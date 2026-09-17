@@ -42,6 +42,9 @@ from .config import (
     CIRCUITO_ARQUIVO,
     CIRCUITO_LIMIAR_SOBRECARGAS,
     CIRCUITO_REABERTURA_S,
+    CIRCUITO_SALDO_REABERTURA_S,
+    DEEPSEEK_BALANCE_TIMEOUT_S,
+    DEEPSEEK_BALANCE_URL,
     FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
     FALLBACK_CONTEUDO_MODELO,
     FALLBACK_CONTEUDO_PROVIDER,
@@ -204,6 +207,18 @@ class LLMCircuitoAberto(LLMIndisponivel):
     Levantada antes da retentativa — falhar rápido é o objetivo inteiro. A
     mensagem começa com `circuito_aberto:`, que é o motivo que o registro de
     falha e a marca `verificacao_pendente` carregam."""
+
+
+class LLMSaldoEsgotado(LLMIndisponivel):
+    """[2026-09-16] A conta do DeepSeek não tem crédito: `402 Insufficient
+    Balance`. Irmã de `LLMCircuitoAberto`, e DISTINTA dela de propósito — as
+    duas barram tráfego, mas por motivos que se resolvem de formas opostas.
+
+    Fila cheia (`LLMSobrecarga`) passa sozinha em minutos; saldo zerado não
+    passa até alguém depositar. Quem trata a exceção precisa saber qual das
+    duas é: a de saldo manda PARAR o lote, a de fila manda esperar a sonda.
+    A mensagem começa com `saldo_esgotado:`, que é o motivo que vai para o
+    registro de falha."""
 
 
 class LLMRespostaComErro(LLMError):
@@ -489,6 +504,18 @@ def deepseek_resposta(system: str, user: str, model: str, *, max_tokens: int,
     except LLMSobrecarga as e:
         _circuito_registrar_sobrecarga(str(e))
         raise
+    except Exception as e:  # noqa: BLE001 — classifica e re-levanta, sempre
+        # [2026-09-16] Saldo zerado (402) abre o disjuntor na primeira
+        # ocorrência; o 429 de concorrência reduzida só AVISA. Nenhum dos
+        # dois é retentado — 4xx não entra em `_erros_transporte_llm` —,
+        # então chegam aqui já finais.
+        if _e_saldo_esgotado(e):
+            _circuito_registrar_saldo(str(e))
+            raise LLMSaldoEsgotado(
+                f"saldo_esgotado: deepseek/{model} — {e}") from e
+        if _e_concorrencia_por_saldo(e):
+            _avisar_concorrencia_por_saldo(str(e))
+        raise
     _circuito_registrar_sucesso()
     return resp
 
@@ -612,6 +639,21 @@ def _circuito_barrar(model: str) -> None:
     estado = _circuito_ler()
     if not estado.get("aberto"):
         return
+    # [2026-09-16] Saldo tem outra porta: a sonda não é uma chamada paga (que
+    # numa conta sem crédito falharia por definição), é a leitura grátis do
+    # saldo. E o sinal em memória é levantado aqui também, para o lote que
+    # COMEÇA com o disjuntor já aberto parar na primeira review em vez de
+    # descobrir isso uma falha por vez.
+    if estado.get("classe") == "saldo":
+        _parada_por_saldo.set()
+        if time.time() >= float(estado.get("reabre_em_epoch") or 0):
+            _circuito_sonda_de_saldo(estado, model)
+            return
+        raise LLMSaldoEsgotado(
+            f"saldo_esgotado: deepseek/{model} — disjuntor de saldo aberto "
+            f"desde {estado.get('aberto_desde')}; sonda de saldo em "
+            f"{estado.get('reabre_em')} (último motivo: "
+            f"{str(estado.get('ultimo_motivo', ''))[:160]})")
     if time.time() >= float(estado.get("reabre_em_epoch") or 0):
         return
     raise LLMCircuitoAberto(
@@ -663,6 +705,167 @@ def _circuito_registrar_sucesso() -> None:
 
 def _circuito_precisa_limpar(estado: dict) -> bool:
     return bool(estado.get("seguidas") or estado.get("aberto"))
+
+
+# ===========================================================================
+# DISJUNTOR DE SALDO (2026-09-16, ABERTO.md C18)
+# ===========================================================================
+# Por que é outro disjuntor, e não outro contador no mesmo: ver os três
+# parâmetros em `config.CIRCUITO_SALDO_*`. Em uma linha: fila cheia é estado
+# TRANSIENTE do provider e saldo zerado é estado DETERMINÍSTICO da conta.
+#
+# O estado mora no MESMO arquivo, com a chave `classe` dizendo qual dos dois
+# abriu. Um arquivo só porque a pergunta que ele responde é uma só — "esta
+# chamada pode sair?" — e porque dois arquivos abririam a porta para os dois
+# se contradizerem.
+
+# A assinatura do saldo zerado, como o DeepSeek a devolveu em 2026-09-16 nas
+# 139 falhas do lote de 44 — todas idênticas, palavra por palavra.
+_ASSINATURA_SALDO_DEEPSEEK = "insufficient balance"
+# O 429 que PRECEDE o 402: o provider corta a concorrência conforme o saldo
+# cai, e diz isso na mensagem. É o único aviso antecipado que existe.
+_ASSINATURA_CONCORRENCIA_POR_SALDO = "based on your remaining balance"
+
+_parada_por_saldo = threading.Event()
+_avisou_concorrencia_por_saldo = threading.Event()
+
+
+def _status_http(e: BaseException) -> int | None:
+    return getattr(e, "status_code", None)
+
+
+def _e_saldo_esgotado(e: BaseException) -> bool:
+    """`402`, ou a assinatura literal de saldo do DeepSeek.
+
+    Os dois critérios, e não só o status: o 402 é o que o SDK expõe hoje, e a
+    assinatura é o que o CORPO declara — se o provider mudar o código HTTP, a
+    mensagem ainda identifica o caso."""
+    if _status_http(e) == 402:
+        return True
+    return _ASSINATURA_SALDO_DEEPSEEK in str(e).lower()
+
+
+def _e_concorrencia_por_saldo(e: BaseException) -> bool:
+    """`429` cuja mensagem atribui o limite ao SALDO — não é o 429 de cota
+    por minuto, que não diz nada sobre crédito."""
+    return (_status_http(e) == 429
+            and _ASSINATURA_CONCORRENCIA_POR_SALDO in str(e).lower())
+
+
+def parada_por_saldo() -> bool:
+    """O disjuntor de saldo abriu NESTE processo: o lote deve parar.
+
+    Lida antes de cada chamada pelos harnesses de lote (`votacao_3`,
+    `verificador_impacto`). É um `Event` em memória, e não o arquivo, porque
+    a pergunta aqui é de LAÇO — feita milhares de vezes — e ler o disco a
+    cada review seria o custo que o disjuntor existe para evitar. O arquivo
+    continua sendo a verdade ENTRE processos, via `_circuito_barrar`."""
+    return _parada_por_saldo.is_set()
+
+
+def limpar_parada_por_saldo() -> None:
+    """Zera o sinal em memória. Para teste e para a reexecução depois do
+    depósito — o arquivo é limpo pelo caminho normal (`sonda`/sucesso)."""
+    _parada_por_saldo.clear()
+
+
+def saldo_deepseek(timeout_s: float = DEEPSEEK_BALANCE_TIMEOUT_S) -> dict | None:
+    """`GET /user/balance` — LEITURA, não inferência: não consome crédito.
+
+    É o que torna a sonda possível numa conta sem saldo, onde uma chamada de
+    verdade (a sonda do disjuntor de sobrecarga) falharia por definição.
+    Devolve o corpo da API, ou `None` quando não dá para saber — chave
+    ausente, rede fora, resposta ilegível. `None` NUNCA fecha o disjuntor:
+    sonda que falha deixa tudo como está."""
+    import requests
+
+    key = os.environ.get(PROVIDER_ENV_KEYS["deepseek"])
+    if not key:
+        return None
+    try:
+        r = requests.get(DEEPSEEK_BALANCE_URL,
+                         headers={"Authorization": f"Bearer {key}"},
+                         timeout=timeout_s)
+        r.raise_for_status()
+        corpo = r.json()
+    except Exception:  # noqa: BLE001 — sonda que falha não decide nada
+        return None
+    return corpo if isinstance(corpo, dict) else None
+
+
+def _saldo_disponivel() -> bool:
+    corpo = saldo_deepseek()
+    return bool(corpo and corpo.get("is_available"))
+
+
+def _circuito_registrar_saldo(motivo: str) -> None:
+    """Um `402`: ABRE NA HORA, sem contar ocorrências (`CIRCUITO_SALDO_LIMIAR`
+    é 1 e o motivo está em `config.py`). Também levanta o sinal em memória,
+    que é o que faz o lote em curso parar em vez de arrastar centenas de
+    reviews contra uma conta morta."""
+    agora = time.time()
+    with _lock_circuito:
+        anterior = _circuito_ler()
+        continua_aberto = (anterior.get("aberto")
+                           and anterior.get("classe") == "saldo")
+        estado = {
+            "provider": "deepseek", "classe": "saldo", "seguidas": 1,
+            "aberto": True, "ultimo_motivo": motivo[:300],
+            "aberto_desde": (anterior.get("aberto_desde") if continua_aberto
+                             else _iso(agora)),
+            "reabre_em_epoch": agora + CIRCUITO_SALDO_REABERTURA_S,
+            "atualizado_em": _iso(agora),
+        }
+        estado["reabre_em"] = _iso(estado["reabre_em_epoch"])
+        _circuito_gravar(estado)
+    _parada_por_saldo.set()
+    if not continua_aberto:
+        print(f"⛔ DISJUNTOR DE SALDO ABERTO — a conta do DeepSeek não tem "
+              f"crédito ({motivo[:160]}). Toda chamada DeepSeek falha na hora; "
+              f"o lote PARA. Sonda de saldo (grátis) em {estado['reabre_em']}. "
+              f"Isto NÃO passa sozinho: precisa de depósito.", file=sys.stderr)
+
+
+def _avisar_concorrencia_por_saldo(motivo: str) -> None:
+    """O aviso que faltou em 2026-09-16: o `429` de concorrência reduzida é o
+    provider dizendo que o saldo está acabando, ANTES de acabar. Uma vez por
+    processo — o sinal é o primeiro, repetir vira ruído."""
+    if _avisou_concorrencia_por_saldo.is_set():
+        return
+    _avisou_concorrencia_por_saldo.set()
+    print(f"⚠️  SALDO BAIXO NO DEEPSEEK: o provider reduziu a concorrência por "
+          f"causa do saldo restante ({motivo[:160]}). O lote continua, mas o "
+          f"crédito vai acabar — reponha antes que vire 402.", file=sys.stderr)
+
+
+def _circuito_sonda_de_saldo(estado: dict, model: str) -> None:
+    """Chamada pelo `_circuito_barrar` quando o prazo da sonda venceu.
+
+    Fecha o disjuntor só com prova positiva (`is_available`); qualquer outra
+    resposta — inclusive sonda que falhou — mantém aberto e empurra o prazo,
+    para não transformar rede instável em enxurrada de sondas."""
+    if _saldo_disponivel():
+        with _lock_circuito:
+            _circuito_gravar({"provider": "deepseek", "seguidas": 0,
+                              "aberto": False, "fechado_por": "sonda_de_saldo",
+                              "atualizado_em": _iso(time.time())})
+        _parada_por_saldo.clear()
+        print("✓ disjuntor de saldo FECHADO: a conta do DeepSeek voltou a ter "
+              "crédito.", file=sys.stderr)
+        return
+    agora = time.time()
+    with _lock_circuito:
+        atual = _circuito_ler()
+        if atual.get("aberto") and atual.get("classe") == "saldo":
+            atual["reabre_em_epoch"] = agora + CIRCUITO_SALDO_REABERTURA_S
+            atual["reabre_em"] = _iso(atual["reabre_em_epoch"])
+            atual["atualizado_em"] = _iso(agora)
+            _circuito_gravar(atual)
+            estado = atual
+    _parada_por_saldo.set()
+    raise LLMSaldoEsgotado(
+        f"saldo_esgotado: deepseek/{model} — a conta segue sem crédito na "
+        f"sonda de {_iso(agora)}; próxima sonda em {estado.get('reabre_em')}")
 
 
 def deepseek_uso(resp) -> dict:

@@ -1,0 +1,296 @@
+{
+  "slug": "mad-max-fury-road",
+  "coletado_em": "2026-09-16T05:12:15.025479+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 5904,
+    "1.0": 16966,
+    "1.5": 8856,
+    "2.0": 52059,
+    "2.5": 44265,
+    "3.0": 222736,
+    "3.5": 236585,
+    "4.0": 654190,
+    "4.5": 372546,
+    "5.0": 652963
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 36,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 36,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 6,
+    "1.0": 8,
+    "1.5": 8,
+    "2.0": 23,
+    "2.5": 23,
+    "3.0": 17,
+    "3.5": 3,
+    "4.0": 14,
+    "4.5": 13,
+    "5.0": 16
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "2.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 40,
+      "n_validas_pos_extensao": 53,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "3.5": 1,
+        "4.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 46,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 7,
+    "1.5": 3,
+    "2.0": 20,
+    "2.5": 17,
+    "3.0": 87,
+    "3.5": 93,
+    "4.0": 256,
+    "4.5": 146,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 660,
+      "min": "2015-05-21",
+      "max": "2026-09-16",
+      "p5": "2026-08-07",
+      "p50": "2026-09-05",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 216,
+        "min": "2015-09-20",
+        "max": "2026-09-15",
+        "p5": "2026-08-10",
+        "p50": "2026-08-29",
+        "p95": "2026-09-14"
+      },
+      "medianas": {
+        "n": 228,
+        "min": "2015-09-07",
+        "max": "2026-09-16",
+        "p5": "2026-07-31",
+        "p50": "2026-09-05",
+        "p95": "2026-09-14"
+      },
+      "positivas": {
+        "n": 216,
+        "min": "2015-05-21",
+        "max": "2026-09-16",
+        "p5": "2026-05-21",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 37,
+    "dias_por_100_paginas": 29.133858267716537,
+    "paginas_para_1_ano": 1253
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 18,
+      "dias_por_100_paginas": 900.0,
+      "paginas_para_1_ano": 41
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 14,
+      "dias_por_100_paginas": 1400.0,
+      "paginas_para_1_ano": 26
+    },
+    "2.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 12,
+      "dias": 36,
+      "dias_por_100_paginas": 327.27272727272725,
+      "paginas_para_1_ano": 112
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 23,
+      "dias_por_100_paginas": 328.57142857142856,
+      "paginas_para_1_ano": 111
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 44,
+      "dias": 46,
+      "dias_por_100_paginas": 106.97674418604652,
+      "paginas_para_1_ano": 341
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 1,
+      "dias_por_100_paginas": 50.0,
+      "paginas_para_1_ano": 730
+    },
+    "4.0": {
+      "n_paginas": 7,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 38,
+      "dias_por_100_paginas": 29.921259842519685,
+      "paginas_para_1_ano": 1220
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 36,
+      "dias": 16,
+      "dias_por_100_paginas": 45.714285714285715,
+      "paginas_para_1_ano": 798
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 13,
+      "dias_por_100_paginas": 20.634920634920636,
+      "paginas_para_1_ano": 1769
+    }
+  },
+  "ano_lancamento": 2015,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "mad-max-fury-road",
+    "titulo": "Mad Max: Fury Road",
+    "ano": 2015,
+    "tmdb_id_letterboxd": 76341,
+    "fonte": "pagina_letterboxd"
+  }
+}

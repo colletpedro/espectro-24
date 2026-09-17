@@ -249,10 +249,18 @@ OITO_DA_LISTA = {
 
 def _temas_retidos_no_catalogo():
     """`(slug, tema)` de todo tema de condição PEDIDO no catálogo que a regra
-    retém — `get-out-2017` pelo lote corrigido, o único sem bloco publicado."""
-    import votacao_3 as v3
-    slugs = {json.loads(l)["slug"] for l in
-             v3.ARQ_CONSENSO.read_text(encoding="utf-8").splitlines() if l.strip()}
+    retém — `get-out-2017` pelo lote corrigido, o único sem bloco publicado.
+
+    [2026-09-16] A população é `resultado/*.json` — o catálogo PUBLICADO em
+    que a medição foi feita —, não todo slug de `consenso.jsonl`. A expansão
+    (ABERTO.md C18) pôs 44 filmes novos no consenso sem `resultado/<slug>.json`
+    algum; ler o consenso aqui faria o teste correr atrás de um catálogo que
+    ainda não existe e quebrar em `FileNotFoundError` a cada filme coletado,
+    não a cada mudança real na regra. `resultado/*.json` é exatamente o
+    universo que `_bloco_corrigido`/`CORRIGIDO` já assumia (só filmes
+    publicados têm bloco a examinar) — a leitura antiga de `consenso.jsonl`
+    era mais ampla do que o próprio corpo da função usava."""
+    slugs = {p.stem for p in (RAIZ / "resultado").glob("*.json")}
     fora = set()
     for slug in slugs:
         doc = json.loads((RAIZ / "resultado" / f"{slug}.json").read_text(
@@ -281,9 +289,16 @@ def test_a_r13_e_REGRA_e_a_lista_literal_nao_existe_mais():
 
 def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
     """Validação feita ANTES de a lista sair, travada no dado real: a regra
-    retém as oito, e além delas exatamente os três temas que a medição
-    achou — dois no ar até 2026-09-15 e um nunca publicado. Um quarto é
-    conversa, não surpresa: a classificação mudou por baixo de um filme."""
+    retém as oito, e além delas exatamente os temas que a medição achou —
+    dois no ar até 2026-09-15 e um nunca publicado. Um quarto é conversa,
+    não surpresa: a classificação mudou por baixo de um filme.
+
+    [2026-09-17, ABERTO.md B5] +3 depois da expansão de 44 filmes
+    (`fight-club`/NEG-A, `gladiator-2000`/NEG-C, `the-truman-show`/NEG-C) —
+    revelados pela publicação real das condições desses filmes, não erro:
+    é a mesma medição, sobre um catálogo maior. O resultado esperado
+    CRESCE para incluir a medição nova; a regra (R13 por eixo de origem,
+    C14.16) não mudou uma linha."""
     if not (RAIZ / "resultado" / "votacao-3" / "consenso.jsonl").exists():
         pytest.skip("catálogo ausente neste checkout")
     retidos = _temas_retidos_no_catalogo()
@@ -292,6 +307,9 @@ def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
         ("talk-to-me-2022", "NEG-C"),
         ("spider-man-across-the-spider-verse", "POS-E"),
         ("mother-2017", "POS-C"),
+        ("fight-club", "NEG-A"),
+        ("gladiator-2000", "NEG-C"),
+        ("the-truman-show", "NEG-C"),
     }
 
 

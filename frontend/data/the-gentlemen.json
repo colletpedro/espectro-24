@@ -1,0 +1,1608 @@
+{
+  "slug": "the-gentlemen",
+  "data_coleta": "2026-09-16T20:04:30.047270+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 575,
+  "reviews_url": "https://letterboxd.com/film/the-gentlemen/reviews/",
+  "ficha": {
+    "titulo": "Magnatas do Crime",
+    "sinopse_oficial": "Um talentoso graduado estadunidense em Oxford, usando suas habilidades únicas, audácia e propensão à violência, cria um império da maconha usando as propriedades dos aristocratas ingleses empobrecidos. No entanto, quando ele tenta vender seu negócio a um colega bilionário. Daí, uma cadeia de eventos se desenrola, envolvendo chantagem, decepção, caos e assassinato entre bandidos de rua, oligarcas russos, gângsteres e jornalistas.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Comédia",
+      "Crime"
+    ],
+    "duracao_min": 113,
+    "diretor": "Guy Ritchie",
+    "diretor_transliterado": false,
+    "ano": 2019,
+    "fonte": "tmdb",
+    "tmdb_id": 522627,
+    "tmdb_fetched_at": "2026-09-16T20:18:52+00:00",
+    "poster_path": "/vaeQ0Xersj2y5t1Hkqljb9i8RaU.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/hClLP88yMIuhslwSVxtYrvWmxfp.jpg",
+      "/tintsaQ0WLzZsTMkTiqtMB3rfc8.jpg",
+      "/9Qfawg9WT3cSbBXQgDRuWbYS9lj.jpg",
+      "/80dORlIfiNfqjOTEUEYYe0KIOgs.jpg",
+      "/xz5nXb69ayjSzmorJBN0q1tIe1K.jpg",
+      "/5HXsuPQrDphfAbXjxW2zp8YC41U.jpg",
+      "/z1Ocv3mAiHXplQJ44LNLmkK4g8r.jpg",
+      "/bTRQ0EdIwNTiRZWlrRhXJvqIZZu.jpg",
+      "/jXRfACT6LIYDeBLj8EVrPTD3u4s.jpg",
+      "/1uZIkohvYHalbUMFz4HVGs2ePob.jpg"
+    ],
+    "backdrop_path": "/hClLP88yMIuhslwSVxtYrvWmxfp.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/1L5t6OfBzuX1sJ0LZNV6ZM1MjCr.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/hClLP88yMIuhslwSVxtYrvWmxfp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/tintsaQ0WLzZsTMkTiqtMB3rfc8.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5HXsuPQrDphfAbXjxW2zp8YC41U.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/xz5nXb69ayjSzmorJBN0q1tIe1K.jpg",
+        "still_largura": 3591,
+        "still_altura": 2020
+      },
+      {
+        "still_path": "/jXRfACT6LIYDeBLj8EVrPTD3u4s.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bgmvswp0E4Htxkte2tLMw4Hvj1B.jpg",
+        "still_largura": 3000,
+        "still_altura": 1687
+      },
+      {
+        "still_path": "/s6fSFATmgD0gcuTgXJNJAyktHzi.jpg",
+        "still_largura": 1333,
+        "still_altura": 749
+      },
+      {
+        "still_path": "/3u0tIxR2dDG28R5NpjpTqP67Utz.jpg",
+        "still_largura": 1471,
+        "still_altura": 827
+      },
+      {
+        "still_path": "/8l2DxP39kRDcMN5rZrG1cG7tZ0n.jpg",
+        "still_largura": 1671,
+        "still_altura": 940
+      },
+      {
+        "still_path": "/hHmGP0mM9LCOoCvPvr676nQxDrt.jpg",
+        "still_largura": 1461,
+        "still_altura": 822
+      },
+      {
+        "still_path": "/vh4H4PxF2cJQly6BEb18kCIHL3r.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/w7WbNdzM9inOpNtz0djPCsxGbXt.jpg",
+        "still_largura": 1676,
+        "still_altura": 943
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-gentlemen",
+      "titulo_letterboxd": "The Gentlemen",
+      "ano_letterboxd": 2019,
+      "tmdb_id_letterboxd": 522627,
+      "tmdb_id_escolhido": 522627,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Gentlemen",
+      "ano_tmdb": 2020,
+      "ano_divergente": true
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 685716,
+    "por_nivel": {
+      "0.5": 1929,
+      "1.0": 4650,
+      "1.5": 5007,
+      "2.0": 18783,
+      "2.5": 27215,
+      "3.0": 92586,
+      "3.5": 147571,
+      "4.0": 229794,
+      "4.5": 80076,
+      "5.0": 78105
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 17,
+      "positivas": 78
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-gentlemen",
+    "coletado_em": "2026-09-16T05:34:41.369570+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1929,
+      "1.0": 4650,
+      "1.5": 5007,
+      "2.0": 18783,
+      "2.5": 27215,
+      "3.0": 92586,
+      "3.5": 147571,
+      "4.0": 229794,
+      "4.5": 80076,
+      "5.0": 78105
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 71,
+      "3.0": 120,
+      "3.5": 60,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 8,
+      "1.5": 17,
+      "2.0": 34,
+      "2.5": 17,
+      "3.0": 25,
+      "3.5": 12,
+      "4.0": 16,
+      "4.5": 5,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 64,
+        "n_validas_pos_extensao": 64,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 1,
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 6,
+      "2.0": 21,
+      "2.5": 30,
+      "3.0": 103,
+      "3.5": 164,
+      "4.0": 256,
+      "4.5": 89,
+      "5.0": 87
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 647,
+        "min": "2020-04-04",
+        "max": "2026-09-16",
+        "p5": "2026-07-27",
+        "p50": "2026-09-08",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2023-12-15",
+          "max": "2026-09-16",
+          "p5": "2026-07-27",
+          "p50": "2026-08-23",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 227,
+          "min": "2020-04-04",
+          "max": "2026-09-16",
+          "p5": "2026-07-11",
+          "p50": "2026-09-07",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 228,
+          "min": "2024-01-08",
+          "max": "2026-09-16",
+          "p5": "2026-07-27",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 49,
+      "dias_por_100_paginas": 38.58267716535433,
+      "paginas_para_1_ano": 946
+    },
+    "identidade_letterboxd": {
+      "slug": "the-gentlemen",
+      "titulo": "The Gentlemen",
+      "ano": 2019,
+      "tmdb_id_letterboxd": 522627,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2019,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 647
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-27",
+        "max": "2026-09-15",
+        "p5": "2026-07-28",
+        "p50": "2026-08-20",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 85,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 85,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo e duração arrastados",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme é longo e monótono, com momentos de tédio e uma sensação de que a história se arrasta sem necessidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Racismo e humor ofensivo",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores criticam o uso de piadas racistas, misóginas e homofóbicas, considerando-as desnecessárias e desconfortáveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo autocomplacente de Guy Ritchie",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O diretor é acusado de repetir sua fórmula habitual de forma narcisista, priorizando o estilo em detrimento de uma narrativa envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos pretensiosos e excessivos",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As conversas são descritas como afetadas e cheias de jargão, tentando ser espertas mas soando forçadas e cansativas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem feminina mal desenvolvida",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A única figura feminina relevante é reduzida a um dispositivo de trama, sem profundidade e usada apenas para impulsionar o protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e reviravoltas vazias",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é considerada difícil de acompanhar, com reviravoltas previsíveis ou sem impacto que não justificam o desenrolar da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam principalmente para um estilo autocomplacente de Guy Ritchie, com diálogos pretensiosos e ritmo arrastado. Além disso, destacam o uso de humor racista e a má condução da única personagem feminina.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 17,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 52,
+        "p5": 1,
+        "p50": 7,
+        "p95": 26,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-11",
+        "max": "2026-09-15",
+        "p5": "2026-08-16",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 71,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 120,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 120,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam o elenco, destacando atuações como as de Colin Farrell e Hugh Grant, mas criticam o desempenho de Jeremy Strong por ser caricato ou desconfortável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e diálogos",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que o roteiro é confuso, com diálogos forçados e piadas que não funcionam, embora alguns considerem a história interessante, mas mal executada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas mencionam que o filme é longo e arrastado, com um ritmo que cansa em certos momentos, apesar de alguns trechos mais dinâmicos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo de Guy Ritchie",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece o estilo característico do diretor, com narrativa não linear e montagem elaborada, mas acha que ele se sobrepõe à história, tornando o filme cansativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conteúdo racista e misógino",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas criticam piadas racistas, especialmente contra asiáticos, e o uso da única personagem feminina como recurso narrativo, considerando isso desnecessário e ofensivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cena de agressão sexual",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo condena uma cena de violência sexual por ser gratuita e chocante, dizendo que ela prejudica a experiência e é desnecessária para a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam o elenco talentoso e o estilo visual de Guy Ritchie, mas criticam o roteiro confuso, o ritmo arrastado e elementos racistas e misóginos. Este grupo considera o filme mediano, com entretenimento pontual, mas falhas significativas que impedem uma avaliação mais positiva.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 78,
+      "composicao_alvo": {
+        "3.5": 11,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 6
+      },
+      "composicao_atingida": {
+        "3.5": 11,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 6
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-08",
+        "max": "2026-09-16",
+        "p5": "2026-08-18",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews elogiam o elenco, destacando a atuação de Matthew McConaughey como carismática, a presença de Charlie Hunnam, o humor de Colin Farrell e a performance de Hugh Grant como um detetive desagradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo e narrativa do Guy Ritchie",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que o filme marca um retorno ao estilo característico de Guy Ritchie, com narrativa não linear, diálogos afiados e reviravoltas, embora alguns considerem uma fórmula já conhecida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor e diversão",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme é extremamente divertido e engraçado, com diálogos cômicos e situações que proporcionam entretenimento leve.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com Snatch e outros filmes de Ritchie",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews comparam o filme a Snatch, notando semelhanças na fórmula e no estilo, algumas vezes chamando-o de uma versão moderna, mas com menos surpresa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e reviravoltas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é elogiado por sua inteligência e por manter o espectador intrigado, com reviravoltas que se desenrolam de forma envolvente, ainda que a trama seja por vezes previsível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estilo visual",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e o visual do filme são mencionados como elegantes e estilosos, contribuindo para a atmosfera geral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam o filme como um retorno ao estilo característico de Guy Ritchie, com um elenco carismático e diálogos afiados. Este grupo considera a obra divertida e envolvente, embora alguns notem semelhanças com trabalhos anteriores do diretor.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração arrastados",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme é longo e monótono, com momentos de tédio e uma sensação de que a história se arrasta sem necessidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "As reviews medianas mencionam que o filme é longo e arrastado, com um ritmo que cansa em certos momentos, apesar de alguns trechos mais dinâmicos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações",
+            "exemplo_parafraseado": "As reviews medianas elogiam o elenco, destacando atuações como as de Colin Farrell e Hugh Grant, mas criticam o desempenho de Jeremy Strong por ser caricato ou desconfortável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações",
+            "exemplo_parafraseado": "Muitas reviews elogiam o elenco, destacando a atuação de Matthew McConaughey como carismática, a presença de Charlie Hunnam, o humor de Colin Farrell e a performance de Hugh Grant como um detetive desagradável.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Estilo autocomplacente de Guy Ritchie",
+            "exemplo_parafraseado": "O diretor é acusado de repetir sua fórmula habitual de forma narcisista, priorizando o estilo em detrimento de uma narrativa envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Estilo e narrativa do Guy Ritchie",
+            "exemplo_parafraseado": "As críticas apontam que o filme marca um retorno ao estilo característico de Guy Ritchie, com narrativa não linear, diálogos afiados e reviravoltas, embora alguns considerem uma fórmula já conhecida.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e estilo visual"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Diálogos pretensiosos e excessivos",
+            "exemplo_parafraseado": "As conversas são descritas como afetadas e cheias de jargão, tentando ser espertas mas soando forçadas e cansativas.",
+            "temas_no_mesmo_eixo": [
+              "Personagem feminina mal desenvolvida",
+              "Roteiro confuso e reviravoltas vazias"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e diálogos",
+            "exemplo_parafraseado": "Este grupo aponta que o roteiro é confuso, com diálogos forçados e piadas que não funcionam, embora alguns considerem a história interessante, mas mal executada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e reviravoltas",
+            "exemplo_parafraseado": "O roteiro é elogiado por sua inteligência e por manter o espectador intrigado, com reviravoltas que se desenrolam de forma envolvente, ainda que a trama seja por vezes previsível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Humor e diversão",
+            "exemplo_parafraseado": "Este grupo destaca que o filme é extremamente divertido e engraçado, com diálogos cômicos e situações que proporcionam entretenimento leve.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Cena de agressão sexual",
+            "exemplo_parafraseado": "Este grupo condena uma cena de violência sexual por ser gratuita e chocante, dizendo que ela prejudica a experiência e é desnecessária para a trama.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Estilo de Guy Ritchie",
+            "exemplo_parafraseado": "Este grupo reconhece o estilo característico do diretor, com narrativa não linear e montagem elaborada, mas acha que ele se sobrepõe à história, tornando o filme cansativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com Snatch e outros filmes de Ritchie",
+            "exemplo_parafraseado": "Algumas reviews comparam o filme a Snatch, notando semelhanças na fórmula e no estilo, algumas vezes chamando-o de uma versão moderna, mas com menos surpresa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Racismo e humor ofensivo",
+            "exemplo_parafraseado": "Muitos espectadores criticam o uso de piadas racistas, misóginas e homofóbicas, considerando-as desnecessárias e desconfortáveis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Conteúdo racista e misógino",
+            "exemplo_parafraseado": "As reviews medianas criticam piadas racistas, especialmente contra asiáticos, e o uso da única personagem feminina como recurso narrativo, considerando isso desnecessário e ofensivo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2019 e dirigido por Guy Ritchie, Magnatas do Crime é um filme de ação, comédia e crime com 113 minutos de duração. A trama acompanha um talentoso graduado estadunidense em Oxford que constrói um império de maconha utilizando propriedades de aristocratas ingleses empobrecidos. Ao tentar vender seu negócio para um bilionário, desencadeia-se uma sucessão de chantagens, decepções, caos e assassinatos envolvendo bandidos de rua, oligarcas russos, gângsteres e jornalistas.\n\nA experiência é marcada pela cadência típica das produções de Guy Ritchie, estruturada em torno de diálogos extensos e uma montagem que cruza múltiplos núcleos narrativos. A condução intercala passagens de exposição verbal detalhada com dinâmicas do submundo do crime.\n\nOs diferentes grupos convergem sobre os temas centrais da obra, discordando no veredito sobre o funcionamento dessas escolhas. Na grande maioria das notas (~78%), a maior parte elogia as atuações do elenco, grande parte exalta o retorno ao estilo e à narrativa característicos do diretor, e uma parcela expressiva destaca o humor e a diversão.\n\nNuma parcela das notas (~17%), sob uma perspectiva intermediária, a maior parcela reconhece o trabalho do elenco, mas cerca de metade critica fragilidades no roteiro e nos diálogos, enquanto boa parte aponta problemas no ritmo e na duração. Por fim, numa fração mínima das notas (~4%), a partir de uma ótica abertamente desfavorável, vários apontam o ritmo e a duração como arrastados, muitos condenam a presença de racismo e humor ofensivo, e um número considerável rejeita o que considera um estilo autocomplacente do cineasta.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11747,
+      "completion_tokens": 1565,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11747
+    },
+    "latencia_s": 35.27
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre o funcionamento do roteiro: a maioria dos que recomendam valoriza a construção da trama e suas reviravoltas, enquanto a maioria dos que não recomendam considera os diálogos excessivos e pretensiosos.",
+    "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro: a maioria dos que recomendam valoriza a construção da trama e suas reviravoltas, enquanto a maioria dos que não recomendam considera os diálogos excessivos e pretensiosos.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "abertura": "opini",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 34,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 0,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 37,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3675,
+      "completion_tokens": 174,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3675
+    },
+    "latencia_s": 13.92
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações carismáticas e cômicas conduzidas por um elenco de destaque",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elenco e atuações",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia o estilo do diretor, mesmo quando recorre a uma fórmula já conhecida",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Estilo e narrativa do Guy Ritchie",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "procura um entretenimento leve e divertido construído a partir de diálogos cômicos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor e diversão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia o estilo de trabalhos anteriores do cineasta, embora com menos surpresas",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Comparação com Snatch e outros filmes de Ritchie",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com uma narrativa longa, monótona e que parece se arrastar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo e duração arrastados",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se sente desconfortável com piadas preconceituosas, de cunho racista ou misógino",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Racismo e humor ofensivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de repetições estilísticas do cineasta que deixam a história pouco envolvente",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estilo autocomplacente de Guy Ritchie",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com tramas confusas e viradas previsíveis ou de pouco impacto",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e reviravoltas vazias",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 78,
+        "peso_texto": "~78% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16134,
+      "completion_tokens": 1236,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16134
+    },
+    "latencia_s": 23.13,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

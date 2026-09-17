@@ -1,0 +1,1703 @@
+{
+  "slug": "cujo",
+  "data_coleta": "2026-09-16T20:07:14.616166+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/cujo/reviews/",
+  "ficha": {
+    "titulo": "Cujo",
+    "sinopse_oficial": "Cujo, um doce cachorro São Bernardo, é picado por um morcego-vampiro e fica raivoso. A partir de então, ele espalha o terror em uma pequena cidade dos Estados Unidos e faz reféns uma mulher e seu filho, aprisionados dentro de um carro quebrado, sob um calor escaldante, durante horas intermináveis.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Terror"
+    ],
+    "duracao_min": 93,
+    "diretor": "Lewis Teague",
+    "diretor_transliterado": false,
+    "ano": 1983,
+    "fonte": "tmdb",
+    "tmdb_id": 10489,
+    "tmdb_fetched_at": "2026-09-16T20:18:53+00:00",
+    "poster_path": "/fnsajFW0YSq68284mxa3d9PB8ao.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/8MHv31RHBbyvBiC4AjJx6opebTm.jpg",
+      "/jvqiz71IFBGhbqUF43JABAbJaG6.jpg",
+      "/oA1iLnLzp59xCUCrXJ4p0iraQXZ.jpg",
+      "/hK19fcSgkAN6de6HlsJVlPYncwv.jpg",
+      "/5AjXG1IHWfaODtzmWOkQGbmF3nZ.jpg",
+      "/kDrowpjCVMdSlYE7yrtpRXCf3NI.jpg",
+      "/bRULPz1lgZt0O7PUlOg4m2u4apR.jpg",
+      "/f3rMemOdQJI66GrkOfR7C66i7RM.jpg",
+      "/bNGFz9XafocBkDlNSf2XKZAtN62.jpg",
+      "/aIXsowldQZpOisqvjO9CZsC042l.jpg"
+    ],
+    "backdrop_path": "/8MHv31RHBbyvBiC4AjJx6opebTm.jpg",
+    "backdrop_largura": 2908,
+    "backdrop_altura": 1636,
+    "poster_sem_texto_path": "/pwjGrpCRJMCK6uye0y5I28FZEGu.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/8MHv31RHBbyvBiC4AjJx6opebTm.jpg",
+        "still_largura": 2908,
+        "still_altura": 1636
+      },
+      {
+        "still_path": "/jvqiz71IFBGhbqUF43JABAbJaG6.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hK19fcSgkAN6de6HlsJVlPYncwv.jpg",
+        "still_largura": 3668,
+        "still_altura": 2063
+      },
+      {
+        "still_path": "/5AjXG1IHWfaODtzmWOkQGbmF3nZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/kDrowpjCVMdSlYE7yrtpRXCf3NI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7774dIfADqjMaAYpEZ6AftwRKVE.jpg",
+        "still_largura": 2905,
+        "still_altura": 1634
+      },
+      {
+        "still_path": "/aIXsowldQZpOisqvjO9CZsC042l.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/c1jPKS6rxgP1FD4rkO58hcEeuo4.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/e93qfGxTbZEJeXDnZkvTPG5hSR9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jdX8LpcuBe6OWcR2BXgz1obe32V.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/tAfTWWIm58UQJOWXc1XImo4EU7I.jpg",
+        "still_largura": 3398,
+        "still_altura": 1912
+      },
+      {
+        "still_path": "/utafHHuSVf6TXqli5pj0Wz4tE1h.jpg",
+        "still_largura": 2912,
+        "still_altura": 1638
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "cujo",
+      "titulo_letterboxd": "Cujo",
+      "ano_letterboxd": 1983,
+      "tmdb_id_letterboxd": 10489,
+      "tmdb_id_escolhido": 10489,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Cujo",
+      "ano_tmdb": 1983,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 77285,
+    "por_nivel": {
+      "0.5": 567,
+      "1.0": 1732,
+      "1.5": 2147,
+      "2.0": 8109,
+      "2.5": 11085,
+      "3.0": 26378,
+      "3.5": 13491,
+      "4.0": 9748,
+      "4.5": 1314,
+      "5.0": 2714
+    },
+    "por_bucket": {
+      "negativas": 16,
+      "medianas": 48,
+      "positivas": 35
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "cujo",
+    "coletado_em": "2026-09-16T05:42:39.243843+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 567,
+      "1.0": 1732,
+      "1.5": 2147,
+      "2.0": 8109,
+      "2.5": 11085,
+      "3.0": 26378,
+      "3.5": 13491,
+      "4.0": 9748,
+      "4.5": 1314,
+      "5.0": 2714
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 8,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 8,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 96,
+      "4.0": 72,
+      "4.5": 12,
+      "5.0": 12
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 8,
+      "1.5": 10,
+      "2.0": 25,
+      "2.5": 25,
+      "3.0": 35,
+      "3.5": 42,
+      "4.0": 27,
+      "4.5": 1,
+      "5.0": 3
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 8,
+      "4.0": 6,
+      "4.5": 1,
+      "5.0": 1
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 60,
+        "n_validas_pos_extensao": 60,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 73,
+        "n_validas_pos_extensao": 73,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 3.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 6,
+      "1.0": 17,
+      "1.5": 21,
+      "2.0": 79,
+      "2.5": 108,
+      "3.0": 256,
+      "3.5": 131,
+      "4.0": 95,
+      "4.5": 13,
+      "5.0": 26
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 600,
+        "min": "1989-08-15",
+        "max": "2026-09-15",
+        "p5": "2025-06-09",
+        "p50": "2026-08-13",
+        "p95": "2026-09-13"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "2019-10-15",
+          "max": "2026-09-15",
+          "p5": "2025-06-29",
+          "p50": "2026-07-06",
+          "p95": "2026-09-06"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2009-11-21",
+          "max": "2026-09-15",
+          "p5": "2025-04-30",
+          "p50": "2026-08-25",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "1989-08-15",
+          "max": "2026-09-15",
+          "p5": "2025-06-11",
+          "p50": "2026-08-20",
+          "p95": "2026-09-14"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 495,
+      "dias_por_100_paginas": 389.76377952755905,
+      "paginas_para_1_ano": 94
+    },
+    "identidade_letterboxd": {
+      "slug": "cujo",
+      "titulo": "Cujo",
+      "ano": 1983,
+      "tmdb_id_letterboxd": 10489,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1983,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 600
+  },
+  "origem_paginas": {
+    "_histograma/cujo.html": "cache",
+    "cujo/pages/by_added/rated_3_page_4.html": "cache",
+    "cujo/pages/by_added/rated_3_page_16.html": "cache",
+    "cujo/pages/by_added/rated_3_page_64.html": "cache",
+    "cujo/pages/by_added/rated_3_page_256.html": "cache",
+    "cujo/pages/by_added/rated_0_5_page_1.html": "cache",
+    "cujo/pages/by_added/rated_1_page_1.html": "cache",
+    "cujo/pages/by_added/rated_1_page_2.html": "cache",
+    "cujo/fulltext/viewing_1422590935.html": "cache",
+    "cujo/fulltext/viewing_1377116327.html": "cache",
+    "cujo/fulltext/viewing_1363121571.html": "cache",
+    "cujo/pages/by_added/rated_1_5_page_1.html": "cache",
+    "cujo/pages/by_added/rated_1_5_page_2.html": "cache",
+    "cujo/pages/by_added/rated_1_5_page_5.html": "cache",
+    "cujo/fulltext/viewing_1479239821.html": "cache",
+    "cujo/fulltext/viewing_1477153571.html": "cache",
+    "cujo/fulltext/viewing_1443678268.html": "cache",
+    "cujo/fulltext/viewing_1385614620.html": "cache",
+    "cujo/fulltext/viewing_1212645569.html": "cache",
+    "cujo/pages/by_added/rated_2_page_1.html": "cache",
+    "cujo/pages/by_added/rated_2_page_2.html": "cache",
+    "cujo/pages/by_added/rated_2_page_3.html": "cache",
+    "cujo/pages/by_added/rated_2_page_4.html": "cache",
+    "cujo/pages/by_added/rated_2_page_5.html": "cache",
+    "cujo/pages/by_added/rated_2_page_6.html": "cache",
+    "cujo/pages/by_added/rated_2_page_7.html": "cache",
+    "cujo/pages/by_added/rated_2_page_8.html": "cache",
+    "cujo/pages/by_added/rated_2_page_20.html": "cache",
+    "cujo/pages/by_added/rated_2_page_40.html": "cache",
+    "cujo/fulltext/viewing_1493163232.html": "cache",
+    "cujo/fulltext/viewing_1489733008.html": "cache",
+    "cujo/fulltext/viewing_1490886728.html": "cache",
+    "cujo/fulltext/viewing_1484254735.html": "cache",
+    "cujo/fulltext/viewing_1478444496.html": "cache",
+    "cujo/fulltext/viewing_1436931093.html": "cache",
+    "cujo/fulltext/viewing_1149015906.html": "cache",
+    "cujo/fulltext/viewing_928382813.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_1.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_2.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_3.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_4.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_27.html": "cache",
+    "cujo/pages/by_added/rated_2_5_page_54.html": "cache",
+    "cujo/fulltext/viewing_1475655771.html": "cache",
+    "cujo/fulltext/viewing_1474385189.html": "cache",
+    "cujo/fulltext/viewing_1456031770.html": "cache",
+    "cujo/fulltext/viewing_74362045.html": "cache",
+    "cujo/fulltext/viewing_1162267523.html": "cache",
+    "cujo/pages/by_added/rated_3_page_1.html": "cache",
+    "cujo/pages/by_added/rated_3_page_2.html": "cache",
+    "cujo/pages/by_added/rated_3_page_3.html": "cache",
+    "cujo/pages/by_added/rated_3_page_5.html": "cache",
+    "cujo/pages/by_added/rated_3_page_6.html": "cache",
+    "cujo/pages/by_added/rated_3_page_7.html": "cache",
+    "cujo/pages/by_added/rated_3_page_8.html": "cache",
+    "cujo/pages/by_added/rated_3_page_128.html": "cache",
+    "cujo/fulltext/viewing_1497398371.html": "cache",
+    "cujo/fulltext/viewing_1489277009.html": "cache",
+    "cujo/fulltext/viewing_1487896656.html": "cache",
+    "cujo/fulltext/viewing_1485055080.html": "cache",
+    "cujo/fulltext/viewing_1483363084.html": "cache",
+    "cujo/fulltext/viewing_1479935375.html": "cache",
+    "cujo/fulltext/viewing_1479834799.html": "cache",
+    "cujo/fulltext/viewing_1459027865.html": "cache",
+    "cujo/fulltext/viewing_877103382.html": "cache",
+    "cujo/fulltext/viewing_876215149.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_1.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_2.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_3.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_4.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_5.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_6.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_33.html": "cache",
+    "cujo/pages/by_added/rated_3_5_page_66.html": "cache",
+    "cujo/fulltext/viewing_1495260053.html": "cache",
+    "cujo/fulltext/viewing_1486342160.html": "cache",
+    "cujo/fulltext/viewing_1482502431.html": "cache",
+    "cujo/fulltext/viewing_1475662519.html": "cache",
+    "cujo/fulltext/viewing_1454285166.html": "cache",
+    "cujo/fulltext/viewing_1453386155.html": "cache",
+    "cujo/fulltext/viewing_1446510226.html": "cache",
+    "cujo/fulltext/viewing_1444662796.html": "cache",
+    "cujo/fulltext/viewing_1166908871.html": "cache",
+    "cujo/pages/by_added/rated_4_page_1.html": "cache",
+    "cujo/pages/by_added/rated_4_page_2.html": "cache",
+    "cujo/pages/by_added/rated_4_page_3.html": "cache",
+    "cujo/pages/by_added/rated_4_page_4.html": "cache",
+    "cujo/pages/by_added/rated_4_page_24.html": "cache",
+    "cujo/pages/by_added/rated_4_page_48.html": "cache",
+    "cujo/fulltext/viewing_1496250804.html": "cache",
+    "cujo/fulltext/viewing_1496010965.html": "cache",
+    "cujo/fulltext/viewing_1485863309.html": "cache",
+    "cujo/fulltext/viewing_1480242255.html": "cache",
+    "cujo/fulltext/viewing_1464134598.html": "cache",
+    "cujo/fulltext/viewing_1449382278.html": "cache",
+    "cujo/fulltext/viewing_1448751034.html": "cache",
+    "cujo/fulltext/viewing_1448750636.html": "cache",
+    "cujo/fulltext/viewing_1159348287.html": "cache",
+    "cujo/fulltext/viewing_1150149133.html": "cache",
+    "cujo/fulltext/viewing_938660340.html": "cache",
+    "cujo/fulltext/viewing_936483343.html": "cache",
+    "cujo/pages/by_added/rated_4_5_page_1.html": "cache",
+    "cujo/pages/by_added/rated_5_page_1.html": "cache",
+    "cujo/fulltext/viewing_1485711126.html": "cache",
+    "cujo/fulltext/viewing_1485123272.html": "cache",
+    "cujo/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 16,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 7,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 1,
+        "1.0": 5,
+        "1.5": 7,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 20,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-05-27",
+        "max": "2026-09-12",
+        "p5": "2025-10-15",
+        "p50": "2026-07-02",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 1,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e monótono, com longos períodos sem tensão e uma sensação de que a história demora a engrenar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desinteresse pela trama de drama familiar",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas reclamam que o filme foca excessivamente em conflitos conjugais e familiares, desviando-se do que esperavam: um terror sobre um cão raivoso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação infantil irritante",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho da criança é frequentemente citado como exagerado e irritante, com gritos constantes que prejudicam a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e decisões ilógicas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por conveniências forçadas, falta de profundidade e escolhas narrativas pouco convincentes que comprometem a verossimilhança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e terror mal construídos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A expectativa de sustos e clima de horror é frustrada, com sequências que soam repetitivas e pouco assustadoras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final abrupto ou decepcionante",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é mencionado como repentino e insatisfatório, deixando a impressão de que a narrativa se encerra sem um clímax adequado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo apontam principalmente para um ritmo arrastado e uma ênfase excessiva no drama familiar, que desviam do terror esperado. Além disso, críticas à atuação infantil e ao roteiro contribuem para uma experiência considerada decepcionante por este recorte.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 48,
+      "composicao_alvo": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "composicao_atingida": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 5,
+        "p95": 128,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2009-11-21",
+        "max": "2026-09-15",
+        "p5": "2025-04-30",
+        "p50": "2026-08-29",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 28,
+          "n_alvo": 28,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 81,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 81,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa preparação",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que a primeira metade é arrastada, com foco excessivo em dramas familiares e tramas secundárias, atrasando a ação principal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Dee Wallace",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam a atuação de Dee Wallace como a mãe, destacando sua capacidade de transmitir desespero e medo de forma convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fidelidade à obra de Stephen King",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns comentários comparam o filme ao livro, notando que a adaptação é fiel em vários aspectos, mas perde a profundidade psicológica e o impacto do final original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e claustrofobia na segunda metade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas reviews medianas destacam que a situação dentro do carro, com o cão raivoso do lado de fora, gera momentos de tensão eficazes e sensação de claustrofobia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação do cão e efeitos práticos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam o treinamento do cão e os efeitos de maquiagem, considerando-os impressionantes para a época e essenciais para a credibilidade das cenas de ataque.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Pena do cão e crítica à negligência",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários expressam tristeza pelo destino do cão, interpretando a raiva como resultado de negligência e destacando a importância da vacinação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para uma recepção morna, com elogios pontuais à atuação de Dee Wallace e às cenas de tensão, mas críticas recorrentes ao ritmo arrastado e ao foco excessivo no drama familiar. Este grupo destaca que a adaptação é fiel ao livro, porém menos impactante, e demonstra certa compaixão pelo cão.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 35,
+      "composicao_alvo": {
+        "3.5": 20,
+        "4.0": 14,
+        "4.5": 2,
+        "5.0": 4
+      },
+      "composicao_atingida": {
+        "3.5": 22,
+        "4.0": 14,
+        "4.5": 1,
+        "5.0": 3
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 66,
+        "p5": 1,
+        "p50": 4,
+        "p95": 66,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "1989-08-15",
+        "max": "2026-09-15",
+        "p5": "2025-06-06",
+        "p50": "2026-08-23",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 22,
+          "n_alvo": 20,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 1,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 3,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Dee Wallace",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Dee Wallace é elogiada por sua performance intensa e comovente como a mãe, sendo considerada por muitos o pilar do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cachorro como vilão assustador e eficaz",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso de cães reais, maquiagem e efeitos práticos tornam o cão protagonista uma presença verdadeiramente ameaçadora e convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Claustrofobia e tensão na segunda metade",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A situação de confinamento no carro durante a onda de calor é destacada como extremamente angustiante e bem construída.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Drama familiar e desenvolvimento dos personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção do drama familiar antes do horror é vista como eficaz para aumentar o impacto emocional da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e efeitos práticos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e os efeitos práticos, incluindo o trabalho com os cães, são elogiados pela qualidade e pela capacidade de gerar tensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final abrupto ou anticlimático",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews positivas consideram que o desfecho acontece de forma repentina, causando uma sensação de que faltou um encerramento mais satisfatório.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atuação de Dee Wallace, a eficácia do cão como vilão e a tensão claustrofóbica da segunda metade. Este grupo também valoriza o desenvolvimento do drama familiar, embora alguns apontem um final abrupto.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e monótono, com longos períodos sem tensão e uma sensação de que a história demora a engrenar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa preparação",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que a primeira metade é arrastada, com foco excessivo em dramas familiares e tramas secundárias, atrasando a ação principal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Claustrofobia e tensão na segunda metade",
+            "exemplo_parafraseado": "A situação de confinamento no carro durante a onda de calor é destacada como extremamente angustiante e bem construída.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação infantil irritante",
+            "exemplo_parafraseado": "O desempenho da criança é frequentemente citado como exagerado e irritante, com gritos constantes que prejudicam a experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Dee Wallace",
+            "exemplo_parafraseado": "Algumas reviews elogiam a atuação de Dee Wallace como a mãe, destacando sua capacidade de transmitir desespero e medo de forma convincente.",
+            "temas_no_mesmo_eixo": [
+              "Atuação do cão e efeitos práticos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Dee Wallace",
+            "exemplo_parafraseado": "Dee Wallace é elogiada por sua performance intensa e comovente como a mãe, sendo considerada por muitos o pilar do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e efeitos práticos",
+            "exemplo_parafraseado": "A fotografia e os efeitos práticos, incluindo o trabalho com os cães, são elogiados pela qualidade e pela capacidade de gerar tensão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e decisões ilógicas",
+            "exemplo_parafraseado": "O roteiro é criticado por conveniências forçadas, falta de profundidade e escolhas narrativas pouco convincentes que comprometem a verossimilhança.",
+            "temas_no_mesmo_eixo": [
+              "Final abrupto ou decepcionante"
+            ]
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Drama familiar e desenvolvimento dos personagens",
+            "exemplo_parafraseado": "A construção do drama familiar antes do horror é vista como eficaz para aumentar o impacto emocional da trama.",
+            "temas_no_mesmo_eixo": [
+              "Final abrupto ou anticlimático"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e terror mal construídos",
+            "exemplo_parafraseado": "A expectativa de sustos e clima de horror é frustrada, com sequências que soam repetitivas e pouco assustadoras.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e claustrofobia na segunda metade",
+            "exemplo_parafraseado": "Certas reviews medianas destacam que a situação dentro do carro, com o cão raivoso do lado de fora, gera momentos de tensão eficazes e sensação de claustrofobia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Cachorro como vilão assustador e eficaz",
+            "exemplo_parafraseado": "O uso de cães reais, maquiagem e efeitos práticos tornam o cão protagonista uma presença verdadeiramente ameaçadora e convincente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Desinteresse pela trama de drama familiar",
+            "exemplo_parafraseado": "Várias críticas reclamam que o filme foca excessivamente em conflitos conjugais e familiares, desviando-se do que esperavam: um terror sobre um cão raivoso.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fidelidade à obra de Stephen King",
+            "exemplo_parafraseado": "Alguns comentários comparam o filme ao livro, notando que a adaptação é fiel em vários aspectos, mas perde a profundidade psicológica e o impacto do final original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Pena do cão e crítica à negligência",
+            "exemplo_parafraseado": "Vários comentários expressam tristeza pelo destino do cão, interpretando a raiva como resultado de negligência e destacando a importância da vacinação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 1983 sob a direção de Lewis Teague, o drama de terror Cujo acompanha a história de um dócil cão São Bernardo que contrai raiva após ser picado por um morcego-vampiro. A partir de então, o animal espalha o terror em uma pequena cidade norte-americana, mantendo reféns uma mulher e seu filho aprisionados dentro de um carro quebrado sob calor escaldante.\n\nA experiência é marcada por uma estrutura que combina uma introdução estendida focada em núcleos cotidianos com uma ambientação concentrada na segunda metade, voltada ao confinamento e à sensação de isolamento dentro do veículo.\n\nOs diferentes grupos abordam os mesmos aspectos do longa-metragem, divergindo centralmente no veredito sobre o funcionamento da obra. Em boa parte das notas (~48%), cerca de metade aponta o ritmo lento e a longa preparação inicial, enquanto uma parcela expressiva destaca a atuação de Dee Wallace e alguns comentam a fidelidade à obra de Stephen King. Numa parte menor das notas (~35%), a recepção se torna amplamente favorável: nessa leitura, boa parte exalta o trabalho de Dee Wallace, muitos consideram o cachorro um vilão assustador e eficaz, e um número considerável valoriza a claustrofobia e a tensão na segunda metade. Em contrapartida, para quem se posiciona de forma crítica, numa parcela das notas (~16%), a maior parte reclama do ritmo lento e entediante, vários manifestam desinteresse pela trama de drama familiar e muitos classificam a atuação infantil como irritante.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 3,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 3,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "positivas",
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.778,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.778,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11363,
+      "completion_tokens": 1426,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11363
+    },
+    "latencia_s": 38.1
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~48% das notas). ",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O meio-termo é o maior grupo da recepção (~48% das notas). A divergência se concentra na condução do roteiro: enquanto a maioria dos que recomendam valoriza o drama familiar e a evolução dos personagens, a maioria dos que desaprovam critica fragilidades no texto e escolhas ilógicas na trama.",
+    "texto_modelo": "A divergência se concentra na condução do roteiro: enquanto a maioria dos que recomendam valoriza o drama familiar e a evolução dos personagens, a maioria dos que desaprovam critica fragilidades no texto e escolhas ilógicas na trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "diver",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 37,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3990,
+      "completion_tokens": 186,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3990
+    },
+    "latencia_s": 10.93
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza uma atuação materna intensa e comovente que sustenta a narrativa",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Dee Wallace",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia efeitos práticos e animais reais criando uma ameaça assustadora e convincente",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cachorro como vilão assustador e eficaz",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma experiência angustiante focada na claustrofobia de um confinamento tenso",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Claustrofobia e tensão na segunda metade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia narrativas que constroem conflitos familiares para dar peso emocional ao horror",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Drama familiar e desenvolvimento dos personagens",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado que demora a engrenar a tensão",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "prefere terror direto sem desvios prolongados em dramas conjugais e familiares",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Desinteresse pela trama de drama familiar",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com atuações infantis estridentes marcadas por gritos constantes",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação infantil irritante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera um clima de horror constante e se frustra com sequências repetitivas",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tensão e terror mal construídos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 35,
+        "peso_texto": "~35% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 16,
+        "peso_texto": "~16% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 48,
+      "texto": "~48% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11043,
+      "completion_tokens": 1145,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11043
+    },
+    "latencia_s": 17.66,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

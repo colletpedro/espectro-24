@@ -1,0 +1,1711 @@
+{
+  "slug": "all-quiet-on-the-western-front-2022",
+  "data_coleta": "2026-09-16T19:46:37.117037+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 564,
+  "reviews_url": "https://letterboxd.com/film/all-quiet-on-the-western-front-2022/reviews/",
+  "ficha": {
+    "titulo": "Nada de Novo no Front",
+    "sinopse_oficial": "Convocado para a linha de frente da Primeira Guerra Mundial, o adolescente Paul encara a dura realidade da vida nas trincheiras.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Guerra",
+      "Drama"
+    ],
+    "duracao_min": 147,
+    "diretor": "Edward Berger",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "tmdb_id": 49046,
+    "tmdb_fetched_at": "2026-09-16T20:18:48+00:00",
+    "poster_path": "/qmcKs0Aoft7MBdBoj1haZyPRgM2.jpg",
+    "poster_largura": 1482,
+    "poster_altura": 2222,
+    "backdrop_paths": [
+      "/xBwtP27cx8WfjHJVFkpuV6F1RES.jpg",
+      "/zbOlpFM306PHE7EP1OELCH5qSmS.jpg",
+      "/tdVlOqviP9LMIXntXZJgu2xnllI.jpg",
+      "/sRnfZo5QuWo63khQsdEbd4oEvcJ.jpg",
+      "/kZZ9JuZ5CMvH0Y2LwboekvXIHqQ.jpg",
+      "/h30gpZLPTMbQ8qS0nV6pRZo8Yco.jpg",
+      "/e3h0knvtz4qPg9dwYdWynALrW9s.jpg",
+      "/9argwmXnStxPJK1OPAbXeAtqWcA.jpg",
+      "/pT6GpQw3qdEH7fjG0Eiu0kwvART.jpg",
+      "/yFEhiouMzPw5opHgSj1DquiZQUt.jpg"
+    ],
+    "backdrop_path": "/xBwtP27cx8WfjHJVFkpuV6F1RES.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/zOUmCXqb5iOMEhdNBPkNCtTHYQH.jpg",
+    "poster_sem_texto_largura": 1482,
+    "poster_sem_texto_altura": 2222,
+    "galeria_stills": [
+      {
+        "still_path": "/xBwtP27cx8WfjHJVFkpuV6F1RES.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/d0ym7yrSoeT4WRLwgiJL3Wdnrts.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kZZ9JuZ5CMvH0Y2LwboekvXIHqQ.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/9argwmXnStxPJK1OPAbXeAtqWcA.jpg",
+        "still_largura": 3000,
+        "still_altura": 1687
+      },
+      {
+        "still_path": "/n5lNDFwh3D3HzCwSCuOi6aA3CYy.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/eLr70WonEW2KG8vrsdHS0yFX2VW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ywLvlcqzGM1E7rV9d8SvmnLxltZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5u2G3IT3vKsatxJdiUtqgG8j9gt.jpg",
+        "still_largura": 3000,
+        "still_altura": 1687
+      },
+      {
+        "still_path": "/e2tJC0on4YbeCYx0TsasUyuoFJG.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/jtL3fqBCHh5MzNHY6D5llYzQDum.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/n6k799RtzRt49FznMHvmqEZ09EZ.jpg",
+        "still_largura": 1440,
+        "still_altura": 810
+      },
+      {
+        "still_path": "/vu5jYQHLV4Ak4jiL9JJMVPjjVvg.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "all-quiet-on-the-western-front-2022",
+      "titulo_letterboxd": "All Quiet on the Western Front",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 49046,
+      "tmdb_id_escolhido": 49046,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "All Quiet on the Western Front",
+      "ano_tmdb": 2022,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1253405,
+    "por_nivel": {
+      "0.5": 1722,
+      "1.0": 3319,
+      "1.5": 3191,
+      "2.0": 15908,
+      "2.5": 23576,
+      "3.0": 103401,
+      "3.5": 174150,
+      "4.0": 443260,
+      "4.5": 225227,
+      "5.0": 259651
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 10,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "all-quiet-on-the-western-front-2022",
+    "coletado_em": "2026-09-16T05:00:22.943593+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1722,
+      "1.0": 3319,
+      "1.5": 3191,
+      "2.0": 15908,
+      "2.5": 23576,
+      "3.0": 103401,
+      "3.5": 174150,
+      "4.0": 443260,
+      "4.5": 225227,
+      "5.0": 259651
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 11,
+      "1.5": 12,
+      "2.0": 30,
+      "2.5": 20,
+      "3.0": 40,
+      "3.5": 9,
+      "4.0": 18,
+      "4.5": 5,
+      "5.0": 11
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 15,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 59,
+        "n_validas_pos_extensao": 59,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 60,
+        "n_validas_pos_extensao": 60,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 14,
+      "3.0": 60,
+      "3.5": 101,
+      "4.0": 256,
+      "4.5": 130,
+      "5.0": 150
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 588,
+        "min": "2022-02-08",
+        "max": "2026-09-16",
+        "p5": "2026-06-02",
+        "p50": "2026-09-02",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 180,
+          "min": "2022-02-08",
+          "max": "2026-09-15",
+          "p5": "2026-06-02",
+          "p50": "2026-08-09",
+          "p95": "2026-09-12"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2022-07-15",
+          "max": "2026-09-16",
+          "p5": "2025-12-28",
+          "p50": "2026-09-03",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2023-06-10",
+          "max": "2026-09-16",
+          "p5": "2026-08-10",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 36,
+      "dias_por_100_paginas": 28.346456692913385,
+      "paginas_para_1_ano": 1288
+    },
+    "identidade_letterboxd": {
+      "slug": "all-quiet-on-the-western-front-2022",
+      "titulo": "All Quiet on the Western Front",
+      "ano": 2022,
+      "tmdb_id_letterboxd": 49046,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 588
+  },
+  "origem_paginas": {
+    "_histograma/all-quiet-on-the-western-front-2022.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_4.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_16.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_64.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_256.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_0_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_0_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496527594.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1432139375.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1427507723.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_1_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_1_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1460564045.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1445903665.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1432163450.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_1_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_1_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1497561976.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496941980.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1475390354.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1420146856.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_3.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_4.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_5.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_6.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_7.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_8.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_page_9.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1479932860.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1470821143.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1470599879.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1437203085.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1433352928.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1432425864.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1431569585.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1421175317.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1416200596.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_3.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_4.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_5.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_2_5_page_7.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1486111419.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1481622799.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1477646183.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1446487587.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_3.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_4.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_5.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_6.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_7.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_8.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_15.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_page_30.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1497478101.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496548581.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1495731797.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1492905268.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1490133771.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1486234228.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1485853227.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1484168649.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1483070928.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1482890891.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1479502632.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1458922811.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_3_5_page_25.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_3.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_page_128.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496900386.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496640456.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1496624454.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1471823121.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1471703327.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_4_5_page_32.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1497217680.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1480648639.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1480253825.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_5_page_1.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_5_page_2.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_5_page_3.html": "cache",
+    "all-quiet-on-the-western-front-2022/pages/by_added/rated_5_page_38.html": "cache",
+    "all-quiet-on-the-western-front-2022/fulltext/viewing_1497931791.html": "cache",
+    "all-quiet-on-the-western-front-2022/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": 0.125
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-02-08",
+        "max": "2026-09-15",
+        "p5": "2026-06-02",
+        "p50": "2026-08-08",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 75,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 75,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Fidelidade ao livro e à adaptação de 1930",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o filme por se afastar do romance original e da versão de 1930, omitindo passagens importantes e alterando o final, o que descaracteriza a obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e tédio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews negativas descrevem a experiência como entediante e longa, com pouco envolvimento emocional e uma sensação de que o filme se estende sem necessidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens rasos e falta de desenvolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são vistos como figuras sem profundidade, difíceis de distinguir ou de criar empatia, o que enfraquece o impacto emocional das tragédias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora excessiva e inadequada",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é criticada por ser dramática demais, insistente e por vezes desrespeitosa, atrapalhando a contemplação e soando artificial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Espectacularização da violência e estética publicitária",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o filme transforma a guerra em espetáculo visual, com fotografia bela mas que glamouriza o sofrimento, contradizendo sua mensagem antiguerra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem simplista e falta de sutileza",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é acusado de expor suas intenções de forma óbvia e repetitiva, sem oferecer reflexão nova sobre a guerra, tratando o público como se precisasse de explicações básicas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a infidelidade ao livro e à adaptação de 1930, o ritmo arrastado, personagens sem profundidade e uma trilha sonora invasiva. Também apontam que o filme prioriza espetáculo visual e violência gráfica em detrimento de uma mensagem antiguerra mais sutil e emocionalmente envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 30,
+        "p5": 1,
+        "p50": 6,
+        "p95": 30,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-07-15",
+        "max": "2026-09-16",
+        "p5": "2024-07-17",
+        "p50": "2026-09-05",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 72,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 4,
+            "abaixo_min_chars": 72,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Dificuldade de conexão emocional com os personagens",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar da qualidade técnica, não conseguiram se envolver emocionalmente com os soldados, achando-os pouco desenvolvidos ou genéricos, o que prejudicou o impacto da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas deste grupo consideraram o filme arrastado, com sequências longas que não acrescentam, levando à desconexão ou tédio, especialmente na primeira metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogio à fotografia e aspectos técnicos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a fotografia, a trilha sonora e a recriação visual da guerra, descrevendo-as como impressionantes e imersivas, mesmo quando a narrativa não convence.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato brutal e realista da guerra",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece que o filme retrata de forma crua e realista os horrores das trincheiras, a violência e o sofrimento dos soldados, transmitindo a brutalidade do conflito.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparações desfavoráveis com o livro ou versões anteriores",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas apontam que a adaptação deixa de fora cenas e críticas essenciais do romance original, como o retorno do protagonista à vida civil, e que outras versões transmitiram melhor a mensagem antiguerra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à subtrama política e ao excesso de didatismo",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas criticam a inclusão da trama política com generais caricatos, que soa artificial e quebra o ritmo, além de considerarem a mensagem antiguerra óbvia ou pouco sutil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews desta faixa mediana (2,5–3 estrelas) reconhecem a qualidade técnica e o retrato brutal da guerra, mas apontam com frequência a falta de conexão emocional com os personagens e problemas de ritmo; muitas também comparam a obra desfavoravelmente com o livro ou versões anteriores. Apesar das ressalvas, várias consideram o filme eficaz em transmitir os horrores do conflito, mesmo sem gerar grande impacto pessoal.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 88,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 8,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 8,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-09-12",
+        "max": "2026-09-16",
+        "p5": "2026-08-24",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 56,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 56,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Representação crua e realista da guerra",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o filme retrata a guerra de forma crua e realista, mostrando o sofrimento, a brutalidade e a falta de sentido do conflito, sem romantizá-lo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e aspectos técnicos",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é frequentemente elogiada como bela e impactante, contribuindo para a imersão na atmosfera do filme, assim como a trilha sonora e os efeitos visuais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente a do protagonista, são bastante elogiadas, com destaque para a transformação do personagem ao longo da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à guerra e aos líderes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como uma forte crítica à guerra e àqueles que a promovem, contrastando o sofrimento dos soldados com a indiferença dos líderes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Adaptação do livro",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews comparam o filme ao livro, notando que a adaptação é boa, mas deixa de fora aspectos considerados importantes por leitores da obra original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores relatam que o filme é emocionalmente pesado, triste e perturbador, deixando uma impressão duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a representação realista e crua da guerra, elogiando a fotografia e as atuações, e frequentemente mencionam o impacto emocional profundo do filme. A crítica à guerra e aos líderes também é um ponto recorrente, assim como comparações com o livro original.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e tédio",
+            "exemplo_parafraseado": "Várias reviews negativas descrevem a experiência como entediante e longa, com pouco envolvimento emocional e uma sensação de que o filme se estende sem necessidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Algumas pessoas deste grupo consideraram o filme arrastado, com sequências longas que não acrescentam, levando à desconexão ou tédio, especialmente na primeira metade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "As atuações, especialmente a do protagonista, são bastante elogiadas, com destaque para a transformação do personagem ao longo da narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Espectacularização da violência e estética publicitária",
+            "exemplo_parafraseado": "Algumas reviews apontam que o filme transforma a guerra em espetáculo visual, com fotografia bela mas que glamouriza o sofrimento, contradizendo sua mensagem antiguerra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Elogio à fotografia e aspectos técnicos",
+            "exemplo_parafraseado": "As reviews medianas frequentemente elogiam a fotografia, a trilha sonora e a recriação visual da guerra, descrevendo-as como impressionantes e imersivas, mesmo quando a narrativa não convence.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e aspectos técnicos",
+            "exemplo_parafraseado": "A fotografia é frequentemente elogiada como bela e impactante, contribuindo para a imersão na atmosfera do filme, assim como a trilha sonora e os efeitos visuais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Personagens rasos e falta de desenvolvimento",
+            "exemplo_parafraseado": "Os personagens são vistos como figuras sem profundidade, difíceis de distinguir ou de criar empatia, o que enfraquece o impacto emocional das tragédias.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora excessiva e inadequada",
+            "exemplo_parafraseado": "A música é criticada por ser dramática demais, insistente e por vezes desrespeitosa, atrapalhando a contemplação e soando artificial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Retrato brutal e realista da guerra",
+            "exemplo_parafraseado": "Este grupo reconhece que o filme retrata de forma crua e realista os horrores das trincheiras, a violência e o sofrimento dos soldados, transmitindo a brutalidade do conflito.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Representação crua e realista da guerra",
+            "exemplo_parafraseado": "As reviews destacam que o filme retrata a guerra de forma crua e realista, mostrando o sofrimento, a brutalidade e a falta de sentido do conflito, sem romantizá-lo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de conexão emocional com os personagens",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar da qualidade técnica, não conseguiram se envolver emocionalmente com os soldados, achando-os pouco desenvolvidos ou genéricos, o que prejudicou o impacto da história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Impacto emocional",
+            "exemplo_parafraseado": "Muitos espectadores relatam que o filme é emocionalmente pesado, triste e perturbador, deixando uma impressão duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Fidelidade ao livro e à adaptação de 1930",
+            "exemplo_parafraseado": "Este grupo critica o filme por se afastar do romance original e da versão de 1930, omitindo passagens importantes e alterando o final, o que descaracteriza a obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Comparações desfavoráveis com o livro ou versões anteriores",
+            "exemplo_parafraseado": "Diversas reviews medianas apontam que a adaptação deixa de fora cenas e críticas essenciais do romance original, como o retorno do protagonista à vida civil, e que outras versões transmitiram melhor a mensagem antiguerra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Adaptação do livro",
+            "exemplo_parafraseado": "Algumas reviews comparam o filme ao livro, notando que a adaptação é boa, mas deixa de fora aspectos considerados importantes por leitores da obra original.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem simplista e falta de sutileza",
+            "exemplo_parafraseado": "O filme é acusado de expor suas intenções de forma óbvia e repetitiva, sem oferecer reflexão nova sobre a guerra, tratando o público como se precisasse de explicações básicas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Crítica à subtrama política e ao excesso de didatismo",
+            "exemplo_parafraseado": "Algumas reviews medianas criticam a inclusão da trama política com generais caricatos, que soa artificial e quebra o ritmo, além de considerarem a mensagem antiguerra óbvia ou pouco sutil.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Crítica à guerra e aos líderes",
+            "exemplo_parafraseado": "O filme é visto como uma forte crítica à guerra e àqueles que a promovem, contrastando o sofrimento dos soldados com a indiferença dos líderes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Edward Berger, Nada de Novo no Front é um drama de guerra centrado na trajetória de um jovem adolescente convocado para a linha de frente da Primeira Guerra Mundial. Ao longo da narrativa, o protagonista encara a dura e violenta realidade cotidiana nas trincheiras.\n\nA experiência do filme se apoia em uma ambientação crua e detalhada dos cenários bélicos, conduzida por um ritmo cadenciado e pela extensão de suas sequências. A atmosfera é marcada pela intensidade sensorial e pela representação da brutalidade do conflito.\n\nOs grupos analisados concordam sobre as características fundamentais do que o filme apresenta, mas divergem no veredito sobre o funcionamento da obra. Na grande maioria das notas (~88%), grande parte destaca a representação crua e realista da guerra e de seus impactos. Além disso, muitos elogiam a fotografia e os aspectos técnicos, enquanto uma parcela expressiva ressalta o trabalho das atuações e dos personagens.\n\nPara quem se posiciona na faixa de uma fração mínima das notas (~10%), um número considerável relata dificuldade de conexão emocional com os soldados em cena. Nessa mesma perspectiva, alguns apontam o ritmo lento e a duração prolongada, embora uma parte reconheça o valor da fotografia e dos elementos técnicos.\n\nJá sob a ótica de quem atribui uma fração ainda menor das notas (~2%), boa parte critica o afastamento em relação ao livro e à adaptação anterior. Para esse grupo, vários descrevem a experiência como marcada por um ritmo arrastado, ao mesmo tempo em que parte deles avalia os personagens como rasos e pouco desenvolvidos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11839,
+      "completion_tokens": 1512,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11839
+    },
+    "latencia_s": 45.38
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre a eficácia da narrativa e de sua estrutura. Enquanto a maioria dos que não recomendam critica a falta de profundidade e evolução dos personagens, cerca de metade dos que recomendam destaca a mensagem sobre conflitos armados e seus governantes.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia da narrativa e de sua estrutura. Enquanto a maioria dos que não recomendam critica a falta de profundidade e evolução dos personagens, cerca de metade dos que recomendam destaca a mensagem sobre conflitos armados e seus governantes.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "opini",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 42,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3609,
+      "completion_tokens": 201,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3609
+    },
+    "latencia_s": 14.9
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um retrato cru e realista da guerra, mostrando o sofrimento sem romantização",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Representação crua e realista da guerra",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia uma fotografia bela e impactante aliada a uma atmosfera técnica imersiva",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e aspectos técnicos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações marcantes e uma presença expressiva do protagonista",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma boa adaptação do livro, mesmo que omita aspectos importantes da obra",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Adaptação do livro",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura uma narrativa emocionalmente pesada, triste e perturbadora com impacto duradouro",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "rejeita adaptações que se afastam do texto original e alteram passagens consagradas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fidelidade ao livro e à adaptação de 1930",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de narrativas longas e entediantes que parecem se estender sem necessidade",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com personagens sem profundidade que dificultam a empatia com a trama",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens rasos e falta de desenvolvimento",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com músicas dramáticas demais e insistentes que atrapalham a contemplação",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Trilha sonora excessiva e inadequada",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita visuais belos que espetacularizam a violência e acabam glamourizando o sofrimento",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Espectacularização da violência e estética publicitária",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 10,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16277,
+      "completion_tokens": 1517,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16277
+    },
+    "latencia_s": 28.0,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

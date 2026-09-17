@@ -1,0 +1,1623 @@
+{
+  "slug": "do-the-right-thing",
+  "data_coleta": "2026-09-16T19:28:42.463804+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/do-the-right-thing/reviews/",
+  "ficha": {
+    "titulo": "Faça a Coisa Certa",
+    "sinopse_oficial": "Em um bairro onde a maioria da população é predominantemente negra, Buggin' Out, um ativista, exige que Sal, um dono de uma pizzaria, troque as fotos de seus ídolos brancos do local por fotos de ídolos negros. Quando tem seu pedido negado, o ativista passa a organizar um boicote contra a pizzaria de Sal.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 120,
+    "diretor": "Spike Lee",
+    "diretor_transliterado": false,
+    "ano": 1989,
+    "fonte": "tmdb",
+    "tmdb_id": 925,
+    "tmdb_fetched_at": "2026-09-16T20:18:45+00:00",
+    "poster_path": "/1WAtju1LpxB7m7QZOcXbTBHc0TN.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/xnLh9CNRxkpkSNikVhi5qLwcfUG.jpg",
+      "/oYOZay9hyW3uI5paKWLIYkWZlzv.jpg",
+      "/jWgJAYFhal5TKRl2htObh2VMJnN.jpg",
+      "/leT6tupwfYea4T0zYBafP73gXj9.jpg",
+      "/lr9bEghi4jf6qyegptveXaFK9yc.jpg",
+      "/muby9Ikal2tRAsUQhNG3OQr9Ant.jpg",
+      "/8uQRpN3JkD24yL1NjUP2YdSsgNf.jpg",
+      "/hmjGKIZ7T7miucHk8JaP0FUdteE.jpg",
+      "/tVAP7T247u84trqj31ET639LD1Y.jpg",
+      "/sizJWEVuZy2LZ9BPDxcprSoEnX3.jpg"
+    ],
+    "backdrop_path": "/xnLh9CNRxkpkSNikVhi5qLwcfUG.jpg",
+    "backdrop_largura": 2914,
+    "backdrop_altura": 1639,
+    "poster_sem_texto_path": "/4RyBCaaipct7YmzkMNf7D70PYhL.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/xnLh9CNRxkpkSNikVhi5qLwcfUG.jpg",
+        "still_largura": 2914,
+        "still_altura": 1639
+      },
+      {
+        "still_path": "/jWgJAYFhal5TKRl2htObh2VMJnN.jpg",
+        "still_largura": 2304,
+        "still_altura": 1296
+      },
+      {
+        "still_path": "/lr9bEghi4jf6qyegptveXaFK9yc.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/etyhjRp5sHCCvtZ32aHg6CVtr3K.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/1u7uA7BCNPFU4PpuzZ11PKNtvGA.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/vYS4n5nglFxNv59Gv2xJmNDJIiX.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/3leftVRvO17DjEkUnY0Xadfsztg.jpg",
+        "still_largura": 1614,
+        "still_altura": 908
+      },
+      {
+        "still_path": "/aAKpHONaucfVj2PCvvhd24ONPFJ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ejB5NVIyDCARvmRlqARRTvWQ8P6.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jIphiyiSuip070eSFV3Ly5OrSy.jpg",
+        "still_largura": 1620,
+        "still_altura": 911
+      },
+      {
+        "still_path": "/nBDKFZe4GWO07qDXwZZh5XDRAeL.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/v5WPVeyZHVFh6kiVggp2MLWMZoD.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "do-the-right-thing",
+      "titulo_letterboxd": "Do the Right Thing",
+      "ano_letterboxd": 1989,
+      "tmdb_id_letterboxd": 925,
+      "tmdb_id_escolhido": 925,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Do the Right Thing",
+      "ano_tmdb": 1989,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 570245,
+    "por_nivel": {
+      "0.5": 714,
+      "1.0": 1399,
+      "1.5": 1108,
+      "2.0": 4952,
+      "2.5": 6220,
+      "3.0": 29366,
+      "3.5": 45468,
+      "4.0": 149213,
+      "4.5": 127631,
+      "5.0": 204174
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "do-the-right-thing",
+    "coletado_em": "2026-09-16T04:32:13.646272+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 714,
+      "1.0": 1399,
+      "1.5": 1108,
+      "2.0": 4952,
+      "2.5": 6220,
+      "3.0": 29366,
+      "3.5": 45468,
+      "4.0": 149213,
+      "4.5": 127631,
+      "5.0": 204174
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 5,
+      "1.5": 7,
+      "2.0": 41,
+      "2.5": 36,
+      "3.0": 38,
+      "3.5": 3,
+      "4.0": 21,
+      "4.5": 15,
+      "5.0": 28
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 59,
+        "n_validas_pos_extensao": 59,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 72,
+        "n_validas_pos_extensao": 72,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 67,
+        "n_validas_pos_extensao": 67,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 8,
+      "3.0": 37,
+      "3.5": 57,
+      "4.0": 187,
+      "4.5": 160,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 540,
+        "min": "2020-01-15",
+        "max": "2026-09-16",
+        "p5": "2026-05-23",
+        "p50": "2026-08-29",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2020-04-23",
+          "max": "2026-09-15",
+          "p5": "2026-05-05",
+          "p50": "2026-07-17",
+          "p95": "2026-09-09"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2020-01-15",
+          "max": "2026-09-15",
+          "p5": "2026-07-15",
+          "p50": "2026-08-24",
+          "p95": "2026-09-12"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2025-04-09",
+          "max": "2026-09-16",
+          "p5": "2026-08-15",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 28,
+      "dias_por_100_paginas": 22.04724409448819,
+      "paginas_para_1_ano": 1656
+    },
+    "identidade_letterboxd": {
+      "slug": "do-the-right-thing",
+      "titulo": "Do the Right Thing",
+      "ano": 1989,
+      "tmdb_id_letterboxd": 925,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1989,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 540
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 5,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 7,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-01-22",
+        "max": "2026-09-13",
+        "p5": "2026-05-29",
+        "p50": "2026-07-22",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 24,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "ritmo lento e falta de história",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews reclamam que o filme é entediante, que quase nada acontece por longos períodos e que a trama demora a engrenar, tornando a experiência arrastada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "personagens caricatos e irritantes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores consideram os personagens exagerados, unidimensionais e antipáticos, com comportamentos que soam artificiais e pouco críveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "mensagem confusa ou contraditória",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas apontam que o filme não deixa clara sua mensagem sobre racismo e violência, misturando citações e ideias que soam contraditórias ou simplistas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "fotografia e aspectos técnicos elogiados",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre avaliações negativas, há quem reconheça qualidades na fotografia, no uso de cores e enquadramentos, e na trilha sonora, que ajudam a compor a atmosfera.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "final e virada violenta mal executados",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O clímax e o desfecho são frequentemente citados como abruptos, moralmente confusos ou incoerentes, com ações que parecem injustificadas e que deixam uma impressão negativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "tratamento do racismo e representação",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam a forma como o racismo é retratado, argumentando que o filme reforça estereótipos ou apresenta todos os lados de maneira igualmente condenável, sem nuances.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, personagens caricatos e uma mensagem confusa ou contraditória, embora algumas reconheçam qualidades técnicas como fotografia e trilha sonora. Este grupo específico não representa a recepção geral do filme, sendo um recorte de opiniões desfavoráveis.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 5,
+        "p95": 18,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-01-01",
+        "max": "2026-09-12",
+        "p5": "2026-07-15",
+        "p50": "2026-08-28",
+        "p95": "2026-09-11"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 77,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 77,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que a primeira metade do filme se arrasta e demora a engatar, com trechos considerados entediantes ou pouco envolventes antes de a tensão finalmente crescer.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desconforto e excesso de gritaria",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo descreve a experiência como desconfortável, citando personagens que passam o tempo todo aos gritos e discussões constantes que tornam a sessão cansativa em vez de prazerosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao modo de transmitir a mensagem",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que a mensagem antirracista é reconhecida como relevante, mas várias delas a consideram confusa, didática demais ou mal executada, deixando a sensação de que o filme não conclui o que propõe discutir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, cor e calor como recurso",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso de cores saturadas, enquadramentos incomuns e a sensação transmitida de calor são elogiados por parte do grupo, que vê nesses recursos um acerto visual do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ligações e comparações com outras obras",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas comparam o filme a outras produções sobre tensão social, dizendo que a abordagem de obras posteriores funciona melhor para elas do que a adotada aqui.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fraqueza ou pouca dimensão dos personagens",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que vários personagens soam teatrais, unidimensionais ou pouco desenvolvidos, o que reduz o envolvimento com a história ao longo da projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem o valor temático e a força visual do filme, mas apontam ritmo lento, excesso de gritaria e uma condução da mensagem considerada confusa ou pouco envolvente. Este grupo não nega a importância da obra, porém relata uma experiência morna, com distância emocional em relação ao que é apresentado na tela.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 92,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 16
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-15",
+        "max": "2026-09-16",
+        "p5": "2026-08-19",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Retrato da comunidade e diversidade",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a habilidade do filme em retratar a vida comunitária em um único quarteirão do Brooklyn, com personagens diversos e autênticos que representam diferentes camadas sociais e culturais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem sobre racismo e injustiça social",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo enfatiza a relevância e a profundidade da abordagem do racismo e das tensões raciais, frequentemente relacionando o tema a questões contemporâneas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens marcantes",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas elogiam as atuações do elenco e a construção de personagens complexos e memoráveis, que contribuem para a autenticidade da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, cores e estilo visual",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas frequentemente mencionam a fotografia vibrante, o uso expressivo das cores e o estilo visual marcante como aspectos que enriquecem a experiência cinematográfica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom e construção da tensão",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo observa a habilidade do filme em equilibrar humor e tensão, construindo gradualmente um clima de apreensão que atinge seu ápice de forma impactante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e uso da música",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews positivas elogiam a trilha sonora e a integração da música, que contribuem para a atmosfera e o ritmo do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a representação vívida de uma comunidade diversa, a poderosa mensagem sobre racismo e a maestria técnica de Spike Lee, especialmente na fotografia e no estilo visual. Este grupo considera o filme uma obra impactante e relevante, com personagens memoráveis e uma construção de tensão eficaz.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "ritmo lento e falta de história",
+            "exemplo_parafraseado": "Muitas reviews reclamam que o filme é entediante, que quase nada acontece por longos períodos e que a trama demora a engrenar, tornando a experiência arrastada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que a primeira metade do filme se arrasta e demora a engatar, com trechos considerados entediantes ou pouco envolventes antes de a tensão finalmente crescer.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens marcantes",
+            "exemplo_parafraseado": "Muitas reviews positivas elogiam as atuações do elenco e a construção de personagens complexos e memoráveis, que contribuem para a autenticidade da história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "fotografia e aspectos técnicos elogiados",
+            "exemplo_parafraseado": "Mesmo entre avaliações negativas, há quem reconheça qualidades na fotografia, no uso de cores e enquadramentos, e na trilha sonora, que ajudam a compor a atmosfera.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia, cor e calor como recurso",
+            "exemplo_parafraseado": "O uso de cores saturadas, enquadramentos incomuns e a sensação transmitida de calor são elogiados por parte do grupo, que vê nesses recursos um acerto visual do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia, cores e estilo visual",
+            "exemplo_parafraseado": "As reviews positivas frequentemente mencionam a fotografia vibrante, o uso expressivo das cores e o estilo visual marcante como aspectos que enriquecem a experiência cinematográfica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "personagens caricatos e irritantes",
+            "exemplo_parafraseado": "Vários espectadores consideram os personagens exagerados, unidimensionais e antipáticos, com comportamentos que soam artificiais e pouco críveis.",
+            "temas_no_mesmo_eixo": [
+              "final e virada violenta mal executados"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Fraqueza ou pouca dimensão dos personagens",
+            "exemplo_parafraseado": "Este grupo destaca que vários personagens soam teatrais, unidimensionais ou pouco desenvolvidos, o que reduz o envolvimento com a história ao longo da projeção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e uso da música",
+            "exemplo_parafraseado": "Algumas reviews positivas elogiam a trilha sonora e a integração da música, que contribuem para a atmosfera e o ritmo do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Tom e construção da tensão",
+            "exemplo_parafraseado": "Este grupo observa a habilidade do filme em equilibrar humor e tensão, construindo gradualmente um clima de apreensão que atinge seu ápice de forma impactante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Desconforto e excesso de gritaria",
+            "exemplo_parafraseado": "Este grupo descreve a experiência como desconfortável, citando personagens que passam o tempo todo aos gritos e discussões constantes que tornam a sessão cansativa em vez de prazerosa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ligações e comparações com outras obras",
+            "exemplo_parafraseado": "Algumas reviews medianas comparam o filme a outras produções sobre tensão social, dizendo que a abordagem de obras posteriores funciona melhor para elas do que a adotada aqui.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "mensagem confusa ou contraditória",
+            "exemplo_parafraseado": "Algumas críticas apontam que o filme não deixa clara sua mensagem sobre racismo e violência, misturando citações e ideias que soam contraditórias ou simplistas.",
+            "temas_no_mesmo_eixo": [
+              "tratamento do racismo e representação"
+            ]
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao modo de transmitir a mensagem",
+            "exemplo_parafraseado": "As reviews medianas apontam que a mensagem antirracista é reconhecida como relevante, mas várias delas a consideram confusa, didática demais ou mal executada, deixando a sensação de que o filme não conclui o que propõe discutir.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Retrato da comunidade e diversidade",
+            "exemplo_parafraseado": "As reviews positivas destacam a habilidade do filme em retratar a vida comunitária em um único quarteirão do Brooklyn, com personagens diversos e autênticos que representam diferentes camadas sociais e culturais.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem sobre racismo e injustiça social"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1487741688",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 148)"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497091003",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 82 (char 81)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Spike Lee e lançado em 1989, Faça a Coisa Certa é um drama ambientado em um bairro de população predominantemente negra. A trama se desenvolve a partir da exigência de um ativista para que o dono de uma pizzaria local inclua fotos de ídolos negros em sua parede de celebridades, gerando a organização de um boicote após a recusa.\n\nA obra se constrói em uma ambientação marcada pelo uso expressivo de cores quentes e pela atmosfera de calor urbano, desenvolvendo sua estrutura por meio de um ritmo compassado e de uma contínua elevação na intensidade da convivência entre os moradores.\n\nOs diferentes segmentos de avaliação abordam os mesmos aspectos centrais da obra, divergindo no veredito sobre a eficácia dessas escolhas. Na grande maioria das notas (~92%), muitos destacam o retrato da comunidade e a diversidade apresentada, enquanto uma parcela expressiva enfatiza a mensagem sobre racismo e injustiça social. Nesse mesmo conjunto, vários ressaltam as atuações e a construção de personagens marcantes.\n\nPor outro lado, sob a perspectiva de quem compõe uma fração mínima das notas (~6%), boa parte relata incômodo com o ritmo lento e arrastado da narrativa. Para esse grupo, um número considerável aponta desconforto com o excesso de gritaria em cena, ao passo que muitos tecem críticas ao modo de transmitir a mensagem central. Por fim, a partir do ponto de vista de uma fração ainda menor das notas (~1%), vários apontam o ritmo lento e a falta de história, boa parte classifica as figuras retratadas como personagens caricatos e irritantes, e uma parcela expressiva avalia a mensagem como confusa ou contraditória.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11851,
+      "completion_tokens": 1524,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11851
+    },
+    "latencia_s": 35.53
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro e da estrutura narrativa. Enquanto a maioria dos que recomendam aprova essa construção, quase todos os que desaprovam criticam as figuras apresentadas, considerando-as exageradas e incômodas ao longo da história.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e da estrutura narrativa. Enquanto a maioria dos que recomendam aprova essa construção, quase todos os que desaprovam criticam as figuras apresentadas, considerando-as exageradas e incômodas ao longo da história.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "opini",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 36,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3567,
+      "completion_tokens": 190,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3567
+    },
+    "latencia_s": 17.5
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa pelo retrato autêntico da vida comunitária e da diversidade cultural",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Retrato da comunidade e diversidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma abordagem profunda e relevante sobre tensões raciais e injustiças sociais",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem sobre racismo e injustiça social",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações marcantes na composição de figuras complexas e autênticas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma trilha sonora integrada que contribui para a atmosfera e ritmo",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e uso da música",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com narrativas arrastadas em que a trama demora a engrenar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "ritmo lento e falta de história",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com personagens caricatos, antipáticos ou de comportamento artificial",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "personagens caricatos e irritantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com discussões sobre racismo e violência que soem contraditórias",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "mensagem confusa ou contraditória",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um clímax abrupto ou com desfechos moralmente incoerentes",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "final e virada violenta mal executados",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita abordagens sobre racismo que apresentem estereótipos ou falta de nuances",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "tratamento do racismo e representação",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15272,
+      "completion_tokens": 1377,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15272
+    },
+    "latencia_s": 23.85,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

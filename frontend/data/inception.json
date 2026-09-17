@@ -1,0 +1,1620 @@
+{
+  "slug": "inception",
+  "data_coleta": "2026-09-16T19:13:58.024338+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/inception/reviews/",
+  "ficha": {
+    "titulo": "A Origem",
+    "sinopse_oficial": "Cobb é um ladrão habilidoso que comete espionagem corporativa infiltrando-se no subconsciente de seus alvos durante o estado de sono. Impedido de retornar para sua família, ele recebe a oportunidade de se redimir ao realizar uma tarefa aparentemente impossível: plantar uma ideia na mente do herdeiro de um império. Para realizar o crime perfeito, ele conta com a ajuda do parceiro Arthur, o discreto Eames e a arquiteta de sonhos Ariadne. Juntos, eles correm para que o inimigo não antecipe seus passos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Ficção científica",
+      "Aventura"
+    ],
+    "duracao_min": 148,
+    "diretor": "Christopher Nolan",
+    "diretor_transliterado": false,
+    "ano": 2010,
+    "fonte": "tmdb",
+    "tmdb_id": 27205,
+    "tmdb_fetched_at": "2026-09-16T20:18:41+00:00",
+    "poster_path": "/9e3Dz7aCANy5aRUQF745IlNloJ1.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+      "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+      "/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+      "/gqby0RhyehP3uRrzmdyUZ0CgPPe.jpg",
+      "/28kKbSUvUz6P5RE1AuMJMO7IMfK.jpg",
+      "/ztZ4vw151mw04Bg6rqJLQGBAmvn.jpg",
+      "/2HmLvOvu1rhfxK50WfJ4jFKy9zQ.jpg",
+      "/zlIBglEnHkxmPGVwEfywC7hXncb.jpg",
+      "/uKc498Sa5V8UTfez75P7EM8Blxp.jpg",
+      "/koYANShm411GCCBwhm5lN96RfBs.jpg"
+    ],
+    "backdrop_path": "/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/frq4ygwcIMusECNv9rPBrvJwyxG.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/8ZTVqvKDQ8emSGUEMjsS4yHAwrp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/56tSqd1kN6nU6sI1lfHO0p6mTS3.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/koYANShm411GCCBwhm5lN96RfBs.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/tnR3Og76RVIFUpb2mpi8Oi1GuAk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/nsnENNp7hdLYeNGwO3DE0gSg4Um.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/c2G8CLSH2XRhuuXnnUMssvhCB62.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/18RLhk7J2aE1tGYNMOYroCMpIEd.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/6t8H5mZvlnGv5pjejV8J6yNQ1lH.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/cPeny1AFySfq4BL9CKmY99wpRaO.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/nkMvhad194v1sciF6b5pmGTr245.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/tcUX2aNvqDNjCFrlb0gQUQ2ppU9.jpg",
+        "still_largura": 2400,
+        "still_altura": 1350
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "inception",
+      "titulo_letterboxd": "Inception",
+      "ano_letterboxd": 2010,
+      "tmdb_id_letterboxd": 27205,
+      "tmdb_id_escolhido": 27205,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Inception",
+      "ano_tmdb": 2010,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4448995,
+    "por_nivel": {
+      "0.5": 5508,
+      "1.0": 16140,
+      "1.5": 9141,
+      "2.0": 63868,
+      "2.5": 57195,
+      "3.0": 363069,
+      "3.5": 393075,
+      "4.0": 1326486,
+      "4.5": 744156,
+      "5.0": 1470357
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "inception",
+    "coletado_em": "2026-09-16T03:58:51.846244+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 5508,
+      "1.0": 16140,
+      "1.5": 9141,
+      "2.0": 63868,
+      "2.5": 57195,
+      "3.0": 363069,
+      "3.5": 393075,
+      "4.0": 1326486,
+      "4.5": 744156,
+      "5.0": 1470357
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 6,
+      "2.0": 23,
+      "2.5": 24,
+      "3.0": 23,
+      "3.5": 4,
+      "4.0": 9,
+      "4.5": 9,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 11,
+      "2.5": 10,
+      "3.0": 63,
+      "3.5": 68,
+      "4.0": 231,
+      "4.5": 130,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 708,
+        "min": "2006-10-10",
+        "max": "2026-09-16",
+        "p5": "2026-04-10",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "2010-08-25",
+          "max": "2026-09-15",
+          "p5": "2025-06-18",
+          "p50": "2026-08-31",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2006-10-10",
+          "max": "2026-09-16",
+          "p5": "2026-08-29",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 252,
+          "min": "2010-08-21",
+          "max": "2026-09-16",
+          "p5": "2026-04-10",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "identidade_letterboxd": {
+      "slug": "inception",
+      "titulo": "Inception",
+      "ano": 2010,
+      "tmdb_id_letterboxd": 27205,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2010,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 708
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 6,
+        "p95": 12,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-15",
+        "max": "2026-09-15",
+        "p5": "2026-08-03",
+        "p50": "2026-08-31",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 119,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 119,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Excesso de exposição e complexidade confusa",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme passa tempo demais explicando suas regras e camadas de sonho, deixando a trama confusa e difícil de acompanhar, com diálogos que pouco contribuem para a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores descrevem o filme como arrastado e entediante, com duração excessiva e momentos que parecem se estender sem necessidade, tornando a sessão cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de profundidade nos personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que os personagens são rasos e sem motivações claras, incluindo a figura feminina central, que não recebe desenvolvimento suficiente para gerar envolvimento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Priorização do espetáculo visual em detrimento da narrativa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews afirmam que o filme se apoia demais em efeitos visuais e cenas de ação, mas isso não compensa a falta de uma história envolvente ou de emoção genuína.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Percepção de cópia ou falta de originalidade em relação a Paprika",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certos espectadores comparam o filme desfavoravelmente a Paprika, sugerindo que ele se apropria de ideias e cenas sem o devido crédito, resultando em uma versão inferior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final aberto e falta de respostas",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas mencionam que o final ambíguo não provoca reflexão profunda e deixa pontas soltas, contribuindo para uma sensação de frustração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de ritmo, exposição excessiva e falta de profundidade emocional, considerando o filme arrastado e confuso. Este grupo também critica a dependência de efeitos visuais e a semelhança com outras obras, resultando em uma experiência pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 7,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 32,
+        "p5": 1,
+        "p50": 5,
+        "p95": 32,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-02",
+        "max": "2026-09-15",
+        "p5": "2026-08-29",
+        "p50": "2026-09-11",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 12,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 28,
+          "n_alvo": 35,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 112,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 112,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Excesso de explicações e exposição",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme passa tempo demais explicando suas próprias regras por meio de diálogos expositivos, em vez de deixar a história fluir ou permitir que o espectador sonhe junto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e sensação de tédio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo relata que a narrativa se torna cansativa e tediosa em vários momentos, com trechos que parecem se arrastar e fazer a duração parecer excessiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e fotografia como pontos fortes",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo nas críticas medianas, várias pessoas reconhecem a beleza visual do filme, elogiando a fotografia, a composição e a execução de cenas impressionantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos e frios",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que os personagens soam rasos ou funcionais demais para a trama, dificultando criar conexão emocional com eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Complexidade confusa e roteiro com furos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que a trama parece complicada de forma desnecessária, com regras pouco claras e momentos em que o espectador se sente perdido ou precisa de explicações externas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas afirmam que o filme é superestimado, considerando que ele não corresponde à reputação de obra-prima que costuma receber.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um tom de decepção moderada: embora muitas reconheçam a originalidade do conceito e a qualidade visual, este grupo destaca problemas como exposição excessiva, ritmo arrastado e personagens pouco envolventes. É um recorte que, por definição, reúne opiniões mais críticas do que entusiasmadas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 88,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 32,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2010-08-21",
+        "max": "2026-09-16",
+        "p5": "2026-04-01",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 75,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 75,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Conceito de sonhos e construção de camadas",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a originalidade da ideia de entrar nos sonhos e implantar pensamentos, além da forma como o filme constrói diferentes níveis oníricos que funcionam simultaneamente, o que torna a experiência intrigante e única.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Complexidade e necessidade de reflexão",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews elogiam o fato de o filme ser mentalmente estimulante e exigir atenção, fazendo o espectador pensar sobre a realidade e a percepção, mesmo que seja necessário assistir mais de uma vez para compreender todos os detalhes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final ambíguo e aberto",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho ambíguo é um dos pontos mais comentados, gerando debates e interpretações sobre a realidade e a escolha do protagonista, sendo considerado marcante e instigante por muitas reviews.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente a de Leonardo DiCaprio e a química do grupo, são frequentemente elogiadas, com menções ao peso emocional transmitido e à competência do elenco em tornar a missão crível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Efeitos visuais e práticos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A produção impressiona pelos efeitos práticos e visuais, como as cenas de gravidade zero e corredores giratórios, que continuam espetaculares e demonstram o cuidado técnico de Nolan.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de Hans Zimmer é lembrada por criar uma atmosfera de mistério, urgência e grandeza, contribuindo para a imersão e o impacto emocional do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a originalidade do conceito de sonhos, a complexidade que estimula a reflexão e o impacto visual e sonoro, embora algumas apontem que o ritmo pode ser lento ou que o filme exija múltiplas visualizações. Este grupo valoriza especialmente a construção das camadas oníricas e o final ambíguo, que continua a render discussões.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Muitos espectadores descrevem o filme como arrastado e entediante, com duração excessiva e momentos que parecem se estender sem necessidade, tornando a sessão cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e sensação de tédio",
+            "exemplo_parafraseado": "Este grupo relata que a narrativa se torna cansativa e tediosa em vários momentos, com trechos que parecem se arrastar e fazer a duração parecer excessiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As atuações, especialmente a de Leonardo DiCaprio e a química do grupo, são frequentemente elogiadas, com menções ao peso emocional transmitido e à competência do elenco em tornar a missão crível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Priorização do espetáculo visual em detrimento da narrativa",
+            "exemplo_parafraseado": "Algumas reviews afirmam que o filme se apoia demais em efeitos visuais e cenas de ação, mas isso não compensa a falta de uma história envolvente ou de emoção genuína.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Visual e fotografia como pontos fortes",
+            "exemplo_parafraseado": "Mesmo nas críticas medianas, várias pessoas reconhecem a beleza visual do filme, elogiando a fotografia, a composição e a execução de cenas impressionantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e práticos",
+            "exemplo_parafraseado": "A produção impressiona pelos efeitos práticos e visuais, como as cenas de gravidade zero e corredores giratórios, que continuam espetaculares e demonstram o cuidado técnico de Nolan.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Excesso de exposição e complexidade confusa",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme passa tempo demais explicando suas regras e camadas de sonho, deixando a trama confusa e difícil de acompanhar, com diálogos que pouco contribuem para a experiência.",
+            "temas_no_mesmo_eixo": [
+              "Falta de profundidade nos personagens",
+              "Final aberto e falta de respostas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de explicações e exposição",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme passa tempo demais explicando suas próprias regras por meio de diálogos expositivos, em vez de deixar a história fluir ou permitir que o espectador sonhe junto.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco desenvolvidos e frios",
+              "Complexidade confusa e roteiro com furos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Conceito de sonhos e construção de camadas",
+            "exemplo_parafraseado": "As reviews positivas destacam a originalidade da ideia de entrar nos sonhos e implantar pensamentos, além da forma como o filme constrói diferentes níveis oníricos que funcionam simultaneamente, o que torna a experiência intrigante e única.",
+            "temas_no_mesmo_eixo": [
+              "Final ambíguo e aberto"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "A trilha sonora de Hans Zimmer é lembrada por criar uma atmosfera de mistério, urgência e grandeza, contribuindo para a imersão e o impacto emocional do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Complexidade e necessidade de reflexão",
+            "exemplo_parafraseado": "Muitas reviews elogiam o fato de o filme ser mentalmente estimulante e exigir atenção, fazendo o espectador pensar sobre a realidade e a percepção, mesmo que seja necessário assistir mais de uma vez para compreender todos os detalhes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Percepção de cópia ou falta de originalidade em relação a Paprika",
+            "exemplo_parafraseado": "Certos espectadores comparam o filme desfavoravelmente a Paprika, sugerindo que ele se apropria de ideias e cenas sem o devido crédito, resultando em uma versão inferior.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Filme superestimado",
+            "exemplo_parafraseado": "Algumas reviews medianas afirmam que o filme é superestimado, considerando que ele não corresponde à reputação de obra-prima que costuma receber.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1494526632",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Expecting ',' delimiter: line 1 column 87 (char 86)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2010 e dirigido por Christopher Nolan, A Origem é um longa-metragem de ação, ficção científica e aventura focado em espionagem corporativa no subconsciente durante o estado de sono. Na trama, um criminoso habilidoso recebe a chance de retornar para sua família caso consiga realizar uma tarefa quase impossível: plantar uma ideia na mente do herdeiro de um império.\n\nA narrativa se estrutura a partir da progressão simultânea de diferentes camadas de sonho e do estabelecimento contínuo das regras que governam esse universo. A dinâmica combina cenas de ação em ritmo cadenciado com passagens dialogadas voltadas a detalhar o funcionamento desse cenário onírico.\n\nEm termos gerais, os três grupos concordam sobre o que o filme é e discordam sobre se essa proposta funciona. Na grande maioria das notas (~88%), grande parte elogia o conceito de invasão mental e a construção dos múltiplos níveis oníricos, cerca de metade valoriza a complexidade do enredo e o estímulo reflexivo exigido, e uma parcela expressiva ressalta o impacto do final aberto e ambíguo.\n\nEm contrapartida, para os avaliadores situados numa fração mínima das notas (~9%), muitos criticam o excesso de diálogos explicativos e vários apontam um ritmo arrastado que gera tédio, embora boa parte reconheça a qualidade visual e da fotografia. Por fim, sob a perspectiva registrada numa fração ainda menor das notas (~2%), um número considerável condena a exposição excessiva que torna a trama confusa, boa parte reforça o ritmo lento e a sensação de tédio, e muitos apontam a falta de profundidade nos personagens.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12069,
+      "completion_tokens": 1562,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12069
+    },
+    "latencia_s": 47.27
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divisão sobre o filme está em sua estrutura narrativa e roteiro. Enquanto quase todos os que recomendam valorizam a construção em múltiplos níveis e a premissa onírica, a maioria dos que não recomendam critica o excesso de explicações e considera a trama confusa.",
+    "texto_modelo": "A divisão sobre o filme está em sua estrutura narrativa e roteiro. Enquanto quase todos os que recomendam valorizam a construção em múltiplos níveis e a premissa onírica, a maioria dos que não recomendam critica o excesso de explicações e considera a trama confusa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3669,
+      "completion_tokens": 199,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3669
+    },
+    "latencia_s": 13.54
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa pela premissa de invasão de sonhos e estruturas em múltiplos níveis",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Conceito de sonhos e construção de camadas",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca uma trama mentalmente estimulante que exige atenção aos detalhes",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Complexidade e necessidade de reflexão",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia narrativas com um desfecho ambíguo que estimula debates e diferentes interpretações",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Final ambíguo e aberto",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com diálogos expositivos excessivos e uma trama difícil de acompanhar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de exposição e complexidade confusa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha cansativo um ritmo arrastado com duração excessiva e momentos entediantes",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "prioriza personagens com desenvolvimento emocional profundo e motivações bem delineadas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de profundidade nos personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra ao notar semelhanças que diminuem a originalidade em relação a Paprika",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Percepção de cópia ou falta de originalidade em relação a Paprika",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com finais abertos que deixam pontas soltas sem resolução",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Final aberto e falta de respostas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15534,
+      "completion_tokens": 1236,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15534
+    },
+    "latencia_s": 20.66,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

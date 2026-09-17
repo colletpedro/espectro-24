@@ -1,0 +1,1712 @@
+{
+  "slug": "the-brutalist",
+  "data_coleta": "2026-09-16T19:33:43.198990+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-brutalist/reviews/",
+  "ficha": {
+    "titulo": "O Brutalista",
+    "sinopse_oficial": "Fugindo da Europa pós-guerra, um arquiteto visionário chega à América para reconstruir sua vida, carreira e casamento. Sozinho em um novo país estranho, ele se estabelece na Pensilvânia, onde um rico e proeminente industrial reconhece seu talento.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 215,
+    "diretor": "Brady Corbet",
+    "diretor_transliterado": false,
+    "ano": 2024,
+    "fonte": "tmdb",
+    "tmdb_id": 549509,
+    "tmdb_fetched_at": "2026-09-16T20:18:46+00:00",
+    "poster_path": "/52iVP3AtNtpjFiBxlOYCUPXhr47.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+      "/cdN7uvygA0AjzZPcsOspHKULLM3.jpg",
+      "/eQfsww1brf0BQfhxegtZ8zgHrVz.jpg",
+      "/sftjavfNJzYxkpkSAqHnvHwviCo.jpg",
+      "/lC5cuFszwg0DZIfxk86aXroO8Lc.jpg",
+      "/zgvM3vOoPdQjpOP58sK9zHLiqri.jpg",
+      "/iKXXPYBWQ0B6BMRHAFbg3wKafWb.jpg",
+      "/aqhpu2KU0MRJxrjRrbPyDBNOSea.jpg",
+      "/kVVzNpwlyhjIORQhFxlU5UB2o5d.jpg",
+      "/k06yv6jQmEQwVs5nnbnSXbySkLG.jpg"
+    ],
+    "backdrop_path": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/zHbtnQfSLypZgKfjH2Ubvh4RmtI.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/cdN7uvygA0AjzZPcsOspHKULLM3.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/k06yv6jQmEQwVs5nnbnSXbySkLG.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/c5OuJxuGPfeEhgKnNSRxa0NFlNj.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/xyWoXIbYuIehobgzZAsWOPDb7EX.jpg",
+        "still_largura": 1707,
+        "still_altura": 960
+      },
+      {
+        "still_path": "/1vL3qR3O96HwUItUpOWutYEuCk8.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/A8ksq2KFhK5zWlJRqROFlIpMeSa.jpg",
+        "still_largura": 2135,
+        "still_altura": 1197
+      },
+      {
+        "still_path": "/pgUK5QrZvuyAFOsYHZz7w0HjCb7.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/i2pleTyNvaUnEaErkdHTNhlweiP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lcv5iXbuKNik18syaEvtzqIGljI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/rUqoSFkyLqXITIwotQagF93sTm5.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/xBOyQh0HwfNClQCqevK5xADVcFK.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-brutalist",
+      "titulo_letterboxd": "The Brutalist",
+      "ano_letterboxd": 2024,
+      "tmdb_id_letterboxd": 549509,
+      "tmdb_id_escolhido": 549509,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Brutalist",
+      "ano_tmdb": 2024,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 799390,
+    "por_nivel": {
+      "0.5": 4075,
+      "1.0": 6487,
+      "1.5": 5396,
+      "2.0": 23097,
+      "2.5": 29857,
+      "3.0": 92837,
+      "3.5": 134709,
+      "4.0": 254873,
+      "4.5": 147521,
+      "5.0": 100538
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 15,
+      "positivas": 80
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-brutalist",
+    "coletado_em": "2026-09-16T04:44:32.831009+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4075,
+      "1.0": 6487,
+      "1.5": 5396,
+      "2.0": 23097,
+      "2.5": 29857,
+      "3.0": 92837,
+      "3.5": 134709,
+      "4.0": 254873,
+      "4.5": 147521,
+      "5.0": 100538
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 5,
+      "1.5": 9,
+      "2.0": 35,
+      "2.5": 22,
+      "3.0": 44,
+      "3.5": 11,
+      "4.0": 22,
+      "4.5": 19,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 57,
+        "n_validas_pos_extensao": 57,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 66,
+        "n_validas_pos_extensao": 66,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 68,
+        "n_validas_pos_extensao": 68,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 4,
+      "1.0": 7,
+      "1.5": 5,
+      "2.0": 23,
+      "2.5": 30,
+      "3.0": 93,
+      "3.5": 135,
+      "4.0": 256,
+      "4.5": 148,
+      "5.0": 101
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2024-12-18",
+        "max": "2026-09-16",
+        "p5": "2026-05-31",
+        "p50": "2026-09-04",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2024-12-18",
+          "max": "2026-09-15",
+          "p5": "2026-07-26",
+          "p50": "2026-08-25",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2025-02-07",
+          "max": "2026-09-16",
+          "p5": "2026-06-06",
+          "p50": "2026-09-06",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2024-12-31",
+          "max": "2026-09-16",
+          "p5": "2026-05-31",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 104,
+      "dias_por_100_paginas": 81.88976377952756,
+      "paginas_para_1_ano": 446
+    },
+    "identidade_letterboxd": {
+      "slug": "the-brutalist",
+      "titulo": "The Brutalist",
+      "ano": 2024,
+      "tmdb_id_letterboxd": 549509,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2024,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "origem_paginas": {
+    "_histograma/the-brutalist.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_4.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_16.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_64.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_256.html": "cache",
+    "the-brutalist/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-brutalist/fulltext/viewing_1495796992.html": "cache",
+    "the-brutalist/fulltext/viewing_1465841389.html": "cache",
+    "the-brutalist/fulltext/viewing_1462553504.html": "cache",
+    "the-brutalist/fulltext/viewing_1461213670.html": "cache",
+    "the-brutalist/pages/by_added/rated_1_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_1_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_1_page_3.html": "cache",
+    "the-brutalist/fulltext/viewing_1468874804.html": "cache",
+    "the-brutalist/fulltext/viewing_1458160888.html": "cache",
+    "the-brutalist/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-brutalist/fulltext/viewing_1474759327.html": "cache",
+    "the-brutalist/fulltext/viewing_1471551216.html": "cache",
+    "the-brutalist/fulltext/viewing_1468624827.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_3.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_4.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_5.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_6.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_7.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_8.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_page_12.html": "cache",
+    "the-brutalist/fulltext/viewing_1490962064.html": "cache",
+    "the-brutalist/fulltext/viewing_1475016282.html": "cache",
+    "the-brutalist/fulltext/viewing_1474612927.html": "cache",
+    "the-brutalist/fulltext/viewing_1465135122.html": "cache",
+    "the-brutalist/fulltext/viewing_1463774306.html": "cache",
+    "the-brutalist/fulltext/viewing_1463238521.html": "cache",
+    "the-brutalist/fulltext/viewing_1456567643.html": "cache",
+    "the-brutalist/fulltext/viewing_1449832151.html": "cache",
+    "the-brutalist/fulltext/viewing_1426640332.html": "cache",
+    "the-brutalist/fulltext/viewing_1418187505.html": "cache",
+    "the-brutalist/fulltext/viewing_1415184088.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_8.html": "cache",
+    "the-brutalist/pages/by_added/rated_2_5_page_15.html": "cache",
+    "the-brutalist/fulltext/viewing_1492446979.html": "cache",
+    "the-brutalist/fulltext/viewing_1491619806.html": "cache",
+    "the-brutalist/fulltext/viewing_1490369491.html": "cache",
+    "the-brutalist/fulltext/viewing_1486636851.html": "cache",
+    "the-brutalist/fulltext/viewing_1477958796.html": "cache",
+    "the-brutalist/fulltext/viewing_1458153256.html": "cache",
+    "the-brutalist/fulltext/viewing_1453543562.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_3.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_4.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_5.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_6.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_7.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_8.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_23.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_page_46.html": "cache",
+    "the-brutalist/fulltext/viewing_1493594719.html": "cache",
+    "the-brutalist/fulltext/viewing_1493243726.html": "cache",
+    "the-brutalist/fulltext/viewing_1492088729.html": "cache",
+    "the-brutalist/fulltext/viewing_1492092580.html": "cache",
+    "the-brutalist/fulltext/viewing_1491887052.html": "cache",
+    "the-brutalist/fulltext/viewing_1491082051.html": "cache",
+    "the-brutalist/fulltext/viewing_1485446697.html": "cache",
+    "the-brutalist/fulltext/viewing_1387237298.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_3_5_page_34.html": "cache",
+    "the-brutalist/fulltext/viewing_1497362135.html": "cache",
+    "the-brutalist/fulltext/viewing_1492620464.html": "cache",
+    "the-brutalist/fulltext/viewing_1443101081.html": "cache",
+    "the-brutalist/fulltext/viewing_1441327594.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_3.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_page_128.html": "cache",
+    "the-brutalist/fulltext/viewing_1496688716.html": "cache",
+    "the-brutalist/fulltext/viewing_1496566533.html": "cache",
+    "the-brutalist/fulltext/viewing_1496551464.html": "cache",
+    "the-brutalist/fulltext/viewing_1495227179.html": "cache",
+    "the-brutalist/fulltext/viewing_1436069658.html": "cache",
+    "the-brutalist/fulltext/viewing_1436053801.html": "cache",
+    "the-brutalist/fulltext/viewing_1330730548.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_5_page_3.html": "cache",
+    "the-brutalist/pages/by_added/rated_4_5_page_37.html": "cache",
+    "the-brutalist/fulltext/viewing_1497895181.html": "cache",
+    "the-brutalist/fulltext/viewing_1497763069.html": "cache",
+    "the-brutalist/fulltext/viewing_1487551210.html": "cache",
+    "the-brutalist/fulltext/viewing_1497607275.html": "cache",
+    "the-brutalist/fulltext/viewing_1496971930.html": "cache",
+    "the-brutalist/fulltext/viewing_1492658370.html": "cache",
+    "the-brutalist/fulltext/viewing_1427859040.html": "cache",
+    "the-brutalist/pages/by_added/rated_5_page_1.html": "cache",
+    "the-brutalist/pages/by_added/rated_5_page_2.html": "cache",
+    "the-brutalist/pages/by_added/rated_5_page_25.html": "cache",
+    "the-brutalist/fulltext/viewing_1497594059.html": "cache",
+    "the-brutalist/fulltext/viewing_1496234401.html": "cache",
+    "the-brutalist/fulltext/viewing_1493640432.html": "cache",
+    "the-brutalist/fulltext/viewing_1444291648.html": "cache",
+    "the-brutalist/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 5,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-27",
+        "max": "2026-09-14",
+        "p5": "2026-07-31",
+        "p50": "2026-08-25",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 24,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 67,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 67,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews reclamam que o filme é longo demais e se arrasta, com uma segunda metade que perde o ritmo e faz a experiência parecer interminável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro raso e falta de emoção",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que a história tem potencial, mas é superficial, sem um núcleo emocional envolvente e com uma trama que não justifica a duração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de sexo gratuitas e violentas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews condenam a quantidade de cenas de sexo, consideradas desnecessárias, explícitas e desconfortáveis, incluindo momentos de violência sexual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem sionista e propaganda",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews interpretam o filme como propaganda sionista, vendo nele uma defesa enviesada de pautas políticas e uma romantização da experiência judaica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens pouco cativantes",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem destaque a atuação principal como competente, mas não excepcional, e que os personagens não despertam empatia ou interesse, soando vazios.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso de IA na produção",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas críticas mencionam o uso de inteligência artificial em partes da produção, como ajustes de sotaque, e consideram isso uma escolha preguiçosa ou antiética.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a duração excessiva e o ritmo lento, além de um roteiro considerado raso e pouco emocionante. Outros pontos recorrentes incluem cenas de sexo gratuitas, suposta propaganda política e o uso de IA na produção.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 15,
+      "composicao_alvo": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 46,
+        "p5": 1,
+        "p50": 5,
+        "p95": 46,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-03-16",
+        "max": "2026-09-15",
+        "p5": "2026-07-06",
+        "p50": "2026-09-06",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 30,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram que o filme é longo demais e que poderia ser mais conciso, com partes que se arrastam e poderiam ser encurtadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e aspectos visuais elogiados",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, a composição visual e a estética brutalista são frequentemente destacadas como pontos fortes, impressionando pela textura e pelos planos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente de Adrien Brody, são elogiadas, embora alguns achem que o desenvolvimento dos personagens deixa a desejar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa irregulares",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas apontam que a história se dispersa, com mudanças de tom e subtramas que não são bem desenvolvidas, resultando em uma narrativa inconsistente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa frustrada e desconexão emocional",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores esperavam mais do filme e sentiram falta de envolvimento emocional, achando que a obra não correspondeu ao hype ou à aclamação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso de IA e polêmicas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O uso de inteligência artificial na produção foi mencionado negativamente por alguns, que consideram isso um problema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a duração excessiva e o ritmo lento como principais problemas, mas elogiam a fotografia e as atuações. Este grupo frequentemente menciona uma narrativa irregular e uma desconexão emocional, apesar dos aspectos técnicos impressionantes.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 80,
+      "composicao_alvo": {
+        "3.5": 9,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 6
+      },
+      "composicao_atingida": {
+        "3.5": 9,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 6
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-03-03",
+        "max": "2026-09-16",
+        "p5": "2026-01-01",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações (Adrien Brody, Guy Pearce, Felicity Jones)",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews elogiam a atuação de Adrien Brody como intensa e marcante, destacando também a força de Guy Pearce e Felicity Jones em papéis coadjuvantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e visual",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é frequentemente descrita como espetacular, com elogios à composição dos planos, ao uso de luz natural e à estética brutalista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração e ritmo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A longa duração divide opiniões: alguns consideram que os minutos passam rápido, enquanto outros acham o ritmo lento, especialmente na segunda metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de Daniel Blumberg é elogiada como imponente e memorável, contribuindo para a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Arquitetura como metáfora",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A arquitetura brutalista é vista como elemento central e simbólico, representando a luta e a identidade do protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao sonho americano",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é interpretado como uma desconstrução do sonho americano, expondo suas contradições e o preço pago pelos imigrantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a grandiosidade visual, as atuações e a trilha sonora, mas apontam ressalvas quanto à duração e ao ritmo. A abordagem temática sobre imigração e crítica ao sonho americano é frequentemente mencionada como ponto forte.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Muitas reviews reclamam que o filme é longo demais e se arrasta, com uma segunda metade que perde o ritmo e faz a experiência parecer interminável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Muitos espectadores consideram que o filme é longo demais e que poderia ser mais conciso, com partes que se arrastam e poderiam ser encurtadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo",
+            "exemplo_parafraseado": "A longa duração divide opiniões: alguns consideram que os minutos passam rápido, enquanto outros acham o ritmo lento, especialmente na segunda metade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens pouco cativantes",
+            "exemplo_parafraseado": "Há quem destaque a atuação principal como competente, mas não excepcional, e que os personagens não despertam empatia ou interesse, soando vazios.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As atuações, especialmente de Adrien Brody, são elogiadas, embora alguns achem que o desenvolvimento dos personagens deixa a desejar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações (Adrien Brody, Guy Pearce, Felicity Jones)",
+            "exemplo_parafraseado": "Muitas reviews elogiam a atuação de Adrien Brody como intensa e marcante, destacando também a força de Guy Pearce e Felicity Jones em papéis coadjuvantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e aspectos visuais elogiados",
+            "exemplo_parafraseado": "A fotografia, a composição visual e a estética brutalista são frequentemente destacadas como pontos fortes, impressionando pela textura e pelos planos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e visual",
+            "exemplo_parafraseado": "A fotografia é frequentemente descrita como espetacular, com elogios à composição dos planos, ao uso de luz natural e à estética brutalista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro raso e falta de emoção",
+            "exemplo_parafraseado": "As críticas apontam que a história tem potencial, mas é superficial, sem um núcleo emocional envolvente e com uma trama que não justifica a duração.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e narrativa irregulares",
+            "exemplo_parafraseado": "Várias críticas apontam que a história se dispersa, com mudanças de tom e subtramas que não são bem desenvolvidas, resultando em uma narrativa inconsistente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Arquitetura como metáfora",
+            "exemplo_parafraseado": "A arquitetura brutalista é vista como elemento central e simbólico, representando a luta e a identidade do protagonista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A trilha sonora de Daniel Blumberg é elogiada como imponente e memorável, contribuindo para a atmosfera do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Cenas de sexo gratuitas e violentas",
+            "exemplo_parafraseado": "Várias reviews condenam a quantidade de cenas de sexo, consideradas desnecessárias, explícitas e desconfortáveis, incluindo momentos de violência sexual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada e desconexão emocional",
+            "exemplo_parafraseado": "Alguns espectadores esperavam mais do filme e sentiram falta de envolvimento emocional, achando que a obra não correspondeu ao hype ou à aclamação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem sionista e propaganda",
+            "exemplo_parafraseado": "Algumas reviews interpretam o filme como propaganda sionista, vendo nele uma defesa enviesada de pautas políticas e uma romantização da experiência judaica.",
+            "temas_no_mesmo_eixo": [
+              "Uso de IA na produção"
+            ]
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Uso de IA e polêmicas",
+            "exemplo_parafraseado": "O uso de inteligência artificial na produção foi mencionado negativamente por alguns, que consideram isso um problema.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao sonho americano",
+            "exemplo_parafraseado": "O filme é interpretado como uma desconstrução do sonho americano, expondo suas contradições e o preço pago pelos imigrantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495317684",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 118 (char 117)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Brady Corbet, o drama O Brutalista (2024) acompanha a jornada de um arquiteto visionário que foge da Europa no período pós-guerra para reconstruir sua vida, carreira e casamento na América. Sozinho em um país estranho, ele busca recomeçar ao se estabelecer na Pensilvânia, local onde seu talento singular é reconhecido por um rico e proeminente industrial.\n\nEm sua forma, o filme é construído a partir de uma estrutura de longa duração e de um ritmo cadenciado, apoiando-se em uma atmosfera densa e em uma ambientação dominada pela estética arquitetônica.\n\nOs três grupos convergem sobre as características formais da obra, de modo que os grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~80%), cerca de metade exalta as atuações de Adrien Brody, Guy Pearce e Felicity Jones, ao passo que uma parcela expressiva elogia a fotografia e o impacto visual. Nesse mesmo conjunto, boa parte menciona e avalia os efeitos da duração e do ritmo ao longo da narrativa.\n\nNuma parcela das notas (~15%), para quem se posiciona nesta leitura intermediária, a maior parcela reclama da duração excessiva e do ritmo lento. Ainda assim, por volta da metade deste grupo expressa apreço pela fotografia e pelos aspectos visuais, enquanto uma fatia considerável avalia favoravelmente as atuações e o elenco.\n\nPor fim, numa fração mínima das notas (~5%), sob a ótica desta faixa, grande parte rejeita a obra apontando a duração excessiva e o ritmo arrastado. Perto da metade relata um roteiro raso e com falta de emoção, e uma fatia menor critica a presença de cenas de sexo descritas como gratuitas e violentas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "construcao_repetida"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11524,
+      "completion_tokens": 1555,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11524
+    },
+    "latencia_s": 57.84
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "prefixo_codigo": "",
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [
+        "tema_ausente"
+      ],
+      "aplicado": false
+    },
+    "spec_version": "1.9.50",
+    "texto": "Os grupos falam das mesmas coisas — discordam sobre se elas funcionam.",
+    "texto_modelo": null,
+    "origem": "template_fallback",
+    "motivo": "template_fallback",
+    "criterio_decisivo": null,
+    "abertura": "grupo",
+    "indice_escolhido": null,
+    "flags": [
+      "tema_ausente"
+    ],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "avali",
+        "abertura_freq": 0,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 4757,
+      "completion_tokens": 262,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 4757
+    },
+    "latencia_s": 14.62
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza atuações intensas e marcantes com grande força do elenco coadjuvante",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações (Adrien Brody, Guy Pearce, Felicity Jones)",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia uma fotografia espetacular marcada por luz natural e estética brutalista",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita uma longa duração mesmo quando o ritmo desacelera na segunda metade",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração e ritmo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes longos e ritmo arrastado que parece interminável",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo arrastado",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com histórias promissoras mas superficiais e sem envolvimento emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro raso e falta de emoção",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se incomoda com cenas explícitas de sexo e momentos de violência sexual",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Cenas de sexo gratuitas e violentas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se desaponta com atuações apenas competentes e personagens vazios sem empatia",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações e personagens pouco cativantes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 80,
+        "peso_texto": "~80% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11259,
+      "completion_tokens": 1035,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11259
+    },
+    "latencia_s": 29.18,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

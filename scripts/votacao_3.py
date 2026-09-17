@@ -67,7 +67,9 @@ from classificar_10 import (  # noqa: E402 — MESMO prompt/eixos/amostra/adapta
 from espectro24.buckets import FRONTEIRAS  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
     FALLBACK_CONTEUDO_PROVIDER,
+    LLMSaldoEsgotado,
     deepseek_client,
+    parada_por_saldo,
     resposta_classificacao,
     telemetria_fallback_conteudo,
     telemetria_retentativa_llm,
@@ -146,6 +148,7 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     falhas = [0]
+    pulados = [0]   # [2026-09-16] não tentados porque o saldo acabou
     n_fallbacks_antes = len(telemetria_fallback_conteudo())
     saida = arq.open("a", encoding="utf-8")
 
@@ -163,6 +166,15 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
         # Gemini. Todo o resto — inclusive JSON inválido — é o de antes. O
         # registro diz quem respondeu (`provider`/`modelo`) e, quando houve
         # troca, carrega `fallback_conteudo`, no sucesso E na falha.
+        # [2026-09-16] Disjuntor de saldo: com a conta sem crédito, a review
+        # NÃO é tentada e NÃO vira registro. Marcar `ok: False` aqui seria
+        # gravar como julgamento do modelo o que é falha administrativa — foi
+        # exatamente assim que 139 reviews ficaram pendentes em 2026-09-16 —
+        # e, sem registro, a reexecução depois do depósito as retenta todas.
+        if parada_por_saldo():
+            with lock:
+                pulados[0] += 1
+            return
         resp = None
         try:
             resp = resposta_classificacao(
@@ -185,6 +197,12 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
                 "latencia_s": resp["latencia_s"],
             }
             marca = resp["fallback_conteudo"]
+        except LLMSaldoEsgotado:
+            # A que DESCOBRIU o saldo zerado também não vira registro: o
+            # motivo é a conta, não a review.
+            with lock:
+                pulados[0] += 1
+            return
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "taxonomia_id": tid, "passe": n_passe,
                         "slug": review["slug"], "perfil": review["perfil"],
@@ -208,6 +226,13 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
     with ThreadPoolExecutor(max_workers=CONCORRENCIA) as pool:
         list(pool.map(tarefa, pendentes))
     saida.close()
+    if parada_por_saldo():
+        raise SystemExit(
+            f"PARADO: a conta do DeepSeek ficou sem crédito no passe "
+            f"{n_passe}. {contador[0]} review(s) processada(s), "
+            f"{pulados[0]} não tentada(s) — nenhuma delas virou registro, "
+            f"então basta repor o saldo e rodar de novo: o passe retoma "
+            f"exatamente de onde parou.")
     # [v1.9.25] Taxa VISÍVEL: falha vira `ok: False` no JSONL e todo
     # consumidor a pula com `if not r.get("ok")`. Sem esta linha, uma taxa
     # alta some entre 8 mil registros.

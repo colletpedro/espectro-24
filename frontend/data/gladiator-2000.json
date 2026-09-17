@@ -1,0 +1,1610 @@
+{
+  "slug": "gladiator-2000",
+  "data_coleta": "2026-09-16T19:42:19.111122+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/gladiator-2000/reviews/",
+  "ficha": {
+    "titulo": "Gladiador",
+    "sinopse_oficial": "Nos dias finais do reinado de Marcus Aurelius, o imperador desperta a ira de seu filho Commodus ao tornar pública sua predileção em deixar o trono para Maximus, o comandante do exército romano. Sedento pelo poder, Commodus mata seu pai, assume a coroa e ordena a morte de Maximus, que consegue fugir antes de ser pego e passa a se esconder sob a identidade de um escravo e gladiador do Império Romano.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Drama",
+      "Aventura"
+    ],
+    "duracao_min": 155,
+    "diretor": "Ridley Scott",
+    "diretor_transliterado": false,
+    "ano": 2000,
+    "fonte": "tmdb",
+    "tmdb_id": 98,
+    "tmdb_fetched_at": "2026-09-16T20:18:47+00:00",
+    "poster_path": "/4DUClyGA6OqjXv6yC0Imf6THGfp.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+      "/hND7xAaxxBgaIspp9iMsaEXOSTz.jpg",
+      "/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
+      "/u1CC2m4owXbAbQfGzXNMcbnUv6G.jpg",
+      "/v2nvvwbWOAEPQeq8wsvUkhb1HI1.jpg",
+      "/aZtwH3RQ0L8jbInxr7OSc9tlGMJ.jpg",
+      "/swpjSgGmBCx6QgfO4rgv5vBzqHL.jpg",
+      "/3ZVEtQxVPpEp5LNpAULDcxadTU3.jpg",
+      "/1g2Oribnq9fLTBqLQtLIhA7X1Zy.jpg",
+      "/qC2J4aSe6NziW3s6fQNqse7RFf7.jpg"
+    ],
+    "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/jKCaGq8dJoc4IDGqmDSjU36b7ee.jpg",
+    "poster_sem_texto_largura": 1200,
+    "poster_sem_texto_altura": 1800,
+    "galeria_stills": [
+      {
+        "still_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hND7xAaxxBgaIspp9iMsaEXOSTz.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/d4mQ4WwJhHkyox9YTZXUlPC1xfg.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jWXpjDEmfL8b5i3ZdbNSVbRa0Q9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/y2x0CdXCQy5zdw2b9pgqT5i7M76.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/xyYznw8rNZvzoBBst6Ov5b3sKIc.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vlAVk0rdG6oyZ8by6bkE9rFVACf.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/r0IbuOQL5I2Y4UIrwEKB1zZMvKx.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/iG27PsLksSE8yGlXXMqBV6jeyO6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7PU2Vz78vtOuA8Hg08g7vGYFazi.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/l58jE9mppa22mEqrzeHkQn88rAO.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/uIrXceAmBSKmWjYvOgmX720nsF0.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "gladiator-2000",
+      "titulo_letterboxd": "Gladiator",
+      "ano_letterboxd": 2000,
+      "tmdb_id_letterboxd": 98,
+      "tmdb_id_escolhido": 98,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Gladiator",
+      "ano_tmdb": 2000,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2314890,
+    "por_nivel": {
+      "0.5": 2170,
+      "1.0": 6339,
+      "1.5": 4968,
+      "2.0": 30052,
+      "2.5": 36660,
+      "3.0": 185136,
+      "3.5": 260722,
+      "4.0": 734948,
+      "4.5": 430976,
+      "5.0": 622919
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 10,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "gladiator-2000",
+    "coletado_em": "2026-09-16T04:52:15.236231+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2170,
+      "1.0": 6339,
+      "1.5": 4968,
+      "2.0": 30052,
+      "2.5": 36660,
+      "3.0": 185136,
+      "3.5": 260722,
+      "4.0": 734948,
+      "4.5": 430976,
+      "5.0": 622919
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 5,
+      "1.5": 4,
+      "2.0": 24,
+      "2.5": 20,
+      "3.0": 21,
+      "3.5": 3,
+      "4.0": 16,
+      "4.5": 9,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "1.5": 1,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.5": 1,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 37,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 13,
+      "3.0": 64,
+      "3.5": 91,
+      "4.0": 256,
+      "4.5": 150,
+      "5.0": 217
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 720,
+        "min": "0041-04-08",
+        "max": "2026-09-16",
+        "p5": "2026-06-06",
+        "p50": "2026-09-02",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2001-02-05",
+          "max": "2026-09-15",
+          "p5": "2026-05-23",
+          "p50": "2026-08-08",
+          "p95": "2026-09-12"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2010-11-21",
+          "max": "2026-09-15",
+          "p5": "2026-07-21",
+          "p50": "2026-09-03",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "0041-04-08",
+          "max": "2026-09-16",
+          "p5": "2026-07-08",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 32,
+      "dias_por_100_paginas": 25.19685039370079,
+      "paginas_para_1_ano": 1449
+    },
+    "identidade_letterboxd": {
+      "slug": "gladiator-2000",
+      "titulo": "Gladiator",
+      "ano": 2000,
+      "tmdb_id_letterboxd": 98,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2000,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 720
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-03-20",
+        "max": "2026-09-13",
+        "p5": "2026-07-18",
+        "p50": "2026-08-11",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 28,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 132,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 132,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme é arrastado e longo demais, com trechos que poderiam ser encurtados e que tornam a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e história pouco original",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideram a trama previsível e sem desenvolvimento significativo, com uma jornada de vingança que não aprofunda os personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Filme superestimado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos membros deste grupo acham que o filme recebe elogios exagerados e não corresponde à reputação de clássico que possui.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações criticadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários negativos sobre a atuação de alguns atores, considerada fraca ou sem carisma, embora a performance de Joaquin Phoenix seja por vezes elogiada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Edição e montagem confusas",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A montagem é descrita como picotada e com cortes rápidos que prejudicam a fluidez, especialmente nas cenas de ação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de ação e lutas mal executadas",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de batalha são vistas como repetitivas e mal coreografadas, com uso excessivo de close-ups que dificultam a compreensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de ritmo, roteiro e edição, considerando o filme longo e entediante. Este grupo também critica a falta de originalidade e o caráter superestimado da obra, embora alguns reconheçam aspectos técnicos como figurino e cenários.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 32,
+        "p5": 1,
+        "p50": 6,
+        "p95": 32,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-01-01",
+        "max": "2026-09-15",
+        "p5": "2026-08-12",
+        "p50": "2026-09-02",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 33,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 123,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 123,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo e arrastado, com partes que parecem se estender sem necessidade, especialmente no primeiro terço e no meio, tornando a experiência cansativa para alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca atuações convincentes, especialmente de Russell Crowe e Joaquin Phoenix, embora alguns critiquem certas escolhas de elenco ou considerem que o protagonista não faz nada excepcional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e clichê",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que a trama é previsível, com uma história de vingança básica e personagens pouco profundos, repetindo fórmulas já vistas em outros filmes do gênero.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e música",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é frequentemente elogiada, mas alguns notam semelhanças com trilhas de outros filmes, como Piratas do Caribe, e há quem diga que ela carrega o filme sozinha.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de ação e coreografia",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Enquanto alguns apreciam as cenas de luta e a coreografia, outros criticam a filmagem confusa, o uso excessivo de câmera lenta e a falta de clareza nos combates.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, figurinos e design de produção",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A parte visual é bastante elogiada, com destaque para a fotografia, os figurinos e a grandiosidade dos cenários, embora alguns considerem a estética datada ou sem inovação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) reconhecem a qualidade técnica e as atuações, mas criticam o ritmo lento, o roteiro previsível e a falta de originalidade. Este grupo específico demonstra uma apreciação moderada, sem o entusiasmo das faixas superiores, e frequentemente aponta que o filme não atendeu às expectativas pessoais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 89,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 9,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-08-15",
+        "max": "2026-09-15",
+        "p5": "2026-05-01",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 64,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 64,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Joaquin Phoenix",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a performance de Joaquin Phoenix como o vilão, descrevendo-a como intensa, repulsiva e capaz de fazer o público odiar o personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Russell Crowe",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Russell Crowe é elogiado por sua atuação contida e carismática, que sustenta o protagonista e dá peso emocional à história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de ação e batalhas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de ação, especialmente as batalhas e os combates na arena, são descritas como impressionantes, bem filmadas e emocionantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora de Hans Zimmer",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é frequentemente mencionada como um ponto alto, com comentários sobre sua grandiosidade e adequação à narrativa épica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Ridley Scott",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Ridley Scott é elogiada por sua habilidade em equilibrar ação, drama político e emoção, contribuindo para a qualidade geral do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e história",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é destacado por sua estrutura bem construída, com uma trama envolvente e reviravoltas que mantêm o interesse, embora alguns apontem previsibilidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a força das atuações, especialmente de Joaquin Phoenix e Russell Crowe, a grandiosidade das cenas de ação e da trilha sonora, e a direção de Ridley Scott. Apesar de pequenas ressalvas, como a duração ou o ritmo, o sentimento predominante é de que o filme é uma obra marcante e emocionante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme é arrastado e longo demais, com trechos que poderiam ser encurtados e que tornam a experiência cansativa.",
+            "temas_no_mesmo_eixo": [
+              "Edição e montagem confusas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo e arrastado, com partes que parecem se estender sem necessidade, especialmente no primeiro terço e no meio, tornando a experiência cansativa para alguns.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Atuações criticadas",
+            "exemplo_parafraseado": "Há comentários negativos sobre a atuação de alguns atores, considerada fraca ou sem carisma, embora a performance de Joaquin Phoenix seja por vezes elogiada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "Este grupo destaca atuações convincentes, especialmente de Russell Crowe e Joaquin Phoenix, embora alguns critiquem certas escolhas de elenco ou considerem que o protagonista não faz nada excepcional.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Joaquin Phoenix",
+            "exemplo_parafraseado": "As reviews positivas destacam a performance de Joaquin Phoenix como o vilão, descrevendo-a como intensa, repulsiva e capaz de fazer o público odiar o personagem.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Russell Crowe"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Cenas de ação e lutas mal executadas",
+            "exemplo_parafraseado": "As sequências de batalha são vistas como repetitivas e mal coreografadas, com uso excessivo de close-ups que dificultam a compreensão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Cenas de ação e coreografia",
+            "exemplo_parafraseado": "Enquanto alguns apreciam as cenas de luta e a coreografia, outros criticam a filmagem confusa, o uso excessivo de câmera lenta e a falta de clareza nos combates.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia, figurinos e design de produção"
+            ]
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Cenas de ação e batalhas",
+            "exemplo_parafraseado": "As sequências de ação, especialmente as batalhas e os combates na arena, são descritas como impressionantes, bem filmadas e emocionantes.",
+            "temas_no_mesmo_eixo": [
+              "Direção de Ridley Scott"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e história pouco original",
+            "exemplo_parafraseado": "Alguns espectadores consideram a trama previsível e sem desenvolvimento significativo, com uma jornada de vingança que não aprofunda os personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e clichê",
+            "exemplo_parafraseado": "As reviews medianas apontam que a trama é previsível, com uma história de vingança básica e personagens pouco profundos, repetindo fórmulas já vistas em outros filmes do gênero.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e história",
+            "exemplo_parafraseado": "O roteiro é destacado por sua estrutura bem construída, com uma trama envolvente e reviravoltas que mantêm o interesse, embora alguns apontem previsibilidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e música",
+            "exemplo_parafraseado": "A música é frequentemente elogiada, mas alguns notam semelhanças com trilhas de outros filmes, como Piratas do Caribe, e há quem diga que ela carrega o filme sozinha.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de Hans Zimmer",
+            "exemplo_parafraseado": "A trilha sonora é frequentemente mencionada como um ponto alto, com comentários sobre sua grandiosidade e adequação à narrativa épica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Filme superestimado",
+            "exemplo_parafraseado": "Muitos membros deste grupo acham que o filme recebe elogios exagerados e não corresponde à reputação de clássico que possui.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2000 e dirigido por Ridley Scott, Gladiador é um drama épico de ação e aventura ambientado no Império Romano. A trama acompanha o comandante do exército que, após ter sua família assassinada e ser destituído pelo novo imperador, passa a viver sob a condição de gladiador enquanto busca sua revanche.\n\nA produção se estrutura em uma narrativa de longa duração, intercalando passagens dramáticas de ritmo cadenciado com sequências de combate em grande escala.\n\nNa grande maioria das notas (~89%), boa parte elogia a intensidade do antagonista interpretado por Joaquin Phoenix, enquanto uma parcela expressiva destaca a presença carismática de Russell Crowe na condução da narrativa. Além disso, muitos ressaltam a grandiosidade e a condução técnica das cenas de batalha e dos confrontos na arena.\n\nPara quem se situa numa fração mínima das notas (~10%), o impacto é moderado: vários apontam que o andamento é arrastado e a duração se mostra excessiva em determinados trechos. Ainda nessa faixa, um número considerável reconhece o bom desempenho do elenco, embora boa parte critique a previsibilidade da história e o uso de convenções narrativas bastante conhecidas.\n\nJá na leitura presente numa fração ainda menor das notas (~2%), o filme é visto com frustração diante das expectativas prévias: uma parcela expressiva se queixa da lentidão estrutural e do tempo excessivo de tela, vários consideram o enredo frágil e derivativo, e uma parte classifica a obra como superestimada em relação ao seu reconhecimento.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9900,
+      "completion_tokens": 1137,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9900
+    },
+    "latencia_s": 36.41
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria de quem recomenda destaca positivamente a construção do roteiro e a condução da narrativa. Por outro lado, a maioria dos que não recomendam aponta fragilidades na trama por falta de originalidade, além de avaliar que a produção recebeu mais elogios e expectativas do que realmente justificava.",
+    "texto_modelo": "A maioria de quem recomenda destaca positivamente a construção do roteiro e a condução da narrativa. Por outro lado, a maioria dos que não recomendam aponta fragilidades na trama por falta de originalidade, além de avaliar que a produção recebeu mais elogios e expectativas do que realmente justificava.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 49,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3579,
+      "completion_tokens": 209,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3579
+    },
+    "latencia_s": 12.14
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca a atuação intensa de Joaquin Phoenix em um papel vilanesco e repulsivo",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Joaquin Phoenix",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia a atuação carismática e contida de Russell Crowe no papel principal",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Russell Crowe",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura sequências de ação e combates de arena bem filmados e emocionantes",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cenas de ação e batalhas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma trama envolvente com reviravoltas, mesmo que apresente momentos previsíveis",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e história",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes longos de ritmo arrastado e trechos desnecessários",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com tramas previsíveis de vingança que não aprofundam seus personagens",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e história pouco original",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com atuações fracas no elenco, apesar do destaque de Joaquin Phoenix",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações criticadas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 89,
+        "peso_texto": "~89% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-E"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "se irrita com montagem picotada e cortes rápidos que prejudicam a fluidez",
+        "tema_origem": "NEG-E",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "ancora_nao_verificavel"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15818,
+      "completion_tokens": 1379,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15818
+    },
+    "latencia_s": 29.49,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

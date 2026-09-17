@@ -1,0 +1,1621 @@
+{
+  "slug": "the-swimming-pool",
+  "data_coleta": "2026-09-16T19:45:00.470320+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-swimming-pool/reviews/",
+  "ficha": {
+    "titulo": "A Piscina",
+    "sinopse_oficial": "Jean-Paul e Marianne formam o casal ideal e estão de férias em sua casa na bela cidade de Saint-Tropez. Tudo vai bem nos dias dos dois até que dois visitantes chegam: Harry e sua filha Penelope. O problema é que Harry é um antigo amante de Marianne. As altas tensões aumentam ainda mais quando Jean-Paul tenta seduzir Penelope.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller"
+    ],
+    "duracao_min": 123,
+    "diretor": "Jacques Deray",
+    "diretor_transliterado": false,
+    "ano": 1969,
+    "fonte": "tmdb",
+    "tmdb_id": 4946,
+    "tmdb_fetched_at": "2026-09-16T20:18:48+00:00",
+    "poster_path": "/cm8STyb2gk61v6ocZ4Kk7RRv6YT.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/pQpGA6XsWlmlAyicVIxVXHIW02P.jpg",
+      "/gbgoA365wY0tLZxVCaOE6NpF2iF.jpg",
+      "/pZ0nNN5UoUkpyY9zWdyquztgX1v.jpg",
+      "/7rMyeyEnRtrLOztMwpOpHxYAosE.jpg",
+      "/cSiaDBMOEYVlJ3uarOGoEPQIewE.jpg",
+      "/ewJv2TjTdFDykYY8I4ChFBFf2yn.jpg",
+      "/crLHR8070VG4stQ2IdCLA1imkyn.jpg",
+      "/8eUle2mQ8dtx3FsLXpovzdJ3Y69.jpg",
+      "/oS3DzKr8xXVyb1Fogl63rdSiF5E.jpg",
+      "/51QLF3Fo9P6nGqN9xZ6mRSIuzEV.jpg"
+    ],
+    "backdrop_path": "/pZ0nNN5UoUkpyY9zWdyquztgX1v.jpg",
+    "backdrop_largura": 2205,
+    "backdrop_altura": 1240,
+    "poster_sem_texto_path": "/cuLq0AFS7D1gykrHRVXoSViM93Y.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/pZ0nNN5UoUkpyY9zWdyquztgX1v.jpg",
+        "still_largura": 2205,
+        "still_altura": 1240
+      },
+      {
+        "still_path": "/51QLF3Fo9P6nGqN9xZ6mRSIuzEV.jpg",
+        "still_largura": 1791,
+        "still_altura": 1007
+      },
+      {
+        "still_path": "/eBrx7Rskgwy3PxFpFCZBDOrMKEs.jpg",
+        "still_largura": 1789,
+        "still_altura": 1006
+      },
+      {
+        "still_path": "/pQpGA6XsWlmlAyicVIxVXHIW02P.jpg",
+        "still_largura": 2126,
+        "still_altura": 1196
+      },
+      {
+        "still_path": "/6Q52MRMoR6LDJkgyjVnB9W33Wo8.jpg",
+        "still_largura": 1789,
+        "still_altura": 1006
+      },
+      {
+        "still_path": "/A9FgQn4d0gnq0XpMTxm6N7oBku3.jpg",
+        "still_largura": 1788,
+        "still_altura": 1006
+      },
+      {
+        "still_path": "/bnyhUGrejhyfW4v18apBy9LBmql.jpg",
+        "still_largura": 1652,
+        "still_altura": 929
+      },
+      {
+        "still_path": "/f217497RIQ3ONUftZxcgVgXoOSn.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/ivcwfzDJOPklSXk4UUDa5ivcosK.jpg",
+        "still_largura": 1760,
+        "still_altura": 990
+      },
+      {
+        "still_path": "/o7NkWLEU7TheOxlHM3k6NMU90i1.jpg",
+        "still_largura": 1789,
+        "still_altura": 1006
+      },
+      {
+        "still_path": "/suzxfneIbSdyftMgxyf0xu3oYiP.jpg",
+        "still_largura": 1789,
+        "still_altura": 1006
+      },
+      {
+        "still_path": "/vOQNvoN4LADzF0NKrXMZ3x81JrG.jpg",
+        "still_largura": 1789,
+        "still_altura": 1006
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-swimming-pool",
+      "titulo_letterboxd": "The Swimming Pool",
+      "ano_letterboxd": 1969,
+      "tmdb_id_letterboxd": 4946,
+      "tmdb_id_escolhido": 4946,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "The Swimming Pool",
+      "ano_tmdb": 1969,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 91538,
+    "por_nivel": {
+      "0.5": 138,
+      "1.0": 392,
+      "1.5": 436,
+      "2.0": 2108,
+      "2.5": 3763,
+      "3.0": 15723,
+      "3.5": 22896,
+      "4.0": 29884,
+      "4.5": 7813,
+      "5.0": 8385
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 21,
+      "positivas": 75
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-swimming-pool",
+    "coletado_em": "2026-09-16T04:56:23.623648+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 138,
+      "1.0": 392,
+      "1.5": 436,
+      "2.0": 2108,
+      "2.5": 3763,
+      "3.0": 15723,
+      "3.5": 22896,
+      "4.0": 29884,
+      "4.5": 7813,
+      "5.0": 8385
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 60,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 24
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 28,
+      "2.5": 19,
+      "3.0": 25,
+      "3.5": 18,
+      "4.0": 26,
+      "4.5": 6,
+      "5.0": 8
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 5,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 2
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "1.5": 2,
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 4,
+      "2.0": 18,
+      "2.5": 32,
+      "3.0": 135,
+      "3.5": 196,
+      "4.0": 256,
+      "4.5": 67,
+      "5.0": 72
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 672,
+        "min": "2014-01-01",
+        "max": "2026-09-15",
+        "p5": "2025-12-21",
+        "p50": "2026-08-20",
+        "p95": "2026-09-14"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2015-04-17",
+          "max": "2026-09-15",
+          "p5": "2025-04-16",
+          "p50": "2026-06-12",
+          "p95": "2026-08-29"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2022-08-08",
+          "max": "2026-09-15",
+          "p5": "2026-04-10",
+          "p50": "2026-08-25",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2014-01-01",
+          "max": "2026-09-15",
+          "p5": "2026-04-20",
+          "p50": "2026-09-10",
+          "p95": "2026-09-14"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 145,
+      "dias_por_100_paginas": 114.1732283464567,
+      "paginas_para_1_ano": 320
+    },
+    "identidade_letterboxd": {
+      "slug": "the-swimming-pool",
+      "titulo": "The Swimming Pool",
+      "ano": 1969,
+      "tmdb_id_letterboxd": 4946,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1969,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 672
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 6,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 6,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 4,
+        "p95": 14,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-04-17",
+        "max": "2026-09-12",
+        "p5": "2021-07-03",
+        "p50": "2026-07-05",
+        "p95": "2026-08-29"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 8,
+          "n_descartadas_curtas": 101,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 8,
+            "abaixo_min_chars": 101,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores descrevem a experiência como arrastada, com longos períodos de tédio e pouco acontecimento, chegando a comparar o filme a uma prova de paciência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens sem profundidade e desinteressantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que os personagens são rasos, egocêntricos e difíceis de se importar, com motivações pouco exploradas e relações artificiais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e história vazia",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O enredo é considerado raso, previsível ou mal desenvolvido, com uma trama que não justifica a duração e reviravoltas pouco convincentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Erotização problemática e desconfortável",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários destacam uma atmosfera de assédio e objetificação, especialmente envolvendo uma personagem jovem, que consideram de mau gosto e datada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética bonitas, mas superficiais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A beleza visual, as cores e os cenários são elogiados, porém vistos como meramente decorativos, sem compensar as falhas de conteúdo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas ou desperdiçadas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas mencionam atuações apáticas ou exageradas, com destaque para a falta de expressividade de certos atores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam principalmente para um ritmo excessivamente lento e entediante, personagens vazios e um roteiro que não sustenta a duração. Apesar de reconhecerem a beleza estética, este grupo destaca a falta de profundidade e o desconforto com relações problemáticas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 21,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 68,
+        "p5": 1,
+        "p50": 6,
+        "p95": 68,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-08",
+        "max": "2026-09-13",
+        "p5": "2026-04-10",
+        "p50": "2026-08-27",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 111,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 7,
+            "abaixo_min_chars": 111,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é excessivamente lento e que a narrativa demora a engrenar, com longos trechos em que quase nada acontece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco e personagens atraentes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a beleza do elenco e dos personagens, especialmente Alain Delon e Romy Schneider, como um dos principais atrativos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética caprichadas",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a fotografia, o visual requintado e o charme das locações no sul da França, que conferem ao filme uma atmosfera única.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento questionáveis",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Para esta faixa, o roteiro é apontado como raso ou pouco convincente, com personagens sem profundidade e situações que soam artificiais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final insatisfatório",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas consideram o desfecho decepcionante ou anticlimático, deixando uma sensação de que o filme não cumpre o que promete.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas, com ressalvas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, em especial a de Alain Delon, são vistas como um ponto forte, embora alguns achem sua expressão monótona ou pouco variada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem o apelo visual e o charme do elenco, mas criticam o ritmo lento, o roteiro pouco envolvente e o final insatisfatório. Este grupo enxerga o filme como estiloso, porém arrastado e sem a profundidade esperada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 75,
+      "composicao_alvo": {
+        "3.5": 13,
+        "4.0": 17,
+        "4.5": 5,
+        "5.0": 5
+      },
+      "composicao_atingida": {
+        "3.5": 13,
+        "4.0": 17,
+        "4.5": 5,
+        "5.0": 5
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.175
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-20",
+        "max": "2026-09-15",
+        "p5": "2026-06-04",
+        "p50": "2026-09-10",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Tensão psicológica e atmosfera",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas descrevem uma tensão constante construída com sutileza, por meio de olhares, silêncios e pequenos deslocamentos de comportamento, criando um clima opressivo mesmo quando nada dramático acontece em cena.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Erotismo e sensualidade",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca o erotismo e a sensualidade do filme, presentes desde a cena de abertura e sustentados pela química entre os atores, pelos corpos ao sol e pela tensão sexual que permeia as interações.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética visual",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia luminosa, as cores vibrantes e os enquadramentos cuidadosos são muito elogiados, com menções à beleza plástica da luz, da água da piscina e das locações mediterrâneas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de Alain Delon, Romy Schneider e Jane Birkin são frequentemente destacadas, com elogios à presença magnética, à química entre eles e à sutileza das expressões contidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e narrativa",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é descrito como lento e paciente, com alguns espectadores considerando a lentidão um mérito na construção da atmosfera, enquanto outros apontam que a segunda metade ou o desfecho perdem força.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ciúme, desejo e relações complexas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam que o filme explora de forma ambígua e sofisticada o ciúme, o desejo e as relações interpessoais, sem julgamentos morais fáceis, deixando muitas coisas nas entrelinhas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para um filme atmosférico, sensual e visualmente deslumbrante, que constrói tensão por meio da sutileza e do não-dito. Este grupo valoriza especialmente o trabalho de câmera, a química do elenco e a ambientação veranil, embora alguns elogiem o ritmo lento enquanto outros o considerem irregular na segunda metade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "Muitos espectadores descrevem a experiência como arrastada, com longos períodos de tédio e pouco acontecimento, chegando a comparar o filme a uma prova de paciência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é excessivamente lento e que a narrativa demora a engrenar, com longos trechos em que quase nada acontece.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e narrativa",
+            "exemplo_parafraseado": "O ritmo é descrito como lento e paciente, com alguns espectadores considerando a lentidão um mérito na construção da atmosfera, enquanto outros apontam que a segunda metade ou o desfecho perdem força.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas ou desperdiçadas",
+            "exemplo_parafraseado": "Algumas críticas mencionam atuações apáticas ou exageradas, com destaque para a falta de expressividade de certos atores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Elenco e personagens atraentes",
+            "exemplo_parafraseado": "Este grupo destaca a beleza do elenco e dos personagens, especialmente Alain Delon e Romy Schneider, como um dos principais atrativos do filme.",
+            "temas_no_mesmo_eixo": [
+              "Atuações elogiadas, com ressalvas"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As atuações de Alain Delon, Romy Schneider e Jane Birkin são frequentemente destacadas, com elogios à presença magnética, à química entre eles e à sutileza das expressões contidas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética bonitas, mas superficiais",
+            "exemplo_parafraseado": "A beleza visual, as cores e os cenários são elogiados, porém vistos como meramente decorativos, sem compensar as falhas de conteúdo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética caprichadas",
+            "exemplo_parafraseado": "As reviews medianas elogiam a fotografia, o visual requintado e o charme das locações no sul da França, que conferem ao filme uma atmosfera única.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética visual",
+            "exemplo_parafraseado": "A fotografia luminosa, as cores vibrantes e os enquadramentos cuidadosos são muito elogiados, com menções à beleza plástica da luz, da água da piscina e das locações mediterrâneas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens sem profundidade e desinteressantes",
+            "exemplo_parafraseado": "As críticas apontam que os personagens são rasos, egocêntricos e difíceis de se importar, com motivações pouco exploradas e relações artificiais.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro fraco e história vazia"
+            ]
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e desenvolvimento questionáveis",
+            "exemplo_parafraseado": "Para esta faixa, o roteiro é apontado como raso ou pouco convincente, com personagens sem profundidade e situações que soam artificiais.",
+            "temas_no_mesmo_eixo": [
+              "Final insatisfatório"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ciúme, desejo e relações complexas",
+            "exemplo_parafraseado": "As reviews positivas apontam que o filme explora de forma ambígua e sofisticada o ciúme, o desejo e as relações interpessoais, sem julgamentos morais fáceis, deixando muitas coisas nas entrelinhas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Tensão psicológica e atmosfera",
+            "exemplo_parafraseado": "As reviews positivas descrevem uma tensão constante construída com sutileza, por meio de olhares, silêncios e pequenos deslocamentos de comportamento, criando um clima opressivo mesmo quando nada dramático acontece em cena.",
+            "temas_no_mesmo_eixo": [
+              "Erotismo e sensualidade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Erotização problemática e desconfortável",
+            "exemplo_parafraseado": "Vários comentários destacam uma atmosfera de assédio e objetificação, especialmente envolvendo uma personagem jovem, que consideram de mau gosto e datada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "positivas",
+        "id": "viewing:1488331026",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_RateLimitError",
+        "erro": "RateLimitError: Error code: 429 - {'error': {'message': 'Too many requests. Your current concurrency is 5, which exceeds your concurrency limit of 5 based on your remaining balance. Please top up your"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1969 e dirigido por Jacques Deray, A Piscina é um drama com elementos de suspense que acompanha um casal em férias em Saint-Tropez. A rotina tranquila dos dois é desestabilizada com a chegada de visitas inesperadas, instaurando um ambiente de ciúme, sedução e conflitos silenciosos.\n\nA narrativa se constrói em um ritmo lento, ancorada em uma atmosfera solar e na ambientação litorânea. A dinâmica entre os personagens se desenvolve por meio de interações carregadas de sensualidade, valorizadas por uma composição visual atenta à luz e aos corpos em cena.\n\nNa grande maioria das notas (~75%), a maior parte destaca a constante tensão psicológica e o clima opressivo construído por meio de olhares e silêncios. Além disso, cerca de metade aponta o erotismo e a sensualidade que permeiam as relações, enquanto uma parcela expressiva ressalta o trabalho de fotografia e a estética visual luminosa.\n\nPara quem está nessa faixa, numa parcela das notas (~21%), o ritmo lento e arrastado é apontado por vários avaliadores como um elemento que prejudica o andamento da narrativa. Ainda assim, um número considerável destaca o apelo e a atratividade do elenco e dos personagens, e muitos valorizam a fotografia e a estética caprichadas das locações.\n\nJá na visão de quem atribui uma fração mínima das notas (~3%), grande parte critica a lentidão da história, considerando a experiência excessivamente entediante. Boa parte desse grupo também aponta que os personagens carecem de profundidade e geram pouco interesse, enquanto muitos descrevem o roteiro como fraco e a trama como vazia para a duração da obra.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 3,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9930,
+      "completion_tokens": 1173,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9930
+    },
+    "latencia_s": 35.22
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria dos que recomendam valoriza o roteiro focado em dinâmicas complexas de ciúme e desejo. Já a maioria dos que não recomendam vê figuras rasas e pouco envolventes na trama, queixando-se ainda de um andamento narrativo excessivamente arrastado e monótono.",
+    "texto_modelo": "A maioria dos que recomendam valoriza o roteiro focado em dinâmicas complexas de ciúme e desejo. Já a maioria dos que não recomendam vê figuras rasas e pouco envolventes na trama, queixando-se ainda de um andamento narrativo excessivamente arrastado e monótono.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3618,
+      "completion_tokens": 217,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3618
+    },
+    "latencia_s": 14.06
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma tensão constante e sutil construída pelo silêncio e pelo clima opressivo",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão psicológica e atmosfera",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca um clima de sensualidade e erotismo sustentado pela forte química em cena",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Erotismo e sensualidade",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza a beleza visual de planos ensolarados, cores vivas e cenários mediterrâneos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e estética visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um ritmo lento que constrói atmosfera, embora a narrativa perca força",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e narrativa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por relações interpessoais complexas guiadas por desejo e ciúme nas entrelinhas",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ciúme, desejo e relações complexas",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com uma narrativa arrastada marcada por períodos de tédio e lentidão",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "rejeita personagens egocêntricos, rasos e com motivações pouco exploradas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens sem profundidade e desinteressantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com um enredo raso e previsível sustentado por reviravoltas pouco convincentes",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e história vazia",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha insuficiente uma beleza visual atraente quando ela não compensa falhas de conteúdo",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e estética bonitas, mas superficiais",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 75,
+        "peso_texto": "~75% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 21,
+      "texto": "~21% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16512,
+      "completion_tokens": 1408,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16512
+    },
+    "latencia_s": 26.09,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

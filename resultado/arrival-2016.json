@@ -1,0 +1,1676 @@
+{
+  "slug": "arrival-2016",
+  "data_coleta": "2026-09-16T19:03:00.357474+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/arrival-2016/reviews/",
+  "ficha": {
+    "titulo": "A Chegada",
+    "sinopse_oficial": "Quando seres interplanetários deixam marcas na Terra, a Dra. Louise Banks, uma linguista especialista no assunto, é procurada por militares para traduzir os sinais e desvendar se os alienígenas representam uma ameaça. No entanto, a resposta para todas as perguntas e mistérios coloca em risco  a vida de Louise e a de toda a humanidade.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Ficção científica",
+      "Mistério"
+    ],
+    "duracao_min": 116,
+    "diretor": "Denis Villeneuve",
+    "diretor_transliterado": false,
+    "ano": 2016,
+    "fonte": "tmdb",
+    "tmdb_id": 329865,
+    "tmdb_fetched_at": "2026-09-16T20:18:38+00:00",
+    "poster_path": "/3rDwbFpn6z5HJUgDjpfhEePx8VI.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+      "/r8FD6CC3GgjWaGVkZh00AcedfpA.jpg",
+      "/uKPbFF08QkRMvIAsgCh1soeyPhZ.jpg",
+      "/iTyh3hqTUjiRqQo8Uz1w1KtQti9.jpg",
+      "/hNCqkXbWd40eftqSdjq8TmV7Mqr.jpg",
+      "/34AIyUtIbBictlaUBuGuurjJXiA.jpg",
+      "/iJVkLpu0BhwhcwEMGV5vPh1pWA.jpg",
+      "/nxc6qxojUFI2KVyN0XfuqRY8qtE.jpg",
+      "/nqxFQH6HQtULZ8wZu3bl6dKq8q3.jpg",
+      "/jfEdwdfuJkSbwIqKJHtD8KyoCsg.jpg"
+    ],
+    "backdrop_path": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/dqXMSuD3Iq1a4oCIJf4T7csrqjD.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/r8FD6CC3GgjWaGVkZh00AcedfpA.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8CEvm3uIm11foF9t91F5fCkXFGW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lmXU7uVnAT8H48RbURiIeI1oAwA.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cBGPDk1tmxY3ZvImq66qJF2eKeQ.jpg",
+        "still_largura": 2880,
+        "still_altura": 1620
+      },
+      {
+        "still_path": "/5Yusk9LZC5cPTxyN3LH4VH0SLHd.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/huyVya2a0AZxkQmcLV1EknnfZ1I.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5Vsr6XLbnnQjdEUWvWmsw6NPdRh.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/A9ZzT6CUlBNSn6Vw16g25Y2ObcA.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/eMf9vusFQSsx8ywdFF960GtglwT.jpg",
+        "still_largura": 1526,
+        "still_altura": 858
+      },
+      {
+        "still_path": "/nYM2BHTnQZRRc8vUvz7vaiPMe5E.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/s1NIaGeXBeB3cl0VmbOgDahEnGh.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "arrival-2016",
+      "titulo_letterboxd": "Arrival",
+      "ano_letterboxd": 2016,
+      "tmdb_id_letterboxd": 329865,
+      "tmdb_id_escolhido": 329865,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Arrival",
+      "ano_tmdb": 2016,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2720713,
+    "por_nivel": {
+      "0.5": 4428,
+      "1.0": 14180,
+      "1.5": 8669,
+      "2.0": 58112,
+      "2.5": 52933,
+      "3.0": 269947,
+      "3.5": 304922,
+      "4.0": 823916,
+      "4.5": 467991,
+      "5.0": 715615
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 12,
+      "positivas": 85
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "arrival-2016",
+    "coletado_em": "2026-09-16T03:30:56.133385+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4428,
+      "1.0": 14180,
+      "1.5": 8669,
+      "2.0": 58112,
+      "2.5": 52933,
+      "3.0": 269947,
+      "3.5": 304922,
+      "4.0": 823916,
+      "4.5": 467991,
+      "5.0": 715615
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 8,
+      "2.0": 27,
+      "2.5": 28,
+      "3.0": 26,
+      "3.5": 10,
+      "4.0": 22,
+      "4.5": 12,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "2.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 54,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 60,
+        "n_validas_pos_extensao": 60,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 18,
+      "2.5": 16,
+      "3.0": 84,
+      "3.5": 95,
+      "4.0": 256,
+      "4.5": 145,
+      "5.0": 222
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 612,
+        "min": "2016-11-19",
+        "max": "2026-09-16",
+        "p5": "2026-08-15",
+        "p50": "2026-09-10",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2017-11-20",
+          "max": "2026-09-16",
+          "p5": "2026-08-02",
+          "p50": "2026-09-01",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2017-01-01",
+          "max": "2026-09-16",
+          "p5": "2026-06-19",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2016-11-19",
+          "max": "2026-09-16",
+          "p5": "2026-08-29",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 16,
+      "dias_por_100_paginas": 12.598425196850394,
+      "paginas_para_1_ano": 2897
+    },
+    "identidade_letterboxd": {
+      "slug": "arrival-2016",
+      "titulo": "Arrival",
+      "ano": 2016,
+      "tmdb_id_letterboxd": 329865,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2016,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 612
+  },
+  "origem_paginas": {
+    "_histograma/arrival-2016.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_4.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_16.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_64.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_256.html": "cache",
+    "arrival-2016/pages/by_added/rated_0_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_1_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_1_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_1_page_3.html": "cache",
+    "arrival-2016/fulltext/viewing_1482163289.html": "cache",
+    "arrival-2016/pages/by_added/rated_1_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_1_5_page_2.html": "cache",
+    "arrival-2016/fulltext/viewing_1492148481.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_3.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_4.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_5.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_6.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_7.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_8.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_9.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_page_14.html": "cache",
+    "arrival-2016/fulltext/viewing_1496176918.html": "cache",
+    "arrival-2016/fulltext/viewing_1484625151.html": "cache",
+    "arrival-2016/fulltext/viewing_1476897206.html": "cache",
+    "arrival-2016/fulltext/viewing_1467010541.html": "cache",
+    "arrival-2016/fulltext/viewing_1456507586.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_3.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_4.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_5.html": "cache",
+    "arrival-2016/pages/by_added/rated_2_5_page_8.html": "cache",
+    "arrival-2016/fulltext/viewing_1493849068.html": "cache",
+    "arrival-2016/fulltext/viewing_1491059582.html": "cache",
+    "arrival-2016/fulltext/viewing_1490843999.html": "cache",
+    "arrival-2016/fulltext/viewing_1490744446.html": "cache",
+    "arrival-2016/fulltext/viewing_1488153980.html": "cache",
+    "arrival-2016/fulltext/viewing_1488045558.html": "cache",
+    "arrival-2016/fulltext/viewing_1476332053.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_3.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_4.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_5.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_6.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_7.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_8.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_21.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_page_42.html": "cache",
+    "arrival-2016/fulltext/viewing_1497641458.html": "cache",
+    "arrival-2016/fulltext/viewing_1497091983.html": "cache",
+    "arrival-2016/fulltext/viewing_1495199930.html": "cache",
+    "arrival-2016/fulltext/viewing_1492113822.html": "cache",
+    "arrival-2016/fulltext/viewing_1464423537.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_3_5_page_2.html": "cache",
+    "arrival-2016/fulltext/viewing_1497784963.html": "cache",
+    "arrival-2016/fulltext/viewing_1497321875.html": "cache",
+    "arrival-2016/fulltext/viewing_1497025770.html": "cache",
+    "arrival-2016/fulltext/viewing_1496936448.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_3.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_page_128.html": "cache",
+    "arrival-2016/fulltext/viewing_1486692018.html": "cache",
+    "arrival-2016/fulltext/viewing_1474557084.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_5_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_4_5_page_36.html": "cache",
+    "arrival-2016/fulltext/viewing_1497767558.html": "cache",
+    "arrival-2016/fulltext/viewing_1490579187.html": "cache",
+    "arrival-2016/fulltext/viewing_1490574252.html": "cache",
+    "arrival-2016/fulltext/viewing_1490493291.html": "cache",
+    "arrival-2016/pages/by_added/rated_5_page_1.html": "cache",
+    "arrival-2016/pages/by_added/rated_5_page_2.html": "cache",
+    "arrival-2016/pages/by_added/rated_5_page_3.html": "cache",
+    "arrival-2016/pages/by_added/rated_5_page_4.html": "cache",
+    "arrival-2016/pages/by_added/rated_5_page_56.html": "cache",
+    "arrival-2016/fulltext/viewing_1497872681.html": "cache",
+    "arrival-2016/fulltext/viewing_1497800769.html": "cache",
+    "arrival-2016/fulltext/viewing_1497536771.html": "cache",
+    "arrival-2016/fulltext/viewing_1491184689.html": "cache",
+    "arrival-2016/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 12,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-11-22",
+        "max": "2026-09-15",
+        "p5": "2025-02-18",
+        "p50": "2026-09-01",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 27,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 13,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 13,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews descrevem o filme como excessivamente lento, com longos períodos em que nada parece acontecer, tornando a experiência arrastada e difícil de acompanhar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos e difíceis de se conectar",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores afirmam que não conseguiram se importar com os personagens, considerando-os rasos e sem profundidade emocional, o que prejudicou o envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e com furos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por deixar pontas soltas, apresentar explicações insuficientes e desenvolvimento apressado, com eventos que surgem sem preparação adequada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Twist final decepcionante ou previsível",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta do final é apontada como óbvia, mal construída ou pouco satisfatória, soando como uma solução fácil em vez de uma conclusão merecida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom excessivamente sério e melodramático",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como pretensioso e artificialmente emotivo, com um estilo que se leva a sério demais e diálogos que soam falsos ou piegas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cinematografia e efeitos visuais elogiados, mas insuficientes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar de reconhecerem a qualidade estética e os efeitos, muitos consideram que o visual bonito não compensa as falhas de história e ritmo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente o ritmo lento e entediante, a dificuldade de conexão com os personagens e problemas no roteiro. Apesar de elogios pontuais à cinematografia, este grupo considerou a experiência arrastada e pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 12,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 14,
+        "3.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 7,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 42,
+        "p5": 1,
+        "p50": 5,
+        "p95": 42,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-10-15",
+        "max": "2026-09-16",
+        "p5": "2026-05-09",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 14,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 26,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme demora a engrenar e que a primeira metade é entediante, com alguns dizendo que quase desistiram antes de se envolver.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e execução frustrante",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que a premissa é interessante, mas a execução e o desenvolvimento da história soam confusos, com ideias mal aproveitadas e um desfecho pouco satisfatório.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e trilha sonora elogiadas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas costumam elogiar a beleza visual, o design dos alienígenas e o som atmosférico, considerando esses os melhores aspectos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à propaganda estadunidense e à geopolítica",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas criticam o retrato estereotipado de outras nações e a visão de que os Estados Unidos seriam os únicos racionais e pacíficos, o que incomoda durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Clichês e falta de originalidade",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem diga que o filme recorre a clichês do gênero, como traumas familiares e personagens genéricos, o que faz a obra parecer derivada de outras ficções científicas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens questionados",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte deste grupo considera as atuações boas, mas acha a protagonista sem personalidade ou os personagens pouco cativantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para uma experiência mista: embora a fotografia, o som e a premissa sejam frequentemente elogiados, o ritmo lento, o roteiro confuso e a execução frustrante decepcionam boa parte deste grupo. Críticas à propaganda estadunidense e aos clichês também aparecem com força.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 85,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-11-19",
+        "max": "2026-09-16",
+        "p5": "2026-02-15",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Amy Adams",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews positivas elogiam a atuação de Amy Adams como contida e cheia de nuances, capaz de transmitir emoções profundas com sutileza.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora, incluindo composições de Max Richter e Jóhann Jóhannsson, é destacada por criar uma atmosfera emocional e imersiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e visuais",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e os visuais são elogiados por sua beleza e capacidade de criar uma atmosfera contemplativa e melancólica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro inteligente e original",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é descrito como inteligente, original e bem estruturado, abordando conceitos complexos de forma envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas de tempo, amor e escolha",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a reflexão sobre tempo não linear, a aceitação do sofrimento e a decisão de viver plenamente mesmo conhecendo as dores futuras.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Denis Villeneuve",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Denis Villeneuve é elogiada por sua elegância, controle de ritmo e habilidade em equilibrar ficção científica e emoção humana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para uma forte apreciação da atuação de Amy Adams, da trilha sonora envolvente e da abordagem inteligente de temas como linguagem, tempo e escolha. Este grupo destaca a combinação de ficção científica com profundidade emocional e a direção de Denis Villeneuve como pontos altos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "Várias reviews descrevem o filme como excessivamente lento, com longos períodos em que nada parece acontecer, tornando a experiência arrastada e difícil de acompanhar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme demora a engrenar e que a primeira metade é entediante, com alguns dizendo que quase desistiram antes de se envolver.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens questionados",
+            "exemplo_parafraseado": "Parte deste grupo considera as atuações boas, mas acha a protagonista sem personalidade ou os personagens pouco cativantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Amy Adams",
+            "exemplo_parafraseado": "Várias reviews positivas elogiam a atuação de Amy Adams como contida e cheia de nuances, capaz de transmitir emoções profundas com sutileza.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Cinematografia e efeitos visuais elogiados, mas insuficientes",
+            "exemplo_parafraseado": "Apesar de reconhecerem a qualidade estética e os efeitos, muitos consideram que o visual bonito não compensa as falhas de história e ritmo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e trilha sonora elogiadas",
+            "exemplo_parafraseado": "As reviews medianas costumam elogiar a beleza visual, o design dos alienígenas e o som atmosférico, considerando esses os melhores aspectos do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e visuais",
+            "exemplo_parafraseado": "A fotografia e os visuais são elogiados por sua beleza e capacidade de criar uma atmosfera contemplativa e melancólica.",
+            "temas_no_mesmo_eixo": [
+              "Direção de Denis Villeneuve"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens pouco desenvolvidos e difíceis de se conectar",
+            "exemplo_parafraseado": "Alguns espectadores afirmam que não conseguiram se importar com os personagens, considerando-os rasos e sem profundidade emocional, o que prejudicou o envolvimento com a história.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro confuso e com furos",
+              "Twist final decepcionante ou previsível"
+            ]
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e execução frustrante",
+            "exemplo_parafraseado": "Este grupo aponta que a premissa é interessante, mas a execução e o desenvolvimento da história soam confusos, com ideias mal aproveitadas e um desfecho pouco satisfatório.",
+            "temas_no_mesmo_eixo": [
+              "Clichês e falta de originalidade"
+            ]
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro inteligente e original",
+            "exemplo_parafraseado": "O roteiro é descrito como inteligente, original e bem estruturado, abordando conceitos complexos de forma envolvente.",
+            "temas_no_mesmo_eixo": [
+              "Temas de tempo, amor e escolha"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "A trilha sonora, incluindo composições de Max Richter e Jóhann Jóhannsson, é destacada por criar uma atmosfera emocional e imersiva.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Tom excessivamente sério e melodramático",
+            "exemplo_parafraseado": "O filme é visto como pretensioso e artificialmente emotivo, com um estilo que se leva a sério demais e diálogos que soam falsos ou piegas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica à propaganda estadunidense e à geopolítica",
+            "exemplo_parafraseado": "Algumas reviews medianas criticam o retrato estereotipado de outras nações e a visão de que os Estados Unidos seriam os únicos racionais e pacíficos, o que incomoda durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Denis Villeneuve e lançado em 2016, A Chegada é um drama de ficção científica e mistério com 116 minutos de duração. Na história, quando naves interplanetárias deixam marcas na Terra, uma linguista é recrutada por militares para traduzir as mensagens alienígenas e descobrir se esses seres representam uma ameaça à humanidade.\n\nO filme se desenvolve por meio de um ritmo desacelerado e constante, sustentado por uma atmosfera contemplativa e por uma composição focada no desenho sonoro e nos aspectos visuais.\n\nEm termos de recepção, os grupos avaliam os mesmos elementos da obra e concordam sobre a sua estrutura, divergindo no veredito sobre o seu funcionamento. Na grande maioria das notas (~85%), uma parcela expressiva exalta a atuação de Amy Adams, boa parte valoriza a trilha sonora e o som, e um número considerável destaca a qualidade da fotografia e dos visuais.\n\nNuma fração mínima das notas (~12%), a leitura sobre a produção torna-se mista: vários apontam o ritmo lento e arrastado, muitos reclamam de um roteiro confuso e de execução frustrante, enquanto uma parte mantém elogios à fotografia e à trilha sonora. Por fim, sob a ótica de quem compõe uma fração ainda menor das notas (~3%), as críticas são dominantes: cerca de metade rejeita o ritmo lento e entediante, uma parcela expressiva aponta personagens pouco desenvolvidos e difíceis de se conectar, e muitos indicam um roteiro confuso e com furos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11691,
+      "completion_tokens": 1431,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11691
+    },
+    "latencia_s": 44.0
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da obra. Enquanto a maioria dos que recomendam exalta o texto pela inteligência e originalidade, quase todos entre os que não recomendam apontam que as figuras em cena são mal construídas e não geram identificação.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da obra. Enquanto a maioria dos que recomendam exalta o texto pela inteligência e originalidade, quase todos entre os que não recomendam apontam que as figuras em cena são mal construídas e não geram identificação.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "abertura": "opini",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "escopo_generalizado"
+        ],
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "escopo_generalizado"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3675,
+      "completion_tokens": 205,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3675
+    },
+    "latencia_s": 9.4
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma atuação contida que expressa emoções profundas com sutileza",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Amy Adams",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma trilha sonora envolvente que cria uma atmosfera emocional e imersiva",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e som",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma fotografia de atmosfera contemplativa e estética melancólica marcante",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e visuais",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado e longos períodos sem acontecimentos claros",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se frustra com personagens rasos e distantes que dificultam o envolvimento emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens pouco desenvolvidos e difíceis de se conectar",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita tramas com pontas soltas, desenvolvimento apressado e explicações insuficientes",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e com furos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "não se contenta com visuais bonitos se a narrativa e o ritmo falharem",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Cinematografia e efeitos visuais elogiados, mas insuficientes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 85,
+        "peso_texto": "~85% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10914,
+      "completion_tokens": 1014,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10914
+    },
+    "latencia_s": 14.09,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

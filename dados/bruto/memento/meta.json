@@ -1,0 +1,298 @@
+{
+  "slug": "memento",
+  "coletado_em": "2026-09-16T05:38:20.265293+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2531,
+    "1.0": 6875,
+    "1.5": 4743,
+    "2.0": 27714,
+    "2.5": 31868,
+    "3.0": 173295,
+    "3.5": 261642,
+    "4.0": 745508,
+    "4.5": 431907,
+    "5.0": 495068
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 48,
+    "5.0": 48
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 2,
+    "1.0": 6,
+    "1.5": 5,
+    "2.0": 26,
+    "2.5": 13,
+    "3.0": 23,
+    "3.5": 8,
+    "4.0": 12,
+    "4.5": 13,
+    "5.0": 9
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 15,
+      "paginas_extensao": 6,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "1.5": 1,
+        "2.0": 4
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 39,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 36,
+      "n_validas_pos_extensao": 48,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 5,
+      "extras_por_nivel": {
+        "4.0": 4,
+        "5.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 42,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 11,
+    "3.0": 60,
+    "3.5": 90,
+    "4.0": 256,
+    "4.5": 148,
+    "5.0": 170
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 792,
+      "min": "2023-04-16",
+      "max": "2026-09-16",
+      "p5": "2026-08-23",
+      "p50": "2026-09-11",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 252,
+        "min": "2023-07-07",
+        "max": "2026-09-16",
+        "p5": "2026-08-21",
+        "p50": "2026-09-02",
+        "p95": "2026-09-14"
+      },
+      "medianas": {
+        "n": 288,
+        "min": "2023-04-16",
+        "max": "2026-09-15",
+        "p5": "2026-09-04",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 252,
+        "min": "2025-03-09",
+        "max": "2026-09-16",
+        "p5": "2026-09-04",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 22,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 11,
+    "dias_por_100_paginas": 8.661417322834646,
+    "paginas_para_1_ano": 4214
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 15,
+      "dias_por_100_paginas": 750.0,
+      "paginas_para_1_ano": 49
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 10,
+      "dias_por_100_paginas": 500.0,
+      "paginas_para_1_ano": 73
+    },
+    "2.0": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 14,
+      "dias": 24,
+      "dias_por_100_paginas": 184.6153846153846,
+      "paginas_para_1_ano": 198
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 9,
+      "dias_por_100_paginas": 180.0,
+      "paginas_para_1_ano": 203
+    },
+    "3.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 30,
+      "dias": 11,
+      "dias_por_100_paginas": 37.93103448275862,
+      "paginas_para_1_ano": 962
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "4.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 37,
+      "dias": 5,
+      "dias_por_100_paginas": 13.88888888888889,
+      "paginas_para_1_ano": 2628
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 42,
+      "dias": 4,
+      "dias_por_100_paginas": 9.75609756097561,
+      "paginas_para_1_ano": 3741
+    }
+  },
+  "ano_lancamento": 2000,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "memento",
+    "titulo": "Memento",
+    "ano": 2000,
+    "tmdb_id_letterboxd": 77,
+    "fonte": "pagina_letterboxd"
+  }
+}

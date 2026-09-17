@@ -1,0 +1,1681 @@
+{
+  "slug": "catch-me-if-you-can-2002",
+  "data_coleta": "2026-09-16T19:49:53.997214+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 552,
+  "reviews_url": "https://letterboxd.com/film/catch-me-if-you-can-2002/reviews/",
+  "ficha": {
+    "titulo": "Prenda-Me se For Capaz",
+    "sinopse_oficial": "Frank Abagnale Jr. já foi médico, advogado e co-piloto, tudo isso com apenas 18 anos. Mestre na arte do disfarce, ele aproveita suas habilidades para viver a vida como quer e praticar golpes milionários, que fazem com que se torne o ladrão de banco mais bem-sucedido da história dos Estados Unidos com apenas 17 anos. Mas em seu encalço está o agente do FBI Carl Hanratty, que usa todos os meios que tem ao seu dispor para encontrá-lo e capturá-lo.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 141,
+    "diretor": "Steven Spielberg",
+    "diretor_transliterado": false,
+    "ano": 2002,
+    "fonte": "tmdb",
+    "tmdb_id": 640,
+    "tmdb_fetched_at": "2026-09-16T20:18:49+00:00",
+    "poster_path": "/pSaqcj3pwTKt34cyn6NrBE7V4eH.jpg",
+    "poster_largura": 1400,
+    "poster_altura": 2100,
+    "backdrop_paths": [
+      "/ggC3Brchf4RqPitEh7cROFoeAWn.jpg",
+      "/dc8Sr1mCiyGXsdVcah3Ot9ff4w9.jpg",
+      "/sfW8gtA6Bz2F4zK1FoCKbMqTF8Z.jpg",
+      "/eS3xZQ1C8lt6mm4K5lTmjbYn2HE.jpg",
+      "/rwcEaZghpbt6mV0lRQ9ymz5oM9B.jpg",
+      "/Ag6qhzsJd3k1NKuNrG9RmhZDMh7.jpg",
+      "/z8cdtRlW9KvZebK5HXm5lOSoVwt.jpg",
+      "/tMR4r33ukEoyfnxkkNnZ848BG9x.jpg",
+      "/p5AsafZovcnMXaU18R2c3roTgA5.jpg",
+      "/dG8garjKCMIBP4AbEiTsuFWPpBF.jpg"
+    ],
+    "backdrop_path": "/dc8Sr1mCiyGXsdVcah3Ot9ff4w9.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/9ZHVlPmJYS2gAT13rxvP25vXMIV.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/dc8Sr1mCiyGXsdVcah3Ot9ff4w9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ggC3Brchf4RqPitEh7cROFoeAWn.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/z8cdtRlW9KvZebK5HXm5lOSoVwt.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/b9c4xtt7uxrOYvkNWVOWRYOXeuF.jpg",
+        "still_largura": 1955,
+        "still_altura": 1100
+      },
+      {
+        "still_path": "/ojyRoO4ZHeV5C7grTLeNyi4hZPl.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/cv6v0N87qGjT3HB1wOGR0lyBixD.jpg",
+        "still_largura": 1813,
+        "still_altura": 1018
+      },
+      {
+        "still_path": "/wZapcrDQtlWWcFQH52AeAwmtl83.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6U6bQY8uyyTQR0eJbL7qEbXN7wM.jpg",
+        "still_largura": 1825,
+        "still_altura": 1026
+      },
+      {
+        "still_path": "/coUZ8TU5mSucnmXZpqZ3x3HmhyJ.jpg",
+        "still_largura": 1329,
+        "still_altura": 748
+      },
+      {
+        "still_path": "/fySCStxLuHyXfYZUDMSAp9DzcaL.jpg",
+        "still_largura": 3690,
+        "still_altura": 2076
+      },
+      {
+        "still_path": "/ip2mJkdSIHm0EkBQOSCYz7UZQ3z.jpg",
+        "still_largura": 2400,
+        "still_altura": 1350
+      },
+      {
+        "still_path": "/pBErJCFQPqpa93KZFHpMf8ffcU4.jpg",
+        "still_largura": 2837,
+        "still_altura": 1596
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "catch-me-if-you-can-2002",
+      "titulo_letterboxd": "Catch Me If You Can",
+      "ano_letterboxd": 2002,
+      "tmdb_id_letterboxd": 640,
+      "tmdb_id_escolhido": 640,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Catch Me If You Can",
+      "ano_tmdb": 2002,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2682622,
+    "por_nivel": {
+      "0.5": 1271,
+      "1.0": 4390,
+      "1.5": 3827,
+      "2.0": 27603,
+      "2.5": 39079,
+      "3.0": 265483,
+      "3.5": 412228,
+      "4.0": 1040864,
+      "4.5": 404919,
+      "5.0": 482958
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 11,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "catch-me-if-you-can-2002",
+    "coletado_em": "2026-09-16T05:08:39.846231+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1271,
+      "1.0": 4390,
+      "1.5": 3827,
+      "2.0": 27603,
+      "2.5": 39079,
+      "3.0": 265483,
+      "3.5": 412228,
+      "4.0": 1040864,
+      "4.5": 404919,
+      "5.0": 482958
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 2,
+      "1.5": 7,
+      "2.0": 19,
+      "2.5": 14,
+      "3.0": 20,
+      "3.5": 6,
+      "4.0": 16,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 31,
+        "n_validas_pos_extensao": 43,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 34,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 3,
+          "5.0": 2
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 31,
+        "n_validas_pos_extensao": 45,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 10,
+      "3.0": 65,
+      "3.5": 101,
+      "4.0": 256,
+      "4.5": 100,
+      "5.0": 119
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 840,
+        "min": "2007-06-22",
+        "max": "2026-09-16",
+        "p5": "2026-05-31",
+        "p50": "2026-09-05",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 264,
+          "min": "2019-06-22",
+          "max": "2026-09-15",
+          "p5": "2026-05-03",
+          "p50": "2026-08-02",
+          "p95": "2026-09-09"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2010-04-30",
+          "max": "2026-09-16",
+          "p5": "2026-08-10",
+          "p50": "2026-09-06",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 288,
+          "min": "2007-06-22",
+          "max": "2026-09-16",
+          "p5": "2026-07-16",
+          "p50": "2026-09-14",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 18,
+      "dias_por_100_paginas": 14.173228346456693,
+      "paginas_para_1_ano": 2575
+    },
+    "identidade_letterboxd": {
+      "slug": "catch-me-if-you-can-2002",
+      "titulo": "Catch Me If You Can",
+      "ano": 2002,
+      "tmdb_id_letterboxd": 640,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2002,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 840
+  },
+  "origem_paginas": {
+    "_histograma/catch-me-if-you-can-2002.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_4.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_16.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_64.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_256.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_0_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_0_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_1_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_1_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_1_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_1_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1462767407.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_3.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_4.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_5.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_6.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_7.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_page_8.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1492951071.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1487382093.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1462150459.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1426231119.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_3.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_4.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_5.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_2_5_page_8.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1491433878.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1489712104.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1434089092.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1472065621.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1466521966.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_3.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_4.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_5.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_6.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_7.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_8.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_16.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_page_32.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497884872.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1491648220.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1491323916.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1490832831.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_3_5_page_25.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_3.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_5.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_page_128.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497477031.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497083078.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_4_5_page_25.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497383302.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_5_page_1.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_5_page_2.html": "cache",
+    "catch-me-if-you-can-2002/pages/by_added/rated_5_page_30.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497405059.html": "cache",
+    "catch-me-if-you-can-2002/fulltext/viewing_1497308869.html": "cache",
+    "catch-me-if-you-can-2002/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 29
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 2,
+        "1.5": 6,
+        "2.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 5,
+        "p95": 15,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-06-14",
+        "max": "2026-09-12",
+        "p5": "2026-06-20",
+        "p50": "2026-08-13",
+        "p95": "2026-09-09"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 30,
+          "n_alvo": 29,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 157,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 157,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo arrastado e longa duração",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme é excessivamente longo e que a narrativa se arrasta, especialmente na parte do meio, tornando a experiência tediosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro raso e sem tensão",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam o roteiro por não explorar o potencial de perseguição, resultando em uma trama repetitiva e sem o suspense esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens femininas retratadas de forma problemática",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há críticas recorrentes sobre a representação das mulheres no filme, vistas apenas como interesse amoroso ou alvos fáceis, o que incomoda parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção burocrática e falta de inspiração",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que a direção de Spielberg soa genérica e sem a energia habitual, com fotografia e trilha sonora consideradas sem graça.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sensação de história inverossímil",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews questionam a verossimilhança dos eventos retratados, sentindo que a trama exagera nas conquistas do protagonista e soa artificial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Tom Hanks criticada",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas reviews mencionam que a atuação de Tom Hanks é fraca ou que seu sotaque é inconsistente e prejudica a credibilidade do personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo lento e a duração excessiva, além de críticas ao roteiro pouco envolvente e à representação problemática das personagens femininas. A direção e atuações também são mencionadas como pontos fracos, e a sensação de inverossimilhança contribui para a insatisfação geral.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 11,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 3,
+        "p50": 7,
+        "p95": 17,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2010-04-30",
+        "max": "2026-09-15",
+        "p5": "2026-08-24",
+        "p50": "2026-09-07",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 35,
+          "n_alvo": 35,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 174,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 174,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Veracidade duvidosa da história real",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas comentam que, apesar de se apresentar como baseado em fatos reais, o filme parece amplamente inventado ou exagerado, o que gera desconfiança e reduz o impacto da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reclama que o filme é longo demais e, em certos momentos, repetitivo ou lento, fazendo com que a atenção se disperse ao longo da projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam o trabalho de Leonardo DiCaprio e Tom Hanks, embora algumas critiquem o sotaque de Hanks ou considerem sua atuação pouco marcante em comparação com outros trabalhos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e estilo de Spielberg",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Spielberg é reconhecida pela fluidez e pelo acabamento técnico, mas alguns sentem que falta profundidade ou que o estilo se sobrepõe ao conteúdo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Romantização e moralidade do protagonista",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do grupo se incomoda com a forma como o filme retrata o protagonista como um herói carismático, minimizando ou glamorizando suas ações questionáveis e o contexto problemático em que ele se envolve.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento da trama",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas apontam que o roteiro repete situações, tem subtramas pouco exploradas e, por vezes, carece de um clímax ou reviravolta mais satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam que o filme é divertido e bem executado, mas frequentemente criticam sua duração excessiva, a veracidade duvidosa da história real e a romantização de um protagonista moralmente problemático. Este grupo específico vê a obra como um entretenimento leve, porém pouco memorável ou profundo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 87,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 18,
+        "4.5": 7,
+        "5.0": 8
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 18,
+        "4.5": 8,
+        "5.0": 8
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 25,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-05-08",
+        "max": "2026-09-16",
+        "p5": "2026-07-16",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 97,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 97,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações de DiCaprio e Hanks",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As avaliações positivas frequentemente elogiam a performance carismática de Leonardo DiCaprio e a química entre ele e Tom Hanks, destacando como os dois atores sustentam a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Spielberg",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Steven Spielberg é bastante celebrada, com menções ao seu toque magistral, ao ritmo ágil e à fluidez da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dinâmica de gato e rato entre os protagonistas",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A relação de perseguição e contra-perseguição entre Frank e Carl é vista como envolvente e bem executada, com direito a um desfecho mentor-aprendiz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e entretenimento",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos destacam que o filme é extremamente divertido, prende a atenção do início ao fim e não deixa a peteca cair, tornando as duas horas e vinte minutos leves.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro baseado em história real",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama baseada em fatos reais é mencionada com surpresa e admiração, com comentários sobre como a história verdadeira é inacreditável e fascinante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom melancólico e temas de identidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar do entretenimento, várias resenhas apontam uma veia triste, explorando a solidão do protagonista e sua busca por aceitação e identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste bucket destacam o carisma das atuações, a direção segura de Spielberg e o entretenimento proporcionado pela trama baseada em fatos reais. Mesmo com elogios ao ritmo e à química entre os protagonistas, algumas resenhas também notam um subtexto melancólico sobre identidade e aceitação.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e longa duração",
+            "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme é excessivamente longo e que a narrativa se arrasta, especialmente na parte do meio, tornando a experiência tediosa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Este grupo reclama que o filme é longo demais e, em certos momentos, repetitivo ou lento, fazendo com que a atenção se disperse ao longo da projeção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e entretenimento",
+            "exemplo_parafraseado": "Muitos destacam que o filme é extremamente divertido, prende a atenção do início ao fim e não deixa a peteca cair, tornando as duas horas e vinte minutos leves.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Tom Hanks criticada",
+            "exemplo_parafraseado": "Certas reviews mencionam que a atuação de Tom Hanks é fraca ou que seu sotaque é inconsistente e prejudica a credibilidade do personagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As reviews medianas elogiam o trabalho de Leonardo DiCaprio e Tom Hanks, embora algumas critiquem o sotaque de Hanks ou considerem sua atuação pouco marcante em comparação com outros trabalhos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações de DiCaprio e Hanks",
+            "exemplo_parafraseado": "As avaliações positivas frequentemente elogiam a performance carismática de Leonardo DiCaprio e a química entre ele e Tom Hanks, destacando como os dois atores sustentam a narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Direção burocrática e falta de inspiração",
+            "exemplo_parafraseado": "Algumas reviews apontam que a direção de Spielberg soa genérica e sem a energia habitual, com fotografia e trilha sonora consideradas sem graça.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Direção e estilo de Spielberg",
+            "exemplo_parafraseado": "A direção de Spielberg é reconhecida pela fluidez e pelo acabamento técnico, mas alguns sentem que falta profundidade ou que o estilo se sobrepõe ao conteúdo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Direção de Spielberg",
+            "exemplo_parafraseado": "A direção de Steven Spielberg é bastante celebrada, com menções ao seu toque magistral, ao ritmo ágil e à fluidez da narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro raso e sem tensão",
+            "exemplo_parafraseado": "Algumas reviews criticam o roteiro por não explorar o potencial de perseguição, resultando em uma trama repetitiva e sem o suspense esperado.",
+            "temas_no_mesmo_eixo": [
+              "Sensação de história inverossímil"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e desenvolvimento da trama",
+            "exemplo_parafraseado": "Algumas reviews medianas apontam que o roteiro repete situações, tem subtramas pouco exploradas e, por vezes, carece de um clímax ou reviravolta mais satisfatória.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Dinâmica de gato e rato entre os protagonistas",
+            "exemplo_parafraseado": "A relação de perseguição e contra-perseguição entre Frank e Carl é vista como envolvente e bem executada, com direito a um desfecho mentor-aprendiz.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro baseado em história real"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Tom melancólico e temas de identidade",
+            "exemplo_parafraseado": "Apesar do entretenimento, várias resenhas apontam uma veia triste, explorando a solidão do protagonista e sua busca por aceitação e identidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Personagens femininas retratadas de forma problemática",
+            "exemplo_parafraseado": "Há críticas recorrentes sobre a representação das mulheres no filme, vistas apenas como interesse amoroso ou alvos fáceis, o que incomoda parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Veracidade duvidosa da história real",
+            "exemplo_parafraseado": "Várias reviews medianas comentam que, apesar de se apresentar como baseado em fatos reais, o filme parece amplamente inventado ou exagerado, o que gera desconfiança e reduz o impacto da narrativa.",
+            "temas_no_mesmo_eixo": [
+              "Romantização e moralidade do protagonista"
+            ]
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2002 e dirigido por Steven Spielberg, Prenda-Me se For Capaz é um filme que combina drama e crime com base em acontecimentos reais. A trama acompanha Frank Abagnale Jr., um jovem que domina a arte do disfarce e pratica golpes milionários fingindo exercer diversas profissões, enquanto passa a ser perseguido por um determinado agente do FBI.\n\nA experiência se constrói a partir de uma metragem de longa duração e de uma estrutura voltada à constante dinâmica de perseguição entre os personagens.\n\nDe maneira geral, os diferentes grupos analisam os mesmos elementos centrais da produção e concordam sobre o que o filme é, divergindo sobretudo no veredito sobre o funcionamento desses pontos. Na grande maioria das notas (~87%), a maior parte enfatiza o carisma e a interação do trabalho conjunto de Leonardo DiCaprio e Tom Hanks. Em complemento, uma parcela expressiva enaltece a condução da direção de Spielberg, ao passo que muitos valorizam a dinâmica de gato e rato estabelecida entre os protagonistas.\n\nPara quem se situa nessa faixa intermediária, correspondente a uma fração mínima das notas (~11%), boa parte manifesta desconfiança quanto à veracidade da história real, avaliando o relato como exagerado. Nesse grupo, vários registram incômodos com o ritmo e a longa duração, ainda que um número considerável mantenha avaliações favoráveis sobre as atuações do elenco.\n\nSob a perspectiva dos que integram uma fração ainda menor das notas (~1%), aproximadamente metade desaprova a duração excessiva e o ritmo arrastado da narrativa. Dentro desse mesmo recorte, boa parte critica o roteiro por considerá-lo raso e desprovido de tensão, enquanto uma fatia menor aponta uma representação problemática das personagens femininas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 3,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10218,
+      "completion_tokens": 1152,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10218
+    },
+    "latencia_s": 55.5
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divergência sobre o filme concentra-se no roteiro e em sua estrutura: enquanto a maioria dos que recomendam destaca o jogo de perseguição entre os personagens principais, a maioria dos que não recomendam considera o texto superficial e desprovido de suspense.",
+    "texto_modelo": "A divergência sobre o filme concentra-se no roteiro e em sua estrutura: enquanto a maioria dos que recomendam destaca o jogo de perseguição entre os personagens principais, a maioria dos que não recomendam considera o texto superficial e desprovido de suspense.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "diver",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3669,
+      "completion_tokens": 183,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3669
+    },
+    "latencia_s": 9.71
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia o carisma de Leonardo DiCaprio e a química forte com Tom Hanks",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações de DiCaprio e Hanks",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza uma direção fluida e ágil sob o comando de Steven Spielberg",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Spielberg",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por uma dinâmica envolvente de perseguição mútua entre protagonistas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Dinâmica de gato e rato entre os protagonistas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um entretenimento leve e envolvente que prende a atenção continuamente",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e entretenimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se atrai por relatos fascinantes baseados em fatos reais inacreditáveis",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro baseado em história real",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes de longa duração que se arrastam no desenvolvimento",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e longa duração",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "evita tramas repetitivas que deixam de lado o suspense e a tensão",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro raso e sem tensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com figuras femininas retratadas apenas como alvos ou interesses amorosos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens femininas retratadas de forma problemática",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se decepciona com uma condução genérica de Spielberg e trilha sem graça",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Direção burocrática e falta de inspiração",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com um desempenho fraco ou sotaque inconsistente de Tom Hanks",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Tom Hanks criticada",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 10,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11394,
+      "completion_tokens": 1364,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11394
+    },
+    "latencia_s": 20.96,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

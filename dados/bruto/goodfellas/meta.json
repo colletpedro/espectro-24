@@ -1,0 +1,288 @@
+{
+  "slug": "goodfellas",
+  "coletado_em": "2026-09-16T04:48:17.386403+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 1637,
+    "1.0": 3460,
+    "1.5": 2400,
+    "2.0": 14320,
+    "2.5": 17207,
+    "3.0": 103678,
+    "3.5": 157212,
+    "4.0": 587865,
+    "4.5": 479181,
+    "5.0": 980414
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 4,
+    "4.5": 4,
+    "5.0": 7
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 4,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 4,
+    "4.5": 4,
+    "5.0": 7
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 96,
+    "2.5": 48,
+    "3.0": 120,
+    "3.5": 12,
+    "4.0": 48,
+    "4.5": 48,
+    "5.0": 84
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 9,
+    "2.0": 30,
+    "2.5": 11,
+    "3.0": 25,
+    "3.5": 4,
+    "4.0": 10,
+    "4.5": 10,
+    "5.0": 21
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 4,
+    "3.0": 10,
+    "3.5": 1,
+    "4.0": 4,
+    "4.5": 4,
+    "5.0": 7
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "2.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 14,
+      "paginas_extensao": 6,
+      "extras_por_nivel": {
+        "3.0": 6
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 36,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 1,
+      "extras_por_nivel": {
+        "4.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 4,
+    "2.5": 4,
+    "3.0": 27,
+    "3.5": 41,
+    "4.0": 153,
+    "4.5": 125,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 624,
+      "min": "2008-06-06",
+      "max": "2026-09-16",
+      "p5": "2026-08-11",
+      "p50": "2026-09-09",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 180,
+        "min": "2015-02-01",
+        "max": "2026-09-16",
+        "p5": "2026-08-11",
+        "p50": "2026-08-29",
+        "p95": "2026-09-14"
+      },
+      "medianas": {
+        "n": 240,
+        "min": "2013-12-31",
+        "max": "2026-09-16",
+        "p5": "2026-07-29",
+        "p50": "2026-09-07",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 204,
+        "min": "2008-06-06",
+        "max": "2026-09-16",
+        "p5": "2026-07-15",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 20,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 9,
+    "dias_por_100_paginas": 7.086614173228346,
+    "paginas_para_1_ano": 5151
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 19,
+      "dias_por_100_paginas": 950.0,
+      "paginas_para_1_ano": 38
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 14,
+      "dias_por_100_paginas": 1400.0,
+      "paginas_para_1_ano": 26
+    },
+    "2.0": {
+      "n_paginas": 9,
+      "pagina_min": 1,
+      "pagina_max": 9,
+      "dias": 31,
+      "dias_por_100_paginas": 387.5,
+      "paginas_para_1_ano": 94
+    },
+    "2.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 8,
+      "dias_por_100_paginas": 266.6666666666667,
+      "paginas_para_1_ano": 137
+    },
+    "3.0": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 16,
+      "dias": 12,
+      "dias_por_100_paginas": 80.0,
+      "paginas_para_1_ano": 456
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 38,
+      "dias": 6,
+      "dias_por_100_paginas": 16.216216216216218,
+      "paginas_para_1_ano": 2251
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 31,
+      "dias": 5,
+      "dias_por_100_paginas": 16.666666666666668,
+      "paginas_para_1_ano": 2190
+    },
+    "5.0": {
+      "n_paginas": 7,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 10,
+      "dias_por_100_paginas": 7.874015748031496,
+      "paginas_para_1_ano": 4636
+    }
+  },
+  "ano_lancamento": 1990,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "goodfellas",
+    "titulo": "GoodFellas",
+    "ano": 1990,
+    "tmdb_id_letterboxd": 769,
+    "fonte": "pagina_letterboxd"
+  }
+}

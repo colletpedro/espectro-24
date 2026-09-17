@@ -1,0 +1,1611 @@
+{
+  "slug": "chinatown",
+  "data_coleta": "2026-09-16T20:09:51.770545+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 564,
+  "reviews_url": "https://letterboxd.com/film/chinatown/reviews/",
+  "ficha": {
+    "titulo": "Chinatown",
+    "sinopse_oficial": "Contratado por uma bela socialite para investigar o caso extra-conjugal do marido dela, o detetive particular Jake Gittes é arrastado para um furacão de falsidades e enganos mortais, descobrindo uma rede de escândalos pessoais e políticos que colidem entre si.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Mistério",
+      "Thriller"
+    ],
+    "duracao_min": 130,
+    "diretor": "Roman Polanski",
+    "diretor_transliterado": false,
+    "ano": 1974,
+    "fonte": "tmdb",
+    "tmdb_id": 829,
+    "tmdb_fetched_at": "2026-09-16T20:18:54+00:00",
+    "poster_path": "/kZRSP3FmOcq0xnBulqpUQngJUXY.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/pyvkujOZ5qvY2NlQVC71flfgVWE.jpg",
+      "/bsoAg22remHKL5O0xJH0m9DX6Pu.jpg",
+      "/eJ6kPtua2rEvjxHdCtnIobXJZSf.jpg",
+      "/p7soTIKAUZdHk2FzVdWoHflCZ5U.jpg",
+      "/we7vCT9Evgjenh3Cx98noLSFu44.jpg",
+      "/ibAetoSaPJ5Ur8zPTahGvR99zf9.jpg",
+      "/hR5z9snfaHY5D95vQFLNhvM4WSO.jpg",
+      "/8DvIyyGBC7r8bAT9erIPAK0aCsQ.jpg",
+      "/r10J4L6P1w3RFS3VyLPGcl3OJXU.jpg",
+      "/jloYgLLoQ4AqGVy5iRSn0AimqXL.jpg"
+    ],
+    "backdrop_path": "/pyvkujOZ5qvY2NlQVC71flfgVWE.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/dgeXPFr0CGpwPpJ2nujzBCwYJcN.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1426,
+    "galeria_stills": [
+      {
+        "still_path": "/dKyDbmbQmrBYGggahgRF5pxifSX.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bsoAg22remHKL5O0xJH0m9DX6Pu.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/hR5z9snfaHY5D95vQFLNhvM4WSO.jpg",
+        "still_largura": 1435,
+        "still_altura": 807
+      },
+      {
+        "still_path": "/p7soTIKAUZdHk2FzVdWoHflCZ5U.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ZwC7dUDUc08Zq5c4fsaKvljOXo.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/nGFwmyLV2VByQslsiyJh0yqlaiG.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/1zZYpk3d2dgql9AD3KSw7QKPEnY.jpg",
+        "still_largura": 1450,
+        "still_altura": 816
+      },
+      {
+        "still_path": "/AqeBUM6cAqAYVJi4EBujHWo0rE0.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/dankSTdOeOpfClaiJPrxno9q4TE.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/gFbmFzeT7nmkicZGMmgZIeXr4ci.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/oMpTbmyvEWmmbZ5UvlpnsanU2hK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/tGbzuLxG61Ns8Bqp1oWSVaB2xsu.jpg",
+        "still_largura": 2256,
+        "still_altura": 1269
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "chinatown",
+      "titulo_letterboxd": "Chinatown",
+      "ano_letterboxd": 1974,
+      "tmdb_id_letterboxd": 829,
+      "tmdb_id_escolhido": 829,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Chinatown",
+      "ano_tmdb": 1974,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 521462,
+    "por_nivel": {
+      "0.5": 779,
+      "1.0": 1492,
+      "1.5": 1113,
+      "2.0": 5831,
+      "2.5": 7575,
+      "3.0": 34554,
+      "3.5": 55229,
+      "4.0": 155683,
+      "4.5": 115817,
+      "5.0": 143389
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "chinatown",
+    "coletado_em": "2026-09-16T05:50:36.385384+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 779,
+      "1.0": 1492,
+      "1.5": 1113,
+      "2.0": 5831,
+      "2.5": 7575,
+      "3.0": 34554,
+      "3.5": 55229,
+      "4.0": 155683,
+      "4.5": 115817,
+      "5.0": 143389
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 12,
+      "2.0": 32,
+      "2.5": 26,
+      "3.0": 43,
+      "3.5": 11,
+      "4.0": 15,
+      "4.5": 16,
+      "5.0": 24
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 15,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 69,
+        "n_validas_pos_extensao": 69,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 66,
+        "n_validas_pos_extensao": 66,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 12,
+      "3.0": 57,
+      "3.5": 91,
+      "4.0": 256,
+      "4.5": 190,
+      "5.0": 236
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 564,
+        "min": "2010-02-14",
+        "max": "2026-09-16",
+        "p5": "2026-04-28",
+        "p50": "2026-08-24",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 180,
+          "min": "2011-01-15",
+          "max": "2026-09-15",
+          "p5": "2026-04-20",
+          "p50": "2026-07-18",
+          "p95": "2026-09-09"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2011-08-01",
+          "max": "2026-09-16",
+          "p5": "2026-06-16",
+          "p50": "2026-08-24",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2010-02-14",
+          "max": "2026-09-16",
+          "p5": "2026-08-08",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 36,
+      "dias_por_100_paginas": 57.142857142857146,
+      "paginas_para_1_ano": 639
+    },
+    "identidade_letterboxd": {
+      "slug": "chinatown",
+      "titulo": "Chinatown",
+      "ano": 1974,
+      "tmdb_id_letterboxd": 829,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1974,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 564
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 5,
+        "1.5": 6,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.175
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-01-12",
+        "max": "2026-09-15",
+        "p5": "2026-04-20",
+        "p50": "2026-07-23",
+        "p95": "2026-09-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 80,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 80,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas criticam o ritmo arrastado e a duração excessiva, considerando o filme monótono e sem envolvimento, com uma trama que demora a avançar e não desperta interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Associação com as ações do diretor",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a dificuldade em separar a obra das ações do diretor, mencionando seu histórico e considerando isso um fator que torna o filme repulsivo ou difícil de apreciar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso ou fraco",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que o roteiro é confuso, com respostas para perguntas não feitas, reviravoltas inverossímeis e falta de coerência, resultando em uma narrativa arrastada e pouco crível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante ou problemático",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é criticado por ser moralmente perturbador, melodramático ou insatisfatório, com acusações de que a resolução é apressada ou incoerente, deixando uma impressão negativa duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens ou atuações sem envolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam dificuldade em se conectar com os personagens ou criticam atuações específicas, como a de Jack Nicholson, considerada inadequada ou pouco carismática, embora Faye Dunaway seja elogiada por alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro clichê ou previsível",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como repleto de clichês do gênero noir, com reviravoltas previsíveis e uma trama que segue fórmulas batidas, tornando a experiência pouco original e decepcionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e entediante, a associação com as ações do diretor, e problemas no roteiro e no final. Este grupo também menciona falta de envolvimento com os personagens e clichês do gênero.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 28,
+        "p5": 1,
+        "p50": 5,
+        "p95": 28,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2011-08-01",
+        "max": "2026-09-16",
+        "p5": "2026-06-05",
+        "p50": "2026-08-27",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e cansaço",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversos espectadores consideram o filme arrastado e entediante, com uma primeira metade que se estende sem grandes acontecimentos e um ritmo que torna difícil manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Jack Nicholson",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Jack Nicholson é frequentemente elogiada como o ponto alto, sustentando o filme com carisma e competência mesmo para quem não se envolveu com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e estética",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, o figurino e a recriação de época são bastante elogiados, com menções à beleza visual e à atmosfera noir bem construída.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e trama",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como inteligente e bem estruturado por alguns, enquanto outros o consideram confuso, clichê ou com uma reviravolta final previsível e excessivamente dependente de choque.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final marcante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho divide opiniões: para uns é impactante e redentor, para outros é perturbador ou decepcionante, mas raramente passa despercebido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desconexão emocional e frieza",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores relatam não terem se conectado emocionalmente com a história ou personagens, sentindo o filme como distante e sem envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas frequentemente destacam a atuação de Jack Nicholson e a qualidade técnica, mas apontam ritmo lento, cansaço e falta de conexão emocional. O final é visto como marcante, porém divisivo, e a trama gera opiniões mistas sobre sua clareza e originalidade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 59,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2010-02-14",
+        "max": "2026-09-16",
+        "p5": "2025-08-09",
+        "p50": "2026-09-14",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Jack Nicholson",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a performance de Jack Nicholson como carismática e marcante, com seu personagem detetive cínico e confiante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Corrupção e abuso de poder",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo enfatiza como a trama expõe a corrupção enraizada e a impunidade dos poderosos, mostrando que a justiça raramente prevalece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam o visual do filme, com cores quentes e recriação detalhada de Los Angeles nos anos 1930, criando uma atmosfera única.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e construção do mistério",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é aclamado por desenrolar gradualmente um mistério envolvente, com reviravoltas que mantêm o espectador investido até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é descrito como sombrio e perturbador, deixando uma impressão duradoura e reforçando o tom pessimista da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Críticas a Roman Polanski",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews condenam a pessoa do diretor por seu histórico, embora reconheçam seu talento na direção do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atuação de Jack Nicholson, a atmosfera noir e a crítica social do filme, com elogios à fotografia, roteiro e final impactante. Algumas reviews também expressam desconforto com o diretor Roman Polanski, mas separam a obra de sua conduta pessoal.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "As reviews negativas criticam o ritmo arrastado e a duração excessiva, considerando o filme monótono e sem envolvimento, com uma trama que demora a avançar e não desperta interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e cansaço",
+            "exemplo_parafraseado": "Diversos espectadores consideram o filme arrastado e entediante, com uma primeira metade que se estende sem grandes acontecimentos e um ritmo que torna difícil manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens ou atuações sem envolvimento",
+            "exemplo_parafraseado": "Algumas reviews mencionam dificuldade em se conectar com os personagens ou criticam atuações específicas, como a de Jack Nicholson, considerada inadequada ou pouco carismática, embora Faye Dunaway seja elogiada por alguns.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Jack Nicholson",
+            "exemplo_parafraseado": "A performance de Jack Nicholson é frequentemente elogiada como o ponto alto, sustentando o filme com carisma e competência mesmo para quem não se envolveu com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Jack Nicholson",
+            "exemplo_parafraseado": "As reviews positivas destacam a performance de Jack Nicholson como carismática e marcante, com seu personagem detetive cínico e confiante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Qualidade técnica e estética",
+            "exemplo_parafraseado": "A fotografia, o figurino e a recriação de época são bastante elogiados, com menções à beleza visual e à atmosfera noir bem construída.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética",
+            "exemplo_parafraseado": "As reviews elogiam o visual do filme, com cores quentes e recriação detalhada de Los Angeles nos anos 1930, criando uma atmosfera única.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso ou fraco",
+            "exemplo_parafraseado": "As reviews apontam que o roteiro é confuso, com respostas para perguntas não feitas, reviravoltas inverossímeis e falta de coerência, resultando em uma narrativa arrastada e pouco crível.",
+            "temas_no_mesmo_eixo": [
+              "Final decepcionante ou problemático",
+              "Roteiro clichê ou previsível"
+            ]
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e trama",
+            "exemplo_parafraseado": "O roteiro é visto como inteligente e bem estruturado por alguns, enquanto outros o consideram confuso, clichê ou com uma reviravolta final previsível e excessivamente dependente de choque.",
+            "temas_no_mesmo_eixo": [
+              "Final marcante"
+            ]
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e construção do mistério",
+            "exemplo_parafraseado": "O roteiro é aclamado por desenrolar gradualmente um mistério envolvente, com reviravoltas que mantêm o espectador investido até o fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Desconexão emocional e frieza",
+            "exemplo_parafraseado": "Vários espectadores relatam não terem se conectado emocionalmente com a história ou personagens, sentindo o filme como distante e sem envolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Final impactante",
+            "exemplo_parafraseado": "O desfecho é descrito como sombrio e perturbador, deixando uma impressão duradoura e reforçando o tom pessimista da narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Associação com as ações do diretor",
+            "exemplo_parafraseado": "Este grupo destaca a dificuldade em separar a obra das ações do diretor, mencionando seu histórico e considerando isso um fator que torna o filme repulsivo ou difícil de apreciar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Corrupção e abuso de poder",
+            "exemplo_parafraseado": "Este grupo enfatiza como a trama expõe a corrupção enraizada e a impunidade dos poderosos, mostrando que a justiça raramente prevalece.",
+            "temas_no_mesmo_eixo": [
+              "Críticas a Roman Polanski"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1470386808",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 89 (char 88)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1974 e dirigido por Roman Polanski, Chinatown é um filme de mistério, crime e suspense. Na trama, o detetive particular Jake Gittes é contratado por uma socialite para investigar um caso extraconjugal, acabando envolvido em uma complexa teia de escândalos pessoais e políticos marcada por enganos e falsidades.\n\nA narrativa adota um ritmo deliberadamente lento e compassado, apoiando-se em uma atmosfera densa de investigação e em uma estética visual detalhada de época.\n\nOs diferentes perfis de recepção concordam sobre a natureza dos elementos centrais da obra, mas divergem frontalmente quanto ao veredito de seu funcionamento. Na grande maioria das notas (~90%), muitos destacam a atuação carismática e marcante de Jack Nicholson. Além disso, boa parte enfatiza o retrato da corrupção enraizada e do abuso de poder dos poderosos, enquanto uma parcela expressiva elogia a fotografia e a estética visual que recria o cenário histórico.\n\nNuma perspectiva intermediária, presente numa fração mínima das notas (~8%), o ritmo lento gera cansaço para vários avaliadores, que apontam a condução arrastada da história. Ainda assim, um número considerável preserva elogios à atuação de Jack Nicholson como ponto de sustentação da obra, e muitos ressaltam a qualidade técnica e a estética do figurino e da ambientação.\n\nJá sob o ponto de vista de quem reprovou o longa, que corresponde a uma fração ainda menor das notas (~2%), boa parte critica a lentidão excessiva e o caráter monótono do ritmo. Para uma parcela expressiva dessa faixa, a associação com as ações e o histórico pessoal do diretor prejudica a experiência, enquanto vários consideram o roteiro confuso, fraco e pouco crível.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.778,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9903,
+      "completion_tokens": 1088,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9903
+    },
+    "latencia_s": 21.9
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões dividem-se diretamente quanto à qualidade da estrutura narrativa e do texto. A maioria entre os que recomendam destaca como o mistério é construído ao longo da história, enquanto quase todos no grupo que desaprova veem a condução do enredo como confusa e desprovida de força.",
+    "texto_modelo": "As opiniões dividem-se diretamente quanto à qualidade da estrutura narrativa e do texto. A maioria entre os que recomendam destaca como o mistério é construído ao longo da história, enquanto quase todos no grupo que desaprova veem a condução do enredo como confusa e desprovida de força.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3663,
+      "completion_tokens": 200,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3663
+    },
+    "latencia_s": 16.31
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia a interpretação marcante e carismática de Jack Nicholson como um detetive cínico",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Jack Nicholson",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca tramas que abordam esquemas de corrupção e a impunidade de figuras poderosas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Corrupção e abuso de poder",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma estética de cores quentes e cuidadosa recriação de época",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e estética",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia um mistério envolvente que se desenrola gradualmente na trama",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e construção do mistério",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza o talento na direção de Roman Polanski apesar de seu histórico pessoal",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Críticas a Roman Polanski",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado e uma trama que demora a avançar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tem dificuldade em dissociar a obra do histórico pessoal de seu diretor",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Associação com as ações do diretor",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com um roteiro confuso, pouco crível e com falta de coerência",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso ou fraco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com atuações pouco carismáticas, embora Faye Dunaway receba elogios",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens ou atuações sem envolvimento",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16395,
+      "completion_tokens": 1392,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16395
+    },
+    "latencia_s": 26.47,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

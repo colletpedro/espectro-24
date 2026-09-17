@@ -1,0 +1,2318 @@
+{
+  "slug": "uncut-gems",
+  "data_coleta": "2026-09-16T19:53:36.348948+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/uncut-gems/reviews/",
+  "ficha": {
+    "titulo": "Joias Brutas",
+    "sinopse_oficial": "Howard Ratner é um joalheiro carismático de Nova York que está sempre tentando ganhar mais dinheiro. Depois que faz uma série de apostas arriscadas, parece que o futuro vai sorrir para ele. Mas, em sua busca pela bolada final, Howard precisará de uma atuação perfeita para equilibrar negócios, família e os inimigos que estão cada vez mais próximos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "duracao_min": 135,
+    "diretor": "Benny Safdie",
+    "diretor_transliterado": false,
+    "ano": 2019,
+    "fonte": "tmdb",
+    "tmdb_id": 473033,
+    "tmdb_fetched_at": "2026-09-16T20:18:50+00:00",
+    "poster_path": "/171gYxXVmCJ4WI7megfkL5549N8.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1426,
+    "backdrop_paths": [
+      "/eGljNfNCrPhFYG2RXXmmE0OKu5.jpg",
+      "/uzvT6tYrU5SxfHe1ieimIGAqyFm.jpg",
+      "/3gmXCrXHAfsdaNRScoXce6mMBL4.jpg",
+      "/5qTZGBHJNq6riBliYtOnH4yUN6x.jpg",
+      "/gN4ahTRnj0Z5ctYaHpeFTMSKqKD.jpg",
+      "/oastliRWPGiD0fHrDtUGJH71fm6.jpg",
+      "/AsLnFcciUqE5Qi30a1dx6QVhsih.jpg",
+      "/bSuT2OaMYu5uYRaemcrNXaYWjly.jpg",
+      "/GRI6uqMGqRfuTjN0gXOWucBk7i.jpg",
+      "/u9VTXzFhDWlsKSmr5XxGEAQbX8g.jpg"
+    ],
+    "backdrop_path": "/eGljNfNCrPhFYG2RXXmmE0OKu5.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/eaxLgZUoUHfwLPZApXbqXAbjvYi.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/eGljNfNCrPhFYG2RXXmmE0OKu5.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/uzvT6tYrU5SxfHe1ieimIGAqyFm.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/gN4ahTRnj0Z5ctYaHpeFTMSKqKD.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/oastliRWPGiD0fHrDtUGJH71fm6.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/2RnkA0SbmYpy2Ufk3mvTcgLEQ9A.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/zmflkvm6rF6PEBx3f00V6hleV2l.jpg",
+        "still_largura": 3051,
+        "still_altura": 1716
+      },
+      {
+        "still_path": "/5Z6MLc9BzGuVnrf321EpmbSRJ9o.jpg",
+        "still_largura": 1430,
+        "still_altura": 804
+      },
+      {
+        "still_path": "/bmRjET1R7p9S5a44UlUDabx5Jwk.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/ceCLHwGYZjK4oOQgipC6LmgSzkQ.jpg",
+        "still_largura": 1429,
+        "still_altura": 804
+      },
+      {
+        "still_path": "/dlP7gbIIgeK8yPdNQac84VDIewV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kRCKerLPimryXfONTARNlkBZcK7.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wbxjm0eDpBRIkz4aKOYKROUkolk.jpg",
+        "still_largura": 2900,
+        "still_altura": 1631
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "uncut-gems",
+      "titulo_letterboxd": "Uncut Gems",
+      "ano_letterboxd": 2019,
+      "tmdb_id_letterboxd": 473033,
+      "tmdb_id_escolhido": 473033,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Uncut Gems",
+      "ano_tmdb": 2019,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1805456,
+    "por_nivel": {
+      "0.5": 8167,
+      "1.0": 20989,
+      "1.5": 11035,
+      "2.0": 54595,
+      "2.5": 48104,
+      "3.0": 196579,
+      "3.5": 257473,
+      "4.0": 611516,
+      "4.5": 306017,
+      "5.0": 290981
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 14,
+      "positivas": 81
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "uncut-gems",
+    "coletado_em": "2026-09-16T05:16:02.499398+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 8167,
+      "1.0": 20989,
+      "1.5": 11035,
+      "2.0": 54595,
+      "2.5": 48104,
+      "3.0": 196579,
+      "3.5": 257473,
+      "4.0": 611516,
+      "4.5": 306017,
+      "5.0": 290981
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 5,
+      "1.5": 7,
+      "2.0": 23,
+      "2.5": 20,
+      "3.0": 30,
+      "3.5": 4,
+      "4.0": 15,
+      "4.5": 11,
+      "5.0": 5
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "2.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.5": 2,
+          "4.0": 4,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 9,
+      "1.5": 5,
+      "2.0": 23,
+      "2.5": 20,
+      "3.0": 82,
+      "3.5": 108,
+      "4.0": 256,
+      "4.5": 128,
+      "5.0": 122
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 732,
+        "min": "2019-09-20",
+        "max": "2026-09-16",
+        "p5": "2026-08-13",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2019-09-20",
+          "max": "2026-09-16",
+          "p5": "2026-08-12",
+          "p50": "2026-08-31",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2020-01-12",
+          "max": "2026-09-15",
+          "p5": "2026-08-14",
+          "p50": "2026-09-09",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 288,
+          "min": "2019-12-27",
+          "max": "2026-09-16",
+          "p5": "2026-07-19",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 27,
+      "dias_por_100_paginas": 21.25984251968504,
+      "paginas_para_1_ano": 1717
+    },
+    "identidade_letterboxd": {
+      "slug": "uncut-gems",
+      "titulo": "Uncut Gems",
+      "ano": 2019,
+      "tmdb_id_letterboxd": 473033,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2019,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 732
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 9,
+        "1.5": 5,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 9,
+        "1.5": 5,
+        "2.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-09-20",
+        "max": "2026-09-13",
+        "p5": "2020-08-23",
+        "p50": "2026-08-31",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 23,
+          "n_alvo": 23,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 115,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 115,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo frenético e cansativo",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas reclamam que o filme é excessivamente frenético e barulhento, com cenas que parecem desnecessariamente apressadas, deixando a experiência exaustiva em vez de envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens antipáticos e rasos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a falta de profundidade dos personagens, afirmando que todos são desagradáveis e caricaturais, o que torna impossível torcer ou se importar com o que acontece com eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Protagonista que toma decisões idiotas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que o protagonista toma uma sequência de decisões irracionais e autossabotadoras, e que a trama depende disso de forma repetitiva, tornando a história previsível e frustrante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom de ansiedade e estresse",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews negativas descrevem o filme como indutor de ansiedade, com uma atmosfera constantemente tensa que, embora intencional, foi sentida como desagradável e desgastante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Adam Sandler em papel sério",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews reconhecem que Adam Sandler se esforça em um papel dramático, mas outras acham que ele não convence ou que sua atuação é monotemática, com muito grito e pouca nuance.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final sem sentido e decepcionante",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é criticado como implausível, anticlimático ou desconectado da tensão construída, deixando a impressão de que a história se perde e entrega uma conclusão insatisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo frenético e estressante, personagens sem carisma e decisões absurdas do protagonista como os principais motivos de descontentamento. Este grupo também aponta que a atuação de Adam Sandler e o final da trama não compensam a experiência cansativa e ansiosa que o filme proporciona.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 14,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 41,
+        "p5": 1,
+        "p50": 5,
+        "p95": 41,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-13",
+        "max": "2026-09-15",
+        "p5": "2026-08-14",
+        "p50": "2026-09-10",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ansiedade e estresse como reação predominante",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que o filme provoca um estado constante de tensão e ansiedade, com ritmo acelerado e diálogos sobrepostos que deixam o espectador exausto, embora algumas reconheçam que essa era a intenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Adam Sandler em papel dramático",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a atuação de Adam Sandler como um ponto alto, elogiando sua capacidade de interpretar um personagem detestável e intenso, embora algumas reviews a considerem superestimada ou repetitiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e duração excessiva",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que o filme se torna longo e arrastado em vários momentos, especialmente na parte do meio, com cenas que parecem não levar a lugar nenhum e fazer o tempo passar devagar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de conexão ou envolvimento com a história",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews comentam que, apesar do caos e da tensão, não conseguiram se envolver emocionalmente com o protagonista ou com a trama, achando difícil torcer por ele ou se importar com o que acontece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante e divisivo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é frequentemente citado como surpreendente e intenso, com algumas pessoas dizendo que ele eleva a nota final, enquanto outras sentem que torna a experiência anterior sem sentido ou não compensa o restante do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco coadjuvante e participações",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam a presença de Julia Fox e de Kevin Garnett como pontos curiosos ou positivos, mas também há críticas à atuação de Garnett e à falta de desenvolvimento dos personagens secundários.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam uma experiência intensa e ansiosa, impulsionada pela atuação de Adam Sandler e pelo estilo caótico dos diretores, mas frequentemente apontam dificuldades de conexão emocional, ritmo arrastado e um final que divide opiniões. Este grupo específico parece reconhecer a competência técnica do filme, porém muitos não o consideram totalmente satisfatório ou adequado ao seu gosto pessoal.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 81,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 8,
+        "5.0": 8
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 8,
+        "5.0": 8
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 32,
+        "p5": 1,
+        "p50": 4,
+        "p95": 32,
+        "fracao_profunda": 0.5
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-01-01",
+        "max": "2026-09-16",
+        "p5": "2026-07-19",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Tensão e ansiedade constantes",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas descrevem o filme como uma experiência intensa e angustiante, que mantém o espectador em estado de alerta do início ao fim, comparando-o a um ataque de pânico ou a uma montanha-russa emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Adam Sandler",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a atuação de Adam Sandler, considerando-a uma das melhores de sua carreira, destacando sua capacidade de interpretar um personagem dramático e complexo, distante de seus papéis cômicos habituais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e estilo dos irmãos Safdie",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a direção dos irmãos Safdie, elogiando a construção do suspense, o ritmo frenético e a habilidade de criar uma atmosfera claustrofóbica e imersiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e desenho de som",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora e o desenho de som são mencionados como elementos que intensificam a experiência, com sobreposição de diálogos e uma mistura sonora que contribui para a sensação de urgência e caos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é descrito como surpreendente e abrupto, deixando uma forte impressão e sendo considerado um ponto alto do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem complexo e decisões questionáveis",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo comenta sobre o protagonista, um personagem cheio de falhas que toma decisões erradas, mas por quem o espectador acaba torcendo, mesmo diante de seu comportamento autodestrutivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a tensão constante, a atuação de Adam Sandler e a direção dos irmãos Safdie como pontos fortes. Este grupo descreve o filme como uma experiência intensa e angustiante, com um final impactante e uma trilha sonora marcante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo frenético e cansativo",
+            "exemplo_parafraseado": "As reviews negativas reclamam que o filme é excessivamente frenético e barulhento, com cenas que parecem desnecessariamente apressadas, deixando a experiência exaustiva em vez de envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e duração excessiva",
+            "exemplo_parafraseado": "Muitas reviews medianas apontam que o filme se torna longo e arrastado em vários momentos, especialmente na parte do meio, com cenas que parecem não levar a lugar nenhum e fazer o tempo passar devagar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adam Sandler em papel sério",
+            "exemplo_parafraseado": "Algumas reviews reconhecem que Adam Sandler se esforça em um papel dramático, mas outras acham que ele não convence ou que sua atuação é monotemática, com muito grito e pouca nuance.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adam Sandler em papel dramático",
+            "exemplo_parafraseado": "Este grupo destaca a atuação de Adam Sandler como um ponto alto, elogiando sua capacidade de interpretar um personagem detestável e intenso, embora algumas reviews a considerem superestimada ou repetitiva.",
+            "temas_no_mesmo_eixo": [
+              "Elenco coadjuvante e participações"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adam Sandler",
+            "exemplo_parafraseado": "Este grupo elogia a atuação de Adam Sandler, considerando-a uma das melhores de sua carreira, destacando sua capacidade de interpretar um personagem dramático e complexo, distante de seus papéis cômicos habituais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Direção e estilo dos irmãos Safdie",
+            "exemplo_parafraseado": "As reviews positivas destacam a direção dos irmãos Safdie, elogiando a construção do suspense, o ritmo frenético e a habilidade de criar uma atmosfera claustrofóbica e imersiva.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens antipáticos e rasos",
+            "exemplo_parafraseado": "Este grupo critica a falta de profundidade dos personagens, afirmando que todos são desagradáveis e caricaturais, o que torna impossível torcer ou se importar com o que acontece com eles.",
+            "temas_no_mesmo_eixo": [
+              "Protagonista que toma decisões idiotas",
+              "Final sem sentido e decepcionante"
+            ]
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Final impactante e divisivo",
+            "exemplo_parafraseado": "O desfecho é frequentemente citado como surpreendente e intenso, com algumas pessoas dizendo que ele eleva a nota final, enquanto outras sentem que torna a experiência anterior sem sentido ou não compensa o restante do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Final impactante",
+            "exemplo_parafraseado": "O desfecho é descrito como surpreendente e abrupto, deixando uma forte impressão e sendo considerado um ponto alto do filme.",
+            "temas_no_mesmo_eixo": [
+              "Personagem complexo e decisões questionáveis"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e desenho de som",
+            "exemplo_parafraseado": "A trilha sonora e o desenho de som são mencionados como elementos que intensificam a experiência, com sobreposição de diálogos e uma mistura sonora que contribui para a sensação de urgência e caos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Tom de ansiedade e estresse",
+            "exemplo_parafraseado": "Muitas reviews negativas descrevem o filme como indutor de ansiedade, com uma atmosfera constantemente tensa que, embora intencional, foi sentida como desagradável e desgastante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ansiedade e estresse como reação predominante",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que o filme provoca um estado constante de tensão e ansiedade, com ritmo acelerado e diálogos sobrepostos que deixam o espectador exausto, embora algumas reconheçam que essa era a intenção.",
+            "temas_no_mesmo_eixo": [
+              "Dificuldade de conexão ou envolvimento com a história"
+            ]
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Tensão e ansiedade constantes",
+            "exemplo_parafraseado": "As reviews positivas descrevem o filme como uma experiência intensa e angustiante, que mantém o espectador em estado de alerta do início ao fim, comparando-o a um ataque de pânico ou a uma montanha-russa emocional.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1449580429",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1450000587",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1450305573",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1450307730",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1450365299",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1450447084",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1474336612",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1482420510",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1482936547",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1482992624",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488253246",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488364503",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488658527",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488671545",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488739895",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1488983373",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1489844348",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1490466073",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1490796497",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1490850987",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1491077792",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1491433753",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1491442039",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1491797422",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1492024467",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1494013277",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1494741801",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1495187865",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1495269491",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1495608650",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1496273030",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1496563379",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1497634674",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1497814710",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1456924976",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1457451354",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1457812188",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1459191530",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1459329291",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1460582074",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1463744024",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1464112347",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1466572728",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1466829752",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1467338500",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1468489293",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1469356964",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1470262966",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1472624688",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1473800025",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1476873081",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1481261396",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1483050202",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484431691",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484680791",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484778994",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1485103583",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1486987939",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1487039643",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1488011365",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1488098246",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1488665400",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1490400186",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1492231866",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1492457852",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1492610116",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1494442298",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1496558974",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1476225413",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1482711897",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1482734800",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1482742209",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1482801219",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495521109",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495813447",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495909289",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495953943",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495982232",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496076577",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496124460",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496196314",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496496552",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496688435",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496735809",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496814427",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497074279",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497082896",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497098315",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497130701",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497139025",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497215596",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497263581",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497362808",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497391586",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497422248",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497565686",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497623051",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497627565",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497895389",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497913351",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2019 e dirigido por Benny Safdie, Joias Brutas enquadra-se nos gêneros de drama, thriller e crime. A narrativa acompanha um joalheiro carismático de Nova York que busca lucros maiores por meio de apostas arriscadas, precisando equilibrar seus negócios e sua família enquanto lida com inimigos cada vez mais próximos.\n\nA experiência do longa-metragem é construída sobre uma atmosfera ininterrupta de tensão e ansiedade. Essa dinâmica se apoia em uma intensidade constante e em um ritmo agitado ao longo de toda a exibição.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam quanto ao veredito sobre o seu funcionamento. Na grande maioria das notas (~81%), grande parte exalta a tensão e a ansiedade constantes proporcionadas pela história. A maior parcela desse grupo elogia a atuação de Adam Sandler, enquanto uma parcela expressiva destaca a direção e o estilo dos irmãos Safdie.\n\nPara a leitura que reúne uma fração mínima das notas (~14%), boa parte relata a ansiedade e o estresse como a reação predominante ao filme. Nesse mesmo grupo, um número considerável ressalta a atuação de Adam Sandler em papel dramático, embora vários apontem a presença de um ritmo arrastado e duração excessiva.\n\nPor fim, na avaliação de quem se concentra em uma fração ainda menor das notas (~5%), muitos desaprovam o ritmo frenético e cansativo da produção. Nessa perspectiva, uma parcela expressiva critica os personagens por considerá-los antipáticos e rasos, enquanto uma parte se incomoda com o protagonista que toma decisões idiotas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10323,
+      "completion_tokens": 1152,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10323
+    },
+    "latencia_s": 39.69
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O debate sobre o filme gira em torno de seu impacto emocional. Enquanto a maioria dos que recomendam valoriza a sensação contínua de angústia e aflição, quase todos os que não recomendam avaliam que essa carga emotiva não funciona.",
+    "texto_modelo": "O debate sobre o filme gira em torno de seu impacto emocional. Enquanto a maioria dos que recomendam valoriza a sensação contínua de angústia e aflição, quase todos os que não recomendam avaliam que essa carga emotiva não funciona.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "debat",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3546,
+      "completion_tokens": 183,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3546
+    },
+    "latencia_s": 9.4
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência intensa e angustiante que mantenha constante estado de alerta",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão e ansiedade constantes",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "quer ver Adam Sandler em uma interpretação dramática e complexa fora do habitual",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Adam Sandler",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia a direção dos irmãos Safdie com ritmo frenético e atmosfera claustrofóbica imersiva",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e estilo dos irmãos Safdie",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo excessivamente frenético, barulhento e cansativo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo frenético e cansativo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita histórias com personagens desagradáveis e caricaturais pelos quais é difícil torcer",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens antipáticos e rasos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com tramas dependentes de repetidas decisões irracionais de um protagonista autossabotador",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Protagonista que toma decisões idiotas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha desgastante uma atmosfera de ansiedade e tensão constante, mesmo sendo intencional",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tom de ansiedade e estresse",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha a atuação dramática de Adam Sandler pouco convincente e monotemática, apesar do esforço",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Adam Sandler em papel sério",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 81,
+        "peso_texto": "~81% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-F"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "gosta de torcer por um protagonista falho, mesmo diante de seu comportamento autodestrutivo",
+        "tema_origem": "POS-F",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16454,
+      "completion_tokens": 1404,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16454
+    },
+    "latencia_s": 24.87,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

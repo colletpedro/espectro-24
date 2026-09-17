@@ -360,11 +360,36 @@ def test_briefing_nao_tem_algarismo_ano_em_nome_de_tema_PASSA():
     "Versão de 2022",
     "Diferenças para o original de 1940, da Disney",
     "Remake do filme lançado em 1978",
+    # [2026-09-16, ABERTO.md B5] `para` — caso real `2001-a-space-odyssey`.
+    "Efeitos visuais impressionantes para 1968",
 ])
 def test_briefing_nao_tem_algarismo_formas_de_ano_admitidas(tema):
     b = C.montar_briefing(_output_com_tema(tema))
     assert C.algarismos_proibidos_no_briefing(b) == []
     assert C.anos_em_nome_de_tema(tema)
+
+
+@pytest.mark.parametrize("tema", [
+    # [2026-09-16, ABERTO.md B5] Década — casos reais `chinatown` (4 dígitos,
+    # fecha a frase) e `a-brighter-summer-day` (2 dígitos, NÃO fecha — "nos
+    # anos 60 e os reflexos..." — é o caso que exigiu o sufixo mais solto).
+    "Recriação de Los Angeles nos anos 1930",
+    "O peso histórico de Taiwan nos anos 60 e os reflexos na juventude",
+])
+def test_briefing_nao_tem_algarismo_decada_em_anos_admitida(tema):
+    b = C.montar_briefing(_output_com_tema(tema))
+    assert C.algarismos_proibidos_no_briefing(b) == []
+
+
+@pytest.mark.parametrize("tema", [
+    # [2026-09-16, ABERTO.md B5] Formato de tela — caso real
+    # `the-spongebob-movie-search-for-squarepants`.
+    "Animação em 3D bem executada",
+    "Comparação entre as versões 2D e 3D",
+])
+def test_briefing_nao_tem_algarismo_formato_de_tela_admitido(tema):
+    b = C.montar_briefing(_output_com_tema(tema))
+    assert C.algarismos_proibidos_no_briefing(b) == []
 
 
 @pytest.mark.parametrize("tema", [
@@ -385,8 +410,6 @@ def test_briefing_nao_tem_algarismo_formas_de_ano_admitidas(tema):
     "Sexta-Feira 13",
     "Versão de 19400",
     "Versão de 1940.5",
-    # década, não obra
-    "Terror dos anos 2000",
     # ano legítimo FORA da forma — a estreiteza é deliberada: o destino é
     # reescrever o tema sem o ano
     "O remake de 2022 e o original",
@@ -397,13 +420,46 @@ def test_briefing_nao_tem_algarismo_de_quantidade_FALHA(tema):
     assert C.algarismos_proibidos_no_briefing(b), tema
 
 
-def test_briefing_nao_tem_algarismo_ano_na_parafrase_nao_tem_excecao():
-    """A exceção é do NOME do tema. A mesma forma na paráfrase continua
-    proibida: é lá que as quantidades moram."""
+def test_briefing_decada_como_locucao_de_quantidade_continua_falhando():
+    """A exclusão de locução (`_LOCUCAO_DE_QUANTIDADE`, a mesma do ano) vale
+    igual para década — sem isto, ficaria furada só para esta forma nova.
+    A palavra que precede `anos` diretamente é o que a guarda olha; "mais"
+    está no conjunto."""
+    b = C.montar_briefing(_output_com_tema("Queria mais anos 2000 de trama"))
+    assert C.algarismos_proibidos_no_briefing(b) == ["2000"]
+
+
+def test_briefing_nao_tem_algarismo_ano_na_forma_admitida_na_parafrase_PASSA():
+    """[2026-09-16, ABERTO.md B5] Substitui
+    `..._na_parafrase_nao_tem_excecao`: aquele teste travava uma decisão que
+    não sobreviveu ao achado 1 da revisão de 100% do lote
+    `expansao-44-2026-09-16` — o validador de PRODUÇÃO (`validar`/`digito`)
+    nunca checou a paráfrase, só a condição publicada, então "a exceção é só
+    do nome do tema" descrevia um alcance que a paráfrase nunca teve sob a
+    R4 real. Casos reais que motivaram a correção:
+    `all-quiet-on-the-western-front-2022`/NEG-A ("da versão de 1930") e
+    `woman-of-fire`/NEG-? ("a versão original de 1960") — ambos citam o ano
+    de uma adaptação anterior, na MESMA forma admitida no tema, só que na
+    paráfrase. A máscara agora cobre os dois campos."""
     b = C.montar_briefing(_output_com_tema(
         "Comparação com o clássico",
         exemplo="muitos compararam com o clássico de 1940"))
-    assert C.algarismos_proibidos_no_briefing(b) == ["1940"]
+    assert C.algarismos_proibidos_no_briefing(b) == []
+
+
+def test_briefing_nao_tem_algarismo_decada_na_parafrase_agora_admitida():
+    """[2026-09-16, ABERTO.md B5] Substitui
+    `..._decada_na_parafrase_continua_reprovada` — aquele teste travava
+    "década não é a exceção", decisão que o dono reverteu no mesmo dia
+    (`"passa todos menos o porco rosso"`, sobre os 5 casos genuínos
+    restantes da revisão de 100%). Caso real: `chinatown`/POS-C, "recriação
+    detalhada de Los Angeles nos anos 1930" — descreve a ÉPOCA do enredo, e
+    agora é tratado como o mesmo tipo de referência temporal que o ano de
+    obra já admitia."""
+    b = C.montar_briefing(_output_com_tema(
+        "Fotografia e estética",
+        exemplo="elogiam a recriação de Los Angeles nos anos 1930"))
+    assert C.algarismos_proibidos_no_briefing(b) == []
 
 
 def test_a_excecao_de_ano_nao_chega_ao_texto_da_condicao():

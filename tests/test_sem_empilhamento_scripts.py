@@ -41,6 +41,15 @@ SCRIPTS_SEM_LACO = [
     "auditoria_acuracia.py", "inspecao_assistir.py",
     "variante_impacto_estrito.py", "variantes_prompt_curtas.py",
     "verificador_impacto.py",
+    # [2026-09-16] `gerar_condicoes.py` não tinha o laço — entra por OUTRA
+    # razão, e ela é o motivo de a lista existir. Ele foi commitado em
+    # `18a1196` SEM COMPILAR (f-string com literal não terminado), justamente
+    # no commit que adotou o briefing variante como default de produção, e
+    # ninguém viu: nenhum teste o abria. `_chamadas_de_llm_dentro_de_laco`
+    # faz `ast.parse` do arquivo, então estar nesta lista transforma erro de
+    # sintaxe em falha de teste — a cobertura mais barata que existe para um
+    # script de produção que ninguém importa.
+    "gerar_condicoes.py",
 ]
 
 

@@ -1,0 +1,1639 @@
+{
+  "slug": "12-angry-men",
+  "data_coleta": "2026-09-16T19:05:48.693073+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 516,
+  "reviews_url": "https://letterboxd.com/film/12-angry-men/reviews/",
+  "ficha": {
+    "titulo": "12 Homens e uma Sentença",
+    "sinopse_oficial": "Um jovem porto-riquenho é acusado do brutal crime de ter matado o próprio pai. Quando ele vai a julgamento, doze jurados se reúnem para decidir a sentença, levando em conta que o réu deve ser considerado inocente até que se prove o contrário. Onze dos jurados têm plena certeza de que ele é culpado, e votam pela condenação, mas um jurado acha que é melhor investigar mais para que a sentença seja correta. Para isso ele terá que enfrentar diferentes interpretações dos fatos, e a má vontade dos outros jurados, que só querem ir logo para suas casas.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 96,
+    "diretor": "Sidney Lumet",
+    "diretor_transliterado": false,
+    "ano": 1957,
+    "fonte": "tmdb",
+    "tmdb_id": 389,
+    "tmdb_fetched_at": "2026-09-16T20:18:39+00:00",
+    "poster_path": "/aiHIhV8c45FzIlbqYlswrrNyQD6.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+      "/w4bTBXcqXc2TUyS5Fc4h67uWbPn.jpg",
+      "/zqWJfpKq3ooParUqAvQC7XTFcN3.jpg",
+      "/p1nBxgrSu9Ex0Uvci1ItWWCWPlk.jpg",
+      "/9GSvXxJojJ7MM2rzvzSIUNDGfMF.jpg",
+      "/2ExdVu0AITPediwjpxGEl9e2NuF.jpg",
+      "/oFuAMAoAEQEAs6bD87Q8BxrAgMf.jpg",
+      "/9CEb1xVkk6Mhusxw2gTsDsuZt8v.jpg",
+      "/e2uXB2C4Rov55zCz7I2S0HaqeA1.jpg",
+      "/trmcU0UiwTXZxZbuewOA4gzMjQP.jpg"
+    ],
+    "backdrop_path": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/wSjLruW8Vr2s6LoCA0adHTGYG3L.jpg",
+    "poster_sem_texto_largura": 1680,
+    "poster_sem_texto_altura": 2520,
+    "galeria_stills": [
+      {
+        "still_path": "/p1nBxgrSu9Ex0Uvci1ItWWCWPlk.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/w4bTBXcqXc2TUyS5Fc4h67uWbPn.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/9CEb1xVkk6Mhusxw2gTsDsuZt8v.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cBUKXPpOYwVzhEwgP36NLpQLY12.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5odxEjqx3UuOFQIEU70VOvVlkCF.jpg",
+        "still_largura": 2898,
+        "still_altura": 1630
+      },
+      {
+        "still_path": "/9MXyGrgwOZpxSFV1YthyAgTBMW0.jpg",
+        "still_largura": 2741,
+        "still_altura": 1542
+      },
+      {
+        "still_path": "/9z3q0VSsOs0jWImMg6D2Xy0AwEw.jpg",
+        "still_largura": 1457,
+        "still_altura": 820
+      },
+      {
+        "still_path": "/asoyUqaNedf7dKuaYGo4ORtXYUI.jpg",
+        "still_largura": 1457,
+        "still_altura": 820
+      },
+      {
+        "still_path": "/ftgvVwbTXhMdl35vlBAtX5p8sMR.jpg",
+        "still_largura": 2884,
+        "still_altura": 1622
+      },
+      {
+        "still_path": "/jIAVPutvymO1W45C2NkmQaFb8pz.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/sJNvZDy9JfoX4BfucL0r8J7Siqz.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vc8H3PGBWDZ0OX7OQt7d0NTvwLe.jpg",
+        "still_largura": 1457,
+        "still_altura": 820
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "12-angry-men",
+      "titulo_letterboxd": "12 Angry Men",
+      "ano_letterboxd": 1957,
+      "tmdb_id_letterboxd": 389,
+      "tmdb_id_escolhido": 389,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "12 Angry Men",
+      "ano_tmdb": 1957,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1730346,
+    "por_nivel": {
+      "0.5": 1608,
+      "1.0": 2892,
+      "1.5": 1610,
+      "2.0": 8437,
+      "2.5": 8577,
+      "3.0": 51831,
+      "3.5": 76459,
+      "4.0": 329265,
+      "4.5": 353608,
+      "5.0": 896059
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 3,
+      "positivas": 96
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "12-angry-men",
+    "coletado_em": "2026-09-16T03:38:56.060553+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1608,
+      "1.0": 2892,
+      "1.5": 1610,
+      "2.0": 8437,
+      "2.5": 8577,
+      "3.0": 51831,
+      "3.5": 76459,
+      "4.0": 329265,
+      "4.5": 353608,
+      "5.0": 896059
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 48,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 36,
+      "4.5": 36,
+      "5.0": 108
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 5,
+      "2.0": 16,
+      "2.5": 7,
+      "3.0": 23,
+      "3.5": 4,
+      "4.0": 5,
+      "4.5": 7,
+      "5.0": 28
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "0.5": 1,
+          "1.0": 3,
+          "2.0": 4
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 24,
+        "n_validas_pos_extensao": 48,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "3.0": 7
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 30,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 44,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 2,
+      "3.0": 15,
+      "3.5": 22,
+      "4.0": 94,
+      "4.5": 101,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 744,
+        "min": "1957-06-21",
+        "max": "2026-09-16",
+        "p5": "2026-07-22",
+        "p50": "2026-09-06",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "1957-06-21",
+          "max": "2026-09-15",
+          "p5": "2026-07-19",
+          "p50": "2026-08-14",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 252,
+          "min": "2018-10-17",
+          "max": "2026-09-15",
+          "p5": "2026-08-14",
+          "p50": "2026-09-03",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "2011-02-22",
+          "max": "2026-09-16",
+          "p5": "2026-08-09",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 4,
+      "dias_por_100_paginas": 3.1496062992125986,
+      "paginas_para_1_ano": 11589
+    },
+    "identidade_letterboxd": {
+      "slug": "12-angry-men",
+      "titulo": "12 Angry Men",
+      "ano": 1957,
+      "tmdb_id_letterboxd": 389,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1957,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 744
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 23
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "1957-06-21",
+        "max": "2026-09-15",
+        "p5": "2026-07-25",
+        "p50": "2026-08-14",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 23,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 100,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 100,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 27,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e monótono, com relatos de cochilos durante a exibição e sensação de que os noventa minutos pareceram uma eternidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ambientação única e falta de dinamismo visual",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O fato de toda a ação se passar em um único cômodo é apontado como limitante, com alguns espectadores sentindo falta de variação de cenários e de recursos visuais que mantenham o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogo excessivo e repetitivo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o filme se sustenta apenas em conversa constante, com argumentos que se repetem e discussões que giram em círculos sem avanço significativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Previsibilidade e roteiro raso",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores afirmam que o desfecho é óbvio desde o início e que as reflexões propostas soam superficiais ou pouco originais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Preto e branco como incômodo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco é citada como um obstáculo, com alguns relatando desconforto visual ou dificuldade de imersão por causa disso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações criticados",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam falta de desenvolvimento dos personagens e atuações consideradas exageradas ou pouco convincentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas concentra suas críticas no ritmo arrastado, na ambientação estática e no excesso de diálogo, além de apontar previsibilidade e falta de impacto emocional. Apesar disso, algumas reviews reconhecem qualidades técnicas e de atuação, mas afirmam que isso não foi suficiente para tornar a experiência agradável para elas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 8,
+        "p95": 14,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-04-03",
+        "max": "2026-09-15",
+        "p5": "2026-08-24",
+        "p50": "2026-09-03",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 204,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 152,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 5,
+            "abaixo_min_chars": 152,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento ou arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores acharam o filme cansativo e com ritmo lento, mencionando que a narrativa em um único ambiente e com diálogos constantes tornou a experiência monótona para eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final previsível",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários indicam que o desfecho era previsível desde o início, o que diminuiu a surpresa e o impacto emocional para parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa vs. realidade (superestimado)",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas sentiram que o filme não correspondeu à fama de obra-prima, considerando-o superestimado ou menos impactante do que esperavam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e diálogos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há elogios às atuações e à qualidade dos diálogos, com destaque para a construção dos personagens e a tensão gerada pelas discussões.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e argumentação",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores criticaram a lógica dos argumentos e a facilidade com que os jurados mudam de opinião, enquanto outros elogiaram a construção dos debates.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Comentários mencionam a eficácia da fotografia em preto e branco e os movimentos de câmera que intensificam a claustrofobia e a tensão do ambiente único.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam que, embora o filme tenha uma premissa interessante e boas atuações, muitos o consideraram lento, previsível e aquém das expectativas criadas por sua reputação. Este grupo também aponta que a argumentação e a reviravolta emocional não convenceram totalmente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 96,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 8,
+        "4.5": 8,
+        "5.0": 22
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 8,
+        "4.5": 8,
+        "5.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2011-02-22",
+        "max": "2026-09-16",
+        "p5": "2026-06-13",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro e construção narrativa",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a escrita precisa e a forma como o roteiro sustenta o interesse do início ao fim, construindo tensão apenas com diálogo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Grande parte das críticas destaca a qualidade das atuações individuais e do elenco em conjunto, com menções frequentes a Henry Fonda e Lee J. Cobb.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão em espaço único",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo valoriza como o filme cria claustrofobia e tensão sem sair quase nunca do mesmo ambiente, usando a limitação espacial a favor da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas de justiça e preconceito",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews ressaltam como o filme discute justiça, dúvida razoável, pressão de grupo e preconceito de forma humanista e ainda relevante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e encenação",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco, os enquadramentos fechados e a direção de cena são citados como elementos que amplificam a tensão psicológica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e diálogo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas mencionam que o filme mantém o ritmo ágil apesar de ser centrado em conversas, prendendo a atenção do espectador durante toda a projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para um grande apreço pela condução do roteiro, pelas atuações e pela capacidade de gerar tensão em um único ambiente, além de destacarem a discussão sobre justiça e preconceito como um dos pontos mais fortes da obra. Este grupo também valoriza a fotografia, a encenação e o ritmo como fatores que tornam a experiência envolvente e duradoura.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado e monótono, com relatos de cochilos durante a exibição e sensação de que os noventa minutos pareceram uma eternidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento ou arrastado",
+            "exemplo_parafraseado": "Alguns espectadores acharam o filme cansativo e com ritmo lento, mencionando que a narrativa em um único ambiente e com diálogos constantes tornou a experiência monótona para eles.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e diálogo",
+            "exemplo_parafraseado": "As críticas mencionam que o filme mantém o ritmo ágil apesar de ser centrado em conversas, prendendo a atenção do espectador durante toda a projeção.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações criticados",
+            "exemplo_parafraseado": "Algumas reviews mencionam falta de desenvolvimento dos personagens e atuações consideradas exageradas ou pouco convincentes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e diálogos",
+            "exemplo_parafraseado": "Há elogios às atuações e à qualidade dos diálogos, com destaque para a construção dos personagens e a tensão gerada pelas discussões.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "Grande parte das críticas destaca a qualidade das atuações individuais e do elenco em conjunto, com menções frequentes a Henry Fonda e Lee J. Cobb.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ambientação única e falta de dinamismo visual",
+            "exemplo_parafraseado": "O fato de toda a ação se passar em um único cômodo é apontado como limitante, com alguns espectadores sentindo falta de variação de cenários e de recursos visuais que mantenham o interesse.",
+            "temas_no_mesmo_eixo": [
+              "Preto e branco como incômodo"
+            ]
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção",
+            "exemplo_parafraseado": "Comentários mencionam a eficácia da fotografia em preto e branco e os movimentos de câmera que intensificam a claustrofobia e a tensão do ambiente único.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e encenação",
+            "exemplo_parafraseado": "A fotografia em preto e branco, os enquadramentos fechados e a direção de cena são citados como elementos que amplificam a tensão psicológica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Diálogo excessivo e repetitivo",
+            "exemplo_parafraseado": "As reviews destacam que o filme se sustenta apenas em conversa constante, com argumentos que se repetem e discussões que giram em círculos sem avanço significativo.",
+            "temas_no_mesmo_eixo": [
+              "Previsibilidade e roteiro raso"
+            ]
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Final previsível",
+            "exemplo_parafraseado": "Vários comentários indicam que o desfecho era previsível desde o início, o que diminuiu a surpresa e o impacto emocional para parte do público.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e argumentação"
+            ]
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e construção narrativa",
+            "exemplo_parafraseado": "As reviews elogiam a escrita precisa e a forma como o roteiro sustenta o interesse do início ao fim, construindo tensão apenas com diálogo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Tensão em espaço único",
+            "exemplo_parafraseado": "O grupo valoriza como o filme cria claustrofobia e tensão sem sair quase nunca do mesmo ambiente, usando a limitação espacial a favor da narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa vs. realidade (superestimado)",
+            "exemplo_parafraseado": "Algumas pessoas sentiram que o filme não correspondeu à fama de obra-prima, considerando-o superestimado ou menos impactante do que esperavam.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Temas de justiça e preconceito",
+            "exemplo_parafraseado": "Várias reviews ressaltam como o filme discute justiça, dúvida razoável, pressão de grupo e preconceito de forma humanista e ainda relevante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1473044609",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 80 (char 79)"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497042363",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 101)"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497861409",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 193)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1957 e dirigido por Sidney Lumet, o drama 12 Homens e uma Sentença acompanha a reunião de doze jurados encarregados de deliberar sobre o caso de um jovem acusado de assassinato. Enquanto a votação inicial se inclina pela condenação, um jurado insiste na necessidade de analisar com cuidado as evidências apresentadas no tribunal antes de selar o destino do réu.\n\nA experiência se constrói a partir do confinamento contínuo em um único cômodo, sustentando sua progressão na intensidade do embate verbal entre os integrantes do júri. A encenação aposta na densidade dos diálogos ininterruptos e na evolução das discussões para conduzir toda a dinâmica dramática.\n\nOs diferentes grupos de recepção concentram suas atenções nos mesmos elementos da encenação, de modo que a discordância entre eles reside estritamente no veredito sobre a eficácia da obra, e não nos temas abordados. Na grande maioria das notas (~96%), cerca de metade exalta a construção precisa do roteiro, uma parcela expressiva destaca o desempenho das atuações do elenco e um número considerável elogia a capacidade de gerar forte tensão dramática dentro de um espaço único.\n\nPara as avaliações que se concentram numa fração mínima das notas (~3%), vários apontam que a condução sofre com um ritmo lento ou arrastado, boa parte julga o desfecho excessivamente previsível e uma parte manifesta que a experiência ficou aquém do esperado em relação à reputação do longa.\n\nNuma fração ainda menor das notas (~1%), para quem está nessa faixa, a maior parte descreve a narrativa como monótona e tomada pelo tédio, muitos criticam a ambientação única desprovida de dinamismo visual e boa parte rejeita o que considera um excesso de diálogos repetitivos ao longo da projeção.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "quantificador_fora_de_faixa"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11968,
+      "completion_tokens": 1611,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11968
+    },
+    "latencia_s": 51.95
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões convergem sobre o foco no texto e na estrutura, mas divergem sobre o resultado. Enquanto a maioria dos que recomendam elogia o desenvolvimento da trama e a condução da história, a maioria dos que não recomendam critica o excesso de falas e as redundâncias.",
+    "texto_modelo": "As opiniões convergem sobre o foco no texto e na estrutura, mas divergem sobre o resultado. Enquanto a maioria dos que recomendam elogia o desenvolvimento da trama e a condução da história, a maioria dos que não recomendam critica o excesso de falas e as redundâncias.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3645,
+      "completion_tokens": 186,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3645
+    },
+    "latencia_s": 12.35
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia um roteiro preciso que constrói tensão contínua unicamente por meio de diálogos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e construção narrativa",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza atuações marcantes tanto em desempenhos individuais quanto no trabalho em conjunto",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações do elenco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia o uso da limitação espacial a favor da tensão e claustrofobia",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão em espaço único",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura um ritmo ágil e envolvente mesmo em uma trama centrada em conversas",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e diálogo",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas de andamento arrastado e sensação de monotonia prolongada",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se incomoda com cenários restritos a um único cômodo e pouca variedade visual",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ambientação única e falta de dinamismo visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com discussões repetitivas e diálogos constantes que giram em círculos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Diálogo excessivo e repetitivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com reflexões pouco originais e um desfecho que soa previsível",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Previsibilidade e roteiro raso",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com atuações pouco convincentes ou exageradas e personagens pouco desenvolvidos",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e atuações criticados",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 96,
+        "peso_texto": "~96% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15592,
+      "completion_tokens": 1395,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15592
+    },
+    "latencia_s": 28.11,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

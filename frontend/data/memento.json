@@ -1,0 +1,1627 @@
+{
+  "slug": "memento",
+  "data_coleta": "2026-09-16T20:05:40.675492+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 564,
+  "reviews_url": "https://letterboxd.com/film/memento/reviews/",
+  "ficha": {
+    "titulo": "Amnésia",
+    "sinopse_oficial": "Leonard está caçando o homem que estuprou e matou sua esposa. Ele tem dificuldades em encontrar o assassino pois sofre de uma forma intratável de perda de memória. Mesmo que ele possa lembrar detalhes da vida antes do acidente, Leonard não consegue lembrar o que aconteceu quinze minutos atrás, onde está indo ou a razão.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Mistério",
+      "Thriller"
+    ],
+    "duracao_min": 113,
+    "diretor": "Christopher Nolan",
+    "diretor_transliterado": false,
+    "ano": 2000,
+    "fonte": "tmdb",
+    "tmdb_id": 77,
+    "tmdb_fetched_at": "2026-09-16T20:18:52+00:00",
+    "poster_path": "/7leBWM27Q0TUnvmhw6WnFNgGn4G.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
+      "/8pwCb7amg8Tvr9FZZJGt7J4OwLV.jpg",
+      "/v4u9FnSOpLEjPIAhbKClM45LJoJ.jpg",
+      "/q2CtXYjp9IlnfBcPktNkBPsuAEO.jpg",
+      "/epS46vDl8yeLDReM1LDFJJLj2yL.jpg",
+      "/pQwjOUfcB4hRdEenA2JOP6ijXoH.jpg",
+      "/njjZmNJkn8o2FhFwP078LEdBtRZ.jpg",
+      "/sNTupCXE0KcDvzi60UeWwmVJsSH.jpg",
+      "/3bRDtzaP8JFYckwukD3Zp3nNsva.jpg",
+      "/6AQpTGMk72HQTgayVUBihdKJrsF.jpg"
+    ],
+    "backdrop_path": "/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/plgpihLQkdXvbvcvMu0sN5ZLIFi.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/8pwCb7amg8Tvr9FZZJGt7J4OwLV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/6AQpTGMk72HQTgayVUBihdKJrsF.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/njjZmNJkn8o2FhFwP078LEdBtRZ.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/1fhAHFql91cSioubcXkuO1rOyFP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qq5Y7Ad0KuayD3f28DcXx33cAau.jpg",
+        "still_largura": 2119,
+        "still_altura": 1192
+      },
+      {
+        "still_path": "/eQgL2o5apFn3L0JIj1w2JpJVXK9.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/miQL8JP5oonBSX2iu8PkYLGqZlw.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/9RUa3yI52d00WJLvVLbrN9O5T8E.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/eR6bCH7PxX9lElk8QkvYsVkLUBp.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/nPkJZrEgFQAO3oDh3IdK54v4Ntn.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vNIIGDvAuiT5sN4ifD5VxJLPhEy.jpg",
+        "still_largura": 1951,
+        "still_altura": 1097
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "memento",
+      "titulo_letterboxd": "Memento",
+      "ano_letterboxd": 2000,
+      "tmdb_id_letterboxd": 77,
+      "tmdb_id_escolhido": 77,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Memento",
+      "ano_tmdb": 2000,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2181151,
+    "por_nivel": {
+      "0.5": 2531,
+      "1.0": 6875,
+      "1.5": 4743,
+      "2.0": 27714,
+      "2.5": 31868,
+      "3.0": 173295,
+      "3.5": 261642,
+      "4.0": 745508,
+      "4.5": 431907,
+      "5.0": 495068
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "memento",
+    "coletado_em": "2026-09-16T05:38:20.265293+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2531,
+      "1.0": 6875,
+      "1.5": 4743,
+      "2.0": 27714,
+      "2.5": 31868,
+      "3.0": 173295,
+      "3.5": 261642,
+      "4.0": 745508,
+      "4.5": 431907,
+      "5.0": 495068
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 26,
+      "2.5": 13,
+      "3.0": 23,
+      "3.5": 8,
+      "4.0": 12,
+      "4.5": 13,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 15,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 48,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "4.0": 4,
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 11,
+      "3.0": 60,
+      "3.5": 90,
+      "4.0": 256,
+      "4.5": 148,
+      "5.0": 170
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 792,
+        "min": "2023-04-16",
+        "max": "2026-09-16",
+        "p5": "2026-08-23",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2023-07-07",
+          "max": "2026-09-16",
+          "p5": "2026-08-21",
+          "p50": "2026-09-02",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2023-04-16",
+          "max": "2026-09-15",
+          "p5": "2026-09-04",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 252,
+          "min": "2025-03-09",
+          "max": "2026-09-16",
+          "p5": "2026-09-04",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "identidade_letterboxd": {
+      "slug": "memento",
+      "titulo": "Memento",
+      "ano": 2000,
+      "tmdb_id_letterboxd": 77,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2000,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 792
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 13,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-31",
+        "max": "2026-09-15",
+        "p5": "2026-08-23",
+        "p50": "2026-09-05",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 131,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 131,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Confusão e dificuldade de compreensão",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews negativas relatam que a narrativa é confusa e difícil de acompanhar, com espectadores afirmando terem se sentido perdidos ou incapazes de entender o que estava acontecendo durante boa parte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme é monótono e arrastado, com várias pessoas mencionando terem sentido sono ou tédio, achando a experiência cansativa e pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura não linear e edição",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que a narrativa em ordem reversa e a edição fragmentada soam como um artifício cansativo e confuso, que não agrega e torna a experiência arrastada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimação e artificialidade",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos consideram o filme superestimado e acham que sua complexidade é artificial, sugerindo que a fama e a reputação do diretor influenciam avaliações positivas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Frieza emocional e falta de envolvimento",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que o filme é frio e não desperta emoção, com personagens pouco desenvolvidos e uma abordagem que parece distante e calculada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Frustração com o final ou reviravolta",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há críticas que expressam decepção com o desfecho ou com a reviravolta, considerando-os anticlimáticos ou pouco impactantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente confusão, ritmo lento e tédio, além de criticarem a estrutura não linear e a edição como recursos que tornam a experiência cansativa. Muitos também consideram o filme superestimado e artificial, com frieza emocional e falta de envolvimento.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 30,
+        "p5": 1,
+        "p50": 5,
+        "p95": 30,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-30",
+        "max": "2026-09-15",
+        "p5": "2026-09-04",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 56,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 56,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 175,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 175,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estrutura narrativa reversa e montagem",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas reconhecem que a cronologia inversa é uma escolha ousada e bem executada, mas muitas a consideram confusa, arrastada ou um artifício que não sustenta o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão e dificuldade de compreensão",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas deste grupo relatam que o filme exige atenção extrema e ainda assim deixa lacunas, sendo necessário reassistir para entender completamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final e reviravolta decepcionantes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que a conclusão não compensa o esforço mental, com algumas dizendo que o plot twist é previsível ou não gera impacto emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens rasos e falta de conexão emocional",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que os personagens soam vazios ou estereotipados, dificultando a empatia, e que o filme prioriza o quebra-cabeça em vez do desenvolvimento humano.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento ou entediante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas das reviews medianas classificam o ritmo como arrastado, com trechos tediosos que tornam a experiência cansativa, apesar de momentos pontuais de interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação e aspectos técnicos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há elogios pontuais à atuação principal e à fotografia, mas também críticas ao excesso de estilo e à falta de naturalidade nos diálogos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas indicam uma recepção morna: a ousadia estrutural é reconhecida, mas frequentemente vista como confusa ou pretensiosa, resultando em uma experiência que divide entre o fascínio técnico e a frustração emocional. Este grupo específico tende a considerar o filme apenas razoável, com ressalvas recorrentes sobre ritmo, personagens e a efetividade do desfecho.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 89,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 16,
+        "4.5": 9,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 37,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-09-29",
+        "max": "2026-09-16",
+        "p5": "2026-08-20",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 98,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 98,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estrutura narrativa não linear",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa inversa é destacada como inovadora e imersiva, fazendo o público experimentar a desorientação do protagonista e tornando a história mais envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reviravoltas e complexidade do roteiro",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviravoltas são consideradas impressionantes e bem construídas, com o roteiro sendo elogiado pela engenhosidade e pela capacidade de surpreender.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Guy Pearce",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Guy Pearce é frequentemente elogiado por sua atuação natural e carismática, sendo descrito como essencial para o sucesso do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão e desafio cognitivo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A confusão gerada pelo filme é vista como intencional e eficaz, colocando o espectador na mesma situação do protagonista e estimulando a curiosidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Christopher Nolan",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Nolan é exaltada como genial, elevando um roteiro não linear a uma experiência cinematográfica única e marcante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo noir e fotografia",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A estética noir, a fotografia e a atmosfera são elogiadas por sua crueza e por contribuírem para a imersão na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a ousadia da estrutura narrativa não linear, a complexidade do roteiro e a atuação de Guy Pearce como pontos altos. Este grupo também valoriza a direção de Christopher Nolan e a experiência imersiva e desafiadora proporcionada pelo filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Este grupo destaca que o filme é monótono e arrastado, com várias pessoas mencionando terem sentido sono ou tédio, achando a experiência cansativa e pouco envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento ou entediante",
+            "exemplo_parafraseado": "Algumas das reviews medianas classificam o ritmo como arrastado, com trechos tediosos que tornam a experiência cansativa, apesar de momentos pontuais de interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação e aspectos técnicos",
+            "exemplo_parafraseado": "Há elogios pontuais à atuação principal e à fotografia, mas também críticas ao excesso de estilo e à falta de naturalidade nos diálogos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Guy Pearce",
+            "exemplo_parafraseado": "Guy Pearce é frequentemente elogiado por sua atuação natural e carismática, sendo descrito como essencial para o sucesso do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Direção de Christopher Nolan",
+            "exemplo_parafraseado": "A direção de Nolan é exaltada como genial, elevando um roteiro não linear a uma experiência cinematográfica única e marcante.",
+            "temas_no_mesmo_eixo": [
+              "Estilo noir e fotografia"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Confusão e dificuldade de compreensão",
+            "exemplo_parafraseado": "Várias reviews negativas relatam que a narrativa é confusa e difícil de acompanhar, com espectadores afirmando terem se sentido perdidos ou incapazes de entender o que estava acontecendo durante boa parte do filme.",
+            "temas_no_mesmo_eixo": [
+              "Estrutura não linear e edição",
+              "Frustração com o final ou reviravolta"
+            ]
+          },
+          "medianas": {
+            "mencoes": 39,
+            "de_n": 40,
+            "freq_pct": 97.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Estrutura narrativa reversa e montagem",
+            "exemplo_parafraseado": "As reviews medianas reconhecem que a cronologia inversa é uma escolha ousada e bem executada, mas muitas a consideram confusa, arrastada ou um artifício que não sustenta o interesse.",
+            "temas_no_mesmo_eixo": [
+              "Confusão e dificuldade de compreensão",
+              "Final e reviravolta decepcionantes",
+              "Personagens rasos e falta de conexão emocional"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Estrutura narrativa não linear",
+            "exemplo_parafraseado": "A narrativa inversa é destacada como inovadora e imersiva, fazendo o público experimentar a desorientação do protagonista e tornando a história mais envolvente.",
+            "temas_no_mesmo_eixo": [
+              "Reviravoltas e complexidade do roteiro"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Frieza emocional e falta de envolvimento",
+            "exemplo_parafraseado": "Algumas reviews mencionam que o filme é frio e não desperta emoção, com personagens pouco desenvolvidos e uma abordagem que parece distante e calculada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Confusão e desafio cognitivo",
+            "exemplo_parafraseado": "A confusão gerada pelo filme é vista como intencional e eficaz, colocando o espectador na mesma situação do protagonista e estimulando a curiosidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Superestimação e artificialidade",
+            "exemplo_parafraseado": "Muitos consideram o filme superestimado e acham que sua complexidade é artificial, sugerindo que a fama e a reputação do diretor influenciam avaliações positivas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1480528777",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 84 (char 83)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2000 e dirigido por Christopher Nolan, Amnésia é um thriller de mistério focado na trajetória de Leonard, um homem determinado a encontrar o assassino de sua esposa. O protagonista enfrenta o desafio de conviver com uma forma intratável de perda de memória recente, sendo incapaz de se lembrar de acontecimentos ocorridos quinze minutos antes.\n\nO filme adota uma atmosfera de mistério apoiada em uma estrutura temporal não linear e reversa. A montagem fragmenta a progressão dos fatos, exigindo atenção para acompanhar a sucessão de eventos e a desorientação do personagem principal.\n\nOs diferentes grupos de avaliação abordam essencialmente as mesmas características da obra, divergindo no veredito sobre o funcionamento dessa proposta. Na grande maioria das notas (~89%), a estrutura narrativa não linear é celebrada por cerca de metade das análises por promover um mergulho direto na condição do protagonista. Paralelamente, uma parcela expressiva elogia a complexidade do roteiro e a construção das reviravoltas, enquanto uma parte destaca a atuação de Guy Pearce.\n\nEm contrapartida, para os espectadores situados numa fração mínima das notas (~9%), a maior parte reconhece a proposta da montagem reversa, mas um número considerável relata confusão e dificuldade de compreensão durante a exibição, ao passo que muitos consideram o desfecho decepcionante diante da expectativa criada. Por fim, na perspectiva reunida numa fração ainda menor das notas (~2%), boa parte aponta grande dificuldade em acompanhar o enredo, vários criticam o ritmo lento e a sensação de tédio gerada pela experiência, e um número considerável rejeita a estrutura não linear e a edição por soarem como um artifício cansativo.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11716,
+      "completion_tokens": 1509,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11716
+    },
+    "latencia_s": 38.7
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O debate central foca na organização do roteiro, divergindo sobre a eficácia dessa escolha. A maioria de quem não recomenda avalia a trama como confusa e difícil de acompanhar, enquanto a maioria dos que recomendam elogia a condução dos acontecimentos fora da ordem cronológica.",
+    "texto_modelo": "O debate central foca na organização do roteiro, divergindo sobre a eficácia dessa escolha. A maioria de quem não recomenda avalia a trama como confusa e difícil de acompanhar, enquanto a maioria dos que recomendam elogia a condução dos acontecimentos fora da ordem cronológica.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "debat",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3645,
+      "completion_tokens": 191,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3645
+    },
+    "latencia_s": 12.4
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma narrativa inversa e envolvente que transmite a desorientação do protagonista",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Estrutura narrativa não linear",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia roteiros engenhosos conduzidos por reviravoltas bem construídas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Reviravoltas e complexidade do roteiro",
+        "rotulo_forca": "muitos",
+        "par_recusado": "NEG-F"
+      },
+      {
+        "texto": "valoriza uma atuação natural e carismática de Guy Pearce",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Guy Pearce",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura uma direção marcante de Christopher Nolan em narrativa não linear",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Christopher Nolan",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com narrativas difíceis de acompanhar que deixam sensação de confusão",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Confusão e dificuldade de compreensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com experiências arrastadas que resultam em tom monótono e cansativo",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 89,
+        "peso_texto": "~89% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-C"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "acha cansativa uma estrutura em ordem reversa com edição fragmentada",
+        "tema_origem": "NEG-C",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-F",
+        "lado": "talvez_evite",
+        "regra": "R6",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15297,
+      "completion_tokens": 1279,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15297
+    },
+    "latencia_s": 30.18,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

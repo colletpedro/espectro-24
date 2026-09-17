@@ -1,0 +1,1585 @@
+{
+  "slug": "django-unchained",
+  "data_coleta": "2026-09-16T19:20:25.946910+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/django-unchained/reviews/",
+  "ficha": {
+    "titulo": "Django Livre",
+    "sinopse_oficial": "Django é um escravo, comprado pelo caçador de recompensas alemão Dr. King Schultz para auxiliá-lo em uma missão. A dupla acaba fazendo amizade e, após resolver os problemas do caçador, parte em busca por Broomhilda, esposa de Django. Para isso, eles devem enfrentar o vilão Calvin Candie, proprietário da escrava.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Faroeste"
+    ],
+    "duracao_min": 165,
+    "diretor": "Quentin Tarantino",
+    "diretor_transliterado": false,
+    "ano": 2012,
+    "fonte": "tmdb",
+    "tmdb_id": 68718,
+    "tmdb_fetched_at": "2026-09-16T20:18:42+00:00",
+    "poster_path": "/ar63Sx8jeqk0OOu2uchS477S2zE.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/5ygng1tW8r2hLqPl3hjNsuG0NwC.jpg",
+      "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+      "/s4cJQaj40SwMifUrrdtdOJsjnRO.jpg",
+      "/n2eUT4zQA2yYcKOgAFidgOyiFoH.jpg",
+      "/5Lbm0gpFDRAPIV1Cth6ln9iL1ou.jpg",
+      "/w6Fs4bIje1naeILo9KwAc1Y6bvP.jpg",
+      "/4LUd0S7lKGesczf5Tc0adLoZkpC.jpg",
+      "/by7k8LWzRO4zVhwL1TunlwFdbx9.jpg",
+      "/8cs96njK3qaPDoyUNKYAWjWoWFF.jpg",
+      "/6MCVqErhPC0p6RkzZsLuIb6LZ1L.jpg"
+    ],
+    "backdrop_path": "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/tqpCY0MMHQ8kS89U6ago3N82cJw.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1500,
+    "galeria_stills": [
+      {
+        "still_path": "/8cs96njK3qaPDoyUNKYAWjWoWFF.jpg",
+        "still_largura": 3000,
+        "still_altura": 1687
+      },
+      {
+        "still_path": "/5Lbm0gpFDRAPIV1Cth6ln9iL1ou.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4LUd0S7lKGesczf5Tc0adLoZkpC.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/rzeXeLkUgQsRqdnoBbCVU6Rvijf.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/ltkWGokEIToUYyoUqc6PBI1kHPx.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/zsWn0hdm3RmMyuihJ6rH37Gef3o.jpg",
+        "still_largura": 2345,
+        "still_altura": 1319
+      },
+      {
+        "still_path": "/34ofLAZ1duOMzO0aLslPdWlvPju.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/8ppoqfTNmgoGIBOewSUSt8TOMVJ.jpg",
+        "still_largura": 2341,
+        "still_altura": 1317
+      },
+      {
+        "still_path": "/eSfHn4xjkD83vUakUTvN5brsS7.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lky8kYyCpJU4Vq1yCRzQazLfVNY.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/pBkOIqD9SKJniG5w1HJ0FU02BjP.jpg",
+        "still_largura": 2187,
+        "still_altura": 1230
+      },
+      {
+        "still_path": "/woYZi3Q7iPQyFNKfv8IhjXkc6d1.jpg",
+        "still_largura": 1577,
+        "still_altura": 887
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "django-unchained",
+      "titulo_letterboxd": "Django Unchained",
+      "ano_letterboxd": 2012,
+      "tmdb_id_letterboxd": 68718,
+      "tmdb_id_escolhido": 68718,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Django Unchained",
+      "ano_tmdb": 2012,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 3499724,
+    "por_nivel": {
+      "0.5": 2616,
+      "1.0": 7364,
+      "1.5": 4368,
+      "2.0": 29279,
+      "2.5": 28381,
+      "3.0": 206247,
+      "3.5": 282746,
+      "4.0": 1067565,
+      "4.5": 730818,
+      "5.0": 1140340
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 7,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "django-unchained",
+    "coletado_em": "2026-09-16T04:10:15.186667+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2616,
+      "1.0": 7364,
+      "1.5": 4368,
+      "2.0": 29279,
+      "2.5": 28381,
+      "3.0": 206247,
+      "3.5": 282746,
+      "4.0": 1067565,
+      "4.5": 730818,
+      "5.0": 1140340
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 8,
+      "1.5": 7,
+      "2.0": 19,
+      "2.5": 23,
+      "3.0": 23,
+      "3.5": 3,
+      "4.0": 11,
+      "4.5": 11,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "4.0": 4,
+          "5.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 46,
+      "3.5": 63,
+      "4.0": 240,
+      "4.5": 164,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 696,
+        "min": "2013-01-20",
+        "max": "2026-09-17",
+        "p5": "2026-06-15",
+        "p50": "2026-09-07",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 204,
+          "min": "2013-01-20",
+          "max": "2026-09-15",
+          "p5": "2026-04-04",
+          "p50": "2026-08-07",
+          "p95": "2026-09-11"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2013-01-20",
+          "max": "2026-09-15",
+          "p5": "2026-08-01",
+          "p50": "2026-09-06",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 276,
+          "min": "2017-03-19",
+          "max": "2026-09-17",
+          "p5": "2026-09-03",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "identidade_letterboxd": {
+      "slug": "django-unchained",
+      "titulo": "Django Unchained",
+      "ano": 2012,
+      "tmdb_id_letterboxd": 68718,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2012,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 696
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 12,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2013-01-20",
+        "max": "2026-09-15",
+        "p5": "2026-06-05",
+        "p50": "2026-08-11",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Uso excessivo de linguagem racista",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews reclamam que o termo racial é repetido à exaustão, tornando as cenas desconfortáveis e vazias de propósito.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como arrastado, com quase três horas que parecem intermináveis e momentos de tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Exploração da escravidão como entretenimento",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas sentem que a escravidão é usada como pano de fundo para violência estilizada, soando exploratória e desrespeitosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Complexo de salvador branco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O arco do caçador de recompensas branco é visto como centralizador, ofuscando a jornada do protagonista negro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção inadequada para a temática",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A escolha de um diretor branco para contar essa história é criticada como inapropriada e desconectada da experiência negra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e falta de desenvolvimento",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O enredo é considerado previsível, com diálogos fracos e personagens pouco desenvolvidos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o uso excessivo de linguagem racista, o ritmo lento e a percepção de que a escravidão é explorada como entretenimento. Este grupo também critica a abordagem do diretor e o complexo de salvador branco, considerando o filme desrespeitoso e cansativo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 12,
+        "3.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 7,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2013-01-20",
+        "max": "2026-09-15",
+        "p5": "2026-08-01",
+        "p50": "2026-09-07",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 12,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 28,
+          "n_alvo": 35,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 108,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 108,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo demais, com trechos arrastados que tornam a experiência cansativa, e que a duração poderia ser reduzida sem prejuízo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência excessiva e estilo cartunesco",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o uso exagerado de sangue e cenas violentas, considerando-as irrealistas e cansativas, embora algumas reconheçam que isso faz parte do estilo do diretor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desempenho do elenco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são frequentemente elogiadas, especialmente as de Christoph Waltz e Leonardo DiCaprio, mas alguns apontam que Jamie Foxx tem pouco destaque ou que certos personagens são unidimensionais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom e equilíbrio entre humor e brutalidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários sobre a dificuldade de equilibrar o humor e a brutalidade, resultando em um tom irregular que oscila entre o cômico e o chocante, o que prejudica a seriedade de alguns momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem da escravidão e do racismo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews questionam a forma como a escravidão é retratada, sentindo que serve mais como pano de fundo para a vingança do que como tema aprofundado, e mencionam o uso excessivo de termos racistas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Referências e originalidade",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo debate se o filme é uma homenagem eficaz ou uma colagem de referências, com alguns achando que falta originalidade e que o diretor se apoia demais em seus próprios clichês.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam uma experiência mista, elogiando aspectos técnicos e atuações, mas criticando a duração, o excesso de violência e a falta de profundidade no tratamento de temas sérios. Este grupo não vê o filme como um consenso positivo, destacando que, apesar de momentos marcantes, a obra soa desigual e por vezes arrastada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 92,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 41,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2017-11-07",
+        "max": "2026-09-16",
+        "p5": "2026-09-03",
+        "p50": "2026-09-14",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 14,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 85,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 85,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações do elenco principal",
+          "mencoes_aproximadas": 34,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam repetidamente as performances de Christoph Waltz, Leonardo DiCaprio, Jamie Foxx e Samuel L. Jackson, considerando-as um dos pontos mais fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Assinatura e estilo de Tarantino",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo enaltece a marca autoral do diretor, com diálogos longos, violência estilizada e referências cinematográficas que tornam o filme inconfundível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas elogiam a seleção musical, que se encaixa perfeitamente nas cenas e contribui para a imersão no faroeste.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, direção e ambientação",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a qualidade visual do filme, com enquadramentos marcantes, cenários detalhados e uma recriação convincente do velho oeste.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro, história e arcos narrativos",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam a estrutura em três atos bem definidos, a progressão dos personagens e a construção de uma trama envolvente e satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência estilizada e cenas de ação",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona a violência exagerada e as sequências de tiroteio como elementos divertidos e característicos da obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente as atuações do elenco, o estilo inconfundível de Tarantino e a trilha sonora como pontos altos, enquanto alguns membros do grupo apontam ressalvas pontuais quanto ao ritmo ou à duração. Em conjunto, este grupo celebra o filme como uma experiência cinematográfica marcante e divertida.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "O filme é descrito como arrastado, com quase três horas que parecem intermináveis e momentos de tédio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é longo demais, com trechos arrastados que tornam a experiência cansativa, e que a duração poderia ser reduzida sem prejuízo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Desempenho do elenco",
+            "exemplo_parafraseado": "As atuações são frequentemente elogiadas, especialmente as de Christoph Waltz e Leonardo DiCaprio, mas alguns apontam que Jamie Foxx tem pouco destaque ou que certos personagens são unidimensionais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Atuações do elenco principal",
+            "exemplo_parafraseado": "As reviews positivas destacam repetidamente as performances de Christoph Waltz, Leonardo DiCaprio, Jamie Foxx e Samuel L. Jackson, considerando-as um dos pontos mais fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Direção inadequada para a temática",
+            "exemplo_parafraseado": "A escolha de um diretor branco para contar essa história é criticada como inapropriada e desconectada da experiência negra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia, direção e ambientação",
+            "exemplo_parafraseado": "Este grupo destaca a qualidade visual do filme, com enquadramentos marcantes, cenários detalhados e uma recriação convincente do velho oeste.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e falta de desenvolvimento",
+            "exemplo_parafraseado": "O enredo é considerado previsível, com diálogos fracos e personagens pouco desenvolvidos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro, história e arcos narrativos",
+            "exemplo_parafraseado": "As reviews positivas apontam a estrutura em três atos bem definidos, a progressão dos personagens e a construção de uma trama envolvente e satisfatória.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "As reviews positivas elogiam a seleção musical, que se encaixa perfeitamente nas cenas e contribui para a imersão no faroeste.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Violência excessiva e estilo cartunesco",
+            "exemplo_parafraseado": "Este grupo critica o uso exagerado de sangue e cenas violentas, considerando-as irrealistas e cansativas, embora algumas reconheçam que isso faz parte do estilo do diretor.",
+            "temas_no_mesmo_eixo": [
+              "Tom e equilíbrio entre humor e brutalidade"
+            ]
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Violência estilizada e cenas de ação",
+            "exemplo_parafraseado": "Este grupo menciona a violência exagerada e as sequências de tiroteio como elementos divertidos e característicos da obra.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Referências e originalidade",
+            "exemplo_parafraseado": "Este grupo debate se o filme é uma homenagem eficaz ou uma colagem de referências, com alguns achando que falta originalidade e que o diretor se apoia demais em seus próprios clichês.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Assinatura e estilo de Tarantino",
+            "exemplo_parafraseado": "Este grupo enaltece a marca autoral do diretor, com diálogos longos, violência estilizada e referências cinematográficas que tornam o filme inconfundível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Uso excessivo de linguagem racista",
+            "exemplo_parafraseado": "Muitas reviews reclamam que o termo racial é repetido à exaustão, tornando as cenas desconfortáveis e vazias de propósito.",
+            "temas_no_mesmo_eixo": [
+              "Exploração da escravidão como entretenimento",
+              "Complexo de salvador branco"
+            ]
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Abordagem da escravidão e do racismo",
+            "exemplo_parafraseado": "Algumas reviews questionam a forma como a escravidão é retratada, sentindo que serve mais como pano de fundo para a vingança do que como tema aprofundado, e mencionam o uso excessivo de termos racistas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -50.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2012 e dirigido por Quentin Tarantino, Django Livre é um filme dos gêneros drama e faroeste. A história apresenta um escravo comprado por um caçador de recompensas para auxiliá-lo em uma missão e que, após essa parceria inicial, parte em busca de sua esposa para resgatá-la de seu proprietário.\n\nA experiência cinematográfica é estruturada em uma narrativa de longa duração ambientada no contexto histórico da escravidão, marcada por sequências de diálogos longos e cenas frequentes de violência gráfica estilizada.\n\nDe maneira geral, os grupos concordam sobre o que o filme é e discordam no veredito sobre o funcionamento dessas escolhas. Na grande maioria das notas (~92%), praticamente todos elogiam as atuações do elenco principal. Cerca de metade desse conjunto exalta a assinatura e o estilo característico de Tarantino, enquanto uma parcela expressiva destaca a trilha sonora e o som.\n\nPor outro lado, sob a perspectiva observada numa fração mínima das notas (~7%), boa parte ressalta que a duração excessiva e o ritmo lento tornam a obra arrastada. Um número considerável critica a violência excessiva e o estilo cartunesco adotado, ainda que uma fatia menor reconheça aspectos positivos no desempenho do elenco.\n\nPor fim, para quem se posiciona numa fração ainda menor das notas (~1%), vários expressam forte incômodo com o uso excessivo de linguagem racista. Além disso, muitos apontam o ritmo lento e a duração excessiva como falhas, e uma parcela expressiva condena a exploração da escravidão como entretenimento.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 13,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10050,
+      "completion_tokens": 1091,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10050
+    },
+    "latencia_s": 43.04
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divergência central está na qualidade do roteiro: a maioria dos que não recomendam aponta fragilidades no texto e no desenvolvimento narrativo, enquanto a maioria dos que recomendam elogia a história e destaca o trabalho do elenco.",
+    "texto_modelo": "A divergência central está na qualidade do roteiro: a maioria dos que não recomendam aponta fragilidades no texto e no desenvolvimento narrativo, enquanto a maioria dos que recomendam elogia a história e destaca o trabalho do elenco.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "diver",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 37,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3660,
+      "completion_tokens": 176,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3660
+    },
+    "latencia_s": 16.95
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações marcantes e expressivas de um elenco principal de destaque",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações do elenco principal",
+        "rotulo_forca": "quase todos"
+      },
+      {
+        "texto": "busca uma assinatura autoral com diálogos extensos, referências e violência estilizada",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Assinatura e estilo de Tarantino",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "gosta de uma seleção musical envolvente que intensifica o clima de faroeste",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e som",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se diverte com sequências de tiroteio movimentadas e violência gráfica exagerada",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Violência estilizada e cenas de ação",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com a repetição exaustiva e desconfortável de termos racistas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Uso excessivo de linguagem racista",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de narrativas longas com ritmo arrastado e momentos de tédio",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita o tratamento da escravidão como pano de fundo para entretenimento violento",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Exploração da escravidão como entretenimento",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10560,
+      "completion_tokens": 1005,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10560
+    },
+    "latencia_s": 15.41,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

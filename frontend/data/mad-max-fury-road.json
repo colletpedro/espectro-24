@@ -1,0 +1,1616 @@
+{
+  "slug": "mad-max-fury-road",
+  "data_coleta": "2026-09-16T19:51:43.289604+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/mad-max-fury-road/reviews/",
+  "ficha": {
+    "titulo": "Mad Max: Estrada da Fúria",
+    "sinopse_oficial": "Em um mundo apocalíptico, Max Rockatansky acredita que a melhor forma de sobreviver é não depender de ninguém. Porém, após ser capturado pelo tirano Immortan Joe e seus rebeldes, Max se vê no meio de uma guerra mortal, iniciada pela imperatriz Furiosa que tenta salvar um grupo de garotas. Também tentando fugir, Max aceita ajudar Furiosa. Dessa vez, o tirano Joe está ainda mais implacável pois teve algo insubstituível roubado.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Aventura",
+      "Ficção científica"
+    ],
+    "duracao_min": 120,
+    "diretor": "George Miller",
+    "diretor_transliterado": false,
+    "ano": 2015,
+    "fonte": "tmdb",
+    "tmdb_id": 76341,
+    "tmdb_fetched_at": "2026-09-16T20:18:50+00:00",
+    "poster_path": "/tH64gzAHDFg7EFcgfkkZyHdGM5P.jpg",
+    "poster_largura": 1894,
+    "poster_altura": 2841,
+    "backdrop_paths": [
+      "/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
+      "/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+      "/n6vWE0bXq4ImAM00iM5gWyORNSM.jpg",
+      "/8yACFuo4OaIiKr9hHFlmPcGalKx.jpg",
+      "/nlCHUWjY9XWbuEUQauCBgnY8ymF.jpg",
+      "/hrYbZY9HaGMlEQsUeEx2lu3vWPy.jpg",
+      "/9hdEQmLC14EbBVnGSjI4WM1ElZB.jpg",
+      "/ejyXv2hRKeA3lU9AHU3Jd59IwoG.jpg",
+      "/quN4QseR3P4ZusUGnL9JyEDS0Y4.jpg",
+      "/r80uNXoxohX0I4J2h0wMhC8LWZ6.jpg"
+    ],
+    "backdrop_path": "/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/iPJEQZR1QceGUGGmuHGtqZqjtFg.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ejyXv2hRKeA3lU9AHU3Jd59IwoG.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/b5EP7S4LkrgxiXlLUXnz9IL1QuI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wl8xNUX8bIfzbMIau2HzaVJ0UIW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5Y7Nc4TJeVKSWpAtd0L72XzemNx.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/whaE3CndXbtRM4OmnimLIaEciDk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/rBLxG3c65bCEb009Wg9834a6Cmo.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7gbhUsXLfq46K6Kdeor2m1hazZQ.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/cT7g30vgkE63H4wM5tB2DesnUlN.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/idqPoLLGtRwpLxaqvrEGoZaDw9M.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ngaM177j3F7kvdvaWPENtI0yiao.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "mad-max-fury-road",
+      "titulo_letterboxd": "Mad Max: Fury Road",
+      "ano_letterboxd": 2015,
+      "tmdb_id_letterboxd": 76341,
+      "tmdb_id_escolhido": 76341,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Mad Max: Fury Road",
+      "ano_tmdb": 2015,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2267070,
+    "por_nivel": {
+      "0.5": 5904,
+      "1.0": 16966,
+      "1.5": 8856,
+      "2.0": 52059,
+      "2.5": 44265,
+      "3.0": 222736,
+      "3.5": 236585,
+      "4.0": 654190,
+      "4.5": 372546,
+      "5.0": 652963
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 12,
+      "positivas": 85
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "mad-max-fury-road",
+    "coletado_em": "2026-09-16T05:12:15.025479+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 5904,
+      "1.0": 16966,
+      "1.5": 8856,
+      "2.0": 52059,
+      "2.5": 44265,
+      "3.0": 222736,
+      "3.5": 236585,
+      "4.0": 654190,
+      "4.5": 372546,
+      "5.0": 652963
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 8,
+      "1.5": 8,
+      "2.0": 23,
+      "2.5": 23,
+      "3.0": 17,
+      "3.5": 3,
+      "4.0": 14,
+      "4.5": 13,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 3,
+      "2.0": 20,
+      "2.5": 17,
+      "3.0": 87,
+      "3.5": 93,
+      "4.0": 256,
+      "4.5": 146,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 660,
+        "min": "2015-05-21",
+        "max": "2026-09-16",
+        "p5": "2026-08-07",
+        "p50": "2026-09-05",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "2015-09-20",
+          "max": "2026-09-15",
+          "p5": "2026-08-10",
+          "p50": "2026-08-29",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2015-09-07",
+          "max": "2026-09-16",
+          "p5": "2026-07-31",
+          "p50": "2026-09-05",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2015-05-21",
+          "max": "2026-09-16",
+          "p5": "2026-05-21",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 37,
+      "dias_por_100_paginas": 29.133858267716537,
+      "paginas_para_1_ano": 1253
+    },
+    "identidade_letterboxd": {
+      "slug": "mad-max-fury-road",
+      "titulo": "Mad Max: Fury Road",
+      "ano": 2015,
+      "tmdb_id_letterboxd": 76341,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2015,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 660
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 3,
+        "p95": 11,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2015-09-20",
+        "max": "2026-09-15",
+        "p5": "2026-08-08",
+        "p50": "2026-08-30",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 111,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 111,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro fraco e falta de história",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas criticam a ausência de uma narrativa envolvente, com eventos que parecem não levar a lugar algum e personagens sem profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e repetitivo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é considerado lento e monótono, com muitas cenas de perseguição que se tornam repetitivas e entediantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desinteressantes e sem carisma",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são vistos como unidimensionais e difíceis de se importar, sem desenvolvimento ou carisma que justifique o envolvimento do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de ação e falta de substância",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é criticado por ser uma sequência incessante de ação sem significado, que cansa em vez de entreter.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos ruins e atuações fracas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os diálogos são considerados pobres e as atuações, em sua maioria, não convencem, contribuindo para a falta de envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mundo e lógica internos pouco convincentes",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção do mundo pós-apocalíptico e as regras que o regem são vistas como inconsistentes e pouco críveis, dificultando a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de roteiro, ritmo e desenvolvimento de personagens, considerando o filme cansativo e sem substância. Apesar de alguns elogios visuais, a experiência geral é de tédio e desinteresse.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 12,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 44,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-30",
+        "max": "2026-09-16",
+        "p5": "2026-08-26",
+        "p50": "2026-09-06",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 33,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 121,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 121,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ação e perseguições",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam que as sequências de ação são bem executadas e emocionantes, mas para parte do grupo a ação incessante se torna monótona ou exaustiva após certo ponto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que os personagens carecem de profundidade, com motivações pouco exploradas; alguns elogiam Furiosa, enquanto outros criticam a atuação de Tom Hardy como Max.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas frequentemente mencionam que o filme é longo e que o ritmo acelerado, embora mantenha a atenção no início, pode cansar e dificultar o acompanhamento da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e história",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Para este grupo, o roteiro é simples e falta desenvolvimento, com alguns considerando a trama confusa ou pouco envolvente, enquanto outros acham a simplicidade uma qualidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, cenários e efeitos práticos",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a fotografia impressionante, os cenários desérticos e os efeitos práticos, que dão peso físico às cenas, embora alguns achem o visual excessivamente grotesco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Som e trilha sonora",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas reclamam que o som é alto demais e que a trilha sonora não atende às expectativas, com menções ao guitarrista que acompanha a ação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) indicam uma recepção morna: este grupo reconhece a qualidade técnica das cenas de ação e do design de produção, mas critica a falta de desenvolvimento dos personagens, o ritmo por vezes exaustivo e a simplicidade do roteiro. A experiência é vista como divertida, porém limitada, sem despertar conexão emocional duradoura.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 85,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2017-11-21",
+        "max": "2026-09-16",
+        "p5": "2026-08-25",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 65,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 65,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Efeitos visuais e práticos impressionantes",
+          "mencoes_aproximadas": 27,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que os efeitos visuais e práticos, incluindo acrobacias e designs de veículos, são de altíssimo nível e contribuem para a experiência imersiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sequências de ação intensas e bem coreografadas",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos elogiam as cenas de ação non-stop, coreografias de luta e perseguições, considerando-as emocionantes e visualmente espetaculares.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Design de produção e caracterização marcantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O design de figurinos, veículos e cenários é frequentemente citado como criativo e detalhado, ajudando a construir a hierarquia e o universo distópico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som imersivos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora e o design de som são elogiados por intensificar a ação e criar uma atmosfera envolvente, com destaque para a guitarra flamejante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de Tom Hardy e Charlize Theron são bem recebidas, e personagens como Furiosa e Nux recebem elogios por sua presença e desenvolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e narrativa eficientes",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo acelerado e a narrativa direta, sem diálogos excessivos, são vistos como pontos fortes que mantêm o espectador engajado do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam principalmente os aspectos técnicos e visuais do filme, como efeitos práticos, design de produção e sequências de ação, além de elogiarem a trilha sonora e o ritmo intenso. Apesar de algumas ressalvas sobre o desenvolvimento de personagens e diálogos, a maioria considera a obra uma experiência cinematográfica impressionante e imersiva.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e repetitivo",
+            "exemplo_parafraseado": "O ritmo é considerado lento e monótono, com muitas cenas de perseguição que se tornam repetitivas e entediantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "As reviews medianas frequentemente mencionam que o filme é longo e que o ritmo acelerado, embora mantenha a atenção no início, pode cansar e dificultar o acompanhamento da história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e narrativa eficientes",
+            "exemplo_parafraseado": "O ritmo acelerado e a narrativa direta, sem diálogos excessivos, são vistos como pontos fortes que mantêm o espectador engajado do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Diálogos ruins e atuações fracas",
+            "exemplo_parafraseado": "Os diálogos são considerados pobres e as atuações, em sua maioria, não convencem, contribuindo para a falta de envolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "As atuações de Tom Hardy e Charlize Theron são bem recebidas, e personagens como Furiosa e Nux recebem elogios por sua presença e desenvolvimento.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Ação e perseguições",
+            "exemplo_parafraseado": "As reviews medianas destacam que as sequências de ação são bem executadas e emocionantes, mas para parte do grupo a ação incessante se torna monótona ou exaustiva após certo ponto.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia, cenários e efeitos práticos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e práticos impressionantes",
+            "exemplo_parafraseado": "As reviews destacam que os efeitos visuais e práticos, incluindo acrobacias e designs de veículos, são de altíssimo nível e contribuem para a experiência imersiva.",
+            "temas_no_mesmo_eixo": [
+              "Sequências de ação intensas e bem coreografadas",
+              "Design de produção e caracterização marcantes"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e falta de história",
+            "exemplo_parafraseado": "As reviews negativas criticam a ausência de uma narrativa envolvente, com eventos que parecem não levar a lugar algum e personagens sem profundidade.",
+            "temas_no_mesmo_eixo": [
+              "Personagens desinteressantes e sem carisma",
+              "Excesso de ação e falta de substância",
+              "Mundo e lógica internos pouco convincentes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e desenvolvimento",
+            "exemplo_parafraseado": "Este grupo aponta que os personagens carecem de profundidade, com motivações pouco exploradas; alguns elogiam Furiosa, enquanto outros criticam a atuação de Tom Hardy como Max.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e história"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Som e trilha sonora",
+            "exemplo_parafraseado": "Algumas reviews medianas reclamam que o som é alto demais e que a trilha sonora não atende às expectativas, com menções ao guitarrista que acompanha a ação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som imersivos",
+            "exemplo_parafraseado": "A trilha sonora e o design de som são elogiados por intensificar a ação e criar uma atmosfera envolvente, com destaque para a guitarra flamejante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1491116265",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 78)"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1491725855",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 158 (char 157)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2015 e dirigido por George Miller, Mad Max: Estrada da Fúria é uma ficção científica de ação e aventura ambientada em um cenário pós-apocalíptico. Na história, o sobrevivente Max Rockatansky é capturado por rebeldes e se vê em meio a um confronto mortal, decidindo ajudar a imperatriz Furiosa a escapar de um tirano implacável.\n\nA experiência é estruturada em torno de sequências contínuas de perseguição em um ambiente desértico, sustentando uma cadência acelerada ao longo de sua duração. A dinâmica se apoia na intensidade das ações físicas e na presença constante de elementos visuais e sonoros na composição do ambiente.\n\nOs grupos de avaliação convergem sobre os elementos que compõem o filme e debatem essencialmente o veredito sobre o funcionamento da obra. Na grande maioria das notas (~85%), a maior parte ressalta os efeitos visuais e práticos impressionantes, enquanto grande parte exalta as sequências de ação intensas e bem coreografadas, além de boa parte destacar o design de produção e a caracterização marcantes.\n\nPara quem se posiciona numa fração mínima das notas (~12%), a maioria avalia a ação e as perseguições sob a ótica do desgaste, aproximadamente metade debate os personagens e o desenvolvimento, e uma parcela expressiva aponta ressalvas quanto ao ritmo e à duração. Por fim, sob a ótica de quem integra uma fração ainda menor das notas (~4%), cerca de metade critica o roteiro fraco e a falta de história, muitos apontam um ritmo arrastado e repetitivo, e vários mencionam personagens desinteressantes e sem carisma.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11880,
+      "completion_tokens": 1501,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11880
+    },
+    "latencia_s": 43.71
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre o resultado da obra: enquanto a maioria dos que recomendam destaca o impacto dos efeitos visuais e práticos, a maioria dos que não recomendam critica a fragilidade da história e a fraqueza do roteiro.",
+    "texto_modelo": "As opiniões divergem sobre o resultado da obra: enquanto a maioria dos que recomendam destaca o impacto dos efeitos visuais e práticos, a maioria dos que não recomendam critica a fragilidade da história e a fraqueza do roteiro.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "opini",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3621,
+      "completion_tokens": 187,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3621
+    },
+    "latencia_s": 15.75
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência imersiva com efeitos práticos impressionantes e acrobacias marcantes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Efeitos visuais e práticos impressionantes",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia cenas de ação intensas com perseguições e coreografias de luta",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Sequências de ação intensas e bem coreografadas",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza um design de produção detalhado na construção de um universo distópico",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Design de produção e caracterização marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "gosta de atuações expressivas e personagens com forte presença em cena",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com a ausência de uma narrativa envolvente e com pouca história",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e falta de história",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se cansa com perseguições repetitivas que tornam o ritmo monótono e arrastado",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e repetitivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita figuras unidimensionais e personagens sem carisma que dificultam a conexão",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desinteressantes e sem carisma",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desgasta com sequências incessantes de ação que carecem de substância",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de ação e falta de substância",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 85,
+        "peso_texto": "~85% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10788,
+      "completion_tokens": 1150,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10788
+    },
+    "latencia_s": 15.98,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

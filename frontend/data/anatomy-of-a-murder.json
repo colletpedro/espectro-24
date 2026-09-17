@@ -1,0 +1,1618 @@
+{
+  "slug": "anatomy-of-a-murder",
+  "data_coleta": "2026-09-16T20:08:34.047106+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 542,
+  "reviews_url": "https://letterboxd.com/film/anatomy-of-a-murder/reviews/",
+  "ficha": {
+    "titulo": "Anatomia de um Crime",
+    "sinopse_oficial": "Paul Biegler é um advogado de uma cidade pequena. Ele já foi promotor público da região, mas, após 10 anos no cargo, perdeu a eleição. Sentindo-se traído pela comunidade, agora tem seu próprio escritório de advocacia, mas poucos clientes, preferindo passar o tempo pescando. E então, ele se depara com um caso enorme: um tenente do exército aparentemente assassinou outro homem depois que este supostamente estuprou sua esposa. O caso exigirá toda a astúcia, experiência e habilidade teatral de Biegler em tribunais, especialmente quando a promotoria contrata um advogado renomado e influente da capital do estado.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Drama",
+      "Mistério"
+    ],
+    "duracao_min": 160,
+    "diretor": "Otto Preminger",
+    "diretor_transliterado": false,
+    "ano": 1959,
+    "fonte": "tmdb",
+    "tmdb_id": 93,
+    "tmdb_fetched_at": "2026-09-16T20:18:53+00:00",
+    "poster_path": "/eXZBRVcDPPX5HWODNiYFcG264p4.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/xfEU7DOlQPwz8Y0TBhKmpETuNIc.jpg",
+      "/jtCNu6f3MCFuEQ4cyHcNdI1QUjI.jpg",
+      "/9QhZ0CEW9qk5l5XyLYR6LZznaAJ.jpg",
+      "/lHYHgK0YejGeFA5AIRsz5yOXYDb.jpg",
+      "/ziUrbhJWJX3448cHAHlCqgKoARi.jpg",
+      "/u56o34qT5Y5nhhqijRsxmjzClft.jpg",
+      "/4BDfGen8nJ2l9IXbgaegOi9vr5h.jpg",
+      "/aZDNG2jwzDZuftWv79Wb22T1P2U.jpg",
+      "/vaR4hPeWrbQ7ZXuoQULd98ejt2H.jpg",
+      "/buQNfkqSZPFIoxFxSqaTRt0afCI.jpg"
+    ],
+    "backdrop_path": "/xfEU7DOlQPwz8Y0TBhKmpETuNIc.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/t7VJ3PJBVknvMmU83CwMQ9uOJEZ.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/xfEU7DOlQPwz8Y0TBhKmpETuNIc.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/jtCNu6f3MCFuEQ4cyHcNdI1QUjI.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/lHYHgK0YejGeFA5AIRsz5yOXYDb.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/u56o34qT5Y5nhhqijRsxmjzClft.jpg",
+        "still_largura": 1625,
+        "still_altura": 914
+      },
+      {
+        "still_path": "/6G2TnwPyQzhRC9yoTvv8ypscH62.jpg",
+        "still_largura": 1834,
+        "still_altura": 1032
+      },
+      {
+        "still_path": "/aZDNG2jwzDZuftWv79Wb22T1P2U.jpg",
+        "still_largura": 1626,
+        "still_altura": 915
+      },
+      {
+        "still_path": "/bKj0h1VnuP1mXHnyam3nFd4VjmF.jpg",
+        "still_largura": 1366,
+        "still_altura": 768
+      },
+      {
+        "still_path": "/ggnUSeit3hTWjOyIya1eNibgOgU.jpg",
+        "still_largura": 2871,
+        "still_altura": 1615
+      },
+      {
+        "still_path": "/jH3HRzaujltjxUpeG4AoY6MCyhz.jpg",
+        "still_largura": 2902,
+        "still_altura": 1632
+      },
+      {
+        "still_path": "/lzGOtsc6sMf5cLAPITKkgpiuu2S.jpg",
+        "still_largura": 1620,
+        "still_altura": 911
+      },
+      {
+        "still_path": "/qam0odCk2wFKsLIOOjlAZtQJtpJ.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/vaR4hPeWrbQ7ZXuoQULd98ejt2H.jpg",
+        "still_largura": 1633,
+        "still_altura": 918
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "anatomy-of-a-murder",
+      "titulo_letterboxd": "Anatomy of a Murder",
+      "ano_letterboxd": 1959,
+      "tmdb_id_letterboxd": 93,
+      "tmdb_id_escolhido": 93,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Anatomy of a Murder",
+      "ano_tmdb": 1959,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 100195,
+    "por_nivel": {
+      "0.5": 75,
+      "1.0": 164,
+      "1.5": 158,
+      "2.0": 754,
+      "2.5": 1282,
+      "3.0": 6517,
+      "3.5": 12980,
+      "4.0": 37294,
+      "4.5": 24901,
+      "5.0": 16070
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 8,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "anatomy-of-a-murder",
+    "coletado_em": "2026-09-16T05:47:11.691339+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 75,
+      "1.0": 164,
+      "1.5": 158,
+      "2.0": 754,
+      "2.5": 1282,
+      "3.0": 6517,
+      "3.5": 12980,
+      "4.0": 37294,
+      "4.5": 24901,
+      "5.0": 16070
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 14,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 84,
+      "4.5": 48,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 7,
+      "1.0": 7,
+      "1.5": 7,
+      "2.0": 33,
+      "2.5": 35,
+      "3.0": 46,
+      "3.5": 11,
+      "4.0": 33,
+      "4.5": 26,
+      "5.0": 13
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 54,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 81,
+        "n_validas_pos_extensao": 81,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 83,
+        "n_validas_pos_extensao": 83,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 9,
+      "3.0": 45,
+      "3.5": 89,
+      "4.0": 256,
+      "4.5": 171,
+      "5.0": 110
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 542,
+        "min": "2008-06-22",
+        "max": "2026-09-15",
+        "p5": "2024-06-07",
+        "p50": "2026-07-04",
+        "p95": "2026-09-14"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 158,
+          "min": "2020-05-23",
+          "max": "2026-09-12",
+          "p5": "2022-01-04",
+          "p50": "2025-10-17",
+          "p95": "2026-08-26"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2013-05-08",
+          "max": "2026-09-15",
+          "p5": "2025-10-23",
+          "p50": "2026-06-29",
+          "p95": "2026-09-12"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2008-06-22",
+          "max": "2026-09-15",
+          "p5": "2025-12-10",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 273,
+      "dias_por_100_paginas": 214.96062992125985,
+      "paginas_para_1_ano": 170
+    },
+    "identidade_letterboxd": {
+      "slug": "anatomy-of-a-murder",
+      "titulo": "Anatomy of a Murder",
+      "ano": 1959,
+      "tmdb_id_letterboxd": 93,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1959,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 542
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 8,
+        "p5": 1,
+        "p50": 2,
+        "p95": 7,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-06-14",
+        "max": "2026-09-09",
+        "p5": "2022-10-16",
+        "p50": "2025-11-19",
+        "p95": "2026-08-09"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 14,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 7,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme é longo demais e arrastado, com quase três horas que parecem não acabar, tornando a experiência tediosa e sonolenta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco, previsível e sem tensão",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas criticam o roteiro por ser raso, sem nuances, com reviravoltas pouco impactantes e falta de tensão, resultando em uma trama que não convence nem surpreende.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens rasos e atuações exageradas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há queixas de que os personagens são unidimensionais e as atuações, incluindo a de James Stewart, soam teatrais e caricatas, sem profundidade emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom inadequado e machismo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas críticas apontam que o filme trata temas sensíveis como abuso e estupro de forma leviana, com momentos cômicos inapropriados e uma abordagem misógina que incomoda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção burocrática e falta de estilo",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews consideram a direção de Otto Preminger rígida e sem inspiração, com enquadramentos datados e uma condução que não valoriza o material.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desfecho insatisfatório",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certos comentários mencionam que o final é decepcionante, sem impacto ou coerência, deixando a sensação de que a história não se resolve de maneira satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva e o ritmo lento, além de um roteiro fraco e sem tensão. Também são frequentes as críticas ao tratamento inadequado de temas sensíveis e ao machismo percebido na obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2013-05-08",
+        "max": "2026-09-13",
+        "p5": "2025-10-27",
+        "p50": "2026-07-18",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 28,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 68,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 68,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram que o filme é longo demais e que o ritmo arrasta, especialmente na fase de preparação do julgamento e nas repetições do tribunal, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao sistema de justiça",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme expõe falhas do sistema judicial, sugerindo que o julgamento é mais um jogo de retórica do que uma busca pela verdade, e que a justiça pode ser falha.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de James Stewart",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de James Stewart é frequentemente elogiada como o ponto alto, com seu carisma e competência carregando boa parte do interesse do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento de temas sensíveis (abuso sexual e sexismo)",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam a forma como o filme aborda a violência sexual e o sexismo, considerando que há momentos problemáticos e que a obra reflete atitudes datadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e falta de envolvimento",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários de que o roteiro não consegue manter o espectador totalmente engajado, com personagens pouco desenvolvidos e uma narrativa que não justifica sua extensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora de Duke Ellington",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de Duke Ellington é mencionada positivamente, embora alguns achem que o jazz não se encaixa bem no contexto do tribunal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam uma recepção morna: reconhecem a qualidade das atuações e a crítica ao sistema judicial, mas criticam a longa duração, o ritmo lento e aspectos datados no tratamento de temas sensíveis.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 11,
+        "5.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2009-05-12",
+        "max": "2026-09-15",
+        "p5": "2025-12-09",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de James Stewart",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a performance magnética e carismática de James Stewart como o advogado protagonista, considerando-a um dos pontos mais altos do filme e frequentemente a razão principal para assisti-lo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Drama de tribunal envolvente",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia as cenas de tribunal como eletrizantes e imersivas, com um vai-e-vem intenso entre acusação e defesa que mantém o espectador preso do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e diálogos",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam o roteiro afiado e os diálogos rápidos e inteligentes como grandes trunfos, com discussões que exploram moralidade e o sistema legal de forma instigante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração e ritmo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme é longo, mas que a narrativa flui bem e não se torna arrastada, enquanto outras consideram que algumas partes poderiam ser mais enxutas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ambiguidade e moralidade",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo valoriza a ambiguidade da trama e a forma como o filme evita respostas fáceis, deixando o espectador refletir sobre justiça, verdade e as nuances do processo judicial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora de Duke Ellington",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha jazzística de Duke Ellington é frequentemente elogiada por dar energia e personalidade ao filme, com alguns destacando até sua participação em cena.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam o filme como um drama de tribunal excepcional, impulsionado por atuações marcantes, roteiro afiado e uma atmosfera envolvente. Este grupo também ressalta a trilha de jazz e a complexidade moral da narrativa, ainda que alguns apontem a longa duração como um pequeno senão.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme é longo demais e arrastado, com quase três horas que parecem não acabar, tornando a experiência tediosa e sonolenta.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Várias reviews medianas consideram que o filme é longo demais e que o ritmo arrasta, especialmente na fase de preparação do julgamento e nas repetições do tribunal, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo",
+            "exemplo_parafraseado": "Muitas reviews positivas mencionam que o filme é longo, mas que a narrativa flui bem e não se torna arrastada, enquanto outras consideram que algumas partes poderiam ser mais enxutas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Personagens rasos e atuações exageradas",
+            "exemplo_parafraseado": "Há queixas de que os personagens são unidimensionais e as atuações, incluindo a de James Stewart, soam teatrais e caricatas, sem profundidade emocional.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de James Stewart",
+            "exemplo_parafraseado": "A performance de James Stewart é frequentemente elogiada como o ponto alto, com seu carisma e competência carregando boa parte do interesse do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de James Stewart",
+            "exemplo_parafraseado": "As reviews positivas destacam a performance magnética e carismática de James Stewart como o advogado protagonista, considerando-a um dos pontos mais altos do filme e frequentemente a razão principal para assisti-lo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Direção burocrática e falta de estilo",
+            "exemplo_parafraseado": "Algumas reviews consideram a direção de Otto Preminger rígida e sem inspiração, com enquadramentos datados e uma condução que não valoriza o material.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco, previsível e sem tensão",
+            "exemplo_parafraseado": "Algumas pessoas criticam o roteiro por ser raso, sem nuances, com reviravoltas pouco impactantes e falta de tensão, resultando em uma trama que não convence nem surpreende.",
+            "temas_no_mesmo_eixo": [
+              "Desfecho insatisfatório"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e falta de envolvimento",
+            "exemplo_parafraseado": "Há comentários de que o roteiro não consegue manter o espectador totalmente engajado, com personagens pouco desenvolvidos e uma narrativa que não justifica sua extensão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Drama de tribunal envolvente",
+            "exemplo_parafraseado": "Este grupo elogia as cenas de tribunal como eletrizantes e imersivas, com um vai-e-vem intenso entre acusação e defesa que mantém o espectador preso do início ao fim.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e diálogos",
+              "Ambiguidade e moralidade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de Duke Ellington",
+            "exemplo_parafraseado": "A trilha sonora de Duke Ellington é mencionada positivamente, embora alguns achem que o jazz não se encaixa bem no contexto do tribunal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de Duke Ellington",
+            "exemplo_parafraseado": "A trilha jazzística de Duke Ellington é frequentemente elogiada por dar energia e personalidade ao filme, com alguns destacando até sua participação em cena.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Tom inadequado e machismo",
+            "exemplo_parafraseado": "Diversas críticas apontam que o filme trata temas sensíveis como abuso e estupro de forma leviana, com momentos cômicos inapropriados e uma abordagem misógina que incomoda.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Crítica ao sistema de justiça",
+            "exemplo_parafraseado": "Este grupo destaca que o filme expõe falhas do sistema judicial, sugerindo que o julgamento é mais um jogo de retórica do que uma busca pela verdade, e que a justiça pode ser falha.",
+            "temas_no_mesmo_eixo": [
+              "Tratamento de temas sensíveis (abuso sexual e sexismo)"
+            ]
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 1959 e dirigido por Otto Preminger, Anatomia de um Crime é um drama policial e de mistério com 160 minutos de duração. A trama acompanha Paul Biegler, um ex-promotor de cidade pequena que assume a defesa de um tenente do exército acusado de assassinar um homem após este supostamente estuprar sua esposa. Para conduzir o caso, o advogado precisa aplicar sua experiência e astúcia em tribunal diante de um influente promotor rival vindo da capital.\n\nA experiência do longa é estruturada em torno dos procedimentos judiciais, desenvolvendo-se em um ritmo detalhado e cadenciado ao longo de sua extensa duração.\n\nOs grupos convergem sobre os temas e a estrutura da narrativa, divergindo estritamente em seus vereditos sobre o funcionamento da obra. Na grande maioria das notas (~91%), o desempenho de James Stewart é apontado por perto da metade dos relatos como um dos grandes atrativos. Além disso, uma parcela expressiva exalta a construção de um drama de tribunal envolvente, enquanto um número considerável destaca a qualidade do roteiro e dos diálogos.\n\nNuma fração mínima das notas (~8%), para quem está nessa faixa, vários apontam a duração excessiva e o ritmo lento como elementos que tornam o filme cansativo. Ainda assim, boa parte enfatiza a crítica ao sistema de justiça e uma parte reconhece a atuação de James Stewart como ponto positivo.\n\nNuma fração ainda menor das notas (~1%), sob a ótica desse grupo, cerca de metade critica a duração excessiva e a lentidão da narrativa. Da mesma forma, muitos consideram o roteiro fraco, previsível e sem tensão, enquanto uma parcela expressiva aponta personagens rasos e atuações exageradas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "cobertura",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 2,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11961,
+      "completion_tokens": 1484,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11961
+    },
+    "latencia_s": 42.97
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "prefixo_codigo": "",
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [
+        "tema_ausente"
+      ],
+      "aplicado": false
+    },
+    "spec_version": "1.9.50",
+    "texto": "Os grupos falam das mesmas coisas — discordam sobre se elas funcionam.",
+    "texto_modelo": null,
+    "origem": "template_fallback",
+    "motivo": "template_fallback",
+    "criterio_decisivo": null,
+    "abertura": "grupo",
+    "indice_escolhido": null,
+    "flags": [
+      "tema_ausente"
+    ],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 37,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 4744,
+      "completion_tokens": 232,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 4744
+    },
+    "latencia_s": 16.51
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza a interpretação carismática de James Stewart no papel do advogado protagonista",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de James Stewart",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia dramas de tribunal com embates eletrizantes entre acusação e defesa",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Drama de tribunal envolvente",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza diálogos rápidos e inteligentes que discutem moralidade e justiça",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e diálogos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera trechos pouco enxutos em um filme longo que flui bem",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração e ritmo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura tramas ambíguas que evitam respostas fáceis sobre justiça e verdade",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ambiguidade e moralidade",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes muito longos de andamento arrastado e tedioso",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se frustra com tramas previsíveis, sem tensão e com reviravoltas pouco impactantes",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco, previsível e sem tensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com atuações teatrais e caricatas em personagens sem profundidade",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens rasos e atuações exageradas",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15602,
+      "completion_tokens": 1215,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15602
+    },
+    "latencia_s": 20.42,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

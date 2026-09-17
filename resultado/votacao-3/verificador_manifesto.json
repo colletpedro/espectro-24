@@ -3,21 +3,23 @@
   "passada": 1,
   "eixo": "impacto_emocional",
   "fonte": "resultado/votacao-3/consenso.jsonl",
-  "fonte_n_linhas": 7845,
-  "n_candidatas": 5835,
-  "n_verificadas": 5843,
-  "n_falharam": 2,
+  "fonte_n_linhas": 13112,
+  "n_candidatas": 9269,
+  "n_verificadas": 9105,
+  "n_falharam": 174,
   "pendentes_por_motivo": {
-    "erro_JSONDecodeError": 2
+    "erro_APIStatusError": 139,
+    "erro_JSONDecodeError": 32,
+    "erro_RateLimitError": 3
   },
   "n_fallback_conteudo": 1,
-  "n_removidas": 2785,
-  "n_chamadas": 5843,
+  "n_removidas": 4154,
+  "n_chamadas": 9105,
   "uso": {
-    "prompt_tokens": 3893952,
-    "completion_tokens": 218920,
-    "cache_hit_tokens": 2064256,
-    "cache_miss_tokens": 1829696
+    "prompt_tokens": 6066225,
+    "completion_tokens": 340841,
+    "cache_hit_tokens": 2899328,
+    "cache_miss_tokens": 3166897
   },
-  "custo_usd": 0.32323495680000003
+  "custo_usd": 0.5469191784
 }

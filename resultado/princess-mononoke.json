@@ -1,0 +1,1680 @@
+{
+  "slug": "princess-mononoke",
+  "data_coleta": "2026-09-16T18:51:22.300669+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 552,
+  "reviews_url": "https://letterboxd.com/film/princess-mononoke/reviews/",
+  "ficha": {
+    "titulo": "Princesa Mononoke",
+    "sinopse_oficial": "Um príncipe infectado por uma doença sabe que irá morrer, a menos que encontre a cura. Sendo a sua última esperança, segue para o leste e, durante o caminho, encontra animais da floresta lutando contra a sua exploração, liderados pela princesa Mononoke.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Aventura",
+      "Fantasia",
+      "Animação"
+    ],
+    "duracao_min": 134,
+    "diretor": "Hayao Miyazaki",
+    "diretor_transliterado": false,
+    "ano": 1997,
+    "fonte": "tmdb",
+    "tmdb_id": 128,
+    "tmdb_fetched_at": "2026-09-16T20:18:36+00:00",
+    "poster_path": "/7EadOwHmyQgOnlghRiWBygNtnjl.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
+      "/sXV0NVLtyEsOdaEXnMcRGwUhIi0.jpg",
+      "/mpNd0rTVrp6vHJ9Je7wSa3zC8JS.jpg",
+      "/zmOiaTwOJOoXv1CnWCMPyZue1OF.jpg",
+      "/15WkAcIsR6MxpEwXMipNxZHKC7v.jpg",
+      "/hWfBDVd18nTA07NmiGSAScE2Gyk.jpg",
+      "/wk0C57pDrxBWSiQLlsEgvK3QvtV.jpg",
+      "/rsojlhFk2lBnk9lrEhss9OzY4d5.jpg",
+      "/wPwLLtHmtXS8JQ7wX9CeLoeW69Y.jpg",
+      "/qgmLwmCD5wHaroLwuOJRqYeEslX.jpg"
+    ],
+    "backdrop_path": "/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/201rbepwdU0NI1g3FQvEuc397fP.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1426,
+    "galeria_stills": [
+      {
+        "still_path": "/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/sXV0NVLtyEsOdaEXnMcRGwUhIi0.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/crn3nZHTQ7s1dT7MibMgI7AWhS4.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/yoIybVuiUWtDf2X8dCt4vZgfC3q.jpg",
+        "still_largura": 1840,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/rMFiGc8Riv2YtKX5RgS8N41NGLH.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/e4xVVML1ERz3y6cwcRm35IqeWVY.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wB6aHmRHy9GPozagH5RM7wDZVvK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/447OYYXgfHqp2Kf2TiCPmDsDtcv.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/7HgPa1TsBHbTeSos2k0XaqKkhe4.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/j01YfN189u3gw4u3a3UxveOd43O.jpg",
+        "still_largura": 1845,
+        "still_altura": 1038
+      },
+      {
+        "still_path": "/lkGxk72nAJBBpL47XUo4uTMeO8s.jpg",
+        "still_largura": 2500,
+        "still_altura": 1406
+      },
+      {
+        "still_path": "/sBZj5jeoZ7HBVuLkFkR9KWy5r4d.jpg",
+        "still_largura": 2500,
+        "still_altura": 1406
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "princess-mononoke",
+      "titulo_letterboxd": "Princess Mononoke",
+      "ano_letterboxd": 1997,
+      "tmdb_id_letterboxd": 128,
+      "tmdb_id_escolhido": 128,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Princess Mononoke",
+      "ano_tmdb": 1997,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1815324,
+    "por_nivel": {
+      "0.5": 1032,
+      "1.0": 2811,
+      "1.5": 2172,
+      "2.0": 13640,
+      "2.5": 16936,
+      "3.0": 99446,
+      "3.5": 142694,
+      "4.0": 463023,
+      "4.5": 329994,
+      "5.0": 743576
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "princess-mononoke",
+    "coletado_em": "2026-09-16T03:05:41.247504+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1032,
+      "1.0": 2811,
+      "1.5": 2172,
+      "2.0": 13640,
+      "2.5": 16936,
+      "3.0": 99446,
+      "3.5": 142694,
+      "4.0": 463023,
+      "4.5": 329994,
+      "5.0": 743576
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 7,
+      "2.0": 20,
+      "2.5": 19,
+      "3.0": 21,
+      "3.5": 3,
+      "4.0": 12,
+      "4.5": 7,
+      "5.0": 21
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "2.0": 7
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 6,
+      "3.0": 34,
+      "3.5": 49,
+      "4.0": 159,
+      "4.5": 114,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 707,
+        "min": "2001-02-19",
+        "max": "2026-09-16",
+        "p5": "2026-03-15",
+        "p50": "2026-09-01",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 251,
+          "min": "2019-06-21",
+          "max": "2026-09-15",
+          "p5": "2025-11-15",
+          "p50": "2026-07-21",
+          "p95": "2026-09-07"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2001-02-19",
+          "max": "2026-09-15",
+          "p5": "2026-03-15",
+          "p50": "2026-09-01",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2009-12-10",
+          "max": "2026-09-16",
+          "p5": "2026-09-01",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "identidade_letterboxd": {
+      "slug": "princess-mononoke",
+      "titulo": "Princess Mononoke",
+      "ano": 1997,
+      "tmdb_id_letterboxd": 128,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1997,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 707
+  },
+  "origem_paginas": {
+    "_histograma/princess-mononoke.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_4.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_16.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_64.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_256.html": "cache",
+    "princess-mononoke/pages/by_added/rated_0_5_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_0_5_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_1_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_1_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_1_5_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_1_5_page_2.html": "cache",
+    "princess-mononoke/fulltext/viewing_1459443247.html": "cache",
+    "princess-mononoke/fulltext/viewing_1456207895.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_3.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_4.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_5.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_6.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_7.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_page_8.html": "cache",
+    "princess-mononoke/fulltext/viewing_1484997591.html": "cache",
+    "princess-mononoke/fulltext/viewing_1480483240.html": "cache",
+    "princess-mononoke/fulltext/viewing_1456460705.html": "cache",
+    "princess-mononoke/fulltext/viewing_1453431030.html": "cache",
+    "princess-mononoke/fulltext/viewing_1420853407.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_3.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_4.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_5.html": "cache",
+    "princess-mononoke/pages/by_added/rated_2_5_page_6.html": "cache",
+    "princess-mononoke/fulltext/viewing_1485114821.html": "cache",
+    "princess-mononoke/fulltext/viewing_1469809034.html": "cache",
+    "princess-mononoke/fulltext/viewing_1461630834.html": "cache",
+    "princess-mononoke/fulltext/viewing_1460314287.html": "cache",
+    "princess-mononoke/fulltext/viewing_1447002624.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_3.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_4.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_5.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_6.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_7.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_8.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_9.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_page_17.html": "cache",
+    "princess-mononoke/fulltext/viewing_1488164757.html": "cache",
+    "princess-mononoke/fulltext/viewing_1483879160.html": "cache",
+    "princess-mononoke/fulltext/viewing_1481293022.html": "cache",
+    "princess-mononoke/fulltext/viewing_1481242636.html": "cache",
+    "princess-mononoke/fulltext/viewing_1480736324.html": "cache",
+    "princess-mononoke/pages/by_added/rated_3_5_page_1.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497839490.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_page_3.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_page_4.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_page_40.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497447467.html": "cache",
+    "princess-mononoke/fulltext/viewing_1482298849.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_5_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_5_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_4_5_page_28.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497309903.html": "cache",
+    "princess-mononoke/fulltext/viewing_1487525560.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_1.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_2.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_3.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_5.html": "cache",
+    "princess-mononoke/pages/by_added/rated_5_page_128.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497519333.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497454971.html": "cache",
+    "princess-mononoke/fulltext/viewing_1497453597.html": "cache",
+    "princess-mononoke/fulltext/viewing_1488464890.html": "cache",
+    "princess-mononoke/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-03-14",
+        "max": "2026-09-12",
+        "p5": "2026-06-17",
+        "p50": "2026-08-01",
+        "p95": "2026-09-04"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 28,
+          "n_brutas": 179,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 138,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 138,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e falta de engajamento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme é lento, arrastado e que não conseguiram se manter interessados ou acordados durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem principal sem carisma ou indeciso",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas apontam que o protagonista é sem graça, sem personalidade e que sua postura neutra ou conciliadora incomoda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro clichê e previsível",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários de que a história é clichê, previsível e sem profundidade, com desenvolvimento raso dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem simplista ou centrista",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews consideram a mensagem do filme excessivamente simples, centrista ou que tenta agradar a todos sem consequências reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas frustradas",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores relatam que criaram expectativas altas por ser um Ghibli aclamado, mas se decepcionaram e não entenderam o apelo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação e trilha sonora elogiadas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo nas críticas negativas, algumas reviews elogiam a qualidade da animação, o estilo visual e a trilha sonora como pontos fortes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente ritmo lento, personagem principal sem carisma, roteiro clichê e mensagem simplista. Apesar disso, muitas reconhecem a qualidade técnica da animação e da trilha sonora.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 7,
+        "p95": 13,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-11",
+        "max": "2026-09-13",
+        "p5": "2026-08-13",
+        "p50": "2026-09-03",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 34,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 128,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 4,
+            "abaixo_min_chars": 128,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento ou arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme se arrasta, especialmente na segunda metade, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de conexão emocional com personagens e história",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo relata dificuldade em se envolver emocionalmente com os personagens e com a trama, sentindo distanciamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e animação belíssimos",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo nas críticas medianas, é consenso que a animação e o visual são impressionantes e cheios de detalhes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de exposição e roteiro explicativo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o roteiro explica demais, com muitos diálogos expositivos que atrapalham o ritmo e a sutileza.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos ou genéricos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas medianas mencionam que os personagens, especialmente os protagonistas, carecem de profundidade e complexidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora marcante",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é frequentemente elogiada, sendo considerada um dos pontos fortes mesmo para quem não se conectou totalmente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam uma experiência mista: reconhecem a beleza visual e a trilha, mas criticam o ritmo arrastado, a falta de conexão emocional e o excesso de exposição. Este grupo destaca que o filme, embora bem produzido, não atendeu às altas expectativas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2009-12-10",
+        "max": "2026-09-16",
+        "p5": "2026-06-26",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Relação humano-natureza e conflito ecológico",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam como o filme aborda a tensão entre o progresso humano e a preservação da natureza, mostrando que não há lados totalmente certos ou errados, mas interesses legítimos em choque.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Beleza visual e animação",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews ressaltam a qualidade excepcional da animação, com cenários deslumbrantes e um design de criaturas impressionante, que contribuem para a imersão no mundo fantástico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens, especialmente Ashitaka, San e Lady Eboshi, são elogiados por sua profundidade e motivações claras, tornando a história envolvente e emocionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Complexidade moral e ausência de vilões unidimensionais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários elogiam a construção de personagens como Lady Eboshi, que não é uma vilã caricata, mas alguém que age em benefício de sua comunidade, tornando o conflito mais rico e realista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e atmosfera",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é frequentemente citada como um ponto alto, elevando momentos-chave e criando uma atmosfera épica e emotiva que reforça a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas de ódio, vingança e coexistência",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam como o filme explora o ciclo de ódio e vingança entre humanos e natureza, e a necessidade de buscar coexistência em vez de destruição mútua.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para uma forte apreciação da complexidade temática e visual do filme, com destaque para a relação humano-natureza e a profundidade dos personagens. Este grupo também valoriza a trilha sonora e a animação como elementos que elevam a experiência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e falta de engajamento",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme é lento, arrastado e que não conseguiram se manter interessados ou acordados durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento ou arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme se arrasta, especialmente na segunda metade, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Visual e animação belíssimos",
+            "exemplo_parafraseado": "Mesmo nas críticas medianas, é consenso que a animação e o visual são impressionantes e cheios de detalhes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Beleza visual e animação",
+            "exemplo_parafraseado": "As reviews ressaltam a qualidade excepcional da animação, com cenários deslumbrantes e um design de criaturas impressionante, que contribuem para a imersão no mundo fantástico.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagem principal sem carisma ou indeciso",
+            "exemplo_parafraseado": "Algumas críticas apontam que o protagonista é sem graça, sem personalidade e que sua postura neutra ou conciliadora incomoda.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro clichê e previsível"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de exposição e roteiro explicativo",
+            "exemplo_parafraseado": "Algumas reviews apontam que o roteiro explica demais, com muitos diálogos expositivos que atrapalham o ritmo e a sutileza.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco desenvolvidos ou genéricos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e desenvolvimento",
+            "exemplo_parafraseado": "Os personagens, especialmente Ashitaka, San e Lady Eboshi, são elogiados por sua profundidade e motivações claras, tornando a história envolvente e emocionante.",
+            "temas_no_mesmo_eixo": [
+              "Complexidade moral e ausência de vilões unidimensionais",
+              "Temas de ódio, vingança e coexistência"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Animação e trilha sonora elogiadas",
+            "exemplo_parafraseado": "Mesmo nas críticas negativas, algumas reviews elogiam a qualidade da animação, o estilo visual e a trilha sonora como pontos fortes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora marcante",
+            "exemplo_parafraseado": "A música é frequentemente elogiada, sendo considerada um dos pontos fortes mesmo para quem não se conectou totalmente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e atmosfera",
+            "exemplo_parafraseado": "A música é frequentemente citada como um ponto alto, elevando momentos-chave e criando uma atmosfera épica e emotiva que reforça a narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de conexão emocional com personagens e história",
+            "exemplo_parafraseado": "Este grupo relata dificuldade em se envolver emocionalmente com os personagens e com a trama, sentindo distanciamento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Expectativas frustradas",
+            "exemplo_parafraseado": "Vários espectadores relatam que criaram expectativas altas por ser um Ghibli aclamado, mas se decepcionaram e não entenderam o apelo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem simplista ou centrista",
+            "exemplo_parafraseado": "Algumas reviews consideram a mensagem do filme excessivamente simples, centrista ou que tenta agradar a todos sem consequências reais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Relação humano-natureza e conflito ecológico",
+            "exemplo_parafraseado": "As reviews destacam como o filme aborda a tensão entre o progresso humano e a preservação da natureza, mostrando que não há lados totalmente certos ou errados, mas interesses legítimos em choque.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 1997 e dirigido pelo cineasta Hayao Miyazaki, Princesa Mononoke é uma produção dos gêneros animação, aventura e fantasia com 134 minutos de duração. A premissa acompanha a jornada de um príncipe que contrai uma doença fatal e viaja em direção ao leste na tentativa de obter uma cura, deparando-se no trajeto com os seres da floresta em luta contra a exploração de seu território.\n\nA experiência do filme se estabelece por meio de uma atmosfera densa e de uma ambientação focada no cenário natural, conduzida por uma cadência pausada e por um andamento narrativo gradual.\n\nOs grupos que avaliaram a obra abordam os mesmos elementos estéticos e narrativos, divergindo especificamente no veredito sobre o funcionamento dessas escolhas. Na grande maioria das notas (~93%), o embate ecológico e a relação entre humanidade e natureza são destacados por cerca de metade das análises. Nesse mesmo segmento, a beleza visual da animação é celebrada por boa parte dos registros, enquanto o desenvolvimento e a profundidade dos personagens recebem a atenção de um número considerável de avaliações.\n\nPara quem se posiciona numa fração mínima das notas (~6%), a percepção se torna mais contida: muitos relatam um ritmo lento ou arrastado e vários apontam dificuldade de conexão emocional com os personagens e a história, ainda que uma parcela expressiva continue destacando a estética visual. Por fim, na leitura de uma fração ainda menor das notas (~1%), muitos criticam a lentidão e a ausência de engajamento, enquanto alguns consideram o protagonista indeciso e sem carisma, e uma fatia menor descreve a condução do roteiro como clichê e previsível.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11521,
+      "completion_tokens": 1557,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11521
+    },
+    "latencia_s": 49.33
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre a construção das figuras da trama: enquanto a maioria dos que não recomendam aponta falta de carisma e indecisão no protagonista, cerca de metade dos que recomendam valoriza a evolução e o desenvolvimento desses mesmos personagens.",
+    "texto_modelo": "As opiniões divergem sobre a construção das figuras da trama: enquanto a maioria dos que não recomendam aponta falta de carisma e indecisão no protagonista, cerca de metade dos que recomendam valoriza a evolução e o desenvolvimento desses mesmos personagens.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "opini",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3654,
+      "completion_tokens": 177,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3654
+    },
+    "latencia_s": 12.02
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se interessa por dilemas ecológicos onde não há vilões claros, mas choques legítimos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Relação humano-natureza e conflito ecológico",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia uma animação envolvente com cenários deslumbrantes e design impressionante de criaturas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Beleza visual e animação",
+        "rotulo_forca": "muitos",
+        "par_recusado": "NEG-F"
+      },
+      {
+        "texto": "busca figuras com motivações nítidas e profundidade que sustentem a história",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens e desenvolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza antagonistas que fogem do caricato ao agir pelo bem de sua comunidade",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Complexidade moral e ausência de vilões unidimensionais",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um andamento lento e arrastado que prejudica o engajamento",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e falta de engajamento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com protagonistas neutros, excessivamente conciliadores e sem carisma",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem principal sem carisma ou indeciso",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita tramas previsíveis e convencionais com figuras de desenvolvimento raso",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro clichê e previsível",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-F",
+        "lado": "talvez_evite",
+        "regra": "R2",
+        "motivo": "O tema descreve elogios à animação e trilha, incompatíveis com um motivo para evitar a obra.",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11442,
+      "completion_tokens": 1201,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11442
+    },
+    "latencia_s": 18.53,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

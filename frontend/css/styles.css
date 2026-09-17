@@ -1818,18 +1818,47 @@ body.lightbox-aberto { overflow: hidden; }
    degenerado (traço de largura zero, invisível) é alcançável pelo código
    mesmo não tendo ocorrido ainda.
 
-   14px sai da medição, não de chute. O MENOR item do catálogo é 10,0%, que
-   dá 34,0px na coluna do desktop (340px) e 15,9px na coluna estreita do
-   mobile (159,5px). 14px fica ABAIXO desses dois: o piso não move NENHUM
-   dos 633 itens publicados, em nenhum dos dois leiautes — ele existe só
-   para o valor que ainda não foi publicado. Fosse maior que 15,9px, ele
-   estaria alongando os 8 itens de 10,0% no mobile e mentindo sobre eles.
-   Contra os 6px de altura, 14px ainda lê como traço (2,3:1), não como
-   ponto. */
+   [2026-09-17, remedido sobre 99 filmes/1780 itens — ABERTO.md B5] 14px
+   virou distorção quando a expansão publicou `goodfellas`/negativas
+   ("Tratamento raso das personagens femininas e visão masculina"), 7,5%
+   = 11,96px no mobile — abaixo do piso antigo. Remedido do zero: a
+   distribuição inteira, não só o item que quebrou.
+
+   **A RESTRIÇÃO QUE DECIDE O VALOR NÃO É MAIS A FIDELIDADE — É
+   `piso >= 2 × altura`.** A distribuição sozinha pediria 10px (sai do
+   VÃO dela: outlier isolado em 11,96px mobile, resto só recomeça em
+   15,95px, 10px fica abaixo dos dois com folga — não é o valor do
+   goodfellas arredondado). Mas a altura do traço é 6px, e
+   `test_o_piso_ainda_le_como_traco_e_nao_como_ponto` (v1.9.47) exige o
+   piso em pelo menos o dobro dela para ler como TRAÇO, não como PONTO —
+   12px é o menor valor que passa nas duas. Sem essa regra, 10px
+   passaria; ela é o que sobra a revisitar se o piso voltar a ser
+   questão, não a distribuição (ver ABERTO.md B5 para as duas outras
+   opções cogitadas e não tomadas: baixar a altura do traço, ou
+   revisitar a proporção 2× em si).
+
+   12px contra o real de 11,96px do goodfellas é 0,0375px de diferença —
+   SUBPIXEL, nenhum navegador renderiza essa diferença; é o limite da
+   unidade de medida, não uma distorção visível. A tolerância que isso
+   exige em `test_o_piso_nao_alonga_nenhum_item_publicado` está
+   documentada NAQUELE teste, com a razão escrita ao lado — reconhece o
+   limite da unidade, não afrouxa a invariante.
+
+   O PISO SÓ MORDE NO MOBILE (159,5px) — nunca é a restrição no desktop.
+   O mesmo item mais fraco do catálogo (7,5%) já dá 16,0px na coluna
+   desktop de 3 grupos (213,3px, caso `--3`, meio dominante) e 25,5px na
+   de 2 grupos (340px, caso `--2`, o comum) — as duas acima de qualquer
+   piso candidato medido (14/12/10/8/6px).
+
+   A FOLGA VALE PARA 99 FILMES, NÃO É GARANTIA PERMANENTE. Com o
+   catálogo em ~300, itens abaixo de 10% deixam de ser caso isolado por
+   simples volume — remedir a distribuição inteira quando o catálogo
+   crescer, pelo mesmo método (não reajustar ao próximo outlier sem medir
+   de novo). */
 .theme__bar span {
   display: block;
   height: 100%;
-  min-width: 14px;
+  min-width: 12px;
   border-radius: 999px;
   transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }

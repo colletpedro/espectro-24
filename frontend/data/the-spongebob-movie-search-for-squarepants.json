@@ -1,0 +1,1618 @@
+{
+  "slug": "the-spongebob-movie-search-for-squarepants",
+  "data_coleta": "2026-09-16T18:54:49.228886+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-spongebob-movie-search-for-squarepants/reviews/",
+  "ficha": {
+    "titulo": "Bob Esponja: Em Busca da Calça Quadrada",
+    "sinopse_oficial": "Bob Esponja e seus amigos da Fenda do Bikini embarcam na maior aventura de suas vidas. Ao tentar provar que é grandão, ele acaba invocando o temido pirata fantasma Holandês Voador, que arrasta Bob Esponja e Patrick para uma jornada caótica no submundo. Enfrentando desafios enormes e com uma equipe de resgate em seu encalço, Bob Esponja descobre que a verdadeira coragem aparece quando os amigos encaram o desconhecido juntos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Aventura",
+      "Família",
+      "Animação",
+      "Comédia",
+      "Fantasia"
+    ],
+    "duracao_min": 88,
+    "diretor": "Derek Drymon",
+    "diretor_transliterado": false,
+    "ano": 2025,
+    "fonte": "tmdb",
+    "tmdb_id": 991494,
+    "tmdb_fetched_at": "2026-09-16T20:18:36+00:00",
+    "poster_path": "/obDYToEfPFNMKW6x0eamCrjTMzK.jpg",
+    "poster_largura": 1685,
+    "poster_altura": 2528,
+    "backdrop_paths": [
+      "/pMxO1beNNFYMDM7RcDyKW5Wheuz.jpg",
+      "/kVSUUWiXoNwq2wVCZ4Mcqkniqvr.jpg",
+      "/jzMhC6NB4KHqfSAgbW2BFslLuSh.jpg",
+      "/gbjK8p5S1aLXWCwOoXqr9aWZvqG.jpg",
+      "/sBEJ3rhJ45HJ6rUj7gQZYODteo3.jpg",
+      "/xFwsArspdwZcns7dTa0ys4ZLOtd.jpg",
+      "/bOalAypnd7Wm6aAWINCEJxVDAP1.jpg",
+      "/hWIQYwa0O1dVkQWA5v0xF7MCKpM.jpg",
+      "/b2HcQiOGg4n6FELTukEzUPEKDHg.jpg",
+      "/56hKUF0F4DmCcN9kRGmq7F3lw01.jpg"
+    ],
+    "backdrop_path": "/pMxO1beNNFYMDM7RcDyKW5Wheuz.jpg",
+    "backdrop_largura": 2400,
+    "backdrop_altura": 1350,
+    "poster_sem_texto_path": "/v95hpkfgPVbtvpYP6dagG49tT2l.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/pMxO1beNNFYMDM7RcDyKW5Wheuz.jpg",
+        "still_largura": 2400,
+        "still_altura": 1350
+      },
+      {
+        "still_path": "/kVSUUWiXoNwq2wVCZ4Mcqkniqvr.jpg",
+        "still_largura": 2018,
+        "still_altura": 1135
+      },
+      {
+        "still_path": "/hWIQYwa0O1dVkQWA5v0xF7MCKpM.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/1BXbHptu1oWVVTOx8RbiNQ31oGb.jpg",
+        "still_largura": 1839,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/4yL8eeYYKdj3MZiHv7MmFsgoXWt.jpg",
+        "still_largura": 1839,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/95WmmnE2rKC8lH0kUAZY3lbCjoS.jpg",
+        "still_largura": 2300,
+        "still_altura": 1293
+      },
+      {
+        "still_path": "/bVGudMRRozdCjS4K6wNiSA6wbHD.jpg",
+        "still_largura": 2183,
+        "still_altura": 1228
+      },
+      {
+        "still_path": "/fBEfuqomNLoHGKiEVSAxlZnagUk.jpg",
+        "still_largura": 1839,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/jU4Ge8yjCXrl5y3hrviAViBFY8Q.jpg",
+        "still_largura": 1847,
+        "still_altura": 1038
+      },
+      {
+        "still_path": "/ogbIdSG2hXGc52v5oB57WxTfjS0.jpg",
+        "still_largura": 1839,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/rzURpnqgwcB8lW5Rd56G2fDcJrj.jpg",
+        "still_largura": 1848,
+        "still_altura": 1038
+      },
+      {
+        "still_path": "/vKBADfB6IBjnseMg7Cdc1fX4qm2.jpg",
+        "still_largura": 2300,
+        "still_altura": 1293
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-spongebob-movie-search-for-squarepants",
+      "titulo_letterboxd": "The SpongeBob Movie: Search for SquarePants",
+      "ano_letterboxd": 2025,
+      "tmdb_id_letterboxd": 991494,
+      "tmdb_id_escolhido": 991494,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The SpongeBob Movie: Search for SquarePants",
+      "ano_tmdb": 2025,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 108354,
+    "por_nivel": {
+      "0.5": 4508,
+      "1.0": 7722,
+      "1.5": 7948,
+      "2.0": 18754,
+      "2.5": 18238,
+      "3.0": 24605,
+      "3.5": 10465,
+      "4.0": 8302,
+      "4.5": 1673,
+      "5.0": 6139
+    },
+    "por_bucket": {
+      "negativas": 36,
+      "medianas": 40,
+      "positivas": 25
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-spongebob-movie-search-for-squarepants",
+    "coletado_em": "2026-09-16T03:15:04.647255+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4508,
+      "1.0": 7722,
+      "1.5": 7948,
+      "2.0": 18754,
+      "2.5": 18238,
+      "3.0": 24605,
+      "3.5": 10465,
+      "4.0": 8302,
+      "4.5": 1673,
+      "5.0": 6139
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 8,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 8,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 36,
+      "2.0": 96,
+      "2.5": 84,
+      "3.0": 108,
+      "3.5": 72,
+      "4.0": 60,
+      "4.5": 12,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 18,
+      "2.5": 22,
+      "3.0": 25,
+      "3.5": 17,
+      "4.0": 13,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 3,
+      "2.0": 8,
+      "2.5": 7,
+      "3.0": 9,
+      "3.5": 6,
+      "4.0": 5,
+      "4.5": 1,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "1.5": 3,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 37,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 1,
+          "5.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 3.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 47,
+      "1.0": 80,
+      "1.5": 83,
+      "2.0": 195,
+      "2.5": 190,
+      "3.0": 256,
+      "3.5": 109,
+      "4.0": 86,
+      "4.5": 17,
+      "5.0": 64
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 744,
+        "min": "2025-04-23",
+        "max": "2026-09-15",
+        "p5": "2026-01-01",
+        "p50": "2026-08-25",
+        "p95": "2026-09-12"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 276,
+          "min": "2025-06-16",
+          "max": "2026-09-15",
+          "p5": "2026-01-09",
+          "p50": "2026-08-23",
+          "p95": "2026-09-12"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2025-07-25",
+          "max": "2026-09-15",
+          "p5": "2026-01-06",
+          "p50": "2026-08-29",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 252,
+          "min": "2025-04-23",
+          "max": "2026-09-15",
+          "p5": "2025-12-29",
+          "p50": "2026-08-23",
+          "p95": "2026-09-12"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 191,
+      "dias_por_100_paginas": 150.39370078740157,
+      "paginas_para_1_ano": 243
+    },
+    "identidade_letterboxd": {
+      "slug": "the-spongebob-movie-search-for-squarepants",
+      "titulo": "The SpongeBob Movie: Search for SquarePants",
+      "ano": 2025,
+      "tmdb_id_letterboxd": 991494,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2025,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 744
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 36,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 8,
+        "1.5": 8,
+        "2.0": 19
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 6,
+        "1.5": 8,
+        "2.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 21,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-12-17",
+        "max": "2026-09-14",
+        "p5": "2026-05-26",
+        "p50": "2026-08-28",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 63,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 63,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 21,
+          "n_alvo": 19,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 111,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 1,
+            "abaixo_min_chars": 111,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Humor apelativo e repetitivo (piadas de traseiro e escatológicas)",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews criticam o excesso de piadas envolvendo traseiros e humor escatológico, considerando-as repetitivas e sem graça.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação 3D artificial e sem charme",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O estilo de animação em 3D foi bastante criticado por parecer artificial, sem a textura e o charme do desenho original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e repetitivo",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews apontam que a trama é fraca, arrastada e recicla elementos de filmes anteriores, sem originalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de graça e tédio",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas opiniões destacam que o filme é entediante e sem momentos realmente engraçados, tornando a experiência maçante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Participação de Ice Spice e celebridades desnecessárias",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A inclusão da rapper Ice Spice e outras participações especiais foi vista como deslocada e desnecessária para um filme infantil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação desfavorável com o filme original de 2004",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews frequentemente afirmam que este filme não chega aos pés do original de 2004, seja em qualidade, humor ou alma.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o humor apelativo e repetitivo, a animação 3D artificial, o roteiro fraco e a falta de graça. A participação de Ice Spice e a comparação desfavorável com o filme original de 2004 também são pontos recorrentes de insatisfação.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 40,
+      "composicao_alvo": {
+        "2.5": 17,
+        "3.0": 23
+      },
+      "composicao_atingida": {
+        "2.5": 17,
+        "3.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 5,
+        "p95": 128,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-12-28",
+        "max": "2026-09-15",
+        "p5": "2026-03-04",
+        "p50": "2026-08-30",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 23,
+          "n_alvo": 23,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 101,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 101,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Nostalgia e comparação com filmes anteriores",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores sentem falta da animação 2D original e consideram que os primeiros filmes da franquia eram superiores, embora ainda guardem carinho pela série e pelos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor infantil e piadas repetitivas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As piadas são vistas como apelativas para crianças, com muitas piadas de baixo calão e momentos que soam forçados, embora algumas ainda arranquem risadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e reutilização de elementos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa é considerada fraca e recicla ideias de filmes anteriores, sem trazer grande originalidade ou surpresas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação 3D e estilo visual",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação em 3D divide opiniões: alguns elogiam a tentativa de recriar o estilo original, enquanto outros preferem o 2D clássico e criticam o visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Participação de Mark Hamill como Holandês Voador",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Mark Hamill como o Holandês Voador é bem recebida, trazendo carisma e diversão ao papel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo acelerado e excesso de estímulos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é criticado por ser muito acelerado e repleto de estímulos constantes, o que cansa e prejudica a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme que diverte, mas é criticado por reutilizar fórmulas antigas, ter humor excessivamente infantil e animação 3D questionável. A nostalgia e o carinho pelos personagens ainda garantem algum entretenimento, mas a sensação é de que a franquia perdeu parte de sua essência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 25,
+      "composicao_alvo": {
+        "3.5": 16,
+        "4.0": 12,
+        "4.5": 3,
+        "5.0": 9
+      },
+      "composicao_atingida": {
+        "3.5": 16,
+        "4.0": 12,
+        "4.5": 3,
+        "5.0": 9
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 27,
+        "p5": 1,
+        "p50": 3,
+        "p95": 22,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-12-20",
+        "max": "2026-09-14",
+        "p5": "2025-12-22",
+        "p50": "2026-08-26",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Humor e comédia",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o filme é engraçado, com piadas que remetem ao humor clássico da série, incluindo momentos de pastelão e piadas visuais que arrancaram risadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com filmes anteriores",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews comparam este filme aos anteriores da franquia, considerando-o melhor que os últimos lançamentos, mas ainda inferior ao primeiro filme, que é tido como insuperável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação e visual",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação é elogiada por sua qualidade e estilo colorido, com algumas ressalvas sobre o uso de CGI e problemas de iluminação, mas no geral é vista como bonita e eficaz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia e fandom",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews expressam apego nostálgico à série e aos filmes antigos, e fãs de longa data compartilham que o filme trouxe memórias afetivas e momentos emocionantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e dublagem",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A dublagem é elogiada, especialmente a atuação de Mark Hamill como o Holandês Voador, que é vista como uma boa adição, embora alguns prefiram o dublador original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e ritmo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é considerado simples e previsível por alguns, com ritmo que pode ser arrastado no início ou perder força no final, mas ainda assim é divertido e adequado para crianças.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam que o filme é divertido e engraçado, com destaque para o humor característico da série e a qualidade da animação. Este grupo também menciona comparações com filmes anteriores, nostalgia e atuações, resultando em uma recepção favorável dentro desta faixa de nota.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo acelerado e excesso de estímulos",
+            "exemplo_parafraseado": "O filme é criticado por ser muito acelerado e repleto de estímulos constantes, o que cansa e prejudica a experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Participação de Ice Spice e celebridades desnecessárias",
+            "exemplo_parafraseado": "A inclusão da rapper Ice Spice e outras participações especiais foi vista como deslocada e desnecessária para um filme infantil.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Participação de Mark Hamill como Holandês Voador",
+            "exemplo_parafraseado": "A atuação de Mark Hamill como o Holandês Voador é bem recebida, trazendo carisma e diversão ao papel.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e dublagem",
+            "exemplo_parafraseado": "A dublagem é elogiada, especialmente a atuação de Mark Hamill como o Holandês Voador, que é vista como uma boa adição, embora alguns prefiram o dublador original.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Animação 3D artificial e sem charme",
+            "exemplo_parafraseado": "O estilo de animação em 3D foi bastante criticado por parecer artificial, sem a textura e o charme do desenho original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Animação 3D e estilo visual",
+            "exemplo_parafraseado": "A animação em 3D divide opiniões: alguns elogiam a tentativa de recriar o estilo original, enquanto outros preferem o 2D clássico e criticam o visual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Animação e visual",
+            "exemplo_parafraseado": "A animação é elogiada por sua qualidade e estilo colorido, com algumas ressalvas sobre o uso de CGI e problemas de iluminação, mas no geral é vista como bonita e eficaz.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e repetitivo",
+            "exemplo_parafraseado": "Muitas reviews apontam que a trama é fraca, arrastada e recicla elementos de filmes anteriores, sem originalidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e reutilização de elementos",
+            "exemplo_parafraseado": "A narrativa é considerada fraca e recicla ideias de filmes anteriores, sem trazer grande originalidade ou surpresas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e ritmo",
+            "exemplo_parafraseado": "O roteiro é considerado simples e previsível por alguns, com ritmo que pode ser arrastado no início ou perder força no final, mas ainda assim é divertido e adequado para crianças.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Humor apelativo e repetitivo (piadas de traseiro e escatológicas)",
+            "exemplo_parafraseado": "Várias reviews criticam o excesso de piadas envolvendo traseiros e humor escatológico, considerando-as repetitivas e sem graça.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Humor infantil e piadas repetitivas",
+            "exemplo_parafraseado": "As piadas são vistas como apelativas para crianças, com muitas piadas de baixo calão e momentos que soam forçados, embora algumas ainda arranquem risadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Humor e comédia",
+            "exemplo_parafraseado": "As reviews destacam que o filme é engraçado, com piadas que remetem ao humor clássico da série, incluindo momentos de pastelão e piadas visuais que arrancaram risadas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Falta de graça e tédio",
+            "exemplo_parafraseado": "Diversas opiniões destacam que o filme é entediante e sem momentos realmente engraçados, tornando a experiência maçante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e fandom",
+            "exemplo_parafraseado": "Várias reviews expressam apego nostálgico à série e aos filmes antigos, e fãs de longa data compartilham que o filme trouxe memórias afetivas e momentos emocionantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Comparação desfavorável com o filme original de 2004",
+            "exemplo_parafraseado": "As reviews frequentemente afirmam que este filme não chega aos pés do original de 2004, seja em qualidade, humor ou alma.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e comparação com filmes anteriores",
+            "exemplo_parafraseado": "Vários espectadores sentem falta da animação 2D original e consideram que os primeiros filmes da franquia eram superiores, embora ainda guardem carinho pela série e pelos personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com filmes anteriores",
+            "exemplo_parafraseado": "Muitas reviews comparam este filme aos anteriores da franquia, considerando-o melhor que os últimos lançamentos, mas ainda inferior ao primeiro filme, que é tido como insuperável.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1368723249",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 81 (char 80)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Derek Drymon, Bob Esponja: Em Busca da Calça Quadrada (2025) é uma animação de aventura, comédia e fantasia. Na trama, o protagonista e seus amigos encaram uma jornada caótica pelo submundo após invocarem o pirata fantasma Holandês Voador, descobrindo o valor da coragem e da união diante do desconhecido.\n\nA experiência é estruturada sobre uma estética em animação tridimensional, desenvolvida em um ritmo acelerado e repleto de estímulos cômicos.\n\nOs grupos debatem essencialmente os mesmos elementos e concordam sobre o que o filme apresenta, divergindo apenas no veredito sobre o funcionamento dessas escolhas. Em boa parte das notas (~40%), cerca de metade aborda a nostalgia e a comparação com os longas anteriores da série. Além disso, muitos apontam o humor infantil calcado em piadas repetitivas, enquanto uma parcela expressiva destaca a previsibilidade do roteiro e a reutilização de fórmulas já conhecidas da franquia.\n\nNuma parte menor das notas (~36%), para eles, vários criticam o tom apelativo das piadas escatológicas e repetitivas. Nesse segmento, boa parte rejeita a animação 3D por considerá-la artificial e sem charme, ao passo que um número considerável enfatiza a fraqueza e a falta de originalidade do texto.\n\nPor fim, numa parcela das notas (~25%), a percepção é favorável: nessa leitura, aproximadamente metade exalta a eficácia do humor e da comédia apresentados. Muitos também recorrem à comparação com produções passadas para valorizar o resultado atual, e uma parcela expressiva elogia a qualidade do visual e da animação.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [
+      "3"
+    ],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [
+      {
+        "expressao": "uma jornada",
+        "n": 1,
+        "trecho": "gonista e seus amigos encaram uma jornada caótica pelo submundo após in"
+      }
+    ],
+    "n_resenha_speak": 1,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 1,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 2,
+      "motivos": [
+        "cliche",
+        "numero_inventado"
+      ],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11913,
+      "completion_tokens": 1528,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11913
+    },
+    "latencia_s": 73.43
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "O meio-termo é o maior grupo da recepção (~40% das notas). ",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O meio-termo é o maior grupo da recepção (~40% das notas). As opiniões analisam os mesmos aspectos da produção, divergindo no resultado: a maioria dos que recomendam aprova o paralelo com os capítulos anteriores da franquia, enquanto a maioria dos que não recomendam julga o texto frágil e repetitivo em relação ao filme original.",
+    "texto_modelo": "As opiniões analisam os mesmos aspectos da produção, divergindo no resultado: a maioria dos que recomendam aprova o paralelo com os capítulos anteriores da franquia, enquanto a maioria dos que não recomendam julga o texto frágil e repetitivo em relação ao filme original.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "opini",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 52,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 4014,
+      "completion_tokens": 202,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 4014
+    },
+    "latencia_s": 12.76
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se diverte com comédia pastelão e piadas visuais no estilo clássico da franquia",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor e comédia",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca uma evolução sobre lançamentos recentes, embora ainda inferior ao filme inaugural",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Comparação com filmes anteriores",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma animação colorida e bonita, apesar de ressalvas pontuais na computação gráfica",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Animação e visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "quer uma diversão infantil adequada, mesmo com roteiro previsível e ritmo oscilante",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e ritmo",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com piadas escatológicas repetitivas e excesso de humor apelativo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Humor apelativo e repetitivo (piadas de traseiro e escatológicas)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita animação tridimensional de aspecto artificial que perde o encanto do traço original",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Animação 3D artificial e sem charme",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita tramas arrastadas e pouco originais que reciclam elementos de filmes anteriores",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e repetitivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa de narrativas maçantes e entediantes que carecem de momentos engraçados",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de graça e tédio",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "talvez_evite",
+      "vale_a_pena"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 25,
+        "peso_texto": "~25% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 36,
+        "peso_texto": "~36% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 40,
+      "texto": "~40% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12078,
+      "completion_tokens": 1159,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12078
+    },
+    "latencia_s": 197.22,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

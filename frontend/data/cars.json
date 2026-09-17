@@ -1,0 +1,1631 @@
+{
+  "slug": "cars",
+  "data_coleta": "2026-09-16T19:04:15.204911+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/cars/reviews/",
+  "ficha": {
+    "titulo": "Carros",
+    "sinopse_oficial": "Ao viajar para a Califórnia, o famoso carro de corridas Relâmpago McQueen se perde e vai parar em Radiator Springs, uma cidadezinha na Rota 66. Ele conhece novos amigos e aprende lições que mudam sua forma de encarar a vida.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Aventura",
+      "Comédia",
+      "Família"
+    ],
+    "duracao_min": 117,
+    "diretor": "John Lasseter",
+    "diretor_transliterado": false,
+    "ano": 2006,
+    "fonte": "tmdb",
+    "tmdb_id": 920,
+    "tmdb_fetched_at": "2026-09-16T20:18:38+00:00",
+    "poster_path": "/A7nssMRIPauZhEVf2dzwsf4EALO.jpg",
+    "poster_largura": 1365,
+    "poster_altura": 2048,
+    "backdrop_paths": [
+      "/sOLgkBKf1gjMRc4yXxM5aciXdfr.jpg",
+      "/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg",
+      "/ef31oDJYZkccRl2rpqGBSzGZiUB.jpg",
+      "/wZiUsAI939lOKgs0u3qA3zSW7zx.jpg",
+      "/a1QsuXuaUu1w4zLJEgOW1pXs9U6.jpg",
+      "/vABOhCPfvm1g0cKNzQXwK8EyQ5z.jpg",
+      "/oITtbEezoBksUw9cII7GQ2kpR5B.jpg",
+      "/hlApZDF02Yra1XCJ8pbdmWiuC3v.jpg",
+      "/hCV6eVyuIZZuyBNVvFwYmCDgLaG.jpg",
+      "/aO2tYNgUsbgcFSfnftMixNaUS8o.jpg"
+    ],
+    "backdrop_path": "/sOLgkBKf1gjMRc4yXxM5aciXdfr.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/laR2A1CNCXQFy1ZVHpvNHmSv2LX.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/sOLgkBKf1gjMRc4yXxM5aciXdfr.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/sd4xN5xi8tKRPrJOWwNiZEile7f.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/oITtbEezoBksUw9cII7GQ2kpR5B.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/21N7m5NfiCsAT7h4ZoqXVwiPAaI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6QSfz952HN7Ac3JmRwQW4Dehn4q.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/JfLpPwYmx5nyRjtT5WF6uD8K1i.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cUYCIMx3VnL7UOMqrMfRDohN01o.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/i93Uoz8BxQRRMboxB7VLlvQWRQt.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/mVqw2aCZAlWRIHWHF3bFMOUYAfC.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/q7tunXBRMXwvqv8K6O5gGwmEIlc.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/smfd7ZwxrsvdDSTowc6tSlVl8yA.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wNQUxIZqljQoFTaYxKn4WtHGfnk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "cars",
+      "titulo_letterboxd": "Cars",
+      "ano_letterboxd": 2006,
+      "tmdb_id_letterboxd": 920,
+      "tmdb_id_escolhido": 920,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Cars",
+      "ano_tmdb": 2006,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2123070,
+    "por_nivel": {
+      "0.5": 4557,
+      "1.0": 14297,
+      "1.5": 10635,
+      "2.0": 61618,
+      "2.5": 68458,
+      "3.0": 302103,
+      "3.5": 295641,
+      "4.0": 590735,
+      "4.5": 199050,
+      "5.0": 575976
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 17,
+      "positivas": 78
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "cars",
+    "coletado_em": "2026-09-16T03:35:19.894661+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4557,
+      "1.0": 14297,
+      "1.5": 10635,
+      "2.0": 61618,
+      "2.5": 68458,
+      "3.0": 302103,
+      "3.5": 295641,
+      "4.0": 590735,
+      "4.5": 199050,
+      "5.0": 575976
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 8,
+      "2.0": 32,
+      "2.5": 19,
+      "3.0": 20,
+      "3.5": 8,
+      "4.0": 14,
+      "4.5": 3,
+      "5.0": 11
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "3.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 2,
+          "4.5": 1,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 27,
+      "2.5": 30,
+      "3.0": 131,
+      "3.5": 128,
+      "4.0": 256,
+      "4.5": 86,
+      "5.0": 250
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 744,
+        "min": "2006-08-23",
+        "max": "2026-09-16",
+        "p5": "2026-08-09",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2017-08-16",
+          "max": "2026-09-15",
+          "p5": "2026-08-02",
+          "p50": "2026-09-05",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 252,
+          "min": "2006-08-23",
+          "max": "2026-09-16",
+          "p5": "2026-08-24",
+          "p50": "2026-09-12",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 264,
+          "min": "2008-09-15",
+          "max": "2026-09-16",
+          "p5": "2026-09-08",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 7,
+      "dias_por_100_paginas": 5.511811023622047,
+      "paginas_para_1_ano": 6622
+    },
+    "identidade_letterboxd": {
+      "slug": "cars",
+      "titulo": "Cars",
+      "ano": 2006,
+      "tmdb_id_letterboxd": 920,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2006,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 744
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-02",
+        "max": "2026-09-15",
+        "p5": "2026-08-07",
+        "p50": "2026-09-06",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 95,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 95,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Universo e lógica interna confusos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews questionam incoerências do mundo dos carros, como a presença de alimentos sem que os veículos comam, enemas de óleo e a mistura de elementos humanos e automotivos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações irritantes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O protagonista é visto como arrogante e narcisista, enquanto o alívio cômico é considerado extremamente irritante e sem graça, com sua voz e trejeitos destacados negativamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e história arrastada",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A duração excessiva e o segundo ato arrastado são apontados como problemas, tornando a experiência entediante e difícil de acompanhar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Foco comercial e mercadológico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas críticas acusam o filme de ser um produto corporativo criado para vender brinquedos, carecendo de criatividade e alma em comparação com outras produções do estúdio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e genérico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama segue uma fórmula batida de jornada do herói, com uma redenção pouco convincente e reviravoltas previsíveis, resultando em uma história sem originalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem e implicações questionáveis",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews interpretam a mensagem como nostálgica de forma problemática, romantizando o passado e apresentando conotações políticas ou sociais controversas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a lógica confusa do universo dos carros, a irritação com personagens e atuações, o ritmo lento e a percepção de que o filme é um produto comercial sem originalidade. Este grupo também questiona a mensagem e as implicações do roteiro, considerando-o previsível e pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 17,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 66,
+        "p5": 1,
+        "p50": 7,
+        "p95": 33,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2006-08-23",
+        "max": "2026-09-15",
+        "p5": "2026-08-31",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 33,
+          "n_brutas": 180,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 146,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 146,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Nostalgia e conexão pessoal",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que reassistir ao filme trouxe lembranças da infância e um forte sentimento nostálgico, especialmente por terem visto na época do lançamento ou em reprises nos cinemas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo frequentemente critica o fato de o filme ser longo demais para uma animação infantil e de ter partes arrastadas, com pouco acontecimento em boa parte da projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e fórmula",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas apontam que a história é bastante previsível, seguindo uma fórmula clássica de redenção e lições de vida, sem grandes surpresas ou originalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e visual",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas elogiam a animação, que se mantém impressionante mesmo após anos, e a trilha sonora marcante, considerada um ponto alto do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mundo dos carros e lógica interna",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo costuma questionar a coerência do universo habitado por carros, levantando dúvidas sobre como funcionam aspectos cotidianos e a lógica por trás da sociedade retratada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam que os personagens, embora carismáticos, não são especialmente profundos ou memoráveis, e que o protagonista pode ser irritante no início.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a forte nostalgia e o carinho de infância, mas apontam limitações como ritmo arrastado, roteiro previsível e falta de originalidade. Este grupo reconhece qualidades técnicas e momentos emocionantes, porém considera o filme apenas razoável dentro da filmografia da Pixar.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 78,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 14,
+        "4.5": 5,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 14,
+        "4.5": 5,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 6,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-03",
+        "max": "2026-09-15",
+        "p5": "2026-09-10",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 77,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 77,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 62,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 62,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Nostalgia e conexão afetiva",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas destacam como o filme desperta memórias de infância e um forte sentimento nostálgico, sendo frequentemente descrito como parte querida da formação cultural de quem cresceu assistindo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade da animação e trilha sonora",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação é elogiada por seu visual caprichado e pela direção de arte, enquanto a trilha sonora, incluindo canções marcantes, é lembrada como um dos pontos altos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desenvolvimento de personagens e atuações de voz",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de voz, especialmente a de Paul Newman como Doc Hudson, são frequentemente citadas como um dos grandes trunfos, trazendo profundidade e carisma aos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Maturidade temática e lições de vida",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo de reviews enxerga o filme como surpreendentemente maduro, abordando temas como humildade, a importância de desacelerar e o valor das relações humanas de forma acessível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura narrativa e ritmo",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção da história e o equilíbrio entre momentos de ação e pausas introspectivas são elogiados, com destaque para a fluidez da trama e o impacto do terceiro ato.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Experiência de assistir no cinema",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A exibição em salas de cinema, especialmente em relançamentos comemorativos, é mencionada como uma forma intensificada de vivenciar o filme, proporcionando reações emocionais coletivas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente a nostalgia e o vínculo afetivo com o filme, além de elogiarem a animação, as atuações de voz e a maturidade dos temas. Este grupo também valoriza a experiência de reassistir à obra no cinema, ressaltando sua durabilidade emocional e técnica.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e história arrastada",
+            "exemplo_parafraseado": "A duração excessiva e o segundo ato arrastado são apontados como problemas, tornando a experiência entediante e difícil de acompanhar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Este grupo frequentemente critica o fato de o filme ser longo demais para uma animação infantil e de ter partes arrastadas, com pouco acontecimento em boa parte da projeção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Estrutura narrativa e ritmo",
+            "exemplo_parafraseado": "A construção da história e o equilíbrio entre momentos de ação e pausas introspectivas são elogiados, com destaque para a fluidez da trama e o impacto do terceiro ato.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações irritantes",
+            "exemplo_parafraseado": "O protagonista é visto como arrogante e narcisista, enquanto o alívio cômico é considerado extremamente irritante e sem graça, com sua voz e trejeitos destacados negativamente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Desenvolvimento de personagens e atuações de voz",
+            "exemplo_parafraseado": "As atuações de voz, especialmente a de Paul Newman como Doc Hudson, são frequentemente citadas como um dos grandes trunfos, trazendo profundidade e carisma aos personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Qualidade técnica e visual",
+            "exemplo_parafraseado": "Algumas reviews medianas elogiam a animação, que se mantém impressionante mesmo após anos, e a trilha sonora marcante, considerada um ponto alto do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Qualidade da animação e trilha sonora",
+            "exemplo_parafraseado": "A animação é elogiada por seu visual caprichado e pela direção de arte, enquanto a trilha sonora, incluindo canções marcantes, é lembrada como um dos pontos altos do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Universo e lógica interna confusos",
+            "exemplo_parafraseado": "As reviews questionam incoerências do mundo dos carros, como a presença de alimentos sem que os veículos comam, enemas de óleo e a mistura de elementos humanos e automotivos.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro previsível e genérico"
+            ]
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e fórmula",
+            "exemplo_parafraseado": "Muitas reviews medianas apontam que a história é bastante previsível, seguindo uma fórmula clássica de redenção e lições de vida, sem grandes surpresas ou originalidade.",
+            "temas_no_mesmo_eixo": [
+              "Mundo dos carros e lógica interna",
+              "Personagens e desenvolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Maturidade temática e lições de vida",
+            "exemplo_parafraseado": "Este grupo de reviews enxerga o filme como surpreendentemente maduro, abordando temas como humildade, a importância de desacelerar e o valor das relações humanas de forma acessível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e conexão pessoal",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que reassistir ao filme trouxe lembranças da infância e um forte sentimento nostálgico, especialmente por terem visto na época do lançamento ou em reprises nos cinemas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e conexão afetiva",
+            "exemplo_parafraseado": "Muitas reviews positivas destacam como o filme desperta memórias de infância e um forte sentimento nostálgico, sendo frequentemente descrito como parte querida da formação cultural de quem cresceu assistindo.",
+            "temas_no_mesmo_eixo": [
+              "Experiência de assistir no cinema"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Foco comercial e mercadológico",
+            "exemplo_parafraseado": "Diversas críticas acusam o filme de ser um produto corporativo criado para vender brinquedos, carecendo de criatividade e alma em comparação com outras produções do estúdio.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem e implicações questionáveis"
+            ]
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1492719025",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 75)"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1492729942",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 100 (char 99)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2006 e dirigido por John Lasseter, Carros é um longa-metragem de animação que reúne aventura, comédia e elementos voltados para a família. A narrativa apresenta a jornada do famoso carro de corridas Relâmpago McQueen, que acaba se perdendo durante uma viagem para a Califórnia e vai parar na cidadezinha de Radiator Springs, onde cria novas amizades e vivencia lições que transformam sua maneira de encarar a vida.\n\nA produção estabelece uma ambientação centrada na calmaria de uma comunidade interiorana, desenvolvendo um universo integralmente composto por veículos motorizados por meio de um andamento narrativo cadenciado.\n\nEm relação à recepção crítica, os diferentes segmentos analisam os mesmos tópicos centrais da obra, divergindo no veredito sobre a eficácia desses elementos. Na grande maioria das notas (~78%), uma parcela expressiva ressalta o forte sentimento de nostalgia e a conexão afetiva estabelecida com a obra, enquanto boa parte elogia a qualidade técnica da animação aliada à trilha sonora. Além disso, uma parte desse grupo enfatiza positivamente o desenvolvimento dos personagens e as atuações de voz.\n\nNa perspectiva de quem assumiu uma visão intermediária, identificada numa parcela das notas (~17%), vários mencionam a nostalgia e a memória afetiva despertadas pelo filme, mas alguns apontam restrições quanto ao ritmo lento e à duração excessiva, enquanto uma fatia menor observa a previsibilidade da fórmula utilizada no roteiro.\n\nJá sob a ótica das análises desfavoráveis, presentes numa fração mínima das notas (~4%), parte deles manifesta incômodo com a lógica interna e a construção confusa do mundo dos carros, alguns criticam os personagens e o tom das atuações, e uma fatia menor reprova a narrativa por considerá-la arrastada.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11819,
+      "completion_tokens": 1584,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11819
+    },
+    "latencia_s": 44.41
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O ponto central de divergência está na construção do roteiro e em sua estrutura. A maioria dos que não recomendam considera a lógica interna e as regras desse universo confusas, enquanto muitos dos que elogiam destacam a maturidade das lições apresentadas e o apelo emocional nostálgico.",
+    "texto_modelo": "O ponto central de divergência está na construção do roteiro e em sua estrutura. A maioria dos que não recomendam considera a lógica interna e as regras desse universo confusas, enquanto muitos dos que elogiam destacam a maturidade das lições apresentadas e o apelo emocional nostálgico.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "ponto",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "abertura": "ponto",
+        "abertura_freq": 0,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3636,
+      "completion_tokens": 197,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3636
+    },
+    "latencia_s": 14.68
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência nostálgica ligada a lembranças afetivas da infância",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Nostalgia e conexão afetiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza animações com direção de arte caprichada e trilha sonora marcante",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Qualidade da animação e trilha sonora",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações vocais marcantes que trazem profundidade e carisma aos personagens",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desenvolvimento de personagens e atuações de voz",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "busca uma trama fluida que equilibra sequências de ação e pausas introspectivas",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Estrutura narrativa e ritmo",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com incoerências e falta de lógica na construção do universo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Universo e lógica interna confusos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se irrita com protagonistas arrogantes ou com alívio cômico sem graça",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e atuações irritantes",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita narrativas longas com passagens arrastadas que tornam o ritmo entediante",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e história arrastada",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita histórias com conotações controversas ou que romantizam excessivamente o passado",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem e implicações questionáveis",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 78,
+        "peso_texto": "~78% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 14729,
+      "completion_tokens": 1248,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 14729
+    },
+    "latencia_s": 24.35,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

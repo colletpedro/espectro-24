@@ -1,0 +1,1638 @@
+{
+  "slug": "500-days-of-summer",
+  "data_coleta": "2026-09-16T20:10:58.947858+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/500-days-of-summer/reviews/",
+  "ficha": {
+    "titulo": "(500) Dias com Ela",
+    "sinopse_oficial": "Um romântico escritor se surpreende quando sua namorada Summer termina o namoro repentinamente. Com isso, ele relembra vários momentos dos 500 dias que passaram juntos para tentar descobrir onde seu caso de amor se perdeu e vai redescobrindo suas verdadeiras paixões.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Drama",
+      "Romance"
+    ],
+    "duracao_min": 93,
+    "diretor": "Marc Webb",
+    "diretor_transliterado": false,
+    "ano": 2009,
+    "fonte": "tmdb",
+    "tmdb_id": 19913,
+    "tmdb_fetched_at": "2026-09-16T20:18:54+00:00",
+    "poster_path": "/lYA0g5vS43u9fqzoqOhA2sKwi0z.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/6dEkaV84ja2zJhJxeClcODhCIzC.jpg",
+      "/fqRJj10Y4MBQwzZZfWpJTXBVW3B.jpg",
+      "/1M2i4Mxd03elGOTmEkIvqrHfmyS.jpg",
+      "/7l6TKfzyHSRGMJK9wvyWRJdbAmz.jpg",
+      "/pvEASRjDoqiay9GwgQpYNJGa5LW.jpg",
+      "/w9qdyyQtBJSgUs2HLvTSpJNJFV0.jpg",
+      "/A7oLC1wvNQTisD0hcLkYoN5XV7p.jpg",
+      "/2zFl6j8MB4jCKUQKVlADyESwkVY.jpg",
+      "/5kVmWPwhndOjEAXXooiXjkVooTI.jpg",
+      "/gybFk2QtOmrlT1PbSSqCUN4mX02.jpg"
+    ],
+    "backdrop_path": "/1M2i4Mxd03elGOTmEkIvqrHfmyS.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/xLIJw8vsdYHaeoOvKVmeOcEgCz9.jpg",
+    "poster_sem_texto_largura": 1200,
+    "poster_sem_texto_altura": 1800,
+    "galeria_stills": [
+      {
+        "still_path": "/1M2i4Mxd03elGOTmEkIvqrHfmyS.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/7l6TKfzyHSRGMJK9wvyWRJdbAmz.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/pvEASRjDoqiay9GwgQpYNJGa5LW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/A7oLC1wvNQTisD0hcLkYoN5XV7p.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/5kVmWPwhndOjEAXXooiXjkVooTI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qR7jY0Huddk3sPP9xyax62Hicyf.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/bAtK2W0Bf8cx4cuFJgC7NqjTta9.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cpSrC3PNTzzYenHlStvockyFYte.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3pqIxCORPga6OAa1i86d1xCJ1uC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/n9StZt5ChJIV5eoN8esZeVeknNL.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fxdhVDuOexOlcqZkHTpxA4e637y.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/wnkdH7mweKmoo3ezarzfLuoSz9J.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "500-days-of-summer",
+      "titulo_letterboxd": "(500) Days of Summer",
+      "ano_letterboxd": 2009,
+      "tmdb_id_letterboxd": 19913,
+      "tmdb_id_escolhido": 19913,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "(500) Days of Summer",
+      "ano_tmdb": 2009,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 3390233,
+    "por_nivel": {
+      "0.5": 17904,
+      "1.0": 41480,
+      "1.5": 26296,
+      "2.0": 133602,
+      "2.5": 144203,
+      "3.0": 602723,
+      "3.5": 596132,
+      "4.0": 999712,
+      "4.5": 280718,
+      "5.0": 547463
+    },
+    "por_bucket": {
+      "negativas": 6,
+      "medianas": 22,
+      "positivas": 72
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "500-days-of-summer",
+    "coletado_em": "2026-09-16T05:54:23.715454+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 17904,
+      "1.0": 41480,
+      "1.5": 26296,
+      "2.0": 133602,
+      "2.5": 144203,
+      "3.0": 602723,
+      "3.5": 596132,
+      "4.0": 999712,
+      "4.5": 280718,
+      "5.0": 547463
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 48,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 0,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 20,
+      "2.5": 23,
+      "3.0": 10,
+      "3.5": 9,
+      "4.0": 12,
+      "4.5": 5,
+      "5.0": 14
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.0": 6
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "4.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 5,
+      "1.0": 11,
+      "1.5": 7,
+      "2.0": 34,
+      "2.5": 37,
+      "3.0": 154,
+      "3.5": 153,
+      "4.0": 256,
+      "4.5": 72,
+      "5.0": 140
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 779,
+        "min": "2009-12-25",
+        "max": "2026-09-16",
+        "p5": "2026-02-01",
+        "p50": "2026-09-14",
+        "p95": "2026-09-16"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 275,
+          "min": "2013-03-13",
+          "max": "2026-09-16",
+          "p5": "2026-04-07",
+          "p50": "2026-09-12",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 264,
+          "min": "2018-06-25",
+          "max": "2026-09-16",
+          "p5": "2026-05-15",
+          "p50": "2026-09-14",
+          "p95": "2026-09-16"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "2009-12-25",
+          "max": "2026-09-16",
+          "p5": "2025-11-15",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 8,
+      "dias_por_100_paginas": 6.299212598425197,
+      "paginas_para_1_ano": 5794
+    },
+    "identidade_letterboxd": {
+      "slug": "500-days-of-summer",
+      "titulo": "(500) Days of Summer",
+      "ano": 2009,
+      "tmdb_id_letterboxd": 19913,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2009,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 780
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "50": 3,
+        "150": 37
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 13,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-04-21",
+        "max": "2026-09-16",
+        "p5": "2026-09-09",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 50,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 24,
+          "n_brutas": 179,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 141,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 141,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Protagonista masculino imaturo e carente",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews descrevem o protagonista como um homem que age de forma infantil e emocionalmente dependente, criando expectativas unilaterais e se recusando a aceitar os termos da relação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem feminina vista como vilã injustiçada",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas críticas argumentam que a personagem feminina é tratada de forma injusta, sendo culpabilizada mesmo tendo deixado claras suas intenções desde o início, e que o filme força uma narrativa que a coloca como manipuladora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à romantização de comportamento tóxico",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o filme romantiza atitudes possessivas e uma visão idealizada de amor, perpetuando uma mensagem problemática sobre relacionamentos e gênero.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e ritmo arrastados ou confusos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há críticas sobre a estrutura narrativa não linear, que é considerada confusa ou desnecessária, além de um ritmo lento e cansativo que torna a experiência tediosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e sem química",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas opiniões mencionam que ambos os protagonistas são irritantes e imaturos, sem profundidade, o que impede qualquer envolvimento emocional com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem final confusa ou hipócrita",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam o desfecho por parecer contradizer a mensagem que o filme tenta transmitir, resultando em uma conclusão que soa forçada ou moralmente ambígua.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas concentram-se em críticas ao protagonista masculino, visto como imaturo e carente, e à forma como o filme supostamente romantiza comportamentos tóxicos e culpabiliza a personagem feminina. Além disso, muitos espectadores consideram o roteiro arrastado, os personagens desagradáveis e a mensagem final confusa ou hipócrita.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 22,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 13,
+        "3.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 5,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 38,
+        "p5": 1,
+        "p50": 9,
+        "p95": 14,
+        "fracao_profunda": 0.575
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-07-24",
+        "max": "2026-09-16",
+        "p5": "2026-05-25",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 13,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 27,
+          "n_alvo": 32,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 159,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 159,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Incompatibilidade e problemas de comunicação do casal",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas apontam que os dois nunca deixaram claro o que esperavam um do outro, com um querendo algo sério e a outra reafirmando que não queria compromisso, gerando sinais confusos de ambas as partes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Idealização de Tom e falta de responsabilidade afetiva",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte deste grupo sustenta que o personagem masculino projetou expectativas irreais e preferiu se enganar a encarar a realidade, enquanto outros criticam a falta de responsabilidade afetiva da personagem feminina por insistir num vínculo que só confundia o outro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ambos os personagens são problemáticos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas afirmam que não há lado certo na história, já que tanto ele quanto ela agiram de forma imatura e tóxica, dificultando torcer pelo casal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem de Summer como irritante ou sem desenvolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas descrevem a personagem feminina como enfadonha, indecisa e pouco desenvolvida, sentindo que o roteiro não lhe dá profundidade além do papel de mulher confusa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro, tom e mensagem do filme",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas elogiam a proposta de retratar um relacionamento realista e não convencional, mas outras acham a abordagem pretensiosa, repetitiva ou com um desfecho que valoriza demais o amor romântico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogios à trilha sonora, atuações e fotografia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas destacam positivamente a música, as atuações e a fotografia, reconhecendo que o filme consegue emocionar e entreter mesmo quando a história não agrada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas concentram-se em discutir a fundo a dinâmica do casal, dividindo-se entre culpar um, outro ou ambos pelos problemas de comunicação e idealização; este grupo também questiona a mensagem e o roteiro, ora elogiando a ousadia de fugir do romance convencional, ora criticando a falta de desenvolvimento e a visão supostamente sexista, sem que haja um consenso sobre recepção geral.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 72,
+      "composicao_alvo": {
+        "3.5": 10,
+        "4.0": 16,
+        "4.5": 5,
+        "5.0": 9
+      },
+      "composicao_atingida": {
+        "3.5": 9,
+        "4.0": 17,
+        "4.5": 5,
+        "5.0": 9
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 38,
+        "p5": 1,
+        "p50": 3,
+        "p95": 38,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2009-12-25",
+        "max": "2026-09-16",
+        "p5": "2024-07-05",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 9,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 16,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 96,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 96,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Idealização e projeção sobre o outro",
+          "mencoes_aproximadas": 31,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Grande parte deste grupo enxerga o cerne do filme na tendência do protagonista de construir uma versão imaginada da pessoa amada em vez de enxergá-la como ela realmente é, e discute como esse mecanismo de projeção sustenta a relação e depois a destrói.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ambos os protagonistas têm responsabilidade",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews desta faixa recusam a ideia de um vilão único e afirmam que os dois personagens agem de forma imatura e contraditória, ainda que de maneiras diferentes, tornando o conflito mais humano do que maniqueísta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Releituras mudam a interpretação",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários descrevem como a percepção do filme se transforma a cada reassistida, alternando a simpatia entre um e outro personagem e revelando novas camadas conforme a experiência de vida do espectador muda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura narrativa não linear",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A montagem fragmentada e a ordem cronológica embaralhada são elogiadas como recurso que imita o funcionamento da memória e dá profundidade ao modo como o protagonista reconstrói o próprio passado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cena de expectativa versus realidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sequência de tela dividida que contrasta o que o protagonista espera com o que de fato acontece é apontada repetidamente como um dos momentos mais marcantes e emocionalmente eficazes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e estética marcantes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As escolhas musicais e o cuidado visual são bastante destacados, com menções frequentes ao impacto das canções e à identidade estética que dá personalidade às cenas e às lembranças do casal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo concentram-se sobretudo na reflexão sobre idealização, expectativas e responsabilidade compartilhada entre os protagonistas, valorizando a estrutura não linear e os recursos formais como forma de sustentar esse tema. Este grupo também enfatiza como a experiência do filme se transforma em reassistidas, tratando a obra como um retrato humano e ambíguo em vez de uma história de culpados e vítimas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e ritmo arrastados ou confusos",
+            "exemplo_parafraseado": "Há críticas sobre a estrutura narrativa não linear, que é considerada confusa ou desnecessária, além de um ritmo lento e cansativo que torna a experiência tediosa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Protagonista masculino imaturo e carente",
+            "exemplo_parafraseado": "Várias reviews descrevem o protagonista como um homem que age de forma infantil e emocionalmente dependente, criando expectativas unilaterais e se recusando a aceitar os termos da relação.",
+            "temas_no_mesmo_eixo": [
+              "Personagem feminina vista como vilã injustiçada",
+              "Personagens desagradáveis e sem química"
+            ]
+          },
+          "medianas": {
+            "mencoes": 36,
+            "de_n": 40,
+            "freq_pct": 90.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Incompatibilidade e problemas de comunicação do casal",
+            "exemplo_parafraseado": "Várias reviews medianas apontam que os dois nunca deixaram claro o que esperavam um do outro, com um querendo algo sério e a outra reafirmando que não queria compromisso, gerando sinais confusos de ambas as partes.",
+            "temas_no_mesmo_eixo": [
+              "Idealização de Tom e falta de responsabilidade afetiva",
+              "Ambos os personagens são problemáticos",
+              "Personagem de Summer como irritante ou sem desenvolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 39,
+            "de_n": 40,
+            "freq_pct": 97.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Idealização e projeção sobre o outro",
+            "exemplo_parafraseado": "Grande parte deste grupo enxerga o cerne do filme na tendência do protagonista de construir uma versão imaginada da pessoa amada em vez de enxergá-la como ela realmente é, e discute como esse mecanismo de projeção sustenta a relação e depois a destrói.",
+            "temas_no_mesmo_eixo": [
+              "Ambos os protagonistas têm responsabilidade",
+              "Estrutura narrativa não linear",
+              "Cena de expectativa versus realidade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e estética marcantes",
+            "exemplo_parafraseado": "As escolhas musicais e o cuidado visual são bastante destacados, com menções frequentes ao impacto das canções e à identidade estética que dá personalidade às cenas e às lembranças do casal.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Releituras mudam a interpretação",
+            "exemplo_parafraseado": "Vários comentários descrevem como a percepção do filme se transforma a cada reassistida, alternando a simpatia entre um e outro personagem e revelando novas camadas conforme a experiência de vida do espectador muda.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à romantização de comportamento tóxico",
+            "exemplo_parafraseado": "Algumas reviews apontam que o filme romantiza atitudes possessivas e uma visão idealizada de amor, perpetuando uma mensagem problemática sobre relacionamentos e gênero.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem final confusa ou hipócrita"
+            ]
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançada em 2009 e dirigida por Marc Webb, a comédia dramática romântica (500) Dias com Ela acompanha um romântico escritor surpreendido pelo término repentino de seu namoro. A partir dessa ruptura, ele relembra momentos dos quinhentos dias em que estiveram juntos para tentar entender onde a relação se perdeu, redescobrindo suas próprias paixões no processo.\n\nA narrativa se constrói por meio de uma estrutura temporal não linear, revisitando diferentes momentos e memórias da convivência do casal.\n\nOs diferentes grupos de recepção concentram-se nos mesmos temas centrais da dinâmica do casal, divergindo essencialmente no veredito sobre o funcionamento da obra. Na grande maioria das notas (~72%), a maior parte destaca o mecanismo de idealização e a projeção de expectativas sobre o outro como o cerne da narrativa. Cerca de metade desse conjunto pondera que ambos os protagonistas compartilham responsabilidades pelas falhas da relação, enquanto uma parcela expressiva relata que releituras e revisitas à obra transformam a interpretação dos acontecimentos.\n\nNuma perspectiva intermediária, presente numa parcela das notas (~22%), muitos apontam a incompatibilidade e as falhas de comunicação como o fator determinante do desencontro. Nesse segmento, um número considerável discute a idealização por parte do protagonista e a falta de responsabilidade afetiva da parceira, ao passo que uma fatia menor conclui que ambos os personagens são problemáticos em suas condutas.\n\nPor fim, sob a ótica crítica presente numa fração mínima das notas (~6%), boa parte reprova o protagonista masculino por considerá-lo imaturo e carente. Vários desses registros entendem que a personagem feminina é retratada injustamente como vilã, enquanto alguns criticam a romantização de comportamentos tóxicos.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [
+      "500"
+    ],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 12,
+        "cobertura": 0.778,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12337,
+      "completion_tokens": 1660,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12337
+    },
+    "latencia_s": 38.67
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "prefixo_codigo": "",
+    "retry": {
+      "flags_antes": [
+        "tema_ausente"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.50",
+    "texto": "A divergência central está no roteiro e na condução do protagonista. Enquanto quase todos os que recomendam elogiam o desenvolvimento e as escolhas do personagem principal, quase todos os que não recomendam criticam essas mesmas atitudes ao longo da narrativa.",
+    "texto_modelo": "A divergência central está no roteiro e na condução do protagonista. Enquanto quase todos os que recomendam elogiam o desenvolvimento e as escolhas do personagem principal, quase todos os que não recomendam criticam essas mesmas atitudes ao longo da narrativa.",
+    "origem": "llm",
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "abertura",
+    "abertura": "debat",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 50,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 4770,
+      "completion_tokens": 274,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 4770
+    },
+    "latencia_s": 13.77
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia conflitos relacionais humanos e imaturos em ambos os lados, sem maniqueísmo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ambos os protagonistas têm responsabilidade",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "gosta de histórias que revelam novas camadas e alternam simpatias em revisitas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Releituras mudam a interpretação",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia recursos visuais marcantes que contrastam diretamente expectativa e realidade",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cena de expectativa versus realidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se irrita com protagonistas infantis, emocionalmente dependentes e criadores de expectativas unilaterais",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Protagonista masculino imaturo e carente",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita narrativas em que a mulher é tratada injustamente como vilã manipuladora",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem feminina vista como vilã injustiçada",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com obras que romantizam atitudes possessivas e visões idealizadas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica à romantização de comportamento tóxico",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se desgasta com personagens centrais irritantes, imaturos e desprovidos de química",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desagradáveis e sem química",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 72,
+        "peso_texto": "~72% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 6,
+        "peso_texto": "~6% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 22,
+      "texto": "~22% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "se interessa por reflexões sobre a idealização amorosa e a projeção de expectativas",
+        "tema_origem": "POS-A",
+        "lado": "vale_a_pena",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15386,
+      "completion_tokens": 1265,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15386
+    },
+    "latencia_s": 21.28,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

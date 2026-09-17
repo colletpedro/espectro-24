@@ -1,0 +1,1688 @@
+{
+  "slug": "the-truman-show",
+  "data_coleta": "2026-09-16T19:10:54.173594+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 552,
+  "reviews_url": "https://letterboxd.com/film/the-truman-show/reviews/",
+  "ficha": {
+    "titulo": "O Show de Truman: O Show da Vida",
+    "sinopse_oficial": "Truman Burbank é um pacato vendedor de seguros que leva um vida simples com sua esposa Meryl Burbank. Porém algumas coisas ao seu redor fazem com que ele passe a estranhar sua cidade, seus supostos amigos e até sua mulher. Após conhecer a misteriosa Lauren, ele fica intrigado e acaba descobrindo que toda sua vida foi monitorada por câmeras e transmitida em rede nacional.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Drama"
+    ],
+    "duracao_min": 103,
+    "diretor": "Peter Weir",
+    "diretor_transliterado": false,
+    "ano": 1998,
+    "fonte": "tmdb",
+    "tmdb_id": 37165,
+    "tmdb_fetched_at": "2026-09-16T20:18:40+00:00",
+    "poster_path": "/mQfHSZDrRBnNPyhfvukM5UhpZTf.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+      "/aCHn2TXYJfzPXQKA6r9mKPbMlUB.jpg",
+      "/kjWIp6COK4MKF0KSffzUD8l9Kuo.jpg",
+      "/1szsl8P3zzvb9O4WJM7B3CLQ7r4.jpg",
+      "/1xWHfZH4Fapu6Yrkv4oOk2rEUTx.jpg",
+      "/rVOHeP2uU4jtCunXWAWE6Xn5xam.jpg",
+      "/bxY7ve1LP8atCIuvr4jeeJMmU4w.jpg",
+      "/bRRxELS8dK3cpqFhaTQcIENAPOI.jpg",
+      "/bVL28JBtkswswllGttyQZY8RvFB.jpg",
+      "/nAWrt7agnSoXKmvwqDmoHUtuW4F.jpg"
+    ],
+    "backdrop_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/evraoQG0l9URU1dKPXTtjMzPOPo.jpg",
+    "poster_sem_texto_largura": 1200,
+    "poster_sem_texto_altura": 1800,
+    "galeria_stills": [
+      {
+        "still_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aCHn2TXYJfzPXQKA6r9mKPbMlUB.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bxY7ve1LP8atCIuvr4jeeJMmU4w.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1YEt6cml1x4V1sJDq74L5WplgaL.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/dF5E83QDvBhxGAGjmCDZXbMQ8gh.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fyK1QAQGWqoTtrcHaNOPxfRD4nt.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/1wvtGiGQXhw60rTKAA9IeeHWEEc.jpg",
+        "still_largura": 2914,
+        "still_altura": 1639
+      },
+      {
+        "still_path": "/dLAT6DTnaeCbhvm3XdkDJZ8N5ts.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/gXuqSPBp67ldNdEAxMsBrAUxaJn.jpg",
+        "still_largura": 2905,
+        "still_altura": 1634
+      },
+      {
+        "still_path": "/kKn5zJjZGm2zIuxiiVnAE3Yjpps.jpg",
+        "still_largura": 2896,
+        "still_altura": 1629
+      },
+      {
+        "still_path": "/rPJGzdg6zyZ78d68sHHGGE3gi0t.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/vfuwGcWx820yttteRl5H0dtOguC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-truman-show",
+      "titulo_letterboxd": "The Truman Show",
+      "ano_letterboxd": 1998,
+      "tmdb_id_letterboxd": 37165,
+      "tmdb_id_escolhido": 37165,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Truman Show",
+      "ano_tmdb": 1998,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 5305179,
+    "por_nivel": {
+      "0.5": 2958,
+      "1.0": 9792,
+      "1.5": 5673,
+      "2.0": 47972,
+      "2.5": 51576,
+      "3.0": 415460,
+      "3.5": 514633,
+      "4.0": 1748339,
+      "4.5": 849165,
+      "5.0": 1659611
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 9,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-truman-show",
+    "coletado_em": "2026-09-16T03:50:26.596538+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2958,
+      "1.0": 9792,
+      "1.5": 5673,
+      "2.0": 47972,
+      "2.5": 51576,
+      "3.0": 415460,
+      "3.5": 514633,
+      "4.0": 1748339,
+      "4.5": 849165,
+      "5.0": 1659611
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 1,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 10,
+      "3.0": 22,
+      "3.5": 5,
+      "4.0": 21,
+      "4.5": 9,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 16,
+        "n_validas_pos_extensao": 31,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 32,
+        "n_validas_pos_extensao": 48,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 8,
+      "3.0": 61,
+      "3.5": 75,
+      "4.0": 256,
+      "4.5": 124,
+      "5.0": 243
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 744,
+        "min": "1957-08-15",
+        "max": "2026-09-16",
+        "p5": "2026-06-13",
+        "p50": "2026-09-10",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 264,
+          "min": "1957-08-15",
+          "max": "2026-09-16",
+          "p5": "2026-03-21",
+          "p50": "2026-08-31",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2016-08-21",
+          "max": "2026-09-16",
+          "p5": "2026-08-15",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2021-09-12",
+          "max": "2026-09-16",
+          "p5": "2026-08-14",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "identidade_letterboxd": {
+      "slug": "the-truman-show",
+      "titulo": "The Truman Show",
+      "ano": 1998,
+      "tmdb_id_letterboxd": 37165,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1998,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 744
+  },
+  "origem_paginas": {
+    "_histograma/the-truman-show.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_4.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_16.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_64.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_256.html": "cache",
+    "the-truman-show/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_1_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_1_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_3.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_4.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_5.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_6.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_7.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_page_8.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-truman-show/pages/by_added/rated_2_5_page_6.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_3.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_4.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_5.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_6.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_7.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_8.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_15.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_page_30.html": "cache",
+    "the-truman-show/fulltext/viewing_1495889736.html": "cache",
+    "the-truman-show/fulltext/viewing_1493434438.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_3.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_page_128.html": "cache",
+    "the-truman-show/fulltext/viewing_1497846719.html": "cache",
+    "the-truman-show/fulltext/viewing_1497816393.html": "cache",
+    "the-truman-show/fulltext/viewing_1486245961.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_4_5_page_31.html": "cache",
+    "the-truman-show/fulltext/viewing_1497916380.html": "cache",
+    "the-truman-show/fulltext/viewing_1497668268.html": "cache",
+    "the-truman-show/pages/by_added/rated_5_page_1.html": "cache",
+    "the-truman-show/pages/by_added/rated_5_page_2.html": "cache",
+    "the-truman-show/pages/by_added/rated_5_page_3.html": "cache",
+    "the-truman-show/pages/by_added/rated_5_page_4.html": "cache",
+    "the-truman-show/pages/by_added/rated_5_page_61.html": "cache",
+    "the-truman-show/fulltext/viewing_1497875294.html": "cache",
+    "the-truman-show/fulltext/viewing_1497832734.html": "cache",
+    "the-truman-show/fulltext/viewing_1497815347.html": "cache",
+    "the-truman-show/fulltext/viewing_1497796619.html": "cache",
+    "the-truman-show/fulltext/viewing_1497759299.html": "cache",
+    "the-truman-show/fulltext/viewing_1494122194.html": "cache",
+    "the-truman-show/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 31,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 3,
+        "2.0": 29
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 1,
+        "1.5": 2,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 31
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 31,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 8,
+        "p95": 16,
+        "fracao_profunda": 0.4838709677419355
+      },
+      "janela_amostra": {
+        "n": 31,
+        "min": "2023-09-02",
+        "max": "2026-09-15",
+        "p5": "2026-01-03",
+        "p50": "2026-08-25",
+        "p95": "2026-09-12"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 1,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 29,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 167,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 167,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "Várias reviews negativas classificam o filme como entediante e arrastado, com ritmo lento que não prende a atenção; algumas mencionam ter interrompido a sessão por tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conceito interessante, execução decepcionante",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "Este grupo reconhece que a premissa é original e fascinante, mas considera que a execução é superficial, sem emoção ou mal desenvolvida, resultando em decepção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de fama e expectativa frustrada",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "Muitas reviews negativas criticam a alta reputação do filme, chamando-o de superestimado e afirmando que não corresponde à expectativa criada, gerando frustração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Jim Carrey",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "A atuação de Jim Carrey divide as opiniões: alguns a consideram exagerada, sem graça ou desagradável, enquanto outros a apontam como o único ponto positivo do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final insatisfatório",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "O desfecho é criticado por ser abrupto, clichê ou deixar pontas soltas, com algumas pessoas desejando ver o que acontece depois que a premissa se resolve.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Realismo e lógica do conceito",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 31,
+          "exemplo_parafraseado": "Algumas reviews questionam a verossimilhança da premissa, apontando falhas na lógica interna e aspectos práticos que tornam a história difícil de aceitar como sátira.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o tédio, a execução considerada superficial e a decepção com a fama do filme. Apesar de reconhecerem a originalidade da premissa, este grupo critica o ritmo, o final e alguns aspectos da atuação e da lógica interna, afastando-se da recepção geral.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 9,
+      "composicao_alvo": {
+        "2.5": 4,
+        "3.0": 36
+      },
+      "composicao_atingida": {
+        "2.5": 4,
+        "3.0": 36
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 8,
+        "p95": 16,
+        "fracao_profunda": 0.525
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-03-18",
+        "max": "2026-09-15",
+        "p5": "2026-08-01",
+        "p50": "2026-09-10",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 59,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 0,
+            "abaixo_min_chars": 59,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 36,
+          "n_alvo": 36,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 172,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 172,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Conceito supera a execução",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews medianas consideram a premissa extremamente criativa e instigante, mas sentem que o desenvolvimento não está à altura, resultando em um filme que vale mais pela ideia do que pela forma como ela é conduzida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte deste grupo reclama que a narrativa demora a engrenar e que certos trechos se tornam repetitivos ou entediantes, fazendo com que o filme pareça mais longo do que é.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Jim Carrey",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação do protagonista é frequentemente elogiada, com vários comentários destacando que ele sustenta o filme mesmo em um papel mais sério do que o habitual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem filosófica e crítica social",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas reconhecem que o filme propõe reflexões sobre controle, liberdade, vigilância e a manipulação da realidade, mas algumas acham que esses temas não são explorados com a profundidade esperada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final e desfecho",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho divide opiniões: alguns o consideram satisfatório, enquanto outros sentem que a história termina abruptamente ou que um desfecho mais surpreendente teria sido mais interessante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas frustradas e superestimação",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas comentam que criaram expectativas muito altas devido à fama do filme e acabaram decepcionadas, achando que ele não merece todo o hype que recebe.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas reconhecem o valor conceitual e a atuação de Jim Carrey, mas frequentemente apontam que a execução não corresponde ao potencial da premissa, com ritmo arrastado e desenvolvimento irregular. Este grupo tende a considerar o filme bom, porém superestimado, e destaca que a mensagem filosófica, embora presente, poderia ser mais bem explorada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.175
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-20",
+        "max": "2026-09-16",
+        "p5": "2026-09-06",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Jim Carrey",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a atuação de Jim Carrey, destacando sua energia cômica e momentos dramáticos, considerando um de seus melhores trabalhos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e relevância",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como uma crítica à sociedade do espetáculo, ao consumismo, à vigilância em massa e à cultura da celebridade, mostrando-se cada vez mais atual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem existencial e liberdade",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews refletem sobre a busca pela liberdade, a importância de questionar a realidade e a escolha entre segurança e autenticidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e construção da narrativa",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A forma como a trama desenvolve a percepção da realidade pelo protagonista é elogiada, com destaque para a tensão e o desenvolvimento gradual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Peter Weir e a fotografia são elogiadas pela atenção aos detalhes, uso de câmeras de vigilância e composição visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final impactante",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho da história é frequentemente descrito como perfeito e emocionante, deixando uma impressão duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews positivas destaca a atuação de Jim Carrey, a crítica social atemporal e a profundidade existencial do filme, além de elogiar a direção, o roteiro e o final impactante, que continuam a provocar reflexões.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 31,
+      "limiar_pp": 25.94
+    },
+    "margem_lift_pp": 25.94,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 31,
+            "freq_pct": 16.1,
+            "lift_pp": -8.9,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Várias reviews negativas classificam o filme como entediante e arrastado, com ritmo lento que não prende a atenção; algumas mencionam ter interrompido a sessão por tédio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 8.9,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Parte deste grupo reclama que a narrativa demora a engrenar e que certos trechos se tornam repetitivos ou entediantes, fazendo com que o filme pareça mais longo do que é.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 31,
+            "freq_pct": 22.6,
+            "lift_pp": -12.4,
+            "acima_da_margem": false,
+            "tema": "Atuação de Jim Carrey",
+            "exemplo_parafraseado": "A atuação de Jim Carrey divide as opiniões: alguns a consideram exagerada, sem graça ou desagradável, enquanto outros a apontam como o único ponto positivo do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Jim Carrey",
+            "exemplo_parafraseado": "A atuação do protagonista é frequentemente elogiada, com vários comentários destacando que ele sustenta o filme mesmo em um papel mais sério do que o habitual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 12.4,
+            "acima_da_margem": false,
+            "tema": "Atuação de Jim Carrey",
+            "exemplo_parafraseado": "As reviews elogiam a atuação de Jim Carrey, destacando sua energia cômica e momentos dramáticos, considerando um de seus melhores trabalhos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 31,
+            "freq_pct": 12.9,
+            "lift_pp": -2.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.1,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção",
+            "exemplo_parafraseado": "A direção de Peter Weir e a fotografia são elogiadas pela atenção aos detalhes, uso de câmeras de vigilância e composição visual.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 31,
+            "freq_pct": 61.3,
+            "lift_pp": -16.2,
+            "acima_da_margem": false,
+            "tema": "Conceito interessante, execução decepcionante",
+            "exemplo_parafraseado": "Este grupo reconhece que a premissa é original e fascinante, mas considera que a execução é superficial, sem emoção ou mal desenvolvida, resultando em decepção.",
+            "temas_no_mesmo_eixo": [
+              "Final insatisfatório",
+              "Realismo e lógica do conceito"
+            ]
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Conceito supera a execução",
+            "exemplo_parafraseado": "Diversas reviews medianas consideram a premissa extremamente criativa e instigante, mas sentem que o desenvolvimento não está à altura, resultando em um filme que vale mais pela ideia do que pela forma como ela é conduzida.",
+            "temas_no_mesmo_eixo": [
+              "Final e desfecho"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e construção da narrativa",
+            "exemplo_parafraseado": "A forma como a trama desenvolve a percepção da realidade pelo protagonista é elogiada, com destaque para a tensão e o desenvolvimento gradual.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 31,
+            "freq_pct": 0.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 31,
+            "freq_pct": 19.4,
+            "lift_pp": 1.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -6.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -1.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 31,
+            "freq_pct": 51.6,
+            "lift_pp": -3.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 3.4,
+            "acima_da_margem": false,
+            "tema": "Final impactante",
+            "exemplo_parafraseado": "O desfecho da história é frequentemente descrito como perfeito e emocionante, deixando uma impressão duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 31,
+            "freq_pct": 6.5,
+            "lift_pp": -21.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 31,
+            "freq_pct": 48.4,
+            "lift_pp": 0.9,
+            "acima_da_margem": false,
+            "tema": "Excesso de fama e expectativa frustrada",
+            "exemplo_parafraseado": "Muitas reviews negativas criticam a alta reputação do filme, chamando-o de superestimado e afirmando que não corresponde à expectativa criada, gerando frustração.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -0.9,
+            "acima_da_margem": false,
+            "tema": "Expectativas frustradas e superestimação",
+            "exemplo_parafraseado": "Várias pessoas comentam que criaram expectativas muito altas devido à fama do filme e acabaram decepcionadas, achando que ele não merece todo o hype que recebe.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -33.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 31,
+            "freq_pct": 16.1,
+            "lift_pp": -18.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem filosófica e crítica social",
+            "exemplo_parafraseado": "As reviews medianas reconhecem que o filme propõe reflexões sobre controle, liberdade, vigilância e a manipulação da realidade, mas algumas acham que esses temas não são explorados com a profundidade esperada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social e relevância",
+            "exemplo_parafraseado": "O filme é visto como uma crítica à sociedade do espetáculo, ao consumismo, à vigilância em massa e à cultura da celebridade, mostrando-se cada vez mais atual.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem existencial e liberdade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1489093537",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_RateLimitError",
+        "erro": "RateLimitError: Error code: 429 - {'error': {'message': 'Too many requests. Your current concurrency is 6, which exceeds your concurrency limit of 5 based on your remaining balance. Please top up your"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1492944762",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 74 (char 73)"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1476807268",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 94 (char 93)"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497833645",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 116 (char 115)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1998 e dirigido por Peter Weir, O Show de Truman: O Show da Vida é um drama com toques de comédia sobre Truman Burbank, um pacato vendedor de seguros que vive com a esposa. Intrigado por acontecimentos incomuns ao seu redor e após conhecer uma misteriosa mulher, ele passa a desconfiar de seu cotidiano e descobre que toda a sua vida foi monitorada e transmitida como um espetáculo televisivo.\n\nNa recepção do filme, os grupos avaliativos concordam sobre o que o filme é e discutem os mesmos temas, mas discordam sobre se ele de fato funciona. Na grande maioria das notas (~90%), boa parte destaca a atuação de Jim Carrey tanto no humor quanto no drama, enquanto uma parcela expressiva enaltece a crítica social voltada à vigilância e à sociedade do espetáculo. Além disso, um número considerável valoriza a mensagem existencial sobre a busca por liberdade e autenticidade.\n\nPara quem se encontra numa fração mínima das notas (~9%), vários apontam que o conceito inicial supera a forma como a execução é conduzida, com muitos apontando um ritmo lento e arrastado. Mesmo nessa faixa intermediária, alguns ressaltam positivamente a atuação do protagonista.\n\nJá para os registros situados numa fração ainda menor das notas (~1%), boa parte se queixa de um ritmo excessivamente lento que resulta em tédio, e vários veem a execução como decepcionante diante do potencial da premissa. Por fim, um número considerável expressa frustração com a alta reputação da produção, considerando o filme superestimado.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10029,
+      "completion_tokens": 1151,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10029
+    },
+    "latencia_s": 29.09
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divergência central está no roteiro: a maioria de quem recomenda valoriza o desenvolvimento da narrativa. Por outro lado, mesmo numa amostra pequena analisada, a maioria de quem desaprova considera que a boa premissa inicial não se sustenta no desenrolar da trama.",
+    "texto_modelo": "A divergência central está no roteiro: a maioria de quem recomenda valoriza o desenvolvimento da narrativa. Por outro lado, mesmo numa amostra pequena analisada, a maioria de quem desaprova considera que a boa premissa inicial não se sustenta no desenrolar da trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ancoras",
+    "abertura": "diver",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 41,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3729,
+      "completion_tokens": 193,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3729
+    },
+    "latencia_s": 10.54
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia o talento de Jim Carrey ao equilibrar humor expressivo e carga dramática",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Jim Carrey",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por críticas sociais atuais sobre consumismo, vigilância e espetáculo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica social e relevância",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por reflexões existenciais sobre libertação e o dilema entre comodidade e autenticidade",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem existencial e liberdade",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo lento e arrastado que possa provocar tédio",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra quando uma premissa fascinante recebe uma execução superficial e sem emoção",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Conceito interessante, execução decepcionante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com atuações de Jim Carrey que soem exageradas ou desagradáveis",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Jim Carrey",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com falhas na lógica interna e na verossimilhança da sátira",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Realismo e lógica do conceito",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15529,
+      "completion_tokens": 1294,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15529
+    },
+    "latencia_s": 24.68,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

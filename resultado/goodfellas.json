@@ -1,0 +1,1648 @@
+{
+  "slug": "goodfellas",
+  "data_coleta": "2026-09-16T20:16:39.607516+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 516,
+  "reviews_url": "https://letterboxd.com/film/goodfellas/reviews/",
+  "ficha": {
+    "titulo": "Os Bons Companheiros",
+    "sinopse_oficial": "A história real de Henry Hill, um garoto meio irlandês e meio siciliano do Brooklyn que é adotado por gangsters do bairro ainda jovem e sobe na hierarquia de uma família da máfia sob a orientação de Jimmy Conway.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 146,
+    "diretor": "Martin Scorsese",
+    "diretor_transliterado": false,
+    "ano": 1990,
+    "fonte": "tmdb",
+    "tmdb_id": 769,
+    "tmdb_fetched_at": "2026-09-16T20:18:46+00:00",
+    "poster_path": "/sTReXuaND1AjkXUfjl1gqRcuGfI.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+      "/7TF4p86ZafnxFuNqWdhpHXFO244.jpg",
+      "/sw7mordbZxgITU877yTpZCud90M.jpg",
+      "/d6UxFCGQxpszcf8mwgGjQ3ynqGl.jpg",
+      "/cHaJdMwIHY3yZdpYF6R0tHUW5Dc.jpg",
+      "/tcfWoS3LoYqXMl7VCaWtpKpLItl.jpg",
+      "/6tlhc0rqvR5sZZxOHvLtRcCbufI.jpg",
+      "/l5siKdCQX5EdMVUH36wJvmxJXBi.jpg",
+      "/UBP8EgqILAt5mb5hJ6jO4uIfYW.jpg",
+      "/6qgSKYgkHLL0vAVbsqRfo8KmZgL.jpg"
+    ],
+    "backdrop_path": "/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/dQThBGXVNSUW5tbcn1cedl71H55.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/7TF4p86ZafnxFuNqWdhpHXFO244.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/sw7mordbZxgITU877yTpZCud90M.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/l5siKdCQX5EdMVUH36wJvmxJXBi.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/7m56vpDfn9gCi9J5vHTjLhnSzHR.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/rszNCG45TAWWquyzJ8CUUxsrEgN.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/9NVYuZQzoHpcA62S5tflIKr6vsf.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/9qcWtFywaIc8geDZ9Y7r6ONuYY7.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/j0vdfY4mNtOUNRRzuOfvvVFSRR4.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/otWGViKioBN7GNc04VWuemVfoGV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vrOhlx39LB3bgcNehwaU3x47VfM.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/AkiTwWMLdCv6yFLkfpwMH3csrdB.jpg",
+        "still_largura": 3020,
+        "still_altura": 1699
+      },
+      {
+        "still_path": "/pMlMZfgNiXfYfDOq4KLuMFqqeOk.jpg",
+        "still_largura": 1364,
+        "still_altura": 768
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "goodfellas",
+      "titulo_letterboxd": "GoodFellas",
+      "ano_letterboxd": 1990,
+      "tmdb_id_letterboxd": 769,
+      "tmdb_id_escolhido": 769,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "GoodFellas",
+      "ano_tmdb": 1990,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2347374,
+    "por_nivel": {
+      "0.5": 1637,
+      "1.0": 3460,
+      "1.5": 2400,
+      "2.0": 14320,
+      "2.5": 17207,
+      "3.0": 103678,
+      "3.5": 157212,
+      "4.0": 587865,
+      "4.5": 479181,
+      "5.0": 980414
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "goodfellas",
+    "coletado_em": "2026-09-16T04:48:17.386403+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1637,
+      "1.0": 3460,
+      "1.5": 2400,
+      "2.0": 14320,
+      "2.5": 17207,
+      "3.0": 103678,
+      "3.5": 157212,
+      "4.0": 587865,
+      "4.5": 479181,
+      "5.0": 980414
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 48,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 48,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 9,
+      "2.0": 30,
+      "2.5": 11,
+      "3.0": 25,
+      "3.5": 4,
+      "4.0": 10,
+      "4.5": 10,
+      "5.0": 21
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.0": 6
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 4,
+      "3.0": 27,
+      "3.5": 41,
+      "4.0": 153,
+      "4.5": 125,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 624,
+        "min": "2008-06-06",
+        "max": "2026-09-16",
+        "p5": "2026-08-11",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 180,
+          "min": "2015-02-01",
+          "max": "2026-09-16",
+          "p5": "2026-08-11",
+          "p50": "2026-08-29",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2013-12-31",
+          "max": "2026-09-16",
+          "p5": "2026-07-29",
+          "p50": "2026-09-07",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2008-06-06",
+          "max": "2026-09-16",
+          "p5": "2026-07-15",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "identidade_letterboxd": {
+      "slug": "goodfellas",
+      "titulo": "GoodFellas",
+      "ano": 1990,
+      "tmdb_id_letterboxd": 769,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1990,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 624
+  },
+  "origem_paginas": {
+    "_histograma/goodfellas.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_4.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_16.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_64.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_256.html": "cache",
+    "goodfellas/pages/by_added/rated_0_5_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_1_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_1_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_1_5_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_1_5_page_2.html": "cache",
+    "goodfellas/fulltext/viewing_1485342844.html": "cache",
+    "goodfellas/fulltext/viewing_1485322278.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_4.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_5.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_6.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_7.html": "cache",
+    "goodfellas/pages/by_added/rated_2_page_8.html": "cache",
+    "goodfellas/fulltext/viewing_1489463492.html": "cache",
+    "goodfellas/fulltext/viewing_1466647057.html": "cache",
+    "goodfellas/fulltext/viewing_1476196196.html": "cache",
+    "goodfellas/fulltext/viewing_1466609271.html": "cache",
+    "goodfellas/pages/by_added/rated_2_5_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_2_5_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_2_5_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_2_5_page_4.html": "cache",
+    "goodfellas/fulltext/viewing_1486604298.html": "cache",
+    "goodfellas/fulltext/viewing_1486211748.html": "cache",
+    "goodfellas/fulltext/viewing_1485555335.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_4.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_5.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_6.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_7.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_8.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_9.html": "cache",
+    "goodfellas/pages/by_added/rated_3_page_14.html": "cache",
+    "goodfellas/fulltext/viewing_1497921196.html": "cache",
+    "goodfellas/fulltext/viewing_1497806400.html": "cache",
+    "goodfellas/fulltext/viewing_1497362528.html": "cache",
+    "goodfellas/fulltext/viewing_1495357948.html": "cache",
+    "goodfellas/fulltext/viewing_1494472889.html": "cache",
+    "goodfellas/fulltext/viewing_1493104579.html": "cache",
+    "goodfellas/fulltext/viewing_1490554320.html": "cache",
+    "goodfellas/fulltext/viewing_1488174673.html": "cache",
+    "goodfellas/pages/by_added/rated_3_5_page_1.html": "cache",
+    "goodfellas/fulltext/viewing_1497466745.html": "cache",
+    "goodfellas/pages/by_added/rated_4_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_4_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_4_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_4_page_38.html": "cache",
+    "goodfellas/fulltext/viewing_1497675977.html": "cache",
+    "goodfellas/pages/by_added/rated_4_5_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_4_5_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_4_5_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_4_5_page_31.html": "cache",
+    "goodfellas/fulltext/viewing_1474343928.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_1.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_2.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_3.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_5.html": "cache",
+    "goodfellas/pages/by_added/rated_5_page_128.html": "cache",
+    "goodfellas/fulltext/viewing_1497921334.html": "cache",
+    "goodfellas/fulltext/viewing_1497821030.html": "cache",
+    "goodfellas/fulltext/viewing_1495736606.html": "cache",
+    "goodfellas/fulltext/viewing_1497620209.html": "cache",
+    "goodfellas/fulltext/viewing_1497464333.html": "cache",
+    "goodfellas/fulltext/viewing_1491194587.html": "cache",
+    "goodfellas/fulltext/viewing_1483779526.html": "cache",
+    "goodfellas/fulltext/viewing_1483664647.html": "cache",
+    "goodfellas/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": 0.175
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-11",
+        "max": "2026-09-14",
+        "p5": "2026-08-11",
+        "p50": "2026-08-28",
+        "p95": "2026-09-11"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 71,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 71,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas relatam que o filme parece muito mais longo do que realmente é, com trechos arrastados que tornam a experiência cansativa e monótona.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens sem carisma ou pouco desenvolvidos",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores afirmam não ter conseguido se importar com os personagens, considerando-os rasos, previsíveis ou simplesmente antipáticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trama fraca e falta de conflito ou propósito",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem diga que a narrativa se resume a uma sequência de eventos sem tensão, sem arco dramático claro e sem um objetivo que justifique o que é mostrado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sensação de obra superestimada",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do grupo questiona a fama e a nota elevada do filme, dizendo não entender por que é tão aclamado e acreditando que a obra não corresponde à expectativa criada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desinteresse pelo universo mafioso",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas pessoas comentam que histórias de máfia simplesmente não lhes agradam, seja pela atmosfera, seja pela violência retratada, o que dificultou o envolvimento com o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento raso das personagens femininas e visão masculina",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas apontam que as mulheres aparecem apenas como figurantes ou estereótipos, sem voz própria, e que o olhar do filme é excessivamente centrado nos homens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas destaca sobretudo o ritmo arrastado, a duração percebida como excessiva e a dificuldade em se conectar com personagens e trama. Também aparece com força a percepção de que a obra é superestimada e de que o universo mafioso, do jeito retratado, não desperta interesse nesses espectadores.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 15,
+        "p5": 1,
+        "p50": 7,
+        "p95": 14,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2013-12-31",
+        "max": "2026-09-15",
+        "p5": "2026-08-09",
+        "p50": "2026-09-08",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 146,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 146,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Desconexão emocional e falta de envolvimento",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar da qualidade técnica, não conseguiram se conectar emocionalmente com a história ou se importar com os personagens, sentindo-se entediadas ou indiferentes durante boa parte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado e supervalorizado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo de reviews medianas frequentemente expressa que o filme é superestimado, com alguns afirmando que não corresponde à fama que recebe e que a experiência não justifica a aclamação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e falta de profundidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas criticam a falta de carisma dos personagens e a ausência de profundidade psicológica, tornando difícil se importar com o que acontece com eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas mencionam que o filme é longo e arrastado em certos momentos, com um ritmo que oscila entre acelerado e tedioso, e que a duração poderia ser menor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e direção",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das críticas, muitas reviews medianas reconhecem a excelência técnica do filme, elogiando a direção, a fotografia, a montagem e a trilha sonora, considerando-o bem feito.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de narração e uso de voz over",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narração constante e o uso de voz over são apontados como recursos que, embora justificados, tornam a experiência menos imersiva e mais cansativa para alguns espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) destacam que, embora o filme seja tecnicamente competente e tenha momentos marcantes, para este grupo ele não consegue gerar envolvimento emocional ou conexão com os personagens. Há uma percepção recorrente de que o filme é superestimado e que, apesar da qualidade da direção, o resultado final não justifica a aclamação recebida.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 94,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 9,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 9,
+        "5.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-01-17",
+        "max": "2026-09-16",
+        "p5": "2026-09-04",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 63,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 63,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são frequentemente elogiadas, com destaque para a intensidade de Joe Pesci e a presença de Robert De Niro e Ray Liotta, considerados impecáveis por muitos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e estilo visual",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Martin Scorsese é exaltada por seu estilo dinâmico, com planos icônicos e uma energia contagiante que mantém o espectador envolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e montagem",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo acelerado e a montagem ágil são vistos como pontos fortes, garantindo que o filme nunca fique monótono, apesar da longa duração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é destacado por sua estrutura sólida e pela forma como retrata a ascensão e queda no mundo do crime, com diálogos marcantes e uma narrativa envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é amplamente elogiada, com menções à sua integração perfeita com as cenas e ao uso de músicas clássicas que intensificam a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto cultural e legado",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews ressaltam a influência duradoura do filme, considerado um marco no gênero de máfia e uma referência para obras posteriores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a excelência técnica e artística do filme, com ênfase nas atuações, direção e montagem. Este grupo frequentemente menciona o impacto cultural e a experiência imersiva proporcionada pela obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Várias pessoas relatam que o filme parece muito mais longo do que realmente é, com trechos arrastados que tornam a experiência cansativa e monótona.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Algumas reviews medianas mencionam que o filme é longo e arrastado em certos momentos, com um ritmo que oscila entre acelerado e tedioso, e que a duração poderia ser menor.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e montagem",
+            "exemplo_parafraseado": "O ritmo acelerado e a montagem ágil são vistos como pontos fortes, garantindo que o filme nunca fique monótono, apesar da longa duração.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações",
+            "exemplo_parafraseado": "As atuações são frequentemente elogiadas, com destaque para a intensidade de Joe Pesci e a presença de Robert De Niro e Ray Liotta, considerados impecáveis por muitos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Qualidade técnica e direção",
+            "exemplo_parafraseado": "Apesar das críticas, muitas reviews medianas reconhecem a excelência técnica do filme, elogiando a direção, a fotografia, a montagem e a trilha sonora, considerando-o bem feito.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Direção e estilo visual",
+            "exemplo_parafraseado": "A direção de Martin Scorsese é exaltada por seu estilo dinâmico, com planos icônicos e uma energia contagiante que mantém o espectador envolvido.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens sem carisma ou pouco desenvolvidos",
+            "exemplo_parafraseado": "Muitos espectadores afirmam não ter conseguido se importar com os personagens, considerando-os rasos, previsíveis ou simplesmente antipáticos.",
+            "temas_no_mesmo_eixo": [
+              "Trama fraca e falta de conflito ou propósito"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens desagradáveis e falta de profundidade",
+            "exemplo_parafraseado": "Muitas reviews medianas criticam a falta de carisma dos personagens e a ausência de profundidade psicológica, tornando difícil se importar com o que acontece com eles.",
+            "temas_no_mesmo_eixo": [
+              "Excesso de narração e uso de voz over"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e narrativa",
+            "exemplo_parafraseado": "O roteiro é destacado por sua estrutura sólida e pela forma como retrata a ascensão e queda no mundo do crime, com diálogos marcantes e uma narrativa envolvente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A trilha sonora é amplamente elogiada, com menções à sua integração perfeita com as cenas e ao uso de músicas clássicas que intensificam a narrativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Desinteresse pelo universo mafioso",
+            "exemplo_parafraseado": "Diversas pessoas comentam que histórias de máfia simplesmente não lhes agradam, seja pela atmosfera, seja pela violência retratada, o que dificultou o envolvimento com o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Desconexão emocional e falta de envolvimento",
+            "exemplo_parafraseado": "Várias reviews medianas relatam que, apesar da qualidade técnica, não conseguiram se conectar emocionalmente com a história ou se importar com os personagens, sentindo-se entediadas ou indiferentes durante boa parte do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Sensação de obra superestimada",
+            "exemplo_parafraseado": "Parte do grupo questiona a fama e a nota elevada do filme, dizendo não entender por que é tão aclamado e acreditando que a obra não corresponde à expectativa criada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Superestimado e supervalorizado",
+            "exemplo_parafraseado": "Este grupo de reviews medianas frequentemente expressa que o filme é superestimado, com alguns afirmando que não corresponde à fama que recebe e que a experiência não justifica a aclamação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Tratamento raso das personagens femininas e visão masculina",
+            "exemplo_parafraseado": "Algumas críticas apontam que as mulheres aparecem apenas como figurantes ou estereótipos, sem voz própria, e que o olhar do filme é excessivamente centrado nos homens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Impacto cultural e legado",
+            "exemplo_parafraseado": "Muitas reviews ressaltam a influência duradoura do filme, considerado um marco no gênero de máfia e uma referência para obras posteriores.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Martin Scorsese e lançado em 1990, Os Bons Companheiros é um drama policial de 146 minutos baseado em uma história real. A trama acompanha a trajetória de Henry Hill, um jovem do Brooklyn que ingressa no crime organizado e ascende na hierarquia de uma família mafiosa sob a orientação de Jimmy Conway.\n\nA experiência estrutura-se na ambientação do cotidiano da máfia ao longo de diferentes épocas, apoiando-se no recurso recorrente da narração em voz over e em uma progressão temporal contínua.\n\nOs três grupos concordam sobre os elementos centrais do filme e discordam sobre o veredito de seu funcionamento. Na grande maioria das notas (~94%), cerca de metade destaca a qualidade do elenco e das atuações, uma parcela expressiva enaltece a direção e o estilo visual, e boa parte ressalta o ritmo e a montagem como pontos altos.\n\nNuma fração mínima das notas (~5%), sob a perspectiva deste grupo, vários apontam desconexão emocional e falta de envolvimento, um número considerável avalia o filme como superestimado e supervalorizado, e parte deles critica a presença de personagens desagradáveis e sem profundidade.\n\nNuma fração ainda menor das notas (~1%), para quem adota esse ponto de vista, muitos apontam ritmo lento e duração excessiva, uma parcela expressiva afirma que os personagens não têm carisma e são pouco desenvolvidos, e uma fatia menor percebe a trama como fraca e desprovida de conflito ou propósito.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9948,
+      "completion_tokens": 1065,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9948
+    },
+    "latencia_s": 45.16
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divisão em torno do filme se concentra na construção do roteiro e de suas figuras: a maioria dos que recomendam elogia o desenrolar da narrativa, enquanto a maioria dos que não recomendam critica a falta de profundidade e o carisma insuficiente dos personagens.",
+    "texto_modelo": "A divisão em torno do filme se concentra na construção do roteiro e de suas figuras: a maioria dos que recomendam elogia o desenrolar da narrativa, enquanto a maioria dos que não recomendam critica a falta de profundidade e o carisma insuficiente dos personagens.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3651,
+      "completion_tokens": 184,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3651
+    },
+    "latencia_s": 9.04
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia atuações intensas e presenças marcantes de um elenco de destaque",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elenco e atuações",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "procura uma direção dinâmica com planos marcantes e energia contagiante",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e estilo visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma montagem ágil e ritmo acelerado, mesmo com longa duração",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e montagem",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com trechos arrastados que tornam a narrativa monótona",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com personagens rasos, previsíveis ou difíceis de se importar",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens sem carisma ou pouco desenvolvidos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com eventos sem tensão, sem objetivo claro ou arco dramático",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Trama fraca e falta de conflito ou propósito",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10731,
+      "completion_tokens": 800,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10731
+    },
+    "latencia_s": 11.9,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

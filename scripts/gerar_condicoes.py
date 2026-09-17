@@ -117,8 +117,8 @@ def main() -> None:
     if not slugs:
         raise SystemExit("nada a fazer: use --todos ou --slug")
 
-    print(f"variante: {VARIANTE_CLI[args.variante] or 'legado (controle, "
-          f"pré-2026-09-15)'}", flush=True)
+    rotulo = VARIANTE_CLI[args.variante] or "legado (controle, pré-2026-09-15)"
+    print(f"variante: {rotulo}", flush=True)
     resumo = []
     for slug in slugs:
         r = gerar_um(slug, destino, n=n, modelo=args.modelo,

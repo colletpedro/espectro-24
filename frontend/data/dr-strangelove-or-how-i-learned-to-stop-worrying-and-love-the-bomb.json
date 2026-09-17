@@ -1,0 +1,1588 @@
+{
+  "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+  "data_coleta": "2026-09-16T18:59:19.937180+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb/reviews/",
+  "ficha": {
+    "titulo": "Dr. Fantástico",
+    "sinopse_oficial": "Depois que o insano General Jack D. Ripper ordena um ataque nuclear contra a União Soviética, uma sala de guerra cheia de políticos, generais e um diplomata russo tentam freneticamente impedir o ataque de se concretizar.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Guerra"
+    ],
+    "duracao_min": 95,
+    "diretor": "Stanley Kubrick",
+    "diretor_transliterado": false,
+    "ano": 1964,
+    "fonte": "tmdb",
+    "tmdb_id": 935,
+    "tmdb_fetched_at": "2026-09-16T20:18:37+00:00",
+    "poster_path": "/lFcwVewzDwmJjIIjNIWwST4ctaC.jpg",
+    "poster_largura": 640,
+    "poster_altura": 960,
+    "backdrop_paths": [
+      "/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
+      "/4LmNLvXP5SZ5TrZEkNhC7dbjUNV.jpg",
+      "/sTp8K0SfcC2RQef1Tu160z3niHO.jpg",
+      "/mpRKhXraPRV6KPDidFf7lxBS7Ot.jpg",
+      "/aIND8x6rns3KOazjaePHrpNUAjO.jpg",
+      "/k1EZ4OGdEqpPE3IfmTQYfcMInSx.jpg",
+      "/cBRgFzANRNyVfUTDpjGF51UNW6c.jpg",
+      "/yVPCxKnWBhkdj4gSOUQbn9L66iM.jpg",
+      "/hPdgnWRpPstF8y7MrC6ENep8RNI.jpg",
+      "/bVZqFey6ihNF8QeywnL7g1fHeB0.jpg"
+    ],
+    "backdrop_path": "/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
+    "backdrop_largura": 2300,
+    "backdrop_altura": 1293,
+    "poster_sem_texto_path": "/1DTOS6uPAhmeGu7gSPlJfBfHeyW.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
+        "still_largura": 2300,
+        "still_altura": 1293
+      },
+      {
+        "still_path": "/4LmNLvXP5SZ5TrZEkNhC7dbjUNV.jpg",
+        "still_largura": 2300,
+        "still_altura": 1294
+      },
+      {
+        "still_path": "/yOK2lktgidMRLojnipfZ2Bdfmjy.jpg",
+        "still_largura": 2960,
+        "still_altura": 1665
+      },
+      {
+        "still_path": "/cBRgFzANRNyVfUTDpjGF51UNW6c.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/k1EZ4OGdEqpPE3IfmTQYfcMInSx.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/yVPCxKnWBhkdj4gSOUQbn9L66iM.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wLjiLmBzZlbjn2VfMLpxDK6FvkZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/gyKm5BJzVaxNnVXpgBK4zpQH72d.jpg",
+        "still_largura": 2300,
+        "still_altura": 1294
+      },
+      {
+        "still_path": "/1r7JppQWv0E2z8bG0AqD99tWN5B.jpg",
+        "still_largura": 2821,
+        "still_altura": 1587
+      },
+      {
+        "still_path": "/5JYMwotBikiNGMpQWbzDwJIrYXp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/e3Ygb9854udc7q2kJoOYJ4VljAW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/nTnNbGnJy18UwFT2LK1k9HLw3DZ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+      "titulo_letterboxd": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "ano_letterboxd": 1964,
+      "tmdb_id_letterboxd": 935,
+      "tmdb_id_escolhido": 935,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "ano_tmdb": 1964,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 657151,
+    "por_nivel": {
+      "0.5": 961,
+      "1.0": 2318,
+      "1.5": 1836,
+      "2.0": 8484,
+      "2.5": 10265,
+      "3.0": 44822,
+      "3.5": 68074,
+      "4.0": 187377,
+      "4.5": 136327,
+      "5.0": 196687
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+    "coletado_em": "2026-09-16T03:22:06.231447+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 961,
+      "1.0": 2318,
+      "1.5": 1836,
+      "2.0": 8484,
+      "2.5": 10265,
+      "3.0": 44822,
+      "3.5": 68074,
+      "4.0": 187377,
+      "4.5": 136327,
+      "5.0": 196687
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 14,
+      "1.5": 5,
+      "2.0": 37,
+      "2.5": 24,
+      "3.0": 45,
+      "3.5": 7,
+      "4.0": 14,
+      "4.5": 14,
+      "5.0": 13
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 69,
+        "n_validas_pos_extensao": 69,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 11,
+      "2.5": 13,
+      "3.0": 58,
+      "3.5": 89,
+      "4.0": 244,
+      "4.5": 177,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 588,
+        "min": "1993-03-01",
+        "max": "2026-09-16",
+        "p5": "2026-06-22",
+        "p50": "2026-09-02",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "1993-03-01",
+          "max": "2026-09-14",
+          "p5": "2026-04-19",
+          "p50": "2026-08-06",
+          "p95": "2026-09-12"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2014-03-22",
+          "max": "2026-09-15",
+          "p5": "2026-07-25",
+          "p50": "2026-09-03",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2008-07-14",
+          "max": "2026-09-16",
+          "p5": "2026-08-20",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 24,
+      "dias_por_100_paginas": 38.095238095238095,
+      "paginas_para_1_ano": 958
+    },
+    "identidade_letterboxd": {
+      "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+      "titulo": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+      "ano": 1964,
+      "tmdb_id_letterboxd": 935,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1964,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 588
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "1993-03-01",
+        "max": "2026-09-14",
+        "p5": "2026-06-23",
+        "p50": "2026-08-04",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 79,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 79,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Humor que não funciona",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas relatam que a comédia pretendida não provocou riso, soando forçada ou datada, com piadas repetitivas e um tom que mais causa tédio do que graça.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo arrastado e a sensação de que o filme não avança aparecem em vários relatos, com menções a cochilos durante a exibição e à impressão de que a duração parece bem maior do que é.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações caricatas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são descritas como exageradas e os personagens como meras caricaturas, dificultando qualquer conexão ou envolvimento com o que acontece na tela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sátira datada e dependente de contexto",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sátira política é vista como presa ao seu próprio tempo, perdendo força para quem assiste hoje e dependendo demais do contexto da Guerra Fria para fazer sentido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro repetitivo e vazio",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O texto é criticado por girar em torno dos mesmos diálogos e discursos sem avançar, resultando em uma experiência que vários descrevem como oca ou sem substância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Divisão entre expectativa e resultado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem reconheça méritos técnicos ou a intenção da obra, mas ainda assim sinta que o resultado final não corresponde à aclamação que o filme recebe.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo apontam principalmente para um descompasso entre a aclamação clássica e a experiência concreta de assistir, com destaque para o humor que não engaja, o ritmo lento e a sensação de que a sátira perdeu força. Ainda assim, parte das críticas reconhece intenções ou qualidades pontuais, mesmo sem se deixar conquistar pelo conjunto.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 29,
+        "p5": 1,
+        "p50": 5,
+        "p95": 29,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-01",
+        "max": "2026-09-15",
+        "p5": "2026-07-11",
+        "p50": "2026-09-05",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Humor não funciona",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas do grupo relatam que esperavam rir muito mais e que o humor não atingiu o esperado, com alguns momentos isolados de graça.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desempenho de Peter Sellers",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Peter Sellers ao interpretar três personagens distintos é amplamente elogiada, sendo frequentemente apontada como o ponto mais forte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é criticado como lento, especialmente no início, com alguns trechos considerados monótonos ou arrastados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sátira política e atemporalidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sátira política é reconhecida como eficaz e ainda relevante, mas alguns acham que o tom e as piadas não envelheceram bem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa versus realidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos expressam decepção por não terem achado o filme tão divertido ou marcante quanto a reputação sugeria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco e a direção de Kubrick são elogiadas, embora isso não baste para conquistar todos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas indicam uma recepção morna: reconhecem a qualidade técnica, as atuações e a sátira relevante, mas frequentemente acham o humor pouco eficaz e o ritmo lento, resultando em uma experiência que não correspondeu às altas expectativas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 61,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2008-07-14",
+        "max": "2026-09-15",
+        "p5": "2026-08-20",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações (Peter Sellers e George C. Scott)",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são amplamente elogiadas, com destaque para Peter Sellers em múltiplos papéis e George C. Scott, cuja veia cômica surpreende. A capacidade de Kubrick de extrair performances memoráveis é ressaltada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor negro e sátira",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O humor ácido e a sátira são vistos como pontos altos, equilibrando comicidade e crítica. Muitos descrevem a obra como uma comédia negra que faz rir e, em seguida, refletir sobre a seriedade do tema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica política e social",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A crítica à paranoia nuclear, à estupidez humana e à política da Guerra Fria é frequentemente mencionada. Os diálogos e situações satirizam a tomada de decisão política e a masculinidade tóxica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e estilo de Kubrick",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Stanley Kubrick é exaltada por seu estilo único, com enquadramentos marcantes e uma abordagem que mistura gêneros. Sua genialidade e influência são reconhecidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e aspectos técnicos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco, os efeitos especiais para a época e o design de produção são elogiados. A qualidade visual é considerada um ponto forte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atemporalidade e relevância",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos destacam como o filme permanece atual e relevante, especialmente em relação a tensões geopolíticas e ameaças nucleares. A capacidade de transcender seu tempo é notável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a genialidade de Kubrick, o humor negro e as atuações excepcionais, especialmente de Peter Sellers. A sátira política e a crítica social são apontadas como centrais, mantendo o filme relevante e impactante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "O ritmo arrastado e a sensação de que o filme não avança aparecem em vários relatos, com menções a cochilos durante a exibição e à impressão de que a duração parece bem maior do que é.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O ritmo é criticado como lento, especialmente no início, com alguns trechos considerados monótonos ou arrastados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações caricatas",
+            "exemplo_parafraseado": "As atuações são descritas como exageradas e os personagens como meras caricaturas, dificultando qualquer conexão ou envolvimento com o que acontece na tela.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Desempenho de Peter Sellers",
+            "exemplo_parafraseado": "A atuação de Peter Sellers ao interpretar três personagens distintos é amplamente elogiada, sendo frequentemente apontada como o ponto mais forte do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações (Peter Sellers e George C. Scott)",
+            "exemplo_parafraseado": "As atuações são amplamente elogiadas, com destaque para Peter Sellers em múltiplos papéis e George C. Scott, cuja veia cômica surpreende. A capacidade de Kubrick de extrair performances memoráveis é ressaltada.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção",
+            "exemplo_parafraseado": "A fotografia em preto e branco e a direção de Kubrick são elogiadas, embora isso não baste para conquistar todos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Direção e estilo de Kubrick",
+            "exemplo_parafraseado": "A direção de Stanley Kubrick é exaltada por seu estilo único, com enquadramentos marcantes e uma abordagem que mistura gêneros. Sua genialidade e influência são reconhecidas.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e aspectos técnicos"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro repetitivo e vazio",
+            "exemplo_parafraseado": "O texto é criticado por girar em torno dos mesmos diálogos e discursos sem avançar, resultando em uma experiência que vários descrevem como oca ou sem substância.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Humor que não funciona",
+            "exemplo_parafraseado": "Várias pessoas relatam que a comédia pretendida não provocou riso, soando forçada ou datada, com piadas repetitivas e um tom que mais causa tédio do que graça.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Humor não funciona",
+            "exemplo_parafraseado": "Várias pessoas do grupo relatam que esperavam rir muito mais e que o humor não atingiu o esperado, com alguns momentos isolados de graça.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Humor negro e sátira",
+            "exemplo_parafraseado": "O humor ácido e a sátira são vistos como pontos altos, equilibrando comicidade e crítica. Muitos descrevem a obra como uma comédia negra que faz rir e, em seguida, refletir sobre a seriedade do tema.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Divisão entre expectativa e resultado",
+            "exemplo_parafraseado": "Há quem reconheça méritos técnicos ou a intenção da obra, mas ainda assim sinta que o resultado final não corresponde à aclamação que o filme recebe.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa versus realidade",
+            "exemplo_parafraseado": "Muitos expressam decepção por não terem achado o filme tão divertido ou marcante quanto a reputação sugeria.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Sátira datada e dependente de contexto",
+            "exemplo_parafraseado": "A sátira política é vista como presa ao seu próprio tempo, perdendo força para quem assiste hoje e dependendo demais do contexto da Guerra Fria para fazer sentido.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Sátira política e atemporalidade",
+            "exemplo_parafraseado": "A sátira política é reconhecida como eficaz e ainda relevante, mas alguns acham que o tom e as piadas não envelheceram bem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Crítica política e social",
+            "exemplo_parafraseado": "A crítica à paranoia nuclear, à estupidez humana e à política da Guerra Fria é frequentemente mencionada. Os diálogos e situações satirizam a tomada de decisão política e a masculinidade tóxica.",
+            "temas_no_mesmo_eixo": [
+              "Atemporalidade e relevância"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497862310",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 155)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1964 e dirigido por Stanley Kubrick, o longa Dr. Fantástico combina os gêneros de comédia e guerra ao apresentar uma crise militar de proporções catastróficas. A história se desenvolve a partir da ordem de um ataque nuclear contra a União Soviética, acompanhando as tentativas frenéticas de generais, políticos e um diplomata em uma sala de comando para conter a tragédia iminente.\n\nA experiência de assistir à produção se apoia em uma sátira política centrada nas tensões da Guerra Fria, conduzida por meio de diálogos densos e ritmo cadenciado em ambientes institucionais fechados.\n\nOs diferentes grupos concordam amplamente sobre os assuntos presentes no filme, discordando no veredito sobre a sua eficácia. Na grande maioria das notas (~90%), boa parte elogia com entusiasmo as atuações de Peter Sellers e George C. Scott, ao passo que uma parcela expressiva exalta o impacto do humor negro e da sátira. Nesse mesmo conjunto, um número considerável dá destaque à crítica política e social.\n\nPor outro lado, sob a ótica de quem compõe uma fração mínima das notas (~8%), vários manifestam que o humor não funciona como o esperado, muito embora muitos reconheçam o desempenho de Peter Sellers; boa parte desse grupo também aponta um ritmo lento e arrastado. Por fim, na visão de quem compõe uma fração ainda menor das notas (~2%), uma parcela expressiva afirma que o humor não funciona, enquanto vários consideram o ritmo lento e entediante, e uma parte rejeita os personagens e atuações caricatas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 2,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11606,
+      "completion_tokens": 1478,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11606
+    },
+    "latencia_s": 49.67
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da obra. Enquanto a maioria dos que recomendam aprova o desenvolvimento da trama, a maioria dos que não recomendam considera o texto redundante e sem substância.",
+    "texto_modelo": "As opiniões divergem sobre a eficácia do roteiro e da estrutura da obra. Enquanto a maioria dos que recomendam aprova o desenvolvimento da trama, a maioria dos que não recomendam considera o texto redundante e sem substância.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "opini",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 37,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3573,
+      "completion_tokens": 189,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3573
+    },
+    "latencia_s": 11.43
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca atuações cômicas memoráveis e a versatilidade em múltiplos papéis",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações (Peter Sellers e George C. Scott)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia comédia negra e sátira ácida que equilibram riso e reflexão",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor negro e sátira",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por sátira política sobre paranoia nuclear e Guerra Fria",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica política e social",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com comédias de tom forçado e piadas repetitivas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Humor que não funciona",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com narrativas de ritmo arrastado e sensação de estagnação",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "não se conecta com atuações exageradas e personagens construídos como caricaturas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e atuações caricatas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita sátiras políticas muito presas ao contexto histórico da Guerra Fria",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Sátira datada e dependente de contexto",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10818,
+      "completion_tokens": 1017,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10818
+    },
+    "latencia_s": 14.77,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

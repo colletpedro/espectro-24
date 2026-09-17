@@ -1,0 +1,1609 @@
+{
+  "slug": "fight-club",
+  "data_coleta": "2026-09-16T19:15:48.645813+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/fight-club/reviews/",
+  "ficha": {
+    "titulo": "Clube da Luta",
+    "sinopse_oficial": "Um homem deprimido que sofre de insônia conhece um estranho vendedor de sabonetes chamado Tyler Durden. Eles formam um clube clandestino com regras rígidas onde lutam com outros homens cansados de suas vidas mundanas. Mas sua parceria perfeita é comprometida quando Marla chama a atenção de Tyler.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller"
+    ],
+    "duracao_min": 139,
+    "diretor": "David Fincher",
+    "diretor_transliterado": false,
+    "ano": 1999,
+    "fonte": "tmdb",
+    "tmdb_id": 550,
+    "tmdb_fetched_at": "2026-09-16T20:18:41+00:00",
+    "poster_path": "/mCICnh7QBH0gzYaTQChBDDVIKdm.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+      "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+      "/xRyINp9KfMLVjRiO5nCsoRDdvvF.jpg",
+      "/52AfXWuXCHn3UjD17rBruA9f5qb.jpg",
+      "/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg",
+      "/3nv2TEz2u178xPXzdKlZdUh5uOI.jpg",
+      "/yrN6gon5NG6t7Lgh05byChFSZem.jpg",
+      "/8iVyhmjzUbvAGppkdCZPiyEHSoF.jpg",
+      "/mD7Q7NynkKKdbhXxcbk3OjY7GM7.jpg",
+      "/cl3PY1FdNnaV5vvdqLIjVR6FNU.jpg"
+    ],
+    "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "backdrop_largura": 2560,
+    "backdrop_altura": 1440,
+    "poster_sem_texto_path": "/fFkMxrBYnEBcEHotxTQwx2nAncy.jpg",
+    "poster_sem_texto_largura": 1200,
+    "poster_sem_texto_altura": 1800,
+    "galeria_stills": [
+      {
+        "still_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/cl3PY1FdNnaV5vvdqLIjVR6FNU.jpg",
+        "still_largura": 1424,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/8iVyhmjzUbvAGppkdCZPiyEHSoF.jpg",
+        "still_largura": 3492,
+        "still_altura": 1964
+      },
+      {
+        "still_path": "/qROibJeYTP4zHUZkUTrAndhpIpB.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/bsfJoKVAqFzlhvbt8AffjvYAtN4.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/2SW1FZHZw4ncy61pb8jcgrzVQVk.jpg",
+        "still_largura": 2082,
+        "still_altura": 1172
+      },
+      {
+        "still_path": "/4bPlbcDkoUXEIjyLJ5N7WkLKH9q.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/fDY5Ai3Rgq136gBrftbo9wxS9iT.jpg",
+        "still_largura": 3324,
+        "still_altura": 1870
+      },
+      {
+        "still_path": "/iEDDrTnHDsHdDv3G21hJrgOzyQH.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/mZ13rdRAmGRutj4nk6JQXvYMcO9.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/rmQgkW0t6stB9shvM3fzYqFnCGP.jpg",
+        "still_largura": 3310,
+        "still_altura": 1862
+      },
+      {
+        "still_path": "/xKgIdDetHhUr8p3y3WuyjEFJhWg.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "fight-club",
+      "titulo_letterboxd": "Fight Club",
+      "ano_letterboxd": 1999,
+      "tmdb_id_letterboxd": 550,
+      "tmdb_id_escolhido": 550,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Fight Club",
+      "ano_tmdb": 1999,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 6063113,
+    "por_nivel": {
+      "0.5": 8921,
+      "1.0": 22325,
+      "1.5": 12330,
+      "2.0": 74849,
+      "2.5": 69050,
+      "3.0": 412624,
+      "3.5": 472390,
+      "4.0": 1703649,
+      "4.5": 996553,
+      "5.0": 2290422
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "fight-club",
+    "coletado_em": "2026-09-16T04:02:41.876419+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 8921,
+      "1.0": 22325,
+      "1.5": 12330,
+      "2.0": 74849,
+      "2.5": 69050,
+      "3.0": 412624,
+      "3.5": 472390,
+      "4.0": 1703649,
+      "4.5": 996553,
+      "5.0": 2290422
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 7,
+      "2.0": 10,
+      "2.5": 10,
+      "3.0": 23,
+      "3.5": 2,
+      "4.0": 12,
+      "4.5": 10,
+      "5.0": 18
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 21,
+        "n_validas_pos_extensao": 39,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "3.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 8,
+      "2.5": 8,
+      "3.0": 46,
+      "3.5": 53,
+      "4.0": 190,
+      "4.5": 111,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 756,
+        "min": "2008-05-17",
+        "max": "2026-09-16",
+        "p5": "2026-07-07",
+        "p50": "2026-09-13",
+        "p95": "2026-09-16"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2018-11-04",
+          "max": "2026-09-16",
+          "p5": "2026-07-21",
+          "p50": "2026-09-11",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 252,
+          "min": "2017-10-29",
+          "max": "2026-09-16",
+          "p5": "2026-07-07",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 252,
+          "min": "2008-05-17",
+          "max": "2026-09-16",
+          "p5": "2026-07-30",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 3,
+      "dias_por_100_paginas": 2.3622047244094486,
+      "paginas_para_1_ano": 15452
+    },
+    "identidade_letterboxd": {
+      "slug": "fight-club",
+      "titulo": "Fight Club",
+      "ano": 1999,
+      "tmdb_id_letterboxd": 550,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1999,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 756
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 39,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 2,
+        "1.5": 7,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 39
+      },
+      "deficit_redistribuido": 6,
+      "distribuicao_pagina_origem": {
+        "n": 39,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 5,
+        "p95": 16,
+        "fracao_profunda": 0.46153846153846156
+      },
+      "janela_amostra": {
+        "n": 39,
+        "min": "2023-04-17",
+        "max": "2026-09-15",
+        "p5": "2026-02-05",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 8,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 25,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 156,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 156,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Superestimado e decepcionante",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "O filme é visto como superestimado e não corresponde ao hype, sendo considerado mediano ou chato por grande parte deste grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "O ritmo é frequentemente descrito como lento e arrastado, com partes entediantes e dificuldade em manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e masculinidade tóxica",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "Os personagens são considerados antipáticos e a abordagem da masculinidade é vista como problemática, glorificando a violência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reviravolta previsível ou insuficiente",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "A reviravolta é muitas vezes considerada previsível ou o único ponto interessante, mas não sustenta o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao capitalismo mal executada",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "A crítica ao capitalismo e ao consumismo é percebida como superficial ou mal desenvolvida, perdendo-se em cenas de violência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência excessiva e desconfortável",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 39,
+          "exemplo_parafraseado": "A violência é vista como excessiva, repulsiva e desconfortável, contribuindo para a rejeição do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o caráter superestimado do filme, o ritmo lento e a abordagem da masculinidade e violência como problemáticas. Este grupo considera a crítica social mal executada e a reviravolta insuficiente para compensar a experiência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 7,
+        "p95": 14,
+        "fracao_profunda": 0.5
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2017-10-29",
+        "max": "2026-09-15",
+        "p5": "2026-09-12",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 180,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 135,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 135,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Superestimado",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram o filme superestimado e não corresponderam às expectativas criadas pelo hype.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e engajamento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas acharam o ritmo lento ou a primeira metade pouco envolvente, dificultando a concentração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à masculinidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a forma como a masculinidade é retratada, por vezes glorificando a violência ou soando como fantasia masculina.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reviravolta final",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta final é vista de forma ambígua: alguns a consideram bem-feita, outros previsível ou não totalmente convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente a de Edward Norton e Brad Pitt, são frequentemente elogiadas como um ponto forte.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem anticonsumista",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A crítica ao consumismo e a alienação são reconhecidas, mas alguns a consideram simplista ou mal executada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam que o filme é superestimado e não atende às expectativas, com ressalvas ao ritmo e à mensagem. Este grupo destaca as atuações e a reviravolta final como aspectos positivos, mas critica a abordagem da masculinidade e o desenvolvimento da trama.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 13,
+        "4.5": 7,
+        "5.0": 17
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 13,
+        "4.5": 7,
+        "5.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 48,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-10-13",
+        "max": "2026-09-16",
+        "p5": "2026-07-07",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 18,
+          "n_alvo": 17,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Reviravolta e sua execução",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta é frequentemente descrita como impactante e capaz de mudar a forma como se enxerga tudo o que veio antes; alguns mencionam que ela surpreende, enquanto outros dizem tê-la previsto, mas ainda assim elogiam a construção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações de Brad Pitt e Edward Norton",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são bastante elogiadas, com destaque para a química entre os dois protagonistas e a forma como cada um dá vida a aspectos distintos da história; alguns consideram Norton o ponto alto, enquanto outros são arrebatados pelo carisma de Pitt.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao consumismo e à masculinidade tóxica",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam que o filme tece críticas ao consumismo desenfreado e à masculinidade frágil ou tóxica, frequentemente apontando que a obra satiriza justamente aqueles que a idolatram sem perceber sua mensagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo visual e atmosfera sombria",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O visual escuro e a atmosfera perturbadora são mencionados como elementos que contribuem para a imersão, com elogios à fotografia, à edição e à trilha sonora, que ajudam a construir a identidade única do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reflexões sobre identidade e propósito",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews refletem sobre temas como a busca por identidade, a sensação de vazio existencial e a crítica à sociedade moderna, destacando como o filme provoca questionamentos sobre quem somos e o que buscamos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente a reviravolta impactante, as atuações fortes e a crítica social mordaz, com muitos elogios ao estilo visual e à capacidade do filme de provocar reflexões sobre identidade e consumismo. Apesar de alguns apontarem problemas de ritmo, este grupo considera a obra marcante e frequentemente a reassiste, encontrando novos detalhes a cada visionamento.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 39,
+      "limiar_pp": 23.12
+    },
+    "margem_lift_pp": 23.12,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 39,
+            "freq_pct": 30.8,
+            "lift_pp": 15.8,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O ritmo é frequentemente descrito como lento e arrastado, com partes entediantes e dificuldade em manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -18.3,
+            "acima_da_margem": false,
+            "tema": "Ritmo e engajamento",
+            "exemplo_parafraseado": "Algumas pessoas acharam o ritmo lento ou a primeira metade pouco envolvente, dificultando a concentração.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.8,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Algumas reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 39,
+            "freq_pct": 17.9,
+            "lift_pp": -12.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As atuações, especialmente a de Edward Norton e Brad Pitt, são frequentemente elogiadas como um ponto forte.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações de Brad Pitt e Edward Norton",
+            "exemplo_parafraseado": "As atuações são bastante elogiadas, com destaque para a química entre os dois protagonistas e a forma como cada um dá vida a aspectos distintos da história; alguns consideram Norton o ponto alto, enquanto outros são arrebatados pelo carisma de Pitt.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 39,
+            "freq_pct": 10.3,
+            "lift_pp": -7.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Estilo visual e atmosfera sombria",
+            "exemplo_parafraseado": "O visual escuro e a atmosfera perturbadora são mencionados como elementos que contribuem para a imersão, com elogios à fotografia, à edição e à trilha sonora, que ajudam a construir a identidade única do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 39,
+            "freq_pct": 64.1,
+            "lift_pp": -5.9,
+            "acima_da_margem": false,
+            "tema": "Personagens desagradáveis e masculinidade tóxica",
+            "exemplo_parafraseado": "Os personagens são considerados antipáticos e a abordagem da masculinidade é vista como problemática, glorificando a violência.",
+            "temas_no_mesmo_eixo": [
+              "Reviravolta previsível ou insuficiente"
+            ]
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Reviravolta final",
+            "exemplo_parafraseado": "A reviravolta final é vista de forma ambígua: alguns a consideram bem-feita, outros previsível ou não totalmente convincente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Reviravolta e sua execução",
+            "exemplo_parafraseado": "A reviravolta é frequentemente descrita como impactante e capaz de mudar a forma como se enxerga tudo o que veio antes; alguns mencionam que ela surpreende, enquanto outros dizem tê-la previsto, mas ainda assim elogiam a construção.",
+            "temas_no_mesmo_eixo": [
+              "Reflexões sobre identidade e propósito"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 39,
+            "freq_pct": 7.7,
+            "lift_pp": -2.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 39,
+            "freq_pct": 5.1,
+            "lift_pp": -12.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 39,
+            "freq_pct": 35.9,
+            "lift_pp": -1.6,
+            "acima_da_margem": false,
+            "tema": "Violência excessiva e desconfortável",
+            "exemplo_parafraseado": "A violência é vista como excessiva, repulsiva e desconfortável, contribuindo para a rejeição do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 1.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 39,
+            "freq_pct": 23.1,
+            "lift_pp": -9.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 9.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 39,
+            "freq_pct": 35.9,
+            "lift_pp": -16.6,
+            "acima_da_margem": false,
+            "tema": "Superestimado e decepcionante",
+            "exemplo_parafraseado": "O filme é visto como superestimado e não corresponde ao hype, sendo considerado mediano ou chato por grande parte deste grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 16.6,
+            "acima_da_margem": false,
+            "tema": "Superestimado",
+            "exemplo_parafraseado": "Várias reviews medianas consideram o filme superestimado e não corresponderam às expectativas criadas pelo hype.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 39,
+            "freq_pct": 56.4,
+            "lift_pp": 8.9,
+            "acima_da_margem": false,
+            "tema": "Crítica ao capitalismo mal executada",
+            "exemplo_parafraseado": "A crítica ao capitalismo e ao consumismo é percebida como superficial ou mal desenvolvida, perdendo-se em cenas de violência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -16.4,
+            "acima_da_margem": false,
+            "tema": "Crítica à masculinidade",
+            "exemplo_parafraseado": "Este grupo critica a forma como a masculinidade é retratada, por vezes glorificando a violência ou soando como fantasia masculina.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem anticonsumista"
+            ]
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -8.9,
+            "acima_da_margem": false,
+            "tema": "Crítica ao consumismo e à masculinidade tóxica",
+            "exemplo_parafraseado": "Muitas reviews destacam que o filme tece críticas ao consumismo desenfreado e à masculinidade frágil ou tóxica, frequentemente apontando que a obra satiriza justamente aqueles que a idolatram sem perceber sua mensagem.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 1999 e dirigido por David Fincher, Clube da Luta é um drama e thriller centrado em um homem deprimido que sofre de insônia e conhece o vendedor de sabonetes Tyler Durden. Juntos, eles fundam um clube clandestino com regras rígidas onde homens cansados de suas vidas mundanas lutam entre si, mas a parceria entre os dois é abalada quando Marla entra na dinâmica.\n\nA experiência do filme se apoia em uma atmosfera sombria e em uma estrutura narrativa que explora tensões físicas e psicológicas, mantendo um andamento cadenciado ao longo de suas sequências.\n\nOs diferentes grupos avaliam os mesmos aspectos da obra e concordam sobre os seus temas centrais, discordando no veredito sobre o funcionamento da narrativa. Na grande maioria das notas (~90%), a reviravolta é celebrada por cerca de metade, enquanto boa parte enaltece as atuações de Brad Pitt e Edward Norton, e uma parcela expressiva valoriza as críticas dirigidas ao consumismo e à masculinidade tóxica.\n\nNa leitura de quem se posiciona numa fração mínima das notas (~8%), vários acham a produção superestimada, ao mesmo tempo em que alguns apontam ressalvas no ritmo e no engajamento, e uma fatia menor contesta o tratamento conferido à masculinidade. Por fim, sob a perspectiva de uma fração ainda menor das notas (~2%), muitos julgam o longa decepcionante e superestimado, um número considerável se queixa de um ritmo lento e arrastado, e boa parte critica a presença de personagens desagradáveis e a abordagem da masculinidade tóxica.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11606,
+      "completion_tokens": 1505,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11606
+    },
+    "latencia_s": 48.03
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As avaliações concentram-se no roteiro e na estrutura da narrativa, mas divergem quanto ao seu funcionamento. Enquanto a maioria dos que recomendam valoriza a condução das viradas da história, a maioria dos que não recomendam, no material reduzido analisado, aponta figuras antipáticas e atitudes masculinas nocivas.",
+    "texto_modelo": "As avaliações concentram-se no roteiro e na estrutura da narrativa, mas divergem quanto ao seu funcionamento. Enquanto a maioria dos que recomendam valoriza a condução das viradas da história, a maioria dos que não recomendam, no material reduzido analisado, aponta figuras antipáticas e atitudes masculinas nocivas.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "avali",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "abertura": "avali",
+        "abertura_freq": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 0,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3747,
+      "completion_tokens": 214,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3747
+    },
+    "latencia_s": 12.96
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia a construção de uma reviravolta, mesmo que consiga prevê-la",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Reviravolta e sua execução",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza a química e o carisma marcante entre os protagonistas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações de Brad Pitt e Edward Norton",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia sátiras sobre a fragilidade masculina e o consumo desenfreado",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica ao consumismo e à masculinidade tóxica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera trechos de ritmo arrastado superados pelos pontos positivos da obra",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "perde o interesse diante de um ritmo vagaroso com partes entediantes",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita personagens antipáticos e uma abordagem vista como glorificação da violência",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desagradáveis e masculinidade tóxica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desaponta quando uma reviravolta previsível não basta para sustentar o filme",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Reviravolta previsível ou insuficiente",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com críticas ao consumismo e capitalismo tratadas de forma superficial",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica ao capitalismo mal executada",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17226,
+      "completion_tokens": 1393,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 17226
+    },
+    "latencia_s": 31.3,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

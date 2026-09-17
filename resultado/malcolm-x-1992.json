@@ -1,0 +1,1722 @@
+{
+  "slug": "malcolm-x-1992",
+  "data_coleta": "2026-09-16T19:26:19.831013+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 551,
+  "reviews_url": "https://letterboxd.com/film/malcolm-x-1992/reviews/",
+  "ficha": {
+    "titulo": "Malcolm X",
+    "sinopse_oficial": "Filme biográfico que retrata a vida de Malcolm X, líder do movimento negro americano Nação do Islã: da infância difícil à juventude delinquente, passando pela prisão, onde aprendeu a cultivar o orgulho na sua raça, ao encontro com o Islão, à peregrinação a Meca e ao seu assassinato em 21 de fevereiro de 1965, em Nova Iorque, no meio de uma reunião.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "História"
+    ],
+    "duracao_min": 202,
+    "diretor": "Spike Lee",
+    "diretor_transliterado": false,
+    "ano": 1992,
+    "fonte": "tmdb",
+    "tmdb_id": 1883,
+    "tmdb_fetched_at": "2026-09-16T20:18:44+00:00",
+    "poster_path": "/o2s9ow0uRRm1BcF3teznk5twd90.jpg",
+    "poster_largura": null,
+    "poster_altura": null,
+    "backdrop_paths": [
+      "/yj9VAqzlA0kasae8rK1VG3NvDZk.jpg",
+      "/kPdAZIqPgegqbv4QF1FshbVXNrx.jpg",
+      "/2yZdgLUHmhL1UG57OYc2yksrmPl.jpg",
+      "/lV5iOWprIT7E0QMQ6yt6rvgZ7al.jpg",
+      "/42mSR48e4h6Zp5BkTUyWPYsAA1X.jpg",
+      "/pZoCxSf6cD6S2S7KELewsKsWRoo.jpg",
+      "/nJ7V6bNNOMIFf15dC7gfQNSWYXq.jpg",
+      "/w9ZertYq16RJmZJU8mshDrhZxfO.jpg",
+      "/2jKIkEBAd0FeIonBhZO1Ydb6m3L.jpg",
+      "/4hNh9MMwKLX7vyDbze648ok1mAX.jpg"
+    ],
+    "backdrop_path": "/yj9VAqzlA0kasae8rK1VG3NvDZk.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/zjeOrVmrt7TohdS3nitWw0O99zk.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/yj9VAqzlA0kasae8rK1VG3NvDZk.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/amJ1tmrs3BrMMVXGFKNbDF72Ik8.jpg",
+        "still_largura": 2908,
+        "still_altura": 1636
+      },
+      {
+        "still_path": "/pZoCxSf6cD6S2S7KELewsKsWRoo.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1mgL76e9zaimkYg77h4CJRlrUSd.jpg",
+        "still_largura": 1791,
+        "still_altura": 1007
+      },
+      {
+        "still_path": "/4C6ODORwbX0vdczSrEVFCLE8l3Z.jpg",
+        "still_largura": 1822,
+        "still_altura": 1025
+      },
+      {
+        "still_path": "/7nlauRJl5WxxsoOO3kZxbgrbRC9.jpg",
+        "still_largura": 2891,
+        "still_altura": 1626
+      },
+      {
+        "still_path": "/cpDlmnieH0W4H9fEIBKtcMtU9dK.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/gjMlE5iME7k7ia2wlA8X5b8KRwJ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kPfdQqcLDaQgC4sUOsFLObOTDVQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/okTgYx618OB9LWmCWs374CgIDUq.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qyNFpPidhGlf3XOeQAFgXnYTHkL.jpg",
+        "still_largura": 2751,
+        "still_altura": 1547
+      },
+      {
+        "still_path": "/wjjnnPBVonCiZG3XOaCssc1kA5q.jpg",
+        "still_largura": 1791,
+        "still_altura": 1007
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "malcolm-x-1992",
+      "titulo_letterboxd": "Malcolm X",
+      "ano_letterboxd": 1992,
+      "tmdb_id_letterboxd": 1883,
+      "tmdb_id_escolhido": 1883,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Malcolm X",
+      "ano_tmdb": 1992,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 226643,
+    "por_nivel": {
+      "0.5": 219,
+      "1.0": 457,
+      "1.5": 382,
+      "2.0": 2129,
+      "2.5": 2810,
+      "3.0": 15836,
+      "3.5": 24161,
+      "4.0": 68353,
+      "4.5": 46413,
+      "5.0": 65883
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "malcolm-x-1992",
+    "coletado_em": "2026-09-16T04:27:22.686179+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 219,
+      "1.0": 457,
+      "1.5": 382,
+      "2.0": 2129,
+      "2.5": 2810,
+      "3.0": 15836,
+      "3.5": 24161,
+      "4.0": 68353,
+      "4.5": 46413,
+      "5.0": 65883
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 23,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 7,
+      "1.0": 7,
+      "1.5": 14,
+      "2.0": 40,
+      "2.5": 36,
+      "3.0": 50,
+      "3.5": 7,
+      "4.0": 22,
+      "4.5": 20,
+      "5.0": 24
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 68,
+        "n_validas_pos_extensao": 68,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 86,
+        "n_validas_pos_extensao": 86,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 73,
+        "n_validas_pos_extensao": 73,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 8,
+      "2.5": 11,
+      "3.0": 59,
+      "3.5": 90,
+      "4.0": 256,
+      "4.5": 174,
+      "5.0": 247
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 551,
+        "min": "1992-01-01",
+        "max": "2026-09-16",
+        "p5": "2025-01-26",
+        "p50": "2026-06-29",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 167,
+          "min": "1994-09-03",
+          "max": "2026-09-11",
+          "p5": "2024-09-05",
+          "p50": "2025-09-28",
+          "p95": "2026-08-20"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2019-01-22",
+          "max": "2026-09-15",
+          "p5": "2025-08-16",
+          "p50": "2026-06-12",
+          "p95": "2026-09-01"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "1992-01-01",
+          "max": "2026-09-16",
+          "p5": "2026-06-08",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 84,
+      "dias_por_100_paginas": 133.33333333333334,
+      "paginas_para_1_ano": 274
+    },
+    "identidade_letterboxd": {
+      "slug": "malcolm-x-1992",
+      "titulo": "Malcolm X",
+      "ano": 1992,
+      "tmdb_id_letterboxd": 1883,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1992,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 551
+  },
+  "origem_paginas": {
+    "_histograma/malcolm-x-1992.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_4.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_16.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_64.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_256.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_0_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_0_5_page_2.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1416853085.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1036404789.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_966866041.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_456565772.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_1_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_1_page_2.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1491817527.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1403409113.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1312916032.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1209886813.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_902581317.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_1_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_1_5_page_2.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1292507679.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1010651423.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_979713329.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_975423586.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_856933515.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_847146882.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_732390689.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_3.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_4.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_5.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_6.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_7.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_page_8.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1477388419.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1305188720.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1193690381.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1260991558.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1021984739.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_998234104.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_948248994.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_933841519.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_921436068.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_859470502.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_3.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_4.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_5.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_2_5_page_6.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1465905629.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1356178853.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1322466484.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1300154044.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1296001154.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1287905343.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1253930130.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1167268092.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_3.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_4.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_5.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_6.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_7.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_8.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_15.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_page_30.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497315037.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1487412708.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1481153524.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1440247936.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1421052881.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1403003147.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1398483614.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1398317325.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1395954601.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1394059260.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1360582508.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1334820431.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1329837840.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1323771344.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1230585095.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_986857729.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_984510629.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_3_5_page_2.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1494269853.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1484201342.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_page_3.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1496249482.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1496166314.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1495178433.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1494320358.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1492569590.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1490973169.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1490807368.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1348537599.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_5_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_5_page_3.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_4_5_page_44.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497648344.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497204848.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497167523.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1495451244.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1494490091.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1415582812.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_5_page_1.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_5_page_2.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_5_page_3.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_5_page_4.html": "cache",
+    "malcolm-x-1992/pages/by_added/rated_5_page_62.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497315717.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1497200087.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1496700636.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1496386306.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1496054631.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1495751842.html": "cache",
+    "malcolm-x-1992/fulltext/viewing_1495615932.html": "cache",
+    "malcolm-x-1992/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 6,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-10-12",
+        "max": "2026-09-11",
+        "p5": "2025-04-08",
+        "p50": "2025-09-23",
+        "p95": "2026-08-31"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 23,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores consideram o filme arrastado e longo demais, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de profundidade política e contexto histórico",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que o filme não explora adequadamente as ideias políticas e religiosas de Malcolm X, deixando de lado suas contradições e o contexto do movimento pelos direitos civis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem excessivamente heroica e falta de crítica",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores sentem que o filme transforma Malcolm X em uma figura santificada, omitindo aspectos controversos e evitando um olhar crítico sobre sua trajetória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso, montagem problemática e narrativa fragmentada",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A narrativa é frequentemente descrita como desorganizada, com cortes que dificultam o acompanhamento e uma estrutura que parece mais uma leitura de fatos do que uma história coesa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogios à atuação de Denzel Washington",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as críticas negativas, muitos reconhecem que Denzel Washington entrega uma atuação forte e carismática, sendo frequentemente o destaque do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão emocional e personagens pouco desenvolvidos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores relatam que não conseguiram se envolver emocionalmente com o protagonista ou com os personagens ao seu redor, achando o retrato distante e pouco empático.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a longa duração e o ritmo lento, a falta de aprofundamento político e a abordagem excessivamente heroica. Apesar disso, a atuação de Denzel Washington é frequentemente elogiada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 8,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 30,
+        "p5": 1,
+        "p50": 5,
+        "p95": 30,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-22",
+        "max": "2026-09-15",
+        "p5": "2025-08-15",
+        "p50": "2026-06-29",
+        "p95": "2026-09-10"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 30,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 67,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 67,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas reclamam que o filme é longo demais e arrastado, especialmente na primeira parte, com cenas que poderiam ser encurtadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Denzel Washington",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Denzel Washington é amplamente elogiada como fenomenal, sendo frequentemente apontada como o principal ponto forte do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato de Malcolm X e sua política",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas afirmam que o filme simplifica ou distorce as ideias políticas de Malcolm X, omitindo seu internacionalismo e críticas ao capitalismo, ou o mostrando como manipulado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Foco na Nação do Islã e religião",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há menções sobre a abordagem da Nação do Islã e da conversão religiosa, com alguns questionando a representação do grupo ou a ênfase dada ao tema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento da história",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por deixar lacunas na narrativa, com transições abruptas e falta de contextualização histórica e política.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Montagem e escolhas de direção",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A montagem e a direção de Spike Lee recebem elogios por momentos visualmente interessantes, mas também críticas por escolhas irregulares e excesso de estilo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a atuação de Denzel Washington e alguns momentos marcantes, mas criticam a longa duração, o ritmo lento e a abordagem do roteiro, que consideram simplificada ou incompleta em relação à complexidade do personagem.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 90,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-17",
+        "max": "2026-09-15",
+        "p5": "2026-06-06",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Denzel Washington",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a atuação de Denzel Washington como um dos pontos mais altos do filme, descrevendo-a como uma performance magistral que captura a complexidade do personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração longa e ritmo",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona que a longa duração do filme é um problema recorrente, com alguns trechos arrastados na primeira parte, embora muitos considerem que o tempo passa rápido devido ao envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Spike Lee",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas elogiam a direção de Spike Lee, destacando sua habilidade visual, o uso de cores para representar as fases da vida do protagonista e a ousadia narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato do personagem e sua jornada",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo destaca a profundidade do retrato do protagonista, mostrando sua transformação pessoal e intelectual sem idealizá-lo, o que torna a narrativa envolvente e educativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto histórico e educativo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas ressaltam que o filme é uma ferramenta educativa poderosa, capaz de ensinar sobre uma figura histórica importante e provocar reflexão sobre questões raciais e sociais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e aspectos visuais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e os elementos visuais são elogiados por sua beleza e por contribuírem para a narrativa, com destaque para a paleta de cores e a montagem inicial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para uma recepção entusiasmada, com elogios à atuação de Denzel Washington, à direção de Spike Lee e à capacidade do filme de retratar a trajetória do protagonista de forma profunda e educativa. A longa duração é frequentemente mencionada, mas não chega a comprometer a avaliação geral dentro deste grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 30.0,
+            "acima_da_margem": true,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Muitos espectadores consideram o filme arrastado e longo demais, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Muitas reviews medianas reclamam que o filme é longo demais e arrastado, especialmente na primeira parte, com cenas que poderiam ser encurtadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Duração longa e ritmo",
+            "exemplo_parafraseado": "Este grupo menciona que a longa duração do filme é um problema recorrente, com alguns trechos arrastados na primeira parte, embora muitos considerem que o tempo passa rápido devido ao envolvimento com a história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Elogios à atuação de Denzel Washington",
+            "exemplo_parafraseado": "Mesmo entre as críticas negativas, muitos reconhecem que Denzel Washington entrega uma atuação forte e carismática, sendo frequentemente o destaque do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Denzel Washington",
+            "exemplo_parafraseado": "A atuação de Denzel Washington é amplamente elogiada como fenomenal, sendo frequentemente apontada como o principal ponto forte do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Denzel Washington",
+            "exemplo_parafraseado": "As reviews positivas destacam a atuação de Denzel Washington como um dos pontos mais altos do filme, descrevendo-a como uma performance magistral que captura a complexidade do personagem.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Montagem e escolhas de direção",
+            "exemplo_parafraseado": "A montagem e a direção de Spike Lee recebem elogios por momentos visualmente interessantes, mas também críticas por escolhas irregulares e excesso de estilo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Direção de Spike Lee",
+            "exemplo_parafraseado": "As reviews positivas elogiam a direção de Spike Lee, destacando sua habilidade visual, o uso de cores para representar as fases da vida do protagonista e a ousadia narrativa.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e aspectos visuais"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso, montagem problemática e narrativa fragmentada",
+            "exemplo_parafraseado": "A narrativa é frequentemente descrita como desorganizada, com cortes que dificultam o acompanhamento e uma estrutura que parece mais uma leitura de fatos do que uma história coesa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Foco na Nação do Islã e religião",
+            "exemplo_parafraseado": "Há menções sobre a abordagem da Nação do Islã e da conversão religiosa, com alguns questionando a representação do grupo ou a ênfase dada ao tema.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e desenvolvimento da história"
+            ]
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Retrato do personagem e sua jornada",
+            "exemplo_parafraseado": "O grupo destaca a profundidade do retrato do protagonista, mostrando sua transformação pessoal e intelectual sem idealizá-lo, o que torna a narrativa envolvente e educativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Falta de conexão emocional e personagens pouco desenvolvidos",
+            "exemplo_parafraseado": "Alguns espectadores relatam que não conseguiram se envolver emocionalmente com o protagonista ou com os personagens ao seu redor, achando o retrato distante e pouco empático.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de profundidade política e contexto histórico",
+            "exemplo_parafraseado": "As críticas apontam que o filme não explora adequadamente as ideias políticas e religiosas de Malcolm X, deixando de lado suas contradições e o contexto do movimento pelos direitos civis.",
+            "temas_no_mesmo_eixo": [
+              "Abordagem excessivamente heroica e falta de crítica"
+            ]
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Retrato de Malcolm X e sua política",
+            "exemplo_parafraseado": "Algumas críticas afirmam que o filme simplifica ou distorce as ideias políticas de Malcolm X, omitindo seu internacionalismo e críticas ao capitalismo, ou o mostrando como manipulado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Impacto histórico e educativo",
+            "exemplo_parafraseado": "Muitas reviews positivas ressaltam que o filme é uma ferramenta educativa poderosa, capaz de ensinar sobre uma figura histórica importante e provocar reflexão sobre questões raciais e sociais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Spike Lee e lançado em 1992, Malcolm X é um drama histórico e biográfico que totaliza 202 minutos de duração. O filme retrata a trajetória de Malcolm X, líder do movimento negro americano Nação do Islã, cobrindo os períodos mais marcantes de sua vida pessoal e de sua militância política.\n\nA experiência cinematográfica é caracterizada por uma narrativa de longa duração que se desenvolve em um ritmo cadenciado. A obra se apoia em uma ambientação histórica detalhada para acompanhar as transformações do protagonista através de diferentes fases.\n\nNa grande maioria das notas (~90%), a reação é amplamente favorável. A maior parte exalta a atuação de Denzel Washington como o elemento principal da obra. Além desse aspecto, boa parte comenta a duração longa e o ritmo adotado, enquanto um número considerável dedica elogios à direção de Spike Lee.\n\nPara quem assume uma postura intermediária, numa fração mínima das notas (~8%), cerca de metade salienta a duração excessiva e o ritmo lento como aspectos problemáticos da exibição. Apesar dessas ressalvas, muitos reconhecem a atuação de Denzel Washington, ao mesmo tempo em que uma parcela expressiva questiona o modo como o retrato de Malcolm X e sua política foram apresentados.\n\nSob o olhar do grupo mais insatisfeito, presente numa fração ainda menor das notas (~1%), aproximadamente metade reclama da duração excessiva e do ritmo lento da produção. Nesse mesmo segmento, vários mencionam a falta de profundidade política e contexto histórico, enquanto muitos apontam uma abordagem excessivamente heroica e a falta de crítica em relação à figura central.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9876,
+      "completion_tokens": 1059,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9876
+    },
+    "latencia_s": 41.51
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria dos que recomendam destaca o desempenho de Denzel Washington. Em contrapartida, a maioria dos que não recomendam aponta uma narrativa confusa e desarticulada, além de criticar a lentidão do ritmo e a longa duração da produção.",
+    "texto_modelo": "A maioria dos que recomendam destaca o desempenho de Denzel Washington. Em contrapartida, a maioria dos que não recomendam aponta uma narrativa confusa e desarticulada, além de criticar a lentidão do ritmo e a longa duração da produção.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "QUANT",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3612,
+      "completion_tokens": 188,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3612
+    },
+    "latencia_s": 13.88
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma atuação magistral de Denzel Washington que capta a complexidade da figura",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Denzel Washington",
+        "rotulo_forca": "a maioria",
+        "par_recusado": "NEG-E"
+      },
+      {
+        "texto": "tolera uma duração longa com trechos arrastados se a narrativa for envolvente",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração longa e ritmo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca a ousadia narrativa e a expressividade visual da direção de Spike Lee",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Spike Lee",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma fotografia bela com paleta de cores que apoia a narrativa",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e aspectos visuais",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com filmes excessivamente longos e de andamento arrastado",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "procura um exame aprofundado de ideias políticas e do contexto dos direitos civis",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de profundidade política e contexto histórico",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com retratos santificados que evitam um olhar crítico sobre o protagonista",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Abordagem excessivamente heroica e falta de crítica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com uma estrutura fragmentada e cortes que prejudicam a coesão narrativa",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso, montagem problemática e narrativa fragmentada",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-E",
+        "lado": "talvez_evite",
+        "regra": "R2",
+        "motivo": "O tema relata elogio à atuação mesmo em críticas negativas, sem sustentar desaconselhamento.",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11358,
+      "completion_tokens": 1330,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11358
+    },
+    "latencia_s": 15.27,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

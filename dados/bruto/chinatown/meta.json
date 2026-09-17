@@ -1,0 +1,289 @@
+{
+  "slug": "chinatown",
+  "coletado_em": "2026-09-16T05:50:36.385384+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 779,
+    "1.0": 1492,
+    "1.5": 1113,
+    "2.0": 5831,
+    "2.5": 7575,
+    "3.0": 34554,
+    "3.5": 55229,
+    "4.0": 155683,
+    "4.5": 115817,
+    "5.0": 143389
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 60,
+    "4.5": 48,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 5,
+    "1.5": 12,
+    "2.0": 32,
+    "2.5": 26,
+    "3.0": 43,
+    "3.5": 11,
+    "4.0": 15,
+    "4.5": 16,
+    "5.0": 24
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 15,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 52,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 69,
+      "n_validas_pos_extensao": 69,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 66,
+      "n_validas_pos_extensao": 66,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 12,
+    "3.0": 57,
+    "3.5": 91,
+    "4.0": 256,
+    "4.5": 190,
+    "5.0": 236
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 564,
+      "min": "2010-02-14",
+      "max": "2026-09-16",
+      "p5": "2026-04-28",
+      "p50": "2026-08-24",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 180,
+        "min": "2011-01-15",
+        "max": "2026-09-15",
+        "p5": "2026-04-20",
+        "p50": "2026-07-18",
+        "p95": "2026-09-09"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2011-08-01",
+        "max": "2026-09-16",
+        "p5": "2026-06-16",
+        "p50": "2026-08-24",
+        "p95": "2026-09-13"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2010-02-14",
+        "max": "2026-09-16",
+        "p5": "2026-08-08",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 15,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 36,
+    "dias_por_100_paginas": 57.142857142857146,
+    "paginas_para_1_ano": 639
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 35,
+      "dias_por_100_paginas": 3500.0,
+      "paginas_para_1_ano": 10
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 44,
+      "dias_por_100_paginas": 4400.0,
+      "paginas_para_1_ano": 8
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 136,
+      "dias_por_100_paginas": 1511.111111111111,
+      "paginas_para_1_ano": 24
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 54,
+      "dias_por_100_paginas": 1080.0,
+      "paginas_para_1_ano": 34
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 28,
+      "dias": 89,
+      "dias_por_100_paginas": 329.6296296296296,
+      "paginas_para_1_ano": 111
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 1,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 38,
+      "dias_por_100_paginas": 60.317460317460316,
+      "paginas_para_1_ano": 605
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 48,
+      "dias": 28,
+      "dias_por_100_paginas": 59.57446808510638,
+      "paginas_para_1_ano": 613
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 59,
+      "dias": 28,
+      "dias_por_100_paginas": 48.275862068965516,
+      "paginas_para_1_ano": 756
+    }
+  },
+  "ano_lancamento": 1974,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "chinatown",
+    "titulo": "Chinatown",
+    "ano": 1974,
+    "tmdb_id_letterboxd": 829,
+    "fonte": "pagina_letterboxd"
+  }
+}

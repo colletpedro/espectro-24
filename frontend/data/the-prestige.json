@@ -1,0 +1,1620 @@
+{
+  "slug": "the-prestige",
+  "data_coleta": "2026-09-16T19:18:17.697884+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 552,
+  "reviews_url": "https://letterboxd.com/film/the-prestige/reviews/",
+  "ficha": {
+    "titulo": "O Grande Truque",
+    "sinopse_oficial": "No século 19, em Londres, dois amigos ilusionistas e mágicos, Alfred Borden e Rupert Angier, acabam construindo uma rivalidade, uma batalha por supremacia, que se estende ao longo dos anos e que se transforma em obsessão, cujos resultados serão inevitavelmente trágicos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Mistério",
+      "Ficção científica"
+    ],
+    "duracao_min": 130,
+    "diretor": "Christopher Nolan",
+    "diretor_transliterado": false,
+    "ano": 2006,
+    "fonte": "tmdb",
+    "tmdb_id": 1124,
+    "tmdb_fetched_at": "2026-09-16T20:18:42+00:00",
+    "poster_path": "/4AUW2bGbQjWACUREckGJWXmyF0d.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
+      "/z3br1ub7spqGMkxgjgJSdM4DC21.jpg",
+      "/yCnJT53HMXAK87xzPAdjdYhZ3JE.jpg",
+      "/eevtnX3syxLZj4pIber8KsJMDl8.jpg",
+      "/xBDE2d6HM1aBKQRu4IT7SfPD9fs.jpg",
+      "/zoHhr6P51pSTn4BmlgxpjFIrdYv.jpg",
+      "/mfJepkInUbiZ0mFXFhDNz8ko6Zr.jpg",
+      "/imwFaRRUr0XhMCsirB38txGUkes.jpg",
+      "/gUjRFBXoXtMBpxOQNi5CTeg9nat.jpg",
+      "/otHSSPPco72Dbn27PJEQY3QxNlU.jpg"
+    ],
+    "backdrop_path": "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/A0eycgzccYk6VlpWF89L7ia2hNO.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/t3kPGJT1khFBJqIWesNQj9Ny96W.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/z3br1ub7spqGMkxgjgJSdM4DC21.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wvoNDWDJfCY2XtrJBLGSAIT1MX9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hMr4w2VstjPnHiJbUF7J97iuZ5Y.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/zwdttd8dfyQC9uafdm4lBiGgrdm.jpg",
+        "still_largura": 3073,
+        "still_altura": 1730
+      },
+      {
+        "still_path": "/hHwGUDREvB0cpsnLFqGIbdOWXHZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3s8fvVhUl3gOITCY0HSHth8Uhrc.jpg",
+        "still_largura": 1453,
+        "still_altura": 816
+      },
+      {
+        "still_path": "/deh8AoxtDdBCP7X8NKMPToefQrn.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fYr5lff9ghIK5RxQHx6We6RFlRQ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/mWLqkBWEWEqYlN8q7vlU6gZSwuK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qdM3r1Mg6EYyk3kXIta0Z7A3Ke0.jpg",
+        "still_largura": 1453,
+        "still_altura": 816
+      },
+      {
+        "still_path": "/ug4x70zk6RbLYf87B0cuKuxBwFG.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-prestige",
+      "titulo_letterboxd": "The Prestige",
+      "ano_letterboxd": 2006,
+      "tmdb_id_letterboxd": 1124,
+      "tmdb_id_escolhido": 1124,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Prestige",
+      "ano_tmdb": 2006,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2179678,
+    "por_nivel": {
+      "0.5": 1898,
+      "1.0": 4666,
+      "1.5": 3838,
+      "2.0": 20827,
+      "2.5": 26415,
+      "3.0": 133068,
+      "3.5": 215359,
+      "4.0": 644083,
+      "4.5": 491118,
+      "5.0": 638406
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 7,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-prestige",
+    "coletado_em": "2026-09-16T04:06:13.705366+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1898,
+      "1.0": 4666,
+      "1.5": 3838,
+      "2.0": 20827,
+      "2.5": 26415,
+      "3.0": 133068,
+      "3.5": 215359,
+      "4.0": 644083,
+      "4.5": 491118,
+      "5.0": 638406
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 7,
+      "1.5": 2,
+      "2.0": 22,
+      "2.5": 25,
+      "3.0": 27,
+      "3.5": 6,
+      "4.0": 17,
+      "4.5": 10,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "1.5": 1,
+          "2.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 37,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 49,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 10,
+      "3.0": 53,
+      "3.5": 86,
+      "4.0": 256,
+      "4.5": 195,
+      "5.0": 254
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 636,
+        "min": "2006-10-10",
+        "max": "2026-09-16",
+        "p5": "2026-08-15",
+        "p50": "2026-09-11",
+        "p95": "2026-09-16"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "2009-06-30",
+          "max": "2026-09-16",
+          "p5": "2026-08-11",
+          "p50": "2026-08-28",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2006-10-10",
+          "max": "2026-09-16",
+          "p5": "2026-08-15",
+          "p50": "2026-09-12",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2008-05-17",
+          "max": "2026-09-16",
+          "p5": "2026-09-06",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 6,
+      "dias_por_100_paginas": 9.523809523809524,
+      "paginas_para_1_ano": 3832
+    },
+    "identidade_letterboxd": {
+      "slug": "the-prestige",
+      "titulo": "The Prestige",
+      "ano": 2006,
+      "tmdb_id_letterboxd": 1124,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2006,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 636
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-15",
+        "max": "2026-09-15",
+        "p5": "2026-08-14",
+        "p50": "2026-08-30",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 113,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 113,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro confuso e excessivamente explicativo",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews criticam que o filme confunde ao tentar ser complexo, com uma trama que se perde em explicações e reviravoltas óbvias, tornando a experiência arrastada e nada emocionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens femininas mal desenvolvidas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Um grupo de reviews aponta que as personagens femininas são superficiais e servem apenas como ferramentas para o desenvolvimento dos protagonistas masculinos, sem profundidade própria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas críticas mencionam que o filme é lento, com uma duração excessiva e cenas que se arrastam, tornando a experiência cansativa e pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Reviravoltas previsíveis e mal executadas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews afirmam que as reviravoltas são óbvias e forçadas, sem impacto, e que a narrativa entrega as respostas de forma didática demais, estragando qualquer surpresa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens rasos e sem carisma",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há críticas de que os protagonistas são unidimensionais, movidos apenas por obsessão, sem que o público consiga se importar com suas motivações ou sentimentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo de Nolan considerado pretensioso",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews comentam que o filme se leva a sério demais, com uma abordagem pretensiosa que prioriza explicações em vez de mostrar, resultando em algo artificial e cansativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente problemas de roteiro, ritmo e desenvolvimento de personagens, com críticas recorrentes à falta de profundidade emocional e à abordagem considerada pretensiosa. Este grupo específico de espectadores não se envolveu com a narrativa e considerou as reviravoltas previsíveis e mal construídas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 7,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 13,
+        "3.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 6,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 26,
+        "p5": 1,
+        "p50": 6,
+        "p95": 26,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-01-13",
+        "max": "2026-09-15",
+        "p5": "2026-08-10",
+        "p50": "2026-09-12",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 13,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 27,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 82,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 9,
+            "abaixo_min_chars": 82,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Twist previsível e explicações excessivas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas comentam que a reviravolta final é fácil de prever ou que o roteiro entrega pistas óbvias demais, tornando o desfecho anticlimático; outras criticam a necessidade de explicações longas para justificar tudo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens femininas subdesenvolvidas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que as personagens femininas são rasas e servem apenas para impulsionar as tramas dos protagonistas masculinos, sem identidade própria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Obsessão e rivalidade entre os protagonistas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a rivalidade intensa e a obsessão mútua entre os dois mágicos como ponto central, embora alguns considerem que a dinâmica se torne repetitiva ou excessivamente melodramática.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e duração excessiva",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas mencionam que o filme é longo e tem momentos arrastados, especialmente na segunda metade, com cenas que poderiam ser mais curtas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa não linear confusa",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas dizem que a estrutura fragmentada e as idas e vindas no tempo dificultam o entendimento inicial, embora outras achem que isso prende a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de explicação e didatismo",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certos comentários sugerem que o filme subestima a inteligência do espectador ao explicar demais a trama e os truques, em vez de deixar o público deduzir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) apontam uma recepção morna: o filme é visto como competente em atuação e direção, mas enfrenta críticas recorrentes sobre um twist previsível, personagens femininas mal desenvolvidas e um ritmo que alterna entre o envolvente e o arrastado. Este grupo específico destaca a originalidade do conceito, porém lamenta a execução excessivamente explicativa e a falta de profundidade emocional.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 91,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 10,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.2
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2008-05-17",
+        "max": "2026-09-16",
+        "p5": "2026-09-07",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Reviravolta e foreshadowing",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A reviravolta final é frequentemente descrita como surpreendente e engenhosa, com pistas sutis plantadas ao longo do filme que recompensam a atenção do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Obsessão e rivalidade",
+          "mencoes_aproximadas": 23,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A rivalidade entre os dois mágicos é vista como intensa e central, alimentada por uma obsessão mútua que leva a consequências extremas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações, especialmente as de Christian Bale e Hugh Jackman, são muito elogiadas pela intensidade e pela química em cena.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Recompensa em reassistir",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores afirmam que o filme melhora em uma segunda assistida, pois detalhes e pistas adicionais se tornam evidentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e roteiro de Nolan",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Christopher Nolan e o roteiro bem estruturado são destacados como pontos fortes, com uma narrativa que prende a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e montagem",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo do filme é por vezes considerado lento, mas a montagem e a estrutura não linear são vistas como eficazes para manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a reviravolta engenhosa, as atuações intensas e a direção de Nolan, com muitos espectadores apontando que o filme ganha ainda mais força em uma segunda assistida. Este grupo também menciona a obsessão e a rivalidade como temas centrais, embora alguns considerem o ritmo lento em certos momentos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "Diversas críticas mencionam que o filme é lento, com uma duração excessiva e cenas que se arrastam, tornando a experiência cansativa e pouco envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e duração excessiva",
+            "exemplo_parafraseado": "As reviews medianas mencionam que o filme é longo e tem momentos arrastados, especialmente na segunda metade, com cenas que poderiam ser mais curtas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e montagem",
+            "exemplo_parafraseado": "O ritmo do filme é por vezes considerado lento, mas a montagem e a estrutura não linear são vistas como eficazes para manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "As atuações, especialmente as de Christian Bale e Hugh Jackman, são muito elogiadas pela intensidade e pela química em cena.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Direção e roteiro de Nolan",
+            "exemplo_parafraseado": "A direção de Christopher Nolan e o roteiro bem estruturado são destacados como pontos fortes, com uma narrativa que prende a atenção.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e excessivamente explicativo",
+            "exemplo_parafraseado": "Várias reviews criticam que o filme confunde ao tentar ser complexo, com uma trama que se perde em explicações e reviravoltas óbvias, tornando a experiência arrastada e nada emocionante.",
+            "temas_no_mesmo_eixo": [
+              "Personagens femininas mal desenvolvidas",
+              "Reviravoltas previsíveis e mal executadas",
+              "Personagens rasos e sem carisma"
+            ]
+          },
+          "medianas": {
+            "mencoes": 36,
+            "de_n": 40,
+            "freq_pct": 90.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Twist previsível e explicações excessivas",
+            "exemplo_parafraseado": "Várias reviews medianas comentam que a reviravolta final é fácil de prever ou que o roteiro entrega pistas óbvias demais, tornando o desfecho anticlimático; outras criticam a necessidade de explicações longas para justificar tudo.",
+            "temas_no_mesmo_eixo": [
+              "Personagens femininas subdesenvolvidas",
+              "Obsessão e rivalidade entre os protagonistas",
+              "Narrativa não linear confusa",
+              "Excesso de explicação e didatismo"
+            ]
+          },
+          "positivas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Reviravolta e foreshadowing",
+            "exemplo_parafraseado": "A reviravolta final é frequentemente descrita como surpreendente e engenhosa, com pistas sutis plantadas ao longo do filme que recompensam a atenção do espectador.",
+            "temas_no_mesmo_eixo": [
+              "Obsessão e rivalidade"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Estilo de Nolan considerado pretensioso",
+            "exemplo_parafraseado": "Várias reviews comentam que o filme se leva a sério demais, com uma abordagem pretensiosa que prioriza explicações em vez de mostrar, resultando em algo artificial e cansativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Recompensa em reassistir",
+            "exemplo_parafraseado": "Muitos espectadores afirmam que o filme melhora em uma segunda assistida, pois detalhes e pistas adicionais se tornam evidentes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1487836985",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 109 (char 108)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Christopher Nolan e lançado em 2006, O Grande Truque é um filme de drama, mistério e ficção científica ambientado na Londres do século XIX. A narrativa acompanha dois ilusionistas cuja amizade se transforma em uma feroz disputa por supremacia ao longo dos anos, resultando em uma rivalidade obsessiva marcada por consequências trágicas.\n\nA experiência do longa-metragem se apoia em uma estrutura que desenvolve a rivalidade crescente entre os mágicos, combinando uma montagem orientada para o plantio de pistas ao longo da trama com uma cadência calculada que dita o tom da narrativa.\n\nOs diferentes grupos concentram-se nos mesmos aspectos da obra e discordam quanto ao veredito sobre o seu funcionamento. Na grande maioria das notas (~91%), a maior parte exalta a construção das reviravoltas e o uso de prenúncios na história, cerca de metade destaca o peso dramático da obsessão e rivalidade entre os protagonistas e uma parcela expressiva elogia a intensidade das atuações do elenco. Em contrapartida, para a perspectiva de quem se posiciona numa fração mínima das notas (~7%), muitos consideram as reviravoltas previsíveis e as explicações excessivas, uma parte avalia as personagens femininas como subdesenvolvidas e alguns apontam ressalvas na dinâmica da rivalidade. Por fim, sob o olhar presente numa fração ainda menor das notas (~1%), boa parte reprova o roteiro por julgá-lo confuso e excessivamente explicativo, vários criticam a falta de profundidade das figuras femininas e uma fatia menor se queixa de um ritmo lento e entediante.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 3,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 3,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "medianas",
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 0.778,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11878,
+      "completion_tokens": 1485,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11878
+    },
+    "latencia_s": 44.78
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem diretamente sobre a condução do roteiro e sua estrutura. Enquanto quase todos que recomendam destacam o impacto das pistas narrativas e das reviravoltas, quase todos que não recomendam consideram o texto confuso e com excesso de explicações.",
+    "texto_modelo": "As opiniões divergem diretamente sobre a condução do roteiro e sua estrutura. Enquanto quase todos que recomendam destacam o impacto das pistas narrativas e das reviravoltas, quase todos que não recomendam consideram o texto confuso e com excesso de explicações.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 49,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3669,
+      "completion_tokens": 208,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3669
+    },
+    "latencia_s": 14.35
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia tramas com pistas sutis e uma reviravolta engenhosa",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Reviravolta e foreshadowing",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por tramas sobre rivalidade intensa alimentada por obsessão mútua",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Obsessão e rivalidade",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza atuações intensas marcadas por forte química em cena",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações do elenco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita um andamento lento quando sustentado por uma montagem não linear eficaz",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e montagem",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com tramas confusas que se perdem em explicações excessivas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e excessivamente explicativo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com personagens femininas superficiais e sem profundidade própria",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens femininas mal desenvolvidas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se cansa com filmes longos de andamento arrastado e pouco envolvente",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com reviravoltas forçadas e sem impacto por respostas didáticas demais",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Reviravoltas previsíveis e mal executadas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16130,
+      "completion_tokens": 1226,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16130
+    },
+    "latencia_s": 26.52,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

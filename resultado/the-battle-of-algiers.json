@@ -1,0 +1,1695 @@
+{
+  "slug": "the-battle-of-algiers",
+  "data_coleta": "2026-09-16T19:23:44.943259+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 552,
+  "reviews_url": "https://letterboxd.com/film/the-battle-of-algiers/reviews/",
+  "ficha": {
+    "titulo": "A Batalha de Argel",
+    "sinopse_oficial": "Os eventos decisivos da guerra pela independência da Argélia, marco do processo de libertação das colônias européias na África. Entre 1954 e 1957 é mostrado o modo de agir dos dois lados do conflito, a Frente de Libertação Nacional e o exército francês. Enquanto que o exército usava técnicas de tortura e eliminava o maior número possível de rebeldes, a FLN desenvolvia técnicas não-convencionais de combate, baseadas na guerrilha e no terrorismo.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Guerra",
+      "História"
+    ],
+    "duracao_min": 121,
+    "diretor": "Gillo Pontecorvo",
+    "diretor_transliterado": false,
+    "ano": 1966,
+    "fonte": "tmdb",
+    "tmdb_id": 17295,
+    "tmdb_fetched_at": "2026-09-16T20:18:43+00:00",
+    "poster_path": "/egAZJTyIBDWeI9xlmx4sZwvZ2I.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/ze7GsNSv418o7pzqc9fb00LWWDk.jpg",
+      "/A5sZ1OxIH5StZgqBE9MslgsWjK6.jpg",
+      "/ceMGdDw8MDm7QEmVUDyR8EssOFG.jpg",
+      "/kIBBeb94FbNfLSljeFUxUoszflb.jpg",
+      "/d67dUXkwVnmyNlIVRu7ctpsE1U7.jpg",
+      "/uw242w2KHzzJL8QNXR1kx2XW5GA.jpg",
+      "/j0yBe5vkRgObJlfcH3qjBHXjLRI.jpg",
+      "/4D7qd4lKY1q0DWeOhVxq1r65BtM.jpg",
+      "/6xTnko6Spb1cZIOTXArLPtUcBB6.jpg",
+      "/fHEMUEDopLx5zIGq5I70y0woBK.jpg"
+    ],
+    "backdrop_path": "/ze7GsNSv418o7pzqc9fb00LWWDk.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/olhAGFnLvSNJlfEY1mQObsbl2IW.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/ze7GsNSv418o7pzqc9fb00LWWDk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/A5sZ1OxIH5StZgqBE9MslgsWjK6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ceMGdDw8MDm7QEmVUDyR8EssOFG.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/d67dUXkwVnmyNlIVRu7ctpsE1U7.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/kIBBeb94FbNfLSljeFUxUoszflb.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/uw242w2KHzzJL8QNXR1kx2XW5GA.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6xTnko6Spb1cZIOTXArLPtUcBB6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fHEMUEDopLx5zIGq5I70y0woBK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/sep5dN839KpGsA1llpVKPAMgOK5.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/sgBGet3CZ6u0uZVBvXobVPvyJdk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/teuZ3ViknX9zjt3aicWfhOqcY4q.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wzipVCtjWL8NBUCTl2zzgqDcyUI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-battle-of-algiers",
+      "titulo_letterboxd": "The Battle of Algiers",
+      "ano_letterboxd": 1966,
+      "tmdb_id_letterboxd": 17295,
+      "tmdb_id_escolhido": 17295,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "alternative_title",
+      "titulo_tmdb_correspondente": "The Battle of Algiers",
+      "ano_tmdb": 1966,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 149745,
+    "por_nivel": {
+      "0.5": 167,
+      "1.0": 259,
+      "1.5": 253,
+      "2.0": 1073,
+      "2.5": 1444,
+      "3.0": 6434,
+      "3.5": 11363,
+      "4.0": 38106,
+      "4.5": 34522,
+      "5.0": 56124
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-battle-of-algiers",
+    "coletado_em": "2026-09-16T04:18:26.828248+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 167,
+      "1.0": 259,
+      "1.5": 253,
+      "2.0": 1073,
+      "2.5": 1444,
+      "3.0": 6434,
+      "3.5": 11363,
+      "4.0": 38106,
+      "4.5": 34522,
+      "5.0": 56124
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 48,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 6,
+      "1.5": 8,
+      "2.0": 43,
+      "2.5": 30,
+      "3.0": 41,
+      "3.5": 2,
+      "4.0": 24,
+      "4.5": 17,
+      "5.0": 40
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 63,
+        "n_validas_pos_extensao": 63,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 71,
+        "n_validas_pos_extensao": 71,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 83,
+        "n_validas_pos_extensao": 83,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 7,
+      "3.0": 29,
+      "3.5": 52,
+      "4.0": 174,
+      "4.5": 157,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 552,
+        "min": "2009-02-21",
+        "max": "2026-09-16",
+        "p5": "2025-07-07",
+        "p50": "2026-07-05",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 168,
+          "min": "2021-12-11",
+          "max": "2026-09-12",
+          "p5": "2023-10-11",
+          "p50": "2026-02-28",
+          "p95": "2026-08-19"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2025-07-30",
+          "max": "2026-09-15",
+          "p5": "2025-12-05",
+          "p50": "2026-06-25",
+          "p95": "2026-09-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2009-02-21",
+          "max": "2026-09-16",
+          "p5": "2026-07-05",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 64,
+      "dias_por_100_paginas": 50.39370078740158,
+      "paginas_para_1_ano": 724
+    },
+    "identidade_letterboxd": {
+      "slug": "the-battle-of-algiers",
+      "titulo": "The Battle of Algiers",
+      "ano": 1966,
+      "tmdb_id_letterboxd": 17295,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1966,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 552
+  },
+  "origem_paginas": {
+    "_histograma/the-battle-of-algiers.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_4.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_16.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_64.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_256.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1249424065.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_824799236.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_1_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_1_page_2.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1420510139.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1113821288.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1160262134.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_4.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_5.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_6.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_7.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_page_8.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1450557037.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1428349596.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1416188747.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1400359291.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1396223997.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1390363628.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1328162780.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1277362108.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1255882250.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1235734873.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1229148908.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1199495752.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1131004824.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1012353955.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_940321866.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_898240113.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_2_5_page_7.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1486968960.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1417311227.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1346042414.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1309712620.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1262347856.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1258984896.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1220710023.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1212548889.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_4.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_5.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_6.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_7.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_8.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_9.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_page_14.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1496746252.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1467196796.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1465302601.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1461964897.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1449755271.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1442179350.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1430918016.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1412461778.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1378628873.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1352593894.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1344898332.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1343259841.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1337008775.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1263312550.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497247804.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_page_44.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497813540.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1494002705.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1383716484.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1382982688.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1382699061.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_5_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_4_5_page_39.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497541313.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1496542045.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1491384612.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1412802153.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_1.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_2.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_3.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_5.html": "cache",
+    "the-battle-of-algiers/pages/by_added/rated_5_page_128.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497443436.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497259138.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1497130600.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1496524124.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1496253150.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1496037420.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1495221513.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1494953151.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1494212528.html": "cache",
+    "the-battle-of-algiers/fulltext/viewing_1382350588.html": "cache",
+    "the-battle-of-algiers/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 6,
+        "fracao_profunda": 0.0
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-09-15",
+        "max": "2026-09-10",
+        "p5": "2025-04-27",
+        "p50": "2026-05-12",
+        "p95": "2026-09-02"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Entediante e difícil de assistir",
+          "mencoes_aproximadas": 27,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores descrevem o filme como monótono e arrastado, com alguns relatando dificuldade em terminar a sessão ou cochilos durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de desenvolvimento de personagens e emoção",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas apontam que os personagens são rasos e sem profundidade, e que o filme carece de carga emocional, impedindo uma conexão com o espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e desarticulado",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews mencionam que a narrativa é fragmentada e de difícil acompanhamento, com eventos que parecem desconexos ou mal explicados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom documental e falta de envolvimento dramático",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O estilo documental é criticado por criar distanciamento, tornando a experiência mais informativa do que envolvente, sem o drama esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas ou inexpressivas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews destacam atuações amadoras ou sem expressividade, que não conseguem dar vida aos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Aspectos técnicos deficientes",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Problemas como iluminação inconsistente, edição abrupta e qualidade de som são mencionados como falhas que prejudicam a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o tédio, a falta de envolvimento emocional e a narrativa confusa, com muitos espectadores relatando dificuldade em se conectar com os personagens e a história.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 14,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-01",
+        "max": "2026-09-13",
+        "p5": "2026-02-09",
+        "p50": "2026-07-17",
+        "p95": "2026-09-03"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 71,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 71,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram que o filme se arrasta em diversos momentos, especialmente na primeira metade, tornando a experiência cansativa e pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens rasos e falta de envolvimento emocional",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que os personagens são pouco desenvolvidos e funcionam apenas como peças para expor as ideias, o que dificulta criar vínculo ou torcida.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo documental e foco histórico",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas reconhecem a abordagem documental e a recriação histórica detalhada, mas muitas vezes isso torna o filme mais informativo do que cinematográfico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Equilíbrio entre os lados do conflito",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam a tentativa de mostrar ambos os lados sem maniqueísmo, enquanto outras criticam o que enxergam como uma imparcialidade limitada ou parcial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade técnica e fotografia",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo costuma elogiar a fotografia, a câmera e a recriação de época, mas há quem considere que esses aspectos não compensam a falta de engajamento narrativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Necessidade de contexto para apreciar",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas afirmam que o valor do filme depende muito do conhecimento prévio do contexto histórico e da importância política, mais do que do prazer de assistir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas apontam um reconhecimento da importância histórica e da qualidade técnica do filme, mas destacam com frequência um ritmo lento, personagens pouco desenvolvidos e uma abordagem documental que dificulta o envolvimento emocional. Este grupo específico tende a valorizar mais o significado político e o contexto do que a experiência cinematográfica em si.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 94,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 17
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2009-02-21",
+        "max": "2026-09-15",
+        "p5": "2026-06-13",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 17,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Autenticidade documental e realismo",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam que o filme parece um documentário ou registro jornalístico da época, com atores não profissionais e locações reais que conferem uma sensação de autenticidade raramente vista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relevância política e atemporalidade",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários apontam que o filme permanece extremamente relevante para debates contemporâneos sobre colonialismo, resistência e luta por liberdade, transcendendo seu contexto histórico original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora de Ennio Morricone",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música de Ennio Morricone é frequentemente elogiada por sua capacidade de intensificar a tensão e criar uma atmosfera opressiva, sendo considerada um dos pontos altos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia em preto e branco e estilo visual",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco e a câmera nervosa são citadas como elementos que contribuem para a imersão e para o tom realista, aproximando o espectador da experiência retratada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Equilíbrio na representação de ambos os lados",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews elogiam a ausência de maniqueísmo, com a narrativa mostrando ações e motivações tanto dos revolucionários quanto das forças coloniais, sem transformar a história em uma aventura heroica simplista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e imersão",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como uma experiência intensa e visceral, que prende a atenção do início ao fim e provoca reflexões profundas sobre violência, sacrifício e liberdade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente a autenticidade documental, a trilha sonora de Morricone e a relevância política atemporal. Este grupo também valoriza o equilíbrio na representação dos dois lados do conflito e o impacto emocional proporcionado pela fotografia e direção.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Entediante e difícil de assistir",
+            "exemplo_parafraseado": "Muitos espectadores descrevem o filme como monótono e arrastado, com alguns relatando dificuldade em terminar a sessão ou cochilos durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews medianas consideram que o filme se arrasta em diversos momentos, especialmente na primeira metade, tornando a experiência cansativa e pouco envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas ou inexpressivas",
+            "exemplo_parafraseado": "Algumas reviews destacam atuações amadoras ou sem expressividade, que não conseguem dar vida aos personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Aspectos técnicos deficientes",
+            "exemplo_parafraseado": "Problemas como iluminação inconsistente, edição abrupta e qualidade de som são mencionados como falhas que prejudicam a experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Qualidade técnica e fotografia",
+            "exemplo_parafraseado": "Este grupo costuma elogiar a fotografia, a câmera e a recriação de época, mas há quem considere que esses aspectos não compensam a falta de engajamento narrativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia em preto e branco e estilo visual",
+            "exemplo_parafraseado": "A fotografia em preto e branco e a câmera nervosa são citadas como elementos que contribuem para a imersão e para o tom realista, aproximando o espectador da experiência retratada.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Falta de desenvolvimento de personagens e emoção",
+            "exemplo_parafraseado": "As críticas apontam que os personagens são rasos e sem profundidade, e que o filme carece de carga emocional, impedindo uma conexão com o espectador.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro confuso e desarticulado"
+            ]
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Personagens rasos e falta de envolvimento emocional",
+            "exemplo_parafraseado": "Este grupo destaca que os personagens são pouco desenvolvidos e funcionam apenas como peças para expor as ideias, o que dificulta criar vínculo ou torcida.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Equilíbrio na representação de ambos os lados",
+            "exemplo_parafraseado": "Diversas reviews elogiam a ausência de maniqueísmo, com a narrativa mostrando ações e motivações tanto dos revolucionários quanto das forças coloniais, sem transformar a história em uma aventura heroica simplista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de Ennio Morricone",
+            "exemplo_parafraseado": "A música de Ennio Morricone é frequentemente elogiada por sua capacidade de intensificar a tensão e criar uma atmosfera opressiva, sendo considerada um dos pontos altos do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Tom documental e falta de envolvimento dramático",
+            "exemplo_parafraseado": "O estilo documental é criticado por criar distanciamento, tornando a experiência mais informativa do que envolvente, sem o drama esperado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Estilo documental e foco histórico",
+            "exemplo_parafraseado": "As reviews medianas reconhecem a abordagem documental e a recriação histórica detalhada, mas muitas vezes isso torna o filme mais informativo do que cinematográfico.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Autenticidade documental e realismo",
+            "exemplo_parafraseado": "Muitas reviews destacam que o filme parece um documentário ou registro jornalístico da época, com atores não profissionais e locações reais que conferem uma sensação de autenticidade raramente vista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Impacto emocional e imersão",
+            "exemplo_parafraseado": "O filme é descrito como uma experiência intensa e visceral, que prende a atenção do início ao fim e provoca reflexões profundas sobre violência, sacrifício e liberdade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Necessidade de contexto para apreciar",
+            "exemplo_parafraseado": "Várias reviews medianas afirmam que o valor do filme depende muito do conhecimento prévio do contexto histórico e da importância política, mais do que do prazer de assistir.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Equilíbrio entre os lados do conflito",
+            "exemplo_parafraseado": "Algumas reviews elogiam a tentativa de mostrar ambos os lados sem maniqueísmo, enquanto outras criticam o que enxergam como uma imparcialidade limitada ou parcial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Relevância política e atemporalidade",
+            "exemplo_parafraseado": "Vários comentários apontam que o filme permanece extremamente relevante para debates contemporâneos sobre colonialismo, resistência e luta por liberdade, transcendendo seu contexto histórico original.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia_e_contraste"
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Gillo Pontecorvo e lançado em 1966, A Batalha de Argel é um drama histórico e de guerra que retrata os eventos decisivos da luta pela independência da Argélia. A narrativa acompanha as ações e estratégias de ambos os lados do conflito colonial, expondo as táticas de tortura empregadas pelo exército francês e os métodos de guerrilha adotados pela Frente de Libertação Nacional.\n\nA obra adota uma estrutura de tom documental e foco na reconstituição histórica, apresentando os dois lados do confronto em cena. A cadência dos acontecimentos organiza a narrativa em torno dos procedimentos e das dinâmicas da disputa retratada.\n\nNa grande maioria das notas (~94%), a maior parte destaca a autenticidade documental e o realismo da encenação. Uma parcela expressiva ressalta a relevância política e a atemporalidade das discussões em torno da luta anticolonial, enquanto vários comentários enfatizam o papel da trilha sonora de Ennio Morricone na ambientação.\n\nPara quem se posiciona numa fração mínima das notas (~5%), muitos apontam um ritmo lento e arrastado durante a exibição. Nessa mesma perspectiva, boa parte menciona a presença de personagens rasos e a carência de envolvimento emocional, e um número considerável analisa o peso do estilo documental e do foco estritamente histórico.\n\nSob o ponto de vista expresso numa fração ainda menor das notas (~1%), a maioria descreve a produção como entediante e difícil de assistir. Além disso, cerca de metade nota a falta de desenvolvimento de personagens e de carga dramática, enquanto aproximadamente metade aponta um roteiro confuso e desarticulado.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 1,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 0,
+      "aplicado": true
+    },
+    "uso": {
+      "prompt_tokens": 11705,
+      "completion_tokens": 1508,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11705
+    },
+    "latencia_s": 39.1
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria dos que recomendam ressalta a crítica social por sua urgência política duradoura. Em contrapartida, a maioria dos que não recomendam centra a atenção no roteiro, apontando figuras pouco construídas e carência de impacto afetivo.",
+    "texto_modelo": "A maioria dos que recomendam ressalta a crítica social por sua urgência política duradoura. Em contrapartida, a maioria dos que não recomendam centra a atenção no roteiro, apontando figuras pouco construídas e carência de impacto afetivo.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 36,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 33,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 42,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3612,
+      "completion_tokens": 180,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3612
+    },
+    "latencia_s": 9.52
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma estética documental realista gravada em locações autênticas com elenco não profissional",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Autenticidade documental e realismo",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por discussões políticas atemporais sobre colonialismo, resistência e lutas por liberdade",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Relevância política e atemporalidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma trilha sonora de Ennio Morricone que intensifica a tensão",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora de Ennio Morricone",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma experiência visceral e envolvente que suscite reflexões sobre violência e liberdade",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e imersão",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um andamento monótono e arrastado difícil de acompanhar",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Entediante e difícil de assistir",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se frustra com personagens sem profundidade e narrativas com pouca carga emocional",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de desenvolvimento de personagens e emoção",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "não gosta de narrativas fragmentadas com acontecimentos desconexos ou difíceis de acompanhar",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e desarticulado",
+        "rotulo_forca": "cerca de metade"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10671,
+      "completion_tokens": 1001,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10671
+    },
+    "latencia_s": 15.81,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "slug": "malcolm-x-1992",
+  "coletado_em": "2026-09-16T04:27:22.686179+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 219,
+    "1.0": 457,
+    "1.5": 382,
+    "2.0": 2129,
+    "2.5": 2810,
+    "3.0": 15836,
+    "3.5": 24161,
+    "4.0": 68353,
+    "4.5": 46413,
+    "5.0": 65883
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 23,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 96,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 60,
+    "4.5": 48,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 7,
+    "1.0": 7,
+    "1.5": 14,
+    "2.0": 40,
+    "2.5": 36,
+    "3.0": 50,
+    "3.5": 7,
+    "4.0": 22,
+    "4.5": 20,
+    "5.0": 24
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 14,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 68,
+      "n_validas_pos_extensao": 68,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 86,
+      "n_validas_pos_extensao": 86,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 73,
+      "n_validas_pos_extensao": 73,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 1,
+    "2.0": 8,
+    "2.5": 11,
+    "3.0": 59,
+    "3.5": 90,
+    "4.0": 256,
+    "4.5": 174,
+    "5.0": 247
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 551,
+      "min": "1992-01-01",
+      "max": "2026-09-16",
+      "p5": "2025-01-26",
+      "p50": "2026-06-29",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 167,
+        "min": "1994-09-03",
+        "max": "2026-09-11",
+        "p5": "2024-09-05",
+        "p50": "2025-09-28",
+        "p95": "2026-08-20"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2019-01-22",
+        "max": "2026-09-15",
+        "p5": "2025-08-16",
+        "p50": "2026-06-12",
+        "p95": "2026-09-01"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "1992-01-01",
+        "max": "2026-09-16",
+        "p5": "2026-06-08",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 13,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 84,
+    "dias_por_100_paginas": 133.33333333333334,
+    "paginas_para_1_ano": 274
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 620,
+      "dias_por_100_paginas": 62000.0,
+      "paginas_para_1_ano": 1
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 180,
+      "dias_por_100_paginas": 18000.0,
+      "paginas_para_1_ano": 2
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 334,
+      "dias_por_100_paginas": 33400.0,
+      "paginas_para_1_ano": 1
+    },
+    "2.0": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 625,
+      "dias_por_100_paginas": 8928.57142857143,
+      "paginas_para_1_ano": 4
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 241,
+      "dias_por_100_paginas": 4820.0,
+      "paginas_para_1_ano": 8
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 30,
+      "dias": 382,
+      "dias_por_100_paginas": 1317.2413793103449,
+      "paginas_para_1_ano": 28
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 5,
+      "dias_por_100_paginas": 500.0,
+      "paginas_para_1_ano": 73
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 99,
+      "dias_por_100_paginas": 157.14285714285714,
+      "paginas_para_1_ano": 232
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 44,
+      "dias": 51,
+      "dias_por_100_paginas": 118.6046511627907,
+      "paginas_para_1_ano": 308
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 62,
+      "dias": 37,
+      "dias_por_100_paginas": 60.65573770491803,
+      "paginas_para_1_ano": 602
+    }
+  },
+  "ano_lancamento": 1992,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "malcolm-x-1992",
+    "titulo": "Malcolm X",
+    "ano": 1992,
+    "tmdb_id_letterboxd": 1883,
+    "fonte": "pagina_letterboxd"
+  }
+}

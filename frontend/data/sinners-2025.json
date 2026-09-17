@@ -1,0 +1,1615 @@
+{
+  "slug": "sinners-2025",
+  "data_coleta": "2026-09-16T19:30:09.966499+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/sinners-2025/reviews/",
+  "ficha": {
+    "titulo": "Pecadores",
+    "sinopse_oficial": "Dispostos a deixar suas vidas conturbadas para trás, irmãos gêmeos retornam à sua cidade natal para recomeçar suas vidas do zero, quando descobrem que um mal ainda maior está à espera deles para recebê-los de volta.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Ação",
+      "Thriller"
+    ],
+    "duracao_min": 138,
+    "diretor": "Ryan Coogler",
+    "diretor_transliterado": false,
+    "ano": 2025,
+    "fonte": "tmdb",
+    "tmdb_id": 1233413,
+    "tmdb_fetched_at": "2026-09-16T20:18:45+00:00",
+    "poster_path": "/v0Ljeti537c6cNKweuEN0iaU3x4.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+      "/j7KqDRzjbvIjDv7cdHz9G3ZYEQy.jpg",
+      "/7dQTILcUKw8chDiLj8TgPXxRuED.jpg",
+      "/mTSL8FmdAO1YiPQzr0fUacCUS0H.jpg",
+      "/sqkSVOijtdqP1yPQ8vZidxXFauQ.jpg",
+      "/aWM8eYmhqBgH4YC5WLLPTJxlc2t.jpg",
+      "/zhr4T3FDf0J6d6wjd3CB7aLADvx.jpg",
+      "/wHhXxZcmF29hZUoRsUOqmGdNNma.jpg",
+      "/k2ZOy1r6JFpF6lmdUtx8hUPxiuU.jpg",
+      "/jONSbZ92K3tvDEsYrBuog5DW1KL.jpg"
+    ],
+    "backdrop_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/7Ma7ex9a3PIJ38ShHtobzUHpd9F.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/j7KqDRzjbvIjDv7cdHz9G3ZYEQy.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/27imQOby5c23sOARUo6UFRpqhFM.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fOaOIBuL4AuinSUpDa21UzafpLF.jpg",
+        "still_largura": 2464,
+        "still_altura": 1386
+      },
+      {
+        "still_path": "/hjhjrs5NLnJAAE2Ddp002KzYvPQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/xHlCbQHjt93wsN6okqe9HgeT9iy.jpg",
+        "still_largura": 2815,
+        "still_altura": 1583
+      },
+      {
+        "still_path": "/6UxbdumQwtiCvkJnpILLPkGWah9.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/nqTgt5oTtmXgAm5aq2voxRwk10s.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/gr0UzcH4uSf8TirGCf8nhPOLY63.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/kDWmaH84SFAqCttD0l8RZFgLMyT.jpg",
+        "still_largura": 2294,
+        "still_altura": 1290
+      },
+      {
+        "still_path": "/ns7RgG5RrvUkjmEEZulLppicQl5.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uNW6Ov0jV9JnzbbxWNMR5TPpHN8.jpg",
+        "still_largura": 2294,
+        "still_altura": 1290
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "sinners-2025",
+      "titulo_letterboxd": "Sinners",
+      "ano_letterboxd": 2025,
+      "tmdb_id_letterboxd": 1233413,
+      "tmdb_id_escolhido": 1233413,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Sinners",
+      "ano_tmdb": 2025,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4858926,
+    "por_nivel": {
+      "0.5": 10465,
+      "1.0": 24725,
+      "1.5": 18743,
+      "2.0": 89904,
+      "2.5": 105995,
+      "3.0": 395179,
+      "3.5": 540957,
+      "4.0": 1314893,
+      "4.5": 870855,
+      "5.0": 1487210
+    },
+    "por_bucket": {
+      "negativas": 3,
+      "medianas": 10,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "sinners-2025",
+    "coletado_em": "2026-09-16T04:36:19.898663+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 10465,
+      "1.0": 24725,
+      "1.5": 18743,
+      "2.0": 89904,
+      "2.5": 105995,
+      "3.0": 395179,
+      "3.5": 540957,
+      "4.0": 1314893,
+      "4.5": 870855,
+      "5.0": 1487210
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 24,
+      "2.5": 18,
+      "3.0": 27,
+      "3.5": 6,
+      "4.0": 12,
+      "4.5": 8,
+      "5.0": 12
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "1.5": 1,
+          "2.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 1,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 15,
+      "2.5": 18,
+      "3.0": 68,
+      "3.5": 93,
+      "4.0": 226,
+      "4.5": 150,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 716,
+        "min": "2025-01-01",
+        "max": "2026-09-16",
+        "p5": "2026-04-28",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 264,
+          "min": "2025-01-01",
+          "max": "2026-09-16",
+          "p5": "2026-03-25",
+          "p50": "2026-09-08",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2025-04-23",
+          "max": "2026-09-16",
+          "p5": "2026-07-14",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 236,
+          "min": "2025-04-16",
+          "max": "2026-09-16",
+          "p5": "2026-03-28",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 4,
+      "dias_por_100_paginas": 3.1496062992125986,
+      "paginas_para_1_ano": 11589
+    },
+    "identidade_letterboxd": {
+      "slug": "sinners-2025",
+      "titulo": "Sinners",
+      "ano": 2025,
+      "tmdb_id_letterboxd": 1233413,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2025,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 716
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 3,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-01-01",
+        "max": "2026-09-15",
+        "p5": "2026-08-21",
+        "p50": "2026-09-09",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 121,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 121,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que a primeira metade é arrastada e sem acontecimentos, com uma longa construção de personagens que não leva a lugar nenhum, tornando a experiência entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e mal desenvolvido",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por ser confuso, cheio de subtramas mal explicadas e reviravoltas sem sentido, com uma mistura de gêneros que não se sustenta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção criticadas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é descrita como feia e cheia de foco suave excessivo, enquanto a direção é vista como incompetente e sem cuidado com o enquadramento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas e personagens rasos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam atuações canhestras e personagens bidimensionais, incluindo o protagonista que não convence em seu papel duplo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mistura de gêneros mal executada",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A tentativa de fundir musical, terror e drama histórico é vista como desastrosa, com números musicais que não se encaixam e uma trama de vampiros mal integrada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de hype e decepção",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos se dizem decepcionados após grande expectativa, considerando o filme superestimado e sem qualidades que justifiquem a aclamação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de ritmo, roteiro confuso e direção, além de considerarem a mistura de gêneros mal executada. Este grupo também menciona decepção em relação ao hype e criticas às atuações e personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 34,
+        "p5": 1,
+        "p50": 5,
+        "p95": 17,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-14",
+        "max": "2026-09-15",
+        "p5": "2026-09-05",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 105,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 105,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estrutura desequilibrada (início forte, queda no final)",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas destacam que a primeira parte é envolvente e promissora, mas que o ritmo desacelera ou se torna apressado e genérico no terço final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa vs. realidade (superestimado)",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona que o filme foi muito hypado e não correspondeu às expectativas, sendo considerado superestimado por parte das reviews.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e música",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a trilha sonora e a música como pontos altos, frequentemente citando a mistura de blues e outros gêneros como um dos melhores aspectos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações (Michael B. Jordan e elenco)",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há menções à atuação de Michael B. Jordan, com elogios ao duplo papel, mas também críticas sobre a falta de profundidade ou sobre não ser digna de um Oscar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e narrativa confusa ou simplista",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o roteiro é simplista, com subtramas não desenvolvidas e uma narrativa que se perde ou se torna confusa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e escolhas visuais (incluindo proporção de tela)",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é elogiada por sua beleza, mas as mudanças de proporção de tela e os movimentos de câmera geram opiniões divididas, sendo considerados distrativos por alguns.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um desequilíbrio entre uma primeira parte elogiada e um desfecho considerado fraco ou apressado, além de destacarem a trilha sonora e a fotografia como pontos fortes, enquanto criticam o roteiro e a construção da narrativa. Este grupo também expressa decepção em relação às expectativas criadas pelo hype em torno do filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 87,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-31",
+        "max": "2026-09-16",
+        "p5": "2026-09-11",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 47,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 93,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 72,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 72,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Michael B. Jordan",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ator entrega uma performance dupla impressionante, com dois papéis distintos que evitam parecer um mero truque, e muitos consideram este um dos melhores trabalhos de sua carreira.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e música",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é constantemente elogiada, não apenas como pano de fundo, mas como elemento que impulsiona a narrativa e cria a atmosfera, com destaque para a trilha sonora e as canções originais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem sobre racismo e cultura negra",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a forma como o filme aborda o racismo, a segregação e a preservação da cultura negra, usando o vampirismo como metáfora para apropriação cultural e trauma histórico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e visuais",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é descrita como bela e marcante, com planos cuidadosamente compostos que capturam a atmosfera da época e contribuem para a imersão na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Originalidade e ambição",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como uma obra ousada e original, que combina gêneros e temas de maneira inovadora, sendo comparado a clássicos e elogiado por sua ambição cinematográfica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e desenvolvimento do roteiro",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o ritmo é lento na primeira parte e que o roteiro se acelera demais no final, com reviravoltas que podem parecer apressadas ou pouco desenvolvidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam especialmente a atuação de Michael B. Jordan, a trilha sonora envolvente e a mensagem sobre racismo e cultura negra, além de elogiarem a fotografia e a originalidade do filme. Apesar dos elogios, alguns textos mencionam ressalvas quanto ao ritmo e ao desenvolvimento do roteiro, principalmente na reta final.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Várias reviews reclamam que a primeira metade é arrastada e sem acontecimentos, com uma longa construção de personagens que não leva a lugar nenhum, tornando a experiência entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e desenvolvimento do roteiro",
+            "exemplo_parafraseado": "Algumas reviews apontam que o ritmo é lento na primeira parte e que o roteiro se acelera demais no final, com reviravoltas que podem parecer apressadas ou pouco desenvolvidas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas e personagens rasos",
+            "exemplo_parafraseado": "Algumas reviews apontam atuações canhestras e personagens bidimensionais, incluindo o protagonista que não convence em seu papel duplo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações (Michael B. Jordan e elenco)",
+            "exemplo_parafraseado": "Há menções à atuação de Michael B. Jordan, com elogios ao duplo papel, mas também críticas sobre a falta de profundidade ou sobre não ser digna de um Oscar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Michael B. Jordan",
+            "exemplo_parafraseado": "O ator entrega uma performance dupla impressionante, com dois papéis distintos que evitam parecer um mero truque, e muitos consideram este um dos melhores trabalhos de sua carreira.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção criticadas",
+            "exemplo_parafraseado": "A fotografia é descrita como feia e cheia de foco suave excessivo, enquanto a direção é vista como incompetente e sem cuidado com o enquadramento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e escolhas visuais (incluindo proporção de tela)",
+            "exemplo_parafraseado": "A fotografia é elogiada por sua beleza, mas as mudanças de proporção de tela e os movimentos de câmera geram opiniões divididas, sendo considerados distrativos por alguns.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e visuais",
+            "exemplo_parafraseado": "A fotografia é descrita como bela e marcante, com planos cuidadosamente compostos que capturam a atmosfera da época e contribuem para a imersão na história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro confuso e mal desenvolvido",
+            "exemplo_parafraseado": "O roteiro é criticado por ser confuso, cheio de subtramas mal explicadas e reviravoltas sem sentido, com uma mistura de gêneros que não se sustenta.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Estrutura desequilibrada (início forte, queda no final)",
+            "exemplo_parafraseado": "Várias reviews medianas destacam que a primeira parte é envolvente e promissora, mas que o ritmo desacelera ou se torna apressado e genérico no terço final.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e narrativa confusa ou simplista"
+            ]
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Originalidade e ambição",
+            "exemplo_parafraseado": "O filme é visto como uma obra ousada e original, que combina gêneros e temas de maneira inovadora, sendo comparado a clássicos e elogiado por sua ambição cinematográfica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e música",
+            "exemplo_parafraseado": "As reviews medianas elogiam a trilha sonora e a música como pontos altos, frequentemente citando a mistura de blues e outros gêneros como um dos melhores aspectos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e música",
+            "exemplo_parafraseado": "A música é constantemente elogiada, não apenas como pano de fundo, mas como elemento que impulsiona a narrativa e cria a atmosfera, com destaque para a trilha sonora e as canções originais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Mistura de gêneros mal executada",
+            "exemplo_parafraseado": "A tentativa de fundir musical, terror e drama histórico é vista como desastrosa, com números musicais que não se encaixam e uma trama de vampiros mal integrada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de hype e decepção",
+            "exemplo_parafraseado": "Muitos se dizem decepcionados após grande expectativa, considerando o filme superestimado e sem qualidades que justifiquem a aclamação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Expectativa vs. realidade (superestimado)",
+            "exemplo_parafraseado": "Este grupo menciona que o filme foi muito hypado e não correspondeu às expectativas, sendo considerado superestimado por parte das reviews.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Mensagem sobre racismo e cultura negra",
+            "exemplo_parafraseado": "As reviews destacam a forma como o filme aborda o racismo, a segregação e a preservação da cultura negra, usando o vampirismo como metáfora para apropriação cultural e trauma histórico.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Lançado em 2025 e dirigido por Ryan Coogler, Pecadores combina elementos dos gêneros de terror, ação e thriller ao longo de sua narrativa. A história acompanha irmãos gêmeos dispostos a deixar suas vidas conturbadas para trás ao retornarem à sua cidade natal para recomeçar do zero, mas que descobrem que um mal ainda maior está à espera deles.\n\nA experiência do filme constrói-se sobre uma estrutura que alterna diferentes ritmos, apoiando-se em uma atmosfera marcada pelo uso constante da música e pela combinação de múltiplos gêneros narrativos.\n\nOs diferentes grupos avaliativos concentram-se nas mesmas características e concordam sobre o que o filme apresenta, discordando essencialmente no veredito sobre a sua execução. Na grande maioria das notas (~87%), cerca de metade destaca a atuação de Michael B. Jordan, enquanto aproximadamente metade elogia a trilha sonora e a condução musical. Além disso, boa parte enfatiza o tratamento dado à mensagem sobre racismo e cultura negra.\n\nNa perspectiva de quem compõe uma fração mínima das notas (~10%), uma parcela expressiva aponta uma estrutura desequilibrada, com início promissor e queda no final. Nesse estrato, vários apontam um descompasso entre a expectativa gerada pelo hype e o resultado entregue, embora um número considerável ainda trate a trilha sonora e as canções como qualidades evidentes. Por fim, sob o ponto de vista de uma fração ainda menor das notas (~3%), muitos condenam o ritmo lento e arrastado da produção, boa parte critica o roteiro por considerá-lo confuso e mal desenvolvido, e alguns expressam descontentamento com a fotografia e a direção.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11820,
+      "completion_tokens": 1482,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11820
+    },
+    "latencia_s": 58.1
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divisão de opiniões gira em torno da estrutura do roteiro e de seu funcionamento. Enquanto a maioria dos que desaprovam avalia o texto como desordenado e pouco desenvolvido, quem recomenda enxerga inventividade e ousadia na mesma narrativa.",
+    "texto_modelo": "A divisão de opiniões gira em torno da estrutura do roteiro e de seu funcionamento. Enquanto a maioria dos que desaprovam avalia o texto como desordenado e pouco desenvolvido, quem recomenda enxerga inventividade e ousadia na mesma narrativa.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 38,
+        "n_ancoras": 1,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3645,
+      "completion_tokens": 196,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3645
+    },
+    "latencia_s": 11.31
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia a atuação impressionante de Michael B. Jordan interpretando papéis distintos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Michael B. Jordan",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza canções originais e trilha que não apenas acompanham, mas impulsionam a narrativa",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e música",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca temas de racismo e segregação abordados por meio de metáforas de vampirismo",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem sobre racismo e cultura negra",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma fotografia marcante com planos compostos para criar imersão de época",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e visuais",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com ritmo arrastado e foco em construções de personagens sem acontecimentos",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "muitos",
+        "par_recusado": "POS-F"
+      },
+      {
+        "texto": "se frustra com narrativas confusas, cheias de subtramas mal explicadas e reviravoltas desconexas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro confuso e mal desenvolvido",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com direção descuidada nos enquadramentos e fotografia com foco suave excessivo",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e direção criticadas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com a fusão desarticulada entre horror, números musicais e drama de época",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mistura de gêneros mal executada",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 3,
+        "peso_texto": "~3% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "POS-F",
+        "lado": "vale_a_pena",
+        "regra": "R2",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16140,
+      "completion_tokens": 1467,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 16140
+    },
+    "latencia_s": 33.5,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

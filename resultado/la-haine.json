@@ -1,0 +1,1669 @@
+{
+  "slug": "la-haine",
+  "data_coleta": "2026-09-16T18:57:17.166750+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/la-haine/reviews/",
+  "ficha": {
+    "titulo": "O Ódio",
+    "sinopse_oficial": "Um dia na vida de três jovens delinquentes, um árabe, um judeu e um negro que moram num conjunto habitacional pobre de Paris, mostra a que ponto pode chegar a discriminação racial de policiais hostis.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 98,
+    "diretor": "Mathieu Kassovitz",
+    "diretor_transliterado": false,
+    "ano": 1995,
+    "fonte": "tmdb",
+    "tmdb_id": 406,
+    "tmdb_fetched_at": "2026-09-16T20:18:37+00:00",
+    "poster_path": "/75WjFRiElQaEGRqNKJdTSB47rMR.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/viGCwLxupyoaLsa6hrnu1gYrB0B.jpg",
+      "/k61xLJgPo7ScxHLLiBzTM9IDaB7.jpg",
+      "/3PGKBMDpsFhAB6xdHEJOKs3AhxW.jpg",
+      "/cClyotANXQwB65cvqS18bRL6qq8.jpg",
+      "/eujiopgBVgh3uY8kWXLwZzfaUHR.jpg",
+      "/htqMsuNHEpMv6uIlitzUp22ryaV.jpg",
+      "/axNThF9ftixKvSLqTPmJ7hWkTVi.jpg",
+      "/hsqfWqFEvkZfFurIxIAAWJbxjg2.jpg",
+      "/9x8W0qtPlOolZCpoqOuZPMkFgs5.jpg",
+      "/fD8Alm5N2Jmmjzm4Z5AbtAWeiKj.jpg"
+    ],
+    "backdrop_path": "/viGCwLxupyoaLsa6hrnu1gYrB0B.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/a1KwZrqG2wfpUYxdT2VmywyAlkn.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/viGCwLxupyoaLsa6hrnu1gYrB0B.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7QNwoDHJV2VJzuzv8so2JRR0bDI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fD8Alm5N2Jmmjzm4Z5AbtAWeiKj.jpg",
+        "still_largura": 3000,
+        "still_altura": 1688
+      },
+      {
+        "still_path": "/3pdFHHqlJi4ZXZBcmvcqPYKxqNT.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/53N3mnIixLU2xJbYbITUKKF8SGp.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8INOgo7FAv0Yhh7nMujnu749icT.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bXisDuARmFB7HOa2iaTtNtpWut8.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hbe0UlRjS9S17Vs85tB1KiAe4Le.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lrg5gx56AMFo2ljFz1clWNHHAg1.jpg",
+        "still_largura": 2898,
+        "still_altura": 1630
+      },
+      {
+        "still_path": "/oUG4SAJEkaU5Ez28X0Ieig3dd4r.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uTlrnBO8NpQgwZg5ICOu7NYLN5f.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/wqa5XnJdTKRmeavnoTEh4Q0mUhb.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "la-haine",
+      "titulo_letterboxd": "La Haine",
+      "ano_letterboxd": 1995,
+      "tmdb_id_letterboxd": 406,
+      "tmdb_id_escolhido": 406,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "La Haine",
+      "ano_tmdb": 1995,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1191819,
+    "por_nivel": {
+      "0.5": 1355,
+      "1.0": 2652,
+      "1.5": 2089,
+      "2.0": 9148,
+      "2.5": 11520,
+      "3.0": 52088,
+      "3.5": 86358,
+      "4.0": 289238,
+      "4.5": 253597,
+      "5.0": 483774
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "la-haine",
+    "coletado_em": "2026-09-16T03:18:34.113202+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1355,
+      "1.0": 2652,
+      "1.5": 2089,
+      "2.0": 9148,
+      "2.5": 11520,
+      "3.0": 52088,
+      "3.5": 86358,
+      "4.0": 289238,
+      "4.5": 253597,
+      "5.0": 483774
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 48,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 7,
+      "1.5": 4,
+      "2.0": 26,
+      "2.5": 25,
+      "3.0": 25,
+      "3.5": 3,
+      "4.0": 12,
+      "4.5": 11,
+      "5.0": 22
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 6,
+      "3.0": 28,
+      "3.5": 46,
+      "4.0": 153,
+      "4.5": 134,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 600,
+        "min": "2021-01-15",
+        "max": "2026-09-16",
+        "p5": "2026-08-10",
+        "p50": "2026-09-07",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 204,
+          "min": "2024-10-08",
+          "max": "2026-09-15",
+          "p5": "2026-08-08",
+          "p50": "2026-08-25",
+          "p95": "2026-09-11"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2025-02-12",
+          "max": "2026-09-16",
+          "p5": "2026-08-22",
+          "p50": "2026-09-07",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2021-01-15",
+          "max": "2026-09-16",
+          "p5": "2026-09-04",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 10,
+      "dias_por_100_paginas": 7.874015748031496,
+      "paginas_para_1_ano": 4636
+    },
+    "identidade_letterboxd": {
+      "slug": "la-haine",
+      "titulo": "La Haine",
+      "ano": 1995,
+      "tmdb_id_letterboxd": 406,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1995,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 600
+  },
+  "origem_paginas": {
+    "_histograma/la-haine.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_4.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_16.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_64.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_256.html": "cache",
+    "la-haine/pages/by_added/rated_0_5_page_1.html": "cache",
+    "la-haine/fulltext/viewing_1487009045.html": "cache",
+    "la-haine/fulltext/viewing_1484925689.html": "cache",
+    "la-haine/fulltext/viewing_1483482964.html": "cache",
+    "la-haine/pages/by_added/rated_1_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_1_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_1_5_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_1_5_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_4.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_5.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_6.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_7.html": "cache",
+    "la-haine/pages/by_added/rated_2_page_8.html": "cache",
+    "la-haine/fulltext/viewing_1491354116.html": "cache",
+    "la-haine/fulltext/viewing_1484145695.html": "cache",
+    "la-haine/fulltext/viewing_1483571107.html": "cache",
+    "la-haine/fulltext/viewing_1476732234.html": "cache",
+    "la-haine/fulltext/viewing_1468618672.html": "cache",
+    "la-haine/fulltext/viewing_1445301804.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_4.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_5.html": "cache",
+    "la-haine/pages/by_added/rated_2_5_page_6.html": "cache",
+    "la-haine/fulltext/viewing_1496413868.html": "cache",
+    "la-haine/fulltext/viewing_1485009907.html": "cache",
+    "la-haine/fulltext/viewing_1479127792.html": "cache",
+    "la-haine/fulltext/viewing_1472731401.html": "cache",
+    "la-haine/fulltext/viewing_1463716131.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_4.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_5.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_6.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_7.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_8.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_9.html": "cache",
+    "la-haine/pages/by_added/rated_3_page_14.html": "cache",
+    "la-haine/fulltext/viewing_1496160338.html": "cache",
+    "la-haine/fulltext/viewing_1495940064.html": "cache",
+    "la-haine/fulltext/viewing_1493907709.html": "cache",
+    "la-haine/fulltext/viewing_1490380350.html": "cache",
+    "la-haine/fulltext/viewing_1482596926.html": "cache",
+    "la-haine/fulltext/viewing_1475757896.html": "cache",
+    "la-haine/pages/by_added/rated_3_5_page_1.html": "cache",
+    "la-haine/fulltext/viewing_1497558056.html": "cache",
+    "la-haine/pages/by_added/rated_4_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_4_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_4_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_4_page_38.html": "cache",
+    "la-haine/fulltext/viewing_1497728422.html": "cache",
+    "la-haine/fulltext/viewing_1497480724.html": "cache",
+    "la-haine/pages/by_added/rated_4_5_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_4_5_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_4_5_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_4_5_page_34.html": "cache",
+    "la-haine/fulltext/viewing_1488368023.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_1.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_2.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_3.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_5.html": "cache",
+    "la-haine/pages/by_added/rated_5_page_128.html": "cache",
+    "la-haine/fulltext/viewing_1497732312.html": "cache",
+    "la-haine/fulltext/viewing_1497550238.html": "cache",
+    "la-haine/fulltext/viewing_1497465588.html": "cache",
+    "la-haine/fulltext/viewing_1490219746.html": "cache",
+    "la-haine/fulltext/viewing_1482636502.html": "cache",
+    "la-haine/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-07",
+        "max": "2026-09-14",
+        "p5": "2026-08-09",
+        "p50": "2026-08-28",
+        "p95": "2026-09-11"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 24,
+          "n_alvo": 24,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e entediante",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado, com longos períodos de conversa e caminhada que não levam a lugar algum, tornando a experiência tediosa e difícil de terminar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e sem carisma",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são frequentemente criticados por serem irritantes, imaturos e difíceis de torcer, o que impede qualquer conexão emocional com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de enredo e desenvolvimento",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews apontam que o filme carece de uma trama substantiva, com eventos mínimos e sem progressão dramática, parecendo mais um retrato vazio do que uma narrativa envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e diálogos ruins",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas mencionam que os diálogos são repetitivos, mal escritos ou desconexos, contribuindo para a sensação de que o filme não se desenvolve.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado e não corresponde ao hype",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos expressam decepção por considerarem o filme superestimado, sem entender o alto conceito que recebe, e sentem que não atende às expectativas criadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estilo preto e branco e cinematografia",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A escolha do preto e branco é vista por alguns como pretensiosa ou desnecessária, enquanto outros reconhecem belos planos, mas acham que o estilo não sustenta o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente o ritmo lento e entediante, personagens desagradáveis e a falta de uma narrativa envolvente. Este grupo também critica o roteiro, considera o filme superestimado e questiona o uso do preto e branco como estilo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 15,
+        "3.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 8,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 3,
+        "p95": 14,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-22",
+        "max": "2026-09-15",
+        "p5": "2026-08-24",
+        "p50": "2026-09-08",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 15,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 25,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 93,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 93,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e repetitivo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas consideram que o filme é arrastado, com momentos repetitivos e uma sensação de que a trama não avança, tornando a experiência entediante para parte do grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de conexão com os personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores deste grupo relatam não terem se apegado aos protagonistas, sentindo indiferença em relação ao que acontece com eles, o que prejudicou o envolvimento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogios à fotografia e à direção",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das ressalvas, muitas reviews medianas reconhecem a qualidade da fotografia em preto e branco, a composição dos planos e a eficácia da direção como pontos fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação do trio principal, em especial a de Vincent Cassel, é frequentemente destacada como convincente e natural, mesmo por quem não gostou do filme como um todo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à abordagem do tema e à mensagem",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas apontam que a mensagem sobre violência e ciclo de ódio é importante, mas transmitida de forma repetitiva, panfletária ou pouco sutil, o que enfraquece o impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas frustradas e desapontamento",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários integrantes deste grupo esperavam mais devido à aclamação, mas ficaram decepcionados por não considerarem o filme tão marcante ou envolvente quanto o esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a qualidade técnica do filme, como fotografia e atuações, mas criticam o ritmo lento, a dificuldade de conexão com os personagens e a abordagem repetitiva do tema. Este grupo demonstra um certo desapontamento em relação às altas expectativas, resultando em uma recepção morna.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 93,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 9,
+        "5.0": 17
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 9,
+        "5.0": 17
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 128,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-11-25",
+        "max": "2026-09-16",
+        "p5": "2026-09-04",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Fotografia em preto e branco e estética",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A escolha do preto e branco é frequentemente elogiada por criar uma atmosfera única e realista, com enquadramentos marcantes que transformam cada cena em algo visualmente poderoso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ciclo de violência e ódio",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam como o filme retrata a violência e o ódio como um ciclo que se perpetua, alimentado por desigualdade social e falta de perspectivas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social e racismo",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As críticas ressaltam a abordagem do racismo institucional, da exclusão social e da brutalidade policial, apresentados de forma crua e sem romantização.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção dos três protagonistas e as atuações são elogiadas por tornar os personagens realistas e complexos, cada um representando perspectivas distintas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e expectativa constante",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como capaz de manter o espectador em suspense, criando uma sensação de que algo ruim está sempre prestes a acontecer.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e mensagem",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews mencionam o forte impacto emocional, deixando o público abalado e reflexivo sobre as questões apresentadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a fotografia em preto e branco, a crítica social contundente e a construção realista dos personagens como pontos altos do filme. Este grupo enfatiza a tensão constante e o impacto emocional duradouro, sem generalizar para outras faixas de nota.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e entediante",
+            "exemplo_parafraseado": "Muitas reviews descrevem o filme como arrastado, com longos períodos de conversa e caminhada que não levam a lugar algum, tornando a experiência tediosa e difícil de terminar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e repetitivo",
+            "exemplo_parafraseado": "Várias reviews medianas consideram que o filme é arrastado, com momentos repetitivos e uma sensação de que a trama não avança, tornando a experiência entediante para parte do grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e expectativa constante",
+            "exemplo_parafraseado": "O filme é descrito como capaz de manter o espectador em suspense, criando uma sensação de que algo ruim está sempre prestes a acontecer.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas",
+            "exemplo_parafraseado": "A atuação do trio principal, em especial a de Vincent Cassel, é frequentemente destacada como convincente e natural, mesmo por quem não gostou do filme como um todo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações",
+            "exemplo_parafraseado": "A construção dos três protagonistas e as atuações são elogiadas por tornar os personagens realistas e complexos, cada um representando perspectivas distintas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Estilo preto e branco e cinematografia",
+            "exemplo_parafraseado": "A escolha do preto e branco é vista por alguns como pretensiosa ou desnecessária, enquanto outros reconhecem belos planos, mas acham que o estilo não sustenta o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Elogios à fotografia e à direção",
+            "exemplo_parafraseado": "Apesar das ressalvas, muitas reviews medianas reconhecem a qualidade da fotografia em preto e branco, a composição dos planos e a eficácia da direção como pontos fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia em preto e branco e estética",
+            "exemplo_parafraseado": "A escolha do preto e branco é frequentemente elogiada por criar uma atmosfera única e realista, com enquadramentos marcantes que transformam cada cena em algo visualmente poderoso.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens desagradáveis e sem carisma",
+            "exemplo_parafraseado": "Os personagens são frequentemente criticados por serem irritantes, imaturos e difíceis de torcer, o que impede qualquer conexão emocional com a história.",
+            "temas_no_mesmo_eixo": [
+              "Falta de enredo e desenvolvimento",
+              "Roteiro fraco e diálogos ruins"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ciclo de violência e ódio",
+            "exemplo_parafraseado": "Muitas reviews destacam como o filme retrata a violência e o ódio como um ciclo que se perpetua, alimentado por desigualdade social e falta de perspectivas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de conexão com os personagens",
+            "exemplo_parafraseado": "Alguns espectadores deste grupo relatam não terem se apegado aos protagonistas, sentindo indiferença em relação ao que acontece com eles, o que prejudicou o envolvimento emocional.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Impacto emocional e mensagem",
+            "exemplo_parafraseado": "Várias reviews mencionam o forte impacto emocional, deixando o público abalado e reflexivo sobre as questões apresentadas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Superestimado e não corresponde ao hype",
+            "exemplo_parafraseado": "Muitos expressam decepção por considerarem o filme superestimado, sem entender o alto conceito que recebe, e sentem que não atende às expectativas criadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Expectativas frustradas e desapontamento",
+            "exemplo_parafraseado": "Vários integrantes deste grupo esperavam mais devido à aclamação, mas ficaram decepcionados por não considerarem o filme tão marcante ou envolvente quanto o esperado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à abordagem do tema e à mensagem",
+            "exemplo_parafraseado": "Algumas reviews medianas apontam que a mensagem sobre violência e ciclo de ódio é importante, mas transmitida de forma repetitiva, panfletária ou pouco sutil, o que enfraquece o impacto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social e racismo",
+            "exemplo_parafraseado": "As críticas ressaltam a abordagem do racismo institucional, da exclusão social e da brutalidade policial, apresentados de forma crua e sem romantização.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1444546883",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 90 (char 89)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 1995 e dirigido por Mathieu Kassovitz, o drama O Ódio retrata um dia na vida de três jovens de origens árabe, judaica e negra que vivem em um conjunto habitacional pobre de Paris. A trama acompanha a escalada de tensões provocada pela discriminação racial exercida por policiais hostis.\n\nA obra é estruturada em uma cinematografia inteiramente em preto e branco, compondo uma atmosfera visual densa e crua. A experiência se desenvolve por meio de um ritmo lento, acompanhando o cotidiano e as andanças dos personagens de forma contínua.\n\nOs grupos concordam sobre o que o filme é e abordam os mesmos tópicos, mas divergem frontalmente quanto ao veredito de seu funcionamento. Na grande maioria das notas (~93%), muitos destacam a fotografia em preto e branco e a estética como pontos centrais. Além disso, uma parcela expressiva enfatiza a representação do ciclo de violência e ódio, enquanto um número considerável ressalta a crítica social voltada ao racismo e à conduta policial.\n\nPara quem está numa fração mínima das notas (~5%), boa parte aponta o ritmo lento e repetitivo como um obstáculo, e vários relatam dificuldade de conexão com os personagens, embora uma parcela expressiva mantenha elogios à fotografia e à direção.\n\nNessa leitura expressa numa fração ainda menor das notas (~1%), a maior parte rejeita o filme pelo ritmo lento e entediante. Cerca de metade vê os personagens como desagradáveis e sem carisma, e boa parte critica a falta de enredo e de desenvolvimento dramático.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9939,
+      "completion_tokens": 1093,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9939
+    },
+    "latencia_s": 39.02
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões convergem ao avaliar o roteiro e a estrutura da obra, mas discordam sobre a sua eficácia. Enquanto a maioria dos que recomendam valoriza o retrato da espiral de violência e ódio, a maioria dos que não recomendam critica os personagens por considerá-los antipáticos e sem carisma.",
+    "texto_modelo": "As opiniões convergem ao avaliar o roteiro e a estrutura da obra, mas discordam sobre a sua eficácia. Enquanto a maioria dos que recomendam valoriza o retrato da espiral de violência e ódio, a maioria dos que não recomendam critica os personagens por considerá-los antipáticos e sem carisma.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "opini",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3663,
+      "completion_tokens": 213,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3663
+    },
+    "latencia_s": 11.5
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma estética marcante em preto e branco com enquadramentos visualmente poderosos",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia em preto e branco e estética",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por reflexões sobre o ciclo de violência alimentado pela desigualdade social",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ciclo de violência e ódio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um retrato cru do racismo institucional, da exclusão e da violência policial",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica social e racismo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado repleto de conversas e caminhadas sem rumo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e entediante",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se afasta de protagonistas imaturos e difíceis de criar conexão ou torcida",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desagradáveis e sem carisma",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca narrativas com progressão dramática e se frustra com tramas de eventos mínimos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de enredo e desenvolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha que belos planos em preto e branco não sustentam o filme",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estilo preto e branco e cinematografia",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10992,
+      "completion_tokens": 1022,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10992
+    },
+    "latencia_s": 22.57,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

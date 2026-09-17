@@ -1,0 +1,301 @@
+{
+  "slug": "the-truman-show",
+  "coletado_em": "2026-09-16T03:50:26.596538+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2958,
+    "1.0": 9792,
+    "1.5": 5673,
+    "2.0": 47972,
+    "2.5": 51576,
+    "3.0": 415460,
+    "3.5": 514633,
+    "4.0": 1748339,
+    "4.5": 849165,
+    "5.0": 1659611
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 96,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 36,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 1,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 10,
+    "3.0": 22,
+    "3.5": 5,
+    "4.0": 21,
+    "4.5": 9,
+    "5.0": 16
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 14,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "2.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 16,
+      "n_validas_pos_extensao": 31,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 32,
+      "n_validas_pos_extensao": 48,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 51,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 7,
+    "2.5": 8,
+    "3.0": 61,
+    "3.5": 75,
+    "4.0": 256,
+    "4.5": 124,
+    "5.0": 243
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 744,
+      "min": "1957-08-15",
+      "max": "2026-09-16",
+      "p5": "2026-06-13",
+      "p50": "2026-09-10",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 264,
+        "min": "1957-08-15",
+        "max": "2026-09-16",
+        "p5": "2026-03-21",
+        "p50": "2026-08-31",
+        "p95": "2026-09-13"
+      },
+      "medianas": {
+        "n": 288,
+        "min": "2016-08-21",
+        "max": "2026-09-16",
+        "p5": "2026-08-15",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2021-09-12",
+        "max": "2026-09-16",
+        "p5": "2026-08-14",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 22,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 9,
+    "dias_por_100_paginas": 7.086614173228346,
+    "paginas_para_1_ano": 5151
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 12,
+      "dias_por_100_paginas": 1200.0,
+      "paginas_para_1_ano": 30
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 10,
+      "dias_por_100_paginas": 1000.0,
+      "paginas_para_1_ano": 36
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 6,
+      "dias_por_100_paginas": 600.0,
+      "paginas_para_1_ano": 61
+    },
+    "2.0": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 16,
+      "dias": 30,
+      "dias_por_100_paginas": 200.0,
+      "paginas_para_1_ano": 182
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 9,
+      "dias_por_100_paginas": 180.0,
+      "paginas_para_1_ano": 203
+    },
+    "3.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 30,
+      "dias": 12,
+      "dias_por_100_paginas": 41.37931034482759,
+      "paginas_para_1_ano": 882
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 31,
+      "dias": 2,
+      "dias_por_100_paginas": 6.666666666666667,
+      "paginas_para_1_ano": 5475
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 61,
+      "dias": 3,
+      "dias_por_100_paginas": 5.0,
+      "paginas_para_1_ano": 7300
+    }
+  },
+  "ano_lancamento": 1998,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-truman-show",
+    "titulo": "The Truman Show",
+    "ano": 1998,
+    "tmdb_id_letterboxd": 37165,
+    "fonte": "pagina_letterboxd"
+  }
+}

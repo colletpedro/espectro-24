@@ -1,0 +1,1683 @@
+{
+  "slug": "marty-supreme",
+  "data_coleta": "2026-09-16T20:14:42.640700+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/marty-supreme/reviews/",
+  "ficha": {
+    "titulo": "Marty Supreme",
+    "sinopse_oficial": "Marty Mauser é um jovem prodígio do tênis de mesa que tem sonhos grandiosos e estilo de jogo arrojado, mas é desacreditado pelas outras pessoas. Buscando provar sua capacidade, ele faz de tudo para alcançar o reconhecimento que julga merecer.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller"
+    ],
+    "duracao_min": 149,
+    "diretor": "Josh Safdie",
+    "diretor_transliterado": false,
+    "ano": 2025,
+    "fonte": "tmdb",
+    "tmdb_id": 1317288,
+    "tmdb_fetched_at": "2026-09-16T20:18:54+00:00",
+    "poster_path": "/oLWBW1Sg9V8KGgbR3Y8jeEWF2Gi.jpg",
+    "poster_largura": 1333,
+    "poster_altura": 2000,
+    "backdrop_paths": [
+      "/6h7w8R4BA7vubEmEEW5vYEjuoz6.jpg",
+      "/qKWDHofjMHPSEOTLaixkC9ZmjTT.jpg",
+      "/bHtlDAORBQiYKCJMwDP9WBgcQHM.jpg",
+      "/3iMoYSbI72Nwsvi7uSpqReLJVa6.jpg",
+      "/jBOhqsbzEL7Ks3NWy98iI7YDzBh.jpg",
+      "/jT8P4cc3C4Tm1vDz9DfPkvPSajo.jpg",
+      "/ncFeMHXI3c5dvroM89JxyH5ctXl.jpg",
+      "/4GfdLk5qYL5eOaP5pR0YwIkLRhq.jpg",
+      "/lO0p9F2HE2Av0BnYJjaCYzY8fvt.jpg",
+      "/x0MhyxUFTGxylclimg9GXY9ei17.jpg"
+    ],
+    "backdrop_path": "/6h7w8R4BA7vubEmEEW5vYEjuoz6.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/jAH9pv4gl9taAD7fRI0Pd9ebr2e.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/6h7w8R4BA7vubEmEEW5vYEjuoz6.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qKWDHofjMHPSEOTLaixkC9ZmjTT.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lO0p9F2HE2Av0BnYJjaCYzY8fvt.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6Q1ZqSg8qUgNLXXclQGy4GbbMfr.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/c5qI5OJErUgH698OLD2kuO79clL.jpg",
+        "still_largura": 2652,
+        "still_altura": 1492
+      },
+      {
+        "still_path": "/4oPrRWBHY9eY3D4d6JTrhpjX5ba.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/11fke0AsTBlIsK0NadzaxTyncLa.jpg",
+        "still_largura": 2340,
+        "still_altura": 1317
+      },
+      {
+        "still_path": "/99sr6SicsXDqHC0mNsSj4nJUSs6.jpg",
+        "still_largura": 1783,
+        "still_altura": 1003
+      },
+      {
+        "still_path": "/cqe1Fu4PRea3WzQ9uBk25dmLIh0.jpg",
+        "still_largura": 2251,
+        "still_altura": 1266
+      },
+      {
+        "still_path": "/lzg3swIcNgBWoZJx5rHrPDAA0uc.jpg",
+        "still_largura": 2838,
+        "still_altura": 1596
+      },
+      {
+        "still_path": "/quGeZAnomIUOYImugSkuIuxwzoA.jpg",
+        "still_largura": 2248,
+        "still_altura": 1264
+      },
+      {
+        "still_path": "/tZnWD15d38QSRNKpNGgh5EKVZ6p.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "marty-supreme",
+      "titulo_letterboxd": "Marty Supreme",
+      "ano_letterboxd": 2025,
+      "tmdb_id_letterboxd": 1317288,
+      "tmdb_id_escolhido": 1317288,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Marty Supreme",
+      "ano_tmdb": 2025,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 3104553,
+    "por_nivel": {
+      "0.5": 9864,
+      "1.0": 19252,
+      "1.5": 14031,
+      "2.0": 68025,
+      "2.5": 84281,
+      "3.0": 299231,
+      "3.5": 438064,
+      "4.0": 967589,
+      "4.5": 646372,
+      "5.0": 557844
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 12,
+      "positivas": 84
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "marty-supreme",
+    "coletado_em": "2026-09-16T05:57:47.241695+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 9864,
+      "1.0": 19252,
+      "1.5": 14031,
+      "2.0": 68025,
+      "2.5": 84281,
+      "3.0": 299231,
+      "3.5": 438064,
+      "4.0": 967589,
+      "4.5": 646372,
+      "5.0": 557844
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 9,
+      "2.0": 38,
+      "2.5": 22,
+      "3.0": 26,
+      "3.5": 9,
+      "4.0": 25,
+      "4.5": 11,
+      "5.0": 6
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 56,
+        "n_validas_pos_extensao": 56,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "3.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 5,
+      "1.5": 4,
+      "2.0": 18,
+      "2.5": 22,
+      "3.0": 79,
+      "3.5": 116,
+      "4.0": 256,
+      "4.5": 171,
+      "5.0": 148
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 588,
+        "min": "2014-09-28",
+        "max": "2026-09-16",
+        "p5": "2026-02-20",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2025-01-04",
+          "max": "2026-09-16",
+          "p5": "2026-02-21",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 204,
+          "min": "2014-09-28",
+          "max": "2026-09-16",
+          "p5": "2026-02-25",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2026-01-03",
+          "max": "2026-09-16",
+          "p5": "2026-02-01",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "identidade_letterboxd": {
+      "slug": "marty-supreme",
+      "titulo": "Marty Supreme",
+      "ano": 2025,
+      "tmdb_id_letterboxd": 1317288,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2025,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 588
+  },
+  "origem_paginas": {
+    "_histograma/marty-supreme.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_4.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_16.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_64.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_256.html": "cache",
+    "marty-supreme/pages/by_added/rated_0_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_1_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_1_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_1_page_3.html": "cache",
+    "marty-supreme/fulltext/viewing_1495111325.html": "cache",
+    "marty-supreme/fulltext/viewing_1492578987.html": "cache",
+    "marty-supreme/pages/by_added/rated_1_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_1_5_page_2.html": "cache",
+    "marty-supreme/fulltext/viewing_1493215889.html": "cache",
+    "marty-supreme/fulltext/viewing_1492126748.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_3.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_4.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_5.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_6.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_7.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_8.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_9.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_page_14.html": "cache",
+    "marty-supreme/fulltext/viewing_1497272008.html": "cache",
+    "marty-supreme/fulltext/viewing_1497163170.html": "cache",
+    "marty-supreme/fulltext/viewing_1495659389.html": "cache",
+    "marty-supreme/fulltext/viewing_1495399212.html": "cache",
+    "marty-supreme/fulltext/viewing_1494584300.html": "cache",
+    "marty-supreme/fulltext/viewing_1494353216.html": "cache",
+    "marty-supreme/fulltext/viewing_1494275928.html": "cache",
+    "marty-supreme/fulltext/viewing_1493487564.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_3.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_4.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_6.html": "cache",
+    "marty-supreme/pages/by_added/rated_2_5_page_11.html": "cache",
+    "marty-supreme/fulltext/viewing_1497057718.html": "cache",
+    "marty-supreme/fulltext/viewing_1218365967.html": "cache",
+    "marty-supreme/fulltext/viewing_1495611409.html": "cache",
+    "marty-supreme/fulltext/viewing_1495012921.html": "cache",
+    "marty-supreme/fulltext/viewing_1494828132.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_3.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_4.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_5.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_6.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_7.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_8.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_20.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_page_40.html": "cache",
+    "marty-supreme/fulltext/viewing_1497764587.html": "cache",
+    "marty-supreme/fulltext/viewing_1266767579.html": "cache",
+    "marty-supreme/fulltext/viewing_1493594746.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_5_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_3_5_page_29.html": "cache",
+    "marty-supreme/fulltext/viewing_1497657382.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_3.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_page_128.html": "cache",
+    "marty-supreme/fulltext/viewing_1497661012.html": "cache",
+    "marty-supreme/fulltext/viewing_1485810898.html": "cache",
+    "marty-supreme/fulltext/viewing_1485719829.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_5_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_5_page_3.html": "cache",
+    "marty-supreme/pages/by_added/rated_4_5_page_43.html": "cache",
+    "marty-supreme/fulltext/viewing_1497879391.html": "cache",
+    "marty-supreme/fulltext/viewing_1497681433.html": "cache",
+    "marty-supreme/fulltext/viewing_1497372615.html": "cache",
+    "marty-supreme/pages/by_added/rated_5_page_1.html": "cache",
+    "marty-supreme/pages/by_added/rated_5_page_2.html": "cache",
+    "marty-supreme/pages/by_added/rated_5_page_37.html": "cache",
+    "marty-supreme/fulltext/viewing_1497998495.html": "cache",
+    "marty-supreme/fulltext/viewing_1497939389.html": "cache",
+    "marty-supreme/fulltext/viewing_1497745985.html": "cache",
+    "marty-supreme/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": 0.15
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-12",
+        "max": "2026-09-16",
+        "p5": "2026-09-08",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 24,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 80,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 80,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "protagonista detestável e sem redenção",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "grande parte do grupo descreve o personagem central como insuportável, egoísta e narcisista, sem qualquer arco de evolução ou momento que desperte empatia, o que torna difícil torcer por ele.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "várias reviews reclamam que o filme é longo demais e se arrasta, com trechos em que a atenção se dispersa e o espectador só espera que acabe.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "roteiro confuso e sem foco",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "o grupo aponta subtramas demais que não levam a lugar nenhum, sensação de história sem rumo e conclusões pouco satisfatórias para os fios narrativos apresentados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "atuação histriônica de Timothée Chalamet",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "parte das críticas considera a performance do ator exagerada, baseada em gritaria e hiperatividade, embora outras reconheçam esforço ou talento apesar do resultado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "personagens femininas rasas e mal escritas",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "há incômodo com figuras femininas reduzidas a funções de apoio, sem profundidade, e com a forma como relacionamentos abusivos são retratados sem nuance.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "tom misógino e imperialista",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "algumas reviews leem a obra como celebração de um homem branco que vence o outro estrangeiro, reforçando machismo e lógica de superioridade americana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas concentra suas críticas na construção do protagonista, considerado detestável e sem redenção, e na sensação de que o filme é longo e dispersivo. Também aparecem queixas sobre atuações exageradas, personagens femininas sem profundidade e um suposto viés misógino e imperialista.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 12,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 40,
+        "p5": 1,
+        "p50": 6,
+        "p95": 40,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-19",
+        "max": "2026-09-16",
+        "p5": "2026-03-22",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 11,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 29,
+          "n_alvo": 31,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 99,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 99,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Timothée Chalamet",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas elogiam a atuação de Chalamet, descrevendo-a como intensa e capaz de carregar o filme, embora algumas considerem que ele está exagerado ou que o personagem é irritante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem principal narcisista e detestável",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o protagonista é narcisista, manipulador e egoísta, o que torna difícil torcer por ele e gera desconforto durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração excessiva",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que o filme é arrastado e longo demais, com momentos que parecem se estender sem necessidade, prejudicando a experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção visual",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam a fotografia e a direção de Safdie, descrevendo-as como estilosas e imersivas, embora outras considerem que o estilo já é repetitivo em relação a trabalhos anteriores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparações com Uncut Gems",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários comentários comparam este filme a Uncut Gems, chamando-o de versão inferior ou repetição da mesma fórmula de protagonista obcecado em ambientes caóticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro confuso e falta de foco",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas criticam o roteiro por ser disperso e sem identidade clara, misturando gêneros e deixando tramas secundárias mal resolvidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a atuação intensa de Chalamet e o personagem narcisista como pontos centrais, mas criticam o ritmo arrastado, a duração excessiva e o roteiro confuso. Este grupo reconhece qualidades técnicas, porém considera a experiência pouco envolvente e inferior a obras anteriores do diretor.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 84,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 15,
+        "4.5": 10,
+        "5.0": 8
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 10,
+        "5.0": 6
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-01-11",
+        "max": "2026-09-16",
+        "p5": "2026-02-01",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Timothée Chalamet",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas consideram a atuação de Chalamet como o ponto mais forte do filme, descrevendo-a como intensa e capaz de sustentar a narrativa. Alguns afirmam que ele merecia o Oscar, enquanto outros destacam sua evolução em relação a trabalhos anteriores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Protagonista narcisista e obsessivo",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo descreve o protagonista como um anti-herói detestável mas fascinante, que manipula todos ao seu redor para atingir seus objetivos competitivos. Alguns o comparam a um vilão sem redenção, enquanto outros enxergam uma possível lição de humildade ao final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo acelerado e tensão constante",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas frequentemente mencionam que o filme mantém um ritmo frenético e gera estresse no espectador, com cenas que não dão trégua. Essa característica é vista como acerto por uns e como motivo de cansaço por outros.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A pontuação musical e o desenho de som são elogiados por intensificar o clima de urgência e complementar as cenas. Alguns destacam a trilha como um dos melhores elementos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e direção",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção e a fotografia são descritas como impressionantes, com enquadramentos que capturam a intensidade da competição e a decadência do protagonista. A assinatura dos Safdie é reconhecida, ainda que alguns achem repetitiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como criativo e cheio de reviravoltas, mas alguns sentem que a narrativa se arrasta ou perde o foco em certos momentos. Ainda assim, a construção do arco do protagonista é elogiada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas analisadas (3,5 a 5 estrelas) destacam principalmente a atuação de Timothée Chalamet, o retrato de um protagonista obsessivo e a tensão constante do filme. Há elogios à trilha sonora e à direção, mas também críticas pontuais ao ritmo e ao roteiro.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "várias reviews reclamam que o filme é longo demais e se arrasta, com trechos em que a atenção se dispersa e o espectador só espera que acabe.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração excessiva",
+            "exemplo_parafraseado": "As reviews medianas apontam que o filme é arrastado e longo demais, com momentos que parecem se estender sem necessidade, prejudicando a experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo acelerado e tensão constante",
+            "exemplo_parafraseado": "As reviews positivas frequentemente mencionam que o filme mantém um ritmo frenético e gera estresse no espectador, com cenas que não dão trégua. Essa característica é vista como acerto por uns e como motivo de cansaço por outros.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "atuação histriônica de Timothée Chalamet",
+            "exemplo_parafraseado": "parte das críticas considera a performance do ator exagerada, baseada em gritaria e hiperatividade, embora outras reconheçam esforço ou talento apesar do resultado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Timothée Chalamet",
+            "exemplo_parafraseado": "Várias reviews medianas elogiam a atuação de Chalamet, descrevendo-a como intensa e capaz de carregar o filme, embora algumas considerem que ele está exagerado ou que o personagem é irritante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Timothée Chalamet",
+            "exemplo_parafraseado": "Muitas reviews positivas consideram a atuação de Chalamet como o ponto mais forte do filme, descrevendo-a como intensa e capaz de sustentar a narrativa. Alguns afirmam que ele merecia o Oscar, enquanto outros destacam sua evolução em relação a trabalhos anteriores.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção visual",
+            "exemplo_parafraseado": "Algumas reviews elogiam a fotografia e a direção de Safdie, descrevendo-as como estilosas e imersivas, embora outras considerem que o estilo já é repetitivo em relação a trabalhos anteriores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e direção",
+            "exemplo_parafraseado": "A direção e a fotografia são descritas como impressionantes, com enquadramentos que capturam a intensidade da competição e a decadência do protagonista. A assinatura dos Safdie é reconhecida, ainda que alguns achem repetitiva.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "protagonista detestável e sem redenção",
+            "exemplo_parafraseado": "grande parte do grupo descreve o personagem central como insuportável, egoísta e narcisista, sem qualquer arco de evolução ou momento que desperte empatia, o que torna difícil torcer por ele.",
+            "temas_no_mesmo_eixo": [
+              "roteiro confuso e sem foco",
+              "personagens femininas rasas e mal escritas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Personagem principal narcisista e detestável",
+            "exemplo_parafraseado": "Este grupo destaca que o protagonista é narcisista, manipulador e egoísta, o que torna difícil torcer por ele e gera desconforto durante a exibição.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro confuso e falta de foco"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Protagonista narcisista e obsessivo",
+            "exemplo_parafraseado": "Este grupo descreve o protagonista como um anti-herói detestável mas fascinante, que manipula todos ao seu redor para atingir seus objetivos competitivos. Alguns o comparam a um vilão sem redenção, enquanto outros enxergam uma possível lição de humildade ao final.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e desenvolvimento"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "A pontuação musical e o desenho de som são elogiados por intensificar o clima de urgência e complementar as cenas. Alguns destacam a trilha como um dos melhores elementos do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Comparações com Uncut Gems",
+            "exemplo_parafraseado": "Vários comentários comparam este filme a Uncut Gems, chamando-o de versão inferior ou repetição da mesma fórmula de protagonista obcecado em ambientes caóticos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "tom misógino e imperialista",
+            "exemplo_parafraseado": "algumas reviews leem a obra como celebração de um homem branco que vence o outro estrangeiro, reforçando machismo e lógica de superioridade americana.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Josh Safdie, o filme Marty Supreme (2025) é um drama com elementos de suspense que acompanha a trajetória de Marty Mauser. O jovem é apresentado como um prodígio do tênis de mesa com sonhos grandiosos e um estilo de jogo arrojado, mas desacreditado pelas outras pessoas. Buscando provar sua capacidade a qualquer custo, ele faz de tudo para alcançar o reconhecimento que julga merecer.\n\nA estrutura da narrativa se apoia na exposição direta de um protagonista obsessivo, desenvolvendo-se por meio de uma ambientação competitiva e de uma duração considerável.\n\nDe modo geral, os grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~84%), a maior parte aponta a atuação de Timothée Chalamet como elemento central, enquanto uma parcela expressiva destaca a figura do protagonista narcisista e obsessivo. Nesse mesmo segmento, boa parte também ressalta o ritmo acelerado e a tensão constante.\n\nSob uma perspectiva intermediária, presente numa fração mínima das notas (~12%), muitos reconhecem a performance de Timothée Chalamet, embora vários apontem incômodo com o personagem principal narcisista e detestável, e um número considerável mencione o ritmo e a duração excessiva.\n\nPor fim, para a visão situada numa fração ainda menor das notas (~4%), grande parte rejeita o protagonista detestável e sem redenção, enquanto vários criticam a duração excessiva e o ritmo arrastado, ao passo que uma parcela expressiva aponta um roteiro confuso e sem foco.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11941,
+      "completion_tokens": 1479,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11941
+    },
+    "latencia_s": 34.78
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "O debate gira em torno da caracterização do protagonista no roteiro e de como esse traço funciona. Enquanto a maioria dos que não recomendam rejeita o personagem por achá-lo desagradável e sem possibilidade de se redimir, a maioria dos que recomendam valoriza sua postura abertamente egocêntrica e obsessiva.",
+    "texto_modelo": "O debate gira em torno da caracterização do protagonista no roteiro e de como esse traço funciona. Enquanto a maioria dos que não recomendam rejeita o personagem por achá-lo desagradável e sem possibilidade de se redimir, a maioria dos que recomendam valoriza sua postura abertamente egocêntrica e obsessiva.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "debat",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "debat",
+        "abertura_freq": 1,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3660,
+      "completion_tokens": 209,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3660
+    },
+    "latencia_s": 22.46
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma atuação intensa de Timothée Chalamet que sustenta a narrativa",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Timothée Chalamet",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se atrai por um protagonista detestável mas fascinante em sua obsessão manipuladora",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Protagonista narcisista e obsessivo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma narrativa com ritmo frenético e tensão constante sem trégua",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo acelerado e tensão constante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma direção visualmente impressionante, mesmo com um estilo que soe repetitivo",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e direção",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "gosta de tramas com reviravoltas criativas, aceitando eventuais perdas de foco narrativo",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e desenvolvimento",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com protagonistas egoístas e narcisistas que não despertam empatia",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "protagonista detestável e sem redenção",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se cansa com narrativas longas que se arrastam e dispersam a atenção",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "duração excessiva e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com excesso de subtramas sem rumo e desfechos pouco satisfatórios",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "roteiro confuso e sem foco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com atuações hiperativas e exageradas, mesmo quando demonstram esforço",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "atuação histriônica de Timothée Chalamet",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 84,
+        "peso_texto": "~84% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "quantidade_escrita",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 13059,
+      "completion_tokens": 1313,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 13059
+    },
+    "latencia_s": 12.99,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

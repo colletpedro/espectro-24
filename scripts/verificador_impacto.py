@@ -71,7 +71,9 @@ from classificar_10 import EIXOS, MODELO  # noqa: E402
 from espectro24.previsao_frequencia import fator_pareado  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
     MOTIVO_RECUSA_CONTEUDO,
+    LLMSaldoEsgotado,
     deepseek_client,
+    parada_por_saldo,
     resposta_json_com_fallback,
 )
 
@@ -218,6 +220,7 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
     system = VARIANTES[variante]
     client = deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
+    pulados = [0]   # [2026-09-16] não tentadas porque o saldo acabou
     arq.parent.mkdir(parents=True, exist_ok=True)
     saida = arq.open("a", encoding="utf-8")
 
@@ -232,6 +235,14 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         # aqui (`a-brighter-summer-day`, `viewing:1343536508`). Só a recusa
         # `Content Exists Risk` troca de provider; o registro diz quem
         # respondeu e carrega a marca, no sucesso e na falha.
+        # [2026-09-16] Conta sem crédito: a review NÃO é tentada e NÃO vira
+        # registro. Foi assim que `uncut-gems` (100/100) e `top-gun-maverick`
+        # (39/77) ficaram `verificacao_pendente` por motivo administrativo —
+        # sem registro, a reexecução depois do depósito retenta todas.
+        if parada_por_saldo():
+            with lock:
+                pulados[0] += 1
+            return
         resp = None
         try:
             resp = resposta_json_com_fallback(
@@ -251,6 +262,12 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                         "modelo": resp["modelo"],
                         "latencia_s": resp["latencia_s"]}
             marca = resp["fallback_conteudo"]
+        except LLMSaldoEsgotado:
+            # A que DESCOBRIU o saldo zerado também não vira registro: o
+            # motivo é a conta, não a review.
+            with lock:
+                pulados[0] += 1
+            return
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "variante": variante, "passe": n_passe,
                         "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
@@ -269,6 +286,13 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
     with ThreadPoolExecutor(max_workers=CONCORRENCIA) as ex:
         list(ex.map(tarefa, pendentes))
     saida.close()
+    if parada_por_saldo():
+        raise SystemExit(
+            f"PARADO: a conta do DeepSeek ficou sem crédito. "
+            f"{contador[0]} review(s) verificada(s), {pulados[0]} não "
+            f"tentada(s) — nenhuma delas virou registro nem "
+            f"`verificacao_pendente`, então basta repor o saldo e rodar de "
+            f"novo: o passe retoma exatamente de onde parou.")
 
 
 def cmd_passes() -> None:

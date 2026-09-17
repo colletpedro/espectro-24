@@ -1,0 +1,1613 @@
+{
+  "slug": "porco-rosso",
+  "data_coleta": "2026-09-16T19:24:55.053349+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/porco-rosso/reviews/",
+  "ficha": {
+    "titulo": "Porco Rosso: O Último Herói Romântico",
+    "sinopse_oficial": "Na Itália, durante o período entre as duas guerras, com um fundo de recessão económica e de ascensão do fascismo, perdido numa ilha deserta no mar Adriático, um ex-piloto emérito da Força Aérea Italiana, se vê transformado em um porco e converte-se em caçador de recompensas. Ele se chama \"Porco Rosso\". A bordo de seu hidroavião vermelho, ele tem muitas aventuras: de caça aos piratas do ar que fizeram um hábito de roubar os turistas que visitam a região, o resgate de passageiros tomados como reféns, duelos aéreos, \"corridas\" de hidroavião, subterfúgios para semear a polícia secreta italiana... a vida do piloto é agitada e cheia de aventuras.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Aventura",
+      "Fantasia"
+    ],
+    "duracao_min": 93,
+    "diretor": "Hayao Miyazaki",
+    "diretor_transliterado": false,
+    "ano": 1992,
+    "fonte": "tmdb",
+    "tmdb_id": 11621,
+    "tmdb_fetched_at": "2026-09-16T20:18:44+00:00",
+    "poster_path": "/mf3UwAH3b2cCFTyw4qKK62Z7AZb.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/ec4m0EvVlEtVl5aySdw6ab9uG0b.jpg",
+      "/dalc1aMjUNIvTOVt5ZHt2zv6cm0.jpg",
+      "/pFalq14lacs2oO7Q6YKiNqz5uAC.jpg",
+      "/wtc0PiSSDPVX5hQdHTujga9cvhX.jpg",
+      "/bOQc0HX8gtUHGYBHp9o6nqWZRz8.jpg",
+      "/ft4W1XYURfORPlYdIO6HnjtHHf3.jpg",
+      "/elOJVlSXMGahE9jfwP6spfPgc5R.jpg",
+      "/bwNkkGJmE67lyDoAsloCbVKETAq.jpg",
+      "/f5NQPsBDcf41kHHEd6SkGv2GyUP.jpg",
+      "/nAeCzilMRXvGaxiCpv63ZRVRVgh.jpg"
+    ],
+    "backdrop_path": "/ec4m0EvVlEtVl5aySdw6ab9uG0b.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/qYMb44dyaMZxx4zHDbCSyfBX4tM.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/ec4m0EvVlEtVl5aySdw6ab9uG0b.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/dalc1aMjUNIvTOVt5ZHt2zv6cm0.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/kyUIWxlDljObcfXhyXKu7JBoJen.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/bjrGOnaHxUvm3vHnUK0U2T4hhlJ.jpg",
+        "still_largura": 1840,
+        "still_altura": 1035
+      },
+      {
+        "still_path": "/x758SRS6VkR4NxFySQ2swVnNwdg.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/96IF2EWqhMH3M8AvVpJgIrn2YI2.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/uAO8TZJXYt4gJYSzjTFQm9cA7CF.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3dejI60Gov8RYG18WljOR88fBwC.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/8hupd0HI2eVZkw8iYwtvyiunFby.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/bIO1WHIdFoKtLXavo7rQJ7qL11I.jpg",
+        "still_largura": 1728,
+        "still_altura": 972
+      },
+      {
+        "still_path": "/jF0Ap1AquyUbYvHITpKb54jOfPg.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/otnaIOtOZHmMcI6ADb68mXLJBhy.jpg",
+        "still_largura": 1696,
+        "still_altura": 954
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "porco-rosso",
+      "titulo_letterboxd": "Porco Rosso",
+      "ano_letterboxd": 1992,
+      "tmdb_id_letterboxd": 11621,
+      "tmdb_id_escolhido": 11621,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Porco Rosso",
+      "ano_tmdb": 1992,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 610537,
+    "por_nivel": {
+      "0.5": 667,
+      "1.0": 1720,
+      "1.5": 1510,
+      "2.0": 8388,
+      "2.5": 12495,
+      "3.0": 62357,
+      "3.5": 101017,
+      "4.0": 209731,
+      "4.5": 94549,
+      "5.0": 118103
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 12,
+      "positivas": 86
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "porco-rosso",
+    "coletado_em": "2026-09-16T04:22:17.631492+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 667,
+      "1.0": 1720,
+      "1.5": 1510,
+      "2.0": 8388,
+      "2.5": 12495,
+      "3.0": 62357,
+      "3.5": 101017,
+      "4.0": 209731,
+      "4.5": 94549,
+      "5.0": 118103
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 7,
+      "1.5": 4,
+      "2.0": 35,
+      "2.5": 17,
+      "3.0": 23,
+      "3.5": 8,
+      "4.0": 17,
+      "4.5": 4,
+      "5.0": 11
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 15,
+      "3.0": 76,
+      "3.5": 123,
+      "4.0": 256,
+      "4.5": 115,
+      "5.0": 144
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 660,
+        "min": "2020-03-17",
+        "max": "2026-09-16",
+        "p5": "2026-06-15",
+        "p50": "2026-08-29",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2020-03-17",
+          "max": "2026-09-15",
+          "p5": "2026-05-12",
+          "p50": "2026-08-03",
+          "p95": "2026-09-09"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2021-01-23",
+          "max": "2026-09-15",
+          "p5": "2026-07-30",
+          "p50": "2026-08-31",
+          "p95": "2026-09-13"
+        },
+        "positivas": {
+          "n": 228,
+          "min": "2025-10-19",
+          "max": "2026-09-16",
+          "p5": "2026-08-09",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 35,
+      "dias_por_100_paginas": 27.559055118110237,
+      "paginas_para_1_ano": 1324
+    },
+    "identidade_letterboxd": {
+      "slug": "porco-rosso",
+      "titulo": "Porco Rosso",
+      "ano": 1992,
+      "tmdb_id_letterboxd": 11621,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1992,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 660
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 2,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 2,
+        "p95": 10,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-01",
+        "max": "2026-09-15",
+        "p5": "2026-06-09",
+        "p50": "2026-08-06",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 27,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 81,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 81,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Relacionamento inadequado entre adulto e adolescente",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews criticam o fato de o protagonista adulto demonstrar interesse romântico por uma personagem de 17 anos, considerando essa dinâmica desconfortável e desnecessária para a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Misoginia e tratamento das personagens femininas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews apontam que o filme apresenta comentários e comportamentos misóginos, com personagens masculinos tratando mulheres de forma desrespeitosa ou objetificante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas pessoas relataram que acharam o filme arrastado, entediante ou que tiveram dificuldade em se manter engajadas durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e falta de profundidade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas mencionam que a narrativa é superficial, com elementos mal desenvolvidos ou que não são explorados de forma satisfatória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas reviews consideram que os personagens secundários são rasos e que o protagonista, apesar de interessante, não compensa a falta de desenvolvimento dos demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final decepcionante ou confuso",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas ficaram insatisfeitas com o desfecho, achando-o anticlimático, pouco claro ou que não resolve adequadamente as questões apresentadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o desconforto com a dinâmica entre o protagonista adulto e a personagem adolescente, além de apontarem misoginia, ritmo lento e roteiro fraco. Mesmo com elogios à animação e à trilha sonora, esses aspectos foram suficientes para tornar a experiência decepcionante para este grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 12,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 38,
+        "p5": 1,
+        "p50": 6,
+        "p95": 38,
+        "fracao_profunda": 0.475
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-22",
+        "max": "2026-09-13",
+        "p5": "2026-07-30",
+        "p50": "2026-08-31",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 128,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 128,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "desconforto com a relação entre Porco e Fio",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas expressam desconforto com a dinâmica entre o protagonista de meia-idade e a personagem de 17 anos, considerando-a inadequada e desnecessária, mesmo quando o personagem mais velho não corresponde às investidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "elogios à animação e às cenas de voo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as avaliações medianas, a qualidade da animação e as sequências de voo são frequentemente elogiadas como pontos fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "críticas ao roteiro e ritmo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews apontam que a história é pouco envolvente, com ritmo lento, subtramas mal resolvidas e um final que deixa questões em aberto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "tratamento misógino e objetificação feminina",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam a forma como as personagens femininas são retratadas, com comentários sexistas e a redução da engenheira a um objeto de desejo ou prêmio em disputa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "mensagem anti-fascista",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A frase sobre preferir ser um porco a um fascista é lembrada, mas alguns consideram que o filme não aprofunda essa postura política, tratando-a mais como um detalhe superficial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "tom infantil e comédia",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que o humor e o tom infantil, por vezes, entram em conflito com temas mais sérios, prejudicando o impacto emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a animação e as cenas de voo como pontos fortes, mas apontam desconforto com a relação entre os protagonistas e críticas ao roteiro e ao ritmo. Este grupo específico também menciona a presença de elementos misóginos e uma abordagem política que consideram superficial.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 86,
+      "composicao_alvo": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "composicao_atingida": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 36,
+        "p5": 1,
+        "p50": 3,
+        "p95": 36,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-10-19",
+        "max": "2026-09-15",
+        "p5": "2026-08-23",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elogio à animação e às cenas de voo",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a beleza visual do filme, com destaque para as sequências aéreas e a paixão do diretor pela aviação, além dos cenários do Adriático e dos fundos desenhados à mão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem antiguerra e antifascista",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews positivas valorizam a crítica ao fascismo e à guerra, vistas como um recado político que permanece atual, e citam a fala em que o protagonista afirma preferir ser um porco a ser fascista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom melancólico e adulto",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo descreve o filme como mais maduro e melancólico dentro da filmografia do estúdio, tratando de culpa, desilusão e isolamento de forma leve na superfície e pesada no fundo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo sem tédio e roteiro simples",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que a narrativa é simples e direta, mas sem momentos entediantes, mantendo o espectador envolvido do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à relação entre Porco e Fio",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte das reviews positivas considera problemática a dinâmica entre o protagonista e a jovem engenheira, vendo conotações românticas inadequadas e preferindo que a relação fosse tratada como mentor e aprendiz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e dublagem",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam o carisma do protagonista e a atuação de Michael Keaton na dublagem, além de personagens coadjuvantes como Gina e os piratas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a beleza visual, o tom melancólico e adulto e a crítica antiguerra e antifascista do filme, com boa parte do grupo apontando ressalvas quanto à relação entre o protagonista e a jovem engenheira. Este recorte de 40 reviews não representa a recepção geral do filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Diversas pessoas relataram que acharam o filme arrastado, entediante ou que tiveram dificuldade em se manter engajadas durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo sem tédio e roteiro simples",
+            "exemplo_parafraseado": "As reviews destacam que a narrativa é simples e direta, mas sem momentos entediantes, mantendo o espectador envolvido do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e dublagem",
+            "exemplo_parafraseado": "Algumas reviews elogiam o carisma do protagonista e a atuação de Michael Keaton na dublagem, além de personagens coadjuvantes como Gina e os piratas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "elogios à animação e às cenas de voo",
+            "exemplo_parafraseado": "Mesmo entre as avaliações medianas, a qualidade da animação e as sequências de voo são frequentemente elogiadas como pontos fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Elogio à animação e às cenas de voo",
+            "exemplo_parafraseado": "As reviews elogiam a beleza visual do filme, com destaque para as sequências aéreas e a paixão do diretor pela aviação, além dos cenários do Adriático e dos fundos desenhados à mão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e falta de profundidade",
+            "exemplo_parafraseado": "Algumas críticas mencionam que a narrativa é superficial, com elementos mal desenvolvidos ou que não são explorados de forma satisfatória.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco desenvolvidos",
+              "Final decepcionante ou confuso"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "críticas ao roteiro e ritmo",
+            "exemplo_parafraseado": "Várias reviews apontam que a história é pouco envolvente, com ritmo lento, subtramas mal resolvidas e um final que deixa questões em aberto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Crítica à relação entre Porco e Fio",
+            "exemplo_parafraseado": "Parte das reviews positivas considera problemática a dinâmica entre o protagonista e a jovem engenheira, vendo conotações românticas inadequadas e preferindo que a relação fosse tratada como mentor e aprendiz.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "tom infantil e comédia",
+            "exemplo_parafraseado": "Algumas reviews mencionam que o humor e o tom infantil, por vezes, entram em conflito com temas mais sérios, prejudicando o impacto emocional.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Tom melancólico e adulto",
+            "exemplo_parafraseado": "Este grupo descreve o filme como mais maduro e melancólico dentro da filmografia do estúdio, tratando de culpa, desilusão e isolamento de forma leve na superfície e pesada no fundo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": "desconforto com a relação entre Porco e Fio",
+            "exemplo_parafraseado": "Várias reviews medianas expressam desconforto com a dinâmica entre o protagonista de meia-idade e a personagem de 17 anos, considerando-a inadequada e desnecessária, mesmo quando o personagem mais velho não corresponde às investidas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Relacionamento inadequado entre adulto e adolescente",
+            "exemplo_parafraseado": "Várias reviews criticam o fato de o protagonista adulto demonstrar interesse romântico por uma personagem de 17 anos, considerando essa dinâmica desconfortável e desnecessária para a história.",
+            "temas_no_mesmo_eixo": [
+              "Misoginia e tratamento das personagens femininas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "tratamento misógino e objetificação feminina",
+            "exemplo_parafraseado": "Algumas reviews criticam a forma como as personagens femininas são retratadas, com comentários sexistas e a redução da engenheira a um objeto de desejo ou prêmio em disputa.",
+            "temas_no_mesmo_eixo": [
+              "mensagem anti-fascista"
+            ]
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": "Mensagem antiguerra e antifascista",
+            "exemplo_parafraseado": "Várias reviews positivas valorizam a crítica ao fascismo e à guerra, vistas como um recado político que permanece atual, e citam a fala em que o protagonista afirma preferir ser um porco a ser fascista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    }
+  },
+  "narrativa": "Dirigido por Hayao Miyazaki e lançado em 1992, Porco Rosso: O Último Herói Romântico é uma animação de aventura e fantasia ambientada no mar Adriático durante o período entre guerras. A narrativa acompanha um ex-piloto da Força Aérea Italiana que, transformado em porco, atua como caçador de recompensas em meio à recessão econômica e à ascensão do fascismo.\n\nO longa-metragem estrutura-se em sequências de aviação e confrontos de hidroaviões em cenários marítimos. A condução equilibra uma atmosfera de aventura com passagens de tom cômico e momentos de melancolia.\n\nOs grupos concordam sobre o que o filme é e discordam sobre se ele funciona. Na grande maioria das notas (~86%), uma parcela expressiva elogia a beleza da animação e as cenas de voo, enquanto um número considerável valoriza a mensagem antiguerra e antifascista. Nessa mesma faixa, uma parte ressalta o tom maduro e melancólico da obra.\n\nPara quem se posiciona numa fração mínima das notas (~12%), boa parte manifesta desconforto com a relação entre o protagonista e a jovem mecânica, embora vários destaquem positivamente a animação e os voos, e muitos apontem problemas no ritmo e no roteiro. Sob a perspectiva de quem está numa fração ainda menor das notas (~2%), a maior parte critica a dinâmica entre o adulto e a adolescente, um número considerável aponta traços de misoginia no tratamento das personagens femininas e alguns relatam que o ritmo lento torna a experiência cansativa.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 12,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12226,
+      "completion_tokens": 1563,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12226
+    },
+    "latencia_s": 41.01
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões se dividem sobre a construção do roteiro e sua estrutura dramática. Enquanto quase todos que desaprovam apontam superficialidade e fragilidade no texto, a maioria dos que aprovam concentra sua análise na dinâmica desenvolvida entre Porco e Fio.",
+    "texto_modelo": "As opiniões se dividem sobre a construção do roteiro e sua estrutura dramática. Enquanto quase todos que desaprovam apontam superficialidade e fragilidade no texto, a maioria dos que aprovam concentra sua análise na dinâmica desenvolvida entre Porco e Fio.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "opini",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3687,
+      "completion_tokens": 192,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3687
+    },
+    "latencia_s": 11.35
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia belas sequências aéreas e cenários desenhados à mão com temática de aviação",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elogio à animação e às cenas de voo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma mensagem política atual com críticas abertas ao fascismo e à guerra",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem antiguerra e antifascista",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um tom melancólico e maduro que aborda culpa, desilusão e isolamento",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tom melancólico e adulto",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aprecia uma narrativa simples e direta que mantém o envolvimento constante sem tédio",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo sem tédio e roteiro simples",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "gosta de figuras carismáticas, personagens coadjuvantes marcantes e um bom trabalho de dublagem",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens e dublagem",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com dinâmicas de interesse romântico entre um adulto e uma adolescente",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Relacionamento inadequado entre adulto e adolescente",
+        "rotulo_forca": "a maioria",
+        "par_recusado": "POS-E"
+      },
+      {
+        "texto": "se incomoda com comentários misóginos e atitudes desrespeitosas ou objetificantes contra mulheres",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Misoginia e tratamento das personagens femininas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desinteressa com narrativas de andamento arrastado que geram tédio ou pouco engajamento",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra com narrativas superficiais e elementos de roteiro pouco desenvolvidos ou explorados",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e falta de profundidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 86,
+        "peso_texto": "~86% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "POS-E",
+        "lado": "vale_a_pena",
+        "regra": "R2",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "ancora_nao_verificavel"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 10
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11619,
+      "completion_tokens": 1507,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11619
+    },
+    "latencia_s": 20.34,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

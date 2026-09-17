@@ -156,6 +156,160 @@ nela, está em aberto.
 Com a barra no ar, os dois lados da decisão ficam visualmente simétricos mesmo
 quando o peso é muito assimétrico. A inspeção não respondeu se isso é problema.
 
+### B5. Primeira revisão humana de 100% em volume (44 filmes, lote
+`expansao-44-2026-09-16`) — validação independente do experimento de
+briefing, e dois achados sobre a R4
+
+**Recusa declarada: 3,0% (11/366)**, contra a única medida anterior — 11%
+(1 em 9), de um filme só (`a-brighter-summer-day`, item 5 do log de
+2026-09-14). A amostra de 44 filmes é a primeira em volume; a sobre-recusa
+não se confirmou nem no experimento de briefing nem aqui.
+
+**Taxa REAL de duvidosos, medida por leitura humana de 100% dos 366 itens:
+2,7% (10/366).** Próxima dos ~1,8% projetados pelo experimento de briefing
+(C14.18, braço adotado) e muito abaixo dos 14,9% de antes do canal de
+recusa. **Registrado como validação independente**, fora da amostra que
+produziu a projeção: o resultado do experimento se confirma em volume.
+
+**Achado 1 — a R4 (regra 7 do prompt, flag `digito` de `condicoes.validar`)
+governa só o TEXTO PUBLICADO da condição, nunca a paráfrase.** Confirmado
+lendo o código: `_todas_as_flags` roda `re.search(r"\d", texto)` só sobre
+`cond["texto"]` — a paráfrase (`exemplo_parafraseado`) não entra na trava
+que decide publicação. A frase "nunca na paráfrase" que aparece perto da
+exceção de ano (linha ~566) é sobre a EXCEÇÃO não se estender à paráfrase,
+não sobre a paráfrase estar sob a R4 — a paráfrase nunca esteve sob ela.
+Achados reais: C031/C071 (`all-quiet-on-the-western-front-2022`/`chinatown`,
+ano na paráfrase) e C320 (`the-spongebob-movie-search-for-squarepants`,
+"3D" na paráfrase) — as três condições publicadas estão limpas; a regra
+nunca previu bloqueá-las.
+
+**Achado 1b — fração posicional por extenso ("um terço final", "primeira
+metade") não é bloqueada por NENHUM validador hoje, e não deveria ser
+tratada como se fosse.** `digito` só casa dígito literal (`\d`); as
+palavras de quantidade que `quantidade_escrita` proíbe vêm do vocabulário
+fechado de `_br.FAIXAS_QUANTIFICADOR` ("a maioria", "alguns"…), que não
+inclui frações. Levantamento sobre os 366 do lote + os 55 publicados: só 4
+condições usam fração por extenso (`district-9` "um terço final",
+`joker-2019` "primeira metade", `the-brutalist` "segunda metade",
+`avengers-endgame` "primeira metade" — esta descartada, mas por
+`exemplo_verbatim`, sem relação). **As 4 são posicionais** (referem-se a um
+trecho do FILME — "final", "primeira", "segunda" — nunca a fração de
+review/espectador/nota); nenhuma usa fração para quantidade de amostra.
+Amostra pequena (n=4), então "reliável" aqui é "sem contraexemplo
+encontrado", não "provado".
+
+**Critério de forma proposto (decisão do dono, 2026-09-16), na mesma lógica
+da exceção de ano — por FORMA, não por intenção:** uma fração por extenso
+é POSICIONAL (permitida) quando qualifica um trecho da OBRA — segue ou
+precede palavra de segmento (`final`, `inicial`, `primeira`, `segunda`,
+`último`, `ato`, `metragem`, `duração`, `filme`) — e é DE AMOSTRA
+(proibida, seria "quanta gente" competindo com os números do código) quando
+se refere a reviews/espectadores/notas/público/pessoas. Nenhum
+contraexemplo nos dados atuais; qualquer caso fora dessa forma volta a ser
+recusado (mesmo destino do ano fora da forma: reescrever sem a fração). Não
+implementado em código — é registro de critério, não um novo validador;
+decidir se vale codificar fica para quando (se) o volume justificar.
+
+**Achado 2 — SEPARADO do Achado 1, e ainda ABERTO: existe um segundo
+validador, mais estrito, que TRATA a paráfrase como proibida sem exceção, e
+ele não roda em produção.** `condicoes.algarismos_proibidos_no_briefing`
+verifica o BRIEFING inteiro (o que vai para o modelo, paráfrase incluída)
+e não tem NENHUMA exceção de ano fora do nome do tema — é o que
+`test_briefing_nao_tem_algarismo_ano_na_parafrase_nao_tem_excecao` prova
+deliberadamente. Só é chamado em teste
+(`test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme`), não em
+`condicoes.gerar()`/`cli.py` — puramente um monitor, não um portão. Esse
+teste é uma das 3 falhas conhecidas da suíte (item citado no changelog de
+2026-09-15, caso `woman-of-fire`) — **e os 44 pioraram, não abriram
+novo**: de 2 filmes falhando (`a-brighter-summer-day` "60",
+`woman-of-fire` "1960") para **7** (+ `2001-a-space-odyssey` "1968",
+`all-quiet-on-the-western-front-2022` "1930", `chinatown` "1930",
+`porco-rosso` "17", `the-spongebob-movie-search-for-squarepants` "3","3").
+Um desses (`2001-a-space-odyssey`) mostra que a FORMA do ano também tem
+falso negativo real: o tema usa "para 1968", e a preposição admitida é só
+`de`/`em` — "para" não está na lista, e um ano genuíno some pela borda da
+forma, o mesmo trade-off já aceito e documentado para a exceção original.
+**Decisão pendente do dono:** fechar esse buraco (estender a exceção de ano
+à paráfrase, do jeito que o item 6 do changelog de 2026-09-13 já cogitou e
+não fez) ou aceitar formalmente que este validador é só telemetria e
+nunca vai ter 100% verde. Não resolvido aqui — resolver o Achado 1 não
+resolve o Achado 2, são dois portões diferentes.
+
+**RESOLVIDO (2026-09-16) — Achado 2 fechado por decisão do dono: "passa
+todos menos o porco rosso".** `algarismos_proibidos_no_briefing` passou a
+mascarar, além do ano na paráfrase (item acima), duas formas novas — a
+mesma regra, "por FORMA, não por intenção":
+- **preposição `para`** somada a `de`/`em` (caso `2001-a-space-odyssey`,
+  "impressionantes para 1968" — ano genuíno, só a preposição estava fora
+  da lista);
+- **década** (`"anos NN"`/`"anos NNNN"`, casos `a-brighter-summer-day`
+  "anos 60" e `chinatown` "anos 1930") — **reverte** a exclusão deliberada
+  anterior (`"Terror dos anos 2000"` saiu do lado FALHA do teste
+  parametrizado); a década também ganhou sufixo mais solto que o do ano
+  (não precisa fechar a frase, só não colar em outro dígito/`%`/decimal) —
+  os dois casos reais não fechavam frase (`"...e os reflexos..."`,
+  `"...1930, criando..."`) e o sufixo do ano os teria barrado de novo;
+- **formato de tela** (`"3D"`/`"2D"`, caso
+  `the-spongebob-movie-search-for-squarepants`) — nova categoria, não é
+  ano nem fração, é nome de tecnologia de exibição.
+
+`porco-rosso` ("personagem de **17** anos") ficou de fora por decisão
+explícita — é idade de personagem, categoria que não foi pedida para
+exemptar, e segue como o único filme que falha o teste hoje. Testes:
+6 novos/reescritos em `test_condicoes.py`, nenhuma asserção existente
+afrouxada (a que mudou de lado — `"Terror dos anos 2000"` — foi movida,
+não apagada, com o motivo registrado ao lado). Suíte: 2083 passam (+5),
+as mesmas 3 falhas de sempre mais esta (só `porco-rosso` agora, era 7).
+
+### B6. Piso da barra do bullet: 14px → 12px, remedido sobre 99 filmes
+(2026-09-17)
+
+Publicar os 44 quebrou `test_o_piso_nao_alonga_nenhum_item_publicado`:
+`goodfellas`/negativas ("Tratamento raso das personagens femininas e visão
+masculina"), 7,5% = **11,96px** na coluna mobile (159,5px) — abaixo do
+piso de 14px calibrado sobre os 35/633 itens da entrega original
+(`v1.9.47`). Remedido do zero sobre 99 filmes/1780 itens, não ajustado ao
+caso: distribuição completa em `min=7,5%, p1=12,5%, p5=15%, mediana=27,5%`.
+
+**A distribuição sozinha pediria 10px** — o catálogo tem um outlier
+isolado em 11,96px e o resto só recomeça em 15,95px, sem agrupamento
+entre os dois; 10px fica abaixo dos dois com folga. **Mas 10px viola
+`test_o_piso_ainda_le_como_traco_e_nao_como_ponto`** (`piso >= 2×altura`,
+altura do traço = 6px, regra da mesma entrega `v1.9.47`): exige piso
+≥ 12px para o traço não ler como ponto. **As duas regras juntas não têm
+solução comum** — 11,96 < 12 — e **essa segunda regra é quem decide o
+valor publicado agora**, não a distribuição.
+
+**Publicado: 12px.** Contra o real do goodfellas (11,96px), a diferença é
+0,0375px — subpixel, nenhum navegador renderiza. A tolerância que isso
+exige em `test_o_piso_nao_alonga_nenhum_item_publicado` está documentada
+NAQUELE teste (comentário extenso, não só aqui): teto de <1px inteiro,
+reconhecendo o limite da unidade de medida — não "o suficiente para
+passar o goodfellas". Qualquer item que exceder 1px de diferença real
+volta a fazer o teste falhar.
+
+**O piso só morde no mobile (159,5px).** O mesmo item mais fraco do
+catálogo já dá 16,0px na coluna desktop de 3 grupos (213,3px, caso
+`--3`, meio dominante) e 25,5px na de 2 grupos (340px, caso `--2`, o
+comum) — nunca é a restrição lá.
+
+**Duas opções cogitadas e NÃO tomadas nesta rodada** — registradas para
+se o piso voltar a ser questão:
+- **(B) Baixar a altura do traço** (hoje 6px) para algo como 5px abriria
+  espaço para um piso de 10px sem violar `piso >= 2×altura` (2×5=10).
+  Não feito: muda a espessura de TODA barra do catálogo, decisão visual
+  maior que só o piso, e não foi pedida.
+- **(C) Revisitar a proporção 2×altura em si** — é uma regra de
+  legibilidade da entrega original (`v1.9.47`), não desta medição; talvez
+  o mínimo para "ler como traço" não precise ser exatamente o dobro. Não
+  feito: mexeria numa invariante estabelecida sem medição própria para
+  justificar outro valor.
+
+**A folga vale para 99 filmes, não é garantia permanente.** Com o
+catálogo em ~300, itens abaixo de 10% deixam de ser caso isolado por
+volume — remedir a distribuição inteira quando o catálogo crescer, pelo
+mesmo método (não reajustar ao próximo outlier sem medir de novo).
+
 ---
 
 ## C. Pipeline e dados
@@ -1801,6 +1955,87 @@ rastreadas desde `85a8f11` (`aceite-e-mapa`, `classificacao`, `coleta`,
 
 **Não corrigido nesta sessão** — nem os caminhos, nem os testes, nem os
 scripts. Decisão do dono: registrar, não consertar.
+
+### C18. O saldo do DeepSeek zerou no meio do lote de 44 (2026-09-16)
+
+**O que aconteceu, medido.** O lote noturno de 44 filmes (coleta →
+classificação → verificador, sem publicar) terminou limpo em 3h41, mas o
+estágio do verificador registrou **174 reviews sem veredito**. Delas, **139
+são `402 Insufficient Balance`**, todas idênticas palavra por palavra, e
+concentradas nas **últimas 142 linhas** de `verificador_producao.jsonl`
+(índices 9166–9307 de 9308) — o fim absoluto da rodada. Saldo medido em
+seguida: **-US$ 0,14, `is_available: false`**.
+
+**Não é (A) nem (B) da C3** — é um terceiro mecanismo. (A) é fila cheia
+declarada no corpo com HTTP 200; (B) é JSON malformado numa resposta que
+chegou; este é 4xx de BILLING, e a conta não volta sozinha. O disjuntor de
+sobrecarga não viu nada porque conta `LLMSobrecarga`, e 402 não é fila.
+
+**O aviso existiu e ninguém viu.** Antes dos 402 vieram **3 `429`** cuja
+mensagem já dizia a causa: *"concurrency ... based on your remaining
+balance"*. O provider corta a concorrência conforme o crédito cai.
+
+**PENDENTES POR SALDO, NÃO POR JULGAMENTO** — o registro que interessa a
+quem for publicar estes dois filmes:
+- **`uncut-gems`: 100 de 100 candidatas** sem veredito do verificador;
+- **`top-gun-maverick`: 39 de 77.**
+
+As 139 seguem com `impacto_emocional` na marcação ORIGINAL, por política
+conservadora, e marcadas `verificacao_pendente` — visíveis, como as da C3.
+**Decisão do dono (2026-09-16): publicar assim, e reverificar em DeepSeek
+quando houver saldo — NÃO em Gemini.** O custo em Gemini seria irrisório
+(~US$ 0,09–0,14), mas exigiria mudar `rodar_passe` e misturaria providers
+dentro do mesmo eixo: os **39,9% de remoção medidos nos 44** (1.369 de 3.434)
+saíram de DeepSeek/`V2_alvo`, e 139 reviews julgadas por outro modelo não
+seriam comparáveis. Custo de reverificar em DeepSeek: **~US$ 0,01**.
+
+**Os outros 30 são a C3(B) de sempre:** `JSONDecodeError` (`Extra data`),
+30/3.434 = **0,87%**, idêntica à taxa histórica do piloto, espalhados por ~20
+filmes. **Não retentados, por decisão do dono** — mesmo motivo da C3.
+
+**CORRIGIDO: disjuntor de SALDO** (`config.CIRCUITO_SALDO_*`,
+`synthesize.py`, `tests/test_disjuntor_saldo.py`). Desenho aprovado
+integralmente pelo dono, e deliberadamente DIFERENTE do de sobrecarga:
+- **402 abre na PRIMEIRA ocorrência** (`CIRCUITO_SALDO_LIMIAR = 1`) — saldo
+  negativo é estado determinístico da conta, não a fila oscilante que exige 3
+  confirmações. As 139 falhas foram o custo de confirmar 139 vezes o que a
+  primeira resposta provou;
+- **exceção própria, `LLMSaldoEsgotado`**, irmã e não sinônimo de
+  `LLMCircuitoAberto`: quem trata precisa saber que esta não passa sozinha;
+- **sonda por `GET /user/balance`**, grátis e sem consumir crédito (é a única
+  sonda possível numa conta sem saldo), a cada **30 min** e não os 5 min
+  calibrados para fila. Sonda que falha NÃO fecha o disjuntor;
+- **o `429` de concorrência por saldo vira AVISO ALTO** na primeira
+  ocorrência, uma vez por processo, e não abre nada;
+- **o passe ABORTA** (`SystemExit`) em vez de arrastar a fila contra conta
+  morta, e **não grava registro nenhum** das não tentadas — sem registro, a
+  reexecução pós-depósito retenta todas. Medido no teste: o dano fica preso a
+  UMA onda de concorrência (8 chamadas), não às 139.
+
+**Buraco de cobertura achado no caminho — e ele é o mais grave desta
+rodada.** `scripts/gerar_condicoes.py` foi commitado em `18a1196` **sem
+compilar** (f-string com literal não terminado), justamente no commit que
+adotou o briefing variante como default de produção. `compileall` sobre
+`scripts/` + `src/` mostrou que era o ÚNICO arquivo quebrado. Nenhum teste o
+abria. Corrigido (2 linhas) e **acrescentado a `SCRIPTS_SEM_LACO`**, cujo
+`ast.parse` transforma erro de sintaxe em falha de teste. **Ainda fora de
+qualquer teste, no caminho de produção:** `lote.py`,
+`relatorio_revisao_condicoes.py`, `aplicar_revisao_condicoes.py`,
+`enriquecer_eixos.py`, `backfill_ano.py`, `recalcular_margem_exata.py`.
+
+**A suíte ganhou uma 4ª falha que é da EXPANSÃO, não do código.**
+`test_publicar_condicoes::test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas`
+assume **consenso ⊆ publicado**: `_temas_retidos_no_catalogo()` varre os
+slugs de `consenso.jsonl` e abre `resultado/<slug>.json` de cada um. Com os
+44 no consenso e nenhum publicado, quebra em `FileNotFoundError`. **É a mesma
+CLASSE dos 6 testes que fixavam o catálogo em 35, mas o espelho deles:**
+aqueles congelavam a CONTAGEM e precisaram derivar da fonte real; este deriva
+a POPULAÇÃO da fonte real e congela o RESULTADO (`retidos - OITO_DA_LISTA ==`
+três pares literais). **Publicar os 44 não cura** — troca `FileNotFoundError`
+por falha na igualdade assim que qualquer um dos 44 tiver tema retido em
+`expectativa`. Conserto proposto, NÃO feito (aguarda aval): fixar a população
+no catálogo em que a medição foi feita, em vez de "todo slug do consenso" —
+o que preserva a asserção inteira em vez de afrouxá-la.
 
 ---
 

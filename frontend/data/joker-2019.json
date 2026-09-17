@@ -1,0 +1,1612 @@
+{
+  "slug": "joker-2019",
+  "data_coleta": "2026-09-16T20:02:50.583209+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/joker-2019/reviews/",
+  "ficha": {
+    "titulo": "Coringa",
+    "sinopse_oficial": "Isolado, intimidado e desconsiderado pela sociedade, o fracassado comediante Arthur Fleck inicia seu caminho como uma mente criminosa após assassinar três homens em pleno metrô. Sua ação inicia um movimento popular contra a elite de Gotham City, da qual Thomas Wayne é seu maior representante.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "duracao_min": 122,
+    "diretor": "Todd Phillips",
+    "diretor_transliterado": false,
+    "ano": 2019,
+    "fonte": "tmdb",
+    "tmdb_id": 475557,
+    "tmdb_fetched_at": "2026-09-16T20:18:52+00:00",
+    "poster_path": "/xLxgVxFWvb9hhUyCDDXxRPPnFck.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/rlay2M5QYvi6igbGcFjq8jxeusY.jpg",
+      "/hw1CwteUFGjcWXwjGhKk8UJpWeA.jpg",
+      "/hO7KbdvGOtDdeg0W4Y5nKEHeDDh.jpg",
+      "/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+      "/qR1yyZe3X14opqBmeHRLXmfVcot.jpg",
+      "/gZWl93sf8AxavYpVT1Un6EF3oCj.jpg",
+      "/9ME1AMXfAoXiD87Lh9lml0FTQcM.jpg",
+      "/1WTKTtptVajbpuVplZAMliZeTCh.jpg",
+      "/15nzoyAHsnsYUQpEzUF4jcroSzt.jpg",
+      "/xWUHCD67fcbEZw5yMrdOnRyd5WR.jpg"
+    ],
+    "backdrop_path": "/hw1CwteUFGjcWXwjGhKk8UJpWeA.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/onwnTFCEF5CvB8AFi9BzZqm6cng.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/hw1CwteUFGjcWXwjGhKk8UJpWeA.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/rlay2M5QYvi6igbGcFjq8jxeusY.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/1WTKTtptVajbpuVplZAMliZeTCh.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/1JlbnzFqp0KQBquCvSmoeWMe274.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vXbDNQ48a2vlGvz4M7P8FKJTMXn.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/e89BFT5P8baD1lE6RqljYCa76Ms.jpg",
+        "still_largura": 1808,
+        "still_altura": 1017
+      },
+      {
+        "still_path": "/rFtpZF0gU8M6zc5BIusBEpR2ZUX.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/6eB5rakwpTQml6qJgp2H081nAA6.jpg",
+        "still_largura": 1441,
+        "still_altura": 810
+      },
+      {
+        "still_path": "/8OaM8fbjwt5ThpWAhhBiYYMF2DT.jpg",
+        "still_largura": 1435,
+        "still_altura": 807
+      },
+      {
+        "still_path": "/dnfEocMgrY7SJvJVBNu2canPYxq.jpg",
+        "still_largura": 1484,
+        "still_altura": 835
+      },
+      {
+        "still_path": "/k7HOk537ehfbUbk45mLOlIzOElN.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/tSkbWV61jbw5hqOWnB3weac1ZiQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "joker-2019",
+      "titulo_letterboxd": "Joker",
+      "ano_letterboxd": 2019,
+      "tmdb_id_letterboxd": 475557,
+      "tmdb_id_escolhido": 475557,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Joker",
+      "ano_tmdb": 2019,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4900424,
+    "por_nivel": {
+      "0.5": 16952,
+      "1.0": 48779,
+      "1.5": 29620,
+      "2.0": 169824,
+      "2.5": 145133,
+      "3.0": 697082,
+      "3.5": 642099,
+      "4.0": 1607888,
+      "4.5": 535384,
+      "5.0": 1007663
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 17,
+      "positivas": 77
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "joker-2019",
+    "coletado_em": "2026-09-16T05:31:12.610279+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 16952,
+      "1.0": 48779,
+      "1.5": 29620,
+      "2.0": 169824,
+      "2.5": 145133,
+      "3.0": 697082,
+      "3.5": 642099,
+      "4.0": 1607888,
+      "4.5": 535384,
+      "5.0": 1007663
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 9,
+      "1.5": 9,
+      "2.0": 32,
+      "2.5": 22,
+      "3.0": 20,
+      "3.5": 8,
+      "4.0": 14,
+      "4.5": 10,
+      "5.0": 15
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "3.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 8,
+      "1.5": 5,
+      "2.0": 27,
+      "2.5": 23,
+      "3.0": 111,
+      "3.5": 102,
+      "4.0": 256,
+      "4.5": 85,
+      "5.0": 160
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 647,
+        "min": "2019-01-01",
+        "max": "2026-09-16",
+        "p5": "2024-10-01",
+        "p50": "2026-09-10",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 191,
+          "min": "2019-09-07",
+          "max": "2026-09-16",
+          "p5": "2024-09-11",
+          "p50": "2026-09-07",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 252,
+          "min": "2019-01-01",
+          "max": "2026-09-15",
+          "p5": "2025-01-24",
+          "p50": "2026-09-09",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2019-07-12",
+          "max": "2026-09-16",
+          "p5": "2024-10-13",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 26,
+      "dias_por_100_paginas": 20.47244094488189,
+      "paginas_para_1_ano": 1783
+    },
+    "identidade_letterboxd": {
+      "slug": "joker-2019",
+      "titulo": "Joker",
+      "ano": 2019,
+      "tmdb_id_letterboxd": 475557,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2019,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 648
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 4,
+        "p95": 14,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-10-03",
+        "max": "2026-09-16",
+        "p5": "2020-01-25",
+        "p50": "2026-09-07",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 119,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 85,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 85,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "roteiro raso e pretensioso",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews negativas consideram que o filme tenta ser uma crítica social profunda, mas fica apenas na superfície, sem desenvolvimento real dos temas que propõe.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "ritmo arrastado e experiência tediosa",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores reclamam que o filme é lento e entediante, com momentos que parecem se arrastar sem necessidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "atuação de Joaquin Phoenix",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as críticas negativas, muitos reconhecem que a atuação de Joaquin Phoenix é competente, embora considerem que isso não salva o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "glorificação da violência e do personagem",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte do público critica o filme por romantizar a violência e transformar um assassino em figura de culto, o que soa irresponsável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "comparações desfavoráveis com Taxi Driver e O Rei da Comédia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews apontam que o filme imita descaradamente obras de Scorsese, mas sem a mesma profundidade ou originalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "tratamento raso e caricato da saúde mental",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas críticas afirmam que o filme aborda doenças mentais de forma exagerada e pouco sutil, beirando o caricato.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo apontam principalmente para um roteiro superficial e pretensioso, ritmo lento e uma abordagem questionável da violência e da saúde mental. Apesar de reconhecerem a atuação de Joaquin Phoenix e aspectos técnicos, consideram que esses elementos não compensam os problemas estruturais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 17,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 56,
+        "p5": 1,
+        "p50": 6,
+        "p95": 28,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-01-01",
+        "max": "2026-09-15",
+        "p5": "2019-10-11",
+        "p50": "2026-09-10",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 33,
+          "n_brutas": 180,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 149,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 149,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Joaquin Phoenix",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas elogiam a performance de Joaquin Phoenix como intensa, perturbadora e convincente, destacando que ele carrega o filme mesmo quando outras partes não funcionam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Derivação e falta de originalidade",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que o filme se apoia demais em referências a outras obras, como Taxi Driver e O Rei da Comédia, sem acrescentar algo novo, soando derivativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e falta de profundidade",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas criticam o roteiro por ser raso, óbvio e sem subtileza, com uma trama que parece não ter muito a dizer além do declínio mental do protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e partes entediantes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews descrevem o filme como arrastado e entediante em vários momentos, com uma sensação de que a história não avança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato da saúde mental e da sociedade",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há comentários sobre como o filme aborda a saúde mental de forma exagerada ou problemática, e sobre a crítica social à desigualdade e ao abandono.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desconexão com o personagem Coringa dos quadrinhos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte deste grupo sente que o filme se afasta da mitologia clássica do Coringa, funcionando melhor como um estudo de um homem comum do que como uma adaptação fiel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a atuação de Joaquin Phoenix como ponto alto, mas criticam a falta de originalidade, o roteiro raso e o ritmo lento. Este grupo também questiona a abordagem da saúde mental e a desconexão com o Coringa dos quadrinhos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 77,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 17,
+        "4.5": 6,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 2,
+        "p95": 64,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-10-05",
+        "max": "2026-09-16",
+        "p5": "2024-10-20",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 17,
+          "n_alvo": 17,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 77,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 77,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Joaquin Phoenix",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Joaquin Phoenix é amplamente elogiada como hipnotizante e crucial para o impacto do filme, com muitos destacando sua capacidade de transmitir fragilidade e perturbação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Retrato da saúde mental e crítica social",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como uma exploração profunda da doença mental, do isolamento e da negligência social, oferecendo uma crítica contundente à forma como a sociedade trata os vulneráveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Abordagem inovadora do personagem Coringa",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos apreciam a reinvenção do Coringa como um estudo de personagem realista e trágico, em vez de uma figura puramente caótica, elogiando a coragem de se afastar das origens dos quadrinhos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e trilha sonora",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A cinematografia e a trilha sonora são frequentemente destacadas como elementos que elevam a atmosfera sombria e imersiva do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e desenvolvimento do roteiro",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews elogiam o ritmo envolvente, enquanto outras apontam que a narrativa poderia ser mais concisa, especialmente na primeira metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com Taxi Driver e influências",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é comparado a Taxi Driver por sua abordagem psicológica e urbana, com alguns notando semelhanças que, embora não originais, são bem executadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam especialmente a atuação de Joaquin Phoenix e a profundidade psicológica do filme, com muitos elogiando a crítica social e a reinvenção do personagem. A fotografia e a trilha sonora também são pontos altos, embora alguns apontem problemas de ritmo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "ritmo arrastado e experiência tediosa",
+            "exemplo_parafraseado": "Alguns espectadores reclamam que o filme é lento e entediante, com momentos que parecem se arrastar sem necessidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e partes entediantes",
+            "exemplo_parafraseado": "Algumas reviews descrevem o filme como arrastado e entediante em vários momentos, com uma sensação de que a história não avança.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e desenvolvimento do roteiro",
+            "exemplo_parafraseado": "Algumas reviews elogiam o ritmo envolvente, enquanto outras apontam que a narrativa poderia ser mais concisa, especialmente na primeira metade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "atuação de Joaquin Phoenix",
+            "exemplo_parafraseado": "Mesmo entre as críticas negativas, muitos reconhecem que a atuação de Joaquin Phoenix é competente, embora considerem que isso não salva o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Joaquin Phoenix",
+            "exemplo_parafraseado": "Várias reviews medianas elogiam a performance de Joaquin Phoenix como intensa, perturbadora e convincente, destacando que ele carrega o filme mesmo quando outras partes não funcionam.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Joaquin Phoenix",
+            "exemplo_parafraseado": "A performance de Joaquin Phoenix é amplamente elogiada como hipnotizante e crucial para o impacto do filme, com muitos destacando sua capacidade de transmitir fragilidade e perturbação.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e trilha sonora",
+            "exemplo_parafraseado": "A cinematografia e a trilha sonora são frequentemente destacadas como elementos que elevam a atmosfera sombria e imersiva do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "roteiro raso e pretensioso",
+            "exemplo_parafraseado": "Várias reviews negativas consideram que o filme tenta ser uma crítica social profunda, mas fica apenas na superfície, sem desenvolvimento real dos temas que propõe.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e falta de profundidade",
+            "exemplo_parafraseado": "As reviews medianas criticam o roteiro por ser raso, óbvio e sem subtileza, com uma trama que parece não ter muito a dizer além do declínio mental do protagonista.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Abordagem inovadora do personagem Coringa",
+            "exemplo_parafraseado": "Muitos apreciam a reinvenção do Coringa como um estudo de personagem realista e trágico, em vez de uma figura puramente caótica, elogiando a coragem de se afastar das origens dos quadrinhos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "comparações desfavoráveis com Taxi Driver e O Rei da Comédia",
+            "exemplo_parafraseado": "Diversas reviews apontam que o filme imita descaradamente obras de Scorsese, mas sem a mesma profundidade ou originalidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Derivação e falta de originalidade",
+            "exemplo_parafraseado": "Este grupo aponta que o filme se apoia demais em referências a outras obras, como Taxi Driver e O Rei da Comédia, sem acrescentar algo novo, soando derivativo.",
+            "temas_no_mesmo_eixo": [
+              "Desconexão com o personagem Coringa dos quadrinhos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com Taxi Driver e influências",
+            "exemplo_parafraseado": "O filme é comparado a Taxi Driver por sua abordagem psicológica e urbana, com alguns notando semelhanças que, embora não originais, são bem executadas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "glorificação da violência e do personagem",
+            "exemplo_parafraseado": "Parte do público critica o filme por romantizar a violência e transformar um assassino em figura de culto, o que soa irresponsável.",
+            "temas_no_mesmo_eixo": [
+              "tratamento raso e caricato da saúde mental"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Retrato da saúde mental e da sociedade",
+            "exemplo_parafraseado": "Há comentários sobre como o filme aborda a saúde mental de forma exagerada ou problemática, e sobre a crítica social à desigualdade e ao abandono.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Retrato da saúde mental e crítica social",
+            "exemplo_parafraseado": "O filme é visto como uma exploração profunda da doença mental, do isolamento e da negligência social, oferecendo uma crítica contundente à forma como a sociedade trata os vulneráveis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1492729445",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 102 (char 101)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2019 e dirigido por Todd Phillips, Coringa é um drama de suspense e crime que acompanha a trajetória de Arthur Fleck, um comediante fracassado que vive isolado e desconsiderado pela sociedade. Ao iniciar seu caminho como uma mente criminosa, suas ações acabam impulsionando um movimento popular contra a elite da cidade.\n\nAo analisar a recepção da obra, nota-se que os grupos avaliativos concordam sobre o que o filme é e discordam sobre se ele funciona na prática.\n\nNa grande maioria das notas (~77%), a maior parte destaca a atuação de Joaquin Phoenix como peça central da narrativa. Além disso, uma parcela expressiva elogia o retrato da saúde mental associado à crítica social sobre o abandono dos vulneráveis, enquanto um número considerável valoriza a abordagem inovadora e realista concedida ao personagem Coringa.\n\nNuma parcela das notas (~17%), para os espectadores situados nessa leitura intermediária, cerca de metade reconhece a força da atuação de Joaquin Phoenix ao conduzir a obra. Contudo, boa parte desse grupo critica a derivação e a falta de originalidade diante de outras referências cinematográficas, ao passo que vários apontam a presença de um roteiro fraco e sem profundidade.\n\nNuma fração mínima das notas (~5%), a partir da perspectiva adotada por este grupo, muitos afirmam que a produção apresenta um roteiro raso e pretensioso. Da mesma forma, vários descrevem a experiência como tediosa em razão de um ritmo arrastado, embora uma parcela expressiva ainda mencione positivamente a atuação de Joaquin Phoenix.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 13,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9996,
+      "completion_tokens": 1097,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9996
+    },
+    "latencia_s": 42.43
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divergência central está na construção do roteiro e do protagonista: enquanto a maioria dos que recomendam exalta a perspectiva original dada ao Coringa, a maioria dos que não recomendam considera o texto superficial e com excesso de pretensão.",
+    "texto_modelo": "A divergência central está na construção do roteiro e do protagonista: enquanto a maioria dos que recomendam exalta a perspectiva original dada ao Coringa, a maioria dos que não recomendam considera o texto superficial e com excesso de pretensão.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "brevidade",
+    "abertura": "diver",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3669,
+      "completion_tokens": 180,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3669
+    },
+    "latencia_s": 12.49
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma atuação hipnotizante capaz de transmitir fragilidade e perturbação",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Joaquin Phoenix",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por uma exploração do isolamento, doença mental e negligência social",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Retrato da saúde mental e crítica social",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma abordagem realista e trágica do personagem, distante dos quadrinhos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Abordagem inovadora do personagem Coringa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca um ritmo envolvente, tolerando uma primeira metade menos concisa",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e desenvolvimento do roteiro",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se frustra quando ambições de crítica social permanecem na superfície temática",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "roteiro raso e pretensioso",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com narrativas lentas que parecem se arrastar sem necessidade",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "ritmo arrastado e experiência tediosa",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "sente que uma atuação competente não basta para sustentar o filme",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "atuação de Joaquin Phoenix",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita retratos que romantizam a violência e cultuam um assassino",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "glorificação da violência e do personagem",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com representações de doenças mentais que beiram o caricato",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "tratamento raso e caricato da saúde mental",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 77,
+        "peso_texto": "~77% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15617,
+      "completion_tokens": 1332,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 15617
+    },
+    "latencia_s": 24.54,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

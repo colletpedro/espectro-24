@@ -716,6 +716,39 @@ from pathlib import Path as _Path  # noqa: E402
 CIRCUITO_ARQUIVO = (_Path(__file__).resolve().parents[2]
                     / "dados" / "lote" / "circuito_deepseek.json")
 
+# [2026-09-16] DISJUNTOR DE SALDO — a segunda indisponibilidade do DeepSeek, e
+# ela NÃO é transiente. Medida no lote de 44 (ABERTO.md C18): a conta zerou no
+# meio do verificador e 139 chamadas falharam com `402 Insufficient Balance`,
+# uma a uma, até a fila de candidatas acabar. O disjuntor de sobrecarga não viu
+# nada — ele conta `LLMSobrecarga` (fila cheia declarada no corpo), e 402 não é
+# fila cheia. Antes dos 402 vieram três `429` cuja mensagem já dizia a causa
+# ("concurrency ... based on your remaining balance") e ninguém viu.
+#
+# TRÊS DIFERENÇAS para `CIRCUITO_LIMIAR_SOBRECARGAS`, todas do mesmo fato: a
+# fila esvazia sozinha, o saldo não.
+#
+# 1. LIMIAR 1, não 3. Sobrecarga precisa de 3 porque a fila é estado
+#    instantâneo do provider e oscila entre chamadas; saldo negativo é estado
+#    DETERMINÍSTICO da conta — a primeira resposta já prova o que a segunda
+#    repetiria. As 139 falhas do lote foram o custo de confirmar 139 vezes o
+#    que a primeira chamada disse.
+CIRCUITO_SALDO_LIMIAR = 1
+# 2. SONDA LONGA. `CIRCUITO_REABERTURA_S` (5 min) é calibrado para fila; saldo
+#    volta quando um humano deposita, que é da ordem de horas. 30 min não
+#    pendura o lote por um depósito já feito nem bate de minuto em minuto numa
+#    conta morta.
+CIRCUITO_SALDO_REABERTURA_S = 1800
+# 3. A SONDA É GRÁTIS e não é uma chamada de inferência: `GET /user/balance`
+#    não consome crédito (confirmado ao vivo em 2026-09-16, com a conta em
+#    -US$ 0,14: respondeu `is_available: false` sem cobrar). Sondar com uma
+#    chamada de verdade, como faz o disjuntor de sobrecarga, gastaria
+#    justamente o crédito que por definição não existe.
+DEEPSEEK_BALANCE_URL = "https://api.deepseek.com/user/balance"
+# Prazo da sonda, curto de propósito: ela roda no caminho de uma chamada
+# barrada, e uma sonda pendurada viraria a lentidão que o disjuntor existe
+# para evitar. Sonda que falha (rede, timeout) NÃO fecha o disjuntor.
+DEEPSEEK_BALANCE_TIMEOUT_S = 10
+
 
 def nota_para_url(n: float) -> str:
     """Formato decimal da nota na URL (§2.1): 3.0 -> '3', 3.5 -> '3.5'."""

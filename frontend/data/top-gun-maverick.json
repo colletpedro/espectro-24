@@ -1,0 +1,1883 @@
+{
+  "slug": "top-gun-maverick",
+  "data_coleta": "2026-09-16T19:54:57.670441+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/top-gun-maverick/reviews/",
+  "ficha": {
+    "titulo": "Top Gun: Maverick",
+    "sinopse_oficial": "Depois de mais de 30 anos de serviço como um dos principais aviadores da Marinha, Pete \"Maverick\" Mitchell está de volta, rompendo os limites como um piloto de testes corajoso. No mundo contemporâneo das guerras tecnológicas, Maverick enfrenta drones e prova que o fator humano ainda é essencial.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Drama"
+    ],
+    "duracao_min": 131,
+    "diretor": "Joseph Kosinski",
+    "diretor_transliterado": false,
+    "ano": 2022,
+    "fonte": "tmdb",
+    "tmdb_id": 361743,
+    "tmdb_fetched_at": "2026-09-16T20:18:50+00:00",
+    "poster_path": "/kPbuLGVSJHATkW9fX9L3h1wM0Pa.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+      "/5AcP07WJl1VZbnloLZrMVgYjR2s.jpg",
+      "/kBSSbN1sOiJtXjAGVZXxHJR9Kox.jpg",
+      "/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg",
+      "/vvfjmGd4iypwE89e3ZkhEsTNQyH.jpg",
+      "/m1aaLpSnmq72jMu5vIbBEdyR508.jpg",
+      "/u9tWvLMKCRryraFCoLhDdLC0gP1.jpg",
+      "/f0GJgpzXlCXeY771LuVKfoj4VmW.jpg",
+      "/o3JObZEzsSNZz1jIyzDZq7i8UJz.jpg",
+      "/uNOttb1gGzEPg280Sza3rdC2hxZ.jpg"
+    ],
+    "backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/e5N2Zk3XEvQfLy1g6ZFNv4w7HNO.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/5AcP07WJl1VZbnloLZrMVgYjR2s.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ndaARSKqKfvPWDS0R3CAbBoCutI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/f7X4OWv3V4f9okq7YqvMgtwn11d.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/2a7ajSvOkeJlxk4s4ZUVE5QYyMG.jpg",
+        "still_largura": 2695,
+        "still_altura": 1516
+      },
+      {
+        "still_path": "/6noWRspSjhx5pxq8W44wuCdv00k.jpg",
+        "still_largura": 2674,
+        "still_altura": 1504
+      },
+      {
+        "still_path": "/awsL5p3BS95S7EBd9WnRt1d9C6F.jpg",
+        "still_largura": 2191,
+        "still_altura": 1232
+      },
+      {
+        "still_path": "/eoN4WPqjOoFVIV6VQyowuAUfGyf.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/i2IQBEoJKCBNFdDI74mrn4psMLD.jpg",
+        "still_largura": 2350,
+        "still_altura": 1322
+      },
+      {
+        "still_path": "/nVOgsxuUuC7gNg3aZTEqBfYAr3I.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/r9bNE8GvxxCpKwDIdsY6uZDwN3d.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/warjC2KNLzAYfaH4XV1E1nbp3XU.jpg",
+        "still_largura": 2745,
+        "still_altura": 1544
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "top-gun-maverick",
+      "titulo_letterboxd": "Top Gun: Maverick",
+      "ano_letterboxd": 2022,
+      "tmdb_id_letterboxd": 361743,
+      "tmdb_id_escolhido": 361743,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Top Gun: Maverick",
+      "ano_tmdb": 2022,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2397862,
+    "por_nivel": {
+      "0.5": 6784,
+      "1.0": 16284,
+      "1.5": 10672,
+      "2.0": 56514,
+      "2.5": 61688,
+      "3.0": 278167,
+      "3.5": 331992,
+      "4.0": 775138,
+      "4.5": 361637,
+      "5.0": 498986
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 14,
+      "positivas": 82
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "top-gun-maverick",
+    "coletado_em": "2026-09-16T05:19:48.256086+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 6784,
+      "1.0": 16284,
+      "1.5": 10672,
+      "2.0": 56514,
+      "2.5": 61688,
+      "3.0": 278167,
+      "3.5": 331992,
+      "4.0": 775138,
+      "4.5": 361637,
+      "5.0": 498986
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 6,
+      "2.0": 30,
+      "2.5": 26,
+      "3.0": 20,
+      "3.5": 10,
+      "4.0": 15,
+      "4.5": 9,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 5,
+        "extras_por_nivel": {
+          "4.0": 2,
+          "5.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 4,
+      "2.0": 19,
+      "2.5": 20,
+      "3.0": 92,
+      "3.5": 110,
+      "4.0": 256,
+      "4.5": 119,
+      "5.0": 165
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 684,
+        "min": "2022-01-01",
+        "max": "2026-09-16",
+        "p5": "2024-01-18",
+        "p50": "2026-09-05",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "2022-01-20",
+          "max": "2026-09-15",
+          "p5": "2025-07-06",
+          "p50": "2026-08-18",
+          "p95": "2026-09-10"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2022-01-01",
+          "max": "2026-09-16",
+          "p5": "2025-09-01",
+          "p50": "2026-09-06",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 252,
+          "min": "2022-03-06",
+          "max": "2026-09-16",
+          "p5": "2023-09-14",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 32,
+      "dias_por_100_paginas": 25.19685039370079,
+      "paginas_para_1_ano": 1449
+    },
+    "identidade_letterboxd": {
+      "slug": "top-gun-maverick",
+      "titulo": "Top Gun: Maverick",
+      "ano": 2022,
+      "tmdb_id_letterboxd": 361743,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2022,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 684
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 3,
+        "p95": 11,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-05-06",
+        "max": "2026-09-13",
+        "p5": "2026-08-02",
+        "p50": "2026-08-19",
+        "p95": "2026-09-11"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 0,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 96,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 96,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Propaganda militar e exaltação nacionalista",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas reviews criticam o filme por funcionar como uma peça publicitária das forças armadas, glorificando o militarismo e o imperialismo norte-americano, com cooperação do próprio governo e do Pentágono.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e fórmula genérica",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é considerado formulaico, sem originalidade, com uma trama óbvia e pouco crível, repleta de clichês e homenagens nostálgicas vazias ao filme original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e atuações fracas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens soam ocos e as atuações são criticadas como pouco inspiradas, com destaque para a falta de carisma do elenco jovem e para um romance sem química.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de tensão e mortes (plot armor)",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ausência de consequências reais e de mortes entre os protagonistas torna as cenas de ação previsíveis e sem peso, minando qualquer senso de perigo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia excessiva e dependência do original",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme se apoia demais em referências e recriações do primeiro filme, soando como uma sequência preguiçosa que não consegue se sustentar sozinha.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e relacionamentos pouco desenvolvidos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As relações entre os personagens são superficiais, e o interesse romântico e os novos pilotos carecem de profundidade e carisma em comparação com o original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam uma forte rejeição à propaganda militar e à falta de originalidade, considerando o filme formulaico e sem tensão real. Este grupo também critica atuações fracas, personagens rasos e o uso excessivo de nostalgia.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 14,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 15,
+        "3.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 8,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 46,
+        "p5": 1,
+        "p50": 5,
+        "p95": 23,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-01-01",
+        "max": "2026-09-16",
+        "p5": "2026-06-02",
+        "p50": "2026-09-06",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 15,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 25,
+          "n_alvo": 33,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 118,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 118,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Cenas de voo e ação",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências aéreas são frequentemente elogiadas como o ponto alto, com manobras impressionantes e um impacto visual que se destaca, mesmo quando o restante do filme é criticado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e clichê",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas apontam que a trama segue uma fórmula batida, com reviravoltas óbvias e diálogos pouco inspirados, tornando o desenvolvimento pouco surpreendente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia e dependência do original",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme se apoia excessivamente na nostalgia do primeiro, reciclando cenas e bordões, o que pode soar como apelo fácil para os fãs.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Propaganda militar",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A presença de propaganda militar é notada por várias reviews, que a consideram um viés problemático, mesmo quando reconhecem a qualidade técnica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e desenvolvimento de personagens",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações dividem opiniões: alguns elogiam o carisma de Tom Cruise e a química do elenco jovem, enquanto outros criticam a falta de profundidade dos personagens coadjuvantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de foco em Maverick",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas sentem que o filme concentra demais a narrativa em Maverick, deixando os novos personagens em segundo plano e sem arcos satisfatórios.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam que, embora as cenas de voo e a ação sejam amplamente elogiadas, a previsibilidade do roteiro e o excesso de nostalgia são os principais pontos negativos. Este grupo destaca uma experiência divertida, mas que não atinge o status de obra-prima, com ressalvas sobre propaganda e desenvolvimento de personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 82,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 41,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-05-29",
+        "max": "2026-09-16",
+        "p5": "2026-07-24",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 69,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 69,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Sequência superior ao original",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews positivas consideram esta sequência superior ao filme original, elogiando a forma como homenageia e expande a história anterior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Emoção e sentimentalismo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo destaca que o filme consegue equilibrar ação com momentos emocionantes, arrancando lágrimas e criando uma conexão afetiva com os personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de ação e efeitos práticos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas enfatizam a espetacularidade das sequências aéreas, rodadas de forma prática e realista, o que intensifica a adrenalina e a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e experiência sonora",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é frequentemente citada como um ponto alto, com menções ao impacto do som em salas Dolby e à capacidade de emocionar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Tom Cruise",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Tom Cruise é amplamente elogiado por sua atuação carismática e por dar vida ao personagem Maverick de forma convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia e referências ao original",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aprecia as referências e a nostalgia em relação ao primeiro filme, considerando que elas são usadas de forma significativa e respeitosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a emoção, as cenas de ação práticas e a trilha sonora como pontos fortes, além de considerarem esta sequência superior ao original. Este grupo também valoriza a atuação de Tom Cruise e a forma como o filme equilibra nostalgia e uma história envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Falta de tensão e mortes (plot armor)",
+            "exemplo_parafraseado": "A ausência de consequências reais e de mortes entre os protagonistas torna as cenas de ação previsíveis e sem peso, minando qualquer senso de perigo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações fracas",
+            "exemplo_parafraseado": "Os personagens soam ocos e as atuações são criticadas como pouco inspiradas, com destaque para a falta de carisma do elenco jovem e para um romance sem química.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e desenvolvimento de personagens",
+            "exemplo_parafraseado": "As atuações dividem opiniões: alguns elogiam o carisma de Tom Cruise e a química do elenco jovem, enquanto outros criticam a falta de profundidade dos personagens coadjuvantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Tom Cruise",
+            "exemplo_parafraseado": "Tom Cruise é amplamente elogiado por sua atuação carismática e por dar vida ao personagem Maverick de forma convincente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Cenas de voo e ação",
+            "exemplo_parafraseado": "As sequências aéreas são frequentemente elogiadas como o ponto alto, com manobras impressionantes e um impacto visual que se destaca, mesmo quando o restante do filme é criticado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Cenas de ação e efeitos práticos",
+            "exemplo_parafraseado": "As reviews positivas enfatizam a espetacularidade das sequências aéreas, rodadas de forma prática e realista, o que intensifica a adrenalina e a imersão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e fórmula genérica",
+            "exemplo_parafraseado": "O roteiro é considerado formulaico, sem originalidade, com uma trama óbvia e pouco crível, repleta de clichês e homenagens nostálgicas vazias ao filme original.",
+            "temas_no_mesmo_eixo": [
+              "Personagens e relacionamentos pouco desenvolvidos"
+            ]
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e clichê",
+            "exemplo_parafraseado": "Várias reviews medianas apontam que a trama segue uma fórmula batida, com reviravoltas óbvias e diálogos pouco inspirados, tornando o desenvolvimento pouco surpreendente.",
+            "temas_no_mesmo_eixo": [
+              "Excesso de foco em Maverick"
+            ]
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e experiência sonora",
+            "exemplo_parafraseado": "A trilha sonora é frequentemente citada como um ponto alto, com menções ao impacto do som em salas Dolby e à capacidade de emocionar.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -50.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Emoção e sentimentalismo",
+            "exemplo_parafraseado": "O grupo destaca que o filme consegue equilibrar ação com momentos emocionantes, arrancando lágrimas e criando uma conexão afetiva com os personagens.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Nostalgia excessiva e dependência do original",
+            "exemplo_parafraseado": "O filme se apoia demais em referências e recriações do primeiro filme, soando como uma sequência preguiçosa que não consegue se sustentar sozinha.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e dependência do original",
+            "exemplo_parafraseado": "Este grupo destaca que o filme se apoia excessivamente na nostalgia do primeiro, reciclando cenas e bordões, o que pode soar como apelo fácil para os fãs.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Sequência superior ao original",
+            "exemplo_parafraseado": "Muitas reviews positivas consideram esta sequência superior ao filme original, elogiando a forma como homenageia e expande a história anterior.",
+            "temas_no_mesmo_eixo": [
+              "Nostalgia e referências ao original"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Propaganda militar e exaltação nacionalista",
+            "exemplo_parafraseado": "Diversas reviews criticam o filme por funcionar como uma peça publicitária das forças armadas, glorificando o militarismo e o imperialismo norte-americano, com cooperação do próprio governo e do Pentágono.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Propaganda militar",
+            "exemplo_parafraseado": "A presença de propaganda militar é notada por várias reviews, que a consideram um viés problemático, mesmo quando reconhecem a qualidade técnica.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -45.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1457979595",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1461429775",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1469758783",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1477259135",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1481461400",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484070554",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484109174",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1484516832",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1487964800",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1491991213",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1495081447",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1449342524",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1470730344",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1471125776",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1480332058",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1480388004",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1480408214",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1483746247",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495530384",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495772876",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1495908325",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496033569",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496256745",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496570709",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496581664",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1496886490",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497080925",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497151199",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497425657",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497432200",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497459036",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497523915",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497540007",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497594615",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497716642",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497769899",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497783404",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497850492",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497949321",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_APIStatusError",
+        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2022 e dirigido por Joseph Kosinski, Top Gun: Maverick é uma obra cinematográfica de ação e drama que acompanha o retorno do aviador Pete Mitchell após mais de trinta anos de serviço na Marinha. No exercício de sua função como piloto de testes corajoso, ele desafia limites operacionais no contexto contemporâneo das guerras tecnológicas, demonstrando que o fator humano segue indispensável frente ao uso de drones.\n\nA experiência do longa-metragem é pautada por intensas sequências de voo militar e por uma atmosfera contínua de referências nostálgicas.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente em relação ao seu veredito. Na grande maioria das notas (~82%), uma parcela expressiva avalia o longa como uma sequência superior ao original. Além disso, alguns enfatizam a presença marcante de emoção e sentimentalismo, enquanto uma fatia menor enaltece as cenas de ação filmadas com efeitos práticos.\n\nA partir da ótica de uma fração mínima das notas (~14%), cerca de metade reconhece o apelo das cenas de voo e ação. Em contrapartida, vários apontam que a história sofre com um roteiro previsível e clichê, e boa parte manifesta incômodo com a nostalgia e a dependência do filme anterior.\n\nJá na visão de uma fração ainda menor das notas (~4%), muitos condenam o teor de propaganda militar e a exaltação nacionalista presente na produção. Nesse mesmo escopo, um número considerável rejeita a condução de um roteiro previsível e de fórmula genérica, ao passo que parte deles destaca negativamente os personagens e atuações fracas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9996,
+      "completion_tokens": 1147,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9996
+    },
+    "latencia_s": 42.99
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "Os dois lados avaliam o filme em relação ao original, divergindo se a continuação supera o predecessor ou se apoia demais em lembranças do passado. Enquanto a maioria dos que recomendam destaca a força sentimental da narrativa, a maioria dos que desaprovam aponta uma trama com estrutura previsível.",
+    "texto_modelo": "Os dois lados avaliam o filme em relação ao original, divergindo se a continuação supera o predecessor ou se apoia demais em lembranças do passado. Enquanto a maioria dos que recomendam destaca a força sentimental da narrativa, a maioria dos que desaprovam aponta uma trama com estrutura previsível.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "dois",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "abertura": "dois",
+        "abertura_freq": 0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3642,
+      "completion_tokens": 199,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3642
+    },
+    "latencia_s": 15.65
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma continuação que homenageie o longa anterior e supere a história original",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Sequência superior ao original",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia narrativas de ação que equilibram momentos emocionantes com forte vínculo afetivo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Emoção e sentimentalismo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "procura sequências aéreas espetaculares gravadas de maneira prática com grande sensação de imersão",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cenas de ação e efeitos práticos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "valoriza uma interpretação carismática e convincente de Tom Cruise como protagonista",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Tom Cruise",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "gosta de lembranças nostálgicas e homenagens respeitosas ao primeiro filme",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Nostalgia e referências ao original",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com produções que exaltam o poderio militar e o nacionalismo norte-americano",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Propaganda militar e exaltação nacionalista",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita roteiros formulaicos e previsíveis sustentados por clichês e homenagens vazias",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro previsível e fórmula genérica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se decepciona com personagens ocos, elenco sem carisma e romance sem química",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e atuações fracas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se frustra quando a ausência de consequências reais e perigo enfraquece a tensão",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de tensão e mortes (plot armor)",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita sequências que dependem excessivamente do filme anterior para sustentar a própria narrativa",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Nostalgia excessiva e dependência do original",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 82,
+        "peso_texto": "~82% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 10,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 10,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 10,
+        "n_flags": 2,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 10,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 10
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11151,
+      "completion_tokens": 1410,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11151
+    },
+    "latencia_s": 18.63,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

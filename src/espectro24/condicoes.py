@@ -565,12 +565,49 @@ def peso_do_meio(idx: dict) -> dict | None:
 # **A exceção é do INSUMO, não da SAÍDA.** Algarismo no texto de uma
 # condição continua reprovado sem exceção (validador `digito`, regra 7 do
 # prompt): o que o leitor lê não ganha número nenhum.
+#
+# [2026-09-16, ABERTO.md B5, esclarecido na 1ª revisão humana de 100% em
+# volume — lote `expansao-44-2026-09-16`] Duas coisas que voltaram como
+# dúvida e ficam registradas aqui para não voltar:
+#
+# 1. **`digito` (regra 7) olha só `cond["texto"]` — nunca a paráfrase.** Um
+#    algarismo em `exemplo_parafraseado` (a paráfrase, campo de análise) não
+#    reprova a condição publicada; a frase acima ("nunca na paráfrase") é
+#    sobre a EXCEÇÃO de ano não se estender lá, não sobre a paráfrase estar
+#    sob a R4 — ela nunca esteve. Casos reais, condição limpa em ambos:
+#    `all-quiet-on-the-western-front-2022`/NEG-A (paráfrase com "1930") e
+#    `the-spongebob-movie-search-for-squarepants`/NEG-? (paráfrase com "3D").
+#
+# 2. **Fração posicional por extenso ("um terço final", "primeira metade")
+#    não é, e nunca foi, bloqueada por nenhum validador** — `digito` só casa
+#    dígito literal (`\d`), e o vocabulário de `quantidade_escrita`
+#    (`_RE_QUANTIDADE`, abaixo) não inclui frações. Critério de FORMA
+#    proposto e aprovado pelo dono, mesma lógica desta exceção — por forma,
+#    não por intenção: fração é POSICIONAL (permitida) quando qualifica um
+#    trecho da OBRA (segue/precede "final", "inicial", "primeira", "segunda",
+#    "último", "ato", "metragem", "duração", "filme"); é DE AMOSTRA
+#    (proibida) quando se refere a reviews/espectadores/notas/público/
+#    pessoas — competiria com os números do código, o mesmo motivo da R4.
+#    Checado contra os 4 casos reais do catálogo (`district-9` "um terço
+#    final", `joker-2019`/`the-brutalist` "primeira/segunda metade",
+#    `avengers-endgame`, descartada por outro motivo): as 4 são
+#    posicionais, nenhum contraexemplo. Registro de critério, NÃO
+#    codificado — não há hoje nenhuma trava a ajustar, porque nenhuma trava
+#    olhava fração por extenso antes disso.
+#
+# **Separado dos dois acima, e ainda ABERTO — não confundir:**
+# `algarismos_proibidos_no_briefing` (função abaixo) é um SEGUNDO validador,
+# mais estrito, que TRATA algarismo na paráfrase como sempre proibido (sem
+# esta exceção) — mas só roda em teste
+# (`test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme`), nunca em
+# `gerar()`/produção. Resolver o item 1 acima não resolve esse teste; ver
+# ABERTO.md B5 para o estado dele (7 filmes falhando, decisão pendente).
 _RE_ANO_EM_NOME_DE_TEMA = re.compile(
-    r"(?<![^\W\d_])(?i:de|em) (?P<ano>18[89]\d|19\d\d|20[0-3]\d)"
+    r"(?<![^\W\d_])(?i:de|em|para) (?P<ano>18[89]\d|19\d\d|20[0-3]\d)"
     r"(?=\s*$|\s*[)\],;:.!?—–](?:\s|$))")
 
-# A palavra antes de `de`/`em` que faz dela uma locução de QUANTIDADE — o
-# ano ali seria contagem ("cerca de 1990"). Normalizada, sem acento.
+# A palavra antes de `de`/`em`/`para` que faz dela uma locução de QUANTIDADE
+# — o ano ali seria contagem ("cerca de 1990"). Normalizada, sem acento.
 _LOCUCAO_DE_QUANTIDADE = frozenset({
     "mais", "menos", "cerca", "perto", "acima", "abaixo", "alem", "torno",
     "volta", "quase", "ate"})
@@ -585,16 +622,89 @@ def _anos_admitidos(tema: str):
 
 
 def anos_em_nome_de_tema(tema: str) -> list[str]:
-    """Os anos do `tema` que a exceção admite, na ordem em que aparecem."""
+    """Os anos do `tema` que a exceção admite, na ordem em que aparecem.
+
+    [2026-09-16, ABERTO.md B5] `para` entrou na lista de preposições ao lado
+    de `de`/`em` — caso real: `2001-a-space-odyssey`/POS-A, "Efeitos visuais
+    e técnicos impressionantes para 1968". Mesma forma, mesma estreiteza
+    (preposição inteira + ano de 4 dígitos + fecha o tema/pontuação); só a
+    lista de preposições aceitas cresceu. `"O remake de 2022 e o original"`
+    continua reprovado — falha pelo SUFIXO (o ano não fecha o tema), uma
+    dimensão da forma que esta mudança não toca."""
     return [m.group("ano") for m in _anos_admitidos(tema)]
 
 
+# [2026-09-16, ABERTO.md B5] DÉCADA ("nos anos 1930", "nos anos 60") — forma
+# distinta de ano de obra: não é "versão de NNNN", é "anos NN"/"anos NNNN"
+# literal. Duas casas OU quatro, porque o uso corrente admite as duas
+# (`"anos 60"` = 1960; `"anos 1930"` por extenso) — a forma de 2 dígitos é
+# mais permissiva, mas o prefixo `anos ` fica só na frente de contagem de
+# tempo, não de contagem de review, e a mesma exclusão de locução de
+# quantidade do ano se aplica aqui. **Isto reverte uma exclusão deliberada
+# anterior** (esta função ficava do lado FALHA de
+# `test_briefing_nao_tem_algarismo_de_quantidade_FALHA`, caso
+# `"Terror dos anos 2000"`, comentado "década, não obra") — decisão do dono,
+# 2026-09-16, sobre os casos reais `a-brighter-summer-day`/POS-? ("peso
+# histórico de Taiwan nos anos 60") e `chinatown`/POS-C ("Los Angeles nos
+# anos 1930"): ambos descrevem a ÉPOCA do enredo, o mesmo tipo de referência
+# temporal que o ano de obra já admitia, só com outra preposição. O teste
+# antigo foi atualizado para o mesmo lado.
+#
+# SUFIXO mais solto que o do ano, de propósito, e é uma segunda decisão —
+# reportada, não só implementada. Dois casos reais precisaram dele:
+# `a-brighter-summer-day`, "nos anos 60 E OS REFLEXOS do autoritarismo" (não
+# fecha a frase) e `chinatown`, "nos anos 1930**,** criando uma atmosfera"
+# (fecha em VÍRGULA de continuação, não em ponto final) — a exigência de
+# sufixo do ano (fechar o tema/pontuação de FIM — a mesma que mantém "remake
+# de 2022 e o original" reprovado) barraria os dois. Década tem risco de
+# colisão com quantidade muito menor que ano ("nos anos 60 e X pessoas" não
+# é uma frase que aparece) — a única guarda de sufixo que fica é não estar
+# colado a outro dígito, `%` ou ponto decimal (a malformação que barra
+# "anos 19400"/"anos 1940.5"); vírgula e qualquer outra pontuação/palavra de
+# continuação são aceitas. Ano de obra mantém a exigência antiga; só década
+# afrouxou.
+_RE_DECADA_EM_ANOS = re.compile(
+    r"(?<![^\W\d_])(?i:anos) (?P<decada>\d{2}|18[89]\d|19\d\d|20[0-3]\d)"
+    r"(?!\d|\.\d|%)")
+
+
+def _decadas_admitidas(texto: str):
+    for m in _RE_DECADA_EM_ANOS.finditer(texto or ""):
+        antes = V._normalizar(texto[:m.start()]).split()
+        if antes and antes[-1] in _LOCUCAO_DE_QUANTIDADE:
+            continue
+        yield m
+
+
+# [2026-09-16, ABERTO.md B5] FORMATO DE TELA ("3D", "2D") — não é ano, não é
+# fração, não é contagem de nada: é o nome de uma tecnologia de exibição,
+# do mesmo jeito que "IMAX" ou "Blu-ray" seriam se tivessem dígito. Caso
+# real: `the-spongebob-movie-search-for-squarepants`/NEG-?, "animação em
+# 3D foi bastante criticado". Forma ESTREITA de propósito — um único dígito
+# 2-9 colado em "D", maiúsculo, com borda de palavra dos dois lados — para
+# não admitir "3Dias" nem números que só terminam coincidentemente em "D"
+# de outra palavra.
+_RE_FORMATO_DE_TELA = re.compile(r"(?<![^\W\d_])(?P<formato>[2-9]D)\b")
+
+
 def _mascarar_anos_do_tema(tema: str) -> str:
+    """Mascara, em ORDEM, as três formas admitidas — ano de obra, década,
+    formato de tela — deixando qualquer outro algarismo intocado. O nome
+    (`_anos_do_tema`) é histórico; a função hoje cobre as três formas."""
+    tema = tema or ""
+    spans = sorted(
+        [(m.start("ano"), m.end("ano")) for m in _anos_admitidos(tema)]
+        + [(m.start("decada"), m.end("decada"))
+           for m in _decadas_admitidas(tema)]
+        + [(m.start("formato"), m.end("formato"))
+           for m in _RE_FORMATO_DE_TELA.finditer(tema)])
     partes, fim = [], 0
-    for m in _anos_admitidos(tema):
-        partes += [tema[fim:m.start("ano")], "ANO"]
-        fim = m.end("ano")
-    return "".join(partes) + (tema or "")[fim:]
+    for i, j in spans:
+        if i < fim:
+            continue   # sobreposição — não deveria acontecer, ignora
+        partes += [tema[fim:i], "X"]
+        fim = j
+    return "".join(partes) + tema[fim:]
 
 
 def algarismos_proibidos_no_tema(tema: str) -> list[str]:
@@ -610,9 +720,30 @@ def algarismos_proibidos_no_briefing(b: dict, *,
     Serializa o briefing de verdade, com os anos admitidos mascarados — o
     texto checado é o MESMO que vai ao modelo, e qualquer outro algarismo, em
     qualquer linha (paráfrase, instrução, tema fora da forma), aparece.
+
+    [2026-09-16, ABERTO.md B5] Até aqui a máscara só cobria `tema`. A
+    paráfrase (`exemplo_parafraseado`) ficava de fora de propósito — a
+    decisão registrada dizia que a exceção era SÓ do nome do tema, e havia
+    teste (`test_briefing_nao_tem_algarismo_ano_na_parafrase_nao_tem_excecao`)
+    provando isso. Essa decisão não sobreviveu ao achado 1 desta sessão: o
+    validador de PRODUÇÃO (`validar`/`digito`) nunca olhou a paráfrase — só
+    a condição publicada —, então a paráfrase nunca esteve sob a R4 de
+    verdade. Este teste era mais estrito que a política vigente, não uma
+    segunda política. A máscara agora cobre os dois campos, com a MESMA
+    forma (`_mascarar_anos_do_tema`, sem alargar a lista de preposições) —
+    alinha o alcance, não a régua: ano fora da forma (ex.: "para 1968") e
+    década ("nos anos 1930") continuam pegos em qualquer campo, porque não
+    são a exceção estreita que existe.
+
+    A fração posicional (§B5, "um terço final", "primeira metade") NÃO
+    precisa de máscara aqui: é escrita por extenso, sem dígito, e este
+    checador só olha `\\d`. Ela nunca foi pega por este validador — não há
+    o que alargar.
     """
     mascarado = {**b, "selecao": {
-        lado: [{**t, "tema": _mascarar_anos_do_tema(t["tema"])} for t in ts]
+        lado: [{**t, "tema": _mascarar_anos_do_tema(t["tema"]),
+               "exemplo": _mascarar_anos_do_tema(t.get("exemplo") or "")}
+              for t in ts]
         for lado, ts in b["selecao"].items()}}
     return re.findall(r"\d+", serializar_briefing(mascarado, variante=variante))
 

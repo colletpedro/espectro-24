@@ -1,0 +1,1681 @@
+{
+  "slug": "the-wolf-of-wall-street",
+  "data_coleta": "2026-09-16T19:12:13.488751+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-wolf-of-wall-street/reviews/",
+  "ficha": {
+    "titulo": "O Lobo de Wall Street",
+    "sinopse_oficial": "Durante seis meses, Jordan Belfort trabalhou duro em uma corretora de Wall Street, seguindo os ensinamentos de seu mentor Mark Hanna. Quando finalmente consegue ser contratado como corretor da firma, acontece o Black Monday, que faz com que as bolsas de vários países caiam repentinamente. Sem emprego e bastante ambicioso, ele acaba trabalhando para uma empresa de fundo de quintal que lida com papéis de baixo valor, que não estão na bolsa de valores. É lá que Belfort tem a idéia de montar uma empresa focada neste tipo de negócio, cujas vendas são de valores mais baixos mas, em compensação, o retorno para o corretor é bem mais vantajoso. Ao lado de Donnie e outros amigos dos velhos tempos, ele cria a Stratton Oakmont, uma empresa que faz com que todos enriqueçam rapidamente e, também, levem uma vida dedicada ao prazer.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Drama",
+      "Comédia"
+    ],
+    "duracao_min": 180,
+    "diretor": "Martin Scorsese",
+    "diretor_transliterado": false,
+    "ano": 2013,
+    "fonte": "tmdb",
+    "tmdb_id": 106646,
+    "tmdb_fetched_at": "2026-09-16T20:18:40+00:00",
+    "poster_path": "/sIy0jXDkaMf3SDZGaWcmkC2IOl.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+      "/63y4XSVTZ7mRzAzkqwi3o0ajDZZ.jpg",
+      "/gqqIUxwey7z2P1scjGpG7G8Uscx.jpg",
+      "/gdavHcRqZYOaOprdGoMccgxMhQX.jpg",
+      "/2P0toWq3feNvFAzf28j7vNc1IuZ.jpg",
+      "/74pgiTEwbgKdPBkhR000wQd1ywI.jpg",
+      "/3L1Lx9tlHS60gkERKK5xOcbzTVA.jpg",
+      "/8kpC27anImNpIHw3nd5goLeMgQS.jpg",
+      "/tVQfDuKXb4GBiTccEiNdweZndkc.jpg",
+      "/bJwjS1syMOVfOmm2FWRms0Rm1gU.jpg"
+    ],
+    "backdrop_path": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/uutxsGjxZfZhGCp9IjoR1PNXDZh.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/63y4XSVTZ7mRzAzkqwi3o0ajDZZ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/4J925d6q27UjoQ5xtJWlS00vemd.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fTi3f8ShWCMSY09ihPWrjV0FWlZ.jpg",
+        "still_largura": 3072,
+        "still_altura": 1728
+      },
+      {
+        "still_path": "/r326kGBSeX49TnyTyyw3nJRqYjv.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/7P5CNFPPkRskskZyO8xkln2PuHY.jpg",
+        "still_largura": 3072,
+        "still_altura": 1728
+      },
+      {
+        "still_path": "/tZ15L5jVlVBV5jlengQWSXBdZrR.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/pB7XVCj8qVYj6LthmGVBEMjvMjb.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/9cFMQhcIxHrYKSaU47o6A9eWXQ0.jpg",
+        "still_largura": 1412,
+        "still_altura": 794
+      },
+      {
+        "still_path": "/eOrnXAZEPtQKaB5hK5l9aA8mK4k.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/mNEsnQpbmaeB9ZuxidsHIAo31MS.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/rKFREOMrp0e2tEelHzA1nzSjnmV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-wolf-of-wall-street",
+      "titulo_letterboxd": "The Wolf of Wall Street",
+      "ano_letterboxd": 2013,
+      "tmdb_id_letterboxd": 106646,
+      "tmdb_id_escolhido": 106646,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Wolf of Wall Street",
+      "ano_tmdb": 2013,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 4360608,
+    "por_nivel": {
+      "0.5": 15161,
+      "1.0": 35671,
+      "1.5": 18281,
+      "2.0": 112941,
+      "2.5": 92832,
+      "3.0": 515161,
+      "3.5": 505196,
+      "4.0": 1445089,
+      "4.5": 627504,
+      "5.0": 992772
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 14,
+      "positivas": 82
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-wolf-of-wall-street",
+    "coletado_em": "2026-09-16T03:54:30.504651+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 15161,
+      "1.0": 35671,
+      "1.5": 18281,
+      "2.0": 112941,
+      "2.5": 92832,
+      "3.0": 515161,
+      "3.5": 505196,
+      "4.0": 1445089,
+      "4.5": 627504,
+      "5.0": 992772
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 10,
+      "1.5": 5,
+      "2.0": 29,
+      "2.5": 14,
+      "3.0": 23,
+      "3.5": 5,
+      "4.0": 14,
+      "4.5": 7,
+      "5.0": 3
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "0.5": 2,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 37,
+        "n_validas_pos_extensao": 46,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "4.0": 2,
+          "4.5": 1,
+          "5.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 29,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 3,
+      "1.0": 6,
+      "1.5": 3,
+      "2.0": 20,
+      "2.5": 16,
+      "3.0": 91,
+      "3.5": 89,
+      "4.0": 256,
+      "4.5": 111,
+      "5.0": 176
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 828,
+        "min": "2014-01-11",
+        "max": "2026-09-16",
+        "p5": "2026-08-27",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 264,
+          "min": "2020-08-11",
+          "max": "2026-09-15",
+          "p5": "2026-08-27",
+          "p50": "2026-09-10",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2014-09-14",
+          "max": "2026-09-16",
+          "p5": "2026-08-29",
+          "p50": "2026-09-12",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 276,
+          "min": "2014-01-11",
+          "max": "2026-09-16",
+          "p5": "2026-08-11",
+          "p50": "2026-09-15",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 16,
+      "dias_por_100_paginas": 12.598425196850394,
+      "paginas_para_1_ano": 2897
+    },
+    "identidade_letterboxd": {
+      "slug": "the-wolf-of-wall-street",
+      "titulo": "The Wolf of Wall Street",
+      "ano": 2013,
+      "tmdb_id_letterboxd": 106646,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2013,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 828
+  },
+  "origem_paginas": {
+    "_histograma/the-wolf-of-wall-street.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_4.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_16.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_64.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_256.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_1_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_1_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_1_page_3.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1495796666.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1492740902.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1491628252.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_3.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_4.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_5.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_6.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_7.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_8.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_9.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_page_10.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497604402.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1496435776.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1494248855.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1489680688.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1485998750.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1485283268.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1484302582.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_2_5_page_8.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497261474.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497181867.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_3.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_4.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_5.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_6.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_7.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_8.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_23.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_page_46.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497877168.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1496027026.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1494810579.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1494745181.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497244016.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1496976438.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_3.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_5.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_page_128.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497520086.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497152715.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_4_5_page_28.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1489996391.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_5_page_1.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_5_page_2.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_5_page_3.html": "cache",
+    "the-wolf-of-wall-street/pages/by_added/rated_5_page_44.html": "cache",
+    "the-wolf-of-wall-street/fulltext/viewing_1497327352.html": "cache",
+    "the-wolf-of-wall-street/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-05-06",
+        "max": "2026-09-15",
+        "p5": "2026-09-04",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 133,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 133,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas reclamam que o filme dura quase três horas e que, depois da primeira hora, a repetição de festas e excessos faz a narrativa perder o fôlego e se tornar cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de cenas de sexo, nudez e drogas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo considera que a quantidade de cenas explícitas de sexo, nudez e uso de drogas é desnecessária e torna a experiência desconfortável e de mau gosto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Glorificação do protagonista em vez de crítica",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversos espectadores sentem que o filme retrata a vida luxuosa e criminosa do protagonista de forma atraente, falhando em condenar seus atos e acabando por romantizar o comportamento que deveria satirizar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens antipáticos e sem carisma",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews afirmam que é difícil se importar com o protagonista ou com os demais personagens, todos vistos como desagradáveis, egoístas ou vazios, o que prejudica o envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas, mas insuficientes para salvar o filme",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo reconhecendo o talento do elenco, especialmente de DiCaprio, muitos dizem que as boas atuações não compensam o roteiro fraco ou o desconforto geral com a obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento sexista e objetificação feminina",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas criticam a forma como as mulheres são retratadas, reduzidas a objetos sexuais, e consideram o filme misógino e desconfortável nesse aspecto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente o excesso de duração, a repetição de cenas de sexo e drogas, e a percepção de que o filme glorifica o protagonista em vez de criticá-lo. Mesmo quando elogiam as atuações, este grupo afirma que tais qualidades não tornam a experiência agradável ou significativa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 14,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 46,
+        "p5": 1,
+        "p50": 6,
+        "p95": 23,
+        "fracao_profunda": 0.45
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-03-03",
+        "max": "2026-09-15",
+        "p5": "2026-08-29",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 34,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 175,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 4,
+            "abaixo_min_chars": 175,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Representação excessiva de drogas, sexo e nudez",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas consideram que o filme abusa de cenas de nudez, sexo e uso de drogas, que soam gratuitas e repetitivas, sem acrescentar à história, tornando a experiência incômoda ou apelativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que, apesar de algumas sequências envolventes, o filme se estende por três horas e poderia ser encurtado, pois o ritmo se torna repetitivo e cansativo após certo ponto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e direção técnicas de alto nível",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a atuação de Leonardo DiCaprio e a direção de Martin Scorsese, descrevendo a execução como impecável e capaz de manter o interesse mesmo quando o conteúdo é desagradável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Romantização e glorificação de comportamentos condenáveis",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews apontam que o filme parece romantizar a ganância, o consumo de drogas e o estilo de vida criminoso, sem oferecer uma crítica moral suficientemente clara, o que incomoda parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Misoginia, objetificação e falta de profundidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas criticam a forma como as mulheres são retratadas no filme, reduzidas a objetos sexuais, e consideram que isso reflete uma misoginia estrutural que torna a obra desconfortável e vazia em seu discurso.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final fraco ou conclusão insatisfatória",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas reviews mencionam que o desfecho não traz consequências significativas para o protagonista ou deixa a narrativa sem um fechamento coerente, o que gera frustração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas deste grupo enxergam o filme como tecnicamente bem executado, com atuações marcantes e direção hábil, mas criticam duramente o excesso de cenas de sexo, drogas e nudez, a duração prolongada e a suposta romantização de comportamentos condenáveis. Este grupo destaca uma tensão entre admirar o ofício cinematográfico e sentir desconforto ético com o conteúdo retratado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 82,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": 0.55
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-05",
+        "max": "2026-09-16",
+        "p5": "2026-09-07",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 11,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Leonardo DiCaprio",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews destacam a performance de Leonardo DiCaprio como um dos pontos altos, descrevendo-a como intensa, carismática e possivelmente uma das melhores de sua carreira.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso e hedonismo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews mencionam o retrato do excesso, com festas, drogas e dinheiro, que torna o filme ao mesmo tempo envolvente e repetitivo em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Martin Scorsese",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Scorsese é frequentemente elogiada por manter o ritmo acelerado e transformar uma história excessiva em uma experiência cinematográfica marcante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração longa",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A longa duração é um ponto recorrente, com alguns espectadores sentindo que o filme poderia ser mais enxuto, embora muitos ainda o considerem divertido do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica ao capitalismo e à ganância",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias análises interpretam o filme como uma sátira ao capitalismo desenfreado e à cultura da ganância, alertando contra a glorificação desses comportamentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Margot Robbie",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Margot Robbie é elogiada, com destaque para a força de sua personagem, que não é apenas um acessório na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente as atuações, a direção de Scorsese e o retrato exagerado do hedonismo, com muitos elogios à energia e ao humor do filme. Ainda assim, a duração longa e a repetição de certos temas são apontadas como pontos que poderiam ser melhor trabalhados.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Várias pessoas reclamam que o filme dura quase três horas e que, depois da primeira hora, a repetição de festas e excessos faz a narrativa perder o fôlego e se tornar cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Este grupo destaca que, apesar de algumas sequências envolventes, o filme se estende por três horas e poderia ser encurtado, pois o ritmo se torna repetitivo e cansativo após certo ponto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Duração longa",
+            "exemplo_parafraseado": "A longa duração é um ponto recorrente, com alguns espectadores sentindo que o filme poderia ser mais enxuto, embora muitos ainda o considerem divertido do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas, mas insuficientes para salvar o filme",
+            "exemplo_parafraseado": "Mesmo reconhecendo o talento do elenco, especialmente de DiCaprio, muitos dizem que as boas atuações não compensam o roteiro fraco ou o desconforto geral com a obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e direção técnicas de alto nível",
+            "exemplo_parafraseado": "As reviews medianas elogiam a atuação de Leonardo DiCaprio e a direção de Martin Scorsese, descrevendo a execução como impecável e capaz de manter o interesse mesmo quando o conteúdo é desagradável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Leonardo DiCaprio",
+            "exemplo_parafraseado": "Muitas reviews destacam a performance de Leonardo DiCaprio como um dos pontos altos, descrevendo-a como intensa, carismática e possivelmente uma das melhores de sua carreira.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Margot Robbie"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Direção de Martin Scorsese",
+            "exemplo_parafraseado": "A direção de Scorsese é frequentemente elogiada por manter o ritmo acelerado e transformar uma história excessiva em uma experiência cinematográfica marcante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens antipáticos e sem carisma",
+            "exemplo_parafraseado": "Muitas reviews afirmam que é difícil se importar com o protagonista ou com os demais personagens, todos vistos como desagradáveis, egoístas ou vazios, o que prejudica o envolvimento com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Final fraco ou conclusão insatisfatória",
+            "exemplo_parafraseado": "Certas reviews mencionam que o desfecho não traz consequências significativas para o protagonista ou deixa a narrativa sem um fechamento coerente, o que gera frustração.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de cenas de sexo, nudez e drogas",
+            "exemplo_parafraseado": "Este grupo considera que a quantidade de cenas explícitas de sexo, nudez e uso de drogas é desnecessária e torna a experiência desconfortável e de mau gosto.",
+            "temas_no_mesmo_eixo": [
+              "Glorificação do protagonista em vez de crítica",
+              "Tratamento sexista e objetificação feminina"
+            ]
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Representação excessiva de drogas, sexo e nudez",
+            "exemplo_parafraseado": "Muitas reviews medianas consideram que o filme abusa de cenas de nudez, sexo e uso de drogas, que soam gratuitas e repetitivas, sem acrescentar à história, tornando a experiência incômoda ou apelativa.",
+            "temas_no_mesmo_eixo": [
+              "Romantização e glorificação de comportamentos condenáveis",
+              "Misoginia, objetificação e falta de profundidade"
+            ]
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Excesso e hedonismo",
+            "exemplo_parafraseado": "As reviews mencionam o retrato do excesso, com festas, drogas e dinheiro, que torna o filme ao mesmo tempo envolvente e repetitivo em certos momentos.",
+            "temas_no_mesmo_eixo": [
+              "Crítica ao capitalismo e à ganância"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1496094794",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_RateLimitError",
+        "erro": "RateLimitError: Error code: 429 - {'error': {'message': 'Too many requests. Your current concurrency is 5, which exceeds your concurrency limit of 5 based on your remaining balance. Please top up your"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Martin Scorsese e lançado em 2013, O Lobo de Wall Street combina drama, comédia e crime em uma narrativa de 180 minutos. A trama retrata a trajetória de corretores ambiciosos que fundam uma firma voltada a papéis de baixo valor, enriquecendo rapidamente e estabelecendo uma rotina inteiramente dedicada aos prazeres materiais.\n\nA experiência de assistir à obra é caracterizada por uma estrutura temporal extensa e por uma atmosfera densa, permeada por uma sucessão contínua de festas, consumo de substâncias e situações de desmedida opulência. O ritmo sustenta essa ambientação intensa ao longo de toda a exibição.\n\nOs diferentes grupos avaliam os mesmos elementos do filme, divergindo no veredito e não nos assuntos abordados. Na grande maioria das notas (~82%), a atuação de Leonardo DiCaprio recebe destaque de grande parte das análises. Além disso, boa parte enfatiza o retrato do excesso e do hedonismo, enquanto vários ressaltam a condução da direção de Martin Scorsese.\n\nPara quem se encontra numa fração mínima das notas (~14%), cerca de metade critica a representação excessiva de drogas, sexo e nudez. Nessa mesma faixa, uma parcela expressiva queixa-se da duração excessiva e do ritmo arrastado, embora um número considerável reconheça as atuações e a direção técnicas de alto nível.\n\nJá para os avaliadores situados numa fração ainda menor das notas (~4%), muitos se incomodam com a duração excessiva e o ritmo arrastado. Da mesma forma, vários desaprovam o excesso de cenas de sexo, nudez e drogas, ao passo que um número considerável aponta a glorificação do protagonista em vez de crítica.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 10,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10680,
+      "completion_tokens": 1113,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10680
+    },
+    "latencia_s": 36.79
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As visões sobre o filme compartilham a análise dos mesmos elementos, divergindo na avaliação de seu funcionamento. A maioria dos que rejeitam critica a falta de simpatia e carisma dos personagens no roteiro, enquanto cerca de metade dos que recomendam destaca o trabalho de Leonardo DiCaprio em cena.",
+    "texto_modelo": "As visões sobre o filme compartilham a análise dos mesmos elementos, divergindo na avaliação de seu funcionamento. A maioria dos que rejeitam critica a falta de simpatia e carisma dos personagens no roteiro, enquanto cerca de metade dos que recomendam destaca o trabalho de Leonardo DiCaprio em cena.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "visoe",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 43,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "abertura": "visoe",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3600,
+      "completion_tokens": 194,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3600
+    },
+    "latencia_s": 18.0
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma atuação intensa e carismática de Leonardo DiCaprio",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Leonardo DiCaprio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia um retrato envolvente de excessos e hedonismo, aceitando momentos repetitivos",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Excesso e hedonismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza a direção marcante e o ritmo acelerado conduzidos por Martin Scorsese",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Martin Scorsese",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma sátira sobre a cultura da ganância e o capitalismo desenfreado",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica ao capitalismo e à ganância",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com narrativas longas cuja repetição de excessos perde o fôlego",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com cenas explícitas e frequentes de nudez, sexo e drogas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de cenas de sexo, nudez e drogas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita narrativas que parecem romantizar a conduta criminosa e luxuosa do protagonista",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Glorificação do protagonista em vez de crítica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha que atuações talentosas não compensam um roteiro fraco ou desconfortável",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações elogiadas, mas insuficientes para salvar o filme",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 82,
+        "peso_texto": "~82% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 10902,
+      "completion_tokens": 1147,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10902
+    },
+    "latencia_s": 20.38,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

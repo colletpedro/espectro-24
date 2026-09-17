@@ -1,0 +1,1703 @@
+{
+  "slug": "the-revenant-2015",
+  "data_coleta": "2026-09-16T19:48:05.137306+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-revenant-2015/reviews/",
+  "ficha": {
+    "titulo": "O Regresso",
+    "sinopse_oficial": "Durante uma expedição em uma selvagem região americana, o lendário explorador Hugh Glass é brutalmente atacado por um urso e deixado para morrer por membros de seu próprio grupo de caça. Em sua cruzada pela sobrevivência, Glass supera tribulações inimagináveis, bem como a traição de seu confidente John Fitzgerald. Guiado por pura determinação e pelo amor de sua família, Glass precisa superar um inverno rigoroso enquanto busca incansavelmente um motivo para seguir em frente e encontrar a redenção.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Faroeste",
+      "Drama",
+      "Aventura"
+    ],
+    "duracao_min": 157,
+    "diretor": "Alejandro G. Iñárritu",
+    "diretor_transliterado": false,
+    "ano": 2015,
+    "fonte": "tmdb",
+    "tmdb_id": 281957,
+    "tmdb_fetched_at": "2026-09-16T20:18:49+00:00",
+    "poster_path": "/hRotKKijqV6YibxnhSOureF5efx.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+      "/mNQtUJv1F3u0uSKILFrGjIHqkxx.jpg",
+      "/s6xQN7DjjBMqj7CtxK3EeR4vFNB.jpg",
+      "/nMfH0LMMFk2ovyURkYvyTI99nSo.jpg",
+      "/mFreKKBNnB2v678aDq0IZ2jaD8K.jpg",
+      "/o9YTgkvsXpwjPR2uMURH6iop9NP.jpg",
+      "/t81KcskqIsHnNvRfQAVw2nS9Wv7.jpg",
+      "/rnKoZVfwyhpg2EMZSmjtP1GSOXT.jpg",
+      "/3uM41OT0RfBkE6Gb6U89LEskJBr.jpg",
+      "/plZ0MPvIqhzO7gHFJHoWjfhykCw.jpg"
+    ],
+    "backdrop_path": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/tfSkzHKC0PIIhl5etuTJuVpjEpQ.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1426,
+    "galeria_stills": [
+      {
+        "still_path": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/k6Dbqm8FMTvxBceqe3RnYHoXj7X.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/eEKDiKCKZZreWFRipWoXtvQcBQu.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/8bqwqYHBolJn7aAAzk85rGWyGpC.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/m1ZcLPMSsvr8O1aYm0jEfuEGXvG.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3nBkk91eTghFdQWiuh7jr4PczFw.jpg",
+        "still_largura": 1436,
+        "still_altura": 808
+      },
+      {
+        "still_path": "/7xI70UCNimXhLi3YWMDNBy1rieA.jpg",
+        "still_largura": 1438,
+        "still_altura": 808
+      },
+      {
+        "still_path": "/a68NnyYVvg1aEaaeLHOLCPtIJGS.jpg",
+        "still_largura": 1419,
+        "still_altura": 798
+      },
+      {
+        "still_path": "/g1gv6hSWvMa9IvEsQHqpFHYABMI.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/myox40mQvALm4FXtNJq1mLjAiN0.jpg",
+        "still_largura": 1436,
+        "still_altura": 808
+      },
+      {
+        "still_path": "/uPxtncgTKhL1y7IjNIWfxUBncWL.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/yZ9VwdeKFwHL37k0WT7hRkgiFoP.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-revenant-2015",
+      "titulo_letterboxd": "The Revenant",
+      "ano_letterboxd": 2015,
+      "tmdb_id_letterboxd": 281957,
+      "tmdb_id_escolhido": 281957,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Revenant",
+      "ano_tmdb": 2015,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1504094,
+    "por_nivel": {
+      "0.5": 3376,
+      "1.0": 10907,
+      "1.5": 7152,
+      "2.0": 41997,
+      "2.5": 43477,
+      "3.0": 201440,
+      "3.5": 253052,
+      "4.0": 525833,
+      "4.5": 204799,
+      "5.0": 212061
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 16,
+      "positivas": 79
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-revenant-2015",
+    "coletado_em": "2026-09-16T05:04:19.257831+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3376,
+      "1.0": 10907,
+      "1.5": 7152,
+      "2.0": 41997,
+      "2.5": 43477,
+      "3.0": 201440,
+      "3.5": 253052,
+      "4.0": 525833,
+      "4.5": 204799,
+      "5.0": 212061
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 84,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 9,
+      "1.5": 10,
+      "2.0": 25,
+      "2.5": 18,
+      "3.0": 28,
+      "3.5": 9,
+      "4.0": 27,
+      "4.5": 12,
+      "5.0": 10
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 3,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "3.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 3,
+      "2.0": 20,
+      "2.5": 21,
+      "3.0": 98,
+      "3.5": 123,
+      "4.0": 256,
+      "4.5": 100,
+      "5.0": 103
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 600,
+        "min": "2015-01-19",
+        "max": "2026-09-16",
+        "p5": "2026-07-25",
+        "p50": "2026-09-06",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 204,
+          "min": "2015-01-19",
+          "max": "2026-09-15",
+          "p5": "2024-08-15",
+          "p50": "2026-08-22",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 204,
+          "min": "2021-09-15",
+          "max": "2026-09-16",
+          "p5": "2026-07-27",
+          "p50": "2026-09-08",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2015-12-29",
+          "max": "2026-09-16",
+          "p5": "2026-08-11",
+          "p50": "2026-09-14",
+          "p95": "2026-09-15"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 34,
+      "dias_por_100_paginas": 26.771653543307085,
+      "paginas_para_1_ano": 1363
+    },
+    "identidade_letterboxd": {
+      "slug": "the-revenant-2015",
+      "titulo": "The Revenant",
+      "ano": 2015,
+      "tmdb_id_letterboxd": 281957,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2015,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 600
+  },
+  "origem_paginas": {
+    "_histograma/the-revenant-2015.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_4.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_16.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_64.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_256.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_1_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_1_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_1_page_3.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1492311858.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1469295126.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1474719007.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1450204662.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1424229232.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_3.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_4.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_5.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_6.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_7.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_8.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_9.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_page_10.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1497500118.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1486692304.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1485651229.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1456648817.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1448750036.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1420002335.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_5.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_2_5_page_10.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1492830571.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1490639157.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1486779474.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1485500117.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1484335318.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1483079078.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1454278431.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1453539953.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_3.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_4.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_5.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_6.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_7.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_8.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_24.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_page_49.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1496515960.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1496381279.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1492495712.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1491612827.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1490254086.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1490128376.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_3_5_page_31.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1476969083.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_3.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_5.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_page_128.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1497667754.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1497297976.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1497087165.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1496464602.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1445862771.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_4_5_page_25.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1497100762.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1496918442.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1496864727.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_5_page_1.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_5_page_2.html": "cache",
+    "the-revenant-2015/pages/by_added/rated_5_page_26.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1494113805.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1485101490.html": "cache",
+    "the-revenant-2015/fulltext/viewing_1484755239.html": "cache",
+    "the-revenant-2015/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 3,
+        "p95": 11,
+        "fracao_profunda": 0.25
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-12-11",
+        "max": "2026-09-15",
+        "p5": "2026-07-28",
+        "p50": "2026-08-18",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 95,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 95,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 19,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o filme é arrastado e longo demais, com momentos de tédio e sensação de que a história poderia ser contada em menos tempo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e história pouco envolvente",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas consideram a narrativa previsível e sem profundidade, com desenvolvimento insuficiente de personagens e temas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção pretensiosa e excesso de estilo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que a direção tenta ser profunda e artística, mas resulta em exibicionismo vazio e falta de conexão emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Leonardo DiCaprio questionada",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora alguns elogiem o esforço físico, outros acham a atuação exagerada ou não merecedora de prêmios, ofuscada por outros atores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia bela, mas pouco funcional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é reconhecida como tecnicamente impressionante, porém criticada por não compensar as falhas de roteiro e ritmo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas espirituais e comentários sociais superficiais",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que as tentativas de inserir metáforas espirituais e críticas sociais soam forçadas e mal desenvolvidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente problemas de ritmo, duração e roteiro, considerando o filme arrastado e pouco envolvente. Apesar de reconhecerem qualidades técnicas, este grupo critica a falta de emoção e o excesso de estilo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 16,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 24,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-01",
+        "max": "2026-09-15",
+        "p5": "2026-08-16",
+        "p50": "2026-09-10",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 33,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 93,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 93,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é arrastado, com ritmo vagaroso e duração excessiva, tornando a experiência cansativa e por vezes entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e paisagens belas",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as críticas, muitos elogiam a fotografia, as paisagens naturais e o trabalho de câmera, considerados os pontos mais fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações (DiCaprio e Hardy)",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são frequentemente elogiadas, com destaque para Tom Hardy, que muitos consideram o melhor em cena, enquanto a performance de DiCaprio divide opiniões.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Realismo questionável da sobrevivência",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores apontam que a capacidade de sobrevivência do protagonista a tantos ferimentos e situações extremas é implausível, quebrando a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro simples e falta de desenvolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews criticam o roteiro por ser previsível, com pouco desenvolvimento de personagens e ausência de uma mensagem mais profunda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso de povos indígenas como recurso narrativo",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas questionam a representação dos povos indígenas, vistos como meros dispositivos para a jornada do protagonista branco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a fotografia e as atuações, especialmente a de Tom Hardy, mas criticam o ritmo arrastado, a longa duração e a falta de envolvimento emocional, considerando o filme superestimado. Este grupo também questiona o realismo da sobrevivência e aponta problemas no roteiro e na representação de povos indígenas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 79,
+      "composicao_alvo": {
+        "3.5": 8,
+        "4.0": 18,
+        "4.5": 7,
+        "5.0": 7
+      },
+      "composicao_atingida": {
+        "3.5": 8,
+        "4.0": 18,
+        "4.5": 7,
+        "5.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-05-13",
+        "max": "2026-09-15",
+        "p5": "2026-08-12",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Leonardo DiCaprio",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Destacam a entrega física e a capacidade de transmitir emoções intensas com pouquíssimo diálogo, considerando uma das melhores atuações da carreira do ator.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e imagens naturais",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Elogiam a fotografia deslumbrante, com uso de luz natural e planos amplos que capturam a beleza e a hostilidade da natureza.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apontam que o filme é longo e por vezes arrastado, com momentos que podem entediar, embora a experiência seja recompensadora.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Tom Hardy",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Elogiam a atuação de Tom Hardy como antagonista, descrevendo sua performance como intensa e crível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Alejandro G. Iñárritu",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Destacam a direção hábil e imersiva, com uso de planos longos que aumentam a tensão e a sensação de estar dentro da ação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cena do ataque do urso",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mencionam a sequência do ataque do urso como um momento de grande impacto e realismo, frequentemente citada como inesquecível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam as atuações de Leonardo DiCaprio e Tom Hardy, a fotografia impressionante e a direção imersiva, mas apontam o ritmo lento e a longa duração como pontos que podem desanimar. A cena do ataque do urso é frequentemente citada como um momento marcante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Várias reviews reclamam que o filme é arrastado e longo demais, com momentos de tédio e sensação de que a história poderia ser contada em menos tempo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme é arrastado, com ritmo vagaroso e duração excessiva, tornando a experiência cansativa e por vezes entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Apontam que o filme é longo e por vezes arrastado, com momentos que podem entediar, embora a experiência seja recompensadora.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Leonardo DiCaprio questionada",
+            "exemplo_parafraseado": "Embora alguns elogiem o esforço físico, outros acham a atuação exagerada ou não merecedora de prêmios, ofuscada por outros atores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Atuações (DiCaprio e Hardy)",
+            "exemplo_parafraseado": "As atuações são frequentemente elogiadas, com destaque para Tom Hardy, que muitos consideram o melhor em cena, enquanto a performance de DiCaprio divide opiniões.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Leonardo DiCaprio",
+            "exemplo_parafraseado": "Destacam a entrega física e a capacidade de transmitir emoções intensas com pouquíssimo diálogo, considerando uma das melhores atuações da carreira do ator.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Tom Hardy"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Direção pretensiosa e excesso de estilo",
+            "exemplo_parafraseado": "Críticas apontam que a direção tenta ser profunda e artística, mas resulta em exibicionismo vazio e falta de conexão emocional.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia bela, mas pouco funcional"
+            ]
+          },
+          "medianas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e paisagens belas",
+            "exemplo_parafraseado": "Mesmo entre as críticas, muitos elogiam a fotografia, as paisagens naturais e o trabalho de câmera, considerados os pontos mais fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e imagens naturais",
+            "exemplo_parafraseado": "Elogiam a fotografia deslumbrante, com uso de luz natural e planos amplos que capturam a beleza e a hostilidade da natureza.",
+            "temas_no_mesmo_eixo": [
+              "Direção de Alejandro G. Iñárritu"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e história pouco envolvente",
+            "exemplo_parafraseado": "Algumas pessoas consideram a narrativa previsível e sem profundidade, com desenvolvimento insuficiente de personagens e temas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Realismo questionável da sobrevivência",
+            "exemplo_parafraseado": "Vários espectadores apontam que a capacidade de sobrevivência do protagonista a tantos ferimentos e situações extremas é implausível, quebrando a imersão.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro simples e falta de desenvolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Cena do ataque do urso",
+            "exemplo_parafraseado": "Mencionam a sequência do ataque do urso como um momento de grande impacto e realismo, frequentemente citada como inesquecível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Temas espirituais e comentários sociais superficiais",
+            "exemplo_parafraseado": "Algumas reviews mencionam que as tentativas de inserir metáforas espirituais e críticas sociais soam forçadas e mal desenvolvidas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Uso de povos indígenas como recurso narrativo",
+            "exemplo_parafraseado": "Algumas reviews medianas questionam a representação dos povos indígenas, vistos como meros dispositivos para a jornada do protagonista branco.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1490913776",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 101 (char 100)"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1485651229",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 96 (char 95)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Alejandro G. Iñárritu e lançado em 2015, O Regresso é uma obra de drama, aventura e faroeste que se estende por 157 minutos de duração. A trama acompanha a trajetória do explorador Hugh Glass em sua provação por sobrevivência em uma região selvagem e inóspita, enfrentando um inverno rigoroso e a traição de membros de sua expedição após o violento ataque de um urso.\n\nA experiência de visualização se estrutura a partir de uma atmosfera rústica e imersiva, marcada pela presença imponente de paisagens naturais e isoladas. A condução privilegia um ritmo deliberadamente desacelerado e contemplativo, estendendo o tempo das ações ao longo de sua longa metragem.\n\nOs três grupos analisados concordam sobre os elementos estruturais do filme, mas divergem diretamente no veredito final sobre o seu resultado. Na grande maioria das notas (~79%), a maioria destaca a atuação de Leonardo DiCaprio, enquanto cerca de metade elogia a fotografia e o uso de imagens naturais. Dentro desse mesmo grupo, uma parcela expressiva também reconhece o ritmo lento e a longa duração da produção.\n\nPara a perspectiva situada numa parcela das notas (~16%), a maior parte aponta que o ritmo vagaroso e a duração tornam a narrativa excessivamente desgastante. Ainda nessa faixa, grande parte enaltece a beleza plástica da fotografia e das paisagens, enquanto aproximadamente metade analisa as atuações de Leonardo DiCaprio e Tom Hardy.\n\nPor fim, na visão manifestada por uma fração mínima das notas (~4%), vários criticam o ritmo arrastado e a duração excessiva da obra. Nesse segmento, boa parte aponta um roteiro fraco e pouco envolvente, ao mesmo tempo em que um número considerável classifica a direção como pretensiosa e marcada por excesso de estilo.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "empate",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 11715,
+      "completion_tokens": 1536,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11715
+    },
+    "latencia_s": 45.1
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divergência sobre o filme se concentra no impacto da história, com cerca de metade dos que não recomendam considerando o desenvolvimento narrativo fraco e desinteressante. Em contrapartida, a maioria dos que recomendam apoia a produção valorizando o desempenho de Leonardo DiCaprio.",
+    "texto_modelo": "A divergência sobre o filme se concentra no impacto da história, com cerca de metade dos que não recomendam considerando o desenvolvimento narrativo fraco e desinteressante. Em contrapartida, a maioria dos que recomendam apoia a produção valorizando o desempenho de Leonardo DiCaprio.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "diver",
+    "indice_escolhido": 2,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 44,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 42,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3612,
+      "completion_tokens": 189,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3612
+    },
+    "latencia_s": 12.21
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza uma atuação de Leonardo DiCaprio marcada por entrega física e emoções intensas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Leonardo DiCaprio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia fotografia com luz natural que captura a beleza e hostilidade da natureza",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e imagens naturais",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "tolera um ritmo arrastado e longa duração por uma experiência recompensadora",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e longa duração",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma direção imersiva de Alejandro G. Iñárritu conduzida por planos longos",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Alejandro G. Iñárritu",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um ritmo arrastado, duração excessiva e momentos de tédio",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e duração excessiva",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com uma narrativa previsível e desenvolvimento insuficiente de personagens",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e história pouco envolvente",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita direção com pretensão artística que resulta em exibicionismo sem conexão emocional",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Direção pretensiosa e excesso de estilo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha a atuação de Leonardo DiCaprio exagerada, apesar de reconhecer o esforço físico",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Leonardo DiCaprio questionada",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 79,
+        "peso_texto": "~79% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11607,
+      "completion_tokens": 1156,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11607
+    },
+    "latencia_s": 19.14,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

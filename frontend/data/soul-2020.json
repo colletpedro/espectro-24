@@ -1,0 +1,1603 @@
+{
+  "slug": "soul-2020",
+  "data_coleta": "2026-09-16T19:57:28.532700+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/soul-2020/reviews/",
+  "ficha": {
+    "titulo": "Soul",
+    "sinopse_oficial": "Joe Gardner é um professor de música de ensino fundamental desanimado por não conseguir alcançar seu sonho de tocar no lendário clube de jazz The Blue Note, em Nova York. Quando um acidente o transporta para fora do seu corpo, fazendo com que ele exista em outra realidade na forma de sua alma, ele se vê forçado a embarcar em uma aventura ao lado da alma de uma criança que ainda está aprendendo sobre si, para aprender o que é necessário para retomar sua vida.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Família",
+      "Drama",
+      "Música",
+      "Fantasia"
+    ],
+    "duracao_min": 100,
+    "diretor": "Pete Docter",
+    "diretor_transliterado": false,
+    "ano": 2020,
+    "fonte": "tmdb",
+    "tmdb_id": 508442,
+    "tmdb_fetched_at": "2026-09-16T20:18:51+00:00",
+    "poster_path": "/1G7QNn1sUShae0Rf9k9D99wVFg5.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
+      "/ijnaE8IU7XC5kA8uZbTxq6SmSnH.jpg",
+      "/4JNggqfyJWREqb0enzpUMbvIniV.jpg",
+      "/kf456ZqeC45XTvo6W9pW5clYKfQ.jpg",
+      "/q2E325E7Y4D4C25S4SIwRCgnvRz.jpg",
+      "/4HcgqYARkfkkdP4zUcfOXN7yNmv.jpg",
+      "/vJRlPwWGCeskWpzLgqAl74JP6tc.jpg",
+      "/3hrNYIWcQgPmujqJd6h8pcb6mEm.jpg",
+      "/bHwlMBrz60LMohtwl5tce0EDv84.jpg",
+      "/qF8eaVidzEsXGMU9qp8owby4bzV.jpg"
+    ],
+    "backdrop_path": "/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/xY6oncV5cY5GBwzrQWwbpH5PLXm.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ijnaE8IU7XC5kA8uZbTxq6SmSnH.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kf456ZqeC45XTvo6W9pW5clYKfQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bHwlMBrz60LMohtwl5tce0EDv84.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/yY35sdVZtJXjeBONWH8HBXnxDgD.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/fAwfLSqGsIDtHkGFX4LnXAyGepl.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/sS2V2AUpNygTV8aP2ux4ZDsx6PU.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/5FUfCuu0aCTpK5vAwXNdG4XY9B8.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/7mDGFxEEM0xyNlh9eoJJ5W7FuaT.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/frC6kopQcTjy0KWf4waZcNhXZaM.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lIXqeFoWlwLLoFmjnDyCe1UN6MM.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/u9LZdfYPu48B8mgP3WhnNQbJeit.jpg",
+        "still_largura": 2364,
+        "still_altura": 1330
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "soul-2020",
+      "titulo_letterboxd": "Soul",
+      "ano_letterboxd": 2020,
+      "tmdb_id_letterboxd": 508442,
+      "tmdb_id_escolhido": 508442,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Soul",
+      "ano_tmdb": 2020,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 2623446,
+    "por_nivel": {
+      "0.5": 5411,
+      "1.0": 18187,
+      "1.5": 12043,
+      "2.0": 75758,
+      "2.5": 70396,
+      "3.0": 345873,
+      "3.5": 350400,
+      "4.0": 813547,
+      "4.5": 331076,
+      "5.0": 600755
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 16,
+      "positivas": 80
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "soul-2020",
+    "coletado_em": "2026-09-16T05:23:54.912868+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 5411,
+      "1.0": 18187,
+      "1.5": 12043,
+      "2.0": 75758,
+      "2.5": 70396,
+      "3.0": 345873,
+      "3.5": 350400,
+      "4.0": 813547,
+      "4.5": 331076,
+      "5.0": 600755
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 1,
+      "1.5": 5,
+      "2.0": 17,
+      "2.5": 15,
+      "3.0": 20,
+      "3.5": 6,
+      "4.0": 12,
+      "4.5": 8,
+      "5.0": 12
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 25,
+        "n_validas_pos_extensao": 37,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 47,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 4,
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 4,
+      "2.0": 24,
+      "2.5": 22,
+      "3.0": 109,
+      "3.5": 110,
+      "4.0": 256,
+      "4.5": 104,
+      "5.0": 189
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 839,
+        "min": "1999-07-28",
+        "max": "2026-09-16",
+        "p5": "2025-09-11",
+        "p50": "2026-09-04",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 288,
+          "min": "1999-07-28",
+          "max": "2026-09-15",
+          "p5": "2022-06-11",
+          "p50": "2026-08-16",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2020-04-22",
+          "max": "2026-09-15",
+          "p5": "2026-03-18",
+          "p50": "2026-09-04",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 263,
+          "min": "2020-12-25",
+          "max": "2026-09-16",
+          "p5": "2026-07-21",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 24,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 22,
+      "dias_por_100_paginas": 17.322834645669293,
+      "paginas_para_1_ano": 2107
+    },
+    "identidade_letterboxd": {
+      "slug": "soul-2020",
+      "titulo": "Soul",
+      "ano": 2020,
+      "tmdb_id_letterboxd": 508442,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2020,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 839
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 37,
+      "share_real": 4,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 1,
+        "1.5": 5,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 37
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 37,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 5,
+        "p95": 17,
+        "fracao_profunda": 0.40540540540540543
+      },
+      "janela_amostra": {
+        "n": 37,
+        "min": "2020-12-26",
+        "max": "2026-09-13",
+        "p5": "2021-01-25",
+        "p50": "2026-08-16",
+        "p95": "2026-09-11"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 1,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 27,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 184,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 184,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Execução da mensagem e resolução da trama",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "Várias reviews apontam que o filme abraça uma mensagem sobre a finitude da vida, mas a contradiz ao conceder ao protagonista uma segunda chance, o que soa covarde e enfraquece a própria lição proposta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e cansaço",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "Este grupo descreve a obra como entediante e repetitiva, com uma primeira metade que se alonga e discussões existenciais que quebram o ritmo da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura e originalidade do roteiro",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "As críticas negativas comparam a estrutura a uma fórmula já vista em outros filmes do estúdio, dizendo que a trama parece montada sobre uma lista de batidas previsíveis e sem ousadia criativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e humor",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "Algumas reviews consideram a personagem secundária irritante e as piadas repetitivas, além de criticarem escolhas de elenco de voz e a dificuldade de se apegar ao protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento do além e da espiritualidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "Parte do grupo rejeita a forma como o além é retratado, achando a abordagem morna, comercial ou simplista, e questiona o papel da religiosidade e da cultura negra nessa construção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Aproveitamento de premissas promissoras",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 37,
+          "exemplo_parafraseado": "Vários textos lamentam que ideias interessantes sobre arte, propósito e identidade tenham sido desperdiçadas em uma execução que não se aprofunda nem se compromete com suas próprias premissas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo concentram-se na frustração com um filme que consideram conceitualmente promissor, mas mal executado, arrastado e contraditório na resolução de sua mensagem. Mesmo reconhecendo qualidades visuais e musicais, este grupo critica a originalidade do roteiro, o humor e a forma como temas existenciais e espirituais são conduzidos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 16,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 54,
+        "p5": 1,
+        "p50": 6,
+        "p95": 15,
+        "fracao_profunda": 0.425
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-12-25",
+        "max": "2026-09-15",
+        "p5": "2026-07-29",
+        "p50": "2026-09-06",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 56,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 56,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 33,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 180,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 180,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Mensagem central arrastada ou contraditória",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que, embora a mensagem sobre aproveitar a vida seja bonita, ela é transmitida de forma confusa ou contraditória, com ideias que não se sustentam até o fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação visualmente bela, mas estilo ou worldbuilding questionável",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a qualidade da animação, mas criticam o design do mundo espiritual por ser genérico ou pouco inspirado, e a lógica interna por vezes incoerente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom e público-alvo confusos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews apontam que o filme não sabe se é para crianças ou adultos, misturando piadas infantis com temas existenciais complexos, resultando em uma experiência irregular.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Protagonista egocêntrico e difícil de torcer",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas reclamam que o protagonista é excessivamente centrado em si mesmo e pouco simpático, o que dificulta a conexão com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e momentos emocionais funcionam",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas pessoas do grupo medianas elogiam a música e os trechos que conseguem emocionar, mesmo quando o restante do filme não atinge o mesmo impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento ou desenvolvimento insuficiente de ideias",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona que a narrativa demora a engrenar ou deixa conceitos interessantes subexplorados, como a jornada da alma e o desenvolvimento dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas deste recorte consideram o filme visualmente bonito e com uma mensagem válida, mas apontam problemas como protagonista antipático, tom confuso, worldbuilding inconsistente e dificuldade em equilibrar o público infantil e adulto. Este grupo não representa a recepção geral, apenas a faixa de 2,5 a 3 estrelas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 80,
+      "composicao_alvo": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 6,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 7,
+        "4.0": 16,
+        "4.5": 6,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 47,
+        "p5": 1,
+        "p50": 3,
+        "p95": 47,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-12-25",
+        "max": "2026-09-16",
+        "p5": "2021-01-02",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 119,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 95,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 95,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Valorização do cotidiano e das pequenas coisas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que a mensagem central reside em apreciar os pequenos momentos do dia a dia, como uma conversa, uma música ou observar o céu, em vez de focar apenas em grandes conquistas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à obsessão por propósito e paixão",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias análises apontam que o filme questiona a necessidade de encontrar um propósito grandioso ou uma paixão única, sugerindo que a vida não se resume a isso e que a busca excessiva pode ser prejudicial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e reflexão existencial",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores relatam que o longa provocou crises existenciais, reflexões profundas sobre a própria vida e até mesmo choro, funcionando como um lembrete para viver o presente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade da animação e da trilha sonora",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a animação visualmente deslumbrante e a trilha sonora envolvente, com destaque para a mistura de jazz e música etérea que contribui para a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Jazz como elemento temático e inspirador",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O jazz é mencionado não apenas como parte da trama, mas como uma força que inspira e dá sentido à vida, incentivando alguns a redescobrir o prazer pela música.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e personagens marcantes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews destacam a atuação do elenco, especialmente a de Jamie Foxx, e a construção de personagens como Joe e 22, que geram identificação e empatia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a mensagem do filme sobre aproveitar o presente e valorizar as pequenas coisas, além de elogiarem a animação e a trilha sonora. Muitos espectadores relatam um forte impacto emocional e reflexões existenciais, com críticas à busca excessiva por um propósito único.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 37,
+      "limiar_pp": 23.74
+    },
+    "margem_lift_pp": 23.74,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 37,
+            "freq_pct": 13.5,
+            "lift_pp": 6.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e cansaço",
+            "exemplo_parafraseado": "Este grupo descreve a obra como entediante e repetitiva, com uma primeira metade que se alonga e discussões existenciais que quebram o ritmo da narrativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -6.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento ou desenvolvimento insuficiente de ideias",
+            "exemplo_parafraseado": "Este grupo menciona que a narrativa demora a engrenar ou deixa conceitos interessantes subexplorados, como a jornada da alma e o desenvolvimento dos personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -13.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 37,
+            "freq_pct": 8.1,
+            "lift_pp": -1.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 1.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens marcantes",
+            "exemplo_parafraseado": "Algumas reviews destacam a atuação do elenco, especialmente a de Jamie Foxx, e a construção de personagens como Joe e 22, que geram identificação e empatia.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 37,
+            "freq_pct": 24.3,
+            "lift_pp": -0.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.7,
+            "acima_da_margem": false,
+            "tema": "Animação visualmente bela, mas estilo ou worldbuilding questionável",
+            "exemplo_parafraseado": "As reviews medianas elogiam a qualidade da animação, mas criticam o design do mundo espiritual por ser genérico ou pouco inspirado, e a lógica interna por vezes incoerente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Qualidade da animação e da trilha sonora",
+            "exemplo_parafraseado": "As reviews elogiam a animação visualmente deslumbrante e a trilha sonora envolvente, com destaque para a mistura de jazz e música etérea que contribui para a atmosfera do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 37,
+            "freq_pct": 75.7,
+            "lift_pp": 3.2,
+            "acima_da_margem": false,
+            "tema": "Execução da mensagem e resolução da trama",
+            "exemplo_parafraseado": "Várias reviews apontam que o filme abraça uma mensagem sobre a finitude da vida, mas a contradiz ao conceder ao protagonista uma segunda chance, o que soa covarde e enfraquece a própria lição proposta.",
+            "temas_no_mesmo_eixo": [
+              "Estrutura e originalidade do roteiro",
+              "Personagens e humor",
+              "Aproveitamento de premissas promissoras"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -3.2,
+            "acima_da_margem": false,
+            "tema": "Protagonista egocêntrico e difícil de torcer",
+            "exemplo_parafraseado": "Algumas reviews medianas reclamam que o protagonista é excessivamente centrado em si mesmo e pouco simpático, o que dificulta a conexão com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -18.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 37,
+            "freq_pct": 8.1,
+            "lift_pp": -14.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e momentos emocionais funcionam",
+            "exemplo_parafraseado": "Algumas pessoas do grupo medianas elogiam a música e os trechos que conseguem emocionar, mesmo quando o restante do filme não atinge o mesmo impacto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Jazz como elemento temático e inspirador",
+            "exemplo_parafraseado": "O jazz é mencionado não apenas como parte da trama, mas como uma força que inspira e dá sentido à vida, incentivando alguns a redescobrir o prazer pela música.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 37,
+            "freq_pct": 16.2,
+            "lift_pp": -3.8,
+            "acima_da_margem": false,
+            "tema": "Tratamento do além e da espiritualidade",
+            "exemplo_parafraseado": "Parte do grupo rejeita a forma como o além é retratado, achando a abordagem morna, comercial ou simplista, e questiona o papel da religiosidade e da cultura negra nessa construção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 3.8,
+            "acima_da_margem": false,
+            "tema": "Tom e público-alvo confusos",
+            "exemplo_parafraseado": "Várias reviews apontam que o filme não sabe se é para crianças ou adultos, misturando piadas infantis com temas existenciais complexos, resultando em uma experiência irregular.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 37,
+            "freq_pct": 24.3,
+            "lift_pp": -38.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Impacto emocional e reflexão existencial",
+            "exemplo_parafraseado": "Muitos espectadores relatam que o longa provocou crises existenciais, reflexões profundas sobre a própria vida e até mesmo choro, funcionando como um lembrete para viver o presente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 37,
+            "freq_pct": 24.3,
+            "lift_pp": -8.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 8.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 37,
+            "freq_pct": 27.0,
+            "lift_pp": -8.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 8.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 37,
+            "freq_pct": 29.7,
+            "lift_pp": -0.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.3,
+            "acima_da_margem": false,
+            "tema": "Mensagem central arrastada ou contraditória",
+            "exemplo_parafraseado": "Este grupo destaca que, embora a mensagem sobre aproveitar a vida seja bonita, ela é transmitida de forma confusa ou contraditória, com ideias que não se sustentam até o fim.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Valorização do cotidiano e das pequenas coisas",
+            "exemplo_parafraseado": "As reviews destacam que a mensagem central reside em apreciar os pequenos momentos do dia a dia, como uma conversa, uma música ou observar o céu, em vez de focar apenas em grandes conquistas.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à obsessão por propósito e paixão"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1468390223",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 175 (char 174)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2020 e dirigido por Pete Docter, Soul é uma animação que mescla drama, fantasia e música em uma produção voltada à família. A trama acompanha um professor de música que almeja tocar em um tradicional clube de jazz nova-iorquino, mas, após um acidente que transporta sua alma para fora do corpo, vê-se diante da necessidade de percorrer outra realidade ao lado de uma jovem alma para tentar retomar sua vida.\n\nA narrativa alterna entre a ambientação urbana com forte presença musical e um plano conceitual abstrato, estruturando-se a partir de um andamento meditativo e temas de teor existencial.\n\nNa grande maioria das notas (~80%), destaca-se a valorização do cotidiano e a apreciação dos pequenos momentos da vida, aspecto enfatizado por muitos. Boa parte também ressalta a crítica em torno da busca obsessiva por uma grande paixão ou propósito definitivo. Além disso, uma parcela expressiva aponta o forte impacto emocional provocado pela obra e suas reflexões existenciais.\n\nPara quem se situa numa parcela das notas (~16%), a percepção ganha ressalvas: vários avaliam que a mensagem central se torna contraditória ou perde força ao longo do desenvolvimento. Nesse mesmo grupo, alguns apontam questionamentos quanto à lógica e ao estilo do universo espiritual, embora notem a beleza visual, enquanto uma fatia menor identifica indefinições de tom quanto ao público-alvo.\n\nJá numa fração mínima das notas (~4%), a leitura foca nas fragilidades da condução. Parte deles considera a resolução da trama incoerente com a proposta inicial, ao passo que uma parte relata um ritmo arrastado que provoca cansaço. Por fim, alguns apontam falta de originalidade na estrutura do roteiro, considerando-a previsível.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 2,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 0.889,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 9,
+        "cobertura": 1.0,
+        "eliminado": false
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 10248,
+      "completion_tokens": 1163,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 10248
+    },
+    "latencia_s": 29.22
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A maioria de quem recomenda destaca o poder de comoção e os questionamentos existenciais provocados pela obra. Por outro lado, numa base reduzida de relatos, a maioria dos que não recomendam concentra suas ressalvas na condução do desfecho e na forma como a mensagem principal é transmitida.",
+    "texto_modelo": "A maioria de quem recomenda destaca o poder de comoção e os questionamentos existenciais provocados pela obra. Por outro lado, numa base reduzida de relatos, a maioria dos que não recomendam concentra suas ressalvas na condução do desfecho e na forma como a mensagem principal é transmitida.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 47,
+        "n_ancoras": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 43,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "quantificador_divergente"
+        ],
+        "n_palavras": 40,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 7,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3624,
+      "completion_tokens": 191,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3624
+    },
+    "latencia_s": 12.63
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma narrativa que valorize pequenos momentos cotidianos em vez de grandes ambições",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Valorização do cotidiano e das pequenas coisas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por histórias que questionam a obsessão por encontrar um propósito grandioso",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica à obsessão por propósito e paixão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma história comovente que provoque reflexões existenciais sobre viver o presente",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e reflexão existencial",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se cansa com ritmo arrastado e discussões existenciais que interrompem a narrativa",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e cansaço",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita tramas construídas sobre fórmulas previsíveis e sem ousadia criativa",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estrutura e originalidade do roteiro",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 80,
+        "peso_texto": "~80% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-A",
+        "lado": "talvez_evite",
+        "regra": "R6",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [
+      {
+        "texto": "aprecia o jazz tanto na narrativa quanto como inspiração para a vida",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Jazz como elemento temático e inspirador",
+        "rotulo_forca": "alguns",
+        "lado": "vale_a_pena",
+        "tema_base": "NEG-A"
+      }
+    ],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11685,
+      "completion_tokens": 1086,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11685
+    },
+    "latencia_s": 25.81,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

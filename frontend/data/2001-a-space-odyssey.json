@@ -1,0 +1,1613 @@
+{
+  "slug": "2001-a-space-odyssey",
+  "data_coleta": "2026-09-16T19:01:14.913311+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/2001-a-space-odyssey/reviews/",
+  "ficha": {
+    "titulo": "2001: Uma Odisséia no Espaço",
+    "sinopse_oficial": "Desde a “Aurora do Homem” (a pré-história), um misterioso monólito negro parece emitir sinais de outra civilização, assim interferindo no nosso planeta. Quatro milhões de anos depois, no século XXI, uma equipe de astronautas liderados pelo experiente David Bowman e Frank Poole é enviada ao planeta Júpiter para investigar o enigmático monólito na nave Discovery, totalmente controlada pelo computador HAL-9000. Entretanto, no meio da viagem, HAL-9000 entra em pane e tenta assumir o controle da nave, eliminando um a um os tripulantes.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ficção científica",
+      "Mistério",
+      "Aventura"
+    ],
+    "duracao_min": 148,
+    "diretor": "Stanley Kubrick",
+    "diretor_transliterado": false,
+    "ano": 1968,
+    "fonte": "tmdb",
+    "tmdb_id": 62,
+    "tmdb_fetched_at": "2026-09-16T20:18:38+00:00",
+    "poster_path": "/pVCmLuATJ0lQs4Vx1zUJUN0if2A.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/eZXG0kT0vgHftAKOfTFeUNNmtDS.jpg",
+      "/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
+      "/spoZUN4X1KiOc5S0plOyGAXLNtb.jpg",
+      "/yfnDgz3Kiv0IkdujrFRh1vcd7Yu.jpg",
+      "/6gyZF4SeifiUUYDELkCS8nOqsu2.jpg",
+      "/kCEXA22ASuq7Y29jnngyaisyA0X.jpg",
+      "/vCkC4lHpJZNVUGzdWAF09UKK8by.jpg",
+      "/sNYSbzWITnFUwvKRcHQ6HM822ST.jpg",
+      "/lpat8k4QmykxmHBVfwN9VFF5rpv.jpg",
+      "/s11vu2ZoM3xQHiMNS181yXBnMDB.jpg"
+    ],
+    "backdrop_path": "/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/dpAhcISQcTSphyN6BZLoJ96DBlv.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/dRFx6ctKBSvw7eAKJXgv9AoAoga.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/spoZUN4X1KiOc5S0plOyGAXLNtb.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/d6Abw0QJI1mm8PZ0mWnP3X49UTm.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8PEC0BbhYKerLnXBfpczdaryUcD.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ywSZYk8D8kOt572L6k2SBDbdlEC.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/1qxTEXqarrQ3PxLLg3NvNTqU0KQ.jpg",
+        "still_largura": 1536,
+        "still_altura": 864
+      },
+      {
+        "still_path": "/6cKdgftsdZII4PTsxMXx32tYjhc.jpg",
+        "still_largura": 3786,
+        "still_altura": 2129
+      },
+      {
+        "still_path": "/9MEfuxptc5Py8z2P5XbUB4t49ZE.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/eZuuYiY7i5noMaqndxePg0mnJGB.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/kjdyLeQcd1a5NUjCkss3c52Nnog.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/qJAqAtLWFY9YzkDwo51tc3N9tJb.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/ty6kHOzFe0vl9ydFETAncMQ8ZRK.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "2001-a-space-odyssey",
+      "titulo_letterboxd": "2001: A Space Odyssey",
+      "ano_letterboxd": 1968,
+      "tmdb_id_letterboxd": 62,
+      "tmdb_id_escolhido": 62,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "2001: A Space Odyssey",
+      "ano_tmdb": 1968,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 1602074,
+    "por_nivel": {
+      "0.5": 10562,
+      "1.0": 20125,
+      "1.5": 11385,
+      "2.0": 44917,
+      "2.5": 38416,
+      "3.0": 129070,
+      "3.5": 127755,
+      "4.0": 355194,
+      "4.5": 243734,
+      "5.0": 620916
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 10,
+      "positivas": 84
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "2001-a-space-odyssey",
+    "coletado_em": "2026-09-16T03:27:06.107462+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 10562,
+      "1.0": 20125,
+      "1.5": 11385,
+      "2.0": 44917,
+      "2.5": 38416,
+      "3.0": 129070,
+      "3.5": 127755,
+      "4.0": 355194,
+      "4.5": 243734,
+      "5.0": 620916
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 4,
+      "1.0": 15,
+      "1.5": 12,
+      "2.0": 40,
+      "2.5": 28,
+      "3.0": 52,
+      "3.5": 6,
+      "4.0": 17,
+      "4.5": 8,
+      "5.0": 31
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 7
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 71,
+        "n_validas_pos_extensao": 71,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 80,
+        "n_validas_pos_extensao": 80,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 62,
+        "n_validas_pos_extensao": 62,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 4,
+      "1.0": 8,
+      "1.5": 5,
+      "2.0": 19,
+      "2.5": 16,
+      "3.0": 53,
+      "3.5": 53,
+      "4.0": 146,
+      "4.5": 100,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2013-04-21",
+        "max": "2026-09-16",
+        "p5": "2026-09-02",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2025-03-07",
+          "max": "2026-09-15",
+          "p5": "2026-09-05",
+          "p50": "2026-09-12",
+          "p95": "2026-09-15"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2022-08-22",
+          "max": "2026-09-16",
+          "p5": "2026-09-04",
+          "p50": "2026-09-13",
+          "p95": "2026-09-15"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2013-04-21",
+          "max": "2026-09-16",
+          "p5": "2026-09-02",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 13,
+      "dias_por_100_paginas": 10.236220472440944,
+      "paginas_para_1_ano": 3566
+    },
+    "identidade_letterboxd": {
+      "slug": "2001-a-space-odyssey",
+      "titulo": "2001: A Space Odyssey",
+      "ano": 1968,
+      "tmdb_id_letterboxd": 62,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 1968,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 576
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 5,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 9,
+        "1.5": 5,
+        "2.0": 21
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 9,
+        "1.5": 5,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 7,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-05",
+        "max": "2026-09-15",
+        "p5": "2026-09-07",
+        "p50": "2026-09-12",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 21,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 8,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 8,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas descrevem o filme como extremamente entediante, com cenas que se arrastam por minutos sem que nada aconteça, tornando a experiência uma prova de paciência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de diálogos e trama",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reclama da ausência de diálogos e de uma narrativa que só engrena após a primeira hora, com longos trechos sem qualquer desenvolvimento de história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Visual e efeitos especiais impressionantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo nas críticas negativas, muitas reviews reconhecem que a fotografia e os efeitos práticos são visualmente deslumbrantes, especialmente considerando a época em que o filme foi feito.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado / não merece o status de obra-prima",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas questionam a aclamação unânime, sugerindo que o filme é superestimado e que seu valor reside mais em sua inovação técnica do que em sua qualidade como entretenimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco desenvolvidos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que os personagens humanos são unidimensionais e difíceis de se apegar, com exceção do computador HAL, que é consistentemente elogiado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de coerência e mensagem confusa",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews mencionam que o filme é confuso, com segmentos desconexos e um final que não faz sentido, deixando a sensação de que não há uma mensagem clara ou relevante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo excessivamente lento e a falta de uma narrativa envolvente, com muitos considerando o filme entediante e superestimado. Apesar disso, quase todas reconhecem o valor visual e a influência histórica da obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 10,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 26,
+        "p5": 1,
+        "p50": 5,
+        "p95": 26,
+        "fracao_profunda": 0.35
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-04",
+        "max": "2026-09-16",
+        "p5": "2026-09-05",
+        "p50": "2026-09-13",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 19,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 66,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 66,
+            "excedente_cota": 21,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews medianas reclamam que o filme é excessivamente lento, com cenas arrastadas que poderiam ser encurtadas, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade visual e efeitos para a época",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece que os efeitos visuais e a fotografia são impressionantes para 1968, com destaque para a composição de cena e o design de produção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Dificuldade de compreensão e narrativa ambígua",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews medianas mencionam confusão com a trama, achando a narrativa ambígua e sem explicações claras, o que prejudica o envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a trilha sonora clássica e o design de som, embora algumas critiquem o volume excessivo ou repetitivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conflito com a IA (HAL) e previsão futurista",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns usuários destacam a abordagem visionária da inteligência artificial e o conflito com HAL, visto como um ponto alto e pertinente nos dias de hoje.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Influência e legado revolucionário",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece o impacto do filme na ficção científica e sua importância histórica, mesmo que não tenha gostado da experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas apontam para uma apreciação técnica do filme, especialmente de seus efeitos visuais e trilha sonora, mas criticam fortemente o ritmo arrastado, a narrativa confusa e a duração excessiva. Este grupo demonstra respeito pelo legado revolucionário, porém expressa tédio e dificuldade de conexão emocional com a obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 84,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 11,
+        "4.5": 7,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 11,
+        "4.5": 7,
+        "5.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-02",
+        "max": "2026-09-16",
+        "p5": "2026-09-02",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Efeitos visuais e técnicos impressionantes para 1968",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que os efeitos práticos e a fotografia são surpreendentes para a época, com espaçonaves e estações espaciais que parecem reais e influenciaram todo o cinema de ficção científica posterior.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e composição visual deslumbrantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos elogiam a beleza das imagens, o uso de simetria e a capacidade de transmitir grandiosidade e solidão através de planos meticulosamente compostos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e longas sequências sem diálogo",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é frequentemente descrito como lento, com trechos arrastados que podem dificultar a imersão, embora alguns considerem que essa lentidão contribui para a experiência contemplativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa enigmática e final ambíguo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é vista como confusa e aberta a interpretações, com um desfecho que deixa muitas perguntas sem resposta e provoca reflexão prolongada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e som marcantes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música clássica e o design de som são amplamente elogiados por criar atmosfera grandiosa e momentos de tensão inesquecíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Inteligência artificial (HAL) como vilão à frente do tempo",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A representação da IA HAL é destacada como assustadoramente presciente, gerando desconforto e questionamentos sobre o controle da tecnologia sobre os humanos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas ressaltam a maestria técnica e visual do filme, especialmente para 1968, mas frequentemente apontam o ritmo lento e a narrativa enigmática como desafios. Este grupo enaltece a obra como um marco influente da ficção científica, ainda que alguns considerem a experiência mais contemplativa do que tradicionalmente envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "As reviews negativas descrevem o filme como extremamente entediante, com cenas que se arrastam por minutos sem que nada aconteça, tornando a experiência uma prova de paciência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Muitas reviews medianas reclamam que o filme é excessivamente lento, com cenas arrastadas que poderiam ser encurtadas, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -50.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longas sequências sem diálogo",
+            "exemplo_parafraseado": "O ritmo é frequentemente descrito como lento, com trechos arrastados que podem dificultar a imersão, embora alguns considerem que essa lentidão contribui para a experiência contemplativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Visual e efeitos especiais impressionantes",
+            "exemplo_parafraseado": "Mesmo nas críticas negativas, muitas reviews reconhecem que a fotografia e os efeitos práticos são visualmente deslumbrantes, especialmente considerando a época em que o filme foi feito.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Qualidade visual e efeitos para a época",
+            "exemplo_parafraseado": "Este grupo reconhece que os efeitos visuais e a fotografia são impressionantes para 1968, com destaque para a composição de cena e o design de produção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e técnicos impressionantes para 1968",
+            "exemplo_parafraseado": "As reviews destacam que os efeitos práticos e a fotografia são surpreendentes para a época, com espaçonaves e estações espaciais que parecem reais e influenciaram todo o cinema de ficção científica posterior.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e composição visual deslumbrantes"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de diálogos e trama",
+            "exemplo_parafraseado": "Este grupo reclama da ausência de diálogos e de uma narrativa que só engrena após a primeira hora, com longos trechos sem qualquer desenvolvimento de história.",
+            "temas_no_mesmo_eixo": [
+              "Personagens pouco desenvolvidos",
+              "Falta de coerência e mensagem confusa"
+            ]
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de compreensão e narrativa ambígua",
+            "exemplo_parafraseado": "Várias reviews medianas mencionam confusão com a trama, achando a narrativa ambígua e sem explicações claras, o que prejudica o envolvimento.",
+            "temas_no_mesmo_eixo": [
+              "Conflito com a IA (HAL) e previsão futurista"
+            ]
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Narrativa enigmática e final ambíguo",
+            "exemplo_parafraseado": "A trama é vista como confusa e aberta a interpretações, com um desfecho que deixa muitas perguntas sem resposta e provoca reflexão prolongada.",
+            "temas_no_mesmo_eixo": [
+              "Inteligência artificial (HAL) como vilão à frente do tempo"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som",
+            "exemplo_parafraseado": "As reviews medianas elogiam a trilha sonora clássica e o design de som, embora algumas critiquem o volume excessivo ou repetitivo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e som marcantes",
+            "exemplo_parafraseado": "A música clássica e o design de som são amplamente elogiados por criar atmosfera grandiosa e momentos de tensão inesquecíveis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado / não merece o status de obra-prima",
+            "exemplo_parafraseado": "Várias críticas questionam a aclamação unânime, sugerindo que o filme é superestimado e que seu valor reside mais em sua inovação técnica do que em sua qualidade como entretenimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Influência e legado revolucionário",
+            "exemplo_parafraseado": "Este grupo reconhece o impacto do filme na ficção científica e sua importância histórica, mesmo que não tenha gostado da experiência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1492040260",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 107 (char 106)"
+      }
+    ]
+  },
+  "narrativa": "Dirigido por Stanley Kubrick e lançado em 1968, 2001: Uma Odisséia no Espaço é uma produção de ficção científica, mistério e aventura. O enredo parte da pré-história com a presença de um misterioso monólito e avança até o século XXI, quando astronautas realizam uma viagem espacial rumo a Júpiter a bordo da nave Discovery, controlada pelo computador HAL-9000, para investigar novos sinais desse enigmático objeto.\n\nEm termos de experiência, a obra se apoia em uma cadência marcadamente desacelerada, com longas sequências desprovidas de diálogos e grande ênfase na composição espacial. A atmosfera é construída pelo rigor visual de seus cenários e pela lentidão com que as ações se desdobram na tela.\n\nNo balanço geral, as diferentes avaliações concordam sobre as características do filme e discordam quanto ao veredito. Na grande maioria das notas (~84%), aproximadamente metade ressalta os efeitos visuais e técnicos impressionantes para 1968, enquanto muitos elogiam a fotografia e a composição visual deslumbrantes. Nesse mesmo grupo, boa parte também menciona o ritmo lento e as longas sequências sem diálogo como elementos centrais.\n\nPara quem se posiciona numa fração mínima das notas (~10%), uma parcela expressiva reclama do ritmo lento e da longa duração, ainda que vários valorizem a qualidade visual e os efeitos da época, com alguns apontando dificuldade de compreensão diante da narrativa ambígua. Por fim, sob a ótica presente numa fração ainda menor das notas (~5%), a maior parte condena o ritmo lento e arrastado, um número considerável critica a falta de diálogos e de trama, enquanto boa parte reconhece o visual e os efeitos especiais impressionantes.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "negativas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [
+      "2001",
+      "9000"
+    ],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 2
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "ritmo",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 2,
+      "motivos": [
+        "numero_inventado"
+      ],
+      "n_flags_depois": 3,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 12244,
+      "completion_tokens": 1591,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 12244
+    },
+    "latencia_s": 46.12
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "As opiniões divergem sobre o funcionamento do roteiro e da estrutura: a maioria dos que recomendam valoriza a condução enigmática e elogia os aspectos visuais de época, enquanto a maioria dos que não recomendam critica o ritmo excessivamente arrastado e a escassez de diálogos e trama.",
+    "texto_modelo": "As opiniões divergem sobre o funcionamento do roteiro e da estrutura: a maioria dos que recomendam valoriza a condução enigmática e elogia os aspectos visuais de época, enquanto a maioria dos que não recomendam critica o ritmo excessivamente arrastado e a escassez de diálogos e trama.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "abertura": "opini",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "formato_invalido"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 1,
+        "abertura": "opini",
+        "abertura_freq": 7,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_ausente"
+        ],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3669,
+      "completion_tokens": 223,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3669
+    },
+    "latencia_s": 14.3
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "admira efeitos visuais e práticos que marcaram época no cinema de ficção científica",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Efeitos visuais e técnicos impressionantes para 1968",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia composições visuais simétricas que transmitem sentimentos de grandiosidade e solidão",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia e composição visual deslumbrantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma experiência contemplativa mesmo com um ritmo lento e trechos arrastados",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e longas sequências sem diálogo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por narrativas enigmáticas com desfecho aberto a interpretações",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Narrativa enigmática e final ambíguo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com cenas excessivamente arrastadas que testam a paciência do espectador",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e arrastado",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se frustra com a ausência de diálogos e demora no desenvolvimento narrativo",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de diálogos e trama",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com personagens humanos unidimensionais, embora aprecie a figura do computador HAL",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens pouco desenvolvidos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 84,
+        "peso_texto": "~84% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-C",
+        "lado": "talvez_evite",
+        "regra": "R2",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 11781,
+      "completion_tokens": 1221,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 11781
+    },
+    "latencia_s": 22.3,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

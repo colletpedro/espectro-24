@@ -1,0 +1,1623 @@
+{
+  "slug": "inglourious-basterds",
+  "data_coleta": "2026-09-16T20:01:29.593405+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/inglourious-basterds/reviews/",
+  "ficha": {
+    "titulo": "Bastardos Inglórios",
+    "sinopse_oficial": "Durante a Segunda Guerra Mundial, na França, um grupo de judeus americanos conhecidos como Bastardos espalha o terror entre o terceiro Reich. Ao mesmo tempo, Shosanna, uma judia que fugiu dos nazistas, planeja vingança quando um evento em seu cinema reunirá os líderes do partido.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller",
+      "Guerra"
+    ],
+    "duracao_min": 152,
+    "diretor": "Quentin Tarantino",
+    "diretor_transliterado": false,
+    "ano": 2009,
+    "fonte": "tmdb",
+    "tmdb_id": 16869,
+    "tmdb_fetched_at": "2026-09-16T20:18:51+00:00",
+    "poster_path": "/6UjYycIR6VLYgggfNpmSPJHmFS0.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+      "/bMJxwgLyD47CDQ6BFCT2AMMlID7.jpg",
+      "/hg0MTIFs49ef179C9Y1HRtzqbbK.jpg",
+      "/1Jpkm9qZcsT0mSyVXgs4VlGjPNI.jpg",
+      "/8pEnePgGyfUqj8Qa6d91OZQ6Aih.jpg",
+      "/bPnPsyo09tLRnTOb7AlsBsgnbhP.jpg",
+      "/kxtIyA7rnoSuNQUm3JAe2VqozqS.jpg",
+      "/wIqOKSfTi1LDWUjeEqe5UKXY1TD.jpg",
+      "/43508X0evUDHMoyMSecsLxcy7RK.jpg",
+      "/ozK1zwPSXhetNY7pZcVZx37UQ7e.jpg"
+    ],
+    "backdrop_path": "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/col4fqppvbht1nvT4OL11SDG4We.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bMJxwgLyD47CDQ6BFCT2AMMlID7.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/bPnPsyo09tLRnTOb7AlsBsgnbhP.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ozK1zwPSXhetNY7pZcVZx37UQ7e.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/87O9BOtR59ZonlIBNeM21PAdtzI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/2v0rKccg3s7vWN1ac2YX9j2uUTl.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/nNhjY0Ccd05eXJ3Z38W5NijGKli.jpg",
+        "still_largura": 1422,
+        "still_altura": 800
+      },
+      {
+        "still_path": "/1YSMA6POgdNYhVyAcpypw0jdYMt.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/7rC61YnAa41JDWp0eixj4OzjFSP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/9xjj7lXiGJmCgeLuRS299c8mJ3P.jpg",
+        "still_largura": 2708,
+        "still_altura": 1523
+      },
+      {
+        "still_path": "/fxCmRDZqgj8RhogE5QeSqKwebWj.jpg",
+        "still_largura": 2708,
+        "still_altura": 1523
+      },
+      {
+        "still_path": "/qCRx7pryOX3YDYHwEMYLX1EJJP4.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "inglourious-basterds",
+      "titulo_letterboxd": "Inglourious Basterds",
+      "ano_letterboxd": 2009,
+      "tmdb_id_letterboxd": 16869,
+      "tmdb_id_escolhido": 16869,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Inglourious Basterds",
+      "ano_tmdb": 2009,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 3950699,
+    "por_nivel": {
+      "0.5": 4014,
+      "1.0": 8843,
+      "1.5": 5563,
+      "2.0": 32992,
+      "2.5": 34784,
+      "3.0": 221502,
+      "3.5": 308180,
+      "4.0": 1125398,
+      "4.5": 797587,
+      "5.0": 1411836
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "inglourious-basterds",
+    "coletado_em": "2026-09-16T05:27:48.382229+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4014,
+      "1.0": 8843,
+      "1.5": 5563,
+      "2.0": 32992,
+      "2.5": 34784,
+      "3.0": 221502,
+      "3.5": 308180,
+      "4.0": 1125398,
+      "4.5": 797587,
+      "5.0": 1411836
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 8,
+      "1.5": 4,
+      "2.0": 20,
+      "2.5": 23,
+      "3.0": 34,
+      "3.5": 4,
+      "4.0": 14,
+      "4.5": 9,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "0.5": 1,
+          "1.5": 1,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 57,
+        "n_validas_pos_extensao": 57,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 2,
+          "5.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 6,
+      "3.0": 40,
+      "3.5": 56,
+      "4.0": 204,
+      "4.5": 145,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 684,
+        "min": "2000-02-14",
+        "max": "2026-09-16",
+        "p5": "2026-05-31",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2000-02-14",
+          "max": "2026-09-15",
+          "p5": "2026-02-03",
+          "p50": "2026-08-30",
+          "p95": "2026-09-14"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2010-05-31",
+          "max": "2026-09-16",
+          "p5": "2026-08-01",
+          "p50": "2026-09-09",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 264,
+          "min": "2010-08-14",
+          "max": "2026-09-16",
+          "p5": "2026-08-05",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 9,
+      "dias_por_100_paginas": 7.086614173228346,
+      "paginas_para_1_ano": 5151
+    },
+    "identidade_letterboxd": {
+      "slug": "inglourious-basterds",
+      "titulo": "Inglourious Basterds",
+      "ano": 2009,
+      "tmdb_id_letterboxd": 16869,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2009,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 684
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 1,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 4,
+        "p95": 10,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2000-02-14",
+        "max": "2026-09-15",
+        "p5": "2026-08-01",
+        "p50": "2026-08-30",
+        "p95": "2026-09-13"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 107,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 107,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Brad Pitt (sotaque e performance)",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias reviews reclamam que o sotaque e a atuação de Brad Pitt soam exagerados e pouco críveis, chegando a atrapalhar a imersão em cenas sérias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom misto entre comédia e drama/paródia",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo critica a alternância entre humor paródico e temas de guerra, dizendo que o tom fica desconexo e que piadas soam infantis diante do contexto retratado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso da Segunda Guerra como entretenimento/vingança fantasiosa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que tratar o conflito como fantasia estilizada e vingança esvazia o peso histórico e soa desrespeitoso com o período retratado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias pessoas descrevem a experiência como arrastada, com cenas longas e prolongadas que tornam difícil terminar o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e subtramas mal desenvolvidas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo considera o roteiro simplista, com arcos abandonados e decisões de personagem pouco críveis ou previsíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elogio isolado à atuação de Christoph Waltz",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as críticas duras, muitas reviews reconhecem que a performance de Christoph Waltz é o ponto alto e o principal motivo para continuar assistindo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo reclamam sobretudo do tom desequilibrado, do ritmo arrastado e do roteiro pouco convincente, além de criticarem o tratamento dado ao período histórico, com a atuação de Brad Pitt sendo citada negativamente. Ainda assim, algumas destacam Christoph Waltz como o único elemento que segura o interesse.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 6,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 20,
+        "p5": 1,
+        "p50": 5,
+        "p95": 20,
+        "fracao_profunda": 0.225
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2010-05-31",
+        "max": "2026-09-15",
+        "p5": "2026-08-01",
+        "p50": "2026-09-11",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 35,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Christoph Waltz / Hans Landa",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores consideram a performance do ator que interpreta o caçador de nazistas o grande destaque do filme, com sua presença imponente e troca de idiomas impressionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom cômico e caricato em contraste com momentos sérios",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Algumas reviews medianas apontam que o filme oscila entre sequências dramáticas de alta qualidade e momentos pastelão, o que gera uma experiência desigual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo irregular e duração excessiva",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reclama que o meio do filme se arrasta, com diálogos longos que não acrescentam tensão, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fantasia histórica / propaganda americana",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Parte das reviews critica a abordagem como uma fantasia de vingança que simplifica a Segunda Guerra e exalta os EUA de forma irreal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens secundários pouco desenvolvidos",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores sentem que os Bastardos e outros personagens têm pouco tempo de tela e profundidade, tornando o filme menos envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência estilizada e tarantinesca",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há quem aprecie a violência exagerada como marca do diretor, enquanto outros a consideram gratuita ou imatura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam um filme tecnicamente competente e com atuações marcantes, mas que sofre com ritmo irregular, tom oscilante e desenvolvimento desigual de personagens, além de críticas à sua abordagem histórica fantasiosa.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "share_real": 92,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 12,
+        "4.5": 9,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 12,
+        "4.5": 9,
+        "5.0": 16
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-08-08",
+        "max": "2026-09-16",
+        "p5": "2026-07-13",
+        "p50": "2026-09-15",
+        "p95": "2026-09-15"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 58,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 58,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Christoph Waltz",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Christoph Waltz é amplamente elogiado por sua atuação como Hans Landa, sendo descrito como assustadoramente bom e capaz de dominar a tela em todas as cenas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e suspense",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A habilidade de Tarantino em criar tensão por meio de diálogos e cenas prolongadas é destacada, com menções à cena inicial e à sequência no bar como exemplos de suspense magistral.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tarantino como diretor",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas reviews elogiam a direção de Tarantino, seu estilo único, a escrita afiada e a ousadia de reescrever eventos históricos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e diálogos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é enaltecido por sua inteligência, com diálogos marcantes e uma estrutura narrativa que prende a atenção, apesar de alguns acharem o filme longo demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco e personagens",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco é muito elogiado, com destaque para Brad Pitt, Eli Roth e a personagem Shosanna, além da química entre os atores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Violência catártica e vingança",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A violência estilizada e a fantasia de vingança são vistas como catárticas e satisfatórias, proporcionando um senso de justiça poética.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam especialmente a atuação de Christoph Waltz, a construção de tensão e o estilo característico de Tarantino, com elogios à direção, roteiro e elenco. A violência catártica e a abordagem de vingança também são apreciadas, resultando em uma experiência intensa e envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Várias pessoas descrevem a experiência como arrastada, com cenas longas e prolongadas que tornam difícil terminar o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo irregular e duração excessiva",
+            "exemplo_parafraseado": "Este grupo reclama que o meio do filme se arrasta, com diálogos longos que não acrescentam tensão, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Brad Pitt (sotaque e performance)",
+            "exemplo_parafraseado": "Várias reviews reclamam que o sotaque e a atuação de Brad Pitt soam exagerados e pouco críveis, chegando a atrapalhar a imersão em cenas sérias.",
+            "temas_no_mesmo_eixo": [
+              "Elogio isolado à atuação de Christoph Waltz"
+            ]
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Christoph Waltz / Hans Landa",
+            "exemplo_parafraseado": "Vários espectadores consideram a performance do ator que interpreta o caçador de nazistas o grande destaque do filme, com sua presença imponente e troca de idiomas impressionante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Christoph Waltz",
+            "exemplo_parafraseado": "Christoph Waltz é amplamente elogiado por sua atuação como Hans Landa, sendo descrito como assustadoramente bom e capaz de dominar a tela em todas as cenas.",
+            "temas_no_mesmo_eixo": [
+              "Elenco e personagens"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Violência estilizada e tarantinesca",
+            "exemplo_parafraseado": "Há quem aprecie a violência exagerada como marca do diretor, enquanto outros a consideram gratuita ou imatura.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Tarantino como diretor",
+            "exemplo_parafraseado": "Muitas reviews elogiam a direção de Tarantino, seu estilo único, a escrita afiada e a ousadia de reescrever eventos históricos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e subtramas mal desenvolvidas",
+            "exemplo_parafraseado": "O grupo considera o roteiro simplista, com arcos abandonados e decisões de personagem pouco críveis ou previsíveis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Personagens secundários pouco desenvolvidos",
+            "exemplo_parafraseado": "Alguns espectadores sentem que os Bastardos e outros personagens têm pouco tempo de tela e profundidade, tornando o filme menos envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e diálogos",
+            "exemplo_parafraseado": "O roteiro é enaltecido por sua inteligência, com diálogos marcantes e uma estrutura narrativa que prende a atenção, apesar de alguns acharem o filme longo demais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Tom misto entre comédia e drama/paródia",
+            "exemplo_parafraseado": "O grupo critica a alternância entre humor paródico e temas de guerra, dizendo que o tom fica desconexo e que piadas soam infantis diante do contexto retratado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Tom cômico e caricato em contraste com momentos sérios",
+            "exemplo_parafraseado": "Algumas reviews medianas apontam que o filme oscila entre sequências dramáticas de alta qualidade e momentos pastelão, o que gera uma experiência desigual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e suspense",
+            "exemplo_parafraseado": "A habilidade de Tarantino em criar tensão por meio de diálogos e cenas prolongadas é destacada, com menções à cena inicial e à sequência no bar como exemplos de suspense magistral.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Violência catártica e vingança",
+            "exemplo_parafraseado": "A violência estilizada e a fantasia de vingança são vistas como catárticas e satisfatórias, proporcionando um senso de justiça poética.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Uso da Segunda Guerra como entretenimento/vingança fantasiosa",
+            "exemplo_parafraseado": "As reviews apontam que tratar o conflito como fantasia estilizada e vingança esvazia o peso histórico e soa desrespeitoso com o período retratado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Fantasia histórica / propaganda americana",
+            "exemplo_parafraseado": "Parte das reviews critica a abordagem como uma fantasia de vingança que simplifica a Segunda Guerra e exalta os EUA de forma irreal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4154
+    },
+    "verificacao_pendente": [
+      {
+        "bucket": "positivas",
+        "id": "viewing:1497940427",
+        "eixo": "impacto_emocional",
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 1 column 82 (char 81)"
+      }
+    ]
+  },
+  "narrativa": "Lançado em 2009 sob a direção de Quentin Tarantino, Bastardos Inglórios é um drama e suspense de guerra ambientado na França ocupada durante a Segunda Guerra Mundial. A premissa acompanha um grupo de soldados judeus americanos conhecido por espalhar o terror entre as tropas do Terceiro Reich, enquanto uma jovem judia refugiada arquiteta uma vingança própria em seu cinema durante uma exibição que reunirá a cúpula do partido nazista.\n\nA experiência se estrutura a partir de cenas longas com diálogos detalhados que constroem suspense contínuo, mesclando passagens de teor dramático a momentos caricatos e explosões de violência estilizada. Trata-se de uma narrativa conduzida como fantasia histórica, cuja cadência se estende ao longo de seus cento e cinquenta e dois minutos de duração.\n\nNa grande maioria das notas (~92%), a maioria exalta a atuação de Christoph Waltz na pele de Hans Landa, boa parte enfatiza o controle na construção de tensão e suspense, e uma parcela expressiva celebra a assinatura de Quentin Tarantino na direção. Os diferentes perfis de recepção debatem os mesmos tópicos centrais da obra, divergindo no veredito sobre se esses recursos funcionam na tela.\n\nNessa perspectiva, que aparece numa fração mínima das notas (~6%), vários ainda consideram a performance de Christoph Waltz o ponto mais forte, embora alguns apontem um descompasso incômodo entre o tom cômico e os segmentos mais sérios, ao passo que uma fatia menor lamenta o ritmo irregular e a sensação de duração excessiva.\n\nPara quem se situa numa fração ainda menor das notas (~1%), muitos direcionam ressalvas à atuação e ao sotaque de Brad Pitt, uma parte critica a oscilação entre drama e comédia paródica, e parte deles rejeita o aproveitamento da Segunda Guerra Mundial como um entretenimento de vingança fantasiosa.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 0
+  },
+  "narrativa_selecao": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "unico",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 11,
+        "cobertura": 1.0,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 10,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": null,
+    "uso": {
+      "prompt_tokens": 9990,
+      "completion_tokens": 1184,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 9990
+    },
+    "latencia_s": 33.9
+  },
+  "veredito": {
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "A divisão sobre o filme está na qualidade do roteiro: a maioria de quem não recomenda aponta fragilidades no texto e tramas secundárias mal conduzidas, enquanto a maioria dos que recomendam valoriza a construção dos diálogos e destaca o trabalho de Christoph Waltz em cena.",
+    "texto_modelo": "A divisão sobre o filme está na qualidade do roteiro: a maioria de quem não recomenda aponta fragilidades no texto e tramas secundárias mal conduzidas, enquanto a maioria dos que recomendam valoriza a construção dos diálogos e destaca o trabalho de Christoph Waltz em cena.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "abertura",
+    "abertura": "divis",
+    "indice_escolhido": 1,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 2,
+        "flags": [
+          "formato_invalido",
+          "tema_verbatim"
+        ],
+        "n_palavras": 48,
+        "n_ancoras": 2,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 45,
+        "n_ancoras": 2,
+        "abertura": "divis",
+        "abertura_freq": 1,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 46,
+        "n_ancoras": 2,
+        "abertura": "diver",
+        "abertura_freq": 11,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 3657,
+      "completion_tokens": 204,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 3657
+    },
+    "latencia_s": 11.46
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma atuação marcante e dominadora de Christoph Waltz em cena",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Christoph Waltz",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca um suspense magistral construído por meio de diálogos e sequências prolongadas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão e suspense",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "admira a direção de Tarantino com escrita afiada e releitura de fatos históricos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tarantino como diretor",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações com forte química entre o elenco e personagens marcantes",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elenco e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma fantasia de vingança com violência estilizada e senso de justiça",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Violência catártica e vingança",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com atuações e sotaques exagerados que afetam a imersão na trama",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Brad Pitt (sotaque e performance)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se frustra com oscilações de tom entre humor paródico e drama de guerra",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tom misto entre comédia e drama/paródia",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita abordagens de vingança fantasiosa que atenuem o peso histórico do conflito",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Uso da Segunda Guerra como entretenimento/vingança fantasiosa",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-D"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "não tolera um ritmo arrastado com cenas muito extensas e prolongadas",
+        "tema_origem": "NEG-D",
+        "lado": "talvez_evite",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "gemini",
+    "modelo": "gemini-3.7-flash",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 14857,
+      "completion_tokens": 1352,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 14857
+    },
+    "latencia_s": 24.74,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

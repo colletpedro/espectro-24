@@ -1,0 +1,295 @@
+{
+  "slug": "the-gentlemen",
+  "coletado_em": "2026-09-16T05:34:41.369570+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 1929,
+    "1.0": 4650,
+    "1.5": 5007,
+    "2.0": 18783,
+    "2.5": 27215,
+    "3.0": 92586,
+    "3.5": 147571,
+    "4.0": 229794,
+    "4.5": 80076,
+    "5.0": 78105
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 3,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 3,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 36,
+    "2.0": 120,
+    "2.5": 71,
+    "3.0": 120,
+    "3.5": 60,
+    "4.0": 84,
+    "4.5": 24,
+    "5.0": 24
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 5,
+    "1.0": 8,
+    "1.5": 17,
+    "2.0": 34,
+    "2.5": 17,
+    "3.0": 25,
+    "3.5": 12,
+    "4.0": 16,
+    "4.5": 5,
+    "5.0": 6
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 3,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 64,
+      "n_validas_pos_extensao": 64,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 42,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.5": 1,
+        "4.0": 1,
+        "4.5": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 39,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 5,
+    "1.5": 6,
+    "2.0": 21,
+    "2.5": 30,
+    "3.0": 103,
+    "3.5": 164,
+    "4.0": 256,
+    "4.5": 89,
+    "5.0": 87
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 647,
+      "min": "2020-04-04",
+      "max": "2026-09-16",
+      "p5": "2026-07-27",
+      "p50": "2026-09-08",
+      "p95": "2026-09-15"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2023-12-15",
+        "max": "2026-09-16",
+        "p5": "2026-07-27",
+        "p50": "2026-08-23",
+        "p95": "2026-09-13"
+      },
+      "medianas": {
+        "n": 227,
+        "min": "2020-04-04",
+        "max": "2026-09-16",
+        "p5": "2026-07-11",
+        "p50": "2026-09-07",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 228,
+        "min": "2024-01-08",
+        "max": "2026-09-16",
+        "p5": "2026-07-27",
+        "p50": "2026-09-14",
+        "p95": "2026-09-15"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 49,
+    "dias_por_100_paginas": 38.58267716535433,
+    "paginas_para_1_ano": 946
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 13,
+      "dias_por_100_paginas": 1300.0,
+      "paginas_para_1_ano": 28
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 37,
+      "dias_por_100_paginas": 1850.0,
+      "paginas_para_1_ano": 20
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 48,
+      "dias_por_100_paginas": 533.3333333333334,
+      "paginas_para_1_ano": 68
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 15,
+      "dias": 49,
+      "dias_por_100_paginas": 350.0,
+      "paginas_para_1_ano": 104
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 52,
+      "dias": 66,
+      "dias_por_100_paginas": 129.41176470588235,
+      "paginas_para_1_ano": 282
+    },
+    "3.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 41,
+      "dias": 28,
+      "dias_por_100_paginas": 70.0,
+      "paginas_para_1_ano": 521
+    },
+    "4.0": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 50,
+      "dias_por_100_paginas": 39.37007874015748,
+      "paginas_para_1_ano": 927
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 2,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    },
+    "5.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    }
+  },
+  "ano_lancamento": 2019,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-gentlemen",
+    "titulo": "The Gentlemen",
+    "ano": 2019,
+    "tmdb_id_letterboxd": 522627,
+    "fonte": "pagina_letterboxd"
+  }
+}
