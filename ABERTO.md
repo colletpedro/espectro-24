@@ -398,6 +398,24 @@ mesma família. Não corrigido.**
   depende de um estágio instável), causa diferente (falha de parse + política
   conservadora + retomada que refaz a falha).
 
+**[2026-09-18] C3(B) deixa de ser cega — a evidência passa a ser gravada.**
+Até aqui o registro de falha do verificador guardava só a MENSAGEM do erro
+(`Extra data: line 1 column 45`); a resposta que a causou sumia, e a taxa
+estável de 0,87% (30 de 3.434 no lote de 44) era inexplicável por construção.
+Agora, quando o parse falha depois de a resposta chegar, o registro carrega
+`resposta_crua` (idêntica à recebida; `max_tokens=300` limita o tamanho),
+`uso`, `provider` e `modelo` — e `ts`. O mesmo vale para a classificação
+(`votacao_3`), que tem o padrão idêntico. **Não há retentativa e nenhuma
+chamada nova**: a decisão do dono de 2026-09-16 (não retentar) está
+preservada; o passo é só guardar. **A causa continua NÃO investigada** — só
+existirá material para investigá-la na próxima ocorrência. `tests/
+test_verificador_resposta_crua.py`.
+
+*Efeito colateral medido:* o registro de falha de parse não trazia `uso`, mas a
+chamada foi cobrada. Todo custo já reportado do verificador omite essas
+chamadas (~0,9% delas), além do erro de preço da C19. Os `custo_usd` antigos
+são, portanto, piso.
+
 ### C4. Feelings — em espera, com dependência de ordem
 Nada implementado, nada autorizado. A tabela review-derived × work-derived é lei
 de uma coisa que não existe.
@@ -2036,6 +2054,183 @@ por falha na igualdade assim que qualquer um dos 44 tiver tema retido em
 `expectativa`. Conserto proposto, NÃO feito (aguarda aval): fixar a população
 no catálogo em que a medição foi feita, em vez de "todo slug do consenso" —
 o que preserva a asserção inteira em vez de afrouxá-la.
+
+### C19. O preço do DeepSeek estava defasado: o código reportava ~38% do custo real (2026-09-18)
+
+**FECHADA NO CÓDIGO.** As constantes `PRECO_*` (0,14 / 0,0028 / 0,28 por M)
+eram de 14/08, anteriores à tabela do V4.1-Flash de 10/09, que trouxe **preço de
+pico e fora de pico**. Hoje vivem num só lugar, `src/espectro24/preco.py`, e
+`classificar_10`, `gate_taxonomia` e `verificador_impacto` importam de lá
+(`tests/test_preco_deepseek.py` falha se um `PRECO_X = <literal>` reaparecer).
+
+**A tabela (USD por M tokens), lida em 2026-09-18, vigente desde 2026-09-10:**
+
+| | fora de pico | pico |
+|---|---:|---:|
+| entrada, cache miss | 0,15 | 0,30 |
+| entrada, cache hit | 0,003 | 0,006 |
+| saída | 0,60 | 1,20 |
+
+**A janela de pico:** segunda a sexta, 01:00–04:00 e 06:00–10:00 UTC (9–12 e
+14–18 em Pequim, UTC+8). Todo o resto — sábado e domingo inteiros — é fora de
+pico. Cada janela é `[início, fim)`; a página não diz se o instante exato do
+fim é pico (erro possível: uma chamada por fronteira). Feriados chineses não
+constam e não são modelados.
+
+**Este número tem validade.** Preço de provider muda sem aviso.
+`preco.aviso_de_validade()` avisa depois de 30 dias da leitura
+(`TABELA_VERIFICADA_EM`), e os relatórios de custo o imprimem. **Fonte:**
+`https://api-docs.deepseek.com/quick_start/pricing/` **com a barra final** — sem
+ela a tabela não renderiza (montada por JS); a versão em chinês
+(`/zh-cn/quick_start/pricing`) confere a janela em RMB.
+
+**Sem horário, o cálculo assume PICO** (superestimar é o lado seguro; o erro
+que zerou o saldo duas vezes foi o oposto). Os registros de passe e do
+verificador passam a gravar `ts` (UTC); o manifesto do verificador registra
+`custo_n_sem_horario` e `tabela_de_preco`.
+
+**O que custou de fato cada lote, com o preço certo** (`scripts/custo_por_lote.py`,
+somente leitura; registros sem `ts` alocados linearmente na janela do estágio,
+dos logs do driver):
+
+| | classificação | verificador | total | constantes velhas | razão |
+|---|---:|---:|---:|---:|---:|
+| lote de 44 (16/09, 95% da classificação e 100% do verificador no pico) | US$1,7201 | US$0,5525 | **US$2,2726** | US$0,8857 | 2,57× |
+| lote de 55 (18/09, 100% no pico, sexta 08:48–09:26 UTC; verificador não rodou) | US$1,7527 | — | **US$1,7527** | US$0,6564 | 2,67× |
+
+A reverificação das 137 reviews do C18 (17/09, quinta, fora de pico): US$0,0108.
+**Conferência contra o saldo:** o lote de 55 saiu de US$1,65 para −US$0,02 (US$1,67)
+e o cálculo dá US$1,75 — fecha em 5%. O resíduo NÃO está explicado: o saldo
+inicial foi o declarado, não lido antes de começar. **Falta medir:** leitura de
+`saldo_deepseek()` (grátis) antes e depois de cada estágio; o driver por blocos
+(C20) já a registra.
+
+**Resíduos NÃO explicados — nomeados, não arredondados:**
+
+1. **5% entre o custo calculado do lote de 55 e o saldo consumido.** O cálculo
+   dá US$1,7527 (100% no pico, tokens registrados); o saldo foi de US$1,65 para
+   −US$0,02, isto é, US$1,67 consumidos — diferença de US$0,0827 (4,95%). O
+   saldo inicial (US$1,65) foi o DECLARADO, não lido por `saldo_deepseek()`
+   antes de começar, e as duas leituras têm resolução de centavo. Hipóteses
+   não testadas: o declarado estava levemente defasado; o saldo é atualizado com
+   atraso pelo provider (o −US$0,02 depois do 402 é compatível com isso); a
+   fronteira exata do pico. Nenhuma foi medida. **O que falta:** leitura de
+   saldo antes e depois de cada estágio (o driver por blocos, C20, já a
+   registra).
+2. **Os registros anteriores a 2026-09-18 não têm `ts`.** O custo dos lotes de 44
+   e de 55 e o `custo_usd` do manifesto para essas linhas usam uma alocação LINEAR
+   dentro da janela do estágio (`scripts/custo_por_lote.py`; janelas dos
+   `00_resumo.log` do driver) ou, sem janela, o PICO como pior caso. É uma
+   aproximação declarada: supõe taxa constante de chamadas dentro do estágio
+   (7/s medido) e o erro é de segundos por fronteira de janela. No lote de 44
+   ela decide 5% da classificação (os ~3 minutos antes das 06:00 UTC); no lote
+   de 55 não decide nada (100% no pico).
+
+Um terceiro resíduo, já quantificado na nota da C3(B): as chamadas cuja resposta
+não parseou foram cobradas e NÃO constam de nenhum custo anterior (~0,9% das do
+verificador). Os custos acima são, portanto, piso.
+
+**`custo_usd` do manifesto muda por isso, e muda neste mesmo commit:
+US$0,5556 → US$1,3982.** O manifesto foi regenerado sem nenhuma chamada
+(`calcular_aplicacao(slugs=[])`; o `consenso_verificado.jsonl` regenerado saiu
+idêntico ao de disco, byte a byte, e só três campos do manifesto mudaram:
+`custo_usd`, `custo_n_sem_horario` e `tabela_de_preco`). Nenhum dos 9.241
+vereditos DeepSeek tem `ts` (o 9.242º é do fallback Gemini, fora deste custo),
+então o valor é o PIOR CASO — tudo cobrado como pico, `custo_n_sem_horario =
+9241`. **Não é o custo real daquelas rodadas** (que rodaram em outros horários,
+parte fora de pico): é o teto sob a tabela vigente. O 0,5556 anterior não era
+menor por a rodada ter sido barata, era menor por o preço estar errado.
+
+**Por filme (perfil do lote de 44, classificação + verificador):** US$0,0528 no
+pico, US$0,0264 fora de pico (o "US$0,020" citado até aqui vinha das
+constantes velhas). **Projeção para 300 filmes:** **US$15,85 no pico, US$7,92
+fora de pico.** **Síntese + rotulagem NÃO estão medidas**: o `uso` delas não é
+persistido por filme (só narrativa, veredito e condições, que são Gemini). A
+estimativa pelo tamanho dos prompts é US$0,006–0,012/filme (US$1,8–3,6 para
+300), rotulada como ESTIMATIVA. Persistir o `uso` de síntese e rotulagem é o
+passo que falta para medi-las.
+
+### C20. Driver por blocos: o consenso deixa de esperar o último passe (2026-09-18)
+
+**IMPLEMENTADO** (`scripts/lote_em_blocos.py`, `tests/test_lote_em_blocos.py`).
+No lote de 18/09 o saldo zerou no passe 3 e 2,4 passes pagos (~US$1,75)
+ficaram em `passe_*.jsonl`, fora da produção. A votação nunca exigiu o lote
+inteiro: `votacao_3._consensuar` é função pura dos três votos de UMA review
+(limiar fixo, sem normalização entre reviews ou filmes). O que prendia era o
+desenho do driver — passe 1 em tudo, passe 2 em tudo, passe 3 em tudo, e só
+então o consenso.
+
+Cada bloco (~10 filmes) roda: registro na amostra → passes 1–3 só do bloco →
+consenso do bloco EM MEMÓRIA (`votacao_3.consenso_incremental`) → verificador
+`aplicar-producao` só do bloco → **commit** (verificado, consenso, manifesto,
+cada um por `escrever_atomico`: temporário + `os.replace`). O commit só ocorre
+se os passes e o verificador terminaram; interrupção antes dele deixa os três
+arquivos byte a byte como estavam, e o que foi pago fica no `passe_*.jsonl` /
+`verificador_producao.jsonl` (append-only), então o resume não paga de novo.
+Perde-se no máximo o bloco em curso.
+
+**Provado por teste:** blocos de 1, blocos de 4 e o `cmd_consenso` monolítico
+original dão o MESMO `consenso.jsonl` e o MESMO `consenso_verificado.jsonl`,
+byte a byte; saldo que acaba no meio dos passes e no meio do verificador não
+toca nenhum dos três arquivos; queda entre as gravações deixa cada arquivo
+inteiro. Conferido também sobre os DADOS REAIS: o consenso recomputado dos 99
+publicados é idêntico ao `consenso.jsonl` atual (13.112 linhas, ordenado por
+`(slug, bucket, id)`).
+
+**A restrição que continua valendo:** `pipeline.py:574` compara
+`fonte_n_linhas` do manifesto com as linhas de `consenso.jsonl` e LEVANTA se
+divergirem. Rodar `votacao_3.py consenso` isolado sobre um estado com passes à
+frente do consenso (é o estado dos 22 filmes do lote de 18/09) quebra
+`montar_eixos` para os 99 publicados. O caminho é o driver.
+
+**Janela residual, conhecida:** a queda entre os dois últimos `os.replace` do
+commit (microssegundos) deixa o consenso à frente do manifesto.
+`estado_consistente()` a detecta na partida do driver, que se recusa a rodar;
+`--reparar` regrava os três arquivos a partir do consenso atual sem chamada.
+`--dry-run` conta as chamadas pendentes por bloco sem gastar.
+
+**Pendente:** o driver NÃO foi rodado sobre os 55 (sem saldo). O `--dry-run`
+sobre o estado real dá 4.071 chamadas de passe 3 (blocos 3–6: 1.080 / 1.193 /
+1.198 / 600) e commit sem chamada de classificação nos blocos 1–2 (os 20 filmes
+com os 3 passes completos). O custo restante com o preço certo está na C19.
+
+### C21. A proveniência de classificação de 64 filmes publicados NÃO é recuperável do dado (2026-09-18)
+
+**Medir o V4.1-Flash contra o gabarito está BLOQUEADO por saldo**, e o problema
+por trás é mais grave do que "filmes antigos e novos": **para 64 dos 99 filmes
+publicados, o dado não diz por qual modelo eles foram classificados, e não há
+como descobrir depois.**
+
+O alias `deepseek-v4-flash`, que o código ainda usa, é roteado desde 2026-09-10
+(04:00 UTC) para o **V4.1-Flash** — o V4-Flash foi aposentado.
+`config.py:387` já avisa que trocar o modelo invalida a calibração em silêncio,
+porque o `taxonomia_id` hasheia prompt e eixos, não o modelo.
+
+| filmes publicados | classificados | modelo |
+|---|---|---|
+| 35 | até 30/08 (commit `b60dcae`) | **V4-Flash, com certeza** — anteriores ao roteamento |
+| 20 | expansão de 35 para 55 (piloto de 10/09; commits `1253eb7`, `594786f`, `7b4d914`, 14–15/09) | **NÃO recuperável**: os registros anteriores a 18/09 não têm `ts`, então não se sabe de que lado das 04:00 UTC de 10/09 cada review caiu |
+| 44 | lote de 16/09 | **NÃO recuperável**: depois do roteamento, portanto muito provavelmente V4.1-Flash, mas o dado não prova |
+| **64** | | **35 + 20 + 44 = 99; os 64 são os dois últimos grupos** |
+
+**A frase que importa para quem ler isto no futuro:** o campo `modelo` de cada
+registro de passe e do verificador guarda **o nome PEDIDO** (`deepseek-v4-flash`),
+não o modelo que respondeu — `synthesize.py:1419` grava `"modelo": model`, o
+argumento da chamada, e ignora o `model` da resposta da API. **O dado não permite
+separar os dois modelos.** Ler `modelo` e concluir "foi o V4-Flash" é um erro
+que o próprio campo induz.
+
+Não se sabe se a troca mexe na precisão e no recall por eixo medidos contra o
+gabarito humano; nada disso foi medido sob o V4.1-Flash.
+
+**BLOQUEADO:** medir exige chamadas de DeepSeek (as 100 reviews do gabarito × 3
+passes, sobre o V4.1-Flash), e o saldo está em −US$0,02 sem depósito previsto.
+Quando houver saldo: rodar a matriz de acerto do gabarito sob o V4.1-Flash e
+compará-la com a do V4-Flash antes de decidir qualquer coisa. Duas mitigações
+baratas que NÃO precisam de saldo e NÃO foram feitas — e que só valem daqui para
+frente, nunca recuperam os 64: gravar o `model` DEVOLVIDO pela API no registro
+(não o pedido), e migrar o nome para `deepseek-flash`. Nenhuma das duas altera a
+classificação.
 
 ---
 

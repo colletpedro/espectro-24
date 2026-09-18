@@ -69,6 +69,13 @@ import auditoria_acuracia as aa  # noqa: E402
 import variante_impacto_estrito as vie  # noqa: E402
 from classificar_10 import EIXOS, MODELO  # noqa: E402
 from espectro24.previsao_frequencia import fator_pareado  # noqa: E402
+from espectro24.atomico import escrever_atomico  # noqa: E402
+from espectro24.preco import (  # noqa: E402
+    TABELA_VERIFICADA_EM,
+    TABELA_VIGENTE_DESDE,
+    agora_utc_iso,
+    custo_de_registros,
+)
 from espectro24.synthesize import (  # noqa: E402
     MOTIVO_RECUSA_CONTEUDO,
     LLMSaldoEsgotado,
@@ -90,10 +97,14 @@ CONCORRENCIA = 8
 # de CONTEÚDO e, depois da v1.9.25, empilharia sobre a do adaptador.
 N_PASSES = 3
 
-# Preços DeepSeek, USD por 1M de tokens (mesmos de `classificar_10`).
-PRECO_ENTRADA_MISS = 0.14 / 1_000_000
-PRECO_ENTRADA_HIT = 0.0028 / 1_000_000
-PRECO_SAIDA = 0.28 / 1_000_000
+# Preços DeepSeek: fonte ÚNICA em `espectro24.preco` (tabela V4.1-Flash,
+# pico/fora de pico, lida em 2026-09-18 — TEM VALIDADE, ver o módulo). Estes
+# scripts agregam `uso` sem horário, então usam o PICO (pior caso).
+from espectro24.preco import (  # noqa: E402
+    PRECO_ENTRADA_HIT,
+    PRECO_ENTRADA_MISS,
+    PRECO_SAIDA,
+)
 
 
 # ===========================================================================
@@ -260,7 +271,8 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                         "confirma": confirma, "frase": frase, "alvo": alvo,
                         "uso": resp["uso"], "provider": resp["provider"],
                         "modelo": resp["modelo"],
-                        "latencia_s": resp["latencia_s"]}
+                        "latencia_s": resp["latencia_s"],
+                        "ts": agora_utc_iso()}
             marca = resp["fallback_conteudo"]
         except LLMSaldoEsgotado:
             # A que DESCOBRIU o saldo zerado também não vira registro: o
@@ -270,7 +282,20 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
             return
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, "variante": variante, "passe": n_passe,
-                        "id": review["id"], "erro": f"{type(e).__name__}: {e}"}
+                        "id": review["id"], "erro": f"{type(e).__name__}: {e}",
+                        "ts": agora_utc_iso()}
+            if resp is not None:
+                # [C3(B)] Até aqui a falha de parse guardava SÓ a mensagem do
+                # erro (`Extra data: line 1 column 45`), e a resposta que a
+                # causou sumia: a taxa estável de 0,87% ficava inexplicável
+                # por construção. Agora a resposta CRUA fica no registro (o
+                # `max_tokens=300` limita o tamanho), junto do `uso`, porque
+                # a chamada foi COBRADA e o registro de falha não a contava.
+                # Não há retentativa: só a evidência para a próxima ocorrência.
+                registro["resposta_crua"] = resp["texto"]
+                registro["uso"] = resp["uso"]
+                registro["provider"] = resp["provider"]
+                registro["modelo"] = resp["modelo"]
             marca = ((resp or {}).get("fallback_conteudo")
                      or getattr(e, "marca", None))
         if marca:
@@ -922,25 +947,30 @@ def _motivo_pendencia(erro: str) -> dict:
     return {"motivo": motivo, "erro": erro[:200]}
 
 
-def cmd_aplicar_producao(slugs: list[str] | None = None) -> None:
-    """`slugs` (2026-09-14) restringe só as CHAMADAS: sem ele, o resume
-    retenta toda candidata sem `ok` — inclusive as 14 falhas de JSON de
-    outros filmes, cujo veredito novo mudaria `consenso_verificado.jsonl`
-    por baixo de um JSON já publicado. A escrita continua cobrindo o consenso
-    inteiro, com os vereditos que já existem."""
-    from dotenv import load_dotenv
-    load_dotenv(RAIZ / ".env")
+def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None
+                       ) -> tuple[list[dict], dict]:
+    """O verificador de PRODUÇÃO sobre `linhas` (o consenso, em memória):
+    chama o LLM só para as candidatas de `slugs` (`None` = todas) e devolve
+    `(consenso_verificado, manifesto)` SEM gravar nada. Quem grava decide a
+    ordem — o driver por blocos grava três arquivos juntos, e uma queda
+    durante a chamada paga não pode deixar nenhum deles pela metade.
 
-    linhas = _linhas_consenso_producao()
+    `slugs` (2026-09-14) restringe só as CHAMADAS: sem ele, o resume retenta
+    toda candidata sem `ok` — inclusive as falhas de JSON de outros filmes,
+    cujo veredito novo mudaria `consenso_verificado.jsonl` por baixo de um
+    JSON já publicado. A escrita continua cobrindo o consenso inteiro, com os
+    vereditos que já existem."""
     candidatas = _reviews_producao_a_verificar(linhas)
     print(f"consenso de produção: {len(linhas)} linhas · "
           f"{len(candidatas)} com {EIXO} no consenso "
           f"({len(candidatas) / len(linhas):.1%}) · variante "
           f"{VARIANTE_PRODUCAO} · passada única")
 
-    a_chamar = (candidatas if not slugs
+    # `is None`, não `not slugs`: lista VAZIA é "nenhuma chamada" (o reparo do
+    # driver por blocos regrava os arquivos sem gastar), não "todas".
+    a_chamar = (candidatas if slugs is None
                 else [c for c in candidatas if c["slug"] in set(slugs)])
-    if slugs:
+    if slugs is not None:
         print(f"  chamadas restritas a {sorted(slugs)}: "
               f"{len(a_chamar)} candidata(s)")
     rodar_passe(VARIANTE_PRODUCAO, 1, a_chamar, arq=ARQ_PRODUCAO)
@@ -971,22 +1001,17 @@ def cmd_aplicar_producao(slugs: list[str] | None = None) -> None:
     n_removidas = sum(1 for antes, depois in zip(linhas, saida)
                       if EIXO in antes["eixos"] and EIXO not in depois["eixos"])
 
-    ARQ_CONSENSO_VERIFICADO.parent.mkdir(parents=True, exist_ok=True)
-    with ARQ_CONSENSO_VERIFICADO.open("w", encoding="utf-8") as fh:
-        for r in saida:
-            fh.write(json.dumps(r, ensure_ascii=False) + "\n")
-
-    # Só o que o DeepSeek respondeu entra no custo: os preços abaixo são os
-    # dele. As chamadas do fallback (Gemini) são contadas à parte.
+    # Só o que o DeepSeek respondeu entra no custo (as chamadas do fallback,
+    # Gemini, são contadas à parte). Cada registro é cobrado no preço do SEU
+    # instante (`ts`); registro anterior ao `ts` é cobrado como PICO — pior
+    # caso, ver `espectro24.preco`. `custo_n_sem_horario` diz quantos.
     uso = Counter()
     for r in resultados.values():
         if r.get("provider", "deepseek") != "deepseek":
             continue
         for k, v in (r.get("uso") or {}).items():
             uso[k] += v
-    custo = (uso["cache_miss_tokens"] * PRECO_ENTRADA_MISS
-            + uso["cache_hit_tokens"] * PRECO_ENTRADA_HIT
-            + uso["completion_tokens"] * PRECO_SAIDA)
+    custo = custo_de_registros(resultados.values())
 
     manifesto = {
         "variante": VARIANTE_PRODUCAO, "passada": 1, "eixo": EIXO,
@@ -1002,16 +1027,47 @@ def cmd_aplicar_producao(slugs: list[str] | None = None) -> None:
         "n_removidas": n_removidas,
         "n_chamadas": len(resultados),
         "uso": dict(uso),
-        "custo_usd": custo,
+        "custo_usd": custo.custo_usd,
+        "custo_n_sem_horario": custo.n_sem_horario,
+        "tabela_de_preco": {
+            "modelo": "DeepSeek-V4.1-Flash",
+            "vigente_desde": TABELA_VIGENTE_DESDE.isoformat(),
+            "verificada_em": TABELA_VERIFICADA_EM.isoformat(),
+        },
     }
-    ARQ_MANIFESTO_VERIFICADOR.write_text(
-        json.dumps(manifesto, ensure_ascii=False, indent=2), encoding="utf-8")
+    return saida, manifesto
 
-    print(f"\n  removidas: {n_removidas}/{len(candidatas)} "
-          f"({n_removidas / len(candidatas):.1%})")
-    print(f"  custo: US$ {custo:.4f} ({len(resultados)} chamadas)")
+
+def gravar_aplicacao(saida: list[dict], manifesto: dict) -> None:
+    """Grava `consenso_verificado.jsonl` e o manifesto, cada um de forma
+    ATÔMICA. O verificado vai primeiro: enquanto o manifesto antigo ainda
+    vale, `montar_eixos` continua lendo um arquivo inteiro."""
+    escrever_atomico(ARQ_CONSENSO_VERIFICADO,
+                     "".join(json.dumps(r, ensure_ascii=False) + "\n"
+                             for r in saida))
+    escrever_atomico(ARQ_MANIFESTO_VERIFICADOR,
+                     json.dumps(manifesto, ensure_ascii=False, indent=2))
+
+
+def imprimir_aplicacao(manifesto: dict) -> None:
+    print(f"\n  removidas: {manifesto['n_removidas']}/"
+          f"{manifesto['n_candidatas']} "
+          f"({manifesto['n_removidas'] / manifesto['n_candidatas']:.1%})")
+    print(f"  custo: US$ {manifesto['custo_usd']:.4f} "
+          f"({manifesto['n_chamadas']} chamadas; "
+          f"{manifesto['custo_n_sem_horario']} sem horário, cobradas como pico)")
     print(f"→ {ARQ_CONSENSO_VERIFICADO.relative_to(RAIZ)}")
     print(f"→ {ARQ_MANIFESTO_VERIFICADOR.relative_to(RAIZ)}")
+
+
+def cmd_aplicar_producao(slugs: list[str] | None = None) -> None:
+    from dotenv import load_dotenv
+    load_dotenv(RAIZ / ".env")
+
+    linhas = _linhas_consenso_producao()
+    saida, manifesto = calcular_aplicacao(linhas, slugs)
+    gravar_aplicacao(saida, manifesto)
+    imprimir_aplicacao(manifesto)
 
 
 # ===========================================================================

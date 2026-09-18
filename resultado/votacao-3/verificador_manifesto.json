@@ -5,21 +5,26 @@
   "fonte": "resultado/votacao-3/consenso.jsonl",
   "fonte_n_linhas": 13112,
   "n_candidatas": 9269,
-  "n_verificadas": 9105,
-  "n_falharam": 174,
+  "n_verificadas": 9242,
+  "n_falharam": 37,
   "pendentes_por_motivo": {
-    "erro_APIStatusError": 139,
-    "erro_JSONDecodeError": 32,
+    "erro_JSONDecodeError": 34,
     "erro_RateLimitError": 3
   },
   "n_fallback_conteudo": 1,
-  "n_removidas": 4154,
-  "n_chamadas": 9105,
+  "n_removidas": 4187,
+  "n_chamadas": 9242,
   "uso": {
-    "prompt_tokens": 6066225,
-    "completion_tokens": 340841,
-    "cache_hit_tokens": 2899328,
-    "cache_miss_tokens": 3166897
+    "prompt_tokens": 6152707,
+    "completion_tokens": 345886,
+    "cache_hit_tokens": 2934400,
+    "cache_miss_tokens": 3218307
   },
-  "custo_usd": 0.5469191784
+  "custo_usd": 1.3981617000000006,
+  "custo_n_sem_horario": 9241,
+  "tabela_de_preco": {
+    "modelo": "DeepSeek-V4.1-Flash",
+    "vigente_desde": "2026-09-10",
+    "verificada_em": "2026-09-18"
+  }
 }

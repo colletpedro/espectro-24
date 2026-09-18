@@ -50,6 +50,15 @@ SCRIPTS_SEM_LACO = [
     # sintaxe em falha de teste — a cobertura mais barata que existe para um
     # script de produção que ninguém importa.
     "gerar_condicoes.py",
+    # [2026-09-18] Os scripts de produção que ficaram FORA da lista quando o
+    # `ast.parse` virou o guard de compilação (ABERTO.md C18 os nomeou:
+    # "ainda fora de qualquer teste, no caminho de produção"). Compilavam todos
+    # no dia em que entraram. `lote_em_blocos.py` é o driver novo, que
+    # orquestra os estágios pagos e por isso entra desde o primeiro dia.
+    "lote.py", "relatorio_revisao_condicoes.py",
+    "aplicar_revisao_condicoes.py", "enriquecer_eixos.py",
+    "backfill_ano.py", "recalcular_margem_exata.py",
+    "lote_em_blocos.py",
 ]
 
 
@@ -122,6 +131,16 @@ def test_a_varredura_detecta_o_laco_reintroduzido(tmp_path):
         "        except Exception:\n"
         "            pass\n", encoding="utf-8")
     assert _chamadas_de_llm_dentro_de_laco(alvo) == ["tarefa"]
+
+
+def test_a_varredura_falha_em_script_que_nao_compila(tmp_path):
+    """A razão de a lista existir (`gerar_condicoes.py`, `18a1196`): o guard
+    de compilação só vale se um script quebrado DERRUBA o teste. Fixa a
+    reprodução do defeito real — f-string com literal não terminado."""
+    quebrado = tmp_path / "script_quebrado.py"
+    quebrado.write_text('def f():\n    return f"sem fechar\n', encoding="utf-8")
+    with pytest.raises(SyntaxError):
+        _chamadas_de_llm_dentro_de_laco(quebrado)
 
 
 # --- a prova de comportamento, não só de forma ------------------------------

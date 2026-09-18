@@ -83,10 +83,14 @@ EIXOS = (
 )
 EIXOS_VALIDOS = set(EIXOS) | {"livre"}
 
-# Preços DeepSeek em USD por 1M de tokens (config.py, v1.8.0).
-PRECO_ENTRADA_MISS = 0.14 / 1_000_000
-PRECO_ENTRADA_HIT = 0.0028 / 1_000_000
-PRECO_SAIDA = 0.28 / 1_000_000
+# Preços DeepSeek: fonte ÚNICA em `espectro24.preco` (tabela V4.1-Flash,
+# pico/fora de pico, lida em 2026-09-18 — TEM VALIDADE, ver o módulo). Estes
+# scripts agregam `uso` sem horário, então usam o PICO (pior caso).
+from espectro24.preco import (  # noqa: E402
+    PRECO_ENTRADA_HIT,
+    PRECO_ENTRADA_MISS,
+    PRECO_SAIDA,
+)
 
 
 # ===========================================================================

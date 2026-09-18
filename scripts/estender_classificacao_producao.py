@@ -40,6 +40,7 @@ sys.path.insert(0, str(RAIZ / "src"))
 sys.path.insert(0, str(RAIZ / "scripts"))
 
 from classificar_10 import entrada_do_filme, taxonomia_id  # noqa: E402
+from espectro24.atomico import escrever_atomico  # noqa: E402
 from espectro24 import eixos as E  # noqa: E402
 from espectro24.pipeline import amostra_do_bruto  # noqa: E402
 from espectro24.uniao_amostra import reviews_faltantes  # noqa: E402
@@ -119,8 +120,9 @@ def _acrescentar_a_amostra(faltantes: dict[str, dict[str, list]]
                 n_novas += 1
 
     if n_novas or filmes_novos:
-        ARQ_AMOSTRA.write_text(json.dumps(amostra, ensure_ascii=False, indent=2),
-                               encoding="utf-8")
+        # Atômico: a amostra (15 MB+) é lida por toda passada e pelo consenso.
+        escrever_atomico(ARQ_AMOSTRA,
+                         json.dumps(amostra, ensure_ascii=False, indent=2))
     return n_novas, filmes_novos
 
 

@@ -65,6 +65,8 @@ from classificar_10 import (  # noqa: E402 — MESMO prompt/eixos/amostra/adapta
     taxonomia_id,
 )
 from espectro24.buckets import FRONTEIRAS  # noqa: E402
+from espectro24.atomico import escrever_atomico  # noqa: E402
+from espectro24.preco import agora_utc_iso  # noqa: E402
 from espectro24.synthesize import (  # noqa: E402
     FALLBACK_CONTEUDO_PROVIDER,
     LLMSaldoEsgotado,
@@ -116,10 +118,11 @@ def cmd_amostra() -> None:
 # pelo número da passada e pelo arquivo de saída.
 # ===========================================================================
 
-def classificar_passe(n_passe: int, limite: int | None = None) -> None:
-    from dotenv import load_dotenv
-    load_dotenv(RAIZ / ".env")
-
+def pendentes_do_passe(n_passe: int, slugs: list[str] | None = None
+                       ) -> tuple[str, int, list[dict]]:
+    """`(taxonomia_id, n_feitas, pendentes)` do passe — SEM chamar nada.
+    `slugs` restringe às reviews desses filmes (o driver por blocos); `None`
+    é o corpus inteiro, o comportamento de sempre."""
     amostra = json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))
     tid = amostra["taxonomia_id"]
     if tid != taxonomia_id():
@@ -136,11 +139,23 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
                 if r.get("ok") and r.get("taxonomia_id") == tid:
                     feitos.add((r["slug"], r["bucket"], r["id"]))
 
+    alvo = set(slugs) if slugs is not None else None
     pendentes = [r for r in amostra["reviews"]
-                 if (r["slug"], r["bucket"], r["id"]) not in feitos]
+                 if (alvo is None or r["slug"] in alvo)
+                 and (r["slug"], r["bucket"], r["id"]) not in feitos]
+    return tid, len(feitos), pendentes
+
+
+def classificar_passe(n_passe: int, limite: int | None = None,
+                      slugs: list[str] | None = None) -> None:
+    from dotenv import load_dotenv
+    load_dotenv(RAIZ / ".env")
+
+    tid, n_feitos, pendentes = pendentes_do_passe(n_passe, slugs)
+    arq = ARQ_PASSE[n_passe]
     if limite:
         pendentes = pendentes[:limite]
-    print(f"passe {n_passe} · taxonomia {tid} · {len(feitos)} já feitas · "
+    print(f"passe {n_passe} · taxonomia {tid} · {n_feitos} já feitas · "
           f"{len(pendentes)} pendentes")
     if not pendentes:
         return
@@ -194,7 +209,7 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
                 "eixos": eixos, "temas_livres": livres,
                 "eixos_invalidos": invalidos, "uso": resp["uso"],
                 "provider": resp["provider"], "modelo": resp["modelo"],
-                "latencia_s": resp["latencia_s"],
+                "latencia_s": resp["latencia_s"], "ts": agora_utc_iso(),
             }
             marca = resp["fallback_conteudo"]
         except LLMSaldoEsgotado:
@@ -207,7 +222,13 @@ def classificar_passe(n_passe: int, limite: int | None = None) -> None:
             registro = {"ok": False, "taxonomia_id": tid, "passe": n_passe,
                         "slug": review["slug"], "perfil": review["perfil"],
                         "bucket": review["bucket"], "id": review["id"],
-                        "erro": f"{type(e).__name__}: {e}"}
+                        "erro": f"{type(e).__name__}: {e}",
+                        "ts": agora_utc_iso()}
+            if resp is not None:
+                # A chamada foi cobrada e a resposta chegou: guardar ambas.
+                # Só a mensagem do erro deixa a falha de parse inexplicável.
+                registro["uso"] = resp["uso"]
+                registro["resposta_crua"] = resp["texto"]
             marca = ((resp or {}).get("fallback_conteudo")
                      or getattr(e, "marca", None))
         if marca:
@@ -346,6 +367,44 @@ def checar_filmes_registrados(amostra: dict,
             "ponha-o em `classificar_10.SLUGS_BRUTOS_RETIRADOS`. Nada gravado.")
 
 
+def serializar_linhas(linhas: list[dict]) -> str:
+    return "".join(json.dumps(r, ensure_ascii=False) + "\n" for r in linhas)
+
+
+def consenso_incremental(linhas_atuais: list[dict],
+                         passes: list[dict[tuple, dict]],
+                         amostra: dict,
+                         slugs_bloco: list[str]) -> tuple[list[dict], int]:
+    """O consenso depois de incorporar os filmes de UM bloco. Devolve
+    `(linhas, n_reviews_incompletas_do_bloco)` — sem gravar nada.
+
+    Por que o consenso pode ser calculado por filme: `_consensuar` é função
+    PURA dos três votos de uma review — limiar fixo (`minimo=2`), sem
+    normalização entre reviews nem entre filmes. O que prendia o investimento
+    até o último passe era o DESENHO do driver, não a votação.
+
+    As linhas dos filmes FORA do bloco passam intactas (byte a byte: os 99
+    publicados não são recomputados), e as do bloco são recomputadas dos
+    passes. A saída sai na ordem `(slug, bucket, id)` — a mesma do
+    `cmd_consenso` monolítico, então aplicar todos os blocos em sequência dá
+    o MESMO arquivo que rodar tudo de uma vez (testado).
+    """
+    bloco = set(slugs_bloco)
+    slugs_amostra = {f["slug"] for f in amostra["filmes"]}
+    completas = set(passes[0]) & set(passes[1]) & set(passes[2])
+    chaves = sorted(c for c in completas
+                    if c[0] in bloco and c[0] in slugs_amostra)
+    novas = _consensuar(passes, chaves)
+    mantidas = [l for l in linhas_atuais if l["slug"] not in bloco]
+    linhas = sorted(mantidas + novas,
+                    key=lambda l: (l["slug"], l["bucket"], l["id"]))
+    n_incompletas = sum(
+        1 for r in amostra["reviews"]
+        if r["slug"] in bloco
+        and (r["slug"], r["bucket"], r["id"]) not in completas)
+    return linhas, n_incompletas
+
+
 def cmd_consenso() -> None:
     """[Entrega 1] Junta os passes 1-3 por chave e grava o consenso — só
     entra na saída quem pertence ao conjunto de FILMES da amostra corrente e
@@ -371,9 +430,9 @@ def cmd_consenso() -> None:
     consenso = _consensuar(passes, chaves)
 
     SAIDA.mkdir(parents=True, exist_ok=True)
-    with ARQ_CONSENSO.open("w", encoding="utf-8") as f:
-        for r in consenso:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+    # Atômico: `open("w")` trunca antes de escrever, e uma queda no meio
+    # deixaria o consenso pela metade para `pipeline.montar_eixos`.
+    escrever_atomico(ARQ_CONSENSO, serializar_linhas(consenso))
 
     print(f"consenso: {len(consenso)} reviews com os 3 passes completos "
           f"({len(faltando)} incompletas, fora do consenso)")
