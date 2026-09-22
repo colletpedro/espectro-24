@@ -1218,10 +1218,10 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 19,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": -22.5,
+            "freq_pct": 32.5,
+            "lift_pp": -27.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1231,18 +1231,18 @@
             "mencoes": 8,
             "de_n": 40,
             "freq_pct": 20.0,
-            "lift_pp": -50.0,
+            "lift_pp": -40.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 28,
+            "mencoes": 24,
             "de_n": 40,
-            "freq_pct": 70.0,
-            "lift_pp": 22.5,
-            "acima_da_margem": false,
+            "freq_pct": 60.0,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
             "tema": "Emoção e sentimentalismo",
             "exemplo_parafraseado": "O grupo destaca que o filme consegue equilibrar ação com momentos emocionantes, arrancando lágrimas e criando uma conexão afetiva com os personagens.",
             "temas_no_mesmo_eixo": []
@@ -1251,7 +1251,7 @@
         "bullet_de": {
           "negativas": null,
           "medianas": null,
-          "positivas": "frequencia"
+          "positivas": "frequencia_e_contraste"
         }
       },
       {
@@ -1377,7 +1377,7 @@
         }
       }
     ],
-    "contraste": "valorativo",
+    "contraste": "tematico",
     "rotulagem": {
       "n_chamadas": 3,
       "falharam": [],
@@ -1390,285 +1390,19 @@
       "variante": "V2_alvo",
       "passada": 1,
       "eixo": "impacto_emocional",
-      "n_removidas_no_corpus": 4154
+      "n_removidas_no_corpus": 4187
     },
     "verificacao_pendente": [
-      {
-        "bucket": "negativas",
-        "id": "viewing:1457979595",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1461429775",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1469758783",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1477259135",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1481461400",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1484070554",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1484109174",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1484516832",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1487964800",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1491991213",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "negativas",
-        "id": "viewing:1495081447",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1449342524",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1470730344",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1471125776",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1480332058",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
       {
         "bucket": "positivas",
         "id": "viewing:1480388004",
         "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1480408214",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1483746247",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1495530384",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1495772876",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1495908325",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1496033569",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1496256745",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1496570709",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1496581664",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1496886490",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497080925",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497151199",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497425657",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497432200",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497459036",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497523915",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497540007",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497594615",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497716642",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497769899",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497783404",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497850492",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
-      },
-      {
-        "bucket": "positivas",
-        "id": "viewing:1497949321",
-        "eixo": "impacto_emocional",
-        "motivo": "erro_APIStatusError",
-        "erro": "APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}"
+        "motivo": "erro_JSONDecodeError",
+        "erro": "JSONDecodeError: Extra data: line 3 column 1 (char 125)"
       }
     ]
   },
-  "narrativa": "Lançado em 2022 e dirigido por Joseph Kosinski, Top Gun: Maverick é uma obra cinematográfica de ação e drama que acompanha o retorno do aviador Pete Mitchell após mais de trinta anos de serviço na Marinha. No exercício de sua função como piloto de testes corajoso, ele desafia limites operacionais no contexto contemporâneo das guerras tecnológicas, demonstrando que o fator humano segue indispensável frente ao uso de drones.\n\nA experiência do longa-metragem é pautada por intensas sequências de voo militar e por uma atmosfera contínua de referências nostálgicas.\n\nOs diferentes grupos concordam sobre o que o filme é e discordam fundamentalmente em relação ao seu veredito. Na grande maioria das notas (~82%), uma parcela expressiva avalia o longa como uma sequência superior ao original. Além disso, alguns enfatizam a presença marcante de emoção e sentimentalismo, enquanto uma fatia menor enaltece as cenas de ação filmadas com efeitos práticos.\n\nA partir da ótica de uma fração mínima das notas (~14%), cerca de metade reconhece o apelo das cenas de voo e ação. Em contrapartida, vários apontam que a história sofre com um roteiro previsível e clichê, e boa parte manifesta incômodo com a nostalgia e a dependência do filme anterior.\n\nJá na visão de uma fração ainda menor das notas (~4%), muitos condenam o teor de propaganda militar e a exaltação nacionalista presente na produção. Nesse mesmo escopo, um número considerável rejeita a condução de um roteiro previsível e de fórmula genérica, ao passo que parte deles destaca negativamente os personagens e atuações fracas.",
+  "narrativa": "Lançado em 2022 e dirigido por Joseph Kosinski, o drama de ação Top Gun: Maverick acompanha o retorno de Pete Maverick Mitchell após mais de trinta anos de serviço como um dos principais aviadores da Marinha. Rompendo limites operacionais como piloto de testes corajoso no contexto contemporâneo das guerras tecnológicas, o protagonista enfrenta drones para demonstrar que o fator humano continua sendo essencial.\n\nA experiência do longa é estruturada a partir de manobras de aviação em alta velocidade e dinâmicas militares contínuas. A atmosfera da narrativa é pontuada pelo ritmo intenso dos voos e pelo resgate constante de elementos e convenções do filme antecessor.\n\nIdentificada na grande maioria das notas (~82%), boa parte ressalta que a produção se consolida como uma sequência superior ao original. Além disso, alguns destacam a presença de emoção e sentimentalismo na condução da trama, enquanto uma fatia menor enfatiza a realização das cenas de ação e o uso de efeitos práticos para intensificar os momentos aéreos.\n\nPara quem se posiciona numa fração mínima das notas (~14%), cerca de metade enaltece o impacto visual das cenas de voo e ação. Contudo, vários criticam a estrutura por apresentar um roteiro previsível e clichê, ao passo que uma parcela expressiva aponta um excesso de nostalgia e dependência do original ao longo do desenvolvimento.\n\nSob a ótica de quem integra uma fração ainda menor das notas (~4%), muitos desaprovam o que consideram propaganda militar e exaltação nacionalista no tom geral. Dentro dessa mesma leitura, um número considerável reprova o roteiro previsível e a fórmula genérica da história, enquanto uma parte menciona personagens e atuações fracas como aspectos negativos da obra.",
   "verificacao_narrativa": {
     "quantificador_fora_de_faixa": [],
     "quantificador_repetido": [],
@@ -1703,10 +1437,10 @@
     "candidatos": [
       {
         "indice": 0,
-        "n_flags": 2,
+        "n_flags": 1,
         "cliches": 0,
         "repeticao_max": 1,
-        "ritmo": 10,
+        "ritmo": 6,
         "cobertura": 1.0,
         "eliminado": true
       },
@@ -1724,19 +1458,19 @@
         "n_flags": 1,
         "cliches": 0,
         "repeticao_max": 1,
-        "ritmo": 9,
+        "ritmo": 6,
         "cobertura": 1.0,
         "eliminado": true
       }
     ],
     "retry": null,
     "uso": {
-      "prompt_tokens": 9996,
-      "completion_tokens": 1147,
+      "prompt_tokens": 9846,
+      "completion_tokens": 1155,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 9996
+      "cache_miss_tokens": 9846
     },
-    "latencia_s": 42.99
+    "latencia_s": 33.59
   },
   "veredito": {
     "provider": "gemini",
@@ -1746,13 +1480,13 @@
     "prefixo_codigo": "",
     "retry": null,
     "spec_version": "1.9.50",
-    "texto": "Os dois lados avaliam o filme em relação ao original, divergindo se a continuação supera o predecessor ou se apoia demais em lembranças do passado. Enquanto a maioria dos que recomendam destaca a força sentimental da narrativa, a maioria dos que desaprovam aponta uma trama com estrutura previsível.",
-    "texto_modelo": "Os dois lados avaliam o filme em relação ao original, divergindo se a continuação supera o predecessor ou se apoia demais em lembranças do passado. Enquanto a maioria dos que recomendam destaca a força sentimental da narrativa, a maioria dos que desaprovam aponta uma trama com estrutura previsível.",
+    "texto": "Para quem recomenda, a maioria considera o filme melhor que a obra original, valorizando também a carga emotiva da narrativa. Em contrapartida, a maioria dos que não recomendam aponta uma trama de estrutura previsível e fórmula batida, além de um apego excessivo à nostalgia do primeiro longa.",
+    "texto_modelo": "Para quem recomenda, a maioria considera o filme melhor que a obra original, valorizando também a carga emotiva da narrativa. Em contrapartida, a maioria dos que não recomendam aponta uma trama de estrutura previsível e fórmula batida, além de um apego excessivo à nostalgia do primeiro longa.",
     "origem": "llm",
     "motivo": "melhor_entre_limpos",
     "criterio_decisivo": "abertura",
-    "abertura": "dois",
-    "indice_escolhido": 1,
+    "abertura": "quem",
+    "indice_escolhido": 2,
     "flags": [],
     "candidatos": [
       {
@@ -1760,39 +1494,39 @@
         "n_flags": 0,
         "flags": [],
         "n_palavras": 47,
-        "n_ancoras": 2,
-        "abertura": "opini",
-        "abertura_freq": 7,
+        "n_ancoras": 3,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
         "eliminado": false
       },
       {
         "indice": 1,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 48,
+        "n_palavras": 46,
         "n_ancoras": 2,
-        "abertura": "dois",
-        "abertura_freq": 0,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
         "eliminado": false
       },
       {
         "indice": 2,
         "n_flags": 0,
         "flags": [],
-        "n_palavras": 43,
+        "n_palavras": 47,
         "n_ancoras": 2,
-        "abertura": "diver",
-        "abertura_freq": 11,
+        "abertura": "quem",
+        "abertura_freq": 0,
         "eliminado": false
       }
     ],
     "uso": {
-      "prompt_tokens": 3642,
-      "completion_tokens": 199,
+      "prompt_tokens": 3576,
+      "completion_tokens": 203,
       "cache_hit_tokens": 0,
-      "cache_miss_tokens": 3642
+      "cache_miss_tokens": 3576
     },
-    "latencia_s": 15.65
+    "latencia_s": 9.96
   },
   "condicoes": {
     "vale_a_pena": [

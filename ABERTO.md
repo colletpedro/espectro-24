@@ -2189,6 +2189,19 @@ commit (microssegundos) deixa o consenso à frente do manifesto.
 `--reparar` regrava os três arquivos a partir do consenso atual sem chamada.
 `--dry-run` conta as chamadas pendentes por bloco sem gastar.
 
+**Armadilha real enquanto o lote de 55 ficar pela metade (2026-09-22):**
+`dados/bruto/` é versionado por desenho (é o superset reusável, §3[B'] — ao
+contrário de `dados/lote/`, que o `.gitignore` cobre por ser checkpoint de
+UMA rodada). Isso significa que os 55 diretórios novos em `dados/bruto/` NÃO
+estão cobertos por nenhuma regra de `.gitignore`, e um `git add -A` ou
+`git commit -a` os arrastaria para dentro de qualquer commit — junto dos
+`passe_1/2/3.jsonl` com o passe 3 em 38%, que não formam um estado coerente
+sozinhos (não fecharam o consenso do bloco). A prática segura, enquanto o
+lote não fechar: staging por caminho explícito, nunca `-A`/`-a`, e conferir
+`git status --short` antes de qualquer commit. Quando o driver por blocos
+(C20) rodar até o fim, o bruto dos 55 entra normalmente, junto do commit que
+fechar a classificação+verificador deles.
+
 **Pendente:** o driver NÃO foi rodado sobre os 55 (sem saldo). O `--dry-run`
 sobre o estado real dá 4.071 chamadas de passe 3 (blocos 3–6: 1.080 / 1.193 /
 1.198 / 600) e commit sem chamada de classificação nos blocos 1–2 (os 20 filmes
