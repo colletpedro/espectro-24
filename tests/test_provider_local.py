@@ -405,3 +405,9 @@ def test_gate_local_aplica_o_mesmo_criterio_de_parada(gate_local, degradar, para
     assert rel["criterio"]["limiar_falha_primeira_tentativa"] == 0.02
     if not parar:
         assert all(v["delta_f1"] == 0 for v in rel["gate_por_eixo"].values())
+
+
+def test_comparar_sem_passes_explica_em_vez_de_quebrar(gate_local):
+    with pytest.raises(SystemExit) as e:
+        G.cmd_comparar()
+    assert "passes" in str(e.value)

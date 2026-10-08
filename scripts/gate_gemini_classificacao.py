@@ -680,6 +680,9 @@ def cmd_comparar(modo: str = "padrao") -> None:
     gm_final = vi.aplicar(gm_cons, ver_p1)
     # comparação PAREADA: só as reviews presentes nos dois lados
     comuns = sorted(set(ds_cons) & set(gm_cons))
+    if not comuns:
+        raise SystemExit(f"nenhum passe de classificação em {SAIDA} — rode "
+                         f"`passes` e `verificar` antes de `comparar`")
     sub = lambda g: {rid: g[rid] for rid in comuns}  # noqa: E731
 
     tab = {
