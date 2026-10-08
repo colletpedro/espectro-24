@@ -313,9 +313,45 @@ def gemini_client_call_prosa(system: str, user: str, model: str) -> str:
                         thinking_budget=PROSA_THINKING_BUDGET, json_mode=True)
 
 
+def _saldo_gemini_esgotado(e: BaseException) -> bool:
+    """[2026-09-27] O 402 do GEMINI: `ClientError` com `code == 402`
+    ("Your prepayment credits are depleted"). O SDK do Gemini expõe o status
+    em `code`, não em `status_code` como o da OpenAI/DeepSeek — por isso o
+    disjuntor de saldo (C18) não o via, e as 11 substitutas do bloco 4 viraram
+    `ok: False`, gravadas como julgamento do modelo, e o bloco foi commitado
+    com incompletas. Mesma política da C18: 402 é estado da CONTA."""
+    return getattr(e, "code", None) == 402 or "prepayment credits are depleted" \
+        in str(e).lower()
+
+
+def _abrir_disjuntor_de_saldo_gemini(e: BaseException) -> "LLMSaldoEsgotado":
+    _parada_por_saldo.set()
+    return LLMSaldoEsgotado(f"saldo_esgotado: gemini — {str(e)[:200]}")
+
+
+def _http_options_gemini(timeout_ms: int):
+    """`HttpOptions` do cliente Gemini. Com `ESPECTRO24_GEMINI_IPV4=1` no
+    ambiente, o httpx do SDK sai só por IPv4 (`local_address="0.0.0.0"`).
+
+    Por que existe (2026-09-23, exceção C22, blocos 2-6): a rota IPv6 desta
+    máquina parou (`curl -6` estoura; `-4` responde em 0,4 s) e o httpx, sem
+    "happy eyeballs", tenta IPv6 primeiro — cada chamada ao SDK passou a
+    levar ~10 min até cair no IPv4. É contorno de AMBIENTE, no processo, sem
+    mexer na rede da máquina; sem a variável, a chamada é a de sempre."""
+    from google.genai import types
+
+    kw = {"timeout": timeout_ms}
+    if os.environ.get("ESPECTRO24_GEMINI_IPV4") == "1":
+        import httpx
+        kw["client_args"] = {"transport": httpx.HTTPTransport(local_address="0.0.0.0")}
+    return types.HttpOptions(**kw)
+
+
 def _gemini_resposta(system: str, user: str, model: str, *,
                      max_output_tokens: int, json_mode: bool,
-                     thinking_budget: int = PROSA_THINKING_BUDGET):
+                     thinking_budget: int = PROSA_THINKING_BUDGET,
+                     service_tier: str | None = None,
+                     timeout_ms: int = LLM_TIMEOUT_MS):
     """Resposta INTEIRA do Gemini (com `usage_metadata`), não só o texto.
 
     Espelho de `deepseek_resposta` — existe pela mesma razão registrada na
@@ -331,6 +367,10 @@ def _gemini_resposta(system: str, user: str, model: str, *,
     socket, sem nunca voltar nem falhar. Um timeout transforma "trava para
     sempre" em "erro que o chamador vê" — e, desde a v1.9.24, em erro que a
     retentativa reconhece como transporte.
+
+    `service_tier`/`timeout_ms` (2026-09-22): só a exceção dos 55 os passa
+    (`resposta_json_gemini`, camada Flex). `None` não envia o campo — todo
+    outro estágio segue byte a byte a chamada de antes.
     """
     from google import genai
     from google.genai import types
@@ -338,18 +378,28 @@ def _gemini_resposta(system: str, user: str, model: str, *,
     _exigir_chave("gemini")
     client = genai.Client(
         api_key=os.environ[PROVIDER_ENV_KEYS["gemini"]],
-        http_options=types.HttpOptions(timeout=LLM_TIMEOUT_MS),
+        http_options=_http_options_gemini(timeout_ms),
     )
     config_kwargs = dict(system_instruction=system,
                          max_output_tokens=max_output_tokens)
+    if service_tier is not None:
+        config_kwargs["service_tier"] = service_tier
     if json_mode:
         config_kwargs["response_mime_type"] = "application/json"
     if gemini_supports_thinking(model):
         config_kwargs["thinking_config"] = types.ThinkingConfig(
             thinking_budget=thinking_budget)
-    return _com_retentativa("gemini", model, lambda: client.models.generate_content(
-        model=model, contents=user,
-        config=types.GenerateContentConfig(**config_kwargs)))
+    if _parada_por_saldo.is_set():
+        raise LLMSaldoEsgotado("saldo_esgotado: gemini — disjuntor já aberto "
+                               "neste processo; nada é tentado")
+    try:
+        return _com_retentativa("gemini", model, lambda: client.models.generate_content(
+            model=model, contents=user,
+            config=types.GenerateContentConfig(**config_kwargs)))
+    except Exception as e:
+        if _saldo_gemini_esgotado(e):
+            raise _abrir_disjuntor_de_saldo_gemini(e) from e
+        raise
 
 
 def _gemini_call(system: str, user: str, model: str, *, max_output_tokens: int,
@@ -1458,6 +1508,311 @@ def _json_no_fallback(system: str, user: str, estagio: str,
     return {"texto": texto, "provider": FALLBACK_CONTEUDO_PROVIDER,
             "modelo": FALLBACK_CONTEUDO_MODELO, "uso": uso(resp, "gemini"),
             "fallback_conteudo": marca}
+
+
+def _bloqueio_gemini(resp) -> str | None:
+    """`prompt_feedback.block_reason` — o filtro de conteúdo do Gemini
+    (`PROHIBITED_CONTENT` e afins). Medido no bloco 1 da exceção C22
+    (2026-09-23): 9 reviews barradas nos dois passes, sem candidato e sem
+    texto — o espelho do `Content Exists Risk` do DeepSeek (C16)."""
+    fb = getattr(resp, "prompt_feedback", None)
+    br = getattr(fb, "block_reason", None) if fb is not None else None
+    return None if br is None else getattr(br, "name", str(br))
+
+
+def _finish_reason_gemini(resp) -> str | None:
+    candidatos = getattr(resp, "candidates", None) or []
+    fr = getattr(candidatos[0], "finish_reason", None) if candidatos else None
+    return None if fr is None else getattr(fr, "name", str(fr))
+
+
+# Camada FLEX do Gemini (2026-09-22, ABERTO.md C22): mesmo modelo, 50% do
+# preço, síncrona, latência-alvo de 1-15 min e disponibilidade "best-effort"
+# (ai.google.dev/gemini-api/docs/flex-inference, lido em 2026-09-22). O
+# timeout de rede sobe para cobrir o alvo; sem capacidade (503 esgotado nas
+# retentativas, ou 429), a chamada cai na camada PADRÃO — mesmo modelo, preço
+# cheio — e o registro diz qual camada respondeu.
+TIMEOUT_FLEX_MS = 20 * 60 * 1000
+
+
+def _sem_capacidade_flex(e: BaseException) -> bool:
+    from google.genai import errors as genai_errors
+
+    if isinstance(e, LLMTransportError):
+        return True
+    return isinstance(e, genai_errors.APIError) and getattr(e, "code", None) in (429, 503)
+
+
+def resposta_json_gemini(system: str, user: str, *, estagio: str,
+                         camada: str | None = None) -> dict:
+    """Uma chamada de JSON CURTO sobre UMA review DIRETO no Gemini — sem
+    passar pelo DeepSeek. É o caminho da exceção escopada de 2026-09-22
+    (os 55 do lote noturno classificados em Gemini por falta de saldo
+    DeepSeek, ABERTO.md C22) e do gate que a precedeu.
+
+    Mesmos parâmetros do fallback de conteúdo (`_json_no_fallback`):
+    `FALLBACK_CONTEUDO_MODELO`, `thinking_budget=0`, teto de
+    `FALLBACK_CONTEUDO_MAX_TOKENS_JSON` — ver a medição em `config.py`.
+    `camada="flex"` pede a camada Flex (ver `TIMEOUT_FLEX_MS`); `None` é a
+    padrão, a do gate.
+
+    Devolve o mesmo formato de `resposta_json_com_fallback`, com campos a
+    mais, porque o `uso()` do Gemini NÃO os enxerga (C15.a):
+    - `modelo_efetivo`: o `model_version` DEVOLVIDO pela API, não o nome
+      pedido — a lição da C21, onde o campo `modelo` guardava o pedido e o
+      dado deixou de saber quem respondeu;
+    - `thinking_tokens`: `thoughts_token_count`, cobrado como saída e
+      ausente de `uso["completion_tokens"]`;
+    - `finish_reason`: `MAX_TOKENS` é o truncamento que a C15.a mediu;
+    - `camada`: a camada que DE FATO respondeu (`flex` ou `padrao`), e
+      `traffic_type` como a API o devolve.
+    Resposta sem texto (bloqueio, truncamento antes do JSON) devolve
+    `texto == ""`: vira JSON inválido no chamador, o `ok: False` de sempre.
+    """
+    t0 = time.monotonic()
+    kw = dict(max_output_tokens=FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
+              json_mode=True, thinking_budget=0)
+    efetiva, motivo = "padrao", None
+    if camada == "flex":
+        try:
+            resp = _gemini_resposta(system, user, FALLBACK_CONTEUDO_MODELO,
+                                    service_tier="flex",
+                                    timeout_ms=TIMEOUT_FLEX_MS, **kw)
+            efetiva = "flex"
+        except Exception as e:
+            if not _sem_capacidade_flex(e):
+                raise
+            motivo = f"{type(e).__name__}: {e}"[:200]
+            _registrar_retentativa_llm("flex_sem_capacidade")
+            resp = _gemini_resposta(system, user, FALLBACK_CONTEUDO_MODELO, **kw)
+    elif camada is None:
+        resp = _gemini_resposta(system, user, FALLBACK_CONTEUDO_MODELO, **kw)
+    else:
+        raise ValueError(f"camada {camada!r} desconhecida — use 'flex' ou None")
+    dt = time.monotonic() - t0
+    _registrar_latencia_llm(estagio, dt)
+    um = getattr(resp, "usage_metadata", None)
+    tt = getattr(um, "traffic_type", None) if um is not None else None
+    return {"texto": resp.text or "", "provider": FALLBACK_CONTEUDO_PROVIDER,
+            "modelo": FALLBACK_CONTEUDO_MODELO,
+            "modelo_efetivo": getattr(resp, "model_version", None),
+            "uso": uso(resp, "gemini"),
+            "thinking_tokens": int(getattr(um, "thoughts_token_count", 0) or 0),
+            "finish_reason": _finish_reason_gemini(resp),
+            "camada": efetiva, "motivo_camada": motivo,
+            "traffic_type": None if tt is None else getattr(tt, "name", str(tt)),
+            "bloqueio": _bloqueio_gemini(resp),
+            "fallback_conteudo": None, "latencia_s": round(dt, 2)}
+
+
+class ChamadaGeminiExcecao:
+    """`(system, user, model) -> str` da exceção C22 na PUBLICAÇÃO (síntese e
+    rotulagem dos 55; ABERTO.md C22, Etapa 2). Injetado como `client_call`
+    em `synthesize_bucket`/`rotular_output` — o caminho que esses estágios
+    sempre aceitaram —, então `PROVIDER_POR_ESTAGIO` não é tocado.
+
+    A chamada é a MESMA do adaptador §D do Gemini (`gemini_client_call`:
+    `LLM_MAX_TOKENS`, `thinking_budget=0`, modo JSON) — o caminho que o
+    fallback de conteúdo usou em `a-brighter-summer-day`, único precedente de
+    síntese em Gemini —, fixada em `FALLBACK_CONTEUDO_MODELO` qualquer que
+    seja o `model` recebido. A diferença é que esta guarda a resposta
+    inteira de cada chamada: `registros` tem, por chamada, o modelo EFETIVO
+    (`model_version`), `finish_reason`, `thinking_tokens` e `uso` — o que
+    `gemini_client_call` joga fora ao devolver só o texto."""
+
+    def __init__(self, estagio: str):
+        self.estagio = estagio
+        self.registros: list[dict] = []
+
+    def __call__(self, system: str, user: str, model: str | None = None) -> str:
+        t0 = time.monotonic()
+        resp = _gemini_resposta(system, user, FALLBACK_CONTEUDO_MODELO,
+                                max_output_tokens=LLM_MAX_TOKENS,
+                                json_mode=True, thinking_budget=0)
+        dt = time.monotonic() - t0
+        _registrar_latencia_llm(self.estagio, dt)
+        um = getattr(resp, "usage_metadata", None)
+        self.registros.append({
+            # a primeira linha da mensagem nomeia a unidade ("Bucket: X" na
+            # síntese, "Grupo: X" na rotulagem — `build_user_message` de cada)
+            "unidade": user.split("\n", 1)[0],
+            "modelo_efetivo": getattr(resp, "model_version", None),
+            "finish_reason": _finish_reason_gemini(resp),
+            "bloqueio": _bloqueio_gemini(resp),
+            "thinking_tokens": int(getattr(um, "thoughts_token_count", 0) or 0),
+            "uso": uso(resp, "gemini"), "latencia_s": round(dt, 2)})
+        return resp.text or ""
+
+    def resumo(self) -> dict:
+        from collections import Counter
+
+        return {"provider": FALLBACK_CONTEUDO_PROVIDER,
+                "modelo": FALLBACK_CONTEUDO_MODELO,
+                "modelos_efetivos": sorted({str(r["modelo_efetivo"])
+                                            for r in self.registros}),
+                "n_chamadas": len(self.registros),
+                "finish_reason": dict(Counter(str(r["finish_reason"])
+                                              for r in self.registros)),
+                "bloqueios": [r["unidade"] for r in self.registros
+                              if r.get("bloqueio")],
+                "chamadas": self.registros}
+
+
+# --- BATCH do Gemini (2026-09-22, C22) --------------------------------------
+# ai.google.dev/gemini-api/docs/batch-mode (lido em 2026-09-22): 50% do preço
+# padrão, "designed to complete within a 24-hour turnaround time", expira se
+# pendente/rodando por mais de 48 h; `gemini-3.7-flash` lista "Batch API" nas
+# capacidades. Entrada por ARQUIVO JSONL (o inline tem teto de 20 MB, e os 55
+# passam disso). Mesma configuração, campo a campo, de `resposta_json_gemini`
+# — e a resposta de cada pedido sai no MESMO formato dela, com
+# `camada="batch"`, para passar pelas mesmas guardas (JSON, provider, modelo
+# efetivo, `finish_reason`) no chamador.
+
+def _pedido_batch(chave: str, system: str, user: str) -> dict:
+    return {"key": chave, "request": {
+        "contents": [{"role": "user", "parts": [{"text": user}]}],
+        "systemInstruction": {"parts": [{"text": system}]},
+        "generationConfig": {
+            "maxOutputTokens": FALLBACK_CONTEUDO_MAX_TOKENS_JSON,
+            "responseMimeType": "application/json",
+            "thinkingConfig": {"thinkingBudget": 0}}}}
+
+
+TIMEOUT_DOWNLOAD_BATCH_MS = 10 * 60 * 1000
+
+
+def _cliente_gemini(timeout_ms: int = LLM_TIMEOUT_MS):
+    from google import genai
+
+    _exigir_chave("gemini")
+    return genai.Client(api_key=os.environ[PROVIDER_ENV_KEYS["gemini"]],
+                        http_options=_http_options_gemini(timeout_ms))
+
+
+def gemini_batch_submeter(pedidos: list[tuple[str, str, str]], nome: str,
+                          dir_trabalho: Path) -> str:
+    """`pedidos` = `[(chave, system, user)]`. Grava o JSONL em
+    `dir_trabalho`, sobe, cria o job e devolve o NOME do job — que o
+    chamador precisa persistir ANTES de qualquer outra coisa (é o único
+    jeito de buscar o resultado depois de uma queda)."""
+    if len({c for c, _, _ in pedidos}) != len(pedidos):
+        raise ValueError("chaves repetidas no batch")
+    dir_trabalho.mkdir(parents=True, exist_ok=True)
+    arq = dir_trabalho / f"{nome}.entrada.jsonl"
+    arq.write_text("".join(json.dumps(_pedido_batch(*p), ensure_ascii=False) + "\n"
+                           for p in pedidos), encoding="utf-8")
+    client = _cliente_gemini()
+    try:
+        return _submeter(client, arq, nome)
+    except Exception as e:
+        if _saldo_gemini_esgotado(e):
+            raise _abrir_disjuntor_de_saldo_gemini(e) from e
+        raise
+
+
+def _submeter(client, arq: Path, nome: str) -> str:
+    enviado = client.files.upload(file=str(arq),
+                                  config={"display_name": nome,
+                                          "mime_type": "jsonl"})
+    job = client.batches.create(model=FALLBACK_CONTEUDO_MODELO,
+                                src=enviado.name,
+                                config={"display_name": nome})
+    return job.name
+
+
+def gemini_batch_estado(nome_job: str) -> dict:
+    # a referência ao cliente precisa viver até a resposta: um `Client`
+    # temporário é coletado e fecha o httpx antes do envio
+    client = _cliente_gemini()
+    job = client.batches.get(name=nome_job)
+    estado = getattr(job.state, "name", str(job.state))
+    return {"nome": job.name, "estado": estado,
+            "criado": str(job.create_time), "inicio": str(job.start_time),
+            "fim": str(job.end_time),
+            "arquivo_saida": getattr(job.dest, "file_name", None) if job.dest else None,
+            "erro": str(job.error) if job.error else None}
+
+
+def gemini_batch_resultados(nome_job: str) -> dict[str, dict]:
+    """`{chave: resposta}` de um job TERMINADO com sucesso. Cada resposta no
+    formato de `resposta_json_gemini` (`camada="batch"`); pedido que falhou
+    no batch vem com `erro` e `texto == ""` — o chamador o registra como
+    `ok: False`, como qualquer falha."""
+    from google.genai import types
+
+    client = _cliente_gemini()
+    job = client.batches.get(name=nome_job)
+    estado = getattr(job.state, "name", str(job.state))
+    if estado != "JOB_STATE_SUCCEEDED":
+        raise LLMError(f"batch {nome_job} em {estado}, não em SUCCEEDED")
+    # [2026-09-24] O arquivo de resultado é MB, não uma resposta curta: com a
+    # rede lenta, o timeout de 180 s das chamadas de LLM estourou no download
+    # (`httpx.ReadTimeout`, bloco 3). Download idempotente: cliente com teto
+    # próprio e a retentativa de transporte de sempre (`_com_retentativa`).
+    cliente_download = _cliente_gemini(timeout_ms=TIMEOUT_DOWNLOAD_BATCH_MS)
+    bruto = _com_retentativa("gemini", "files.download",
+                             lambda: cliente_download.files.download(
+                                 file=job.dest.file_name))
+    saida: dict[str, dict] = {}
+    for linha in bruto.decode("utf-8").splitlines():
+        if not linha.strip():
+            continue
+        d = json.loads(linha)
+        chave = d.get("key")
+        if "response" not in d or d.get("error"):
+            saida[chave] = {"texto": "", "erro": json.dumps(d.get("error"))[:300],
+                            "provider": FALLBACK_CONTEUDO_PROVIDER,
+                            "modelo": FALLBACK_CONTEUDO_MODELO, "camada": "batch"}
+            continue
+        resp, extras = _validar_resposta_batch(d["response"])
+        um = getattr(resp, "usage_metadata", None)
+        texto = ""
+        try:
+            texto = resp.text or ""
+        except Exception:  # noqa: BLE001 — sem candidato/partes: texto vazio
+            texto = ""
+        saida[chave] = {
+            "texto": texto, "provider": FALLBACK_CONTEUDO_PROVIDER,
+            "modelo": FALLBACK_CONTEUDO_MODELO,
+            "modelo_efetivo": getattr(resp, "model_version", None),
+            "uso": uso(resp, "gemini"),
+            "thinking_tokens": int(getattr(um, "thoughts_token_count", 0) or 0),
+            "finish_reason": _finish_reason_gemini(resp),
+            "camada": "batch", "motivo_camada": None,
+            "traffic_type": extras.get("usageMetadata.serviceTier"),
+            "bloqueio": _bloqueio_gemini(resp),
+            "campos_desconhecidos_do_sdk": extras or None,
+            "fallback_conteudo": None, "latencia_s": None}
+    return saida
+
+
+def _validar_resposta_batch(bruto: dict):
+    """`GenerateContentResponse` a partir do JSON cru do arquivo de saída.
+    A API devolve campos que o SDK instalado (2.12.1) não declara — medido
+    em 2026-09-22: `usageMetadata.serviceTier` —, e o modelo pydantic os
+    RECUSA (`extra_forbidden`). Remove SÓ os campos acusados como extras e
+    os devolve à parte (`{caminho: valor}`), para que nada suma sem
+    registro; qualquer outro erro de validação sobe."""
+    from pydantic import ValidationError
+    from google.genai import types
+    import copy
+
+    d = copy.deepcopy(bruto)
+    extras: dict = {}
+    for _ in range(20):
+        try:
+            return types.GenerateContentResponse.model_validate(d), extras
+        except ValidationError as e:
+            erros = e.errors()
+            if not erros or any(x["type"] != "extra_forbidden" for x in erros):
+                raise
+            for x in erros:
+                *pais, folha = x["loc"]
+                alvo = d
+                for k in pais:
+                    alvo = alvo[k]
+                extras[".".join(map(str, x["loc"]))] = alvo.pop(folha)
+    raise LLMError("resposta de batch com campos extras demais")
 
 
 class _ChamadaComFallback:

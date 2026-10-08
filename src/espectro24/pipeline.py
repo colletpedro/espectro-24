@@ -397,10 +397,15 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
     # Vem do superset desta execução; ausente, a seleção cai no comportamento
     # da v1.9.4.
     orc_meta = superset.meta.get("orcamento_paginas_por_nivel") or {}
+    # [2026-09-23, C22] as recusadas pelo filtro de conteúdo saem da seleção
+    # AQUI e em `amostra_do_bruto`, o mesmo registro nos dois lados — é o que
+    # mantém análise e classificação na MESMA amostra (guarda C14.8).
+    from .recusas import ids_recusados
     sel = selecionar(todas, distrib.por_nivel if distrib else None,
                      cota_por_bucket=cota_por_bucket,
                      orcamento_paginas_por_nivel={float(k): v
-                                                  for k, v in orc_meta.items()})
+                                                  for k, v in orc_meta.items()},
+                     excluir_ids=ids_recusados(slug))
     buckets = montar_buckets(sel, superset)
 
     if synth:
@@ -433,7 +438,8 @@ def ids_analisados(buckets) -> dict[str, set[str]]:
 
 def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,
                             raiz: str | Path = DADOS_BRUTO_DIR,
-                            cota_por_bucket: int = COTA_POR_BUCKET
+                            cota_por_bucket: int = COTA_POR_BUCKET,
+                            ignorar_recusas: bool = False
                             ) -> dict[str, set[str]]:
     """O mesmo conjunto, re-derivado do bruto — para quem não tem os
     `BucketResult` em mãos (enriquecimento de um JSON já publicado).
@@ -449,17 +455,23 @@ def ids_analisados_do_bruto(slug: str, coleta: dict | None = None,
     return {nome: {r.id for r in reviews}
             for nome, reviews in amostra_do_bruto(
                 slug, coleta=coleta, raiz=raiz,
-                cota_por_bucket=cota_por_bucket).items()}
+                cota_por_bucket=cota_por_bucket,
+                ignorar_recusas=ignorar_recusas).items()}
 
 
 def amostra_do_bruto(slug: str, coleta: dict | None = None,
                      raiz: str | Path = DADOS_BRUTO_DIR,
-                     cota_por_bucket: int = COTA_POR_BUCKET
+                     cota_por_bucket: int = COTA_POR_BUCKET,
+                     ignorar_recusas: bool = False
                      ) -> dict[str, list]:
     """`{bucket: [ReviewBruta]}` — a amostra que a síntese leria, do disco.
 
     Reusa `selecionar` com os MESMOS parâmetros do pipeline, `orcamento_
     paginas_por_nivel` incluído. Zero rede.
+
+    `ignorar_recusas` (2026-09-27): a seleção SEM o registro de recusas — o
+    "antes do filtro" que a regra de aceite automático do dono compara. Só
+    para medir; a seleção de produção sempre exclui as recusadas.
     """
     meta, todas = carregar(slug, raiz=raiz)
     meta = meta or {}
@@ -467,8 +479,11 @@ def amostra_do_bruto(slug: str, coleta: dict | None = None,
     hist = {float(k): v for k, v in (coleta.get("histograma_bruto") or {}).items()}
     orc = {float(k): v
            for k, v in (coleta.get("orcamento_paginas_por_nivel") or {}).items()}
+    from .recusas import ids_recusados
     sel = selecionar(todas, hist or None, cota_por_bucket=cota_por_bucket,
-                     orcamento_paginas_por_nivel=orc)
+                     orcamento_paginas_por_nivel=orc,
+                     excluir_ids=(frozenset() if ignorar_recusas
+                                  else ids_recusados(slug)))
     return {nome: [r for ns in b.niveis.values() for r in ns.validas]
             for nome, b in sel.items()}
 

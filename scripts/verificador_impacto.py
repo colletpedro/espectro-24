@@ -82,7 +82,9 @@ from espectro24.synthesize import (  # noqa: E402
     deepseek_client,
     parada_por_saldo,
     resposta_json_com_fallback,
+    resposta_json_gemini,
 )
+import excecao_gemini_c22 as C22  # noqa: E402
 
 SAIDA = RAIZ / "resultado" / "auditoria-acuracia" / "verificador"
 DIR_A_REGRA = RAIZ / "resultado" / "auditoria-acuracia" / "variantes"
@@ -212,9 +214,67 @@ def _normalizar_veredito(data: dict) -> tuple[bool, str, str | None]:
     return confirma, frase, (str(alvo).strip().lower() if alvo else None)
 
 
+def mensagem_verificador(review: dict) -> str:
+    """A mensagem do verificador — a MESMA para DeepSeek, Gemini síncrono e
+    Gemini batch."""
+    return (f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
+            f"{review['texto']}\n\n"
+            f"Esta review foi marcada com `impacto_emocional`. "
+            f"Confirma ou remove?")
+
+
+CAMPOS_EXCECAO = ("provider", "modelo", "modelo_efetivo", "thinking_tokens",
+                  "finish_reason", "camada", "motivo_camada", "traffic_type",
+                  "bloqueio")
+
+
+class BloqueioDeConteudoGemini(RuntimeError):
+    """O Gemini recusou a entrada (`prompt_feedback.block_reason`). Não há
+    fallback de provider na exceção C22: a review fica fora do consenso e o
+    registro diz por quê."""
+
+
+def registro_excecao(variante: str, n_passe: int, review: dict,
+                     resp: dict | None, erro: BaseException | None = None
+                     ) -> dict:
+    """[2026-09-22, C22] O registro do verificador sob a exceção Gemini — o
+    mesmo para a chamada síncrona e para a resposta de batch. Guardas de
+    sempre: JSON inválido, resposta vazia ou pedido com erro viram
+    `ok: False` com a resposta crua e o `uso`; `confirma` ausente segue a
+    política conservadora de `_normalizar_veredito`."""
+    base = {"variante": variante, "passe": n_passe, "id": review["id"]}
+    try:
+        if erro is not None:
+            raise erro
+        if resp.get("erro"):
+            raise ValueError(f"pedido falhou no batch: {resp['erro']}")
+        if resp.get("bloqueio") and not resp.get("texto"):
+            # o filtro de conteúdo do Gemini — nomeado, não um JSONDecodeError
+            raise BloqueioDeConteudoGemini(resp["bloqueio"])
+        confirma, frase, alvo = _normalizar_veredito(json.loads(resp["texto"]))
+        registro = {"ok": True, **base, "n_chars": review["n_chars"],
+                    "confirma": confirma, "frase": frase, "alvo": alvo,
+                    "uso": resp["uso"], "latencia_s": resp.get("latencia_s"),
+                    "ts": agora_utc_iso()}
+    except Exception as e:  # noqa: BLE001
+        registro = {"ok": False, **base, "erro": f"{type(e).__name__}: {e}"[:500],
+                    "ts": agora_utc_iso()}
+        if resp is not None:
+            registro["resposta_crua"] = resp.get("texto")
+            registro["uso"] = resp.get("uso")
+    registro["excecao"] = C22.EXCECAO
+    if resp is not None:
+        registro.update({k: resp.get(k) for k in CAMPOS_EXCECAO})
+    return registro
+
+
 def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
-                arq: Path | None = None) -> None:
+                arq: Path | None = None, excecao: bool = False) -> None:
+    """`excecao=True` (2026-09-22, C22): as reviews — todas dos 55 — são
+    verificadas DIRETO no Gemini (camada de `C22.CAMADA`), com a marca."""
     arq = arq if arq is not None else _arq(variante, n_passe)
+    if excecao:
+        C22.exigir_no_escopo({r["slug"] for r in reviews})
     feitos = set()
     if arq.exists():
         for linha in arq.read_text(encoding="utf-8").splitlines():
@@ -229,7 +289,7 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         return
 
     system = VARIANTES[variante]
-    client = deepseek_client()
+    client = None if excecao else deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     pulados = [0]   # [2026-09-16] não tentadas porque o saldo acabou
     arq.parent.mkdir(parents=True, exist_ok=True)
@@ -253,6 +313,22 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         if parada_por_saldo():
             with lock:
                 pulados[0] += 1
+            return
+        if excecao:
+            try:
+                registro = registro_excecao(
+                    variante, n_passe, review,
+                    resposta_json_gemini(system, mensagem_verificador(review),
+                                         estagio="verificador",
+                                         camada=C22.CAMADA))
+            except LLMSaldoEsgotado:
+                with lock:
+                    pulados[0] += 1
+                return
+            except Exception as e:  # noqa: BLE001 — sem resposta nenhuma
+                registro = registro_excecao(variante, n_passe, review, None,
+                                            erro=e)
+            _gravar(registro)
             return
         resp = None
         try:
@@ -300,6 +376,9 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                      or getattr(e, "marca", None))
         if marca:
             registro["fallback_conteudo"] = marca
+        _gravar(registro)
+
+    def _gravar(registro: dict) -> None:
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
@@ -313,7 +392,8 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
     saida.close()
     if parada_por_saldo():
         raise SystemExit(
-            f"PARADO: a conta do DeepSeek ficou sem crédito. "
+            f"PARADO: a conta do {'Gemini' if excecao else 'DeepSeek'} ficou "
+            f"sem crédito. "
             f"{contador[0]} review(s) verificada(s), {pulados[0]} não "
             f"tentada(s) — nenhuma delas virou registro nem "
             f"`verificacao_pendente`, então basta repor o saldo e rodar de "
@@ -947,8 +1027,8 @@ def _motivo_pendencia(erro: str) -> dict:
     return {"motivo": motivo, "erro": erro[:200]}
 
 
-def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None
-                       ) -> tuple[list[dict], dict]:
+def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None,
+                       excecao: bool = False) -> tuple[list[dict], dict]:
     """O verificador de PRODUÇÃO sobre `linhas` (o consenso, em memória):
     chama o LLM só para as candidatas de `slugs` (`None` = todas) e devolve
     `(consenso_verificado, manifesto)` SEM gravar nada. Quem grava decide a
@@ -973,7 +1053,24 @@ def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None
     if slugs is not None:
         print(f"  chamadas restritas a {sorted(slugs)}: "
               f"{len(a_chamar)} candidata(s)")
-    rodar_passe(VARIANTE_PRODUCAO, 1, a_chamar, arq=ARQ_PRODUCAO)
+    if excecao:
+        # [2026-09-22, C22] Nenhuma candidata da exceção pode ter veredito de
+        # FORA dela (o resume reaproveitaria um voto DeepSeek num filme
+        # Gemini): o eixo inteiro de um filme sai de um provider só.
+        alvo = {c["id"] for c in a_chamar}
+        de_fora = [json.loads(l)["id"] for l in (
+            ARQ_PRODUCAO.read_text(encoding="utf-8").splitlines()
+            if ARQ_PRODUCAO.exists() else []) if l.strip()
+            and json.loads(l)["id"] in alvo
+            and json.loads(l).get("excecao") != C22.EXCECAO]
+        if de_fora:
+            raise C22.ForaDaExcecao(
+                f"{len(de_fora)} candidata(s) da exceção C22 com veredito de "
+                f"fora dela em {ARQ_PRODUCAO.name}: {de_fora[:5]}")
+    # o caminho de sempre chama exatamente como antes; o argumento novo só
+    # vai quando a exceção C22 está ativa
+    rodar_passe(VARIANTE_PRODUCAO, 1, a_chamar, arq=ARQ_PRODUCAO,
+                **({"excecao": True} if excecao else {}))
 
     resultados, ultima_falha = {}, {}
     for l in ARQ_PRODUCAO.read_text(encoding="utf-8").splitlines():

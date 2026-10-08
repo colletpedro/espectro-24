@@ -34,6 +34,15 @@ partida do driver, e `--reparar` a fecha sem gastar chamada.
 Uso:
     python scripts/lote_em_blocos.py LISTA.txt [--tamanho-bloco 10] [--dry-run]
     python scripts/lote_em_blocos.py --reparar
+    python scripts/lote_em_blocos.py LISTA.txt --excecao-gemini --teto-usd N
+
+`--excecao-gemini` (2026-09-22, ABERTO.md C22): os filmes da LISTA — todos
+dentro dos 55 de `excecao_gemini_c22.SLUGS`, ou nada roda — são classificados
+e verificados em GEMINI, com a marca `excecao` em cada registro e o passe 3
+dispensado quando os passes 1 e 2 concordam. `PROVIDER_POR_ESTAGIO` não muda.
+No Gemini não há sonda de saldo: o disjuntor é `--teto-usd`, o gasto MEDIDO
+da exceção (todos os registros marcados, `preco.custo_gemini`), conferido
+antes de cada bloco — estoura no máximo o bloco em curso.
 """
 from __future__ import annotations
 
@@ -49,6 +58,7 @@ sys.path.insert(0, str(RAIZ / "src"))
 sys.path.insert(0, str(RAIZ / "scripts"))
 
 import estender_classificacao_producao as est  # noqa: E402
+import excecao_gemini_c22 as C22  # noqa: E402
 import verificador_impacto as vi  # noqa: E402
 import votacao_3 as v3  # noqa: E402
 from espectro24 import synthesize as S  # noqa: E402
@@ -57,6 +67,7 @@ from espectro24.preco import (  # noqa: E402
     agora_utc_iso,
     aviso_de_validade,
     custo_de_registros,
+    custo_gemini,
 )
 
 TAMANHO_BLOCO = 10
@@ -128,6 +139,44 @@ def gravar_bloco(linhas_consenso: list[dict], saida: list[dict],
                      json.dumps(manifesto, ensure_ascii=False, indent=2))
 
 
+MAX_RODADAS_SUBSTITUICAO = 10
+
+
+def substituir_recusadas(bloco: list[str]) -> list[dict]:
+    """Registra as recusas NOVAS do bloco e anota a substituta de cada uma.
+    Devolve as recusas acrescentadas nesta rodada (vazio = nada a fazer)."""
+    from espectro24 import recusas
+    from espectro24.pipeline import ids_analisados_do_bruto
+
+    detectadas = v3.recusas_detectadas(bloco)
+    if not detectadas:
+        return []
+    por_slug: dict[str, list[dict]] = {}
+    for d in detectadas:
+        por_slug.setdefault(d["slug"], []).append(d)
+    novas = []
+    for slug, ds in sorted(por_slug.items()):
+        antes = ids_analisados_do_bruto(slug, coleta=_coleta(slug))
+        acrescentadas = recusas.registrar(ds)
+        if not acrescentadas:
+            continue
+        depois = ids_analisados_do_bruto(slug, coleta=_coleta(slug))
+        resumo = recusas.anotar_substitutas(slug, antes, depois)
+        for b, r in resumo.items():
+            if r["saiu"] or r["entrou"]:
+                print(f"  recusa {slug}/{b}: saiu {r['saiu']} · entrou "
+                      f"{r['entrou']} · n {r['n_antes']} → {r['n_depois']}")
+        novas += acrescentadas
+    return novas
+
+
+def _coleta(slug: str) -> dict | None:
+    arq = RAIZ / "resultado" / f"{slug}.json"
+    if arq.exists():
+        return json.loads(arq.read_text(encoding="utf-8")).get("coleta")
+    return None
+
+
 def custo_do_bloco(desde_iso: str, bloco: list[str]) -> dict:
     """Custo REAL das chamadas gravadas desde `desde_iso` para o bloco, cada
     uma no preço do seu instante (`ts`)."""
@@ -143,21 +192,43 @@ def custo_do_bloco(desde_iso: str, bloco: list[str]) -> dict:
         if r.get("id") in por_id_slug and (r.get("ts") or "") >= desde_iso:
             regs_ver.append(r)
     cp, cv = custo_de_registros(regs_passes), custo_de_registros(regs_ver)
+    # [C22] registros da exceção: Gemini, cobrado pela camada que respondeu
+    gemini = sum(custo_gemini(r) for r in regs_passes + regs_ver
+                 if r.get("excecao") == C22.EXCECAO)
     return {"passes": cp.custo_usd, "verificador": cv.custo_usd,
-            "total": cp.custo_usd + cv.custo_usd,
+            "gemini": gemini,
+            "total": cp.custo_usd + cv.custo_usd + gemini,
             "n_chamadas": cp.n_chamadas + cv.n_chamadas,
             "pico": cp.custo_pico_usd + cv.custo_pico_usd,
             "fora_de_pico": (cp.custo_fora_de_pico_usd
                              + cv.custo_fora_de_pico_usd)}
 
 
-def processar_bloco(bloco: list[str]) -> dict:
+def processar_bloco(bloco: list[str], excecao: bool = False) -> dict:
     """Um bloco de ponta a ponta. Levanta `SystemExit` (saldo) ANTES do commit
-    se o dinheiro acabar; nesse caso nenhum dos três arquivos foi tocado."""
+    se o dinheiro acabar; nesse caso nenhum dos três arquivos foi tocado.
+    `excecao=True`: a exceção C22 (Gemini), ver o docstring do módulo."""
     desde = agora_utc_iso()
+    if excecao:
+        C22.exigir_no_escopo(bloco)
     n_novas, filmes_novos = registrar_bloco(bloco)
     for n in (1, 2, 3):
-        v3.classificar_passe(n, slugs=bloco)
+        v3.classificar_passe(n, slugs=bloco, excecao=excecao)
+    # [2026-09-23, C22] Review que o Gemini RECUSA (filtro de conteúdo) sai
+    # da amostra e a próxima elegível do mesmo bucket entra (`recusas.py`):
+    # registrar → re-selecionar → classificar a substituta, até não sobrar
+    # recusa nova (a substituta também pode ser recusada) ou a reserva do
+    # bucket esgotar — aí a seleção devolve menos de 40, e o `n` menor é
+    # declarado por `recusas.relatorio_de_n` antes de publicar.
+    recusas_bloco: list[dict] = []
+    for _ in range(MAX_RODADAS_SUBSTITUICAO if excecao else 0):
+        novas = substituir_recusadas(bloco)
+        if not novas:
+            break
+        recusas_bloco += novas
+        registrar_bloco(bloco)
+        for n in (1, 2, 3):
+            v3.classificar_passe(n, slugs=bloco, excecao=excecao)
 
     passes = [v3._ler_passe(n) for n in (1, 2, 3)]
     amostra = json.loads(v3.ARQ_AMOSTRA.read_text(encoding="utf-8"))
@@ -166,14 +237,16 @@ def processar_bloco(bloco: list[str]) -> dict:
     linhas, n_incompletas = v3.consenso_incremental(atuais, passes, amostra,
                                                     bloco)
 
-    saida, manifesto = vi.calcular_aplicacao(linhas, slugs=bloco)
+    saida, manifesto = vi.calcular_aplicacao(linhas, slugs=bloco,
+                                             excecao=excecao)
     gravar_bloco(linhas, saida, manifesto)
     return {"bloco": bloco, "reviews_no_consenso":
             sum(1 for l in linhas if l["slug"] in set(bloco)),
             "incompletas": n_incompletas, "removidas": manifesto["n_removidas"],
             "pendentes_verificador": manifesto["n_falharam"],
             "custo": custo_do_bloco(desde, bloco),
-            "linhas_consenso": len(linhas)}
+            "linhas_consenso": len(linhas),
+            "recusas": recusas_bloco}
 
 
 def reparar() -> int:
@@ -199,10 +272,30 @@ def _fmt_saldo(s: dict | None) -> str:
             f"(is_available={s.get('is_available')})")
 
 
-def dry_run(blocos: list[list[str]]) -> int:
+def gasto_excecao(slugs=None, preco_cheio: bool = False) -> float:
+    """Gasto MEDIDO da exceção C22: todo registro marcado, em todo passe e no
+    verificador — dos `slugs` pedidos (`None` = todos), pelo preço da camada
+    que respondeu ou, com `preco_cheio`, sem desconto nenhum (C22 (e))."""
+    alvo = set(slugs) if slugs is not None else None
+    regs = [r for n in (1, 2, 3) for r in _linhas_jsonl(v3.ARQ_PASSE[n])
+            if alvo is None or r.get("slug") in alvo]
+    ids = None
+    if alvo is not None:
+        ids = {r["id"] for r in json.loads(v3.ARQ_AMOSTRA.read_text(
+            encoding="utf-8"))["reviews"] if r["slug"] in alvo}
+    regs += [r for r in _linhas_jsonl(vi.ARQ_PRODUCAO)
+             if ids is None or r.get("id") in ids]
+    return sum(custo_gemini(r, preco_cheio=preco_cheio) for r in regs
+               if r.get("excecao") == C22.EXCECAO)
+
+
+def dry_run(blocos: list[list[str]], excecao: bool = False) -> int:
     total = Counter()
     for i, bloco in enumerate(blocos, 1):
-        por_passe = {n: len(v3.pendentes_do_passe(n, bloco)[2])
+        # passe 3 da exceção: só o que os passes 1-2 já gravados não dispensam
+        # (antes de eles rodarem, é o bloco inteiro — o teto do número)
+        por_passe = {n: len(v3.pendentes_do_passe(
+                         n, bloco, dispensar_p3=excecao)[2])
                      for n in (1, 2, 3)}
         total.update(por_passe)
         print(f"bloco {i}/{len(blocos)} ({len(bloco)} filmes): chamadas "
@@ -224,6 +317,12 @@ def main(argv=None) -> int:
     p.add_argument("--reparar", action="store_true",
                    help="regrava os três arquivos a partir do consenso "
                         "atual, sem chamada")
+    p.add_argument("--excecao-gemini", action="store_true",
+                   help="exceção C22: classifica e verifica em Gemini (só "
+                        "os 55 de excecao_gemini_c22.SLUGS)")
+    p.add_argument("--teto-usd", type=float, default=None,
+                   help="obrigatório com --excecao-gemini: gasto medido "
+                        "máximo da exceção; conferido antes de cada bloco")
     args = p.parse_args(argv)
 
     if args.reparar:
@@ -234,6 +333,10 @@ def main(argv=None) -> int:
     from espectro24.lote import ler_lista_slugs
     blocos = dividir_em_blocos(ler_lista_slugs(args.lista),
                                args.tamanho_bloco)
+    if args.excecao_gemini:
+        C22.exigir_no_escopo([s for b in blocos for s in b])
+        if args.teto_usd is None and not args.dry_run:
+            p.error("--excecao-gemini exige --teto-usd")
     aviso = aviso_de_validade()
     if aviso:
         print(aviso)
@@ -248,22 +351,34 @@ def main(argv=None) -> int:
         return 2
 
     if args.dry_run:
-        return dry_run(blocos)
+        return dry_run(blocos, excecao=args.excecao_gemini)
 
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
 
     t0, custo_total, feitos = time.time(), 0.0, 0
     for i, bloco in enumerate(blocos, 1):
-        saldo = _saldo()
-        print(f"\n=== bloco {i}/{len(blocos)} · {len(bloco)} filmes · saldo "
-              f"antes: {_fmt_saldo(saldo)}", flush=True)
+        if args.excecao_gemini:
+            gasto = gasto_excecao()
+            print(f"\n=== bloco {i}/{len(blocos)} · {len(bloco)} filmes · "
+                  f"EXCEÇÃO C22 (Gemini) · gasto medido US${gasto:.4f} de "
+                  f"teto US${args.teto_usd:.2f}", flush=True)
+            if gasto >= args.teto_usd:
+                print(f"PARADO antes do bloco: o gasto medido da exceção "
+                      f"atingiu o teto. Blocos 1..{i - 1} estão COMMITADOS; "
+                      f"nada foi tocado neste.")
+                return 1
+            saldo = None
+        else:
+            saldo = _saldo()
+            print(f"\n=== bloco {i}/{len(blocos)} · {len(bloco)} filmes · saldo "
+                  f"antes: {_fmt_saldo(saldo)}", flush=True)
         if saldo is not None and saldo.get("is_available") is False:
             print("PARADO antes do bloco: a conta não tem crédito. Blocos "
                   f"1..{i - 1} estão COMMITADOS; nada foi tocado neste.")
             return 1
         try:
-            r = processar_bloco(bloco)
+            r = processar_bloco(bloco, excecao=args.excecao_gemini)
         except SystemExit as e:
             print(f"\nPARADO no bloco {i}/{len(blocos)}: {e}")
             problemas = estado_consistente()
@@ -280,8 +395,11 @@ def main(argv=None) -> int:
               f"{r['pendentes_verificador']} sem veredito · custo real "
               f"US${r['custo']['total']:.4f} (pico "
               f"US${r['custo']['pico']:.4f} / fora "
-              f"US${r['custo']['fora_de_pico']:.4f}) · saldo depois: "
-              f"{_fmt_saldo(_saldo())}", flush=True)
+              f"US${r['custo']['fora_de_pico']:.4f}; Gemini "
+              f"US${r['custo']['gemini']:.4f}) · "
+              + (f"gasto da exceção: US${gasto_excecao():.4f}"
+                 if args.excecao_gemini
+                 else f"saldo depois: {_fmt_saldo(_saldo())}"), flush=True)
         if r["incompletas"]:
             print(f"  AVISO: {r['incompletas']} review(s) sem os 3 passes "
                   f"ok ficaram FORA do consenso; reexecutar o bloco as retenta.")

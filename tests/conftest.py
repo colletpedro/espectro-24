@@ -152,3 +152,13 @@ def exige_resultado_sob_a_lei(caminho=None):
                 "v1.9.34 (bloco `eixos` sem `margem`/`acima_da_margem`). "
                 "Este teste lê artefato PUBLICADO e volta sozinho depois da "
                 "republicação — ver `tests/conftest.py`.")
+
+
+@pytest.fixture(autouse=True)
+def _recusas_isoladas(tmp_path, monkeypatch):
+    """[2026-09-23, C22] O registro de reviews recusadas pelo filtro de
+    conteúdo (`espectro24.recusas`) é lido pela SELEÇÃO. Todo teste começa
+    com um registro vazio em `tmp_path` — nenhum depende do estado do disco.
+    Quem precisa de recusas as grava com `recusas.registrar`."""
+    from espectro24 import recusas
+    monkeypatch.setattr(recusas, "ARQ_RECUSAS", tmp_path / "recusas_conteudo.json")

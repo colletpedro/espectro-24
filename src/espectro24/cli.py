@@ -127,6 +127,11 @@ def _parse_args(argv):
                        "[D3]. Sem ele o JSON sai sem o bloco `eixos`, o "
                        "frontend cai na lista de temas anterior e o briefing "
                        "não recebe o estado `contraste`")
+    p.add_argument("--excecao-gemini", action="store_true",
+                   help="exceção C22 (ABERTO.md): síntese e rotulagem em "
+                        "Gemini, SÓ para os 55 de `excecao_c22.SLUGS` já "
+                        "classificados em Gemini. Não muda "
+                        "PROVIDER_POR_ESTAGIO")
     p.add_argument("--no-distribuicao", action="store_true",
                    help="pula a busca do histograma de notas do Letterboxd "
                        "(v1.4.0); sem ele o narrador volta às regras da "
@@ -147,6 +152,94 @@ def _pick_slug(fetcher, query):
         ano = f" ({r.year})" if r.year else ""
         print(f"  --slug {r.slug:35} {r.name}{ano}", file=sys.stderr)
     sys.exit(3)
+
+
+FALHA_JSON_SINTESE = "Falha ao obter JSON válido do LLM."
+
+
+def _preparar_excecao_c22(args) -> dict:
+    """[2026-09-22, C22 Etapa 2] Recusa o que está fora da exceção e monta os
+    dois clientes Gemini (síntese, rotulagem) que registram cada chamada.
+
+    Recusa: sem `--slug`, slug fora dos 55, `--provider` junto (a exceção já
+    fixa o provider desses dois estágios e deixa os outros no default),
+    `--reuse-synthesis` (a síntese reaproveitada seria DeepSeek), e filme cuja
+    classificação no consenso não é INTEIRA da exceção — um filme publica com
+    um provider de classificação só."""
+    from . import excecao_c22 as C22
+    from .synthesize import ChamadaGeminiExcecao, FALLBACK_CONTEUDO_MODELO
+
+    erro = None
+    if not args.slug:
+        erro = "exige --slug"
+    elif args.slug not in C22.SLUGS:
+        erro = f"{args.slug!r} não está entre os 55 da exceção"
+    elif args.provider:
+        erro = "não combina com --provider"
+    elif args.reuse_synthesis:
+        erro = "não combina com --reuse-synthesis (a síntese salva seria DeepSeek)"
+    else:
+        from . import eixos as E
+        caminho = Path(E.CONSENSO_PADRAO)
+        linhas = [json.loads(l) for l in caminho.read_text(encoding="utf-8")
+                  .splitlines() if l.strip() and f'"{args.slug}"' in l] \
+            if caminho.exists() else []
+        linhas = [l for l in linhas if l.get("slug") == args.slug]
+        fora = [l["id"] for l in linhas if (l.get("classificacao_excecao") or {})
+                .get("excecao") != C22.EXCECAO]
+        if not linhas:
+            erro = f"{args.slug!r} não tem classificação no consenso"
+        elif fora:
+            erro = (f"{len(fora)} review(s) de {args.slug!r} no consenso NÃO são "
+                    f"da exceção C22 — o filme misturaria provider")
+    if erro:
+        print(f"--excecao-gemini: {erro}. Nada foi rodado.", file=sys.stderr)
+        sys.exit(2)
+    sintese, rotulagem = (ChamadaGeminiExcecao("sintese"),
+                          ChamadaGeminiExcecao("rotulagem"))
+    sintese.modelo_fixo = rotulagem.modelo_fixo = FALLBACK_CONTEUDO_MODELO
+    return {"sintese": sintese, "rotulagem": rotulagem, "n_consenso": len(linhas)}
+
+
+def _fechar_excecao_c22(output: dict, excecao: dict) -> None:
+    """Grava a proveniência (`proveniencia_llm`, operacional: o
+    `frontend/build_data.py` a tira antes do site) e RECUSA publicar bucket
+    cuja síntese não produziu JSON. No caminho DeepSeek essa falha publica o
+    bucket sem temas, com a frase de falha; aqui, onde o risco medido do
+    Gemini é justamente truncar a saída (C15.a), ela para o filme."""
+    from . import excecao_c22 as C22
+
+    output["proveniencia_llm"] = {
+        "excecao": C22.EXCECAO,
+        "classificacao": {"provider": "gemini", "modelo": C22.MODELO,
+                          "n_reviews_no_consenso": excecao["n_consenso"]},
+        "sintese": excecao["sintese"].resumo(),
+        "rotulagem": excecao["rotulagem"].resumo(),
+    }
+    # [2026-09-23] recusas do filtro de conteúdo DECLARADAS no dado do filme,
+    # por bucket — substituídas e, se a reserva esgotou, o `n` menor e o
+    # aceite do dono. Chave ausente = bucket sem recusa.
+    from . import recusas as R
+    esgotadas = R.reservas_esgotadas([output.get("slug")])
+    if esgotadas:
+        print(f"\n⛔ EXCEÇÃO C22: reserva esgotada sem aceite do dono em "
+              f"{[r['bucket'] for r in esgotadas]} — nada publicado.",
+              file=sys.stderr)
+        sys.exit(8)
+    for b in output.get("buckets", []):
+        dec = R.declaracao_do_bucket(output.get("slug"), b.get("bucket"))
+        if dec:
+            b["recusas_filtro_conteudo"] = dec
+    falhos = [b.get("bucket") for b in output.get("buckets", [])
+              if b.get("observacao_geral") == FALHA_JSON_SINTESE]
+    if falhos:
+        fr = output["proveniencia_llm"]["sintese"]["finish_reason"]
+        bl = output["proveniencia_llm"]["sintese"]["bloqueios"]
+        print(f"\n⛔ EXCEÇÃO C22: a síntese em Gemini não produziu JSON em "
+              f"{falhos} (finish_reason das chamadas: {fr}; bloqueio de "
+              f"conteúdo em: {bl or 'nenhuma'}) — nada publicado.",
+              file=sys.stderr)
+        sys.exit(7)
 
 
 def main(argv=None):
@@ -176,13 +269,16 @@ def main(argv=None):
     # narrativa podem usar providers diferentes, e checar só um deixaria o
     # outro estourar depois da coleta inteira.
     provider_sintese = None
+    excecao = None
+    if args.excecao_gemini:
+        excecao = _preparar_excecao_c22(args)
     try:
         from .synthesize import provider_do_estagio
-        if vai_sintetizar:
+        if vai_sintetizar and excecao is None:
             provider_sintese = provider_do_estagio("classificacao", args.provider)
         if vai_narrar:
             provider_do_estagio("narrativa", args.provider)
-        if not args.no_eixos:
+        if not args.no_eixos and excecao is None:
             provider_do_estagio("rotulagem", args.provider)
     except ProviderError as e:
         print(f"Provider LLM: {e}", file=sys.stderr)
@@ -230,7 +326,11 @@ def main(argv=None):
             buckets, superset, distrib = run_pipeline(
                 fetcher, slug,
                 data_coleta=datetime.now(timezone.utc).isoformat(),
-                model=args.model, provider=provider_sintese, synth=not args.no_synth,
+                **({"client_call": excecao["sintese"],
+                    "model": excecao["sintese"].modelo_fixo}
+                   if excecao else
+                   {"model": args.model, "provider": provider_sintese}),
+                synth=not args.no_synth,
                 cota_por_bucket=args.cota,
                 orcamento_paginas_bucket=args.orcamento_paginas,
                 on_level=_on_level, distribuicao=not args.no_distribuicao,
@@ -341,7 +441,11 @@ def main(argv=None):
                           raiz=args.dados_dir, cota_por_bucket=args.cota))
         try:
             bloco = montar_eixos(slug, output, analisadas,
-                                 provider=args.provider, model=args.model)
+                                 **({"client_call": excecao["rotulagem"],
+                                     "model": excecao["rotulagem"].modelo_fixo}
+                                    if excecao else
+                                    {"provider": args.provider,
+                                     "model": args.model}))
         except AmostraNaoClassificada as e:
             # NÃO aditivo: sem esta saída, o filme publicaria com um `n`
             # menor e nenhum aviso (C14.8, `get-out-2017`). Nada é gravado.
@@ -418,6 +522,9 @@ def main(argv=None):
     # `narrativa_bruta` não são mais gravados aqui; `resultado/*.json`
     # publicados ANTES desta versão continuam com o campo, e
     # `render_terminal` continua sabendo lê-lo (compatibilidade histórica).
+
+    if excecao is not None:
+        _fechar_excecao_c22(output, excecao)
 
     path = write_json(output, args.out_dir)
     print(render_terminal(output, tom=args.tom))

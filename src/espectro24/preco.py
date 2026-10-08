@@ -64,6 +64,40 @@ class Preco:
 FORA_DE_PICO = Preco(entrada_miss=0.15, entrada_hit=0.003, saida=0.60)
 PICO = Preco(entrada_miss=0.30, entrada_hit=0.006, saida=1.20)
 
+# --- Gemini (`gemini-3.7-flash`) — o provider dos 55 da exceção de 2026-09-22
+# Fonte: https://ai.google.dev/gemini-api/docs/pricing, lida em 2026-09-22
+# (página datada "2026-09-22 UTC"): Standard US$0,75/M entrada e US$3,75/M
+# saída "(including thinking tokens)" até 31/12/2026 — DOBRA em 01/01/2027;
+# Batch e Flex, US$0,375 e US$1,875 (50%). Sem pico. O `thoughts_token_count`
+# é cobrado como SAÍDA e o `uso()` do adaptador não o enxerga — quem calcula
+# soma `thinking_tokens` à saída. `entrada_hit` = preço CHEIO: o cache
+# implícito do 3.7 Flash exige 4.096 tokens de prefixo (docs/caching) e o
+# prefixo fixo da classificação tem 929; o gate mediu 0 token em cache.
+GEMINI_3_7_FLASH = Preco(entrada_miss=0.75, entrada_hit=0.75, saida=3.75)
+GEMINI_3_7_FLASH_DESCONTO = Preco(entrada_miss=0.375, entrada_hit=0.375,
+                                  saida=1.875)
+GEMINI_VALIDO_ATE = date(2026, 12, 31)
+_CAMADAS_COM_DESCONTO = ("flex", "batch")
+
+
+def custo_gemini(registro: Mapping, preco_cheio: bool = False) -> float:
+    """Custo de UMA chamada Gemini registrada (`uso` + `thinking_tokens` +
+    `camada`). Camada ausente = padrão (preço cheio, o lado seguro).
+
+    `preco_cheio=True` (2026-09-23, ABERTO.md C22 (e)): ignora o desconto de
+    batch/flex. O desconto vem da documentação, não da fatura — a resposta do
+    batch declara `serviceTier: SERVICE_TIER_STANDARD` e o billing não pôde
+    ser conferido. Um teto calculado COM o desconto nunca dispararia se a
+    cobrança viesse cheia; calculado a preço cheio, ele limita o gasto REAL
+    nos dois casos."""
+    u = registro.get("uso") or {}
+    p = (GEMINI_3_7_FLASH_DESCONTO
+         if registro.get("camada") in _CAMADAS_COM_DESCONTO and not preco_cheio
+         else GEMINI_3_7_FLASH)
+    return (u.get("prompt_tokens", 0) * p.miss_por_token
+            + (u.get("completion_tokens", 0)
+               + int(registro.get("thinking_tokens") or 0)) * p.saida_por_token)
+
 # `[início, fim)`, em UTC, segunda a sexta (`datetime.weekday()` 0..4).
 JANELAS_PICO_UTC = ((time(1, 0), time(4, 0)), (time(6, 0), time(10, 0)))
 DIAS_DE_PICO = (0, 1, 2, 3, 4)

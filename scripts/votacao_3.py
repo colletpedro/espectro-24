@@ -73,9 +73,11 @@ from espectro24.synthesize import (  # noqa: E402
     deepseek_client,
     parada_por_saldo,
     resposta_classificacao,
+    resposta_json_gemini,
     telemetria_fallback_conteudo,
     telemetria_retentativa_llm,
 )
+import excecao_gemini_c22 as C22  # noqa: E402
 
 SAIDA = RAIZ / "resultado" / "votacao-3"
 ARQ_AMOSTRA = SAIDA / "amostra.json"
@@ -118,11 +120,16 @@ def cmd_amostra() -> None:
 # pelo número da passada e pelo arquivo de saída.
 # ===========================================================================
 
-def pendentes_do_passe(n_passe: int, slugs: list[str] | None = None
+def pendentes_do_passe(n_passe: int, slugs: list[str] | None = None,
+                       dispensar_p3: bool = False
                        ) -> tuple[str, int, list[dict]]:
     """`(taxonomia_id, n_feitas, pendentes)` do passe — SEM chamar nada.
     `slugs` restringe às reviews desses filmes (o driver por blocos); `None`
-    é o corpus inteiro, o comportamento de sempre."""
+    é o corpus inteiro, o comportamento de sempre.
+
+    `dispensar_p3` (2026-09-22, exceção C22): no passe 3, tira das pendentes
+    as reviews em que os passes 1 e 2 da exceção votaram o MESMO conjunto
+    (`passe_3_dispensavel`) — o terceiro voto não muda o consenso."""
     amostra = json.loads(ARQ_AMOSTRA.read_text(encoding="utf-8"))
     tid = amostra["taxonomia_id"]
     if tid != taxonomia_id():
@@ -140,18 +147,178 @@ def pendentes_do_passe(n_passe: int, slugs: list[str] | None = None
                     feitos.add((r["slug"], r["bucket"], r["id"]))
 
     alvo = set(slugs) if slugs is not None else None
+    recusadas = ids_recusados_de(alvo)
     pendentes = [r for r in amostra["reviews"]
                  if (alvo is None or r["slug"] in alvo)
-                 and (r["slug"], r["bucket"], r["id"]) not in feitos]
+                 and (r["slug"], r["bucket"], r["id"]) not in feitos
+                 and (r["slug"], r["id"]) not in recusadas]
+    if dispensar_p3 and n_passe == 3:
+        p1, p2 = _ler_passe(1), _ler_passe(2)
+        pendentes = [r for r in pendentes
+                     if not passe_3_dispensavel(
+                         p1.get((r["slug"], r["bucket"], r["id"])),
+                         p2.get((r["slug"], r["bucket"], r["id"])))]
     return tid, len(feitos), pendentes
 
 
+def ids_recusados_de(slugs: set[str] | None) -> set[tuple[str, str]]:
+    """`{(slug, id)}` recusados pelo filtro de conteúdo (`recusas.py`) —
+    saíram da amostra, não são mais pendentes nem incompletas."""
+    from espectro24 import recusas
+    return {(r["slug"], r["id"]) for r in recusas.recusas()
+            if slugs is None or r["slug"] in slugs}
+
+
+def recusas_detectadas(slugs) -> list[dict]:
+    """[2026-09-23, C22] Reviews da exceção que o Gemini RECUSOU: pelo menos
+    `recusas.MIN_TENTATIVAS_BLOQUEADAS` registros com `bloqueio` e nenhum
+    `ok` em nenhum passe. Só LÊ os passes; quem grava é `recusas.registrar`."""
+    from espectro24 import recusas
+    alvo = set(slugs)
+    bloq: dict[tuple, list[dict]] = {}
+    ok: set[tuple] = set()
+    for n in (1, 2, 3):
+        arq = ARQ_PASSE[n]
+        if not arq.exists():
+            continue
+        for linha in arq.read_text(encoding="utf-8").splitlines():
+            if not linha.strip():
+                continue
+            r = json.loads(linha)
+            if r.get("slug") not in alvo or r.get("excecao") != C22.EXCECAO:
+                continue
+            chave = (r["slug"], r["bucket"], r["id"])
+            if r.get("ok"):
+                ok.add(chave)
+            elif r.get("bloqueio"):
+                bloq.setdefault(chave, []).append(r)
+    saida = []
+    for chave, regs in sorted(bloq.items()):
+        if chave in ok or len(regs) < recusas.MIN_TENTATIVAS_BLOQUEADAS:
+            continue
+        saida.append({"slug": chave[0], "bucket": chave[1], "id": chave[2],
+                      "provider": regs[0].get("provider"),
+                      "modelo": regs[0].get("modelo"),
+                      "bloqueio": regs[0]["bloqueio"],
+                      "n_tentativas_bloqueadas": len(regs),
+                      "evidencia": "registros de passe com `bloqueio` "
+                                   "(prompt_feedback.block_reason)"})
+    return saida
+
+
+def passe_3_dispensavel(r1: dict | None, r2: dict | None) -> bool:
+    """[2026-09-22, C22] Os passes 1 e 2 bastam para o consenso desta review?
+
+    Vale quando os dois votaram EXATAMENTE o mesmo conjunto de eixos. A
+    igualdade é sobre o que `_consensuar` de fato conta: `r["eixos"]` como
+    `_ler_passe` o entrega (eixo inválido recuperado, ordenado, sem
+    repetição) — `livre` incluído, `temas_livres` e `eixos_invalidos` crus
+    fora, porque `_consensuar` não os lê. Com dois votos iguais, cada eixo
+    marcado já tem 2 de 3 e cada eixo não marcado tem no máximo 1 de 3: o
+    terceiro voto não muda o conjunto final, seja ele qual for
+    (`tests/test_dispensa_passe_3.py`, exaustivo sobre os 2.048 conjuntos).
+
+    SÓ para registros da exceção C22 (marca `excecao` nos dois). Os 99
+    publicados continuam exigindo os três passes: estender a dispensa a eles
+    mudaria o `consenso.jsonl` de reviews cujo passe 3 falhou e que hoje
+    ficam de fora."""
+    if r1 is None or r2 is None:
+        return False
+    if r1.get("excecao") != C22.EXCECAO or r2.get("excecao") != C22.EXCECAO:
+        return False
+    return r1["eixos"] == r2["eixos"]
+
+
+def chaves_consensuaveis(passes: list[dict[tuple, dict]]) -> set[tuple]:
+    """As chaves que entram no consenso: os três passes presentes, ou — só
+    na exceção C22 — os passes 1 e 2 iguais com o 3 dispensado."""
+    completas = set(passes[0]) & set(passes[1]) & set(passes[2])
+    dispensadas = {c for c in (set(passes[0]) & set(passes[1])) - set(passes[2])
+                   if passe_3_dispensavel(passes[0][c], passes[1][c])}
+    return completas | dispensadas
+
+
+class ProviderMisturadoNoVoto(RuntimeError):
+    """Uma review com votos da exceção C22 (Gemini) e votos de fora dela. A
+    votação de 3 pressupõe três sorteios do MESMO modelo — misturar quebra a
+    premissa e não é reversível no dado. Arquive os passes DeepSeek do filme
+    (`scripts/arquivar_passes_c22.py`) antes de rodar a exceção."""
+
+
+def mensagem_usuario(review: dict) -> str:
+    """A mensagem de usuário da classificação — a MESMA para DeepSeek,
+    Gemini síncrono e Gemini batch."""
+    return (f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
+            f"{review['texto']}")
+
+
+CAMPOS_EXCECAO = ("provider", "modelo", "modelo_efetivo", "thinking_tokens",
+                  "finish_reason", "camada", "motivo_camada", "traffic_type",
+                  "bloqueio")
+
+
+class BloqueioDeConteudoGemini(RuntimeError):
+    """O Gemini recusou a entrada (`prompt_feedback.block_reason`). Não há
+    fallback de provider na exceção C22: a review fica fora do consenso e o
+    registro diz por quê."""
+
+
+def registro_excecao(review: dict, n_passe: int, tid: str,
+                     resp: dict | None, erro: BaseException | None = None
+                     ) -> dict:
+    """O registro de passe da exceção C22 — o MESMO para a chamada síncrona
+    (`resposta_json_gemini`) e para a resposta de batch
+    (`gemini_batch_resultados`), que devolvem o mesmo formato. As guardas são
+    as da classificação de sempre: JSON inválido, resposta vazia (bloqueio,
+    truncamento) ou erro do pedido viram `ok: False` com a resposta crua e o
+    `uso` cobrado; e todo registro carrega a marca `excecao`, o provider, o
+    modelo pedido e o EFETIVO, o `finish_reason` e a camada."""
+    base = {"taxonomia_id": tid, "passe": n_passe, "slug": review["slug"],
+            "perfil": review["perfil"], "bucket": review["bucket"],
+            "id": review["id"]}
+    try:
+        if erro is not None:
+            raise erro
+        if resp.get("erro"):
+            raise ValueError(f"pedido falhou no batch: {resp['erro']}")
+        if resp.get("bloqueio") and not resp.get("texto"):
+            # o filtro de conteúdo do Gemini — nomeado, não um JSONDecodeError
+            raise BloqueioDeConteudoGemini(resp["bloqueio"])
+        eixos, livres, invalidos = _normalizar(json.loads(resp["texto"]))
+        registro = {"ok": True, **base, "nivel": review["nivel"],
+                    "n_chars": review["n_chars"], "eixos": eixos,
+                    "temas_livres": livres, "eixos_invalidos": invalidos,
+                    "uso": resp["uso"], "latencia_s": resp.get("latencia_s"),
+                    "ts": agora_utc_iso()}
+    except Exception as e:  # noqa: BLE001
+        registro = {"ok": False, **base, "erro": f"{type(e).__name__}: {e}"[:500],
+                    "ts": agora_utc_iso()}
+        if resp is not None:
+            registro["uso"] = resp.get("uso")
+            registro["resposta_crua"] = resp.get("texto")
+    registro["excecao"] = C22.EXCECAO
+    if resp is not None:
+        registro.update({k: resp.get(k) for k in CAMPOS_EXCECAO})
+    return registro
+
+
 def classificar_passe(n_passe: int, limite: int | None = None,
-                      slugs: list[str] | None = None) -> None:
+                      slugs: list[str] | None = None,
+                      excecao: bool = False) -> None:
+    """`excecao=True` (2026-09-22, C22): os `slugs` — todos dentro dos 55 —
+    são classificados DIRETO no Gemini (`resposta_json_gemini`, camada
+    Flex), cada registro com a marca `excecao`, e o passe 3 dispensa as
+    reviews em que os passes 1 e 2 concordam."""
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
 
-    tid, n_feitos, pendentes = pendentes_do_passe(n_passe, slugs)
+    if excecao:
+        if slugs is None:
+            raise C22.ForaDaExcecao("a exceção C22 exige a lista de slugs")
+        C22.exigir_no_escopo(slugs)
+        exigir_sem_votos_de_fora(slugs)
+    tid, n_feitos, pendentes = pendentes_do_passe(n_passe, slugs,
+                                                  dispensar_p3=excecao)
     arq = ARQ_PASSE[n_passe]
     if limite:
         pendentes = pendentes[:limite]
@@ -160,7 +327,7 @@ def classificar_passe(n_passe: int, limite: int | None = None,
     if not pendentes:
         return
 
-    client = deepseek_client()
+    client = None if excecao else deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     falhas = [0]
     pulados = [0]   # [2026-09-16] não tentados porque o saldo acabou
@@ -191,6 +358,23 @@ def classificar_passe(n_passe: int, limite: int | None = None,
                 pulados[0] += 1
             return
         resp = None
+        if excecao:
+            try:
+                registro = registro_excecao(review, n_passe, tid,
+                                            resposta_json_gemini(
+                                                SYSTEM, mensagem_usuario(review),
+                                                estagio="classificacao",
+                                                camada=C22.CAMADA))
+            except LLMSaldoEsgotado:
+                # [2026-09-27] 402 do Gemini: estado da CONTA, não julgamento
+                # do modelo — sem registro (C18), a reexecução retenta
+                with lock:
+                    pulados[0] += 1
+                return
+            except Exception as e:  # noqa: BLE001 — sem resposta nenhuma
+                registro = registro_excecao(review, n_passe, tid, None, erro=e)
+            _gravar(registro)
+            return
         try:
             resp = resposta_classificacao(
                 SYSTEM,
@@ -233,6 +417,9 @@ def classificar_passe(n_passe: int, limite: int | None = None,
                      or getattr(e, "marca", None))
         if marca:
             registro["fallback_conteudo"] = marca
+        _gravar(registro)
+
+    def _gravar(registro: dict) -> None:
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
@@ -249,7 +436,8 @@ def classificar_passe(n_passe: int, limite: int | None = None,
     saida.close()
     if parada_por_saldo():
         raise SystemExit(
-            f"PARADO: a conta do DeepSeek ficou sem crédito no passe "
+            f"PARADO: a conta do {'Gemini' if excecao else 'DeepSeek'} ficou "
+            f"sem crédito no passe "
             f"{n_passe}. {contador[0]} review(s) processada(s), "
             f"{pulados[0]} não tentada(s) — nenhuma delas virou registro, "
             f"então basta repor o saldo e rodar de novo: o passe retoma "
@@ -317,8 +505,19 @@ def _consensuar(passes: list[dict[tuple, dict]], chaves: list[tuple],
     saida = []
     for chave in chaves:
         registros = [p.get(chave) for p in passes]
+        # [2026-09-22, C22] passe 3 dispensado: os dois votos iguais já
+        # decidem (`passe_3_dispensavel`). O limiar continua `minimo`.
+        dispensado = (len(registros) == 3 and registros[2] is None
+                      and passe_3_dispensavel(registros[0], registros[1]))
+        if dispensado:
+            registros = registros[:2]
         if any(r is None for r in registros):
             continue
+        marcas = {r.get("excecao") for r in registros}
+        if len(marcas) > 1:
+            raise ProviderMisturadoNoVoto(
+                f"{chave}: votos com marcas {sorted(map(str, marcas))} na "
+                f"mesma review")
         votos = Counter(e for r in registros for e in r["eixos"])
         finais = sorted(e for e, v in votos.items() if v >= minimo)
         base = registros[0]
@@ -336,8 +535,44 @@ def _consensuar(passes: list[dict[tuple, dict]], chaves: list[tuple],
                      for r in registros if r.get("fallback_conteudo")]
         if fallbacks:
             linha["fallback_conteudo"] = fallbacks
+        # [2026-09-22, C22] Só nas linhas da exceção — as demais ficam byte a
+        # byte como eram. `votos`/`eixos_por_passe` de uma linha com passe 3
+        # dispensado têm DOIS votos: a medida de reprodutibilidade de 3
+        # passes deixa de existir para essa review.
+        if C22.EXCECAO in marcas:
+            linha["classificacao_excecao"] = {
+                "excecao": C22.EXCECAO,
+                "provider": registros[0].get("provider"),
+                "modelo": registros[0].get("modelo"),
+                "modelos_efetivos": sorted({str(r.get("modelo_efetivo"))
+                                            for r in registros}),
+                "camadas": sorted({str(r.get("camada")) for r in registros}),
+            }
+            if dispensado:
+                linha["passe_3_dispensado"] = True
         saida.append(linha)
     return saida
+
+
+def exigir_sem_votos_de_fora(slugs) -> None:
+    """Recusa rodar a exceção C22 enquanto houver, nos passes, registro de
+    `slugs` SEM a marca da exceção — os passes DeepSeek pagos precisam ser
+    arquivados antes (`scripts/arquivar_passes_c22.py`)."""
+    alvo = set(slugs)
+    achados = Counter()
+    for n, arq in ARQ_PASSE.items():
+        if n == 4 or not arq.exists():
+            continue
+        for linha in arq.read_text(encoding="utf-8").splitlines():
+            if linha.strip():
+                r = json.loads(linha)
+                if r.get("slug") in alvo and r.get("excecao") != C22.EXCECAO:
+                    achados[n] += 1
+    if achados:
+        raise ProviderMisturadoNoVoto(
+            f"há registros de fora da exceção C22 para estes filmes nos "
+            f"passes {dict(sorted(achados.items()))} — arquive-os antes "
+            f"(scripts/arquivar_passes_c22.py)")
 
 
 class FilmeForaDaAmostra(RuntimeError):
@@ -391,17 +626,19 @@ def consenso_incremental(linhas_atuais: list[dict],
     """
     bloco = set(slugs_bloco)
     slugs_amostra = {f["slug"] for f in amostra["filmes"]}
-    completas = set(passes[0]) & set(passes[1]) & set(passes[2])
+    completas = chaves_consensuaveis(passes)
     chaves = sorted(c for c in completas
                     if c[0] in bloco and c[0] in slugs_amostra)
     novas = _consensuar(passes, chaves)
     mantidas = [l for l in linhas_atuais if l["slug"] not in bloco]
     linhas = sorted(mantidas + novas,
                     key=lambda l: (l["slug"], l["bucket"], l["id"]))
+    recusadas = ids_recusados_de(bloco)
     n_incompletas = sum(
         1 for r in amostra["reviews"]
         if r["slug"] in bloco
-        and (r["slug"], r["bucket"], r["id"]) not in completas)
+        and (r["slug"], r["bucket"], r["id"]) not in completas
+        and (r["slug"], r["id"]) not in recusadas)
     return linhas, n_incompletas
 
 
@@ -424,7 +661,7 @@ def cmd_consenso() -> None:
         (r["slug"], r["bucket"], r["id"]) for r in amostra["reviews"]
     }
     slugs_amostra = {f["slug"] for f in amostra["filmes"]}
-    completas = set(passes[0]) & set(passes[1]) & set(passes[2])
+    completas = chaves_consensuaveis(passes)
     chaves = sorted(c for c in completas if c[0] in slugs_amostra)
     faltando = chaves_amostra - completas
     consenso = _consensuar(passes, chaves)

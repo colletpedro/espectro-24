@@ -256,6 +256,9 @@ def main():
         data = json.loads(caminho.read_text(encoding="utf-8"))
         # aliviar o peso: origem_paginas não é usado no frontend
         data.pop("origem_paginas", None)
+        # [2026-09-22, C22] proveniência de LLM da exceção Gemini: operacional
+        # (para o dono escolher o que recoletar), nunca página
+        data.pop("proveniencia_llm", None)
         sem_motivo_de_recusa(data)
         filmes[slug] = data
         # cópia crua (referência/deploy), sem origem_paginas

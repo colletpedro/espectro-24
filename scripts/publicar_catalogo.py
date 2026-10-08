@@ -150,7 +150,7 @@ def checar_amostra_antes_de_publicar(slug: str) -> None:
         E.checar_amostra_classificada(do_filme, P.ids_analisados_do_bruto(slug))
 
 
-def publicar_um(slug: str) -> dict:
+def publicar_um(slug: str, excecao_gemini: bool = False) -> dict:
     t0 = time.time()
     try:
         # `--offline` (C14.8 (A)): sem ele, TODA publicação rodava a coleta
@@ -161,7 +161,9 @@ def publicar_um(slug: str) -> dict:
         # `FetchError` (rc≠0), nunca uma recoleta.
         r = subprocess.run(
             [sys.executable, "-m", "espectro24.cli", "--slug", slug,
-             "--tom", "ambos", "--offline"],
+             "--tom", "ambos", "--offline"]
+            # [2026-09-22, C22] síntese e rotulagem em Gemini, só os 55
+            + (["--excecao-gemini"] if excecao_gemini else []),
             cwd=RAIZ, capture_output=True, text=True, timeout=TIMEOUT_S)
         rc, stdout, stderr, expirou = r.returncode, r.stdout, r.stderr, False
     except subprocess.TimeoutExpired as e:
@@ -187,7 +189,24 @@ def publicar_um(slug: str) -> dict:
             "stdout_tail": stdout[-3000:], "stderr_tail": stderr[-6000:]}
 
 
-def cmd_publicar(slugs: list[str], republicar_tudo: bool = False) -> None:
+def cmd_publicar(slugs: list[str], republicar_tudo: bool = False,
+                 excecao_gemini: bool = False) -> None:
+    if excecao_gemini:
+        # [2026-09-22, C22] a exceção é por --slug, NUNCA pelo default
+        # (pendentes) nem por --republicar-tudo, e só dentro dos 55
+        from espectro24 import excecao_c22 as C22
+        if republicar_tudo:
+            raise SystemExit("--excecao-gemini não combina com --republicar-tudo")
+        C22.exigir_no_escopo(slugs)
+        # [2026-09-23] bucket sem substituta para uma recusada: o `n` caiu, e
+        # o dono decide ANTES de publicar
+        from espectro24 import recusas
+        esg = recusas.reservas_esgotadas(slugs)
+        if esg:
+            raise SystemExit(
+                "RECUSADO: reserva de substitutas esgotada (o n caiu) em "
+                + ", ".join(f"{r['slug']}/{r['bucket']}" for r in esg)
+                + " — decisão do dono antes de publicar.")
     checar_tamanho_do_lote(slugs, republicar_tudo)
     LOG_DIR.mkdir(parents=True, exist_ok=True)
     pulados = feitos = falhas = 0
@@ -212,7 +231,8 @@ def cmd_publicar(slugs: list[str], republicar_tudo: bool = False) -> None:
                   f"({type(e).__name__}) — {e}")
             falhas += 1
             continue
-        res = publicar_um(slug)
+        res = (publicar_um(slug, excecao_gemini=True) if excecao_gemini
+               else publicar_um(slug))
         with LOG.open("a", encoding="utf-8") as fh:
             fh.write(json.dumps(res, ensure_ascii=False) + "\n")
         fb = res.get("fallback_conteudo") or {}
@@ -350,6 +370,9 @@ def main() -> None:
                     help="slug a publicar (repetível); default: os pendentes")
     ap.add_argument("--relatorio", action="store_true",
                     help="só agrega o que já está publicado, sem rodar nada")
+    ap.add_argument("--excecao-gemini", action="store_true",
+                    help="exceção C22: síntese e rotulagem em Gemini; exige "
+                         "--slug, só os 55 de excecao_c22.SLUGS")
     ap.add_argument("--republicar-tudo", action="store_true",
                     help=f"autoriza um lote acima de "
                          f"{LIMITE_LOTE_SEM_CONFIRMACAO} filmes (re-scrape "
@@ -358,8 +381,11 @@ def main() -> None:
     if args.relatorio:
         cmd_relatorio()
         return
+    if args.excecao_gemini and not args.slug:
+        ap.error("--excecao-gemini exige --slug")
     cmd_publicar(args.slug or filmes_pendentes(),
-                 republicar_tudo=args.republicar_tudo)
+                 republicar_tudo=args.republicar_tudo,
+                 excecao_gemini=args.excecao_gemini)
 
 
 if __name__ == "__main__":

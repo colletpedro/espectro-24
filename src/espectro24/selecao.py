@@ -90,7 +90,9 @@ def _escada(min_chars: int, cascata: list[int]) -> list[int]:
 def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
                            selecionadas_ids: set[str],
                            filtro_aplicado: int,
-                           excluir_spoiler: bool) -> dict[str, int]:
+                           excluir_spoiler: bool,
+                           excluir_ids: frozenset[str] = frozenset()
+                           ) -> dict[str, int]:
     """Classifica cada review do bruto de um nível em EXATAMENTE uma categoria
     — `selecionada` (não contada) ou um dos motivos de `_MOTIVOS_DESCARTE` —
     numa ordem de precedência fixa (v1.9.1, §3[C2]):
@@ -119,6 +121,12 @@ def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
             continue
         vistos.add(r.id)
         if r.id in selecionadas_ids:
+            continue
+        if r.id in excluir_ids:
+            # [2026-09-23, C22] recusada pelo filtro de conteúdo do provider
+            # (`recusas.py`). A chave só EXISTE quando há recusada no nível:
+            # o dict de todo outro filme sai com o schema de sempre.
+            motivos["recusada_conteudo"] = motivos.get("recusada_conteudo", 0) + 1
             continue
         if not r.texto_completo:
             motivos["truncada_sem_texto"] += 1
@@ -202,7 +210,8 @@ def _escolher_estratificado(pool: list[ReviewBruta], n_alvo: int,
 
 
 def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
-                  cascata: list[int], excluir_spoiler: bool
+                  cascata: list[int], excluir_spoiler: bool,
+                  excluir_ids: frozenset[str] = frozenset()
                   ) -> tuple[list[ReviewBruta], int]:
     """Aplica a cascata a UM nível. Devolve `(pool, filtro_que_vigorou)`.
 
@@ -211,7 +220,8 @@ def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
     longa e 30 curtas fecha com 1, não relaxa para 31.
     """
     elegiveis = [r for r in reviews
-                 if r.texto_completo and not (excluir_spoiler and r.spoiler_flag)]
+                 if r.texto_completo and not (excluir_spoiler and r.spoiler_flag)
+                 and r.id not in excluir_ids]
     degraus = _escada(min_chars, cascata)
     for thr in degraus:
         pool = [r for r in elegiveis if r.n_chars >= thr]
@@ -230,6 +240,7 @@ def selecionar(reviews: list[ReviewBruta],
                cascata: list[int] | None = None,
                piso_nivel: int = PISO_ALOCACAO_POR_NIVEL,
                orcamento_paginas_por_nivel: dict[float, int] | None = None,
+               excluir_ids: frozenset[str] = frozenset(),
                ) -> dict[str, BucketSelecionado]:
     """Escolhe até `cota_por_bucket` reviews por bucket, a partir do bruto.
 
@@ -255,6 +266,11 @@ def selecionar(reviews: list[ReviewBruta],
     **Omiti-lo devolve o comportamento byte-idêntico ao da v1.9.4**, o que
     mantém válidos o caminho offline e todo teste anterior: a estratificação é
     uma adição, não uma substituição.
+
+    `excluir_ids` (2026-09-23, C22): reviews RECUSADAS pelo filtro de conteúdo
+    do provider (`recusas.py`) — inelegíveis no passo 1, como truncada e
+    spoiler, então a vaga vai para a próxima review na ordem de sempre.
+    Vazio (o default) é a seleção byte a byte de antes.
     """
     fr = FRONTEIRAS if fronteiras is None else fronteiras
     cascata = CASCATA_CHARS if cascata is None else cascata
@@ -277,7 +293,7 @@ def selecionar(reviews: list[ReviewBruta],
         filtros: dict[float, int] = {}
         for n in niveis:
             pool, thr = _cascade_pool(por_nivel.get(n, []), min_chars, cascata,
-                                      excluir_spoiler)
+                                      excluir_spoiler, excluir_ids)
             pool.sort(key=lambda r: (r.pagina_origem, posicao[id(r)]))
             pools[n], filtros[n] = pool, thr
 
@@ -298,7 +314,8 @@ def selecionar(reviews: list[ReviewBruta],
             # campos antigos abaixo são DERIVADOS deste dict, não uma segunda
             # contagem que pode divergir dele.
             motivos = _discriminar_descartes(
-                brutas_do_nivel, {r.id for r in escolhidas}, filtros[n], excluir_spoiler)
+                brutas_do_nivel, {r.id for r in escolhidas}, filtros[n],
+                excluir_spoiler, excluir_ids)
             bucket.niveis[n] = NivelSelecionado(
                 nivel=n,
                 n_alvo=alocacao[n],
