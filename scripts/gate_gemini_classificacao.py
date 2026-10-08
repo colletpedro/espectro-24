@@ -56,6 +56,19 @@ Uso:
     python scripts/gate_gemini_classificacao.py comparar    # zero rede: métricas + gate + custo
 
 Saídas em `resultado/auditoria-acuracia/gemini/`.
+
+**Provider `local` (Ollama), 2026-10-08.** O MESMO gate, o MESMO critério de
+parada (IC95 de ΔF1 inteiro abaixo de zero, ΔF1 <= -0,10, falha > 2%), a
+MESMA referência (DeepSeek em disco), com `--provider local --modelo <nome>`:
+    python scripts/gate_gemini_classificacao.py --provider local --modelo qwen3:8b passes
+    python scripts/gate_gemini_classificacao.py --provider local --modelo qwen3:8b verificar
+    python scripts/gate_gemini_classificacao.py --provider local --modelo qwen3:8b comparar
+Saídas em `resultado/auditoria-acuracia/local/<modelo>/` (`:` e `/` do nome
+do modelo viram `-` e `_`: o Windows não aceita `:` em caminho). Chamadas
+SEQUENCIAIS (o Ollama reaproveita o prefixo de 929 tokens entre chamadas
+consecutivas), custo zero, tempo por chamada em cada registro. O resumo de
+tempo vai em `gate.json` → `custo.tempo_local`. Detalhes: `espectro24.local_ollama`
+e `docs/SETUP_WINDOWS.md`.
 """
 from __future__ import annotations
 
@@ -77,11 +90,17 @@ sys.path.insert(0, str(RAIZ / "scripts"))
 import auditoria_acuracia as aa  # noqa: E402
 import variante_impacto_estrito as vie  # noqa: E402
 import verificador_impacto as vi  # noqa: E402
-from classificar_10 import EIXOS, SYSTEM, _normalizar, taxonomia_id  # noqa: E402
+from classificar_10 import EIXOS, EIXOS_VALIDOS, SYSTEM, _normalizar, taxonomia_id  # noqa: E402
 from espectro24.preco import GEMINI_3_7_FLASH, agora_utc_iso, custo_gemini  # noqa: E402
 from espectro24.synthesize import resposta_json_gemini  # noqa: E402
+from espectro24 import local_ollama  # noqa: E402
 
 SAIDA = RAIZ / "resultado" / "auditoria-acuracia" / "gemini"
+SAIDA_BASE = RAIZ / "resultado" / "auditoria-acuracia"
+# Provider do gate em curso. `gemini` é o de sempre; `local` é o Ollama
+# (`_configurar` troca SAIDA e os rótulos antes de qualquer leitura/escrita).
+PROVIDER_GATE = "gemini"
+MODELO_LOCAL: str | None = None
 DIR_DEEPSEEK_CLASS = RAIZ / "resultado" / "auditoria-acuracia" / "variantes"
 DIR_DEEPSEEK_VERIF = RAIZ / "resultado" / "auditoria-acuracia" / "verificador"
 ARQ_RELATORIO = SAIDA / "gate.json"
@@ -99,6 +118,28 @@ N_BOOTSTRAP = 5000
 LIMIAR_DELTA_F1 = -0.10
 LIMIAR_FALHA_PASSE1 = 0.02
 MIN_POSITIVOS_PODER = 20
+
+
+def _slug_modelo(modelo: str) -> str:
+    return modelo.replace(":", "-").replace("/", "_")
+
+
+def _configurar(provider: str, modelo: str | None) -> None:
+    """Aponta o gate para o provider pedido. `local` exige `--modelo` e grava
+    em `local/<modelo>/`; as chaves do relatório (`gemini` no gate original)
+    passam a levar o nome do provider."""
+    global SAIDA, ARQ_RELATORIO, ARQ_SONDA_FLEX, PROVIDER_GATE, MODELO_LOCAL
+    if provider == "gemini":
+        if modelo:
+            raise SystemExit("--modelo só vale com --provider local "
+                             "(o Gemini é fixo em FALLBACK_CONTEUDO_MODELO)")
+        return
+    if not modelo:
+        raise SystemExit("--provider local exige --modelo <nome do Ollama>")
+    PROVIDER_GATE, MODELO_LOCAL = "local", modelo
+    SAIDA = SAIDA_BASE / "local" / _slug_modelo(modelo)
+    ARQ_RELATORIO = SAIDA / "gate.json"
+    ARQ_SONDA_FLEX = SAIDA / "flex_classificacao_passe_1.jsonl"
 
 
 def _arq_class(n: int) -> Path:
@@ -124,9 +165,21 @@ def _ids_ok(arq: Path) -> set[str]:
     return feitos
 
 
+CAMPOS_LOCAL = ("custo_usd", "leitura_prompt_s", "geracao_s", "carga_s",
+                "total_s", "prompt_eval_count", "eval_count")
+
+
+def _chamar(system: str, user: str, estagio: str, camada: str | None,
+            schema: dict | None) -> dict:
+    if PROVIDER_GATE == "local":
+        return local_ollama.resposta_json_local(
+            system, user, estagio=estagio, modelo=MODELO_LOCAL, schema=schema)
+    return resposta_json_gemini(system, user, estagio=estagio, camada=camada)
+
+
 def _rodar(arq: Path, reviews: list[dict], system: str, montar_user,
            interpretar, estagio: str, rotulo: str, camada: str | None = None,
-           concorrencia: int = CONCORRENCIA) -> None:
+           concorrencia: int = CONCORRENCIA, schema: dict | None = None) -> None:
     """Uma passada. Falha vira `ok: False` com a resposta crua e o
     `finish_reason`; a reexecução retenta só as que não têm `ok: True` — o
     mesmo contrato dos passes de produção."""
@@ -135,6 +188,10 @@ def _rodar(arq: Path, reviews: list[dict], system: str, montar_user,
     print(f"  {rotulo}: {len(feitos)} feitas · {len(pendentes)} pendentes")
     if not pendentes:
         return
+    if PROVIDER_GATE == "local":
+        # um de cada vez, na ordem do gabarito: o Ollama só reaproveita o
+        # prefixo entre chamadas CONSECUTIVAS
+        concorrencia = 1
     lock, contador, t0 = Lock(), [0], time.time()
     arq.parent.mkdir(parents=True, exist_ok=True)
     saida = arq.open("a", encoding="utf-8")
@@ -145,18 +202,23 @@ def _rodar(arq: Path, reviews: list[dict], system: str, montar_user,
                 "nivel": review["nivel"], "n_chars": review["n_chars"],
                 "ts": agora_utc_iso()}
         try:
-            resp = resposta_json_gemini(system, montar_user(review),
-                                        estagio=estagio, camada=camada)
+            resp = _chamar(system, montar_user(review), estagio, camada, schema)
             registro = {"ok": True, **base, **interpretar(json.loads(resp["texto"]))}
         except Exception as e:  # noqa: BLE001
             registro = {"ok": False, **base, "erro": f"{type(e).__name__}: {e}"}
             if resp is not None:
                 registro["resposta_crua"] = resp["texto"]
+            elif PROVIDER_GATE == "local":
+                # falha sem resposta: provider, modelo e o tempo gasto até ela
+                registro.update({"provider": "local", "modelo": MODELO_LOCAL,
+                                 "custo_usd": 0.0,
+                                 "latencia_s": getattr(e, "latencia_s", None)})
         if resp is not None:
             registro.update({k: resp[k] for k in (
                 "provider", "modelo", "modelo_efetivo", "uso",
                 "thinking_tokens", "finish_reason", "latencia_s",
                 "camada", "motivo_camada", "traffic_type")})
+            registro.update({k: resp[k] for k in CAMPOS_LOCAL if k in resp})
         with lock:
             saida.write(json.dumps(registro, ensure_ascii=False) + "\n")
             saida.flush()
@@ -226,16 +288,34 @@ def _carregar_env() -> None:
     load_dotenv(RAIZ / ".env")
 
 
+def _exigir_modelo_instalado() -> None:
+    """Falha CEDO, antes de 300 chamadas: servidor fora do ar ou modelo não
+    baixado (`ollama pull <modelo>`)."""
+    try:
+        nomes = local_ollama.modelos_instalados()
+    except Exception as e:  # noqa: BLE001
+        raise SystemExit(f"Ollama inacessível em {local_ollama.url_base()} "
+                         f"({type(e).__name__}: {e}) — suba o servidor "
+                         f"(`ollama serve`) ou ajuste ESPECTRO24_OLLAMA_URL")
+    base = MODELO_LOCAL if ":" in MODELO_LOCAL else MODELO_LOCAL + ":latest"
+    if base not in nomes and MODELO_LOCAL not in nomes:
+        raise SystemExit(f"modelo {MODELO_LOCAL!r} não está no Ollama "
+                         f"({local_ollama.url_base()}). Instalados: {nomes}. "
+                         f"Rode `ollama pull {MODELO_LOCAL}`")
+
+
 def cmd_passes() -> None:
     _carregar_env()
     if taxonomia_id() != "ebab2667de74":
         raise SystemExit(f"taxonomia {taxonomia_id()} ≠ ebab2667de74 — o "
                          f"gabarito do DeepSeek foi medido sob ebab2667de74")
     reviews = _reviews()
-    print(f"{len(reviews)} reviews · {N_PASSES} passes · Gemini")
+    print(f"{len(reviews)} reviews · {N_PASSES} passes · "
+          f"{'Ollama ' + MODELO_LOCAL if PROVIDER_GATE == 'local' else 'Gemini'}")
     for n in range(1, N_PASSES + 1):
         _rodar(_arq_class(n), reviews, SYSTEM, _user_classificacao,
-               _interpretar_classificacao, "classificacao", f"classificação passe {n}")
+               _interpretar_classificacao, "classificacao", f"classificação passe {n}",
+               schema=local_ollama.schema_classificacao(EIXOS_VALIDOS))
 
 
 ARQ_SONDA_FLEX = SAIDA / "flex_classificacao_passe_1.jsonl"
@@ -337,7 +417,8 @@ def cmd_verificar() -> None:
           f"{N_PASSES} passes · Gemini")
     for n in range(1, N_PASSES + 1):
         _rodar(_arq_verif(n), reviews, vi.SYSTEM_V2_ALVO, _user_verificador,
-               _interpretar_verificador, "verificador", f"V2_alvo passe {n}")
+               _interpretar_verificador, "verificador", f"V2_alvo passe {n}",
+               schema=local_ollama.SCHEMA_VERIFICADOR)
 
 
 # ===========================================================================
@@ -583,6 +664,7 @@ def cmd_comparar(modo: str = "padrao") -> None:
     feitos pelo BATCH (verificador em passada única — só o passe 1 existe).
     Saída em `gate_batch.json`."""
     batch = modo == "batch"
+    L = PROVIDER_GATE  # chave do lado "novo" nas tabelas: gemini | local
     prefixo = "batch_classificacao" if batch else "classificacao"
     arqs_class = ([_arq_regs_batch("classificacao", n) for n in (1, 2, 3)]
                   if batch else [_arq_class(n) for n in (1, 2, 3)])
@@ -602,9 +684,9 @@ def cmd_comparar(modo: str = "padrao") -> None:
 
     tab = {
         "consenso": {"deepseek": _tabela(anot, sub(ds_cons)),
-                     "gemini": _tabela(anot, sub(gm_cons))},
+                     L: _tabela(anot, sub(gm_cons))},
         "producao_consenso_mais_v2_passe1": {"deepseek": _tabela(anot, sub(ds_final)),
-                                             "gemini": _tabela(anot, sub(gm_final))},
+                                             L: _tabela(anot, sub(gm_final))},
     }
     boot = {k: _bootstrap(anot, sub(ds_final if k.startswith("producao") else ds_cons),
                           sub(gm_final if k.startswith("producao") else gm_cons))
@@ -618,12 +700,12 @@ def cmd_comparar(modo: str = "padrao") -> None:
         b = boot[decisiva][e]
         fd = (tab[decisiva]["deepseek"]["micro"] if e == "_micro"
               else tab[decisiva]["deepseek"]["por_eixo"][e])["f1"] or 0.0
-        fg = (tab[decisiva]["gemini"]["micro"] if e == "_micro"
-              else tab[decisiva]["gemini"]["por_eixo"][e])["f1"] or 0.0
+        fg = (tab[decisiva][L]["micro"] if e == "_micro"
+              else tab[decisiva][L]["por_eixo"][e])["f1"] or 0.0
         delta = fg - fd
         sig = b["ic95"][1] < 0
         mag = delta <= LIMIAR_DELTA_F1 + 1e-12
-        linhas_gate[e] = {"f1_deepseek": round(fd, 4), "f1_gemini": round(fg, 4),
+        linhas_gate[e] = {"f1_deepseek": round(fd, 4), f"f1_{L}": round(fg, 4),
                           "delta_f1": round(delta, 4), "ic95": b["ic95"],
                           "pior_com_significancia": sig, "pior_em_magnitude": mag,
                           "poder_baixo": e != "_micro" and positivos[e] < MIN_POSITIVOS_PODER}
@@ -652,24 +734,26 @@ def cmd_comparar(modo: str = "padrao") -> None:
         "reprodutibilidade": {
             "classificacao": {"deepseek": _reprodutibilidade(
                                   _passes_class(DIR_DEEPSEEK_CLASS, "A_regra"), "eixos"),
-                              "gemini": _reprodutibilidade(
+                              L: _reprodutibilidade(
                                   _passes_class(SAIDA, prefixo), "eixos")},
             "verificador_V2": {"deepseek": _reprodutibilidade(_passes_ds_verif(), "confirma"),
-                               "gemini": _reprodutibilidade(
+                               L: _reprodutibilidade(
                                    [_ultimo_ok(a) for a in arqs_verif], "confirma")
                                if len(arqs_verif) == 3 else "só passe 1 (produção)"},
         },
-        "falhas": {"classificacao_gemini": falhas_gm, "verificador_gemini": falhas_gm_v,
+        "falhas": {f"classificacao_{L}": falhas_gm, f"verificador_{L}": falhas_gm_v,
                    "classificacao_deepseek_no_gabarito": {
                        "n_falhas": sum(1 for n in (1, 2, 3) for r in _linhas(
                            DIR_DEEPSEEK_CLASS / f"A_regra_passe_{n}.jsonl") if not r.get("ok"))}},
         "danos_verificador": {"deepseek": vi._dano_e_acerto(anot, {
                                   rid: r["confirma"] for rid, r in _passes_ds_verif()[0].items()}),
-                              "gemini": vi._dano_e_acerto(anot, ver_p1)},
-        "custo": _custo(_slugs_55()) if not batch else {
-            "medido_batch_usd": sum(custo_gemini(r) for a in arqs_class + arqs_verif
-                                    for r in _linhas(a) if "uso" in r)},
-        "modo": modo,
+                              L: vi._dano_e_acerto(anot, ver_p1)},
+        "custo": (_custo_local(arqs_class + arqs_verif) if L == "local"
+                  else _custo(_slugs_55()) if not batch else {
+                      "medido_batch_usd": sum(custo_gemini(r) for a in arqs_class + arqs_verif
+                                              for r in _linhas(a) if "uso" in r)}),
+        "modo": modo, "provider": L, "modelo_local": MODELO_LOCAL,
+        "lado": L,
         "gate": {"parar": bool(motivos), "motivos": motivos},
     }
     SAIDA.mkdir(parents=True, exist_ok=True)
@@ -678,18 +762,49 @@ def cmd_comparar(modo: str = "padrao") -> None:
     _imprimir(rel)
 
 
+def _quantis(xs: list[float]) -> dict:
+    if not xs:
+        return {}
+    v = sorted(xs)
+    q = lambda p: v[min(len(v) - 1, int(p * len(v)))]  # noqa: E731
+    return {"n": len(v), "soma": round(sum(v), 1), "media": round(sum(v) / len(v), 2),
+            "p50": round(q(0.5), 2), "p95": round(q(0.95), 2), "max": round(v[-1], 2)}
+
+
+def _custo_local(arqs: list[Path]) -> dict:
+    """Custo zero (gravado por chamada) e o TEMPO: parede, leitura do prompt
+    e geração separados. `prompt_eval_count` da 1ª chamada contra a mediana
+    é a evidência de que o Ollama reaproveitou o prefixo fixo."""
+    regs = [r for a in arqs for r in _linhas(a)]
+    com_tempo = [r for r in regs if "leitura_prompt_s" in r]
+    leitura_tokens = [r["prompt_eval_count"] for r in com_tempo]
+    return {"usd": sum(r.get("custo_usd", 0.0) for r in regs),
+            "n_chamadas": len(regs),
+            "tempo_local": {
+                "parede_s": _quantis([r["latencia_s"] for r in regs
+                                      if r.get("latencia_s") is not None]),
+                "leitura_prompt_s": _quantis([r["leitura_prompt_s"] for r in com_tempo]),
+                "geracao_s": _quantis([r["geracao_s"] for r in com_tempo]),
+                "carga_s": _quantis([r["carga_s"] for r in com_tempo]),
+                "prompt_eval_count": _quantis([float(x) for x in leitura_tokens]),
+                "tokens_gerados": _quantis([float(r["eval_count"]) for r in com_tempo]),
+            },
+            "modelo_efetivo": dict(Counter(r.get("modelo_efetivo") for r in regs))}
+
+
 def _fmt(x) -> str:
     return "  —  " if x is None else f"{x:.3f}"
 
 
 def _imprimir(rel: dict) -> None:
+    L = rel["lado"]
     for k, t in rel["tabelas"].items():
         print(f"\n== {k} (n={rel['n_pareado']}) ==")
         print(f"{'eixo':22} {'pos':>4} | {'DS P':>6} {'DS R':>6} {'DS F1':>6} | "
               f"{'GM P':>6} {'GM R':>6} {'GM F1':>6} | ΔF1 IC95")
         for e in list(EIXOS) + ["_micro"]:
             d = t["deepseek"]["micro" if e == "_micro" else "por_eixo"]
-            g = t["gemini"]["micro" if e == "_micro" else "por_eixo"]
+            g = t[L]["micro" if e == "_micro" else "por_eixo"]
             d = d if e == "_micro" else d[e]
             g = g if e == "_micro" else g[e]
             b = rel["bootstrap_delta_f1"][k][e]
@@ -698,12 +813,12 @@ def _imprimir(rel: dict) -> None:
                   f"{_fmt(g['precisao'])} {_fmt(g['recall'])} {_fmt(g['f1'])} | "
                   f"{(g['f1'] or 0) - (d['f1'] or 0):+.3f} {b['ic95']}")
         print(f"concordância exata: DS {t['deepseek']['concordancia_exata']:.2f} · "
-              f"GM {t['gemini']['concordancia_exata']:.2f}")
+              f"{L[:2].upper()} {t[L]['concordancia_exata']:.2f}")
     print("\n== reprodutibilidade ==")
     print(json.dumps(rel["reprodutibilidade"], ensure_ascii=False, indent=1))
     print("\n== falhas ==")
     f = rel["falhas"]
-    for k in ("classificacao_gemini", "verificador_gemini"):
+    for k in (f"classificacao_{L}", f"verificador_{L}"):
         x = f[k]
         print(f"{k}: {x['n_falhas']}/{x['n_chamadas']} chamadas · 1ª tentativa "
               f"{x['falhas_primeira_tentativa']}/{x['n_primeira_tentativa']} · "
@@ -726,12 +841,22 @@ def main() -> None:
     ap.add_argument("cmd", choices=("passes", "verificar", "comparar", "comparar-batch",
                                     "sonda-flex",
                                     "sonda-batch", "sonda-batch-coletar"))
+    ap.add_argument("--provider", choices=("gemini", "local"), default="gemini",
+                    help="gemini (padrão) ou local (Ollama; exige --modelo)")
+    ap.add_argument("--modelo", default=None,
+                    help="nome do modelo no Ollama, ex.: qwen3:8b")
     ap.add_argument("--concorrencia", type=int, default=CONCORRENCIA)
     ap.add_argument("--rodada", type=int, default=1)
     ap.add_argument("--tipo", choices=("classificacao", "verificador"),
                     default="classificacao")
     ap.add_argument("--passe", type=int, default=1)
     a = ap.parse_args()
+    _configurar(a.provider, a.modelo)
+    if a.provider == "local" and a.cmd not in ("passes", "verificar", "comparar"):
+        raise SystemExit(f"{a.cmd!r} é do Gemini (flex/batch); "
+                         f"com --provider local use passes | verificar | comparar")
+    if a.provider == "local" and a.cmd in ("passes", "verificar"):
+        _exigir_modelo_instalado()
     if a.cmd == "sonda-flex":
         return cmd_sonda_flex(a.concorrencia, a.rodada)
     if a.cmd == "comparar-batch":
