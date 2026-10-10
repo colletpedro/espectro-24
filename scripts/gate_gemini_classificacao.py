@@ -136,6 +136,10 @@ def _configurar(provider: str, modelo: str | None) -> None:
         return
     if not modelo:
         raise SystemExit("--provider local exige --modelo <nome do Ollama>")
+    try:
+        local_ollama.nivel_think()
+    except ValueError as e:
+        raise SystemExit(str(e))
     PROVIDER_GATE, MODELO_LOCAL = "local", modelo
     SAIDA = SAIDA_BASE / "local" / _slug_modelo(modelo)
     ARQ_RELATORIO = SAIDA / "gate.json"
@@ -165,7 +169,7 @@ def _ids_ok(arq: Path) -> set[str]:
     return feitos
 
 
-CAMPOS_LOCAL = ("custo_usd", "leitura_prompt_s", "geracao_s", "carga_s",
+CAMPOS_LOCAL = ("custo_usd", "think", "leitura_prompt_s", "geracao_s", "carga_s",
                 "total_s", "prompt_eval_count", "eval_count")
 
 
@@ -212,6 +216,7 @@ def _rodar(arq: Path, reviews: list[dict], system: str, montar_user,
                 # falha sem resposta: provider, modelo e o tempo gasto até ela
                 registro.update({"provider": "local", "modelo": MODELO_LOCAL,
                                  "custo_usd": 0.0,
+                                 "think": local_ollama.nivel_think(),
                                  "latencia_s": getattr(e, "latencia_s", None)})
         if resp is not None:
             registro.update({k: resp[k] for k in (
@@ -756,6 +761,7 @@ def cmd_comparar(modo: str = "padrao") -> None:
                       "medido_batch_usd": sum(custo_gemini(r) for a in arqs_class + arqs_verif
                                               for r in _linhas(a) if "uso" in r)}),
         "modo": modo, "provider": L, "modelo_local": MODELO_LOCAL,
+        "think": local_ollama.nivel_think() if L == "local" else None,
         "lado": L,
         "gate": {"parar": bool(motivos), "motivos": motivos},
     }
@@ -792,6 +798,7 @@ def _custo_local(arqs: list[Path]) -> dict:
                 "prompt_eval_count": _quantis([float(x) for x in leitura_tokens]),
                 "tokens_gerados": _quantis([float(r["eval_count"]) for r in com_tempo]),
             },
+            "think": dict(Counter(r.get("think") for r in regs)),
             "modelo_efetivo": dict(Counter(r.get("modelo_efetivo") for r in regs))}
 
 

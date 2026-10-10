@@ -39,6 +39,8 @@ servidor, não há outro slot para desfazer o prefixo.
   Ollama, 2048, truncaria prefixo + review longa em silêncio).
 - `ESPECTRO24_OLLAMA_TEMPERATURE` — opcional; ausente = padrão do modelo
   (os outros providers também não fixam temperatura).
+- `ESPECTRO24_OLLAMA_THINK` — nível de raciocínio: `false` (padrão), `low`,
+  `medium` ou `high`. Ver `nivel_think`.
 - `ESPECTRO24_OLLAMA_NUM_PREDICT` — teto de saída, padrão 2000 (o mesmo do
   Gemini, `FALLBACK_CONTEUDO_MAX_TOKENS_JSON`).
 """
@@ -131,6 +133,24 @@ def prazo_s() -> float:
     return float(bruto) if bruto else PRAZO_PADRAO_S
 
 
+NIVEIS_THINK = ("false", "low", "medium", "high")
+
+
+def nivel_think() -> str:
+    """O nível de `think` pedido, de `ESPECTRO24_OLLAMA_THINK` (padrão
+    `false`). Documentação do Ollama (docs.ollama.com/capabilities/thinking,
+    conferida em 2026-10-10): `think` aceita booleano ou, nos modelos que
+    declaram níveis, "low"/"medium"/"high". O `gpt-oss` NÃO tem como ser
+    desligado — `false` não o desliga, ele espera um dos três níveis — e
+    qwen3/mistral seguem com `false`. Valor fora da lista é erro, não
+    fallback silencioso."""
+    bruto = (os.environ.get("ESPECTRO24_OLLAMA_THINK") or "false").strip().lower()
+    if bruto not in NIVEIS_THINK:
+        raise ValueError(f"ESPECTRO24_OLLAMA_THINK={bruto!r} inválido — "
+                         f"use um de {', '.join(NIVEIS_THINK)}")
+    return bruto
+
+
 def _opcoes() -> dict:
     op = {"num_ctx": int(os.environ.get("ESPECTRO24_OLLAMA_NUM_CTX")
                          or NUM_CTX_PADRAO),
@@ -161,13 +181,17 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
     `prompt_eval_count` e `eval_count`. Levanta `LLMLocalFalhou` (com a
     latência) se não houver resposta.
 
-    `think: false`: um modelo com "raciocínio" (família qwen3, deepseek-r1)
+    `think`: `false` por padrão (ver `nivel_think` para os outros níveis; o
+    nível usado vai em `think` no retorno, `"omitido"` se o servidor recusou
+    o campo). Com `false`, um modelo com "raciocínio" (família qwen3, deepseek-r1)
     gastaria o teto de saída pensando — na CPU, minutos por chamada — e a
     saída forçada por schema nem o deixa escrever o pensamento. Modelo sem
     esse recurso ignora o campo; se o servidor o recusar (400), a chamada é
     refeita uma vez sem ele."""
+    nivel = nivel_think()
     corpo = {"model": modelo, "stream": False, "keep_alive": KEEP_ALIVE,
-             "format": schema, "think": False, "options": _opcoes(),
+             "format": schema, "think": False if nivel == "false" else nivel,
+             "options": _opcoes(),
              "messages": [{"role": "system", "content": system},
                           {"role": "user", "content": user}]}
     limite = prazo if prazo is not None else prazo_s()
@@ -181,6 +205,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
         r = post(corpo)
         if r.status_code == 400 and "think" in r.text.lower():
             corpo.pop("think")
+            nivel = "omitido"
             r = post(corpo)
         if r.status_code != 200:
             raise LLMLocalFalhou(
@@ -212,7 +237,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
         "finish_reason": dados.get("done_reason"),
         "camada": "local", "motivo_camada": None, "traffic_type": None,
         "latencia_s": round(dt, 2),
-        "custo_usd": 0.0,
+        "custo_usd": 0.0, "think": nivel,
         "leitura_prompt_s": _s(dados.get("prompt_eval_duration")),
         "geracao_s": _s(dados.get("eval_duration")),
         "carga_s": _s(dados.get("load_duration")),

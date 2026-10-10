@@ -411,3 +411,81 @@ def test_comparar_sem_passes_explica_em_vez_de_quebrar(gate_local):
     with pytest.raises(SystemExit) as e:
         G.cmd_comparar()
     assert "passes" in str(e.value)
+
+
+# --- nível de raciocínio (ESPECTRO24_OLLAMA_THINK) -------------------------------
+
+def test_think_padrao_e_false_booleano_e_fica_no_registro(ollama, monkeypatch):
+    monkeypatch.delenv("ESPECTRO24_OLLAMA_THINK", raising=False)
+    r = _chamar()
+    assert ollama.requisicoes[0]["think"] is False
+    assert r["think"] == "false"
+
+
+@pytest.mark.parametrize("valor,enviado", [("false", False), ("low", "low"),
+                                           ("medium", "medium"), ("high", "high")])
+def test_think_quatro_valores(ollama, monkeypatch, valor, enviado):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", valor)
+    r = _chamar()
+    assert ollama.requisicoes[0]["think"] == enviado
+    assert type(ollama.requisicoes[0]["think"]) is type(enviado)
+    assert r["think"] == valor
+
+
+def test_think_ignora_caixa_e_espacos(ollama, monkeypatch):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", " High ")
+    assert _chamar()["think"] == "high"
+    assert ollama.requisicoes[0]["think"] == "high"
+
+
+@pytest.mark.parametrize("valor", ["true", "alto", "1", "xhigh"])
+def test_think_invalido_e_erro_e_nao_chama_o_servidor(ollama, monkeypatch, valor):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", valor)
+    with pytest.raises(ValueError):
+        _chamar()
+    assert ollama.requisicoes == []
+
+
+def test_think_recusado_pelo_servidor_fica_omitido_no_registro(ollama, monkeypatch):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "low")
+
+    def do_POST(self):
+        corpo = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
+        ollama.requisicoes.append(corpo)
+        if "think" in corpo:
+            return self._enviar(400, {"error": "model does not support think"})
+        self._enviar(200, _corpo_ok())
+
+    ollama.srv.RequestHandlerClass.do_POST = do_POST
+    assert _chamar()["think"] == "omitido"
+
+
+def test_gate_grava_o_think_em_cada_registro_e_no_gate_json(gate_local, ollama, monkeypatch):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "medium")
+    _, reviews = gate_local
+    G._rodar(G._arq_class(1), reviews[:2], "SISTEMA", G._user_classificacao,
+             G._interpretar_classificacao, "classificacao", "p1",
+             schema=local_ollama.schema_classificacao(G.EIXOS_VALIDOS))
+    assert [r["think"] for r in G._linhas(G._arq_class(1))] == ["medium", "medium"]
+    assert G._custo_local([G._arq_class(1)])["think"] == {"medium": 2}
+    ollama.respostas.append(500)
+    G._rodar(G._arq_class(2), reviews[:1], "S", G._user_classificacao,
+             G._interpretar_classificacao, "classificacao", "p2",
+             schema=local_ollama.schema_classificacao(G.EIXOS_VALIDOS))
+    assert G._linhas(G._arq_class(2))[0]["think"] == "medium"  # falha também
+
+
+def test_gate_json_leva_o_think(gate_local, monkeypatch):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "high")
+    _copiar_como_local(G.SAIDA, False)
+    G.cmd_comparar()
+    rel = json.loads((G.SAIDA / "gate.json").read_text(encoding="utf-8"))
+    assert rel["think"] == "high"
+
+
+def test_gate_recusa_think_invalido_antes_de_rodar(monkeypatch):
+    for nome in ("SAIDA", "ARQ_RELATORIO", "ARQ_SONDA_FLEX", "PROVIDER_GATE", "MODELO_LOCAL"):
+        monkeypatch.setattr(G, nome, getattr(G, nome))
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "true")
+    with pytest.raises(SystemExit):
+        G._configurar("local", "gpt-oss:20b")

@@ -77,6 +77,7 @@ Opcionais — o padrão já serve para o Ollama no próprio Windows:
 | `ESPECTRO24_OLLAMA_PRAZO_S` | `600` | prazo por chamada, em segundos. Na CPU uma review longa leva 1–2 min e a 1ª chamada soma a carga do modelo; suba para `900` ou mais com modelo grande |
 | `ESPECTRO24_OLLAMA_NUM_CTX` | `8192` | janela de contexto (prefixo de ~929 tokens + a review) |
 | `ESPECTRO24_OLLAMA_NUM_PREDICT` | `2000` | teto de tokens de saída |
+| `ESPECTRO24_OLLAMA_THINK` | `false` | nível de raciocínio: `false`, `low`, `medium` ou `high`. **`gpt-oss` não desliga com `false`** — use `low` (ou mais). qwen3/mistral: deixe `false`. O nível usado vai em cada registro e no `gate.json`. Com raciocínio ligado, os tokens pensados contam no teto de saída: suba `ESPECTRO24_OLLAMA_NUM_PREDICT` (ex.: `4000`) se aparecer `finish_reason: length` |
 | `ESPECTRO24_OLLAMA_TEMPERATURE` | (padrão do modelo) | só se quiser fixar |
 
 **Uma variável é do servidor, não do gate:** `OLLAMA_NUM_PARALLEL=1`. O Ollama
