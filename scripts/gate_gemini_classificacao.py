@@ -782,8 +782,9 @@ def _quantis(xs: list[float]) -> dict:
 
 def _custo_local(arqs: list[Path]) -> dict:
     """Custo zero (gravado por chamada) e o TEMPO: parede, leitura do prompt
-    e geração separados. `prompt_eval_count` da 1ª chamada contra a mediana
-    é a evidência de que o Ollama reaproveitou o prefixo fixo."""
+    e geração separados. O sinal de que o Ollama reaproveitou o prefixo fixo é
+    o tempo de leitura do prompt: alto na 1ª chamada, baixo nas seguintes
+    (`reaproveitamento_do_prefixo`). `prompt_eval_count` não serve de sinal."""
     regs = [r for a in arqs for r in _linhas(a)]
     com_tempo = [r for r in regs if "leitura_prompt_s" in r]
     leitura_tokens = [r["prompt_eval_count"] for r in com_tempo]
@@ -799,6 +800,11 @@ def _custo_local(arqs: list[Path]) -> dict:
                 "tokens_gerados": _quantis([float(r["eval_count"]) for r in com_tempo]),
             },
             "think": dict(Counter(r.get("think") for r in regs)),
+            "reaproveitamento_do_prefixo": (
+                {"leitura_prompt_primeira_chamada_s": com_tempo[0]["leitura_prompt_s"],
+                 "leitura_prompt_mediana_s": _quantis(
+                     [r["leitura_prompt_s"] for r in com_tempo[1:]]).get("p50")}
+                if len(com_tempo) > 1 else None),
             "modelo_efetivo": dict(Counter(r.get("modelo_efetivo") for r in regs))}
 
 

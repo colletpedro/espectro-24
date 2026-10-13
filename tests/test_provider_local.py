@@ -489,3 +489,16 @@ def test_gate_recusa_think_invalido_antes_de_rodar(monkeypatch):
     monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "true")
     with pytest.raises(SystemExit):
         G._configurar("local", "gpt-oss:20b")
+
+
+def test_resumo_traz_o_sinal_de_reaproveitamento_do_prefixo_pelo_tempo_de_leitura(gate_local, ollama):
+    _, reviews = gate_local
+    ollama.respostas.append(_corpo_ok(prompt_eval_duration=23_000_000_000))
+    ollama.respostas.append(_corpo_ok(prompt_eval_duration=1_200_000_000))
+    ollama.respostas.append(_corpo_ok(prompt_eval_duration=1_300_000_000))
+    G._rodar(G._arq_class(1), reviews, "SISTEMA", G._user_classificacao,
+             G._interpretar_classificacao, "classificacao", "p1",
+             schema=local_ollama.schema_classificacao(G.EIXOS_VALIDOS))
+    r = G._custo_local([G._arq_class(1)])["reaproveitamento_do_prefixo"]
+    assert r["leitura_prompt_primeira_chamada_s"] == 23.0
+    assert r["leitura_prompt_mediana_s"] in (1.2, 1.3)
