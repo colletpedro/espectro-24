@@ -1,0 +1,885 @@
+{
+  "criterio": {
+    "limiar_delta_f1": -0.1,
+    "limiar_falha_primeira_tentativa": 0.02,
+    "configuracao_decisiva": "producao_consenso_mais_v2_passe1",
+    "bootstrap": {
+      "B": 5000,
+      "semente": 20260922
+    }
+  },
+  "referencia_deepseek": "A_regra_passe_1-3 + V2_alvo passe 1, em disco (2026-08-13/14, V4-Flash); nenhuma chamada nova",
+  "n_pareado": 100,
+  "positivos_no_gabarito": {
+    "ritmo": 30,
+    "atuacao": 33,
+    "direcao_imagem": 42,
+    "roteiro_estrutura": 69,
+    "som_trilha": 20,
+    "tom_atmosfera": 37,
+    "impacto_emocional": 38,
+    "comparacoes": 47,
+    "expectativa": 40,
+    "critica_social": 23
+  },
+  "tabelas": {
+    "consenso": {
+      "deepseek": {
+        "por_eixo": {
+          "ritmo": {
+            "tp": 25,
+            "fp": 4,
+            "fn": 5,
+            "precisao": 0.8620689655172413,
+            "recall": 0.8333333333333334,
+            "f1": 0.847457627118644
+          },
+          "atuacao": {
+            "tp": 27,
+            "fp": 0,
+            "fn": 6,
+            "precisao": 1.0,
+            "recall": 0.8181818181818182,
+            "f1": 0.9
+          },
+          "direcao_imagem": {
+            "tp": 37,
+            "fp": 1,
+            "fn": 5,
+            "precisao": 0.9736842105263158,
+            "recall": 0.8809523809523809,
+            "f1": 0.925
+          },
+          "roteiro_estrutura": {
+            "tp": 52,
+            "fp": 3,
+            "fn": 17,
+            "precisao": 0.9454545454545454,
+            "recall": 0.7536231884057971,
+            "f1": 0.8387096774193549
+          },
+          "som_trilha": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 3,
+            "precisao": 1.0,
+            "recall": 0.85,
+            "f1": 0.918918918918919
+          },
+          "tom_atmosfera": {
+            "tp": 22,
+            "fp": 3,
+            "fn": 15,
+            "precisao": 0.88,
+            "recall": 0.5945945945945946,
+            "f1": 0.7096774193548387
+          },
+          "impacto_emocional": {
+            "tp": 35,
+            "fp": 37,
+            "fn": 3,
+            "precisao": 0.4861111111111111,
+            "recall": 0.9210526315789473,
+            "f1": 0.6363636363636364
+          },
+          "comparacoes": {
+            "tp": 37,
+            "fp": 5,
+            "fn": 10,
+            "precisao": 0.8809523809523809,
+            "recall": 0.7872340425531915,
+            "f1": 0.8314606741573034
+          },
+          "expectativa": {
+            "tp": 20,
+            "fp": 2,
+            "fn": 20,
+            "precisao": 0.9090909090909091,
+            "recall": 0.5,
+            "f1": 0.6451612903225806
+          },
+          "critica_social": {
+            "tp": 17,
+            "fp": 8,
+            "fn": 6,
+            "precisao": 0.68,
+            "recall": 0.7391304347826086,
+            "f1": 0.7083333333333334
+          }
+        },
+        "micro": {
+          "tp": 289,
+          "fp": 63,
+          "fn": 90,
+          "precisao": 0.8210227272727273,
+          "recall": 0.762532981530343,
+          "f1": 0.7906976744186046
+        },
+        "concordancia_exata": 0.13,
+        "n": 100
+      },
+      "local": {
+        "por_eixo": {
+          "ritmo": {
+            "tp": 14,
+            "fp": 2,
+            "fn": 16,
+            "precisao": 0.875,
+            "recall": 0.4666666666666667,
+            "f1": 0.6086956521739131
+          },
+          "atuacao": {
+            "tp": 25,
+            "fp": 3,
+            "fn": 8,
+            "precisao": 0.8928571428571429,
+            "recall": 0.7575757575757576,
+            "f1": 0.819672131147541
+          },
+          "direcao_imagem": {
+            "tp": 34,
+            "fp": 0,
+            "fn": 8,
+            "precisao": 1.0,
+            "recall": 0.8095238095238095,
+            "f1": 0.8947368421052632
+          },
+          "roteiro_estrutura": {
+            "tp": 58,
+            "fp": 3,
+            "fn": 11,
+            "precisao": 0.9508196721311475,
+            "recall": 0.8405797101449275,
+            "f1": 0.8923076923076924
+          },
+          "som_trilha": {
+            "tp": 15,
+            "fp": 1,
+            "fn": 5,
+            "precisao": 0.9375,
+            "recall": 0.75,
+            "f1": 0.8333333333333334
+          },
+          "tom_atmosfera": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 30,
+            "precisao": 0.875,
+            "recall": 0.1891891891891892,
+            "f1": 0.3111111111111111
+          },
+          "impacto_emocional": {
+            "tp": 23,
+            "fp": 16,
+            "fn": 15,
+            "precisao": 0.5897435897435898,
+            "recall": 0.6052631578947368,
+            "f1": 0.5974025974025974
+          },
+          "comparacoes": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 32,
+            "precisao": 1.0,
+            "recall": 0.3191489361702128,
+            "f1": 0.4838709677419355
+          },
+          "expectativa": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 30,
+            "precisao": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "critica_social": {
+            "tp": 8,
+            "fp": 2,
+            "fn": 15,
+            "precisao": 0.8,
+            "recall": 0.34782608695652173,
+            "f1": 0.48484848484848486
+          }
+        },
+        "micro": {
+          "tp": 209,
+          "fp": 28,
+          "fn": 170,
+          "precisao": 0.8818565400843882,
+          "recall": 0.5514511873350924,
+          "f1": 0.6785714285714286
+        },
+        "concordancia_exata": 0.16,
+        "n": 100
+      }
+    },
+    "producao_consenso_mais_v2_passe1": {
+      "deepseek": {
+        "por_eixo": {
+          "ritmo": {
+            "tp": 25,
+            "fp": 4,
+            "fn": 5,
+            "precisao": 0.8620689655172413,
+            "recall": 0.8333333333333334,
+            "f1": 0.847457627118644
+          },
+          "atuacao": {
+            "tp": 27,
+            "fp": 0,
+            "fn": 6,
+            "precisao": 1.0,
+            "recall": 0.8181818181818182,
+            "f1": 0.9
+          },
+          "direcao_imagem": {
+            "tp": 37,
+            "fp": 1,
+            "fn": 5,
+            "precisao": 0.9736842105263158,
+            "recall": 0.8809523809523809,
+            "f1": 0.925
+          },
+          "roteiro_estrutura": {
+            "tp": 52,
+            "fp": 3,
+            "fn": 17,
+            "precisao": 0.9454545454545454,
+            "recall": 0.7536231884057971,
+            "f1": 0.8387096774193549
+          },
+          "som_trilha": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 3,
+            "precisao": 1.0,
+            "recall": 0.85,
+            "f1": 0.918918918918919
+          },
+          "tom_atmosfera": {
+            "tp": 22,
+            "fp": 3,
+            "fn": 15,
+            "precisao": 0.88,
+            "recall": 0.5945945945945946,
+            "f1": 0.7096774193548387
+          },
+          "impacto_emocional": {
+            "tp": 27,
+            "fp": 7,
+            "fn": 11,
+            "precisao": 0.7941176470588235,
+            "recall": 0.7105263157894737,
+            "f1": 0.75
+          },
+          "comparacoes": {
+            "tp": 37,
+            "fp": 5,
+            "fn": 10,
+            "precisao": 0.8809523809523809,
+            "recall": 0.7872340425531915,
+            "f1": 0.8314606741573034
+          },
+          "expectativa": {
+            "tp": 20,
+            "fp": 2,
+            "fn": 20,
+            "precisao": 0.9090909090909091,
+            "recall": 0.5,
+            "f1": 0.6451612903225806
+          },
+          "critica_social": {
+            "tp": 17,
+            "fp": 8,
+            "fn": 6,
+            "precisao": 0.68,
+            "recall": 0.7391304347826086,
+            "f1": 0.7083333333333334
+          }
+        },
+        "micro": {
+          "tp": 281,
+          "fp": 33,
+          "fn": 98,
+          "precisao": 0.8949044585987261,
+          "recall": 0.741424802110818,
+          "f1": 0.810966810966811
+        },
+        "concordancia_exata": 0.23,
+        "n": 100
+      },
+      "local": {
+        "por_eixo": {
+          "ritmo": {
+            "tp": 14,
+            "fp": 2,
+            "fn": 16,
+            "precisao": 0.875,
+            "recall": 0.4666666666666667,
+            "f1": 0.6086956521739131
+          },
+          "atuacao": {
+            "tp": 25,
+            "fp": 3,
+            "fn": 8,
+            "precisao": 0.8928571428571429,
+            "recall": 0.7575757575757576,
+            "f1": 0.819672131147541
+          },
+          "direcao_imagem": {
+            "tp": 34,
+            "fp": 0,
+            "fn": 8,
+            "precisao": 1.0,
+            "recall": 0.8095238095238095,
+            "f1": 0.8947368421052632
+          },
+          "roteiro_estrutura": {
+            "tp": 58,
+            "fp": 3,
+            "fn": 11,
+            "precisao": 0.9508196721311475,
+            "recall": 0.8405797101449275,
+            "f1": 0.8923076923076924
+          },
+          "som_trilha": {
+            "tp": 15,
+            "fp": 1,
+            "fn": 5,
+            "precisao": 0.9375,
+            "recall": 0.75,
+            "f1": 0.8333333333333334
+          },
+          "tom_atmosfera": {
+            "tp": 7,
+            "fp": 1,
+            "fn": 30,
+            "precisao": 0.875,
+            "recall": 0.1891891891891892,
+            "f1": 0.3111111111111111
+          },
+          "impacto_emocional": {
+            "tp": 21,
+            "fp": 11,
+            "fn": 17,
+            "precisao": 0.65625,
+            "recall": 0.5526315789473685,
+            "f1": 0.6
+          },
+          "comparacoes": {
+            "tp": 15,
+            "fp": 0,
+            "fn": 32,
+            "precisao": 1.0,
+            "recall": 0.3191489361702128,
+            "f1": 0.4838709677419355
+          },
+          "expectativa": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 30,
+            "precisao": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          "critica_social": {
+            "tp": 8,
+            "fp": 2,
+            "fn": 15,
+            "precisao": 0.8,
+            "recall": 0.34782608695652173,
+            "f1": 0.48484848484848486
+          }
+        },
+        "micro": {
+          "tp": 207,
+          "fp": 23,
+          "fn": 172,
+          "precisao": 0.9,
+          "recall": 0.5461741424802111,
+          "f1": 0.6798029556650246
+        },
+        "concordancia_exata": 0.17,
+        "n": 100
+      }
+    }
+  },
+  "bootstrap_delta_f1": {
+    "consenso": {
+      "ritmo": {
+        "delta_f1_mediano": -0.2382,
+        "ic95": [
+          -0.4179,
+          -0.0893
+        ]
+      },
+      "atuacao": {
+        "delta_f1_mediano": -0.0809,
+        "ic95": [
+          -0.1923,
+          0.0179
+        ]
+      },
+      "direcao_imagem": {
+        "delta_f1_mediano": -0.0291,
+        "ic95": [
+          -0.1096,
+          0.0441
+        ]
+      },
+      "roteiro_estrutura": {
+        "delta_f1_mediano": 0.0527,
+        "ic95": [
+          -0.0036,
+          0.1152
+        ]
+      },
+      "som_trilha": {
+        "delta_f1_mediano": -0.0839,
+        "ic95": [
+          -0.241,
+          0.0427
+        ]
+      },
+      "tom_atmosfera": {
+        "delta_f1_mediano": -0.3982,
+        "ic95": [
+          -0.5847,
+          -0.2042
+        ]
+      },
+      "impacto_emocional": {
+        "delta_f1_mediano": -0.0381,
+        "ic95": [
+          -0.1726,
+          0.086
+        ]
+      },
+      "comparacoes": {
+        "delta_f1_mediano": -0.3469,
+        "ic95": [
+          -0.5005,
+          -0.2048
+        ]
+      },
+      "expectativa": {
+        "delta_f1_mediano": -0.2421,
+        "ic95": [
+          -0.4269,
+          -0.0624
+        ]
+      },
+      "critica_social": {
+        "delta_f1_mediano": -0.2231,
+        "ic95": [
+          -0.4359,
+          -0.0197
+        ]
+      },
+      "_micro": {
+        "delta_f1_mediano": -0.1116,
+        "ic95": [
+          -0.1546,
+          -0.0695
+        ]
+      }
+    },
+    "producao_consenso_mais_v2_passe1": {
+      "ritmo": {
+        "delta_f1_mediano": -0.2382,
+        "ic95": [
+          -0.4179,
+          -0.0893
+        ]
+      },
+      "atuacao": {
+        "delta_f1_mediano": -0.0809,
+        "ic95": [
+          -0.1923,
+          0.0179
+        ]
+      },
+      "direcao_imagem": {
+        "delta_f1_mediano": -0.0291,
+        "ic95": [
+          -0.1096,
+          0.0441
+        ]
+      },
+      "roteiro_estrutura": {
+        "delta_f1_mediano": 0.0527,
+        "ic95": [
+          -0.0036,
+          0.1152
+        ]
+      },
+      "som_trilha": {
+        "delta_f1_mediano": -0.0839,
+        "ic95": [
+          -0.241,
+          0.0427
+        ]
+      },
+      "tom_atmosfera": {
+        "delta_f1_mediano": -0.3982,
+        "ic95": [
+          -0.5847,
+          -0.2042
+        ]
+      },
+      "impacto_emocional": {
+        "delta_f1_mediano": -0.1508,
+        "ic95": [
+          -0.3078,
+          0.0
+        ]
+      },
+      "comparacoes": {
+        "delta_f1_mediano": -0.3469,
+        "ic95": [
+          -0.5005,
+          -0.2048
+        ]
+      },
+      "expectativa": {
+        "delta_f1_mediano": -0.2421,
+        "ic95": [
+          -0.4269,
+          -0.0624
+        ]
+      },
+      "critica_social": {
+        "delta_f1_mediano": -0.2231,
+        "ic95": [
+          -0.4359,
+          -0.0197
+        ]
+      },
+      "_micro": {
+        "delta_f1_mediano": -0.1304,
+        "ic95": [
+          -0.1742,
+          -0.0875
+        ]
+      }
+    }
+  },
+  "gate_por_eixo": {
+    "ritmo": {
+      "f1_deepseek": 0.8475,
+      "f1_local": 0.6087,
+      "delta_f1": -0.2388,
+      "ic95": [
+        -0.4179,
+        -0.0893
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "atuacao": {
+      "f1_deepseek": 0.9,
+      "f1_local": 0.8197,
+      "delta_f1": -0.0803,
+      "ic95": [
+        -0.1923,
+        0.0179
+      ],
+      "pior_com_significancia": false,
+      "pior_em_magnitude": false,
+      "poder_baixo": false
+    },
+    "direcao_imagem": {
+      "f1_deepseek": 0.925,
+      "f1_local": 0.8947,
+      "delta_f1": -0.0303,
+      "ic95": [
+        -0.1096,
+        0.0441
+      ],
+      "pior_com_significancia": false,
+      "pior_em_magnitude": false,
+      "poder_baixo": false
+    },
+    "roteiro_estrutura": {
+      "f1_deepseek": 0.8387,
+      "f1_local": 0.8923,
+      "delta_f1": 0.0536,
+      "ic95": [
+        -0.0036,
+        0.1152
+      ],
+      "pior_com_significancia": false,
+      "pior_em_magnitude": false,
+      "poder_baixo": false
+    },
+    "som_trilha": {
+      "f1_deepseek": 0.9189,
+      "f1_local": 0.8333,
+      "delta_f1": -0.0856,
+      "ic95": [
+        -0.241,
+        0.0427
+      ],
+      "pior_com_significancia": false,
+      "pior_em_magnitude": false,
+      "poder_baixo": false
+    },
+    "tom_atmosfera": {
+      "f1_deepseek": 0.7097,
+      "f1_local": 0.3111,
+      "delta_f1": -0.3986,
+      "ic95": [
+        -0.5847,
+        -0.2042
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "impacto_emocional": {
+      "f1_deepseek": 0.75,
+      "f1_local": 0.6,
+      "delta_f1": -0.15,
+      "ic95": [
+        -0.3078,
+        0.0
+      ],
+      "pior_com_significancia": false,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "comparacoes": {
+      "f1_deepseek": 0.8315,
+      "f1_local": 0.4839,
+      "delta_f1": -0.3476,
+      "ic95": [
+        -0.5005,
+        -0.2048
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "expectativa": {
+      "f1_deepseek": 0.6452,
+      "f1_local": 0.4,
+      "delta_f1": -0.2452,
+      "ic95": [
+        -0.4269,
+        -0.0624
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "critica_social": {
+      "f1_deepseek": 0.7083,
+      "f1_local": 0.4848,
+      "delta_f1": -0.2235,
+      "ic95": [
+        -0.4359,
+        -0.0197
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    },
+    "_micro": {
+      "f1_deepseek": 0.811,
+      "f1_local": 0.6798,
+      "delta_f1": -0.1312,
+      "ic95": [
+        -0.1742,
+        -0.0875
+      ],
+      "pior_com_significancia": true,
+      "pior_em_magnitude": true,
+      "poder_baixo": false
+    }
+  },
+  "reprodutibilidade": {
+    "classificacao": {
+      "deepseek": {
+        "n": 100,
+        "tres_passes_identicos": 16,
+        "fracao_identica": 0.16,
+        "jaccard_medio_entre_pares": 0.6887089947089947
+      },
+      "local": {
+        "n": 100,
+        "tres_passes_identicos": 25,
+        "fracao_identica": 0.25,
+        "jaccard_medio_entre_pares": 0.6778492063492064
+      }
+    },
+    "verificador_V2": {
+      "deepseek": {
+        "n": 72,
+        "tres_passes_identicos": 64,
+        "fracao_identica": 0.8888888888888888
+      },
+      "local": {
+        "n": 39,
+        "tres_passes_identicos": 30,
+        "fracao_identica": 0.7692307692307693
+      }
+    }
+  },
+  "falhas": {
+    "classificacao_local": {
+      "n_chamadas": 300,
+      "n_falhas": 0,
+      "n_primeira_tentativa": 300,
+      "falhas_primeira_tentativa": 0,
+      "taxa_falha_primeira_tentativa": 0.0,
+      "finish_reason": {
+        "stop": 300
+      },
+      "erros": [],
+      "thinking": {
+        "n_com_thinking": 0,
+        "media": 0.0,
+        "max": 0
+      },
+      "modelo_efetivo": {
+        "gpt-oss:20b": 300
+      }
+    },
+    "verificador_local": {
+      "n_chamadas": 117,
+      "n_falhas": 0,
+      "n_primeira_tentativa": 117,
+      "falhas_primeira_tentativa": 0,
+      "taxa_falha_primeira_tentativa": 0.0,
+      "finish_reason": {
+        "stop": 117
+      },
+      "erros": [],
+      "thinking": {
+        "n_com_thinking": 0,
+        "media": 0.0,
+        "max": 0
+      },
+      "modelo_efetivo": {
+        "gpt-oss:20b": 117
+      }
+    },
+    "classificacao_deepseek_no_gabarito": {
+      "n_falhas": 0
+    }
+  },
+  "danos_verificador": {
+    "deepseek": {
+      "n_removidas": 38,
+      "acerto_gabarito_tambem_remove": 30,
+      "dano_gabarito_mantinha": 8,
+      "taxa_de_acerto_das_remocoes": 0.7894736842105263,
+      "falsos_positivos_que_sobreviveram": 7,
+      "ids_dano": [
+        "viewing:1424202073",
+        "viewing:1429269629",
+        "viewing:1431008461",
+        "viewing:1433154456",
+        "viewing:1436204229",
+        "viewing:1438669140",
+        "viewing:1439627998",
+        "viewing:415737961"
+      ]
+    },
+    "local": {
+      "n_removidas": 7,
+      "acerto_gabarito_tambem_remove": 5,
+      "dano_gabarito_mantinha": 2,
+      "taxa_de_acerto_das_remocoes": 0.7142857142857143,
+      "falsos_positivos_que_sobreviveram": 11,
+      "ids_dano": [
+        "viewing:1386291162",
+        "viewing:1429269629"
+      ]
+    }
+  },
+  "custo": {
+    "usd": 0.0,
+    "n_chamadas": 417,
+    "tempo_local": {
+      "parede_s": {
+        "n": 417,
+        "soma": 5618.3,
+        "media": 13.47,
+        "p50": 11.52,
+        "p95": 27.33,
+        "max": 59.12
+      },
+      "leitura_prompt_s": {
+        "n": 417,
+        "soma": 523.5,
+        "media": 1.26,
+        "p50": 1.07,
+        "p95": 2.36,
+        "max": 9.44
+      },
+      "geracao_s": {
+        "n": 417,
+        "soma": 4118.4,
+        "media": 9.88,
+        "p50": 8.05,
+        "p95": 21.98,
+        "max": 56.05
+      },
+      "carga_s": {
+        "n": 417,
+        "soma": 106.5,
+        "media": 0.26,
+        "p50": 0.01,
+        "p95": 0.02,
+        "max": 27.59
+      },
+      "prompt_eval_count": {
+        "n": 417,
+        "soma": 416613.0,
+        "media": 999.07,
+        "p50": 1027.0,
+        "p95": 1570.0,
+        "max": 2211.0
+      },
+      "tokens_gerados": {
+        "n": 417,
+        "soma": 57547.0,
+        "media": 138.0,
+        "p50": 117.0,
+        "p95": 273.0,
+        "max": 696.0
+      }
+    },
+    "think": {
+      "low": 417
+    },
+    "modelo_efetivo": {
+      "gpt-oss:20b": 417
+    }
+  },
+  "modo": "padrao",
+  "provider": "local",
+  "modelo_local": "gpt-oss:20b",
+  "think": "low",
+  "lado": "local",
+  "gate": {
+    "parar": true,
+    "motivos": [
+      "ritmo: IC95 de ΔF1 [-0.4179, -0.0893] inteiro abaixo de zero",
+      "ritmo: ΔF1 -0.239 ≤ -0.1",
+      "tom_atmosfera: IC95 de ΔF1 [-0.5847, -0.2042] inteiro abaixo de zero",
+      "tom_atmosfera: ΔF1 -0.399 ≤ -0.1",
+      "impacto_emocional: ΔF1 -0.150 ≤ -0.1",
+      "comparacoes: IC95 de ΔF1 [-0.5005, -0.2048] inteiro abaixo de zero",
+      "comparacoes: ΔF1 -0.348 ≤ -0.1",
+      "expectativa: IC95 de ΔF1 [-0.4269, -0.0624] inteiro abaixo de zero",
+      "expectativa: ΔF1 -0.245 ≤ -0.1",
+      "critica_social: IC95 de ΔF1 [-0.4359, -0.0197] inteiro abaixo de zero",
+      "critica_social: ΔF1 -0.223 ≤ -0.1",
+      "_micro: IC95 de ΔF1 [-0.1742, -0.0875] inteiro abaixo de zero",
+      "_micro: ΔF1 -0.131 ≤ -0.1"
+    ]
+  }
+}
