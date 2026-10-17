@@ -1,0 +1,1785 @@
+{
+  "slug": "the-substance",
+  "data_coleta": "2026-08-23T01:17:29.269505+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/the-substance/reviews/",
+  "ficha": {
+    "titulo": "A Substância",
+    "sinopse_oficial": "Uma estrela em declínio descobre uma substância misteriosa que lhe permite criar uma versão mais jovem e perfeita de si mesma. No entanto, o que parece ser uma solução milagrosa para recuperar sua glória logo se transforma em um pesadelo perturbador quando as consequências desta decisão começam a se manifestar de formas sombrias e irreversíveis.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Ficção científica"
+    ],
+    "duracao_min": 140,
+    "diretor": "Coralie Fargeat",
+    "diretor_transliterado": false,
+    "ano": 2024,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto",
+    "tmdb_id": 933260,
+    "tmdb_fetched_at": "2026-08-27T16:35:41+00:00",
+    "poster_path": "/vWeOgzlhnP1sS23H3rzctGHB9Nb.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+      "/8ODNt5olCeIqBYTP3GgXEQYTfeX.jpg",
+      "/jocCWIF8YksHuTPhFUSxevz69Qm.jpg",
+      "/cL519xfEtR8NzE6UmUHyTpNO68I.jpg",
+      "/9Whl7RAzes0oMaFAeSqD8ttN3fl.jpg",
+      "/t98L9uphqBSNn2Mkvdm3xSFCQyi.jpg",
+      "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+      "/9oYdz5gDoIl8h67e3ccv3OHtmm2.jpg",
+      "/jlWk4J1sV1EHgkjhvsN7EdzGvOx.jpg",
+      "/b0itXhS69X33BvLi7uWjUZQs9MB.jpg"
+    ],
+    "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/snq9VCzSzTpxfFzx9WoVgLxjozo.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/7h6TqPB3ESmjuVbxCxAeB1c9OB1.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8ODNt5olCeIqBYTP3GgXEQYTfeX.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/pQesMch1KeIfpCwoZfMPTZDR5Gd.jpg",
+        "still_largura": 3787,
+        "still_altura": 2131
+      },
+      {
+        "still_path": "/4XprW1HjS7S0fhMLTydJTnAOvrQ.jpg",
+        "still_largura": 3787,
+        "still_altura": 2131
+      },
+      {
+        "still_path": "/g7nGNUYdGHZq5dpKfEoTAUmKikD.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/oBviuwvB1DyYwiNyVUdfXWn9El3.jpg",
+        "still_largura": 1429,
+        "still_altura": 804
+      },
+      {
+        "still_path": "/2Ni7f4Ropa4PvLkAWxG414fmRZw.jpg",
+        "still_largura": 1426,
+        "still_altura": 802
+      },
+      {
+        "still_path": "/5s0loIya9cI3vCBAZyFeN6VnLV.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3rECJUrnTVLSMYsBAZhldIZ45jq.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/d6Pb23VFaphkQ4AEwtjFTXMAioB.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ja5zvARh9Iffmlg7VL5NgcjMS3j.jpg",
+        "still_largura": 1780,
+        "still_altura": 1000
+      },
+      {
+        "still_path": "/sPx9P7AvQe5iz4jpHg8EuKOruzh.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ]
+  },
+  "distribuicao": {
+    "n_notas_total": 3735113,
+    "por_nivel": {
+      "0.5": 27451,
+      "1.0": 53768,
+      "1.5": 39152,
+      "2.0": 154320,
+      "2.5": 156182,
+      "3.0": 521140,
+      "3.5": 561541,
+      "4.0": 1116158,
+      "4.5": 462407,
+      "5.0": 642994
+    },
+    "por_bucket": {
+      "negativas": 7,
+      "medianas": 18,
+      "positivas": 75
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-substance",
+    "coletado_em": "2026-08-23T01:17:09.086793+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 27451,
+      "1.0": 53768,
+      "1.5": 39152,
+      "2.0": 154320,
+      "2.5": 156182,
+      "3.0": 521140,
+      "3.5": 561541,
+      "4.0": 1116158,
+      "4.5": 462407,
+      "5.0": 642994
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 9,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 29,
+      "2.5": 14,
+      "3.0": 22,
+      "3.5": 14,
+      "4.0": 17,
+      "4.5": 5,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 81,
+        "n_validas_pos_extensao": 81,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 70,
+        "n_validas_pos_extensao": 70,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 90,
+        "n_validas_pos_extensao": 90,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 6,
+      "1.0": 12,
+      "1.5": 9,
+      "2.0": 35,
+      "2.5": 36,
+      "3.0": 120,
+      "3.5": 129,
+      "4.0": 256,
+      "4.5": 106,
+      "5.0": 147
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 923,
+        "min": "2024-04-17",
+        "max": "2026-08-20",
+        "p5": "2024-05-19",
+        "p50": "2026-08-07",
+        "p95": "2026-08-18"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 288,
+          "min": "2024-05-19",
+          "max": "2026-08-20",
+          "p5": "2024-05-20",
+          "p50": "2026-08-06",
+          "p95": "2026-08-16"
+        },
+        "medianas": {
+          "n": 311,
+          "min": "2024-05-19",
+          "max": "2026-08-19",
+          "p5": "2024-05-20",
+          "p50": "2026-08-07",
+          "p95": "2026-08-18"
+        },
+        "positivas": {
+          "n": 324,
+          "min": "2024-04-17",
+          "max": "2026-08-19",
+          "p5": "2024-05-19",
+          "p50": "2026-08-07",
+          "p95": "2026-08-17"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": -5,
+      "dias_por_100_paginas": -3.937007874015748,
+      "paginas_para_1_ano": null
+    },
+    "ano_lancamento": 2024,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 923
+  },
+  "origem_paginas": {
+    "_histograma/the-substance.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_4.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_16.html": "network",
+    "the-substance/pages/by_added/rated_4_page_64.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_256.html": "network",
+    "the-substance/pages/by_added/rated_0_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_0_5_page_2.html": "cache",
+    "the-substance/fulltext/viewing_1438344409.html": "cache",
+    "the-substance/fulltext/viewing_1437432041.html": "cache",
+    "the-substance/pages/by_added/rated_1_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_1_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_1_page_3.html": "network",
+    "the-substance/fulltext/viewing_1458990350.html": "network",
+    "the-substance/pages/by_added/rated_1_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_1_5_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_3.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_4.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_5.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_6.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_7.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_9.html": "cache",
+    "the-substance/pages/by_added/rated_2_page_18.html": "network",
+    "the-substance/fulltext/viewing_1438487263.html": "cache",
+    "the-substance/fulltext/viewing_1452832136.html": "network",
+    "the-substance/pages/by_added/rated_2_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_2_5_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_2_5_page_3.html": "cache",
+    "the-substance/pages/by_added/rated_2_5_page_4.html": "cache",
+    "the-substance/pages/by_added/rated_2_5_page_9.html": "network",
+    "the-substance/pages/by_added/rated_2_5_page_18.html": "network",
+    "the-substance/fulltext/viewing_1438868936.html": "cache",
+    "the-substance/fulltext/viewing_1453598807.html": "network",
+    "the-substance/pages/by_added/rated_3_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_3.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_4.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_5.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_6.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_7.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_8.html": "cache",
+    "the-substance/pages/by_added/rated_3_page_30.html": "network",
+    "the-substance/pages/by_added/rated_3_page_60.html": "network",
+    "the-substance/fulltext/viewing_1439464416.html": "cache",
+    "the-substance/fulltext/viewing_1438930999.html": "cache",
+    "the-substance/fulltext/viewing_1438313802.html": "cache",
+    "the-substance/pages/by_added/rated_3_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_3_5_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_3_5_page_32.html": "network",
+    "the-substance/pages/by_added/rated_4_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_3.html": "cache",
+    "the-substance/pages/by_added/rated_4_page_128.html": "network",
+    "the-substance/fulltext/viewing_1429018550.html": "cache",
+    "the-substance/fulltext/viewing_1439459546.html": "cache",
+    "the-substance/pages/by_added/rated_4_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_4_5_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_4_5_page_26.html": "network",
+    "the-substance/fulltext/viewing_1439489161.html": "cache",
+    "the-substance/pages/by_added/rated_5_page_1.html": "cache",
+    "the-substance/pages/by_added/rated_5_page_2.html": "cache",
+    "the-substance/pages/by_added/rated_5_page_3.html": "cache",
+    "the-substance/pages/by_added/rated_5_page_37.html": "network",
+    "the-substance/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 8,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "composicao_atingida": {
+        "0.5": 4,
+        "1.0": 8,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-19",
+        "max": "2026-08-19",
+        "p5": "2024-05-19",
+        "p50": "2026-08-06",
+        "p95": "2026-08-19"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 45,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 45,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 104,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 104,
+            "excedente_cota": 24,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 9
+        }
+      ],
+      "temas": [
+        {
+          "tema": "abordagem excessiva de gore e nus",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas críticas destacam que o filme recorre excessivamente a cenas de violência gráfica e nudez, muitas vezes sem propósito ou desenvolvimento, tornando a experiência visual insuportável para alguns espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "roteiro fraco e desorganizado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias avaliações apontam para um roteiro pouco coeso, com desenvolvimento fraco de personagens e enredo, que desvia a atenção do tema central e deixa a narrativa sem direção clara.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "excesso de repetição e previsibilidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores mencionam que o filme se repete excessivamente, com ideias e temas que já eram explorados anteriormente, sem oferecer novidade ou profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "exposição de temas sensíveis de forma inadequada",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns críticos observam que o filme trata temas como a objetificação de mulheres e a pressão estética de maneira superficial ou insensível, sem construir uma reflexão significativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "longa duração e ritmo lento",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas mencionam que o filme se arrasta, com um ritmo lento que torna a experiência cansativa, especialmente nos momentos em que não há desenvolvimento de enredo ou personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "falta de originalidade e influências evidentes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores destacam que o filme parece copiar ou imitar outros filmes de gênero sem oferecer algo inovador, tornando a experiência pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "as reviews negativas apontam para uma experiência visual e narrativa marcada por excessos de gore e nudez, roteiro desorganizado e repetitivo, além de uma abordagem temática superficial. este grupo destaca a insatisfação com a forma como o filme desenvolve seus temas e a falta de originalidade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 7
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 60,
+        "p5": 1,
+        "p50": 5,
+        "p95": 30,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-19",
+        "max": "2026-08-19",
+        "p5": "2024-05-19",
+        "p50": "2026-08-06",
+        "p95": "2026-08-18"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 2,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 31,
+          "n_brutas": 203,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 145,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 145,
+            "excedente_cota": 20,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "horror corporal e estética grotesca",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas destacam a presença intensa de elementos de horror corporal e imagens visuais impactantes, muitas vezes associadas a uma estética exagerada e grotesca.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "crítica à beleza e ao envelhecimento feminino",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas avaliações mencionam a exploração do tema da pressão social sobre a beleza e o envelhecimento, especialmente no que diz respeito ao corpo feminino e à aceitação de si mesma.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "narrativa repetitiva e excessiva",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns críticos apontam que a narrativa se torna monótona e repetitiva em certos momentos, especialmente no decorrer da segunda e terceira partes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "atuações e direção",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A qualidade das atuações e a direção são frequentemente mencionadas, com elogios à performance de Demi Moore e à habilidade de alguns diretores em transmitir a mensagem do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "comentários sobre o final do filme",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O final do filme gera opiniões divididas, com algumas críticas considerando-o exagerado e outras elogiando sua originalidade e impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "referências culturais e influências cinematográficas",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns críticos observam a presença de referências a outros filmes e gêneros, como a influência de clássicos do horror e da comédia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews medianas destaca a presença de elementos de horror corporal e uma crítica à pressão sobre a beleza feminina, mas também aponta para uma narrativa repetitiva e um final polêmico.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 18
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "composicao_atingida": {
+        "3.5": 8,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 9
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 8,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-19",
+        "max": "2026-08-17",
+        "p5": "2026-05-07",
+        "p50": "2026-08-07",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 91,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 4,
+            "abaixo_min_chars": 91,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 40,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 40,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 3
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "representação do corpo e a pressão por juventude",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "várias críticas destacam como o filme explora a obsessão por manter a juventude e a beleza, especialmente no contexto de mulheres que se veem pressionadas a se adaptar a padrões estéticos impessoais e opressivos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "horror corporal e efeitos visuais extremos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "muitas avaliações mencionam a intensidade dos efeitos de corpo horror, descrevendo cenas que são consideradas brutais, visceralmente impactantes e muitas vezes surpreendentes em sua execução.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "crítica ao patriarcado e estereótipos de beleza",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "diversas reviews destacam como o filme aborda a forma como a sociedade, especialmente o patriarcado, exige que as mulheres se conformem a padrões de beleza que são insustentáveis e destrutivos para sua autoestima.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "dualidade entre personagens e identidade",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "algumas críticas abordam a relação entre as duas versões da protagonista, explorando como a divisão entre o desejo de juventude e o corpo real reflete conflitos internos e a perda de identidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "uso de metáforas e simbolismo",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "alguns comentários mencionam a riqueza simbólica do filme, com destaque para a representação da autoaversão, da luta pela aceitação e para a crítica ao consumismo de beleza.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "desempenho dos atores e direção",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "algumas avaliações elogiam a atuação dos protagonistas, destacando a profundidade emocional e a intensidade dos papéis, bem como a habilidade da diretora em transmitir uma visão clara e impactante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "as reviews positivas destacam a violência visual e a crítica social que o filme oferece, com foco na representação do corpo, na pressão por juventude e na exploração de temas como a autoaversão e a destruição causada por padrões de beleza.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 75
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "longa duração e ritmo lento",
+            "exemplo_parafraseado": "Várias críticas mencionam que o filme se arrasta, com um ritmo lento que torna a experiência cansativa, especialmente nos momentos em que não há desenvolvimento de enredo ou personagens.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "atuações e direção",
+            "exemplo_parafraseado": "A qualidade das atuações e a direção são frequentemente mencionadas, com elogios à performance de Demi Moore e à habilidade de alguns diretores em transmitir a mensagem do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "desempenho dos atores e direção",
+            "exemplo_parafraseado": "algumas avaliações elogiam a atuação dos protagonistas, destacando a profundidade emocional e a intensidade dos papéis, bem como a habilidade da diretora em transmitir uma visão clara e impactante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "horror corporal e estética grotesca",
+            "exemplo_parafraseado": "Várias críticas destacam a presença intensa de elementos de horror corporal e imagens visuais impactantes, muitas vezes associadas a uma estética exagerada e grotesca.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "horror corporal e efeitos visuais extremos",
+            "exemplo_parafraseado": "muitas avaliações mencionam a intensidade dos efeitos de corpo horror, descrevendo cenas que são consideradas brutais, visceralmente impactantes e muitas vezes surpreendentes em sua execução.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "roteiro fraco e desorganizado",
+            "exemplo_parafraseado": "Várias avaliações apontam para um roteiro pouco coeso, com desenvolvimento fraco de personagens e enredo, que desvia a atenção do tema central e deixa a narrativa sem direção clara.",
+            "temas_no_mesmo_eixo": [
+              "excesso de repetição e previsibilidade",
+              "falta de originalidade e influências evidentes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "narrativa repetitiva e excessiva",
+            "exemplo_parafraseado": "Alguns críticos apontam que a narrativa se torna monótona e repetitiva em certos momentos, especialmente no decorrer da segunda e terceira partes do filme.",
+            "temas_no_mesmo_eixo": [
+              "comentários sobre o final do filme"
+            ]
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "dualidade entre personagens e identidade",
+            "exemplo_parafraseado": "algumas críticas abordam a relação entre as duas versões da protagonista, explorando como a divisão entre o desejo de juventude e o corpo real reflete conflitos internos e a perda de identidade.",
+            "temas_no_mesmo_eixo": [
+              "uso de metáforas e simbolismo"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia_e_contraste",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "referências culturais e influências cinematográficas",
+            "exemplo_parafraseado": "Alguns críticos observam a presença de referências a outros filmes e gêneros, como a influência de clássicos do horror e da comédia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "abordagem excessiva de gore e nus",
+            "exemplo_parafraseado": "Muitas críticas destacam que o filme recorre excessivamente a cenas de violência gráfica e nudez, muitas vezes sem propósito ou desenvolvimento, tornando a experiência visual insuportável para alguns espectadores.",
+            "temas_no_mesmo_eixo": [
+              "exposição de temas sensíveis de forma inadequada"
+            ]
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "crítica à beleza e ao envelhecimento feminino",
+            "exemplo_parafraseado": "Muitas avaliações mencionam a exploração do tema da pressão social sobre a beleza e o envelhecimento, especialmente no que diz respeito ao corpo feminino e à aceitação de si mesma.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "representação do corpo e a pressão por juventude",
+            "exemplo_parafraseado": "várias críticas destacam como o filme explora a obsessão por manter a juventude e a beleza, especialmente no contexto de mulheres que se veem pressionadas a se adaptar a padrões estéticos impessoais e opressivos.",
+            "temas_no_mesmo_eixo": [
+              "crítica ao patriarcado e estereótipos de beleza"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4187
+    }
+  },
+  "narrativa": "A Substância, dirigida por Coralie Fargeat e lançada em 2024, é um filme de terror e ficção científica que gira em torno de uma estrela em declínio que descobre uma substância misteriosa capaz de rejuvenecê-la. Com uma duração de 140 minutos, a trama explora as consequências devastadoras de uma decisão aparentemente milagrosa.\n\nO filme apresenta uma experiência visual marcada por elementos de horror corporal e uma abordagem intensa da pressão sobre a beleza feminina. A narrativa, embora repetitiva em alguns momentos, oferece uma estrutura que mistura o grotesco com a crítica social, criando uma atmosfera densa e imersiva. O ritmo, por vezes lento, e a ambientação sombria contribuem para uma intensidade que pode ser tanto impactante quanto polarizadora.\n\nNa grande maioria das notas (~75%), os espectadores destacam a representação do corpo e a pressão por juventude, explorada de forma intensa e crítica. Muitas avaliações mencionam a intensidade dos efeitos visuais extremos, que são descritos como brutais e visceralmente impactantes. Além disso, uma parcela das notas (~18%) aponta para a presença de elementos de horror corporal e estética grotesca, enquanto também aborda a crítica à beleza e ao envelhecimento feminino, embora de forma menos frequente.\n\nNuma fração mínima das notas (~7%), as críticas apontam para uma abordagem excessiva de gore e nus, que, segundo alguns espectadores, torna a experiência visual insuportável. O roteiro é descrito como fraco e desorganizado por vários críticos, com uma narrativa repetitiva e previsível que, segundo algumas avaliações, limita a originalidade do filme. A falta de profundidade e a influência evidente de outras obras são mencionadas com menos frequência, mas ainda assim são apontadas como pontos de insatisfação.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 4,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 4,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [
+      "medianas"
+    ],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "repeticao",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 3,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 6,
+        "ritmo": 4,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 0.889,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 13098,
+      "completion_tokens": 2162,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 13098
+    },
+    "latencia_s": 646.94
+  },
+  "veredito": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "prefixo_codigo": "",
+    "retry": {
+      "flags_antes": [
+        "tema_verbatim"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.50",
+    "texto": "A maioria dos que não recomendam aponta para uma narrativa confusa e pouco envolvente, enquanto cerca de metade dos que recomendam destaca a forte conexão emocional com o espectador.",
+    "texto_modelo": "A maioria dos que não recomendam aponta para uma narrativa confusa e pouco envolvente, enquanto cerca de metade dos que recomendam destaca a forte conexão emocional com o espectador.",
+    "origem": "llm",
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "empate",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 25,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 25,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 25,
+        "n_ancoras": 2,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 5127,
+      "completion_tokens": 197,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 5127
+    },
+    "latencia_s": 58.63
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia a exploração da pressão social sobre a juventude e a beleza feminina",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "representação do corpo e a pressão por juventude",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca efeitos visuais intensos e impactantes que provoquem reações físicas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "horror corporal e efeitos visuais extremos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "quer uma crítica ao patriarcado e aos padrões de beleza impostos às mulheres",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "crítica ao patriarcado e estereótipos de beleza",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "valoriza atuações intensas e direção que transmite uma visão clara e impactante",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "desempenho dos atores e direção",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com cenas excessivamente violentas e nus sem propósito narrativo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "abordagem excessiva de gore e nus",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "prefere roteiros coesos com desenvolvimento de personagens e enredo bem estruturado",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "roteiro fraco e desorganizado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita repetições excessivas e temas que já foram explorados de forma mais profunda",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "excesso de repetição e previsibilidade",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha que temas sensíveis devem ser abordados com mais cuidado e profundidade",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "exposição de temas sensíveis de forma inadequada",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 75,
+        "peso_texto": "~75% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 7,
+        "peso_texto": "~7% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-D"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "se interessa por conflitos internos e a perda de identidade em personagens divididas",
+        "tema_origem": "POS-D",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "comprimento",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17203,
+      "completion_tokens": 1242,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 17203
+    },
+    "latencia_s": 404.95,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  },
+  "proveniencia_llm": {
+    "excecao": "LOCAL_PROSA",
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "think": "false",
+    "estagios": {
+      "sintese": {
+        "estagio": "sintese",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 805.8,
+          "leitura_prompt": 48.6,
+          "geracao": 737.7
+        }
+      },
+      "rotulagem": {
+        "estagio": "rotulagem",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 119.5,
+          "leitura_prompt": 4.4,
+          "geracao": 108.5
+        }
+      },
+      "narrativa": {
+        "estagio": "narrativa",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 646.9,
+          "leitura_prompt": 13.7,
+          "geracao": 624.8
+        }
+      },
+      "veredito": {
+        "estagio": "veredito",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 58.6,
+          "leitura_prompt": 5.5,
+          "geracao": 44.7
+        }
+      },
+      "condicoes": {
+        "estagio": "condicoes",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 404.9,
+          "leitura_prompt": 14.1,
+          "geracao": 382.4
+        }
+      }
+    },
+    "falhas": {}
+  }
+}

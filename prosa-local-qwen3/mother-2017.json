@@ -1,0 +1,1796 @@
+{
+  "slug": "mother-2017",
+  "data_coleta": "2026-08-23T00:59:30.236589+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 576,
+  "reviews_url": "https://letterboxd.com/film/mother-2017/reviews/",
+  "ficha": {
+    "titulo": "mãe!",
+    "sinopse_oficial": "Um casal vive em um imenso casarão no campo. Enquanto a jovem esposa passa os dias restaurando o lugar, afetado por um incêndio no passado, o marido mais velho tenta desesperadamente recuperar a inspiração para voltar a escrever os poemas que o tornaram famoso. Os dias pacíficos se transformam com a chegada de visitantes que se impõem à rotina do casal e escondem suas verdadeiras intenções.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Drama"
+    ],
+    "duracao_min": 121,
+    "diretor": "Darren Aronofsky",
+    "diretor_transliterado": false,
+    "ano": 2017,
+    "fonte": "tmdb",
+    "ano_fonte": "bruto",
+    "tmdb_id": 381283,
+    "tmdb_fetched_at": "2026-08-27T16:35:31+00:00",
+    "poster_path": "/ldEZHi9jyfAhJuSUaEWd7qf7nU3.jpg",
+    "poster_largura": 1933,
+    "poster_altura": 2900,
+    "backdrop_paths": [
+      "/2wS8pMZgvzq7kaZb5LHX54poQnA.jpg",
+      "/z5q5X3QUBW4W2SaprgPsWCnI6GJ.jpg",
+      "/saX2u347kGUXbKUWd84n73tHmNk.jpg",
+      "/1JKzoV2FqOuOxrnXNIZxF8jIY58.jpg",
+      "/rbHJd3xj2287kwgzMu3IHcTkGoE.jpg",
+      "/uuQpQ8VDOtVL2IO4y2pR58odkS5.jpg",
+      "/1PZzp9LMfy9hh7q00jSczlKbdDI.jpg",
+      "/tmkrGWqMshsxp5cEv3515pGpPBM.jpg",
+      "/6ao98lR8a7AAvDmZYlt6J2wagjW.jpg",
+      "/koQCafVJATc9Gxw8QrCQzLY3jdx.jpg"
+    ],
+    "backdrop_path": "/2wS8pMZgvzq7kaZb5LHX54poQnA.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/466CsG8OhvJcXeSMMoS2xqHU9ad.jpg",
+    "poster_sem_texto_largura": 1800,
+    "poster_sem_texto_altura": 2694,
+    "galeria_stills": [
+      {
+        "still_path": "/2wS8pMZgvzq7kaZb5LHX54poQnA.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/z5q5X3QUBW4W2SaprgPsWCnI6GJ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/dI5jhNFToxP683NKZboBrrxTuva.jpg",
+        "still_largura": 2999,
+        "still_altura": 1688
+      },
+      {
+        "still_path": "/28jokGNnxOAvks2Ldo6udaFiHSO.jpg",
+        "still_largura": 1403,
+        "still_altura": 789
+      },
+      {
+        "still_path": "/4yQnt9sI8rD80NPuVHl3dvISdPR.jpg",
+        "still_largura": 1406,
+        "still_altura": 791
+      },
+      {
+        "still_path": "/6UMVt46A7wKz0weiTjolrPmnbxQ.jpg",
+        "still_largura": 1405,
+        "still_altura": 791
+      },
+      {
+        "still_path": "/AwDKXQsh789YE8AlO3t2aj5qGaV.jpg",
+        "still_largura": 1398,
+        "still_altura": 786
+      },
+      {
+        "still_path": "/e2U2c9kpQvTeYCPwKii1CL9ixDL.jpg",
+        "still_largura": 1408,
+        "still_altura": 792
+      },
+      {
+        "still_path": "/ibhsTVPssQB3rXHX7IAyAk22ITL.jpg",
+        "still_largura": 1371,
+        "still_altura": 771
+      },
+      {
+        "still_path": "/oIvuVDEwQlfh1lUODDyemkov2J7.jpg",
+        "still_largura": 1414,
+        "still_altura": 795
+      },
+      {
+        "still_path": "/rUS9DiyYoWlv7oKl9iF43rw1Oju.jpg",
+        "still_largura": 1414,
+        "still_altura": 795
+      },
+      {
+        "still_path": "/v3KP4MZIUGyfu3VBm6JM7oqNfWm.jpg",
+        "still_largura": 1384,
+        "still_altura": 778
+      }
+    ]
+  },
+  "distribuicao": {
+    "n_notas_total": 884774,
+    "por_nivel": {
+      "0.5": 17325,
+      "1.0": 29403,
+      "1.5": 17161,
+      "2.0": 57919,
+      "2.5": 50668,
+      "3.0": 142510,
+      "3.5": 135772,
+      "4.0": 220144,
+      "4.5": 78036,
+      "5.0": 135836
+    },
+    "por_bucket": {
+      "negativas": 14,
+      "medianas": 22,
+      "positivas": 64
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "mother-2017",
+    "coletado_em": "2026-08-09T12:55:04.724189+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 17325,
+      "1.0": 29403,
+      "1.5": 17161,
+      "2.0": 57919,
+      "2.5": 50668,
+      "3.0": 142510,
+      "3.5": 135772,
+      "4.0": 220144,
+      "4.5": 78036,
+      "5.0": 135836
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 48,
+      "4.0": 72,
+      "4.5": 24,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 15,
+      "1.5": 6,
+      "2.0": 23,
+      "2.5": 16,
+      "3.0": 22,
+      "3.5": 13,
+      "4.0": 23,
+      "4.5": 4,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 60,
+        "n_validas_pos_extensao": 60,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 62,
+        "n_validas_pos_extensao": 62,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 20,
+      "1.0": 34,
+      "1.5": 20,
+      "2.0": 67,
+      "2.5": 59,
+      "3.0": 166,
+      "3.5": 158,
+      "4.0": 256,
+      "4.5": 91,
+      "5.0": 158
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 708,
+        "min": "2017-08-01",
+        "max": "2026-08-08",
+        "p5": "2026-05-09",
+        "p50": "2026-08-02",
+        "p95": "2026-08-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2017-08-01",
+          "max": "2026-08-08",
+          "p5": "2024-03-28",
+          "p50": "2026-07-30",
+          "p95": "2026-08-07"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2018-11-08",
+          "max": "2026-08-08",
+          "p5": "2026-05-15",
+          "p50": "2026-08-02",
+          "p95": "2026-08-07"
+        },
+        "positivas": {
+          "n": 240,
+          "min": "2017-09-18",
+          "max": "2026-08-08",
+          "p5": "2025-12-20",
+          "p50": "2026-08-05",
+          "p95": "2026-08-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 76,
+      "dias_por_100_paginas": 59.84251968503937,
+      "paginas_para_1_ano": 610
+    },
+    "ano_lancamento": 2017,
+    "ano_fonte": "slug",
+    "n_reviews_bruto": 708
+  },
+  "origem_paginas": {
+    "_histograma/mother-2017.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_4.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_16.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_64.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_256.html": "cache",
+    "mother-2017/pages/by_added/rated_0_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_0_5_page_2.html": "cache",
+    "mother-2017/fulltext/viewing_1431693425.html": "cache",
+    "mother-2017/fulltext/viewing_1421122067.html": "cache",
+    "mother-2017/fulltext/viewing_1420197144.html": "cache",
+    "mother-2017/pages/by_added/rated_1_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_1_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_1_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_1_page_8.html": "cache",
+    "mother-2017/fulltext/viewing_1436395017.html": "cache",
+    "mother-2017/fulltext/viewing_1434281777.html": "cache",
+    "mother-2017/fulltext/viewing_1431050336.html": "cache",
+    "mother-2017/fulltext/viewing_1422505464.html": "cache",
+    "mother-2017/pages/by_added/rated_1_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_1_5_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_4.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_5.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_6.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_17.html": "cache",
+    "mother-2017/pages/by_added/rated_2_page_34.html": "cache",
+    "mother-2017/fulltext/viewing_1438841126.html": "cache",
+    "mother-2017/fulltext/viewing_1436027070.html": "cache",
+    "mother-2017/fulltext/viewing_1430204115.html": "cache",
+    "mother-2017/fulltext/viewing_1424439039.html": "cache",
+    "mother-2017/fulltext/viewing_1311592311.html": "cache",
+    "mother-2017/fulltext/viewing_1311274529.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_4.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_15.html": "cache",
+    "mother-2017/pages/by_added/rated_2_5_page_30.html": "cache",
+    "mother-2017/fulltext/viewing_1438228276.html": "cache",
+    "mother-2017/fulltext/viewing_1433281303.html": "cache",
+    "mother-2017/fulltext/viewing_1432016324.html": "cache",
+    "mother-2017/fulltext/viewing_1428809405.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_4.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_5.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_6.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_7.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_8.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_42.html": "cache",
+    "mother-2017/pages/by_added/rated_3_page_83.html": "cache",
+    "mother-2017/fulltext/viewing_1437377835.html": "cache",
+    "mother-2017/fulltext/viewing_1436501924.html": "cache",
+    "mother-2017/fulltext/viewing_1436135171.html": "cache",
+    "mother-2017/fulltext/viewing_1433944011.html": "cache",
+    "mother-2017/pages/by_added/rated_3_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_3_5_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_3_5_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_3_5_page_40.html": "cache",
+    "mother-2017/fulltext/viewing_1437073527.html": "cache",
+    "mother-2017/fulltext/viewing_1436103032.html": "cache",
+    "mother-2017/fulltext/viewing_1378779460.html": "cache",
+    "mother-2017/fulltext/viewing_1378509862.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_4_page_128.html": "cache",
+    "mother-2017/fulltext/viewing_1437360688.html": "cache",
+    "mother-2017/fulltext/viewing_1438336849.html": "cache",
+    "mother-2017/fulltext/viewing_1386037427.html": "cache",
+    "mother-2017/fulltext/viewing_1326338725.html": "cache",
+    "mother-2017/pages/by_added/rated_4_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_4_5_page_2.html": "cache",
+    "mother-2017/fulltext/viewing_1436897462.html": "cache",
+    "mother-2017/fulltext/viewing_1438080294.html": "cache",
+    "mother-2017/fulltext/viewing_1433604061.html": "cache",
+    "mother-2017/pages/by_added/rated_5_page_1.html": "cache",
+    "mother-2017/pages/by_added/rated_5_page_2.html": "cache",
+    "mother-2017/pages/by_added/rated_5_page_3.html": "cache",
+    "mother-2017/pages/by_added/rated_5_page_40.html": "cache",
+    "mother-2017/fulltext/viewing_1438930372.html": "cache",
+    "mother-2017/fulltext/viewing_1401676492.html": "cache",
+    "mother-2017/fulltext/viewing_1401262212.html": "cache",
+    "mother-2017/fulltext/viewing_1401163410.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 6,
+        "1.0": 10,
+        "1.5": 5,
+        "2.0": 19
+      },
+      "composicao_atingida": {
+        "0.5": 6,
+        "1.0": 10,
+        "1.5": 5,
+        "2.0": 19
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": 0.275
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-05-20",
+        "max": "2026-08-07",
+        "p5": "2026-07-16",
+        "p50": "2026-07-30",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 19,
+          "n_alvo": 19,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 86,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 86,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 8
+        }
+      ],
+      "temas": [
+        {
+          "tema": "excesso de metáforas e simbolismo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "muitas críticas apontam para uma sobrecarga de símbolos e alegorias, que tornam a experiência de assistir ao filme confusa e pouco envolvente",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "trabalho de Jennifer Lawrence",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "a atuação de Jennifer Lawrence é frequentemente mencionada como um dos pontos positivos, mesmo que o resto do filme tenha recebido críticas severas",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "ritmo e desgaste do espectador",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "várias avaliações destacam que o filme é cansativo, com longas sequências que não parecem ter um propósito claro, gerando frustração",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "trabalho do diretor e intencionalidade artística",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "alguns críticos acreditam que o filme busca provocar ou desafiar o espectador, mas muitos acham que isso é feito de forma excessiva e pouco eficaz",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "trabalho de atores secundários e direção de cena",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "algumas avaliações mencionam que os atores secundários não parecem bem integrados, e a direção de cena e os planos frequentemente são considerados desconfortáveis",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "conteúdo desagradável e impacto emocional",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "várias críticas descrevem cenas que parecem agressivas, desagradáveis ou que causam desconforto emocional ao espectador",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "as reviews negativas destacam uma experiência de assistência marcada por frustração, excesso de metáforas e símbolos confusos, além de momentos considerados desagradáveis. o grupo aponta para uma narrativa pouco envolvente e uma direção que muitos acham excessiva e pouco eficaz.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 14
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "composicao_atingida": {
+        "2.5": 11,
+        "3.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 83,
+        "p5": 2,
+        "p50": 6,
+        "p95": 42,
+        "fracao_profunda": 0.375
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-10-18",
+        "max": "2026-08-07",
+        "p5": "2026-05-15",
+        "p50": "2026-08-02",
+        "p95": "2026-08-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 11,
+          "n_alvo": 10,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 70,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 70,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 29,
+          "n_alvo": 30,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 110,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 110,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "sensação de desconforto e ansiedade",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias avaliações mencionam uma experiência intensa de ansiedade, com sensações de desconforto psicológico e estresse extremo durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "uso de metáforas e simbolismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas críticas destacam a tentativa de transmitir significados simbólicos, como referências religiosas ou a destruição do meio ambiente, embora algumas considerem o uso excessivo ou forçado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "desenvolvimento do enredo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há uma crítica frequente em relação ao ritmo e à construção do enredo, com algumas avaliações achando que o filme se arrasta no início e se torna caótico no final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "interpretação pessoal e reflexão",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas mencionam que o filme provoca reflexões pessoais, mesmo que as interpretações sejam diversas e, em alguns casos, confusas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "desempenho de Jennifer Lawrence",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O trabalho da atriz é frequentemente elogiado, com reconhecimento por sua interpretação intensa e envolvente, mesmo em meio a uma narrativa complexa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "confusão e falta de clareza",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores mencionam ter dificuldade em compreender a trama, com críticas à falta de clareza e à exibição excessiva de elementos caóticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews destaca uma experiência intensa de desconforto e ansiedade, com críticas ao desenvolvimento do enredo e à clareza da narrativa, apesar do reconhecimento do desempenho de Jennifer Lawrence e do uso simbólico.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 22
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 10,
+        "4.0": 15,
+        "4.5": 5,
+        "5.0": 10
+      },
+      "composicao_atingida": {
+        "3.5": 10,
+        "4.0": 16,
+        "4.5": 4,
+        "5.0": 10
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 40,
+        "p5": 1,
+        "p50": 4,
+        "p95": 40,
+        "fracao_profunda": 0.4
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-12-04",
+        "max": "2026-08-08",
+        "p5": "2026-06-29",
+        "p50": "2026-08-06",
+        "p95": "2026-08-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 44,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 44,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 15,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 60,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 60,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 4,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Metáforas religiosas e simbolismo bíblico",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores destacaram a interpretação do filme como uma representação simbólica da Bíblia, com referências a figuras como Adão, Eva, Caim e Abel, além de alusões ao papel da mulher na religião.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Performance de Jennifer Lawrence",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas críticas elogiaram a atuação de Jennifer Lawrence, descrevendo-a como intensa, realista e capaz de transmitir uma vasta gama de emoções, especialmente em um papel que exige grande vulnerabilidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e ansiedade psicológica",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O clima de pressão e inquietação constante foi frequentemente mencionado, com muitos apontando que o filme cria uma sensação de claustrofobia e desespero, especialmente na segunda metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Confusão inicial e revelação no final",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias avaliações mencionaram que o filme é difícil de entender no início, mas que a compreensão da narrativa e do simbolismo se torna clara após o desfecho, gerando uma reavaliação positiva da experiência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à figura masculina e ao ego",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O comportamento do personagem masculino, interpretado por Javier Bardem, foi frequentemente interpretado como uma metáfora para o ego humano, a falta de empatia e a dominação sobre a mulher.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Impacto emocional e psicológico",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos espectadores descreveram a experiência como intensamente perturbadora, com reações como frustração, raiva e até lágrimas, especialmente diante da exploração de temas como abuso e esgotamento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a força do simbolismo religioso e a intensa atuação de Jennifer Lawrence, apesar da confusão inicial. Este grupo valoriza a experiência emocional intensa e a interpretação do filme como uma crítica à humanidade e aos relacionamentos tóxicos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 64
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "ritmo e desgaste do espectador",
+            "exemplo_parafraseado": "várias avaliações destacam que o filme é cansativo, com longas sequências que não parecem ter um propósito claro, gerando frustração",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "trabalho de Jennifer Lawrence",
+            "exemplo_parafraseado": "a atuação de Jennifer Lawrence é frequentemente mencionada como um dos pontos positivos, mesmo que o resto do filme tenha recebido críticas severas",
+            "temas_no_mesmo_eixo": [
+              "trabalho de atores secundários e direção de cena"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "desempenho de Jennifer Lawrence",
+            "exemplo_parafraseado": "O trabalho da atriz é frequentemente elogiado, com reconhecimento por sua interpretação intensa e envolvente, mesmo em meio a uma narrativa complexa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Performance de Jennifer Lawrence",
+            "exemplo_parafraseado": "Muitas críticas elogiaram a atuação de Jennifer Lawrence, descrevendo-a como intensa, realista e capaz de transmitir uma vasta gama de emoções, especialmente em um papel que exige grande vulnerabilidade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "trabalho do diretor e intencionalidade artística",
+            "exemplo_parafraseado": "alguns críticos acreditam que o filme busca provocar ou desafiar o espectador, mas muitos acham que isso é feito de forma excessiva e pouco eficaz",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "uso de metáforas e simbolismo",
+            "exemplo_parafraseado": "Muitas críticas destacam a tentativa de transmitir significados simbólicos, como referências religiosas ou a destruição do meio ambiente, embora algumas considerem o uso excessivo ou forçado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "excesso de metáforas e simbolismo",
+            "exemplo_parafraseado": "muitas críticas apontam para uma sobrecarga de símbolos e alegorias, que tornam a experiência de assistir ao filme confusa e pouco envolvente",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "desenvolvimento do enredo",
+            "exemplo_parafraseado": "Há uma crítica frequente em relação ao ritmo e à construção do enredo, com algumas avaliações achando que o filme se arrasta no início e se torna caótico no final.",
+            "temas_no_mesmo_eixo": [
+              "confusão e falta de clareza"
+            ]
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Metáforas religiosas e simbolismo bíblico",
+            "exemplo_parafraseado": "Vários espectadores destacaram a interpretação do filme como uma representação simbólica da Bíblia, com referências a figuras como Adão, Eva, Caim e Abel, além de alusões ao papel da mulher na religião.",
+            "temas_no_mesmo_eixo": [
+              "Confusão inicial e revelação no final"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "sensação de desconforto e ansiedade",
+            "exemplo_parafraseado": "Várias avaliações mencionam uma experiência intensa de ansiedade, com sensações de desconforto psicológico e estresse extremo durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e ansiedade psicológica",
+            "exemplo_parafraseado": "O clima de pressão e inquietação constante foi frequentemente mencionado, com muitos apontando que o filme cria uma sensação de claustrofobia e desespero, especialmente na segunda metade.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "conteúdo desagradável e impacto emocional",
+            "exemplo_parafraseado": "várias críticas descrevem cenas que parecem agressivas, desagradáveis ou que causam desconforto emocional ao espectador",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Impacto emocional e psicológico",
+            "exemplo_parafraseado": "Muitos espectadores descreveram a experiência como intensamente perturbadora, com reações como frustração, raiva e até lágrimas, especialmente diante da exploração de temas como abuso e esgotamento emocional.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à figura masculina e ao ego",
+            "exemplo_parafraseado": "O comportamento do personagem masculino, interpretado por Javier Bardem, foi frequentemente interpretado como uma metáfora para o ego humano, a falta de empatia e a dominação sobre a mulher.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4187
+    }
+  },
+  "narrativa": "Filme \"Mãe!\", dirigido por Darren Aronofsky em 2017, pertence aos gêneros de Terror e Drama, com duração de 121 minutos. Sua sinopse oficial apresenta um casal que mora em um casarão no campo, onde a esposa tenta restaurar o local afetado por um incêndio passado, enquanto o marido busca recuperar a inspiração para escrever novamente. A pacífica rotina do casal é interrompida com a chegada de visitantes que se impõem à sua vida e escondem intenções verdadeiras.\n\nA experiência de assistir ao filme é marcada por uma intensa sensação de desconforto e ansiedade, com uma atmosfera de pressão constante que se intensifica ao longo da narrativa. O uso de metáforas e simbolismo é outro elemento recorrente, contribuindo para um clima de ambiguidade e reflexão. O desenvolvimento do enredo, embora presente, é frequentemente descrito como desafiador, exigindo do espectador uma interpretação ativa para compreender as camadas de significado.\n\nNa maioria das notas (~64%), os espectadores destacam a riqueza do simbolismo religioso e o impacto emocional do filme, interpretando-o como uma crítica à humanidade e aos relacionamentos tóxicos. A performance de Jennifer Lawrence é amplamente elogiada, com muitos considerando-a intensa e realista. O clima de tensão e ansiedade psicológica também é frequentemente mencionado, com destaque para a segunda metade do filme, que gera uma sensação de claustrofobia e desespero.\n\nNuma parcela das notas (~22%), os críticos apontam uma experiência intensa de desconforto e ansiedade, destacando a tentativa de transmitir significados simbólicos, embora algumas considerem o uso excessivo ou forçado. Há uma crítica frequente em relação ao ritmo e à construção do enredo, com algumas avaliações achando que o filme se arrasta no início e se torna caótico no final. Ainda assim, o desempenho de Jennifer Lawrence é reconhecido como um ponto positivo.\n\nNuma fração mínima das notas (~14%), as críticas destacam uma experiência de assistência marcada por frustração, com a sensação de sobrecarga de símbolos e alegorias, que tornam a experiência de assistir ao filme confusa e pouco envolvente. O ritmo e o desgaste do espectador são frequentemente mencionados, com várias avaliações apontando que o filme é cansativo, com longas sequências que não parecem ter um propósito claro, gerando frustração. Mesmo assim, a atuação de Jennifer Lawrence é frequentemente mencionada como um dos pontos positivos, mesmo que o resto do filme tenha recebido críticas severas.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [],
+    "paragrafos": {
+      "n_paragrafos": 5,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 5,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": true,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "repeticao",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 1,
+        "ritmo": 7,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 4,
+        "ritmo": 5,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 2,
+        "cliches": 0,
+        "repeticao_max": 2,
+        "ritmo": 6,
+        "cobertura": 0.667,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 0,
+      "motivos": [],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 13322,
+      "completion_tokens": 2416,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 13322
+    },
+    "latencia_s": 762.31
+  },
+  "veredito": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "prefixo_codigo": "",
+    "retry": {
+      "flags_antes": [
+        "tema_verbatim"
+      ],
+      "flags_depois": [],
+      "aplicado": true
+    },
+    "spec_version": "1.9.50",
+    "texto": "Cerca de metade dos que não recomendam apontam a dificuldade em acompanhar o uso de metáforas e símbolos, enquanto a maioria dos que recomendam valoriza a riqueza das metáforas religiosas e o simbolismo presente na trama.",
+    "texto_modelo": "Cerca de metade dos que não recomendam apontam a dificuldade em acompanhar o uso de metáforas e símbolos, enquanto a maioria dos que recomendam valoriza a riqueza das metáforas religiosas e o simbolismo presente na trama.",
+    "origem": "llm",
+    "motivo": "retry_direcionado",
+    "criterio_decisivo": "empate",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 28,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 12,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 39,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 12,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_palavras": 28,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 12,
+        "eliminado": true
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 5358,
+      "completion_tokens": 274,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 5358
+    },
+    "latencia_s": 77.78
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia simbolismos bíblicos e metáforas religiosas",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Metáforas religiosas e simbolismo bíblico",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "admira atuações intensas e que exploram vulnerabilidade emocional",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Performance de Jennifer Lawrence",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura um clima de inquietação e pressão constante",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão e ansiedade psicológica",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aceita uma narrativa inicial confusa mas com revelação final",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Confusão inicial e revelação no final",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se sente sobrecarregado por símbolos e alegorias excessivas",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "excesso de metáforas e simbolismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "prefere ritmo mais dinâmico do que sequências cansativas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "ritmo e desgaste do espectador",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera intencionalidade artística mas não excessos",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "trabalho do diretor e intencionalidade artística",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 64,
+        "peso_texto": "~64% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 14,
+        "peso_texto": "~14% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": {
+      "pct": 22,
+      "texto": "~22% das notas ficaram no meio-termo"
+    },
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-B"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "não se interessa por atuações isoladas em um filme fraco",
+        "tema_origem": "NEG-B",
+        "lado": "talvez_evite",
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 3,
+        "flags": [
+          "idioma",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "ancora_nao_verificavel",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 18233,
+      "completion_tokens": 824,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 18233
+    },
+    "latencia_s": 300.29,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  },
+  "proveniencia_llm": {
+    "excecao": "LOCAL_PROSA",
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "think": "false",
+    "estagios": {
+      "sintese": {
+        "estagio": "sintese",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 827.7,
+          "leitura_prompt": 44.0,
+          "geracao": 763.7
+        }
+      },
+      "rotulagem": {
+        "estagio": "rotulagem",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 117.2,
+          "leitura_prompt": 4.5,
+          "geracao": 106.3
+        }
+      },
+      "narrativa": {
+        "estagio": "narrativa",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 762.3,
+          "leitura_prompt": 14.2,
+          "geracao": 739.5
+        }
+      },
+      "veredito": {
+        "estagio": "veredito",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 77.8,
+          "leitura_prompt": 6.0,
+          "geracao": 63.4
+        }
+      },
+      "condicoes": {
+        "estagio": "condicoes",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 300.3,
+          "leitura_prompt": 14.8,
+          "geracao": 277.1
+        }
+      }
+    },
+    "falhas": {}
+  }
+}

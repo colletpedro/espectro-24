@@ -1,0 +1,18 @@
+{
+  "semente": 20261012,
+  "a_e": {
+    "anatomy-of-a-fall": "local",
+    "incendies": "publicado",
+    "mother-2017": "publicado",
+    "napoleon-2023": "publicado",
+    "the-substance": "publicado"
+  },
+  "filmes": [
+    "anatomy-of-a-fall",
+    "incendies",
+    "mother-2017",
+    "napoleon-2023",
+    "the-substance"
+  ],
+  "sha256": "6e0ae2be96f6bd2dde9d7c93a79c595786dfd08f541ef2a1ec6dd9e4343ee111"
+}

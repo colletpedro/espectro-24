@@ -1,0 +1,4 @@
+{"ts": "2026-10-16T20:35:54", "estagio": "sintese", "ok": true, "think": "low", "finish_reason": "stop", "latencia_s": 109.86, "leitura_prompt_s": 16.782, "geracao_s": 66.025, "prompt_tokens": 5098, "eval_count": 614, "erro": null}
+{"ts": "2026-10-16T20:37:13", "estagio": "sintese", "ok": true, "think": "low", "finish_reason": "stop", "latencia_s": 79.06, "leitura_prompt_s": 15.431, "geracao_s": 61.246, "prompt_tokens": 4193, "eval_count": 593, "erro": null}
+{"ts": "2026-10-16T20:38:36", "estagio": "sintese", "ok": true, "think": "low", "finish_reason": "stop", "latencia_s": 83.44, "leitura_prompt_s": 13.088, "geracao_s": 68.024, "prompt_tokens": 5389, "eval_count": 618, "erro": null}
+{"ts": "2026-10-16T20:38:58", "estagio": "rotulagem", "ok": true, "think": "low", "finish_reason": "stop", "latencia_s": 20.92, "leitura_prompt_s": 4.946, "geracao_s": 13.843, "prompt_tokens": 722, "eval_count": 182, "erro": null}

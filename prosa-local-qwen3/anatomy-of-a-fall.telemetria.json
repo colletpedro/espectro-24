@@ -1,0 +1,427 @@
+{
+  "slug": "anatomy-of-a-fall",
+  "excecao": "LOCAL_PROSA",
+  "provider": "local",
+  "modelo": "qwen3:14b",
+  "think": "false",
+  "n_best_of": 3,
+  "falhas": {},
+  "selecao_reproduz_publicada": true,
+  "estagios": {
+    "sintese": {
+      "estagio": "sintese",
+      "provider": "local",
+      "modelo": "qwen3:14b",
+      "think": "false",
+      "modelos_efetivos": [
+        "qwen3:14b"
+      ],
+      "n_chamadas": 3,
+      "n_falhas": 0,
+      "finish_reason": {
+        "stop": 3
+      },
+      "custo_usd": 0.0,
+      "tempo_s": {
+        "parede": 719.0,
+        "leitura_prompt": 47.0,
+        "geracao": 652.5
+      },
+      "chamadas": [
+        {
+          "estagio": "sintese",
+          "unidade": "Bucket: negativas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:39:32+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 249.09,
+          "leitura_prompt_s": 17.427,
+          "geracao_s": 216.619,
+          "carga_s": 12.914,
+          "total_s": 247.011,
+          "prompt_eval_count": 5635,
+          "eval_count": 623,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "sintese",
+          "unidade": "Bucket: medianas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:43:41+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 226.23,
+          "leitura_prompt_s": 13.003,
+          "geracao_s": 211.03,
+          "carga_s": 0.015,
+          "total_s": 224.18,
+          "prompt_eval_count": 4679,
+          "eval_count": 649,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "sintese",
+          "unidade": "Bucket: positivas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:47:27+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 243.69,
+          "leitura_prompt_s": 16.59,
+          "geracao_s": 224.848,
+          "carga_s": 0.011,
+          "total_s": 241.63,
+          "prompt_eval_count": 5902,
+          "eval_count": 639,
+          "custo_usd": 0.0
+        }
+      ]
+    },
+    "rotulagem": {
+      "estagio": "rotulagem",
+      "provider": "local",
+      "modelo": "qwen3:14b",
+      "think": "false",
+      "modelos_efetivos": [
+        "qwen3:14b"
+      ],
+      "n_chamadas": 3,
+      "n_falhas": 0,
+      "finish_reason": {
+        "stop": 3
+      },
+      "custo_usd": 0.0,
+      "tempo_s": {
+        "parede": 109.1,
+        "leitura_prompt": 4.3,
+        "geracao": 98.3
+      },
+      "chamadas": [
+        {
+          "estagio": "rotulagem",
+          "unidade": "Grupo: negativas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:51:31+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 37.86,
+          "leitura_prompt_s": 2.548,
+          "geracao_s": 33.034,
+          "carga_s": 0.012,
+          "total_s": 35.765,
+          "prompt_eval_count": 791,
+          "eval_count": 148,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "rotulagem",
+          "unidade": "Grupo: medianas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:52:09+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 38.16,
+          "leitura_prompt_s": 0.886,
+          "geracao_s": 35.172,
+          "carga_s": 0.012,
+          "total_s": 36.076,
+          "prompt_eval_count": 802,
+          "eval_count": 157,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "rotulagem",
+          "unidade": "Grupo: positivas",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:52:47+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 33.09,
+          "leitura_prompt_s": 0.902,
+          "geracao_s": 30.109,
+          "carga_s": 0.012,
+          "total_s": 31.029,
+          "prompt_eval_count": 780,
+          "eval_count": 135,
+          "custo_usd": 0.0
+        }
+      ]
+    },
+    "narrativa": {
+      "estagio": "narrativa",
+      "provider": "local",
+      "modelo": "qwen3:14b",
+      "think": "false",
+      "modelos_efetivos": [
+        "qwen3:14b"
+      ],
+      "n_chamadas": 4,
+      "n_falhas": 0,
+      "finish_reason": {
+        "stop": 4
+      },
+      "custo_usd": 0.0,
+      "tempo_s": {
+        "parede": 487.8,
+        "leitura_prompt": 11.9,
+        "geracao": 467.4
+      },
+      "chamadas": [
+        {
+          "estagio": "narrativa",
+          "unidade": "BRIEFING (todas as decisões já foram tomadas pelo código — verbalize, não escolh",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:53:20+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 165.41,
+          "leitura_prompt_s": 9.569,
+          "geracao_s": 153.714,
+          "carga_s": 0.012,
+          "total_s": 163.345,
+          "prompt_eval_count": 3512,
+          "eval_count": 524,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "narrativa",
+          "unidade": "BRIEFING (todas as decisões já foram tomadas pelo código — verbalize, não escolh",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:56:06+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 106.73,
+          "leitura_prompt_s": 0.353,
+          "geracao_s": 104.303,
+          "carga_s": 0.014,
+          "total_s": 104.683,
+          "prompt_eval_count": 3512,
+          "eval_count": 356,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "narrativa",
+          "unidade": "BRIEFING (todas as decisões já foram tomadas pelo código — verbalize, não escolh",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:57:52+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 121.0,
+          "leitura_prompt_s": 0.421,
+          "geracao_s": 118.476,
+          "carga_s": 0.012,
+          "total_s": 118.922,
+          "prompt_eval_count": 3512,
+          "eval_count": 406,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "narrativa",
+          "unidade": "O texto abaixo está quase certo. Reescreva APENAS as frases listadas depois dele",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-16T23:59:53+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 94.64,
+          "leitura_prompt_s": 1.554,
+          "geracao_s": 90.891,
+          "carga_s": 0.02,
+          "total_s": 92.565,
+          "prompt_eval_count": 1844,
+          "eval_count": 356,
+          "custo_usd": 0.0
+        }
+      ]
+    },
+    "veredito": {
+      "estagio": "veredito",
+      "provider": "local",
+      "modelo": "qwen3:14b",
+      "think": "false",
+      "modelos_efetivos": [
+        "qwen3:14b"
+      ],
+      "n_chamadas": 3,
+      "n_falhas": 0,
+      "finish_reason": {
+        "stop": 3
+      },
+      "custo_usd": 0.0,
+      "tempo_s": {
+        "parede": 55.9,
+        "leitura_prompt": 4.6,
+        "geracao": 45.0
+      },
+      "chamadas": [
+        {
+          "estagio": "veredito",
+          "unidade": "CONTRASTE ENTRE OS GRUPOS: temático.",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:01:28+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 21.89,
+          "leitura_prompt_s": 3.858,
+          "geracao_s": 15.886,
+          "carga_s": 0.011,
+          "total_s": 19.817,
+          "prompt_eval_count": 1326,
+          "eval_count": 70,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "veredito",
+          "unidade": "CONTRASTE ENTRE OS GRUPOS: temático.",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:01:50+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 17.55,
+          "leitura_prompt_s": 0.449,
+          "geracao_s": 15.004,
+          "carga_s": 0.012,
+          "total_s": 15.471,
+          "prompt_eval_count": 1326,
+          "eval_count": 63,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "veredito",
+          "unidade": "CONTRASTE ENTRE OS GRUPOS: temático.",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:02:08+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 16.48,
+          "leitura_prompt_s": 0.297,
+          "geracao_s": 14.126,
+          "carga_s": 0.012,
+          "total_s": 14.441,
+          "prompt_eval_count": 1326,
+          "eval_count": 62,
+          "custo_usd": 0.0
+        }
+      ]
+    },
+    "condicoes": {
+      "estagio": "condicoes",
+      "provider": "local",
+      "modelo": "qwen3:14b",
+      "think": "false",
+      "modelos_efetivos": [
+        "qwen3:14b"
+      ],
+      "n_chamadas": 3,
+      "n_falhas": 0,
+      "finish_reason": {
+        "stop": 3
+      },
+      "custo_usd": 0.0,
+      "tempo_s": {
+        "parede": 310.5,
+        "leitura_prompt": 12.9,
+        "geracao": 291.2
+      },
+      "chamadas": [
+        {
+          "estagio": "condicoes",
+          "unidade": "QUEM RECOMENDA — ESCREVA UMA CONDIÇÃO PARA CADA TEMA ABAIXO, NESTA ORDEM (lado `",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:02:24+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 121.06,
+          "leitura_prompt_s": 11.896,
+          "geracao_s": 106.991,
+          "carga_s": 0.021,
+          "total_s": 118.965,
+          "prompt_eval_count": 4185,
+          "eval_count": 348,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "condicoes",
+          "unidade": "QUEM RECOMENDA — ESCREVA UMA CONDIÇÃO PARA CADA TEMA ABAIXO, NESTA ORDEM (lado `",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:04:25+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 106.81,
+          "leitura_prompt_s": 0.506,
+          "geracao_s": 104.199,
+          "carga_s": 0.011,
+          "total_s": 104.732,
+          "prompt_eval_count": 4185,
+          "eval_count": 337,
+          "custo_usd": 0.0
+        },
+        {
+          "estagio": "condicoes",
+          "unidade": "QUEM RECOMENDA — ESCREVA UMA CONDIÇÃO PARA CADA TEMA ABAIXO, NESTA ORDEM (lado `",
+          "provider": "local",
+          "modelo": "qwen3:14b",
+          "think": "false",
+          "ts": "2026-10-17T00:06:12+00:00",
+          "ok": true,
+          "modelo_efetivo": "qwen3:14b",
+          "finish_reason": "stop",
+          "latencia_s": 82.64,
+          "leitura_prompt_s": 0.499,
+          "geracao_s": 80.057,
+          "carga_s": 0.012,
+          "total_s": 80.583,
+          "prompt_eval_count": 4185,
+          "eval_count": 261,
+          "custo_usd": 0.0
+        }
+      ]
+    }
+  },
+  "elapsed_s": 1682.7
+}

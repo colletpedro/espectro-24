@@ -1,0 +1,1832 @@
+{
+  "slug": "incendies",
+  "data_coleta": "2026-09-16T19:22:03.423081+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 540,
+  "reviews_url": "https://letterboxd.com/film/incendies/reviews/",
+  "ficha": {
+    "titulo": "Incêndios",
+    "sinopse_oficial": "Após a morte da mãe, os gêmeos Simon e Jeanne descobrem que têm um irmão e que o pai, que julgavam morto, está vivo. Em conflito interno, eles descobrem revelações sobre si mesmos.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Guerra",
+      "Mistério"
+    ],
+    "duracao_min": 131,
+    "diretor": "Denis Villeneuve",
+    "diretor_transliterado": false,
+    "ano": 2010,
+    "fonte": "tmdb",
+    "tmdb_id": 46738,
+    "tmdb_fetched_at": "2026-09-16T20:18:43+00:00",
+    "poster_path": "/uCS7IEfBLoBBLpOdCkfpVA7xhed.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/f3ATwil5vmUeTsogBaMEKbBYBth.jpg",
+      "/u8wmr8QCowIYXUxVeZYSPWVbB9P.jpg",
+      "/xsmOd7CnT6XrfQoRTF3YVeS0ByJ.jpg",
+      "/xzuiKws8WQ5wYlIm4gDPX7mzvtf.jpg",
+      "/cxdwJCfHgv4lMjkcahWRDf5mW01.jpg",
+      "/9YRnkhmG1lFjtSWHAuywUXab8Kv.jpg",
+      "/gZ2ZtFNGD0piaFZmrtPxoS0dzTg.jpg",
+      "/7iXm2NXmc7gDVIVdwHl1Rdr2Y4D.jpg",
+      "/9cre8l1zykyQjhXGqEEJTMHC211.jpg",
+      "/4yXXn5ahxy03afo25AOsMQEMMnk.jpg"
+    ],
+    "backdrop_path": "/f3ATwil5vmUeTsogBaMEKbBYBth.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/bpTtu2Tc05mCehkKInvmp1EOx98.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 2963,
+    "galeria_stills": [
+      {
+        "still_path": "/f3ATwil5vmUeTsogBaMEKbBYBth.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/4yXXn5ahxy03afo25AOsMQEMMnk.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/v3OqIIRI3lb6AN5XBKjoTFRGBGC.jpg",
+        "still_largura": 2919,
+        "still_altura": 1642
+      },
+      {
+        "still_path": "/xsmOd7CnT6XrfQoRTF3YVeS0ByJ.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/2H0jhu4RyUPHHeXCLehE3DByReO.jpg",
+        "still_largura": 2048,
+        "still_altura": 1151
+      },
+      {
+        "still_path": "/1I2Yw2VqMhXBMmcYBhcqCWSVBEb.jpg",
+        "still_largura": 2905,
+        "still_altura": 1634
+      },
+      {
+        "still_path": "/7lPAG2kJawvy3htAR5cAA5mXdKk.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cfXHVNuN9JJKSBxDELt2px3StKi.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/h3ojHoqPu56MIne6Q6EE3vTyVwn.jpg",
+        "still_largura": 2846,
+        "still_altura": 1601
+      },
+      {
+        "still_path": "/nUg4ealsEwryvY3X6tX6CjtOzh1.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/t32x4HaPdZqvqDD56Tu5WdT91Cv.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vxT8Rn4bwVpd77wLQs6ijOkuC3y.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": "letterboxd",
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "incendies",
+      "titulo_letterboxd": "Incendies",
+      "ano_letterboxd": 2010,
+      "tmdb_id_letterboxd": 46738,
+      "tmdb_id_escolhido": 46738,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Incendies",
+      "ano_tmdb": 2010,
+      "ano_divergente": false
+    }
+  },
+  "distribuicao": {
+    "n_notas_total": 664575,
+    "por_nivel": {
+      "0.5": 1047,
+      "1.0": 1663,
+      "1.5": 1333,
+      "2.0": 5024,
+      "2.5": 6831,
+      "3.0": 26509,
+      "3.5": 48682,
+      "4.0": 168100,
+      "4.5": 168200,
+      "5.0": 237186
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "incendies",
+    "coletado_em": "2026-09-16T04:13:51.511806+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1047,
+      "1.0": 1663,
+      "1.5": 1333,
+      "2.0": 5024,
+      "2.5": 6831,
+      "3.0": 26509,
+      "3.5": 48682,
+      "4.0": 168100,
+      "4.5": 168200,
+      "5.0": 237186
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 5,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 5,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 60,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 6,
+      "1.5": 12,
+      "2.0": 26,
+      "2.5": 20,
+      "3.0": 42,
+      "3.5": 3,
+      "4.0": 13,
+      "4.5": 16,
+      "5.0": 16
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 5,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "1.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 49,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 62,
+        "n_validas_pos_extensao": 62,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 5,
+      "2.5": 7,
+      "3.0": 29,
+      "3.5": 53,
+      "4.0": 181,
+      "4.5": 182,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 564,
+        "min": "2016-03-28",
+        "max": "2026-09-16",
+        "p5": "2026-08-06",
+        "p50": "2026-09-06",
+        "p95": "2026-09-15"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 168,
+          "min": "2016-03-28",
+          "max": "2026-09-15",
+          "p5": "2026-08-01",
+          "p50": "2026-08-24",
+          "p95": "2026-09-13"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2023-09-07",
+          "max": "2026-09-16",
+          "p5": "2026-08-16",
+          "p50": "2026-09-05",
+          "p95": "2026-09-14"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2023-10-06",
+          "max": "2026-09-16",
+          "p5": "2026-09-03",
+          "p50": "2026-09-15",
+          "p95": "2026-09-16"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "identidade_letterboxd": {
+      "slug": "incendies",
+      "titulo": "Incendies",
+      "ano": 2010,
+      "tmdb_id_letterboxd": 46738,
+      "fonte": "pagina_letterboxd"
+    },
+    "ano_lancamento": 2010,
+    "ano_fonte": "letterboxd",
+    "n_reviews_bruto": 564
+  },
+  "origem_paginas": {
+    "_histograma/incendies.html": "cache",
+    "incendies/pages/by_added/rated_5_page_4.html": "cache",
+    "incendies/pages/by_added/rated_5_page_16.html": "cache",
+    "incendies/pages/by_added/rated_5_page_64.html": "cache",
+    "incendies/pages/by_added/rated_5_page_256.html": "cache",
+    "incendies/pages/by_added/rated_0_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_0_5_page_2.html": "cache",
+    "incendies/pages/by_added/rated_1_page_1.html": "cache",
+    "incendies/pages/by_added/rated_1_page_2.html": "cache",
+    "incendies/fulltext/viewing_1489059637.html": "cache",
+    "incendies/fulltext/viewing_1463506575.html": "cache",
+    "incendies/fulltext/viewing_1458926971.html": "cache",
+    "incendies/pages/by_added/rated_1_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_1_5_page_2.html": "cache",
+    "incendies/fulltext/viewing_1496199631.html": "cache",
+    "incendies/fulltext/viewing_1495915810.html": "cache",
+    "incendies/fulltext/viewing_1494903440.html": "cache",
+    "incendies/fulltext/viewing_1464733339.html": "cache",
+    "incendies/fulltext/viewing_1436466166.html": "cache",
+    "incendies/pages/by_added/rated_2_page_1.html": "cache",
+    "incendies/pages/by_added/rated_2_page_2.html": "cache",
+    "incendies/pages/by_added/rated_2_page_3.html": "cache",
+    "incendies/pages/by_added/rated_2_page_4.html": "cache",
+    "incendies/pages/by_added/rated_2_page_5.html": "cache",
+    "incendies/pages/by_added/rated_2_page_6.html": "cache",
+    "incendies/pages/by_added/rated_2_page_7.html": "cache",
+    "incendies/fulltext/viewing_1494928320.html": "cache",
+    "incendies/fulltext/viewing_1494886751.html": "cache",
+    "incendies/fulltext/viewing_1475556179.html": "cache",
+    "incendies/fulltext/viewing_1468873823.html": "cache",
+    "incendies/fulltext/viewing_1455857917.html": "cache",
+    "incendies/fulltext/viewing_1437173847.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_2.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_3.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_4.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_5.html": "cache",
+    "incendies/pages/by_added/rated_2_5_page_7.html": "cache",
+    "incendies/fulltext/viewing_1495371278.html": "cache",
+    "incendies/fulltext/viewing_1474975149.html": "cache",
+    "incendies/fulltext/viewing_1472729969.html": "cache",
+    "incendies/fulltext/viewing_1471155843.html": "cache",
+    "incendies/fulltext/viewing_1468623729.html": "cache",
+    "incendies/pages/by_added/rated_3_page_1.html": "cache",
+    "incendies/pages/by_added/rated_3_page_2.html": "cache",
+    "incendies/pages/by_added/rated_3_page_3.html": "cache",
+    "incendies/pages/by_added/rated_3_page_4.html": "cache",
+    "incendies/pages/by_added/rated_3_page_5.html": "cache",
+    "incendies/pages/by_added/rated_3_page_6.html": "cache",
+    "incendies/pages/by_added/rated_3_page_7.html": "cache",
+    "incendies/pages/by_added/rated_3_page_8.html": "cache",
+    "incendies/pages/by_added/rated_3_page_9.html": "cache",
+    "incendies/pages/by_added/rated_3_page_14.html": "cache",
+    "incendies/fulltext/viewing_1495736427.html": "cache",
+    "incendies/fulltext/viewing_1495702257.html": "cache",
+    "incendies/fulltext/viewing_1495299459.html": "cache",
+    "incendies/fulltext/viewing_1491344714.html": "cache",
+    "incendies/fulltext/viewing_1490691856.html": "cache",
+    "incendies/fulltext/viewing_1486323170.html": "cache",
+    "incendies/fulltext/viewing_1486049036.html": "cache",
+    "incendies/fulltext/viewing_1482359809.html": "cache",
+    "incendies/fulltext/viewing_1482137434.html": "cache",
+    "incendies/fulltext/viewing_1468427752.html": "cache",
+    "incendies/fulltext/viewing_1466756080.html": "cache",
+    "incendies/fulltext/viewing_1466274940.html": "cache",
+    "incendies/pages/by_added/rated_3_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_4_page_1.html": "cache",
+    "incendies/pages/by_added/rated_4_page_2.html": "cache",
+    "incendies/pages/by_added/rated_4_page_3.html": "cache",
+    "incendies/pages/by_added/rated_4_page_45.html": "cache",
+    "incendies/fulltext/viewing_1497858233.html": "cache",
+    "incendies/fulltext/viewing_1484324929.html": "cache",
+    "incendies/pages/by_added/rated_4_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_4_5_page_2.html": "cache",
+    "incendies/pages/by_added/rated_4_5_page_3.html": "cache",
+    "incendies/pages/by_added/rated_4_5_page_4.html": "cache",
+    "incendies/pages/by_added/rated_4_5_page_46.html": "cache",
+    "incendies/fulltext/viewing_1497299733.html": "cache",
+    "incendies/fulltext/viewing_1497209380.html": "cache",
+    "incendies/pages/by_added/rated_5_page_1.html": "cache",
+    "incendies/pages/by_added/rated_5_page_2.html": "cache",
+    "incendies/pages/by_added/rated_5_page_3.html": "cache",
+    "incendies/pages/by_added/rated_5_page_128.html": "cache",
+    "incendies/fulltext/viewing_1497623747.html": "cache",
+    "incendies/fulltext/viewing_1497388013.html": "cache",
+    "incendies/fulltext/viewing_1488762301.html": "cache",
+    "incendies/film_page.html": "cache"
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 7,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 6,
+        "fracao_profunda": 0.075
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-01",
+        "max": "2026-09-15",
+        "p5": "2026-08-09",
+        "p50": "2026-08-26",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 2
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 22,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 7,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 7
+        }
+      ],
+      "temas": [
+        {
+          "tema": "previsibilidade do enredo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores consideraram o desfecho do filme extremamente previsível, com alguns afirmando que conseguiram desvendar o twist já no início da narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "trabalho de atuação insatisfatório",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas frequentes apontaram para a falta de qualidade no desempenho dos atores, especialmente em relação à falta de autenticidade e à dificuldade de envolver o espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "falta de aprofundamento no contexto político e histórico",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias análises destacaram o desinteresse do filme em explorar de forma satisfatória os aspectos políticos e históricos do conflito que inspirou a trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "apresentação de temas sensíveis de forma inadequada",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideraram a abordagem de temas como violência e trauma de forma superficial e, em alguns casos, até ofensiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "ritmo lento e falta de engajamento",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos comentários mencionaram a lentidão do ritmo da narrativa e a dificuldade de manter o interesse ao longo do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "falta de originalidade e genericalidade",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores criticaram a ausência de originalidade e a percepção de que o filme poderia ter se passado em qualquer lugar ou época.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "as reviews negativas destacam a previsibilidade do enredo, a falta de aprofundamento político e a insatisfação com o desempenho dos atores, apontando para uma experiência geralmente desengajadora.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 5,
+        "p95": 14,
+        "fracao_profunda": 0.325
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-24",
+        "max": "2026-09-15",
+        "p5": "2026-08-24",
+        "p50": "2026-09-06",
+        "p95": "2026-09-14"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 46,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 46,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 71,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 71,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 10
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Revelação surpreendente no final",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas mencionam a surpresa causada pelo desfecho, apesar de algumas terem previsto ou esperado algo semelhante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trabalho de direção e fotografia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O estilo visual e a direção são frequentemente elogiados, especialmente a cinematografia e a construção de cenas impactantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Narrativa lenta e densa",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Alguns espectadores consideraram o ritmo da narrativa como demorado, o que afetou a experiência geral da obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Foco excessivo no plot twist",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que a construção do filme parece ter priorizado o desfecho surpreendente em detrimento do desenvolvimento dos personagens e da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas de guerra e conflito",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A guerra e suas consequências são discutidas de forma intensa, embora algumas críticas apontem uma abordagem simplificada ou polarizada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ausência de conexão emocional com os personagens",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas avaliações destacam a dificuldade em se conectar com os personagens, considerando-os mais como ferramentas para o enredo do que como figuras com profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews destaca a surpresa do final, mas também aponta para uma narrativa lenta e uma construção que prioriza o desfecho em detrimento do desenvolvimento dos personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 5
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 11,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 11,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 46,
+        "fracao_profunda": 0.3
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-05",
+        "max": "2026-09-16",
+        "p5": "2026-09-05",
+        "p50": "2026-09-15",
+        "p95": "2026-09-16"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 1
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 4
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 5
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 3,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 6
+        }
+      ],
+      "temas": [
+        {
+          "tema": "impacto emocional intenso",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitas avaliações destacam a forte emoção gerada pelo filme, com reações como choque, tristeza profunda e sensação de desgaste psicológico, indicando que o filme atinge espectadores de forma visceral e duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "revelação surpreendente e impactante",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas mencionam a revelação central do filme como um momento de grande surpresa e emoção, com destaque para a forma como ela é apresentada e seu efeito nos espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "exploração da guerra e seus efeitos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Vários espectadores ressaltam a forma como o filme aborda o impacto da guerra nas vidas das pessoas, com destaque para o sofrimento, o desespero e as consequências de longo prazo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "exploração da maternidade e dos laços familiares",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A relação entre mãe e filhos é frequentemente mencionada como um ponto central do filme, com destaque para a intensidade emocional e a complexidade dos sentimentos envolvidos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "realismo e representação da vida real",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Diversas avaliações destacam a forma como o filme retrata situações reais e complexas, com um tom de autenticidade que impacta o espectador de maneira profunda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "direção e cinematografia impecáveis",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Várias críticas elogiam a direção e a estética visual do filme, destacando a qualidade técnica e a forma como os elementos visuais contribuem para o impacto emocional da obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para um filme impactante emocionalmente, com revelações fortes e uma exploração profunda da guerra e dos laços familiares. Este grupo destaca a cinematografia e a direção como elementos fundamentais para a experiência do espectador.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 94
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "ritmo lento e falta de engajamento",
+            "exemplo_parafraseado": "Muitos comentários mencionaram a lentidão do ritmo da narrativa e a dificuldade de manter o interesse ao longo do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Narrativa lenta e densa",
+            "exemplo_parafraseado": "Alguns espectadores consideraram o ritmo da narrativa como demorado, o que afetou a experiência geral da obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "trabalho de atuação insatisfatório",
+            "exemplo_parafraseado": "Críticas frequentes apontaram para a falta de qualidade no desempenho dos atores, especialmente em relação à falta de autenticidade e à dificuldade de envolver o espectador.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trabalho de direção e fotografia",
+            "exemplo_parafraseado": "O estilo visual e a direção são frequentemente elogiados, especialmente a cinematografia e a construção de cenas impactantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "realismo e representação da vida real",
+            "exemplo_parafraseado": "Diversas avaliações destacam a forma como o filme retrata situações reais e complexas, com um tom de autenticidade que impacta o espectador de maneira profunda.",
+            "temas_no_mesmo_eixo": [
+              "direção e cinematografia impecáveis"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "previsibilidade do enredo",
+            "exemplo_parafraseado": "Vários espectadores consideraram o desfecho do filme extremamente previsível, com alguns afirmando que conseguiram desvendar o twist já no início da narrativa.",
+            "temas_no_mesmo_eixo": [
+              "falta de originalidade e genericalidade"
+            ]
+          },
+          "medianas": {
+            "mencoes": 38,
+            "de_n": 40,
+            "freq_pct": 95.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Revelação surpreendente no final",
+            "exemplo_parafraseado": "Várias críticas mencionam a surpresa causada pelo desfecho, apesar de algumas terem previsto ou esperado algo semelhante.",
+            "temas_no_mesmo_eixo": [
+              "Foco excessivo no plot twist"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "revelação surpreendente e impactante",
+            "exemplo_parafraseado": "Várias críticas mencionam a revelação central do filme como um momento de grande surpresa e emoção, com destaque para a forma como ela é apresentada e seu efeito nos espectadores.",
+            "temas_no_mesmo_eixo": [
+              "exploração da maternidade e dos laços familiares"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Ausência de conexão emocional com os personagens",
+            "exemplo_parafraseado": "Diversas avaliações destacam a dificuldade em se conectar com os personagens, considerando-os mais como ferramentas para o enredo do que como figuras com profundidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "impacto emocional intenso",
+            "exemplo_parafraseado": "Muitas avaliações destacam a forte emoção gerada pelo filme, com reações como choque, tristeza profunda e sensação de desgaste psicológico, indicando que o filme atinge espectadores de forma visceral e duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "falta de aprofundamento no contexto político e histórico",
+            "exemplo_parafraseado": "Várias análises destacaram o desinteresse do filme em explorar de forma satisfatória os aspectos políticos e históricos do conflito que inspirou a trama.",
+            "temas_no_mesmo_eixo": [
+              "apresentação de temas sensíveis de forma inadequada"
+            ]
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Temas de guerra e conflito",
+            "exemplo_parafraseado": "A guerra e suas consequências são discutidas de forma intensa, embora algumas críticas apontem uma abordagem simplificada ou polarizada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "exploração da guerra e seus efeitos",
+            "exemplo_parafraseado": "Vários espectadores ressaltam a forma como o filme aborda o impacto da guerra nas vidas das pessoas, com destaque para o sofrimento, o desespero e as consequências de longo prazo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "variante": "V2_alvo",
+      "passada": 1,
+      "eixo": "impacto_emocional",
+      "n_removidas_no_corpus": 4187
+    }
+  },
+  "narrativa": "O filme *Incêndios*, dirigido por Denis Villeneuve em 2010, pertence aos gêneros de Drama, Guerra e Mistério. Com duração de 131 minutos, a sinopse apresenta a história de Simon e Jeanne, gêmeos que descobrem a existência de um irmão e o fato de que o pai, acreditado morto, está vivo, gerando conflitos internos e revelações sobre si mesmos.\n\nAssistir ao filme é uma experiência marcada por uma narrativa lenta e densa, com uma estrutura que prioriza o desfecho em detrimento do desenvolvimento dos personagens. O ritmo, embora em alguns momentos desafiador, contribui para uma atmosfera intensa e imersiva, enquanto a direção e a fotografia destacam-se por sua qualidade visual e pela forma como as cenas são construídas.\n\nA grande maioria das notas (~94%) destaca o impacto emocional intenso do filme, com muitas avaliações apontando para reações como choque, tristeza profunda e sensação de desgaste psicológico. Uma parcela expressiva também menciona a revelação surpreendente e impactante no final, que é apresentada de forma marcante e envolvente. Além disso, uma fatia menor destaca a exploração da guerra e seus efeitos, com destaque para o sofrimento e as consequências de longo prazo.\n\nNuma fração mínima das notas (~5%), algumas críticas apontam para a surpresa causada pelo desfecho, embora algumas tenham previsto ou esperado algo semelhante. O trabalho de direção e fotografia é frequentemente elogiado, especialmente a cinematografia e a construção de cenas impactantes. Por outro lado, uma fatia menor destaca que a narrativa é lenta e densa, o que afetou a experiência geral da obra.\n\nNuma fração ainda menor das notas (~1%), vários espectadores consideraram o desfecho do filme extremamente previsível, com alguns afirmando que conseguiram desvendar o twist já no início da narrativa. Uma parte também aponta para o trabalho de atuação insatisfatório, especialmente em relação à falta de autenticidade e à dificuldade de envolver o espectador. Além disso, uma fatia menor destaca a falta de aprofundamento no contexto político e histórico, com várias análises destacando o desinteresse do filme em explorar de forma satisfatória os aspectos políticos e históricos do conflito que inspirou a trama.\n\nOs grupos concordam sobre o que o filme é e discordam sobre se ele funciona.",
+  "verificacao_narrativa": {
+    "quantificador_fora_de_faixa": [],
+    "quantificador_repetido": [
+      {
+        "construcao": "uma fatia menor",
+        "n": 3
+      }
+    ],
+    "paragrafos": {
+      "n_paragrafos": 6,
+      "minimo": 3,
+      "insuficientes": false,
+      "longos": []
+    },
+    "n_paragrafos": 6,
+    "paragrafos_insuficientes": false,
+    "paragrafos_longos": [],
+    "grupos_sem_paragrafo_proprio": [],
+    "movimento1_e_movimento2_no_mesmo_paragrafo": false,
+    "formato_invalido": false,
+    "numeros_inventados": [],
+    "rotulos_faltando": [],
+    "ordem_incorreta": false,
+    "vocabulario_peso": false,
+    "resenha_speak": [],
+    "n_resenha_speak": 0,
+    "n_flags": 1
+  },
+  "narrativa_selecao": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "motivo": "menor_severidade",
+    "criterio_decisivo": "repeticao",
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 3,
+        "cliches": 0,
+        "repeticao_max": 6,
+        "ritmo": 7,
+        "cobertura": 0.667,
+        "eliminado": true
+      },
+      {
+        "indice": 1,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 4,
+        "ritmo": 6,
+        "cobertura": 1.0,
+        "eliminado": true
+      },
+      {
+        "indice": 2,
+        "n_flags": 1,
+        "cliches": 0,
+        "repeticao_max": 3,
+        "ritmo": 8,
+        "cobertura": 1.0,
+        "eliminado": true
+      }
+    ],
+    "retry": {
+      "n_frases_infratoras": 3,
+      "motivos": [
+        "construcao_repetida"
+      ],
+      "n_flags_depois": 1,
+      "aplicado": false
+    },
+    "uso": {
+      "prompt_tokens": 13111,
+      "completion_tokens": 2474,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 13111
+    },
+    "latencia_s": 736.22
+  },
+  "veredito": {
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "prefixo_codigo": "",
+    "retry": null,
+    "spec_version": "1.9.50",
+    "texto": "Quase todos que não recomendam criticam a previsibilidade do enredo, enquanto a maioria que recomenda elogia as revelações surpreendentes e impactantes.",
+    "texto_modelo": "Quase todos que não recomendam criticam a previsibilidade do enredo, enquanto a maioria que recomenda elogia as revelações surpreendentes e impactantes.",
+    "origem": "llm",
+    "motivo": "melhor_entre_limpos",
+    "criterio_decisivo": "empate",
+    "abertura": "QUANT",
+    "indice_escolhido": 0,
+    "flags": [],
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 21,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": false
+      },
+      {
+        "indice": 1,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 21,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": false
+      },
+      {
+        "indice": 2,
+        "n_flags": 0,
+        "flags": [],
+        "n_palavras": 21,
+        "n_ancoras": 1,
+        "abertura": "QUANT",
+        "abertura_freq": 13,
+        "eliminado": false
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 4086,
+      "completion_tokens": 138,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 4086
+    },
+    "latencia_s": 42.17
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um impacto emocional visceral e duradouro",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "impacto emocional intenso",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por uma abordagem do sofrimento causado pela guerra",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "exploração da guerra e seus efeitos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "quer explorar a complexidade dos laços entre mães e filhos",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "exploração da maternidade e dos laços familiares",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "espera atuações mais autênticas e envolventes",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "trabalho de atuação insatisfatório",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "deseja uma exploração mais profunda do contexto histórico",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "falta de aprofundamento no contexto político e histórico",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com a abordagem superficial de temas sensíveis",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "apresentação de temas sensíveis de forma inadequada",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-B",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "aprecia uma revelação surpreendente e bem executada",
+        "tema_origem": "POS-B",
+        "lado": "vale_a_pena",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "valoriza uma direção e uma cinematografia de alta qualidade",
+        "tema_origem": "POS-F",
+        "lado": "vale_a_pena",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "prefere enredos com desfechos imprevisíveis",
+        "tema_origem": "NEG-A",
+        "lado": "talvez_evite",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 3,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 8,
+        "flags": [
+          "sem_discriminacao",
+          "tema_repetido",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 5,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17492,
+      "completion_tokens": 1230,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 17492
+    },
+    "latencia_s": 403.71,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  },
+  "proveniencia_llm": {
+    "excecao": "LOCAL_PROSA",
+    "provider": "local",
+    "modelo": "qwen3:14b",
+    "think": "false",
+    "estagios": {
+      "sintese": {
+        "estagio": "sintese",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 773.5,
+          "leitura_prompt": 55.0,
+          "geracao": 698.9
+        }
+      },
+      "rotulagem": {
+        "estagio": "rotulagem",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 115.1,
+          "leitura_prompt": 4.4,
+          "geracao": 104.3
+        }
+      },
+      "narrativa": {
+        "estagio": "narrativa",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 736.2,
+          "leitura_prompt": 13.7,
+          "geracao": 714.0
+        }
+      },
+      "veredito": {
+        "estagio": "veredito",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 3,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 3
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 42.2,
+          "leitura_prompt": 4.7,
+          "geracao": 31.1
+        }
+      },
+      "condicoes": {
+        "estagio": "condicoes",
+        "provider": "local",
+        "modelo": "qwen3:14b",
+        "think": "false",
+        "modelos_efetivos": [
+          "qwen3:14b"
+        ],
+        "n_chamadas": 4,
+        "n_falhas": 0,
+        "finish_reason": {
+          "stop": 4
+        },
+        "custo_usd": 0.0,
+        "tempo_s": {
+          "parede": 403.7,
+          "leitura_prompt": 14.6,
+          "geracao": 380.7
+        }
+      }
+    },
+    "falhas": {}
+  }
+}
