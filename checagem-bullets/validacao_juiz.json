@@ -1,0 +1,573 @@
+{
+  "selo_mapa": "bc592ee92638b995c5c1f1e67c9825cab26a45e929a52fe8380ed71efef77f3d",
+  "geral": {
+    "n": 40,
+    "vp": 24,
+    "fp": 9,
+    "fn": 1,
+    "vn": 6,
+    "precisao": 0.727,
+    "precisao_ic95": [
+      0.558,
+      0.849
+    ],
+    "recall": 0.96,
+    "recall_ic95": [
+      0.805,
+      0.993
+    ],
+    "acuracia": 0.75
+  },
+  "por_lado": {
+    "publicado": {
+      "n": 20,
+      "vp": 13,
+      "fp": 3,
+      "fn": 1,
+      "vn": 3,
+      "precisao": 0.812,
+      "precisao_ic95": [
+        0.57,
+        0.934
+      ],
+      "recall": 0.929,
+      "recall_ic95": [
+        0.685,
+        0.987
+      ],
+      "acuracia": 0.8
+    },
+    "local": {
+      "n": 20,
+      "vp": 11,
+      "fp": 6,
+      "fn": 0,
+      "vn": 3,
+      "precisao": 0.647,
+      "precisao_ic95": [
+        0.413,
+        0.827
+      ],
+      "recall": 1.0,
+      "recall_ic95": [
+        0.741,
+        1.0
+      ],
+      "acuracia": 0.7
+    }
+  },
+  "julgamento": {
+    "vale": false,
+    "motivos": [
+      "precisão 0.727 < 0.8"
+    ],
+    "criterio": {
+      "precisao_min": 0.8,
+      "recall_min": 0.8
+    }
+  },
+  "erros": [
+    {
+      "par": "P03",
+      "id_par": "local|the-substance|positivas|3|viewing:1439467759",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "dualidade entre personagens e identidade",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P04",
+      "id_par": "local|mother-2017|medianas|5|viewing:1432016324",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "confusão e falta de clareza",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P11",
+      "id_par": "publicado|the-substance|positivas|3|viewing:1438930488",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Body horror extremo e efeitos práticos",
+      "dono": true,
+      "juiz": false
+    },
+    {
+      "par": "P13",
+      "id_par": "local|napoleon-2023|medianas|3|viewing:1436650058",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Interpretação do personagem insatisfatória",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P15",
+      "id_par": "local|napoleon-2023|positivas|4|viewing:1438708417",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Abordagem do personagem Napoleão",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P31",
+      "id_par": "local|anatomy-of-a-fall|negativas|3|viewing:1432358891",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "diálogos longos e repetitivos",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P32",
+      "id_par": "local|the-substance|positivas|1|viewing:1439197022",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "horror corporal e efeitos visuais extremos",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P34",
+      "id_par": "publicado|anatomy-of-a-fall|negativas|2|viewing:1420634637",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "História sem profundidade",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P36",
+      "id_par": "publicado|incendies|medianas|1|viewing:1492143104",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Ritmo lento e momentos arrastados",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P39",
+      "id_par": "publicado|the-substance|positivas|2|viewing:596184054",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Direção e estilo visual marcantes",
+      "dono": false,
+      "juiz": true
+    }
+  ],
+  "pares": [
+    {
+      "par": "P01",
+      "id_par": "local|mother-2017|positivas|4|viewing:1433604061",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Crítica à figura masculina e ao ego",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P02",
+      "id_par": "local|the-substance|medianas|0|viewing:596551133",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "medianas",
+      "tema": "horror corporal e estética grotesca",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P03",
+      "id_par": "local|the-substance|positivas|3|viewing:1439467759",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "dualidade entre personagens e identidade",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P04",
+      "id_par": "local|mother-2017|medianas|5|viewing:1432016324",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "confusão e falta de clareza",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P05",
+      "id_par": "local|mother-2017|medianas|0|viewing:1419105213",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "sensação de desconforto e ansiedade",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P06",
+      "id_par": "local|incendies|negativas|3|viewing:1481854439",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "apresentação de temas sensíveis de forma inadequada",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P07",
+      "id_par": "publicado|mother-2017|negativas|4|viewing:1426008473",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "negativas",
+      "tema": "Atuação de Jennifer Lawrence como ponto positivo",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P08",
+      "id_par": "local|anatomy-of-a-fall|negativas|1|viewing:1361551004",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "final aberto e frustrante",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P09",
+      "id_par": "publicado|napoleon-2023|negativas|5|viewing:1431566496",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "negativas",
+      "tema": "Batalhas decepcionantes",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P10",
+      "id_par": "local|incendies|negativas|2|viewing:1460517176",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "falta de aprofundamento no contexto político e histórico",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P11",
+      "id_par": "publicado|the-substance|positivas|3|viewing:1438930488",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Body horror extremo e efeitos práticos",
+      "dono": true,
+      "juiz": false
+    },
+    {
+      "par": "P12",
+      "id_par": "local|anatomy-of-a-fall|medianas|4|viewing:1430145751",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "medianas",
+      "tema": "presença do cachorro como elemento simbólico",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P13",
+      "id_par": "local|napoleon-2023|medianas|3|viewing:1436650058",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Interpretação do personagem insatisfatória",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P14",
+      "id_par": "publicado|anatomy-of-a-fall|medianas|3|viewing:1414293465",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "medianas",
+      "tema": "Promotor irritante e processo judicial",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P15",
+      "id_par": "local|napoleon-2023|positivas|4|viewing:1438708417",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Abordagem do personagem Napoleão",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P16",
+      "id_par": "local|incendies|medianas|5|viewing:1466936529",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Ausência de conexão emocional com os personagens",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P17",
+      "id_par": "publicado|mother-2017|positivas|1|viewing:1435157908",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Desempenho de Jennifer Lawrence",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P18",
+      "id_par": "publicado|the-substance|positivas|0|viewing:1439467759",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Metáfora da autodestruição e padrões de beleza",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P19",
+      "id_par": "publicado|the-substance|negativas|1|viewing:1436969547",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "negativas",
+      "tema": "Exibicionismo e nudez excessiva",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P20",
+      "id_par": "publicado|napoleon-2023|positivas|4|viewing:1366933027",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Ritmo e edição",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P21",
+      "id_par": "publicado|mother-2017|medianas|1|viewing:1435562837",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "Atuação de Jennifer Lawrence",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P22",
+      "id_par": "publicado|mother-2017|positivas|4|viewing:1438999079",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Roteiro e direção intensos",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P23",
+      "id_par": "local|napoleon-2023|positivas|0|viewing:1416576321",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Batalhas e cenas de ação",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P24",
+      "id_par": "local|mother-2017|medianas|2|viewing:1434099692",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "desenvolvimento do enredo",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P25",
+      "id_par": "local|incendies|medianas|1|viewing:1477456198",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Trabalho de direção e fotografia",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P26",
+      "id_par": "publicado|incendies|negativas|5|viewing:1489059637",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "Problemas de roteiro e lógica",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P27",
+      "id_par": "local|anatomy-of-a-fall|negativas|4|viewing:1358845720",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "atuações insuficientes",
+      "dono": false,
+      "juiz": false
+    },
+    {
+      "par": "P28",
+      "id_par": "local|the-substance|negativas|0|viewing:1439469596",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "negativas",
+      "tema": "abordagem excessiva de gore e nus",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P29",
+      "id_par": "publicado|incendies|positivas|1|viewing:1497209380",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "positivas",
+      "tema": "Reviravolta e revelações",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P30",
+      "id_par": "publicado|incendies|medianas|3|viewing:1484752463",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Roteiro excessivamente construído para o choque",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P31",
+      "id_par": "local|anatomy-of-a-fall|negativas|3|viewing:1432358891",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "diálogos longos e repetitivos",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P32",
+      "id_par": "local|the-substance|positivas|1|viewing:1439197022",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "horror corporal e efeitos visuais extremos",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P33",
+      "id_par": "local|napoleon-2023|medianas|5|viewing:1429398371",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Tempo de duração e ritmo narrativo criticados",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P34",
+      "id_par": "publicado|anatomy-of-a-fall|negativas|2|viewing:1420634637",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "História sem profundidade",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P35",
+      "id_par": "publicado|napoleon-2023|positivas|1|viewing:1436928633",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Impacto visual e direção de arte",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P36",
+      "id_par": "publicado|incendies|medianas|1|viewing:1492143104",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Ritmo lento e momentos arrastados",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P37",
+      "id_par": "publicado|anatomy-of-a-fall|positivas|4|viewing:1437519205",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "positivas",
+      "tema": "Direção e atmosfera realista",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P38",
+      "id_par": "publicado|anatomy-of-a-fall|positivas|1|viewing:1437243876",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "positivas",
+      "tema": "Dissolução e complexidade conjugal",
+      "dono": true,
+      "juiz": true
+    },
+    {
+      "par": "P39",
+      "id_par": "publicado|the-substance|positivas|2|viewing:596184054",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Direção e estilo visual marcantes",
+      "dono": false,
+      "juiz": true
+    },
+    {
+      "par": "P40",
+      "id_par": "publicado|napoleon-2023|medianas|2|viewing:1432476830",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Foco excessivo no relacionamento com Josefina",
+      "dono": true,
+      "juiz": true
+    }
+  ]
+}

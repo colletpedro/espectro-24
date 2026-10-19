@@ -105,3 +105,22 @@ números com o aviso "ESTE RESULTADO NÃO VALE" no topo.
 
 **Pares que o dono considerou duvidosos** (o rótulo não muda; registro para
 ler a validação com cuidado): P03, P09, P11, P13, P15, P22, P28, P34, P36, P39.
+
+## Validação do juiz e resultado (2026-10-19)
+
+**O juiz REPROVOU: o resultado da Parte 2 NÃO VALE.** Precisão 0,727
+[IC95 0,558–0,849], recall 0,96 [0,805–0,993] nos 40 pares (critério: ambos
+≥ 0,8). Por lado: publicado P 0,812 / R 0,929; local P 0,647 / R 1,0. O erro
+é de um lado só — o juiz diz "menciona" demais (9 falsos positivos, 1 falso
+negativo), e mais no lado local (6 FP) que no publicado (3 FP).
+
+7 dos 10 erros caem em pares que o dono marcou como duvidosos; isso não muda
+o veredito, que foi fixado antes do rótulo.
+
+O juiz rodou 900/900 pares, todos `finish_reason: stop`, ~65 min de parede
+(latência mediana 4,2 s), dentro da faixa estimada (67–179 min).
+
+Os números de apoio em `resultado_final.md` existem só para auditoria. Com o
+juiz complacente, eles são um TETO: os 2 bullets sem apoio nenhum (os dois do
+lado local, ambos nas negativas de Anatomia, os mesmos apontados na leitura
+humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
