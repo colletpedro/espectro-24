@@ -12,10 +12,11 @@ tem de ser confiável e a validação, honesta.
    local, e o melhor que roda no notebook. Contexto: o menor que cabe no maior
    par dos 900 (ver `NUM_CTX`), conferido por medição no Windows antes de rodar
    (`medir-contexto`) e por uma guarda em cada chamada.
-2. Frase de prova: o modelo devolve `{"trecho": <literal da review> | null,
-   "apoia": bool}`. O CÓDIGO decide (`apoio_final`): apoio = o modelo disse que
-   apoia E o trecho não é nulo E o trecho existe no texto da review
-   (normalizando só espaços, caixa e a forma Unicode). O modelo não tem a
+2. Frase de prova: o modelo devolve `{"trecho": <a frase inteira da review>
+   | null, "apoia": bool}`. O CÓDIGO decide (`apoio_final`): apoio = o modelo
+   disse que apoia E o trecho não é nulo E tem ao menos 4 palavras E existe no
+   texto da review (normalizando só espaços, caixa e a forma Unicode). Sem
+   apoio, o motivo fica registrado (`motivo_sem_apoio`). O modelo não tem a
    palavra final.
 3. Critério: o MESMO guia que o dono usou para rotular (`CRITERIO_DONO`).
 
@@ -100,6 +101,11 @@ MEDICAO_NUM_CTX = 8192
 MEDICAO_N_PARES = 10
 RAZAO_TOKENS_POR_CHAR = 0.35
 
+# Trecho com menos palavras que isto não é prova (apoio = falso, com o
+# motivo): uma palavra solta existe em qualquer review do assunto, inclusive
+# na de juízo oposto. Decisão do dono, 2026-10-19, antes de qualquer dado do v2.
+MIN_PALAVRAS_TRECHO = 4
+
 SCHEMA = {"type": "object",
           "properties": {"trecho": {"type": ["string", "null"]},
                          "apoia": {"type": "boolean"}},
@@ -121,7 +127,7 @@ O bullet resume algo que um grupo de reviews diria sobre o filme. Ele tem um TÍ
 Critério:
 {CRITERIO_DONO}
 
-Prova: em "trecho", copie da review a frase ou o pedaço que sustenta o bullet, LITERALMENTE, caractere por caractere, na língua original da review — sem traduzir, sem resumir, sem corrigir, sem juntar partes distantes. O trecho vai ser procurado no texto da review; se não for encontrado, a resposta não conta como apoio. Se a review não sustenta o bullet, "trecho" é null e "apoia" é false.
+Prova: em "trecho", copie da review a FRASE INTEIRA onde está a prova — a frase completa, do começo ao fim, não um fragmento nem palavras soltas —, LITERALMENTE, caractere por caractere, na língua original da review — sem traduzir, sem resumir, sem corrigir, sem juntar partes distantes. O trecho vai ser procurado no texto da review; se não for encontrado, ou se tiver menos de {MIN_PALAVRAS_TRECHO} palavras, a resposta não conta como apoio. Se a review não sustenta o bullet, "trecho" é null e "apoia" é false.
 
 Responda APENAS com um objeto JSON: {{"trecho": "<trecho literal>" ou null, "apoia": true ou false}}."""
 
@@ -169,9 +175,32 @@ def trecho_encontrado(trecho: str | None, texto: str) -> bool:
     return bool(t) and t in normalizar(texto)
 
 
+def n_palavras(trecho: str | None) -> int:
+    """Palavras = pedaços separados por espaço, depois de `normalizar`."""
+    return len(normalizar(trecho).split()) if trecho else 0
+
+
+def motivo_sem_apoio(apoia: bool, trecho: str | None, texto: str) -> str | None:
+    """Por que NÃO há apoio (`None` = há). A ordem é a da regra: o modelo
+    disse que não apoia; não deu trecho; o trecho é curto demais para ser
+    prova (uma palavra como "acting" existe em "Great acting" e sustentaria
+    "atuações insuficientes"); o trecho não está na review."""
+    if not apoia:
+        return "modelo disse que não apoia"
+    if trecho is None or not normalizar(trecho):
+        return "trecho nulo"
+    n = n_palavras(trecho)
+    if n < MIN_PALAVRAS_TRECHO:
+        return f"trecho curto ({n} palavra{'s' if n != 1 else ''} < {MIN_PALAVRAS_TRECHO})"
+    if not trecho_encontrado(trecho, texto):
+        return "trecho não encontrado na review"
+    return None
+
+
 def apoio_final(apoia: bool, trecho: str | None, texto: str) -> bool:
-    """A regra final, aplicada pelo código e não pelo modelo."""
-    return bool(apoia) and trecho is not None and trecho_encontrado(trecho, texto)
+    """A regra final, aplicada pelo código e não pelo modelo: apoia E trecho
+    não-nulo E com ao menos `MIN_PALAVRAS_TRECHO` palavras E achado na review."""
+    return motivo_sem_apoio(apoia, trecho, texto) is None
 
 
 def ler_resposta(texto: str) -> dict:
@@ -211,8 +240,10 @@ def config(versao: str = VERSAO_ATUAL) -> dict:
     código (o fonte das funções que decidem o apoio)."""
     v = _versao(versao)
     regra = "\n".join(inspect.getsource(f) for f in
-                      (normalizar, trecho_encontrado, apoio_final, ler_resposta))
+                      (normalizar, trecho_encontrado, n_palavras, motivo_sem_apoio,
+                       apoio_final, ler_resposta))
     return {"versao": versao, "modelo": MODELO, "think": THINK, "num_ctx": NUM_CTX,
+            "min_palavras_trecho": MIN_PALAVRAS_TRECHO,
             "num_predict": NUM_PREDICT, "seed": SEED, "temperatura": "padrão do modelo",
             "schema": SCHEMA, "system": v["system"], "user_template": v["user"],
             "regra_sha256": C._sha256_texto(regra)}
@@ -314,7 +345,12 @@ def rodar(pares: list[dict], saida: Path, chamar, *, versao: str,
                 estouro = contexto_estoura(resp)
                 if estouro:
                     raise ValueError(estouro)
-                reg = {"ok": True, **base, **ler_resposta(resp["texto"])}
+                lida = ler_resposta(resp["texto"])
+                # o apoio do código, para quem lê o registro; a leitura
+                # (`vereditos`) recalcula do texto e não confia neste campo
+                reg = {"ok": True, **base, **lida,
+                       "motivo_sem_apoio": motivo_sem_apoio(lida["apoia"], lida["trecho"],
+                                                            p["texto"])}
             except Exception as e:  # noqa: BLE001
                 n_falhas += 1
                 reg = {"ok": False, **base, "erro": f"{type(e).__name__}: {e}",
@@ -355,11 +391,13 @@ def vereditos(pares: list[dict], regs: list[dict], versao: str) -> dict[str, dic
                              f"{r.get('think')!r} — o juiz v2 é {MODELO} com think={THINK}")
         if r["id_par"] not in texto:
             raise ValueError(f"veredito de par que não está na entrada: {r['id_par']}")
-        enc = trecho_encontrado(r["trecho"], texto[r["id_par"]])
+        tx = texto[r["id_par"]]
+        motivo = motivo_sem_apoio(r["apoia"], r["trecho"], tx)
         fora[r["id_par"]] = {"apoia_modelo": r["apoia"], "trecho": r["trecho"],
-                             "trecho_encontrado": enc,
-                             "apoio": apoio_final(r["apoia"], r["trecho"], texto[r["id_par"]]),
-                             "pensamento": r.get("pensamento")}
+                             "trecho_palavras": n_palavras(r["trecho"]),
+                             "trecho_encontrado": trecho_encontrado(r["trecho"], tx),
+                             "apoio": apoio_final(r["apoia"], r["trecho"], tx),
+                             "motivo": motivo, "pensamento": r.get("pensamento")}
     faltam = [p["id_par"] for p in pares if p["id_par"] not in fora]
     if faltam:
         raise ValueError(f"{len(faltam)} pares sem veredito do juiz v2 (ex.: {faltam[:2]}) "
@@ -429,6 +467,7 @@ def calibracao(d: Path, versao: str) -> dict:
                        "juiz": v["apoio"], "juiz_v1": v1[id_par],
                        "apoia_modelo": v["apoia_modelo"], "trecho": v["trecho"],
                        "trecho_encontrado": v["trecho_encontrado"],
+                       "trecho_palavras": v["trecho_palavras"], "motivo": v["motivo"],
                        "duvidoso": par in DUVIDOSOS_CALIBRACAO,
                        "pensamento": v["pensamento"]})
     geral = C.matriz([(x["dono"], x["juiz"]) for x in linhas])
@@ -440,8 +479,8 @@ def calibracao(d: Path, versao: str) -> dict:
                    "por_lado": {lado: C.matriz([(x["dono"], x["juiz_v1"]) for x in linhas
                                                 if x["lado"] == lado]) for lado in C.LADOS}},
             "julgamento": julgar(geral, por_lado),
-            "derrubados_pelo_trecho": [x["par"] for x in linhas
-                                       if x["apoia_modelo"] and not x["juiz"]],
+            "derrubados_pelo_trecho": [{"par": x["par"], "motivo": x["motivo"]}
+                                       for x in linhas if x["apoia_modelo"] and not x["juiz"]],
             "erros": [x["par"] for x in linhas if x["dono"] != x["juiz"]],
             "pares": linhas}
 
@@ -470,8 +509,10 @@ def md_calibracao(cal: dict) -> str:
     L += [linha(f"v2 · {lado}", cal["por_lado"][lado]) for lado in C.LADOS]
     L += [linha("v1 · todos", cal["v1"]["geral"])]
     L += [linha(f"v1 · {lado}", cal["v1"]["por_lado"][lado]) for lado in C.LADOS]
-    L += ["", f"**Derrubados pelo trecho** (o modelo disse que apoia, mas o trecho é "
-          f"nulo ou não está na review): {', '.join(cal['derrubados_pelo_trecho']) or 'nenhum'}.",
+    der = ", ".join(f"{d['par']} ({d['motivo']})" for d in cal["derrubados_pelo_trecho"])
+    L += ["", f"**Derrubados pelo trecho** (o modelo disse que apoia, mas o trecho é nulo, "
+          f"tem menos de {MIN_PALAVRAS_TRECHO} palavras ou não está na review): "
+          f"{der or 'nenhum'}.",
           "", "## Erros do v2", ""]
     for x in cal["pares"]:
         if x["dono"] == x["juiz"]:
@@ -481,7 +522,8 @@ def md_calibracao(cal: dict) -> str:
         L += ["", f"- tema: \"{x['tema']}\"",
               f"- dono {'sim' if x['dono'] else 'não'} · v2 {'sim' if x['juiz'] else 'não'} "
               f"(modelo disse {'apoia' if x['apoia_modelo'] else 'não apoia'}; trecho "
-              f"{'encontrado' if x['trecho_encontrado'] else 'não encontrado'}) · v1 "
+              f"{'encontrado' if x['trecho_encontrado'] else 'não encontrado'}, "
+              f"{x['trecho_palavras']} palavras; motivo: {x['motivo'] or '—'}) · v1 "
               f"{'sim' if x['juiz_v1'] else 'não'}",
               f"- trecho: {json.dumps(x['trecho'], ensure_ascii=False)}",
               f"- raciocínio: {json.dumps((x['pensamento'] or '')[:600], ensure_ascii=False)}",

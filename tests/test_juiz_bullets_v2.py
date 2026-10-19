@@ -25,6 +25,23 @@ from test_checagem_bullets import _csv, _entrada, _hash_publicados, _montar_dir 
 PUB = RAIZ / "resultado"
 
 REVIEW = "Great acting,  but the STORY sucked.\nJ’ai adoré la fin — très émouvante."
+TEXTO_LONGO = "Texto longo da review {rid} com prova suficiente."
+TRECHO_R1 = "texto longo da review r1"            # 5 palavras, só na review r1
+
+
+def _entrada_longa():
+    """A entrada sintética com reviews de frases de verdade (a de
+    `test_checagem_bullets` tem duas palavras por review)."""
+    bl, pares = _entrada()
+    return bl, [{**p, "texto": TEXTO_LONGO.format(rid=p["review_id"])} for p in pares]
+
+
+def _alongar(d):
+    """Reescreve a entrada de `_montar_dir` com os textos longos."""
+    pares = [{**p, "texto": TEXTO_LONGO.format(rid=p["review_id"])}
+             for p in C._ler_jsonl(d / C.ARQ_ENTRADA)]
+    C._escrever(d / C.ARQ_ENTRADA, "".join(json.dumps(p) + "\n" for p in pares))
+    return pares
 
 
 # ---------------------------------------------------------------------------
@@ -46,7 +63,8 @@ def test_hash_cobre_prompt_modelo_parametros_e_regra(monkeypatch):
     base = J.config_sha256()
     assert base == J.config_sha256()
     for nome, valor in (("NUM_CTX", 4096), ("NUM_PREDICT", 512), ("SEED", 1),
-                        ("THINK", "medium"), ("MODELO", "outro:1b")):
+                        ("THINK", "medium"), ("MODELO", "outro:1b"),
+                        ("MIN_PALAVRAS_TRECHO", 3)):
         with monkeypatch.context() as m:
             m.setattr(J, nome, valor)
             assert J.config_sha256() != base, nome
@@ -66,6 +84,8 @@ def test_criterio_do_dono_esta_no_prompt_inteiro():
                    "Não julgue se o bullet é verdadeiro", "ESTA review"):
         assert trecho in s, trecho
     assert "LITERALMENTE" in s and "língua original da review" in s
+    assert "FRASE INTEIRA" in s and "não um fragmento" in s
+    assert f"menos de {J.MIN_PALAVRAS_TRECHO} palavras" in s and J.MIN_PALAVRAS_TRECHO == 4
     assert J.SCHEMA["required"] == ["trecho", "apoia"]
     assert J.SCHEMA["properties"]["trecho"]["type"] == ["string", "null"]
 
@@ -101,14 +121,36 @@ def test_trecho_com_forma_unicode_diferente_e_o_mesmo_texto():
     assert J.trecho_encontrado(decomposto, REVIEW)
 
 
-@pytest.mark.parametrize("apoia,trecho,esperado", [
-    (True, "Great acting", True),
-    (True, None, False),                 # disse que apoia sem prova
-    (True, "Ótima atuação", False),      # prova que não está na review
-    (False, "Great acting", False),      # prova sem o sim
-    (False, None, False)])
-def test_apoio_final_e_a_conjuncao_das_tres(apoia, trecho, esperado):
-    assert J.apoio_final(apoia, trecho, REVIEW) is esperado
+@pytest.mark.parametrize("apoia,trecho,motivo", [
+    (True, "Great acting,  but the STORY sucked.", None),
+    (True, "J’ai adoré la fin", None),                        # 4 palavras: o mínimo
+    (True, None, "trecho nulo"),                              # disse que apoia sem prova
+    (True, "   ", "trecho nulo"),
+    (True, "Great acting", "trecho curto (2 palavras < 4)"),
+    (True, "acting,", "trecho curto (1 palavra < 4)"),
+    (True, "Ótima atuação, mas a história é fraca.", "trecho não encontrado na review"),
+    (False, "Great acting,  but the STORY sucked.", "modelo disse que não apoia"),
+    (False, None, "modelo disse que não apoia")])
+def test_apoio_final_exige_sim_trecho_de_4_palavras_e_achado(apoia, trecho, motivo):
+    assert J.motivo_sem_apoio(apoia, trecho, REVIEW) == motivo
+    assert J.apoio_final(apoia, trecho, REVIEW) is (motivo is None)
+
+
+def test_great_acting_nao_prova_atuacoes_insuficientes():
+    # O par real local|anatomy-of-a-fall|negativas|4 (bullet "atuações
+    # insuficientes"): copiar "acting" ou "Great acting" de uma review que
+    # ELOGIA a atuação não pode virar apoio só porque a palavra existe nela.
+    review = ("Music was cool, acting was decent. Story sucked ass. Great acting "
+              "though, I'll give it that.")
+    for trecho in ("acting", "Great acting", "acting was decent."):
+        assert J.trecho_encontrado(trecho, review)
+        assert not J.apoio_final(True, trecho, review)
+        assert J.motivo_sem_apoio(True, trecho, review).startswith("trecho curto")
+
+
+def test_palavras_contam_por_espaco_depois_de_normalizar():
+    assert J.n_palavras("  Great\n\tacting ,  ok  ") == 4
+    assert J.n_palavras(None) == 0 and J.n_palavras("") == 0
 
 
 @pytest.mark.parametrize("texto", ['{"apoia": true}', '{"trecho": null}',
@@ -184,11 +226,12 @@ def _resp(texto, **kw):
 
 
 def test_juiz_retoma_e_registra_truncamento_e_estouro_como_falha(tmp_path):
-    _, pares = _entrada()
+    _, pares = _entrada_longa()
     vistos, n = [], {"i": 0}
 
     def chamar(system, user):
         assert system == J.system()
+        assert "Texto longo da review" in user
         vistos.append(user)
         n["i"] += 1
         if n["i"] == 2:
@@ -197,7 +240,7 @@ def test_juiz_retoma_e_registra_truncamento_e_estouro_como_falha(tmp_path):
             return _resp('{"trecho": null, "apoia": false}', prompt_eval_count=J.NUM_CTX)
         if n["i"] == 4:
             raise RuntimeError("prazo")
-        return _resp('{"trecho": "texto", "apoia": true}')
+        return _resp('{"trecho": "texto longo da review", "apoia": true}')
 
     saida = tmp_path / "s.jsonl"
     r = J.rodar(pares, saida, chamar, versao="v2.0")
@@ -209,6 +252,7 @@ def test_juiz_retoma_e_registra_truncamento_e_estouro_como_falha(tmp_path):
     assert any(e.startswith("RuntimeError") for e in erros)
     ok = [x for x in regs if x["ok"]]
     assert all(x["config_sha256"] == J.config_sha256() and x["pensamento"] for x in ok)
+    assert all(x["motivo_sem_apoio"] is None for x in ok)
     r2 = J.rodar(pares, saida, chamar, versao="v2.0")
     assert r2["rodados"] == 3 and len(vistos) == 11
     ver = J.vereditos(pares, C._ler_jsonl(saida), "v2.0")
@@ -216,17 +260,24 @@ def test_juiz_retoma_e_registra_truncamento_e_estouro_como_falha(tmp_path):
 
 
 def test_vereditos_recalculam_o_apoio_do_texto_e_nao_confiam_no_modelo():
-    _, pares = _entrada()
+    _, pares = _entrada_longa()
     sha = J.config_sha256()
-    base = {"ok": True, "config_sha256": sha, "modelo_efetivo": J.MODELO, "think": J.THINK}
-    regs = [{**base, "id_par": p["id_par"], "apoia": True,
-             "trecho": "texto r1" if p["review_id"] == "r1" else "texto r1"} for p in pares]
+    base = {"ok": True, "config_sha256": sha, "modelo_efetivo": J.MODELO, "think": J.THINK,
+            "motivo_sem_apoio": None}           # o campo gravado não é lido
+    regs = [{**base, "id_par": p["id_par"], "apoia": True, "trecho": TRECHO_R1}
+            for p in pares]
     ver = J.vereditos(pares, regs, "v2.0")
     for p in pares:
         v = ver[p["id_par"]]
         assert v["apoia_modelo"] is True
-        # "texto r1" não está na review r2: o código derruba o sim do modelo
+        # o trecho da r1 não está na review r2: o código derruba o sim do modelo
         assert v["apoio"] is (p["review_id"] == "r1") and v["trecho_encontrado"] is v["apoio"]
+        assert v["motivo"] == (None if v["apoio"] else "trecho não encontrado na review")
+    regs = [{**base, "id_par": p["id_par"], "apoia": True, "trecho": "texto longo"}
+            for p in pares]
+    ver = J.vereditos(pares, regs, "v2.0")
+    assert all(v["trecho_encontrado"] and not v["apoio"]
+               and v["motivo"] == "trecho curto (2 palavras < 4)" for v in ver.values())
 
 
 def test_vereditos_exigem_configuracao_modelo_think_e_todos_os_pares():
@@ -315,34 +366,42 @@ def test_criterio_reprova_lado_sem_nenhum_sim():
 def test_calibracao_ponta_a_ponta_se_declara_calibracao(tmp_path):
     # v1 diz sim a tudo; v2: o modelo diz que apoia tudo, com prova só em r1
     d, pares, mapa = _montar_dir(tmp_path, lambda p: True)
+    _alongar(d)
     por = {p["id_par"]: p for p in pares}
     _csv(d / C.ARQ_ROTULOS, [(k, "sim" if por[v]["review_id"] == "r1" else "não")
                             for k, v in mapa["pares"].items()])
     base = {"ok": True, "config_sha256": J.config_sha256(), "modelo_efetivo": J.MODELO,
             "think": J.THINK, "apoia": True, "pensamento": "raciocínio"}
+    trecho_r2 = {0: "frase inventada que não está", 1: "review"}   # não achado; curto
     C._escrever(d / J.DIR_V2 / "calibracao_v2.0_saida.jsonl", "".join(
         json.dumps({**base, "id_par": p["id_par"],
-                    "trecho": "texto r1" if p["review_id"] == "r1" else "inventado"}) + "\n"
-        for p in pares))
+                    "trecho": TRECHO_R1 if p["review_id"] == "r1" else trecho_r2[p["i"]]})
+        + "\n" for p in pares))
     J.cmd_calibrar(SimpleNamespace(dir=d, versao=None))
     cal = json.loads((d / J.DIR_V2 / "calibracao_v2.0.json").read_text())
     assert cal["geral"]["precisao"] == 1.0 and cal["geral"]["recall"] == 1.0
     assert cal["v1"]["geral"]["precisao"] == 0.5
-    assert len(cal["derrubados_pelo_trecho"]) == 4 and not cal["erros"]
+    assert not cal["erros"]
+    assert sorted(x["motivo"] for x in cal["derrubados_pelo_trecho"]) == (
+        ["trecho curto (1 palavra < 4)"] * 2 + ["trecho não encontrado na review"] * 2)
     md = (d / J.DIR_V2 / "calibracao_v2.0.md").read_text()
+    assert "(trecho curto (1 palavra < 4))" in md
     assert md.splitlines()[2].startswith("> **CALIBRAÇÃO, NÃO VALIDAÇÃO.**")
 
 
 def test_calibracao_lista_o_erro_com_trecho_e_raciocinio(tmp_path):
     d, pares, mapa = _montar_dir(tmp_path, lambda p: True)
+    _alongar(d)
     _csv(d / C.ARQ_ROTULOS, [(k, "não") for k in mapa["pares"]])
     base = {"ok": True, "config_sha256": J.config_sha256(), "modelo_efetivo": J.MODELO,
-            "think": J.THINK, "apoia": True, "trecho": "texto", "pensamento": "PENSEI"}
+            "think": J.THINK, "apoia": True, "trecho": "texto longo da review",
+            "pensamento": "PENSEI"}
     C._escrever(d / J.DIR_V2 / "calibracao_v2.0_saida.jsonl", "".join(
         json.dumps({**base, "id_par": p["id_par"]}) + "\n" for p in pares))
     J.cmd_calibrar(SimpleNamespace(dir=d, versao="v2.0"))
     md = (d / J.DIR_V2 / "calibracao_v2.0.md").read_text()
-    assert "REPROVARIA" in md and "PENSEI" in md and '"texto"' in md
+    assert "REPROVARIA" in md and "PENSEI" in md and '"texto longo da review"' in md
+    assert "4 palavras; motivo: —" in md
     assert "### P01" in md
 
 

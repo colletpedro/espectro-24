@@ -313,7 +313,8 @@ python scripts/checagem_bullets.py relatorio --dir checagem-bullets
 
 O juiz v1 (§10) reprovou contra o rótulo do dono (precisão 0,727). O v2 troca o
 modelo (gpt-oss:20b, que não escreveu nenhum dos lados), exige uma **frase de
-prova** literal da review — conferida pelo código, não pelo modelo — e usa o
+prova** — a frase inteira da review, literal, com ao menos 4 palavras,
+conferida pelo código e não pelo modelo — e usa o
 mesmo guia que o dono usou para rotular. Código: `scripts/juiz_bullets_v2.py`.
 Custo **zero**; não escreve em `resultado/`.
 
