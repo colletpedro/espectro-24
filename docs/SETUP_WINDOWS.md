@@ -243,3 +243,68 @@ git push
 No Mac, `scripts/comparacao_cega_prosa.py` monta o documento de leitura cega
 (A/B sorteado por filme, sem dizer qual é qual), o mapeamento com hash em
 arquivo separado e as métricas dos validadores.
+
+## 10. Juiz dos bullets (qwen3:14b) — checagem de apoio
+
+Para cada bullet da síntese dos 5 filmes (lado publicado, do DeepSeek, e lado
+local, do qwen3:14b), o juiz recebe o bullet e **uma** review recuperada por
+vez e responde `{"menciona": true}` ou `{"menciona": false}`. A entrada já vem
+pronta do Mac (`checagem-bullets\juiz_entrada.jsonl`, no branch `gate-local`,
+com o texto das reviews dentro): aqui só se roda o juiz. Custo **zero**; não
+escreve em `resultado/`.
+
+**Antes — as mesmas guardas de memória do gate:**
+
+- feche o que puder (navegador, apps), confira RAM+VRAM livres e acompanhe o
+  pagefile;
+- `OLLAMA_NUM_PARALLEL=1` no servidor (§4): as chamadas são uma por vez e o
+  system prompt fica no KV entre elas;
+- só o qwen3:14b carregado: `ollama ps`; se outro modelo aparecer (p.ex. o
+  gpt-oss da §9), `ollama stop <modelo>`;
+- a janela é a do gate (`ESPECTRO24_OLLAMA_NUM_CTX`, padrão 8192) — a maior
+  review da entrada tem ~5 mil caracteres, folga de sobra. Não use as
+  variáveis `_PROSA` da §9, que não valem aqui;
+- raciocínio desligado: `ESPECTRO24_OLLAMA_THINK=false` (o padrão).
+
+```powershell
+git fetch
+git switch gate-local
+git pull
+.\venv\Scripts\Activate.ps1
+pip install -e .                               # só se o venv for novo
+$env:PYTHONUTF8 = "1"
+$env:ESPECTRO24_OLLAMA_THINK = "false"
+ollama list                                    # qwen3:14b precisa aparecer
+python scripts/checagem_bullets.py juiz --modelo qwen3:14b --dir checagem-bullets
+```
+
+- **900 chamadas.** Tempo estimado: **~1h30** (faixa ~1h10–3h), em
+  `checagem-bullets\juiz_estimativa.md`. Estimativa, não medição: sai das
+  velocidades do qwen3:14b medidas no gate deste notebook. O progresso sai a
+  cada 25 chamadas, com o tempo que falta; se as primeiras 25 passarem de
+  ~5 min, a ponta pessimista vale.
+- **Pode interromper e reexecutar:** par com `ok: true` em
+  `checagem-bullets\juiz_saida.jsonl` não é refeito; o que falhou é refeito.
+- **No fim** a última linha diz `pares sem veredito: 0 — completo`. Se não
+  disser, rode o mesmo comando de novo.
+- **O que olhar** em `juiz_saida.jsonl`: `finish_reason` (`length` = o teto
+  de 64 tokens cortou — não deveria acontecer com uma resposta de ~8 tokens),
+  `modelo_efetivo` e `think` em cada registro.
+
+**Depois:**
+
+```powershell
+git add checagem-bullets/juiz_saida.jsonl
+git commit -m "checagem bullets: juiz qwen3:14b nos 900 pares"
+git push
+```
+
+**A rotulagem do dono (Parte 3) não depende do juiz** e pode ser feita antes,
+no Mac: `checagem-bullets\rotulagem\rotulagem_dono.md`, respostas em
+`rotulos_dono.csv`. Quem rotula não deve abrir `juiz_saida.jsonl` antes de
+terminar. Com os dois prontos, no Mac:
+
+```bash
+python scripts/checagem_bullets.py validar-juiz --dir checagem-bullets
+python scripts/checagem_bullets.py relatorio --dir checagem-bullets
+```
