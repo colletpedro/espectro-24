@@ -43,6 +43,7 @@ import json
 import re
 import subprocess
 import sys
+from fractions import Fraction
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -53,6 +54,10 @@ INDICE_JS = FRONTEND / "js" / "indice.js"
 REGISTRO = FRONTEND / "entrada_no_catalogo.json"
 
 FUSO = ZoneInfo("America/Sao_Paulo")
+
+sys.path.insert(0, str(ROOT / "src"))
+# O MESMO detector de alfabeto que a ficha usa para o diretor (v1.6.0).
+from espectro24.ficha import _e_escrita_latina  # noqa: E402
 
 # Os campos de IMAGEM da ficha que `poster.js` lê (`montar` e
 # `montarBackdrop`). O índice leva só estes — a home reaproveita os mesmos
@@ -101,14 +106,114 @@ def eixos_acima(eixos: dict | None) -> list[dict]:
     return saida
 
 
-def entrada_do_indice(slug: str, filme: dict, data_entrada: str | None) -> dict:
+def frequencias_somadas(eixos: dict | None) -> dict[str, tuple[Fraction, Fraction]]:
+    """eixo → (frequência SOMADA nos três grupos, frequência MÍNIMA entre
+    eles), fora `livre`.
+
+    Soma de FREQUÊNCIAS (menções / n do grupo), não de menções: cada grupo
+    pesa o mesmo mesmo quando o `n` difere (8 filmes do catálogo têm grupo
+    com n entre 27 e 39). Aritmética exata (`Fraction`), para que um empate
+    seja empate de verdade e não ruído de arredondamento de `freq_pct`."""
+    saida = {}
+    for linha in (eixos or {}).get("linhas") or []:
+        if linha.get("eixo") == "livre":
+            continue
+        freqs = [Fraction(c["mencoes"], c["de_n"])
+                 for c in (linha.get("por_bucket") or {}).values()
+                 if c and c.get("de_n")]
+        if freqs:
+            saida[linha["eixo"]] = (sum(freqs), min(freqs))
+    return saida
+
+
+def media_do_catalogo(dados: dict) -> dict[str, Fraction]:
+    """eixo → média, sobre TODOS os filmes publicados no catálogo (os 99 de
+    `data.js`, inclusive os da lista de exclusão da home — a média é
+    propriedade do dado, não da vitrine), da frequência somada nos três
+    grupos. Filme sem a linha do eixo conta como zero.
+
+    Consequência declarada: a média muda quando o catálogo muda, e o
+    assunto comum de um filme JÁ publicado pode mudar com a entrada de
+    filmes novos. Medido em 2026-10-19 (99 filmes), em pp somados: roteiro
+    201,4 · impacto 116,0 · comparações 112,5 · direção 92,3 · ritmo 88,4
+    · atuação 86,9 · crítica social 79,1 · expectativa 70,4 · tom 65,7 ·
+    som 37,3."""
+    somas = [frequencias_somadas((dados["filmes"].get(s) or {}).get("eixos"))
+             for s in dados["catalogo"] if s in dados["filmes"]]
+    eixos = sorted({e for fs in somas for e in fs})
+    if not somas:
+        return {}
+    return {e: sum((fs[e][0] for fs in somas if e in fs), Fraction(0)) / len(somas)
+            for e in eixos}
+
+
+def assunto_comum_dominante(eixos: dict | None,
+                            media: dict[str, Fraction]) -> str | None:
+    """O ASSUNTO COMUM DOMINANTE de um filme: o eixo (fora `livre`) cuja
+    frequência SOMADA nos três grupos mais EXCEDE a média do catálogo
+    (`media_do_catalogo`). Em palavras: o assunto de que os três grupos
+    juntos falam mais do que o habitual no catálogo.
+
+    [rodada 2, decisão do dono] Substitui "a maior frequência somada, em
+    termos absolutos", que punha `roteiro_estrutura` em 66 dos 79
+    valorativos — roteiro é simplesmente o eixo mais falado em QUALQUER
+    filme (201 pp somados de média, contra 116 do segundo). Medido com a
+    regra nova (2026-10-19): os 10 eixos aparecem, de 5 a 12 filmes cada,
+    zero empate, e todo valorativo tem excesso positivo (o menor,
+    `talk-to-me-2022`, +15,0 pp).
+
+    DESEMPATE, nesta ordem:
+      1. a maior frequência MÍNIMA entre os três grupos — o assunto mais
+         igualmente compartilhado, que é o sentido de "comum";
+      2. a ordem da taxonomia (`eixos.linhas`).
+
+    Sem nenhum eixo ACIMA da média (excesso <= 0), não há assunto comum
+    a nomear: devolve None e a home cai no gancho genérico. Eixo ausente
+    de `media` conta média zero.
+
+    Calculado para qualquer filme; a home só o usa no estado `valorativo`.
+    """
+    fs = frequencias_somadas(eixos)
+    ordem = [l.get("eixo") for l in (eixos or {}).get("linhas") or []]
+    candidatos = [(soma - media.get(e, Fraction(0)), minimo, -ordem.index(e), e)
+                  for e, (soma, minimo) in fs.items()]
+    if not candidatos:
+        return None
+    melhor = max(candidatos)
+    return melhor[3] if melhor[0] > 0 else None
+
+
+def titulos_de_exibicao(ficha: dict, slug: str) -> tuple[str, str | None]:
+    """(título exibido na home, título nativo como linha secundária).
+
+    Quando `ficha.titulo` não está em alfabeto latino (hoje só
+    `woman-of-fire`, "화녀"), a home exibe o título do Letterboxd e, sem
+    ele, o título TMDB que provou a identidade da ficha
+    (`titulo_tmdb_correspondente`) — desde que ESTES sejam latinos. O
+    original vira a linha secundária. Sem alternativa latina, nada muda.
+    A página do filme não usa isto (fora do escopo desta rodada)."""
+    titulo = ficha.get("titulo") or slug
+    if _e_escrita_latina(titulo):
+        return titulo, None
+    identidade = ficha.get("identidade") or {}
+    for alt in (identidade.get("titulo_letterboxd"),
+                identidade.get("titulo_tmdb_correspondente")):
+        if alt and _e_escrita_latina(alt):
+            return alt, titulo
+    return titulo, None
+
+
+def entrada_do_indice(slug: str, filme: dict, data_entrada: str | None,
+                      media: dict[str, Fraction] | None = None) -> dict:
     ficha = filme.get("ficha") or {}
     identidade = ficha.get("identidade") or {}
     pb = (filme.get("distribuicao") or {}).get("por_bucket") or {}
     eixos = filme.get("eixos") or {}
+    titulo, titulo_nativo = titulos_de_exibicao(ficha, slug)
     return {
         "slug": slug,
-        "titulo": ficha.get("titulo") or slug,
+        "titulo": titulo,
+        "titulo_nativo": titulo_nativo,
         # O título canônico do LETTERBOXD (`ficha.identidade`, v1.9.49) —
         # para a maioria é o original ou o internacional em inglês. Ausente
         # em 33 filmes (fichas anteriores ao selo de identidade).
@@ -119,6 +224,13 @@ def entrada_do_indice(slug: str, filme: dict, data_entrada: str | None) -> dict:
         "distribuicao": ({g: pb.get(g, 0) for g in GRUPOS} if pb else None),
         "contraste": eixos.get("contraste"),
         "eixos_acima": eixos_acima(eixos),
+        "assunto_comum": assunto_comum_dominante(eixos, media or {}),
+        # Data de estreia completa (AAAA-MM-DD), para o gancho de
+        # aniversário. **A ficha publicada hoje NÃO a tem** — `ficha.py` lê
+        # `release_date` do TMDB e guarda só o ano. O campo fica `null` nos
+        # 99 até a ficha passar a persistir `data_estreia`; o gancho está
+        # pronto e testado, mas não dispara com o dado atual.
+        "estreia": ficha.get("data_estreia"),
         "entrada": data_entrada,
     }
 
@@ -170,11 +282,12 @@ def hoje_sp() -> str:
 
 def montar_indice(dados: dict, registro: dict) -> dict:
     filmes = []
+    media = media_do_catalogo(dados)
     for slug in dados["catalogo"]:
         filme = dados["filmes"].get(slug)
         if filme is None:
             continue
-        filmes.append(entrada_do_indice(slug, filme, registro.get(slug)))
+        filmes.append(entrada_do_indice(slug, filme, registro.get(slug), media))
     return {"versao": 1, "fonte": "frontend/js/data.js", "filmes": filmes}
 
 

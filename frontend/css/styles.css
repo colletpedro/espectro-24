@@ -2539,6 +2539,22 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .prateleira__titulo { margin: 0; }
 .prateleira__nota { margin: 4px 4px 0; font-size: 0.64rem; }
+.prateleira__todos {
+  display: inline-block;
+  margin: 6px 4px 0;
+  font-size: 0.64rem;
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.prateleira__todos:hover { color: var(--text); }
+/* linha secundária com o título original não latino ("화녀") */
+.mosaic-cell__nativo {
+  font-size: 0.72rem;
+  color: var(--text-mute);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.filme-do-dia__nativo { margin: 0 0 2px; color: var(--text-mute); }
 .prateleira__nav { display: flex; gap: 6px; flex-shrink: 0; }
 /* mesmo empate de `.mosaic-cell[hidden]`: sem isto o `display: flex` acima
    vence o `[hidden]` do navegador e as setas de uma prateleira que não rola

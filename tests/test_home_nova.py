@@ -25,6 +25,7 @@ import shutil
 import subprocess
 import textwrap
 import unicodedata
+from fractions import Fraction
 from pathlib import Path
 
 import pytest
@@ -72,7 +73,8 @@ def _filme(slug, titulo=None, **kw):
     f = {"slug": slug, "titulo": titulo or slug, "titulo_letterboxd": None,
          "chave_slug": slug.replace("-", " "), "ano": 2000, "imagens": {},
          "distribuicao": {"negativas": 10, "medianas": 20, "positivas": 70},
-         "contraste": "valorativo", "eixos_acima": [], "entrada": "2026-01-01"}
+         "contraste": "valorativo", "eixos_acima": [], "entrada": "2026-01-01",
+         "titulo_nativo": None, "assunto_comum": None, "estreia": None}
     f.update(kw)
     return f
 
@@ -297,27 +299,96 @@ def test_piso_de_tres_e_exclusao_conta_contra_o_piso():
 
 
 @precisa_node
-def test_prateleiras_reais_ordem_alfabetica_e_rotacao():
+def test_prateleiras_reais_ordem_alfabetica_piso_e_intercalacao():
+    """[rodada 2] Cada prateleira em ordem alfabética e acima do piso; a
+    ordem do dia intercala divisão e valorativa PROPORCIONALMENTE
+    (começando por divisão em dia par e por valorativa em dia ímpar, sem
+    sequência de um tipo maior que ceil(maior/menor)) e cada tipo gira
+    sozinho."""
     out = _node("""
         const base = S.prateleirasBase(D);
-        const rot = [0, 1, 2, 3, 4, 5].map(i => S.prateleiras(D,
-            new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10))
-            .map(p => p.chave));
+        const dias = [];
+        for (let i = 0; i < 30; i++) {
+            const dia = new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
+            dias.push({d: S.diasDesdeEpoca(dia),
+                       ps: S.prateleiras(D, dia).map(p => [p.chave, p.tipo])});
+        }
         console.log(JSON.stringify({
-            base: base.map(p => [p.chave, p.filmes.map(f => f.slug)]),
+            base: base.map(p => [p.chave, p.tipo, p.filmes.map(f => f.slug)]),
             ordenadas: base.every(p => JSON.stringify(p.filmes.map(f => f.slug))
                 === JSON.stringify(B.ordenarAlfabetico(p.filmes).map(f => f.slug))),
-            rot, piso: S.PISO_PRATELEIRA,
+            dias, piso: S.PISO_PRATELEIRA,
         }));
     """, FILMES_REAIS)
     assert out["ordenadas"]
-    assert all(len(f) >= out["piso"] for _, f in out["base"])
-    chaves = [c for c, _ in out["base"]]
-    for dia in out["rot"]:                       # mesma lista, só girada
-        assert sorted(dia) == sorted(chaves)
-        k = chaves.index(dia[0])
-        assert dia == chaves[k:] + chaves[:k]
-    assert len({tuple(d) for d in out["rot"][:len(chaves)]}) == len(chaves)
+    assert all(len(f) >= out["piso"] for _, _, f in out["base"])
+    assert "valorativo" not in [c for c, _, _ in out["base"]]   # a única saiu
+    D = [c for c, t, _ in out["base"] if t == "divisao"]
+    V = [c for c, t, _ in out["base"] if t == "valorativa"]
+    assert D and V
+    for dia in out["dias"]:
+        chaves = [c for c, _ in dia["ps"]]
+        tipos = [t for _, t in dia["ps"]]
+        assert sorted(chaves) == sorted(D + V)
+        assert tipos[0] == ("divisao" if dia["d"] % 2 == 0 else "valorativa")
+        assert tipos[0] != tipos[1]              # não abre com dois iguais
+        maior, menor = max(len(D), len(V)), min(len(D), len(V))
+        teto = -(-maior // menor)                # ceil(maior / menor)
+        corrida, maxima = 1, 1
+        for a, b in zip(tipos, tipos[1:]):
+            corrida = corrida + 1 if a == b else 1
+            maxima = max(maxima, corrida)
+        assert maxima <= teto, (dia["d"], tipos)
+        for lista in (D, V):                     # cada tipo, só girado
+            seq = [c for c in chaves if c in lista]
+            k = lista.index(seq[0])
+            assert seq == lista[k:] + lista[:k]
+            assert k == dia["d"] % len(lista)
+
+
+@precisa_node
+def test_intercalacao_e_piso_sinteticos():
+    def div(eixo, slug):
+        return _filme(slug, slug.upper(), contraste="tematico",
+                      eixos_acima=[{"eixo": eixo, "lift_pp": 25}])
+    def val(eixo, slug):
+        return _filme(slug, slug.upper(), assunto_comum=eixo)
+    filmes = ([div("ritmo", f"r{i}") for i in range(3)]
+              + [div("atuacao", f"a{i}") for i in range(3)]
+              + [val("roteiro_estrutura", f"v{i}") for i in range(4)]
+              + [val("comparacoes", f"c{i}") for i in range(2)]   # abaixo do piso
+              + [_filme("sem-assunto", "SEM")])                    # valorativo sem eixo
+    out = _node("""console.log(JSON.stringify(["2026-01-01", "2026-01-02"].map(dia =>
+        S.prateleiras(D, dia).map(p => p.chave + "=" + p.filmes.map(f => f.slug).join(",")))));""",
+                filmes)
+    assert out == [
+        ["ritmo=r0,r1,r2", "valorativo:roteiro_estrutura=v0,v1,v2,v3",
+         "atuacao=a0,a1,a2"],
+        # dia 1 (ímpar): abre por valorativa, e a divisão girou uma posição
+        ["valorativo:roteiro_estrutura=v0,v1,v2,v3", "atuacao=a0,a1,a2",
+         "ritmo=r0,r1,r2"],
+    ]
+
+
+@precisa_node
+def test_recem_chegados_limite_de_doze_em_ordem_alfabetica():
+    filmes = ([_filme(f"n{i:02d}", f"Novo {i:02d}", entrada="2026-09-30")
+               for i in range(20, 0, -1)]
+              + [_filme("velho", "Aaa Velho", entrada="2026-08-01")])
+    out = _node("console.log(JSON.stringify(S.recemChegados(D)));", filmes)
+    assert out["total"] == 20 and out["desde"] == out["ate"] == "2026-09-30"
+    assert [f["slug"] for f in out["filmes"]] == [f"n{i:02d}" for i in range(1, 13)]
+
+
+@precisa_node
+def test_recem_chegados_reais_e_link_para_filmes_filtrado():
+    out = _node("console.log(JSON.stringify(S.recemChegados(D)));", FILMES_REAIS)
+    assert len(out["filmes"]) == 12 and out["total"] == 44
+    assert out["desde"] == "2026-09-17"
+    fonte = (JS / "inicio.js").read_text(encoding="utf-8")
+    assert '"?desde=" + r.desde' in fonte
+    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
+    assert 'get("desde")' in cat and "foraDaLeva" in cat
 
 
 @precisa_node
@@ -381,6 +452,7 @@ def test_indice_gerado_sem_nota_e_sem_texto_de_review():
                       "titulo_letterboxd", "chave_slug", "ano", "imagens",
                       "distribuicao", "negativas", "medianas", "positivas",
                       "contraste", "eixos_acima", "eixo", "lift_pp", "entrada",
+                      "titulo_nativo", "assunto_comum", "estreia",
                       *_modulo_build_indice().CAMPOS_IMAGEM}
     # Os TÍTULOS não passam pelo detector: são dado, e "Estrela Encoberta de
     # Nuvens" é título, não nota. Os outros textos que o índice leva:
@@ -454,9 +526,17 @@ def _proibidos_em(texto: str) -> list[str]:
 def justificativas():
     if shutil.which("node") is None:
         pytest.skip("node não encontrado")
+    # Cada filme duas vezes: o texto de hoje e o texto FORÇADO de
+    # aniversário (estreia no mesmo dia e mês, 36 anos antes) — o
+    # vocabulário proibido vale para o template de aniversário também.
     return _node("""
-        console.log(JSON.stringify(S.elegiveis(D).map(f =>
-            Object.assign({slug: f.slug, titulo: f.titulo}, T.justificar(f)))));
+        const dia = "2026-10-19";
+        console.log(JSON.stringify(S.elegiveis(D).flatMap(f => [
+            Object.assign({slug: f.slug, titulo: f.titulo, forcado: false},
+                          T.justificar(f, dia)),
+            Object.assign({slug: f.slug, titulo: f.titulo, forcado: true},
+                          T.justificar(Object.assign({}, f, {estreia: "1990-10-19"}), dia)),
+        ])));
     """, FILMES_REAIS)
 
 
@@ -490,13 +570,18 @@ def test_gancho_segue_a_prioridade(justificativas):
     por_slug = {f["slug"]: f for f in FILMES_REAIS}
     for j in justificativas:
         f = por_slug[j["slug"]]
+        if j["forcado"]:
+            assert j["gancho"] == "aniversario"
+            assert j["texto"].startswith(f["titulo"] + " faz aniversário de estreia hoje. ")
+            continue
         if f["eixos_acima"]:
             maior = max(f["eixos_acima"], key=lambda e: e["lift_pp"])["lift_pp"]
             assert j["gancho"] == "eixo"
             assert j["eixo"] in {e["eixo"] for e in f["eixos_acima"]
                                  if e["lift_pp"] == maior}
-        elif f["contraste"] == "valorativo":
+        elif f["contraste"] == "valorativo" and f["assunto_comum"]:
             assert j["gancho"] == "valorativo"
+            assert j["eixo"] == f["assunto_comum"]
         else:
             assert j["gancho"] == "generico"
 
@@ -517,10 +602,73 @@ def test_justificativa_so_le_titulo_e_eixo():
 @precisa_node
 def test_todo_eixo_e_toda_prateleira_tem_nome():
     out = _node("""console.log(JSON.stringify({
-        ordem: S.ORDEM_PRATELEIRAS,
+        ordem: S.ORDEM_EIXOS, prefixo: S.PREFIXO_VALORATIVA,
         nomes: Object.keys(T.EIXO_NOME), titulos: Object.keys(T.TITULO_PRATELEIRA)}));""")
-    assert set(out["titulos"]) == set(out["ordem"])
-    assert set(out["nomes"]) == set(out["ordem"]) - {"valorativo"}
+    assert set(out["nomes"]) == set(out["ordem"])
+    assert set(out["titulos"]) == (set(out["ordem"])
+                                   | {out["prefixo"] + e for e in out["ordem"]})
+
+
+@precisa_node
+@pytest.mark.parametrize("estreia,dia,esperado", [
+    ("1990-03-14", "2026-03-14", True),
+    ("1990-03-14", "2026-03-15", False),
+    ("2026-03-14", "2026-03-14", False),     # o dia da estreia não é aniversário
+    ("2000-02-29", "2028-02-29", True),
+    ("2000-02-29", "2027-02-28", False),     # sem aniversário adiado
+    ("2000-02-29", "2027-03-01", False),
+    (None, "2026-03-14", False),
+    ("1990", "2026-03-14", False),           # só o ano: não dispara
+])
+def test_aniversario_dia_e_mes(estreia, dia, esperado):
+    assert _node("console.log(JSON.stringify(T.fazAniversario(D[0], D[1])));",
+                 [estreia, dia]) is esperado
+
+
+@precisa_node
+def test_prioridade_dos_quatro_ganchos():
+    dia = "2026-03-14"
+    filmes = {
+        "eixo": _filme("e", "Filme E", contraste="tematico", assunto_comum="ritmo",
+                       eixos_acima=[{"eixo": "atuacao", "lift_pp": 25}]),
+        "valorativo": _filme("v", "Filme V", assunto_comum="comparacoes"),
+        "generico": _filme("g", "Filme G", contraste=None, assunto_comum="ritmo"),
+        "sem_assunto": _filme("s", "Filme S", assunto_comum=None),
+    }
+    out = _node("""
+        const r = {};
+        for (const [k, f] of Object.entries(D.filmes)) {
+            r[k] = T.justificar(f, D.dia);
+            r[k + "+aniv"] = T.justificar(Object.assign({}, f, {estreia: "1980-03-14"}), D.dia);
+        }
+        console.log(JSON.stringify(r));
+    """, {"filmes": filmes, "dia": dia})
+    assert [out[k]["gancho"] for k in filmes] == ["eixo", "valorativo", "generico", "generico"]
+    assert out["eixo"]["eixo"] == "atuacao"           # divisão vence o assunto comum
+    assert out["valorativo"]["eixo"] == "comparacoes"
+    assert "comparações com outros filmes" in out["valorativo"]["texto"]
+    for k in filmes:
+        a = out[k + "+aniv"]
+        assert a["gancho"] == "aniversario"
+        assert a["gancho_conteudo"] == out[k]["gancho"]
+        assert a["texto"] == (filmes[k]["titulo"] + " faz aniversário de estreia hoje. "
+                              + out[k]["texto"])
+
+
+@precisa_node
+def test_aniversario_nao_muda_a_selecao_e_a_home_usa_o_dia_da_url():
+    """O aniversário só muda o TEXTO. E a home passa o `?dia=` (ou o dia de
+    hoje em São Paulo) para a justificativa — é o que faz o gancho poder
+    ser conferido num dia qualquer."""
+    out = _node("""
+        const dia = "2026-10-19";
+        const com = D.map(f => Object.assign({}, f, {estreia: "1999-10-19"}));
+        console.log(JSON.stringify([S.filmeDoDia(D, dia).slug, S.filmeDoDia(com, dia).slug,
+            S.prateleiras(D, dia).map(p => p.chave), S.prateleiras(com, dia).map(p => p.chave)]));
+    """, FILMES_REAIS)
+    assert out[0] == out[1] and out[2] == out[3]
+    fonte = (JS / "inicio.js").read_text(encoding="utf-8")
+    assert 'get("dia")' in fonte and "T.justificar(f, DIA)" in fonte
 
 
 # ===========================================================================
@@ -573,3 +721,112 @@ def test_chave_do_slug():
     assert ch("district-9") == "district 9"
     assert ch("friday-the-13th-2009") == "friday the 13th"
     assert ch("2001-a-space-odyssey") == "2001 a space odyssey"
+
+
+# ===========================================================================
+# 8. [rodada 2] ASSUNTO COMUM DOMINANTE e TÍTULO NÃO LATINO (build_indice.py)
+# ===========================================================================
+
+def _linha(eixo, *mencoes_e_n):
+    return {"eixo": eixo, "por_bucket": {
+        b: {"mencoes": m, "de_n": n}
+        for b, (m, n) in zip(("negativas", "medianas", "positivas"), mencoes_e_n)}}
+
+
+def test_assunto_comum_soma_de_frequencias_nao_de_mencoes():
+    """Com média zero, o excesso é a própria soma — isola a regra da SOMA."""
+    f = _modulo_build_indice().assunto_comum_dominante
+    # ritmo: 20/40 + 20/40 + 20/40 = 1,5 (60 menções); atuacao: 39/80 +
+    # 1/40 + 39/40 = 1,4875 com 79 menções. Vence a FREQUÊNCIA, não a contagem.
+    eixos = {"linhas": [_linha("ritmo", (20, 40), (20, 40), (20, 40)),
+                        _linha("atuacao", (39, 80), (1, 40), (39, 40))]}
+    assert f(eixos, {}) == "ritmo"
+
+
+def test_assunto_comum_desempate_pela_menor_frequencia_e_depois_taxonomia():
+    f = _modulo_build_indice().assunto_comum_dominante
+    # mesma soma (1,5): vence o mais igualmente compartilhado (min maior)
+    eixos = {"linhas": [_linha("ritmo", (40, 40), (10, 40), (10, 40)),
+                        _linha("atuacao", (20, 40), (20, 40), (20, 40))]}
+    assert f(eixos, {}) == "atuacao"
+    # soma E mínimo iguais: vence a ordem da taxonomia (a primeira linha)
+    eixos = {"linhas": [_linha("ritmo", (20, 40), (20, 40), (20, 40)),
+                        _linha("atuacao", (20, 40), (20, 40), (20, 40))]}
+    assert f(eixos, {}) == "ritmo"
+    # empate exato com n diferentes (Fraction, não float): 1/3 == 9/27
+    eixos = {"linhas": [_linha("ritmo", (9, 27), (10, 40), (10, 40)),
+                        _linha("atuacao", (10, 30), (10, 40), (10, 40))]}
+    assert f(eixos, {}) == "ritmo"
+
+
+def test_assunto_comum_ignora_livre_e_zero():
+    f = _modulo_build_indice().assunto_comum_dominante
+    assert f({"linhas": [_linha("livre", (40, 40), (40, 40), (40, 40)),
+                         _linha("ritmo", (1, 40), (0, 40), (0, 40))]}, {}) == "ritmo"
+    assert f({"linhas": [_linha("ritmo", (0, 40), (0, 40), (0, 40))]}, {}) is None
+    assert f({}, {}) is None
+
+
+def test_assunto_comum_e_o_que_mais_excede_a_media_do_catalogo():
+    """[rodada 2, decisão do dono] Vence o EXCESSO sobre a média, não a soma
+    absoluta: roteiro tem a maior soma (2,0), mas é o habitual; ritmo, com
+    1,2, está 0,6 acima da média dele."""
+    f = _modulo_build_indice().assunto_comum_dominante
+    eixos = {"linhas": [_linha("ritmo", (16, 40), (16, 40), (16, 40)),
+                        _linha("roteiro_estrutura", (30, 40), (20, 40), (30, 40))]}
+    media = {"ritmo": Fraction(3, 5), "roteiro_estrutura": Fraction(19, 10)}
+    assert f(eixos, media) == "ritmo"
+    assert f(eixos, {}) == "roteiro_estrutura"      # a regra antiga escolheria roteiro
+    # nenhum eixo acima da média: não há assunto a nomear
+    assert f(eixos, {"ritmo": Fraction(2), "roteiro_estrutura": Fraction(3)}) is None
+
+
+def test_media_do_catalogo_conta_eixo_ausente_como_zero():
+    bi = _modulo_build_indice()
+    dados = {"catalogo": ["a", "b", "fora"], "filmes": {
+        "a": {"eixos": {"linhas": [_linha("ritmo", (40, 40), (40, 40), (40, 40))]}},
+        "b": {"eixos": {"linhas": [_linha("ritmo", (0, 40), (0, 40), (20, 40)),
+                                   _linha("atuacao", (40, 40), (0, 40), (0, 40))]}}}}
+    assert bi.media_do_catalogo(dados) == {"ritmo": Fraction(7, 4),
+                                           "atuacao": Fraction(1, 2)}
+
+
+def test_assunto_comum_real_espalhado_e_presente_em_todo_valorativo():
+    """O defeito medido da definição absoluta: 66 de 79 em roteiro. Com a
+    média do catálogo, nenhum eixo concentra metade dos valorativos e todo
+    valorativo tem assunto."""
+    val = [f for f in FILMES_REAIS if f["contraste"] == "valorativo"]
+    assert all(f["assunto_comum"] for f in val)
+    contagem = {}
+    for f in val:
+        contagem[f["assunto_comum"]] = contagem.get(f["assunto_comum"], 0) + 1
+    assert max(contagem.values()) < len(val) / 2
+    assert len(contagem) >= 5
+
+
+def test_titulo_nao_latino_cai_no_letterboxd_e_depois_no_tmdb():
+    f = _modulo_build_indice().titulos_de_exibicao
+    assert f({"titulo": "A Cura"}, "cure") == ("A Cura", None)
+    assert f({"titulo": "화녀", "identidade": {
+        "titulo_letterboxd": "Woman of Fire",
+        "titulo_tmdb_correspondente": "Hanyo"}}, "w") == ("Woman of Fire", "화녀")
+    assert f({"titulo": "화녀", "identidade": {
+        "titulo_letterboxd": None,
+        "titulo_tmdb_correspondente": "Woman of Fire"}}, "w") == ("Woman of Fire", "화녀")
+    # nenhuma alternativa latina: o original fica, sem linha secundária
+    assert f({"titulo": "화녀", "identidade": {
+        "titulo_letterboxd": "화녀"}}, "w") == ("화녀", None)
+    assert f({"titulo": "화녀"}, "w") == ("화녀", None)
+
+
+@precisa_node
+def test_woman_of_fire_na_home_e_na_busca():
+    wof = next(f for f in FILMES_REAIS if f["slug"] == "woman-of-fire")
+    assert (wof["titulo"], wof["titulo_nativo"]) == ("Woman of Fire", "화녀")
+    assert [f["slug"] for f in FILMES_REAIS if f["titulo_nativo"]] == ["woman-of-fire"]
+    out = _node("""const m = B.criar(D);
+        console.log(JSON.stringify([m.buscar("화녀"), m.buscar("woman of fire")]));""",
+                FILMES_REAIS)
+    for res in out:
+        assert [r["slug"] for r in res] == ["woman-of-fire"]
+        assert res[0]["titulo_nativo"] == "화녀"

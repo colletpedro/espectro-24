@@ -32,23 +32,42 @@
    ---------------------------------------------------------------------
    PRATELEIRAS
    ---------------------------------------------------------------------
-   · Uma por eixo da taxonomia (os filmes em que AQUELE eixo passa a
-     margem de lift, `eixos_acima`) e uma para `contraste: valorativo`.
+   · DE DIVISÃO ("Onde X divide"): uma por eixo da taxonomia, com os
+     filmes em que AQUELE eixo passa a margem de lift (`eixos_acima`).
+   · VALORATIVAS ("Todos falam de X, ninguém concorda"): uma por eixo, com
+     os filmes `contraste: valorativo` cujo assunto comum dominante
+     (`assunto_comum`, `build_indice.py`) é aquele eixo. Substituem a
+     prateleira valorativa única da rodada 1, que tinha 79 filmes.
    · Piso: só existe prateleira com >= PISO_PRATELEIRA filmes elegíveis.
+     Filme de eixo abaixo do piso simplesmente não aparece em prateleira.
    · Dentro da prateleira: ordem ALFABÉTICA pelo título exibido
      normalizado (artigo inicial ignorado), empate pelo slug — a mesma
-     regra para todas, inclusive as de eixo. Descartado: ordenar pela
-     magnitude do lift (mede contraste, não qualidade, mas pede explicação
-     que a prateleira não tem onde dar).
-   · Ordem das prateleiras: a ordem da taxonomia (`ORDEM_PRATELEIRAS`),
-     ROTACIONADA pelo mesmo contador de dias do filme do dia — no dia d, a
-     prateleira de posição (d mod P) abre a lista (P = nº de prateleiras
-     que passaram o piso). A home não fica idêntica todo dia, e qualquer
-     um pode reproduzir a ordem de uma data.
+     regra para todas. Descartado: ordenar pela magnitude do lift (mede
+     contraste, não qualidade, mas pede explicação que a prateleira não tem
+     onde dar).
+   · Ordem das prateleiras no dia d (d = dias desde EPOCA, o mesmo
+     contador do filme do dia), com D = as de divisão e V = as valorativas,
+     cada lista na ordem da taxonomia:
+       1. cada lista é ROTACIONADA sozinha: D começa na posição (d mod |D|)
+          e V na posição (d mod |V|);
+       2. as duas são INTERCALADAS de forma PROPORCIONAL, começando por D
+          em dia par e por V em dia ímpar: a cada posição entra o tipo que
+          está mais ATRASADO na sua própria lista (fração já usada menor;
+          empate, o tipo que abre o dia). Com tamanhos iguais isso é a
+          alternância simples; com 10 valorativas e 4 de divisão, cada
+          divisão vem depois de duas ou três valorativas, e nenhuma
+          sequência de um tipo só passa de ceil(maior / menor) seguidas.
+          Descartado (versão anterior desta rodada): alternar um a um e
+          despejar o resto no fim — com 10 contra 4, a home terminava com
+          seis valorativas seguidas.
+     A home não fica idêntica todo dia, não abre com uma sequência de um
+     tipo só, e qualquer um pode reproduzir a ordem de uma data.
 
    RECÉM-CHEGADOS: os filmes da data de entrada mais recente do registro
-   (`entrada`), em ordem alfabética; se essa leva tiver menos que o piso,
-   entram as levas anteriores até alcançá-lo. */
+   (`entrada`); se essa leva tiver menos que o piso, entram as levas
+   anteriores até alcançá-lo. Em ordem alfabética, cortados em
+   LIMITE_RECEM (12); `total` diz quantos a leva tem, para o link "ver
+   todos" (que abre /filmes?desde=<data>). */
 (function (root) {
   "use strict";
 
@@ -71,12 +90,16 @@
 
   var PISO_PRATELEIRA = 3;
 
-  // A taxonomia fechada, na ordem de `eixos.linhas`, + o estado valorativo.
-  var ORDEM_PRATELEIRAS = [
+  var LIMITE_RECEM = 12;
+
+  // A taxonomia fechada, na ordem de `eixos.linhas`.
+  var ORDEM_EIXOS = [
     "ritmo", "atuacao", "direcao_imagem", "roteiro_estrutura", "som_trilha",
     "tom_atmosfera", "impacto_emocional", "comparacoes", "expectativa",
-    "critica_social", "valorativo",
+    "critica_social",
   ];
+
+  var PREFIXO_VALORATIVA = "valorativo:";
 
   var MS_DIA = 86400000;
 
@@ -137,31 +160,63 @@
     return filmeDoDia(filmes, diaEmSaoPaulo(instante));
   }
 
-  function membrosDa(chave, filmes) {
+  function membrosDaDivisao(eixo, filmes) {
     return filmes.filter(function (f) {
-      if (chave === "valorativo") return f.contraste === "valorativo";
-      return (f.eixos_acima || []).some(function (e) { return e.eixo === chave; });
+      return (f.eixos_acima || []).some(function (e) { return e.eixo === eixo; });
     });
   }
 
-  // Todas as prateleiras que passam o piso, na ordem-base (sem rotação).
-  function prateleirasBase(filmes) {
+  function membrosDaValorativa(eixo, filmes) {
+    return filmes.filter(function (f) {
+      return f.contraste === "valorativo" && f.assunto_comum === eixo;
+    });
+  }
+
+  function doTipo(tipo, filmes) {
     var lista = elegiveis(filmes);
     var saida = [];
-    ORDEM_PRATELEIRAS.forEach(function (chave) {
-      var membros = membrosDa(chave, lista);
+    ORDEM_EIXOS.forEach(function (eixo) {
+      var membros = tipo === "divisao" ? membrosDaDivisao(eixo, lista)
+        : membrosDaValorativa(eixo, lista);
       if (membros.length >= PISO_PRATELEIRA) {
-        saida.push({ chave: chave, filmes: B.ordenarAlfabetico(membros) });
+        saida.push({
+          chave: tipo === "divisao" ? eixo : PREFIXO_VALORATIVA + eixo,
+          tipo: tipo, eixo: eixo, filmes: B.ordenarAlfabetico(membros),
+        });
       }
     });
     return saida;
   }
 
+  // Todas as prateleiras que passam o piso, sem rotação: divisão, depois
+  // valorativas, cada grupo na ordem da taxonomia.
+  function prateleirasBase(filmes) {
+    return doTipo("divisao", filmes).concat(doTipo("valorativa", filmes));
+  }
+
+  function girar(lista, d) {
+    if (!lista.length) return lista;
+    var k = modulo(d, lista.length);
+    return lista.slice(k).concat(lista.slice(0, k));
+  }
+
   function prateleiras(filmes, dia) {
-    var base = prateleirasBase(filmes);
-    if (!base.length) return base;
-    var k = modulo(diasDesdeEpoca(dia), base.length);
-    return base.slice(k).concat(base.slice(0, k));
+    var d = diasDesdeEpoca(dia);
+    var D = girar(doTipo("divisao", filmes), d);
+    var V = girar(doTipo("valorativa", filmes), d);
+    var vez = modulo(d, 2) === 0 ? [D, V] : [V, D];
+    var A = vez[0], Z = vez[1];
+    var saida = [];
+    var ia = 0, iz = 0;
+    // `ia / |A| <= iz / |Z|`, em inteiros: A entra quando não está à frente.
+    while (ia < A.length || iz < Z.length) {
+      if (iz >= Z.length || (ia < A.length && ia * Z.length <= iz * A.length)) {
+        saida.push(A[ia++]);
+      } else {
+        saida.push(Z[iz++]);
+      }
+    }
+    return saida;
   }
 
   function recemChegados(filmes, piso) {
@@ -179,12 +234,14 @@
       }));
     }
     if (escolhidos.length < piso) return null;
-    return { desde: ultima, ate: datas[0], filmes: B.ordenarAlfabetico(escolhidos) };
+    return { desde: ultima, ate: datas[0], total: escolhidos.length,
+             filmes: B.ordenarAlfabetico(escolhidos).slice(0, LIMITE_RECEM) };
   }
 
   var api = {
     SEMENTE: SEMENTE, EPOCA: EPOCA, FUSO: FUSO, EXCLUIDOS: EXCLUIDOS,
-    PISO_PRATELEIRA: PISO_PRATELEIRA, ORDEM_PRATELEIRAS: ORDEM_PRATELEIRAS,
+    PISO_PRATELEIRA: PISO_PRATELEIRA, LIMITE_RECEM: LIMITE_RECEM,
+    ORDEM_EIXOS: ORDEM_EIXOS, PREFIXO_VALORATIVA: PREFIXO_VALORATIVA,
     diaEmSaoPaulo: diaEmSaoPaulo, diasDesdeEpoca: diasDesdeEpoca,
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
     filmeDoDia: filmeDoDia, filmeDoDiaEm: filmeDoDiaEm,

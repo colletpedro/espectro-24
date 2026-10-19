@@ -113,6 +113,7 @@
         a.tabIndex = -1;
         a.appendChild(el("span", "busca__titulo", r.titulo));
         var extra = [];
+        if (r.titulo_nativo) extra.push(r.titulo_nativo);
         if (r.titulo_letterboxd && B.normalizar(r.titulo_letterboxd) !== B.normalizar(r.titulo)) {
           extra.push(r.titulo_letterboxd);
         }
@@ -168,6 +169,7 @@
     }
     var body = el("span", "mosaic-cell__body");
     body.appendChild(el("span", "mosaic-cell__title", f.titulo));
+    if (f.titulo_nativo) body.appendChild(el("span", "mosaic-cell__nativo", f.titulo_nativo));
     if (f.ano) body.appendChild(el("span", "mosaic-cell__year", String(f.ano)));
     var strip = el("span", "mosaic-cell__strip");
     strip.setAttribute("aria-hidden", "true");
@@ -194,7 +196,7 @@
     var caixa = document.getElementById("filmeDoDia");
     var f = S.filmeDoDia(FILMES, DIA);
     if (!caixa || !f) { if (caixa) caixa.hidden = true; return; }
-    var j = T.justificar(f);
+    var j = T.justificar(f, DIA);
     caixa.dataset.slug = f.slug;
     caixa.dataset.gancho = j.gancho;
 
@@ -214,6 +216,7 @@
     link.href = hrefFilme(f.slug);
     h.appendChild(link);
     caixa.appendChild(h);
+    if (f.titulo_nativo) caixa.appendChild(el("p", "filme-do-dia__nativo", f.titulo_nativo));
     if (f.ano) caixa.appendChild(el("p", "filme-do-dia__ano mono", String(f.ano)));
     caixa.appendChild(el("p", "filme-do-dia__texto", j.texto));
     var abrir = el("a", "filme-do-dia__abrir mono", T.ROTULO_ABRIR + " →");
@@ -226,7 +229,7 @@
   var reduzMovimento = window.matchMedia
     && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function prateleira(id, titulo, filmes, nota) {
+  function prateleira(id, titulo, filmes, nota, link) {
     var sec = el("section", "prateleira");
     sec.dataset.chave = id;
     var cab = el("div", "prateleira__cabeca");
@@ -250,6 +253,11 @@
     cab.appendChild(nav);
     sec.appendChild(cab);
     if (nota) sec.appendChild(el("p", "prateleira__nota mono", nota));
+    if (link) {
+      var a = el("a", "prateleira__todos mono", link.texto + " →");
+      a.href = link.href;
+      sec.appendChild(a);
+    }
     filmes.forEach(function (f) {
       var li = el("li", "prateleira__item");
       li.appendChild(celula(f));
@@ -295,7 +303,11 @@
       var fmt = function (d) { var p = d.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; };
       var nota = r.desde === r.ate ? "entraram no catálogo em " + fmt(r.ate)
         : "entraram no catálogo entre " + fmt(r.desde) + " e " + fmt(r.ate);
-      areaRecem.appendChild(prateleira("recem", T.ROTULO_RECEM, r.filmes, nota));
+      // "ver todos" abre /filmes FILTRADO pela leva (`?desde=`, lido por
+      // catalogo.js) — mesmo critério de data desta seção.
+      areaRecem.appendChild(prateleira("recem", T.ROTULO_RECEM, r.filmes, nota,
+        { texto: T.ROTULO_RECEM_TODOS,
+          href: HREF_CATALOGO + "?desde=" + r.desde }));
     } else {
       areaRecem.hidden = true;
     }

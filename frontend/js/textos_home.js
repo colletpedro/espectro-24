@@ -22,13 +22,28 @@
      índice que a alimenta não tem texto de review nenhum.
 
    GANCHOS DA JUSTIFICATIVA, em prioridade fixa (o primeiro que se aplica):
-     a) `eixo`       — o filme tem eixo acima da margem de lift: usa o de
-                       maior lift_pp (empate: o primeiro na ordem da
-                       taxonomia).
-     b) `valorativo` — `contraste: valorativo`: os grupos falam dos mesmos
-                       assuntos e discordam do valor.
-     c) `generico`   — nenhum dos dois (hoje: filme abaixo do piso do
-                       estado de contraste). */
+     1) `aniversario` — o dia e o mês de HOJE (America/Sao_Paulo) coincidem
+                        com a data de estreia (`estreia`, AAAA-MM-DD) e o
+                        ano de hoje é posterior ao da estreia. Uma frase de
+                        aniversário SEM o número de anos (algarismo seria
+                        quantidade fora do título), seguida do gancho de
+                        conteúdo do filme (2 a 4, abaixo). Estreia em 29/02
+                        só faz aniversário em ano bissexto. Não altera a
+                        SELEÇÃO do filme do dia, só o texto.
+                        **Hoje não dispara:** a ficha publicada guarda só o
+                        ano de estreia (ver `build_indice.py`).
+     2) `eixo`        — o filme tem eixo acima da margem de lift: usa o de
+                        maior lift_pp (empate: o primeiro na ordem da
+                        taxonomia).
+     3) `valorativo`  — `contraste: valorativo` E um assunto comum
+                        dominante (`assunto_comum`, calculado em
+                        `build_indice.py`): o eixo de que os três grupos,
+                        somados, falam MAIS DO QUE O HABITUAL no catálogo
+                        — não o mais falado em termos absolutos, que seria
+                        roteiro em quase todo filme. O texto diz isso, e
+                        não "falam sobretudo de".
+     4) `generico`    — nenhum dos anteriores (hoje: `woman-of-fire`, abaixo
+                        do piso do estado de contraste). */
 (function (root) {
   "use strict";
 
@@ -52,6 +67,7 @@
   var ROTULO_FILME_DO_DIA = "Filme do dia";
   var ROTULO_ABRIR = "Abrir a análise";
   var ROTULO_RECEM = "Recém-chegados";
+  var ROTULO_RECEM_TODOS = "Ver todos os recém-chegados";
 
   // O eixo em português legível, SEM artigo — os templates o usam depois de
   // dois-pontos, o que dispensa concordância de gênero e número.
@@ -68,8 +84,10 @@
     critica_social: "crítica social",
   };
 
-  // Títulos das prateleiras: fixos, neutros, um por chave de
-  // `ORDEM_PRATELEIRAS` (selecao.js). Nenhum diz quem fala mais.
+  // Títulos das prateleiras: fixos, neutros, um por chave de prateleira
+  // (selecao.js). As de DIVISÃO têm a chave do eixo; as VALORATIVAS,
+  // "valorativo:" + o eixo do assunto comum. Nenhum título diz quem fala
+  // mais, nem quem gosta mais.
   var TITULO_PRATELEIRA = {
     ritmo: "Onde o ritmo divide",
     atuacao: "Onde a atuação divide",
@@ -81,7 +99,16 @@
     comparacoes: "Onde as comparações dividem",
     expectativa: "Onde a expectativa divide",
     critica_social: "Onde a crítica social divide",
-    valorativo: "Mesmos assuntos, vereditos diferentes",
+    "valorativo:ritmo": "Todos falam do ritmo, ninguém concorda",
+    "valorativo:atuacao": "Todos falam da atuação, ninguém concorda",
+    "valorativo:direcao_imagem": "Todos falam da direção e da imagem, ninguém concorda",
+    "valorativo:roteiro_estrutura": "Todos falam do roteiro, ninguém concorda",
+    "valorativo:som_trilha": "Todos falam do som e da trilha, ninguém concorda",
+    "valorativo:tom_atmosfera": "Todos falam do tom e da atmosfera, ninguém concorda",
+    "valorativo:impacto_emocional": "Todos falam do impacto emocional, ninguém concorda",
+    "valorativo:comparacoes": "Todos fazem comparações, ninguém concorda",
+    "valorativo:expectativa": "Todos falam da expectativa, ninguém concorda",
+    "valorativo:critica_social": "Todos falam da crítica social, ninguém concorda",
   };
 
   var ORDEM_EIXOS = [
@@ -104,15 +131,19 @@
   }
 
   var TEMPLATES = {
+    aniversario: function (t) {
+      return t + " faz aniversário de estreia hoje.";
+    },
     eixo: function (t, eixo) {
       return "Em " + t + ", " + TRES_GRUPOS + " se afastam sobretudo num "
         + "assunto: " + EIXO_NOME[eixo] + ". Um dos grupos fala disso bem "
         + "mais que os outros dois — a página mostra qual, e com que palavras.";
     },
-    valorativo: function (t) {
-      return "Em " + t + ", nenhum assunto separa " + TRES_GRUPOS + ": os "
-        + "três grupos falam das mesmas coisas. A diferença está no valor que "
-        + "cada um dá ao filme, não num aspecto específico.";
+    valorativo: function (t, eixo) {
+      return "Em " + t + ", um assunto aparece mais do que o habitual no "
+        + "catálogo, somando " + TRES_GRUPOS + ": " + EIXO_NOME[eixo] + ". Os "
+        + "três grupos falam dele e chegam a vereditos diferentes — o que muda "
+        + "é o valor que cada um dá ao filme, não o tema da conversa.";
     },
     generico: function (t) {
       return t + " está no catálogo com o que " + TRES_GRUPOS + " dizem "
@@ -121,15 +152,35 @@
     },
   };
 
-  // → { gancho: "eixo"|"valorativo"|"generico", eixo: string|null, texto }
-  function justificar(filme) {
+  // Ganchos 2 a 4: o que o filme TEM, independente da data.
+  function ganchoDeConteudo(filme) {
     var t = filme.titulo || filme.slug;
     var e = eixoQueMaisDivide(filme);
     if (e) return { gancho: "eixo", eixo: e.eixo, texto: TEMPLATES.eixo(t, e.eixo) };
-    if (filme.contraste === "valorativo") {
-      return { gancho: "valorativo", eixo: null, texto: TEMPLATES.valorativo(t) };
+    var a = filme.assunto_comum;
+    if (filme.contraste === "valorativo"
+        && Object.prototype.hasOwnProperty.call(EIXO_NOME, a)) {
+      return { gancho: "valorativo", eixo: a, texto: TEMPLATES.valorativo(t, a) };
     }
     return { gancho: "generico", eixo: null, texto: TEMPLATES.generico(t) };
+  }
+
+  // `dia` em AAAA-MM-DD (São Paulo). Aniversário: mesmo dia e mês, ano
+  // posterior. 29/02 só casa com 29/02 — não há "aniversário adiado".
+  function fazAniversario(estreia, dia) {
+    if (!estreia || !dia || !/^\d{4}-\d{2}-\d{2}$/.test(estreia)) return false;
+    return estreia.slice(5) === dia.slice(5) && estreia.slice(0, 4) < dia.slice(0, 4);
+  }
+
+  // → { gancho, gancho_conteudo, eixo, texto }. Sem `dia`, só conteúdo.
+  function justificar(filme, dia) {
+    var c = ganchoDeConteudo(filme);
+    var r = { gancho: c.gancho, gancho_conteudo: c.gancho, eixo: c.eixo, texto: c.texto };
+    if (fazAniversario(filme.estreia, dia)) {
+      r.gancho = "aniversario";
+      r.texto = TEMPLATES.aniversario(filme.titulo || filme.slug) + " " + c.texto;
+    }
+    return r;
   }
 
   function tituloDaPrateleira(chave) { return TITULO_PRATELEIRA[chave] || chave; }
@@ -139,9 +190,9 @@
     AVISO_LINK: AVISO_LINK, BUSCA_PLACEHOLDER: BUSCA_PLACEHOLDER,
     BUSCA_VAZIA: BUSCA_VAZIA, BUSCA_VAZIA_LINK: BUSCA_VAZIA_LINK,
     ROTULO_FILME_DO_DIA: ROTULO_FILME_DO_DIA, ROTULO_ABRIR: ROTULO_ABRIR,
-    ROTULO_RECEM: ROTULO_RECEM, EIXO_NOME: EIXO_NOME,
+    ROTULO_RECEM: ROTULO_RECEM, ROTULO_RECEM_TODOS: ROTULO_RECEM_TODOS, EIXO_NOME: EIXO_NOME,
     TITULO_PRATELEIRA: TITULO_PRATELEIRA, eixoQueMaisDivide: eixoQueMaisDivide,
-    justificar: justificar, tituloDaPrateleira: tituloDaPrateleira,
+    fazAniversario: fazAniversario, justificar: justificar, tituloDaPrateleira: tituloDaPrateleira,
   };
 
   if (typeof module !== "undefined" && module.exports) module.exports = api;

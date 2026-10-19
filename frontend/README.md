@@ -91,7 +91,12 @@ Nada mais a configurar — a Vercel serve os arquivos estáticos direto.
 - **Busca da home**: client-side sobre `js/indice.js` (título exibido,
   título do Letterboxd, slug como chave oculta, ano); prefixo antes de
   substring, desempate alfabético. Setas + Enter, Esc fecha. Em `/filmes`
-  continua o filtro do mosaico (título ou eixo em destaque).
+  continua o filtro do mosaico (título ou eixo em destaque); `?desde=AAAA-MM-DD`
+  restringe o mosaico aos filmes que entraram no catálogo a partir da data
+  (é o "ver todos os recém-chegados" da home).
+- **Filme do dia, prateleiras e ganchos**: regras escritas no cabeçalho de
+  `js/selecao.js` (seleção) e de `js/textos_home.js` (prioridade dos
+  ganchos). `?dia=AAAA-MM-DD` na home fixa a data para conferência.
 - **Micro-pesquisa (A/B):** voto salvo em `localStorage` por filme; botão
   "copiar meu feedback" gera texto simples para envio manual. Sem backend,
   sem analytics, sem cookies de terceiros.

@@ -11,9 +11,11 @@
    `criar` devolve, desde que `buscar(q)` continue devolvendo essa lista na
    ordem de exibição — a UI não muda.
 
-   O QUE ESTA VERSÃO PROCURA: o título exibido (pt-BR, da ficha TMDB), o
-   título canônico do Letterboxd quando a ficha o tem, o slug como chave
-   oculta (33 filmes não têm o título do Letterboxd persistido) e o ANO.
+   O QUE ESTA VERSÃO PROCURA: o título exibido (pt-BR, da ficha TMDB; em
+   alfabeto latino — ver `titulos_de_exibicao` em build_indice.py), o
+   título nativo quando ele foi trocado na exibição ("화녀"), o título
+   canônico do Letterboxd quando a ficha o tem, o slug como chave oculta
+   (33 filmes não têm o título do Letterboxd persistido) e o ANO.
 
    ORDEM: (0) prefixo de algum título; (1) substring de algum título; (2) o
    ano, quando a consulta é exatamente um ano. Desempate alfabético pelo
@@ -60,7 +62,7 @@
   }
 
   function chavesDeTitulo(f) {
-    var ks = [f.titulo, f.titulo_letterboxd, f.chave_slug]
+    var ks = [f.titulo, f.titulo_nativo, f.titulo_letterboxd, f.chave_slug]
       .filter(Boolean).map(normalizar).filter(Boolean);
     // "titulo ano" também é chave: "coringa 2019" casa como PREFIXO.
     if (f.ano) {
@@ -103,7 +105,7 @@
       return achados.slice(0, limite).map(function (a) {
         var f = a.e.filme;
         return {
-          slug: f.slug, titulo: f.titulo,
+          slug: f.slug, titulo: f.titulo, titulo_nativo: f.titulo_nativo || null,
           titulo_letterboxd: f.titulo_letterboxd || null, ano: f.ano || null,
         };
       });
@@ -113,6 +115,7 @@
   }
 
   var api = {
+    chavesDeTitulo: chavesDeTitulo,
     ARTIGOS: ARTIGOS, LIMITE_RESULTADOS: LIMITE_RESULTADOS,
     normalizar: normalizar, comparar: comparar,
     ordenarAlfabetico: ordenarAlfabetico, criar: criar,
