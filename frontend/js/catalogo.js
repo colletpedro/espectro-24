@@ -1,4 +1,9 @@
-/* Espectro 24 — home.js
+/* Espectro 24 — catalogo.js (até a home nova, `home.js`)
+   [home nova] O mosaico migrou INTACTO de `/` para `/filmes` (catálogo
+   completo). A única mudança é o caminho relativo dos links, que agora
+   saem de `filmes/`: `../filme.html` funciona tanto em `/filmes` quanto em
+   `/filmes/` e por file://.
+
    Monta os cards do catálogo a partir de window.ESPECTRO_DATA e liga a BUSCA.
 
    v1.9.14: a busca deixou de ser decorativa. Até aqui ela exibia "Busca em
@@ -104,7 +109,7 @@
 
     var a = document.createElement("a");
     a.className = "mosaic-cell";
-    a.href = "filme.html?slug=" + encodeURIComponent(slug);
+    a.href = "../filme.html?slug=" + encodeURIComponent(slug);
     a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
 
     // [v1.9.29] O PÔSTER — e isto é REDESENHO da célula, não acréscimo.

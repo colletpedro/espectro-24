@@ -2451,3 +2451,137 @@ body.lightbox-aberto { overflow: hidden; }
   .decide__grid { grid-template-columns: 1fr; gap: 22px; }
   .decide__text { font-size: 0.99rem; }
 }
+
+/* =======================================================
+   HOME NOVA — estrutura (busca, filme do dia, prateleiras)
+   =======================================================
+   Rodada de ESTRUTURA: nada aqui é identidade visual nova. Só tokens,
+   famílias e componentes que o site já tem (`.search`, `.section-label`,
+   `.backdrop`, `.mosaic-cell`, `.mono`); a rodada de design troca este
+   bloco inteiro sem tocar em busca.js, selecao.js ou textos_home.js. */
+.home-premissa {
+  max-width: 30rem;
+  margin: 0 auto 18px;
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* a lista de resultados abre SOBRE o conteúdo, colada no campo */
+.busca { margin-bottom: 0; }
+.busca__resultados {
+  position: absolute;
+  left: 0; right: 0; top: calc(100% + 6px);
+  z-index: 20;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  max-height: min(60vh, 26rem);
+  overflow-y: auto;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 14px 30px -12px #000000cc;
+  text-align: left;
+}
+.busca__opcao { border-radius: 8px; }
+.busca__opcao.is-ativo { background: var(--bg-elev-2); }
+.busca__link {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--text);
+}
+.busca__titulo { font-family: var(--serif); font-weight: 700; line-height: 1.3; }
+.busca__meta {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-mute);
+}
+.busca__vazia {
+  margin: 12px auto 0;
+  max-width: 26rem;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
+.busca__vazia a,
+.home-aviso a { color: var(--text); text-underline-offset: 3px; }
+
+.filme-do-dia { margin-top: 36px; }
+.filme-do-dia__visual { display: block; }
+.filme-do-dia__visual .poster--ficha { margin: 0 auto; }
+.filme-do-dia__titulo {
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+  line-height: 1.1;
+  margin: 4px 0 4px;
+  position: relative;
+  z-index: 1;
+}
+.filme-do-dia__titulo a { text-decoration: none; }
+.filme-do-dia__titulo a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.filme-do-dia__ano { margin: 0 0 12px; }
+.filme-do-dia__texto { color: var(--text-dim); margin: 0 0 14px; max-width: 38rem; }
+.filme-do-dia__abrir { color: var(--text-dim); text-decoration: none; }
+.filme-do-dia__abrir:hover { color: var(--text); }
+
+/* prateleiras: mais largas que a coluna de leitura, como o mosaico */
+.prateleiras { max-width: 1080px; margin: 0 auto; padding: 0 14px; }
+.prateleira { margin-top: 36px; }
+.prateleira__cabeca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 4px;
+}
+.prateleira__titulo { margin: 0; }
+.prateleira__nota { margin: 4px 4px 0; font-size: 0.64rem; }
+.prateleira__nav { display: flex; gap: 6px; flex-shrink: 0; }
+/* mesmo empate de `.mosaic-cell[hidden]`: sem isto o `display: flex` acima
+   vence o `[hidden]` do navegador e as setas de uma prateleira que não rola
+   continuam na tela */
+.prateleira__nav[hidden] { display: none; }
+.prateleira__botao {
+  width: 32px; height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg-elev);
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.prateleira__botao:hover:not(:disabled) { color: var(--text); border-color: #3a4152; }
+.prateleira__botao:disabled { opacity: 0.35; cursor: default; }
+.prateleira__botao:focus-visible,
+.prateleira__trilha:focus-visible { outline: 2px solid #3b82f680; outline-offset: 2px; }
+/* Rolagem NATIVA: swipe no iPhone, trackpad e shift+roda de graça; com
+   foco, as setas do teclado rolam a trilha. O padding vertical dá espaço
+   ao `scale` de hover da célula do mosaico, que o overflow cortaria. */
+.prateleira__trilha {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 8px 4px 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding: 0 4px;
+  scrollbar-width: thin;
+}
+.prateleira__item { flex: 0 0 132px; scroll-snap-align: start; }
+@media (max-width: 640px) {
+  .prateleira__item { flex-basis: 30%; }
+}
+
+.home-aviso {
+  margin-top: 44px;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+}
