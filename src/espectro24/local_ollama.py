@@ -153,7 +153,8 @@ def nivel_think() -> str:
     return bruto
 
 
-def _opcoes(num_predict: int | None = None, num_ctx: int | None = None) -> dict:
+def _opcoes(num_predict: int | None = None, num_ctx: int | None = None,
+            seed: int | None = None) -> dict:
     op = {"num_ctx": num_ctx or int(os.environ.get("ESPECTRO24_OLLAMA_NUM_CTX")
                                     or NUM_CTX_PADRAO),
           "num_predict": num_predict or int(
@@ -162,6 +163,8 @@ def _opcoes(num_predict: int | None = None, num_ctx: int | None = None) -> dict:
     temp = os.environ.get("ESPECTRO24_OLLAMA_TEMPERATURE")
     if temp:
         op["temperature"] = float(temp)
+    if seed is not None:
+        op["seed"] = int(seed)
     return op
 
 
@@ -176,7 +179,8 @@ def _s(ns) -> float:
 def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
                         schema: dict | str, prazo: float | None = None,
                         num_predict: int | None = None,
-                        num_ctx: int | None = None) -> dict:
+                        num_ctx: int | None = None, think: str | None = None,
+                        seed: int | None = None) -> dict:
     """Uma chamada de JSON CURTO sobre UMA review no Ollama.
 
     Devolve o mesmo formato de `resposta_json_gemini` (`texto`, `provider`,
@@ -193,15 +197,22 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
 
     `think`: `false` por padrão (ver `nivel_think` para os outros níveis; o
     nível usado vai em `think` no retorno, `"omitido"` se o servidor recusou
-    o campo). Com `false`, um modelo com "raciocínio" (família qwen3, deepseek-r1)
+    o campo). `think` e `seed` explícitos sobrepõem o ambiente — para quem
+    precisa fixar a configuração no código (o juiz v2 dos bullets, cuja
+    configuração inteira entra num hash). Com `false`, um modelo com "raciocínio" (família qwen3, deepseek-r1)
     gastaria o teto de saída pensando — na CPU, minutos por chamada — e a
     saída forçada por schema nem o deixa escrever o pensamento. Modelo sem
     esse recurso ignora o campo; se o servidor o recusar (400), a chamada é
     refeita uma vez sem ele."""
-    nivel = nivel_think()
+    if think is None:
+        nivel = nivel_think()
+    elif think in NIVEIS_THINK:
+        nivel = think
+    else:
+        raise ValueError(f"think={think!r} inválido — use um de {', '.join(NIVEIS_THINK)}")
     corpo = {"model": modelo, "stream": False, "keep_alive": KEEP_ALIVE,
              "format": schema, "think": False if nivel == "false" else nivel,
-             "options": _opcoes(num_predict, num_ctx),
+             "options": _opcoes(num_predict, num_ctx, seed),
              "messages": [{"role": "system", "content": system},
                           {"role": "user", "content": user}]}
     limite = prazo if prazo is not None else prazo_s()
@@ -253,6 +264,9 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
         "carga_s": _s(dados.get("load_duration")),
         "total_s": _s(dados.get("total_duration")),
         "prompt_eval_count": n_in, "eval_count": n_out,
+        # O raciocínio que o servidor devolve à parte (`message.thinking`,
+        # gpt-oss com think ligado); `None` quando não há.
+        "pensamento": (dados.get("message") or {}).get("thinking") or None,
     }
 
 

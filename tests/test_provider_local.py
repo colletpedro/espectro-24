@@ -502,3 +502,32 @@ def test_resumo_traz_o_sinal_de_reaproveitamento_do_prefixo_pelo_tempo_de_leitur
     r = G._custo_local([G._arq_class(1)])["reaproveitamento_do_prefixo"]
     assert r["leitura_prompt_primeira_chamada_s"] == 23.0
     assert r["leitura_prompt_mediana_s"] in (1.2, 1.3)
+
+
+# --- think e seed explícitos (juiz v2 dos bullets, 2026-10-19) ---------------
+
+def test_think_explicito_vence_o_ambiente(ollama, monkeypatch):
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_THINK", "false")
+    r = _chamar(think="low")
+    assert ollama.requisicoes[0]["think"] == "low" and r["think"] == "low"
+
+
+def test_think_explicito_invalido_falha_antes_de_chamar(ollama):
+    with pytest.raises(ValueError, match="think"):
+        _chamar(think="sim")
+    assert ollama.requisicoes == []
+
+
+def test_seed_so_vai_quando_pedida(ollama):
+    _chamar()
+    _chamar(seed=7)
+    assert "seed" not in ollama.requisicoes[0]["options"]
+    assert ollama.requisicoes[1]["options"]["seed"] == 7
+
+
+def test_pensamento_do_servidor_volta_a_parte(ollama):
+    corpo = _corpo_ok()
+    corpo["message"]["thinking"] = "a review elogia"
+    ollama.respostas.append(corpo)
+    assert _chamar()["pensamento"] == "a review elogia"
+    assert _chamar()["pensamento"] is None
