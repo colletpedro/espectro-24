@@ -308,3 +308,72 @@ terminar. Com os dois prontos, no Mac:
 python scripts/checagem_bullets.py validar-juiz --dir checagem-bullets
 python scripts/checagem_bullets.py relatorio --dir checagem-bullets
 ```
+
+## 11. Juiz v2 dos bullets (gpt-oss:20b) — calibração nos 40 pares
+
+O juiz v1 (§10) reprovou contra o rótulo do dono (precisão 0,727). O v2 troca o
+modelo (gpt-oss:20b, que não escreveu nenhum dos lados), exige uma **frase de
+prova** literal da review — conferida pelo código, não pelo modelo — e usa o
+mesmo guia que o dono usou para rotular. Código: `scripts/juiz_bullets_v2.py`.
+Custo **zero**; não escreve em `resultado/`.
+
+Aqui roda só a **calibração**: o v2 nos mesmos 40 pares que o dono já rotulou.
+Ela serve para ajustar o prompt, não para validar o juiz (a validação é numa
+amostra nova, depois de a versão ser congelada).
+
+**A configuração inteira está no código** e entra num hash (`config_sha256`,
+gravado em cada registro): modelo, `think=low`, `num_ctx` 3584, `num_predict`
+1024, `seed` 20261019, temperatura do modelo. As variáveis
+`ESPECTRO24_OLLAMA_THINK`, `_NUM_CTX` e `_NUM_PREDICT` **não valem** para este
+juiz; `ESPECTRO24_OLLAMA_TEMPERATURE` definida faz o juiz se recusar a rodar.
+
+**Antes — as mesmas guardas de memória do gate do gpt-oss:** feche o que puder,
+confira RAM+VRAM livres (o gate rodou com ≥ 13,0 GB) e acompanhe o pagefile;
+`OLLAMA_NUM_PARALLEL=1`; só o gpt-oss carregado (`ollama ps`; `ollama stop
+qwen3:14b` se ele aparecer).
+
+Dois passos, na ordem:
+
+1. `medir-contexto` — os 10 prompts mais longos dos 900, com janela folgada
+   (8192) e 1 token de saída, para o servidor contar os tokens exatos. Grava
+   `checagem-bullets\juiz_v2\contexto_medido_v2.0.json` e diz `CABE` ou `NÃO
+   CABE` em 3584. Sem `CABE`, o juiz se recusa a rodar. Poucos minutos.
+2. `juiz --calibracao` — os 40 pares. **~10 min (p95 ~19 min)**, estimativa a
+   partir das velocidades do gate do gpt-oss neste notebook
+   (`checagem-bullets\juiz_v2\preparo_v2.0.md`). Retomável: par já feito com a
+   mesma configuração não é refeito.
+
+```powershell
+git fetch
+git switch gate-local
+git pull
+.\venv\Scripts\Activate.ps1
+$env:PYTHONUTF8 = "1"
+Remove-Item Env:ESPECTRO24_OLLAMA_TEMPERATURE -ErrorAction SilentlyContinue
+ollama list                                    # gpt-oss:20b precisa aparecer
+python scripts/juiz_bullets_v2.py medir-contexto --dir checagem-bullets
+python scripts/juiz_bullets_v2.py juiz --calibracao --dir checagem-bullets
+```
+
+- **No fim** a última linha diz `pares sem veredito: 0 — completo`. Se não
+  disser, rode o último comando de novo.
+- **O que olhar** em `checagem-bullets\juiz_v2\calibracao_v2.0_saida.jsonl`:
+  `finish_reason` (falha com `length` = o raciocínio passou de 1024 tokens),
+  `erro` com `contexto` (o prompt encostou na janela), `think` = `low` e
+  `modelo_efetivo` = `gpt-oss:20b`. O `pensamento` de cada par fica gravado.
+- Se o seu `ollama ps` tiver a coluna `CONTEXT`, ela deve mostrar 3584 durante o
+  passo 2 (8192 no passo 1).
+
+**Depois:**
+
+```powershell
+git add checagem-bullets/juiz_v2
+git commit -m "checagem bullets: juiz v2.0 (gpt-oss:20b) na calibração dos 40 pares"
+git push
+```
+
+No Mac, a calibração contra o rótulo do dono:
+
+```bash
+python scripts/juiz_bullets_v2.py calibrar --dir checagem-bullets
+```
