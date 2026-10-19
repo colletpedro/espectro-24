@@ -127,7 +127,7 @@ humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
 
 ## Juiz v2 (2026-10-19) — preparado; calibração falta rodar no Windows
 
-Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e`). O v1 e a saída
+Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e` + `c9bb711`). O v1 e a saída
 dele ficam como estão (verificáveis pelo hash do prompt).
 
 **O que muda.**
@@ -136,20 +136,29 @@ dele ficam como estão (verificáveis pelo hash do prompt).
   gpt-oss o máximo de saída foi 696).
 - **Contexto: `num_ctx` 3584.** O maior par dos 900
   (`local|the-substance|positivas|0|viewing:1439489161`, review de 4.990
-  caracteres, prompt inteiro de 6.998) dá no máximo 2.450 tokens pela cota
+  caracteres, prompt inteiro de 7.100) dá no máximo 2.485 tokens pela cota
   conservadora de 0,35 token/caractere (no gate do gpt-oss a razão nunca passou
-  de 0,343 em 417 prompts); + 1024 de saída = 3.474 → o menor múltiplo de 512
+  de 0,343 em 417 prompts); + 1024 de saída = 3.509 → o menor múltiplo de 512
   que cabe é 3584. **É cota, não medição:** `medir-contexto` conta no servidor
   os 10 prompts mais longos antes de o juiz rodar, e o juiz se recusa sem essa
   medição dizer que cabe. Cada chamada ainda tem uma guarda de estouro.
-- **Frase de prova:** o modelo devolve `{"trecho": literal | null, "apoia":
-  bool}`; o código decide: apoio = apoia E trecho não-nulo E trecho achado na
-  review (normalizando só espaços, caixa e forma Unicode — sem tirar acento nem
-  trocar aspas). Recalculado na leitura, não confiado ao registro.
+- **Frase de prova:** o modelo devolve `{"trecho": a frase inteira | null,
+  "apoia": bool}` — o prompt pede a FRASE INTEIRA da review onde está a prova,
+  não um fragmento. O código decide: apoio = apoia E trecho não-nulo E trecho
+  com **ao menos 4 palavras** E trecho achado na review (normalizando só
+  espaços, caixa e forma Unicode — sem tirar acento nem trocar aspas).
+  Recalculado na leitura, não confiado ao registro; sem apoio, o motivo fica
+  gravado (modelo disse que não / trecho nulo / trecho curto / não encontrado).
+- **Por que o mínimo de 4 palavras** (decisão do dono, 2026-10-19, antes de
+  qualquer dado do v2 — por isso é a própria v2.0, não um ajuste): uma palavra
+  só esvazia a prova. "acting" existe em "Great acting", e o código aceitaria
+  como apoio a "atuações insuficientes".
 - **Critério = o guia do dono** (`CRITERIO_DONO`, no prompt inteiro).
 
 **Configuração v2.0:** `config_sha256` =
-`30f966aee4bd6aead34446d44d4a85432458127f0e37965d33838c69180658d9`
+`a42f48932713ff322535116cb17538bc51a14bdb5e49c9c8389c35b687461c22`
+(substitui o `30f966ae…` do primeiro preparo, anterior à regra das 4
+palavras; nenhum dado rodou com ele)
 (prompt, modelo, parâmetros e o fonte da regra; detalhe em
 `juiz_v2/config_v2.0.json`). Este hash é da versão em calibração, **não** o da
 versão congelada.
@@ -169,4 +178,4 @@ versão congelada); (f) validação só na amostra nova.
 
 | versão | config_sha256 | calibração (40 pares antigos) |
 |---|---|---|
-| v2.0 | `30f966ae…` | falta rodar no Windows |
+| v2.0 | `a42f4893…` | falta rodar no Windows |
