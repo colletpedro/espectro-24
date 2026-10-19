@@ -124,3 +124,49 @@ Os números de apoio em `resultado_final.md` existem só para auditoria. Com o
 juiz complacente, eles são um TETO: os 2 bullets sem apoio nenhum (os dois do
 lado local, ambos nas negativas de Anatomia, os mesmos apontados na leitura
 humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
+
+## Juiz v2 (2026-10-19) — preparado; calibração falta rodar no Windows
+
+Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e`). O v1 e a saída
+dele ficam como estão (verificáveis pelo hash do prompt).
+
+**O que muda.**
+- **Modelo:** `gpt-oss:20b`, think=low — não escreveu nenhum dos lados. Seed
+  fixa (20261019), temperatura do modelo, `num_predict` 1024 (no gate do
+  gpt-oss o máximo de saída foi 696).
+- **Contexto: `num_ctx` 3584.** O maior par dos 900
+  (`local|the-substance|positivas|0|viewing:1439489161`, review de 4.990
+  caracteres, prompt inteiro de 6.998) dá no máximo 2.450 tokens pela cota
+  conservadora de 0,35 token/caractere (no gate do gpt-oss a razão nunca passou
+  de 0,343 em 417 prompts); + 1024 de saída = 3.474 → o menor múltiplo de 512
+  que cabe é 3584. **É cota, não medição:** `medir-contexto` conta no servidor
+  os 10 prompts mais longos antes de o juiz rodar, e o juiz se recusa sem essa
+  medição dizer que cabe. Cada chamada ainda tem uma guarda de estouro.
+- **Frase de prova:** o modelo devolve `{"trecho": literal | null, "apoia":
+  bool}`; o código decide: apoio = apoia E trecho não-nulo E trecho achado na
+  review (normalizando só espaços, caixa e forma Unicode — sem tirar acento nem
+  trocar aspas). Recalculado na leitura, não confiado ao registro.
+- **Critério = o guia do dono** (`CRITERIO_DONO`, no prompt inteiro).
+
+**Configuração v2.0:** `config_sha256` =
+`30f966aee4bd6aead34446d44d4a85432458127f0e37965d33838c69180658d9`
+(prompt, modelo, parâmetros e o fonte da regra; detalhe em
+`juiz_v2/config_v2.0.json`). Este hash é da versão em calibração, **não** o da
+versão congelada.
+
+**Calibração (a).** Os 40 pares do rótulo antigo, só para ajustar o prompt —
+no máximo 2 ajustes (v2.1, v2.2), cada versão com o seu arquivo e o seu
+resultado aqui. O relatório (`juiz_v2/calibracao_<versão>.md`) se declara
+CALIBRAÇÃO, NÃO VALIDAÇÃO. Estimativa: ~10 min (p95 ~19) para os 40,
+`juiz_v2/preparo_v2.0.md`. Comando: `docs/SETUP_WINDOWS.md` §11.
+
+**Ainda NÃO feitos** (próximas sessões, nesta ordem): (b) congelar a versão e
+gravar o hash dela aqui; (c) pré-registrar aqui o critério — precisão ≥ 0,8 e
+recall ≥ 0,8, e diferença de precisão entre os lados ≤ 0,15 (é o que
+`CRITERIO_V2` já aplica na calibração, como proposta); (d) amostra nova de 40
+pares sem sobreposição com os antigos; (e) os 900 pares (o código recusa sem a
+versão congelada); (f) validação só na amostra nova.
+
+| versão | config_sha256 | calibração (40 pares antigos) |
+|---|---|---|
+| v2.0 | `30f966ae…` | falta rodar no Windows |
