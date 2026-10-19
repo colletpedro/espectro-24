@@ -98,3 +98,10 @@ números com o aviso "ESTE RESULTADO NÃO VALE" no topo.
   Parte 3 mede o erro dele nos dois lados separadamente para isso aparecer.
 - A recuperação pode deixar de fora a review que sustenta o bullet; "sem apoio"
   quer dizer "sem apoio nas 5 mais parecidas".
+
+## Rotulagem do dono (2026-10-19)
+
+40 pares rotulados em `rotulagem/rotulos_dono.csv`: 25 `sim`, 15 `não`.
+
+**Pares que o dono considerou duvidosos** (o rótulo não muda; registro para
+ler a validação com cuidado): P03, P09, P11, P13, P15, P22, P28, P34, P36, P39.
