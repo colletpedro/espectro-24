@@ -141,8 +141,11 @@ e `/` vira `_`: `qwen3:8b` → `qwen3-8b`):
 - `gate.json` — o relatório (`gate.parar`, `gate.motivos`, `gate_por_eixo`,
   `custo.tempo_local` com média/p50/p95/máximo de cada tempo).
 
-`prompt_eval_count` pequeno (≈ tamanho da review, não ≈ 929 + review) nas
-chamadas depois da primeira é a evidência de que o prefixo foi reaproveitado.
+O sinal de que o prefixo foi reaproveitado é o **tempo de leitura do prompt
+cair**: `leitura_prompt_s` alto na primeira chamada (~23 s medidos) e baixo nas
+seguintes (~1,2 s). Está resumido em `custo.tempo_local.reaproveitamento_do_prefixo`
+do `gate.json`. **Não** use `prompt_eval_count` como sinal: o Ollama o reporta
+com o prompt inteiro, reaproveitado ou não.
 Se `total_s` máximo chegar perto do prazo, suba `ESPECTRO24_OLLAMA_PRAZO_S`.
 
 ### Devolver o resultado ao GitHub
@@ -180,3 +183,128 @@ A suíte inteira (`pytest -q`, com `pip install -e ".[llm,stills,test]"`) tem
 leem o catálogo publicado (`test_aplicar_lei_margem`, `test_condicoes`,
 `test_hero_faixa_frontend`, `test_veredito_briefing`). Não são do Windows nem
 do gate; qualquer falha *além* dessas merece atenção.
+
+## 9. Gerar a prosa local dos 5 filmes (gpt-oss:20b) — comparação cega
+
+Roda **síntese, rotulagem, narrativa, veredito e condições** com o modelo local
+sobre 5 filmes **já publicados**, para o dono comparar, às cegas, com o texto
+publicado. É uma exceção escopada (`espectro24.prosa_local`): não escreve em
+`resultado/`, não toca nos 99 publicados, recusa o lote C22 e custa **zero**.
+Os 5 filmes (`FILMES_COMPARACAO`): `anatomy-of-a-fall` (arthouse, contraste
+temático), `mother-2017` (divisivo, valorativo), `napoleon-2023` (invertido,
+valorativo), `the-substance` (aclamado, temático), `incendies` (aclamado,
+valorativo) — os cinco com condições publicadas.
+
+**Antes:** `git pull` (traz o código desta seção), venv ativado, e o mesmo
+cuidado de memória do gate: feche o que puder (navegador, apps), confira
+RAM+VRAM livres e acompanhe o pagefile — a janela de contexto da prosa é maior
+(24.576 tokens) que a do gate (8.192).
+
+```powershell
+$env:PYTHONUTF8 = "1"
+$env:ESPECTRO24_OLLAMA_THINK = "low"          # gpt-oss não desliga o raciocínio; low é o do gate
+ollama pull gpt-oss:20b                       # se ainda não estiver
+python scripts/gerar_prosa_local.py --modelo gpt-oss:20b --saida prosa-local --filmes-padrao
+```
+
+- **Pode interromper e reexecutar:** filme com `prosa-local\<slug>.json` pronto
+  é pulado. O filme em andamento recomeça do zero (não há checkpoint por
+  estágio).
+- **Seguir como está em produção:** best-of-3 por estágio (`--n` só para teste).
+  São ~15–19 chamadas por filme.
+- **Variáveis da prosa (opcionais):** `ESPECTRO24_OLLAMA_PRAZO_PROSA_S` (padrão
+  1800 s por chamada), `ESPECTRO24_OLLAMA_NUM_CTX_PROSA` (24576),
+  `ESPECTRO24_OLLAMA_NUM_PREDICT_PROSA` (6000 na síntese/rotulagem, 12000 na
+  prosa; **inclui os tokens de raciocínio**).
+- **O que olhar:** `prosa-local\<slug>.telemetria.json` — `falhas` por estágio
+  (vazio = sem falha), `estagios.<estágio>.finish_reason` (`length` = o teto de
+  saída cortou: suba `NUM_PREDICT_PROSA`), tempos por chamada, `think` e
+  `modelo_efetivo` em cada chamada.
+
+**Tempo estimado: ~25 min por filme, ~2h15 para os cinco** (faixa 1h30–3h30).
+Estimativa, não medida: sai das velocidades do gate do gpt-oss (leitura do
+prompt ~40–80 tokens/s, geração ~14 tokens/s) e dos tamanhos reais dos prompts
+dos 5 filmes — síntese 3 × ~6 mil tokens de entrada (~11 min), rotulagem
+(~2 min), narrativa (~5,5 min; as 3 amostras repetem o mesmo prompt, então só a
+1ª paga a leitura), veredito (~2 min), condições (~4 min; o prompt de sistema
+tem 11 mil caracteres). O primeiro filme dá o número real: se passar de 40 min,
+a faixa pessimista vale.
+
+**Depois:** levar `prosa-local\` para o Mac. O jeito mais simples é um commit no
+branch `gate-local` (NUNCA em `main`):
+
+```powershell
+git switch gate-local
+git add prosa-local
+git commit -m "prosa local: 5 filmes, gpt-oss:20b think=low"
+git push
+```
+
+No Mac, `scripts/comparacao_cega_prosa.py` monta o documento de leitura cega
+(A/B sorteado por filme, sem dizer qual é qual), o mapeamento com hash em
+arquivo separado e as métricas dos validadores.
+
+## 10. Juiz dos bullets (qwen3:14b) — checagem de apoio
+
+Para cada bullet da síntese dos 5 filmes (lado publicado, do DeepSeek, e lado
+local, do qwen3:14b), o juiz recebe o bullet e **uma** review recuperada por
+vez e responde `{"menciona": true}` ou `{"menciona": false}`. A entrada já vem
+pronta do Mac (`checagem-bullets\juiz_entrada.jsonl`, no branch `gate-local`,
+com o texto das reviews dentro): aqui só se roda o juiz. Custo **zero**; não
+escreve em `resultado/`.
+
+**Antes — as mesmas guardas de memória do gate:**
+
+- feche o que puder (navegador, apps), confira RAM+VRAM livres e acompanhe o
+  pagefile;
+- `OLLAMA_NUM_PARALLEL=1` no servidor (§4): as chamadas são uma por vez e o
+  system prompt fica no KV entre elas;
+- só o qwen3:14b carregado: `ollama ps`; se outro modelo aparecer (p.ex. o
+  gpt-oss da §9), `ollama stop <modelo>`;
+- a janela é a do gate (`ESPECTRO24_OLLAMA_NUM_CTX`, padrão 8192) — a maior
+  review da entrada tem ~5 mil caracteres, folga de sobra. Não use as
+  variáveis `_PROSA` da §9, que não valem aqui;
+- raciocínio desligado: `ESPECTRO24_OLLAMA_THINK=false` (o padrão).
+
+```powershell
+git fetch
+git switch gate-local
+git pull
+.\venv\Scripts\Activate.ps1
+pip install -e .                               # só se o venv for novo
+$env:PYTHONUTF8 = "1"
+$env:ESPECTRO24_OLLAMA_THINK = "false"
+ollama list                                    # qwen3:14b precisa aparecer
+python scripts/checagem_bullets.py juiz --modelo qwen3:14b --dir checagem-bullets
+```
+
+- **900 chamadas.** Tempo estimado: **~1h30** (faixa ~1h10–3h), em
+  `checagem-bullets\juiz_estimativa.md`. Estimativa, não medição: sai das
+  velocidades do qwen3:14b medidas no gate deste notebook. O progresso sai a
+  cada 25 chamadas, com o tempo que falta; se as primeiras 25 passarem de
+  ~5 min, a ponta pessimista vale.
+- **Pode interromper e reexecutar:** par com `ok: true` em
+  `checagem-bullets\juiz_saida.jsonl` não é refeito; o que falhou é refeito.
+- **No fim** a última linha diz `pares sem veredito: 0 — completo`. Se não
+  disser, rode o mesmo comando de novo.
+- **O que olhar** em `juiz_saida.jsonl`: `finish_reason` (`length` = o teto
+  de 64 tokens cortou — não deveria acontecer com uma resposta de ~8 tokens),
+  `modelo_efetivo` e `think` em cada registro.
+
+**Depois:**
+
+```powershell
+git add checagem-bullets/juiz_saida.jsonl
+git commit -m "checagem bullets: juiz qwen3:14b nos 900 pares"
+git push
+```
+
+**A rotulagem do dono (Parte 3) não depende do juiz** e pode ser feita antes,
+no Mac: `checagem-bullets\rotulagem\rotulagem_dono.md`, respostas em
+`rotulos_dono.csv`. Quem rotula não deve abrir `juiz_saida.jsonl` antes de
+terminar. Com os dois prontos, no Mac:
+
+```bash
+python scripts/checagem_bullets.py validar-juiz --dir checagem-bullets
+python scripts/checagem_bullets.py relatorio --dir checagem-bullets
+```

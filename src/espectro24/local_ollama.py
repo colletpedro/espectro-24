@@ -19,9 +19,11 @@ sem pedir (hoje, só `scripts/gate_gemini_classificacao.py --provider local`).
   também leva a latência de parede (`LLMLocalFalhou.latencia_s`).
 - `provider` e `modelo_efetivo` (o `model` devolvido pelo servidor, não o
   pedido) em cada registro — a lição da C21.
-- `prompt_eval_count`: tokens que o servidor de fato LEU nesta chamada. Com o
-  prefixo fixo (o system prompt, 929 tokens) reaproveitado do cache de KV, o
-  número cai para o tamanho da review; é a evidência do reaproveitamento.
+- `leitura_prompt_s` é o SINAL do reaproveitamento do prefixo: com o prefixo
+  fixo (o system prompt, 929 tokens) no cache de KV, o tempo de leitura do
+  prompt cai (medido no notebook: ~23 s na 1ª chamada, ~1,2 s nas seguintes).
+  `prompt_eval_count` NÃO serve de sinal — o Ollama o reporta com o prompt
+  inteiro, reaproveitado ou não.
 
 **Reaproveitamento de prefixo.** O Ollama guarda o KV da última requisição e
 reaproveita o prefixo idêntico da seguinte. Por isso o chamador deve fazer
@@ -151,11 +153,12 @@ def nivel_think() -> str:
     return bruto
 
 
-def _opcoes() -> dict:
-    op = {"num_ctx": int(os.environ.get("ESPECTRO24_OLLAMA_NUM_CTX")
-                         or NUM_CTX_PADRAO),
-          "num_predict": int(os.environ.get("ESPECTRO24_OLLAMA_NUM_PREDICT")
-                             or FALLBACK_CONTEUDO_MAX_TOKENS_JSON)}
+def _opcoes(num_predict: int | None = None, num_ctx: int | None = None) -> dict:
+    op = {"num_ctx": num_ctx or int(os.environ.get("ESPECTRO24_OLLAMA_NUM_CTX")
+                                    or NUM_CTX_PADRAO),
+          "num_predict": num_predict or int(
+              os.environ.get("ESPECTRO24_OLLAMA_NUM_PREDICT")
+              or FALLBACK_CONTEUDO_MAX_TOKENS_JSON)}
     temp = os.environ.get("ESPECTRO24_OLLAMA_TEMPERATURE")
     if temp:
         op["temperature"] = float(temp)
@@ -171,7 +174,9 @@ def _s(ns) -> float:
 # ---------------------------------------------------------------------------
 
 def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
-                        schema: dict, prazo: float | None = None) -> dict:
+                        schema: dict | str, prazo: float | None = None,
+                        num_predict: int | None = None,
+                        num_ctx: int | None = None) -> dict:
     """Uma chamada de JSON CURTO sobre UMA review no Ollama.
 
     Devolve o mesmo formato de `resposta_json_gemini` (`texto`, `provider`,
@@ -180,6 +185,11 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
     `custo_usd`, `leitura_prompt_s`, `geracao_s`, `carga_s`, `total_s`,
     `prompt_eval_count` e `eval_count`. Levanta `LLMLocalFalhou` (com a
     latência) se não houver resposta.
+
+    `schema` é um JSON schema (classificação, verificador) ou a string
+    `"json"` (modo JSON livre do Ollama — as etapas de PROSA, cuja forma é
+    validada pelos extratores de sempre, não por gramática). `num_predict` e
+    `num_ctx` sobrepõem o ambiente (a prosa precisa de teto e janela maiores).
 
     `think`: `false` por padrão (ver `nivel_think` para os outros níveis; o
     nível usado vai em `think` no retorno, `"omitido"` se o servidor recusou
@@ -191,7 +201,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
     nivel = nivel_think()
     corpo = {"model": modelo, "stream": False, "keep_alive": KEEP_ALIVE,
              "format": schema, "think": False if nivel == "false" else nivel,
-             "options": _opcoes(),
+             "options": _opcoes(num_predict, num_ctx),
              "messages": [{"role": "system", "content": system},
                           {"role": "user", "content": user}]}
     limite = prazo if prazo is not None else prazo_s()
