@@ -52,6 +52,7 @@ FRONTEND = ROOT / "frontend"
 DATA_JS = FRONTEND / "js" / "data.js"
 INDICE_JS = FRONTEND / "js" / "indice.js"
 REGISTRO = FRONTEND / "entrada_no_catalogo.json"
+SELECAO_JS = FRONTEND / "js" / "selecao.js"
 
 FUSO = ZoneInfo("America/Sao_Paulo")
 
@@ -126,11 +127,24 @@ def frequencias_somadas(eixos: dict | None) -> dict[str, tuple[Fraction, Fractio
     return saida
 
 
-def media_do_catalogo(dados: dict) -> dict[str, Fraction]:
-    """eixo → média, sobre TODOS os filmes publicados no catálogo (os 99 de
-    `data.js`, inclusive os da lista de exclusão da home — a média é
-    propriedade do dado, não da vitrine), da frequência somada nos três
+def excluidos_da_home(caminho: Path = SELECAO_JS) -> set[str]:
+    """Os slugs de `EXCLUIDOS` em `js/selecao.js` — a lista vive UM lugar só,
+    no código da home, e o build a lê de lá (um teste confere que o que este
+    parser lê é o que o node executa)."""
+    texto = caminho.read_text(encoding="utf-8")
+    bloco = re.search(r"var EXCLUIDOS = \{(.*?)\};", texto, re.S)
+    if not bloco:
+        raise ValueError("EXCLUIDOS não encontrado em selecao.js")
+    return set(re.findall(r'^\s*"([^"]+)"\s*:', bloco.group(1), re.M))
+
+
+def media_do_catalogo(dados: dict, excluidos: set[str] = frozenset()) -> dict[str, Fraction]:
+    """eixo → média, sobre os filmes publicados no catálogo MENOS os da
+    lista de exclusão da home (`excluidos`), da frequência somada nos três
     grupos. Filme sem a linha do eixo conta como zero.
+
+    [rodada 3, decisão do dono] Os excluídos saem da média: um corpus sob
+    suspeita não deve definir o que é "habitual" para os outros filmes.
 
     Consequência declarada: a média muda quando o catálogo muda, e o
     assunto comum de um filme JÁ publicado pode mudar com a entrada de
@@ -139,7 +153,8 @@ def media_do_catalogo(dados: dict) -> dict[str, Fraction]:
     · atuação 86,9 · crítica social 79,1 · expectativa 70,4 · tom 65,7 ·
     som 37,3."""
     somas = [frequencias_somadas((dados["filmes"].get(s) or {}).get("eixos"))
-             for s in dados["catalogo"] if s in dados["filmes"]]
+             for s in dados["catalogo"]
+             if s in dados["filmes"] and s not in excluidos]
     eixos = sorted({e for fs in somas for e in fs})
     if not somas:
         return {}
@@ -282,7 +297,7 @@ def hoje_sp() -> str:
 
 def montar_indice(dados: dict, registro: dict) -> dict:
     filmes = []
-    media = media_do_catalogo(dados)
+    media = media_do_catalogo(dados, excluidos_da_home())
     for slug in dados["catalogo"]:
         filme = dados["filmes"].get(slug)
         if filme is None:

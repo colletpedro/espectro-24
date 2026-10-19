@@ -540,6 +540,10 @@ def _stills(imagens: dict, hero_backdrop_path: str | None, *,
 _CHAVES_COMPLETUDE = (
     "tmdb_fetched_at", "poster_path", "backdrop_path", "poster_sem_texto_path",
     "galeria_stills",
+    # [home nova, rodada 3] Sem isto, uma entrada de cache anterior à data
+    # completa voltaria SEM `data_estreia` e a republicação apagaria, em
+    # silêncio, a data que `scripts/backfill_data_estreia.py` gravou.
+    "data_estreia",
 )
 
 
@@ -565,6 +569,9 @@ _ANO_RE_CANDIDATOS = (
 _TITULO_CANONICO_RE = re.compile(
     r'<meta\s+name="production:name"\s+content="([^"]*)"', re.I)
 _TMDB_ID_LETTERBOXD_RE = re.compile(r'data-tmdb-id="(\d+)"', re.I)
+
+
+_DATA_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
 
 
 def _agora_utc() -> str:
@@ -998,6 +1005,13 @@ def _montar_ficha(session, api_key: str, movie_id: int, detalhes: dict,
         # não estava em escrita latina (visível, nunca silencioso)
         "diretor_transliterado": diretor_transliterado,
         "ano": ano,
+        # [home nova, rodada 3] A data COMPLETA do TMDB (`release_date`,
+        # AAAA-MM-DD), para o gancho de aniversário da home. O `ano` acima
+        # continua sendo o publicado (e `buscar_ficha` ainda o troca pelo do
+        # Letterboxd quando a identidade é provada); esta data NÃO é
+        # reconciliada com ele — divergência de ano é dado, não erro.
+        # Vazia no TMDB → None (presença da chave, não verdade).
+        "data_estreia": data if _DATA_RE.fullmatch(data) else None,
         "fonte": "tmdb",
         # [v1.9.29] Identidade e RASTREABILIDADE. `tmdb_fetched_at` vale para
         # a ficha INTEIRA — título, sinopse, diretor, gêneros, duração,

@@ -310,8 +310,9 @@ def test_prateleiras_reais_ordem_alfabetica_piso_e_intercalacao():
         const dias = [];
         for (let i = 0; i < 30; i++) {
             const dia = new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
+            // [rodada 3] a ORDEM inteira — `prateleiras` agora corta em 6
             dias.push({d: S.diasDesdeEpoca(dia),
-                       ps: S.prateleiras(D, dia).map(p => [p.chave, p.tipo])});
+                       ps: S.ordemDoDia(D, dia).map(p => [p.chave, p.tipo])});
         }
         console.log(JSON.stringify({
             base: base.map(p => [p.chave, p.tipo, p.filmes.map(f => f.slug)]),
@@ -574,6 +575,12 @@ def test_gancho_segue_a_prioridade(justificativas):
             assert j["gancho"] == "aniversario"
             assert j["texto"].startswith(f["titulo"] + " faz aniversário de estreia hoje. ")
             continue
+        # [rodada 3] com a estreia real no índice, o dia fixo do fixture
+        # (19/10) é aniversário de algum filme: o gancho é "aniversario"
+        # exatamente quando dia e mês batem, e o de conteúdo segue a regra.
+        aniv = bool(f["estreia"]) and f["estreia"][5:] == "10-19" and f["estreia"][:4] < "2026"
+        assert (j["gancho"] == "aniversario") is aniv, (j["slug"], f["estreia"])
+        j = dict(j, gancho=j["gancho_conteudo"])
         if f["eixos_acima"]:
             maior = max(f["eixos_acima"], key=lambda e: e["lift_pp"])["lift_pp"]
             assert j["gancho"] == "eixo"
@@ -830,3 +837,86 @@ def test_woman_of_fire_na_home_e_na_busca():
     for res in out:
         assert [r["slug"] for r in res] == ["woman-of-fire"]
         assert res[0]["titulo_nativo"] == "화녀"
+
+
+# ===========================================================================
+# 9. [rodada 3] LIMITE DE PRATELEIRAS, MÉDIA SEM EXCLUÍDOS, ESTREIA
+# ===========================================================================
+
+_RETORNO = """
+    const dia = i => new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
+    const base = S.prateleirasBase(D);
+    const tam = {divisao: base.filter(p => p.tipo === "divisao").length,
+                 valorativa: base.filter(p => p.tipo === "valorativa").length};
+    const dias = [];
+    for (let i = 0; i < 80; i++) dias.push({
+        mostradas: S.prateleiras(D, dia(i)).map(p => p.chave),
+        ordem: S.ordemDoDia(D, dia(i)).map(p => p.chave)});
+    console.log(JSON.stringify({limite: S.LIMITE_PRATELEIRAS, tam,
+        chaves: base.map(p => p.chave), dias}));
+"""
+
+
+def _checar_retorno(out):
+    janela = max(out["tam"].values())
+    for d in out["dias"]:
+        assert d["mostradas"] == d["ordem"][:out["limite"]]
+        assert len(d["mostradas"]) == min(out["limite"], len(out["chaves"]))
+    # GARANTIA: toda prateleira aparece em QUALQUER janela de max(|D|,|V|) dias
+    for i in range(len(out["dias"]) - janela + 1):
+        vistas = {c for d in out["dias"][i:i + janela] for c in d["mostradas"]}
+        assert vistas == set(out["chaves"]), (i, set(out["chaves"]) - vistas)
+
+
+@precisa_node
+def test_limite_de_seis_e_retorno_de_toda_prateleira_no_catalogo_real():
+    out = _node(_RETORNO, FILMES_REAIS)
+    assert out["limite"] == 6
+    assert len(out["chaves"]) > 6          # o corte é de verdade
+    _checar_retorno(out)
+
+
+@precisa_node
+@pytest.mark.parametrize("n_div,n_val", [(4, 10), (7, 9), (1, 10), (6, 0), (3, 3)])
+def test_retorno_vale_para_outros_tamanhos(n_div, n_val):
+    eixos = ["ritmo", "atuacao", "direcao_imagem", "roteiro_estrutura", "som_trilha",
+             "tom_atmosfera", "impacto_emocional", "comparacoes", "expectativa",
+             "critica_social"]
+    filmes = []
+    for k in range(n_div):
+        filmes += [_filme(f"d{k}{i}", f"D{k}{i}", contraste="tematico",
+                          eixos_acima=[{"eixo": eixos[k], "lift_pp": 25}]) for i in range(3)]
+    for k in range(n_val):
+        filmes += [_filme(f"v{k}{i}", f"V{k}{i}", assunto_comum=eixos[k]) for i in range(3)]
+    _checar_retorno(_node(_RETORNO, filmes))
+
+
+@precisa_node
+def test_lista_de_exclusao_lida_pelo_build_e_a_mesma_do_node():
+    out = _node("console.log(JSON.stringify(Object.keys(S.EXCLUIDOS)));")
+    assert _modulo_build_indice().excluidos_da_home() == set(out) == {"obsession-2025"}
+
+
+def test_media_do_catalogo_ignora_excluidos():
+    bi = _modulo_build_indice()
+    base = {"a": {"eixos": {"linhas": [_linha("ritmo", (10, 40), (10, 40), (10, 40))]}},
+            "b": {"eixos": {"linhas": [_linha("ritmo", (30, 40), (30, 40), (30, 40))]}}}
+    dados = {"catalogo": ["a", "b", "x"], "filmes": {
+        **base, "x": {"eixos": {"linhas": [_linha("ritmo", (40, 40), (40, 40), (40, 40))]}}}}
+    assert bi.media_do_catalogo(dados, {"x"}) == {"ritmo": Fraction(3, 2)}
+    assert bi.media_do_catalogo(dados) == {"ritmo": Fraction(2)}
+
+
+def test_media_real_e_a_dos_publicados_menos_os_excluidos():
+    bi = _modulo_build_indice()
+    dados = bi.ler_data_js()
+    excl = bi.excluidos_da_home()
+    sem = {"catalogo": [s for s in dados["catalogo"] if s not in excl],
+           "filmes": dados["filmes"]}
+    assert bi.media_do_catalogo(dados, excl) == bi.media_do_catalogo(sem)
+    assert bi.media_do_catalogo(dados, excl) != bi.media_do_catalogo(dados)
+
+
+def test_estreia_completa_em_todo_o_catalogo():
+    assert all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", f["estreia"] or "")
+               for f in FILMES_REAIS)

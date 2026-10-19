@@ -30,7 +30,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2026-06-25",
    "entrada": "2026-07-20"
   },
   {
@@ -59,7 +59,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "1957-04-10",
    "entrada": "2026-09-17"
   },
   {
@@ -88,7 +88,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "1968-04-02",
    "entrada": "2026-09-17"
   },
   {
@@ -117,7 +117,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2009-07-17",
    "entrada": "2026-09-17"
   },
   {
@@ -151,7 +151,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "1991-07-27",
    "entrada": "2026-09-14"
   },
   {
@@ -180,7 +180,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2022-10-21",
    "entrada": "2026-08-22"
   },
   {
@@ -209,7 +209,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2022-10-07",
    "entrada": "2026-09-17"
   },
   {
@@ -243,7 +243,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2023-08-23",
    "entrada": "2026-08-22"
   },
   {
@@ -272,7 +272,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "1959-07-01",
    "entrada": "2026-09-17"
   },
   {
@@ -301,7 +301,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2016-11-10",
    "entrada": "2026-09-17"
   },
   {
@@ -330,7 +330,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2019-04-24",
    "entrada": "2026-08-22"
   },
   {
@@ -364,7 +364,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2023-07-19",
    "entrada": "2026-08-22"
   },
   {
@@ -393,7 +393,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2022-11-18",
    "entrada": "2026-08-22"
   },
   {
@@ -422,7 +422,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2018-05-17",
    "entrada": "2026-09-14"
   },
   {
@@ -451,7 +451,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "2006-06-08",
    "entrada": "2026-09-17"
   },
   {
@@ -480,7 +480,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2002-12-16",
    "entrada": "2026-09-17"
   },
   {
@@ -514,7 +514,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "2019-12-19",
    "entrada": "2026-08-22"
   },
   {
@@ -541,7 +541,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "1974-06-20",
    "entrada": "2026-09-17"
   },
   {
@@ -570,7 +570,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2002-08-30",
    "entrada": "2026-07-20"
   },
   {
@@ -599,7 +599,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "1983-08-10",
    "entrada": "2026-09-17"
   },
   {
@@ -633,7 +633,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "1997-12-27",
    "entrada": "2026-07-20"
   },
   {
@@ -662,7 +662,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2009-08-05",
    "entrada": "2026-09-17"
   },
   {
@@ -691,7 +691,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2012-12-25",
    "entrada": "2026-09-17"
   },
   {
@@ -720,7 +720,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1989-06-14",
    "entrada": "2026-09-17"
   },
   {
@@ -749,7 +749,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "1964-01-29",
    "entrada": "2026-09-17"
   },
   {
@@ -778,7 +778,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2021-08-18",
    "entrada": "2026-09-14"
   },
   {
@@ -807,7 +807,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2021-09-15",
    "entrada": "2026-08-22"
   },
   {
@@ -836,7 +836,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2024-02-27",
    "entrada": "2026-08-22"
   },
   {
@@ -865,7 +865,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2018-01-19",
    "entrada": "2026-08-22"
   },
   {
@@ -894,7 +894,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2022-03-24",
    "entrada": "2026-08-22"
   },
   {
@@ -923,7 +923,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1999-10-15",
    "entrada": "2026-09-17"
   },
   {
@@ -954,7 +954,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2014-08-15",
    "entrada": "2026-09-14"
   },
   {
@@ -983,7 +983,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2009-02-11",
    "entrada": "2026-08-22"
   },
   {
@@ -1012,7 +1012,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "2017-02-24",
    "entrada": "2026-09-14"
   },
   {
@@ -1046,7 +1046,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2000-05-04",
    "entrada": "2026-09-17"
   },
   {
@@ -1075,7 +1075,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "1990-09-12",
    "entrada": "2026-09-17"
   },
   {
@@ -1104,7 +1104,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2022-11-09",
    "entrada": "2026-09-14"
   },
   {
@@ -1128,7 +1128,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2015-12-12",
    "entrada": "2026-09-14"
   },
   {
@@ -1154,7 +1154,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2014-02-27",
    "entrada": "2026-09-14"
   },
   {
@@ -1183,7 +1183,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2018-06-07",
    "entrada": "2026-08-22"
   },
   {
@@ -1212,7 +1212,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2024-09-19",
    "entrada": "2026-08-22"
   },
   {
@@ -1241,7 +1241,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2010-09-17",
    "entrada": "2026-09-17"
   },
   {
@@ -1270,7 +1270,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2010-07-15",
    "entrada": "2026-09-17"
   },
   {
@@ -1299,7 +1299,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2009-08-02",
    "entrada": "2026-09-17"
   },
   {
@@ -1328,7 +1328,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "2014-11-04",
    "entrada": "2026-08-22"
   },
   {
@@ -1357,7 +1357,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2019-10-01",
    "entrada": "2026-09-17"
   },
   {
@@ -1386,7 +1386,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2024-10-01",
    "entrada": "2026-08-22"
   },
   {
@@ -1415,7 +1415,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1995-05-31",
    "entrada": "2026-09-17"
   },
   {
@@ -1444,7 +1444,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2024-07-10",
    "entrada": "2026-08-22"
   },
   {
@@ -1473,7 +1473,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2015-05-13",
    "entrada": "2026-09-17"
   },
   {
@@ -1505,7 +1505,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1992-11-18",
    "entrada": "2026-09-17"
   },
   {
@@ -1534,7 +1534,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2025-12-19",
    "entrada": "2026-09-17"
   },
   {
@@ -1563,7 +1563,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2000-10-11",
    "entrada": "2026-09-17"
   },
   {
@@ -1592,7 +1592,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2003-04-25",
    "entrada": "2026-09-14"
   },
   {
@@ -1621,7 +1621,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2017-09-13",
    "entrada": "2026-08-22"
   },
   {
@@ -1650,7 +1650,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2023-11-22",
    "entrada": "2026-08-22"
   },
   {
@@ -1676,7 +1676,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2012-11-19",
    "entrada": "2026-09-14"
   },
   {
@@ -1710,7 +1710,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2026-05-13",
    "entrada": "2026-09-08"
   },
   {
@@ -1744,7 +1744,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2023-07-19",
    "entrada": "2026-08-22"
   },
   {
@@ -1773,7 +1773,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2019-05-30",
    "entrada": "2026-08-22"
   },
   {
@@ -1802,7 +1802,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2022-09-16",
    "entrada": "2026-08-22"
   },
   {
@@ -1831,7 +1831,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2023-11-10",
    "entrada": "2026-08-22"
   },
   {
@@ -1865,7 +1865,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2022-09-07",
    "entrada": "2026-09-14"
   },
   {
@@ -1894,7 +1894,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1992-07-18",
    "entrada": "2026-09-17"
   },
   {
@@ -1923,7 +1923,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2019-09-06",
    "entrada": "2026-09-17"
   },
   {
@@ -1952,7 +1952,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "1997-07-12",
    "entrada": "2026-09-17"
   },
   {
@@ -1990,7 +1990,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2013-09-19",
    "entrada": "2026-09-17"
   },
   {
@@ -2024,7 +2024,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "1994-04-28",
    "entrada": "2026-09-14"
   },
   {
@@ -2053,7 +2053,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "1995-09-22",
    "entrada": "2026-09-17"
   },
   {
@@ -2082,7 +2082,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2010-02-14",
    "entrada": "2026-08-22"
   },
   {
@@ -2111,7 +2111,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "2025-04-16",
    "entrada": "2026-09-17"
   },
   {
@@ -2145,7 +2145,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "2020-12-25",
    "entrada": "2026-09-17"
   },
   {
@@ -2174,7 +2174,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2022-03-17",
    "entrada": "2026-09-14"
   },
   {
@@ -2203,7 +2203,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2023-05-31",
    "entrada": "2026-08-22"
   },
   {
@@ -2232,7 +2232,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2023-07-26",
    "entrada": "2026-08-22"
   },
   {
@@ -2266,7 +2266,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "1966-09-08",
    "entrada": "2026-09-17"
   },
   {
@@ -2295,7 +2295,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2024-12-20",
    "entrada": "2026-09-17"
   },
   {
@@ -2319,7 +2319,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "1960-04-13",
    "entrada": "2026-09-14"
   },
   {
@@ -2348,7 +2348,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2020-01-01",
    "entrada": "2026-09-17"
   },
   {
@@ -2377,7 +2377,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "1972-03-14",
    "entrada": "2026-08-22"
   },
   {
@@ -2406,7 +2406,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2015-12-25",
    "entrada": "2026-08-22"
   },
   {
@@ -2435,7 +2435,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2022-04-07",
    "entrada": "2026-08-22"
   },
   {
@@ -2464,7 +2464,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
-   "estreia": null,
+   "estreia": "2006-10-19",
    "entrada": "2026-09-17"
   },
   {
@@ -2493,7 +2493,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2015-12-25",
    "entrada": "2026-09-17"
   },
   {
@@ -2519,7 +2519,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2015-06-04",
    "entrada": "2026-09-14"
   },
   {
@@ -2548,7 +2548,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2025-12-16",
    "entrada": "2026-09-17"
   },
   {
@@ -2582,7 +2582,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2024-09-18",
    "entrada": "2026-08-22"
   },
   {
@@ -2616,7 +2616,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "1969-01-31",
    "entrada": "2026-09-17"
   },
   {
@@ -2645,7 +2645,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "expectativa",
-   "estreia": null,
+   "estreia": "1998-06-04",
    "entrada": "2026-09-17"
   },
   {
@@ -2671,7 +2671,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "ritmo",
-   "estreia": null,
+   "estreia": "2011-03-31",
    "entrada": "2026-09-14"
   },
   {
@@ -2700,7 +2700,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
-   "estreia": null,
+   "estreia": "2016-05-12",
    "entrada": "2026-09-14"
   },
   {
@@ -2729,7 +2729,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "critica_social",
-   "estreia": null,
+   "estreia": "2013-12-25",
    "entrada": "2026-09-17"
   },
   {
@@ -2763,7 +2763,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "2022-05-21",
    "entrada": "2026-09-17"
   },
   {
@@ -2792,7 +2792,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
-   "estreia": null,
+   "estreia": "2019-12-13",
    "entrada": "2026-09-17"
   },
   {
@@ -2821,7 +2821,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "atuacao",
-   "estreia": null,
+   "estreia": "2014-10-10",
    "entrada": "2026-09-14"
   },
   {
@@ -2850,7 +2850,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "2024-10-16",
    "entrada": "2026-08-22"
   },
   {
@@ -2874,7 +2874,7 @@ window.ESPECTRO_INDICE = {
    "contraste": null,
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
-   "estreia": null,
+   "estreia": "1971-04-01",
    "entrada": "2026-09-14"
   },
   {
@@ -2903,7 +2903,7 @@ window.ESPECTRO_INDICE = {
    "contraste": "valorativo",
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
-   "estreia": null,
+   "estreia": "2023-12-06",
    "entrada": "2026-08-22"
   },
   {
@@ -2936,7 +2936,7 @@ window.ESPECTRO_INDICE = {
     }
    ],
    "assunto_comum": "direcao_imagem",
-   "estreia": null,
+   "estreia": "2017-09-28",
    "entrada": "2026-09-14"
   }
  ]

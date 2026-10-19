@@ -60,6 +60,15 @@
           Descartado (versão anterior desta rodada): alternar um a um e
           despejar o resto no fim — com 10 contra 4, a home terminava com
           seis valorativas seguidas.
+       4. [rodada 3] a home mostra só as LIMITE_PRATELEIRAS (6) primeiras
+          dessa ordem (`prateleiras`); `ordemDoDia` devolve a ordem inteira.
+          GARANTIA de retorno: com os dois tipos presentes, as duas
+          primeiras posições são sempre uma de cada tipo (a proporcional
+          começa por um tipo e o outro entra logo em seguida), e cada tipo
+          gira UMA posição por dia. Logo a prateleira de posição 0 de cada
+          tipo muda todo dia e percorre a lista inteira: toda prateleira
+          aparece pelo menos uma vez a cada |tipo| dias (4 para divisão, 10
+          para valorativa no catálogo de 2026-10-19). Coberto por teste.
      A home não fica idêntica todo dia, não abre com uma sequência de um
      tipo só, e qualquer um pode reproduzir a ordem de uma data.
 
@@ -91,6 +100,10 @@
   var PISO_PRATELEIRA = 3;
 
   var LIMITE_RECEM = 12;
+
+  // [rodada 3] Quantas prateleiras a home mostra por dia (fora
+  // Recém-chegados). Constante ÚNICA; ver a garantia de retorno acima.
+  var LIMITE_PRATELEIRAS = 6;
 
   // A taxonomia fechada, na ordem de `eixos.linhas`.
   var ORDEM_EIXOS = [
@@ -201,6 +214,11 @@
   }
 
   function prateleiras(filmes, dia) {
+    return ordemDoDia(filmes, dia).slice(0, LIMITE_PRATELEIRAS);
+  }
+
+  // A ordem INTEIRA do dia, antes do corte.
+  function ordemDoDia(filmes, dia) {
     var d = diasDesdeEpoca(dia);
     var D = girar(doTipo("divisao", filmes), d);
     var V = girar(doTipo("valorativa", filmes), d);
@@ -241,6 +259,7 @@
   var api = {
     SEMENTE: SEMENTE, EPOCA: EPOCA, FUSO: FUSO, EXCLUIDOS: EXCLUIDOS,
     PISO_PRATELEIRA: PISO_PRATELEIRA, LIMITE_RECEM: LIMITE_RECEM,
+    LIMITE_PRATELEIRAS: LIMITE_PRATELEIRAS, ordemDoDia: ordemDoDia,
     ORDEM_EIXOS: ORDEM_EIXOS, PREFIXO_VALORATIVA: PREFIXO_VALORATIVA,
     diaEmSaoPaulo: diaEmSaoPaulo, diasDesdeEpoca: diasDesdeEpoca,
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
