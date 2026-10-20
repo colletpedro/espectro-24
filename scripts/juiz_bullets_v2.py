@@ -48,6 +48,11 @@ Subcomandos (todos escrevem em `--dir`/juiz_v2, nunca em `resultado/`):
 - `juiz --calibracao` (Windows): a versão atual nos 40 pares do rótulo antigo.
 - `juiz --todos` (Windows): os 900 pares — só com a versão CONGELADA.
 - `calibrar` (Mac): a calibração contra o rótulo do dono, por lado.
+- `amostra-validacao` (Mac, depois de congelar): os 40 pares NOVOS, sem
+  nenhum da calibração, e o documento cego para o dono rotular.
+- `validar` (Mac): a versão congelada contra o rótulo novo, SÓ nos 40 novos.
+- `relatorio` (Mac): a fidelidade dos bullets nos 900 com o juiz congelado;
+  reprovado na validação, "ESTE RESULTADO NÃO VALE" na primeira linha.
 
 Uso:
     python scripts/juiz_bullets_v2.py preparar --dir checagem-bullets
@@ -58,6 +63,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import csv
 import hashlib
 import inspect
 import json
@@ -437,7 +443,10 @@ VERSAO_ATUAL = "v2.2"
 # A versão congelada para a validação na amostra nova e os 900 pares — `None`
 # até a calibração terminar. Congelar = fixar aqui E gravar `config_sha256` no
 # REGISTRO.md antes de qualquer rotulagem nova.
-CONGELADA: str | None = None
+# Congelada em 2026-10-20 pela regra pré-registrada (a v2.2 passou nos três
+# critérios na calibração); o hash está no REGISTRO.md desde antes da
+# rotulagem nova.
+CONGELADA: str | None = "v2.2"
 
 
 # ===========================================================================
@@ -1010,12 +1019,241 @@ def cmd_calibrar(a) -> None:
            if cal.get("escolha") else ""))
 
 
+# ===========================================================================
+# Validação — os 40 pares NOVOS, só com a versão congelada
+# ===========================================================================
+
+# Outra semente que a do rótulo antigo: o sorteio novo não repete o antigo.
+SEMENTE_VALIDACAO = 20261020
+# A amostra nova fica longe do mapa (o mapa diz o lado; o documento, não).
+ARQ_DOC_VALIDACAO = Path("rotulagem_validacao") / "rotulagem_dono.md"
+ARQ_ROTULOS_VALIDACAO = Path("rotulagem_validacao") / "rotulos_dono.csv"
+ARQ_MAPA_VALIDACAO = Path("mapa") / "validacao_mapa.json"
+
+
+def exigir_congelada() -> str:
+    if CONGELADA is None or CONGELADA not in VERSOES:
+        raise SystemExit("nenhuma versão CONGELADA — a amostra nova e a validação só "
+                         "existem depois do congelamento")
+    return CONGELADA
+
+
+def sortear_validacao(pares: list[dict], excluir: set[str]) -> list[dict]:
+    """Os 40 novos: o mesmo sorteio da rotulagem antiga (`C.sortear_rotulo`:
+    20 por lado, cotas iguais por filme — 4 —, metade dos ranks 1-2 e metade
+    dos 3-5, no máximo um par por bullet), com outra semente e SEM nenhum
+    dos pares da calibração."""
+    restantes = [p for p in pares if p["id_par"] not in excluir]
+    amostra = C.sortear_rotulo(restantes, semente=SEMENTE_VALIDACAO)
+    assert not {p["id_par"] for p in amostra} & excluir
+    return amostra
+
+
+def montar_doc_validacao(amostra: list[dict], titulos: dict[str, str], selo: str) -> str:
+    """O documento que o dono LÊ, no formato do da rotulagem antiga. Não diz
+    o lado, o modelo, a similaridade, o rank, nem a resposta do juiz. O
+    critério é o guia do dono (`CRITERIO_DONO`), o mesmo da calibração."""
+    L = ["# Rotulagem manual (validação) — o bullet tem apoio nesta review?", "",
+         f"São {len(amostra)} pares NOVOS (nenhum da rotulagem anterior). Em cada um, "
+         "um TEMA (o bullet da síntese, com a descrição que aparece em \"Aprofundar\") "
+         "e UMA review do mesmo grupo.", "",
+         "> **Esta review sustenta o bullet?**", "",
+         CRITERIO_DONO, "",
+         f"Responda em `{ARQ_ROTULOS_VALIDACAO.name}` (mesma pasta), uma linha por par: "
+         "`sim` ou `não`. Não deixe em branco — par sem rótulo trava a validação.", ""]
+    for k, p in enumerate(amostra, 1):
+        L += ["---", "", f"## P{k:02d} — {titulos[p['slug']]} · {C.GRUPO[p['bucket']]}", "",
+              f"**Tema:** {p['tema']}", "", f"**Descrição:** {p['exemplo']}", "",
+              f"**Review** (nota {p['nivel']} de 5 estrelas):", ""]
+        L += ["> " + linha if linha.strip() else ">" for linha in p["texto"].splitlines()]
+        L += ["", f"**P{k:02d} — a review sustenta o bullet?** sim / não", ""]
+    L += ["---", "", f"_Selo do mapeamento (sha256): `{selo}`_", ""]
+    return "\n".join(L)
+
+
+def _titulos(d: Path) -> dict[str, str]:
+    eixo = C._ler_json(d / C.ARQ_EIXO)
+    return {s: (C._ler_json(C.RESULTADO_DIR / f"{s}.json").get("ficha") or {}).get("titulo")
+            or s for s in eixo["meta"]["filmes"]}
+
+
+def mapa_validacao_conferido(d: Path) -> dict:
+    mapa = C._ler_json(d / ARQ_MAPA_VALIDACAO)
+    selo = C._sha256_texto(json.dumps({k: mapa[k] for k in ("semente", "pares")},
+                                      sort_keys=True, ensure_ascii=False))
+    if selo != mapa["sha256"]:
+        raise SystemExit("o mapeamento da validação não confere com o próprio selo")
+    antigos = set(mapa_conferido(d)["pares"].values())
+    if set(mapa["pares"].values()) & antigos:
+        raise SystemExit("a amostra de validação repete pares da calibração")
+    return mapa
+
+
+def cmd_amostra_validacao(a) -> None:
+    versao = exigir_congelada()
+    csv_ = a.dir / ARQ_ROTULOS_VALIDACAO
+    if csv_.exists():
+        with csv_.open(encoding="utf-8", newline="") as fh:
+            preenchidos = [l for l in csv.DictReader(fh) if (l.get("rotulo") or "").strip()]
+        if preenchidos:
+            raise SystemExit(f"{csv_} já tem {len(preenchidos)} rótulos — o sorteio nunca "
+                             f"é refeito por cima do rótulo do dono")
+        raise SystemExit(f"{csv_} já existe — a amostra nova é sorteada uma vez só")
+    pares = C._ler_jsonl(a.dir / C.ARQ_ENTRADA)
+    antigos = set(mapa_conferido(a.dir)["pares"].values())
+    amostra = sortear_validacao(pares, antigos)
+    mapa = {"semente": SEMENTE_VALIDACAO,
+            "pares": {f"P{k:02d}": p["id_par"] for k, p in enumerate(amostra, 1)}}
+    selo = C._sha256_texto(json.dumps(mapa, sort_keys=True, ensure_ascii=False))
+    C._json(a.dir / ARQ_MAPA_VALIDACAO,
+            {**mapa, "sha256": selo, "congelada": versao,
+             "config_sha256": config_sha256(versao),
+             "excluidos": "os 40 pares de mapa/rotulagem_mapa.json (calibração)"})
+    C._escrever(a.dir / ARQ_DOC_VALIDACAO, montar_doc_validacao(amostra, _titulos(a.dir), selo))
+    C._escrever(csv_, "par,rotulo\n" + "".join(f"P{k:02d},\n"
+                                                 for k in range(1, len(amostra) + 1)))
+    print(f"{len(amostra)} pares novos → {a.dir / ARQ_DOC_VALIDACAO} · selo {selo[:16]}…")
+
+
+def validacao(d: Path) -> dict:
+    """A versão congelada contra o rótulo NOVO do dono, só nos 40 novos, com
+    o critério pré-registrado (`CRITERIO_V2`, sem mudança)."""
+    versao = exigir_congelada()
+    mapa = mapa_validacao_conferido(d)
+    ids = set(mapa["pares"].values())
+    entrada = {p["id_par"]: p for p in C._ler_jsonl(d / C.ARQ_ENTRADA)}
+    pares = [entrada[i] for i in mapa["pares"].values()]
+    regs = [r for r in C._ler_jsonl(d / DIR_V2 / f"saida_{versao}.jsonl") if r["id_par"] in ids]
+    ver = vereditos(pares, regs, versao)
+    dono = C.ler_rotulos(d / ARQ_ROTULOS_VALIDACAO, list(mapa["pares"]))
+    linhas = []
+    for par, id_par in mapa["pares"].items():
+        p, v = entrada[id_par], ver[id_par]
+        linhas.append({"par": par, "id_par": id_par, "lado": p["lado"], "slug": p["slug"],
+                       "bucket": p["bucket"], "tema": p["tema"], "dono": dono[par],
+                       "juiz": v["apoio"], "motivo": v["motivo"], "trecho": v["trecho"],
+                       "pensamento": v["pensamento"]})
+    geral = C.matriz([(x["dono"], x["juiz"]) for x in linhas])
+    por_lado = {lado: C.matriz([(x["dono"], x["juiz"]) for x in linhas if x["lado"] == lado])
+                for lado in C.LADOS}
+    return {"versao": versao, "config_sha256": config_sha256(versao),
+            "selo_mapa": mapa["sha256"], "geral": geral, "por_lado": por_lado,
+            "julgamento": julgar(geral, por_lado),
+            "erros": [x for x in linhas if x["dono"] != x["juiz"]], "pares": linhas}
+
+
+def _aviso_nao_vale(j: dict, versao: str) -> list[str]:
+    return ["> **ESTE RESULTADO NÃO VALE.** O juiz " + versao + " reprovou na validação "
+            "contra o rótulo do dono nos 40 pares novos (" + "; ".join(j["motivos"]) +
+            "). Os números abaixo estão aqui só para auditoria; nenhuma conclusão "
+            "pode sair deles.", ""]
+
+
+def md_validacao(val: dict) -> str:
+    def linha(nome, m):
+        return (f"| {nome} | {m['n']} | {m['vp']} | {m['fp']} | {m['fn']} | {m['vn']} | "
+                f"{m['precisao']} {m['precisao_ic95']} | {m['recall']} {m['recall_ic95']} |")
+    j, cr = val["julgamento"], CRITERIO_V2
+    L = [] if j["vale"] else _aviso_nao_vale(j, val["versao"])
+    L += [f"# Validação do juiz v2 — versão congelada {val['versao']}", "",
+          f"Configuração `{val['config_sha256']}` · 40 pares NOVOS (nenhum da calibração) · "
+          f"rótulo do dono · selo do mapa `{val['selo_mapa'][:16]}…`", "",
+          ("**O JUIZ PASSOU** no critério pré-registrado" if j["vale"] else
+           "**O JUIZ REPROVOU** no critério pré-registrado: " + "; ".join(j["motivos"]))
+          + f" — precisão ≥ {cr['precisao_min']}, recall ≥ {cr['recall_min']}, diferença "
+          f"de precisão entre os lados ≤ {cr['dif_precisao_lados_max']} (medida: "
+          f"{j['dif_precisao_lados']}).", "",
+          "| recorte | n | VP | FP | FN | VN | precisão [IC95] | recall [IC95] |",
+          "|---|---|---|---|---|---|---|---|", linha("todos", val["geral"])]
+    L += [linha(lado, val["por_lado"][lado]) for lado in C.LADOS]
+    L += ["", "## Erros", ""]
+    for x in val["erros"]:
+        L += [f"### {x['par']} — {x['lado']}, {x['slug']}/{x['bucket']}", "",
+              f"- tema: \"{x['tema']}\"",
+              f"- dono {'sim' if x['dono'] else 'não'} · juiz {'sim' if x['juiz'] else 'não'} "
+              f"(motivo: {x['motivo'] or '—'})",
+              f"- trecho: {json.dumps(x['trecho'], ensure_ascii=False)}",
+              f"- raciocínio: {json.dumps((x['pensamento'] or '')[:600], ensure_ascii=False)}",
+              ""]
+    if not val["erros"]:
+        L.append("_(nenhum)_")
+    return "\n".join(L) + "\n"
+
+
+def cmd_validar(a) -> None:
+    val = validacao(a.dir)
+    v = val["versao"]
+    C._json(a.dir / DIR_V2 / f"validacao_{v}.json", val)
+    C._escrever(a.dir / DIR_V2 / f"validacao_{v}.md", md_validacao(val))
+    g, j = val["geral"], val["julgamento"]
+    print(("JUIZ VALE" if j["vale"] else "JUIZ NÃO VALE: " + "; ".join(j["motivos"])) +
+          f" · {v} · P={g['precisao']} R={g['recall']} · dif. lados {j['dif_precisao_lados']}")
+
+
+def md_fidelidade(apoios: list[dict], val: dict, titulos: dict[str, str]) -> str:
+    """O relatório de fidelidade dos bullets com o juiz congelado. O corpo é o
+    de `C.md_final` (mesmas tabelas da Parte 2); o cabeçalho é o da validação
+    nos 40 pares novos e, se ela reprovou, o aviso vem na PRIMEIRA linha."""
+    j, g = val["julgamento"], val["geral"]
+    L = [] if j["vale"] else _aviso_nao_vale(j, val["versao"])
+    L += [f"# Fidelidade dos bullets — juiz {val['versao']} (congelado)", "",
+          f"Configuração `{val['config_sha256']}`. Validação nos 40 pares novos: "
+          f"precisão {g['precisao']} {g['precisao_ic95']}, recall {g['recall']} "
+          f"{g['recall_ic95']}; por lado: " + "; ".join(
+              f"{lado} P {val['por_lado'][lado]['precisao']} / R "
+              f"{val['por_lado'][lado]['recall']}" for lado in C.LADOS) +
+          f" — {'passou' if j['vale'] else 'REPROVOU'} no critério pré-registrado.", ""]
+    corpo = C.md_final(apoios, {**val, "julgamento": {**j, "vale": True}}, titulos).splitlines()
+    ini = next(k for k, l in enumerate(corpo) if l.startswith("Apoio = "))
+    velho = 'Apoio = o juiz disse "menciona" para a review.'
+    assert corpo[ini].startswith(velho), corpo[ini]
+    corpo[ini] = (f"Apoio = o juiz {val['versao']} deu apoio à review (ideia principal do "
+                  "título, evidência clara e frase de prova achada nela)."
+                  + corpo[ini][len(velho):])
+    return "\n".join(L + corpo[ini:]) + "\n"
+
+
+def cmd_relatorio(a) -> None:
+    versao = exigir_congelada()
+    arq_val = a.dir / DIR_V2 / f"validacao_{versao}.json"
+    if not arq_val.exists():
+        raise SystemExit(f"sem {arq_val}: o relatório não sai antes de o juiz ser validado "
+                         f"nos 40 pares novos (`validar`)")
+    val = C._ler_json(arq_val)
+    if val.get("config_sha256") != config_sha256(versao):
+        raise SystemExit(f"{arq_val} é de outra configuração — rode `validar` de novo")
+    entrada = C._ler_jsonl(a.dir / C.ARQ_ENTRADA)
+    ver = {k: v["apoio"] for k, v in vereditos(
+        entrada, C._ler_jsonl(a.dir / DIR_V2 / f"saida_{versao}.jsonl"), versao).items()}
+    eixo = C._ler_json(a.dir / C.ARQ_EIXO)
+    apoios = C.apoio_por_bullet(eixo["bullets"], entrada, ver)
+    final = {"vale": val["julgamento"]["vale"], "versao": versao,
+             "config_sha256": val["config_sha256"], "validacao": val["geral"],
+             "validacao_por_lado": val["por_lado"],
+             "por_lado": {lado: C.resumo([x for x in apoios if x["lado"] == lado])
+                          for lado in C.LADOS},
+             "por_filme": {s: {lado: C.resumo([x for x in apoios if x["lado"] == lado
+                                               and x["slug"] == s]) for lado in C.LADOS}
+                           for s in eixo["meta"]["filmes"]},
+             "cruzamento_parte1": {lado: C.cruzamento([x for x in apoios if x["lado"] == lado])
+                                   for lado in C.LADOS},
+             "bullets": apoios}
+    C._json(a.dir / DIR_V2 / f"fidelidade_{versao}.json", final)
+    C._escrever(a.dir / DIR_V2 / f"fidelidade_{versao}.md",
+                md_fidelidade(apoios, val, _titulos(a.dir)))
+    print(("" if final["vale"] else "NÃO VALE (juiz reprovado) · ") +
+          " · ".join(f"{lado}: ≥1 {final['por_lado'][lado]['frac_ge1']:.0%}, "
+                     f"≥2 {final['por_lado'][lado]['frac_ge2']:.0%}" for lado in C.LADOS))
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawTextHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     for nome, func in (("preparar", cmd_preparar), ("medir-contexto", cmd_medir_contexto),
-                       ("juiz", cmd_juiz), ("calibrar", cmd_calibrar)):
+                       ("juiz", cmd_juiz), ("calibrar", cmd_calibrar),
+                       ("amostra-validacao", cmd_amostra_validacao),
+                       ("validar", cmd_validar), ("relatorio", cmd_relatorio)):
         p = sub.add_parser(nome)
         p.set_defaults(func=func)
         p.add_argument("--dir", type=Path, required=True,
