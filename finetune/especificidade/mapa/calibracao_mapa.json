@@ -1,0 +1,934 @@
+{
+ "gerado_por": "scripts/finetune/especificidade.py amostrar-calibracao",
+ "semente": 20261021,
+ "k_disp": 10,
+ "referencia_sha256": "92e4f2f0e98c63ee62c6310338181ec66921fcde6b08112e05bcd190156fcb44",
+ "protocolo_sha256": "3568d4ef1580568079879f136b5054258373a568f73ae5cb4a7f72dfb39c77a4",
+ "script_sha256": "7d40e6202ab1821cce0afa02ce2291f6097c430e8f6b590607f1b9881b38f316",
+ "pool_treino": 1079,
+ "tamanho_quartis": {
+  "1": 270,
+  "2": 270,
+  "3": 270,
+  "4": 269
+ },
+ "peso_por_quartil": {
+  "1": 13.5,
+  "2": 13.5,
+  "3": 13.5,
+  "4": 13.45
+ },
+ "distancia_minima_repeticao": 41,
+ "itens": [
+  {
+   "id": "T01",
+   "id_titulo": "cars|negativas|3",
+   "slug": "cars",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Foco comercial e mercadológico",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T02",
+   "id_titulo": "princess-mononoke|medianas|1",
+   "slug": "princess-mononoke",
+   "bucket": "medianas",
+   "i": 1,
+   "tema": "Dificuldade de conexão emocional com personagens e história",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T03",
+   "id_titulo": "district-9|medianas|5",
+   "slug": "district-9",
+   "bucket": "medianas",
+   "i": 5,
+   "tema": "Roteiro fraco e execução aquém do potencial",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T04",
+   "id_titulo": "bones-and-all|positivas|2",
+   "slug": "bones-and-all",
+   "bucket": "positivas",
+   "i": 2,
+   "tema": "Atuações marcantes de Taylor Russell e Timothée Chalamet",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T05",
+   "id_titulo": "cidade-de-deus|positivas|2",
+   "slug": "cidade-de-deus",
+   "bucket": "positivas",
+   "i": 2,
+   "tema": "Roteiro e narrativa",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T06",
+   "id_titulo": "malcolm-x-1992|negativas|0",
+   "slug": "malcolm-x-1992",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Duração excessiva e ritmo lento",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T07",
+   "id_titulo": "joker-folie-a-deux|positivas|4",
+   "slug": "joker-folie-a-deux",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Fotografia e direção de arte",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T08",
+   "id_titulo": "arrival-2016|medianas|3",
+   "slug": "arrival-2016",
+   "bucket": "medianas",
+   "i": 3,
+   "tema": "Crítica à propaganda estadunidense e à geopolítica",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T09",
+   "id_titulo": "the-wolf-of-wall-street|negativas|1",
+   "slug": "the-wolf-of-wall-street",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Excesso de cenas de sexo, nudez e drogas",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T10",
+   "id_titulo": "malcolm-x-1992|negativas|3",
+   "slug": "malcolm-x-1992",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Roteiro confuso, montagem problemática e narrativa fragmentada",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T11",
+   "id_titulo": "wonka|positivas|5",
+   "slug": "wonka",
+   "bucket": "positivas",
+   "i": 5,
+   "tema": "Roteiro e mensagem",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T12",
+   "id_titulo": "do-the-right-thing|medianas|5",
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "i": 5,
+   "tema": "Fraqueza ou pouca dimensão dos personagens",
+   "quartil": 2,
+   "repete": true,
+   "repete_de": "T56"
+  },
+  {
+   "id": "T13",
+   "id_titulo": "the-spongebob-movie-search-for-squarepants|negativas|2",
+   "slug": "the-spongebob-movie-search-for-squarepants",
+   "bucket": "negativas",
+   "i": 2,
+   "tema": "Roteiro fraco e repetitivo",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T14",
+   "id_titulo": "la-haine|medianas|5",
+   "slug": "la-haine",
+   "bucket": "medianas",
+   "i": 5,
+   "tema": "Expectativas frustradas e desapontamento",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T15",
+   "id_titulo": "all-quiet-on-the-western-front-2022|negativas|4",
+   "slug": "all-quiet-on-the-western-front-2022",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Espectacularização da violência e estética publicitária",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T16",
+   "id_titulo": "malcolm-x-1992|medianas|1",
+   "slug": "malcolm-x-1992",
+   "bucket": "medianas",
+   "i": 1,
+   "tema": "Atuação de Denzel Washington",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T17",
+   "id_titulo": "dune-part-two|positivas|3",
+   "slug": "dune-part-two",
+   "bucket": "positivas",
+   "i": 3,
+   "tema": "Trilha sonora de Hans Zimmer",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T18",
+   "id_titulo": "mad-max-fury-road|negativas|5",
+   "slug": "mad-max-fury-road",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Mundo e lógica internos pouco convincentes",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T19",
+   "id_titulo": "12-angry-men|negativas|4",
+   "slug": "12-angry-men",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Preto e branco como incômodo",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T20",
+   "id_titulo": "inception|medianas|3",
+   "slug": "inception",
+   "bucket": "medianas",
+   "i": 3,
+   "tema": "Personagens pouco desenvolvidos e frios",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T21",
+   "id_titulo": "the-truman-show|positivas|4",
+   "slug": "the-truman-show",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Fotografia e direção",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T22",
+   "id_titulo": "cars|positivas|5",
+   "slug": "cars",
+   "bucket": "positivas",
+   "i": 5,
+   "tema": "Experiência de assistir no cinema",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T23",
+   "id_titulo": "do-the-right-thing|medianas|2",
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "i": 2,
+   "tema": "Crítica ao modo de transmitir a mensagem",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T24",
+   "id_titulo": "porco-rosso|negativas|3",
+   "slug": "porco-rosso",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Roteiro fraco e falta de profundidade",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T25",
+   "id_titulo": "the-wailing|medianas|1",
+   "slug": "the-wailing",
+   "bucket": "medianas",
+   "i": 1,
+   "tema": "Confusão narrativa e ambiguidade excessiva",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T26",
+   "id_titulo": "get-out-2017|negativas|5",
+   "slug": "get-out-2017",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Final decepcionante",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T27",
+   "id_titulo": "memories-of-murder|positivas|4",
+   "slug": "memories-of-murder",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Baseado em fatos reais",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T28",
+   "id_titulo": "district-9|medianas|4",
+   "slug": "district-9",
+   "bucket": "medianas",
+   "i": 4,
+   "tema": "Efeitos visuais e CGI ainda eficazes",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T29",
+   "id_titulo": "avengers-endgame|negativas|5",
+   "slug": "avengers-endgame",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Efeitos visuais e estética comprometidos",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T30",
+   "id_titulo": "eighth-grade|negativas|4",
+   "slug": "eighth-grade",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Cenas desconfortáveis e vergonha alheia",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T31",
+   "id_titulo": "catch-me-if-you-can-2002|medianas|3",
+   "slug": "catch-me-if-you-can-2002",
+   "bucket": "medianas",
+   "i": 3,
+   "tema": "Direção e estilo de Spielberg",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T32",
+   "id_titulo": "cars|positivas|4",
+   "slug": "cars",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Estrutura narrativa e ritmo",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T33",
+   "id_titulo": "memories-of-murder|negativas|5",
+   "slug": "memories-of-murder",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Superestimado e supervalorizado",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T34",
+   "id_titulo": "talk-to-me-2022|positivas|0",
+   "slug": "talk-to-me-2022",
+   "bucket": "positivas",
+   "i": 0,
+   "tema": "Metáfora do vício e autodestruição",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T35",
+   "id_titulo": "neighboring-sounds|positivas|2",
+   "slug": "neighboring-sounds",
+   "bucket": "positivas",
+   "i": 2,
+   "tema": "Retrato do cotidiano e da vida em comunidade",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T36",
+   "id_titulo": "neighboring-sounds|medianas|3",
+   "slug": "neighboring-sounds",
+   "bucket": "medianas",
+   "i": 3,
+   "tema": "Uso do som e da ambientação",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T37",
+   "id_titulo": "arrival-2016|negativas|1",
+   "slug": "arrival-2016",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Personagens pouco desenvolvidos e difíceis de se conectar",
+   "quartil": 3,
+   "repete": true,
+   "repete_de": "T80"
+  },
+  {
+   "id": "T38",
+   "id_titulo": "soul-2020|medianas|2",
+   "slug": "soul-2020",
+   "bucket": "medianas",
+   "i": 2,
+   "tema": "Tom e público-alvo confusos",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T39",
+   "id_titulo": "malcolm-x-1992|positivas|4",
+   "slug": "malcolm-x-1992",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Impacto histórico e educativo",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T40",
+   "id_titulo": "im-still-here-2024|medianas|1",
+   "slug": "im-still-here-2024",
+   "bucket": "medianas",
+   "i": 1,
+   "tema": "Ritmo lento e falta de dinamismo",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T41",
+   "id_titulo": "catch-me-if-you-can-2002|medianas|1",
+   "slug": "catch-me-if-you-can-2002",
+   "bucket": "medianas",
+   "i": 1,
+   "tema": "Ritmo e duração",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T42",
+   "id_titulo": "hard-to-be-a-god|positivas|0",
+   "slug": "hard-to-be-a-god",
+   "bucket": "positivas",
+   "i": 0,
+   "tema": "Imersão sensorial e worldbuilding",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T43",
+   "id_titulo": "cars|negativas|3",
+   "slug": "cars",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Foco comercial e mercadológico",
+   "quartil": 1,
+   "repete": true,
+   "repete_de": "T01"
+  },
+  {
+   "id": "T44",
+   "id_titulo": "do-the-right-thing|medianas|0",
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "i": 0,
+   "tema": "Ritmo lento e arrastado",
+   "quartil": 4,
+   "repete": true,
+   "repete_de": "T86"
+  },
+  {
+   "id": "T45",
+   "id_titulo": "whiplash-2014|negativas|1",
+   "slug": "whiplash-2014",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Personagens desagradáveis e sem profundidade",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T46",
+   "id_titulo": "la-haine|negativas|1",
+   "slug": "la-haine",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Personagens desagradáveis e sem carisma",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T47",
+   "id_titulo": "soul-2020|negativas|0",
+   "slug": "soul-2020",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Execução da mensagem e resolução da trama",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T48",
+   "id_titulo": "district-9|negativas|1",
+   "slug": "district-9",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Tom e roteiro inconsistentes",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T49",
+   "id_titulo": "the-truman-show|negativas|0",
+   "slug": "the-truman-show",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Ritmo lento e tédio",
+   "quartil": 4,
+   "repete": true,
+   "repete_de": "T90"
+  },
+  {
+   "id": "T50",
+   "id_titulo": "cats-2019|negativas|4",
+   "slug": "cats-2019",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Efeitos visuais de baixa qualidade",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T51",
+   "id_titulo": "satantango|negativas|3",
+   "slug": "satantango",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Personagens desinteressantes e atuações fracas",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T52",
+   "id_titulo": "whiplash-2014|medianas|4",
+   "slug": "whiplash-2014",
+   "bucket": "medianas",
+   "i": 4,
+   "tema": "Roteiro e Desenvolvimento",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T53",
+   "id_titulo": "the-wolf-of-wall-street|negativas|1",
+   "slug": "the-wolf-of-wall-street",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Excesso de cenas de sexo, nudez e drogas",
+   "quartil": 1,
+   "repete": true,
+   "repete_de": "T09"
+  },
+  {
+   "id": "T54",
+   "id_titulo": "malcolm-x-1992|negativas|3",
+   "slug": "malcolm-x-1992",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Roteiro confuso, montagem problemática e narrativa fragmentada",
+   "quartil": 3,
+   "repete": true,
+   "repete_de": "T10"
+  },
+  {
+   "id": "T55",
+   "id_titulo": "soul-2020|positivas|2",
+   "slug": "soul-2020",
+   "bucket": "positivas",
+   "i": 2,
+   "tema": "Impacto emocional e reflexão existencial",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T56",
+   "id_titulo": "do-the-right-thing|medianas|5",
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "i": 5,
+   "tema": "Fraqueza ou pouca dimensão dos personagens",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T57",
+   "id_titulo": "cujo|negativas|2",
+   "slug": "cujo",
+   "bucket": "negativas",
+   "i": 2,
+   "tema": "Atuação infantil irritante",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T58",
+   "id_titulo": "talk-to-me-2022|medianas|4",
+   "slug": "talk-to-me-2022",
+   "bucket": "medianas",
+   "i": 4,
+   "tema": "Trama sobre luto e solidão",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T59",
+   "id_titulo": "uncut-gems|positivas|3",
+   "slug": "uncut-gems",
+   "bucket": "positivas",
+   "i": 3,
+   "tema": "Trilha sonora e desenho de som",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T60",
+   "id_titulo": "dune-part-two|positivas|3",
+   "slug": "dune-part-two",
+   "bucket": "positivas",
+   "i": 3,
+   "tema": "Trilha sonora de Hans Zimmer",
+   "quartil": 2,
+   "repete": true,
+   "repete_de": "T17"
+  },
+  {
+   "id": "T61",
+   "id_titulo": "mad-max-fury-road|negativas|5",
+   "slug": "mad-max-fury-road",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Mundo e lógica internos pouco convincentes",
+   "quartil": 2,
+   "repete": true,
+   "repete_de": "T18"
+  },
+  {
+   "id": "T62",
+   "id_titulo": "the-swimming-pool|positivas|1",
+   "slug": "the-swimming-pool",
+   "bucket": "positivas",
+   "i": 1,
+   "tema": "Erotismo e sensualidade",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T63",
+   "id_titulo": "hereditary|medianas|0",
+   "slug": "hereditary",
+   "bucket": "medianas",
+   "i": 0,
+   "tema": "Ritmo lento e longa duração",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T64",
+   "id_titulo": "the-truman-show|positivas|4",
+   "slug": "the-truman-show",
+   "bucket": "positivas",
+   "i": 4,
+   "tema": "Fotografia e direção",
+   "quartil": 4,
+   "repete": true,
+   "repete_de": "T21"
+  },
+  {
+   "id": "T65",
+   "id_titulo": "avengers-endgame|medianas|0",
+   "slug": "avengers-endgame",
+   "bucket": "medianas",
+   "i": 0,
+   "tema": "Viagem no tempo e lógica",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T66",
+   "id_titulo": "fight-club|positivas|3",
+   "slug": "fight-club",
+   "bucket": "positivas",
+   "i": 3,
+   "tema": "Estilo visual e atmosfera sombria",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T67",
+   "id_titulo": "cujo|positivas|5",
+   "slug": "cujo",
+   "bucket": "positivas",
+   "i": 5,
+   "tema": "Final abrupto ou anticlimático",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T68",
+   "id_titulo": "parasite-2019|positivas|1",
+   "slug": "parasite-2019",
+   "bucket": "positivas",
+   "i": 1,
+   "tema": "Roteiro e reviravoltas",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T69",
+   "id_titulo": "satantango|positivas|1",
+   "slug": "satantango",
+   "bucket": "positivas",
+   "i": 1,
+   "tema": "Fotografia e planos longos",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T70",
+   "id_titulo": "cidade-de-deus|negativas|4",
+   "slug": "cidade-de-deus",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Estética e estilo vazios, tecnicamente chamativos",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T71",
+   "id_titulo": "im-still-here-2024|negativas|5",
+   "slug": "im-still-here-2024",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Estética segura e previsível",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T72",
+   "id_titulo": "12-angry-men|positivas|5",
+   "slug": "12-angry-men",
+   "bucket": "positivas",
+   "i": 5,
+   "tema": "Ritmo e diálogo",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T73",
+   "id_titulo": "talk-to-me-2022|negativas|3",
+   "slug": "talk-to-me-2022",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Falta de terror e ritmo irregular",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T74",
+   "id_titulo": "inception|negativas|1",
+   "slug": "inception",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Ritmo lento e tédio",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T75",
+   "id_titulo": "fight-club|negativas|5",
+   "slug": "fight-club",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Violência excessiva e desconfortável",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T76",
+   "id_titulo": "12-angry-men|negativas|0",
+   "slug": "12-angry-men",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Ritmo lento e tédio",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T77",
+   "id_titulo": "cujo|negativas|4",
+   "slug": "cujo",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Tensão e terror mal construídos",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T78",
+   "id_titulo": "parasite-2019|negativas|3",
+   "slug": "parasite-2019",
+   "bucket": "negativas",
+   "i": 3,
+   "tema": "Crítica social superficial ou mal desenvolvida",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T79",
+   "id_titulo": "se7en|negativas|4",
+   "slug": "se7en",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Expectativa frustrada pela fama do filme",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T80",
+   "id_titulo": "arrival-2016|negativas|1",
+   "slug": "arrival-2016",
+   "bucket": "negativas",
+   "i": 1,
+   "tema": "Personagens pouco desenvolvidos e difíceis de se conectar",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T81",
+   "id_titulo": "inglourious-basterds|negativas|2",
+   "slug": "inglourious-basterds",
+   "bucket": "negativas",
+   "i": 2,
+   "tema": "Uso da Segunda Guerra como entretenimento/vingança fantasiosa",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T82",
+   "id_titulo": "speak-no-evil-2022|positivas|1",
+   "slug": "speak-no-evil-2022",
+   "bucket": "positivas",
+   "i": 1,
+   "tema": "Passividade e excesso de gentileza dos protagonistas",
+   "quartil": 1,
+   "repete": false
+  },
+  {
+   "id": "T83",
+   "id_titulo": "happy-hour-2015-1|negativas|4",
+   "slug": "happy-hour-2015-1",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Fotografia e direção desinteressantes",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T84",
+   "id_titulo": "princess-mononoke|medianas|2",
+   "slug": "princess-mononoke",
+   "bucket": "medianas",
+   "i": 2,
+   "tema": "Visual e animação belíssimos",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T85",
+   "id_titulo": "interstellar|negativas|4",
+   "slug": "interstellar",
+   "bucket": "negativas",
+   "i": 4,
+   "tema": "Atuações e personagens fracos",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T86",
+   "id_titulo": "do-the-right-thing|medianas|0",
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "i": 0,
+   "tema": "Ritmo lento e arrastado",
+   "quartil": 4,
+   "repete": false
+  },
+  {
+   "id": "T87",
+   "id_titulo": "everything-everywhere-all-at-once|positivas|5",
+   "slug": "everything-everywhere-all-at-once",
+   "bucket": "positivas",
+   "i": 5,
+   "tema": "Unicidade e originalidade",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T88",
+   "id_titulo": "mad-max-fury-road|negativas|0",
+   "slug": "mad-max-fury-road",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Roteiro fraco e falta de história",
+   "quartil": 3,
+   "repete": false
+  },
+  {
+   "id": "T89",
+   "id_titulo": "hereditary|negativas|5",
+   "slug": "hereditary",
+   "bucket": "negativas",
+   "i": 5,
+   "tema": "Atuações (elogio a Toni Collette)",
+   "quartil": 2,
+   "repete": false
+  },
+  {
+   "id": "T90",
+   "id_titulo": "the-truman-show|negativas|0",
+   "slug": "the-truman-show",
+   "bucket": "negativas",
+   "i": 0,
+   "tema": "Ritmo lento e tédio",
+   "quartil": 4,
+   "repete": false
+  }
+ ]
+}

@@ -503,6 +503,90 @@ cada 10 filmes se o working set cresceu > 25% (justificativa no script).
 - Custo ESTIMADO no Windows: 1.223 × 1,456 pares/bullet × 16 s ≈ **7,9 h**
   (mais ~10 min de `medir-contexto`).
 
+## Pré-voo do Kaggle (2026-10-20)
+
+**Documentação** (kaggle.com/docs/notebooks, consultada em 2026-10-20):
+`/kaggle/working` = 20 GB salvos ("auto-saved disk space"); o disco
+temporário é só "Additional scratchpad disk space (outside /kaggle/working)
+that will not be saved", **sem tamanho declarado** (nenhuma fonte oficial dá o
+número; o script mede com `df -h`); máquina T4 ×2 = 2 × T4, 4 CPUs, **29 GB de
+RAM**; sessão de 12 h.
+
+**Pesos sem token (MEDIDO):** `unsloth/gemma-4-12b-it` (sha `55cdba07…`),
+`unsloth/gemma-4-E4B-it-unsloth-bnb-4bit` (`6f10b2aa…`) e
+`unsloth/Qwen3-8B-unsloth-bnb-4bit` (`62efd7f9…`): `gated: False`,
+Apache 2.0, `config.json` baixa sem token (HTTP 200). `kernel-metadata.json`:
+`is_private: true`, `enable_internet: true`.
+
+**`smoke_treino.py` revisado** (`main` `621977e4…`, KAGGLE LIBERADO): E4B antes
+do 12B, cada um no seu try/except; cache do HF, `cwd` (llama.cpp e cache de
+compilação do Unsloth), fusão 16-bit e GGUF intermediário em
+`/tmp/espectro24_smoke`; em `/kaggle/working` só Q4_K_M, Modelfile, adaptador
+LoRA e logs; E1–E3 gravados com fsync antes de exportar; adaptador salvo antes
+da fusão; linha do tempo de RAM/disco por fase (carga, treino, fusão,
+conversão) a cada 2 s e `df -h` em cada troca. A exportação é sempre tentada
+(a estimativa de disco é só registro), para que uma falha deixe a causa
+demonstrada no log.
+
+**Adendo ao critério** (`CRITERIO_ESCOLHA_BASE_ADENDO.md`, commit próprio
+`f49c21350cc2a1b287b859207074a712937fdbf6`): E4 pelo caminho alternativo
+(adaptador do Kaggle, fusão e Q4_K_M no Mac com llama.cpp) se a exportação
+cair por limite da plataforma. MEDIDO no Mac: 16,0 GiB de RAM, **5,5 GiB de
+disco livre**, sem llama.cpp — a fusão em memória do 12B não cabe e a
+tensor a tensor precisa de ~60 GB de disco: o caminho alternativo é inviável
+no Mac até liberar disco.
+
+## Fase 1 — medida de especificidade (desenho e calibração)
+
+**Objetivo.** Separar, por código e sem LLM, bullet GENÉRICO de ESPECÍFICO, para
+funcionar nas saídas de modelo local (a régua de fidelidade não pega bullet
+genérico). Unidade: o título. Definição: GENÉRICO = o título caberia, sem
+mudança, em bullets de muitos filmes diferentes; ESPECÍFICO = só faz sentido
+para este filme ou para poucos.
+
+**Pré-registro.** `finetune/especificidade/PROTOCOLO.md`, commit próprio
+`fe7d7a02f271729913eef1886a8298edaa5f165d` (sha256 do arquivo `3568d4ef…`),
+ANTES do documento de rotulagem. Código: `scripts/finetune/especificidade.py`
+(sha256 `7d40e620…`, `main` `a3807be4…`).
+
+**Referência congelada.** `finetune/especificidade/referencia.jsonl`, sha256
+`92e4f2f0e98c63ee62c6310338181ec66921fcde6b08112e05bcd190156fcb44`: 1.223
+títulos publicados de 68 filmes (1.079 treino, 144 validação), sem o bucket do
+Gemini e sem os filmes excluídos. Sem teste, sem saída de modelo; toda medida
+sem o próprio filme do item.
+
+**Medidas.** M-disp (e5 com `query:` dos dois lados e a correção de viés do
+juiz; média dos 10 maiores máximos por OUTRO filme; alto = genérico) — a forma
+"média dos k maiores" foi escolhida contra a contagem acima de τ porque τ seria
+um segundo parâmetro livre ajustado nos mesmos rótulos. M-anc (máximo, nas
+palavras de conteúdo do título, de presente nas reviews analisadas do próprio
+filme × idf entre os outros filmes; alto = específico). M-comb (logística
+ponderada com as duas). Fórmulas completas no protocolo.
+
+**Calibração preparada.** 80 títulos de TREINO, 20 por quartil de M-disp no
+pool de treino (quartis 270/270/270/269 → pesos 13,5/13,5/13,5/13,45), semente
+20261021, mais 10 repetidos a ≥ 41 posições do original: **90 itens**.
+Documento cego `docs/arquivo-de-estudos/finetune-fase1/rotulagem_calibracao.md`
+(fora do git; só id e título), respostas em branco em `rotulos_calibracao.csv`
+(mesma pasta), mapa em `finetune/especificidade/mapa/calibracao_mapa.json`
+(selo `2bcbf74376ad28c1d41b9de50e5a8dd6777a52cbe34a01d01f92050bb2fdf3a2`,
+impresso no fim do documento; só o quartil, nenhum valor de medida). Nenhuma
+medida foi calculada sobre os itens sorteados (o M-anc não rodou em nada real).
+
+**Depois da escolha do modelo base.** Seletor rodado: os 5 filmes de TREINO da
+geração são fight-club, hereditary, pinocchio-2022, soul-2020, the-wailing
+(`validacao_filmes.json`, semente 20261022). A geração
+(`scripts/finetune/gerar_titulos_base.py --modelo <escolhido>`, Windows) e o
+sorteio dos 60 + 6 itens da validação ficam para depois.
+
+**Ordem combinada no Windows** (PowerShell novo, FORA do Claude Code):
+1. viabilidade agora (`viabilidade_ollama.py baixar` + `medir`);
+2. limpeza de madrugada (`limpar_treino.py medir-contexto` + `julgar` +
+   `resumir`);
+3. import do Kaggle quando a saída existir — baixada direto no Windows pelo
+   Kaggle CLI (`kaggle kernels output …`) e importada com
+   `viabilidade_ollama.py importar`.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -523,3 +607,6 @@ cada 10 filmes se o working set cresceu > 25% (justificativa no script).
   (o teste de fumaça registra a comparação em `template_confere`).
 - Se a cota de 0,35 token/caractere separa bem os pares que cabem na janela
   do juiz (`medir-contexto` confere os 10 maiores julgáveis no servidor).
+- (fase 1) Nenhuma medida de especificidade sobre título real: os rótulos da
+  calibração ainda não voltaram; a validação nem foi montada.
+- O tamanho do disco temporário do Kaggle (a documentação não declara).
