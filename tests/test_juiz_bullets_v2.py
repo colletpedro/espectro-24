@@ -64,8 +64,11 @@ def test_hash_da_v2_0_nao_muda_com_a_v2_1():
     # ele mudasse, a calibração da v2.0 deixaria de ser legível
     assert J.config_sha256("v2.0") == (
         "a42f48932713ff322535116cb17538bc51a14bdb5e49c9c8389c35b687461c22")
-    assert J.config_sha256("v2.1") != J.config_sha256("v2.0")
-    assert J.VERSAO_ATUAL == "v2.1"
+    # idem para os 40 registros da v2.1
+    assert J.config_sha256("v2.1") == (
+        "75b5533f685bc37549a9c7751b7cb5ed3d777bc742dc5d832b6728be995b86b2")
+    assert len({J.config_sha256(v) for v in J.VERSOES}) == len(J.VERSOES) == 3
+    assert J.VERSAO_ATUAL == "v2.2"
 
 
 def test_hash_cobre_prompt_modelo_parametros_e_regra(monkeypatch):
@@ -107,7 +110,7 @@ def test_criterio_do_dono_esta_no_prompt_inteiro():
 
 def test_mensagem_review_primeiro_titulo_e_descricao_por_ultimo():
     _, pares = _entrada()
-    u = J.user(pares[0])
+    u = J.user(pares[0], "v2.0")
     assert u.startswith("Review (nota 1.5 de 5 estrelas):\n\ntexto r1")
     assert u.index("texto r1") < u.index("título (o núcleo)") < u.index("descrição")
 
@@ -331,7 +334,7 @@ def test_chamador_fixa_modelo_think_seed_e_janela_no_codigo(monkeypatch):
     monkeypatch.setattr(local_ollama, "resposta_json_local",
                         lambda s, u, **kw: visto.update(kw) or {})
     J._chamador(num_ctx=J.num_ctx(), num_predict=J.NUM_PREDICT, schema=J.schema())("S", "U")
-    assert visto == {"estagio": J.ESTAGIO, "modelo": J.MODELO, "schema": J.SCHEMA_V2_1,
+    assert visto == {"estagio": J.ESTAGIO, "modelo": J.MODELO, "schema": J.SCHEMA_V2_2,
                      "num_predict": J.NUM_PREDICT, "num_ctx": J.num_ctx(),
                      "think": J.THINK, "seed": J.SEED}
 
@@ -584,7 +587,7 @@ def test_calibracao_v2_1_ao_lado_do_v1_e_da_v2_0(tmp_path):
         json.dumps({**comum, "config_sha256": J.config_sha256("v2.1"), "id_par": p["id_par"],
                     "apoia": True, "ambiguo": p["review_id"] == "r2",
                     "trecho": "texto longo da review"}) + "\n" for p in pares))
-    J.cmd_calibrar(SimpleNamespace(dir=d, versao=None))
+    J.cmd_calibrar(SimpleNamespace(dir=d, versao="v2.1"))
     cal = json.loads((d / J.DIR_V2 / "calibracao_v2.1.json").read_text())
     assert list(cal["comparacao"]) == ["v1", "v2.0", "v2.1"]
     assert cal["comparacao"]["v2.0"]["geral"]["precisao"] == 0.5
@@ -595,3 +598,141 @@ def test_calibracao_v2_1_ao_lado_do_v1_e_da_v2_0(tmp_path):
     for linha in ("| v1 · todos |", "| v2.0 · todos |", "| v2.1 · todos |",
                   "| par | lado | dono | v1 | v2.0 | v2.1 |"):
         assert linha in md, linha
+
+
+# ---------------------------------------------------------------------------
+# v2.2 — o último ajuste: estrutural (só o título, ideia principal, evidência
+# clara afirmada) e a escolha pré-registrada entre v2.1 e v2.2
+# ---------------------------------------------------------------------------
+
+def test_v2_2_juiz_nao_recebe_a_descricao():
+    _, pares = _entrada()
+    par = {**pares[0], "tema": "TÍTULO-DO-BULLET", "exemplo": "DESCRIÇÃO-DO-BULLET"}
+    u = J.user(par, "v2.2")
+    assert "TÍTULO-DO-BULLET" in u and "DESCRIÇÃO-DO-BULLET" not in u
+    assert "descrição" not in u.casefold() and "{exemplo}" not in J.VERSOES["v2.2"]["user"]
+    assert u.startswith("Review (nota 1.5 de 5 estrelas):\n\ntexto r1")
+    assert u.index("texto r1") < u.index("TÍTULO-DO-BULLET")
+    # as versões anteriores seguem vendo a descrição
+    assert "DESCRIÇÃO-DO-BULLET" in J.user(par, "v2.1")
+
+
+def test_v2_2_rodar_nunca_manda_a_descricao(tmp_path):
+    _, pares = _entrada_longa()
+    pares = [{**p, "exemplo": "DESCRIÇÃO-SECRETA"} for p in pares]
+
+    def chamar(system, user):
+        assert system == J.system("v2.2") and "DESCRIÇÃO-SECRETA" not in user
+        return _resp(json.dumps({"trecho": "texto longo da review",
+                                 "apoia_ideia_principal": True,
+                                 "evidencia_clara": "r1" in user}))
+
+    saida = tmp_path / "s.jsonl"
+    assert J.rodar(pares, saida, chamar, versao="v2.2")["falhas"] == 0
+    ver = J.vereditos(pares, C._ler_jsonl(saida), "v2.2")
+    por = {p["id_par"]: p for p in pares}
+    for id_par, v in ver.items():
+        r1 = por[id_par]["review_id"] == "r1"
+        assert v["apoia_modelo"] is True and v["evidencia_clara"] is r1
+        assert v["apoio"] is r1
+        assert v["motivo"] == (None if r1 else "modelo não afirmou evidência clara")
+
+
+@pytest.mark.parametrize("ideia,clara,trecho,motivo", [
+    (True, True, "Great acting,  but the STORY sucked.", None),
+    (True, False, "Great acting,  but the STORY sucked.", "modelo não afirmou evidência clara"),
+    (False, True, "Great acting,  but the STORY sucked.",
+     "modelo disse que não apoia a ideia principal"),
+    (False, False, None, "modelo disse que não apoia a ideia principal"),
+    (True, False, None, "modelo não afirmou evidência clara"),
+    (True, True, None, "trecho nulo"),
+    (True, True, "Great acting", "trecho curto (2 palavras < 4)"),
+    (True, True, "Ótima atuação, mas a história é fraca.", "trecho não encontrado na review"),
+])
+def test_v2_2_apoio_exige_evidencia_clara_afirmada(ideia, clara, trecho, motivo):
+    resp = {"trecho": trecho, "apoia_ideia_principal": ideia, "evidencia_clara": clara}
+    assert J.motivo_sem_apoio_v2_2(resp, REVIEW) == motivo
+    assert J.motivo_da_versao(resp, REVIEW, "v2.2") == motivo
+
+
+def test_v2_2_mantem_a_normalizacao_da_v2_1():
+    resp = {"trecho": TRECHO_P28, "apoia_ideia_principal": True, "evidencia_clara": True}
+    assert J.motivo_sem_apoio_v2_2(resp, REVIEW_P28) is None
+    colado = {**resp, "trecho": "Joaquin Phoenix als Napoleon … wirkt sehr distanziert."}
+    assert J.motivo_sem_apoio_v2_2(colado, REVIEW_P13) == "trecho não encontrado na review"
+
+
+@pytest.mark.parametrize("texto", [
+    '{"trecho": null, "apoia": false, "evidencia_clara": false}',
+    '{"trecho": null, "apoia_ideia_principal": false, "ambiguo": false}',
+    '{"trecho": null, "apoia_ideia_principal": false}',
+    '{"trecho": null, "apoia_ideia_principal": false, "evidencia_clara": null}',
+    '{"trecho": null, "apoia_ideia_principal": 0, "evidencia_clara": false}'])
+def test_v2_2_resposta_fora_do_formato_e_falha(texto):
+    with pytest.raises(Exception):
+        J.ler_resposta_v2_2(texto)
+
+
+def test_v2_2_schema_e_prompt():
+    assert J.schema("v2.2")["required"] == ["trecho", "apoia_ideia_principal",
+                                            "evidencia_clara"]
+    s = J.system("v2.2")
+    assert J.CRITERIO_DONO in s
+    for trecho in ("só o TÍTULO", "IDEIA PRINCIPAL", "é a PRIMEIRA",
+                   "true SÓ se você AFIRMA", "Sem evidência clara afirmada",
+                   "FRASE INTEIRA", "LITERALMENTE", "Não omita nem altere NADA",
+                   "menos de 4 palavras",
+                   '"apoia_ideia_principal": true ou false, "evidencia_clara": true ou false'):
+        assert trecho in s, trecho
+    assert '"ambiguo"' not in s and '"apoia":' not in s
+    low = s.casefold()
+    for nome in ("jennifer lawrence", "mother", "napoleão", "napoleon", "josefina",
+                 "phoenix", "substance", "anatomia", "anatomy", "incendies"):
+        assert nome not in low, nome
+
+
+def _comp(pub_v21, loc_v21, pub_v22, loc_v22, vale_v22=False):
+    def m(pub, loc, vale):
+        return {"por_lado": {"publicado": {"recall": pub}, "local": {"recall": loc}},
+                "julgamento": {"vale": vale}}
+    return {"v2.1": m(pub_v21, loc_v21, False), "v2.2": m(pub_v22, loc_v22, vale_v22)}
+
+
+@pytest.mark.parametrize("comp,congelar", [
+    (_comp(0.714, 0.909, 0.6, 0.6, vale_v22=True), "v2.2"),   # passa nos três: v2.2
+    (_comp(0.714, 0.909, 0.786, 0.75), "v2.2"),                # pior lado 0,75 > 0,714
+    (_comp(0.714, 0.909, 0.857, 0.6), "v2.1"),                 # pior lado 0,6 < 0,714
+    (_comp(0.714, 0.909, 0.714, 1.0), "v2.1"),                 # empate no pior lado
+])
+def test_escolha_pre_registrada(comp, congelar):
+    e = J.escolha_pre_registrada(comp)
+    assert e["congelar"] == congelar
+    if comp["v2.2"]["por_lado"]["publicado"]["recall"] == 0.714 and congelar == "v2.1":
+        assert "empate" in e["motivo"]
+
+
+def test_calibracao_v2_2_traz_a_escolha(tmp_path):
+    d, pares, mapa = _montar_dir(tmp_path, lambda p: True)
+    _alongar(d)
+    por = {p["id_par"]: p for p in pares}
+    _csv(d / C.ARQ_ROTULOS, [(k, "sim" if por[v]["review_id"] == "r1" else "não")
+                            for k, v in mapa["pares"].items()])
+    comum = {"ok": True, "modelo_efetivo": J.MODELO, "think": J.THINK, "pensamento": "p",
+             "trecho": "texto longo da review"}
+    r1 = {p["id_par"]: p["review_id"] == "r1" for p in pares}
+    C._escrever(d / J.DIR_V2 / "calibracao_v2.1_saida.jsonl", "".join(
+        json.dumps({**comum, "config_sha256": J.config_sha256("v2.1"), "id_par": i,
+                    "apoia": True, "ambiguo": False}) + "\n" for i in r1))
+    C._escrever(d / J.DIR_V2 / "calibracao_v2.2_saida.jsonl", "".join(
+        json.dumps({**comum, "config_sha256": J.config_sha256("v2.2"), "id_par": i,
+                    "apoia_ideia_principal": True, "evidencia_clara": e}) + "\n"
+        for i, e in r1.items()))
+    J.cmd_calibrar(SimpleNamespace(dir=d, versao=None))
+    cal = json.loads((d / J.DIR_V2 / "calibracao_v2.2.json").read_text())
+    assert list(cal["comparacao"]) == ["v1", "v2.1", "v2.2"]     # sem a v2.0 neste dir
+    assert cal["julgamento"]["vale"] and cal["escolha"]["congelar"] == "v2.2"
+    assert {x["motivo"] for x in cal["derrubados_pelo_codigo"]} == {
+        "modelo não afirmou evidência clara"}
+    md = (d / J.DIR_V2 / "calibracao_v2.2.md").read_text()
+    assert "Escolha pré-registrada (REGISTRO.md): congelar a v2.2" in md
+    assert "sem evidência clara afirmada" not in md                # sem erros
