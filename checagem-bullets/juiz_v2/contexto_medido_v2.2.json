@@ -1,0 +1,85 @@
+{
+  "versao": "v2.2",
+  "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+  "medicao_num_ctx": 8192,
+  "medidos": [
+    {
+      "id_par": "local|the-substance|positivas|0|viewing:1439489161",
+      "chars_prompt": 8424,
+      "chars_review": 4990,
+      "prompt_eval_count": 2074,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "publicado|mother-2017|negativas|3|viewing:1421122067",
+      "chars_prompt": 7266,
+      "chars_review": 3828,
+      "prompt_eval_count": 1753,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|napoleon-2023|positivas|1|viewing:1409019652",
+      "chars_prompt": 7015,
+      "chars_review": 3597,
+      "prompt_eval_count": 1804,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|napoleon-2023|medianas|4|viewing:1428491750",
+      "chars_prompt": 6512,
+      "chars_review": 3031,
+      "prompt_eval_count": 1672,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|mother-2017|medianas|1|viewing:1437377835",
+      "chars_prompt": 6228,
+      "chars_review": 2813,
+      "prompt_eval_count": 1648,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "publicado|napoleon-2023|positivas|0|viewing:1405282754",
+      "chars_prompt": 6119,
+      "chars_review": 2680,
+      "prompt_eval_count": 1484,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|the-substance|medianas|1|viewing:612784621",
+      "chars_prompt": 6062,
+      "chars_review": 2631,
+      "prompt_eval_count": 1561,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|napoleon-2023|positivas|3|viewing:1366933027",
+      "chars_prompt": 5807,
+      "chars_review": 2387,
+      "prompt_eval_count": 1440,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "local|incendies|negativas|2|viewing:1475556179",
+      "chars_prompt": 5805,
+      "chars_review": 2363,
+      "prompt_eval_count": 1474,
+      "modelo_efetivo": "gpt-oss:20b"
+    },
+    {
+      "id_par": "publicado|anatomy-of-a-fall|positivas|4|viewing:1437519205",
+      "chars_prompt": 5627,
+      "chars_review": 2213,
+      "prompt_eval_count": 1447,
+      "modelo_efetivo": "gpt-oss:20b"
+    }
+  ],
+  "max_prompt_tokens": 2074,
+  "num_predict": 1024,
+  "precisa": 3098,
+  "num_ctx": 4096,
+  "folga": 998,
+  "cabe": true,
+  "menor_multiplo_512": 3584,
+  "ts": "2026-10-20T02:51:53+00:00"
+}
