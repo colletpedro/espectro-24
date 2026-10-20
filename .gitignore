@@ -42,3 +42,6 @@ docs/arquivo-de-estudos/experimento-briefing/
 # política e mesmo escopo estreito: há 48 arquivos versionados em
 # docs/arquivo-de-estudos/, então só esta subpasta é ignorada.
 docs/arquivo-de-estudos/finetune-fase0/
+# [2026-10-20] Fase 1 do fine-tuning: o documento cego de rotulagem e as
+# respostas do dono ficam fora do git (mesmo escopo estreito).
+docs/arquivo-de-estudos/finetune-fase1/
