@@ -332,3 +332,14 @@ primeira linha.
 deste registro; (2) o dono rotula; (3) o Windows roda a v2.2 nos 900
 (`docs/SETUP_WINDOWS.md` §12); (4) `validar`, SÓ nos 40 novos; (5)
 `relatorio` (`juiz_v2/fidelidade_v2.2.md`).
+
+## Amostra nova da validação (2026-10-20, depois do congelamento)
+
+40 pares sorteados dos 900 por `amostra-validacao`, semente 20261020 (a da
+calibração foi 20261019): **nenhum** dos 40 da calibração, 20 por lado, 4 por
+filme em cada lado, metade dos ranks 1-2 e metade dos 3-5, um par por bullet.
+Documento cego para o dono: `rotulagem_validacao/rotulagem_dono.md` (sem lado,
+modelo, similaridade, rank nem resposta de juiz; o critério impresso é o guia
+do dono, `CRITERIO_DONO`), respostas em `rotulagem_validacao/rotulos_dono.csv`.
+O mapa (que diz o lado) fica em `mapa/validacao_mapa.json`, selo
+`5fad9a3000cb45c053f33958199b2bfc74826deb730a5dbf32925aa9ec0edfca`.
