@@ -343,3 +343,14 @@ modelo, similaridade, rank nem resposta de juiz; o critério impresso é o guia
 do dono, `CRITERIO_DONO`), respostas em `rotulagem_validacao/rotulos_dono.csv`.
 O mapa (que diz o lado) fica em `mapa/validacao_mapa.json`, selo
 `5fad9a3000cb45c053f33958199b2bfc74826deb730a5dbf32925aa9ec0edfca`.
+
+## Rotulagem do dono — validação (2026-10-20)
+
+40 pares rotulados em `rotulagem_validacao/rotulos_dono.csv`: 25 `sim`, 15
+`não`. Rotulagem cega, feita no chat a partir do documento
+`rotulagem_validacao/rotulagem_dono.md`, sem acesso ao mapa nem à saída do
+juiz (a saída dos 900 já estava no branch, mas não foi aberta antes do rótulo
+gravado).
+
+**Pares que o dono considerou duvidosos** (o rótulo não muda; registro para
+ler a validação com cuidado): P01, P04, P08, P18, P33, P36.
