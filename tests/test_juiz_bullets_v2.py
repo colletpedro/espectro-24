@@ -897,3 +897,58 @@ def test_validacao_recusa_amostra_que_repete_a_calibracao(tmp_path, monkeypatch)
         json.dumps(mapa, sort_keys=True, ensure_ascii=False))})
     with pytest.raises(SystemExit, match="repete pares da calibração"):
         J.mapa_validacao_conferido(d)
+
+
+# ---------------------------------------------------------------------------
+# Sensibilidade da validação (não muda o veredito)
+# ---------------------------------------------------------------------------
+
+def test_bootstrap_reamostra_reviews_e_nao_pares():
+    # 10 reviews; a review "ruim" tem 5 pares, todos FP. Por review, ela entra
+    # ou sai inteira: a precisão nunca fica entre os valores que a mistura de
+    # pares soltos daria fora dos múltiplos de 5 FP.
+    linhas = [{"review": ("f", f"r{k}"), "dono": True, "juiz": True} for k in range(9)]
+    linhas += [{"review": ("f", "ruim"), "dono": False, "juiz": True}] * 5
+    b = J.bootstrap_por_review(linhas, n=2000)
+    assert b["n_reviews"] == 10 and b["n_pares"] == 14
+    assert b["recall_ic95"] == [1.0, 1.0]
+    lo, hi = b["precisao_ic95"]
+    assert lo < hi <= 1.0
+    assert b == J.bootstrap_por_review(linhas, n=2000)            # semente fixa
+
+
+def test_sensibilidade_separada_do_veredito(tmp_path, monkeypatch):
+    d, pares, antigos = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    mapa = J.mapa_validacao_conferido(d)
+    _rodar_900(d, pares, lambda p: p["rank"] <= 2)
+    por = {p["id_par"]: p for p in pares}
+    _csv(d / J.ARQ_ROTULOS_VALIDACAO, [(k, "sim" if por[v]["rank"] <= 2 else "não")
+                                       for k, v in mapa["pares"].items()])
+    mapa_cal = J.mapa_conferido(d)
+    _csv(d / C.ARQ_ROTULOS, [(k, "sim" if por[v]["rank"] <= 2 else "não")
+                            for k, v in mapa_cal["pares"].items()])
+    sha = J.config_sha256("v2.2")
+    C._escrever(d / J.DIR_V2 / "calibracao_v2.2_saida.jsonl", "".join(
+        json.dumps({"ok": True, "id_par": i, "config_sha256": sha,
+                    "modelo_efetivo": J.MODELO, "think": J.THINK, "pensamento": "p",
+                    "trecho": "texto longo da review", "apoia_ideia_principal": True,
+                    "evidencia_clara": True}) + "\n" for i in antigos))
+    J.cmd_validar(SimpleNamespace(dir=d))
+    antes = (d / J.DIR_V2 / "validacao_v2.2.json").read_text()
+    J.cmd_sensibilidade(SimpleNamespace(dir=d))
+    assert (d / J.DIR_V2 / "validacao_v2.2.json").read_text() == antes   # veredito intocado
+    s = json.loads((d / J.DIR_V2 / "sensibilidade_v2.2.json").read_text())
+    rev_cal = {(por[i]["slug"], por[i]["review_id"]) for i in antigos}
+    esperados = sorted(k for k, v in mapa["pares"].items()
+                       if (por[v]["slug"], por[v]["review_id"]) in rev_cal)
+    assert sorted(s["sem_reviews_da_calibracao"]["excluidos"]) == esperados
+    n = s["sem_reviews_da_calibracao"]["geral"]["n"]
+    assert n == 40 - len(esperados)
+    assert s["bootstrap_por_review"]["todos"]["precisao_ic95"] == [1.0, 1.0]
+    assert s["compartilham_dentro"] and s["compartilham_entre"]
+    for g in s["compartilham_entre"]:
+        assert {x["amostra"] for x in g} == {"validação", "calibração"}
+        assert len({(x["slug"]) for x in g}) == 1
+    md = (d / J.DIR_V2 / "sensibilidade_v2.2.md").read_text()
+    assert "> **ISTO NÃO MUDA O VEREDITO.**" in md and "**PASSOU**" in md

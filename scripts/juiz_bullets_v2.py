@@ -53,6 +53,9 @@ Subcomandos (todos escrevem em `--dir`/juiz_v2, nunca em `resultado/`):
 - `validar` (Mac): a versão congelada contra o rótulo novo, SÓ nos 40 novos.
 - `relatorio` (Mac): a fidelidade dos bullets nos 900 com o juiz congelado;
   reprovado na validação, "ESTE RESULTADO NÃO VALE" na primeira linha.
+- `sensibilidade` (Mac): leituras de robustez da validação (sem as reviews da
+  calibração, bootstrap por review, pares que dividem review) — não muda o
+  veredito.
 
 Uso:
     python scripts/juiz_bullets_v2.py preparar --dir checagem-bullets
@@ -69,6 +72,7 @@ import inspect
 import json
 import math
 import os
+import random
 import re
 import statistics
 import sys
@@ -1246,6 +1250,173 @@ def cmd_relatorio(a) -> None:
                      f"≥2 {final['por_lado'][lado]['frac_ge2']:.0%}" for lado in C.LADOS))
 
 
+# ===========================================================================
+# Sensibilidade da validação — SEPARADA do veredito, que não muda
+# ===========================================================================
+
+N_BOOTSTRAP = 10000
+
+
+def _chave_review(p: dict) -> tuple[str, str]:
+    return (p["slug"], p["review_id"])
+
+
+def _p_r(pares: list[tuple[bool, bool]]) -> tuple[float | None, float | None]:
+    vp = sum(1 for d, j in pares if d and j)
+    fp = sum(1 for d, j in pares if not d and j)
+    fn = sum(1 for d, j in pares if d and not j)
+    return (vp / (vp + fp) if vp + fp else None, vp / (vp + fn) if vp + fn else None)
+
+
+def bootstrap_por_review(linhas: list[dict], n: int = N_BOOTSTRAP,
+                         semente: int = SEMENTE_VALIDACAO) -> dict:
+    """IC95 de precisão e recall reamostrando REVIEWS (com reposição), não
+    pares: pares que dividem a review entram e saem juntos. Percentis 2,5 e
+    97,5; reamostra em que a medida é indefinida (sem nenhum sim) é descartada
+    e contada."""
+    grupos: dict[tuple, list[tuple[bool, bool]]] = {}
+    for x in linhas:
+        grupos.setdefault(x["review"], []).append((x["dono"], x["juiz"]))
+    chaves = sorted(grupos)
+    rng = random.Random(semente)
+    ps, rs = [], []
+    for _ in range(n):
+        amostra = [par for k in rng.choices(chaves, k=len(chaves)) for par in grupos[k]]
+        p, r = _p_r(amostra)
+        if p is not None:
+            ps.append(p)
+        if r is not None:
+            rs.append(r)
+
+    def ic(v):
+        v = sorted(v)
+        return [round(v[int(0.025 * (len(v) - 1))], 3), round(v[int(0.975 * (len(v) - 1))], 3)]
+    return {"n_reviews": len(chaves), "n_pares": len(linhas), "n_reamostras": n,
+            "precisao_ic95": ic(ps), "recall_ic95": ic(rs),
+            "descartadas": {"precisao": n - len(ps), "recall": n - len(rs)}}
+
+
+def sensibilidade(d: Path) -> dict:
+    """(a) a validação sem os pares cuja review já apareceu na calibração;
+    (b) IC95 por bootstrap de reviews; (c) os pares que dividem review dentro
+    da amostra nova e entre as duas amostras. Nada disto muda o veredito."""
+    val = C._ler_json(d / DIR_V2 / f"validacao_{exigir_congelada()}.json")
+    versao = val["versao"]
+    entrada = {p["id_par"]: p for p in C._ler_jsonl(d / C.ARQ_ENTRADA)}
+    novos = [{**x, "amostra": "validação", "review": _chave_review(entrada[x["id_par"]])}
+             for x in val["pares"]]
+    mapa_cal = mapa_conferido(d)
+    pares_cal = pares_calibracao(d)
+    ver_cal = vereditos(pares_cal, C._ler_jsonl(
+        d / DIR_V2 / f"calibracao_{versao}_saida.jsonl"), versao)
+    dono_cal = C.ler_rotulos(d / C.ARQ_ROTULOS, list(mapa_cal["pares"]))
+    antigos = [{"par": par, "id_par": i, "amostra": "calibração",
+                "lado": entrada[i]["lado"], "slug": entrada[i]["slug"],
+                "bucket": entrada[i]["bucket"], "tema": entrada[i]["tema"],
+                "dono": dono_cal[par], "juiz": ver_cal[i]["apoio"],
+                "review": _chave_review(entrada[i])}
+               for par, i in mapa_cal["pares"].items()]
+    reviews_cal = {x["review"] for x in antigos}
+
+    def medir(linhas):
+        geral = C.matriz([(x["dono"], x["juiz"]) for x in linhas])
+        por_lado = {lado: C.matriz([(x["dono"], x["juiz"]) for x in linhas
+                                    if x["lado"] == lado]) for lado in C.LADOS}
+        return {"geral": geral, "por_lado": por_lado, "julgamento": julgar(geral, por_lado)}
+
+    sem_cal = [x for x in novos if x["review"] not in reviews_cal]
+    boot = {"todos": bootstrap_por_review(novos),
+            **{lado: bootstrap_por_review([x for x in novos if x["lado"] == lado])
+               for lado in C.LADOS}}
+    por_review: dict[tuple, list[dict]] = {}
+    for x in novos + antigos:
+        por_review.setdefault(x["review"], []).append(x)
+
+    def enxuto(x):
+        return {k: x[k] for k in ("amostra", "par", "lado", "slug", "bucket", "tema",
+                                  "dono", "juiz")}
+    dentro = [[enxuto(x) for x in g] for g in por_review.values()
+              if sum(1 for x in g if x["amostra"] == "validação") >= 2]
+    entre = [[enxuto(x) for x in g] for g in por_review.values()
+             if {x["amostra"] for x in g} == {"validação", "calibração"}]
+    return {"versao": versao, "config_sha256": val["config_sha256"],
+            "veredito": val["julgamento"], "completa": medir(novos),
+            "sem_reviews_da_calibracao": {**medir(sem_cal),
+                                          "excluidos": [x["par"] for x in novos
+                                                        if x["review"] in reviews_cal]},
+            "bootstrap_por_review": boot, "compartilham_dentro": dentro,
+            "compartilham_entre": entre}
+
+
+def md_sensibilidade(s: dict) -> str:
+    def linha(nome, m):
+        return (f"| {nome} | {m['n']} | {m['vp']} | {m['fp']} | {m['fn']} | {m['vn']} | "
+                f"{m['precisao']} {m['precisao_ic95']} | {m['recall']} {m['recall_ic95']} |")
+
+    def sn(b):
+        return "sim" if b else "não"
+    v = s["veredito"]
+    L = [f"# Sensibilidade da validação — juiz {s['versao']} (congelado)", "",
+         "> **ISTO NÃO MUDA O VEREDITO.** O veredito é o da validação com o critério "
+         "pré-registrado (`validacao_" + s["versao"] + ".md`): **"
+         + ("PASSOU" if v["vale"] else "REPROVOU") + "**. Esta análise foi pedida "
+         "depois, para ler a robustez do número; nenhum resultado dela troca o veredito.",
+         "", "## (a) Sem os pares cuja review apareceu na calibração", "",
+         f"Excluídos ({len(s['sem_reviews_da_calibracao']['excluidos'])}): "
+         + (", ".join(s["sem_reviews_da_calibracao"]["excluidos"]) or "nenhum") + ".", "",
+         "| recorte | n | VP | FP | FN | VN | precisão [IC95] | recall [IC95] |",
+         "|---|---|---|---|---|---|---|---|"]
+    for nome, m in (("completa", s["completa"]), ("sem calibração",
+                                                   s["sem_reviews_da_calibracao"])):
+        L += [linha(f"{nome} · todos", m["geral"])]
+        L += [linha(f"{nome} · {lado}", m["por_lado"][lado]) for lado in C.LADOS]
+    j = s["sem_reviews_da_calibracao"]["julgamento"]
+    L += ["", f"Sem esses pares, a diferença de precisão entre os lados é "
+          f"{j['dif_precisao_lados']}, e o critério " + ("seria atendido" if j["vale"]
+          else "não seria atendido (" + "; ".join(j["motivos"]) + ")") + " — informativo.",
+          "", "## (b) IC95 por bootstrap de reviews", "",
+          f"{N_BOOTSTRAP} reamostras de REVIEWS com reposição (pares da mesma review "
+          "entram e saem juntos); percentis 2,5 e 97,5. Ao lado, o Wilson por par, da "
+          "validação.", "",
+          "| recorte | reviews | pares | precisão: bootstrap · Wilson | recall: bootstrap · Wilson |",
+          "|---|---|---|---|---|"]
+    for nome, b in s["bootstrap_por_review"].items():
+        m = s["completa"]["geral"] if nome == "todos" else s["completa"]["por_lado"][nome]
+        L.append(f"| {nome} | {b['n_reviews']} | {b['n_pares']} | {b['precisao_ic95']} · "
+                 f"{m['precisao_ic95']} | {b['recall_ic95']} · {m['recall_ic95']} |")
+    L += ["", "## (c) Pares que compartilham a review", "",
+          "### Dentro da amostra de validação", ""]
+    for nome, grupos in (("dentro", s["compartilham_dentro"]),
+                         ("entre", s["compartilham_entre"])):
+        if nome == "entre":
+            L += ["### Entre a validação e a calibração (juiz = a mesma versão "
+                  "congelada, na calibração)", ""]
+        if not grupos:
+            L += ["_(nenhum)_", ""]
+        for k, g in enumerate(grupos, 1):
+            L += [f"**Review {k}** — {g[0]['slug']}/{g[0]['bucket']}", "",
+                  "| amostra | par | lado | tema | dono | juiz |", "|---|---|---|---|---|---|"]
+            L += [f"| {x['amostra']} | {x['par']} | {x['lado']} | {x['tema']} | "
+                  f"{sn(x['dono'])} | {sn(x['juiz'])} |" for x in g]
+            L.append("")
+    return "\n".join(L)
+
+
+def cmd_sensibilidade(a) -> None:
+    s = sensibilidade(a.dir)
+    v = s["versao"]
+    C._json(a.dir / DIR_V2 / f"sensibilidade_{v}.json",
+            {**s, "compartilham_dentro": s["compartilham_dentro"],
+             "compartilham_entre": s["compartilham_entre"]})
+    C._escrever(a.dir / DIR_V2 / f"sensibilidade_{v}.md", md_sensibilidade(s))
+    m = s["sem_reviews_da_calibracao"]["geral"]
+    b = s["bootstrap_por_review"]["todos"]
+    print(f"sensibilidade (não muda o veredito) · sem reviews da calibração: n={m['n']} "
+          f"P={m['precisao']} R={m['recall']} · bootstrap P {b['precisao_ic95']} "
+          f"R {b['recall_ic95']} · {len(s['compartilham_dentro'])} reviews repetidas "
+          f"dentro, {len(s['compartilham_entre'])} entre as amostras")
+
+
 def main(argv=None) -> None:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawTextHelpFormatter)
@@ -1253,7 +1424,8 @@ def main(argv=None) -> None:
     for nome, func in (("preparar", cmd_preparar), ("medir-contexto", cmd_medir_contexto),
                        ("juiz", cmd_juiz), ("calibrar", cmd_calibrar),
                        ("amostra-validacao", cmd_amostra_validacao),
-                       ("validar", cmd_validar), ("relatorio", cmd_relatorio)):
+                       ("validar", cmd_validar), ("relatorio", cmd_relatorio),
+                       ("sensibilidade", cmd_sensibilidade)):
         p = sub.add_parser(nome)
         p.set_defaults(func=func)
         p.add_argument("--dir", type=Path, required=True,
