@@ -381,3 +381,40 @@ No Mac, a calibração contra o rótulo do dono:
 ```bash
 python scripts/juiz_bullets_v2.py calibrar --dir checagem-bullets
 ```
+
+## 12. Juiz v2.2 congelado — os 900 pares
+
+A calibração terminou e a v2.2 foi **congelada** pela regra pré-registrada
+(`CONGELADA = "v2.2"`, `config_sha256` `44606cf1…` no
+`checagem-bullets\REGISTRO.md`). Só a versão congelada roda nos 900 pares — o
+código recusa qualquer outra. A validação é no Mac, nos 40 pares NOVOS que o
+dono rotula (`amostra-validacao`); o juiz não vê os rótulos.
+
+**Tempo: ~4,5 h** (medido: 18 s por par em média na calibração da v2.2, 40
+pares em 12,6 min; a estimativa do `preparo_v2.2.md` é ~3,3 h na mediana e
+~6,5 h no p95). Retomável: se parar, rode de novo e ele refaz só os que faltam.
+As mesmas guardas de memória do §11.
+
+```powershell
+git fetch
+git switch gate-local
+git pull
+$env:PYTHONUTF8 = "1"
+Remove-Item Env:ESPECTRO24_OLLAMA_TEMPERATURE -ErrorAction SilentlyContinue
+ollama list
+.\venv\Scripts\python.exe scripts/juiz_bullets_v2.py medir-contexto --dir checagem-bullets
+.\venv\Scripts\python.exe scripts/juiz_bullets_v2.py juiz --todos --dir checagem-bullets
+git add checagem-bullets/juiz_v2
+git commit -m "checagem bullets: juiz v2.2 congelado nos 900 pares"
+git push
+```
+
+A saída é `checagem-bullets\juiz_v2\saida_v2.2.jsonl`; a última linha tem de
+dizer `pares sem veredito: 0 — completo`.
+
+No Mac, depois do rótulo do dono e dos 900:
+
+```bash
+python scripts/juiz_bullets_v2.py validar --dir checagem-bullets
+python scripts/juiz_bullets_v2.py relatorio --dir checagem-bullets
+```

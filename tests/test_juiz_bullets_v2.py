@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections import Counter
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -57,6 +58,13 @@ def test_no_maximo_dois_ajustes_e_versao_atual_existe():
     assert len(J.VERSOES) <= J.MAX_VERSOES == 3
     assert J.VERSAO_ATUAL in J.VERSOES and list(J.VERSOES)[0] == "v2.0"
     assert J.CONGELADA is None or J.CONGELADA in J.VERSOES
+
+
+def test_a_v2_2_esta_congelada_com_o_hash_do_registro():
+    # a regra pré-registrada escolheu a v2.2 (passou nos três critérios)
+    assert J.CONGELADA == "v2.2" == J.VERSAO_ATUAL
+    assert J.config_sha256("v2.2") == (
+        "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669")
 
 
 def test_hash_da_v2_0_nao_muda_com_a_v2_1():
@@ -736,3 +744,156 @@ def test_calibracao_v2_2_traz_a_escolha(tmp_path):
     md = (d / J.DIR_V2 / "calibracao_v2.2.md").read_text()
     assert "Escolha pré-registrada (REGISTRO.md): congelar a v2.2" in md
     assert "sem evidência clara afirmada" not in md                # sem erros
+
+
+# ---------------------------------------------------------------------------
+# Validação nos 40 pares novos e relatório de fidelidade
+# ---------------------------------------------------------------------------
+
+FILMES = ("anatomy-of-a-fall", "incendies", "mother-2017", "napoleon-2023", "the-substance")
+
+
+def _universo():
+    """2 lados × 5 filmes × 6 bullets × 5 reviews (ranks 1-5): 300 pares."""
+    bullets, pares = [], []
+    for lado in C.LADOS:
+        for slug in FILMES:
+            for i in range(6):
+                idb = f"{lado}|{slug}|negativas|{i}"
+                bullets.append({"id_bullet": idb, "lado": lado, "slug": slug,
+                                "bucket": "negativas", "i": i, "tema": f"tema {i}",
+                                "exemplo": f"descrição {i}", "mencoes": 5, "n": 40,
+                                "eixo": "ritmo", "n_com_eixo": 1, "suspeito": False,
+                                "sem_eixo": False, "declarado_acima_do_eixo": False,
+                                "ids_com_eixo": ["r1"]})
+                for rank in range(1, 6):
+                    rid = f"r{rank}"
+                    pares.append({"id_par": f"{idb}|{rid}", "id_bullet": idb, "lado": lado,
+                                  "slug": slug, "bucket": "negativas", "i": i, "rank": rank,
+                                  "review_id": rid, "nivel": 1.5,
+                                  "texto": f"Texto longo da review {rid} com prova suficiente.",
+                                  "tema": f"tema {i}", "exemplo": f"descrição {i}"})
+    return bullets, pares
+
+
+def _dir_validacao(tmp_path, monkeypatch):
+    bullets, pares = _universo()
+    d = tmp_path / "cb"
+    C._escrever(d / C.ARQ_ENTRADA, "".join(json.dumps(p) + "\n" for p in pares))
+    C._json(d / C.ARQ_EIXO, {"meta": {"filmes": list(FILMES)}, "bullets": bullets})
+    antiga = C.sortear_rotulo(pares)                    # a calibração (semente antiga)
+    mapa = {"semente": C.SEMENTE, "pares": {f"P{k:02d}": p["id_par"]
+                                            for k, p in enumerate(antiga, 1)}}
+    C._json(d / C.ARQ_MAPA, {**mapa, "sha256": C._sha256_texto(
+        json.dumps(mapa, sort_keys=True, ensure_ascii=False))})
+    monkeypatch.setattr(J, "_titulos", lambda d: {s: s.upper() for s in FILMES})
+    return d, pares, {p["id_par"] for p in antiga}
+
+
+def test_amostra_nova_sem_sobreposicao_20_por_lado_e_4_por_filme(tmp_path, monkeypatch):
+    d, pares, antigos = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    mapa = J.mapa_validacao_conferido(d)
+    ids = list(mapa["pares"].values())
+    assert len(ids) == 40 and not set(ids) & antigos
+    por = {p["id_par"]: p for p in pares}
+    assert Counter(por[i]["lado"] for i in ids) == {"publicado": 20, "local": 20}
+    assert set(Counter((por[i]["lado"], por[i]["slug"]) for i in ids).values()) == {4}
+    assert len({por[i]["id_bullet"] for i in ids}) == 40      # um par por bullet
+    assert mapa["semente"] == J.SEMENTE_VALIDACAO != C.SEMENTE
+    assert mapa["congelada"] == "v2.2" and mapa["config_sha256"] == J.config_sha256("v2.2")
+
+
+def test_documento_da_validacao_e_cego(tmp_path, monkeypatch):
+    d, pares, _ = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    doc = (d / J.ARQ_DOC_VALIDACAO).read_text()
+    assert doc.count("\n## P") == 40 and J.CRITERIO_DONO in doc
+    for proibido in ("publicado", "local", "qwen", "DeepSeek", "gpt-oss", "rank",
+                     "similaridade", "juiz", "|negativas|", "apoia_ideia"):
+        assert proibido.casefold() not in doc.casefold(), proibido
+    assert "**Descrição:** descrição" in doc                   # o formato da vez anterior
+    csv_ = (d / J.ARQ_ROTULOS_VALIDACAO).read_text().splitlines()
+    assert csv_[0] == "par,rotulo" and len(csv_) == 41 and csv_[1] == "P01,"
+
+
+def test_amostra_nova_nunca_e_refeita_nem_sem_congelar(tmp_path, monkeypatch):
+    d, _, _ = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    with pytest.raises(SystemExit, match="uma vez só"):
+        J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    _csv(d / J.ARQ_ROTULOS_VALIDACAO, [("P01", "sim")])
+    with pytest.raises(SystemExit, match="rótulos"):
+        J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    monkeypatch.setattr(J, "CONGELADA", None)
+    with pytest.raises(SystemExit, match="CONGELADA"):
+        J.cmd_amostra_validacao(SimpleNamespace(dir=tmp_path / "outro"))
+
+
+def _rodar_900(d, pares, apoia):
+    sha = J.config_sha256("v2.2")
+    C._escrever(d / J.DIR_V2 / "saida_v2.2.jsonl", "".join(
+        json.dumps({"ok": True, "id_par": p["id_par"], "config_sha256": sha,
+                    "modelo_efetivo": J.MODELO, "think": J.THINK, "pensamento": "p",
+                    "trecho": "texto longo da review", "apoia_ideia_principal": apoia(p),
+                    "evidencia_clara": apoia(p)}) + "\n" for p in pares))
+
+
+def test_validacao_so_nos_40_novos_e_relatorio(tmp_path, monkeypatch):
+    d, pares, antigos = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    mapa = J.mapa_validacao_conferido(d)
+    # o juiz diz sim nos ranks 1-2; o dono concorda em tudo
+    _rodar_900(d, pares, lambda p: p["rank"] <= 2)
+    por = {p["id_par"]: p for p in pares}
+    _csv(d / J.ARQ_ROTULOS_VALIDACAO, [(k, "sim" if por[v]["rank"] <= 2 else "não")
+                                       for k, v in mapa["pares"].items()])
+    J.cmd_validar(SimpleNamespace(dir=d))
+    val = json.loads((d / J.DIR_V2 / "validacao_v2.2.json").read_text())
+    assert val["geral"]["n"] == 40 and val["julgamento"]["vale"]
+    assert {x["id_par"] for x in val["pares"]} == set(mapa["pares"].values())
+    assert not {x["id_par"] for x in val["pares"]} & antigos
+    md = (d / J.DIR_V2 / "validacao_v2.2.md").read_text()
+    assert md.startswith("# Validação do juiz v2 — versão congelada v2.2")
+    J.cmd_relatorio(SimpleNamespace(dir=d))
+    fid = (d / J.DIR_V2 / "fidelidade_v2.2.md").read_text()
+    assert fid.startswith("# Fidelidade dos bullets — juiz v2.2 (congelado)")
+    assert "NÃO VALE" not in fid and "Apoio = o juiz v2.2 deu apoio" in fid
+    final = json.loads((d / J.DIR_V2 / "fidelidade_v2.2.json").read_text())
+    assert final["vale"] and final["por_lado"]["local"]["apoio_ge2"] == 30
+
+
+def test_validacao_reprovada_poe_nao_vale_no_topo(tmp_path, monkeypatch):
+    d, pares, _ = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    mapa = J.mapa_validacao_conferido(d)
+    _rodar_900(d, pares, lambda p: True)                       # juiz diz sim a tudo
+    por = {p["id_par"]: p for p in pares}
+    _csv(d / J.ARQ_ROTULOS_VALIDACAO, [(k, "sim" if por[v]["rank"] <= 2 else "não")
+                                       for k, v in mapa["pares"].items()])
+    J.cmd_validar(SimpleNamespace(dir=d))
+    md = (d / J.DIR_V2 / "validacao_v2.2.md").read_text()
+    assert md.startswith("> **ESTE RESULTADO NÃO VALE.**")
+    J.cmd_relatorio(SimpleNamespace(dir=d))
+    fid = (d / J.DIR_V2 / "fidelidade_v2.2.md").read_text()
+    assert fid.startswith("> **ESTE RESULTADO NÃO VALE.**")
+    assert not json.loads((d / J.DIR_V2 / "fidelidade_v2.2.json").read_text())["vale"]
+
+
+def test_relatorio_exige_validacao_e_validacao_exige_rotulo_completo(tmp_path, monkeypatch):
+    d, pares, _ = _dir_validacao(tmp_path, monkeypatch)
+    J.cmd_amostra_validacao(SimpleNamespace(dir=d))
+    _rodar_900(d, pares, lambda p: True)
+    with pytest.raises(SystemExit, match="validar"):
+        J.cmd_relatorio(SimpleNamespace(dir=d))
+    with pytest.raises(ValueError, match="use sim ou não"):       # CSV em branco
+        J.cmd_validar(SimpleNamespace(dir=d))
+
+
+def test_validacao_recusa_amostra_que_repete_a_calibracao(tmp_path, monkeypatch):
+    d, pares, antigos = _dir_validacao(tmp_path, monkeypatch)
+    mapa = {"semente": 1, "pares": {"P01": sorted(antigos)[0]}}
+    C._json(d / J.ARQ_MAPA_VALIDACAO, {**mapa, "sha256": C._sha256_texto(
+        json.dumps(mapa, sort_keys=True, ensure_ascii=False))})
+    with pytest.raises(SystemExit, match="repete pares da calibração"):
+        J.mapa_validacao_conferido(d)
