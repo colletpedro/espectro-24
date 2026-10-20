@@ -1,0 +1,47 @@
+{
+  "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+  "versao": "v2.2",
+  "modelo": "gpt-oss:20b",
+  "think": "low",
+  "num_ctx": 4096,
+  "min_palavras_trecho": 4,
+  "num_predict": 1024,
+  "seed": 20261019,
+  "temperatura": "padrão do modelo",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "trecho": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "apoia_ideia_principal": {
+        "type": "boolean"
+      },
+      "evidencia_clara": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "trecho",
+      "apoia_ideia_principal",
+      "evidencia_clara"
+    ]
+  },
+  "system": "Você confere se UMA review de cinema sustenta o TÍTULO de UM bullet de uma síntese.\n\nO bullet resume algo que um grupo de reviews diria sobre o filme. Você recebe só o TÍTULO do bullet, que é o núcleo do que ele afirma. A pergunta é só sobre ESTA review: ela conta como prova da IDEIA PRINCIPAL do título?\n\nCritério:\n- **SIM** se a review conta como apoio para o bullet, NO MESMO SENTIDO. Apoio implícito conta, desde que sem ambiguidade. Review em outra língua conta.\n- **NÃO** se a review fala do mesmo assunto com o juízo oposto (ex.: o bullet critica as atuações e a review as elogia).\n- **NÃO** se a review atribui a opinião a outros e discorda dela (ex.: \"dizem que é lento, mas não achei\").\n- **NÃO** se a review é ambivalente demais para servir de prova.\n- **Bullet composto:** SIM se a review apoia o NÚCLEO do bullet, que é o título; NÃO se ela apoia só uma parte lateral (um detalhe da descrição, ou uma das ideias secundárias do título).\n- **Na dúvida, NÃO.**\n- Não julgue se o bullet é verdadeiro sobre o filme: julgue só se ESTA review o sustenta. Ignore quantas pessoas a descrição diz que concordam.\n\nA IDEIA PRINCIPAL: se o título tem uma ideia só, é ela. Se tem duas ideias (ex.: \"Fotografia deslumbrante e trilha marcante\"), é a PRIMEIRA — aqui, a fotografia. A review não precisa falar da segunda.\n\nA review não precisa usar as palavras do título nem nomear o aspecto: apoio implícito conta, desde que inequívoco. Exemplos, de outros filmes:\n- título \"Atuação de Cate Blanchett\"; review \"Cate Blanchett é uma força da natureza, não consegui tirar os olhos dela\" → apoia: elogiar a protagonista é elogiar a atuação.\n- título \"Romance ocupa espaço demais\"; review \"metade do filme é a vida amorosa do piloto, eu queria ver as corridas\" → apoia: reclamar do excesso de vida pessoal sustenta o foco excessivo no relacionamento, mesmo sem nomear o par.\n- título \"Fotografia deslumbrante e trilha marcante\"; review \"cada plano parece uma pintura\" → apoia; review que só elogia a trilha → não apoia.\n\nOs campos:\n- \"apoia_ideia_principal\": true se a review sustenta a ideia principal do título, no mesmo sentido.\n- \"evidencia_clara\": true SÓ se você AFIRMA que a prova é clara — o trecho, lido na review, sustenta a ideia principal sem precisar de suposição. Se a review é ambígua, morna, dividida, se fala do assunto sem tomar o mesmo lado, ou se você hesitou (\"talvez\", \"possivelmente\", \"ambíguo\"), é false. Sem evidência clara afirmada, a resposta não conta como apoio.\n- \"trecho\": copie da review a FRASE INTEIRA onde está a prova — a frase completa, do começo ao fim, não um fragmento nem palavras soltas —, LITERALMENTE, caractere por caractere, na língua original da review — sem traduzir, sem resumir, sem corrigir, sem juntar partes distantes. **Não omita nem altere NADA**: nenhuma palavra, nem interjeição, palavrão, gíria ou erro de digitação; não use reticências para pular partes. O trecho vai ser procurado no texto da review; se não for encontrado, ou se tiver menos de 4 palavras, a resposta não conta como apoio. Se a review não sustenta a ideia principal, \"trecho\" é null e os dois campos são false.\n\nResponda APENAS com um objeto JSON: {\"trecho\": \"<trecho literal>\" ou null, \"apoia_ideia_principal\": true ou false, \"evidencia_clara\": true ou false}.",
+  "user_template": "Review (nota {nivel} de 5 estrelas):\n\n{texto}\n\nTítulo do bullet: {tema}\n\nEsta review sustenta a ideia principal do título?",
+  "regra_sha256": "026b357315b7bb897a76630322006e6fd9b60df96aad6dfe6b0542ccd435c7a6",
+  "contexto_estimado": {
+    "maior_id_par": "local|the-substance|positivas|0|viewing:1439489161",
+    "maior_chars_review": 4990,
+    "maior_chars_prompt": 8424,
+    "cota_tokens_prompt": 2949,
+    "num_predict": 1024,
+    "precisa": 3973,
+    "menor_multiplo_512": 4096,
+    "num_ctx": 4096,
+    "cabe": true
+  }
+}

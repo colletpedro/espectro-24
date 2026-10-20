@@ -125,7 +125,7 @@ juiz complacente, eles são um TETO: os 2 bullets sem apoio nenhum (os dois do
 lado local, ambos nas negativas de Anatomia, os mesmos apontados na leitura
 humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
 
-## Juiz v2 (2026-10-19) — v2.0 calibrada; v2.1 preparada, calibração falta rodar no Windows
+## Juiz v2 (2026-10-19) — v2.0 e v2.1 calibradas; v2.2 (último ajuste) preparada, calibração falta rodar no Windows
 
 Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e` + `c9bb711`). O v1 e a saída
 dele ficam como estão (verificáveis pelo hash do prompt).
@@ -179,7 +179,8 @@ versão congelada); (f) validação só na amostra nova.
 | versão | config_sha256 | calibração (40 pares antigos) |
 |---|---|---|
 | v2.0 | `a42f4893…` | P 0,85 [0,64–0,95] · R 0,68 [0,48–0,83] · dif. lados 0,131 — reprovaria no recall (`juiz_v2/calibracao_v2.0.md`) |
-| v2.1 | `75b5533f…` | falta rodar no Windows |
+| v2.1 | `75b5533f…` | P 0,909 [0,72–0,98] · R 0,80 [0,61–0,91] · dif. lados 0,167 — reprovaria na diferença entre os lados (`juiz_v2/calibracao_v2.1.md`) |
+| v2.2 | `44606cf1…` | falta rodar no Windows |
 
 ### v2.0 — resultado da calibração
 
@@ -230,3 +231,56 @@ v2.1 sai ao lado do v1 e da v2.0.
 
 Depois da v2.1 sobra **um** ajuste (v2.2). Se a v2.1 ficar boa o bastante,
 congelar em vez de gastá-lo.
+
+### v2.1 — resultado da calibração
+
+20 VP, 2 FP, 5 FN, 13 VN. Por lado: publicado P 0,833 / **R 0,714**; local
+P 1,0 / R 0,909. Corrigiu da v2.0: P01, P08, P33 (FN) e P04, P15 (FP). Erro
+novo: P09 (FP, publicado, duvidoso). Sobraram: P09, P34 (FP, publicado,
+ambos duvidosos), P11, P17, P29, P40 (FN, publicado) e P28 (FN, local).
+O código não derrubou nenhum "sim"; `ambiguo` foi false nos 40, inclusive em
+P17 e P28, cujo raciocínio diz "it's ambiguous". Em P11, P28 e P40 o
+raciocínio contraria o prompt (exige as duas ideias do título, ou a menção
+explícita a Josefina).
+
+### v2.2 — o 2º e último ajuste (2026-10-19): estrutural
+
+**Configuração v2.2:** `config_sha256` =
+`44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669`
+(`juiz_v2/config_v2.2.json`; código em `main`, `f95d7fa`). Hash da versão em
+calibração, **não** o da versão congelada.
+
+**Por quê.** A v2.1 erra quase só no lado PUBLICADO (recall 0,714 × 0,909 no
+local). Um juiz que nega apoio a bullets bons do publicado favorece o modelo
+local — o defeito que mais importa numa régua para avaliar o fine-tuning. Os
+erros vêm do modelo não obedecer a instruções em texto; por isso as mudanças
+são estruturais, não mais prosa:
+
+1. **O juiz vê só o TÍTULO do bullet**, sem a descrição (a v2.1 seguiu
+   cobrando a descrição, P29). O `CRITERIO_DONO` segue no prompt, inteiro.
+2. **O campo de decisão é `"apoia_ideia_principal"`**: a review sustenta a
+   ideia principal do título — em título com duas ideias, a primeira? Sai o
+   `"apoia"` genérico.
+3. **Polaridade invertida:** sai `"ambiguo"`, entra `"evidencia_clara"`, que
+   precisa ser AFIRMADA verdadeira. Apoio = `apoia_ideia_principal` E
+   `evidencia_clara` E trecho válido (≥ 4 palavras, encontrado com a
+   normalização da v2.1).
+
+O resto é o da v2.1: modelo, frase inteira, normalização, exemplos de filmes
+fora dos 40 pares, contexto medido antes (maior par: 8.424 caracteres, cota
+2.949 + 1024 = 3.973 → `num_ctx` 4096).
+
+### Regra de escolha entre v2.1 e v2.2 — PRÉ-REGISTRADA (2026-10-19, antes de a v2.2 rodar)
+
+- Se a v2.2 passar nos **três** critérios na calibração (precisão ≥ 0,8,
+  recall ≥ 0,8, diferença de precisão entre os lados ≤ 0,15) → **congela a
+  v2.2**.
+- Senão → congela a versão (v2.1 ou v2.2) com o **maior "recall no pior
+  lado"** (o menor dos dois recalls por lado) — o critério que mede justamente
+  o defeito atual. Referência da v2.1: **0,714** (publicado).
+- **Empate → v2.1.**
+
+A versão congelada é a que vai para os 40 pares novos e para os 900. Os 40
+pares novos não são tocados por nenhuma das duas versões antes da escolha.
+A regra está no código (`escolha_pre_registrada`, com teste) e o relatório
+da v2.2 diz qual versão ela escolhe. Não há ajuste depois da v2.2.
