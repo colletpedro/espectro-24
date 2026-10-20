@@ -1,0 +1,2078 @@
+{
+ "gerado_por": "scripts/finetune/reconstruir_sintese.py",
+ "fonte_primaria": {
+  "raizes": [
+   "/Users/pedrocollet/Downloads/espectro-24",
+   "/Users/pedrocollet/Downloads/espectro-24-finetune"
+  ],
+  "arquivos_varridos": 1960,
+  "achados": []
+ },
+ "remontagem_atual": {
+  "n_filmes": 98,
+  "n_buckets": 294,
+  "selecao_n_e_composicao_iguais": 294,
+  "eixos_reconciliados": 97,
+  "celulas_eixos_conferidas": 2910,
+  "erros_eixos": {
+   "spider-man-across-the-spider-verse": "ValueError: spider-man-across-the-spider-verse/positivas/impacto_emocional: contei 16/40, o bloco eixos diz 17/40"
+  }
+ },
+ "remontagem_por_epoca": {
+  "por_commit": {
+   "1253eb73d": {
+    "n_filmes": 19,
+    "n_buckets": 57,
+    "buckets_byte_a_byte": 57,
+    "bruto_igual_ao_de_HEAD": 19
+   },
+   "31c463528": {
+    "n_filmes": 31,
+    "n_buckets": 93,
+    "buckets_byte_a_byte": 93,
+    "bruto_igual_ao_de_HEAD": 31
+   },
+   "594786f55": {
+    "n_filmes": 1,
+    "n_buckets": 3,
+    "buckets_byte_a_byte": 3,
+    "bruto_igual_ao_de_HEAD": 1
+   },
+   "7d2fa09eb": {
+    "n_filmes": 44,
+    "n_buckets": 132,
+    "buckets_byte_a_byte": 132,
+    "bruto_igual_ao_de_HEAD": 44
+   },
+   "d0dee5159": {
+    "n_filmes": 3,
+    "n_buckets": 9,
+    "buckets_byte_a_byte": 9,
+    "bruto_igual_ao_de_HEAD": 3
+   }
+  },
+  "divergencias": []
+ },
+ "pos_processamento": {
+  "contagens": {
+   "buckets": 293,
+   "temas": 1757,
+   "temas_aspas_removidas": 3
+  },
+  "exemplos": {
+   "aspas_removidas": [
+    [
+     "eighth-grade",
+     "negativas",
+     1
+    ],
+    [
+     "eighth-grade",
+     "negativas",
+     5
+    ],
+    [
+     "wicked-2024",
+     "positivas",
+     1
+    ]
+   ],
+   "mencoes_clampadas": []
+  },
+  "validadores": {
+   "n_buckets": 293,
+   "passa_publicado": 293,
+   "passa_crua_estimada": 291,
+   "falhas_por_regra": {
+    "aspas_bruto": [
+     "eighth-grade/negativas",
+     "wicked-2024/positivas"
+    ]
+   }
+  }
+ },
+ "lado_a_lado": [
+  {
+   "tipo": "aspas",
+   "slug": "eighth-grade",
+   "bucket": "negativas",
+   "tema": "Diálogos artificiais e repetitivos",
+   "cru": "o mesmo texto COM aspas de citação (posições não gravadas)",
+   "publicado": "As falas da personagem são marcadas por gaguejos e muletas linguísticas como tipo e gucci, o que soa forçado e cansativo."
+  },
+  {
+   "tipo": "aspas",
+   "slug": "eighth-grade",
+   "bucket": "negativas",
+   "tema": "Comparações desfavoráveis com outros filmes",
+   "cru": "o mesmo texto COM aspas de citação (posições não gravadas)",
+   "publicado": "O longa é comparado negativamente a outras obras do gênero, como Lady Bird e The Edge of Seventeen, que são consideradas superiores."
+  }
+ ],
+ "par_exemplo": [
+  "finetune/par_exemplo/whiplash-2014__negativas.json",
+  "finetune/par_exemplo/whiplash-2014__negativas.md"
+ ],
+ "hashes": {
+  "12-angry-men": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "6ed30b2542796f8a97330d2f595a4b5c50a554e929f2fb4dea4f2529d9756a3f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "a936823aa0b05acfbdef23f48de3d7802915eb5640d09cb23d49d470c1cf595a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "5d22f7f74c855cb9d4aeaa5bb971b39217436e7cda38bc12758df30c3b1df0bf",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "2001-a-space-odyssey": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "8d6d2a2aa615c780108d91ef34ce50ba4724bef69372b75ed03591af69244ad2",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "33a850c0940a658e639c5619971d5b154dacfbb72616edc70525c0b7d73bc3ed",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e6634598bee7e70ef9eb9c553147b333b7efdff9d3dbdde0cfc731e8c79ace01",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "500-days-of-summer": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "2db7db639ae207efb0375fc39f7d00079179262b2cc38c2fa8914369e55ffe8c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "f0e292fbc42058555c0af5e7047f1c9e2dc475ed0edd0b0e90b935e2602c3484",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "3e3936b2f6b2653811aa8f07aaf849ba0dc92919d506b7aaf6a438757a3b4eca",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "a-brighter-summer-day": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "f0886ceadfafc0dc4cf98f873cbd5538b293c51c51669c1a15a1d601ca82c98b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "ab40dbc3ba5c78a7d441266b98f122c7a176316ab97072619d35c13caad772be",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e82884326861e746a421d261e345d694ae72456fd964d7528a78a7b09a99ed4d",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "aftersun": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e55a6dc7d2970cb0fa34d24989b0640c87475609864b732bdb4359f73f677cea",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "fce8f5cb5af415af1173c7f5fc96800fd7bde7bce109172acf69df4ccc84c085",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "4c60c3879ef164aff53a506015e2ea64091162e9bd178d4f32ac3a448a8887e8",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "all-quiet-on-the-western-front-2022": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "67c27aa9e3f817d7945433eb1c75d0912b9711f1daa2d067051700711e2952ac",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "308e5e159c7a91939f922eeb7a6f414170d5df7b5ebccf4f2bf6095bd56ad74c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "4abd902bfe54053a7404943057399d00fdb1405f91e745262c6084b33ae5b012",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "anatomy-of-a-fall": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "ea7b705a11ca50e5738edb9bd36b29b628148f893ed9316dc69f5d88ec8b8d8d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "9aef6e93e7a5e63f0e9fbd3aba0d5e5e2095719d957c58275fe3856264d5d19c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "54a60f7400e7eef84d032d8a622201b2acb7989726d0652498178b6a6a75c4fc",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "anatomy-of-a-murder": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "515d60765787ebfe192ae03d4727de2169d8b79bd4517f64afcc048bb9f986b1",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "78ef17831f685d7bb40570f7100ec51d132da796cf816d77e367324e0010fb17",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "4b17de35dd2f22cc504ad88199768ac2e879289b8543d3fa1081ae76acf75595",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "arrival-2016": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "689dd02af878ecca310e69c16a1f48a90c68682e48f73ec25abdb68fe2a8bfa6",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "f6629d6be8aedd5ddb9b3b87c2fba8cbac23140cba42d47b45d2c87d870ecac9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "05e711fc841222604e27f12a6338f7f2c95d614701c8c5ab9098931539212e69",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "avengers-endgame": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "fc19b462e32349e80286590064f166b599e7b0b3af459f759bc06dfad6767881",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8c2d272df3b3d767bf496501341d5ef81ec84ac992fd5db9ed7a22a56296fb36",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "d630b4f506744bcd31d7770d8ad6d34d67fcdc0e862ec02f167d98d26f756854",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "barbie": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e539e7fa106f9268253e76f3c394028c46cd1f4bb2cac81a22bfd7fbd426c8d3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8f75235cf5b77f4b5a90455062c061bf8402c63a215c6eea6c5c1de3e75e7354",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9b6530df0b3d73bc2cc335e3cd7e981ff0d3f4a5f75d8734f9b95691925f073d",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "bones-and-all": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "aad4b43c394149f4d4f94fd8388f013c204b395e9b031e25114fdca695651b06",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "ef6dabcb441d92da793e442fe07516ee2bbf0917cee043ef77344660e1d9ad25",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "1fe74b09eec0543f36e7003cd519fdfd8dbe193b9f288c88a78076d6dba388ee",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "burning-2018": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "222a2a6b2b6bcafbfb176329b458a0c282ff6e92ca452b720eba226236b39d95",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6d5dbb5c89df6bf0bc988138b9148d67821fae541db7e096bec0a83602f4a5b7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "c0a865d65ad0e4d251750b00823453319aea29974f17e6fd4b37b5d6396a1712",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "cars": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "89a60e7d09f73ada931735703fd2ba43de8b80d7b511fb592762a0789ee41bbd",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6a5f3b3af5dff11a7ced010962e2d8a5950961ce87767f1bea8ce4d8d8db1a1d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "944901ca4a71723a03704c651961f72927c51d2da1a9db7429856172805c07d1",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "catch-me-if-you-can-2002": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e77ac333d91ab66efc26ce82dd1852e418f0a4d8f72f0e897c8117e71dc0e704",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "237cc13f2a4bbaa497f22923513ea1b26e00a82502abe8c6c72962ba35622e70",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "a082810feddde5d0377dab1454be495717cef5115275d0754860fcbbfbd2a936",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "cats-2019": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "933cf46abb3aab4221b3199ff4c9e18fdb064d4ecc2b851e3ab81e0c4ffd6d70",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "10428798d0e45286093c416f46906fbc1867e034585261a4b917ef3e78ca5ea4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "d2ef2a00b8406d476420bfd131b990883720674d8e6aaa9b75497db988ffd756",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "chinatown": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "4706d70e31945a7b9a4fc043672b90f3148eaaeac5958147bfe4d5b69bb26539",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "2420260ae63921968de400329341d8f01e3ae31d2449026d224d3d979cb43449",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9ad4c67d4052593dcad9ce5dcb4f085de12ec8086091d0601be62ef184ed4574",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "cidade-de-deus": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "55ccd0a0c6f9f979a8e4c7fec09a1a9c34d5c292c57e7923f5c4103e5a727543",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "52fbe70e0e391f9d369fb325736f6d69921778c555afaaf9abfde713112184f9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9e355de66a0df6aba91c8f499a6e9922c0f88c574d3d9dad510e550e9bc3f5e3",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "cujo": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "8075ac0934a7c87a11fe9dced2d70dfedf40368a70c2efe047f510780ffb7337",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "a85ea0487694d2cf3d296e3d1797faee86cd08d7777c2585496039fe26982fcc",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "da6f17c7111501b609814d3d41e24563ab81446667887086ff8f12e50bb606af",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "cure": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "72af71480b8b2e12bdc823a7d873b3c5f31547dbc8d0b27f377475fdf62fde2b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6c2c0273d1e54c1ab3788550b02cc3840b9a549eee1803cef1c3634aa7dde66c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e147f514a03ecbf4c078a0b285235289cccd8948ddce8f61aec420718651c835",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "district-9": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "62c3221bd28fb2e3448a5a543c7ad29f180c5a4184138b0884a7a6bb80efbb18",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "39b09df64946faab37cd22ab4143973f044a39b87fd4815e91dc73507d539ec8",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "a45b21a768639bb2e7063eabe08e47617187c761c067e6dc3e72b5ed1be096f8",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "django-unchained": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "74b361be6f86afb0506c84efff06cf379919e9c3196d81eeebf79139c1295dcc",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "b567cef1c81317c9dd4caf1f9d31bf43aef24ab4c7aae27602fcecddd5e03f38",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "c5d0693ec600870cab4ae80891e203518d5e277250fa1574eae25763038f4e93",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "do-the-right-thing": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "941fbb28fdb61ae092d85a1f9a3d30788079fd9c0b23c62cc5e68fca1460e7ad",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "7cc345df70cce94161d8c4d3e1c3e617d150c3f3c64e5d169c3c4da1ba1eb0e1",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "761cf495534c933ea898de3b9e334bb756fe12373e57547f51660d1443df35c7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "19c3e7e7719186f91226eb8faced4cf8f472f82b1a2c439c919707d7ab2f0faf",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "7d0a5cdb95a1dc7702796ed24e308ff8ff39265cc33a4381ed0ef4afb607a174",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "drive-my-car": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "05d67ba21d1294ab4eee0477487b43517e5526082d00684ae3b654e9be97ad2c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "aec97e0d79360bf958448e75f8c9797b855b6eefb9bb349cbfd1f65582c676b4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9156ce12c61c229d37bc74d187a7a31dc317dfc1fb802a89fa0d1273840cde67",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "dune-2021": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "9d435a769f593af6611d9b47008c41853f7ea7eb1b366556dcb2521d39b9cb1b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "01c4de46e156b7235ba3cee7f32dab5695ba61daf5da80e22f6dd6c36df46d71",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "372d69e7fcf2e77f530f2ba697c26d3301751fdaddf698562b96b6a907edaae2",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "dune-part-two": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "d80b7e1afa4019df1cb53d30e863414cc7440953aefb7e6a64d9248f28e9927d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "43de9432d999e2f8e0cb1bc8e80d69658b9eef8e3ef52505379a4a5e052a106a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e7488a9c139806051705efa714843736ca30e63ea46bf1ef398b3d34b14722bf",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "eighth-grade": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "427d806cc9bf5ed30f0ba4ef7d114e6078476e3db29eed2294f0420d26216f1d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "874a854b11f6cb6a4cccc994e9b7e2ac37059fde0987218d4d749f2911554e53",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "45ba774c718311ab60409009a58e8d21453e414e10644cf35d45d3e35aaba530",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "everything-everywhere-all-at-once": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "5724980dada40300a807229dc226e38c132d82ae9931d6b85f88ece4bb760844",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6dcfda4a34306381c64dbca4db52682369351fd2013885913b67e959afaf5788",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "4ae72374b2083b79607f5f4c9aff137653277be0ffe833732bae057ce3c58e97",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "fight-club": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "b050fb2ace2c64535a8b2f4cb249f3d47f5648034cc0ff908bae39daf3e248cf",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "64257808009f87891cc4dcad4325813e622be221831390893fd6773a4c95c9c9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "cf8cf9a84f161d6642d6cd21233e04d47c3d082e9ce4ead7eb339f855a8ee755",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "force-majeure-2014": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "6cb8930b3bdce02ffbff3daf20889202be95a4e733d76047cf416501951e8538",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "eb1711e0366b132ec292fc8797231cad5309eafc58917e7a040c398bf370a1b4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "1b59c440f77073526517e4e3f4443406ba41c9a02fa151913498dc4919b4be27",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "friday-the-13th-2009": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "83c72d4abd57f08cb5079f28a4253d2e27219a7c03b6f766c4798df77920eee7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "d8ac153f697010bb2c94abcd49e4e05d879ca54f006d1f0f69e63f826e13251d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "5fd993fe2f5da23913f1d19ee7cdbb7d4d556a7829f0385f834ad4698b4e3f8e",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "get-out-2017": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "93711478e0947887391a34e0abfeb36a3d99efa325170b21811c614df6f9eea7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "27de6c01fe00b84355d7a4d83deed75f39117249d535502deefdd2272b2254e5",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "dbc31a3c99903e509ca951b099f9f778f7eb723219dd49474ae0fadb837b7363",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "gladiator-2000": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "5101373ee2c116f21b87c73f45e23fd8b41ebf4890e7129548053bec4a5e9d39",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "abde002176f9686db0c71a8b3b27d88861ea2adc367f6d09ab3f19a41445261f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e1998a3ccc680fcfb23aee5c03cf12ae91a24e2561c61747b1f6243eaf996eca",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "goodfellas": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "7a0f9f4cc67f365c4a066703a8448e0c8dd6595c708727da49316ac106292e4c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "21b7d2c5de303b9acd652e10697b1731c485d4305db4278640ab733e1c64180a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "84a2b793760ef76919fc1ebdcf9d7a38fb0348d0ddb4a8be84834f5b270588f3",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "guillermo-del-toros-pinocchio": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "ee9605ff422266d9eeefc2289aef61d608c0c2467b8d816a452897f0315aad70",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6642659a9b17bf484b372d8a60a131ff38ddc237ea6106bbae16cca3369ec23c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "736c1556025797add12a5dd2ff9274c486c4bb08226376e9d5f4d51afc240c87",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "happy-hour-2015-1": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "9ec71aabcfb6db565e500a36c7c54b01b8ab2968e24dd33c1f2237515f62646f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "3c15f8f59e8a287c8a8614986d31dbbb94ddeb66d19e26ae97f21db9eaf993d3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "551c33a831a300e68d2ac6a590934b0314aa076a8bf7c9ec09cd7e9537cff4d0",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "hard-to-be-a-god": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e90014f631fe520bcad15ea4ccd78b12d2c6d5f9bdd3b56d6da0f668a0e5443d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "1d52f463560536d12514d8d2da113d08bbb0be73ce248ec2624633d3f82d5b22",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "b2fc24bb41bb23808d02d68fe43da5410ca19d4021b928f9977b7cf4019f9174",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "hereditary": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "b024a742500db249421afe72981a67708b04f0388538f3d547fdd239d22e0024",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "157f0a2b02135dcfb37c8ea29fdf52f5c27f51ffe893e2d3b55605416b20ba43",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "13500d48edcda3d37c3e4267666efd6b0125f452dd26254877580b67046ba83c",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "im-still-here-2024": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "a000a55c9c6b746ed9693fd53f437d6bf8ba86f43d5312b0d6a4442987aeeba5",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6c84f166ac905bf1fa7d4f9afa7ee5ae714ffc8780bfda430d2fc07baef32891",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "25a1caf70595d6dc8030d0726ae7a68c9fca69142984d552f65fad3264f3af02",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "incendies": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e79c150caf3a13b98921d8cfde6fa7700dca63c9e3f4dcb457f5aaa13b6c64ac",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8467cbf82195f3bc46f16b6c6b73a90aaad88508cf71de04c82b201957ff607c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "67703d416c364499bf54c0674ec97bc72d5bf1cb064eea5fca6a6915f0fe2d25",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "inception": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "15ab28ba3878f077ae6278a4cd40649c963452b2722a44c72d7c7cae986d277e",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "7f08837f45c6bab5ab49b205d72b1bc5d6e024fb79907ece77b5a3b8511535ef",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "b48a41b6cc1fde00e4a41a18b55e430524d4c9144e213b04e9ae8ef4ca61070d",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "inglourious-basterds": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "60b16cc0faa8e0d00636c651c2d5232b0a29aec7afd916597ef230e4eab8e0bf",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "9d09938d889f039d3b6628a0057b582fecfbae2acfbf441612f150aa95457669",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "064ee3b45a993cf62313c452d7cd7174f3730d946a91348d1d773615aa5bcd2f",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "interstellar": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "0103b4ac55870ffba6f3875e09039a87462f26bbbb0f45eec285077f2a0b231b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "ee89d8cc74b8868df2b9d6e3e90743b74ab9ce9948154b4cc158e4fe6ecd458d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "347705132e293c88c46e9a911254b96a85d19b5913d6fc0c6360ff279605d929",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "joker-2019": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "f923cf9ef86ba3aae3032b48c740fc4c9f68ac3a16451c7786697f53b28ef97b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "a08cc4d73ec998d610aabc4b618de25c29c9a23f36a8b4fd4e02b57b3e994fd4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "fb28d5aec64fa172164e56a535d4a8885d0902dd2af319651549a30c5e3ffad0",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "joker-folie-a-deux": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "295fff3ef843f8bce254462e0295a36ec0dc229a42a325ba9e722142d45901e3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "4358a774eb736985319ce10cf81c7a7f3eaba721fbd442c4e97c9a7f87e52bc0",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "c7812119263b35bc22a81227eb2f3a0853eff6550515a0d1609832f35cc3a893",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "la-haine": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "0aec83d40f91ee578a6cc909241fc8ed3101c2ac8d11c1458cbf7bc6cea570d1",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "230d5d04447e3bdce5aab0f803ff5bcc71e857f4a712e9e77b3aca4ee4c1047b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "ef161700d454676a4670f2ce064d25a76e4d9e1a3f310f6173aa02f058054ce1",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "longlegs": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "8c1a35e9b45c294af8498be5c871fa09ca7ff7b524d5b3c42d12423d25ecbc43",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "57220f80af29e43204a2bfee68d8941ab74d3e85e95866bac57cacbb04d7c58e",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "ed568ae91d7c1b3a44ecca4b6e31dc7e5c52e73f62caf11262f4333738f1d5c9",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "mad-max-fury-road": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "31e57462f73b2c6afd66417db3bdbb02983d77dea8800f05dbd7b55b6454b58a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "f8f988f3f357d52dfb5f1b93cb8c342fe30da4f6a2aefa565bdc1ef175714aba",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "d595a204296e5e9327e280beeafdff8502815b0a3d96c8fbd8c1433a58308ef5",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "malcolm-x-1992": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "14e0f959fadd8b1569da1ecbb2fa40ff513e0cd9ad2afe011393c484e897cdbe",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "2546b268cc9c12f34003cf45498f90c5643629218bc3fb63473f77855e12ff36",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "afe825cce27fb3f1076ac86df6fcdea1276ebb4e1e4042ac66ddddf5bc920aa7",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "marty-supreme": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "872a1ba87a1b1251249c1b52fa025751137f9c7c5108576ad4452fc0891bb5bf",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "7a2e7bcc53105691ef3b986d2bbb283e62fe6879e3dc6826fa6d1084ac9ddaf3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "d2103f42579672c510bdc90018f1dda5a44de4280718fed842e7a4582404013e",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "memento": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "c808884fc6a7191023bd72faef703ed5d9cfd2fb08ed180e0579190a238f9b8b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "3c69ca4ff95371a41d219dacee1012f4eec349b30e429147d54413a0aca91589",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "b0f683b6d1d8c26a7164294cfd940c82d88dda50c76f89dbd4d7d57cbefbcfcc",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "memories-of-murder": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e9a5b5b87225fb1c77165f8a1b9936539f3941fa222bf89146d09bdd17135302",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "44d2e9fb4001545a3acd0a3368cd0cc6338d8b14a45a2594c1cccd96ef7e9529",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "8701f51eaddf177681a79083576b140a8b333891a377f6bffdcf03f9c985963a",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "mother-2017": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "491c2313e16608186befb8a6720d49d04a6b2998712c3695cf17b93676e434af",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8dbcbfe886740e44e8ac81cfedbdcea27828a566896ce9fa451d7a62f3e8700b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "960ea2725d67cf09675dab5adf776fd2af3a916855e814531b932fc9897b5c0e",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "napoleon-2023": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "2d33f6b2ffc79cd090e725964a757bef7f97ba7e4d742d725c4e05938741d827",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "d941630bebabeeb203750b6d782d2eb3eaa5352249945750c80bb8e829656fd3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "3d0a99c7d5697927f996ab15e8b909c3f4f40e3cbd7a560d00990fd83715e3f4",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "neighboring-sounds": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "4f86b890abf0b39e8de3376a7edad9b2afa868cd460770a03d3371839f3df000",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "ba3fcee54f11f77bd7fcc9e16ff9abdbbb92162bcec1ff96291256a71a5402f3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "33210f21fe2d57a573176d65035dd54060a09d989065311d639f2aeec71be1bb",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "oppenheimer-2023": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "39c905beb37bd8ab3698daec2e4d3fe3ac81badb0131fa394c199ffefd07bb0b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "5d4b200407c13ae228c4743cc13472d90c062e7c44269cb4ffc7df0f74aceb3a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "ad3650d61906809a2b6e58603b7c7acb009ed8b6b505dde5905cac3e6d203b00",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "parasite-2019": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "f9ae49095307a9dab1ab401bde9b4318463221f596eb469a3518651d33d76616",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "11fc39e8e613edecb001e6ca30dc16239db38cfb292b9a30e8c075c65bf2acd5",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e70e62b9b9c52fe4d3a1b795c59920ff97c01efe1188e9884c2bff9173759074",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "pearl-2022": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "27a1c98c900f535e4583b08a8c426ab0d073325f081f5fc54c98ec04d280bbf8",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "e2e3e0f632e4a9e20f9b9a227010a29736b3741434707d821d63dbe378d5aeb8",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "8a5cb36a76cd269e4a15c600b24dfa19bd10cca434b89a82a1be47799d5734e8",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "perfect-days-2023": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "1a507e8297918c38e8ad9513e2f6be359db2783f3b001ab647ba42fe894cfe0a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "fd3f901379f9ee96928e4f72bd79a06443535a5a4ec6511881a50edb72923343",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "8dd4d9581f10e1b479500005b2b6df1ca505bd261d55c1193e17181cd59af08a",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "pinocchio-2022": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "e6d0bbb61f91e5034a37762ac0571171dcb862163b5699f80c33c6bcb44c82c0",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6320826c32d36b469643868d9e9598e7e40ce77515958beb452a638ad7b971f4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "0a6dbdb91e97be5d65b60a4986735984c49f91cfbd9d6cbd4528c6528cc752c4",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "porco-rosso": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "6d27a392bd365988237d6d840969ba057137f680705bb9571c7626659b555856",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "6aeec009daa4b64b463d98ed64a7920e3d8a37050b84697fe9928ab193d18cea",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "411ec0cc5b3bfde098895e3a8990f12680598896cf9d689dacd0fa4f1b5a956b",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "portrait-of-a-lady-on-fire": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "0a33851e6d03add1c94023f26c49cda84deee82a6ec76fd9abbe404872249029",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "7980188a53f5b2eb4f1d4f9f7a90f58a8bcb302f9cd558e70603e9702366f050",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "16055b8c14f4f2f5eccf1c3e0b0d65c616b26211bd1948b376771318bb89e052",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "princess-mononoke": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "3bb2ddbd9813efd253aabf4259fc500bc0c26149754993173719439de6d0dd7b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "dc80998f81c72d8971a718e9d0fcfa93ab5549eeb879a5520638ce30a759bbbd",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "f7896c7fcfef274d967e39e4adba08ef2f68ab97fd6b5e222545a20c0ea53894",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "prisoners": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "46c60c65abad1178d226a06d0def75d6d56987e7c0f91b02987306495b4593b3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "a61a9347243f335571dc1b9e0cb749386422248d47c06abe08a705f7de0946e2",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e78a250a3787c102620c6f91ccc6c203c09cc6b17c8bebebba57858f0e25e2b2",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "satantango": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "a8ed8f1ee6378a3ae2fa4e5927557dbf2df87bdf8ce8cdd767fef644bfd3caef",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "74b2f9a13fd6c61c594ce3d729d59341431fc4649feadc2328d4a566d2b5e963",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "03edd917276089559966b40c75f277c5f12af4f3f510e0880c274d0c0f400f5c",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "se7en": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "9ad73d56512e881036f2065337596ceef73d7d939e093fa51fd815d2a130d121",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "e4af42aba2e466a37487356b224390ab6e5b671f85b5030cf00e2c456cc3761a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "746d39e57d27a93c75b27cb886462283831caccbf04edaea57d2765f06505d55",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "shutter-island": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "b270938235ef4874076220c54e34ab2c9ac05a1a6352df28cecd54a94706dc18",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "53c6fd888cb911b58aa453df2ee215effec1b725906371cf14715dabc482eee6",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "fb46651cd664d8b04d2da9d5fd14398c0b2b747393515a4bdd1e6a0add940b4a",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "sinners-2025": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "3a0e18e531a50f6a21afbb1ece7fc5ee7e1a6a0d11d9faf85c62c0b0f9c58138",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "2a938baf046d271ee032629b626aeda957f22e9e525528aa826404dfc6c1db62",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "68f5207faa59c85a61328ea08873ff213c5d5098f90c3dc151a600b478e04360",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "soul-2020": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "8838d4c747d58b5898d1d67ddb4f2249104553a7acb02ffb595b3f066eab0466",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "9f3a56b1a79b97bbb1f6aba5202ebdfe0d4233a550108e7bb88d3e1f5df9c3d0",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "57b99e0a3c7ab7bf696c6ed61c588d945aeeda8eb9442b5c303a1fc6ed1121ec",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "speak-no-evil-2022": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "0bc5b5dda77cae67740156f659701794cb7ddec089160638af5097f3d5ded4e3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "38b9eb64b3fbc8395c6ebdc431500af858bf1bf6ae38ad8b204b38a7d0196bb2",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "fde9735c178b77c85a4da387da4031523b52a525d569204008a38708b3e77578",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "spider-man-across-the-spider-verse": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "fdfe98c1df6e9cf4e9931eee8dd3a8cf1c048423f0afe672176192aff617c557",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "b622ebccc106562dd9bccec9e4f64a70006533d465504269942075da861ee542",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "21dad596ba4f18f7ec71765528e364dad007ed59cfb7f5d6acac0fdfa44b5ef0",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "talk-to-me-2022": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "eef1b77c14a02ef96175c952f5cb097d80f99b8884a7339fc86f31804c07cada",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "483ab0bb22ad78312bff0948d06f191ab661d00e1c2c70c0e4670ca21f8b54a5",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "8bc3da1e5f0937fcc670af0c82c74dcea18096b4d7f66d214047193cced00a90",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-battle-of-algiers": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "260c2243fb345fc5754c4c62c4e261b2abe9e5ecc2db53a3dbe25ffe60de363b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "e20226ea6ad6abf92a45db1c323903afa9052d238bf705ff65203a33cc93369c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e82d72bbca8e5cd3a9c2ba0efc48bfa991fbc28ce7783786467cb2f9efd5adca",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-brutalist": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "cd25bf521dbde34fa4709b2c307ae7b7eb75c0df3afe07e2ff0aadcd08a163b9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "2313a028d932d79cf7bccb68643a1bbdea9514ec90655833aee0b88e8f0dfebe",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "350baad296be755afc39e468647179818de0781f6f9f732fcd3ad5aa7ebf4b3b",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-cloud-capped-star": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "cdabb5939ae662264759657acaaee86bb0459332aafa9279a710646a0672ce1a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "b0c9d2626fe24e573ae0b5075dff33be316c7925896719e83dee48fd8629150f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "59cc3b823c43d274ad92a922aa46a3c2ac3007137fb8f580ebafe9bb5fb82cad",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-gentlemen": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "b1fe6579c2cb6f9fcd1f023b927f85789479707eba9d070c9e7532b5b6b620a3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "540bb12a4cad1959a6d446dc79f67db5e8192ff21ba49958039f75fcbf6477f6",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "29198d90dce34ccaa7da632d6ac4a5b1387081923ab3b30f7391960975189ba0",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-godfather": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "cc0c4700150048c4caf091b46e5a9ddfb0aee578f2179b54b706931675ded23f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8530c803a79b303929a050410e6d43a394c0bd9d73dad4670b951d3a280a94f4",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "bfe028b73648dccbb1f0797679bc0beab96eab16f5a9d6f63a0e51c7165e93ac",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-hateful-eight": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "94aa16f04e29f8c5863390c5582c81d78856b562293cdb633cb04f6ecd711025",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "ac5bf10349704e394ab0e2bae88bd0fd1dee79ca1a836e4d4c43985b778b8e5d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9c6c0e29e7d0840aaf7651349e086e447c904f88b98306d64b5edea079963c30",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-invite-2026": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "a5402afb4d0dc1e3dbb76d7ff46a03cc7b003061ac3e451e8cb6dcf1f0c6da5b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "02a712dd093f7451ab592ed20e3d2c28d9a5e9f1fc844f82aea7ef4e4085879a",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "31663d9b0a5538a747ff554060aca6dbe5a9245755d4a95d6f68fdd9ba39cf84",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-northman": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "534311d59078a283bc25b90534e9a579313f0d163ce5f2aa682692b1bbebee40",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "15c580531376f675c5525e5c6ca29167766c63d7302d2893b17770b4b784bfc9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "7e4f0dd3313608097ef85639fa99ea3b245cc47f28790f389b64f80b52396f1e",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-prestige": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "11e39403fe63c529254fbc5b9af6e3c42bc9f3e15505d271cd8ce90b2bbf958d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "031827daf29053d56e6e626e43395693f98c764048e2b8605feb8bc6a474ced6",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "7678ceb3b55f8967041ed193916f2468d3966343864b5aa796efa0539c58c616",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-revenant-2015": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "da61f7e53d6dda3cd875b7e0eb2f85e038d70797d00e8522c0ba58adddf46ef2",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "4176e77b136d64522ae6491b33710a414fa047867abe8618985b715234513c9c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "92525f7e3678386595fbf2b3192fb43cdee628183fc1b4224a4f7978920c04e5",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-second-mother": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "842584ef1dec37b3e8de37bc2537556f6ca6f54ca0b6ef74fa6a0612a46e459d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "17589a6e10eba50938f3050d2287104fea99c35cdbb99ffc8a48bbee916224cd",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "3f587aa9b589da31eb1094b33b9d377dd43d33873d0d9f25ee595ff15cf087c4",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-spongebob-movie-search-for-squarepants": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "34ef53eebdbe3b836edf5241564cc3b259f19efa3e9282a75dd2ec1663e65ff2",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "aa8387cfc7d7883ddc53904086fc7474f8685bc0ac73e56c7224821f47ebcbbc",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "a3abfd1ee22f20141461b64ac240645457ebb7d744b45a7f88e221a85e5d0a15",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-substance": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "818b1306003bbd704c6ba658fb2605ef91c39c0ca3441092c98ecd6695efc266",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "35524def8ec44efe2d826dbb0317d5f8d22288c3be03314203822e894d9a4e41",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "fa7f0bc7de4595c434793128ca2cd9c35fd21f8bbd0a2d0f2c6c078853797a17",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-swimming-pool": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "c3909803aff7d46976d0de40a870e7a32acb0ec83c7c3c1ef24ca359590de9f7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "e3b4ca10e163bcdd9704dcadbd91b5c2cd72735dde7d94a5fe2bfcf7b4833a20",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "5a2ac94c8ce2909e43ff855334e404e1ae6dcb20213c21372f7c65862db56f83",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-truman-show": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "ba13cbaa8a928f370f77302cac238568e133ee6ad67caf88072793e2289c1445",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "c3abc4e84fb23566f50989d3984a239d38d02431ff01a4208a696335a8a865a7",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "6936ed4f2dd838ebc02bde886b5c7c4e37204e8550d5a0d68142defe95348693",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-turin-horse": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "f5bd51d0c2a3a5ecfe79d85a12a282594984c14889fc93c4fa08723a54d1af5f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "3b26e20a80c956ac6e2ccbe31d0c530a96a5e70ea3d6bf557a8efbc7c7c1f7df",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "826ccea9049ae3cbf5b8c2d986c14cae5d49f24c61ffb58c8addfdae8a993b9f",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-wailing": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "3601db1444ae2cbeab7e215d5cc30ea233943d97a3c4664a71c7a9c941cca742",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "f28e41cb27636fb19d0d7c4f58a4d3de119ed3f5028872322b901813835a756f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e3cffc38e63b2a244dfa8e1c697cd8cfcd4de44ce18adf089010cbc6815eab0f",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "the-wolf-of-wall-street": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "c79304ecd5b7f4e615571240fc9f3cd0c9802ffe4a31050ea50b347147c38ef3",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "1affcac7118d7a8a85421c81dace0dc993592bae12b0d276573b55bd4ef6450c",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "f959aef502d91ce9c8ac124f342309b225a6daf64ebaadb1159b4c3ddef3ffcc",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "top-gun-maverick": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "7bf02ec1e1f0c508879d5ca5305d62e5be885dcc7bdfcb70a7663c47e635ef63",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "f06254de2208d84d820bdb42ca38cae2b458632b36edb9e6da55c54695b3f38d",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "e706b6e332998153d31d3af84b560a97adbf0fba1d7728f341ca513df2c81f3b",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "uncut-gems": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "c5af3e9bbeb853d796fd75dc64cdfaf98ee80372039c3a3f53754404bfa73591",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "b5155f0accd75fcc26c641b3e3e19f7188607f7f8daca5dcbfd1a9725b2fc052",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "aca2d454fc8d6170f5d3c66c19d7bc787891f0dabc1daaef8cf6043233bbb058",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "whiplash-2014": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "463acdc0d24d6f5df8075300b458f2c0e26d54539abdf045d326ee25a66cfd0b",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "2636bd6badd6726027d9055e093596cff9619cde127d7c842092eca922631138",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9277f47e4a4e9e16044eb6cc760fefdbe1cf39f83e5a200067373f82f47ad0af",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "wicked-2024": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "1d8481d31a94b29ce3274fc56d107cdd9cfc1423aa24ca44f39ae978acbb00e1",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "64028a042a3cecb550b5bd83a403f0ce89b02aa48a9df519833923e91a53e902",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "dd81b73c2c84141f6d9b71b9a43710871c7f80804ce52cc020a5d0c672566c6b",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "woman-of-fire": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "5112e106453619c1771e995af8485deeae0561189329d824535d014b2ea088f0",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "8ed46e90c1212ecb6888196a41233bb061af114810ce47cafe5f3ebacf81619e",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "9fb73baa0a67cb1ebe1864c9e79544239bfb175076479099d92ab72e5f727a17",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "wonka": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "220748fa58fc7a80938ad614823e4c6d3d1ac7a5f9a2598efe03dfe2fc722212",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "db62fb0c8053ada2e4720cbdf2011e1fb15b8841d600e9039dff819e2c18eae9",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "ddd2c6e407ba12f5c8a50536d96b9908d18b968ab3cbf8c70377719eb9051fd0",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  },
+  "zama": {
+   "negativas": {
+    "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+    "user_sha256": "26befe61d7d85f3e279ca664bf9738019ae56708ee4b48bd389f8e32f1a6085f",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "medianas": {
+    "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+    "user_sha256": "223e0958bcd494c433bc94c8e86d822e99d45f0f56ba4d251deccb5d47924e72",
+    "n_igual": true,
+    "composicao_igual": true
+   },
+   "positivas": {
+    "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+    "user_sha256": "2cb806ceae40b20ddba8a96655136be06981cc7e715826c0d55c196590419c68",
+    "n_igual": true,
+    "composicao_igual": true
+   }
+  }
+ }
+}

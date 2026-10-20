@@ -1,0 +1,211 @@
+{
+ "insumos": {
+  "p0_publicado": 0.022222222222222223,
+  "ref_por_filme": {
+   "publicado": [
+    0,
+    1,
+    0,
+    1,
+    0
+   ],
+   "local": [
+    3,
+    0,
+    2,
+    0,
+    1
+   ]
+  },
+  "m_bullets": 18,
+  "apoio_ge2": {
+   "publicado": 0.833,
+   "local": 0.822
+  },
+  "seg_por_par": 16.0,
+  "pares_por_bullet": 5,
+  "lados": 3,
+  "semente": 20261020
+ },
+ "icc_referencia": {
+  "publicado": -0.014,
+  "local": 0.029,
+  "juntos": 0.023
+ },
+ "referencia_5_filmes": {
+  "dif_local_menos_publicado_pp": 4.4,
+  "ic95_bootstrap_por_filme_pp": [
+   -3.3,
+   12.2
+  ]
+ },
+ "mde": [
+  {
+   "n_filmes": 20,
+   "icc": 0.0,
+   "deff": 1.0,
+   "mde_analitico_pp": 4.3,
+   "mde_simulado_r0_pp": 4.1,
+   "erro_tipo_1_r0": 0.068,
+   "mde_simulado_r1_pp": 4.1,
+   "erro_tipo_1_r1": 0.068
+  },
+  {
+   "n_filmes": 20,
+   "icc": 0.023,
+   "deff": 1.39,
+   "mde_analitico_pp": 5.3,
+   "mde_simulado_r0_pp": 4.2,
+   "erro_tipo_1_r0": 0.069,
+   "mde_simulado_r1_pp": 4.2,
+   "erro_tipo_1_r1": 0.067
+  },
+  {
+   "n_filmes": 20,
+   "icc": 0.05,
+   "deff": 1.85,
+   "mde_analitico_pp": 6.4,
+   "mde_simulado_r0_pp": 4.2,
+   "erro_tipo_1_r0": 0.076,
+   "mde_simulado_r1_pp": 4.1,
+   "erro_tipo_1_r1": 0.065
+  },
+  {
+   "n_filmes": 20,
+   "icc": 0.1,
+   "deff": 2.7,
+   "mde_analitico_pp": 8.4,
+   "mde_simulado_r0_pp": 4.5,
+   "erro_tipo_1_r0": 0.071,
+   "mde_simulado_r1_pp": 3.9,
+   "erro_tipo_1_r1": 0.062
+  },
+  {
+   "n_filmes": 20,
+   "icc": 0.2,
+   "deff": 4.4,
+   "mde_analitico_pp": 11.9,
+   "mde_simulado_r0_pp": 5.3,
+   "erro_tipo_1_r0": 0.077,
+   "mde_simulado_r1_pp": 3.6,
+   "erro_tipo_1_r1": 0.065
+  },
+  {
+   "n_filmes": 25,
+   "icc": 0.0,
+   "deff": 1.0,
+   "mde_analitico_pp": 3.7,
+   "mde_simulado_r0_pp": 3.6,
+   "erro_tipo_1_r0": 0.074,
+   "mde_simulado_r1_pp": 3.6,
+   "erro_tipo_1_r1": 0.074
+  },
+  {
+   "n_filmes": 25,
+   "icc": 0.023,
+   "deff": 1.39,
+   "mde_analitico_pp": 4.6,
+   "mde_simulado_r0_pp": 3.8,
+   "erro_tipo_1_r0": 0.076,
+   "mde_simulado_r1_pp": 3.6,
+   "erro_tipo_1_r1": 0.079
+  },
+  {
+   "n_filmes": 25,
+   "icc": 0.05,
+   "deff": 1.85,
+   "mde_analitico_pp": 5.5,
+   "mde_simulado_r0_pp": 3.6,
+   "erro_tipo_1_r0": 0.079,
+   "mde_simulado_r1_pp": 3.4,
+   "erro_tipo_1_r1": 0.069
+  },
+  {
+   "n_filmes": 25,
+   "icc": 0.1,
+   "deff": 2.7,
+   "mde_analitico_pp": 7.1,
+   "mde_simulado_r0_pp": 3.9,
+   "erro_tipo_1_r0": 0.076,
+   "mde_simulado_r1_pp": 3.4,
+   "erro_tipo_1_r1": 0.071
+  },
+  {
+   "n_filmes": 25,
+   "icc": 0.2,
+   "deff": 4.4,
+   "mde_analitico_pp": 10.1,
+   "mde_simulado_r0_pp": 4.4,
+   "erro_tipo_1_r0": 0.086,
+   "mde_simulado_r1_pp": 3.1,
+   "erro_tipo_1_r1": 0.078
+  },
+  {
+   "n_filmes": 30,
+   "icc": 0.0,
+   "deff": 1.0,
+   "mde_analitico_pp": 3.3,
+   "mde_simulado_r0_pp": 3.1,
+   "erro_tipo_1_r0": 0.053,
+   "mde_simulado_r1_pp": 3.1,
+   "erro_tipo_1_r1": 0.053
+  },
+  {
+   "n_filmes": 30,
+   "icc": 0.023,
+   "deff": 1.39,
+   "mde_analitico_pp": 4.0,
+   "mde_simulado_r0_pp": 3.3,
+   "erro_tipo_1_r0": 0.062,
+   "mde_simulado_r1_pp": 3.1,
+   "erro_tipo_1_r1": 0.061
+  },
+  {
+   "n_filmes": 30,
+   "icc": 0.05,
+   "deff": 1.85,
+   "mde_analitico_pp": 4.9,
+   "mde_simulado_r0_pp": 3.3,
+   "erro_tipo_1_r0": 0.062,
+   "mde_simulado_r1_pp": 3.0,
+   "erro_tipo_1_r1": 0.058
+  },
+  {
+   "n_filmes": 30,
+   "icc": 0.1,
+   "deff": 2.7,
+   "mde_analitico_pp": 6.3,
+   "mde_simulado_r0_pp": 3.4,
+   "erro_tipo_1_r0": 0.05,
+   "mde_simulado_r1_pp": 3.0,
+   "erro_tipo_1_r1": 0.059
+  },
+  {
+   "n_filmes": 30,
+   "icc": 0.2,
+   "deff": 4.4,
+   "mde_analitico_pp": 8.9,
+   "mde_simulado_r0_pp": 4.1,
+   "erro_tipo_1_r0": 0.068,
+   "mde_simulado_r1_pp": 2.8,
+   "erro_tipo_1_r1": 0.078
+  }
+ ],
+ "custo_juiz": {
+  "20": {
+   "horas_3_lados": 24.0,
+   "horas_reaproveitando_publicado_dos_5": 22.0,
+   "horas_2_lados_novos": 16.0
+  },
+  "25": {
+   "horas_3_lados": 30.0,
+   "horas_reaproveitando_publicado_dos_5": 28.0,
+   "horas_2_lados_novos": 20.0
+  },
+  "30": {
+   "horas_3_lados": 36.0,
+   "horas_reaproveitando_publicado_dos_5": 34.0,
+   "horas_2_lados_novos": 24.0
+  }
+ }
+}

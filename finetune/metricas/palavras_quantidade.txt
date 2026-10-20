@@ -1,0 +1,81 @@
+# Palavras e expressões de QUANTIDADE em `exemplo_parafraseado` — lista CONGELADA (2026-10-20).
+#
+# Montada SÓ com os 60 filmes de TREINO de finetune/split.json (1.079 exemplos):
+# nenhum filme de validação ou de teste foi lido para escrevê-la.
+# Uso: scripts/finetune/metricas.py (taxa de exemplos com ao menos uma ocorrência).
+#
+# Regra de casamento:
+# - sem diferença de caixa (case-insensitive);
+# - palavra inteira: antes e depois da expressão não pode haver letra, dígito
+#   nem "_" (Unicode; a expressão de várias palavras casa com espaço simples);
+# - acentos como escritos aqui (não há dobra de acento);
+# - só as flexões listadas abaixo: nada é derivado.
+#
+# Formas ambíguas entram SÓ em expressões explícitas: no treino, "metade",
+# "parte do" e "certos/certas" aparecem sobretudo como posição no filme
+# ("segunda metade", "melhor parte do filme", "certos momentos").
+# Uma linha = uma expressão. Linhas com "#" e vazias são ignoradas.
+
+# quantificadores no plural
+muitos
+muitas
+vários
+várias
+diversos
+diversas
+alguns
+algumas
+poucos
+poucas
+inúmeros
+inúmeras
+numerosos
+numerosas
+
+# proporção
+maioria
+minoria
+maior parte
+grande parte
+boa parte
+parcela
+quase todos
+quase todas
+praticamente todos
+praticamente todas
+cerca de metade
+quase metade
+metade do grupo
+metade das reviews
+metade dos espectadores
+parte do grupo
+parte deste grupo
+parte desse grupo
+parte do público
+parte das reviews
+parte das críticas
+parte dos espectadores
+parte das pessoas
+parte dos comentários
+um número considerável
+um número significativo
+um número expressivo
+um bom número
+unanimidade
+unânime
+unânimes
+consenso
+
+# expressões de pessoa indeterminada
+há quem
+certas reviews
+certas críticas
+certos espectadores
+certos comentários
+
+# frequência como prevalência ("é frequentemente elogiada")
+frequentemente
+com frequência
+recorrente
+recorrentes
+recorrentemente

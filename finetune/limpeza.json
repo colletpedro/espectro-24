@@ -1,0 +1,81 @@
+{
+ "gerado_por": "scripts/finetune/estimar_limpeza.py",
+ "referencia": {
+  "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+  "publicado": {
+   "n_bullets": 90,
+   "posicao_1o_sim": {
+    "1": 64,
+    "3": 5,
+    "2": 17,
+    "None": 2,
+    "4": 2
+   },
+   "pares_parando_no_1o_sim": 131,
+   "pares_parando_no_2o_sim": 288,
+   "pares_completo": 450,
+   "pares_por_bullet_1o_sim": 1.456,
+   "pares_por_bullet_2o_sim": 3.2,
+   "bullets_sem_apoio": 2,
+   "buckets": 15,
+   "buckets_com_algum_sem_apoio": 2
+  },
+  "local": {
+   "n_bullets": 90,
+   "posicao_1o_sim": {
+    "None": 6,
+    "1": 70,
+    "3": 2,
+    "2": 10,
+    "5": 1,
+    "4": 1
+   },
+   "pares_parando_no_1o_sim": 135,
+   "pares_parando_no_2o_sim": 265,
+   "pares_completo": 450,
+   "pares_por_bullet_1o_sim": 1.5,
+   "pares_por_bullet_2o_sim": 2.944,
+   "bullets_sem_apoio": 6,
+   "buckets": 15,
+   "buckets_com_algum_sem_apoio": 3
+  }
+ },
+ "seg_por_par": 16.0,
+ "treino": {
+  "filmes": 60,
+  "bullets": 1079,
+  "exemplos": 180
+ },
+ "economia_parando_no_1o_sim": 0.709,
+ "p_bucket_com_sem_apoio": {
+  "medido_na_referencia": 0.133,
+  "ic95_wilson": [
+   0.037,
+   0.379
+  ],
+  "pela_taxa_por_bullet": 0.126
+ },
+ "opcoes": {
+  "filtrar_tudo": {
+   "filmes": 60,
+   "bullets": 1079,
+   "horas_juiz_completo": 24.0,
+   "horas_parando_no_1o_sim": 7.0,
+   "exemplos_removidos_estimados": 24.0,
+   "exemplos_restantes_estimados": 156.0
+  },
+  "filtrar_parte_v4flash": {
+   "filmes": 20,
+   "bullets": 359,
+   "horas_juiz_completo": 8.0,
+   "horas_parando_no_1o_sim": 2.3,
+   "exemplos_removidos_estimados": 8.0,
+   "nota": "só a época V4-Flash (professor anterior): o critério do recorte é PROPOSTO, não medido"
+  },
+  "nao_filtrar": {
+   "horas": 0.0,
+   "exemplos_removidos": 0,
+   "bullets_sem_apoio_esperados_no_treino": 24.0
+  }
+ }
+}

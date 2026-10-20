@@ -1,0 +1,360 @@
+{
+ "gerado_por": "scripts/finetune/limpar_treino.py preparar",
+ "juiz_config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "modelo_e5": "intfloat/multilingual-e5-base",
+ "e5_snapshot": "d128750597153bb5987e10b1c3493a34e5a4502a",
+ "e5_pesos_sha256": "a18a44fad1d0b46ded15928144138cff1135d5cc8233bdd90be5f18822de09a7",
+ "k": 5,
+ "referencia_catalogo": 1780,
+ "regra_referencia": "bullets publicados do catálogo fora do C22 e do PRÓPRIO filme",
+ "filmes": 68,
+ "bullets": 1223,
+ "pares": 6115,
+ "pares_nao_julgaveis_estimados": 24,
+ "bullets_com_par_nao_julgavel": 23,
+ "split_sha256": "3232b2ad48178aaf19c4825aff6e17aa53a5de2ef4b15c2d19a574c0180be423",
+ "entrada_sha256": "11b5d44ff6d4601c6971a0555d3c53fd7bc79f441f1a9d3c0789934f1642744b",
+ "tempo_s": 1927.7,
+ "por_filme": {
+  "12-angry-men": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "3856edaaaa3f7c3bd975fb2a5b0057e4199dcd86b1a98503b4179ae5a0907a7c"
+  },
+  "all-quiet-on-the-western-front-2022": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "6e5c0f5e48b42a06cd0e1f5d00845fa31e6804fb392a74ae8de947fefd840072"
+  },
+  "arrival-2016": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "d5dc62d6e1e0df943fdf81f9ff2e88dab28b098cf057b13e58db9cf4bdbde2fa"
+  },
+  "avengers-endgame": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "b4c3980f96b3452bf6a07d19416c06de1eac6b06af148f774c06b148a68c1de6"
+  },
+  "barbie": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "9f89f78c5755e6d25a1bcc5df28a9dd22f06912ef7a420c29e4f1e3ddfede63f"
+  },
+  "bones-and-all": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "e672159e949eee365662af49889f02894dbd528313940d643130963ab4010b01"
+  },
+  "cars": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "2bbd2713afad327ac2b810311fe2e314708f91936ff3cd75f0c214c6a899d73c"
+  },
+  "catch-me-if-you-can-2002": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "c9359e68b5b8f27fed59747efad8de766905cea7a035c745544f657894d9bbe5"
+  },
+  "cats-2019": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "2fadf0009c59ed67584ffa83d7c00f9f4ca106293e03a84182c5de7490a51279"
+  },
+  "cidade-de-deus": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "8f0d0ca53b7f9ec0334ab36a0b490740d42a919deb6bf5235e3ac275cae998b3"
+  },
+  "cujo": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "7719a9c722bf729afadb6ce536050802ea20332af3a10c22514340cabb756516"
+  },
+  "cure": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "03970fecf42e4b387a7fae4e245ce2e04900be826e0a2a5789f4cacdca4ff208"
+  },
+  "district-9": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "d848957c9d98d865b844b69c9b2dfc3ea79d2e6f31d7a9c598da9028b18c951b"
+  },
+  "do-the-right-thing": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "ba0ed3e7fc966ecb803d578619c911c03fde4a5bccdffc099e61a575065e83b5"
+  },
+  "drive-my-car": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "b54bf8fb3e24e86c6f2274181a3008c4b3d91f24f4ab5f091c052d4505eb666f"
+  },
+  "dune-part-two": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "200efacd1ace28500a826a203b8bc8a82647248e520fa2f6dc4d34fc4c179d5b"
+  },
+  "eighth-grade": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "4c14ac867f767277d7c0ca2ea070487c26a7774718ba182ddec33eb41825b29b"
+  },
+  "everything-everywhere-all-at-once": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "7366b541ea27a13f5838f07a7812259dfcf66b1ac5dc10074d4bddf04adbe395"
+  },
+  "fight-club": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "b87ffadcfb364d1907f0e585eed33af39b178a1509c03888deb5df709535ae34"
+  },
+  "get-out-2017": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "2f38a69f27b76eb1ed7c8b7166b02eda578501ef1b7dd8947d3b74fbe1482e1f"
+  },
+  "happy-hour-2015-1": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "cf5624535ad3acbd9622c5975c8530334ac4ca84162d16bf09d64277fb5b1c38"
+  },
+  "hard-to-be-a-god": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "d02d431dcecf7175a6cddf53db37824c79824e5480690bf3d8f3e508e69c6411"
+  },
+  "hereditary": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "248cf3242aa89c4a0ca9e9b5079fd5cd1bfea5252ba1c2f84aac76ccbf844c11"
+  },
+  "im-still-here-2024": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "8ef726e9366b1d9fbfe7e509ad1dbd4e79f7c77ce2332f1c4d1b2373333758dd"
+  },
+  "inception": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "a3969c66ee22109d2fbb99a690157e2f04a34e02aa3bc1b475236f3bdcaf2a12"
+  },
+  "inglourious-basterds": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "316b03d039c8aeabd79a7da8e0f128e004f714ea2bbe750d34ebbf88cb3a5e65"
+  },
+  "interstellar": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "64cb8d6ff88a0b1214939df2c79bd30eadc61f94d84aac027e05d39a26137e47"
+  },
+  "joker-folie-a-deux": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "34a2acb432bd3027b614d402b63b9324d43fd35783cf495ee1cc14369b3c58e8"
+  },
+  "la-haine": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "42a7a880e0ff8441294b00038b1568438b004035e9d6c4fa26ac711bdfa621cc"
+  },
+  "mad-max-fury-road": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "1a580c79fd1f20b363580bd6046129b26dcb16d89f7e99cc47dc94458d86ff24"
+  },
+  "malcolm-x-1992": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "a7fa0099fb7a550cc19d63794224a390f4722b047043ee321fd2f72b3b0822bc"
+  },
+  "marty-supreme": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "aadb0ea276a4ecdc30e70d14adb2f3a8fddcf6eeb5f600df3d4b7b59568b15ce"
+  },
+  "memories-of-murder": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "6634a2ccc80102c8fea502212ab1ff55052fb567d16cc54982d5b8cedfd7f2ad"
+  },
+  "neighboring-sounds": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "fa24c667685cf2ab414ce6ba83053b9f2eb5d3de403827090264f8e2a862ae5c"
+  },
+  "oppenheimer-2023": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "d93b5f31a810a6afc7385d34951b9c79e511884ce44d1a70dd0cef060bbedd5c"
+  },
+  "parasite-2019": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "63c71e3ce184f4ec56739983802814a06d981dd00cc301f8549b24861f44ee53"
+  },
+  "pearl-2022": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "fb411b6a873209e6d4e3313f853a058822b80987a111375861dc1e63d13faaa0"
+  },
+  "pinocchio-2022": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "dff80f10e491a61640d04b3e4ffcf501a5661101decde1251f1ab41821c4f78e"
+  },
+  "porco-rosso": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "4929973d1b84fa48257eda53b0244b63252756b57411498b11ce79b128bccf78"
+  },
+  "princess-mononoke": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "c97222f713d01fd4546627a6d183454d3afeafce3a9132be2be33a4b1410ff49"
+  },
+  "prisoners": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "149250f999a1ee8442da2507b1b9d87e83d12e3faf16df7cf5fc2c29981cd094"
+  },
+  "satantango": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "743faad65c8a42b8afffb07610c502f2840890386a49303fe436cd0f50875852"
+  },
+  "se7en": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "8c4611758011475ac846e309e91e31c1c0d85ae005840d304ce6a6768f2fc7a8"
+  },
+  "soul-2020": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "cb64047243dad8c67d2d875aec37fc64fb486d3620e485070b26c3ef4fe935a8"
+  },
+  "speak-no-evil-2022": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "f2a840761ba68e93ffbee3bd3ca2a8b8677eb327d081e51673b9c68245871532"
+  },
+  "talk-to-me-2022": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "98d09f268f5455fed84720fe02ab5097939f9bd37ce34e226c72e5780c097ceb"
+  },
+  "the-brutalist": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "fa56c53b709b74010464d8c15e86c99d69a44784a309abb7509bc5ff6ffe6cff"
+  },
+  "the-cloud-capped-star": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "e85ba2fd8b9fe7e9c8003434b5e3e8f980d1ef924e568c845002b20039e011ad"
+  },
+  "the-hateful-eight": {
+   "bullets": 17,
+   "referencia": 1763,
+   "referencia_sha256": "f006ecc250ccf9e61e38d976155eea9c9334191a26b1f3535d01260155d238f3"
+  },
+  "the-northman": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "eef39887b9c7ea4697b79bbfde186df4b2e7ab57eb086243b7c1586e21198a2c"
+  },
+  "the-spongebob-movie-search-for-squarepants": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "f097746c5dbc3044f68b6892a7c9a2b1e7c3894ba4bf38df0ae4a79a77428b5f"
+  },
+  "the-swimming-pool": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "d17bc6cd79ec9d97f599b4ed809b0d19cd59e688839350e06f2053dea909d0d3"
+  },
+  "the-truman-show": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "39e3b60ed3522947bb95c3287261dfc2342d89cc2d4e66108738e0bf64197d82"
+  },
+  "the-turin-horse": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "027802dd85a20882359da3eef6b93a5f67ea2ec3026a0cf285576b4233adda1b"
+  },
+  "the-wailing": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "c845625ec8b329928e74f8e10dcdf2f56b8cec4678bcb0c13ea97b12ae9202b7"
+  },
+  "the-wolf-of-wall-street": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "e13d24d13c4f4a89ff9634a59dba4ee6df75d320d19c6e835dcd636d84a9d385"
+  },
+  "top-gun-maverick": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "cf8f65217a201e5264992c424753e73e76845896303179a66e3d0db893d821da"
+  },
+  "uncut-gems": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "490210a657e83a1a6cd299fb7d48d57394da1d22554483f8b4a13eaf8d74de6c"
+  },
+  "whiplash-2014": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "ca4b8eb904503a66c561b4e5d1d596e8eecf967afd731d82f7fca5006ee239a5"
+  },
+  "wonka": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "392ab2d28e97c2d9eb80909346656806f436c2e6a44b0611c301bb9bf9496225"
+  },
+  "chinatown": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "112785c16f5d7ba2a2c4c8d05a55de6363c9ebd2fe15d0bfa9a28cc1e95f3a8e"
+  },
+  "goodfellas": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "61881591915d9efe65bc96bd7e1479e82c390af7d649357221271683741706ef"
+  },
+  "longlegs": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "e41fd36045b427f5b0c07a1f2ceae6e535ce3ad0de2bd2f76da987d5110547c4"
+  },
+  "perfect-days-2023": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "0f0497622f576ee2e37fc87f639a05170a2e2d55311b9078b494561eb4fbc86e"
+  },
+  "sinners-2025": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "70e95a00ab80862092f75622a60d28129b5edeea666c78b20e6dc9b9aefed589"
+  },
+  "the-gentlemen": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "b18e9a7eefa736783d3f9e07f48c96600edb35da9420a0291f831362430c82ad"
+  },
+  "the-godfather": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "cfcd138f667bf91bd0948ac3f84fc36eacffb7e265b51ac2bc1a12e884e41ad6"
+  },
+  "zama": {
+   "bullets": 18,
+   "referencia": 1762,
+   "referencia_sha256": "dd649e6f94103a9519ce25de19019bc7b7922f1ca4873daa31cf1bd08f69f189"
+  }
+ }
+}
