@@ -194,11 +194,13 @@
   // --- 3. filme do dia ---
   (function filmeDoDia() {
     var caixa = document.getElementById("filmeDoDia");
-    var f = S.filmeDoDia(FILMES, DIA);
+    var escolha = S.escolhaDoDia(FILMES, DIA);
+    var f = escolha && escolha.filme;
     if (!caixa || !f) { if (caixa) caixa.hidden = true; return; }
     var j = T.justificar(f, DIA);
     caixa.dataset.slug = f.slug;
     caixa.dataset.gancho = j.gancho;
+    caixa.dataset.motivo = escolha.motivo;   // "aniversario" | "permutacao"
 
     caixa.appendChild(el("p", "section-label", T.ROTULO_FILME_DO_DIA));
     var visual = el("a", "filme-do-dia__visual");

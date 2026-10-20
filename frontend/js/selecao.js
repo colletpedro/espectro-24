@@ -28,6 +28,24 @@
       outros podem ser adiados. Daí em diante vale um ciclo completo novo,
       sem repetição, enquanto a lista não mudar de novo. Continua 100%
       determinístico: mesma lista + mesma data → mesmo filme.
+   6. [rodada 4] O ANIVERSÁRIO VENCE A PERMUTAÇÃO. Se algum elegível faz
+      aniversário de estreia no dia (`fazAniversario`: mesmo dia e mês de
+      `estreia`, ano posterior, 29/02 só em ano bissexto, 01/01 NUNCA), ele
+      é o filme do dia. Com mais de um aniversariante, vence o que vem
+      PRIMEIRO NA PERMUTAÇÃO da lista atual — a mesma ordem do item 3, sem
+      critério novo. A permutação NÃO é deslocada: no dia seguinte o índice
+      continua sendo `dias mod N`, como se o aniversário não tivesse
+      acontecido. Consequências aceitas (decisão do dono): o aniversariante
+      pode aparecer de novo pela permutação no mesmo ciclo, e o filme que a
+      permutação mostraria no dia do aniversário perde a vez naquele ciclo.
+      Substitui a regra da rodada 2 ("o aniversário não altera a seleção"),
+      com a qual o gancho não aparecia nenhuma vez em 3 anos.
+      `filmeDaPermutacao` continua expondo a regra antiga (itens 3–5) sozinha.
+
+   ANIVERSÁRIO EM 01/01: não conta. O `release_date` 01/01 no TMDB é, na
+   prática, data genérica ("só o ano"), não estreia — `the-gentlemen`
+   (2020-01-01) é o caso no catálogo de 2026-10-19. A data fica gravada; o
+   gancho e a seleção a ignoram.
 
    ---------------------------------------------------------------------
    PRATELEIRAS
@@ -162,11 +180,40 @@
     }).map(function (x) { return x.f; });
   }
 
-  // `dia` é AAAA-MM-DD já em São Paulo; `filmeDoDiaEm` aceita um instante.
-  function filmeDoDia(filmes, dia) {
+  var DATA_RE = /^\d{4}-\d{2}-\d{2}$/;
+
+  // Aniversário de estreia em `dia` (AAAA-MM-DD, São Paulo): mesmo dia e
+  // mês, ano posterior ao da estreia. 29/02 só casa com 29/02 (não há
+  // aniversário adiado), e 01/01 nunca conta (ver o cabeçalho).
+  function fazAniversario(estreia, dia) {
+    if (!estreia || !dia || !DATA_RE.test(estreia) || !DATA_RE.test(dia)) return false;
+    if (estreia.slice(5) === "01-01") return false;
+    return estreia.slice(5) === dia.slice(5) && estreia.slice(0, 4) < dia.slice(0, 4);
+  }
+
+  // A regra dos itens 3–5, sozinha: o filme que a permutação dá ao dia.
+  function filmeDaPermutacao(filmes, dia) {
     var lista = permutacao(elegiveis(filmes));
     if (!lista.length) return null;
     return lista[modulo(diasDesdeEpoca(dia), lista.length)];
+  }
+
+  // → { filme, motivo: "aniversario" | "permutacao" }
+  function escolhaDoDia(filmes, dia) {
+    var lista = permutacao(elegiveis(filmes));
+    if (!lista.length) return null;
+    for (var i = 0; i < lista.length; i++) {
+      if (fazAniversario(lista[i].estreia, dia)) {
+        return { filme: lista[i], motivo: "aniversario" };
+      }
+    }
+    return { filme: lista[modulo(diasDesdeEpoca(dia), lista.length)], motivo: "permutacao" };
+  }
+
+  // `dia` é AAAA-MM-DD já em São Paulo; `filmeDoDiaEm` aceita um instante.
+  function filmeDoDia(filmes, dia) {
+    var e = escolhaDoDia(filmes, dia);
+    return e && e.filme;
   }
 
   function filmeDoDiaEm(filmes, instante) {
@@ -264,6 +311,8 @@
     diaEmSaoPaulo: diaEmSaoPaulo, diasDesdeEpoca: diasDesdeEpoca,
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
     filmeDoDia: filmeDoDia, filmeDoDiaEm: filmeDoDiaEm,
+    fazAniversario: fazAniversario, filmeDaPermutacao: filmeDaPermutacao,
+    escolhaDoDia: escolhaDoDia,
     prateleirasBase: prateleirasBase, prateleiras: prateleiras,
     recemChegados: recemChegados,
   };

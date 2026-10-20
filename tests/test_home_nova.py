@@ -100,8 +100,13 @@ def test_mesma_data_mesmo_filme():
 @precisa_node
 def test_ciclo_completo_sem_repeticao():
     """Em N dias seguidos (N = nº de elegíveis), cada elegível aparece
-    exatamente uma vez — começando em qualquer dia, inclusive antes da
-    época (dias negativos)."""
+    exatamente uma vez NA PERMUTAÇÃO — começando em qualquer dia, inclusive
+    antes da época (dias negativos).
+
+    [rodada 4] Lê `filmeDaPermutacao`: desde que o aniversário passou a
+    definir o filme do dia (decisão do dono), `filmeDoDia` pode repetir um
+    filme no ciclo. A asserção é a mesma, sobre o mesmo mecanismo; o
+    desvio do aniversário tem testes próprios abaixo."""
     out = _node("""
         const n = S.elegiveis(D).length;
         const base = Date.UTC(2026, 9, 19);
@@ -110,7 +115,7 @@ def test_ciclo_completo_sem_repeticao():
             for (let i = 0; i < n; i++) {
                 const dia = new Date(base + (desloc + i) * 86400000)
                     .toISOString().slice(0, 10);
-                vistos.push(S.filmeDoDia(D, dia).slug);
+                vistos.push(S.filmeDaPermutacao(D, dia).slug);
             }
             return vistos;
         });
@@ -658,24 +663,120 @@ def test_prioridade_dos_quatro_ganchos():
         a = out[k + "+aniv"]
         assert a["gancho"] == "aniversario"
         assert a["gancho_conteudo"] == out[k]["gancho"]
-        assert a["texto"] == (filmes[k]["titulo"] + " faz aniversário de estreia hoje. "
-                              + out[k]["texto"])
+        # [rodada 4] a segunda frase NÃO repete o título: "Em X," → "Nele,"
+        # e "X está" → "Está"; o resto do texto de conteúdo é idêntico.
+        t = filmes[k]["titulo"]
+        sem_titulo = (out[k]["texto"].replace("Em " + t + ",", "Nele,", 1)
+                      .replace(t + " está", "Está", 1))
+        assert sem_titulo != out[k]["texto"]
+        assert a["texto"] == t + " faz aniversário de estreia hoje. " + sem_titulo
+        assert a["texto"].count(t) == 1
 
 
 @precisa_node
-def test_aniversario_nao_muda_a_selecao_e_a_home_usa_o_dia_da_url():
-    """O aniversário só muda o TEXTO. E a home passa o `?dia=` (ou o dia de
-    hoje em São Paulo) para a justificativa — é o que faz o gancho poder
-    ser conferido num dia qualquer."""
+def test_aniversario_define_o_filme_do_dia_e_a_home_usa_o_dia_da_url():
+    """[rodada 4] Inverte a regra da rodada 2 (decisão do dono): o
+    aniversariante É o filme do dia. As PRATELEIRAS continuam não
+    dependendo da estreia. E a home passa o `?dia=` (ou o dia de hoje em
+    São Paulo) para a seleção e para a justificativa."""
     out = _node("""
         const dia = "2026-10-19";
-        const com = D.map(f => Object.assign({}, f, {estreia: "1999-10-19"}));
-        console.log(JSON.stringify([S.filmeDoDia(D, dia).slug, S.filmeDoDia(com, dia).slug,
-            S.prateleiras(D, dia).map(p => p.chave), S.prateleiras(com, dia).map(p => p.chave)]));
+        const alvo = S.filmeDaPermutacao(D, "2026-10-20");   // um que NÃO é o do dia
+        const com = D.map(f => Object.assign({}, f,
+            {estreia: f.slug === alvo.slug ? "1999-10-19" : null}));
+        console.log(JSON.stringify({
+            sem: S.filmeDaPermutacao(D, dia).slug, alvo: alvo.slug,
+            com: S.escolhaDoDia(com, dia),
+            prat: [S.prateleiras(D, dia).map(p => p.chave), S.prateleiras(com, dia).map(p => p.chave)]}));
     """, FILMES_REAIS)
-    assert out[0] == out[1] and out[2] == out[3]
+    assert out["sem"] != out["alvo"]
+    assert out["com"]["filme"]["slug"] == out["alvo"]
+    assert out["com"]["motivo"] == "aniversario"
+    assert out["prat"][0] == out["prat"][1]
     fonte = (JS / "inicio.js").read_text(encoding="utf-8")
     assert 'get("dia")' in fonte and "T.justificar(f, DIA)" in fonte
+    assert "S.escolhaDoDia(FILMES, DIA)" in fonte
+
+
+@precisa_node
+def test_aniversarios_simultaneos_vence_o_primeiro_da_permutacao():
+    filmes = [_filme(f"f{i:02d}", f"Filme {i:02d}", estreia="1990-05-05" if i in (2, 5, 7) else None)
+              for i in range(10)]
+    out = _node("""
+        const perm = S.permutacao(S.elegiveis(D)).map(f => f.slug);
+        console.log(JSON.stringify({perm, e: S.escolhaDoDia(D, "2027-05-05")}));
+    """, filmes)
+    aniv = [s for s in out["perm"] if s in ("f02", "f05", "f07")]
+    assert out["e"]["filme"]["slug"] == aniv[0]
+    assert out["e"]["motivo"] == "aniversario"
+
+
+@precisa_node
+def test_permutacao_segue_intacta_em_volta_do_aniversario():
+    """O dia do aniversário não desloca o ciclo: em TODOS os outros dias o
+    filme é exatamente o da permutação — inclusive o dia seguinte."""
+    filmes = [_filme(f"f{i:02d}", f"Filme {i:02d}") for i in range(12)]
+    filmes[3]["estreia"] = "1990-03-10"
+    out = _node("""
+        const r = [];
+        for (let i = 0; i < 40; i++) {
+            const dia = new Date(Date.UTC(2027, 2, 1) + i * 86400000).toISOString().slice(0, 10);
+            const e = S.escolhaDoDia(D, dia);
+            r.push([dia, e.filme.slug, e.motivo, S.filmeDaPermutacao(D, dia).slug]);
+        }
+        console.log(JSON.stringify(r));
+    """, filmes)
+    for dia, slug, motivo, perm in out:
+        if dia == "2027-03-10":
+            assert (slug, motivo) == ("f03", "aniversario")
+        else:
+            assert (slug, motivo) == (perm, "permutacao"), dia
+
+
+@precisa_node
+@pytest.mark.parametrize("estreia,dia,esperado", [
+    ("2020-01-01", "2027-01-01", False),     # 01/01: data genérica do TMDB
+    ("2020-01-02", "2027-01-02", True),
+    ("2019-12-31", "2026-12-31", True),
+])
+def test_primeiro_de_janeiro_nao_e_aniversario(estreia, dia, esperado):
+    out = _node("""
+        const f = Object.assign({}, D.f, {estreia: D.estreia});
+        console.log(JSON.stringify({s: S.fazAniversario(D.estreia, D.dia),
+            t: T.fazAniversario(D.estreia, D.dia), g: T.justificar(f, D.dia).gancho,
+            e: S.escolhaDoDia([f, D.outro], D.dia).motivo}));
+    """, {"estreia": estreia, "dia": dia, "f": _filme("a", "A"), "outro": _filme("b", "B")})
+    assert out["s"] is out["t"] is esperado
+    assert (out["g"] == "aniversario") is esperado
+    assert (out["e"] == "aniversario") is esperado
+
+
+@precisa_node
+def test_excluido_nunca_e_escolhido_pelo_aniversario():
+    """obsession-2025 no catálogo real, no dia do aniversário dele."""
+    out = _node("""
+        const o = D.find(f => f.slug === "obsession-2025");
+        const dia = (Number(o.estreia.slice(0, 4)) + 1) + o.estreia.slice(4);
+        console.log(JSON.stringify({estreia: o.estreia, dia, e: S.escolhaDoDia(D, dia).filme.slug,
+            vencedores: D.filter(f => S.fazAniversario(f.estreia, dia)).map(f => f.slug)}));
+    """, FILMES_REAIS)
+    assert "obsession-2025" in out["vencedores"]       # o dia É aniversário dele
+    assert out["e"] != "obsession-2025"
+
+
+@precisa_node
+def test_texto_de_aniversario_nao_repete_o_titulo_em_nenhum_filme_real():
+    out = _node("""
+        console.log(JSON.stringify(S.elegiveis(D).map(f => {
+            const g = Object.assign({}, f, {estreia: "1990-10-19"});
+            return [f.titulo, T.justificar(g, "2026-10-19").texto];
+        })));
+    """, FILMES_REAIS)
+    for titulo, texto in out:
+        assert texto.startswith(titulo + " faz aniversário de estreia hoje. ")
+        resto = texto[len(titulo):]
+        assert titulo not in resto, (titulo, texto)
+        assert resto.split(". ", 1)[1].startswith(("Nele, ", "Está no catálogo")), texto
 
 
 # ===========================================================================

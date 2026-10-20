@@ -28,10 +28,11 @@
                         aniversário SEM o número de anos (algarismo seria
                         quantidade fora do título), seguida do gancho de
                         conteúdo do filme (2 a 4, abaixo). Estreia em 29/02
-                        só faz aniversário em ano bissexto. Não altera a
-                        SELEÇÃO do filme do dia, só o texto.
-                        **Hoje não dispara:** a ficha publicada guarda só o
-                        ano de estreia (ver `build_indice.py`).
+                        só faz aniversário em ano bissexto.
+                        [rodada 4] O aniversário passou a DEFINIR o
+                        filme do dia (selecao.js); 01/01 não conta. Depois
+                        da frase de aniversário, o gancho de conteúdo abre
+                        com "Nele"/"Está" em vez de repetir o título.
      2) `eixo`        — o filme tem eixo acima da margem de lift: usa o de
                         maior lift_pp (empate: o primeiro na ordem da
                         taxonomia).
@@ -46,6 +47,11 @@
                         do piso do estado de contraste). */
 (function (root) {
   "use strict";
+
+  // A regra do aniversário mora em selecao.js (ela decide o filme do dia);
+  // o texto usa a MESMA função, para não haver duas regras.
+  var S = (typeof module !== "undefined" && module.exports)
+    ? require("./selecao.js") : root.ESPECTRO_SELECAO;
 
   // Os rótulos que o site já usa (`GRUPO_LABEL` em filme.js), na ordem
   // de leitura dele.
@@ -130,53 +136,58 @@
     return melhor;
   }
 
+  // `semTitulo`: [rodada 4] quando o gancho de conteúdo vem DEPOIS da
+  // frase de aniversário, que já nomeou o filme, a abertura troca o título
+  // por "Nele" / "Está" — o resto do texto é idêntico. Sem aniversário, os
+  // textos são exatamente os da rodada 3.
   var TEMPLATES = {
     aniversario: function (t) {
       return t + " faz aniversário de estreia hoje.";
     },
-    eixo: function (t, eixo) {
-      return "Em " + t + ", " + TRES_GRUPOS + " se afastam sobretudo num "
+    eixo: function (t, eixo, semTitulo) {
+      return (semTitulo ? "Nele" : "Em " + t) + ", " + TRES_GRUPOS
+        + " se afastam sobretudo num "
         + "assunto: " + EIXO_NOME[eixo] + ". Um dos grupos fala disso bem "
         + "mais que os outros dois — a página mostra qual, e com que palavras.";
     },
-    valorativo: function (t, eixo) {
-      return "Em " + t + ", um assunto aparece mais do que o habitual no "
+    valorativo: function (t, eixo, semTitulo) {
+      return (semTitulo ? "Nele" : "Em " + t)
+        + ", um assunto aparece mais do que o habitual no "
         + "catálogo, somando " + TRES_GRUPOS + ": " + EIXO_NOME[eixo] + ". Os "
         + "três grupos falam dele e chegam a vereditos diferentes — o que muda "
         + "é o valor que cada um dá ao filme, não o tema da conversa.";
     },
-    generico: function (t) {
-      return t + " está no catálogo com o que " + TRES_GRUPOS + " dizem "
+    generico: function (t, semTitulo) {
+      return (semTitulo ? "Está" : t + " está") + " no catálogo com o que "
+        + TRES_GRUPOS + " dizem "
         + "sobre ele. A página mostra os assuntos de cada grupo lado a lado, "
         + "cada um com as próprias palavras.";
     },
   };
 
   // Ganchos 2 a 4: o que o filme TEM, independente da data.
-  function ganchoDeConteudo(filme) {
+  function ganchoDeConteudo(filme, semTitulo) {
     var t = filme.titulo || filme.slug;
     var e = eixoQueMaisDivide(filme);
-    if (e) return { gancho: "eixo", eixo: e.eixo, texto: TEMPLATES.eixo(t, e.eixo) };
+    if (e) return { gancho: "eixo", eixo: e.eixo, texto: TEMPLATES.eixo(t, e.eixo, semTitulo) };
     var a = filme.assunto_comum;
     if (filme.contraste === "valorativo"
         && Object.prototype.hasOwnProperty.call(EIXO_NOME, a)) {
-      return { gancho: "valorativo", eixo: a, texto: TEMPLATES.valorativo(t, a) };
+      return { gancho: "valorativo", eixo: a, texto: TEMPLATES.valorativo(t, a, semTitulo) };
     }
-    return { gancho: "generico", eixo: null, texto: TEMPLATES.generico(t) };
+    return { gancho: "generico", eixo: null, texto: TEMPLATES.generico(t, semTitulo) };
   }
 
-  // `dia` em AAAA-MM-DD (São Paulo). Aniversário: mesmo dia e mês, ano
-  // posterior. 29/02 só casa com 29/02 — não há "aniversário adiado".
-  function fazAniversario(estreia, dia) {
-    if (!estreia || !dia || !/^\d{4}-\d{2}-\d{2}$/.test(estreia)) return false;
-    return estreia.slice(5) === dia.slice(5) && estreia.slice(0, 4) < dia.slice(0, 4);
-  }
+  // A regra (dia e mês, ano posterior, 29/02, 01/01 nunca) é a de
+  // selecao.js; reexportada aqui por compatibilidade.
+  var fazAniversario = S.fazAniversario;
 
   // → { gancho, gancho_conteudo, eixo, texto }. Sem `dia`, só conteúdo.
   function justificar(filme, dia) {
-    var c = ganchoDeConteudo(filme);
+    var aniv = fazAniversario(filme.estreia, dia);
+    var c = ganchoDeConteudo(filme, aniv);
     var r = { gancho: c.gancho, gancho_conteudo: c.gancho, eixo: c.eixo, texto: c.texto };
-    if (fazAniversario(filme.estreia, dia)) {
+    if (aniv) {
       r.gancho = "aniversario";
       r.texto = TEMPLATES.aniversario(filme.titulo || filme.slug) + " " + c.texto;
     }
