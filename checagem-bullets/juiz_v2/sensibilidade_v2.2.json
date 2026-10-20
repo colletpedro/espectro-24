@@ -1,0 +1,410 @@
+{
+  "versao": "v2.2",
+  "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+  "veredito": {
+    "vale": true,
+    "motivos": [],
+    "criterio": {
+      "precisao_min": 0.8,
+      "recall_min": 0.8,
+      "dif_precisao_lados_max": 0.15
+    },
+    "dif_precisao_lados": 0.011
+  },
+  "completa": {
+    "geral": {
+      "n": 40,
+      "vp": 23,
+      "fp": 4,
+      "fn": 2,
+      "vn": 11,
+      "precisao": 0.852,
+      "precisao_ic95": [
+        0.675,
+        0.941
+      ],
+      "recall": 0.92,
+      "recall_ic95": [
+        0.75,
+        0.978
+      ],
+      "acuracia": 0.85
+    },
+    "por_lado": {
+      "publicado": {
+        "n": 20,
+        "vp": 12,
+        "fp": 2,
+        "fn": 1,
+        "vn": 5,
+        "precisao": 0.857,
+        "precisao_ic95": [
+          0.601,
+          0.96
+        ],
+        "recall": 0.923,
+        "recall_ic95": [
+          0.667,
+          0.986
+        ],
+        "acuracia": 0.85
+      },
+      "local": {
+        "n": 20,
+        "vp": 11,
+        "fp": 2,
+        "fn": 1,
+        "vn": 6,
+        "precisao": 0.846,
+        "precisao_ic95": [
+          0.578,
+          0.957
+        ],
+        "recall": 0.917,
+        "recall_ic95": [
+          0.646,
+          0.985
+        ],
+        "acuracia": 0.85
+      }
+    },
+    "julgamento": {
+      "vale": true,
+      "motivos": [],
+      "criterio": {
+        "precisao_min": 0.8,
+        "recall_min": 0.8,
+        "dif_precisao_lados_max": 0.15
+      },
+      "dif_precisao_lados": 0.011
+    }
+  },
+  "sem_reviews_da_calibracao": {
+    "geral": {
+      "n": 37,
+      "vp": 20,
+      "fp": 4,
+      "fn": 2,
+      "vn": 11,
+      "precisao": 0.833,
+      "precisao_ic95": [
+        0.641,
+        0.933
+      ],
+      "recall": 0.909,
+      "recall_ic95": [
+        0.722,
+        0.975
+      ],
+      "acuracia": 0.838
+    },
+    "por_lado": {
+      "publicado": {
+        "n": 20,
+        "vp": 12,
+        "fp": 2,
+        "fn": 1,
+        "vn": 5,
+        "precisao": 0.857,
+        "precisao_ic95": [
+          0.601,
+          0.96
+        ],
+        "recall": 0.923,
+        "recall_ic95": [
+          0.667,
+          0.986
+        ],
+        "acuracia": 0.85
+      },
+      "local": {
+        "n": 17,
+        "vp": 8,
+        "fp": 2,
+        "fn": 1,
+        "vn": 6,
+        "precisao": 0.8,
+        "precisao_ic95": [
+          0.49,
+          0.943
+        ],
+        "recall": 0.889,
+        "recall_ic95": [
+          0.565,
+          0.98
+        ],
+        "acuracia": 0.824
+      }
+    },
+    "julgamento": {
+      "vale": true,
+      "motivos": [],
+      "criterio": {
+        "precisao_min": 0.8,
+        "recall_min": 0.8,
+        "dif_precisao_lados_max": 0.15
+      },
+      "dif_precisao_lados": 0.057
+    },
+    "excluidos": [
+      "P18",
+      "P26",
+      "P30"
+    ]
+  },
+  "bootstrap_por_review": {
+    "todos": {
+      "n_reviews": 34,
+      "n_pares": 40,
+      "n_reamostras": 10000,
+      "precisao_ic95": [
+        0.677,
+        1.0
+      ],
+      "recall_ic95": [
+        0.792,
+        1.0
+      ],
+      "descartadas": {
+        "precisao": 0,
+        "recall": 0
+      }
+    },
+    "publicado": {
+      "n_reviews": 19,
+      "n_pares": 20,
+      "n_reamostras": 10000,
+      "precisao_ic95": [
+        0.636,
+        1.0
+      ],
+      "recall_ic95": [
+        0.75,
+        1.0
+      ],
+      "descartadas": {
+        "precisao": 0,
+        "recall": 0
+      }
+    },
+    "local": {
+      "n_reviews": 19,
+      "n_pares": 20,
+      "n_reamostras": 10000,
+      "precisao_ic95": [
+        0.625,
+        1.0
+      ],
+      "recall_ic95": [
+        0.727,
+        1.0
+      ],
+      "descartadas": {
+        "precisao": 0,
+        "recall": 0
+      }
+    }
+  },
+  "compartilham_dentro": [
+    [
+      {
+        "amostra": "validação",
+        "par": "P02",
+        "lado": "publicado",
+        "slug": "the-substance",
+        "bucket": "negativas",
+        "tema": "Duração excessiva e ritmo lento",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "validação",
+        "par": "P36",
+        "lado": "publicado",
+        "slug": "the-substance",
+        "bucket": "negativas",
+        "tema": "Roteiro sem desenvolvimento",
+        "dono": true,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P03",
+        "lado": "publicado",
+        "slug": "incendies",
+        "bucket": "positivas",
+        "tema": "Direção de Denis Villeneuve",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "validação",
+        "par": "P37",
+        "lado": "local",
+        "slug": "incendies",
+        "bucket": "positivas",
+        "tema": "impacto emocional intenso",
+        "dono": true,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P05",
+        "lado": "local",
+        "slug": "mother-2017",
+        "bucket": "negativas",
+        "tema": "excesso de metáforas e simbolismo",
+        "dono": false,
+        "juiz": true
+      },
+      {
+        "amostra": "validação",
+        "par": "P20",
+        "lado": "publicado",
+        "slug": "mother-2017",
+        "bucket": "negativas",
+        "tema": "Alta carga alegórica e excesso de simbolismo",
+        "dono": false,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P12",
+        "lado": "local",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "medianas",
+        "tema": "ritmo lento e alongado",
+        "dono": false,
+        "juiz": false
+      },
+      {
+        "amostra": "validação",
+        "par": "P27",
+        "lado": "local",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "medianas",
+        "tema": "críticas ao sistema judicial francês",
+        "dono": false,
+        "juiz": false
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P13",
+        "lado": "local",
+        "slug": "napoleon-2023",
+        "bucket": "negativas",
+        "tema": "Inaccuracy histórica",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "validação",
+        "par": "P39",
+        "lado": "publicado",
+        "slug": "napoleon-2023",
+        "bucket": "negativas",
+        "tema": "Retrato de Napoleão",
+        "dono": true,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P19",
+        "lado": "local",
+        "slug": "the-substance",
+        "bucket": "positivas",
+        "tema": "uso de metáforas e simbolismo",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "validação",
+        "par": "P21",
+        "lado": "publicado",
+        "slug": "the-substance",
+        "bucket": "positivas",
+        "tema": "Metáfora da autodestruição e padrões de beleza",
+        "dono": true,
+        "juiz": true
+      }
+    ]
+  ],
+  "compartilham_entre": [
+    [
+      {
+        "amostra": "validação",
+        "par": "P18",
+        "lado": "local",
+        "slug": "the-substance",
+        "bucket": "positivas",
+        "tema": "horror corporal e efeitos visuais extremos",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "calibração",
+        "par": "P11",
+        "lado": "publicado",
+        "slug": "the-substance",
+        "bucket": "positivas",
+        "tema": "Body horror extremo e efeitos práticos",
+        "dono": true,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P26",
+        "lado": "local",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "positivas",
+        "tema": "desempenho atorial",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "calibração",
+        "par": "P37",
+        "lado": "publicado",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "positivas",
+        "tema": "Direção e atmosfera realista",
+        "dono": true,
+        "juiz": true
+      }
+    ],
+    [
+      {
+        "amostra": "validação",
+        "par": "P30",
+        "lado": "local",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "negativas",
+        "tema": "ritmo lento e monótono",
+        "dono": true,
+        "juiz": true
+      },
+      {
+        "amostra": "calibração",
+        "par": "P08",
+        "lado": "local",
+        "slug": "anatomy-of-a-fall",
+        "bucket": "negativas",
+        "tema": "final aberto e frustrante",
+        "dono": true,
+        "juiz": true
+      }
+    ]
+  ]
+}

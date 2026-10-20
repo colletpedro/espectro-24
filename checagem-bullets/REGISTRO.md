@@ -354,3 +354,34 @@ gravado).
 
 **Pares que o dono considerou duvidosos** (o rótulo não muda; registro para
 ler a validação com cuidado): P01, P04, P08, P18, P33, P36.
+
+## VALIDAÇÃO do juiz v2.2 congelado (2026-10-20) — **PASSOU**
+
+Os 900 pares rodaram no Windows com a v2.2 congelada (`juiz_v2/saida_v2.2.jsonl`,
+900/900 `ok`, todos com `config_sha256` `44606cf1…`). Validação SÓ nos 40 pares
+novos, contra o rótulo do dono, com o critério pré-registrado sem mudança
+(`juiz_v2/validacao_v2.2.md`):
+
+| recorte | n | VP | FP | FN | VN | precisão [IC95] | recall [IC95] |
+|---|---|---|---|---|---|---|---|
+| todos | 40 | 23 | 4 | 2 | 11 | 0,852 [0,675–0,941] | 0,92 [0,75–0,978] |
+| publicado | 20 | 12 | 2 | 1 | 5 | 0,857 [0,601–0,96] | 0,923 [0,667–0,986] |
+| local | 20 | 11 | 2 | 1 | 6 | 0,846 [0,578–0,957] | 0,917 [0,646–0,985] |
+
+Diferença de precisão entre os lados: **0,011** (≤ 0,15). Erros: P05, P14, P20,
+P32 (FP) e P09, P40 (FN); P09 caiu pelo código (a cópia colou duas frases da
+review com vírgula — trecho não encontrado). Os 6 duvidosos do dono (P01, P04,
+P08, P18, P33, P36): o juiz concordou com o rótulo nos 6.
+
+**Sensibilidade** (`juiz_v2/sensibilidade_v2.2.md`), pedida depois do rótulo e
+**sem mudar o veredito**: sem os 3 pares cuja review já estava na calibração
+(P18, P26, P30), P 0,833 / R 0,909 (n = 37), diferença entre os lados 0,057;
+bootstrap por review (34 reviews, 10 mil reamostras) P [0,677–1,0], R
+[0,792–1,0]; 6 reviews aparecem em 2 pares da validação e 3 em pares das duas
+amostras — rótulo e juiz coerentes em todas, exceto a review de P05/P20, em
+que o juiz diz sim às duas e o dono não.
+
+**Fidelidade dos bullets** com o juiz validado (`juiz_v2/fidelidade_v2.2.md`):
+apoio ≥ 1 em 98% dos bullets do publicado e 93% do local; apoio ≥ 2 em 83% e
+82%; sem apoio nenhum: 2 bullets do publicado, 6 do local (3 deles nas
+negativas de Anatomia).
