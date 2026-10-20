@@ -1,0 +1,1399 @@
+{
+  "versao": "v2.2",
+  "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+  "selo_mapa": "bc592ee92638b995c5c1f1e67c9825cab26a45e929a52fe8380ed71efef77f3d",
+  "escolha": {
+    "congelar": "v2.2",
+    "motivo": "a v2.2 passa nos três critérios"
+  },
+  "geral": {
+    "n": 40,
+    "vp": 23,
+    "fp": 5,
+    "fn": 2,
+    "vn": 10,
+    "precisao": 0.821,
+    "precisao_ic95": [
+      0.644,
+      0.921
+    ],
+    "recall": 0.92,
+    "recall_ic95": [
+      0.75,
+      0.978
+    ],
+    "acuracia": 0.825
+  },
+  "por_lado": {
+    "publicado": {
+      "n": 20,
+      "vp": 12,
+      "fp": 3,
+      "fn": 2,
+      "vn": 3,
+      "precisao": 0.8,
+      "precisao_ic95": [
+        0.548,
+        0.93
+      ],
+      "recall": 0.857,
+      "recall_ic95": [
+        0.601,
+        0.96
+      ],
+      "acuracia": 0.75
+    },
+    "local": {
+      "n": 20,
+      "vp": 11,
+      "fp": 2,
+      "fn": 0,
+      "vn": 7,
+      "precisao": 0.846,
+      "precisao_ic95": [
+        0.578,
+        0.957
+      ],
+      "recall": 1.0,
+      "recall_ic95": [
+        0.741,
+        1.0
+      ],
+      "acuracia": 0.9
+    }
+  },
+  "v1": {
+    "geral": {
+      "n": 40,
+      "vp": 24,
+      "fp": 9,
+      "fn": 1,
+      "vn": 6,
+      "precisao": 0.727,
+      "precisao_ic95": [
+        0.558,
+        0.849
+      ],
+      "recall": 0.96,
+      "recall_ic95": [
+        0.805,
+        0.993
+      ],
+      "acuracia": 0.75
+    },
+    "por_lado": {
+      "publicado": {
+        "n": 20,
+        "vp": 13,
+        "fp": 3,
+        "fn": 1,
+        "vn": 3,
+        "precisao": 0.812,
+        "precisao_ic95": [
+          0.57,
+          0.934
+        ],
+        "recall": 0.929,
+        "recall_ic95": [
+          0.685,
+          0.987
+        ],
+        "acuracia": 0.8
+      },
+      "local": {
+        "n": 20,
+        "vp": 11,
+        "fp": 6,
+        "fn": 0,
+        "vn": 3,
+        "precisao": 0.647,
+        "precisao_ic95": [
+          0.413,
+          0.827
+        ],
+        "recall": 1.0,
+        "recall_ic95": [
+          0.741,
+          1.0
+        ],
+        "acuracia": 0.7
+      }
+    },
+    "julgamento": {
+      "vale": false,
+      "motivos": [
+        "precisão 0.727 < 0.8",
+        "precisão difere 0.165 entre os lados (> 0.15)"
+      ],
+      "criterio": {
+        "precisao_min": 0.8,
+        "recall_min": 0.8,
+        "dif_precisao_lados_max": 0.15
+      },
+      "dif_precisao_lados": 0.165
+    }
+  },
+  "comparacao": {
+    "v1": {
+      "geral": {
+        "n": 40,
+        "vp": 24,
+        "fp": 9,
+        "fn": 1,
+        "vn": 6,
+        "precisao": 0.727,
+        "precisao_ic95": [
+          0.558,
+          0.849
+        ],
+        "recall": 0.96,
+        "recall_ic95": [
+          0.805,
+          0.993
+        ],
+        "acuracia": 0.75
+      },
+      "por_lado": {
+        "publicado": {
+          "n": 20,
+          "vp": 13,
+          "fp": 3,
+          "fn": 1,
+          "vn": 3,
+          "precisao": 0.812,
+          "precisao_ic95": [
+            0.57,
+            0.934
+          ],
+          "recall": 0.929,
+          "recall_ic95": [
+            0.685,
+            0.987
+          ],
+          "acuracia": 0.8
+        },
+        "local": {
+          "n": 20,
+          "vp": 11,
+          "fp": 6,
+          "fn": 0,
+          "vn": 3,
+          "precisao": 0.647,
+          "precisao_ic95": [
+            0.413,
+            0.827
+          ],
+          "recall": 1.0,
+          "recall_ic95": [
+            0.741,
+            1.0
+          ],
+          "acuracia": 0.7
+        }
+      },
+      "julgamento": {
+        "vale": false,
+        "motivos": [
+          "precisão 0.727 < 0.8",
+          "precisão difere 0.165 entre os lados (> 0.15)"
+        ],
+        "criterio": {
+          "precisao_min": 0.8,
+          "recall_min": 0.8,
+          "dif_precisao_lados_max": 0.15
+        },
+        "dif_precisao_lados": 0.165
+      }
+    },
+    "v2.0": {
+      "geral": {
+        "n": 40,
+        "vp": 17,
+        "fp": 3,
+        "fn": 8,
+        "vn": 12,
+        "precisao": 0.85,
+        "precisao_ic95": [
+          0.64,
+          0.948
+        ],
+        "recall": 0.68,
+        "recall_ic95": [
+          0.484,
+          0.828
+        ],
+        "acuracia": 0.725
+      },
+      "por_lado": {
+        "publicado": {
+          "n": 20,
+          "vp": 10,
+          "fp": 1,
+          "fn": 4,
+          "vn": 5,
+          "precisao": 0.909,
+          "precisao_ic95": [
+            0.623,
+            0.984
+          ],
+          "recall": 0.714,
+          "recall_ic95": [
+            0.454,
+            0.883
+          ],
+          "acuracia": 0.75
+        },
+        "local": {
+          "n": 20,
+          "vp": 7,
+          "fp": 2,
+          "fn": 4,
+          "vn": 7,
+          "precisao": 0.778,
+          "precisao_ic95": [
+            0.453,
+            0.937
+          ],
+          "recall": 0.636,
+          "recall_ic95": [
+            0.354,
+            0.848
+          ],
+          "acuracia": 0.7
+        }
+      },
+      "julgamento": {
+        "vale": false,
+        "motivos": [
+          "recall 0.68 < 0.8"
+        ],
+        "criterio": {
+          "precisao_min": 0.8,
+          "recall_min": 0.8,
+          "dif_precisao_lados_max": 0.15
+        },
+        "dif_precisao_lados": 0.131
+      }
+    },
+    "v2.1": {
+      "geral": {
+        "n": 40,
+        "vp": 20,
+        "fp": 2,
+        "fn": 5,
+        "vn": 13,
+        "precisao": 0.909,
+        "precisao_ic95": [
+          0.722,
+          0.975
+        ],
+        "recall": 0.8,
+        "recall_ic95": [
+          0.609,
+          0.911
+        ],
+        "acuracia": 0.825
+      },
+      "por_lado": {
+        "publicado": {
+          "n": 20,
+          "vp": 10,
+          "fp": 2,
+          "fn": 4,
+          "vn": 4,
+          "precisao": 0.833,
+          "precisao_ic95": [
+            0.552,
+            0.953
+          ],
+          "recall": 0.714,
+          "recall_ic95": [
+            0.454,
+            0.883
+          ],
+          "acuracia": 0.7
+        },
+        "local": {
+          "n": 20,
+          "vp": 10,
+          "fp": 0,
+          "fn": 1,
+          "vn": 9,
+          "precisao": 1.0,
+          "precisao_ic95": [
+            0.722,
+            1.0
+          ],
+          "recall": 0.909,
+          "recall_ic95": [
+            0.623,
+            0.984
+          ],
+          "acuracia": 0.95
+        }
+      },
+      "julgamento": {
+        "vale": false,
+        "motivos": [
+          "precisão difere 0.167 entre os lados (> 0.15)"
+        ],
+        "criterio": {
+          "precisao_min": 0.8,
+          "recall_min": 0.8,
+          "dif_precisao_lados_max": 0.15
+        },
+        "dif_precisao_lados": 0.167
+      }
+    },
+    "v2.2": {
+      "geral": {
+        "n": 40,
+        "vp": 23,
+        "fp": 5,
+        "fn": 2,
+        "vn": 10,
+        "precisao": 0.821,
+        "precisao_ic95": [
+          0.644,
+          0.921
+        ],
+        "recall": 0.92,
+        "recall_ic95": [
+          0.75,
+          0.978
+        ],
+        "acuracia": 0.825
+      },
+      "por_lado": {
+        "publicado": {
+          "n": 20,
+          "vp": 12,
+          "fp": 3,
+          "fn": 2,
+          "vn": 3,
+          "precisao": 0.8,
+          "precisao_ic95": [
+            0.548,
+            0.93
+          ],
+          "recall": 0.857,
+          "recall_ic95": [
+            0.601,
+            0.96
+          ],
+          "acuracia": 0.75
+        },
+        "local": {
+          "n": 20,
+          "vp": 11,
+          "fp": 2,
+          "fn": 0,
+          "vn": 7,
+          "precisao": 0.846,
+          "precisao_ic95": [
+            0.578,
+            0.957
+          ],
+          "recall": 1.0,
+          "recall_ic95": [
+            0.741,
+            1.0
+          ],
+          "acuracia": 0.9
+        }
+      },
+      "julgamento": {
+        "vale": true,
+        "motivos": [],
+        "criterio": {
+          "precisao_min": 0.8,
+          "recall_min": 0.8,
+          "dif_precisao_lados_max": 0.15
+        },
+        "dif_precisao_lados": 0.046
+      }
+    }
+  },
+  "julgamento": {
+    "vale": true,
+    "motivos": [],
+    "criterio": {
+      "precisao_min": 0.8,
+      "recall_min": 0.8,
+      "dif_precisao_lados_max": 0.15
+    },
+    "dif_precisao_lados": 0.046
+  },
+  "derrubados_pelo_codigo": [],
+  "erros": [
+    "P04",
+    "P09",
+    "P15",
+    "P29",
+    "P34",
+    "P36",
+    "P40"
+  ],
+  "pares": [
+    {
+      "par": "P01",
+      "id_par": "local|mother-2017|positivas|4|viewing:1433604061",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Crítica à figura masculina e ao ego",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "quand l’homme est un connard, la femme, seule personne cohérente du film, ne se fait pas écouter donc forcément ça part en sucette.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 23,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Crítica à figura masculina e ao ego\". Review says: \"Miam miam on aime ce qui montre le vrai : quand l’homme est un connard, la femme, seule personne cohérente du film, ne se fait pas écouter donc forcément ça part en sucette. J’aime la boucle que le film créé, les détails qui expliquent tout sans trop en dévoiler et une scène finale qui prend aux tripes en transgressant toutes les constructions morales de bienséance que nous avons construites…\"\n\nIt criticizes male figure as \"connard\" and says the woman is the only coherent person. So it criticizes male figure. It also mentions ego? Not explicitly. But main idea \"Critica à figura masculina e ao ego\". Does review mention ego? No. It criticizes male as a jerk, but does not discuss ego. So bullet has two ideas: Critica à figura masculina e ao ego. The primary idea is first: Critica à figura masculina. So review supports that. So \"apoia_ideia_principal\": true. Evidencia clara: yes, the sentence \"quand l’homme est un connard\" supports. Need the literal sentence. Let's pick: \"quand l’homme est un connard\". But we need the full phrase: \"quand l’homme est un connard\". It's part of a sentence: \"quand l’homme est un connard, la femme, seule personne cohérente du film, ne se fait pas écouter donc forcément ça part en sucette.\" That's the full sentence. Provide that."
+    },
+    {
+      "par": "P02",
+      "id_par": "local|the-substance|medianas|0|viewing:596551133",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "medianas",
+      "tema": "horror corporal e estética grotesca",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Unapologetically over the top, unsettling, gut-renching and excessive.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 8,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to see if review supports horror corporal e estética grotesca. Review mentions body horror, horror, unsettling, gut-renching, over the top, grotesque. So supports. Evidência clara: a sentence \"Unapologetically over the top, unsettling, gut-renching and excessive.\" Also \"this one takes the genre to new places in the craziest of ways.\" but we need one sentence. Use first. Provide trecho exactly. Ensure at least 4 words. Provide JSON."
+    },
+    {
+      "par": "P03",
+      "id_par": "local|the-substance|positivas|3|viewing:1439467759",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "dualidade entre personagens e identidade",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": true,
+      "pensamento": "Need to see if review supports bullet \"dualidade entre personagens e identidade\". Review talks about awfulness, sacrifice of being pretty, industry replaces you, concept horrifying, representing feeling of changing yourself to be accepted. It's about identity, but not duality between characters. So doesn't support. Output false."
+    },
+    {
+      "par": "P04",
+      "id_par": "local|mother-2017|medianas|5|viewing:1432016324",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "confusão e falta de clareza",
+      "dono": false,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "the frantic descent into chaos leading to the finale throws a harsh spotlight on societal collapse, throwing at thr audience brutal, inexplicable human crimes in rapid flashes without giving you a second to breathe.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 34,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to see if review supports title \"confusão e falta de clareza\". Review says chaotic descent into chaos, frantic, harsh spotlight, but also slow burn. Mentions early narrative drags, lost interest. So review indicates confusion and lack of clarity. So supports. Need clear evidence: phrase that indicates confusion/lack of clarity. For example: \"the frantic descent into chaos\" or \"early narrative drags so much that it completely lost my interest.\" We need entire sentence from review. Let's pick sentence: \"the frantic descent into chaos leading to the finale throws a harsh spotlight on societal collapse, throwing at thr audience brutal, inexplicable human crimes in rapid flashes without giving you a second to breathe.\" That indicates confusion. Or \"the early narrative drags so much that it completely lost my interest.\" Choose one. Provide entire sentence. So trecho = that sentence exactly. Count words >=4 yes. So apoia_ideia_principal true, evidencia_clara true."
+    },
+    {
+      "par": "P05",
+      "id_par": "local|mother-2017|medianas|0|viewing:1419105213",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "sensação de desconforto e ansiedade",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Brother I don’t even know, I remember this fucking HOOKED me but the part with the baby and the crowd was the wildest stomach turn I’ve ever seen ever.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 29,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to see if review supports main idea: discomfort and anxiety. Review says \"wildest stomach turn\" etc. That indicates discomfort. So yes. Provide trecho entire sentence. Find exact sentence: \"Brother I don’t even know, I remember this fucking HOOKED me but the part with the baby and the crowd was the wildest stomach turn I’ve ever seen ever.\" That's long. We copy exactly. Check length >4 words. Yes. Provide fields true."
+    },
+    {
+      "par": "P06",
+      "id_par": "local|incendies|negativas|3|viewing:1481854439",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "apresentação de temas sensíveis de forma inadequada",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Ah non ce serait chiant d’assumer un contexte politique dans un film dont le seul propos est l’esthétisation de la guerre et du malheur avec quelques pirouettes scenaristiques",
+      "trecho_encontrado": true,
+      "trecho_palavras": 28,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet: \"apresentação de temas sensíveis de forma inadequada\". Review says: \"Je me suis senti vraiment en empathie ... l’esthétisation de la guerre et du malheur\" implying film aestheticizes war, inadequate. So supports. Evidência clara? Yes phrase. Provide full sentence."
+    },
+    {
+      "par": "P07",
+      "id_par": "publicado|mother-2017|negativas|4|viewing:1426008473",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "negativas",
+      "tema": "Atuação de Jennifer Lawrence como ponto positivo",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Atuação de Jennifer Lawrence como ponto positivo\". The review is negative, says she was watching older movie, not about acting. It does not support. So output false, no evidence."
+    },
+    {
+      "par": "P08",
+      "id_par": "local|anatomy-of-a-fall|negativas|1|viewing:1361551004",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "final aberto e frustrante",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "j’ai carrément détesté la fin, pcq tout le long on s’attend à une réponse concrète mais le but du film c’est justement de ne donner aucune réponse, du coup c’est super frustrant.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 32,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to decide if review supports \"final aberto e frustrante\". Review says: \"j’ai carrément détesté la fin... c’est super frustrant ... le film répond à rien ... c’est frustrant ... je n’aime pas.\" So supports that final is open/frustrating. Evidência clara? The phrase \"j’ai carrément détesté la fin, pcq tout le long on s’attend à une réponse concrète mais le but du film c’est justement de ne donner aucune réponse, du coup c’est super frustrant.\" is clear. So true. Provide trecho."
+    },
+    {
+      "par": "P09",
+      "id_par": "publicado|napoleon-2023|negativas|5|viewing:1431566496",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "negativas",
+      "tema": "Batalhas decepcionantes",
+      "dono": false,
+      "juiz": true,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "hay más escenas de Napoleón practicando el sexo con Josefina que de propias batallas.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 14,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "We need to check if review supports bullet \"Batalhas decepcionantes\" (Portuguese). Review says: expects war movie but it's porn, few battles. That supports idea of disappointing battles. So yes. Provide full sentence that shows that. The phrase: \"hay más escenas de Napoleón practicando el sexo con Josefina que de propias batallas.\" That's the evidence. It's more than 4 words. So we return.\n\n"
+    },
+    {
+      "par": "P10",
+      "id_par": "local|incendies|negativas|2|viewing:1460517176",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "falta de aprofundamento no contexto político e histórico",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Basé un film sur les conflits du moyen orient qui se passe dans un pays imaginaire sans expliquer les contextes sociaux sans parler un peu de politique, tout ça pour sortir un plot twist de merde par pitié c’est horrible",
+      "trecho_encontrado": true,
+      "trecho_palavras": 40,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to decide if review supports title: \"falta de aprofundamento no contexto político e histórico\". Review says: \"Basé un film sur les conflits du moyen orient qui se passe dans un pays imaginaire sans expliquer les contextes sociaux sans parler un peu de politique, tout ça pour sortir un plot twist de merde par pitié c’est horrible\". This supports lack of context explanation. So SIM. Evidência clara: yes, explicit. Provide full sentence."
+    },
+    {
+      "par": "P11",
+      "id_par": "publicado|the-substance|positivas|3|viewing:1438930488",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Body horror extremo e efeitos práticos",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Body horror goes crazyyyy!",
+      "trecho_encontrado": true,
+      "trecho_palavras": 4,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "Need to see if review supports bullet \"Body horror extremo e efeitos práticos\". Review talks about body horror, but no mention of practical effects. So not supporting practical effects. Main idea first part \"Body horror extremo\". It says body horror goes crazyyyy, great job representing horror. That supports body horror extreme. So apoia_ideia_principal true, evidencia_clara true, trecho that contains body horror extreme. Use sentence: \"Body horror goes crazyyyy!\" That is entire sentence. Provide."
+    },
+    {
+      "par": "P12",
+      "id_par": "local|anatomy-of-a-fall|medianas|4|viewing:1430145751",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "medianas",
+      "tema": "presença do cachorro como elemento simbólico",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "The bullet: \"presença do cachorro como elemento simbólico\". The review talks about music, not about dog. So no."
+    },
+    {
+      "par": "P13",
+      "id_par": "local|napoleon-2023|medianas|3|viewing:1436650058",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Interpretação do personagem insatisfatória",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": true,
+      "pensamento": "We need to decide if the review supports the bullet title \"Interpretação do personagem insatisfatória\". The review says: Joaquin Phoenix as Napoleon: \"Joaquin Phoenix as Napoleon… I cannot decide if I found him in the role genial or terrible… he is on the one hand naturally engaging, on the other he doesn't allow much closeness and seems very detached.\" That suggests ambiguous, but includes criticism: he is detached, hard to connect. So does it support interpretation unsatisfying? The review is ambivalent; it states cannot decide if genial or terrible. That is ambivalent, not clear support. According to criteria, NÃO if ambivalente demais. So output false. evidence_clara false. trecho null."
+    },
+    {
+      "par": "P14",
+      "id_par": "publicado|anatomy-of-a-fall|medianas|3|viewing:1414293465",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "medianas",
+      "tema": "Promotor irritante e processo judicial",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "La prise de parole de l’avocat général.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 7,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Promotor irritante e processo judicial\". The review criticizes the film, mentions \"Le côté médiatisé, la présence des médias lors du procès. Je trouve les moments inutiles, pas intéressants cinématographiquement - La prise de parole de l’avocat général.\" So criticizes the prosecutor's speech and the process. It says prosecutor speech sounds wrong, many interventions. That supports idea of irritante. So yes. Need to provide exact sentence from review. Choose sentence that shows prosecutor irritating: \"La prise de parole de l’avocat général.\" That's a full sentence. It is at least 4 words. It's literal. So trecho: \"La prise de parole de l’avocat général.\" Apoia_ideia_principal true. Evidencia_clara true."
+    },
+    {
+      "par": "P15",
+      "id_par": "local|napoleon-2023|positivas|4|viewing:1438708417",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Abordagem do personagem Napoleão",
+      "dono": false,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Le personnage de Napoléon est incomplet certes, mais loin d'être inintéressant.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 11,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "We need to check if review supports bullet \"Abordagem do personagem Napoleão\" (Approach to Napoleon character). Review says: \"Le personnage de Napoléon est incomplet certes, mais loin d'être inintéressant. C'est simplement pas la face de lui qu'on s'attendait à voir.\" That comments on character portrayal. So yes supports. Evidence: the sentence about character. Need full sentence. That's: \"Le personnage de Napoléon est incomplet certes, mais loin d'être inintéressant.\" or also following? The sentence includes \"C'est simplement pas la face de lui qu'on s'attendait à voir.\" That is also about character. Which is more? Provide one full sentence. Use first one.\n\nEvidência clara: yes. Return JSON."
+    },
+    {
+      "par": "P16",
+      "id_par": "local|incendies|medianas|5|viewing:1466936529",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Ausência de conexão emocional com os personagens",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "don’t care about the characters",
+      "trecho_encontrado": true,
+      "trecho_palavras": 5,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to check: bullet says \"Ausência de conexão emocional com os personagens\". Review says \"don’t care about the characters\". That supports lack of emotional connection. It's same idea. Evidence clear: phrase \"don’t care about the characters\". So true.\n\nReturn JSON."
+    },
+    {
+      "par": "P17",
+      "id_par": "publicado|mother-2017|positivas|1|viewing:1435157908",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Desempenho de Jennifer Lawrence",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "she's really that MOTHER! Jennifer Lawrence THE WOMAN THAT YOU ARE!!!!",
+      "trecho_encontrado": true,
+      "trecho_palavras": 11,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to decide if review supports bullet \"Desempenho de Jennifer Lawrence\". Review says: \"she's really that MOTHER! Jennifer Lawrence THE WOMAN...\" unclear but mentions Jennifer Lawrence, praising? The review is unclear, but seems praising her. Could support. However, the sentence is garbled. It says \"she's really that MOTHER! Jennifer Lawrence THE WOMAN THAT YOU ARE!!!!\" This indicates praise. So apoia. Evidência clara? The sentence is somewhat ambiguous but still praising. Probably clear enough. Trecho: entire sentence where proof: \"she's really that MOTHER! Jennifer Lawrence THE WOMAN THAT YOU ARE!!!!\" We'll use that."
+    },
+    {
+      "par": "P18",
+      "id_par": "publicado|the-substance|positivas|0|viewing:1439467759",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Metáfora da autodestruição e padrões de beleza",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "awfulness and sacrifice of being pretty in an industry that can just replace you whenever they want, and put it on a concept that's absolutely horrifying to watch yet it represents so well how it feels in the inside to change yourself completely just to be accepted",
+      "trecho_encontrado": true,
+      "trecho_palavras": 47,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to decide if review supports title \"Metáfora da autodestruição e padrões de beleza\". Review says: \"awfulness and sacrifice of being pretty ... replace you ... concept horrifying ... represents how it feels inside to change yourself completely just to be accepted ... good movie ... disgusting but omg it's sooo real\". This supports metaphor of self-destruction and beauty standards. So yes, supports. Need clear evidence. Provide full sentence: likely \"awfulness and sacrifice of being pretty in an industry that can just replace you whenever they want, and put it on a concept that's absolutely horrifying to watch yet it represents so well how it feels in the inside to change yourself completely just to be accepted\". That sentence contains the idea. Provide as trecho. Ensure full sentence.\n\nWe must ensure length >=4 words. Provide that sentence exactly as in review. Provide JSON."
+    },
+    {
+      "par": "P19",
+      "id_par": "publicado|the-substance|negativas|1|viewing:1436969547",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "negativas",
+      "tema": "Exibicionismo e nudez excessiva",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Entre les scènes de nudité et le gore à gogo qui est inutile je ne comprends pas les éloges de ce film.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 22,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to decide. Title bullet: \"Exibicionismo e nudez excessiva\". Review: says film has scenes of nudity and gore. So supports excessive nudity. The review criticizes it. It does mention nudity. So supports main idea. Evident? The sentence: \"Entre les scènes de nudité et le gore à gogo qui est inutile je ne comprends pas les éloges de ce film.\" This explicitly mentions scenes of nudity. So yes. Provide trecho."
+    },
+    {
+      "par": "P20",
+      "id_par": "publicado|napoleon-2023|positivas|4|viewing:1366933027",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Ritmo e edição",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "the director’s cut is far more expansive and patient with its pacing, allowing these elements to breathe and making the atmosphere all the more effective.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 25,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to decide if the review supports the idea \"Ritmo e edição\" (Rhythm and editing). The review talks about director's cut, pacing, expanded plotlines, but does it support that the rhythm/editing is good? It says: \"the director’s cut is far more expansive and patient with its pacing, allowing these elements to breathe and making the atmosphere all the more effective.\" That supports good rhythm/editing. So yes. The evidence: the sentence about pacing. It's clear. So apoia_ideia_principal true, evidencia_clara true, trecho is that sentence. Ensure exact phrase: \"the director’s cut is far more expansive and patient with its pacing, allowing these elements to breathe and making the atmosphere all the more effective.\" That's exactly."
+    },
+    {
+      "par": "P21",
+      "id_par": "publicado|mother-2017|medianas|1|viewing:1435562837",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "Atuação de Jennifer Lawrence",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Great family film. The script demands a lot from Jennifer Lawrence and whilst she’s not perfect she manages to do a great job at being the central performance in a film where everyone around her is a raving lunatic that completely goes against everything she asks.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 46,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to see if review supports the idea \"Atuação de Jennifer Lawrence\". Review says: script demands a lot, she manages to do a great job at being the central performance. That supports. It's clear. So apoia true, evidencia clara true. Need trecho. Full sentence: \"Great family film. The script demands a lot from Jennifer Lawrence and whilst she’s not perfect she manages to do a great job at being the central performance in a film where everyone around her is a raving lunatic that completely goes against everything she asks.\" That's the part that shows. Use that entire sentence."
+    },
+    {
+      "par": "P22",
+      "id_par": "publicado|mother-2017|positivas|4|viewing:1438999079",
+      "lado": "publicado",
+      "slug": "mother-2017",
+      "bucket": "positivas",
+      "tema": "Roteiro e direção intensos",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": true,
+      "pensamento": "We need to check if review supports idea \"Roteiro e direção intensos\" (intense script and direction). Review says: frustration, crying, comparison to Eraserhead, mentions Jennifer Lawrence performance, Niomi Watts acting, outstanding. No mention of script or direction being intense. So no."
+    },
+    {
+      "par": "P23",
+      "id_par": "local|napoleon-2023|positivas|0|viewing:1416576321",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Batalhas e cenas de ação",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Les scènes de bataille sont spectaculaires, la mise en scène est magnifique et les décors donnent une véritable impression de grandeur.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 21,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to check if review supports title \"Batalhas e cenas de ação\". The review says scenes de batalha são espectaculares, etc. So yes supports idea of battles and action scenes. Provide trecho literal. Use original French sentence: \"Les scènes de bataille sont spectaculaires, la mise en scène est magnifique et les décors donnent une véritable impression de grandeur.\" That supports battles. Provide."
+    },
+    {
+      "par": "P24",
+      "id_par": "local|mother-2017|medianas|2|viewing:1434099692",
+      "lado": "local",
+      "slug": "mother-2017",
+      "bucket": "medianas",
+      "tema": "desenvolvimento do enredo",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports idea \"desenvolvimento do enredo\" (plot development). The review talks about intellectual respect, higher power, criticism of Christian structure, environment, symbolism forced, Jennifer Lawrence great. No mention of plot development. So doesn't support. Output false."
+    },
+    {
+      "par": "P25",
+      "id_par": "local|incendies|medianas|1|viewing:1477456198",
+      "lado": "local",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Trabalho de direção e fotografia",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "The only savings graces were Villeneuve's camera casts its usual effectively cold gaze",
+      "trecho_encontrado": true,
+      "trecho_palavras": 13,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to decide if the review supports the idea principal: \"Trabalho de direção e fotografia\" i.e., work of direction and cinematography. The review mentions \"Villeneuve's camera casts its usual effectively cold gaze\". That supports cinematography. Also maybe direction. The sentence: \"The only savings graces were Villeneuve's camera casts its usual effectively cold gaze\". That supports that the cinematography is good. So yes. evidence clear? The sentence directly says camera casts its usual effectively cold gaze, which indicates direction/camera. So evidence clear. Return JSON."
+    },
+    {
+      "par": "P26",
+      "id_par": "publicado|incendies|negativas|5|viewing:1489059637",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "negativas",
+      "tema": "Problemas de roteiro e lógica",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Butchered arabic, dialects that have nothing to do with the region (the militia chief is Moroccan, they couldn’t go furthest than that).",
+      "trecho_encontrado": true,
+      "trecho_palavras": 22,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to determine if the review supports the bullet \"Problemas de roteiro e lógica\". The review is negative, pointing out plot issues. That supports the idea that there are problems with the script and logic. So yes, it supports. Provide trecho: choose a sentence that supports. Example: \"Butchered arabic, dialects that have nothing to do with the region ... also they make it as the refugees were the problem and not the Israeli interference in Lebanon’s politics.\" That's a long sentence. Must be complete. We need a sentence with at least 4 words. Provide the entire sentence. Let's pick: \"Butchered arabic, dialects that have nothing to do with the region (the militia chief is Moroccan, they couldn’t go furthest than that).\" That is a complete sentence with punctuation. Provide that as trecho.\n\nReturn JSON."
+    },
+    {
+      "par": "P27",
+      "id_par": "local|anatomy-of-a-fall|negativas|4|viewing:1358845720",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "atuações insuficientes",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": false,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to decide if the review supports the bullet title \"atuações insuficientes\" (insufficient performances). The review says: \"So terribly boring. The courtroom procedures, including the judge, really irritated me. Still unable to see the point of it all. Only highlight was the marital argument scene.\" It mentions judge irritated, boring, only highlight was marital argument. No mention of performances. Does it imply performances insufficient? Not explicit. Could be inferred that judge performance? But no. So answer NÃO. No evidence."
+    },
+    {
+      "par": "P28",
+      "id_par": "local|the-substance|negativas|0|viewing:1439469596",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "negativas",
+      "tema": "abordagem excessiva de gore e nus",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "The visuals got exhausting, and the fake‑ahh body horror really started to annoy me.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 14,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "We need to check if review supports bullet \"abordagem excessiva de gore e nus\". Review mentions \"fake-ahh body horror\" and \"visuals got exhausting\". That implies gore? Body horror suggests gore. Nudes? Not mentioned. But the bullet claims excessive gore and nudity. Review says gore is overdone, yes. So supports idea main (gore). Nudity not addressed but main is gore. So true. Provide trecho literal. Need a sentence that evidences. \"The visuals got exhausting, and the fake‑ahh body horror really started to annoy me.\" That supports gore. Use exact. It's 13 words. Good."
+    },
+    {
+      "par": "P29",
+      "id_par": "publicado|incendies|positivas|1|viewing:1497209380",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "positivas",
+      "tema": "Reviravolta e revelações",
+      "dono": true,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Reviravolta e revelações\" (Plot twist and revelations). Review mentions plot twist: \"en sondaki plot twist pornosu bence çok gereksizdi\" => says plot twist is unnecessary. It does not support. So answer NÃO. Provide null, false, false."
+    },
+    {
+      "par": "P30",
+      "id_par": "publicado|incendies|medianas|3|viewing:1484752463",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Roteiro excessivamente construído para o choque",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "Extremely contrived misery porn at times.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 6,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Roteiro excessivamente construído para o choque\" (script excessively built for shock). Review says: \"Extremely contrived misery porn at times.\" Also \"plot twist ... more grace.\" He criticizes script as contrived? He says \"extremely contrived misery porn\" implying overbuilt for shock. Yes supports. Provide trecho whole sentence that contains evidence: \"Extremely contrived misery porn at times.\" That is 5 words? It's 5 words? Let's count: \"Extremely\"1 \"contrived\"2 \"misery\"3 \"porn\"4 \"at\"5 \"times\"6. Good >4. Provide. Output JSON."
+    },
+    {
+      "par": "P31",
+      "id_par": "local|anatomy-of-a-fall|negativas|3|viewing:1432358891",
+      "lado": "local",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "diálogos longos e repetitivos",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to decide. Review: \"I don’t know why I thought I’d enjoyed this movie. Everyone was speaking French. The last 30 mins was the best part. It took way to long and it was rather boring\". Bullet: \"diálogos longos e repetitivos\". Review mentions \"Everyone was speaking French\" and \"It took way to long and it was rather boring\". Doesn't explicitly say dialogues long and repetitive, but implies long due to long movie. Not sure. It's ambiguous. The review complains about length, but not explicitly about repetition. The bullet is about long and repetitive dialogues. The review does not explicitly support that dialogues are long and repetitive. It says everyone speaking French but no comment on repetition. So likely NÃO. But guidelines: need evidence. There's no direct evidence of long repetitive dialogues. So false.\n\nThus output: trecho null, apoia false, evidencia false."
+    },
+    {
+      "par": "P32",
+      "id_par": "local|the-substance|positivas|1|viewing:1439197022",
+      "lado": "local",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "horror corporal e efeitos visuais extremos",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "Need to see if review supports horror corporal e efeitos visuais extremos. Review mentions \"great freaky and weird af\", \"scary\", \"costumes were great\". Does not mention corporeal horror or extreme visual effects explicitly. No evidence. So answer no."
+    },
+    {
+      "par": "P33",
+      "id_par": "local|napoleon-2023|medianas|5|viewing:1429398371",
+      "lado": "local",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Tempo de duração e ritmo narrativo criticados",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "half of the time either Joaquin’s acting is meandering and aimless or Napoleon’s mood is being written to abruptly shift contradictory to how he should be acting.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 27,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Tempo de duração e ritmo narrativo criticados\". The main idea: duration and narrative pacing criticized. Review mentions runtime: \"clocks in at roughly three hours... two hours thirty-eight\". Then says \"half of the time either Joaquin’s acting is meandering and aimless or Napoleon’s mood is being written to abruptly shift contradictory\". That addresses pacing? says meandering, aimless, abruptly shift. Also earlier \"Now ask yourself: Which film is longer?\" But does it criticize duration? It mentions runtime but doesn't say it's too long. It says \"half of the time either acting meandering\" about pacing. So supports idea: pacing criticized. Also duration? not strongly. But bullet includes both duration and pacing criticized. Review says runtime info but not criticize. Could be ambiguous. But main idea maybe pacing criticized. Since it does mention pacing negatively, I think supports. Evidencia clara? The phrase \"half of the time either Joaquin’s acting is meandering and aimless or Napoleon’s mood is being written to abruptly shift contradictory\" is clear. So true. Provide trecho."
+    },
+    {
+      "par": "P34",
+      "id_par": "publicado|anatomy-of-a-fall|negativas|2|viewing:1420634637",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "negativas",
+      "tema": "História sem profundidade",
+      "dono": false,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "O filme é inteiro um suspense sobre se ela matou o marido ou não pra simplesmente chegar no final é só jogar a resposta de um jeito muito simples acabando com todo suspense que foi criado",
+      "trecho_encontrado": true,
+      "trecho_palavras": 36,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "We need to decide. Title \"História sem profundidade\". Review says film is just suspense about murder, ends simply, kills suspense. That indicates shallow story? The review implies lack of depth. So supports idea. It is clear. Provide trecho. Sentence: \"O filme é inteiro um suspense sobre se ela matou o marido ou não pra simplesmente chegar no final é só jogar a resposta de um jeito muito simples acabando com todo suspense que foi criado\". That's whole. That's >4 words. So output."
+    },
+    {
+      "par": "P35",
+      "id_par": "publicado|napoleon-2023|positivas|1|viewing:1436928633",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "positivas",
+      "tema": "Impacto visual e direção de arte",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "les scènes de batailles sont dingues, certains tableaux célèbres mis en images, la photographie est superbe.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 16,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to decide if the review supports the bullet title \"Impacto visual e direção de arte\". Main idea: visual impact and art direction. Review mentions \"scènes de batailles ... la photographie est superbe.\" That's visual impact and art direction. So supports. Evidência clara: phrase \"les scènes de batailles sont dingues, certains tableaux célèbres mis en images, la photographie est superbe.\" That clearly supports. So true.\n\nReturn JSON."
+    },
+    {
+      "par": "P36",
+      "id_par": "publicado|incendies|medianas|1|viewing:1492143104",
+      "lado": "publicado",
+      "slug": "incendies",
+      "bucket": "medianas",
+      "tema": "Ritmo lento e momentos arrastados",
+      "dono": false,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "By the time this slow sad family and war drama becomes disturbingly devastating, it’s become too late to back out and you’re invested in the story.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 26,
+      "motivo": null,
+      "duvidoso": true,
+      "pensamento": "Need to see if review supports idea \"Ritmo lento e momentos arrastados\". Review says: \"By the time this slow sad family and war drama becomes disturbingly devastating, it’s become too late to back out and you’re invested in the story.\" Mentions \"slow sad family and war drama\". So yes supports slow rhythm. Provide trecho. Let's find exact phrase: \"By the time this slow sad family and war drama becomes disturbingly devastating\". That includes \"slow sad\". So yes. Provide trecho entire sentence. It has >4 words. Provide JSON."
+    },
+    {
+      "par": "P37",
+      "id_par": "publicado|anatomy-of-a-fall|positivas|4|viewing:1437519205",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "positivas",
+      "tema": "Direção e atmosfera realista",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "I love that the director allowed certain scenes to “breathe.”",
+      "trecho_encontrado": true,
+      "trecho_palavras": 10,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "We need to check if review supports bullet \"Direção e atmosfera realista\". The review praises realism, authenticity, director allowed scenes to breathe, etc. That supports real atmosphere and direction. So apoia. Evidencia clara? The sentence: \"The authenticity of this film is thanks equally to the screen writer(s) and the actors.\" Also \"Sandra Hüller in particular is downright incredible.\" Not about direction. But earlier: \"I love that the director allowed certain scenes to 'breathe.'\" That directly supports direction and atmosphere. So evidence clear. We'll give trecho: \"I love that the director allowed certain scenes to “breathe.”\"\n\nCheck length >4 words: yes. So JSON."
+    },
+    {
+      "par": "P38",
+      "id_par": "publicado|anatomy-of-a-fall|positivas|1|viewing:1437243876",
+      "lado": "publicado",
+      "slug": "anatomy-of-a-fall",
+      "bucket": "positivas",
+      "tema": "Dissolução e complexidade conjugal",
+      "dono": true,
+      "juiz": true,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": true,
+        "v2.1": true
+      },
+      "apoia_modelo": true,
+      "ambiguo": null,
+      "evidencia_clara": true,
+      "trecho": "La muerte del marido es una excusa para desmenuzar la propia anatomía de la pareja y sus propias repercusiones con la excusa del juicio.",
+      "trecho_encontrado": true,
+      "trecho_palavras": 24,
+      "motivo": null,
+      "duvidoso": false,
+      "pensamento": "Need to decide. Bullet \"Dissolução e complexidade conjugal\" idea: dissolution and complexity of marriage. Review says: death of husband is excuse to dissect own anatomy of couple and own repercussions with the excuse of the trial. Very intelligent. So yes supports dissolution (marriage dissolution) and complexity. So apoia_ideia_principal true. evidence clear? The sentence states \"La muerte del marido es una excusa para desmenuzar la propia anatomía de la pareja y sus propias repercusiones...\" This clearly shows dissolution and complexity. So true. Provide trecho."
+    },
+    {
+      "par": "P39",
+      "id_par": "publicado|the-substance|positivas|2|viewing:596184054",
+      "lado": "publicado",
+      "slug": "the-substance",
+      "bucket": "positivas",
+      "tema": "Direção e estilo visual marcantes",
+      "dono": false,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": true,
+      "pensamento": "Need to see if review supports bullet \"Direção e estilo visual marcantes\". Review talks about body horror, sexual shots, gross shots, entertaining, story, horror fans. Does it discuss direction and visual style? It says \"Rare to see the Cannes press screening audience go THIS wild during a film - that's always the mark of something truly great.\" Also \"the most gratuitously sexual shots of female bodies AND also the most disgustingly gross shots\". That implies visual style. It praises film's visual style? It says \"it's entertaining\", \"the way it's told ... is original\". Not explicit about direction. Might be implicit. But \"mark of something truly great\" refers to visual style? It's ambiguous. I think not clear evidence. So false."
+    },
+    {
+      "par": "P40",
+      "id_par": "publicado|napoleon-2023|medianas|2|viewing:1432476830",
+      "lado": "publicado",
+      "slug": "napoleon-2023",
+      "bucket": "medianas",
+      "tema": "Foco excessivo no relacionamento com Josefina",
+      "dono": true,
+      "juiz": false,
+      "juiz_v1": true,
+      "juiz_anteriores": {
+        "v2.0": false,
+        "v2.1": false
+      },
+      "apoia_modelo": false,
+      "ambiguo": null,
+      "evidencia_clara": false,
+      "trecho": null,
+      "trecho_encontrado": false,
+      "trecho_palavras": 0,
+      "motivo": "modelo disse que não apoia a ideia principal",
+      "duvidoso": false,
+      "pensamento": "We need to decide. Bullet title: \"Foco excessivo no relacionamento com Josefina\" meaning focus excessive on relationship with Josephine. Review says: \"just focus so much in the personal life of Napoleon instead of showing one of the greatest generals\". That's about personal life in general, not specifically Josephine. The bullet specifically about relationship with Josefina. The review does not mention Josephine, only personal life. So does it support? According to rules, if review supports the nucleus of bullet: the nucleus is focus on relationship with Josefina. Review says focus on personal life, not necessarily Josephine. That is not specific, so does not support. So answer: apoia_ideia_principal false, evidencia_clara false, trecho null."
+    }
+  ]
+}

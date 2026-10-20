@@ -125,7 +125,7 @@ juiz complacente, eles são um TETO: os 2 bullets sem apoio nenhum (os dois do
 lado local, ambos nas negativas de Anatomia, os mesmos apontados na leitura
 humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
 
-## Juiz v2 (2026-10-19) — v2.0 e v2.1 calibradas; v2.2 (último ajuste) preparada, calibração falta rodar no Windows
+## Juiz v2 (2026-10-19) — calibrado; **v2.2 CONGELADA** (2026-10-20)
 
 Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e` + `c9bb711`). O v1 e a saída
 dele ficam como estão (verificáveis pelo hash do prompt).
@@ -180,7 +180,7 @@ versão congelada); (f) validação só na amostra nova.
 |---|---|---|
 | v2.0 | `a42f4893…` | P 0,85 [0,64–0,95] · R 0,68 [0,48–0,83] · dif. lados 0,131 — reprovaria no recall (`juiz_v2/calibracao_v2.0.md`) |
 | v2.1 | `75b5533f…` | P 0,909 [0,72–0,98] · R 0,80 [0,61–0,91] · dif. lados 0,167 — reprovaria na diferença entre os lados (`juiz_v2/calibracao_v2.1.md`) |
-| v2.2 | `44606cf1…` | falta rodar no Windows |
+| v2.2 | `44606cf1…` | P 0,821 [0,64–0,92] · R 0,92 [0,75–0,98] · dif. lados 0,046 — passaria; **congelada** (`juiz_v2/calibracao_v2.2.md`) |
 
 ### v2.0 — resultado da calibração
 
@@ -284,3 +284,51 @@ A versão congelada é a que vai para os 40 pares novos e para os 900. Os 40
 pares novos não são tocados por nenhuma das duas versões antes da escolha.
 A regra está no código (`escolha_pre_registrada`, com teste) e o relatório
 da v2.2 diz qual versão ela escolhe. Não há ajuste depois da v2.2.
+
+### v2.2 — resultado da calibração (2026-10-20)
+
+23 VP, 5 FP, 2 FN, 10 VN. Por lado: publicado P **0,80** / R 0,857; local
+P 0,846 / R 1,0. Diferença de precisão entre os lados 0,046. Corrigiu da
+v2.1: P11, P17, P28 (FN). Erros novos: P04, P15 (FP que a v2.0 já tinha e a
+v2.1 corrigira) e P36 (FP). Sobraram: P04, P09, P15, P34, P36 (FP) e P29, P40
+(FN). O código não derrubou nenhum "sim". Em P28 a cópia trouxe de novo o
+hífen U+2011 e a normalização da v2.1 a encontrou (a da v2.0 não).
+
+## CONGELAMENTO — juiz v2.2 (2026-10-20, antes de qualquer rotulagem nova)
+
+**Versão congelada: v2.2.** `config_sha256` =
+**`44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669`**
+(`CONGELADA = "v2.2"` em `main`, `c489630`; um teste fixa o hash).
+
+**Por quê:** a regra pré-registrada acima — a v2.2 passou nos três critérios
+da calibração (precisão 0,821 ≥ 0,8; recall 0,92 ≥ 0,8; diferença de precisão
+entre os lados 0,046 ≤ 0,15). Não houve escolha pelo resultado: a regra foi
+gravada antes de a v2.2 rodar, e não há ajuste depois dela.
+
+**Registrado junto do congelamento, para ler a validação:**
+- **`evidencia_clara` é DECORATIVO, não é uma segunda trava.** Nos 40 pares
+  ele nunca divergiu de `apoia_ideia_principal` (28 vezes os dois
+  verdadeiros, 12 os dois falsos); em P17 o raciocínio diz "unclear… Could
+  support" e o campo veio verdadeiro — a mesma falha do `ambiguo` da v2.1. A
+  melhora da v2.2 veio de mostrar só o título e de perguntar pela ideia
+  principal. Na prática o juiz decide por `apoia_ideia_principal` e pela
+  frase de prova (≥ 4 palavras, achada na review).
+- **A precisão do lado publicado ficou em 0,80 exato** na calibração, e 4 dos
+  5 FP (P09, P15, P34, P36) estão em pares que o dono marcou como duvidosos.
+  O resultado da validação vale qualquer que seja.
+- **O viés restante aponta para o mesmo lado:** recall do local 1,0 contra
+  0,857 no publicado — o juiz ainda nega mais apoio a bullets bons do
+  publicado, o que favorece o modelo local.
+- Calibração não é validação: os 40 pares acima ajustaram o prompt e o
+  número deles é otimista por construção.
+
+**Critério da validação — o pré-registrado, sem nenhuma mudança:** precisão
+≥ 0,8, recall ≥ 0,8 e diferença de precisão entre os lados ≤ 0,15
+(`CRITERIO_V2`), nos 40 pares NOVOS, contra o rótulo novo do dono. Reprovado,
+a validação e o relatório de fidelidade dizem "ESTE RESULTADO NÃO VALE" na
+primeira linha.
+
+**O que vem, nesta ordem:** (1) amostra nova de 40 pares, sorteada depois
+deste registro; (2) o dono rotula; (3) o Windows roda a v2.2 nos 900
+(`docs/SETUP_WINDOWS.md` §12); (4) `validar`, SÓ nos 40 novos; (5)
+`relatorio` (`juiz_v2/fidelidade_v2.2.md`).
