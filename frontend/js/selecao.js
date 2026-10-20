@@ -198,12 +198,29 @@
     return lista[modulo(diasDesdeEpoca(dia), lista.length)];
   }
 
+  /* [rodada 4b] CARÊNCIA: o aniversariante só vence a permutação se NÃO
+     for o filme da PERMUTAÇÃO em nenhum dia de [dia − C, dia + C] (o
+     próprio dia incluso). Calculada sobre `filmeDaPermutacao`, nunca sobre
+     `escolhaDoDia` — sem recursão. Aplicada a cada aniversariante ANTES do
+     desempate pela ordem da permutação; se nenhum passar, vale a
+     permutação. Evita o mesmo filme duas vezes em poucos dias (caso
+     medido: Napoleão em 20/11 pela permutação e 22/11 pelo aniversário). */
+  var CARENCIA_ANIVERSARIO_DIAS = 14;
+
+  function emCarencia(slug, lista, dia) {
+    var d = diasDesdeEpoca(dia);
+    for (var k = -CARENCIA_ANIVERSARIO_DIAS; k <= CARENCIA_ANIVERSARIO_DIAS; k++) {
+      if (lista[modulo(d + k, lista.length)].slug === slug) return true;
+    }
+    return false;
+  }
+
   // → { filme, motivo: "aniversario" | "permutacao" }
   function escolhaDoDia(filmes, dia) {
     var lista = permutacao(elegiveis(filmes));
     if (!lista.length) return null;
     for (var i = 0; i < lista.length; i++) {
-      if (fazAniversario(lista[i].estreia, dia)) {
+      if (fazAniversario(lista[i].estreia, dia) && !emCarencia(lista[i].slug, lista, dia)) {
         return { filme: lista[i], motivo: "aniversario" };
       }
     }
@@ -312,7 +329,8 @@
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
     filmeDoDia: filmeDoDia, filmeDoDiaEm: filmeDoDiaEm,
     fazAniversario: fazAniversario, filmeDaPermutacao: filmeDaPermutacao,
-    escolhaDoDia: escolhaDoDia,
+    escolhaDoDia: escolhaDoDia, emCarencia: emCarencia,
+    CARENCIA_ANIVERSARIO_DIAS: CARENCIA_ANIVERSARIO_DIAS,
     prateleirasBase: prateleirasBase, prateleiras: prateleiras,
     recemChegados: recemChegados,
   };
