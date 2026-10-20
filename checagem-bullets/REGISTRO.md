@@ -125,7 +125,7 @@ juiz complacente, eles são um TETO: os 2 bullets sem apoio nenhum (os dois do
 lado local, ambos nas negativas de Anatomia, os mesmos apontados na leitura
 humana) seguem sem apoio mesmo com um juiz que tende a dizer sim.
 
-## Juiz v2 (2026-10-19) — preparado; calibração falta rodar no Windows
+## Juiz v2 (2026-10-19) — v2.0 calibrada; v2.1 preparada, calibração falta rodar no Windows
 
 Código: `scripts/juiz_bullets_v2.py` (em `main`, `e04937e` + `c9bb711`). O v1 e a saída
 dele ficam como estão (verificáveis pelo hash do prompt).
@@ -178,4 +178,55 @@ versão congelada); (f) validação só na amostra nova.
 
 | versão | config_sha256 | calibração (40 pares antigos) |
 |---|---|---|
-| v2.0 | `a42f4893…` | falta rodar no Windows |
+| v2.0 | `a42f4893…` | P 0,85 [0,64–0,95] · R 0,68 [0,48–0,83] · dif. lados 0,131 — reprovaria no recall (`juiz_v2/calibracao_v2.0.md`) |
+| v2.1 | `75b5533f…` | falta rodar no Windows |
+
+### v2.0 — resultado da calibração
+
+17 VP, 3 FP, 8 FN, 12 VN (v1: 24, 9, 1, 6). Por lado: publicado P 0,909 /
+R 0,714; local P 0,778 / R 0,636. A v2.0 trocou falso positivo por falso
+negativo. O código derrubou 3 "sim" do modelo, todos por trecho não
+encontrado: P08 (cópia com "j’ai carrément" omitido — derrubada certa pela
+regra, mas custou um VP), P13 (partes distantes coladas com "…" — acerto do
+código, evitou um FP) e P28 (cópia fiel com hífen U+2011 no lugar de "-" —
+erro da normalização).
+
+### v2.1 — o 1º ajuste (2026-10-19), uma correção por causa de erro
+
+**Configuração v2.1:** `config_sha256` =
+`75b5533f685bc37549a9c7751b7cb5ed3d777bc742dc5d832b6728be995b86b2`
+(`juiz_v2/config_v2.1.json`; código em `main`, `9b84104`). Hash da versão em
+calibração, **não** o da versão congelada.
+
+1. **Literalidade (prompt).** 5 dos 8 FN da v2.0 (P01, P11, P17, P29, P40;
+   talvez P33) foram o modelo exigindo menção explícita ou a parte lateral do
+   bullet, contra o critério do dono. O prompt passa a dizer, com destaque: o
+   NÚCLEO é o título, a descrição é contexto e não exigência; apoio implícito
+   conta se inequívoco (elogiar a protagonista é elogiar a atuação; reclamar do
+   excesso de vida pessoal sustenta "foco excessivo no relacionamento"); título
+   com duas ideias: basta apoiar a principal. Os exemplos são de filmes FORA
+   dos 40 pares (um teste confere que nenhum nome dos 5 filmes da calibração
+   aparece no prompt). O `CRITERIO_DONO` segue inteiro e sem mudança.
+2. **Normalização do trecho (código, não é ajuste de critério).** P28 caiu por
+   um hífen U+2011 numa cópia fiel. A comparação da v2.1 usa NFKC e une
+   hífens e travessões ("-"), aspas ('"'), apóstrofos ("'") e espaços
+   especiais (os de largura zero somem). Continua NÃO contando: trecho com "…"
+   ou partes distantes coladas (P13), cópia com palavra omitida (P08), sem
+   acento. O prompt reforça: copiar sem omitir nem alterar nada, sem
+   reticências. Com a regra nova, dos trechos da v2.0 só o de P28 muda (passa a
+   ser encontrado).
+3. **"Na dúvida, não" imposto pelo código.** P15: o raciocínio dizia
+   "ambíguo" e o modelo respondeu sim. O JSON do juiz ganha o booleano
+   `"ambiguo"`; apoio = apoia E não ambíguo E trecho válido (≥ 4 palavras,
+   encontrado). Sem apoio por isso, o motivo é "modelo disse que é ambíguo".
+
+**Janela:** o prompt da v2.1 é mais longo (maior par: 8.737 caracteres, cota
+3.058 + 1024 = 4.082) → `num_ctx` 4096 (a v2.0 segue 3584). `medir-contexto`
+roda de novo para a v2.1 antes do juiz.
+
+**A v2.0 continua verificável:** prompt, schema, janela e regra são por versão
+no código, a v2.0 mantém o hash `a42f4893…` (um teste fixa) e a calibração da
+v2.1 sai ao lado do v1 e da v2.0.
+
+Depois da v2.1 sobra **um** ajuste (v2.2). Se a v2.1 ficar boa o bastante,
+congelar em vez de gastá-lo.
