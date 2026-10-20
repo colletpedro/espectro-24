@@ -284,6 +284,15 @@ def main():
     print(f"    catálogo (home): {len(catalogo_presente)} filmes")
     print(f"    + filme oculto de teste: {deg['slug']}")
 
+    # [home nova] o índice enxuto da home sai dos dados que acabaram de ser
+    # publicados — gerado na mesma passada para não divergir de data.js.
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "build_indice", FRONTEND / "build_indice.py")
+    build_indice = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(build_indice)
+    build_indice.main([])
+
 
 if __name__ == "__main__":
     main()

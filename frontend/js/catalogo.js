@@ -1,4 +1,9 @@
-/* Espectro 24 — home.js
+/* Espectro 24 — catalogo.js (até a home nova, `home.js`)
+   [home nova] O mosaico migrou INTACTO de `/` para `/filmes` (catálogo
+   completo). A única mudança é o caminho relativo dos links, que agora
+   saem de `filmes/`: `../filme.html` funciona tanto em `/filmes` quanto em
+   `/filmes/` e por file://.
+
    Monta os cards do catálogo a partir de window.ESPECTRO_DATA e liga a BUSCA.
 
    v1.9.14: a busca deixou de ser decorativa. Até aqui ela exibia "Busca em
@@ -104,7 +109,8 @@
 
     var a = document.createElement("a");
     a.className = "mosaic-cell";
-    a.href = "filme.html?slug=" + encodeURIComponent(slug);
+    a.dataset.slug = slug;
+    a.href = "../filme.html?slug=" + encodeURIComponent(slug);
     a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
 
     // [v1.9.29] O PÔSTER — e isto é REDESENHO da célula, não acréscimo.
@@ -187,17 +193,46 @@
   var hint = document.getElementById("searchHint");
   var todos = [].slice.call(cards.children);
 
+  // [home nova, rodada 2] `?desde=AAAA-MM-DD` — o "ver todos os
+  // recém-chegados" da home. Mostra só os filmes que entraram no catálogo
+  // nessa data ou depois (`entrada`, de js/indice.js); o filtro de texto
+  // abaixo continua valendo DENTRO desse recorte. Sem o parâmetro, ou sem o
+  // índice, nada muda.
+  var desde = new URLSearchParams(location.search).get("desde");
+  var INDICE = window.ESPECTRO_INDICE;
+  if (desde && /^\d{4}-\d{2}-\d{2}$/.test(desde) && INDICE) {
+    var naLeva = {};
+    INDICE.filmes.forEach(function (f) {
+      if (f.entrada && f.entrada >= desde) naLeva[f.slug] = true;
+    });
+    var nLeva = 0;
+    todos.forEach(function (el) {
+      if (naLeva[el.dataset.slug]) nLeva++;
+      else el.dataset.foraDaLeva = "1";
+      el.hidden = !!el.dataset.foraDaLeva;
+    });
+    if (microcopy) {
+      var p = desde.split("-");
+      microcopy.textContent = nLeva + " recém-chegados desde " + p[2] + "/"
+        + p[1] + "/" + p[0] + " · ";
+      var todosLink = document.createElement("a");
+      todosLink.href = "./";
+      todosLink.textContent = "ver o catálogo completo";
+      microcopy.appendChild(todosLink);
+    }
+  }
+
   function filtrar() {
     var q = norm(input.value.trim());
     if (!q) {
-      todos.forEach(function (el) { el.hidden = false; });
+      todos.forEach(function (el) { el.hidden = !!el.dataset.foraDaLeva; });
       hint.classList.remove("is-visible");
       hint.textContent = "";
       return;
     }
     var n = 0;
     todos.forEach(function (el) {
-      var casa = el.dataset.busca.indexOf(q) !== -1;
+      var casa = el.dataset.busca.indexOf(q) !== -1 && !el.dataset.foraDaLeva;
       el.hidden = !casa;
       if (casa) n++;
     });

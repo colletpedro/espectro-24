@@ -323,8 +323,8 @@ Ela serve para ajustar o prompt, não para validar o juiz (a validação é numa
 amostra nova, depois de a versão ser congelada).
 
 **A configuração inteira está no código** e entra num hash (`config_sha256`,
-gravado em cada registro): modelo, `think=low`, `num_ctx` 3584, `num_predict`
-1024, `seed` 20261019, temperatura do modelo. As variáveis
+gravado em cada registro): modelo, `think=low`, `num_ctx` (3584 na v2.0, 4096 na
+v2.1 — o prompt da v2.1 é mais longo), `num_predict` 1024, `seed` 20261019, temperatura do modelo. As variáveis
 `ESPECTRO24_OLLAMA_THINK`, `_NUM_CTX` e `_NUM_PREDICT` **não valem** para este
 juiz; `ESPECTRO24_OLLAMA_TEMPERATURE` definida faz o juiz se recusar a rodar.
 
@@ -337,11 +337,11 @@ Dois passos, na ordem:
 
 1. `medir-contexto` — os 10 prompts mais longos dos 900, com janela folgada
    (8192) e 1 token de saída, para o servidor contar os tokens exatos. Grava
-   `checagem-bullets\juiz_v2\contexto_medido_v2.0.json` e diz `CABE` ou `NÃO
-   CABE` em 3584. Sem `CABE`, o juiz se recusa a rodar. Poucos minutos.
+   `checagem-bullets\juiz_v2\contexto_medido_<versão>.json` e diz `CABE` ou `NÃO
+   CABE` na janela da versão. Cada versão mede de novo. Sem `CABE`, o juiz se recusa a rodar. Poucos minutos.
 2. `juiz --calibracao` — os 40 pares. **~10 min (p95 ~19 min)**, estimativa a
    partir das velocidades do gate do gpt-oss neste notebook
-   (`checagem-bullets\juiz_v2\preparo_v2.0.md`). Retomável: par já feito com a
+   (`checagem-bullets\juiz_v2\preparo_<versão>.md`). Retomável: par já feito com a
    mesma configuração não é refeito.
 
 ```powershell
@@ -352,24 +352,27 @@ git pull
 $env:PYTHONUTF8 = "1"
 Remove-Item Env:ESPECTRO24_OLLAMA_TEMPERATURE -ErrorAction SilentlyContinue
 ollama list                                    # gpt-oss:20b precisa aparecer
-python scripts/juiz_bullets_v2.py medir-contexto --dir checagem-bullets
-python scripts/juiz_bullets_v2.py juiz --calibracao --dir checagem-bullets
+.\venv\Scripts\python.exe scripts/juiz_bullets_v2.py medir-contexto --dir checagem-bullets
+.\venv\Scripts\python.exe scripts/juiz_bullets_v2.py juiz --calibracao --dir checagem-bullets
 ```
+
+A versão que roda é a `VERSAO_ATUAL` do código (hoje **v2.1**); a saída vai
+para `calibracao_<versão>_saida.jsonl` e não mistura com a da versão anterior.
 
 - **No fim** a última linha diz `pares sem veredito: 0 — completo`. Se não
   disser, rode o último comando de novo.
-- **O que olhar** em `checagem-bullets\juiz_v2\calibracao_v2.0_saida.jsonl`:
+- **O que olhar** em `checagem-bullets\juiz_v2\calibracao_<versão>_saida.jsonl`:
   `finish_reason` (falha com `length` = o raciocínio passou de 1024 tokens),
   `erro` com `contexto` (o prompt encostou na janela), `think` = `low` e
   `modelo_efetivo` = `gpt-oss:20b`. O `pensamento` de cada par fica gravado.
-- Se o seu `ollama ps` tiver a coluna `CONTEXT`, ela deve mostrar 3584 durante o
-  passo 2 (8192 no passo 1).
+- Se o seu `ollama ps` tiver a coluna `CONTEXT`, ela deve mostrar a janela da
+  versão durante o passo 2 (4096 na v2.1) e 8192 no passo 1.
 
 **Depois:**
 
 ```powershell
 git add checagem-bullets/juiz_v2
-git commit -m "checagem bullets: juiz v2.0 (gpt-oss:20b) na calibração dos 40 pares"
+git commit -m "checagem bullets: juiz v2.1 (gpt-oss:20b) na calibração dos 40 pares"
 git push
 ```
 

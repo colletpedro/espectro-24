@@ -12,16 +12,30 @@ como marca, tipografia serif/mono/sans. Mobile-first.
 
 ```
 frontend/
-  index.html        Home (catálogo dos 3 filmes)
+  index.html        Home: premissa, busca, filme do dia, prateleiras,
+                    recém-chegados, aviso de catálogo (lê só js/indice.js)
+  filmes/index.html Catálogo completo — o mosaico que era a home (rota /filmes)
   filme.html        Tela do filme (lê ?slug=<slug>)
   css/styles.css    Design system (dark, gradiente, 3 famílias de fonte)
   js/data.js        DADOS EMBUTIDOS (gerado — não editar à mão)
-  js/home.js        Monta cards + busca estética
+  js/indice.js      ÍNDICE ENXUTO da home (gerado de data.js — não editar)
+  js/busca.js       Motor de busca: consulta → resultados (puro, sem DOM)
+  js/selecao.js     Filme do dia, prateleiras, recém-chegados (puro)
+  js/textos_home.js Toda a prosa da home, inclusive os templates
+  js/inicio.js      Apresentação da home (só DOM e eventos)
+  js/catalogo.js    Mosaico + filtro de /filmes (era js/home.js)
   js/filme.js       Renderiza ficha, narrativa, grupos, temas, modo degradado
   js/survey.js      Micro-pesquisa A/B (localStorage + copiar feedback)
   data/*.json       Cópia crua dos JSONs (referência; o site usa data.js)
-  build_data.py     Gera js/data.js e data/*.json a partir de resultado/
+  build_data.py     Gera js/data.js e data/*.json a partir de resultado/,
+                    e em seguida js/indice.js
+  build_indice.py   Gera js/indice.js a partir de js/data.js
+  entrada_no_catalogo.json  Data de entrada de cada slug (recém-chegados)
 ```
+
+`/filmes` é uma pasta com `index.html` para funcionar igual na Vercel e no
+`http.server`. Por `file://` o navegador não resolve índice de pasta: abra
+`filmes/index.html` diretamente.
 
 ## Rodar localmente
 
@@ -46,7 +60,8 @@ Roda offline, não toca no pacote Python:
 python3 frontend/build_data.py
 ```
 
-Isso reescreve `js/data.js` e `data/*.json` a partir de
+Isso reescreve `js/data.js` e `data/*.json` (e, em seguida, `js/indice.js`)
+a partir de
 `resultado/{the-invite-2026,cure,cidade-de-deus}.json` e adiciona um filme
 sintético `teste-degradado` (usado só para exercitar o modo degradado —
 não aparece no catálogo da home).
@@ -73,8 +88,15 @@ Nada mais a configurar — a Vercel serve os arquivos estáticos direto.
   reviews no Letterboxd e **não** lista temas. Nunca atrás de tooltip/collapse.
 - **Sem conteúdo de trama** além da sinopse oficial da ficha (TMDB); sem
   review bruta individual.
-- **Busca** é estética nesta versão: ao focar/digitar mostra "busca em breve",
-  sem lógica de filtro.
+- **Busca da home**: client-side sobre `js/indice.js` (título exibido,
+  título do Letterboxd, slug como chave oculta, ano); prefixo antes de
+  substring, desempate alfabético. Setas + Enter, Esc fecha. Em `/filmes`
+  continua o filtro do mosaico (título ou eixo em destaque); `?desde=AAAA-MM-DD`
+  restringe o mosaico aos filmes que entraram no catálogo a partir da data
+  (é o "ver todos os recém-chegados" da home).
+- **Filme do dia, prateleiras e ganchos**: regras escritas no cabeçalho de
+  `js/selecao.js` (seleção) e de `js/textos_home.js` (prioridade dos
+  ganchos). `?dia=AAAA-MM-DD` na home fixa a data para conferência.
 - **Micro-pesquisa (A/B):** voto salvo em `localStorage` por filme; botão
   "copiar meu feedback" gera texto simples para envio manual. Sem backend,
   sem analytics, sem cookies de terceiros.

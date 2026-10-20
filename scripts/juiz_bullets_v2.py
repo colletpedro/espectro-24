@@ -10,7 +10,7 @@ tem de ser confiável e a validação, honesta.
 **O que muda em relação ao v1.**
 1. Modelo: `gpt-oss:20b` (think=low), outro modelo que não o que escreveu o lado
    local, e o melhor que roda no notebook. Contexto: o menor que cabe no maior
-   par dos 900 (ver `NUM_CTX`), conferido por medição no Windows antes de rodar
+   par dos 900 (ver `NUM_CTX_V2_0`), conferido por medição no Windows antes de rodar
    (`medir-contexto`) e por uma guarda em cada chamada.
 2. Frase de prova: o modelo devolve `{"trecho": <a frase inteira da review>
    | null, "apoia": bool}`. O CÓDIGO decide (`apoio_final`): apoio = o modelo
@@ -19,6 +19,13 @@ tem de ser confiável e a validação, honesta.
    apoio, o motivo fica registrado (`motivo_sem_apoio`). O modelo não tem a
    palavra final.
 3. Critério: o MESMO guia que o dono usou para rotular (`CRITERIO_DONO`).
+
+**v2.1 (o 1º ajuste, 2026-10-19)** — uma correção por causa de erro da v2.0:
+o prompt destaca que o núcleo é o título e que apoio implícito inequívoco conta;
+a comparação do trecho une as variantes tipográficas (`normalizar_v2_1`); e o
+modelo devolve também `"ambiguo"`, e ambíguo nunca é apoio. Cada versão tem o seu
+prompt, schema, janela e regra em `VERSOES`, e a v2.0 continua legível com o
+hash dela.
 
 **Calibração × validação.** Os 40 pares já rotulados servem para AJUSTAR o
 prompt (no máximo 2 ajustes: `VERSOES` tem no máximo 3 entradas), nunca para
@@ -86,8 +93,9 @@ NUM_PREDICT = 1024
 # Maior par (review de 4.990 caracteres, prompt de 6.998): ≤ 2.450 tokens +
 # 1024 de saída = 3.474 → 3584. `medir-contexto` confere com a contagem exata
 # do servidor antes de o juiz rodar, e cada chamada tem a guarda
-# `contexto_estoura`.
-NUM_CTX = 3584
+# `contexto_estoura`. A janela é por versão (`num_ctx`): o prompt da v2.1 é
+# mais longo.
+NUM_CTX_V2_0 = 3584
 # Semente fixa: a mesma entrada dá a mesma resposta na mesma máquina, e o par
 # refeito depois de uma falha de rede não muda de veredito por sorteio. A
 # temperatura fica a do modelo (a que o gate do gpt-oss usou), não fixada.
@@ -138,18 +146,45 @@ USER_V2_0 = ("Review (nota {nivel} de 5 estrelas):\n\n{texto}\n\n"
              "Bullet — descrição: {exemplo}\n\n"
              "Esta review sustenta o bullet?")
 
-# Uma entrada por versão do prompt; versão nova nunca reescreve a anterior.
-# No máximo 2 ajustes depois da v2.0 (pedido do dono, 2026-10-19).
-VERSOES = {
-    "v2.0": {"system": SYSTEM_V2_0, "user": USER_V2_0,
-             "nota": "primeira versão: critério do dono, frase de prova; sem ajuste"},
-}
-MAX_VERSOES = 3
-VERSAO_ATUAL = "v2.0"
-# A versão congelada para a validação na amostra nova e os 900 pares — `None`
-# até a calibração terminar. Congelar = fixar aqui E gravar `config_sha256` no
-# REGISTRO.md antes de qualquer rotulagem nova.
-CONGELADA: str | None = None
+# v2.1 — o primeiro ajuste (2026-10-19), uma correção por causa de erro da
+# calibração da v2.0 (REGISTRO.md):
+# 1. literalidade: 5 dos 8 FN foram o modelo exigindo menção explícita ou a
+#    parte lateral do bullet → o prompt diz, com destaque e exemplos de filmes
+#    FORA dos 40 pares, que o núcleo é o título, que a descrição é contexto e
+#    que apoio implícito inequívoco conta;
+# 2. cópia fiel com outro hífen (P28, U+2011) → `normalizar_v2_1`;
+# 3. "na dúvida, não" pelo código (P15: o raciocínio dizia "ambíguo" e a
+#    resposta foi sim) → o campo "ambiguo", e ambíguo nunca é apoio.
+SCHEMA_V2_1 = {"type": "object",
+               "properties": {"trecho": {"type": ["string", "null"]},
+                              "ambiguo": {"type": "boolean"},
+                              "apoia": {"type": "boolean"}},
+               "required": ["trecho", "ambiguo", "apoia"]}
+
+SYSTEM_V2_1 = f"""Você confere se UMA review de cinema sustenta UM bullet de uma síntese.
+
+O bullet resume algo que um grupo de reviews diria sobre o filme. Ele tem um TÍTULO e uma DESCRIÇÃO. A pergunta é só sobre ESTA review: ela conta como prova do que o bullet afirma?
+
+Critério:
+{CRITERIO_DONO}
+
+COMO LER O BULLET — IMPORTANTE:
+- **O NÚCLEO do bullet é o TÍTULO.** A DESCRIÇÃO é contexto para entender o título, NÃO é exigência: a review NÃO precisa confirmar os detalhes da descrição (os exemplos, as nuances, quem acha o quê). Basta sustentar o título.
+- **Apoio implícito CONTA, desde que inequívoco.** A review não precisa usar as palavras do bullet nem nomear o aspecto. Exemplos, de outros filmes:
+  - bullet "Atuação de Cate Blanchett"; review "Cate Blanchett é uma força da natureza, não consegui tirar os olhos dela" → SIM: elogiar a protagonista é elogiar a atuação.
+  - bullet "Romance ocupa espaço demais"; review "metade do filme é a vida amorosa do piloto, eu queria ver as corridas" → SIM: reclamar do excesso de vida pessoal sustenta o foco excessivo no relacionamento, mesmo sem nomear o par.
+- **Título com duas ideias** (ex.: "Fotografia deslumbrante e trilha marcante"): basta a review apoiar a ideia PRINCIPAL, a que dá o assunto do bullet — "cada plano parece uma pintura" → SIM, mesmo sem falar da trilha. Apoiar só a ideia secundária ("a trilha é boa") → NÃO.
+- Isto não afrouxa o resto do critério: juízo oposto, opinião atribuída a outros e review ambivalente continuam NÃO.
+
+Ambiguidade: em "ambiguo", responda true se a leitura da review a favor do bullet NÃO é inequívoca — se ela pode ser lida dos dois jeitos, se é morna ou dividida sobre o assunto, ou se você mesmo hesitou ("talvez", "possivelmente", "ambíguo"). Resposta com "ambiguo": true não conta como apoio. Apoio implícito mas claro NÃO é ambíguo.
+
+Prova: em "trecho", copie da review a FRASE INTEIRA onde está a prova — a frase completa, do começo ao fim, não um fragmento nem palavras soltas —, LITERALMENTE, caractere por caractere, na língua original da review — sem traduzir, sem resumir, sem corrigir, sem juntar partes distantes. **Não omita nem altere NADA**: nenhuma palavra, nem interjeição, palavrão, gíria ou erro de digitação; não use reticências para pular partes. O trecho vai ser procurado no texto da review; se não for encontrado, ou se tiver menos de {MIN_PALAVRAS_TRECHO} palavras, a resposta não conta como apoio. Se a review não sustenta o bullet, "trecho" é null e "apoia" é false.
+
+Responda APENAS com um objeto JSON: {{"trecho": "<trecho literal>" ou null, "ambiguo": true ou false, "apoia": true ou false}}."""
+
+# Janela da v2.1: a mesma conta da v2.0 (`estimar_contexto`) com o prompt mais
+# longo — o maior par passa de 3.584; o menor múltiplo de 512 que cabe é 4096.
+NUM_CTX_V2_1 = 4096
 
 # Critério de aprovação (o de antes, mais a diferença entre os lados): um
 # juiz que erra mais num lado não serve para compará-los.
@@ -216,6 +251,104 @@ def ler_resposta(texto: str) -> dict:
     return {"trecho": dados["trecho"], "apoia": dados["apoia"]}
 
 
+# A regra da v2.1. As funções acima são a da v2.0 e não mudam: o hash
+# a42f4893… é o fonte delas, e os registros da v2.0 continuam legíveis.
+
+# Variantes tipográficas que viram a forma simples antes do NFKC: hífens e
+# travessões → "-", aspas → '"', apóstrofos e acentos soltos → "'", e os
+# caracteres de largura zero somem (os espaços especiais o NFKC e o `\s` já unem).
+TIPOGRAFIA_V2_1 = {
+    **dict.fromkeys("‐‑‒–—―−⁃﹘﹣－", "-"),
+    **dict.fromkeys("“”„‟«»″‶＂", '"'),
+    **dict.fromkeys("‘’‚‛′‵´`＇", "'"),
+    **dict.fromkeys("​‌‍⁠﻿", ""),
+}
+_TABELA_V2_1 = str.maketrans(TIPOGRAFIA_V2_1)
+
+
+def normalizar_v2_1(s: str) -> str:
+    """A da v2.0 mais a tipografia (`TIPOGRAFIA_V2_1`) e NFKC no lugar de NFC.
+    Letra ou palavra diferente continua diferente: cópia com palavra omitida,
+    ou com "…" no lugar de partes distantes, segue não encontrada."""
+    s = unicodedata.normalize("NFKC", s.translate(_TABELA_V2_1))
+    return re.sub(r"\s+", " ", s.casefold()).strip()
+
+
+def trecho_encontrado_v2_1(trecho: str | None, texto: str) -> bool:
+    if trecho is None:
+        return False
+    t = normalizar_v2_1(trecho)
+    return bool(t) and t in normalizar_v2_1(texto)
+
+
+def n_palavras_v2_1(trecho: str | None) -> int:
+    return len(normalizar_v2_1(trecho).split()) if trecho else 0
+
+
+def motivo_sem_apoio_v2_1(resp: dict, texto: str) -> str | None:
+    """A da v2.0 com o "na dúvida, não" do código: o modelo disse que é
+    ambíguo → não há apoio, diga ele o que disser em "apoia"."""
+    if not resp["apoia"]:
+        return "modelo disse que não apoia"
+    if resp["ambiguo"]:
+        return "modelo disse que é ambíguo"
+    trecho = resp["trecho"]
+    if trecho is None or not normalizar_v2_1(trecho):
+        return "trecho nulo"
+    n = n_palavras_v2_1(trecho)
+    if n < MIN_PALAVRAS_TRECHO:
+        return f"trecho curto ({n} palavra{'s' if n != 1 else ''} < {MIN_PALAVRAS_TRECHO})"
+    if not trecho_encontrado_v2_1(trecho, texto):
+        return "trecho não encontrado na review"
+    return None
+
+
+def ler_resposta_v2_1(texto: str) -> dict:
+    """`{"trecho": str|null, "ambiguo": bool, "apoia": bool}` e nada além."""
+    dados = json.loads(texto)
+    if not isinstance(dados, dict) or set(dados) != {"trecho", "ambiguo", "apoia"}:
+        raise ValueError(f"resposta fora do formato: {texto[:200]!r}")
+    for campo in ("ambiguo", "apoia"):
+        if not isinstance(dados[campo], bool):
+            raise ValueError(f"{campo} não é booleano: {texto[:200]!r}")
+    if dados["trecho"] is not None and not isinstance(dados["trecho"], str):
+        raise ValueError(f"trecho não é texto nem null: {texto[:200]!r}")
+    return {"trecho": dados["trecho"], "ambiguo": dados["ambiguo"], "apoia": dados["apoia"]}
+
+
+# ===========================================================================
+# Versões
+# ===========================================================================
+
+# Uma entrada por versão; versão nova nunca reescreve a anterior. Cada uma
+# leva o seu prompt, schema, janela e regra (`regra` e `regra_dados` entram no
+# hash). No máximo 2 ajustes depois da v2.0 (pedido do dono, 2026-10-19).
+VERSOES = {
+    "v2.0": {"system": SYSTEM_V2_0, "user": USER_V2_0, "schema": SCHEMA,
+             "num_ctx": NUM_CTX_V2_0,
+             "regra": (normalizar, trecho_encontrado, n_palavras, motivo_sem_apoio,
+                       apoio_final, ler_resposta),
+             "ler": ler_resposta, "encontrado": trecho_encontrado, "palavras": n_palavras,
+             "motivo": lambda r, texto: motivo_sem_apoio(r["apoia"], r["trecho"], texto),
+             "nota": "primeira versão: critério do dono, frase de prova; sem ajuste"},
+    "v2.1": {"system": SYSTEM_V2_1, "user": USER_V2_0, "schema": SCHEMA_V2_1,
+             "num_ctx": NUM_CTX_V2_1,
+             "regra": (normalizar_v2_1, trecho_encontrado_v2_1, n_palavras_v2_1,
+                       motivo_sem_apoio_v2_1, ler_resposta_v2_1),
+             "regra_dados": [json.dumps(TIPOGRAFIA_V2_1, sort_keys=True)],
+             "ler": ler_resposta_v2_1, "encontrado": trecho_encontrado_v2_1,
+             "palavras": n_palavras_v2_1, "motivo": motivo_sem_apoio_v2_1,
+             "nota": "1º ajuste: núcleo/implícito no prompt, normalização tipográfica, "
+                     "campo ambiguo"},
+}
+MAX_VERSOES = 3
+VERSAO_ATUAL = "v2.1"
+# A versão congelada para a validação na amostra nova e os 900 pares — `None`
+# até a calibração terminar. Congelar = fixar aqui E gravar `config_sha256` no
+# REGISTRO.md antes de qualquer rotulagem nova.
+CONGELADA: str | None = None
+
+
 # ===========================================================================
 # Configuração e hash
 # ===========================================================================
@@ -224,6 +357,19 @@ def _versao(versao: str) -> dict:
     if versao not in VERSOES:
         raise ValueError(f"versão {versao!r} não existe (há {list(VERSOES)})")
     return VERSOES[versao]
+
+
+def num_ctx(versao: str = VERSAO_ATUAL) -> int:
+    return _versao(versao)["num_ctx"]
+
+
+def schema(versao: str = VERSAO_ATUAL) -> dict:
+    return _versao(versao)["schema"]
+
+
+def motivo_da_versao(resp: dict, texto: str, versao: str = VERSAO_ATUAL) -> str | None:
+    """Por que não há apoio na regra da versão (`None` = há)."""
+    return _versao(versao)["motivo"](resp, texto)
 
 
 def system(versao: str = VERSAO_ATUAL) -> str:
@@ -239,13 +385,11 @@ def config(versao: str = VERSAO_ATUAL) -> dict:
     """Tudo o que define o juiz: prompt, modelo, parâmetros e a regra do
     código (o fonte das funções que decidem o apoio)."""
     v = _versao(versao)
-    regra = "\n".join(inspect.getsource(f) for f in
-                      (normalizar, trecho_encontrado, n_palavras, motivo_sem_apoio,
-                       apoio_final, ler_resposta))
-    return {"versao": versao, "modelo": MODELO, "think": THINK, "num_ctx": NUM_CTX,
+    regra = "\n".join([inspect.getsource(f) for f in v["regra"]] + v.get("regra_dados", []))
+    return {"versao": versao, "modelo": MODELO, "think": THINK, "num_ctx": v["num_ctx"],
             "min_palavras_trecho": MIN_PALAVRAS_TRECHO,
             "num_predict": NUM_PREDICT, "seed": SEED, "temperatura": "padrão do modelo",
-            "schema": SCHEMA, "system": v["system"], "user_template": v["user"],
+            "schema": v["schema"], "system": v["system"], "user_template": v["user"],
             "regra_sha256": C._sha256_texto(regra)}
 
 
@@ -271,8 +415,8 @@ def estimar_contexto(pares: list[dict], versao: str = VERSAO_ATUAL) -> dict:
     return {"maior_id_par": maior["id_par"], "maior_chars_review": len(maior["texto"]),
             "maior_chars_prompt": ch, "cota_tokens_prompt": cota,
             "num_predict": NUM_PREDICT, "precisa": precisa,
-            "menor_multiplo_512": 512 * math.ceil(precisa / 512), "num_ctx": NUM_CTX,
-            "cabe": precisa <= NUM_CTX}
+            "menor_multiplo_512": 512 * math.ceil(precisa / 512),
+            "num_ctx": num_ctx(versao), "cabe": precisa <= num_ctx(versao)}
 
 
 def maiores_pares(pares: list[dict], n: int = MEDICAO_N_PARES,
@@ -290,22 +434,23 @@ def maiores_pares(pares: list[dict], n: int = MEDICAO_N_PARES,
     return fora
 
 
-def julgar_medicao(medidos: list[dict]) -> dict:
+def julgar_medicao(medidos: list[dict], versao: str = VERSAO_ATUAL) -> dict:
     mx = max(m["prompt_eval_count"] for m in medidos)
-    precisa = mx + NUM_PREDICT
+    precisa, ctx = mx + NUM_PREDICT, num_ctx(versao)
     return {"max_prompt_tokens": mx, "num_predict": NUM_PREDICT, "precisa": precisa,
-            "num_ctx": NUM_CTX, "folga": NUM_CTX - precisa, "cabe": precisa <= NUM_CTX,
+            "num_ctx": ctx, "folga": ctx - precisa, "cabe": precisa <= ctx,
             "menor_multiplo_512": 512 * math.ceil(precisa / 512)}
 
 
-def contexto_estoura(resp: dict) -> str | None:
-    """A guarda por chamada: prompt + saída têm de caber em `NUM_CTX`, e o
+def contexto_estoura(resp: dict, versao: str = VERSAO_ATUAL) -> str | None:
+    """A guarda por chamada: prompt + saída têm de caber na janela, e o
     prompt tem de deixar a saída inteira. Um prompt truncado pelo servidor
     também cai aqui (a contagem dele encosta na janela)."""
     pe, ev = int(resp.get("prompt_eval_count") or 0), int(resp.get("eval_count") or 0)
-    if pe > NUM_CTX - NUM_PREDICT or pe + ev > NUM_CTX:
+    ctx = num_ctx(versao)
+    if pe > ctx - NUM_PREDICT or pe + ev > ctx:
         return (f"contexto: prompt {pe} + saída {ev} tokens não cabe com folga em "
-                f"num_ctx={NUM_CTX} (num_predict={NUM_PREDICT})")
+                f"num_ctx={ctx} (num_predict={NUM_PREDICT})")
     return None
 
 
@@ -342,15 +487,14 @@ def rodar(pares: list[dict], saida: Path, chamar, *, versao: str,
                 if resp.get("finish_reason") != "stop":
                     raise ValueError(f"finish_reason={resp.get('finish_reason')!r} "
                                      f"(teto de {NUM_PREDICT} tokens?)")
-                estouro = contexto_estoura(resp)
+                estouro = contexto_estoura(resp, versao)
                 if estouro:
                     raise ValueError(estouro)
-                lida = ler_resposta(resp["texto"])
+                lida = _versao(versao)["ler"](resp["texto"])
                 # o apoio do código, para quem lê o registro; a leitura
                 # (`vereditos`) recalcula do texto e não confia neste campo
                 reg = {"ok": True, **base, **lida,
-                       "motivo_sem_apoio": motivo_sem_apoio(lida["apoia"], lida["trecho"],
-                                                            p["texto"])}
+                       "motivo_sem_apoio": motivo_da_versao(lida, p["texto"], versao)}
             except Exception as e:  # noqa: BLE001
                 n_falhas += 1
                 reg = {"ok": False, **base, "erro": f"{type(e).__name__}: {e}",
@@ -391,13 +535,15 @@ def vereditos(pares: list[dict], regs: list[dict], versao: str) -> dict[str, dic
                              f"{r.get('think')!r} — o juiz v2 é {MODELO} com think={THINK}")
         if r["id_par"] not in texto:
             raise ValueError(f"veredito de par que não está na entrada: {r['id_par']}")
-        tx = texto[r["id_par"]]
-        motivo = motivo_sem_apoio(r["apoia"], r["trecho"], tx)
-        fora[r["id_par"]] = {"apoia_modelo": r["apoia"], "trecho": r["trecho"],
-                             "trecho_palavras": n_palavras(r["trecho"]),
-                             "trecho_encontrado": trecho_encontrado(r["trecho"], tx),
-                             "apoio": apoio_final(r["apoia"], r["trecho"], tx),
-                             "motivo": motivo, "pensamento": r.get("pensamento")}
+        tx, v = texto[r["id_par"]], _versao(versao)
+        lida = {k: r[k] for k in v["schema"]["required"]}
+        mot = motivo_da_versao(lida, tx, versao)
+        fora[r["id_par"]] = {"apoia_modelo": r["apoia"], "ambiguo": lida.get("ambiguo"),
+                             "trecho": r["trecho"],
+                             "trecho_palavras": v["palavras"](r["trecho"]),
+                             "trecho_encontrado": v["encontrado"](r["trecho"], tx),
+                             "apoio": mot is None,
+                             "motivo": mot, "pensamento": r.get("pensamento")}
     faltam = [p["id_par"] for p in pares if p["id_par"] not in fora]
     if faltam:
         raise ValueError(f"{len(faltam)} pares sem veredito do juiz v2 (ex.: {faltam[:2]}) "
@@ -452,10 +598,17 @@ def julgar(geral: dict, por_lado: dict, criterio: dict = CRITERIO_V2) -> dict:
 
 
 def calibracao(d: Path, versao: str) -> dict:
+    """A versão contra o rótulo do dono, ao lado do v1 e das versões v2
+    anteriores que já rodaram (cada uma lida com a própria regra)."""
     mapa = mapa_conferido(d)
     pares = pares_calibracao(d)
     ver = vereditos(pares, C._ler_jsonl(d / DIR_V2 / f"calibracao_{versao}_saida.jsonl"),
                     versao)
+    anteriores = {}
+    for vv in list(VERSOES)[:list(VERSOES).index(versao)]:
+        arq = d / DIR_V2 / f"calibracao_{vv}_saida.jsonl"
+        if arq.exists():
+            anteriores[vv] = vereditos(pares, C._ler_jsonl(arq), vv)
     dono = C.ler_rotulos(d / C.ARQ_ROTULOS, list(mapa["pares"]))
     v1 = C.vereditos(C._ler_jsonl(d / C.ARQ_ENTRADA), C._ler_jsonl(d / C.ARQ_SAIDA))
     por_par = {p["id_par"]: p for p in pares}
@@ -465,21 +618,28 @@ def calibracao(d: Path, versao: str) -> dict:
         linhas.append({"par": par, "id_par": id_par, "lado": p["lado"], "slug": p["slug"],
                        "bucket": p["bucket"], "tema": p["tema"], "dono": dono[par],
                        "juiz": v["apoio"], "juiz_v1": v1[id_par],
-                       "apoia_modelo": v["apoia_modelo"], "trecho": v["trecho"],
-                       "trecho_encontrado": v["trecho_encontrado"],
+                       "juiz_anteriores": {vv: a[id_par]["apoio"] for vv, a in anteriores.items()},
+                       "apoia_modelo": v["apoia_modelo"], "ambiguo": v["ambiguo"],
+                       "trecho": v["trecho"], "trecho_encontrado": v["trecho_encontrado"],
                        "trecho_palavras": v["trecho_palavras"], "motivo": v["motivo"],
                        "duvidoso": par in DUVIDOSOS_CALIBRACAO,
                        "pensamento": v["pensamento"]})
-    geral = C.matriz([(x["dono"], x["juiz"]) for x in linhas])
-    por_lado = {lado: C.matriz([(x["dono"], x["juiz"]) for x in linhas if x["lado"] == lado])
-                for lado in C.LADOS}
+
+    def medir(juiz) -> dict:
+        geral = C.matriz([(x["dono"], juiz(x)) for x in linhas])
+        por_lado = {lado: C.matriz([(x["dono"], juiz(x)) for x in linhas if x["lado"] == lado])
+                    for lado in C.LADOS}
+        return {"geral": geral, "por_lado": por_lado, "julgamento": julgar(geral, por_lado)}
+
+    atual = medir(lambda x: x["juiz"])
+    comparacao = {"v1": medir(lambda x: x["juiz_v1"]),
+                  **{vv: medir(lambda x, vv=vv: x["juiz_anteriores"][vv]) for vv in anteriores},
+                  versao: atual}
     return {"versao": versao, "config_sha256": config_sha256(versao),
-            "selo_mapa": mapa["sha256"], "geral": geral, "por_lado": por_lado,
-            "v1": {"geral": C.matriz([(x["dono"], x["juiz_v1"]) for x in linhas]),
-                   "por_lado": {lado: C.matriz([(x["dono"], x["juiz_v1"]) for x in linhas
-                                                if x["lado"] == lado]) for lado in C.LADOS}},
-            "julgamento": julgar(geral, por_lado),
-            "derrubados_pelo_trecho": [{"par": x["par"], "motivo": x["motivo"]}
+            "selo_mapa": mapa["sha256"], "geral": atual["geral"],
+            "por_lado": atual["por_lado"], "v1": comparacao["v1"],
+            "comparacao": comparacao, "julgamento": atual["julgamento"],
+            "derrubados_pelo_codigo": [{"par": x["par"], "motivo": x["motivo"]}
                                        for x in linhas if x["apoia_modelo"] and not x["juiz"]],
             "erros": [x["par"] for x in linhas if x["dono"] != x["juiz"]],
             "pares": linhas}
@@ -489,13 +649,16 @@ def md_calibracao(cal: dict) -> str:
     def linha(nome, m):
         return (f"| {nome} | {m['n']} | {m['vp']} | {m['fp']} | {m['fn']} | {m['vn']} | "
                 f"{m['precisao']} {m['precisao_ic95']} | {m['recall']} {m['recall_ic95']} |")
-    j = cal["julgamento"]
+
+    def sn(b):
+        return "sim" if b else "não"
+    j, comp = cal["julgamento"], cal["comparacao"]
     L = [f"# Calibração do juiz v2 — versão {cal['versao']}", "",
          "> **CALIBRAÇÃO, NÃO VALIDAÇÃO.** Estes 40 pares são os mesmos usados para "
          "ajustar o prompt; o número aqui é otimista por construção. O juiz só vale "
          "depois de congelado e medido numa amostra NOVA.", "",
          f"Configuração `{cal['config_sha256']}` · {MODELO} think={THINK} · "
-         f"num_ctx {NUM_CTX} · num_predict {NUM_PREDICT} · seed {SEED}", "",
+         f"num_ctx {num_ctx(cal['versao'])} · num_predict {NUM_PREDICT} · seed {SEED}", "",
          ("No critério proposto (a pré-registrar antes da amostra nova), esta "
           "calibração passaria" if j["vale"] else
           "No critério proposto (a pré-registrar antes da amostra nova), esta "
@@ -504,27 +667,42 @@ def md_calibracao(cal: dict) -> str:
          f"{CRITERIO_V2['dif_precisao_lados_max']}; diferença medida: "
          f"{j['dif_precisao_lados']}.", "",
          "| recorte | n | VP | FP | FN | VN | precisão [IC95] | recall [IC95] |",
-         "|---|---|---|---|---|---|---|---|",
-         linha("v2 · todos", cal["geral"])]
-    L += [linha(f"v2 · {lado}", cal["por_lado"][lado]) for lado in C.LADOS]
-    L += [linha("v1 · todos", cal["v1"]["geral"])]
-    L += [linha(f"v1 · {lado}", cal["v1"]["por_lado"][lado]) for lado in C.LADOS]
-    der = ", ".join(f"{d['par']} ({d['motivo']})" for d in cal["derrubados_pelo_trecho"])
-    L += ["", f"**Derrubados pelo trecho** (o modelo disse que apoia, mas o trecho é nulo, "
-          f"tem menos de {MIN_PALAVRAS_TRECHO} palavras ou não está na review): "
-          f"{der or 'nenhum'}.",
-          "", "## Erros do v2", ""]
+         "|---|---|---|---|---|---|---|---|"]
+    for nome, m in comp.items():
+        L += [linha(f"{nome} · todos", m["geral"])]
+        L += [linha(f"{nome} · {lado}", m["por_lado"][lado]) for lado in C.LADOS]
+    L += ["", "| juiz | diferença de precisão entre os lados | no critério proposto |",
+          "|---|---|---|"]
+    L += [f"| {nome} | {m['julgamento']['dif_precisao_lados']} | "
+          f"{'passaria' if m['julgamento']['vale'] else 'reprovaria: ' + '; '.join(m['julgamento']['motivos'])} |"
+          for nome, m in comp.items()]
+    der = ", ".join(f"{d['par']} ({d['motivo']})" for d in cal["derrubados_pelo_codigo"])
+    L += ["", f"**Derrubados pelo código** (o modelo disse que apoia, mas disse que é "
+          f"ambíguo, ou o trecho é nulo, tem menos de {MIN_PALAVRAS_TRECHO} palavras ou "
+          f"não está na review): {der or 'nenhum'}.", "",
+          "## Pares duvidosos", "",
+          "| par | lado | dono | " + " | ".join(comp) + " | motivo do não |",
+          "|---|---|---|" + "---|" * len(comp) + "---|"]
+    for x in cal["pares"]:
+        if x["duvidoso"]:
+            vs = [sn(x["juiz_v1"])] + [sn(x["juiz_anteriores"][vv]) for vv in comp
+                                       if vv not in ("v1", cal["versao"])] + [sn(x["juiz"])]
+            L.append(f"| {x['par']} | {x['lado']} | {sn(x['dono'])} | " + " | ".join(vs)
+                     + f" | {x['motivo'] or '—'} |")
+    L += ["", f"## Erros da {cal['versao']}", ""]
     for x in cal["pares"]:
         if x["dono"] == x["juiz"]:
             continue
+        amb = "" if x["ambiguo"] is None else f", {'ambíguo' if x['ambiguo'] else 'não ambíguo'}"
         L.append(f"### {x['par']}{' (duvidoso)' if x['duvidoso'] else ''} — {x['lado']}, "
                  f"{x['slug']}/{x['bucket']}")
         L += ["", f"- tema: \"{x['tema']}\"",
-              f"- dono {'sim' if x['dono'] else 'não'} · v2 {'sim' if x['juiz'] else 'não'} "
-              f"(modelo disse {'apoia' if x['apoia_modelo'] else 'não apoia'}; trecho "
+              f"- dono {sn(x['dono'])} · {cal['versao']} {sn(x['juiz'])} "
+              f"(modelo disse {'apoia' if x['apoia_modelo'] else 'não apoia'}{amb}; trecho "
               f"{'encontrado' if x['trecho_encontrado'] else 'não encontrado'}, "
-              f"{x['trecho_palavras']} palavras; motivo: {x['motivo'] or '—'}) · v1 "
-              f"{'sim' if x['juiz_v1'] else 'não'}",
+              f"{x['trecho_palavras']} palavras; motivo: {x['motivo'] or '—'}) · "
+              + " · ".join(f"{vv} {sn(b)}" for vv, b in x["juiz_anteriores"].items())
+              + ("" if not x["juiz_anteriores"] else " · ") + f"v1 {sn(x['juiz_v1'])}",
               f"- trecho: {json.dumps(x['trecho'], ensure_ascii=False)}",
               f"- raciocínio: {json.dumps((x['pensamento'] or '')[:600], ensure_ascii=False)}",
               ""]
@@ -560,7 +738,7 @@ def md_preparo(cfg: dict, sha: str, est_ctx: dict, t_cal: dict, t_todos: dict) -
         f"# Juiz v2 — versão {cfg['versao']}", "",
         f"`config_sha256`: `{sha}`", "",
         f"- modelo `{MODELO}`, think `{THINK}`, seed {SEED}, temperatura do modelo",
-        f"- num_predict {NUM_PREDICT}, num_ctx **{NUM_CTX}**", "",
+        f"- num_predict {NUM_PREDICT}, num_ctx **{cfg['num_ctx']}**", "",
         "## Contexto", "",
         f"Maior par dos {t_todos['n_chamadas']}: `{est_ctx['maior_id_par']}` — review de "
         f"{est_ctx['maior_chars_review']} caracteres, prompt inteiro de "
@@ -593,12 +771,12 @@ def _exigir_ambiente() -> None:
                          f"do modelo, parte da configuração. Remova a variável.")
 
 
-def _chamador(*, num_ctx: int, num_predict: int):
+def _chamador(*, num_ctx: int, num_predict: int, schema: dict):
     from espectro24 import local_ollama
 
     def chamar(sys_txt: str, user_txt: str) -> dict:
         return local_ollama.resposta_json_local(
-            sys_txt, user_txt, estagio=ESTAGIO, modelo=MODELO, schema=SCHEMA,
+            sys_txt, user_txt, estagio=ESTAGIO, modelo=MODELO, schema=schema,
             num_predict=num_predict, num_ctx=num_ctx, think=THINK, seed=SEED)
     return chamar
 
@@ -621,7 +799,7 @@ def cmd_preparar(a) -> None:
     cfg, sha = config(), config_sha256()
     est = estimar_contexto(pares)
     if not est["cabe"]:
-        raise SystemExit(f"a cota de contexto ({est['precisa']}) não cabe em NUM_CTX={NUM_CTX}")
+        raise SystemExit(f"a cota de contexto ({est['precisa']}) não cabe em num_ctx={num_ctx()}")
     regs = [r for n in (1, 2, 3)
             for r in C._ler_jsonl(a.medicao_dir / f"classificacao_passe_{n}.jsonl")]
     if not regs:
@@ -633,7 +811,7 @@ def cmd_preparar(a) -> None:
     C._escrever(a.dir / DIR_V2 / f"preparo_{VERSAO_ATUAL}.md",
                 md_preparo(cfg, sha, est, t_cal, t_todos))
     print(f"{VERSAO_ATUAL} · config {sha[:16]}… · contexto: cota {est['precisa']} → "
-          f"num_ctx {NUM_CTX} · calibração ~{t_cal['min_mediana']:.0f} min "
+          f"num_ctx {num_ctx()} · calibração ~{t_cal['min_mediana']:.0f} min "
           f"(p95 {t_cal['min_p95']:.0f})")
 
 
@@ -643,7 +821,7 @@ def cmd_medir_contexto(a) -> None:
     if not pares:
         raise SystemExit(f"{a.dir / C.ARQ_ENTRADA} não encontrado ou vazio")
     _exigir_modelo()
-    chamar = _chamador(num_ctx=MEDICAO_NUM_CTX, num_predict=1)
+    chamar = _chamador(num_ctx=MEDICAO_NUM_CTX, num_predict=1, schema=schema())
     medidos = []
     for p in maiores_pares(pares):
         resp = chamar(system(), user(p))
@@ -662,7 +840,7 @@ def cmd_medir_contexto(a) -> None:
              "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")})
     print(("CABE" if jul["cabe"] else "NÃO CABE") +
           f": maior prompt {jul['max_prompt_tokens']} + {NUM_PREDICT} = {jul['precisa']} "
-          f"em num_ctx {NUM_CTX} (folga {jul['folga']})")
+          f"em num_ctx {num_ctx()} (folga {jul['folga']})")
     if not jul["cabe"]:
         raise SystemExit(1)
 
@@ -684,9 +862,10 @@ def cmd_juiz(a) -> None:
                              f"{CONGELADA!r}); congele e registre o hash antes")
         pares, saida = C._ler_jsonl(a.dir / C.ARQ_ENTRADA), a.dir / DIR_V2 / f"saida_{versao}.jsonl"
     _exigir_modelo()
-    print(f"{len(pares)} pares · {MODELO} think={THINK} · num_ctx {NUM_CTX} · "
+    print(f"{len(pares)} pares · {MODELO} think={THINK} · num_ctx {num_ctx(versao)} · "
           f"versão {versao} ({config_sha256(versao)[:16]}…)", flush=True)
-    r = rodar(pares, saida, _chamador(num_ctx=NUM_CTX, num_predict=NUM_PREDICT), versao=versao)
+    r = rodar(pares, saida, _chamador(num_ctx=num_ctx(versao), num_predict=NUM_PREDICT,
+                                     schema=schema(versao)), versao=versao)
     ok = {x["id_par"] for x in C._ler_jsonl(saida)
           if x.get("ok") and x.get("config_sha256") == config_sha256(versao)}
     faltam = sum(1 for p in pares if p["id_par"] not in ok)
