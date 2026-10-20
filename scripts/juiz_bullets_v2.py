@@ -20,6 +20,10 @@ tem de ser confiável e a validação, honesta.
    palavra final.
 3. Critério: o MESMO guia que o dono usou para rotular (`CRITERIO_DONO`).
 
+**v2.2 (o 2º e último ajuste)** — estrutural: o juiz vê só o título, decide
+em `"apoia_ideia_principal"` e precisa AFIRMAR `"evidencia_clara"`; a escolha
+entre v2.1 e v2.2 é a pré-registrada (`escolha_pre_registrada`).
+
 **v2.1 (o 1º ajuste, 2026-10-19)** — uma correção por causa de erro da v2.0:
 o prompt destaca que o núcleo é o título e que apoio implícito inequívoco conta;
 a comparação do trecho une as variantes tipográficas (`normalizar_v2_1`); e o
@@ -186,6 +190,51 @@ Responda APENAS com um objeto JSON: {{"trecho": "<trecho literal>" ou null, "amb
 # longo — o maior par passa de 3.584; o menor múltiplo de 512 que cabe é 4096.
 NUM_CTX_V2_1 = 4096
 
+# v2.2 — o último ajuste (2026-10-19). A v2.1 errou quase só no lado
+# PUBLICADO (recall 0,71 × 0,91 no local), e os erros vinham do modelo NÃO
+# obedecer ao texto do prompt (P11, P28, P40 contrariam a instrução; "ambiguo"
+# nunca disparou, nem com "it's ambiguous" no raciocínio). Por isso as mudanças
+# são ESTRUTURAIS, não mais prosa:
+# 1. o juiz vê SÓ o título (`USER_V2_2` não tem a descrição), pois a v2.1
+#    seguiu cobrando a descrição (P29);
+# 2. o campo de decisão é "apoia_ideia_principal" (em título com duas ideias,
+#    a primeira) — sai o "apoia" genérico;
+# 3. polaridade invertida: "evidencia_clara" tem de ser AFIRMADA verdadeira
+#    (sai "ambiguo"). Normalização, frase inteira e modelo: os da v2.1.
+SCHEMA_V2_2 = {"type": "object",
+               "properties": {"trecho": {"type": ["string", "null"]},
+                              "apoia_ideia_principal": {"type": "boolean"},
+                              "evidencia_clara": {"type": "boolean"}},
+               "required": ["trecho", "apoia_ideia_principal", "evidencia_clara"]}
+
+SYSTEM_V2_2 = f"""Você confere se UMA review de cinema sustenta o TÍTULO de UM bullet de uma síntese.
+
+O bullet resume algo que um grupo de reviews diria sobre o filme. Você recebe só o TÍTULO do bullet, que é o núcleo do que ele afirma. A pergunta é só sobre ESTA review: ela conta como prova da IDEIA PRINCIPAL do título?
+
+Critério:
+{CRITERIO_DONO}
+
+A IDEIA PRINCIPAL: se o título tem uma ideia só, é ela. Se tem duas ideias (ex.: "Fotografia deslumbrante e trilha marcante"), é a PRIMEIRA — aqui, a fotografia. A review não precisa falar da segunda.
+
+A review não precisa usar as palavras do título nem nomear o aspecto: apoio implícito conta, desde que inequívoco. Exemplos, de outros filmes:
+- título "Atuação de Cate Blanchett"; review "Cate Blanchett é uma força da natureza, não consegui tirar os olhos dela" → apoia: elogiar a protagonista é elogiar a atuação.
+- título "Romance ocupa espaço demais"; review "metade do filme é a vida amorosa do piloto, eu queria ver as corridas" → apoia: reclamar do excesso de vida pessoal sustenta o foco excessivo no relacionamento, mesmo sem nomear o par.
+- título "Fotografia deslumbrante e trilha marcante"; review "cada plano parece uma pintura" → apoia; review que só elogia a trilha → não apoia.
+
+Os campos:
+- "apoia_ideia_principal": true se a review sustenta a ideia principal do título, no mesmo sentido.
+- "evidencia_clara": true SÓ se você AFIRMA que a prova é clara — o trecho, lido na review, sustenta a ideia principal sem precisar de suposição. Se a review é ambígua, morna, dividida, se fala do assunto sem tomar o mesmo lado, ou se você hesitou ("talvez", "possivelmente", "ambíguo"), é false. Sem evidência clara afirmada, a resposta não conta como apoio.
+- "trecho": copie da review a FRASE INTEIRA onde está a prova — a frase completa, do começo ao fim, não um fragmento nem palavras soltas —, LITERALMENTE, caractere por caractere, na língua original da review — sem traduzir, sem resumir, sem corrigir, sem juntar partes distantes. **Não omita nem altere NADA**: nenhuma palavra, nem interjeição, palavrão, gíria ou erro de digitação; não use reticências para pular partes. O trecho vai ser procurado no texto da review; se não for encontrado, ou se tiver menos de {MIN_PALAVRAS_TRECHO} palavras, a resposta não conta como apoio. Se a review não sustenta a ideia principal, "trecho" é null e os dois campos são false.
+
+Responda APENAS com um objeto JSON: {{"trecho": "<trecho literal>" ou null, "apoia_ideia_principal": true ou false, "evidencia_clara": true ou false}}."""
+
+# Sem a descrição: o juiz não tem como cobrá-la.
+USER_V2_2 = ("Review (nota {nivel} de 5 estrelas):\n\n{texto}\n\n"
+             "Título do bullet: {tema}\n\n"
+             "Esta review sustenta a ideia principal do título?")
+
+NUM_CTX_V2_2 = 4096
+
 # Critério de aprovação (o de antes, mais a diferença entre os lados): um
 # juiz que erra mais num lado não serve para compará-los.
 CRITERIO_V2 = {"precisao_min": 0.8, "recall_min": 0.8, "dif_precisao_lados_max": 0.15}
@@ -316,6 +365,39 @@ def ler_resposta_v2_1(texto: str) -> dict:
     return {"trecho": dados["trecho"], "ambiguo": dados["ambiguo"], "apoia": dados["apoia"]}
 
 
+def motivo_sem_apoio_v2_2(resp: dict, texto: str) -> str | None:
+    """Apoio = apoia a ideia principal E evidência clara AFIRMADA E trecho
+    válido (a normalização e a contagem de palavras são as da v2.1)."""
+    if not resp["apoia_ideia_principal"]:
+        return "modelo disse que não apoia a ideia principal"
+    if not resp["evidencia_clara"]:
+        return "modelo não afirmou evidência clara"
+    trecho = resp["trecho"]
+    if trecho is None or not normalizar_v2_1(trecho):
+        return "trecho nulo"
+    n = n_palavras_v2_1(trecho)
+    if n < MIN_PALAVRAS_TRECHO:
+        return f"trecho curto ({n} palavra{'s' if n != 1 else ''} < {MIN_PALAVRAS_TRECHO})"
+    if not trecho_encontrado_v2_1(trecho, texto):
+        return "trecho não encontrado na review"
+    return None
+
+
+def ler_resposta_v2_2(texto: str) -> dict:
+    """`{"trecho": str|null, "apoia_ideia_principal": bool, "evidencia_clara":
+    bool}` e nada além."""
+    campos = ("apoia_ideia_principal", "evidencia_clara")
+    dados = json.loads(texto)
+    if not isinstance(dados, dict) or set(dados) != {"trecho", *campos}:
+        raise ValueError(f"resposta fora do formato: {texto[:200]!r}")
+    for campo in campos:
+        if not isinstance(dados[campo], bool):
+            raise ValueError(f"{campo} não é booleano: {texto[:200]!r}")
+    if dados["trecho"] is not None and not isinstance(dados["trecho"], str):
+        raise ValueError(f"trecho não é texto nem null: {texto[:200]!r}")
+    return {"trecho": dados["trecho"], **{c: dados[c] for c in campos}}
+
+
 # ===========================================================================
 # Versões
 # ===========================================================================
@@ -340,9 +422,18 @@ VERSOES = {
              "palavras": n_palavras_v2_1, "motivo": motivo_sem_apoio_v2_1,
              "nota": "1º ajuste: núcleo/implícito no prompt, normalização tipográfica, "
                      "campo ambiguo"},
+    "v2.2": {"system": SYSTEM_V2_2, "user": USER_V2_2, "schema": SCHEMA_V2_2,
+             "num_ctx": NUM_CTX_V2_2, "decisao": "apoia_ideia_principal",
+             "regra": (normalizar_v2_1, trecho_encontrado_v2_1, n_palavras_v2_1,
+                       motivo_sem_apoio_v2_2, ler_resposta_v2_2),
+             "regra_dados": [json.dumps(TIPOGRAFIA_V2_1, sort_keys=True)],
+             "ler": ler_resposta_v2_2, "encontrado": trecho_encontrado_v2_1,
+             "palavras": n_palavras_v2_1, "motivo": motivo_sem_apoio_v2_2,
+             "nota": "2º e último ajuste: só o título, apoia_ideia_principal, "
+                     "evidencia_clara afirmada"},
 }
 MAX_VERSOES = 3
-VERSAO_ATUAL = "v2.1"
+VERSAO_ATUAL = "v2.2"
 # A versão congelada para a validação na amostra nova e os 900 pares — `None`
 # até a calibração terminar. Congelar = fixar aqui E gravar `config_sha256` no
 # REGISTRO.md antes de qualquer rotulagem nova.
@@ -538,7 +629,9 @@ def vereditos(pares: list[dict], regs: list[dict], versao: str) -> dict[str, dic
         tx, v = texto[r["id_par"]], _versao(versao)
         lida = {k: r[k] for k in v["schema"]["required"]}
         mot = motivo_da_versao(lida, tx, versao)
-        fora[r["id_par"]] = {"apoia_modelo": r["apoia"], "ambiguo": lida.get("ambiguo"),
+        fora[r["id_par"]] = {"apoia_modelo": lida[v.get("decisao", "apoia")],
+                             "ambiguo": lida.get("ambiguo"),
+                             "evidencia_clara": lida.get("evidencia_clara"),
                              "trecho": r["trecho"],
                              "trecho_palavras": v["palavras"](r["trecho"]),
                              "trecho_encontrado": v["encontrado"](r["trecho"], tx),
@@ -597,6 +690,26 @@ def julgar(geral: dict, por_lado: dict, criterio: dict = CRITERIO_V2) -> dict:
             "dif_precisao_lados": dif}
 
 
+# A regra de escolha entre a v2.1 e a v2.2, PRÉ-REGISTRADA no REGISTRO.md
+# (2026-10-19) antes de a v2.2 rodar: a v2.2 passa nos três critérios →
+# congela a v2.2; senão, a de MAIOR recall no pior lado (o defeito da v2.1 era
+# negar apoio a bullets bons de um lado só); empate → v2.1. Os 40 pares novos
+# não são tocados por nenhuma das duas antes da escolha.
+def escolha_pre_registrada(comparacao: dict) -> dict:
+    if comparacao["v2.2"]["julgamento"]["vale"]:
+        return {"congelar": "v2.2", "motivo": "a v2.2 passa nos três critérios"}
+    pior = {v: min(comparacao[v]["por_lado"][lado]["recall"] for lado in C.LADOS)
+            for v in ("v2.1", "v2.2")}
+    if pior["v2.2"] > pior["v2.1"]:
+        return {"congelar": "v2.2", "recall_pior_lado": pior,
+                "motivo": "a v2.2 não passa nos três critérios, mas tem o maior recall "
+                          "no pior lado"}
+    return {"congelar": "v2.1", "recall_pior_lado": pior,
+            "motivo": "a v2.2 não passa nos três critérios e não tem recall maior no "
+                      "pior lado" + (" (empate → v2.1)" if pior["v2.2"] == pior["v2.1"]
+                                     else "")}
+
+
 def calibracao(d: Path, versao: str) -> dict:
     """A versão contra o rótulo do dono, ao lado do v1 e das versões v2
     anteriores que já rodaram (cada uma lida com a própria regra)."""
@@ -620,6 +733,7 @@ def calibracao(d: Path, versao: str) -> dict:
                        "juiz": v["apoio"], "juiz_v1": v1[id_par],
                        "juiz_anteriores": {vv: a[id_par]["apoio"] for vv, a in anteriores.items()},
                        "apoia_modelo": v["apoia_modelo"], "ambiguo": v["ambiguo"],
+                       "evidencia_clara": v["evidencia_clara"],
                        "trecho": v["trecho"], "trecho_encontrado": v["trecho_encontrado"],
                        "trecho_palavras": v["trecho_palavras"], "motivo": v["motivo"],
                        "duvidoso": par in DUVIDOSOS_CALIBRACAO,
@@ -635,8 +749,10 @@ def calibracao(d: Path, versao: str) -> dict:
     comparacao = {"v1": medir(lambda x: x["juiz_v1"]),
                   **{vv: medir(lambda x, vv=vv: x["juiz_anteriores"][vv]) for vv in anteriores},
                   versao: atual}
+    escolha = (escolha_pre_registrada(comparacao)
+               if versao == "v2.2" and "v2.1" in comparacao else None)
     return {"versao": versao, "config_sha256": config_sha256(versao),
-            "selo_mapa": mapa["sha256"], "geral": atual["geral"],
+            "selo_mapa": mapa["sha256"], "escolha": escolha, "geral": atual["geral"],
             "por_lado": atual["por_lado"], "v1": comparacao["v1"],
             "comparacao": comparacao, "julgamento": atual["julgamento"],
             "derrubados_pelo_codigo": [{"par": x["par"], "motivo": x["motivo"]}
@@ -676,6 +792,11 @@ def md_calibracao(cal: dict) -> str:
     L += [f"| {nome} | {m['julgamento']['dif_precisao_lados']} | "
           f"{'passaria' if m['julgamento']['vale'] else 'reprovaria: ' + '; '.join(m['julgamento']['motivos'])} |"
           for nome, m in comp.items()]
+    if cal.get("escolha"):
+        e = cal["escolha"]
+        L += ["", f"**Escolha pré-registrada (REGISTRO.md): congelar a {e['congelar']}** — "
+              f"{e['motivo']}" + (f"; recall no pior lado: {e['recall_pior_lado']}"
+                                  if "recall_pior_lado" in e else "") + "."]
     der = ", ".join(f"{d['par']} ({d['motivo']})" for d in cal["derrubados_pelo_codigo"])
     L += ["", f"**Derrubados pelo código** (o modelo disse que apoia, mas disse que é "
           f"ambíguo, ou o trecho é nulo, tem menos de {MIN_PALAVRAS_TRECHO} palavras ou "
@@ -694,6 +815,9 @@ def md_calibracao(cal: dict) -> str:
         if x["dono"] == x["juiz"]:
             continue
         amb = "" if x["ambiguo"] is None else f", {'ambíguo' if x['ambiguo'] else 'não ambíguo'}"
+        if x.get("evidencia_clara") is not None:
+            amb += (", evidência clara" if x["evidencia_clara"]
+                    else ", sem evidência clara afirmada")
         L.append(f"### {x['par']}{' (duvidoso)' if x['duvidoso'] else ''} — {x['lado']}, "
                  f"{x['slug']}/{x['bucket']}")
         L += ["", f"- tema: \"{x['tema']}\"",
@@ -881,7 +1005,9 @@ def cmd_calibrar(a) -> None:
     g, j = cal["geral"], cal["julgamento"]
     print(f"CALIBRAÇÃO {versao} (não é validação) · P={g['precisao']} R={g['recall']} · "
           f"dif. lados {j['dif_precisao_lados']} · " +
-          ("passaria" if j["vale"] else "reprovaria: " + "; ".join(j["motivos"])))
+          ("passaria" if j["vale"] else "reprovaria: " + "; ".join(j["motivos"])) +
+          (f" · escolha pré-registrada: congelar a {cal['escolha']['congelar']}"
+           if cal.get("escolha") else ""))
 
 
 def main(argv=None) -> None:

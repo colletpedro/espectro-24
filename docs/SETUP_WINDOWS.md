@@ -323,8 +323,8 @@ Ela serve para ajustar o prompt, não para validar o juiz (a validação é numa
 amostra nova, depois de a versão ser congelada).
 
 **A configuração inteira está no código** e entra num hash (`config_sha256`,
-gravado em cada registro): modelo, `think=low`, `num_ctx` (3584 na v2.0, 4096 na
-v2.1 — o prompt da v2.1 é mais longo), `num_predict` 1024, `seed` 20261019, temperatura do modelo. As variáveis
+gravado em cada registro): modelo, `think=low`, `num_ctx` (3584 na v2.0, 4096 na v2.1 e
+na v2.2 — prompts mais longos), `num_predict` 1024, `seed` 20261019, temperatura do modelo. As variáveis
 `ESPECTRO24_OLLAMA_THINK`, `_NUM_CTX` e `_NUM_PREDICT` **não valem** para este
 juiz; `ESPECTRO24_OLLAMA_TEMPERATURE` definida faz o juiz se recusar a rodar.
 
@@ -356,7 +356,7 @@ ollama list                                    # gpt-oss:20b precisa aparecer
 .\venv\Scripts\python.exe scripts/juiz_bullets_v2.py juiz --calibracao --dir checagem-bullets
 ```
 
-A versão que roda é a `VERSAO_ATUAL` do código (hoje **v2.1**); a saída vai
+A versão que roda é a `VERSAO_ATUAL` do código (hoje **v2.2**); a saída vai
 para `calibracao_<versão>_saida.jsonl` e não mistura com a da versão anterior.
 
 - **No fim** a última linha diz `pares sem veredito: 0 — completo`. Se não
@@ -366,13 +366,13 @@ para `calibracao_<versão>_saida.jsonl` e não mistura com a da versão anterior
   `erro` com `contexto` (o prompt encostou na janela), `think` = `low` e
   `modelo_efetivo` = `gpt-oss:20b`. O `pensamento` de cada par fica gravado.
 - Se o seu `ollama ps` tiver a coluna `CONTEXT`, ela deve mostrar a janela da
-  versão durante o passo 2 (4096 na v2.1) e 8192 no passo 1.
+  versão durante o passo 2 (4096 na v2.1 e na v2.2) e 8192 no passo 1.
 
 **Depois:**
 
 ```powershell
 git add checagem-bullets/juiz_v2
-git commit -m "checagem bullets: juiz v2.1 (gpt-oss:20b) na calibração dos 40 pares"
+git commit -m "checagem bullets: juiz v2.2 (gpt-oss:20b) na calibração dos 40 pares"
 git push
 ```
 
