@@ -126,7 +126,8 @@
     "logo": {
       "path": "/jrZp7apZ5hPvrMdOG3NPjPP7VNG.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Carros"
     },
     "titulo_difere_do_logo": false
   },

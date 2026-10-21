@@ -96,8 +96,12 @@ _REG = {"logo_escolhido": {"file_path": "/a.png", "idioma": "en"},
 
 
 def test_logo_publicado_usa_a_classe_medida_sem_override(build):
+    # [rodada editorial 2] o logo publicado ganhou `titulo` (o que ele escreve)
     assert build.logo_da_ficha(_REG, None) == {"path": "/a.png", "idioma": "en",
-                                               "classe": "claro"}
+                                               "classe": "claro", "titulo": None}
+    com_titulo = {"logo_escolhido": dict(_REG["logo_escolhido"], titulo_do_logo="Cure"),
+                  "classe_medida": "claro"}
+    assert build.logo_da_ficha(com_titulo, None)["titulo"] == "Cure"
 
 
 def test_override_vence_a_medida(build):

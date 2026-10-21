@@ -216,7 +216,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/mCRRIzvGBDkzmKpuS2MyejDHHCF.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Convite"
         },
         "titulo_difere_do_logo": false
       },
@@ -1781,7 +1782,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/cluD120ZWH3mYDHDVVcNJNYfgrC.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "12 Homens e uma Sentença"
         },
         "titulo_difere_do_logo": false
       },
@@ -3433,7 +3435,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/9ntblcdsqyUj99RbfTTN973DZvx.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "2001: Uma Odisséia no Espaço"
         },
         "titulo_difere_do_logo": false
       },
@@ -5056,7 +5059,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/Ab0wdaoQ7WtWr7Hhj2OezTx4Ju3.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "(500) Dias com Ela"
         },
         "titulo_difere_do_logo": false
       },
@@ -6704,7 +6708,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/lNzPGatbAcNxPpcK7Zp9LDRj3jk.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "A Brighter Summer Day"
         },
         "titulo_difere_do_logo": true
       },
@@ -8165,7 +8170,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/hZCqSZbRUSUyWIXglKtwuoM0AiV.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Aftersun"
         },
         "titulo_difere_do_logo": true
       },
@@ -9731,7 +9737,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/5BI2vscWdROnvRlYibNjr1FOpDf.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Nada de Novo no Front"
         },
         "titulo_difere_do_logo": false
       },
@@ -11342,7 +11349,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/fDgEeNkyUPBGzovS98t899SIdhN.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Anatomy of a Fall"
         },
         "titulo_difere_do_logo": true
       },
@@ -12907,7 +12915,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/j7zUJ1Oh2isTuMjVDgLGnAPjXIZ.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Anatomia de um Crime"
         },
         "titulo_difere_do_logo": false
       },
@@ -14535,7 +14544,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/aKFYSSTPkReVysTEWrE3yaqmcMS.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "A Chegada"
         },
         "titulo_difere_do_logo": false
       },
@@ -16120,7 +16130,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/8gmwT4NJ68ZtZEVpPWlPEdZOXa8.png",
           "idioma": "pt-BR",
-          "classe": "escuro_cor"
+          "classe": "escuro_cor",
+          "titulo": "Vingadores: Ultimato"
         },
         "titulo_difere_do_logo": false
       },
@@ -17708,7 +17719,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/nsMnkuWIZCBxkBLPi0ZXuRloYL2.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Barbie"
         },
         "titulo_difere_do_logo": true
       },
@@ -19285,7 +19297,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/bL5uoEftrLACHEG3vVCWkmTwqAF.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Até os Ossos"
         },
         "titulo_difere_do_logo": false
       },
@@ -20865,7 +20878,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/bILH1xVdtoAPt087S0Of3dWmQma.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Burning"
         },
         "titulo_difere_do_logo": true
       },
@@ -22397,7 +22411,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/jrZp7apZ5hPvrMdOG3NPjPP7VNG.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Carros"
         },
         "titulo_difere_do_logo": false
       },
@@ -24036,7 +24051,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/r6Vr1kPwEyhX03xhMZCvhUSfnhB.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Prenda-Me se For Capaz"
         },
         "titulo_difere_do_logo": false
       },
@@ -25645,7 +25661,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/fsdazyxTF9lrY6aqcbYbpuhRcfC.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Cats"
         },
         "titulo_difere_do_logo": true
       },
@@ -27236,7 +27253,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/os83qvlIUOhU8wjajznIlv4v9tC.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Chinatown"
         },
         "titulo_difere_do_logo": true
       },
@@ -28844,7 +28862,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/2pcA81BO9viDv8OXo2SMCCL4cBk.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Cidade de Deus"
         },
         "titulo_difere_do_logo": false
       },
@@ -30437,7 +30456,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/fxBkTUvznm3BMeSGYJDBsOcdOPb.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Cujo"
         },
         "titulo_difere_do_logo": false
       },
@@ -32030,7 +32050,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Cure"
         },
         "titulo_difere_do_logo": true
       },
@@ -33616,7 +33637,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/gneH6YMq0WKVBLBXO8rzf1YBerp.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "District 9"
         },
         "titulo_difere_do_logo": true
       },
@@ -35253,7 +35275,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Django Livre"
         },
         "titulo_difere_do_logo": false
       },
@@ -36847,7 +36870,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/wOEgtn3ACdItTa88Pt8kof4wndV.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Faça a Coisa Certa"
         },
         "titulo_difere_do_logo": false
       },
@@ -38482,7 +38506,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/a99uuyz8q0JCPHN4RfQmHfM5PI4.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Dr. Fantástico"
         },
         "titulo_difere_do_logo": false
       },
@@ -40079,7 +40104,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/hMiu2LVznsq8rgHLW6patHsIu6j.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Drive My Car"
         },
         "titulo_difere_do_logo": true
       },
@@ -41611,7 +41637,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/2hY4HZrW6Ym8kZj34dVhOHLLnNh.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Duna"
         },
         "titulo_difere_do_logo": false
       },
@@ -43183,7 +43210,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/eYvF1LhPKuoBxOAmWjFTAK7EPWl.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Dune: Part Two"
         },
         "titulo_difere_do_logo": true
       },
@@ -44741,7 +44769,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/mtBjMCwFlv8smc8hd0BRclfh1xZ.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Eighth Grade"
         },
         "titulo_difere_do_logo": true
       },
@@ -46315,7 +46344,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/mFA3RihM8JjIbVAPowmES4ZJxMo.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Tudo em Todo o Lugar ao Mesmo Tempo"
         },
         "titulo_difere_do_logo": false
       },
@@ -47923,7 +47953,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/lyFSC5i078jk12aNH4wUCNbCV8e.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Clube da Luta"
         },
         "titulo_difere_do_logo": false
       },
@@ -49528,7 +49559,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/7bcd9abkjgVVTrR1z3MrHSMI9Y3.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Force Majeure"
         },
         "titulo_difere_do_logo": true
       },
@@ -51065,7 +51097,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/DkMLTZBaz55DssxhHJQiVZLIMS.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Sexta-Feira 13"
         },
         "titulo_difere_do_logo": false
       },
@@ -52659,7 +52692,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Corra!"
         },
         "titulo_difere_do_logo": false
       },
@@ -54201,7 +54235,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/n5Mwi61zHyCk26YHRrwCNvP0Sf3.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Gladiador"
         },
         "titulo_difere_do_logo": false
       },
@@ -55820,7 +55855,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/d4zBnh2AlvT9vStIjceZAyvcBak.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Os Bons Companheiros"
         },
         "titulo_difere_do_logo": false
       },
@@ -57403,7 +57439,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/sFHqRdrAw1xvX8ltoJkyAVsHjPh.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Guillermo del Toro's Pinocchio"
         },
         "titulo_difere_do_logo": true
       },
@@ -58906,7 +58943,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/9KywbVkZgLnSSF5zxQfFIVvaaYf.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Happy Hour"
         },
         "titulo_difere_do_logo": true
       },
@@ -60431,7 +60469,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/3oE8aYKwwYeMybQeOi5uv4nbeI4.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Hard to Be a God"
         },
         "titulo_difere_do_logo": true
       },
@@ -61972,7 +62011,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/fXhfzLMyJCNYpnP61kyF4haGfAI.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Hereditário"
         },
         "titulo_difere_do_logo": false
       },
@@ -63542,7 +63582,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/mNEinPcj374nOKwbxCCRQCaQO8J.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Ainda Estou Aqui"
         },
         "titulo_difere_do_logo": false
       },
@@ -65138,7 +65179,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/jDADVUZdWCTArACWXIdiedbfi1i.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Incendies"
         },
         "titulo_difere_do_logo": true
       },
@@ -66734,7 +66776,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/xxgYI7UcYiFalWa8EimBSoc7dlT.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "A Origem"
         },
         "titulo_difere_do_logo": false
       },
@@ -68365,7 +68408,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/ckZoF4j35HL1USGG2iX8GeQ7058.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Bastardos Inglórios"
         },
         "titulo_difere_do_logo": false
       },
@@ -69985,7 +70029,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/7GN6eZ1xw4apwobsmohLtgZB6K6.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Interestelar"
         },
         "titulo_difere_do_logo": false
       },
@@ -71552,7 +71597,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/ckRklE1gzQUzdVQ8BaKL652oO7V.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Coringa"
         },
         "titulo_difere_do_logo": false
       },
@@ -73160,7 +73206,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/gIOXjK4tS7cYemLEe0w5HuiUGH9.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Coringa: Delírio a Dois"
         },
         "titulo_difere_do_logo": false
       },
@@ -74731,7 +74778,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/8VWm0tNRtt8VjYI4efiMeodKfW0.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "La Haine"
         },
         "titulo_difere_do_logo": true
       },
@@ -76319,7 +76367,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/gmNwiZjD9CkbcNhqVD2UZpkS9qJ.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Longlegs - Vínculo Mortal"
         },
         "titulo_difere_do_logo": false
       },
@@ -77896,7 +77945,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/1XYQTYx4kcIhzNwSttv9xooioeI.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Mad Max: Estrada da Fúria"
         },
         "titulo_difere_do_logo": false
       },
@@ -79522,7 +79572,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/hmsi0KPsXxyqxSOOxM2YQaakU4W.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Malcolm X"
         },
         "titulo_difere_do_logo": true
       },
@@ -81127,7 +81178,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/37hfr9UXKAfXRNmps8BO5cuAO9J.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Marty Supreme"
         },
         "titulo_difere_do_logo": true
       },
@@ -82736,7 +82788,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/w5Wpi1sRP6CZd6fbNHPJ8LTTU8O.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Amnésia"
         },
         "titulo_difere_do_logo": false
       },
@@ -84374,7 +84427,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/uzVGePBZLsdzeMUJArknO5TsB78.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Memories of Murder"
         },
         "titulo_difere_do_logo": true
       },
@@ -85878,7 +85932,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/5NirokqjePXDkbGmdnhfLzXHKh5.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "mother!"
         },
         "titulo_difere_do_logo": true
       },
@@ -87445,7 +87500,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/dkjivK8Mm7f3m8BtmueCZJuanbw.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Napoleon"
         },
         "titulo_difere_do_logo": true
       },
@@ -89018,7 +89074,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Som ao Redor"
         },
         "titulo_difere_do_logo": false
       },
@@ -90550,7 +90607,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/3iwqmEyyMGawO30DQd19kBXqAZA.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Obsessão"
         },
         "titulo_difere_do_logo": false
       },
@@ -92139,7 +92197,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/e0NcrovoxPi2ZI7rTFzymjN96U8.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Oppenheimer"
         },
         "titulo_difere_do_logo": false
       },
@@ -93721,7 +93780,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/rRj7LWPPl9ASsSy5Cehq32FegIa.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Parasita"
         },
         "titulo_difere_do_logo": false
       },
@@ -95282,7 +95342,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/wNp1gb3OkXN5VyngQU06uzBsvt0.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Pearl"
         },
         "titulo_difere_do_logo": true
       },
@@ -96862,7 +96923,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/2VSRdZhkQ4Dqs4lR1pKr4CEsF2Q.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Dias Perfeitos"
         },
         "titulo_difere_do_logo": false
       },
@@ -98434,7 +98496,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/hQbVaYetCKr4RM4fADzL7ihKCQO.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Pinocchio"
         },
         "titulo_difere_do_logo": true
       },
@@ -99975,7 +100038,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/5XkvUkROBNlIfsSiCHzir8IKpqI.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Porco Rosso: O Último Herói Romântico"
         },
         "titulo_difere_do_logo": false
       },
@@ -101597,7 +101661,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/9yGHOV8NmNzkwBn3wXrB5IgaaNH.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Retrato de uma Jovem em Chamas"
         },
         "titulo_difere_do_logo": false
       },
@@ -103212,7 +103277,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/a87lLp1CUwGDn4mfDyxbyYsz4A7.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Princesa Mononoke"
         },
         "titulo_difere_do_logo": false
       },
@@ -104823,7 +104889,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/slGwR0Xq2OSeHOT4bY7LIIrg5hS.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Os Suspeitos"
         },
         "titulo_difere_do_logo": false
       },
@@ -106474,7 +106541,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/1KME4tIFqEPl5XwRnV6WlcwjsRH.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Satantango"
         },
         "titulo_difere_do_logo": true
       },
@@ -107996,7 +108064,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/xqMDJ8aFKn0YpajNnFtyi1ZscmN.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Seven - Os Sete Crimes Capitais"
         },
         "titulo_difere_do_logo": false
       },
@@ -109606,7 +109675,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/8Nd8wAHEhFvWZ782Frnb2p9X01w.png",
           "idioma": "pt-BR",
-          "classe": "escuro_cor"
+          "classe": "escuro_cor",
+          "titulo": "Ilha do Medo"
         },
         "titulo_difere_do_logo": false
       },
@@ -111179,7 +111249,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/d7pA3cdwXiGaiHrGiBtIRTfMvWk.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Pecadores"
         },
         "titulo_difere_do_logo": false
       },
@@ -112806,7 +112877,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/x0zdKfh6qqud6BZAITgP6zhmE1g.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Soul"
         },
         "titulo_difere_do_logo": true
       },
@@ -114413,7 +114485,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/2KZ7lGvEnMKKcYyjpzx5vuAYOAj.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Speak No Evil"
         },
         "titulo_difere_do_logo": true
       },
@@ -115944,7 +116017,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/yucbV7s34jCNRAfqOEiyOSPvIkT.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Homem-Aranha: Através do Aranhaverso"
         },
         "titulo_difere_do_logo": false
       },
@@ -117524,7 +117598,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Fale Comigo"
         },
         "titulo_difere_do_logo": false
       },
@@ -119109,7 +119184,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/mVSoOqDUIspvRduxoiWwnHziace.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "The Battle of Algiers"
         },
         "titulo_difere_do_logo": true
       },
@@ -120698,7 +120774,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/isrOcpeplAtUoxBBV469GMBBVCW.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Brutalista"
         },
         "titulo_difere_do_logo": false
       },
@@ -123844,7 +123921,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/863trX5l5X2H1IvJjV1R3cYe8Y7.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Magnatas do Crime"
         },
         "titulo_difere_do_logo": false
       },
@@ -125447,7 +125525,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/nWjlUrwVcSPHvbF7frdx0cKBAHl.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Poderoso Chefão"
         },
         "titulo_difere_do_logo": false
       },
@@ -127009,7 +127088,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/viU3jzYsvR94YZcV4fINkx10NeR.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Os Oito Odiados"
         },
         "titulo_difere_do_logo": false
       },
@@ -128561,7 +128641,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/wRUsm1am2uilmEDCrJ9rJJ9uFJd.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "The Northman"
         },
         "titulo_difere_do_logo": true
       },
@@ -130165,7 +130246,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Grande Truque"
         },
         "titulo_difere_do_logo": false
       },
@@ -131798,7 +131880,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Regresso"
         },
         "titulo_difere_do_logo": false
       },
@@ -133403,7 +133486,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/dvYqCaQflbvC8J2o9fLnKWEyfbG.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Que Horas Ela Volta?"
         },
         "titulo_difere_do_logo": false
       },
@@ -134938,7 +135022,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/qCS7gkIz0t37kMj183F4xVvDkDs.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Bob Esponja: Em Busca da Calça Quadrada"
         },
         "titulo_difere_do_logo": false
       },
@@ -136551,7 +136636,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/tl8Bpz1Q3y2AVhzHCazGCcIguQQ.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "A Substância"
         },
         "titulo_difere_do_logo": false
       },
@@ -138147,7 +138233,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/gKT2fMi5curdg4V77MuPOE60Lzd.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "The Swimming Pool"
         },
         "titulo_difere_do_logo": true
       },
@@ -139778,7 +139865,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/g4NnPHqujkLrpO9u64jmMWSgfcb.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Show de Truman: O Show da Vida"
         },
         "titulo_difere_do_logo": false
       },
@@ -141414,7 +141502,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/5YnrSw3cn439D2AstdBMRnoyT9c.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "The Turin Horse"
         },
         "titulo_difere_do_logo": true
       },
@@ -142972,7 +143061,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Lamento"
         },
         "titulo_difere_do_logo": false
       },
@@ -144494,7 +144584,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/1VdpZBlBC59xgqYRdqwv1P6ufOR.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "O Lobo de Wall Street"
         },
         "titulo_difere_do_logo": false
       },
@@ -146108,7 +146199,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/wbuiGa8NTw6uOkjzWsszXNUIqHP.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Top Gun: Maverick"
         },
         "titulo_difere_do_logo": false
       },
@@ -147736,7 +147828,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/f1IJSjZuAbPYdTSsq1iQyWUIjO5.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Joias Brutas"
         },
         "titulo_difere_do_logo": false
       },
@@ -149387,7 +149480,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/6CPHlVEUXysNUTNI0iucYgQEApt.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Whiplash: Em Busca da Perfeição"
         },
         "titulo_difere_do_logo": false
       },
@@ -150910,7 +151004,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/ms75wl4cMU8zhXG4QwwCdaWlzLT.png",
           "idioma": "pt-BR",
-          "classe": "escuro_cor"
+          "classe": "escuro_cor",
+          "titulo": "Wicked"
         },
         "titulo_difere_do_logo": false
       },
@@ -153834,7 +153929,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/cUzMzh1XrairgWBeD53LnwBKx0z.png",
           "idioma": "pt-BR",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Wonka"
         },
         "titulo_difere_do_logo": false
       },
@@ -155429,7 +155525,8 @@ window.ESPECTRO_DATA = {
         "logo": {
           "path": "/a3PpPJ71VhO9B98fnjAKB6yXMpI.png",
           "idioma": "en",
-          "classe": "claro"
+          "classe": "claro",
+          "titulo": "Zama"
         },
         "titulo_difere_do_logo": true
       },

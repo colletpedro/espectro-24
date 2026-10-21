@@ -128,7 +128,8 @@
     "logo": {
       "path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "O Regresso"
     },
     "titulo_difere_do_logo": false
   },

@@ -289,8 +289,9 @@ def ler_logos() -> tuple[dict, dict]:
 
 
 def logo_da_ficha(registro: dict | None, override: dict | None) -> dict | None:
-    """`ficha.logo` publicado: caminho TMDB, idioma e a classe FINAL — a do
-    override, se houver (`desligar` vira `desligado`), senão a medida.
+    """`ficha.logo` publicado: caminho TMDB, idioma, a classe FINAL — a do
+    override, se houver (`desligar` vira `desligado`), senão a medida — e
+    [rodada editorial 2] o título que o logo escreve (`titulo`).
     Aplicada aqui, e não só na medição, para que editar o override e rodar
     o build baste: a medição faz rede, o build não."""
     escolhido = (registro or {}).get("logo_escolhido")
@@ -302,7 +303,7 @@ def logo_da_ficha(registro: dict | None, override: dict | None) -> dict | None:
     elif override and override.get("classe"):
         classe = override["classe"]
     return {"path": escolhido["file_path"], "idioma": escolhido["idioma"],
-            "classe": classe}
+            "classe": classe, "titulo": escolhido.get("titulo_do_logo")}
 
 
 def com_logo(data: dict, registro: dict | None, override: dict | None) -> dict:

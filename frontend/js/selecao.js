@@ -94,7 +94,7 @@
    `escuro_mono` → o logo embranquecido por filtro; qualquer outra
    (`escuro_cor`, `desligado`) ou sem logo → o título em texto. E o título
    brasileiro abre a linha de metadado só com logo exibido que não é pt-BR
-   (`tituloNaLinha`). */
+   e cujo texto, normalizado como na busca, difere dele (`tituloNaLinha`). */
 (function (root) {
   "use strict";
 
@@ -338,10 +338,16 @@
   }
 
   // O título brasileiro abre a linha de metadado da manchete só quando o
-  // LOGO EXIBIDO não é o pt-BR: logo exibido (`modoDoLogo` != "texto") e
-  // `titulo_difere_do_logo`. Com o título em texto, ele já está na tela.
+  // LOGO EXIBIDO não é o pt-BR (`modoDoLogo` != "texto" e
+  // `titulo_difere_do_logo`) E [rodada editorial 2] o que o logo escreve
+  // (`logo.titulo`), normalizado como na busca (`B.normalizar`: caixa,
+  // acentos, pontuação, artigos iniciais), é DIFERENTE do título
+  // brasileiro — "Aftersun" no logo e "Aftersun" no título não se repetem.
+  // Sem `logo.titulo`, conta como diferente (o título aparece). Com o
+  // título em texto, ele já está na tela.
   function tituloNaLinha(filme) {
-    return modoDoLogo(filme) !== "texto" && !!(filme && filme.titulo_difere_do_logo);
+    if (modoDoLogo(filme) === "texto" || !filme.titulo_difere_do_logo) return false;
+    return B.normalizar(filme.titulo || "") !== B.normalizar(filme.logo.titulo || "");
   }
 
   function recemChegados(filmes, piso) {

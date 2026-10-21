@@ -125,7 +125,8 @@
     "logo": {
       "path": "/aKFYSSTPkReVysTEWrE3yaqmcMS.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "A Chegada"
     },
     "titulo_difere_do_logo": false
   },

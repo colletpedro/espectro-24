@@ -41,7 +41,8 @@
      "largura_medida": 500,
      "altura_medida": 103,
      "contraste_wcag": 18.87
-    }
+    },
+    "titulo_do_logo": "O Convite"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -81,7 +82,8 @@
      "largura_medida": 500,
      "altura_medida": 170,
      "contraste_wcag": 8.105
-    }
+    },
+    "titulo_do_logo": "12 Homens e uma Sentença"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -121,7 +123,8 @@
      "largura_medida": 500,
      "altura_medida": 212,
      "contraste_wcag": 18.878
-    }
+    },
+    "titulo_do_logo": "2001: Uma Odisséia no Espaço"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -161,7 +164,8 @@
      "largura_medida": 500,
      "altura_medida": 205,
      "contraste_wcag": 11.643
-    }
+    },
+    "titulo_do_logo": "(500) Dias com Ela"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -201,7 +205,8 @@
      "largura_medida": 500,
      "altura_medida": 57,
      "contraste_wcag": 18.87
-    }
+    },
+    "titulo_do_logo": "A Brighter Summer Day"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -241,7 +246,8 @@
      "largura_medida": 500,
      "altura_medida": 93,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "Aftersun"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -281,7 +287,8 @@
      "largura_medida": 499,
      "altura_medida": 104,
      "contraste_wcag": 18.865
-    }
+    },
+    "titulo_do_logo": "Nada de Novo no Front"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -321,7 +328,8 @@
      "largura_medida": 500,
      "altura_medida": 103,
      "contraste_wcag": 17.91
-    }
+    },
+    "titulo_do_logo": "Anatomy of a Fall"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -361,7 +369,8 @@
      "largura_medida": 500,
      "altura_medida": 184,
      "contraste_wcag": 6.605
-    }
+    },
+    "titulo_do_logo": "Anatomia de um Crime"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -401,7 +410,8 @@
      "largura_medida": 497,
      "altura_medida": 30,
      "contraste_wcag": 18.863
-    }
+    },
+    "titulo_do_logo": "A Chegada"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -441,7 +451,8 @@
      "largura_medida": 500,
      "altura_medida": 149,
      "contraste_wcag": 2.775
-    }
+    },
+    "titulo_do_logo": "Vingadores: Ultimato"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -481,7 +492,8 @@
      "largura_medida": 500,
      "altura_medida": 197,
      "contraste_wcag": 8.873
-    }
+    },
+    "titulo_do_logo": "Barbie"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -521,7 +533,8 @@
      "largura_medida": 499,
      "altura_medida": 228,
      "contraste_wcag": 16.167
-    }
+    },
+    "titulo_do_logo": "Até os Ossos"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -561,7 +574,8 @@
      "largura_medida": 500,
      "altura_medida": 70,
      "contraste_wcag": 18.865
-    }
+    },
+    "titulo_do_logo": "Burning"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -601,7 +615,8 @@
      "largura_medida": 500,
      "altura_medida": 321,
      "contraste_wcag": 6.397
-    }
+    },
+    "titulo_do_logo": "Carros"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -641,7 +656,8 @@
      "largura_medida": 499,
      "altura_medida": 244,
      "contraste_wcag": 5.298
-    }
+    },
+    "titulo_do_logo": "Prenda-Me se For Capaz"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -681,7 +697,8 @@
      "largura_medida": 500,
      "altura_medida": 391,
      "contraste_wcag": 18.878
-    }
+    },
+    "titulo_do_logo": "Cats"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -721,7 +738,8 @@
      "largura_medida": 500,
      "altura_medida": 218,
      "contraste_wcag": 12.254
-    }
+    },
+    "titulo_do_logo": "Chinatown"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -761,7 +779,8 @@
      "largura_medida": 498,
      "altura_medida": 76,
      "contraste_wcag": 9.461
-    }
+    },
+    "titulo_do_logo": "Cidade de Deus"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -801,7 +820,8 @@
      "largura_medida": 500,
      "altura_medida": 356,
      "contraste_wcag": 4.884
-    }
+    },
+    "titulo_do_logo": "Cujo"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -841,7 +861,8 @@
      "largura_medida": 500,
      "altura_medida": 41,
      "contraste_wcag": 5.981
-    }
+    },
+    "titulo_do_logo": "Cure"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -881,7 +902,8 @@
      "largura_medida": 500,
      "altura_medida": 77,
      "contraste_wcag": 16.831
-    }
+    },
+    "titulo_do_logo": "District 9"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -921,7 +943,8 @@
      "largura_medida": 500,
      "altura_medida": 213,
      "contraste_wcag": 5.127
-    }
+    },
+    "titulo_do_logo": "Django Livre"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -961,7 +984,8 @@
      "largura_medida": 500,
      "altura_medida": 700,
      "contraste_wcag": 10.218
-    }
+    },
+    "titulo_do_logo": "Faça a Coisa Certa"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1001,7 +1025,8 @@
      "largura_medida": 500,
      "altura_medida": 78,
      "contraste_wcag": 3.345
-    }
+    },
+    "titulo_do_logo": "Dr. Fantástico"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1041,7 +1066,8 @@
      "largura_medida": 500,
      "altura_medida": 112,
      "contraste_wcag": 3.757
-    }
+    },
+    "titulo_do_logo": "Drive My Car"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1081,7 +1107,8 @@
      "largura_medida": 497,
      "altura_medida": 51,
      "contraste_wcag": 3.016
-    }
+    },
+    "titulo_do_logo": "Duna"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1121,7 +1148,8 @@
      "largura_medida": 500,
      "altura_medida": 150,
      "contraste_wcag": 8.789
-    }
+    },
+    "titulo_do_logo": "Dune: Part Two"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1161,7 +1189,8 @@
      "largura_medida": 500,
      "altura_medida": 211,
      "contraste_wcag": 15.097
-    }
+    },
+    "titulo_do_logo": "Eighth Grade"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1201,7 +1230,8 @@
      "largura_medida": 499,
      "altura_medida": 184,
      "contraste_wcag": 18.874
-    }
+    },
+    "titulo_do_logo": "Tudo em Todo o Lugar ao Mesmo Tempo"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1241,7 +1271,8 @@
      "largura_medida": 500,
      "altura_medida": 262,
      "contraste_wcag": 4.322
-    }
+    },
+    "titulo_do_logo": "Clube da Luta"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1281,7 +1312,8 @@
      "largura_medida": 497,
      "altura_medida": 71,
      "contraste_wcag": 3.715
-    }
+    },
+    "titulo_do_logo": "Force Majeure"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1321,7 +1353,8 @@
      "largura_medida": 499,
      "altura_medida": 73,
      "contraste_wcag": 3.401
-    }
+    },
+    "titulo_do_logo": "Sexta-Feira 13"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1361,7 +1394,8 @@
      "largura_medida": 498,
      "altura_medida": 78,
      "contraste_wcag": 18.876
-    }
+    },
+    "titulo_do_logo": "Corra!"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1401,7 +1435,8 @@
      "largura_medida": 495,
      "altura_medida": 44,
      "contraste_wcag": 7.83
-    }
+    },
+    "titulo_do_logo": "Gladiador"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1441,7 +1476,8 @@
      "largura_medida": 500,
      "altura_medida": 169,
      "contraste_wcag": 18.849
-    }
+    },
+    "titulo_do_logo": "Os Bons Companheiros"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1481,7 +1517,8 @@
      "largura_medida": 499,
      "altura_medida": 88,
      "contraste_wcag": 5.78
-    }
+    },
+    "titulo_do_logo": "Guillermo del Toro's Pinocchio"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1521,7 +1558,8 @@
      "largura_medida": 499,
      "altura_medida": 156,
      "contraste_wcag": 13.22
-    }
+    },
+    "titulo_do_logo": "Happy Hour"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1561,7 +1599,8 @@
      "largura_medida": 500,
      "altura_medida": 82,
      "contraste_wcag": 18.872
-    }
+    },
+    "titulo_do_logo": "Hard to Be a God"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1601,7 +1640,8 @@
      "largura_medida": 499,
      "altura_medida": 185,
      "contraste_wcag": 18.852
-    }
+    },
+    "titulo_do_logo": "Hereditário"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1641,7 +1681,8 @@
      "largura_medida": 499,
      "altura_medida": 137,
      "contraste_wcag": 18.863
-    }
+    },
+    "titulo_do_logo": "Ainda Estou Aqui"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1681,7 +1722,8 @@
      "largura_medida": 500,
      "altura_medida": 67,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "Incendies"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1721,7 +1763,8 @@
      "largura_medida": 500,
      "altura_medida": 59,
      "contraste_wcag": 4.503
-    }
+    },
+    "titulo_do_logo": "A Origem"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1761,7 +1804,8 @@
      "largura_medida": 500,
      "altura_medida": 163,
      "contraste_wcag": 18.108
-    }
+    },
+    "titulo_do_logo": "Bastardos Inglórios"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1801,7 +1845,8 @@
      "largura_medida": 500,
      "altura_medida": 91,
      "contraste_wcag": 4.219
-    }
+    },
+    "titulo_do_logo": "Interestelar"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1841,7 +1886,8 @@
      "largura_medida": 500,
      "altura_medida": 181,
      "contraste_wcag": 18.858
-    }
+    },
+    "titulo_do_logo": "Coringa"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1881,7 +1927,8 @@
      "largura_medida": 500,
      "altura_medida": 179,
      "contraste_wcag": 18.843
-    }
+    },
+    "titulo_do_logo": "Coringa: Delírio a Dois"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -1921,7 +1968,8 @@
      "largura_medida": 500,
      "altura_medida": 58,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "La Haine"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -1961,7 +2009,8 @@
      "largura_medida": 500,
      "altura_medida": 142,
      "contraste_wcag": 4.687
-    }
+    },
+    "titulo_do_logo": "Longlegs - Vínculo Mortal"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2001,7 +2050,8 @@
      "largura_medida": 500,
      "altura_medida": 75,
      "contraste_wcag": 11.607
-    }
+    },
+    "titulo_do_logo": "Mad Max: Estrada da Fúria"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2041,7 +2091,8 @@
      "largura_medida": 500,
      "altura_medida": 67,
      "contraste_wcag": 18.867
-    }
+    },
+    "titulo_do_logo": "Malcolm X"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2081,7 +2132,8 @@
      "largura_medida": 500,
      "altura_medida": 548,
      "contraste_wcag": 11.724
-    }
+    },
+    "titulo_do_logo": "Marty Supreme"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2121,7 +2173,8 @@
      "largura_medida": 500,
      "altura_medida": 142,
      "contraste_wcag": 18.056
-    }
+    },
+    "titulo_do_logo": "Amnésia"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2161,7 +2214,8 @@
      "largura_medida": 500,
      "altura_medida": 301,
      "contraste_wcag": 7.222
-    }
+    },
+    "titulo_do_logo": "Memories of Murder"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2201,7 +2255,8 @@
      "largura_medida": 499,
      "altura_medida": 135,
      "contraste_wcag": 13.671
-    }
+    },
+    "titulo_do_logo": "mother!"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2241,7 +2296,8 @@
      "largura_medida": 500,
      "altura_medida": 65,
      "contraste_wcag": 3.449
-    }
+    },
+    "titulo_do_logo": "Napoleon"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2281,7 +2337,8 @@
      "largura_medida": 500,
      "altura_medida": 193,
      "contraste_wcag": 7.961
-    }
+    },
+    "titulo_do_logo": "O Som ao Redor"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2321,7 +2378,8 @@
      "largura_medida": 500,
      "altura_medida": 156,
      "contraste_wcag": 15.639
-    }
+    },
+    "titulo_do_logo": "Obsessão"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2361,7 +2419,8 @@
      "largura_medida": 500,
      "altura_medida": 67,
      "contraste_wcag": 7.902
-    }
+    },
+    "titulo_do_logo": "Oppenheimer"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2401,7 +2460,8 @@
      "largura_medida": 500,
      "altura_medida": 80,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "Parasita"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2441,7 +2501,8 @@
      "largura_medida": 500,
      "altura_medida": 359,
      "contraste_wcag": 3.947
-    }
+    },
+    "titulo_do_logo": "Pearl"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2481,7 +2542,8 @@
      "largura_medida": 497,
      "altura_medida": 54,
      "contraste_wcag": 14.461
-    }
+    },
+    "titulo_do_logo": "Dias Perfeitos"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2521,7 +2583,8 @@
      "largura_medida": 500,
      "altura_medida": 104,
      "contraste_wcag": 18.874
-    }
+    },
+    "titulo_do_logo": "Pinocchio"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2561,7 +2624,8 @@
      "largura_medida": 498,
      "altura_medida": 85,
      "contraste_wcag": 18.872
-    }
+    },
+    "titulo_do_logo": "Porco Rosso: O Último Herói Romântico"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2601,7 +2665,8 @@
      "largura_medida": 500,
      "altura_medida": 65,
      "contraste_wcag": 17.959
-    }
+    },
+    "titulo_do_logo": "Retrato de uma Jovem em Chamas"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2641,7 +2706,8 @@
      "largura_medida": 499,
      "altura_medida": 124,
      "contraste_wcag": 18.874
-    }
+    },
+    "titulo_do_logo": "Princesa Mononoke"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2681,7 +2747,8 @@
      "largura_medida": 500,
      "altura_medida": 40,
      "contraste_wcag": 16.908
-    }
+    },
+    "titulo_do_logo": "Os Suspeitos"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2721,7 +2788,8 @@
      "largura_medida": 499,
      "altura_medida": 103,
      "contraste_wcag": 3.559
-    }
+    },
+    "titulo_do_logo": "Satantango"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2761,7 +2829,8 @@
      "largura_medida": 500,
      "altura_medida": 125,
      "contraste_wcag": 16.531
-    }
+    },
+    "titulo_do_logo": "Seven - Os Sete Crimes Capitais"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2801,7 +2870,8 @@
      "largura_medida": 500,
      "altura_medida": 206,
      "contraste_wcag": 2.921
-    }
+    },
+    "titulo_do_logo": "Ilha do Medo"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2841,7 +2911,8 @@
      "largura_medida": 500,
      "altura_medida": 70,
      "contraste_wcag": 15.279
-    }
+    },
+    "titulo_do_logo": "Pecadores"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -2881,7 +2952,8 @@
      "largura_medida": 500,
      "altura_medida": 313,
      "contraste_wcag": 6.728
-    }
+    },
+    "titulo_do_logo": "Soul"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2921,7 +2993,8 @@
      "largura_medida": 500,
      "altura_medida": 30,
      "contraste_wcag": 5.965
-    }
+    },
+    "titulo_do_logo": "Speak No Evil"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -2961,7 +3034,8 @@
      "largura_medida": 500,
      "altura_medida": 155,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "Homem-Aranha: Através do Aranhaverso"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3001,7 +3075,8 @@
      "largura_medida": 500,
      "altura_medida": 128,
      "contraste_wcag": 5.519
-    }
+    },
+    "titulo_do_logo": "Fale Comigo"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3041,7 +3116,8 @@
      "largura_medida": 499,
      "altura_medida": 244,
      "contraste_wcag": 16.964
-    }
+    },
+    "titulo_do_logo": "The Battle of Algiers"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -3081,7 +3157,8 @@
      "largura_medida": 500,
      "altura_medida": 265,
      "contraste_wcag": 18.872
-    }
+    },
+    "titulo_do_logo": "O Brutalista"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3138,7 +3215,8 @@
      "largura_medida": 494,
      "altura_medida": 28,
      "contraste_wcag": 18.826
-    }
+    },
+    "titulo_do_logo": "Magnatas do Crime"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3178,7 +3256,8 @@
      "largura_medida": 500,
      "altura_medida": 566,
      "contraste_wcag": 6.289
-    }
+    },
+    "titulo_do_logo": "O Poderoso Chefão"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3218,7 +3297,8 @@
      "largura_medida": 500,
      "altura_medida": 207,
      "contraste_wcag": 18.874
-    }
+    },
+    "titulo_do_logo": "Os Oito Odiados"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3258,7 +3338,8 @@
      "largura_medida": 500,
      "altura_medida": 66,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "The Northman"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -3298,7 +3379,8 @@
      "largura_medida": 500,
      "altura_medida": 35,
      "contraste_wcag": 18.843
-    }
+    },
+    "titulo_do_logo": "O Grande Truque"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3338,7 +3420,8 @@
      "largura_medida": 500,
      "altura_medida": 66,
      "contraste_wcag": 4.89
-    }
+    },
+    "titulo_do_logo": "O Regresso"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3378,7 +3461,8 @@
      "largura_medida": 500,
      "altura_medida": 213,
      "contraste_wcag": 18.87
-    }
+    },
+    "titulo_do_logo": "Que Horas Ela Volta?"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3418,7 +3502,8 @@
      "largura_medida": 499,
      "altura_medida": 182,
      "contraste_wcag": 9.116
-    }
+    },
+    "titulo_do_logo": "Bob Esponja: Em Busca da Calça Quadrada"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3458,7 +3543,8 @@
      "largura_medida": 498,
      "altura_medida": 120,
      "contraste_wcag": 18.151
-    }
+    },
+    "titulo_do_logo": "A Substância"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3498,7 +3584,8 @@
      "largura_medida": 500,
      "altura_medida": 94,
      "contraste_wcag": 4.307
-    }
+    },
+    "titulo_do_logo": "The Swimming Pool"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -3538,7 +3625,8 @@
      "largura_medida": 500,
      "altura_medida": 108,
      "contraste_wcag": 3.501
-    }
+    },
+    "titulo_do_logo": "O Show de Truman: O Show da Vida"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3578,7 +3666,8 @@
      "largura_medida": 500,
      "altura_medida": 224,
      "contraste_wcag": 17.441
-    }
+    },
+    "titulo_do_logo": "The Turin Horse"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,
@@ -3618,7 +3707,8 @@
      "largura_medida": 500,
      "altura_medida": 167,
      "contraste_wcag": 16.853
-    }
+    },
+    "titulo_do_logo": "O Lamento"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3658,7 +3748,8 @@
      "largura_medida": 500,
      "altura_medida": 32,
      "contraste_wcag": 10.441
-    }
+    },
+    "titulo_do_logo": "O Lobo de Wall Street"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3698,7 +3789,8 @@
      "largura_medida": 500,
      "altura_medida": 152,
      "contraste_wcag": 18.876
-    }
+    },
+    "titulo_do_logo": "Top Gun: Maverick"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3738,7 +3830,8 @@
      "largura_medida": 500,
      "altura_medida": 108,
      "contraste_wcag": 18.878
-    }
+    },
+    "titulo_do_logo": "Joias Brutas"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3778,7 +3871,8 @@
      "largura_medida": 500,
      "altura_medida": 244,
      "contraste_wcag": 18.883
-    }
+    },
+    "titulo_do_logo": "Whiplash: Em Busca da Perfeição"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3818,7 +3912,8 @@
      "largura_medida": 500,
      "altura_medida": 237,
      "contraste_wcag": 2.446
-    }
+    },
+    "titulo_do_logo": "Wicked"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3875,7 +3970,8 @@
      "largura_medida": 500,
      "altura_medida": 305,
      "contraste_wcag": 17.658
-    }
+    },
+    "titulo_do_logo": "Wonka"
    },
    "idioma_logo": "pt-BR",
    "titulo_difere_do_logo": false,
@@ -3915,7 +4011,8 @@
      "largura_medida": 500,
      "altura_medida": 599,
      "contraste_wcag": 3.194
-    }
+    },
+    "titulo_do_logo": "Zama"
    },
    "idioma_logo": "en",
    "titulo_difere_do_logo": true,

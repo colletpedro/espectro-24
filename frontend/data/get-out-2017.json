@@ -125,7 +125,8 @@
     "logo": {
       "path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Corra!"
     },
     "titulo_difere_do_logo": false
   },

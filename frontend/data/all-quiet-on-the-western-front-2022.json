@@ -124,7 +124,8 @@
     "logo": {
       "path": "/5BI2vscWdROnvRlYibNjr1FOpDf.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Nada de Novo no Front"
     },
     "titulo_difere_do_logo": false
   },

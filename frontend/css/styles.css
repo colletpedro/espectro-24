@@ -2460,11 +2460,21 @@ body.lightbox-aberto { overflow: hidden; }
    16:9 (nunca pôster), cantos RETOS nas imagens, calha fina entre imagens
    (`--ed-calha`) e nenhuma sombra. A home vive em `ed-*`; `.busca*` é a
    lista de resultados da busca, que veio da home nova. */
+/* [rodada editorial 2] PROVA DE FONTES: `--ed-fonte` é a variável ÚNICA
+   da família dos títulos de coleção, títulos em texto, metadados e rótulos
+   de seção da home. Sem ela (`?fonte=atual`, o padrão), cada elemento cai
+   na família de sempre (`var(--ed-fonte, var(--serif))` etc.). `js/fonte.js`
+   marca `<html data-fonte>` e carrega só a família pedida. */
+:root[data-fonte="inter-tight"] { --ed-fonte: "Inter Tight", var(--sans); }
+:root[data-fonte="instrument"] { --ed-fonte: "Instrument Sans", var(--sans); }
+
 :root {
-  /* o véu da faixa inferior da manchete: opacidade MÁXIMA do preto na base
-     do still, que some até o meio da altura. Constante ÚNICA, para ajustar
-     ao vivo (teto 0,35). */
-  --ed-veu: 0.35;
+  /* [rodada editorial 2] o VÉU atrás do bloco de texto da manchete (canto
+     inferior esquerdo do still): opacidade do preto, MEDIDA para o
+     contraste WCAG >= 4,5 da justificativa sobre o pior still dos 98
+     elegíveis (scripts/medir_legibilidade.py, dados/legibilidade_manchete.json).
+     Constante ÚNICA. */
+  --ed-veu: 0.53;
   --ed-calha: 4px;
   --ed-largura: 1180px;
 }
@@ -2566,12 +2576,6 @@ body.lightbox-aberto { overflow: hidden; }
 /* --- 1. manchete --- */
 .ed-manchete { position: relative; }
 .ed-manchete__visual { display: block; position: relative; }
-.ed-manchete__veu {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(to top, rgba(0, 0, 0, var(--ed-veu)) 0%, rgba(0, 0, 0, 0) 50%);
-}
 .ed-faixa { display: flex; height: 5px; width: 100%; background: transparent; }
 .ed-faixa.is-vazia { background: var(--border); }
 .ed-faixa__seg { height: 100%; }
@@ -2586,6 +2590,15 @@ body.lightbox-aberto { overflow: hidden; }
   margin: 0 auto;
   padding: 0 20px 28px;
 }
+/* a caixa do véu: só atrás do texto, cantos retos, sem sombra; o recuo
+   negativo mantém o texto alinhado à coluna */
+.ed-manchete__caixa {
+  display: inline-block;
+  max-width: calc(36rem + 40px);
+  margin-left: -20px;
+  padding: 18px 20px 16px;
+  background: rgba(0, 0, 0, var(--ed-veu));
+}
 .ed-manchete__titulo { margin: 0 0 10px; line-height: 1; }
 .ed-manchete__titulo a { text-decoration: none; display: inline-block; }
 .ed-manchete__logo {
@@ -2597,7 +2610,7 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .ed-manchete__logo.is-branco { filter: brightness(0) invert(1); }
 .ed-manchete__titulo-texto {
-  font-family: var(--serif);
+  font-family: var(--ed-fonte, var(--serif));
   font-size: clamp(2rem, 4.4vw, 3.6rem);
   font-weight: 700;
   line-height: 1.05;
@@ -2605,7 +2618,7 @@ body.lightbox-aberto { overflow: hidden; }
 .ed-manchete__nativo { margin: 0 0 4px; color: var(--text-dim); }
 .ed-manchete__linha {
   margin: 0 0 8px;
-  font-family: var(--mono);
+  font-family: var(--ed-fonte, var(--mono));
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -2616,11 +2629,11 @@ body.lightbox-aberto { overflow: hidden; }
 /* --- cartões (coleção e recém-chegados): título e meta ABAIXO do still --- */
 .ed-cartao { display: block; text-decoration: none; color: var(--text); }
 .ed-cartao__corpo { display: flex; flex-direction: column; padding: 8px 0 0; }
-.ed-cartao__titulo { font-family: var(--serif); font-weight: 700; line-height: 1.25; }
+.ed-cartao__titulo { font-family: var(--ed-fonte, var(--serif)); font-weight: 700; line-height: 1.25; }
 .ed-cartao:hover .ed-cartao__titulo { text-decoration: underline; text-underline-offset: 3px; }
 .ed-cartao__nativo { font-size: 0.8rem; color: var(--text-mute); }
 .ed-cartao__meta {
-  font-family: var(--mono);
+  font-family: var(--ed-fonte, var(--mono));
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   color: var(--text-mute);
@@ -2639,7 +2652,7 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .ed-colecao__rotulo { margin-bottom: 10px; }
 .ed-colecao__titulo {
-  font-family: var(--serif);
+  font-family: var(--ed-fonte, var(--serif));
   font-size: clamp(1.5rem, 2.6vw, 2.1rem);
   line-height: 1.15;
   margin: 0 0 14px;
@@ -2678,13 +2691,48 @@ body.lightbox-aberto { overflow: hidden; }
 
 .ed-todos { margin-top: 48px; margin-bottom: 8px; font-family: var(--serif); font-size: 1.15rem; }
 
+/* rótulos de seção da home ("Coleção do dia", "Recém-chegados") */
+.ed-main .section-label { font-family: var(--ed-fonte, var(--mono)); }
+
+/* --- prova de fontes: o tratamento das famílias novas --- */
+:root[data-fonte]:not([data-fonte="atual"]) .ed-colecao__titulo,
+:root[data-fonte]:not([data-fonte="atual"]) .ed-manchete__titulo-texto,
+:root[data-fonte]:not([data-fonte="atual"]) .ed-cartao__titulo {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+:root[data-fonte]:not([data-fonte="atual"]) .ed-main .section-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: normal;
+  color: var(--text-dim);
+}
+/* metadado no formato MUBI: diretor em negrito, país e ano no peso normal,
+   em caixa alta pequena */
+:root[data-fonte]:not([data-fonte="atual"]) .ed-meta {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  font-weight: 400;
+}
+:root[data-fonte]:not([data-fonte="atual"]) .ed-meta__diretor { font-weight: 700; }
+:root[data-fonte]:not([data-fonte="atual"]) .ed-cartao__meta { color: var(--text-dim); }
+
 /* --- mobile (< 700px): still em cima, texto embaixo sobre fundo sólido --- */
 @media (max-width: 699px) {
   .ed-cabecalho__linha { flex-wrap: wrap; gap: 10px 16px; padding: 10px 16px; }
   .ed-cabecalho__busca { order: 3; flex-basis: 100%; max-width: none; }
   .ed-largura { padding: 0 16px; }
 
-  .ed-manchete__veu { display: none; }
+  .ed-manchete__caixa {
+    display: block;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+  }
   .ed-manchete__texto {
     position: static;
     max-width: none;

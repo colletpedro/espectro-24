@@ -111,7 +111,8 @@
     "logo": {
       "path": "/e0NcrovoxPi2ZI7rTFzymjN96U8.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Oppenheimer"
     },
     "titulo_difere_do_logo": false
   },

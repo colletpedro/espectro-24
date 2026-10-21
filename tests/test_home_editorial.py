@@ -10,15 +10,20 @@ textos_home.js são puros); o resto lê os arquivos. Trava:
   4. recém-chegados: 3 por dia, da leva mais recente;
   5. nenhum pôster na home: só caminhos de backdrop, still e logo;
   6. os textos novos passam pelo vocabulário proibido e pelo detector de
-     nota; forma (véu, hover, cantos, sombra) e o link de coleção em /filmes.
+     nota; forma (véu, hover, cantos, sombra) e o link de coleção em /filmes;
+  7. [rodada editorial 2] o título repetido na linha (normalizado como na
+     busca), o véu MEDIDO atrás do texto e a prova de fontes (`?fonte=`).
 """
 from __future__ import annotations
 
+import json
 import re
+import subprocess
+import textwrap
 
 import pytest
 
-from test_home_nova import (FILMES_REAIS, FRONT, JS, _filme, _node,
+from test_home_nova import (FILMES_REAIS, FRONT, JS, RAIZ, _filme, _node,
                             _proibidos_em, _violacoes_de_nota, precisa_node)
 
 CSS = (FRONT / "css" / "styles.css").read_text(encoding="utf-8")
@@ -54,7 +59,8 @@ def test_regra_de_exibicao_do_logo_por_classe():
 def test_titulo_brasileiro_na_linha_so_com_logo_exibido_que_nao_e_pt_br():
     def f(classe, difere, idioma="en"):
         return {"titulo": "T", "titulo_difere_do_logo": difere,
-                "logo": {"path": "/a.png", "idioma": idioma, "classe": classe}}
+                "logo": {"path": "/a.png", "idioma": idioma, "classe": classe,
+                         "titulo": "Outro"}}
     casos = {"en_claro": f("claro", True), "en_mono": f("escuro_mono", True),
              "br_claro": f("claro", False, "pt-BR"), "en_cor": f("escuro_cor", True),
              "en_desligado": f("desligado", True),
@@ -288,11 +294,49 @@ def test_textos_novos_sem_vocabulario_proibido_nem_nota():
         assert _violacoes_de_nota(t) == [], t
 
 
-def test_veu_e_constante_unica_com_teto_de_0_35():
+def test_veu_medido_atras_do_texto_garante_contraste_4_5():
+    """[rodada editorial 2] Substitui "véu uniforme com teto de 0,35" (a
+    regra de produto mudou: o véu fica SÓ atrás do bloco de texto, com a
+    opacidade MEDIDA para contraste WCAG >= 4,5 da justificativa no pior
+    still). A constante continua única; o valor dela é o da medição."""
     css = _bloco_editorial_css()
     defs = re.findall(r"--ed-veu:\s*([\d.]+)", css)
-    assert len(defs) == 1 and float(defs[0]) <= 0.35
+    assert len(defs) == 1
     assert css.count("var(--ed-veu)") == 1
+    # o véu está na CAIXA do texto, e em nenhum outro lugar
+    caixa = re.search(r"\.ed-manchete__caixa\s*\{([^}]*)\}", css).group(1)
+    assert "background: rgba(0, 0, 0, var(--ed-veu));" in caixa
+    assert "ed-manchete__veu" not in css + INICIO
+    medida = json.loads((RAIZ / "dados" / "legibilidade_manchete.json").read_text(encoding="utf-8"))
+    assert float(defs[0]) == medida["alfa"]
+    assert medida["cor_texto"] == "#f2f0ea" and medida["contraste_minimo"] == 4.5
+    contrastes = [c for r in medida["filmes"].values() for c in r["contraste_com_veu"].values()]
+    assert min(contrastes) >= 4.5
+    assert medida["pior_caso"]["contraste"] == round(min(contrastes), 3)
+    # os 98 elegíveis da manchete, nas quatro larguras de desktop
+    elegiveis = {f["slug"] for f in FILMES_REAIS} - {"obsession-2025"}
+    assert set(medida["filmes"]) == elegiveis
+    assert all(set(r["caixas"]) == {"700", "1024", "1440", "1920"}
+               for r in medida["filmes"].values())
+
+
+def test_medida_do_veu_e_a_menor_opacidade_que_passa():
+    pytest.importorskip("numpy")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "medir_legibilidade_teste", RAIZ / "scripts" / "medir_legibilidade.py")
+    ml = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(ml)
+    import numpy as np
+    branco = np.ones((10, 3))
+    # sobre branco puro: (0,87+0,05)/(L(1−a)+0,05) >= 4,5 pede a = 0,58
+    a = ml.menor_alfa([branco])
+    assert ml.contraste(ml.luminancia_do_fundo(branco, a)) >= 4.5
+    assert ml.contraste(ml.luminancia_do_fundo(branco, a - 0.01)) < 4.5
+    assert ml.menor_alfa([np.zeros((10, 3))]) == 0.0      # fundo preto: sem véu
+    # a região é o recorte da caixa, em frações do still
+    img = np.zeros((10, 20, 3)); img[5:, :10] = 1.0
+    assert ml.regiao(img, [0, 0.5, 0.5, 1.0]).mean() == 1.0
 
 
 def test_imagens_da_home_com_cantos_retos_e_sem_sombra():
@@ -328,3 +372,142 @@ def test_ordem_das_secoes_da_home():
                                     'id="recemChegados"', 'id="verTodos"')]
     assert ordem == sorted(ordem)
     assert 'id="prateleiras"' not in html
+
+
+# ===========================================================================
+# 7. [rodada editorial 2] TÍTULO REPETIDO E PROVA DE FONTES
+# ===========================================================================
+
+@precisa_node
+def test_titulo_na_linha_compara_normalizado_como_na_busca():
+    reais = {f["slug"]: f for f in FILMES_REAIS}
+    casos = {
+        # logo en que escreve o mesmo título: não repete
+        "aftersun": reais["aftersun"],
+        # o logo real de Interestelar é pt-BR e escreve "INTERESTELAR": não repete
+        "interstellar": reais["interstellar"],
+        # se o logo exibido fosse o en ("Interstellar"), o título repetiria
+        "interstellar_en": dict(reais["interstellar"], titulo_difere_do_logo=True,
+                                logo=dict(reais["interstellar"]["logo"], idioma="en",
+                                          titulo="Interstellar")),
+        # normalização da busca: caixa, acento, pontuação e artigo inicial
+        "normalizado": {"titulo": "O Ódio!", "titulo_difere_do_logo": True,
+                        "logo": {"path": "/a.png", "idioma": "en", "classe": "claro",
+                                 "titulo": "odio"}},
+        "anatomia": reais["anatomy-of-a-fall"],
+    }
+    out = _node("""const r = {};
+        for (const [k, f] of Object.entries(D)) r[k] = [S.tituloNaLinha(f),
+            T.linhaDaManchete(f, S.tituloNaLinha(f))];
+        console.log(JSON.stringify(r));""", casos)
+    assert reais["aftersun"]["logo"]["titulo"] == "Aftersun"
+    assert out["aftersun"] == [False, "Charlotte Wells · Reino Unido, Estados Unidos · 2022"]
+    assert reais["interstellar"]["logo"]["idioma"] == "pt-BR"
+    assert out["interstellar"][0] is False
+    assert out["interstellar_en"][0] is True
+    assert out["interstellar_en"][1].startswith("Interestelar · ")
+    assert out["normalizado"][0] is False
+    assert out["anatomia"][0] is True
+    assert out["anatomia"][1].startswith("Anatomia de uma Queda · ")
+
+
+@precisa_node
+def test_titulo_do_logo_publicado_em_todo_logo():
+    out = _node("console.log(JSON.stringify(D.filter(f => f.logo).map(f => [f.slug, f.logo.idioma, f.logo.titulo, f.titulo])));",
+                FILMES_REAIS)
+    assert len(out) == 97
+    for slug, idioma, titulo_logo, titulo in out:
+        assert titulo_logo, slug
+        if idioma == "pt-BR":
+            assert titulo_logo == titulo, slug
+
+
+@precisa_node
+def test_linha_em_partes_tem_o_mesmo_texto():
+    out = _node("""console.log(JSON.stringify(D.map(f => [
+        T.partesDaManchete(f, true).map(p => p.texto).join(T.SEPARADOR) === T.linhaDaManchete(f, true),
+        T.partesDiretorAno(f).map(p => p.texto).join(T.SEPARADOR) === T.linhaDiretorAno(f),
+        T.partesDaManchete(f, false).map(p => p.tipo)])));""", FILMES_REAIS)
+    for igual_m, igual_r, tipos in out:
+        assert igual_m and igual_r
+        assert tipos[0] == "diretor" and tipos[-1] == "ano"
+
+
+FONTE_JS = (JS / "fonte.js").read_text(encoding="utf-8")
+
+
+def _rodar_fonte(busca: str) -> dict:
+    """Executa js/fonte.js num documento falso, com `?...` = `busca`."""
+    script = textwrap.dedent("""
+        const links = []; const attrs = {};
+        global.location = {search: process.argv[1]};
+        global.URLSearchParams = URLSearchParams;
+        global.window = {};
+        global.document = {
+            documentElement: {setAttribute: (k, v) => { attrs[k] = v; }},
+            createElement: () => ({}),
+            head: {appendChild: l => links.push({rel: l.rel, href: l.href})},
+        };
+        require(process.argv[2]);
+        console.log(JSON.stringify({attrs, links, api: window.ESPECTRO_FONTE}));
+    """)
+    r = subprocess.run(["node", "-e", script, busca, str(JS / "fonte.js")],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+    return json.loads(r.stdout)
+
+
+@precisa_node
+@pytest.mark.parametrize("busca,fonte,familia", [
+    ("", "atual", None),
+    ("?fonte=atual", "atual", None),
+    ("?fonte=inter-tight", "inter-tight", "Inter+Tight"),
+    ("?fonte=instrument", "instrument", "Instrument+Sans"),
+    ("?fonte=comic-sans", "atual", None),           # desconhecida: o padrão
+    ("?dia=2026-10-21&fonte=instrument", "instrument", "Instrument+Sans"),
+])
+def test_fonte_marca_o_html_e_carrega_so_a_familia_pedida(busca, fonte, familia):
+    out = _rodar_fonte(busca)
+    assert out["attrs"] == {"data-fonte": fonte}
+    folhas = [l["href"] for l in out["links"] if l["rel"] == "stylesheet"]
+    if familia is None:
+        assert out["links"] == []                    # `atual`: zero rede
+    else:
+        assert len(folhas) == 1 and "family=" + familia + ":" in folhas[0]
+        assert folhas[0].startswith("https://fonts.googleapis.com/css2?")
+        outra = "Instrument" if familia.startswith("Inter") else "Inter"
+        assert outra not in folhas[0]
+
+
+def test_padrao_da_fonte_e_uma_linha_e_a_familia_uma_variavel():
+    assert len(re.findall(r'var FONTE_PADRAO = "[a-z-]+";', FONTE_JS)) == 1
+    assert 'var FONTE_PADRAO = "atual";' in FONTE_JS
+    css = _bloco_editorial_css()
+    # uma variável só define a família, por opção
+    assert re.findall(r':root\[data-fonte="([a-z-]+)"\] \{ --ed-fonte: "([^"]+)"', css) == [
+        ("inter-tight", "Inter Tight"), ("instrument", "Instrument Sans")]
+    # os elementos da prova leem a variável, com a família de sempre como padrão
+    for seletor, padrao in ((".ed-colecao__titulo", "--serif"),
+                            (".ed-manchete__titulo-texto", "--serif"),
+                            (".ed-cartao__titulo", "--serif"),
+                            (".ed-manchete__linha", "--mono"),
+                            (".ed-cartao__meta", "--mono"),
+                            (".ed-main .section-label", "--mono")):
+        corpo = re.search(re.escape(seletor) + r"\s*\{([^}]*)\}", css).group(1)
+        assert f"font-family: var(--ed-fonte, var({padrao}))" in corpo, seletor
+    html = (FRONT / "index.html").read_text(encoding="utf-8")
+    assert html.index('src="js/fonte.js"') < html.index("</head>")
+
+
+def test_tratamento_das_fontes_novas():
+    css = _bloco_editorial_css()
+    novo = ':root[data-fonte]:not([data-fonte="atual"])'
+    titulos = re.search(re.escape(novo + " .ed-colecao__titulo") + r"[^{]*\{([^}]*)\}", css).group(1)
+    assert "text-transform: uppercase" in titulos and "letter-spacing: normal" in titulos
+    assert re.search(r"font-weight: (500|600)", titulos)
+    rotulo = re.search(re.escape(novo + " .ed-main .section-label") + r"\s*\{([^}]*)\}", css).group(1)
+    assert "text-transform: uppercase" in rotulo and "letter-spacing: normal" in rotulo
+    assert re.search(r"font-weight: (500|600)", rotulo)
+    meta = re.search(re.escape(novo + " .ed-meta") + r"\s*\{([^}]*)\}", css).group(1)
+    assert "text-transform: uppercase" in meta and "font-weight: 400" in meta
+    assert re.search(re.escape(novo + " .ed-meta__diretor") + r"\s*\{ font-weight: 700; \}", css)

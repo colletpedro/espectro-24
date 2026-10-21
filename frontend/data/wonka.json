@@ -112,7 +112,8 @@
     "logo": {
       "path": "/cUzMzh1XrairgWBeD53LnwBKx0z.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Wonka"
     },
     "titulo_difere_do_logo": false
   },

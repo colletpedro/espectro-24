@@ -112,7 +112,8 @@
     "logo": {
       "path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
       "idioma": "en",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Cure"
     },
     "titulo_difere_do_logo": true
   },

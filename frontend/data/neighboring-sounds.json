@@ -100,7 +100,8 @@
     "logo": {
       "path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "O Som ao Redor"
     },
     "titulo_difere_do_logo": false
   },

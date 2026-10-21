@@ -225,6 +225,18 @@ def razao_contraste(l_logo: float, fundo: str = FUNDO_REFERENCIA) -> float:
     return (claro + 0.05) / (escuro + 0.05)
 
 
+def titulo_do_logo(idioma: str, ficha: dict, detalhe_tmdb) -> str | None:
+    """O título que o LOGO escreve, pelo idioma dele: pt-BR → o título da
+    ficha (que é o pt-BR do TMDB); en → o `title` do TMDB (en-US, o idioma
+    padrão de /movie/{id}); sem idioma → o `original_title`. É a base da
+    comparação que decide se o título brasileiro se repete na linha da
+    manchete (selecao.js, `tituloNaLinha`)."""
+    if idioma == "pt-BR":
+        return ficha.get("titulo")
+    det = detalhe_tmdb()
+    return det.get("title") if idioma == "en" else det.get("original_title")
+
+
 def classe_medida(medida: dict) -> str | None:
     lum, croma = medida.get("luminancia_relativa_media"), medida.get("croma_medio")
     if lum is None or croma is None:
@@ -286,6 +298,9 @@ def processar(slug: str, key: str) -> dict:
             por_idioma[chave] += 1
     escolhido = escolher_logo(logos)
     reg_logo = _registro_logo(escolhido) if escolhido else None
+    if reg_logo:
+        reg_logo["titulo_do_logo"] = titulo_do_logo(reg_logo["idioma"], ficha,
+                                                    lambda: detalhe(tmdb_id, key))
 
     # país: campo NOVO (lista de códigos ISO 3166-1, na ordem do TMDB). O
     # formato anterior desta rodada (objetos com nome) nunca foi commitado e

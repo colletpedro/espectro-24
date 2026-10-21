@@ -124,7 +124,8 @@
     "logo": {
       "path": "/fxBkTUvznm3BMeSGYJDBsOcdOPb.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Cujo"
     },
     "titulo_difere_do_logo": false
   },

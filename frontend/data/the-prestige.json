@@ -126,7 +126,8 @@
     "logo": {
       "path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "O Grande Truque"
     },
     "titulo_difere_do_logo": false
   },

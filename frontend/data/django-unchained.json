@@ -124,7 +124,8 @@
     "logo": {
       "path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Django Livre"
     },
     "titulo_difere_do_logo": false
   },

@@ -112,7 +112,8 @@
     "logo": {
       "path": "/tl8Bpz1Q3y2AVhzHCazGCcIguQQ.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "A Substância"
     },
     "titulo_difere_do_logo": false
   },

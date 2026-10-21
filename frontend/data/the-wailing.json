@@ -125,7 +125,8 @@
     "logo": {
       "path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "O Lamento"
     },
     "titulo_difere_do_logo": false
   },

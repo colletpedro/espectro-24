@@ -124,7 +124,8 @@
     "logo": {
       "path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Fale Comigo"
     },
     "titulo_difere_do_logo": false
   },

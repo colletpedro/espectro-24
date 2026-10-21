@@ -123,24 +123,40 @@
     });
   }
 
-  // A linha de metadado da manchete: "Diretor · País(es) · Ano", com o
-  // título brasileiro no início quando `comTitulo` (o logo exibido não é o
-  // pt-BR — ver `titulo_difere_do_logo` e `modoDoLogo`).
-  function linhaDaManchete(filme, comTitulo) {
+  // A linha de metadado da manchete, em PARTES ({tipo, texto}): título
+  // brasileiro (quando `comTitulo` — ver `tituloNaLinha`, selecao.js),
+  // diretor, país(es) e ano. As partes deixam a apresentação marcar o
+  // diretor (negrito no formato MUBI da prova de fontes) sem refazer a
+  // regra; o texto corrido é `linhaDaManchete`.
+  var SEPARADOR = " · ";
+
+  function partesDaManchete(filme, comTitulo) {
     var partes = [];
-    if (comTitulo && filme.titulo) partes.push(filme.titulo);
-    if (filme.diretor) partes.push(filme.diretor);
+    if (comTitulo && filme.titulo) partes.push({ tipo: "titulo", texto: filme.titulo });
+    if (filme.diretor) partes.push({ tipo: "diretor", texto: filme.diretor });
     var paises = nomesDosPaises(filme.paises);
-    if (paises.length) partes.push(paises.join(", "));
-    if (filme.ano) partes.push(String(filme.ano));
-    return partes.join(" · ");
+    if (paises.length) partes.push({ tipo: "paises", texto: paises.join(", ") });
+    if (filme.ano) partes.push({ tipo: "ano", texto: String(filme.ano) });
+    return partes;
   }
 
-  // "Diretor · Ano", sob o still dos recém-chegados.
-  function linhaDiretorAno(filme) {
-    return [filme.diretor, filme.ano ? String(filme.ano) : null]
-      .filter(Boolean).join(" · ");
+  function juntar(partes) {
+    return partes.map(function (p) { return p.texto; }).join(SEPARADOR);
   }
+
+  // "Diretor · País(es) · Ano", com o título brasileiro no início quando
+  // `comTitulo`.
+  function linhaDaManchete(filme, comTitulo) { return juntar(partesDaManchete(filme, comTitulo)); }
+
+  // "Diretor · Ano", sob o still dos recém-chegados.
+  function partesDiretorAno(filme) {
+    var partes = [];
+    if (filme.diretor) partes.push({ tipo: "diretor", texto: filme.diretor });
+    if (filme.ano) partes.push({ tipo: "ano", texto: String(filme.ano) });
+    return partes;
+  }
+
+  function linhaDiretorAno(filme) { return juntar(partesDiretorAno(filme)); }
 
   // O eixo em português legível, SEM artigo — os templates o usam depois de
   // dois-pontos, o que dispensa concordância de gênero e número.
@@ -284,6 +300,8 @@
     verOsFilmes: verOsFilmes, DESCRICAO_EIXO: DESCRICAO_EIXO, FRASE_TIPO: FRASE_TIPO,
     MAX_PAISES: MAX_PAISES, nomesDosPaises: nomesDosPaises,
     linhaDaManchete: linhaDaManchete, linhaDiretorAno: linhaDiretorAno,
+    partesDaManchete: partesDaManchete, partesDiretorAno: partesDiretorAno,
+    SEPARADOR: SEPARADOR,
     textoDaColecao: textoDaColecao,
   };
 

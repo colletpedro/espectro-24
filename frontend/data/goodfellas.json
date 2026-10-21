@@ -124,7 +124,8 @@
     "logo": {
       "path": "/d4zBnh2AlvT9vStIjceZAyvcBak.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Os Bons Companheiros"
     },
     "titulo_difere_do_logo": false
   },

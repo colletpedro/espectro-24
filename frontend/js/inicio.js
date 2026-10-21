@@ -246,6 +246,18 @@
     alvo.addEventListener("mouseleave", fora);
   }
 
+  // Linha de metadado em partes: cada uma num `span.ed-meta__<tipo>`,
+  // separadas por `span.ed-meta__sep` — o texto corrido é o mesmo de
+  // `T.linhaDaManchete`; o CSS da prova de fontes põe o diretor em negrito.
+  function preencherMeta(alvo, partes) {
+    alvo.innerHTML = "";
+    partes.forEach(function (p, i) {
+      if (i) alvo.appendChild(el("span", "ed-meta__sep", T.SEPARADOR));
+      alvo.appendChild(el("span", "ed-meta__" + p.tipo, p.texto));
+    });
+    return alvo;
+  }
+
   // A faixa fina dos três grupos (a mesma semântica e paleta do mosaico).
   var GRUPOS = ["negativas", "medianas", "positivas"];
   var COR_GRUPO_HOME = {
@@ -296,11 +308,15 @@
     visual.tabIndex = -1;
     visual.setAttribute("aria-hidden", "true");
     visual.appendChild(quadro(f, "ed-manchete__quadro", "100vw", true, true));
-    visual.appendChild(el("span", "ed-manchete__veu"));
     visual.appendChild(faixaDosGrupos(f, "ed-faixa ed-manchete__faixa"));
     caixa.appendChild(visual);
 
+    // O texto vai numa CAIXA com o véu atrás (canto inferior esquerdo do
+    // still) — a opacidade `--ed-veu` é MEDIDA para o contraste WCAG >= 4,5
+    // da justificativa (scripts/medir_legibilidade.py).
     var texto = el("div", "ed-manchete__texto");
+    var caixaTexto = el("div", "ed-manchete__caixa");
+    texto.appendChild(caixaTexto);
     var titulo = el("h3", "ed-manchete__titulo");
     var link = el("a");
     link.href = hrefFilme(f.slug);
@@ -309,7 +325,7 @@
       link.className = "ed-manchete__titulo-texto";
       link.textContent = f.titulo;
       caixa.dataset.modoLogo = "texto";
-      if (linha) linha.textContent = T.linhaDaManchete(f, false);
+      if (linha) preencherMeta(linha, T.partesDaManchete(f, false));
     }
     var linha = null;
     if (modo === "logo" || modo === "logo_branco") {
@@ -325,12 +341,13 @@
       link.textContent = f.titulo;
     }
     titulo.appendChild(link);
-    texto.appendChild(titulo);
-    if (f.titulo_nativo) texto.appendChild(el("p", "ed-manchete__nativo", f.titulo_nativo));
-    // o título brasileiro abre a linha só quando o LOGO EXIBIDO não é pt-BR
-    linha = el("p", "ed-manchete__linha", T.linhaDaManchete(f, S.tituloNaLinha(f)));
-    texto.appendChild(linha);
-    texto.appendChild(el("p", "ed-manchete__justificativa", j.texto));
+    caixaTexto.appendChild(titulo);
+    if (f.titulo_nativo) caixaTexto.appendChild(el("p", "ed-manchete__nativo", f.titulo_nativo));
+    // o título brasileiro abre a linha só quando o LOGO EXIBIDO escreve
+    // outra coisa (`tituloNaLinha`)
+    linha = preencherMeta(el("p", "ed-manchete__linha ed-meta"), T.partesDaManchete(f, S.tituloNaLinha(f)));
+    caixaTexto.appendChild(linha);
+    caixaTexto.appendChild(el("p", "ed-manchete__justificativa", j.texto));
     caixa.appendChild(texto);
   })();
 
@@ -345,13 +362,13 @@
     var corpo = el("span", "ed-cartao__corpo");
     corpo.appendChild(el("span", "ed-cartao__titulo", f.titulo));
     if (f.titulo_nativo) corpo.appendChild(el("span", "ed-cartao__nativo", f.titulo_nativo));
-    var m = meta(f);
-    if (m) corpo.appendChild(el("span", "ed-cartao__meta", m));
+    var partes = meta(f);
+    if (partes.length) corpo.appendChild(preencherMeta(el("span", "ed-cartao__meta ed-meta"), partes));
     a.appendChild(corpo);
     return a;
   }
 
-  function soAno(f) { return f.ano ? String(f.ano) : ""; }
+  function soAno(f) { return f.ano ? [{ tipo: "ano", texto: String(f.ano) }] : []; }
 
   (function montarColecao() {
     var caixa = document.getElementById("colecaoDoDia");
@@ -410,7 +427,7 @@
     var grade = el("ul", "ed-recem__grade");
     r.filmes.forEach(function (f) {
       var li = el("li");
-      li.appendChild(cartao(f, null, "(max-width: 699px) 100vw, 33vw", T.linhaDiretorAno));
+      li.appendChild(cartao(f, null, "(max-width: 699px) 100vw, 33vw", T.partesDiretorAno));
       grade.appendChild(li);
     });
     caixa.appendChild(grade);

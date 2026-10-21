@@ -112,7 +112,8 @@
     "logo": {
       "path": "/fXhfzLMyJCNYpnP61kyF4haGfAI.png",
       "idioma": "pt-BR",
-      "classe": "claro"
+      "classe": "claro",
+      "titulo": "Hereditário"
     },
     "titulo_difere_do_logo": false
   },
