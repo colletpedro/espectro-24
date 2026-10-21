@@ -474,11 +474,11 @@ def _rodar_fonte(busca: str) -> dict:
 
 @precisa_node
 @pytest.mark.parametrize("busca,fonte,familia", [
-    ("", "atual", None),
+    ("", "instrument", "Instrument+Sans"),          # [rodada da fonte] o padrão
     ("?fonte=atual", "atual", None),
     ("?fonte=inter-tight", "inter-tight", "Inter+Tight"),
     ("?fonte=instrument", "instrument", "Instrument+Sans"),
-    ("?fonte=comic-sans", "atual", None),           # desconhecida: o padrão
+    ("?fonte=comic-sans", "instrument", "Instrument+Sans"),  # desconhecida: o padrão
     ("?dia=2026-10-21&fonte=instrument", "instrument", "Instrument+Sans"),
 ])
 def test_fonte_marca_o_html_e_carrega_so_a_familia_pedida(busca, fonte, familia):
@@ -496,7 +496,9 @@ def test_fonte_marca_o_html_e_carrega_so_a_familia_pedida(busca, fonte, familia)
 
 def test_padrao_da_fonte_e_uma_linha_e_a_familia_uma_variavel():
     assert len(re.findall(r'var FONTE_PADRAO = "[a-z-]+";', FONTE_JS)) == 1
-    assert 'var FONTE_PADRAO = "atual";' in FONTE_JS
+    assert 'var FONTE_PADRAO = "instrument";' in FONTE_JS   # [rodada da fonte]
+    filmes = (FRONT / "filmes" / "index.html").read_text(encoding="utf-8")
+    assert filmes.index('src="../js/fonte.js"') < filmes.index("</head>")
     css = _bloco_editorial_css()
     # uma variável só define a família, por opção
     assert re.findall(r':root\[data-fonte="([a-z-]+)"\] \{ --ed-fonte: "([^"]+)"', css) == [

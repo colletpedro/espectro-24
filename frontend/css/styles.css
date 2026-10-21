@@ -2729,7 +2729,7 @@ body.lightbox-aberto { overflow: hidden; }
 .ex-titulo { font-family: var(--ed-fonte, var(--serif)); font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 16px; }
 .ex-vistas { display: flex; gap: 14px; }
 .ex-vista {
-  font-family: var(--mono);
+  font-family: var(--ed-fonte, var(--mono));
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2742,7 +2742,7 @@ body.lightbox-aberto { overflow: hidden; }
 .ex-filtros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .ex-filtro { display: flex; flex-direction: column; gap: 4px; }
 .ex-filtro__nome {
-  font-family: var(--mono);
+  font-family: var(--ed-fonte, var(--mono));
   font-size: 0.66rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2839,6 +2839,15 @@ body.lightbox-aberto { overflow: hidden; }
   font-size: 0.78rem;
   letter-spacing: normal;
   color: var(--text-dim);
+}
+/* /filmes: a mesma família e o mesmo tratamento */
+:root[data-fonte]:not([data-fonte="atual"]) .ex-titulo,
+:root[data-fonte]:not([data-fonte="atual"]) .ex-indice__letra,
+:root[data-fonte]:not([data-fonte="atual"]) .ex-filtro__nome,
+:root[data-fonte]:not([data-fonte="atual"]) .ex-vista {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: normal;
 }
 /* metadado no formato MUBI: diretor em negrito, país e ano no peso normal,
    em caixa alta pequena */

@@ -294,3 +294,38 @@ def test_textos_do_explorar_sem_vocabulario_proibido():
     for t in out:
         assert _proibidos_em(t) == [], t
         assert _violacoes_de_nota(t) == [], t
+
+
+# ===========================================================================
+# 7. [rodada da fonte] EXCLUSÃO CONSISTENTE EM /filmes
+# ===========================================================================
+
+@precisa_node
+def test_contagens_da_home_batem_com_filmes_filtrado():
+    """Para TODO item do Explorar da home, a contagem é o número de filmes
+    que /filmes mostra com o filtro correspondente — /filmes parte de
+    `S.elegiveis` (a mesma lista de exclusão)."""
+    out = _x("""
+        const home = X.gruposDoExplorar(D, {elegiveis: true, piso: X.PISO_HOME});
+        const pagina = S.elegiveis(D);
+        const P = {assunto: "colecao", decada: "decada", genero: "genero", pais: "pais"};
+        const r = [];
+        for (const k of Object.keys(P)) for (const it of home[k]) {
+            const f = {}; f[P[k]] = it.chave;
+            r.push([k, it.chave, it.n, X.filtrar(pagina, f).length]);
+        }
+        console.log(JSON.stringify({r, pagina: pagina.map(f => f.slug),
+            opcoes: X.gruposDoExplorar(pagina, {piso: 1})}));""", FILMES_REAIS)
+    assert len(out["r"]) > 40
+    for k, chave, n_home, n_filmes in out["r"]:
+        assert n_home == n_filmes, (k, chave, n_home, n_filmes)
+    assert "obsession-2025" not in out["pagina"] and len(out["pagina"]) == 98
+    opcoes = out["opcoes"]
+    t = {i["chave"]: i["n"] for i in opcoes["genero"]}
+    assert t["terror"] == 15
+
+
+def test_filmes_usa_a_lista_de_exclusao_de_selecao():
+    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
+    assert "window.ESPECTRO_SELECAO.elegiveis(IDX.filmes || [])" in cat
+    assert "EXCLUIDOS" not in re.sub(r"/\*.*?\*/|//[^\n]*", "", cat, flags=re.S)

@@ -2,9 +2,10 @@
    `?fonte=` troca a família tipográfica da home (títulos de coleção,
    títulos em texto, metadados e rótulos de seção):
 
-     atual        as famílias de sistema de sempre (padrão; zero rede)
+     atual        as famílias de sistema de sempre (zero rede)
      inter-tight  Inter Tight (Google Fonts)
-     instrument   Instrument Sans (Google Fonts)
+     instrument   Instrument Sans (Google Fonts) — PADRÃO desde a rodada
+                  da fonte; vale na home e em /filmes
 
    Roda no <head>, antes de pintar: marca `<html data-fonte="...">` — o CSS
    põe a família numa variável ÚNICA (`--ed-fonte`) e aplica o tratamento
@@ -15,7 +16,7 @@
 (function () {
   "use strict";
 
-  var FONTE_PADRAO = "atual";
+  var FONTE_PADRAO = "instrument";
 
   var GOOGLE = "https://fonts.googleapis.com/css2?family=";
   var FONTES = {

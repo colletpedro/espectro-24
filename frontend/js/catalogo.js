@@ -22,7 +22,10 @@
   var X = window.ESPECTRO_EXPLORAR;
   var T = window.ESPECTRO_TEXTOS;
   var C = window.ESPECTRO_CARTOES;
-  var FILMES = IDX.filmes || [];
+  // A MESMA lista de exclusão da vitrine da home (selecao.js, EXCLUIDOS):
+  // fora da grade, do Índice e dos filtros; a busca do cabeçalho e a URL
+  // direta da página do filme continuam chegando nele.
+  var FILMES = window.ESPECTRO_SELECAO.elegiveis(IDX.filmes || []);
   var RAIZ = "../";
 
   var el = C.el;

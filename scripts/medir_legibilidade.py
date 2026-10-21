@@ -11,7 +11,8 @@ da manchete.
 O fundo de cada caso é a região do still SOB A CAIXA: o retângulo da caixa
 relativo ao still, MEDIDO no navegador (iframe com a home de um dia em que
 o filme é a manchete) em quatro larguras de desktop — 700, 1024, 1440 e
-1920 px; abaixo de 700 px o texto sai do still e vai para fundo sólido. Em
+1920 px, com a fonte padrão da home (Instrument Sans desde a rodada da
+fonte; remedido nela); abaixo de 700 px o texto sai do still e vai para fundo sólido. Em
 cada região, o preto com opacidade `a` é composto sobre cada pixel em sRGB
 (como o navegador compõe `rgba()`), e a luminância relativa LINEAR média
 dos pixels compostos é a luminância do fundo. Contraste = (L_texto + 0,05) /
@@ -159,6 +160,7 @@ def main() -> None:
                   "preto (centésimos) com contraste WCAG >= 4,5 do texto "
                   "#f2f0ea sobre a luminância média da região do still sob a "
                   "caixa de texto, em todos os filmes elegíveis e larguras."),
+        "fonte": "Instrument Sans (padrão, js/fonte.js)",
         "cor_texto": COR_TEXTO, "contraste_minimo": CONTRASTE_MINIMO,
         "larguras": list(LARGURAS), "imagem": "backdrop_path em w300",
         "alfa": alfa,
