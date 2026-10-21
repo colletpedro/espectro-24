@@ -84,7 +84,28 @@
   var LINK_METODO = "Método";
   var ROTULO_COLECAO = "Coleção do dia";
   var ROTULO_COLECAO_TODOS = "Ver todos";
-  function verOsFilmes(n) { return "Ver os " + n + " filmes"; }
+
+  // [rodada Explorar] o bloco Explorar da home e a página /filmes
+  var TITULO_EXPLORAR = "Explorar";
+  var ROTULO_GRUPO_EXPLORAR = {
+    assunto: "Por assunto", decada: "Por década", genero: "Por gênero", pais: "Por país",
+  };
+  var LINK_INDICE = "Índice A–Z";
+  var VISTA_GRADE = "Grade";
+  var VISTA_INDICE = "Índice A–Z";
+  var MOSTRAR_MAIS = "Mostrar mais";
+  var FILTRO_VAZIO = "Nenhum filme com esses filtros.";
+  var LIMPAR_FILTROS = "Limpar os filtros";
+  var REMOVER_FILTRO = "Remover filtro";
+  var QUALQUER = {
+    colecao: "Qualquer assunto", decada: "Qualquer década",
+    genero: "Qualquer gênero", pais: "Qualquer país",
+  };
+  function contadorDaPagina(mostrados, total) { return mostrados + " de " + total; }
+  function chipDesde(dia) {
+    var p = dia.split("-");
+    return "Recém-chegados desde " + p[2] + "/" + p[1] + "/" + p[0];
+  }
 
   // Descrição FIXA de cada eixo, para o bloco de texto da coleção do dia.
   // Diz o que o assunto É, nunca como os grupos o julgam.
@@ -115,12 +136,14 @@
     nomesDeRegiao = new Intl.DisplayNames(["pt-BR"], { type: "region" });
   } catch (e) { nomesDeRegiao = null; }
 
+  function nomeDoPais(c) {
+    var nome = null;
+    try { nome = nomesDeRegiao && nomesDeRegiao.of(c); } catch (e) { nome = null; }
+    return nome || c;
+  }
+
   function nomesDosPaises(codigos) {
-    return (codigos || []).slice(0, MAX_PAISES).map(function (c) {
-      var nome = null;
-      try { nome = nomesDeRegiao && nomesDeRegiao.of(c); } catch (e) { nome = null; }
-      return nome || c;
-    });
+    return (codigos || []).slice(0, MAX_PAISES).map(nomeDoPais);
   }
 
   // A linha de metadado da manchete, em PARTES ({tipo, texto}): título
@@ -297,8 +320,13 @@
     fazAniversario: fazAniversario, justificar: justificar, tituloDaPrateleira: tituloDaPrateleira,
     NOME_SITE: NOME_SITE, LINK_FILMES: LINK_FILMES, LINK_METODO: LINK_METODO,
     ROTULO_COLECAO: ROTULO_COLECAO, ROTULO_COLECAO_TODOS: ROTULO_COLECAO_TODOS,
-    verOsFilmes: verOsFilmes, DESCRICAO_EIXO: DESCRICAO_EIXO, FRASE_TIPO: FRASE_TIPO,
-    MAX_PAISES: MAX_PAISES, nomesDosPaises: nomesDosPaises,
+    DESCRICAO_EIXO: DESCRICAO_EIXO, FRASE_TIPO: FRASE_TIPO,
+    MAX_PAISES: MAX_PAISES, nomesDosPaises: nomesDosPaises, nomeDoPais: nomeDoPais,
+    TITULO_EXPLORAR: TITULO_EXPLORAR, ROTULO_GRUPO_EXPLORAR: ROTULO_GRUPO_EXPLORAR,
+    LINK_INDICE: LINK_INDICE, VISTA_GRADE: VISTA_GRADE, VISTA_INDICE: VISTA_INDICE,
+    MOSTRAR_MAIS: MOSTRAR_MAIS, FILTRO_VAZIO: FILTRO_VAZIO, LIMPAR_FILTROS: LIMPAR_FILTROS,
+    REMOVER_FILTRO: REMOVER_FILTRO, QUALQUER: QUALQUER,
+    contadorDaPagina: contadorDaPagina, chipDesde: chipDesde,
     linhaDaManchete: linhaDaManchete, linhaDiretorAno: linhaDiretorAno,
     partesDaManchete: partesDaManchete, partesDiretorAno: partesDiretorAno,
     SEPARADOR: SEPARADOR,

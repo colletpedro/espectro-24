@@ -12,6 +12,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the invite",
    "ano": 2026,
    "diretor": "Olivia Wilde",
+   "generos": [
+    "Drama",
+    "Comédia"
+   ],
    "imagens": {
     "backdrop_path": "/lEwqBGNR65KZv6Ej5ufcmhZu2y2.jpg",
     "backdrop_largura": 3840,
@@ -60,6 +64,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "12 angry men",
    "ano": 1957,
    "diretor": "Sidney Lumet",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
     "backdrop_largura": 1920,
@@ -108,6 +115,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "2001 a space odyssey",
    "ano": 1968,
    "diretor": "Stanley Kubrick",
+   "generos": [
+    "Ficção científica",
+    "Mistério",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/w5IDXtifKntw0ajv2co7jFlTQDM.jpg",
     "backdrop_largura": 3840,
@@ -157,6 +169,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "500 days of summer",
    "ano": 2009,
    "diretor": "Marc Webb",
+   "generos": [
+    "Comédia",
+    "Drama",
+    "Romance"
+   ],
    "imagens": {
     "backdrop_path": "/1M2i4Mxd03elGOTmEkIvqrHfmyS.jpg",
     "backdrop_largura": 3840,
@@ -205,6 +222,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "a brighter summer day",
    "ano": 1991,
    "diretor": "Edward Yang",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Romance"
+   ],
    "imagens": {
     "backdrop_path": "/hypv7bDxzqdhJfEpjRKf1aQbdc.jpg",
     "backdrop_largura": 3840,
@@ -258,6 +280,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "aftersun",
    "ano": 2022,
    "diretor": "Charlotte Wells",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/4jdduww9j5RyzO4ITRcuBFhqNN1.jpg",
     "backdrop_largura": 3840,
@@ -307,6 +332,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "all quiet on the western front",
    "ano": 2022,
    "diretor": "Edward Berger",
+   "generos": [
+    "Guerra",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/xBwtP27cx8WfjHJVFkpuV6F1RES.jpg",
     "backdrop_largura": 3840,
@@ -355,6 +384,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "anatomy of a fall",
    "ano": 2023,
    "diretor": "Justine Triet",
+   "generos": [
+    "Thriller",
+    "Mistério",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/lDVl2jf6VB8ODl1olZ6FLvOV1gX.jpg",
     "backdrop_largura": 3840,
@@ -408,6 +442,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "anatomy of a murder",
    "ano": 1959,
    "diretor": "Otto Preminger",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/xfEU7DOlQPwz8Y0TBhKmpETuNIc.jpg",
     "backdrop_largura": 1920,
@@ -456,6 +495,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "arrival",
    "ano": 2016,
    "diretor": "Denis Villeneuve",
+   "generos": [
+    "Drama",
+    "Ficção científica",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/8MUZz7oPXQftFTslZpRP3CVMOoq.jpg",
     "backdrop_largura": 3840,
@@ -504,6 +548,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "avengers endgame",
    "ano": 2019,
    "diretor": "Anthony Russo",
+   "generos": [
+    "Aventura",
+    "Ficção científica",
+    "Ação"
+   ],
    "imagens": {
     "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
     "backdrop_largura": 3840,
@@ -552,6 +601,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "barbie",
    "ano": 2023,
    "diretor": "Greta Gerwig",
+   "generos": [
+    "Comédia",
+    "Aventura",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/1esAE8sLJRWWFsLLeh5r3g2WanI.jpg",
     "backdrop_largura": 3840,
@@ -606,6 +660,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "bones and all",
    "ano": 2022,
    "diretor": "Luca Guadagnino",
+   "generos": [
+    "Terror",
+    "Romance",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/8sPxa4sdRvjgRG3GgkO8RQxUR9P.jpg",
     "backdrop_largura": 3840,
@@ -655,6 +714,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "burning",
    "ano": 2018,
    "diretor": "Lee Chang-dong",
+   "generos": [
+    "Mistério",
+    "Drama",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/qQEt2FqF8McryFBNX30dyDJKiEK.jpg",
     "backdrop_largura": 3840,
@@ -704,6 +768,12 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "cars",
    "ano": 2006,
    "diretor": "John Lasseter",
+   "generos": [
+    "Animação",
+    "Aventura",
+    "Comédia",
+    "Família"
+   ],
    "imagens": {
     "backdrop_path": "/sOLgkBKf1gjMRc4yXxM5aciXdfr.jpg",
     "backdrop_largura": 3840,
@@ -752,6 +822,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "catch me if you can",
    "ano": 2002,
    "diretor": "Steven Spielberg",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/dc8Sr1mCiyGXsdVcah3Ot9ff4w9.jpg",
     "backdrop_largura": 3840,
@@ -800,6 +874,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "cats",
    "ano": 2019,
    "diretor": "Tom Hooper",
+   "generos": [
+    "Fantasia",
+    "Comédia",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/rXSDDbT43pcTjppu1qTxs1cOwla.jpg",
     "backdrop_largura": 1280,
@@ -855,6 +934,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "chinatown",
    "ano": 1974,
    "diretor": "Roman Polanski",
+   "generos": [
+    "Crime",
+    "Mistério",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/pyvkujOZ5qvY2NlQVC71flfgVWE.jpg",
     "backdrop_largura": 1920,
@@ -903,6 +987,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "cidade de deus",
    "ano": 2002,
    "diretor": "Fernando Meirelles",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/uvitbjFU4JqvMwIkMWHp69bmUzG.jpg",
     "backdrop_largura": 3840,
@@ -953,6 +1041,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "cujo",
    "ano": 1983,
    "diretor": "Lewis Teague",
+   "generos": [
+    "Drama",
+    "Terror"
+   ],
    "imagens": {
     "backdrop_path": "/8MHv31RHBbyvBiC4AjJx6opebTm.jpg",
     "backdrop_largura": 2908,
@@ -1001,6 +1093,12 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "cure",
    "ano": 1997,
    "diretor": "Kiyoshi Kurosawa",
+   "generos": [
+    "Crime",
+    "Thriller",
+    "Terror",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/xxIRKSd9LmHojUD5grvMuGypwVC.jpg",
     "backdrop_largura": 3840,
@@ -1054,6 +1152,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "district 9",
    "ano": 2009,
    "diretor": "Neill Blomkamp",
+   "generos": [
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/jhM3wgWUrrOkz9r4xwV5cV5RhI4.jpg",
     "backdrop_largura": 3840,
@@ -1104,6 +1205,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "django unchained",
    "ano": 2012,
    "diretor": "Quentin Tarantino",
+   "generos": [
+    "Drama",
+    "Faroeste"
+   ],
    "imagens": {
     "backdrop_path": "/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
     "backdrop_largura": 1920,
@@ -1152,6 +1257,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "do the right thing",
    "ano": 1989,
    "diretor": "Spike Lee",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/xnLh9CNRxkpkSNikVhi5qLwcfUG.jpg",
     "backdrop_largura": 2914,
@@ -1200,6 +1308,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "dr strangelove or how i learned to stop worrying and love the bomb",
    "ano": 1964,
    "diretor": "Stanley Kubrick",
+   "generos": [
+    "Comédia",
+    "Guerra"
+   ],
    "imagens": {
     "backdrop_path": "/7i0L2ee4Iy0aXV6vR5u1ZmblOrx.jpg",
     "backdrop_largura": 2300,
@@ -1249,6 +1361,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "drive my car",
    "ano": 2021,
    "diretor": "Ryusuke Hamaguchi",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/r6aqhlmJmu8Dv5E7QYEruaEXKYm.jpg",
     "backdrop_largura": 2048,
@@ -1297,6 +1412,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "dune",
    "ano": 2021,
    "diretor": "Denis Villeneuve",
+   "generos": [
+    "Ficção científica",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/h3HsfV8Kn9Sz2QWUYYdP5ya23hx.jpg",
     "backdrop_largura": 3840,
@@ -1345,6 +1464,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "dune part two",
    "ano": 2024,
    "diretor": "Denis Villeneuve",
+   "generos": [
+    "Ficção científica",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/eZ239CUp1d6OryZEBPnO2n87gMG.jpg",
     "backdrop_largura": 3840,
@@ -1393,6 +1516,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "eighth grade",
    "ano": 2018,
    "diretor": "Bo Burnham",
+   "generos": [
+    "Comédia",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/7cDZkagW1YTnT4nP1BYrLPSd04B.jpg",
     "backdrop_largura": 3500,
@@ -1441,6 +1568,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "everything everywhere all at once",
    "ano": 2022,
    "diretor": "Daniel Scheinert",
+   "generos": [
+    "Ação",
+    "Aventura",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/ss0Os3uWJfQAENILHZUdX8Tt1OC.jpg",
     "backdrop_largura": 3840,
@@ -1489,6 +1621,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "fight club",
    "ano": 1999,
    "diretor": "David Fincher",
+   "generos": [
+    "Drama",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
     "backdrop_largura": 2560,
@@ -1538,6 +1674,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "force majeure",
    "ano": 2014,
    "diretor": "Ruben Östlund",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/oZp8CLwvRXgBAYGhn8P0pKOD4Ho.jpg",
     "backdrop_largura": 3840,
@@ -1591,6 +1730,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "friday the 13th",
    "ano": 2009,
    "diretor": "Marcus Nispel",
+   "generos": [
+    "Terror",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/xECaVCK8nT1KCKdGg01mQgizuOd.jpg",
     "backdrop_largura": 3840,
@@ -1639,6 +1782,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "get out",
    "ano": 2017,
    "diretor": "Jordan Peele",
+   "generos": [
+    "Mistério",
+    "Thriller",
+    "Terror"
+   ],
    "imagens": {
     "backdrop_path": "/bBQHALHRAaaORlPNXv7fNcRXYdx.jpg",
     "backdrop_largura": 3600,
@@ -1687,6 +1835,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "gladiator",
    "ano": 2000,
    "diretor": "Ridley Scott",
+   "generos": [
+    "Ação",
+    "Drama",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/Ar7QuJ7sJEiC0oP3I8fKBKIQD9u.jpg",
     "backdrop_largura": 3840,
@@ -1741,6 +1894,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "goodfellas",
    "ano": 1990,
    "diretor": "Martin Scorsese",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
     "backdrop_largura": 1920,
@@ -1789,6 +1946,12 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "guillermo del toros pinocchio",
    "ano": 2022,
    "diretor": "Mark Gustafson",
+   "generos": [
+    "Animação",
+    "Fantasia",
+    "Aventura",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/e782pDRAlu4BG0ahd777n8zfPzZ.jpg",
     "backdrop_largura": 3840,
@@ -1837,6 +2000,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "happy hour",
    "ano": 2015,
    "diretor": "Ryusuke Hamaguchi",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/jfSP2x11d6Okd6bbPTDTrRGyKh8.jpg",
     "backdrop_largura": 2500,
@@ -1881,6 +2047,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "hard to be a god",
    "ano": 2013,
    "diretor": "Aleksei German Sr.",
+   "generos": [
+    "Drama",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/iEOKiQs1Exyuu5eNK3MT8pyen0e.jpg",
     "backdrop_largura": 3840,
@@ -1929,6 +2099,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "hereditary",
    "ano": 2018,
    "diretor": "Ari Aster",
+   "generos": [
+    "Terror",
+    "Mistério",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg",
     "backdrop_largura": 3840,
@@ -1978,6 +2153,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "im still here",
    "ano": 2024,
    "diretor": "Walter Salles",
+   "generos": [
+    "Drama",
+    "História"
+   ],
    "imagens": {
     "backdrop_path": "/j9uruwRe9qM8RnP758dF7ISB8Bj.jpg",
     "backdrop_largura": 3840,
@@ -2027,6 +2206,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "incendies",
    "ano": 2010,
    "diretor": "Denis Villeneuve",
+   "generos": [
+    "Drama",
+    "Guerra",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/f3ATwil5vmUeTsogBaMEKbBYBth.jpg",
     "backdrop_largura": 1920,
@@ -2076,6 +2260,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "inception",
    "ano": 2010,
    "diretor": "Christopher Nolan",
+   "generos": [
+    "Ação",
+    "Ficção científica",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/ii8QGacT3MXESqBckQlyrATY0lT.jpg",
     "backdrop_largura": 1920,
@@ -2125,6 +2314,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "inglourious basterds",
    "ano": 2009,
    "diretor": "Quentin Tarantino",
+   "generos": [
+    "Drama",
+    "Thriller",
+    "Guerra"
+   ],
    "imagens": {
     "backdrop_path": "/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
     "backdrop_largura": 3840,
@@ -2174,6 +2368,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "interstellar",
    "ano": 2014,
    "diretor": "Christopher Nolan",
+   "generos": [
+    "Aventura",
+    "Drama",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/5XNQBqnBwPA9yT0jZ0p3s8bbLh0.jpg",
     "backdrop_largura": 3840,
@@ -2223,6 +2422,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "joker",
    "ano": 2019,
    "diretor": "Todd Phillips",
+   "generos": [
+    "Crime",
+    "Thriller",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/hw1CwteUFGjcWXwjGhKk8UJpWeA.jpg",
     "backdrop_largura": 3840,
@@ -2272,6 +2476,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "joker folie a deux",
    "ano": 2024,
    "diretor": "Todd Phillips",
+   "generos": [
+    "Drama",
+    "Crime",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/AVWlQpVhpudyFsSh3OQIieHHYf.jpg",
     "backdrop_largura": 3840,
@@ -2320,6 +2529,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "la haine",
    "ano": 1995,
    "diretor": "Mathieu Kassovitz",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/viGCwLxupyoaLsa6hrnu1gYrB0B.jpg",
     "backdrop_largura": 1920,
@@ -2368,6 +2580,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "longlegs",
    "ano": 2024,
    "diretor": "Osgood Perkins",
+   "generos": [
+    "Crime",
+    "Terror",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/6ToGkmqn0KG0UGGGUAC1Ww0e5CM.jpg",
     "backdrop_largura": 3840,
@@ -2417,6 +2634,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "mad max fury road",
    "ano": 2015,
    "diretor": "George Miller",
+   "generos": [
+    "Ação",
+    "Aventura",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/gqrnQA6Xppdl8vIb2eJc58VC1tW.jpg",
     "backdrop_largura": 3840,
@@ -2466,6 +2688,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "malcolm x",
    "ano": 1992,
    "diretor": "Spike Lee",
+   "generos": [
+    "Drama",
+    "História"
+   ],
    "imagens": {
     "backdrop_path": "/yj9VAqzlA0kasae8rK1VG3NvDZk.jpg",
     "backdrop_largura": 3840,
@@ -2520,6 +2746,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "marty supreme",
    "ano": 2025,
    "diretor": "Josh Safdie",
+   "generos": [
+    "Drama",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/6h7w8R4BA7vubEmEEW5vYEjuoz6.jpg",
     "backdrop_largura": 3840,
@@ -2568,6 +2798,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "memento",
    "ano": 2000,
    "diretor": "Christopher Nolan",
+   "generos": [
+    "Mistério",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/7Wev9JMo6R5XAfz2KDvXb7oPMmy.jpg",
     "backdrop_largura": 1920,
@@ -2616,6 +2850,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "memories of murder",
    "ano": 2003,
    "diretor": "Bong Joon-ho",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/6Kn6qW3an3DkPl3MahWemTzrjCt.jpg",
     "backdrop_largura": 3840,
@@ -2664,6 +2903,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "mother",
    "ano": 2017,
    "diretor": "Darren Aronofsky",
+   "generos": [
+    "Terror",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/2wS8pMZgvzq7kaZb5LHX54poQnA.jpg",
     "backdrop_largura": 3840,
@@ -2712,6 +2955,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "napoleon",
    "ano": 2023,
    "diretor": "Ridley Scott",
+   "generos": [
+    "História",
+    "Guerra",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/33pMXav77ICRnceEBLhL8lXTywv.jpg",
     "backdrop_largura": 3840,
@@ -2760,6 +3008,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "neighboring sounds",
    "ano": 2012,
    "diretor": "Kleber Mendonça Filho",
+   "generos": [
+    "Thriller",
+    "Drama",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/bOitf6oTR92tGOZtTQdZnQzXMEy.jpg",
     "backdrop_largura": 3840,
@@ -2803,6 +3056,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "obsession",
    "ano": 2025,
    "diretor": "Curry Barker",
+   "generos": [
+    "Terror",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
     "backdrop_largura": 3200,
@@ -2857,6 +3114,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "oppenheimer",
    "ano": 2023,
    "diretor": "Christopher Nolan",
+   "generos": [
+    "Drama",
+    "História"
+   ],
    "imagens": {
     "backdrop_path": "/neeNHeXjMF5fXoCJRsOmkNGC7q.jpg",
     "backdrop_largura": 3840,
@@ -2911,6 +3172,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "parasite",
    "ano": 2019,
    "diretor": "Bong Joon-ho",
+   "generos": [
+    "Comédia",
+    "Thriller",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/vbC0rzdrb7Ohc2TkbEbxtOABECe.jpg",
     "backdrop_largura": 2880,
@@ -2959,6 +3225,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "pearl",
    "ano": 2022,
    "diretor": "Ti West",
+   "generos": [
+    "Terror"
+   ],
    "imagens": {
     "backdrop_path": "/fdzpbJ0xdyjMUY4DqN6cOpESA1X.jpg",
     "backdrop_largura": 3840,
@@ -3007,6 +3276,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "perfect days",
    "ano": 2023,
    "diretor": "Wim Wenders",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/hjWxngV6tidwDkfJDEgMjHD2KEz.jpg",
     "backdrop_largura": 3840,
@@ -3056,6 +3328,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "pinocchio",
    "ano": 2022,
    "diretor": "Robert Zemeckis",
+   "generos": [
+    "Fantasia",
+    "Aventura",
+    "Família"
+   ],
    "imagens": {
     "backdrop_path": "/nnUQqlVZeEGuCRx8SaoCU4XVHJN.jpg",
     "backdrop_largura": 3840,
@@ -3108,6 +3385,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "porco rosso",
    "ano": 1992,
    "diretor": "Hayao Miyazaki",
+   "generos": [
+    "Animação",
+    "Aventura",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/ec4m0EvVlEtVl5aySdw6ab9uG0b.jpg",
     "backdrop_largura": 3840,
@@ -3156,6 +3438,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "portrait of a lady on fire",
    "ano": 2019,
    "diretor": "Céline Sciamma",
+   "generos": [
+    "Drama",
+    "Romance"
+   ],
    "imagens": {
     "backdrop_path": "/dbKXAOqJ9W6hycK1iM60u4u0jLN.jpg",
     "backdrop_largura": 3840,
@@ -3204,6 +3490,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "princess mononoke",
    "ano": 1997,
    "diretor": "Hayao Miyazaki",
+   "generos": [
+    "Aventura",
+    "Fantasia",
+    "Animação"
+   ],
    "imagens": {
     "backdrop_path": "/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
     "backdrop_largura": 1920,
@@ -3252,6 +3543,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "prisoners",
    "ano": 2013,
    "diretor": "Denis Villeneuve",
+   "generos": [
+    "Drama",
+    "Thriller",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/3RFmTz5h2UuFWEV4oH00XICBR9y.jpg",
     "backdrop_largura": 3840,
@@ -3309,6 +3605,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "satantango",
    "ano": 1994,
    "diretor": "Béla Tarr",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/5a4Gmk2HNeefI4Rmwdmbyoy79oy.jpg",
     "backdrop_largura": 3574,
@@ -3364,6 +3663,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "se7en",
    "ano": 1995,
    "diretor": "David Fincher",
+   "generos": [
+    "Crime",
+    "Mistério",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/i5H7zusQGsysGQ8i6P361Vnr0n2.jpg",
     "backdrop_largura": 3840,
@@ -3412,6 +3716,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "shutter island",
    "ano": 2010,
    "diretor": "Martin Scorsese",
+   "generos": [
+    "Drama",
+    "Thriller",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/rbZvGN1A1QyZuoKzhCw8QPmf2q0.jpg",
     "backdrop_largura": 3840,
@@ -3460,6 +3769,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "sinners",
    "ano": 2025,
    "diretor": "Ryan Coogler",
+   "generos": [
+    "Terror",
+    "Ação",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/nAxGnGHOsfzufThz20zgmRwKur3.jpg",
     "backdrop_largura": 3840,
@@ -3508,6 +3822,13 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "soul",
    "ano": 2020,
    "diretor": "Pete Docter",
+   "generos": [
+    "Animação",
+    "Família",
+    "Drama",
+    "Música",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/rQaHA74pevnGsxcKGaoZVGWe9TC.jpg",
     "backdrop_largura": 3840,
@@ -3561,6 +3882,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "speak no evil",
    "ano": 2022,
    "diretor": "Christian Tafdrup",
+   "generos": [
+    "Terror",
+    "Thriller",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/lHhRU3jEnju4pKibOeYOgxaEw2y.jpg",
     "backdrop_largura": 1920,
@@ -3609,6 +3935,12 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "spider man across the spider verse",
    "ano": 2023,
    "diretor": "Justin K. Thompson",
+   "generos": [
+    "Animação",
+    "Ação",
+    "Aventura",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/kVd3a9YeLGkoeR50jGEXM6EqseS.jpg",
     "backdrop_largura": 3840,
@@ -3657,6 +3989,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "talk to me",
    "ano": 2022,
    "diretor": "Michael Philippou",
+   "generos": [
+    "Terror"
+   ],
    "imagens": {
     "backdrop_path": "/46Os8U0DEPmI0OnvKDxucl6SLVZ.jpg",
     "backdrop_largura": 3840,
@@ -3706,6 +4041,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the battle of algiers",
    "ano": 1966,
    "diretor": "Gillo Pontecorvo",
+   "generos": [
+    "Drama",
+    "Guerra",
+    "História"
+   ],
    "imagens": {
     "backdrop_path": "/ze7GsNSv418o7pzqc9fb00LWWDk.jpg",
     "backdrop_largura": 1920,
@@ -3760,6 +4100,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the brutalist",
    "ano": 2024,
    "diretor": "Brady Corbet",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/hmZnqijPaaACjenDkrbWcCmcADI.jpg",
     "backdrop_largura": 3840,
@@ -3809,6 +4152,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the cloud capped star",
    "ano": 1960,
    "diretor": "Ritwik Kumar Ghatak",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/b6VR1AKWEs4OJqTscANnvQm4WuC.jpg",
     "backdrop_largura": 1600,
@@ -3852,6 +4198,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the gentlemen",
    "ano": 2019,
    "diretor": "Guy Ritchie",
+   "generos": [
+    "Ação",
+    "Comédia",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/hClLP88yMIuhslwSVxtYrvWmxfp.jpg",
     "backdrop_largura": 3840,
@@ -3901,6 +4252,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the godfather",
    "ano": 1972,
    "diretor": "Francis Ford Coppola",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/ejdD20cdHNFAYAN2DlqPToXKyzx.jpg",
     "backdrop_largura": 1920,
@@ -3949,6 +4304,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the hateful eight",
    "ano": 2015,
    "diretor": "Quentin Tarantino",
+   "generos": [
+    "Drama",
+    "Mistério",
+    "Faroeste"
+   ],
    "imagens": {
     "backdrop_path": "/7g1zO5t0bd27Iqn5ZUDJmksOGPJ.jpg",
     "backdrop_largura": 3840,
@@ -3997,6 +4357,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the northman",
    "ano": 2022,
    "diretor": "Robert Eggers",
+   "generos": [
+    "Ação",
+    "Aventura",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/qZYvF1M7y8Gfp4S6OBHbYfB0Lgc.jpg",
     "backdrop_largura": 3840,
@@ -4045,6 +4410,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the prestige",
    "ano": 2006,
    "diretor": "Christopher Nolan",
+   "generos": [
+    "Drama",
+    "Mistério",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/yaExZh6qE2cfyK3o4kAMEq0mkgy.jpg",
     "backdrop_largura": 1920,
@@ -4094,6 +4464,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the revenant",
    "ano": 2015,
    "diretor": "Alejandro G. Iñárritu",
+   "generos": [
+    "Faroeste",
+    "Drama",
+    "Aventura"
+   ],
    "imagens": {
     "backdrop_path": "/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
     "backdrop_largura": 1920,
@@ -4145,6 +4520,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the second mother",
    "ano": 2015,
    "diretor": "Anna Muylaert",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/9h5BsxRmxLAvASADo2VcTlTUdb0.jpg",
     "backdrop_largura": 3840,
@@ -4190,6 +4568,13 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the spongebob movie search for squarepants",
    "ano": 2025,
    "diretor": "Derek Drymon",
+   "generos": [
+    "Aventura",
+    "Família",
+    "Animação",
+    "Comédia",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/pMxO1beNNFYMDM7RcDyKW5Wheuz.jpg",
     "backdrop_largura": 2400,
@@ -4238,6 +4623,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the substance",
    "ano": 2024,
    "diretor": "Coralie Fargeat",
+   "generos": [
+    "Terror",
+    "Ficção científica"
+   ],
    "imagens": {
     "backdrop_path": "/bVSOgrxasVJF6V71T7v2KfBRSzu.jpg",
     "backdrop_largura": 3840,
@@ -4293,6 +4682,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the swimming pool",
    "ano": 1969,
    "diretor": "Jacques Deray",
+   "generos": [
+    "Drama",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/pZ0nNN5UoUkpyY9zWdyquztgX1v.jpg",
     "backdrop_largura": 2205,
@@ -4347,6 +4740,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the truman show",
    "ano": 1998,
    "diretor": "Peter Weir",
+   "generos": [
+    "Comédia",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/rmiG2uwcNoGFmBKMoa1pIcf514L.jpg",
     "backdrop_largura": 3840,
@@ -4395,6 +4792,9 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the turin horse",
    "ano": 2011,
    "diretor": "Béla Tarr",
+   "generos": [
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/eMgNa5dbU34qyF0KA9DMA4TrEzn.jpg",
     "backdrop_largura": 3840,
@@ -4447,6 +4847,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the wailing",
    "ano": 2016,
    "diretor": "Na Hong-jin",
+   "generos": [
+    "Terror",
+    "Mistério"
+   ],
    "imagens": {
     "backdrop_path": "/9qxBNfI1QFbiZS62fsgaUd563t2.jpg",
     "backdrop_largura": 1920,
@@ -4496,6 +4900,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "the wolf of wall street",
    "ano": 2013,
    "diretor": "Martin Scorsese",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Comédia"
+   ],
    "imagens": {
     "backdrop_path": "/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
     "backdrop_largura": 3840,
@@ -4544,6 +4953,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "top gun maverick",
    "ano": 2022,
    "diretor": "Joseph Kosinski",
+   "generos": [
+    "Ação",
+    "Drama"
+   ],
    "imagens": {
     "backdrop_path": "/AaV1YIdWKnjAIAOe8UUKBFm327v.jpg",
     "backdrop_largura": 3840,
@@ -4597,6 +5010,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "uncut gems",
    "ano": 2019,
    "diretor": "Benny Safdie",
+   "generos": [
+    "Drama",
+    "Thriller",
+    "Crime"
+   ],
    "imagens": {
     "backdrop_path": "/eGljNfNCrPhFYG2RXXmmE0OKu5.jpg",
     "backdrop_largura": 1920,
@@ -4645,6 +5063,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "whiplash",
    "ano": 2014,
    "diretor": "Damien Chazelle",
+   "generos": [
+    "Drama",
+    "Música",
+    "Thriller"
+   ],
    "imagens": {
     "backdrop_path": "/fRGxZuo7jJUWQsVg9PREb98Aclp.jpg",
     "backdrop_largura": 3840,
@@ -4693,6 +5116,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "wicked",
    "ano": 2024,
    "diretor": "Jon M. Chu",
+   "generos": [
+    "Drama",
+    "Romance",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/w22GVYotTIVC1dUd58mRhwPqiS.jpg",
     "backdrop_largura": 3840,
@@ -4741,6 +5169,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "woman of fire",
    "ano": 1971,
    "diretor": "Kim Ki-young",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Terror"
+   ],
    "imagens": {
     "backdrop_path": "/l5NaZ5dw70e3mEByTPMKh2cOGHS.jpg",
     "backdrop_largura": 1970,
@@ -4775,6 +5208,11 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "wonka",
    "ano": 2023,
    "diretor": "Paul King",
+   "generos": [
+    "Comédia",
+    "Família",
+    "Fantasia"
+   ],
    "imagens": {
     "backdrop_path": "/uIk2g2bRkNwNywKZIhC5oIU94Kh.jpg",
     "backdrop_largura": 3840,
@@ -4824,6 +5262,10 @@ window.ESPECTRO_INDICE = {
    "chave_slug": "zama",
    "ano": 2017,
    "diretor": "Lucrecia Martel",
+   "generos": [
+    "Drama",
+    "História"
+   ],
    "imagens": {
     "backdrop_path": "/9JqIR7bBO0uofsJiONgYAX2yw1R.jpg",
     "backdrop_largura": 1920,

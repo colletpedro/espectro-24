@@ -463,6 +463,8 @@ def test_indice_gerado_sem_nota_e_sem_texto_de_review():
                       # [rodada editorial] metadados TMDB da manchete
                       "paises", "logo", "path", "idioma", "classe",
                       "titulo_difere_do_logo", "diretor", "stills",
+                      # [rodada Explorar] gêneros da ficha (TMDB, pt-BR)
+                      "generos",
                       *_modulo_build_indice().CAMPOS_IMAGEM}
     # Os TÍTULOS não passam pelo detector: são dado, e "Estrela Encoberta de
     # Nuvens" é título, não nota. Os outros textos que o índice leva:

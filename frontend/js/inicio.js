@@ -16,7 +16,7 @@
   "use strict";
 
   var IDX = window.ESPECTRO_INDICE || { filmes: [] };
-  var B = window.ESPECTRO_BUSCA;
+  var X = window.ESPECTRO_EXPLORAR;
   var S = window.ESPECTRO_SELECAO;
   var T = window.ESPECTRO_TEXTOS;
   var P = window.ESPECTRO_POSTER;
@@ -36,249 +36,11 @@
   function hrefFilme(slug) { return "filme.html?slug=" + encodeURIComponent(slug); }
   var HREF_CATALOGO = "filmes/";
 
-  // --- barra espectral segmentada (marca) — a mesma de /filmes ---
-  var brand = document.getElementById("brandBar");
-  if (brand) {
-    ["#e5484d", "#f5820b", "#f5a623", "#f5c518", "#8bbf3f", "#46a758",
-     "#2e9c8e", "#3b82f6"].forEach(function (c) {
-      var s = el("span");
-      s.style.background = c;
-      brand.appendChild(s);
-    });
-  }
-
-  // --- cabeçalho: nome e links ---
-  [["edNome", T.NOME_SITE], ["edLinkFilmes", T.LINK_FILMES],
-   ["edLinkMetodo", T.LINK_METODO]].forEach(function (par) {
-    var n = document.getElementById(par[0]);
-    if (n) n.textContent = par[1];
-  });
-
-  // --- busca (no cabeçalho) ---
-  (function ligarBusca() {
-    var input = document.getElementById("busca");
-    var lista = document.getElementById("buscaResultados");
-    var vazio = document.getElementById("buscaVazia");
-    if (!input || !lista || !vazio) return;
-    input.placeholder = T.BUSCA_PLACEHOLDER;
-
-    var motor = B.criar(FILMES);
-    var resultados = [];
-    var ativo = -1;
-
-    function fechar() {
-      lista.hidden = true;
-      vazio.hidden = true;
-      input.setAttribute("aria-expanded", "false");
-      input.removeAttribute("aria-activedescendant");
-      ativo = -1;
-    }
-
-    function marcar(i) {
-      ativo = i;
-      [].forEach.call(lista.children, function (li, j) {
-        li.setAttribute("aria-selected", j === i ? "true" : "false");
-        li.classList.toggle("is-ativo", j === i);
-      });
-      if (i >= 0) {
-        input.setAttribute("aria-activedescendant", "busca-op-" + i);
-        lista.children[i].scrollIntoView({ block: "nearest" });
-      } else {
-        input.removeAttribute("aria-activedescendant");
-      }
-    }
-
-    function render() {
-      var q = input.value;
-      lista.innerHTML = "";
-      ativo = -1;
-      input.removeAttribute("aria-activedescendant");
-      if (!B.normalizar(q)) { fechar(); return; }
-      resultados = motor.buscar(q);
-      if (!resultados.length) {
-        lista.hidden = true;
-        input.setAttribute("aria-expanded", "false");
-        vazio.innerHTML = "";
-        vazio.appendChild(el("span", null, T.BUSCA_VAZIA + " "));
-        var a = el("a", null, T.BUSCA_VAZIA_LINK);
-        a.href = HREF_CATALOGO;
-        vazio.appendChild(a);
-        vazio.hidden = false;
-        return;
-      }
-      vazio.hidden = true;
-      resultados.forEach(function (r, i) {
-        var li = el("li", "busca__opcao");
-        li.id = "busca-op-" + i;
-        li.setAttribute("role", "option");
-        li.setAttribute("aria-selected", "false");
-        var a = el("a", "busca__link");
-        a.href = hrefFilme(r.slug);
-        a.tabIndex = -1;
-        a.appendChild(el("span", "busca__titulo", r.titulo));
-        var extra = [];
-        if (r.titulo_nativo) extra.push(r.titulo_nativo);
-        if (r.titulo_letterboxd && B.normalizar(r.titulo_letterboxd) !== B.normalizar(r.titulo)) {
-          extra.push(r.titulo_letterboxd);
-        }
-        if (r.ano) extra.push(String(r.ano));
-        if (extra.length) a.appendChild(el("span", "busca__meta", extra.join(" · ")));
-        li.appendChild(a);
-        li.addEventListener("mousemove", function () { if (ativo !== i) marcar(i); });
-        lista.appendChild(li);
-      });
-      lista.hidden = false;
-      input.setAttribute("aria-expanded", "true");
-    }
-
-    input.addEventListener("input", render);
-    input.addEventListener("focus", function () { if (input.value) render(); });
-    input.addEventListener("keydown", function (ev) {
-      var n = resultados.length;
-      if (ev.key === "Escape") {
-        if (!lista.hidden || !vazio.hidden) { fechar(); ev.preventDefault(); }
-        return;
-      }
-      // depois de um Esc, a seta para baixo reabre a lista da consulta atual
-      if (lista.hidden && ev.key === "ArrowDown" && input.value) {
-        render(); n = resultados.length; ev.preventDefault();
-        if (lista.hidden) return;
-      }
-      if (lista.hidden || !n) return;
-      if (ev.key === "ArrowDown") { marcar((ativo + 1) % n); ev.preventDefault(); }
-      else if (ev.key === "ArrowUp") { marcar(ativo <= 0 ? n - 1 : ativo - 1); ev.preventDefault(); }
-      else if (ev.key === "Enter") {
-        ev.preventDefault();
-        location.href = hrefFilme(resultados[ativo >= 0 ? ativo : 0].slug);
-      }
-    });
-    document.addEventListener("click", function (ev) {
-      if (!document.getElementById("buscaCaixa").contains(ev.target)) fechar();
-    });
-  })();
-
-  // ------------------------------------------------------------------
-  // IMAGENS: só backdrop e stills 16:9 (CDN do TMDB, larguras de backdrop
-  // w300 · w780 · w1280) e o logo (w500). Cantos retos e sem sombra são CSS.
-  // ------------------------------------------------------------------
-  var LARGURAS_STILL = ["w300", "w780", "w1280"];
-  var PX_LARGURA = { w300: 300, w780: 780, w1280: 1280 };
-  var TAMANHO_LOGO = "w500";
-
-  function fontes(path) {
-    return {
-      src: P.url(path, "w780"),
-      srcset: LARGURAS_STILL.map(function (w) {
-        return P.url(path, w) + " " + PX_LARGURA[w] + "w";
-      }).join(", "),
-    };
-  }
-
-  // A sequência de quadros do filme: o backdrop publicado primeiro (o mesmo
-  // quadro de sempre) e depois a galeria SEM o primeiro item, que é o grupo
-  // do próprio backdrop (ele ou um gêmeo perceptual, `stills_da_galeria`).
-  function sequencia(f) {
-    var hero = f.imagens && f.imagens.backdrop_path;
-    var resto = (f.stills || []).slice(hero ? 1 : 0).filter(function (p) { return p !== hero; });
-    return (hero ? [hero] : []).concat(resto);
-  }
-
-  // `fixo`: sem troca no hover (a manchete; a troca é da coleção e dos
-  // recém-chegados). `desloc`: abre no quadro de posição `desloc` da
-  // sequência (o still grande da coleção abre no segundo quadro, para não
-  // repetir a imagem do mesmo filme na fileira logo abaixo).
-  function quadro(f, classe, sizes, eager, fixo, desloc) {
-    var seq = sequencia(f);
-    var k = desloc && seq.length > desloc ? desloc : 0;
-    seq = seq.slice(k).concat(seq.slice(0, k));
-    var caixa = el("span", "ed-quadro" + (classe ? " " + classe : ""));
-    if (!seq.length) return caixa;
-    var img = el("img", "ed-quadro__img");
-    var fo = fontes(seq[0]);
-    img.src = fo.src;
-    img.srcset = fo.srcset;
-    img.sizes = sizes;
-    img.alt = "";
-    img.width = 16;
-    img.height = 9;
-    img.decoding = "async";
-    if (!eager) img.loading = "lazy";
-    img.dataset.path = seq[0];
-    caixa.appendChild(img);
-    if (!fixo) ligarTroca(caixa, img, seq);
-    return caixa;
-  }
-
-  // HOVER (desktop): troca pelo próximo still da galeria a cada INTERVALO_HOVER
-  // e volta ao primeiro ao sair. Sem troca automática com movimento reduzido
-  // e em aparelho sem hover de verdade (toque).
-  var INTERVALO_HOVER = 1200;
-  var reduzMovimento = window.matchMedia
-    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var temHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
-
-  function mostrar(img, path) {
-    var fo = fontes(path);
-    img.srcset = fo.srcset;
-    img.src = fo.src;
-    img.dataset.path = path;
-  }
-
-  function ligarTroca(alvo, img, seq) {
-    if (reduzMovimento || !temHover || seq.length < 2) return;
-    var timer = null, i = 0;
-    function sobre() {
-      if (timer) return;
-      // pré-carrega o próximo, para a troca não piscar
-      new Image().src = fontes(seq[1 % seq.length]).src;
-      timer = setInterval(function () {
-        i = (i + 1) % seq.length;
-        mostrar(img, seq[i]);
-        new Image().src = fontes(seq[(i + 1) % seq.length]).src;
-      }, INTERVALO_HOVER);
-    }
-    function fora() {
-      clearInterval(timer);
-      timer = null;
-      if (i !== 0) { i = 0; mostrar(img, seq[0]); }
-    }
-    alvo.addEventListener("mouseenter", sobre);
-    alvo.addEventListener("mouseleave", fora);
-  }
-
-  // Linha de metadado em partes: cada uma num `span.ed-meta__<tipo>`,
-  // separadas por `span.ed-meta__sep` — o texto corrido é o mesmo de
-  // `T.linhaDaManchete`; o CSS da prova de fontes põe o diretor em negrito.
-  function preencherMeta(alvo, partes) {
-    alvo.innerHTML = "";
-    partes.forEach(function (p, i) {
-      if (i) alvo.appendChild(el("span", "ed-meta__sep", T.SEPARADOR));
-      alvo.appendChild(el("span", "ed-meta__" + p.tipo, p.texto));
-    });
-    return alvo;
-  }
-
-  // A faixa fina dos três grupos (a mesma semântica e paleta do mosaico).
-  var GRUPOS = ["negativas", "medianas", "positivas"];
-  var COR_GRUPO_HOME = {
-    negativas: "var(--neg-home)", medianas: "var(--med-home)", positivas: "var(--pos-home)",
-  };
-
-  function faixaDosGrupos(f, classe) {
-    var strip = el("span", classe);
-    strip.setAttribute("aria-hidden", "true");
-    var d = f.distribuicao;
-    var total = d ? GRUPOS.reduce(function (s, g) { return s + (d[g] || 0); }, 0) : 0;
-    if (!total) { strip.classList.add("is-vazia"); return strip; }
-    GRUPOS.forEach(function (g) {
-      if (!(d[g] > 0)) return;
-      var seg = el("span", "ed-faixa__seg");
-      seg.style.background = COR_GRUPO_HOME[g];
-      seg.style.width = (d[g] / total) * 100 + "%";
-      strip.appendChild(seg);
-    });
-    return strip;
-  }
+  // O cabeçalho (barra, nome, links, busca) é de js/cabecalho.js; o cartão
+  // de filme (still, título, metadado, hover), de js/cartoes.js.
+  var C = window.ESPECTRO_CARTOES;
+  var quadro = C.quadro, preencherMeta = C.preencherMeta,
+      faixaDosGrupos = C.faixaDosGrupos, TAMANHO_LOGO = C.TAMANHO_LOGO;
 
   // ------------------------------------------------------------------
   // 1. MANCHETE (o filme do dia)
@@ -355,17 +117,7 @@
   // 2. COLEÇÃO DO DIA
   // ------------------------------------------------------------------
   function cartao(f, classe, sizes, meta, desloc) {
-    var a = el("a", "ed-cartao" + (classe ? " " + classe : ""));
-    a.href = hrefFilme(f.slug);
-    a.dataset.slug = f.slug;
-    a.appendChild(quadro(f, null, sizes, false, false, desloc));
-    var corpo = el("span", "ed-cartao__corpo");
-    corpo.appendChild(el("span", "ed-cartao__titulo", f.titulo));
-    if (f.titulo_nativo) corpo.appendChild(el("span", "ed-cartao__nativo", f.titulo_nativo));
-    var partes = meta(f);
-    if (partes.length) corpo.appendChild(preencherMeta(el("span", "ed-cartao__meta ed-meta"), partes));
-    a.appendChild(corpo);
-    return a;
+    return C.cartao(f, classe, sizes, meta, desloc, "");
   }
 
   function soAno(f) { return f.ano ? [{ tipo: "ano", texto: String(f.ano) }] : []; }
@@ -433,11 +185,66 @@
     caixa.appendChild(grade);
   })();
 
-  // --- 4. o link para o catálogo inteiro ---
-  var verTodos = document.getElementById("verTodos");
-  if (verTodos) {
-    var a = el("a", "ed-link", T.verOsFilmes(FILMES.length) + " →");
-    a.href = HREF_CATALOGO;
-    verTodos.appendChild(a);
-  }
+  // ------------------------------------------------------------------
+  // 4. EXPLORAR — as portas de entrada de /filmes, só texto. Conta só os
+  // ELEGÍVEIS (fora a lista de exclusão da vitrine). No desktop os quatro
+  // grupos ficam abertos lado a lado; abaixo de 700px cada um é um
+  // <details> fechado, com o número de itens no <summary>.
+  // ------------------------------------------------------------------
+  (function montarExplorar() {
+    var caixa = document.getElementById("explorar");
+    if (!caixa) return;
+    var g = X.gruposDoExplorar(FILMES, { elegiveis: true, piso: X.PISO_HOME });
+    var h = el("h2", "section-label ed-explorar__titulo", T.TITULO_EXPLORAR);
+    h.id = "explorarTitulo";
+    caixa.appendChild(h);
+    var colunas = el("div", "ed-explorar__grupos");
+    var PARAM = { assunto: "colecao", decada: "decada", genero: "genero", pais: "pais" };
+    var grupos = [];
+    ["assunto", "decada", "genero", "pais"].forEach(function (k) {
+      if (!g[k].length) return;
+      var d = el("details", "ed-explorar__grupo");
+      d.dataset.grupo = k;
+      var s = el("summary", "ed-explorar__nome");
+      s.appendChild(el("span", null, T.ROTULO_GRUPO_EXPLORAR[k]));
+      s.appendChild(el("span", "ed-explorar__quantos", " (" + g[k].length + ")"));
+      d.appendChild(s);
+      var ul = el("ul", "ed-explorar__lista");
+      g[k].forEach(function (it) {
+        var li = el("li");
+        var a = el("a", "ed-explorar__item");
+        a.href = HREF_CATALOGO + "?" + PARAM[k] + "=" + encodeURIComponent(String(it.chave));
+        a.dataset.n = it.n;
+        a.appendChild(el("span", null, it.nome));
+        a.appendChild(el("span", "ed-explorar__n", " (" + it.n + ")"));
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      d.appendChild(ul);
+      colunas.appendChild(d);
+      grupos.push(d);
+    });
+    caixa.appendChild(colunas);
+    var indice = el("p", "ed-explorar__indice");
+    var ai = el("a", "ed-link mono", T.LINK_INDICE + " →");
+    ai.href = HREF_CATALOGO + "?vista=indice";
+    indice.appendChild(ai);
+    caixa.appendChild(indice);
+
+    // abertos no desktop, fechados no mobile; no desktop o <summary> não
+    // fecha o grupo (é só o título da coluna)
+    var largo = window.matchMedia ? window.matchMedia("(min-width: 700px)") : null;
+    function ajustar() {
+      var aberto = !largo || largo.matches;
+      grupos.forEach(function (d) { d.open = aberto; });
+      caixa.classList.toggle("is-colunas", aberto);
+    }
+    grupos.forEach(function (d) {
+      d.querySelector("summary").addEventListener("click", function (ev) {
+        if (!largo || largo.matches) ev.preventDefault();
+      });
+    });
+    if (largo && largo.addEventListener) largo.addEventListener("change", ajustar);
+    ajustar();
+  })();
 })();

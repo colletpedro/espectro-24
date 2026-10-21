@@ -2689,7 +2689,36 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .ed-recem__grade .ed-cartao__corpo { padding-right: 8px; }
 
-.ed-todos { margin-top: 48px; margin-bottom: 8px; font-family: var(--serif); font-size: 1.15rem; }
+/* --- 4. Explorar: só texto, quatro grupos lado a lado (desktop) --- */
+.ed-explorar { margin-top: 56px; margin-bottom: 8px; }
+.ed-explorar__grupos {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+}
+.ed-explorar__nome {
+  list-style: none;
+  font-family: var(--ed-fonte, var(--mono));
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin-bottom: 10px;
+}
+.ed-explorar__nome::-webkit-details-marker { display: none; }
+.ed-explorar.is-colunas .ed-explorar__nome { cursor: default; }
+.ed-explorar.is-colunas .ed-explorar__quantos { display: none; }
+.ed-explorar__lista { list-style: none; margin: 0; padding: 0; }
+.ed-explorar__lista li { margin: 0 0 6px; line-height: 1.35; }
+.ed-explorar__item {
+  font-family: var(--ed-fonte, var(--serif));
+  color: var(--text);
+  text-decoration: none;
+}
+.ed-explorar__item:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ed-explorar__n { color: var(--text-mute); font-family: var(--sans); font-size: 0.85em; }
+.ed-explorar__indice { margin: 24px 0 0; }
+
 
 /* rótulos de seção da home ("Coleção do dia", "Recém-chegados") */
 .ed-main .section-label { font-family: var(--ed-fonte, var(--mono)); }
@@ -2752,6 +2781,15 @@ body.lightbox-aberto { overflow: hidden; }
     align-items: center;
   }
   .ed-colecao__fileira .ed-cartao__corpo { padding: 0; }
+
+  .ed-explorar__grupos { grid-template-columns: 1fr; gap: 0; }
+  .ed-explorar__grupo { border-top: 1px solid var(--border-soft); }
+  .ed-explorar__grupo:last-child { border-bottom: 1px solid var(--border-soft); }
+  .ed-explorar__nome { cursor: pointer; margin: 0; padding: 14px 0; }
+  .ed-explorar__nome::after { content: "+"; float: right; }
+  .ed-explorar__grupo[open] .ed-explorar__nome::after { content: "–"; }
+  .ed-explorar__lista { padding: 0 0 14px; }
+
 
   .ed-recem { margin-top: 40px; }
   .ed-recem__cabeca { flex-direction: column; align-items: flex-start; gap: 2px; }

@@ -28,6 +28,9 @@ from test_home_nova import (FILMES_REAIS, FRONT, JS, RAIZ, _filme, _node,
 
 CSS = (FRONT / "css" / "styles.css").read_text(encoding="utf-8")
 INICIO = (JS / "inicio.js").read_text(encoding="utf-8")
+# [rodada Explorar] o cartão (still, hover, metadado) saiu de inicio.js para
+# cartoes.js, compartilhado com /filmes; os testes de forma leem os dois
+CARTOES = (JS / "cartoes.js").read_text(encoding="utf-8")
 
 
 def _bloco_editorial_css() -> str:
@@ -248,7 +251,11 @@ def test_indice_da_home_sem_campo_de_poster():
 
 
 def test_a_apresentacao_da_home_nao_monta_poster():
-    codigo = re.sub(r"/\*.*?\*/|//[^\n]*", "", INICIO, flags=re.S)
+    """[rodada Explorar] Cobre também cartoes.js e cabecalho.js, que montam
+    cartões e links da home."""
+    fontes_js = INICIO + CARTOES + "".join(
+        (JS / n).read_text(encoding="utf-8") for n in ("cabecalho.js", "explorar.js"))
+    codigo = re.sub(r"/\*.*?\*/|//[^\n]*", "", fontes_js, flags=re.S)
     assert "poster_" not in codigo
     assert "P.montar" not in codigo            # montar, montarBackdrop, montarHeroFaixa
     # toda imagem da home sai de P.url com um caminho de backdrop, still ou logo
@@ -267,7 +274,7 @@ def test_sequencia_de_quadros_so_tem_backdrop_e_stills():
     for f in FILMES_REAIS:
         assert f["stills"], f["slug"]
         assert all(p.startswith("/") for p in f["stills"])
-    assert "(f.stills || []).slice(hero ? 1 : 0)" in INICIO
+    assert "(f.stills || []).slice(hero ? 1 : 0)" in CARTOES
 
 
 # ===========================================================================
@@ -279,7 +286,12 @@ def test_textos_novos_sem_vocabulario_proibido_nem_nota():
     out = _node("""console.log(JSON.stringify({
         fixos: Object.values(T.DESCRICAO_EIXO).concat(Object.values(T.FRASE_TIPO)),
         rotulos: [T.NOME_SITE, T.LINK_FILMES, T.LINK_METODO, T.ROTULO_COLECAO,
-                  T.ROTULO_COLECAO_TODOS, T.ROTULO_RECEM_TODOS, T.verOsFilmes(99)],
+                  T.ROTULO_COLECAO_TODOS, T.ROTULO_RECEM_TODOS,
+                  // [rodada Explorar] o link "Ver os N filmes" saiu; entram os do Explorar
+                  T.TITULO_EXPLORAR, T.LINK_INDICE, T.VISTA_GRADE, T.VISTA_INDICE,
+                  T.MOSTRAR_MAIS, T.FILTRO_VAZIO, T.LIMPAR_FILTROS, T.REMOVER_FILTRO,
+                  T.contadorDaPagina(24, 99), T.chipDesde("2026-09-17")]
+                  .concat(Object.values(T.ROTULO_GRUPO_EXPLORAR), Object.values(T.QUALQUER)),
         eixos: Object.keys(T.DESCRICAO_EIXO), ordem: S.ORDEM_EIXOS,
         tipos: Object.keys(T.FRASE_TIPO)}));""")
     assert set(out["eixos"]) == set(out["ordem"])
@@ -351,9 +363,9 @@ def test_imagens_da_home_com_cantos_retos_e_sem_sombra():
 
 
 def test_hover_troca_a_cada_1200ms_e_respeita_movimento_reduzido():
-    assert "var INTERVALO_HOVER = 1200;" in INICIO
-    assert '"(prefers-reduced-motion: reduce)"' in INICIO
-    assert "if (reduzMovimento || !temHover || seq.length < 2) return;" in INICIO
+    assert "var INTERVALO_HOVER = 1200;" in CARTOES
+    assert '"(prefers-reduced-motion: reduce)"' in CARTOES
+    assert "if (reduzMovimento || !temHover || seq.length < 2) return;" in CARTOES
 
 
 def test_ver_todos_da_colecao_abre_filmes_filtrado():
@@ -369,7 +381,7 @@ def test_ordem_das_secoes_da_home():
     html = re.sub(r"<!--.*?-->", "", (FRONT / "index.html").read_text(encoding="utf-8"), flags=re.S)
     ordem = [html.index(i) for i in ('id="busca"', 'id="edLinkFilmes"', 'id="edLinkMetodo"',
                                     'id="manchete"', 'id="colecaoDoDia"',
-                                    'id="recemChegados"', 'id="verTodos"')]
+                                    'id="recemChegados"', 'id="explorar"')]
     assert ordem == sorted(ordem)
     assert 'id="prateleiras"' not in html
 
