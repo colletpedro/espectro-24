@@ -102,21 +102,52 @@ def _eixos_do_degradado() -> dict:
     bloco["spec_version"] = "1.9.14"
     return bloco
 
-def _catalogo() -> list[str]:
-    """[v1.9.16] Os 35 slugs de `votacao-3/consenso.jsonl` — a mesma fonte
-    única que decide o catálogo em `scripts/publicar_catalogo.py` — em vez
-    de uma lista redigitada que podia divergir dele (era só os 3 primeiros
-    filmes publicados). `the-invite-2026` continua primeiro por curadoria
-    (era o filme novo quando só 3 existiam); os outros 34, alfabético.
-    """
-    slugs = set()
-    for linha in (RESULTADO / "votacao-3" / "consenso.jsonl").read_text(
-            encoding="utf-8").splitlines():
-        if linha.strip():
-            slugs.add(json.loads(linha)["slug"])
-    destaque = "the-invite-2026"
-    resto = sorted(slugs - {destaque})
-    return ([destaque] if destaque in slugs else []) + resto
+PUBLICADOS = ROOT / "dados" / "publicados.json"
+DESTAQUE = "the-invite-2026"
+
+
+def ler_publicados(caminho: Path = PUBLICADOS) -> list[str]:
+    """[rodada editorial 2] A TRAVA DE PUBLICAÇÃO: os slugs de
+    `dados/publicados.json`, lista explícita e versionada.
+
+    Substitui `votacao-3/consenso.jsonl` como fonte do catálogo (v1.9.16):
+    o consenso cresce com o trabalho de classificação em andamento (139
+    slugs na árvore de trabalho em 2026-10-21, contra 99 publicados), e um
+    filme novo com `resultado/*.json` entrava no site no build seguinte sem
+    decisão nenhuma. Agora publicar é um ato explícito: acrescentar o slug
+    à lista."""
+    slugs = json.loads(caminho.read_text(encoding="utf-8"))["slugs"]
+    if len(set(slugs)) != len(slugs):
+        raise SystemExit(f"{caminho.name}: slug repetido na lista de publicados")
+    return slugs
+
+
+def _catalogo(publicados: list[str] | None = None) -> list[str]:
+    """A ordem do catálogo: `the-invite-2026` primeiro por curadoria (era o
+    filme novo quando só 3 existiam); os outros, alfabético."""
+    slugs = set(ler_publicados() if publicados is None else publicados)
+    resto = sorted(slugs - {DESTAQUE})
+    return ([DESTAQUE] if DESTAQUE in slugs else []) + resto
+
+
+def catalogo_para_build(publicados: list[str],
+                        resultado_dir: Path = RESULTADO) -> tuple[list[str], list[str]]:
+    """(catálogo a publicar, slugs com resultado IGNORADOS por estarem fora
+    da lista).
+
+    Slug da lista sem `resultado/<slug>.json` é ERRO — o build para, em vez
+    de publicar um catálogo menor que o declarado (até aqui ele era pulado
+    com um aviso). Resultado fora da lista é ignorado e contado: é trabalho
+    em andamento, não publicação."""
+    faltando = [s for s in publicados if not (resultado_dir / f"{s}.json").exists()]
+    if faltando:
+        raise SystemExit(
+            f"dados/publicados.json lista {len(faltando)} slug(s) sem "
+            f"resultado/<slug>.json: {', '.join(faltando)}. Gere o resultado "
+            "ou tire o slug da lista — o build não publica catálogo parcial.")
+    existentes = sorted(p.stem for p in resultado_dir.glob("*.json"))
+    ignorados = [s for s in existentes if s not in set(publicados)]
+    return _catalogo(publicados), ignorados
 
 
 # Ordem no catálogo da home (curadoria: o filme em destaque primeiro).
@@ -287,13 +318,14 @@ def com_logo(data: dict, registro: dict | None, override: dict | None) -> dict:
 
 def main():
     logos, overrides = ler_logos()
+    catalogo, ignorados = catalogo_para_build(ler_publicados())
+    if ignorados:
+        print(f"  {len(ignorados)} resultado(s) fora de dados/publicados.json "
+              f"ignorado(s): {', '.join(ignorados)}")
     filmes = {}
     catalogo_presente = []
-    for slug in CATALOGO:
+    for slug in catalogo:
         caminho = RESULTADO / f"{slug}.json"
-        if not caminho.exists():
-            print(f"  ⚠️  {slug}: sem resultado/{slug}.json — pulado do catálogo")
-            continue
         catalogo_presente.append(slug)
         data = json.loads(caminho.read_text(encoding="utf-8"))
         # aliviar o peso: origem_paginas não é usado no frontend
