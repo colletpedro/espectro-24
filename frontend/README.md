@@ -12,15 +12,16 @@ como marca, tipografia serif/mono/sans. Mobile-first.
 
 ```
 frontend/
-  index.html        Home: premissa, busca, filme do dia, prateleiras,
-                    recém-chegados, aviso de catálogo (lê só js/indice.js)
+  index.html        Home editorial: cabeçalho (busca, Filmes, Método),
+                    manchete (filme do dia), coleção do dia, recém-
+                    chegados, link para /filmes (lê só js/indice.js)
   filmes/index.html Catálogo completo — o mosaico que era a home (rota /filmes)
   filme.html        Tela do filme (lê ?slug=<slug>)
   css/styles.css    Design system (dark, gradiente, 3 famílias de fonte)
   js/data.js        DADOS EMBUTIDOS (gerado — não editar à mão)
   js/indice.js      ÍNDICE ENXUTO da home (gerado de data.js — não editar)
   js/busca.js       Motor de busca: consulta → resultados (puro, sem DOM)
-  js/selecao.js     Filme do dia, prateleiras, recém-chegados (puro)
+  js/selecao.js     Filme do dia, coleções, recém-chegados (puro)
   js/textos_home.js Toda a prosa da home, inclusive os templates
   js/inicio.js      Apresentação da home (só DOM e eventos)
   js/catalogo.js    Mosaico + filtro de /filmes (era js/home.js)

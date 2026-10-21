@@ -1,4 +1,7 @@
-"""Home nova — busca, filme do dia, prateleiras, recém-chegados.
+"""Home nova — busca, filme do dia, coleções (eram as prateleiras),
+recém-chegados. A home editorial (rodada editorial) tem testes próprios em
+`test_home_editorial.py`; os de prateleira que deixaram de valer foram
+SUBSTITUÍDOS aqui pelos da regra nova, cada um marcado "[rodada editorial]".
 
 Como em `test_faixa_stills.py`, a lógica da home foi escrita em funções
 PURAS (`busca.js`, `selecao.js`, `textos_home.js`, sem DOM) e é EXECUTADA
@@ -9,7 +12,7 @@ O que cada bloco trava:
   1. filme do dia: determinismo, ciclo sem repetição, fuso de São Paulo,
      lista de exclusão, e a regra escrita para quando a lista muda;
   2. busca: normalização (acentos, caixa, pontuação, artigos) e ordem;
-  3. prateleiras: piso, exclusão, ordem alfabética e rotação;
+  3. coleções: piso, exclusão, ordem alfabética e intercalação;
   4. invariante "sem nota": varre o HTML e o JS gerado da home;
   5. justificativas: sem número de proporção, sem veredito, os três grupos
      sempre juntos, e só metadado + nome de eixo como insumo;
@@ -304,26 +307,20 @@ def test_piso_de_tres_e_exclusao_conta_contra_o_piso():
 
 
 @precisa_node
-def test_prateleiras_reais_ordem_alfabetica_piso_e_intercalacao():
-    """[rodada 2] Cada prateleira em ordem alfabética e acima do piso; a
-    ordem do dia intercala divisão e valorativa PROPORCIONALMENTE
-    (começando por divisão em dia par e por valorativa em dia ímpar, sem
-    sequência de um tipo maior que ceil(maior/menor)) e cada tipo gira
-    sozinho."""
+def test_colecoes_reais_ordem_alfabetica_piso_e_intercalacao():
+    """[rodada editorial] Substitui o teste da ordem das prateleiras por dia
+    (rodada 2): as prateleiras saíram da home. Cada coleção em ordem
+    alfabética e acima do piso; a ORDEM FIXA das coleções intercala divisão
+    e valorativa PROPORCIONALMENTE, começando por divisão, sem sequência de
+    um tipo maior que ceil(maior/menor), cada tipo na ordem da taxonomia."""
     out = _node("""
         const base = S.prateleirasBase(D);
-        const dias = [];
-        for (let i = 0; i < 30; i++) {
-            const dia = new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
-            // [rodada 3] a ORDEM inteira — `prateleiras` agora corta em 6
-            dias.push({d: S.diasDesdeEpoca(dia),
-                       ps: S.ordemDoDia(D, dia).map(p => [p.chave, p.tipo])});
-        }
         console.log(JSON.stringify({
             base: base.map(p => [p.chave, p.tipo, p.filmes.map(f => f.slug)]),
             ordenadas: base.every(p => JSON.stringify(p.filmes.map(f => f.slug))
                 === JSON.stringify(B.ordenarAlfabetico(p.filmes).map(f => f.slug))),
-            dias, piso: S.PISO_PRATELEIRA,
+            ordem: S.ordemDasColecoes(D).map(p => [p.chave, p.tipo]),
+            piso: S.PISO_PRATELEIRA,
         }));
     """, FILMES_REAIS)
     assert out["ordenadas"]
@@ -332,28 +329,25 @@ def test_prateleiras_reais_ordem_alfabetica_piso_e_intercalacao():
     D = [c for c, t, _ in out["base"] if t == "divisao"]
     V = [c for c, t, _ in out["base"] if t == "valorativa"]
     assert D and V
-    for dia in out["dias"]:
-        chaves = [c for c, _ in dia["ps"]]
-        tipos = [t for _, t in dia["ps"]]
-        assert sorted(chaves) == sorted(D + V)
-        assert tipos[0] == ("divisao" if dia["d"] % 2 == 0 else "valorativa")
-        assert tipos[0] != tipos[1]              # não abre com dois iguais
-        maior, menor = max(len(D), len(V)), min(len(D), len(V))
-        teto = -(-maior // menor)                # ceil(maior / menor)
-        corrida, maxima = 1, 1
-        for a, b in zip(tipos, tipos[1:]):
-            corrida = corrida + 1 if a == b else 1
-            maxima = max(maxima, corrida)
-        assert maxima <= teto, (dia["d"], tipos)
-        for lista in (D, V):                     # cada tipo, só girado
-            seq = [c for c in chaves if c in lista]
-            k = lista.index(seq[0])
-            assert seq == lista[k:] + lista[:k]
-            assert k == dia["d"] % len(lista)
+    chaves = [c for c, _ in out["ordem"]]
+    tipos = [t for _, t in out["ordem"]]
+    assert sorted(chaves) == sorted(D + V)
+    assert tipos[0] == "divisao" and tipos[1] == "valorativa"
+    maior, menor = max(len(D), len(V)), min(len(D), len(V))
+    teto = -(-maior // menor)
+    corrida, maxima = 1, 1
+    for a, b in zip(tipos, tipos[1:]):
+        corrida = corrida + 1 if a == b else 1
+        maxima = max(maxima, corrida)
+    assert maxima <= teto, tipos
+    for lista in (D, V):                          # cada tipo na ordem da taxonomia
+        assert [c for c in chaves if c in lista] == lista
 
 
 @precisa_node
 def test_intercalacao_e_piso_sinteticos():
+    """[rodada editorial] Substitui o da rodada 2 (`prateleiras` por dia):
+    a mesma intercalação e o mesmo piso, agora na ordem FIXA das coleções."""
     def div(eixo, slug):
         return _filme(slug, slug.upper(), contraste="tematico",
                       eixos_acima=[{"eixo": eixo, "lift_pp": 25}])
@@ -364,33 +358,40 @@ def test_intercalacao_e_piso_sinteticos():
               + [val("roteiro_estrutura", f"v{i}") for i in range(4)]
               + [val("comparacoes", f"c{i}") for i in range(2)]   # abaixo do piso
               + [_filme("sem-assunto", "SEM")])                    # valorativo sem eixo
-    out = _node("""console.log(JSON.stringify(["2026-01-01", "2026-01-02"].map(dia =>
-        S.prateleiras(D, dia).map(p => p.chave + "=" + p.filmes.map(f => f.slug).join(",")))));""",
+    out = _node("""console.log(JSON.stringify(
+        S.ordemDasColecoes(D).map(p => p.chave + "=" + p.filmes.map(f => f.slug).join(","))));""",
                 filmes)
-    assert out == [
-        ["ritmo=r0,r1,r2", "valorativo:roteiro_estrutura=v0,v1,v2,v3",
-         "atuacao=a0,a1,a2"],
-        # dia 1 (ímpar): abre por valorativa, e a divisão girou uma posição
-        ["valorativo:roteiro_estrutura=v0,v1,v2,v3", "atuacao=a0,a1,a2",
-         "ritmo=r0,r1,r2"],
-    ]
+    assert out == ["ritmo=r0,r1,r2", "valorativo:roteiro_estrutura=v0,v1,v2,v3",
+                   "atuacao=a0,a1,a2"]
 
 
 @precisa_node
-def test_recem_chegados_limite_de_doze_em_ordem_alfabetica():
+def test_recem_chegados_tres_por_dia_em_ordem_alfabetica():
+    """[rodada editorial] Substitui "limite de doze": a leva inteira fica em
+    `recemChegados` (alfabética), e a home mostra 3 por dia (`recemDoDia`),
+    uma janela circular que gira um filme por dia."""
     filmes = ([_filme(f"n{i:02d}", f"Novo {i:02d}", entrada="2026-09-30")
                for i in range(20, 0, -1)]
               + [_filme("velho", "Aaa Velho", entrada="2026-08-01")])
-    out = _node("console.log(JSON.stringify(S.recemChegados(D)));", filmes)
-    assert out["total"] == 20 and out["desde"] == out["ate"] == "2026-09-30"
-    assert [f["slug"] for f in out["filmes"]] == [f"n{i:02d}" for i in range(1, 13)]
+    out = _node("""console.log(JSON.stringify({leva: S.recemChegados(D),
+        dias: ["2026-01-01", "2026-01-02", "2026-01-20"].map(d =>
+            S.recemDoDia(D, d).filmes.map(f => f.slug))}));""", filmes)
+    leva = out["leva"]
+    assert leva["total"] == 20 and leva["desde"] == leva["ate"] == "2026-09-30"
+    assert [f["slug"] for f in leva["filmes"]] == [f"n{i:02d}" for i in range(1, 21)]
+    assert out["dias"] == [["n01", "n02", "n03"], ["n02", "n03", "n04"],
+                           ["n01", "n02", "n20"]]     # dia 19: n20, n01, n02
 
 
 @precisa_node
 def test_recem_chegados_reais_e_link_para_filmes_filtrado():
-    out = _node("console.log(JSON.stringify(S.recemChegados(D)));", FILMES_REAIS)
-    assert len(out["filmes"]) == 12 and out["total"] == 44
-    assert out["desde"] == "2026-09-17"
+    """[rodada editorial] Era "12 da leva"; agora 3 por dia, mesmo link."""
+    out = _node("""console.log(JSON.stringify({r: S.recemChegados(D),
+        hoje: S.recemDoDia(D, "2026-10-21")}));""", FILMES_REAIS)
+    assert out["r"]["total"] == 44 and len(out["r"]["filmes"]) == 44
+    assert out["r"]["desde"] == "2026-09-17"
+    assert len(out["hoje"]["filmes"]) == 3
+    assert {f["slug"] for f in out["hoje"]["filmes"]} <= {f["slug"] for f in out["r"]["filmes"]}
     fonte = (JS / "inicio.js").read_text(encoding="utf-8")
     assert '"?desde=" + r.desde' in fonte
     cat = (JS / "catalogo.js").read_text(encoding="utf-8")
@@ -461,7 +462,7 @@ def test_indice_gerado_sem_nota_e_sem_texto_de_review():
                       "titulo_nativo", "assunto_comum", "estreia",
                       # [rodada editorial] metadados TMDB da manchete
                       "paises", "logo", "path", "idioma", "classe",
-                      "titulo_difere_do_logo",
+                      "titulo_difere_do_logo", "diretor", "stills",
                       *_modulo_build_indice().CAMPOS_IMAGEM}
     # Os TÍTULOS não passam pelo detector: são dado, e "Estrela Encoberta de
     # Nuvens" é título, não nota. Os outros textos que o índice leva:
@@ -679,9 +680,11 @@ def test_prioridade_dos_quatro_ganchos():
 @precisa_node
 def test_aniversario_define_o_filme_do_dia_e_a_home_usa_o_dia_da_url():
     """[rodada 4] Inverte a regra da rodada 2 (decisão do dono): o
-    aniversariante É o filme do dia. As PRATELEIRAS continuam não
-    dependendo da estreia. E a home passa o `?dia=` (ou o dia de hoje em
-    São Paulo) para a seleção e para a justificativa."""
+    aniversariante É o filme do dia. A ORDEM DAS COLEÇÕES não depende da
+    estreia ([rodada editorial]: era "as prateleiras"; a coleção DO DIA
+    depende da manchete por regra — evita a coleção dela — e tem teste
+    próprio). E a home passa o `?dia=` (ou o dia de hoje em São Paulo)
+    para a seleção e para a justificativa."""
     out = _node("""
         const dia = "2026-10-19";
         // [4b] um alvo FORA da janela de carência (±14 dias da permutação)
@@ -691,7 +694,7 @@ def test_aniversario_define_o_filme_do_dia_e_a_home_usa_o_dia_da_url():
         console.log(JSON.stringify({
             sem: S.filmeDaPermutacao(D, dia).slug, alvo: alvo.slug,
             com: S.escolhaDoDia(com, dia),
-            prat: [S.prateleiras(D, dia).map(p => p.chave), S.prateleiras(com, dia).map(p => p.chave)]}));
+            prat: [S.ordemDasColecoes(D).map(p => p.chave), S.ordemDasColecoes(com).map(p => p.chave)]}));
     """, FILMES_REAIS)
     assert out["sem"] != out["alvo"]
     assert out["com"]["filme"]["slug"] == out["alvo"]
@@ -855,8 +858,13 @@ def test_selecao_identica_com_distribuicao_embaralhada():
             const out = [];
             for (let i = 0; i < 40; i++) {
                 const dia = new Date(Date.UTC(2026, 9, 1) + i * 86400000).toISOString().slice(0, 10);
+                // [rodada editorial] era `S.prateleiras(L, dia)`: a home agora
+                // mostra a coleção do dia e os recém-chegados do dia
+                const c = S.colecaoDoDia(L, dia);
                 out.push([S.filmeDoDia(L, dia).slug,
-                          S.prateleiras(L, dia).map(p => p.chave + ":" + p.filmes.map(f => f.slug).join(","))]);
+                          c.colecao.chave + ":" + c.filmes.map(f => f.slug).join(","),
+                          S.ordemDasColecoes(L).map(p => p.chave + ":" + p.filmes.map(f => f.slug).join(",")),
+                          S.recemDoDia(L, dia).filmes.map(f => f.slug)]);
             }
             out.push(S.recemChegados(L).filmes.map(f => f.slug));
             out.push(B.criar(L).buscar("o").map(r => r.slug));
@@ -1006,52 +1014,30 @@ def test_woman_of_fire_na_home_e_na_busca():
 # 9. [rodada 3] LIMITE DE PRATELEIRAS, MÉDIA SEM EXCLUÍDOS, ESTREIA
 # ===========================================================================
 
-_RETORNO = """
-    const dia = i => new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
-    const base = S.prateleirasBase(D);
-    const tam = {divisao: base.filter(p => p.tipo === "divisao").length,
-                 valorativa: base.filter(p => p.tipo === "valorativa").length};
-    const dias = [];
-    for (let i = 0; i < 80; i++) dias.push({
-        mostradas: S.prateleiras(D, dia(i)).map(p => p.chave),
-        ordem: S.ordemDoDia(D, dia(i)).map(p => p.chave)});
-    console.log(JSON.stringify({limite: S.LIMITE_PRATELEIRAS, tam,
-        chaves: base.map(p => p.chave), dias}));
-"""
-
-
-def _checar_retorno(out):
-    janela = max(out["tam"].values())
-    for d in out["dias"]:
-        assert d["mostradas"] == d["ordem"][:out["limite"]]
-        assert len(d["mostradas"]) == min(out["limite"], len(out["chaves"]))
-    # GARANTIA: toda prateleira aparece em QUALQUER janela de max(|D|,|V|) dias
-    for i in range(len(out["dias"]) - janela + 1):
-        vistas = {c for d in out["dias"][i:i + janela] for c in d["mostradas"]}
-        assert vistas == set(out["chaves"]), (i, set(out["chaves"]) - vistas)
-
-
 @precisa_node
-def test_limite_de_seis_e_retorno_de_toda_prateleira_no_catalogo_real():
-    out = _node(_RETORNO, FILMES_REAIS)
-    assert out["limite"] == 6
-    assert len(out["chaves"]) > 6          # o corte é de verdade
-    _checar_retorno(out)
-
-
-@precisa_node
-@pytest.mark.parametrize("n_div,n_val", [(4, 10), (7, 9), (1, 10), (6, 0), (3, 3)])
-def test_retorno_vale_para_outros_tamanhos(n_div, n_val):
-    eixos = ["ritmo", "atuacao", "direcao_imagem", "roteiro_estrutura", "som_trilha",
-             "tom_atmosfera", "impacto_emocional", "comparacoes", "expectativa",
-             "critica_social"]
-    filmes = []
-    for k in range(n_div):
-        filmes += [_filme(f"d{k}{i}", f"D{k}{i}", contraste="tematico",
-                          eixos_acima=[{"eixo": eixos[k], "lift_pp": 25}]) for i in range(3)]
-    for k in range(n_val):
-        filmes += [_filme(f"v{k}{i}", f"V{k}{i}", assunto_comum=eixos[k]) for i in range(3)]
-    _checar_retorno(_node(_RETORNO, filmes))
+def test_colecao_do_dia_percorre_todas_as_colecoes():
+    """[rodada editorial] Substitui "limite de seis e retorno de toda
+    prateleira" (a home não tem mais prateleiras): sem manchete a evitar,
+    em N dias seguidos (N = nº de coleções) cada coleção é a do dia
+    exatamente uma vez; com a manchete real, toda coleção aparece em
+    qualquer janela de 2N dias."""
+    out = _node("""
+        const dia = i => new Date(Date.UTC(2026, 9, 19) + i * 86400000).toISOString().slice(0, 10);
+        const n = S.ordemDasColecoes(D).length;
+        const sem = [], com = [];
+        for (let i = 0; i < 4 * n; i++) {
+            sem.push(S.colecaoDoDia(D, dia(i), null).colecao.chave);
+            com.push(S.colecaoDoDia(D, dia(i)).colecao.chave);
+        }
+        console.log(JSON.stringify({n, sem, com, chaves: S.ordemDasColecoes(D).map(c => c.chave)}));
+    """, FILMES_REAIS)
+    n, chaves = out["n"], set(out["chaves"])
+    assert n > 4
+    for i in range(0, len(out["sem"]) - n + 1):
+        assert set(out["sem"][i:i + n]) == chaves
+        assert len(out["sem"][i:i + n]) == len(set(out["sem"][i:i + n]))
+    for i in range(0, len(out["com"]) - 2 * n + 1):
+        assert set(out["com"][i:i + 2 * n]) == chaves, i
 
 
 @precisa_node

@@ -19,18 +19,17 @@
 <body>
   <div class="spectrum-bar spectrum-bar--segmented" aria-hidden="true" id="brandBar"></div>
 
-  <main class="home-main">
-    <section class="home-hero wrap">
-      <p class="tagline">24 quadros · 3 grupos · 0 spoilers</p>
-      <h1 class="home-title">Espectro <span class="num">24</span></h1>
+  <!-- [rodada editorial] ESTRUTURA da home editorial; tipografia e paleta
+       são a próxima rodada (fontes e cores são as atuais). Ordem fixa:
+       cabeçalho, manchete (o filme do dia), coleção do dia, recém-chegados
+       e o link para /filmes. Só stills/backdrops 16:9, nunca pôster. Toda a
+       prosa vem de js/textos_home.js; a seleção, de js/selecao.js; a busca,
+       de js/busca.js; o DOM, de js/inicio.js. -->
+  <header class="ed-cabecalho">
+    <div class="ed-cabecalho__linha">
+      <a class="ed-cabecalho__nome" id="edNome" href="index.html"></a>
 
-      <!-- [home nova] Estrutura e lógica; a identidade visual é outra
-           rodada. Ordem fixa: premissa, busca, filme do dia, prateleiras,
-           recém-chegados, aviso. Toda a prosa vem de js/textos_home.js; a
-           seleção, de js/selecao.js; a busca, de js/busca.js. -->
-      <p class="home-premissa" id="homePremissa"></p>
-
-      <div class="search busca" id="buscaCaixa" role="search">
+      <div class="search busca ed-cabecalho__busca" id="buscaCaixa" role="search">
         <span class="search__icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </span>
@@ -41,15 +40,22 @@
         <ul class="busca__resultados" id="buscaResultados" role="listbox" aria-label="Resultados da busca" hidden></ul>
         <p class="busca__vazia" id="buscaVazia" role="status" aria-live="polite" hidden></p>
       </div>
-    </section>
 
-    <section class="filme-do-dia wrap" id="filmeDoDia" aria-labelledby="filmeDoDiaTitulo"></section>
+      <nav class="ed-cabecalho__nav" aria-label="Seções">
+        <a id="edLinkFilmes" href="filmes/"></a>
+        <a id="edLinkMetodo" href="creditos.html#cred-metodo"></a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="prateleiras" id="prateleiras"></div>
+  <main class="ed-main">
+    <section class="ed-manchete" id="manchete" aria-labelledby="mancheteRotulo"></section>
 
-    <div class="prateleiras" id="recemChegados"></div>
+    <section class="ed-colecao ed-largura" id="colecaoDoDia" aria-labelledby="colecaoTitulo"></section>
 
-    <p class="home-aviso wrap" id="homeAviso"></p>
+    <section class="ed-recem ed-largura" id="recemChegados" aria-labelledby="recemTitulo"></section>
+
+    <p class="ed-todos ed-largura" id="verTodos"></p>
   </main>
 
   <footer class="site-footer">

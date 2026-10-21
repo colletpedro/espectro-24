@@ -222,6 +222,34 @@
     }
   }
 
+  // [rodada editorial] `?colecao=<chave>` — o "ver todos" da coleção do
+  // dia da home. Mostra só os filmes da coleção, pela MESMA regra da home
+  // (`prateleirasBase` de selecao.js, sobre js/indice.js, com a mesma lista
+  // de exclusão). Chave desconhecida, ou sem os scripts, não filtra nada.
+  var colecao = new URLSearchParams(location.search).get("colecao");
+  var SEL = window.ESPECTRO_SELECAO, TXT = window.ESPECTRO_TEXTOS;
+  if (colecao && INDICE && SEL) {
+    var alvo = SEL.prateleirasBase(INDICE.filmes).filter(function (c) {
+      return c.chave === colecao;
+    })[0];
+    if (alvo) {
+      var naColecao = {};
+      alvo.filmes.forEach(function (f) { naColecao[f.slug] = true; });
+      todos.forEach(function (el) {
+        if (!naColecao[el.dataset.slug]) el.dataset.foraDaLeva = "1";
+        el.hidden = !!el.dataset.foraDaLeva;
+      });
+      if (microcopy) {
+        var nome = TXT ? TXT.tituloDaPrateleira(alvo.chave) : alvo.chave;
+        microcopy.textContent = alvo.filmes.length + " filmes · " + nome + " · ";
+        var completo = document.createElement("a");
+        completo.href = "./";
+        completo.textContent = "ver o catálogo completo";
+        microcopy.appendChild(completo);
+      }
+    }
+  }
+
   function filtrar() {
     var q = norm(input.value.trim());
     if (!q) {

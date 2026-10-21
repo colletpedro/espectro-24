@@ -1,7 +1,10 @@
 /* Espectro 24 — textos_home.js
-   TODA a prosa da home num arquivo só: a premissa, os títulos das
-   prateleiras, o aviso de catálogo, a mensagem de busca vazia e os
-   TEMPLATES da justificativa do filme do dia. Nada aqui chama LLM, em build
+   TODA a prosa da home num arquivo só: os títulos das coleções (que eram
+   os das prateleiras), as descrições fixas de eixo e de tipo da coleção do
+   dia, a linha de metadado da manchete, a mensagem de busca vazia e os
+   TEMPLATES da justificativa do filme do dia. A premissa e o aviso de
+   catálogo saíram da home editorial e ficam aqui, sem uso na home, porque
+   o teste "sem nota" de toda a prosa continua cobrindo-os. Nada aqui chama LLM, em build
    ou em runtime; a prosa vai ser substituída por modelo próprio depois, e é
    por isso que mora isolada — reescrever este arquivo não toca a lógica.
 
@@ -74,6 +77,70 @@
   var ROTULO_ABRIR = "Abrir a análise";
   var ROTULO_RECEM = "Recém-chegados";
   var ROTULO_RECEM_TODOS = "Ver todos os recém-chegados";
+
+  // [rodada editorial] cabeçalho, coleção do dia e o link final
+  var NOME_SITE = "Espectro 24";
+  var LINK_FILMES = "Filmes";
+  var LINK_METODO = "Método";
+  var ROTULO_COLECAO = "Coleção do dia";
+  var ROTULO_COLECAO_TODOS = "Ver todos";
+  function verOsFilmes(n) { return "Ver os " + n + " filmes"; }
+
+  // Descrição FIXA de cada eixo, para o bloco de texto da coleção do dia.
+  // Diz o que o assunto É, nunca como os grupos o julgam.
+  var DESCRICAO_EIXO = {
+    ritmo: "Ritmo é a sensação de tempo do filme: se ele se arrasta, respira ou corre.",
+    atuacao: "Atuação é o que o elenco entrega: presença, voz, gesto, a credibilidade de cada personagem.",
+    direcao_imagem: "Direção e imagem é o filme como coisa vista: enquadramento, fotografia, cor, a mão de quem dirige.",
+    roteiro_estrutura: "Roteiro e estrutura é como a história é montada: diálogos, viradas, a ordem em que as coisas acontecem.",
+    som_trilha: "Som e trilha é tudo o que se ouve: a música, o silêncio, o desenho de som.",
+    tom_atmosfera: "Tom e atmosfera é o clima que o filme sustenta: o desconforto, a leveza, a estranheza que fica no ar.",
+    impacto_emocional: "Impacto emocional é o que o filme faz com quem assiste: se comove, perturba ou deixa frio.",
+    comparacoes: "Comparações é quando o filme é medido contra outro: o original, a sequência, a obra anterior de quem dirige.",
+    expectativa: "Expectativa é a distância entre o que se esperava e o que se encontrou.",
+    critica_social: "Crítica social é o que o filme diz sobre o mundo fora dele: classe, poder, história.",
+  };
+
+  // Frase FIXA de cada tipo de coleção (selecao.js: "divisao" | "valorativa").
+  var FRASE_TIPO = {
+    divisao: "Nestes filmes, é desse assunto que um grupo fala muito mais que os outros.",
+    valorativa: "Nestes filmes, os três grupos falam disso mais do que o habitual e chegam a vereditos diferentes.",
+  };
+
+  // Países (ISO 3166-1) pelo nome em português do Brasil, no máximo
+  // MAX_PAISES, na ordem do TMDB. Sem `Intl.DisplayNames`, fica o código.
+  var MAX_PAISES = 2;
+  var nomesDeRegiao = null;
+  try {
+    nomesDeRegiao = new Intl.DisplayNames(["pt-BR"], { type: "region" });
+  } catch (e) { nomesDeRegiao = null; }
+
+  function nomesDosPaises(codigos) {
+    return (codigos || []).slice(0, MAX_PAISES).map(function (c) {
+      var nome = null;
+      try { nome = nomesDeRegiao && nomesDeRegiao.of(c); } catch (e) { nome = null; }
+      return nome || c;
+    });
+  }
+
+  // A linha de metadado da manchete: "Diretor · País(es) · Ano", com o
+  // título brasileiro no início quando `comTitulo` (o logo exibido não é o
+  // pt-BR — ver `titulo_difere_do_logo` e `modoDoLogo`).
+  function linhaDaManchete(filme, comTitulo) {
+    var partes = [];
+    if (comTitulo && filme.titulo) partes.push(filme.titulo);
+    if (filme.diretor) partes.push(filme.diretor);
+    var paises = nomesDosPaises(filme.paises);
+    if (paises.length) partes.push(paises.join(", "));
+    if (filme.ano) partes.push(String(filme.ano));
+    return partes.join(" · ");
+  }
+
+  // "Diretor · Ano", sob o still dos recém-chegados.
+  function linhaDiretorAno(filme) {
+    return [filme.diretor, filme.ano ? String(filme.ano) : null]
+      .filter(Boolean).join(" · ");
+  }
 
   // O eixo em português legível, SEM artigo — os templates o usam depois de
   // dois-pontos, o que dispensa concordância de gênero e número.
@@ -196,6 +263,14 @@
 
   function tituloDaPrateleira(chave) { return TITULO_PRATELEIRA[chave] || chave; }
 
+  // O texto da coleção do dia: título (o da prateleira, já aprovado),
+  // descrição fixa do eixo e frase fixa do tipo.
+  function textoDaColecao(colecao) {
+    return { titulo: tituloDaPrateleira(colecao.chave),
+             descricao: DESCRICAO_EIXO[colecao.eixo] || "",
+             frase: FRASE_TIPO[colecao.tipo] || "" };
+  }
+
   var api = {
     GRUPOS: GRUPOS, PREMISSA: PREMISSA, AVISO_CATALOGO: AVISO_CATALOGO,
     AVISO_LINK: AVISO_LINK, BUSCA_PLACEHOLDER: BUSCA_PLACEHOLDER,
@@ -204,6 +279,12 @@
     ROTULO_RECEM: ROTULO_RECEM, ROTULO_RECEM_TODOS: ROTULO_RECEM_TODOS, EIXO_NOME: EIXO_NOME,
     TITULO_PRATELEIRA: TITULO_PRATELEIRA, eixoQueMaisDivide: eixoQueMaisDivide,
     fazAniversario: fazAniversario, justificar: justificar, tituloDaPrateleira: tituloDaPrateleira,
+    NOME_SITE: NOME_SITE, LINK_FILMES: LINK_FILMES, LINK_METODO: LINK_METODO,
+    ROTULO_COLECAO: ROTULO_COLECAO, ROTULO_COLECAO_TODOS: ROTULO_COLECAO_TODOS,
+    verOsFilmes: verOsFilmes, DESCRICAO_EIXO: DESCRICAO_EIXO, FRASE_TIPO: FRASE_TIPO,
+    MAX_PAISES: MAX_PAISES, nomesDosPaises: nomesDosPaises,
+    linhaDaManchete: linhaDaManchete, linhaDiretorAno: linhaDiretorAno,
+    textoDaColecao: textoDaColecao,
   };
 
   if (typeof module !== "undefined" && module.exports) module.exports = api;

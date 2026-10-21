@@ -2453,18 +2453,20 @@ body.lightbox-aberto { overflow: hidden; }
 }
 
 /* =======================================================
-   HOME NOVA — estrutura (busca, filme do dia, prateleiras)
+   HOME EDITORIAL — estrutura (rodada editorial)
    =======================================================
-   Rodada de ESTRUTURA: nada aqui é identidade visual nova. Só tokens,
-   famílias e componentes que o site já tem (`.search`, `.section-label`,
-   `.backdrop`, `.mosaic-cell`, `.mono`); a rodada de design troca este
-   bloco inteiro sem tocar em busca.js, selecao.js ou textos_home.js. */
-.home-premissa {
-  max-width: 30rem;
-  margin: 0 auto 18px;
-  color: var(--text-dim);
-  font-size: 1rem;
-  line-height: 1.55;
+   Rodada de ESTRUTURA: fontes e cores são as atuais (tipografia e paleta
+   são a próxima rodada). Regras de forma, todas aqui: só stills/backdrops
+   16:9 (nunca pôster), cantos RETOS nas imagens, calha fina entre imagens
+   (`--ed-calha`) e nenhuma sombra. A home vive em `ed-*`; `.busca*` é a
+   lista de resultados da busca, que veio da home nova. */
+:root {
+  /* o véu da faixa inferior da manchete: opacidade MÁXIMA do preto na base
+     do still, que some até o meio da altura. Constante ÚNICA, para ajustar
+     ao vivo (teto 0,35). */
+  --ed-veu: 0.35;
+  --ed-calha: 4px;
+  --ed-largura: 1180px;
 }
 
 /* a lista de resultados abre SOBRE o conteúdo, colada no campo */
@@ -2506,98 +2508,204 @@ body.lightbox-aberto { overflow: hidden; }
   color: var(--text-dim);
   font-size: 0.92rem;
 }
-.busca__vazia a,
-.home-aviso a { color: var(--text); text-underline-offset: 3px; }
+.busca__vazia a { color: var(--text); text-underline-offset: 3px; }
 
-.filme-do-dia { margin-top: 36px; }
-.filme-do-dia__visual { display: block; }
-.filme-do-dia__visual .poster--ficha { margin: 0 auto; }
-.filme-do-dia__titulo {
-  font-family: var(--serif);
-  font-size: clamp(1.6rem, 5vw, 2.3rem);
-  line-height: 1.1;
-  margin: 4px 0 4px;
-  position: relative;
-  z-index: 1;
+.ed-largura {
+  max-width: var(--ed-largura);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
-.filme-do-dia__titulo a { text-decoration: none; }
-.filme-do-dia__titulo a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.filme-do-dia__ano { margin: 0 0 12px; }
-.filme-do-dia__texto { color: var(--text-dim); margin: 0 0 14px; max-width: 38rem; }
-.filme-do-dia__abrir { color: var(--text-dim); text-decoration: none; }
-.filme-do-dia__abrir:hover { color: var(--text); }
 
-/* prateleiras: mais largas que a coluna de leitura, como o mosaico */
-.prateleiras { max-width: 1080px; margin: 0 auto; padding: 0 14px; }
-.prateleira { margin-top: 36px; }
-.prateleira__cabeca {
+/* --- cabeçalho: nome, busca, Filmes e Método --- */
+.ed-cabecalho { border-bottom: 1px solid var(--border-soft); }
+.ed-cabecalho__linha {
+  max-width: var(--ed-largura);
+  margin: 0 auto;
+  padding: 12px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 0 4px;
+  gap: 20px;
 }
-.prateleira__titulo { margin: 0; }
-.prateleira__nota { margin: 4px 4px 0; font-size: 0.64rem; }
-.prateleira__todos {
-  display: inline-block;
-  margin: 6px 4px 0;
-  font-size: 0.64rem;
+.ed-cabecalho__nome {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.ed-cabecalho__busca { flex: 1; margin: 0; max-width: 26rem; }
+.ed-cabecalho__busca input { padding-top: 9px; padding-bottom: 9px; font-size: 0.95rem; }
+.ed-cabecalho__nav { display: flex; gap: 18px; margin-left: auto; }
+.ed-cabecalho__nav a {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--text-dim);
   text-decoration: none;
 }
-.prateleira__todos:hover { color: var(--text); }
-/* linha secundária com o título original não latino ("화녀") */
-.mosaic-cell__nativo {
-  font-size: 0.72rem;
-  color: var(--text-mute);
-  line-height: 1.2;
-  margin-top: 2px;
-}
-.filme-do-dia__nativo { margin: 0 0 2px; color: var(--text-mute); }
-.prateleira__nav { display: flex; gap: 6px; flex-shrink: 0; }
-/* mesmo empate de `.mosaic-cell[hidden]`: sem isto o `display: flex` acima
-   vence o `[hidden]` do navegador e as setas de uma prateleira que não rola
-   continuam na tela */
-.prateleira__nav[hidden] { display: none; }
-.prateleira__botao {
-  width: 32px; height: 32px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+.ed-cabecalho__nav a:hover { color: var(--text); }
+
+/* --- quadros: 16:9, cantos retos, sem sombra --- */
+.ed-quadro {
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   background: var(--bg-elev);
-  color: var(--text-dim);
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
 }
-.prateleira__botao:hover:not(:disabled) { color: var(--text); border-color: #3a4152; }
-.prateleira__botao:disabled { opacity: 0.35; cursor: default; }
-.prateleira__botao:focus-visible,
-.prateleira__trilha:focus-visible { outline: 2px solid #3b82f680; outline-offset: 2px; }
-/* Rolagem NATIVA: swipe no iPhone, trackpad e shift+roda de graça; com
-   foco, as setas do teclado rolam a trilha. O padding vertical dá espaço
-   ao `scale` de hover da célula do mosaico, que o overflow cortaria. */
-.prateleira__trilha {
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  margin: 8px 0 0;
-  padding: 8px 4px 12px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
-  scroll-padding: 0 4px;
-  scrollbar-width: thin;
-}
-.prateleira__item { flex: 0 0 132px; scroll-snap-align: start; }
-@media (max-width: 640px) {
-  .prateleira__item { flex-basis: 30%; }
+.ed-quadro__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
 }
 
-.home-aviso {
-  margin-top: 44px;
-  text-align: center;
-  color: var(--text-dim);
-  font-size: 0.92rem;
+/* --- 1. manchete --- */
+.ed-manchete { position: relative; }
+.ed-manchete__visual { display: block; position: relative; }
+.ed-manchete__veu {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0, 0, 0, var(--ed-veu)) 0%, rgba(0, 0, 0, 0) 50%);
+}
+.ed-faixa { display: flex; height: 5px; width: 100%; background: transparent; }
+.ed-faixa.is-vazia { background: var(--border); }
+.ed-faixa__seg { height: 100%; }
+.ed-manchete__faixa { position: absolute; left: 0; right: 0; bottom: 0; }
+/* alinhado à esquerda da coluna do resto da página (`--ed-largura`) */
+.ed-manchete__texto {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;            /* acima da faixa dos grupos */
+  max-width: var(--ed-largura);
+  margin: 0 auto;
+  padding: 0 20px 28px;
+}
+.ed-manchete__titulo { margin: 0 0 10px; line-height: 1; }
+.ed-manchete__titulo a { text-decoration: none; display: inline-block; }
+.ed-manchete__logo {
+  display: block;
+  max-width: min(420px, 100%);
+  max-height: 150px;
+  width: auto;
+  height: auto;
+}
+.ed-manchete__logo.is-branco { filter: brightness(0) invert(1); }
+.ed-manchete__titulo-texto {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4.4vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+.ed-manchete__nativo { margin: 0 0 4px; color: var(--text-dim); }
+.ed-manchete__linha {
+  margin: 0 0 8px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+.ed-manchete__justificativa { margin: 0; max-width: 36rem; color: var(--text); line-height: 1.5; }
+
+/* --- cartões (coleção e recém-chegados): título e meta ABAIXO do still --- */
+.ed-cartao { display: block; text-decoration: none; color: var(--text); }
+.ed-cartao__corpo { display: flex; flex-direction: column; padding: 8px 0 0; }
+.ed-cartao__titulo { font-family: var(--serif); font-weight: 700; line-height: 1.25; }
+.ed-cartao:hover .ed-cartao__titulo { text-decoration: underline; text-underline-offset: 3px; }
+.ed-cartao__nativo { font-size: 0.8rem; color: var(--text-mute); }
+.ed-cartao__meta {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-mute);
+  margin-top: 2px;
+}
+.ed-link { color: var(--text-dim); text-decoration: none; }
+.ed-link:hover { color: var(--text); }
+
+/* --- 2. coleção do dia: texto 1/3 ao lado do still grande 2/3 --- */
+.ed-colecao { margin-top: 56px; }
+.ed-colecao__topo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 32px;
+  align-items: start;
+}
+.ed-colecao__rotulo { margin-bottom: 10px; }
+.ed-colecao__titulo {
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+.ed-colecao__descricao,
+.ed-colecao__frase { color: var(--text-dim); margin: 0 0 12px; line-height: 1.55; }
+.ed-colecao__fileira {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--ed-calha);
+}
+.ed-colecao__fileira .ed-cartao__corpo { padding-right: 8px; }
+
+/* --- 3. recém-chegados: grade de 3 --- */
+.ed-recem { margin-top: 56px; }
+.ed-recem__cabeca {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.ed-recem__titulo { margin: 0; }
+.ed-recem__grade {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--ed-calha);
+}
+.ed-recem__grade .ed-cartao__corpo { padding-right: 8px; }
+
+.ed-todos { margin-top: 48px; margin-bottom: 8px; font-family: var(--serif); font-size: 1.15rem; }
+
+/* --- mobile (< 700px): still em cima, texto embaixo sobre fundo sólido --- */
+@media (max-width: 699px) {
+  .ed-cabecalho__linha { flex-wrap: wrap; gap: 10px 16px; padding: 10px 16px; }
+  .ed-cabecalho__busca { order: 3; flex-basis: 100%; max-width: none; }
+  .ed-largura { padding: 0 16px; }
+
+  .ed-manchete__veu { display: none; }
+  .ed-manchete__texto {
+    position: static;
+    max-width: none;
+    padding: 16px 16px 4px;
+    background: var(--bg);
+  }
+  .ed-manchete__logo { max-width: min(280px, 100%); max-height: 110px; }
+  .ed-manchete__titulo-texto { font-size: 2rem; }
+
+  .ed-colecao { margin-top: 40px; }
+  .ed-colecao__topo { grid-template-columns: 1fr; gap: 16px; }
+  .ed-colecao__fileira { grid-template-columns: 1fr; gap: 12px; margin-top: 20px; }
+  .ed-colecao__fileira .ed-cartao {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    gap: 12px;
+    align-items: center;
+  }
+  .ed-colecao__fileira .ed-cartao__corpo { padding: 0; }
+
+  .ed-recem { margin-top: 40px; }
+  .ed-recem__cabeca { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .ed-recem__grade { grid-template-columns: 1fr; gap: 16px; }
 }

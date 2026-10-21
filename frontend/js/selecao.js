@@ -1,6 +1,6 @@
 /* Espectro 24 — selecao.js
-   O QUE a home mostra em cada dia: filme do dia, prateleiras e
-   recém-chegados. Funções puras sobre o índice (`js/indice.js`), sem DOM e
+   O QUE a home mostra em cada dia: a manchete (o filme do dia), a coleção
+   do dia e os recém-chegados. Funções puras sobre o índice (`js/indice.js`), sem DOM e
    sem relógio próprio — a data entra como argumento, e é por isso que os
    testes conseguem fixar o dia (ver `tests/test_home_nova.py`).
 
@@ -48,53 +48,53 @@
    gancho e a seleção a ignoram.
 
    ---------------------------------------------------------------------
-   PRATELEIRAS
+   COLEÇÕES (rodada editorial: as prateleiras saíram da home e a lógica
+   delas virou a das coleções)
    ---------------------------------------------------------------------
    · DE DIVISÃO ("Onde X divide"): uma por eixo da taxonomia, com os
      filmes em que AQUELE eixo passa a margem de lift (`eixos_acima`).
    · VALORATIVAS ("Todos falam de X, ninguém concorda"): uma por eixo, com
      os filmes `contraste: valorativo` cujo assunto comum dominante
-     (`assunto_comum`, `build_indice.py`) é aquele eixo. Substituem a
-     prateleira valorativa única da rodada 1, que tinha 79 filmes.
-   · Piso: só existe prateleira com >= PISO_PRATELEIRA filmes elegíveis.
-     Filme de eixo abaixo do piso simplesmente não aparece em prateleira.
-   · Dentro da prateleira: ordem ALFABÉTICA pelo título exibido
-     normalizado (artigo inicial ignorado), empate pelo slug — a mesma
-     regra para todas. Descartado: ordenar pela magnitude do lift (mede
-     contraste, não qualidade, mas pede explicação que a prateleira não tem
-     onde dar).
-   · Ordem das prateleiras no dia d (d = dias desde EPOCA, o mesmo
-     contador do filme do dia), com D = as de divisão e V = as valorativas,
-     cada lista na ordem da taxonomia:
-       1. cada lista é ROTACIONADA sozinha: D começa na posição (d mod |D|)
-          e V na posição (d mod |V|);
-       2. as duas são INTERCALADAS de forma PROPORCIONAL, começando por D
-          em dia par e por V em dia ímpar: a cada posição entra o tipo que
-          está mais ATRASADO na sua própria lista (fração já usada menor;
-          empate, o tipo que abre o dia). Com tamanhos iguais isso é a
-          alternância simples; com 10 valorativas e 4 de divisão, cada
-          divisão vem depois de duas ou três valorativas, e nenhuma
-          sequência de um tipo só passa de ceil(maior / menor) seguidas.
-          Descartado (versão anterior desta rodada): alternar um a um e
-          despejar o resto no fim — com 10 contra 4, a home terminava com
-          seis valorativas seguidas.
-       4. [rodada 3] a home mostra só as LIMITE_PRATELEIRAS (6) primeiras
-          dessa ordem (`prateleiras`); `ordemDoDia` devolve a ordem inteira.
-          GARANTIA de retorno: com os dois tipos presentes, as duas
-          primeiras posições são sempre uma de cada tipo (a proporcional
-          começa por um tipo e o outro entra logo em seguida), e cada tipo
-          gira UMA posição por dia. Logo a prateleira de posição 0 de cada
-          tipo muda todo dia e percorre a lista inteira: toda prateleira
-          aparece pelo menos uma vez a cada |tipo| dias (4 para divisão, 10
-          para valorativa no catálogo de 2026-10-19). Coberto por teste.
-     A home não fica idêntica todo dia, não abre com uma sequência de um
-     tipo só, e qualquer um pode reproduzir a ordem de uma data.
+     (`assunto_comum`, `build_indice.py`) é aquele eixo.
+   · Piso: só existe coleção com >= PISO_PRATELEIRA filmes elegíveis.
+   · Dentro da coleção: ordem ALFABÉTICA pelo título exibido normalizado
+     (artigo inicial ignorado), empate pelo slug.
+   · ORDEM FIXA DAS COLEÇÕES (`ordemDasColecoes`): divisão (D) e valorativa
+     (V), cada uma na ordem da taxonomia, INTERCALADAS de forma
+     PROPORCIONAL a partir de D: a cada posição entra o tipo mais ATRASADO
+     na sua própria lista (fração já usada menor; empate, D). Com 4 de
+     divisão e 10 valorativas, nenhuma sequência de um tipo só passa de
+     ceil(maior / menor) seguidas — a mesma intercalação das prateleiras
+     da rodada 2, agora sem rotação por dia (a rotação é a da coleção do
+     dia, abaixo).
 
-   RECÉM-CHEGADOS: os filmes da data de entrada mais recente do registro
-   (`entrada`); se essa leva tiver menos que o piso, entram as levas
-   anteriores até alcançá-lo. Em ordem alfabética, cortados em
-   LIMITE_RECEM (12); `total` diz quantos a leva tem, para o link "ver
-   todos" (que abre /filmes?desde=<data>). */
+   COLEÇÃO DO DIA (`colecaoDoDia`): no dia d (o mesmo contador do filme do
+   dia), a coleção de posição (d mod N) na ordem fixa, N = nº de coleções.
+   Se ela contém o filme da MANCHETE, a busca SALTA MEIO CICLO: tenta as
+   posições (d mod N) + floor(N/2), + floor(N/2) + 1, ... (circular) até a
+   primeira que não contém o filme; se todas contêm, fica a de posição
+   (d mod N). O salto existe porque avançar uma posição escolheria a
+   coleção de amanhã, e a mesma coleção apareceria em dois dias seguidos.
+   Em N dias seguidos sem manchete a evitar, cada coleção aparece uma vez.
+   FILMES MOSTRADOS: até LIMITE_COLECAO (4). Com mais que isso, uma janela
+   circular de 4 sobre a lista alfabética, começando em (d mod tamanho), e
+   reordenada alfabeticamente; o "primeiro filme" (o still grande) é o
+   primeiro dessa seleção.
+
+   RECÉM-CHEGADOS (`recemChegados`): os filmes da data de entrada mais
+   recente do registro (`entrada`); se essa leva tiver menos que o piso,
+   entram as levas anteriores até alcançá-lo. Em ordem alfabética, inteira.
+   A HOME mostra LIMITE_RECEM (3) por dia (`recemDoDia`): janela circular
+   de 3 sobre a leva, começando em (d mod tamanho), em ordem alfabética.
+   Antes da janela saem os filmes que já estão na página (manchete e
+   coleção), DESDE QUE sobrem pelo menos 3; senão, nada sai.
+
+   LOGO DA MANCHETE (`modoDoLogo`): a classe de contraste FINAL do logo
+   (`logo.classe`, build_data.py) decide: `claro` → o logo como está;
+   `escuro_mono` → o logo embranquecido por filtro; qualquer outra
+   (`escuro_cor`, `desligado`) ou sem logo → o título em texto. E o título
+   brasileiro abre a linha de metadado só com logo exibido que não é pt-BR
+   (`tituloNaLinha`). */
 (function (root) {
   "use strict";
 
@@ -117,11 +117,10 @@
 
   var PISO_PRATELEIRA = 3;
 
-  var LIMITE_RECEM = 12;
-
-  // [rodada 3] Quantas prateleiras a home mostra por dia (fora
-  // Recém-chegados). Constante ÚNICA; ver a garantia de retorno acima.
-  var LIMITE_PRATELEIRAS = 6;
+  // [rodada editorial] quantos filmes a home mostra da coleção do dia e dos
+  // recém-chegados
+  var LIMITE_COLECAO = 4;
+  var LIMITE_RECEM = 3;
 
   // A taxonomia fechada, na ordem de `eixos.linhas`.
   var ORDEM_EIXOS = [
@@ -265,29 +264,15 @@
     return saida;
   }
 
-  // Todas as prateleiras que passam o piso, sem rotação: divisão, depois
-  // valorativas, cada grupo na ordem da taxonomia.
+  // Todas as coleções que passam o piso, sem rotação: divisão, depois
+  // valorativas, cada grupo na ordem da taxonomia. (O nome é o das
+  // prateleiras, de onde a lógica veio; `colecoes` é o mesmo.)
   function prateleirasBase(filmes) {
     return doTipo("divisao", filmes).concat(doTipo("valorativa", filmes));
   }
 
-  function girar(lista, d) {
-    if (!lista.length) return lista;
-    var k = modulo(d, lista.length);
-    return lista.slice(k).concat(lista.slice(0, k));
-  }
-
-  function prateleiras(filmes, dia) {
-    return ordemDoDia(filmes, dia).slice(0, LIMITE_PRATELEIRAS);
-  }
-
-  // A ordem INTEIRA do dia, antes do corte.
-  function ordemDoDia(filmes, dia) {
-    var d = diasDesdeEpoca(dia);
-    var D = girar(doTipo("divisao", filmes), d);
-    var V = girar(doTipo("valorativa", filmes), d);
-    var vez = modulo(d, 2) === 0 ? [D, V] : [V, D];
-    var A = vez[0], Z = vez[1];
+  // Intercalação PROPORCIONAL de A e Z, começando por A (ver o cabeçalho).
+  function intercalar(A, Z) {
     var saida = [];
     var ia = 0, iz = 0;
     // `ia / |A| <= iz / |Z|`, em inteiros: A entra quando não está à frente.
@@ -299,6 +284,64 @@
       }
     }
     return saida;
+  }
+
+  function ordemDasColecoes(filmes) {
+    return intercalar(doTipo("divisao", filmes), doTipo("valorativa", filmes));
+  }
+
+  // Janela circular de `n` itens começando em (d mod tamanho), devolvida na
+  // ordem original da lista (que é a alfabética).
+  function janelaDoDia(lista, n, d) {
+    if (lista.length <= n) return lista.slice();
+    var k = modulo(d, lista.length);
+    var idx = [];
+    for (var i = 0; i < n; i++) idx.push((k + i) % lista.length);
+    return idx.sort(function (a, b) { return a - b; })
+      .map(function (i) { return lista[i]; });
+  }
+
+  function contem(colecao, slug) {
+    return colecao.filmes.some(function (f) { return f.slug === slug; });
+  }
+
+  // → { colecao, filmes (até LIMITE_COLECAO), total, evitou } ou null.
+  // `mancheteSlug` é opcional: sem ele, é o filme do dia de `escolhaDoDia`.
+  function colecaoDoDia(filmes, dia, mancheteSlug) {
+    var ordem = ordemDasColecoes(filmes);
+    if (!ordem.length) return null;
+    if (mancheteSlug === undefined) {
+      var e = escolhaDoDia(filmes, dia);
+      mancheteSlug = e && e.filme.slug;
+    }
+    var d = diasDesdeEpoca(dia);
+    var n = ordem.length;
+    var k0 = modulo(d, n);
+    var escolhida = ordem[k0];
+    if (mancheteSlug && contem(escolhida, mancheteSlug)) {
+      var salto = Math.floor(n / 2);
+      for (var j = 0; j < n; j++) {
+        var c = ordem[(k0 + salto + j) % n];
+        if (c !== ordem[k0] && !contem(c, mancheteSlug)) { escolhida = c; break; }
+      }
+    }
+    return { colecao: escolhida, filmes: janelaDoDia(escolhida.filmes, LIMITE_COLECAO, d),
+             total: escolhida.filmes.length, evitou: escolhida !== ordem[k0] };
+  }
+
+  function modoDoLogo(filme) {
+    var logo = filme && filme.logo;
+    if (!logo || !logo.path) return "texto";
+    if (logo.classe === "claro") return "logo";
+    if (logo.classe === "escuro_mono") return "logo_branco";
+    return "texto";
+  }
+
+  // O título brasileiro abre a linha de metadado da manchete só quando o
+  // LOGO EXIBIDO não é o pt-BR: logo exibido (`modoDoLogo` != "texto") e
+  // `titulo_difere_do_logo`. Com o título em texto, ele já está na tela.
+  function tituloNaLinha(filme) {
+    return modoDoLogo(filme) !== "texto" && !!(filme && filme.titulo_difere_do_logo);
   }
 
   function recemChegados(filmes, piso) {
@@ -317,13 +360,25 @@
     }
     if (escolhidos.length < piso) return null;
     return { desde: ultima, ate: datas[0], total: escolhidos.length,
-             filmes: B.ordenarAlfabetico(escolhidos).slice(0, LIMITE_RECEM) };
+             filmes: B.ordenarAlfabetico(escolhidos) };
+  }
+
+  // Os LIMITE_RECEM do dia (ver o cabeçalho). `evitar`: slugs já na página.
+  function recemDoDia(filmes, dia, evitar) {
+    var r = recemChegados(filmes);
+    if (!r) return null;
+    var fora = {};
+    (evitar || []).forEach(function (s) { fora[s] = true; });
+    var resto = r.filmes.filter(function (f) { return !fora[f.slug]; });
+    var pool = resto.length >= LIMITE_RECEM ? resto : r.filmes;
+    return { desde: r.desde, ate: r.ate, total: r.total,
+             filmes: janelaDoDia(pool, LIMITE_RECEM, diasDesdeEpoca(dia)) };
   }
 
   var api = {
     SEMENTE: SEMENTE, EPOCA: EPOCA, FUSO: FUSO, EXCLUIDOS: EXCLUIDOS,
     PISO_PRATELEIRA: PISO_PRATELEIRA, LIMITE_RECEM: LIMITE_RECEM,
-    LIMITE_PRATELEIRAS: LIMITE_PRATELEIRAS, ordemDoDia: ordemDoDia,
+    LIMITE_COLECAO: LIMITE_COLECAO,
     ORDEM_EIXOS: ORDEM_EIXOS, PREFIXO_VALORATIVA: PREFIXO_VALORATIVA,
     diaEmSaoPaulo: diaEmSaoPaulo, diasDesdeEpoca: diasDesdeEpoca,
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
@@ -331,8 +386,11 @@
     fazAniversario: fazAniversario, filmeDaPermutacao: filmeDaPermutacao,
     escolhaDoDia: escolhaDoDia, emCarencia: emCarencia,
     CARENCIA_ANIVERSARIO_DIAS: CARENCIA_ANIVERSARIO_DIAS,
-    prateleirasBase: prateleirasBase, prateleiras: prateleiras,
-    recemChegados: recemChegados,
+    prateleirasBase: prateleirasBase, colecoes: prateleirasBase,
+    ordemDasColecoes: ordemDasColecoes, intercalar: intercalar,
+    janelaDoDia: janelaDoDia, colecaoDoDia: colecaoDoDia,
+    recemChegados: recemChegados, recemDoDia: recemDoDia,
+    modoDoLogo: modoDoLogo, tituloNaLinha: tituloNaLinha,
   };
 
   if (typeof module !== "undefined" && module.exports) module.exports = api;

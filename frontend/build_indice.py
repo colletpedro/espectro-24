@@ -8,7 +8,8 @@ offline, zero rede, zero LLM — só lê JSON e copia campos.
 
 POR QUE UM ARQUIVO À PARTE, e não a home lendo `data.js` direto: `data.js`
 tem ~5,6 MB (narrativa, bullets, condições, histograma por nível de nota de
-99 filmes) e a home nova precisa de uma fração disso — título, ano, imagens,
+99 filmes) e a home nova precisa de uma fração disso — título, ano, diretor,
+países, backdrop e stills (nunca pôster), logo,
 o estado de contraste e QUAIS eixos passam a margem de lift. Separar também
 é o que mantém a lógica da home (busca, filme do dia, prateleiras) longe do
 conteúdo das reviews: **o índice não carrega texto derivado de review
@@ -60,15 +61,21 @@ sys.path.insert(0, str(ROOT / "src"))
 # O MESMO detector de alfabeto que a ficha usa para o diretor (v1.6.0).
 from espectro24.ficha import _e_escrita_latina  # noqa: E402
 
-# Os campos de IMAGEM da ficha que `poster.js` lê (`montar` e
-# `montarBackdrop`). O índice leva só estes — a home reaproveita os mesmos
-# construtores de pôster e backdrop do resto do site.
+# Os campos de IMAGEM da ficha que o índice leva. [rodada editorial] Só o
+# BACKDROP: a home usa stills/backdrops 16:9 e NUNCA pôster, e a forma mais
+# simples de garantir isso é o pôster não estar no único dado que ela lê.
+# A galeria vai à parte, em `stills` (`stills_da_galeria`).
 CAMPOS_IMAGEM = (
-    "poster_path", "poster_largura", "poster_altura",
-    "poster_sem_texto_path", "poster_sem_texto_largura",
-    "poster_sem_texto_altura",
     "backdrop_path", "backdrop_largura", "backdrop_altura",
 )
+
+
+def stills_da_galeria(ficha: dict) -> list[str]:
+    """Os `still_path` de `ficha.galeria_stills`, na ordem publicada (o
+    primeiro é o grupo do backdrop do hero: ele mesmo ou um gêmeo
+    perceptual — ver `ficha._stills`). Para a troca de imagem no hover."""
+    return [s["still_path"] for s in ficha.get("galeria_stills") or []
+            if s.get("still_path")]
 
 GRUPOS = ("negativas", "medianas", "positivas")
 
@@ -235,7 +242,9 @@ def entrada_do_indice(slug: str, filme: dict, data_entrada: str | None,
         "titulo_letterboxd": identidade.get("titulo_letterboxd"),
         "chave_slug": chave_do_slug(slug),
         "ano": ficha.get("ano"),
+        "diretor": ficha.get("diretor"),
         "imagens": {k: ficha.get(k) for k in CAMPOS_IMAGEM if ficha.get(k)},
+        "stills": stills_da_galeria(ficha),
         "distribuicao": ({g: pb.get(g, 0) for g in GRUPOS} if pb else None),
         "contraste": eixos.get("contraste"),
         "eixos_acima": eixos_acima(eixos),

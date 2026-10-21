@@ -1,13 +1,14 @@
 /* Espectro 24 — inicio.js
-   A APRESENTAÇÃO da home nova. Só monta DOM e liga eventos: o que mostrar
-   vem de `selecao.js` (filme do dia, prateleiras, recém-chegados), a busca
-   vem de `busca.js` (consulta → resultados) e toda a prosa vem de
-   `textos_home.js`. A rodada de identidade visual troca este arquivo e o
+   A APRESENTAÇÃO da home editorial. Só monta DOM e liga eventos: o que
+   mostrar vem de `selecao.js` (manchete, coleção do dia, recém-chegados,
+   modo do logo), a busca vem de `busca.js` e toda a prosa vem de
+   `textos_home.js`. A rodada de tipografia e paleta troca este arquivo e o
    CSS sem tocar nos outros três.
 
-   Lê só `window.ESPECTRO_INDICE` (`js/indice.js`, ~70 KB), nunca o
-   `data.js` de 5,6 MB — que continua sendo o dado de /filmes e da página
-   do filme.
+   Lê só `window.ESPECTRO_INDICE` (`js/indice.js`), nunca o `data.js` de
+   5,6 MB — que continua sendo o dado de /filmes e da página do filme. De
+   imagem, o índice só tem backdrop, stills e logo: a home NUNCA mostra
+   pôster (`poster.js` entra só pela URL do CDN, `P.url`).
 
    `?dia=AAAA-MM-DD` fixa a data da seleção (conferência manual de um dia
    específico); sem ele, vale o dia de hoje em America/Sao_Paulo. */
@@ -46,11 +47,14 @@
     });
   }
 
-  // --- 1. premissa ---
-  var premissa = document.getElementById("homePremissa");
-  if (premissa) premissa.textContent = T.PREMISSA;
+  // --- cabeçalho: nome e links ---
+  [["edNome", T.NOME_SITE], ["edLinkFilmes", T.LINK_FILMES],
+   ["edLinkMetodo", T.LINK_METODO]].forEach(function (par) {
+    var n = document.getElementById(par[0]);
+    if (n) n.textContent = par[1];
+  });
 
-  // --- 2. busca ---
+  // --- busca (no cabeçalho) ---
   (function ligarBusca() {
     var input = document.getElementById("busca");
     var lista = document.getElementById("buscaResultados");
@@ -153,176 +157,270 @@
     });
   })();
 
-  // --- célula de filme: a MESMA do mosaico de /filmes (pôster, título, ano
-  // e a faixa fina dos três grupos, no estado final, sem animação) ---
+  // ------------------------------------------------------------------
+  // IMAGENS: só backdrop e stills 16:9 (CDN do TMDB, larguras de backdrop
+  // w300 · w780 · w1280) e o logo (w500). Cantos retos e sem sombra são CSS.
+  // ------------------------------------------------------------------
+  var LARGURAS_STILL = ["w300", "w780", "w1280"];
+  var PX_LARGURA = { w300: 300, w780: 780, w1280: 1280 };
+  var TAMANHO_LOGO = "w500";
+
+  function fontes(path) {
+    return {
+      src: P.url(path, "w780"),
+      srcset: LARGURAS_STILL.map(function (w) {
+        return P.url(path, w) + " " + PX_LARGURA[w] + "w";
+      }).join(", "),
+    };
+  }
+
+  // A sequência de quadros do filme: o backdrop publicado primeiro (o mesmo
+  // quadro de sempre) e depois a galeria SEM o primeiro item, que é o grupo
+  // do próprio backdrop (ele ou um gêmeo perceptual, `stills_da_galeria`).
+  function sequencia(f) {
+    var hero = f.imagens && f.imagens.backdrop_path;
+    var resto = (f.stills || []).slice(hero ? 1 : 0).filter(function (p) { return p !== hero; });
+    return (hero ? [hero] : []).concat(resto);
+  }
+
+  // `fixo`: sem troca no hover (a manchete; a troca é da coleção e dos
+  // recém-chegados). `desloc`: abre no quadro de posição `desloc` da
+  // sequência (o still grande da coleção abre no segundo quadro, para não
+  // repetir a imagem do mesmo filme na fileira logo abaixo).
+  function quadro(f, classe, sizes, eager, fixo, desloc) {
+    var seq = sequencia(f);
+    var k = desloc && seq.length > desloc ? desloc : 0;
+    seq = seq.slice(k).concat(seq.slice(0, k));
+    var caixa = el("span", "ed-quadro" + (classe ? " " + classe : ""));
+    if (!seq.length) return caixa;
+    var img = el("img", "ed-quadro__img");
+    var fo = fontes(seq[0]);
+    img.src = fo.src;
+    img.srcset = fo.srcset;
+    img.sizes = sizes;
+    img.alt = "";
+    img.width = 16;
+    img.height = 9;
+    img.decoding = "async";
+    if (!eager) img.loading = "lazy";
+    img.dataset.path = seq[0];
+    caixa.appendChild(img);
+    if (!fixo) ligarTroca(caixa, img, seq);
+    return caixa;
+  }
+
+  // HOVER (desktop): troca pelo próximo still da galeria a cada INTERVALO_HOVER
+  // e volta ao primeiro ao sair. Sem troca automática com movimento reduzido
+  // e em aparelho sem hover de verdade (toque).
+  var INTERVALO_HOVER = 1200;
+  var reduzMovimento = window.matchMedia
+    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var temHover = window.matchMedia && window.matchMedia("(hover: hover)").matches;
+
+  function mostrar(img, path) {
+    var fo = fontes(path);
+    img.srcset = fo.srcset;
+    img.src = fo.src;
+    img.dataset.path = path;
+  }
+
+  function ligarTroca(alvo, img, seq) {
+    if (reduzMovimento || !temHover || seq.length < 2) return;
+    var timer = null, i = 0;
+    function sobre() {
+      if (timer) return;
+      // pré-carrega o próximo, para a troca não piscar
+      new Image().src = fontes(seq[1 % seq.length]).src;
+      timer = setInterval(function () {
+        i = (i + 1) % seq.length;
+        mostrar(img, seq[i]);
+        new Image().src = fontes(seq[(i + 1) % seq.length]).src;
+      }, INTERVALO_HOVER);
+    }
+    function fora() {
+      clearInterval(timer);
+      timer = null;
+      if (i !== 0) { i = 0; mostrar(img, seq[0]); }
+    }
+    alvo.addEventListener("mouseenter", sobre);
+    alvo.addEventListener("mouseleave", fora);
+  }
+
+  // A faixa fina dos três grupos (a mesma semântica e paleta do mosaico).
   var GRUPOS = ["negativas", "medianas", "positivas"];
   var COR_GRUPO_HOME = {
     negativas: "var(--neg-home)", medianas: "var(--med-home)", positivas: "var(--pos-home)",
   };
 
-  function celula(f) {
-    var a = el("a", "mosaic-cell");
-    a.href = hrefFilme(f.slug);
-    a.setAttribute("aria-label", f.titulo + (f.ano ? " (" + f.ano + ")" : "") + " — ver análise");
-    if (P) {
-      a.appendChild(P.montar(f.imagens, { uso: "mosaico", titulo: f.titulo, ano: f.ano, lazy: true }));
-    }
-    var body = el("span", "mosaic-cell__body");
-    body.appendChild(el("span", "mosaic-cell__title", f.titulo));
-    if (f.titulo_nativo) body.appendChild(el("span", "mosaic-cell__nativo", f.titulo_nativo));
-    if (f.ano) body.appendChild(el("span", "mosaic-cell__year", String(f.ano)));
-    var strip = el("span", "mosaic-cell__strip");
+  function faixaDosGrupos(f, classe) {
+    var strip = el("span", classe);
     strip.setAttribute("aria-hidden", "true");
     var d = f.distribuicao;
     var total = d ? GRUPOS.reduce(function (s, g) { return s + (d[g] || 0); }, 0) : 0;
-    if (total) {
-      GRUPOS.forEach(function (g) {
-        if (!(d[g] > 0)) return;
-        var seg = el("span", "mosaic-cell__seg");
-        seg.style.background = COR_GRUPO_HOME[g];
-        seg.style.width = (d[g] / total) * 100 + "%";
-        strip.appendChild(seg);
-      });
-    } else {
-      strip.style.background = "var(--border)";
-    }
-    a.appendChild(body);
-    a.appendChild(strip);
-    return a;
+    if (!total) { strip.classList.add("is-vazia"); return strip; }
+    GRUPOS.forEach(function (g) {
+      if (!(d[g] > 0)) return;
+      var seg = el("span", "ed-faixa__seg");
+      seg.style.background = COR_GRUPO_HOME[g];
+      seg.style.width = (d[g] / total) * 100 + "%";
+      strip.appendChild(seg);
+    });
+    return strip;
   }
 
-  // --- 3. filme do dia ---
-  (function filmeDoDia() {
-    var caixa = document.getElementById("filmeDoDia");
-    var escolha = S.escolhaDoDia(FILMES, DIA);
-    var f = escolha && escolha.filme;
+  // ------------------------------------------------------------------
+  // 1. MANCHETE (o filme do dia)
+  // ------------------------------------------------------------------
+  var escolha = S.escolhaDoDia(FILMES, DIA);
+  var manchete = escolha && escolha.filme;
+  var naPagina = [];
+
+  (function montarManchete() {
+    var caixa = document.getElementById("manchete");
+    var f = manchete;
     if (!caixa || !f) { if (caixa) caixa.hidden = true; return; }
+    naPagina.push(f.slug);
     var j = T.justificar(f, DIA);
+    var modo = S.modoDoLogo(f);
     caixa.dataset.slug = f.slug;
     caixa.dataset.gancho = j.gancho;
     caixa.dataset.motivo = escolha.motivo;   // "aniversario" | "permutacao"
+    caixa.dataset.modoLogo = modo;           // "logo" | "logo_branco" | "texto"
 
-    caixa.appendChild(el("p", "section-label", T.ROTULO_FILME_DO_DIA));
-    var visual = el("a", "filme-do-dia__visual");
+    var rotulo = el("h2", "visually-hidden", T.ROTULO_FILME_DO_DIA);
+    rotulo.id = "mancheteRotulo";
+    caixa.appendChild(rotulo);
+
+    var visual = el("a", "ed-manchete__visual");
     visual.href = hrefFilme(f.slug);
     visual.tabIndex = -1;
     visual.setAttribute("aria-hidden", "true");
-    var img = P && (P.montarBackdrop(f.imagens, { titulo: f.titulo, ano: f.ano })
-      || P.montar(f.imagens, { uso: "ficha", titulo: f.titulo, ano: f.ano }));
-    if (img) visual.appendChild(img);
+    visual.appendChild(quadro(f, "ed-manchete__quadro", "100vw", true, true));
+    visual.appendChild(el("span", "ed-manchete__veu"));
+    visual.appendChild(faixaDosGrupos(f, "ed-faixa ed-manchete__faixa"));
     caixa.appendChild(visual);
 
-    var h = el("h2", "filme-do-dia__titulo");
-    h.id = "filmeDoDiaTitulo";
-    var link = el("a", null, f.titulo);
+    var texto = el("div", "ed-manchete__texto");
+    var titulo = el("h3", "ed-manchete__titulo");
+    var link = el("a");
     link.href = hrefFilme(f.slug);
-    h.appendChild(link);
-    caixa.appendChild(h);
-    if (f.titulo_nativo) caixa.appendChild(el("p", "filme-do-dia__nativo", f.titulo_nativo));
-    if (f.ano) caixa.appendChild(el("p", "filme-do-dia__ano mono", String(f.ano)));
-    caixa.appendChild(el("p", "filme-do-dia__texto", j.texto));
-    var abrir = el("a", "filme-do-dia__abrir mono", T.ROTULO_ABRIR + " →");
-    abrir.href = hrefFilme(f.slug);
-    caixa.appendChild(abrir);
+    function tituloEmTexto() {
+      link.innerHTML = "";
+      link.className = "ed-manchete__titulo-texto";
+      link.textContent = f.titulo;
+      caixa.dataset.modoLogo = "texto";
+      if (linha) linha.textContent = T.linhaDaManchete(f, false);
+    }
+    var linha = null;
+    if (modo === "logo" || modo === "logo_branco") {
+      var logo = el("img", "ed-manchete__logo" + (modo === "logo_branco" ? " is-branco" : ""));
+      logo.src = P.url(f.logo.path, TAMANHO_LOGO);
+      logo.alt = f.titulo;
+      logo.decoding = "async";
+      // logo que não carrega cai no título em texto
+      logo.addEventListener("error", tituloEmTexto);
+      link.appendChild(logo);
+    } else {
+      link.className = "ed-manchete__titulo-texto";
+      link.textContent = f.titulo;
+    }
+    titulo.appendChild(link);
+    texto.appendChild(titulo);
+    if (f.titulo_nativo) texto.appendChild(el("p", "ed-manchete__nativo", f.titulo_nativo));
+    // o título brasileiro abre a linha só quando o LOGO EXIBIDO não é pt-BR
+    linha = el("p", "ed-manchete__linha", T.linhaDaManchete(f, S.tituloNaLinha(f)));
+    texto.appendChild(linha);
+    texto.appendChild(el("p", "ed-manchete__justificativa", j.texto));
+    caixa.appendChild(texto);
   })();
 
-  // --- prateleira: rolagem horizontal NATIVA (touch e trackpad de graça),
-  // foco por teclado na trilha (setas) e botões para quem usa mouse ---
-  var reduzMovimento = window.matchMedia
-    && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // ------------------------------------------------------------------
+  // 2. COLEÇÃO DO DIA
+  // ------------------------------------------------------------------
+  function cartao(f, classe, sizes, meta, desloc) {
+    var a = el("a", "ed-cartao" + (classe ? " " + classe : ""));
+    a.href = hrefFilme(f.slug);
+    a.dataset.slug = f.slug;
+    a.appendChild(quadro(f, null, sizes, false, false, desloc));
+    var corpo = el("span", "ed-cartao__corpo");
+    corpo.appendChild(el("span", "ed-cartao__titulo", f.titulo));
+    if (f.titulo_nativo) corpo.appendChild(el("span", "ed-cartao__nativo", f.titulo_nativo));
+    var m = meta(f);
+    if (m) corpo.appendChild(el("span", "ed-cartao__meta", m));
+    a.appendChild(corpo);
+    return a;
+  }
 
-  function prateleira(id, titulo, filmes, nota, link) {
-    var sec = el("section", "prateleira");
-    sec.dataset.chave = id;
-    var cab = el("div", "prateleira__cabeca");
-    var h = el("h2", "section-label prateleira__titulo", titulo);
-    h.id = "prat-" + id;
+  function soAno(f) { return f.ano ? String(f.ano) : ""; }
+
+  (function montarColecao() {
+    var caixa = document.getElementById("colecaoDoDia");
+    var cd = S.colecaoDoDia(FILMES, DIA, manchete ? manchete.slug : null);
+    if (!caixa || !cd || !cd.filmes.length) { if (caixa) caixa.hidden = true; return; }
+    var txt = T.textoDaColecao(cd.colecao);
+    caixa.dataset.chave = cd.colecao.chave;
+    cd.filmes.forEach(function (f) { naPagina.push(f.slug); });
+
+    var topo = el("div", "ed-colecao__topo");
+    var bloco = el("div", "ed-colecao__texto");
+    bloco.appendChild(el("p", "section-label ed-colecao__rotulo", T.ROTULO_COLECAO));
+    var h = el("h2", "ed-colecao__titulo", txt.titulo);
+    h.id = "colecaoTitulo";
+    bloco.appendChild(h);
+    if (txt.descricao) bloco.appendChild(el("p", "ed-colecao__descricao", txt.descricao));
+    if (txt.frase) bloco.appendChild(el("p", "ed-colecao__frase", txt.frase));
+    if (cd.total > cd.filmes.length) {
+      var todos = el("a", "ed-link mono", T.ROTULO_COLECAO_TODOS + " →");
+      todos.href = HREF_CATALOGO + "?colecao=" + encodeURIComponent(cd.colecao.chave);
+      bloco.appendChild(todos);
+    }
+    topo.appendChild(bloco);
+
+    var primeiro = cd.filmes[0];
+    topo.appendChild(cartao(primeiro, "ed-colecao__destaque",
+      "(max-width: 699px) 100vw, 66vw", soAno, 1));
+    caixa.appendChild(topo);
+
+    var fileira = el("ul", "ed-colecao__fileira");
+    cd.filmes.forEach(function (f) {
+      var li = el("li");
+      li.appendChild(cartao(f, null, "(max-width: 699px) 40vw, 25vw", soAno));
+      fileira.appendChild(li);
+    });
+    caixa.appendChild(fileira);
+  })();
+
+  // ------------------------------------------------------------------
+  // 3. RECÉM-CHEGADOS (3 por dia, da leva mais recente)
+  // ------------------------------------------------------------------
+  (function montarRecem() {
+    var caixa = document.getElementById("recemChegados");
+    var r = S.recemDoDia(FILMES, DIA, naPagina);
+    if (!caixa || !r || !r.filmes.length) { if (caixa) caixa.hidden = true; return; }
+    var cab = el("div", "ed-recem__cabeca");
+    var h = el("h2", "section-label ed-recem__titulo", T.ROTULO_RECEM);
+    h.id = "recemTitulo";
     cab.appendChild(h);
-    var nav = el("div", "prateleira__nav");
-    var trilha = el("ul", "prateleira__trilha");
-    trilha.tabIndex = 0;
-    trilha.setAttribute("aria-labelledby", h.id);
-    [["‹", -1, "Rolar para a esquerda"], ["›", 1, "Rolar para a direita"]].forEach(function (b) {
-      var btn = el("button", "prateleira__botao", b[0]);
-      btn.type = "button";
-      btn.setAttribute("aria-label", b[2] + ": " + titulo);
-      btn.addEventListener("click", function () {
-        trilha.scrollBy({ left: b[1] * trilha.clientWidth * 0.85,
-                          behavior: reduzMovimento ? "auto" : "smooth" });
-      });
-      nav.appendChild(btn);
+    // "ver todos" abre /filmes FILTRADO pela leva (`?desde=`, lido por
+    // catalogo.js) — mesmo critério de data desta seção.
+    var todos = el("a", "ed-link mono", T.ROTULO_RECEM_TODOS + " →");
+    todos.href = HREF_CATALOGO + "?desde=" + r.desde;
+    cab.appendChild(todos);
+    caixa.appendChild(cab);
+    var grade = el("ul", "ed-recem__grade");
+    r.filmes.forEach(function (f) {
+      var li = el("li");
+      li.appendChild(cartao(f, null, "(max-width: 699px) 100vw, 33vw", T.linhaDiretorAno));
+      grade.appendChild(li);
     });
-    cab.appendChild(nav);
-    sec.appendChild(cab);
-    if (nota) sec.appendChild(el("p", "prateleira__nota mono", nota));
-    if (link) {
-      var a = el("a", "prateleira__todos mono", link.texto + " →");
-      a.href = link.href;
-      sec.appendChild(a);
-    }
-    filmes.forEach(function (f) {
-      var li = el("li", "prateleira__item");
-      li.appendChild(celula(f));
-      trilha.appendChild(li);
-    });
-    sec.appendChild(trilha);
+    caixa.appendChild(grade);
+  })();
 
-    function atualizarBotoes() {
-      var max = trilha.scrollWidth - trilha.clientWidth;
-      nav.children[0].disabled = trilha.scrollLeft <= 1;
-      nav.children[1].disabled = trilha.scrollLeft >= max - 1;
-      nav.hidden = max <= 1;
-    }
-    trilha.addEventListener("scroll", atualizarBotoes, { passive: true });
-    // Medir só depois de a seção estar no DOM (`montarPrateleira`). Vários
-    // gatilhos de propósito, como em `faixa.js`: no navegador embutido usado
-    // para conferir, nem o rAF nem o ResizeObserver dispararam sempre.
-    atualizaveis.push(atualizarBotoes);
-    if (typeof ResizeObserver !== "undefined") {
-      new ResizeObserver(atualizarBotoes).observe(trilha);
-    }
-    return sec;
-  }
-
-  var atualizaveis = [];
-  function atualizarTodas() { atualizaveis.forEach(function (fn) { fn(); }); }
-  window.addEventListener("resize", atualizarTodas);
-  window.addEventListener("load", atualizarTodas);
-
-  // --- 4. prateleiras ---
-  var areaPrat = document.getElementById("prateleiras");
-  if (areaPrat) {
-    S.prateleiras(FILMES, DIA).forEach(function (p) {
-      areaPrat.appendChild(prateleira(p.chave, T.tituloDaPrateleira(p.chave), p.filmes));
-    });
-  }
-
-  // --- 5. recém-chegados (a data vem do registro de entrada no catálogo) ---
-  var areaRecem = document.getElementById("recemChegados");
-  if (areaRecem) {
-    var r = S.recemChegados(FILMES);
-    if (r) {
-      var fmt = function (d) { var p = d.split("-"); return p[2] + "/" + p[1] + "/" + p[0]; };
-      var nota = r.desde === r.ate ? "entraram no catálogo em " + fmt(r.ate)
-        : "entraram no catálogo entre " + fmt(r.desde) + " e " + fmt(r.ate);
-      // "ver todos" abre /filmes FILTRADO pela leva (`?desde=`, lido por
-      // catalogo.js) — mesmo critério de data desta seção.
-      areaRecem.appendChild(prateleira("recem", T.ROTULO_RECEM, r.filmes, nota,
-        { texto: T.ROTULO_RECEM_TODOS,
-          href: HREF_CATALOGO + "?desde=" + r.desde }));
-    } else {
-      areaRecem.hidden = true;
-    }
-  }
-
-  atualizarTodas();
-
-  // --- 6. aviso fixo ---
-  var aviso = document.getElementById("homeAviso");
-  if (aviso) {
-    aviso.appendChild(el("span", null, T.AVISO_CATALOGO + " "));
-    var a = el("a", null, T.AVISO_LINK + " →");
+  // --- 4. o link para o catálogo inteiro ---
+  var verTodos = document.getElementById("verTodos");
+  if (verTodos) {
+    var a = el("a", "ed-link", T.verOsFilmes(FILMES.length) + " →");
     a.href = HREF_CATALOGO;
-    aviso.appendChild(a);
+    verTodos.appendChild(a);
   }
 })();
