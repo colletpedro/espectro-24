@@ -1,4 +1,4 @@
-"""[rodada Explorar] O bloco Explorar da home e a lógica das portas de entrada.
+"""[rodada Explorar] O bloco Explorar da home e /filmes como página Explorar.
 
 A lógica é EXECUTADA sob node (explorar.js é puro, como selecao.js). Trava:
   1. as contagens do Explorar batem com o catálogo, respeitam os pisos e a
@@ -196,6 +196,27 @@ def test_ordem_e_filtros_nao_leem_a_distribuicao():
     assert a == b
     fonte = (JS / "explorar.js").read_text(encoding="utf-8")
     assert "distribuicao" not in re.sub(r"/\*.*?\*/", "", fonte, flags=re.S)
+    assert "distribuicao" not in (JS / "catalogo.js").read_text(encoding="utf-8")
+
+
+# ===========================================================================
+# 4. PAGINAÇÃO
+# ===========================================================================
+
+def test_paginacao_de_24_com_mostrar_mais_e_contador():
+    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
+    exp = (JS / "explorar.js").read_text(encoding="utf-8")
+    assert "var PAGINA = 24;" in exp
+    assert "recorte.slice(0, mostrados)" in cat and "mostrados += X.PAGINA" in cat
+    assert "T.contadorDaPagina(n, recorte.length)" in cat
+    # a página não vai para a URL
+    assert "pagina" not in exp.split("function urlDosFiltros")[1].split("function filtrar")[0]
+
+
+@precisa_node
+def test_contador_da_pagina():
+    out = _x("console.log(JSON.stringify([T.contadorDaPagina(24, 99), T.MOSTRAR_MAIS]))")
+    assert out == ["24 de 99", "Mostrar mais"]
 
 
 # ===========================================================================
@@ -223,9 +244,26 @@ def test_indice_az_ignora_artigos_e_respeita_filtros():
         assert all(letra[s] == l for s in slugs)
 
 
+def test_indice_sem_imagem_com_titulo_ano_e_diretor():
+    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
+    bloco = cat.split("function renderIndice()")[1].split("function render()")[0]
+    assert "img" not in bloco and "quadro" not in bloco
+    assert "f.titulo" in bloco and "f.ano" in bloco and "f.diretor" in bloco
+
+
 # ===========================================================================
 # 6. NENHUM PÔSTER EM /filmes; LINKS ANTIGOS
 # ===========================================================================
+
+def test_filmes_sem_poster_e_sem_data_js():
+    html = re.sub(r"<!--.*?-->", "", (FRONT / "filmes" / "index.html").read_text(encoding="utf-8"),
+                  flags=re.S)
+    assert "data.js" not in html                  # lê só o índice
+    assert "mosaic" not in html and "poster" not in html.replace("../js/poster.js", "")
+    cat = re.sub(r"/\*.*?\*/|//[^\n]*", "", (JS / "catalogo.js").read_text(encoding="utf-8"), flags=re.S)
+    assert "poster" not in cat and "P.montar" not in cat and "ESPECTRO_DATA" not in cat
+    assert "C.cartao(" in cat                     # o cartão de still da home
+
 
 @precisa_node
 def test_links_antigos_continuam_validos():

@@ -1,278 +1,235 @@
-/* Espectro 24 — catalogo.js (até a home nova, `home.js`)
-   [home nova] O mosaico migrou INTACTO de `/` para `/filmes` (catálogo
-   completo). A única mudança é o caminho relativo dos links, que agora
-   saem de `filmes/`: `../filme.html` funciona tanto em `/filmes` quanto em
-   `/filmes/` e por file://.
+/* Espectro 24 — catalogo.js  [rodada Explorar]
+   /filmes como página EXPLORAR. Substitui o mosaico de pôsteres (v1.9.17–
+   rodada editorial) e a busca por título ou eixo sobre data.js: a página
+   agora lê só `js/indice.js` (o cabeçalho, com a busca por título, é de
+   cabecalho.js).
 
-   Monta os cards do catálogo a partir de window.ESPECTRO_DATA e liga a BUSCA.
+   O que mostrar vem de explorar.js (filtros em AND, ordem padrão, Índice
+   A–Z, URL ⇄ filtros); o cartão de filme, de cartoes.js (o mesmo dos
+   recém-chegados da home, com o hover); a prosa, de textos_home.js.
+   Nenhuma ordenação nem filtro lê a distribuição dos grupos.
 
-   v1.9.14: a busca deixou de ser decorativa. Até aqui ela exibia "Busca em
-   breve" e o catálogo inteiro seguia abaixo, sem filtrar nada — não havia
-   critério de filtro que não fosse o título. Com a taxonomia fechada de 10
-   eixos (§2.5) passa a haver: o leitor procura "ritmo" e recebe os filmes
-   cujos grupos falam de ritmo. Filtra por TÍTULO e por EIXO, sobre o dado já
-   embutido, sem uma requisição de rede. */
+   ESTADO = os filtros e a vista, sempre na URL (`?colecao=`, `?decada=`,
+   `?genero=`, `?pais=`, `?desde=` e `?vista=indice`): qualquer estado é um
+   link. A paginação (24 por vez, "Mostrar mais") NÃO vai para a URL.
+   `?desde=` (o "ver todos os recém-chegados" da home) e `?colecao=` (o
+   "ver todos" da coleção do dia) continuam valendo, agora combináveis com
+   os outros filtros. */
 (function () {
   "use strict";
 
-  var DATA = window.ESPECTRO_DATA || { catalogo: [], filmes: {} };
+  var IDX = window.ESPECTRO_INDICE || { filmes: [] };
+  var X = window.ESPECTRO_EXPLORAR;
+  var T = window.ESPECTRO_TEXTOS;
+  var C = window.ESPECTRO_CARTOES;
+  var FILMES = IDX.filmes || [];
+  var RAIZ = "../";
 
-  // --- barra espectral segmentada (marca) ---
-  var brand = document.getElementById("brandBar");
-  if (brand) {
-    var stops = ["#e5484d", "#f5820b", "#f5a623", "#f5c518", "#8bbf3f", "#46a758", "#2e9c8e", "#3b82f6"];
-    stops.forEach(function (c) {
-      var s = document.createElement("span");
-      s.style.background = c;
-      brand.appendChild(s);
+  var el = C.el;
+
+  var estado = X.lerFiltros(location.search);
+  var mostrados = X.PAGINA;
+
+  // As opções dos filtros: tudo o que existe no catálogo inteiro (piso 1).
+  var OPCOES = X.gruposDoExplorar(FILMES, { piso: 1 });
+  var FILTROS = [
+    { chave: "colecao", grupo: "assunto" },
+    { chave: "decada", grupo: "decada" },
+    { chave: "genero", grupo: "genero" },
+    { chave: "pais", grupo: "pais" },
+  ];
+
+  function nomeDoFiltro(chave, valor) {
+    if (chave === "desde") return T.chipDesde(valor);
+    if (chave === "colecao") return T.tituloDaPrateleira(valor);
+    if (chave === "decada") return X.rotuloDaDecada(valor);
+    if (chave === "pais") return T.nomeDoPais(valor);
+    var g = OPCOES.genero.filter(function (o) { return o.chave === valor; })[0];
+    return g ? g.nome : valor;
+  }
+
+  function irPara(filtros, vista) {
+    estado = { filtros: filtros, vista: vista };
+    mostrados = X.PAGINA;
+    var url = location.pathname + X.urlDosFiltros(filtros, vista);
+    if (url !== location.pathname + location.search) history.pushState(null, "", url);
+    render();
+  }
+
+  function semFiltro(chave) {
+    var f = {};
+    Object.keys(estado.filtros).forEach(function (k) { if (k !== chave) f[k] = estado.filtros[k]; });
+    return f;
+  }
+
+  // --- título ---
+  var titulo = document.getElementById("exTitulo");
+  if (titulo) titulo.textContent = T.TITULO_EXPLORAR;
+
+  // --- seletor de vista: Grade | Índice A–Z ---
+  var vistas = document.getElementById("exVistas");
+  var botoesVista = {};
+  [["grade", T.VISTA_GRADE], ["indice", T.VISTA_INDICE]].forEach(function (v) {
+    var a = el("a", "ex-vista", v[1]);
+    a.dataset.vista = v[0];
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      irPara(estado.filtros, v[0]);
     });
-  }
-
-  // Rótulos dos eixos — a mesma lista fechada de filme.js. Duplicada aqui
-  // (e não importada) porque os dois scripts são independentes e carregados
-  // em páginas diferentes; a lista é FECHADA e versionada pelo taxonomia_id,
-  // então a divergência seria visível no primeiro filme classificado.
-  var EIXO_LABEL = {
-    ritmo: "ritmo", atuacao: "atuação", direcao_imagem: "direção e imagem",
-    roteiro_estrutura: "roteiro e estrutura", som_trilha: "som e trilha",
-    tom_atmosfera: "tom e atmosfera", impacto_emocional: "impacto emocional",
-    comparacoes: "comparações", expectativa: "expectativa",
-    critica_social: "crítica social",
-  };
-
-  // O que cada filme responde na busca: título + os eixos EM DESTAQUE, com
-  // acento removido para que "atuacao" e "atuação" achem a mesma coisa.
-  //
-  // Só os eixos que viraram BULLET (§2.5: 2 de frequência + 3 de contraste
-  // por grupo), nunca os 10. Medido nos 3 filmes do catálogo: todos os 10
-  // eixos aparecem em todos os 3, então casar com a linha inteira devolveria
-  // o catálogo completo para qualquer eixo — um filtro que não filtra é o
-  // mesmo defeito da busca decorativa, com outra roupa.
-  function chavesDe(f) {
-    var termos = [(f.ficha && f.ficha.titulo) || "", f.slug];
-    ((f.eixos && f.eixos.linhas) || []).forEach(function (l) {
-      var papeis = l.bullet_de || {};
-      var destaque = Object.keys(papeis).some(function (b) { return !!papeis[b]; });
-      if (destaque) termos.push(l.eixo, EIXO_LABEL[l.eixo] || "");
-    });
-    return termos.map(norm).filter(Boolean);
-  }
-
-  function norm(s) {
-    return String(s).toLowerCase()
-      .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  }
-
-  // [v1.9.16] A contagem vem do próprio dado embutido, não de um literal —
-  // mesmo princípio de v1.9.1 (§3[B1], "50·20·30 remanescente... passa a
-  // derivar do próprio JSON"): um catálogo que cresce de 3 para 35 não pode
-  // deixar a home dizendo "3" até alguém lembrar de editar o HTML à mão.
-  var microcopy = document.getElementById("homeMicrocopy");
-  if (microcopy) {
-    var n = DATA.catalogo.length;
-    microcopy.textContent = n + (n === 1 ? " análise pronta" : " análises prontas")
-      + " · busca por título ou eixo";
-  }
-
-  // --- mosaico do catálogo (v1.9.17; célula refeita na v1.9.18) ---
-  // Ordem de leitura igual à do resto do site: quem não gostou primeiro,
-  // quem gostou por último (mesma ordem de `GRUPO_META` em filme.js).
-  var GRUPOS = ["negativas", "medianas", "positivas"];
-  // [v1.9.18] paleta PARALELA, só para a faixa da home — ver `:root` em
-  // styles.css para o porquê (as cores oficiais dos grupos, --neg/--med/
-  // --pos, continuam intactas e são as que `filme.html` usa).
-  var COR_GRUPO_HOME = {
-    negativas: "var(--neg-home)", medianas: "var(--med-home)", positivas: "var(--pos-home)",
-  };
-
-  // A faixa é a distribuição REAL do histograma (`distribuicao.por_bucket`,
-  // já em percentual, soma ~100) — não a cota de análise, que é sempre
-  // 40/40/40 e não diria nada sobre a recepção real. RESTRIÇÃO DE PRODUTO:
-  // isto é o único "número" da célula, e ele nunca vira nota, score ou
-  // média — é proporção de TRÊS grupos, nunca um valor único agregado.
-  function barraDe(f) {
-    var pb = f.distribuicao && f.distribuicao.por_bucket;
-    if (!pb) return null;
-    var total = GRUPOS.reduce(function (s, g) { return s + (pb[g] || 0); }, 0);
-    if (!total) return null;
-    return GRUPOS.map(function (g) {
-      return { grupo: g, pct: ((pb[g] || 0) / total) * 100 };
-    });
-  }
-
-  var cards = document.getElementById("filmCards");
-  DATA.catalogo.forEach(function (slug) {
-    var f = DATA.filmes[slug];
-    if (!f) return;
-    var titulo = (f.ficha && f.ficha.titulo) || slug;
-    var ano = (f.ficha && f.ficha.ano) || "";
-
-    var a = document.createElement("a");
-    a.className = "mosaic-cell";
-    a.dataset.slug = slug;
-    a.href = "../filme.html?slug=" + encodeURIComponent(slug);
-    a.setAttribute("aria-label", titulo + (ano ? " (" + ano + ")" : "") + " — ver análise");
-
-    // [v1.9.29] O PÔSTER — e isto é REDESENHO da célula, não acréscimo.
-    //
-    // A célula da v1.9.18 foi desenhada SEM imagem: um card escuro em 4/5,
-    // com o texto como protagonista e uma faixa de 5px na base. Encaixar um
-    // pôster nela sem mexer no resto daria o pior dos dois — uma miniatura
-    // apertada disputando espaço com o título. Então a célula muda de
-    // proporção (4/5 → 2/3, a do próprio pôster), o pôster passa a ocupar a
-    // célula inteira, e o texto sobe para um degradê na base.
-    //
-    // O QUE NÃO MUDA, e é o motivo de a faixa continuar existindo: a home
-    // não vira um catálogo de capas. A faixa é o único sinal de RECEPÇÃO da
-    // célula, e sobre imagem ela precisava de mais presença que os 5px que
-    // tinha contra fundo chapado — subiu para 6px e ganhou um fio escuro em
-    // cima, que a separa de qualquer pôster (claro ou escuro) sem depender
-    // da cor da arte. Cores, ordem e semântica: idênticas.
-    //
-    // A ANIMAÇÃO DA BARRA NÃO RODA AQUI — decisão registrada (§3[E]).
-    // Trinta e cinco sequências simultâneas na entrada viram espetáculo e
-    // competem entre si; a home mostra a faixa no ESTADO FINAL, e a
-    // animação continua sendo o momento de abrir um filme.
-    //
-    // [v1.9.31] `montar` sempre usa a arte SEM TEXTO quando o filme tem
-    // (`fonteDoPoster` em poster.js) — decisão final do dono do projeto,
-    // depois de comparar as duas variantes ao vivo (`?poster=texto/limpo`,
-    // v1.9.30). O mecanismo de escolha saiu do código; o fallback para o
-    // pôster com texto continua, porque é regra de AUSÊNCIA de dado, não
-    // resquício do switch.
-    if (window.ESPECTRO_POSTER) {
-      a.appendChild(window.ESPECTRO_POSTER.montar(f.ficha, {
-        uso: "mosaico", titulo: titulo, ano: ano, lazy: true,
-      }));
-    }
-
-    // corpo: título sempre visível (Entrega 1, v1.9.18 — revoga o "só no
-    // hover" da v1.9.17), ano abaixo, alinhados na base da célula.
-    var body = document.createElement("span");
-    body.className = "mosaic-cell__body";
-    var h = document.createElement("span");
-    h.className = "mosaic-cell__title";
-    h.textContent = titulo;
-    body.appendChild(h);
-    if (ano) {
-      var y = document.createElement("span");
-      y.className = "mosaic-cell__year";
-      y.textContent = String(ano);
-      body.appendChild(y);
-    }
-
-    // faixa fina colada na base — não mais a célula inteira.
-    var strip = document.createElement("span");
-    strip.className = "mosaic-cell__strip";
-    strip.setAttribute("aria-hidden", "true");
-    var partes = barraDe(f);
-    if (partes) {
-      partes.forEach(function (p) {
-        if (p.pct <= 0) return;
-        var seg = document.createElement("span");
-        seg.className = "mosaic-cell__seg";
-        seg.style.background = COR_GRUPO_HOME[p.grupo];
-        seg.style.width = p.pct + "%";
-        strip.appendChild(seg);
-      });
-    } else {
-      // sem distribuição real (não deveria acontecer no catálogo de
-      // produção — todo filme publicado tem histograma; fallback neutro
-      // para não deixar a faixa vazia se algum dia acontecer).
-      strip.style.background = "var(--border)";
-    }
-
-    a.appendChild(body);
-    a.appendChild(strip);
-    a.dataset.busca = chavesDe(f).join(" | ");
-    cards.appendChild(a);
+    botoesVista[v[0]] = a;
+    vistas.appendChild(a);
   });
 
-  // --- busca REAL: título ou eixo ---
-  var input = document.getElementById("search");
-  var hint = document.getElementById("searchHint");
-  var todos = [].slice.call(cards.children);
+  // --- filtros: um <select> por grupo ---
+  var form = document.getElementById("exFiltros");
+  var selects = {};
+  FILTROS.forEach(function (fi) {
+    var rotulo = el("label", "ex-filtro");
+    rotulo.appendChild(el("span", "ex-filtro__nome", T.ROTULO_GRUPO_EXPLORAR[fi.grupo]));
+    var sel = el("select", "ex-filtro__select");
+    sel.name = fi.chave;
+    var qualquer = el("option", null, T.QUALQUER[fi.chave]);
+    qualquer.value = "";
+    sel.appendChild(qualquer);
+    OPCOES[fi.grupo].forEach(function (o) {
+      var op = el("option", null, o.nome + " (" + o.n + ")");
+      op.value = String(o.chave);
+      sel.appendChild(op);
+    });
+    sel.addEventListener("change", function () {
+      var f = semFiltro(fi.chave);
+      if (sel.value) f[fi.chave] = fi.chave === "decada" ? Number(sel.value) : sel.value;
+      irPara(f, estado.vista);
+    });
+    selects[fi.chave] = sel;
+    rotulo.appendChild(sel);
+    form.appendChild(rotulo);
+  });
 
-  // [home nova, rodada 2] `?desde=AAAA-MM-DD` — o "ver todos os
-  // recém-chegados" da home. Mostra só os filmes que entraram no catálogo
-  // nessa data ou depois (`entrada`, de js/indice.js); o filtro de texto
-  // abaixo continua valendo DENTRO desse recorte. Sem o parâmetro, ou sem o
-  // índice, nada muda.
-  var desde = new URLSearchParams(location.search).get("desde");
-  var INDICE = window.ESPECTRO_INDICE;
-  if (desde && /^\d{4}-\d{2}-\d{2}$/.test(desde) && INDICE) {
-    var naLeva = {};
-    INDICE.filmes.forEach(function (f) {
-      if (f.entrada && f.entrada >= desde) naLeva[f.slug] = true;
-    });
-    var nLeva = 0;
-    todos.forEach(function (el) {
-      if (naLeva[el.dataset.slug]) nLeva++;
-      else el.dataset.foraDaLeva = "1";
-      el.hidden = !!el.dataset.foraDaLeva;
-    });
-    if (microcopy) {
-      var p = desde.split("-");
-      microcopy.textContent = nLeva + " recém-chegados desde " + p[2] + "/"
-        + p[1] + "/" + p[0] + " · ";
-      var todosLink = document.createElement("a");
-      todosLink.href = "./";
-      todosLink.textContent = "ver o catálogo completo";
-      microcopy.appendChild(todosLink);
-    }
+  var chips = document.getElementById("exChips");
+  var contador = document.getElementById("exContador");
+  var grade = document.getElementById("exGrade");
+  var indice = document.getElementById("exIndice");
+  var vazio = document.getElementById("exVazio");
+  var mais = document.getElementById("exMais");
+  mais.textContent = T.MOSTRAR_MAIS;
+
+  function linkLimpar() {
+    var a = el("a", "ex-limpar", T.LIMPAR_FILTROS);
+    a.href = "./" + (estado.vista === "indice" ? "?vista=indice" : "");
+    a.addEventListener("click", function (ev) { ev.preventDefault(); irPara({}, estado.vista); });
+    return a;
   }
 
-  // [rodada editorial] `?colecao=<chave>` — o "ver todos" da coleção do
-  // dia da home. Mostra só os filmes da coleção, pela MESMA regra da home
-  // (`prateleirasBase` de selecao.js, sobre js/indice.js, com a mesma lista
-  // de exclusão). Chave desconhecida, ou sem os scripts, não filtra nada.
-  var colecao = new URLSearchParams(location.search).get("colecao");
-  var SEL = window.ESPECTRO_SELECAO, TXT = window.ESPECTRO_TEXTOS;
-  if (colecao && INDICE && SEL) {
-    var alvo = SEL.prateleirasBase(INDICE.filmes).filter(function (c) {
-      return c.chave === colecao;
-    })[0];
-    if (alvo) {
-      var naColecao = {};
-      alvo.filmes.forEach(function (f) { naColecao[f.slug] = true; });
-      todos.forEach(function (el) {
-        if (!naColecao[el.dataset.slug]) el.dataset.foraDaLeva = "1";
-        el.hidden = !!el.dataset.foraDaLeva;
+  function cartao(f) {
+    var li = el("li");
+    li.appendChild(C.cartao(f, null, "(max-width: 699px) 100vw, 33vw",
+                            T.partesDiretorAno, 0, RAIZ));
+    return li;
+  }
+
+  var recorte = [];
+
+  function atualizarPaginacao() {
+    var n = Math.min(mostrados, recorte.length);
+    contador.textContent = T.contadorDaPagina(n, recorte.length);
+    mais.hidden = n >= recorte.length;
+  }
+
+  function renderGrade() {
+    grade.innerHTML = "";
+    recorte.slice(0, mostrados).forEach(function (f) { grade.appendChild(cartao(f)); });
+    atualizarPaginacao();
+  }
+
+  function renderIndice() {
+    indice.innerHTML = "";
+    X.indiceAZ(recorte).forEach(function (g) {
+      var sec = el("section", "ex-indice__grupo");
+      sec.appendChild(el("h2", "ex-indice__letra", g.letra));
+      var ul = el("ul", "ex-indice__lista");
+      g.filmes.forEach(function (f) {
+        var li = el("li", "ex-indice__linha");
+        li.dataset.slug = f.slug;
+        var a = el("a", "ex-indice__titulo", f.titulo);
+        a.href = RAIZ + "filme.html?slug=" + encodeURIComponent(f.slug);
+        li.appendChild(a);
+        var meta = [f.ano ? String(f.ano) : null, f.diretor].filter(Boolean).join(T.SEPARADOR);
+        if (meta) li.appendChild(el("span", "ex-indice__meta", meta));
+        ul.appendChild(li);
       });
-      if (microcopy) {
-        var nome = TXT ? TXT.tituloDaPrateleira(alvo.chave) : alvo.chave;
-        microcopy.textContent = alvo.filmes.length + " filmes · " + nome + " · ";
-        var completo = document.createElement("a");
-        completo.href = "./";
-        completo.textContent = "ver o catálogo completo";
-        microcopy.appendChild(completo);
-      }
-    }
-  }
-
-  function filtrar() {
-    var q = norm(input.value.trim());
-    if (!q) {
-      todos.forEach(function (el) { el.hidden = !!el.dataset.foraDaLeva; });
-      hint.classList.remove("is-visible");
-      hint.textContent = "";
-      return;
-    }
-    var n = 0;
-    todos.forEach(function (el) {
-      var casa = el.dataset.busca.indexOf(q) !== -1 && !el.dataset.foraDaLeva;
-      el.hidden = !casa;
-      if (casa) n++;
+      sec.appendChild(ul);
+      indice.appendChild(sec);
     });
-    // A mensagem diz o que NÃO casou, em vez de fingir que a funcionalidade
-    // não existe — era esse o defeito do "Busca em breve".
-    hint.textContent = n
-      ? n + (n === 1 ? " filme encontrado" : " filmes encontrados")
-      : "Nada com \u201C" + input.value.trim() + "\u201D — a busca cobre o "
-        + "título e os eixos em destaque de cada análise.";
-    hint.classList.add("is-visible");
+    contador.textContent = T.contadorDaPagina(recorte.length, recorte.length);
+    mais.hidden = true;
   }
 
-  input.addEventListener("input", filtrar);
-  input.addEventListener("focus", function () { if (input.value) filtrar(); });
+  function render() {
+    var f = estado.filtros;
+    recorte = X.ordenarPadrao(X.filtrar(FILMES, f));
+
+    FILTROS.forEach(function (fi) {
+      var v = f[fi.chave] == null ? "" : String(f[fi.chave]);
+      var sel = selects[fi.chave];
+      // valor da URL fora das opções: o chip mostra; o select fica em "qualquer"
+      sel.value = [].some.call(sel.options, function (o) { return o.value === v; }) ? v : "";
+    });
+
+    chips.innerHTML = "";
+    var ativos = ["colecao", "decada", "genero", "pais", "desde"].filter(function (k) {
+      return f[k] != null;
+    });
+    ativos.forEach(function (k) {
+      var chip = el("span", "ex-chip");
+      chip.dataset.filtro = k;
+      var nome = nomeDoFiltro(k, f[k]);
+      chip.appendChild(el("span", "ex-chip__nome", nome));
+      var x = el("button", "ex-chip__remover", "×");
+      x.type = "button";
+      x.setAttribute("aria-label", T.REMOVER_FILTRO + ": " + nome);
+      x.addEventListener("click", function () { irPara(semFiltro(k), estado.vista); });
+      chip.appendChild(x);
+      chips.appendChild(chip);
+    });
+    if (ativos.length > 1) chips.appendChild(linkLimpar());
+    chips.hidden = !ativos.length;
+
+    Object.keys(botoesVista).forEach(function (v) {
+      var b = botoesVista[v];
+      b.href = "./" + X.urlDosFiltros(f, v);
+      b.setAttribute("aria-current", v === estado.vista ? "true" : "false");
+      b.classList.toggle("is-ativa", v === estado.vista);
+    });
+
+    vazio.innerHTML = "";
+    vazio.hidden = recorte.length > 0;
+    if (!recorte.length) {
+      vazio.appendChild(el("span", null, T.FILTRO_VAZIO + " "));
+      vazio.appendChild(linkLimpar());
+    }
+
+    var emIndice = estado.vista === "indice";
+    grade.hidden = emIndice || !recorte.length;
+    indice.hidden = !emIndice || !recorte.length;
+    contador.hidden = !recorte.length;
+    if (emIndice) { grade.innerHTML = ""; renderIndice(); }
+    else { indice.innerHTML = ""; renderGrade(); }
+    if (!recorte.length) mais.hidden = true;
+  }
+
+  mais.addEventListener("click", function () {
+    var antes = Math.min(mostrados, recorte.length);
+    mostrados += X.PAGINA;
+    recorte.slice(antes, mostrados).forEach(function (f) { grade.appendChild(cartao(f)); });
+    atualizarPaginacao();
+  });
+
+  window.addEventListener("popstate", function () {
+    estado = X.lerFiltros(location.search);
+    mostrados = X.PAGINA;
+    render();
+  });
+
+  render();
 })();

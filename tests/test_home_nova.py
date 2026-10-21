@@ -394,8 +394,12 @@ def test_recem_chegados_reais_e_link_para_filmes_filtrado():
     assert {f["slug"] for f in out["hoje"]["filmes"]} <= {f["slug"] for f in out["r"]["filmes"]}
     fonte = (JS / "inicio.js").read_text(encoding="utf-8")
     assert '"?desde=" + r.desde' in fonte
-    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
-    assert 'get("desde")' in cat and "foraDaLeva" in cat
+    # [rodada Explorar] /filmes lê `?desde=` por explorar.js (era o recorte
+    # `foraDaLeva` do mosaico em catalogo.js); o filtro tem teste próprio
+    # em test_explorar.py
+    exp = (JS / "explorar.js").read_text(encoding="utf-8")
+    assert 'p.get("desde")' in exp and "filtros.desde" in exp
+    assert "X.lerFiltros(location.search)" in (JS / "catalogo.js").read_text(encoding="utf-8")
 
 
 @precisa_node

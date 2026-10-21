@@ -15,7 +15,8 @@ frontend/
   index.html        Home editorial: cabeçalho (busca, Filmes, Método),
                     manchete (filme do dia), coleção do dia, recém-
                     chegados, link para /filmes (lê só js/indice.js)
-  filmes/index.html Catálogo completo — o mosaico que era a home (rota /filmes)
+  filmes/index.html Explorar (rota /filmes): filtros, grade de stills,
+                    Índice A–Z (lê só js/indice.js)
   filme.html        Tela do filme (lê ?slug=<slug>)
   css/styles.css    Design system (dark, gradiente, 3 famílias de fonte)
   js/data.js        DADOS EMBUTIDOS (gerado — não editar à mão)
@@ -24,7 +25,10 @@ frontend/
   js/selecao.js     Filme do dia, coleções, recém-chegados (puro)
   js/textos_home.js Toda a prosa da home, inclusive os templates
   js/inicio.js      Apresentação da home (só DOM e eventos)
-  js/catalogo.js    Mosaico + filtro de /filmes (era js/home.js)
+  js/explorar.js    Explorar: contagens, filtros, URL, ordem, Índice (puro)
+  js/cabecalho.js   Cabeçalho comum (nome, links, busca)
+  js/cartoes.js     Cartão de still com hover (home e /filmes)
+  js/catalogo.js    Apresentação de /filmes (só DOM e eventos)
   js/filme.js       Renderiza ficha, narrativa, grupos, temas, modo degradado
   js/survey.js      Micro-pesquisa A/B (localStorage + copiar feedback)
   data/*.json       Cópia crua dos JSONs (referência; o site usa data.js)

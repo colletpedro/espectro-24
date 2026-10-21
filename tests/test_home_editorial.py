@@ -251,10 +251,10 @@ def test_indice_da_home_sem_campo_de_poster():
 
 
 def test_a_apresentacao_da_home_nao_monta_poster():
-    """[rodada Explorar] Cobre também cartoes.js e cabecalho.js, que montam
-    cartões e links da home."""
+    """[rodada Explorar] Cobre também cartoes.js, cabecalho.js e catalogo.js
+    (/filmes), que montam cartões e links da home e do catálogo."""
     fontes_js = INICIO + CARTOES + "".join(
-        (JS / n).read_text(encoding="utf-8") for n in ("cabecalho.js", "explorar.js"))
+        (JS / n).read_text(encoding="utf-8") for n in ("cabecalho.js", "catalogo.js", "explorar.js"))
     codigo = re.sub(r"/\*.*?\*/|//[^\n]*", "", fontes_js, flags=re.S)
     assert "poster_" not in codigo
     assert "P.montar" not in codigo            # montar, montarBackdrop, montarHeroFaixa
@@ -370,10 +370,13 @@ def test_hover_troca_a_cada_1200ms_e_respeita_movimento_reduzido():
 
 def test_ver_todos_da_colecao_abre_filmes_filtrado():
     assert '"?colecao=" + encodeURIComponent(cd.colecao.chave)' in INICIO
-    cat = (JS / "catalogo.js").read_text(encoding="utf-8")
-    assert 'get("colecao")' in cat and "SEL.prateleirasBase(INDICE.filmes)" in cat
+    # [rodada Explorar] o filtro de coleção de /filmes mora em explorar.js
+    # (era catalogo.js), com a MESMA regra da home: `S.prateleirasBase`
+    exp = (JS / "explorar.js").read_text(encoding="utf-8")
+    assert 'p.get("colecao")' in exp and "S.prateleirasBase(filmes)" in exp
     filmes = (FRONT / "filmes" / "index.html").read_text(encoding="utf-8")
-    for js in ("indice.js", "busca.js", "selecao.js", "textos_home.js"):
+    for js in ("indice.js", "busca.js", "selecao.js", "textos_home.js", "explorar.js",
+               "cartoes.js"):
         assert filmes.index(js) < filmes.index("catalogo.js"), js
 
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo completo — Espectro 24</title>
+  <title>Explorar — Espectro 24</title>
   <meta name="description" content="A recepção completa de um filme — o que quem odiou, quem amou e quem ficou no meio diz — sem nota média e sem spoilers.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Espectro 24">
@@ -16,52 +16,49 @@
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-raiz="../">
   <div class="spectrum-bar spectrum-bar--segmented" aria-hidden="true" id="brandBar"></div>
 
-  <div class="wrap topbar">
-    <a class="back-link" href="../index.html">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      Início
-    </a>
-  </div>
+  <!-- [rodada Explorar] /filmes é a página EXPLORAR: o mesmo cabeçalho da
+       home (js/cabecalho.js), filtros por assunto, década, gênero e país
+       (AND, todos na URL), chips removíveis, grade de stills 16:9 (nunca
+       pôster) com 24 por vez, e a vista Índice A–Z. Lê só js/indice.js. -->
+  <header class="ed-cabecalho">
+    <div class="ed-cabecalho__linha">
+      <a class="ed-cabecalho__nome" id="edNome" href="../index.html"></a>
 
-  <main class="home-main">
-    <section class="home-hero wrap">
-      <p class="tagline">24 quadros · 3 grupos · 0 spoilers</p>
-      <h1 class="home-title">Espectro <span class="num">24</span></h1>
-
-      <form class="search" role="search" autocomplete="off" onsubmit="return false;">
+      <div class="search busca ed-cabecalho__busca" id="buscaCaixa" role="search">
         <span class="search__icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </span>
-        <input id="search" type="text" name="q" placeholder="Buscar por título ou eixo (ritmo, atuação…)" aria-describedby="searchHint">
-        <p class="search__hint" id="searchHint" role="status" aria-live="polite"></p>
-      </form>
+        <label class="visually-hidden" for="busca">Buscar filme</label>
+        <input id="busca" type="text" autocomplete="off" spellcheck="false"
+               role="combobox" aria-autocomplete="list" aria-expanded="false"
+               aria-controls="buscaResultados">
+        <ul class="busca__resultados" id="buscaResultados" role="listbox" aria-label="Resultados da busca" hidden></ul>
+        <p class="busca__vazia" id="buscaVazia" role="status" aria-live="polite" hidden></p>
+      </div>
 
-      <p class="home-microcopy" id="homeMicrocopy">busca por título ou eixo</p>
-    </section>
+      <nav class="ed-cabecalho__nav" aria-label="Seções">
+        <a id="edLinkFilmes" href="./" aria-current="page"></a>
+        <a id="edLinkMetodo" href="../creditos.html#cred-metodo"></a>
+      </nav>
+    </div>
+  </header>
 
-    <section class="mosaic-wrap" aria-labelledby="availLabel">
-      <h2 class="visually-hidden" id="availLabel">Disponíveis agora</h2>
-      <div class="mosaic" id="filmCards"></div>
-      <!-- [v1.9.26] A legenda vira GLOSSÁRIO — decisão de produto, e o caso
-           de fronteira que fechou o critério "rótulo troca, prosa mantém"
-           da Entrega 3 (ver SPEC.md §0, "SEGUNDA EXCEÇÃO DELIBERADA").
-           Ela não cai limpo dos dois lados: é a legenda da faixa (função de
-           RÓTULO, que trocaria) escrita como enumeração dentro de uma frase
-           corrida (forma de PROSA, que manteria). As duas saídas puras eram
-           ruins — trocar seco ("...do filme: HATERS, MIXED, FANS") destrói a
-           única função que a legenda tem, que é EXPLICAR a faixa a quem
-           acabou de chegar; manter como estava cria descompasso com todas as
-           páginas de filme, onde os grupos já se chamam outra coisa.
-           A legenda é justamente onde o vocabulário novo se ENSINA: o rótulo
-           vem primeiro, a glosa entre parênteses logo atrás, e o leitor sai
-           daqui sabendo ler as páginas de filme. As cores de grupo ficam. -->
-      <p class="mosaic-hint">sem nota, sem spoiler — a faixa na base de cada quadro é a distribuição real do filme:
-        <span class="mosaic-hint__neg">HATERS</span> (quem não gostou),
-        <span class="mosaic-hint__med">MIXED</span> (quem ficou no meio),
-        <span class="mosaic-hint__pos">FANS</span> (quem gostou).</p>
+  <main class="ed-main">
+    <section class="ex ed-largura" aria-labelledby="exTitulo">
+      <div class="ex-topo">
+        <h1 class="ex-titulo" id="exTitulo"></h1>
+        <div class="ex-vistas" id="exVistas" role="group" aria-label="Vista"></div>
+      </div>
+      <form class="ex-filtros" id="exFiltros" onsubmit="return false;"></form>
+      <div class="ex-chips" id="exChips"></div>
+      <p class="ex-contador" id="exContador" role="status" aria-live="polite"></p>
+      <ul class="ex-grade" id="exGrade"></ul>
+      <div class="ex-indice" id="exIndice" hidden></div>
+      <p class="ex-vazio" id="exVazio" hidden></p>
+      <button class="ex-mais" id="exMais" type="button" hidden></button>
     </section>
   </main>
 
@@ -78,12 +75,14 @@
     </div>
   </footer>
 
-  <script src="../js/data.js"></script>
   <script src="../js/indice.js"></script>
   <script src="../js/poster.js"></script>
   <script src="../js/busca.js"></script>
   <script src="../js/selecao.js"></script>
   <script src="../js/textos_home.js"></script>
+  <script src="../js/explorar.js"></script>
+  <script src="../js/cartoes.js"></script>
+  <script src="../js/cabecalho.js"></script>
   <script src="../js/catalogo.js"></script>
 </body>
 </html>
