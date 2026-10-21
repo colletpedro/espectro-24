@@ -117,7 +117,16 @@
       "titulo_tmdb_correspondente": "Django Unchained",
       "ano_tmdb": 2012,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 3499724,

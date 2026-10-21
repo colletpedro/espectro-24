@@ -116,7 +116,12 @@
       "titulo_tmdb_correspondente": "Sátántangó",
       "ano_tmdb": 1994,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DE",
+      "HU",
+      "CH"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 45536,

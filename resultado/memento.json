@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "Memento",
       "ano_tmdb": 2000,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2181151,

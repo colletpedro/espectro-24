@@ -104,6 +104,11 @@
         "still_largura": 1920,
         "still_altura": 1080
       }
+    ],
+    "paises": [
+      "CN",
+      "GB",
+      "US"
     ]
   },
   "distribuicao": {

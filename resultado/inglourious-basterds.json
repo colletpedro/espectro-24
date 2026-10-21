@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "Inglourious Basterds",
       "ano_tmdb": 2009,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DE",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 3950699,

@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Se7en",
       "ano_tmdb": 1995,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 3976785,

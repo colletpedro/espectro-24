@@ -116,7 +116,10 @@
       "titulo_tmdb_correspondente": "12 Angry Men",
       "ano_tmdb": 1957,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1730346,

@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "Get Out",
       "ano_tmdb": 2017,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4739915,

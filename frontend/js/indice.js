@@ -31,7 +31,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2026-06-25",
-   "entrada": "2026-07-20"
+   "entrada": "2026-07-20",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/mCRRIzvGBDkzmKpuS2MyejDHHCF.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "12-angry-men",
@@ -60,7 +69,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "1957-04-10",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/cluD120ZWH3mYDHDVVcNJNYfgrC.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "2001-a-space-odyssey",
@@ -89,7 +107,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "1968-04-02",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/9ntblcdsqyUj99RbfTTN973DZvx.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "500-days-of-summer",
@@ -118,7 +146,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2009-07-17",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/Ab0wdaoQ7WtWr7Hhj2OezTx4Ju3.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "a-brighter-summer-day",
@@ -152,7 +189,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "ritmo",
    "estreia": "1991-07-27",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "TW"
+   ],
+   "logo": {
+    "path": "/lNzPGatbAcNxPpcK7Zp9LDRj3jk.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "aftersun",
@@ -181,7 +227,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2022-10-21",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/hZCqSZbRUSUyWIXglKtwuoM0AiV.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "all-quiet-on-the-western-front-2022",
@@ -210,7 +266,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2022-10-07",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "DE"
+   ],
+   "logo": {
+    "path": "/5BI2vscWdROnvRlYibNjr1FOpDf.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "anatomy-of-a-fall",
@@ -244,7 +309,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "ritmo",
    "estreia": "2023-08-23",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "FR"
+   ],
+   "logo": {
+    "path": "/fDgEeNkyUPBGzovS98t899SIdhN.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "anatomy-of-a-murder",
@@ -273,7 +347,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "1959-07-01",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/j7zUJ1Oh2isTuMjVDgLGnAPjXIZ.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "arrival-2016",
@@ -302,7 +385,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2016-11-10",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/aKFYSSTPkReVysTEWrE3yaqmcMS.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "avengers-endgame",
@@ -331,7 +423,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2019-04-24",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/8gmwT4NJ68ZtZEVpPWlPEdZOXa8.png",
+    "idioma": "pt-BR",
+    "classe": "escuro_cor"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "barbie",
@@ -365,7 +466,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "critica_social",
    "estreia": "2023-07-19",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/nsMnkuWIZCBxkBLPi0ZXuRloYL2.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "bones-and-all",
@@ -394,7 +505,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2022-11-18",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "IT",
+    "US"
+   ],
+   "logo": {
+    "path": "/bL5uoEftrLACHEG3vVCWkmTwqAF.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "burning-2018",
@@ -423,7 +544,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2018-05-17",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "KR",
+    "JP"
+   ],
+   "logo": {
+    "path": "/bILH1xVdtoAPt087S0Of3dWmQma.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "cars",
@@ -452,7 +583,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "expectativa",
    "estreia": "2006-06-08",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/jrZp7apZ5hPvrMdOG3NPjPP7VNG.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "catch-me-if-you-can-2002",
@@ -481,7 +621,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2002-12-16",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/r6Vr1kPwEyhX03xhMZCvhUSfnhB.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "cats-2019",
@@ -515,7 +664,18 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "som_trilha",
    "estreia": "2019-12-19",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "CN",
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/fsdazyxTF9lrY6aqcbYbpuhRcfC.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "chinatown",
@@ -542,7 +702,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "1974-06-20",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/os83qvlIUOhU8wjajznIlv4v9tC.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "cidade-de-deus",
@@ -571,7 +740,18 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2002-08-30",
-   "entrada": "2026-07-20"
+   "entrada": "2026-07-20",
+   "paises": [
+    "BR",
+    "FR",
+    "DE"
+   ],
+   "logo": {
+    "path": "/2pcA81BO9viDv8OXo2SMCCL4cBk.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "cujo",
@@ -600,7 +780,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "1983-08-10",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/fxBkTUvznm3BMeSGYJDBsOcdOPb.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "cure",
@@ -634,7 +823,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "tom_atmosfera",
    "estreia": "1997-12-27",
-   "entrada": "2026-07-20"
+   "entrada": "2026-07-20",
+   "paises": [
+    "JP"
+   ],
+   "logo": {
+    "path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "district-9",
@@ -663,7 +861,18 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2009-08-05",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "NZ",
+    "ZA",
+    "US"
+   ],
+   "logo": {
+    "path": "/gneH6YMq0WKVBLBXO8rzf1YBerp.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "django-unchained",
@@ -692,7 +901,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2012-12-25",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "do-the-right-thing",
@@ -721,7 +939,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "1989-06-14",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/wOEgtn3ACdItTa88Pt8kof4wndV.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
@@ -750,7 +977,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "1964-01-29",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/a99uuyz8q0JCPHN4RfQmHfM5PI4.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "drive-my-car",
@@ -779,7 +1016,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "2021-08-18",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "JP"
+   ],
+   "logo": {
+    "path": "/hMiu2LVznsq8rgHLW6patHsIu6j.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "dune-2021",
@@ -808,7 +1054,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2021-09-15",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/2hY4HZrW6Ym8kZj34dVhOHLLnNh.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "dune-part-two",
@@ -837,7 +1092,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2024-02-27",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/eYvF1LhPKuoBxOAmWjFTAK7EPWl.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "eighth-grade",
@@ -866,7 +1130,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2018-01-19",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/mtBjMCwFlv8smc8hd0BRclfh1xZ.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "everything-everywhere-all-at-once",
@@ -895,7 +1168,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2022-03-24",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/mFA3RihM8JjIbVAPowmES4ZJxMo.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "fight-club",
@@ -924,7 +1206,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "1999-10-15",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "DE",
+    "US"
+   ],
+   "logo": {
+    "path": "/lyFSC5i078jk12aNH4wUCNbCV8e.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "force-majeure-2014",
@@ -955,7 +1247,19 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2014-08-15",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "DK",
+    "FR",
+    "NO",
+    "SE"
+   ],
+   "logo": {
+    "path": "/7bcd9abkjgVVTrR1z3MrHSMI9Y3.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "friday-the-13th-2009",
@@ -984,7 +1288,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2009-02-11",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/DkMLTZBaz55DssxhHJQiVZLIMS.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "get-out-2017",
@@ -1013,7 +1326,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "expectativa",
    "estreia": "2017-02-24",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "gladiator-2000",
@@ -1047,7 +1369,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "atuacao",
    "estreia": "2000-05-04",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/n5Mwi61zHyCk26YHRrwCNvP0Sf3.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "goodfellas",
@@ -1076,7 +1408,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "1990-09-12",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/d4zBnh2AlvT9vStIjceZAyvcBak.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "guillermo-del-toros-pinocchio",
@@ -1105,7 +1446,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2022-11-09",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/sFHqRdrAw1xvX8ltoJkyAVsHjPh.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "happy-hour-2015-1",
@@ -1129,7 +1479,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "2015-12-12",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "JP"
+   ],
+   "logo": {
+    "path": "/9KywbVkZgLnSSF5zxQfFIVvaaYf.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "hard-to-be-a-god",
@@ -1155,7 +1514,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2014-02-27",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "RU"
+   ],
+   "logo": {
+    "path": "/3oE8aYKwwYeMybQeOi5uv4nbeI4.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "hereditary",
@@ -1184,7 +1552,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2018-06-07",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US",
+    "GB"
+   ],
+   "logo": {
+    "path": "/fXhfzLMyJCNYpnP61kyF4haGfAI.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "im-still-here-2024",
@@ -1213,7 +1591,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2024-09-19",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "BR",
+    "FR"
+   ],
+   "logo": {
+    "path": "/mNEinPcj374nOKwbxCCRQCaQO8J.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "incendies",
@@ -1242,7 +1630,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2010-09-17",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "CA",
+    "FR"
+   ],
+   "logo": {
+    "path": "/jDADVUZdWCTArACWXIdiedbfi1i.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "inception",
@@ -1271,7 +1669,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2010-07-15",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/xxgYI7UcYiFalWa8EimBSoc7dlT.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "inglourious-basterds",
@@ -1300,7 +1708,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2009-08-02",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "DE",
+    "US"
+   ],
+   "logo": {
+    "path": "/ckZoF4j35HL1USGG2iX8GeQ7058.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "interstellar",
@@ -1329,7 +1747,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
    "estreia": "2014-11-04",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/7GN6eZ1xw4apwobsmohLtgZB6K6.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "joker-2019",
@@ -1358,7 +1786,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2019-10-01",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "CA",
+    "US"
+   ],
+   "logo": {
+    "path": "/ckRklE1gzQUzdVQ8BaKL652oO7V.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "joker-folie-a-deux",
@@ -1387,7 +1825,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2024-10-01",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/gIOXjK4tS7cYemLEe0w5HuiUGH9.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "la-haine",
@@ -1416,7 +1863,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "1995-05-31",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "FR"
+   ],
+   "logo": {
+    "path": "/8VWm0tNRtt8VjYI4efiMeodKfW0.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "longlegs",
@@ -1445,7 +1901,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2024-07-10",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "CA",
+    "US"
+   ],
+   "logo": {
+    "path": "/gmNwiZjD9CkbcNhqVD2UZpkS9qJ.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "mad-max-fury-road",
@@ -1474,7 +1940,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2015-05-13",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "AU",
+    "US"
+   ],
+   "logo": {
+    "path": "/1XYQTYx4kcIhzNwSttv9xooioeI.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "malcolm-x-1992",
@@ -1506,7 +1982,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "critica_social",
    "estreia": "1992-11-18",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US",
+    "AN"
+   ],
+   "logo": {
+    "path": "/hmsi0KPsXxyqxSOOxM2YQaakU4W.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "marty-supreme",
@@ -1535,7 +2021,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2025-12-19",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/37hfr9UXKAfXRNmps8BO5cuAO9J.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "memento",
@@ -1564,7 +2059,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2000-10-11",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/w5Wpi1sRP6CZd6fbNHPJ8LTTU8O.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "memories-of-murder",
@@ -1593,7 +2097,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2003-04-25",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "KR"
+   ],
+   "logo": {
+    "path": "/uzVGePBZLsdzeMUJArknO5TsB78.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "mother-2017",
@@ -1622,7 +2135,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2017-09-13",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/5NirokqjePXDkbGmdnhfLzXHKh5.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "napoleon-2023",
@@ -1651,7 +2173,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2023-11-22",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/dkjivK8Mm7f3m8BtmueCZJuanbw.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "neighboring-sounds",
@@ -1677,7 +2208,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2012-11-19",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "BR"
+   ],
+   "logo": {
+    "path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "obsession-2025",
@@ -1711,7 +2251,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2026-05-13",
-   "entrada": "2026-09-08"
+   "entrada": "2026-09-08",
+   "paises": [
+    "US",
+    "GB"
+   ],
+   "logo": {
+    "path": "/3iwqmEyyMGawO30DQd19kBXqAZA.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "oppenheimer-2023",
@@ -1745,7 +2295,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "ritmo",
    "estreia": "2023-07-19",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/e0NcrovoxPi2ZI7rTFzymjN96U8.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "parasite-2019",
@@ -1774,7 +2334,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2019-05-30",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "KR"
+   ],
+   "logo": {
+    "path": "/rRj7LWPPl9ASsSy5Cehq32FegIa.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "pearl-2022",
@@ -1803,7 +2372,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2022-09-16",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/wNp1gb3OkXN5VyngQU06uzBsvt0.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "perfect-days-2023",
@@ -1832,7 +2410,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2023-11-10",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "DE",
+    "JP"
+   ],
+   "logo": {
+    "path": "/2VSRdZhkQ4Dqs4lR1pKr4CEsF2Q.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "pinocchio-2022",
@@ -1866,7 +2454,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "comparacoes",
    "estreia": "2022-09-07",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/hQbVaYetCKr4RM4fADzL7ihKCQO.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "porco-rosso",
@@ -1895,7 +2492,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "1992-07-18",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "JP"
+   ],
+   "logo": {
+    "path": "/5XkvUkROBNlIfsSiCHzir8IKpqI.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "portrait-of-a-lady-on-fire",
@@ -1924,7 +2530,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2019-09-06",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "FR"
+   ],
+   "logo": {
+    "path": "/9yGHOV8NmNzkwBn3wXrB5IgaaNH.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "princess-mononoke",
@@ -1953,7 +2568,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "expectativa",
    "estreia": "1997-07-12",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "JP"
+   ],
+   "logo": {
+    "path": "/a87lLp1CUwGDn4mfDyxbyYsz4A7.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "prisoners",
@@ -1991,7 +2615,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "atuacao",
    "estreia": "2013-09-19",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/slGwR0Xq2OSeHOT4bY7LIIrg5hS.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "satantango",
@@ -2025,7 +2658,18 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "ritmo",
    "estreia": "1994-04-28",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "DE",
+    "HU",
+    "CH"
+   ],
+   "logo": {
+    "path": "/1KME4tIFqEPl5XwRnV6WlcwjsRH.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "se7en",
@@ -2054,7 +2698,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "expectativa",
    "estreia": "1995-09-22",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/xqMDJ8aFKn0YpajNnFtyi1ZscmN.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "shutter-island",
@@ -2083,7 +2736,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2010-02-14",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/8Nd8wAHEhFvWZ782Frnb2p9X01w.png",
+    "idioma": "pt-BR",
+    "classe": "escuro_cor"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "sinners-2025",
@@ -2112,7 +2774,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
    "estreia": "2025-04-16",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/d7pA3cdwXiGaiHrGiBtIRTfMvWk.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "soul-2020",
@@ -2146,7 +2817,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "expectativa",
    "estreia": "2020-12-25",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/x0zdKfh6qqud6BZAITgP6zhmE1g.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "speak-no-evil-2022",
@@ -2175,7 +2855,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2022-03-17",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "DK",
+    "NL"
+   ],
+   "logo": {
+    "path": "/2KZ7lGvEnMKKcYyjpzx5vuAYOAj.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "spider-man-across-the-spider-verse",
@@ -2204,7 +2894,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2023-05-31",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/yucbV7s34jCNRAfqOEiyOSPvIkT.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "talk-to-me-2022",
@@ -2233,7 +2932,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2023-07-26",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "AU",
+    "GB"
+   ],
+   "logo": {
+    "path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-battle-of-algiers",
@@ -2267,7 +2976,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "critica_social",
    "estreia": "1966-09-08",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "IT",
+    "DZ"
+   ],
+   "logo": {
+    "path": "/mVSoOqDUIspvRduxoiWwnHziace.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "the-brutalist",
@@ -2296,7 +3015,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "2024-12-20",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/isrOcpeplAtUoxBBV469GMBBVCW.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-cloud-capped-star",
@@ -2320,7 +3049,12 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
    "estreia": "1960-04-13",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "IN"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-gentlemen",
@@ -2349,7 +3083,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2020-01-01",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/863trX5l5X2H1IvJjV1R3cYe8Y7.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-godfather",
@@ -2378,7 +3122,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "1972-03-14",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/nWjlUrwVcSPHvbF7frdx0cKBAHl.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-hateful-eight",
@@ -2407,7 +3160,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "2015-12-25",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/viU3jzYsvR94YZcV4fINkx10NeR.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-northman",
@@ -2436,7 +3198,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2022-04-07",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/wRUsm1am2uilmEDCrJ9rJJ9uFJd.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "the-prestige",
@@ -2465,7 +3236,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "roteiro_estrutura",
    "estreia": "2006-10-19",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-revenant-2015",
@@ -2494,7 +3275,19 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "direcao_imagem",
    "estreia": "2015-12-25",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "CA",
+    "HK",
+    "TW",
+    "US"
+   ],
+   "logo": {
+    "path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-second-mother",
@@ -2520,7 +3313,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2015-06-04",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "BR"
+   ],
+   "logo": {
+    "path": "/dvYqCaQflbvC8J2o9fLnKWEyfbG.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-spongebob-movie-search-for-squarepants",
@@ -2549,7 +3351,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "2025-12-16",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/qCS7gkIz0t37kMj183F4xVvDkDs.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-substance",
@@ -2583,7 +3394,18 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "critica_social",
    "estreia": "2024-09-18",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "FR",
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/tl8Bpz1Q3y2AVhzHCazGCcIguQQ.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-swimming-pool",
@@ -2617,7 +3439,17 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "atuacao",
    "estreia": "1969-01-31",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "FR",
+    "IT"
+   ],
+   "logo": {
+    "path": "/gKT2fMi5curdg4V77MuPOE60Lzd.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "the-truman-show",
@@ -2646,7 +3478,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "expectativa",
    "estreia": "1998-06-04",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/g4NnPHqujkLrpO9u64jmMWSgfcb.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-turin-horse",
@@ -2672,7 +3513,20 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "ritmo",
    "estreia": "2011-03-31",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "HU",
+    "CH",
+    "FR",
+    "DE",
+    "US"
+   ],
+   "logo": {
+    "path": "/5YnrSw3cn439D2AstdBMRnoyT9c.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   },
   {
    "slug": "the-wailing",
@@ -2701,7 +3555,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "tom_atmosfera",
    "estreia": "2016-05-12",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "KR",
+    "US"
+   ],
+   "logo": {
+    "path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-wolf-of-wall-street",
@@ -2730,7 +3594,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "critica_social",
    "estreia": "2013-12-25",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/1VdpZBlBC59xgqYRdqwv1P6ufOR.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "top-gun-maverick",
@@ -2764,7 +3637,16 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "comparacoes",
    "estreia": "2022-05-21",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/wbuiGa8NTw6uOkjzWsszXNUIqHP.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "uncut-gems",
@@ -2793,7 +3675,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "impacto_emocional",
    "estreia": "2019-12-13",
-   "entrada": "2026-09-17"
+   "entrada": "2026-09-17",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/f1IJSjZuAbPYdTSsq1iQyWUIjO5.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "whiplash-2014",
@@ -2822,7 +3713,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "atuacao",
    "estreia": "2014-10-10",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/6CPHlVEUXysNUTNI0iucYgQEApt.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "wicked-2024",
@@ -2851,7 +3751,16 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
    "estreia": "2024-10-16",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "US"
+   ],
+   "logo": {
+    "path": "/ms75wl4cMU8zhXG4QwwCdaWlzLT.png",
+    "idioma": "pt-BR",
+    "classe": "escuro_cor"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "woman-of-fire",
@@ -2875,7 +3784,12 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "comparacoes",
    "estreia": "1971-04-01",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "KR"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "wonka",
@@ -2904,7 +3818,17 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [],
    "assunto_comum": "som_trilha",
    "estreia": "2023-12-06",
-   "entrada": "2026-08-22"
+   "entrada": "2026-08-22",
+   "paises": [
+    "GB",
+    "US"
+   ],
+   "logo": {
+    "path": "/cUzMzh1XrairgWBeD53LnwBKx0z.png",
+    "idioma": "pt-BR",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "zama",
@@ -2937,7 +3861,25 @@ window.ESPECTRO_INDICE = {
    ],
    "assunto_comum": "direcao_imagem",
    "estreia": "2017-09-28",
-   "entrada": "2026-09-14"
+   "entrada": "2026-09-14",
+   "paises": [
+    "AR",
+    "BR",
+    "ES",
+    "PT",
+    "MX",
+    "FR",
+    "LB",
+    "NL",
+    "US",
+    "DO"
+   ],
+   "logo": {
+    "path": "/a3PpPJ71VhO9B98fnjAKB6yXMpI.png",
+    "idioma": "en",
+    "classe": "claro"
+   },
+   "titulo_difere_do_logo": true
   }
  ]
 };

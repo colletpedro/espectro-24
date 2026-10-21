@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "Inception",
       "ano_tmdb": 2010,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ],
+    "logo": {
+      "path": "/xxgYI7UcYiFalWa8EimBSoc7dlT.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4448995,

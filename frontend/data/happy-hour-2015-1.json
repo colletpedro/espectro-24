@@ -94,7 +94,16 @@
       "titulo_tmdb_correspondente": "Happy Hour",
       "ano_tmdb": 2015,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "JP"
+    ],
+    "logo": {
+      "path": "/9KywbVkZgLnSSF5zxQfFIVvaaYf.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 14888,

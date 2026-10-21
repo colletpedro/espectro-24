@@ -120,7 +120,16 @@
       "titulo_tmdb_correspondente": "The SpongeBob Movie: Search for SquarePants",
       "ano_tmdb": 2025,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/qCS7gkIz0t37kMj183F4xVvDkDs.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 108354,

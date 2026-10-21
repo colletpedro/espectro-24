@@ -103,7 +103,16 @@
         "still_largura": 1384,
         "still_altura": 778
       }
-    ]
+    ],
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/5NirokqjePXDkbGmdnhfLzXHKh5.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 884774,

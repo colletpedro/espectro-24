@@ -101,7 +101,16 @@
       "titulo_tmdb_correspondente": "The Second Mother",
       "ano_tmdb": 2015,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "BR"
+    ],
+    "logo": {
+      "path": "/dvYqCaQflbvC8J2o9fLnKWEyfbG.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 149576,

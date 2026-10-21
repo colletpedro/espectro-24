@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "Chinatown",
       "ano_tmdb": 1974,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/os83qvlIUOhU8wjajznIlv4v9tC.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 521462,

@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "Gladiator",
       "ano_tmdb": 2000,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2314890,

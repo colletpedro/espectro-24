@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "Cujo",
       "ano_tmdb": 1983,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 77285,

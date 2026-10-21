@@ -1,0 +1,4 @@
+{
+ "_leia": "Override manual da classe de contraste do logo, por slug (lido por scripts/medir_editorial.py). Cada entrada: {\"classe\": \"claro\" | \"escuro_mono\" | \"escuro_cor\"} para forçar a classe, ou {\"desligar\": true} para o frontend usar o título em texto; \"motivo\" é opcional e recomendado. A classe final em dados/logos.json é a do override, se existir, senão a medida.",
+ "overrides": {}
+}

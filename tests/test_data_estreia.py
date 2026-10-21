@@ -28,6 +28,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "scripts"))
 
 BASE = "f5ec6db"     # último commit ANTES do backfill da data de estreia
+RODADA_3 = "54ee00d"  # o commit da rodada 3, que fez o backfill
 
 
 # ---------------------------------------------------------------------------
@@ -179,10 +180,10 @@ def test_backfill_so_conversa_com_o_tmdb(tmp_path):
 # 4. DIFF contra o commit anterior ao backfill
 # ---------------------------------------------------------------------------
 
-def _git_show(caminho: str) -> str | None:
+def _git_show(caminho: str, commit: str = BASE) -> str | None:
     if shutil.which("git") is None:
         return None
-    r = subprocess.run(["git", "show", f"{BASE}:{caminho}"], cwd=RAIZ,
+    r = subprocess.run(["git", "show", f"{commit}:{caminho}"], cwd=RAIZ,
                        capture_output=True, text=True)
     return r.stdout if r.returncode == 0 else None
 
@@ -204,17 +205,21 @@ def _data_js(texto: str) -> dict:
 
 
 def test_diff_resultado_so_mudou_data_estreia():
-    import backfill_data_estreia as bf
-    if _git_show("frontend/js/data.js") is None:
-        pytest.skip(f"git ou o commit {BASE} indisponível")
+    """Fixado no PAR de commits da rodada 3 (`BASE` → `RODADA_3`), não na
+    árvore atual: o que se prova é o diff daquele backfill, e campos aditivos
+    de rodadas posteriores não podem nem mascarar nem quebrar essa prova."""
+    data_js = _git_show("frontend/js/data.js", RODADA_3)
+    if _git_show("frontend/js/data.js") is None or data_js is None:
+        pytest.skip(f"git ou os commits {BASE}/{RODADA_3} indisponíveis")
     comparados, pulados = 0, []
-    for slug in bf.catalogo_publicado():
+    for slug in _data_js(data_js)["catalogo"]:
         base_txt = _git_show(f"resultado/{slug}.json")
-        if base_txt is None:
+        atual_txt = _git_show(f"resultado/{slug}.json", RODADA_3)
+        if base_txt is None or atual_txt is None:
             pulados.append(slug)
             continue
         base = json.loads(base_txt)
-        atual = json.loads((RAIZ / "resultado" / f"{slug}.json").read_text(encoding="utf-8"))
+        atual = json.loads(atual_txt)
         if _republicado(base, atual):
             pulados.append(slug)
             continue
@@ -225,11 +230,14 @@ def test_diff_resultado_so_mudou_data_estreia():
 
 
 def test_diff_data_js_so_mudou_data_estreia():
+    """Fixado no PAR de commits da rodada 3 (`BASE` → `RODADA_3`), como o
+    teste das fichas acima."""
     base_txt = _git_show("frontend/js/data.js")
-    if base_txt is None:
-        pytest.skip(f"git ou o commit {BASE} indisponível")
+    atual_txt = _git_show("frontend/js/data.js", RODADA_3)
+    if base_txt is None or atual_txt is None:
+        pytest.skip(f"git ou os commits {BASE}/{RODADA_3} indisponíveis")
     base = _data_js(base_txt)
-    atual = _data_js((RAIZ / "frontend" / "js" / "data.js").read_text(encoding="utf-8"))
+    atual = _data_js(atual_txt)
     assert atual["catalogo"] == base["catalogo"]
     assert set(atual["filmes"]) == set(base["filmes"])
     com_data = 0

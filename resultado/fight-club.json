@@ -117,7 +117,11 @@
       "titulo_tmdb_correspondente": "Fight Club",
       "ano_tmdb": 1999,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DE",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 6063113,

@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "(500) Days of Summer",
       "ano_tmdb": 2009,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 3390233,

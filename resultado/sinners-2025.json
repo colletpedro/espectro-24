@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Sinners",
       "ano_tmdb": 2025,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 4858926,

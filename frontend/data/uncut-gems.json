@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "Uncut Gems",
       "ano_tmdb": 2019,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/f1IJSjZuAbPYdTSsq1iQyWUIjO5.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 1805456,

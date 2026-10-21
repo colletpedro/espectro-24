@@ -20,6 +20,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RESULTADO = ROOT / "resultado"
 FRONTEND = ROOT / "frontend"
+LOGOS = ROOT / "dados" / "logos.json"
+LOGOS_OVERRIDE = ROOT / "dados" / "logos_override.json"
 
 sys.path.insert(0, str(ROOT / "src"))
 from espectro24 import eixos as _E  # noqa: E402
@@ -244,7 +246,47 @@ def sem_motivo_de_recusa(data: dict) -> dict:
     return data
 
 
+def ler_logos() -> tuple[dict, dict]:
+    """(`logos` de `dados/logos.json`, `overrides` de
+    `dados/logos_override.json`) — a medição da rodada editorial
+    (`scripts/medir_editorial.py`) e o override manual por slug."""
+    logos = (json.loads(LOGOS.read_text(encoding="utf-8"))["logos"]
+             if LOGOS.exists() else {})
+    ov = (json.loads(LOGOS_OVERRIDE.read_text(encoding="utf-8")).get("overrides")
+          if LOGOS_OVERRIDE.exists() else None) or {}
+    return logos, ov
+
+
+def logo_da_ficha(registro: dict | None, override: dict | None) -> dict | None:
+    """`ficha.logo` publicado: caminho TMDB, idioma e a classe FINAL — a do
+    override, se houver (`desligar` vira `desligado`), senão a medida.
+    Aplicada aqui, e não só na medição, para que editar o override e rodar
+    o build baste: a medição faz rede, o build não."""
+    escolhido = (registro or {}).get("logo_escolhido")
+    if not escolhido:
+        return None
+    classe = registro.get("classe_medida")
+    if override and override.get("desligar"):
+        classe = "desligado"
+    elif override and override.get("classe"):
+        classe = override["classe"]
+    return {"path": escolhido["file_path"], "idioma": escolhido["idioma"],
+            "classe": classe}
+
+
+def com_logo(data: dict, registro: dict | None, override: dict | None) -> dict:
+    """Acrescenta `ficha.logo` e `ficha.titulo_difere_do_logo` (campos NOVOS
+    da rodada editorial; `resultado/` não os tem). Muta e devolve `data`."""
+    ficha = data.get("ficha")
+    if isinstance(ficha, dict):
+        logo = logo_da_ficha(registro, override)
+        ficha["logo"] = logo
+        ficha["titulo_difere_do_logo"] = bool(logo) and logo["idioma"] != "pt-BR"
+    return data
+
+
 def main():
+    logos, overrides = ler_logos()
     filmes = {}
     catalogo_presente = []
     for slug in CATALOGO:
@@ -260,6 +302,7 @@ def main():
         # (para o dono escolher o que recoletar), nunca página
         data.pop("proveniencia_llm", None)
         sem_motivo_de_recusa(data)
+        com_logo(data, logos.get(slug), overrides.get(slug))
         filmes[slug] = data
         # cópia crua (referência/deploy), sem origem_paginas
         (FRONTEND / "data" / f"{slug}.json").write_text(

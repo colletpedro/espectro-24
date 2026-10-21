@@ -116,7 +116,14 @@
       "titulo_tmdb_correspondente": "The Turin Horse",
       "ano_tmdb": 2011,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "HU",
+      "CH",
+      "FR",
+      "DE",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 47834,

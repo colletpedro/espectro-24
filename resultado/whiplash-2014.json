@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Whiplash",
       "ano_tmdb": 2014,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 4774893,

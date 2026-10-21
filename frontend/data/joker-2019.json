@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "Joker",
       "ano_tmdb": 2019,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "CA",
+      "US"
+    ],
+    "logo": {
+      "path": "/ckRklE1gzQUzdVQ8BaKL652oO7V.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4900424,

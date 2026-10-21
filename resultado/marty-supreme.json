@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "Marty Supreme",
       "ano_tmdb": 2025,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 3104553,

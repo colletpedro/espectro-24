@@ -116,7 +116,17 @@
       "titulo_tmdb_correspondente": "The Brutalist",
       "ano_tmdb": 2024,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ],
+    "logo": {
+      "path": "/isrOcpeplAtUoxBBV469GMBBVCW.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 799390,

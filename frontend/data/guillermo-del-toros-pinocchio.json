@@ -119,7 +119,16 @@
       "titulo_tmdb_correspondente": "Guillermo del Toro's Pinocchio",
       "ano_tmdb": 2022,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/sFHqRdrAw1xvX8ltoJkyAVsHjPh.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 714140,

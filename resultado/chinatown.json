@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Chinatown",
       "ano_tmdb": 1974,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 521462,

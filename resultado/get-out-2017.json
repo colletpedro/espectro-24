@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Get Out",
       "ano_tmdb": 2017,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 4739915,

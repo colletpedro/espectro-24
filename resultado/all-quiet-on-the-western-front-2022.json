@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "All Quiet on the Western Front",
       "ano_tmdb": 2022,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DE"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1253405,

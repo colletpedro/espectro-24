@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Princess Mononoke",
       "ano_tmdb": 1997,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "JP"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1815324,

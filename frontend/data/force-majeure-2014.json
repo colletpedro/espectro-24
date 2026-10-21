@@ -100,7 +100,19 @@
       "titulo_tmdb_correspondente": "Force Majeure",
       "ano_tmdb": 2014,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DK",
+      "FR",
+      "NO",
+      "SE"
+    ],
+    "logo": {
+      "path": "/7bcd9abkjgVVTrR1z3MrHSMI9Y3.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 138906,

@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "Incendies",
       "ano_tmdb": 2010,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "CA",
+      "FR"
+    ],
+    "logo": {
+      "path": "/jDADVUZdWCTArACWXIdiedbfi1i.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 664575,

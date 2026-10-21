@@ -117,7 +117,17 @@
       "titulo_tmdb_correspondente": "Malcolm X",
       "ano_tmdb": 1992,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US",
+      "AN"
+    ],
+    "logo": {
+      "path": "/hmsi0KPsXxyqxSOOxM2YQaakU4W.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 226643,

@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "Sinners",
       "ano_tmdb": 2025,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/d7pA3cdwXiGaiHrGiBtIRTfMvWk.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4858926,

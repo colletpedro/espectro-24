@@ -247,6 +247,12 @@ def entrada_do_indice(slug: str, filme: dict, data_entrada: str | None,
         # pronto e testado, mas não dispara com o dado atual.
         "estreia": ficha.get("data_estreia"),
         "entrada": data_entrada,
+        # [rodada editorial] metadados da manchete: países (ISO 3166-1, na
+        # ordem do TMDB), o logo do título (caminho TMDB, idioma, classe de
+        # contraste final) e se o título brasileiro difere do logo.
+        "paises": ficha.get("paises") or [],
+        "logo": ficha.get("logo"),
+        "titulo_difere_do_logo": bool(ficha.get("titulo_difere_do_logo")),
     }
 
 

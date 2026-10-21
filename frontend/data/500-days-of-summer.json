@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "(500) Days of Summer",
       "ano_tmdb": 2009,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/Ab0wdaoQ7WtWr7Hhj2OezTx4Ju3.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 3390233,

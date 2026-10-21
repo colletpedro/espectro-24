@@ -117,7 +117,16 @@
       "titulo_tmdb_correspondente": "Top Gun: Maverick",
       "ano_tmdb": 2022,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/wbuiGa8NTw6uOkjzWsszXNUIqHP.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 2397862,

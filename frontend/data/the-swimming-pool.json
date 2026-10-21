@@ -117,7 +117,17 @@
       "titulo_tmdb_correspondente": "The Swimming Pool",
       "ano_tmdb": 1969,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "FR",
+      "IT"
+    ],
+    "logo": {
+      "path": "/gKT2fMi5curdg4V77MuPOE60Lzd.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 91538,

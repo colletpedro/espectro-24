@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "Portrait of a Lady on Fire",
       "ano_tmdb": 2019,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "FR"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1178572,

@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "Django Unchained",
       "ano_tmdb": 2012,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 3499724,

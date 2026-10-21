@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "Mad Max: Fury Road",
       "ano_tmdb": 2015,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "AU",
+      "US"
+    ],
+    "logo": {
+      "path": "/1XYQTYx4kcIhzNwSttv9xooioeI.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 2267070,

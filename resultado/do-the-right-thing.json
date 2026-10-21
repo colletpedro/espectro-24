@@ -116,7 +116,10 @@
       "titulo_tmdb_correspondente": "Do the Right Thing",
       "ano_tmdb": 1989,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 570245,

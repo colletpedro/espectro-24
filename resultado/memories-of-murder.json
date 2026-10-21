@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Memories of Murder",
       "ano_tmdb": 2003,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "KR"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1098638,

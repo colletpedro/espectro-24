@@ -116,7 +116,10 @@
       "titulo_tmdb_correspondente": "Drive My Car",
       "ano_tmdb": 2021,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "JP"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 395980,

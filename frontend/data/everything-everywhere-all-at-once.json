@@ -104,7 +104,16 @@
         "still_largura": 1849,
         "still_altura": 1040
       }
-    ]
+    ],
+    "paises": [
+      "US"
+    ],
+    "logo": {
+      "path": "/mFA3RihM8JjIbVAPowmES4ZJxMo.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4060162,

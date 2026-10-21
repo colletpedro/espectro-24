@@ -113,7 +113,17 @@
       "titulo_tmdb_correspondente": "Speak No Evil",
       "ano_tmdb": 2022,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "DK",
+      "NL"
+    ],
+    "logo": {
+      "path": "/2KZ7lGvEnMKKcYyjpzx5vuAYOAj.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 247174,

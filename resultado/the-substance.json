@@ -103,6 +103,11 @@
         "still_largura": 1920,
         "still_altura": 1080
       }
+    ],
+    "paises": [
+      "FR",
+      "GB",
+      "US"
     ]
   },
   "distribuicao": {

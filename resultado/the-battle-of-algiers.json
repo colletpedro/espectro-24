@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "The Battle of Algiers",
       "ano_tmdb": 1966,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "IT",
+      "DZ"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 149745,

@@ -117,7 +117,11 @@
       "titulo_tmdb_correspondente": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
       "ano_tmdb": 1964,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 657151,

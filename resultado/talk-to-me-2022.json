@@ -116,7 +116,11 @@
       "titulo_tmdb_correspondente": "Talk to Me",
       "ano_tmdb": 2023,
       "ano_divergente": true
-    }
+    },
+    "paises": [
+      "AU",
+      "GB"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1484316,

@@ -113,7 +113,10 @@
       "titulo_tmdb_correspondente": "Pinocchio",
       "ano_tmdb": 2022,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 110315,

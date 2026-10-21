@@ -93,7 +93,16 @@
       "titulo_tmdb_correspondente": "Neighboring Sounds",
       "ano_tmdb": 2012,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "BR"
+    ],
+    "logo": {
+      "path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 38214,

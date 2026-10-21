@@ -117,7 +117,25 @@
       "titulo_tmdb_correspondente": "Zama",
       "ano_tmdb": 2017,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "AR",
+      "BR",
+      "ES",
+      "PT",
+      "MX",
+      "FR",
+      "LB",
+      "NL",
+      "US",
+      "DO"
+    ],
+    "logo": {
+      "path": "/a3PpPJ71VhO9B98fnjAKB6yXMpI.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 25021,

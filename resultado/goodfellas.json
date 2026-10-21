@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "GoodFellas",
       "ano_tmdb": 1990,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2347374,

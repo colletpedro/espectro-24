@@ -117,7 +117,10 @@
       "titulo_tmdb_correspondente": "The Truman Show",
       "ano_tmdb": 1998,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 5305179,

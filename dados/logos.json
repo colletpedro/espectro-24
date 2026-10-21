@@ -1,0 +1,3927 @@
+{
+ "_leia": "Etapa 0 da rodada editorial (scripts/medir_editorial.py). Logo do TMDB por slug: disponibilidade por idioma e o escolhido (pt-BR > en > sem idioma; pt-PT e pt sem país nunca; vote_average, largura). Luminância = luma Rec.709 sRGB em [0,1] dos pixels com alfa >= 128 do PNG w500; fracao_escura = luma < 0,25; saturação = S do HSV. classe medida = razão WCAG (luminância relativa linear média vs. #111111) >= 3,0 → claro; abaixo, croma médio (max − min) < 0,15 → escuro_mono, senão escuro_cor. classe = override (dados/logos_override.json) ou a medida; titulo_difere_do_logo = há logo e ele não é pt-BR.",
+ "consulta": "/movie/{id}/images?include_image_language=pt,en,null",
+ "limiares": {
+  "fundo_referencia": "#111111",
+  "contraste_claro": 3.0,
+  "croma_mono": 0.15,
+  "luma_pixel_escuro": 0.25,
+  "alfa_visivel": 128
+ },
+ "logos": {
+  "the-invite-2026": {
+   "tmdb_id": 950028,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/mCRRIzvGBDkzmKpuS2MyejDHHCF.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3662,
+    "altura": 755,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9993,
+     "pixels_opacos": 14189,
+     "fracao_opaca": 0.2755,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 103,
+     "contraste_wcag": 18.87
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "12-angry-men": {
+   "tmdb_id": 389,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/cluD120ZWH3mYDHDVVcNJNYfgrC.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 783,
+    "altura": 266,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.6263,
+     "fracao_escura": 0.0348,
+     "saturacao_media": 0.8851,
+     "croma_medio": 0.7405,
+     "luminancia_relativa_media": 0.4007,
+     "pixels_opacos": 51240,
+     "fracao_opaca": 0.6028,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 170,
+     "contraste_wcag": 8.105
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "2001-a-space-odyssey": {
+   "tmdb_id": 62,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 25,
+    "sem_idioma": 0
+   },
+   "logos_total": 29,
+   "logo_escolhido": {
+    "file_path": "/9ntblcdsqyUj99RbfTTN973DZvx.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2586,
+    "altura": 1097,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9999,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9997,
+     "pixels_opacos": 54081,
+     "fracao_opaca": 0.5102,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 212,
+     "contraste_wcag": 18.878
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "500-days-of-summer": {
+   "tmdb_id": 19913,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 4,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/Ab0wdaoQ7WtWr7Hhj2OezTx4Ju3.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3840,
+    "altura": 1573,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.6265,
+     "fracao_escura": 0.345,
+     "saturacao_media": 0.0187,
+     "croma_medio": 0.0026,
+     "luminancia_relativa_media": 0.5974,
+     "pixels_opacos": 43456,
+     "fracao_opaca": 0.424,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 205,
+     "contraste_wcag": 11.643
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "a-brighter-summer-day": {
+   "tmdb_id": 15804,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 6,
+   "logo_escolhido": {
+    "file_path": "/lNzPGatbAcNxPpcK7Zp9LDRj3jk.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 2653,
+    "altura": 302,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9993,
+     "pixels_opacos": 16453,
+     "fracao_opaca": 0.5773,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 57,
+     "contraste_wcag": 18.87
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "aftersun": {
+   "tmdb_id": 965150,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/hZCqSZbRUSUyWIXglKtwuoM0AiV.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1232,
+    "altura": 230,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 22056,
+     "fracao_opaca": 0.4743,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 93,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "all-quiet-on-the-western-front-2022": {
+   "tmdb_id": 49046,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 5,
+   "logo_escolhido": {
+    "file_path": "/5BI2vscWdROnvRlYibNjr1FOpDf.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 624,
+    "altura": 130,
+    "vote_average": 1.562,
+    "vote_count": 8,
+    "medida_w500": {
+     "luminancia_media": 0.9996,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.999,
+     "pixels_opacos": 7951,
+     "fracao_opaca": 0.1532,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 104,
+     "contraste_wcag": 18.865
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "anatomy-of-a-fall": {
+   "tmdb_id": 915935,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 5,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 11,
+   "logo_escolhido": {
+    "file_path": "/fDgEeNkyUPBGzovS98t899SIdhN.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 2500,
+    "altura": 513,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9679,
+     "fracao_escura": 0.0051,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9459,
+     "pixels_opacos": 29701,
+     "fracao_opaca": 0.5767,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 103,
+     "contraste_wcag": 17.91
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "anatomy-of-a-murder": {
+   "tmdb_id": 93,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 8,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/j7zUJ1Oh2isTuMjVDgLGnAPjXIZ.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 793,
+    "altura": 292,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.3767,
+     "fracao_escura": 0.5541,
+     "saturacao_media": 0.0477,
+     "croma_medio": 0.0204,
+     "luminancia_relativa_media": 0.3173,
+     "pixels_opacos": 24584,
+     "fracao_opaca": 0.2672,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 184,
+     "contraste_wcag": 6.605
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "arrival-2016": {
+   "tmdb_id": 329865,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 12,
+   "logo_escolhido": {
+    "file_path": "/aKFYSSTPkReVysTEWrE3yaqmcMS.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4305,
+    "altura": 260,
+    "vote_average": 0.5,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.9995,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9989,
+     "pixels_opacos": 1796,
+     "fracao_opaca": 0.1205,
+     "tinha_alfa": true,
+     "largura_medida": 497,
+     "altura_medida": 30,
+     "contraste_wcag": 18.863
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "avengers-endgame": {
+   "tmdb_id": 299534,
+   "logos_disponiveis": {
+    "pt-BR": 8,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 25,
+    "sem_idioma": 4
+   },
+   "logos_total": 40,
+   "logo_escolhido": {
+    "file_path": "/8gmwT4NJ68ZtZEVpPWlPEdZOXa8.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 786,
+    "altura": 234,
+    "vote_average": 1.434,
+    "vote_count": 5,
+    "medida_w500": {
+     "luminancia_media": 0.2873,
+     "fracao_escura": 0.4832,
+     "saturacao_media": 0.5503,
+     "croma_medio": 0.2409,
+     "luminancia_relativa_media": 0.1043,
+     "pixels_opacos": 42087,
+     "fracao_opaca": 0.5649,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 149,
+     "contraste_wcag": 2.775
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "escuro_cor",
+   "override": null,
+   "classe": "escuro_cor"
+  },
+  "barbie": {
+   "tmdb_id": 346698,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 1
+   },
+   "logos_total": 12,
+   "logo_escolhido": {
+    "file_path": "/nsMnkuWIZCBxkBLPi0ZXuRloYL2.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 3261,
+    "altura": 1284,
+    "vote_average": 7.19,
+    "vote_count": 7,
+    "medida_w500": {
+     "luminancia_media": 0.5306,
+     "fracao_escura": 0.0436,
+     "saturacao_media": 0.589,
+     "croma_medio": 0.5465,
+     "luminancia_relativa_media": 0.4434,
+     "pixels_opacos": 69532,
+     "fracao_opaca": 0.7059,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 197,
+     "contraste_wcag": 8.873
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "bones-and-all": {
+   "tmdb_id": 791177,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/bL5uoEftrLACHEG3vVCWkmTwqAF.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 346,
+    "altura": 158,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9226,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0209,
+     "croma_medio": 0.0183,
+     "luminancia_relativa_media": 0.849,
+     "pixels_opacos": 16270,
+     "fracao_opaca": 0.143,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 228,
+     "contraste_wcag": 16.167
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "burning-2018": {
+   "tmdb_id": 491584,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/bILH1xVdtoAPt087S0Of3dWmQma.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1774,
+    "altura": 250,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9996,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.999,
+     "pixels_opacos": 9056,
+     "fracao_opaca": 0.2587,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 70,
+     "contraste_wcag": 18.865
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "cars": {
+   "tmdb_id": 920,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 11,
+    "sem_idioma": 0
+   },
+   "logos_total": 14,
+   "logo_escolhido": {
+    "file_path": "/jrZp7apZ5hPvrMdOG3NPjPP7VNG.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1177,
+    "altura": 756,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.4404,
+     "fracao_escura": 0.3715,
+     "saturacao_media": 0.4824,
+     "croma_medio": 0.2793,
+     "luminancia_relativa_media": 0.3057,
+     "pixels_opacos": 64652,
+     "fracao_opaca": 0.4028,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 321,
+     "contraste_wcag": 6.397
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "catch-me-if-you-can-2002": {
+   "tmdb_id": 640,
+   "logos_disponiveis": {
+    "pt-BR": 4,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 11,
+    "sem_idioma": 0
+   },
+   "logos_total": 17,
+   "logo_escolhido": {
+    "file_path": "/r6Vr1kPwEyhX03xhMZCvhUSfnhB.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1105,
+    "altura": 540,
+    "vote_average": 1.444,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.4219,
+     "fracao_escura": 0.3992,
+     "saturacao_media": 0.8606,
+     "croma_medio": 0.5773,
+     "luminancia_relativa_media": 0.2446,
+     "pixels_opacos": 61951,
+     "fracao_opaca": 0.5088,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 244,
+     "contraste_wcag": 5.298
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "cats-2019": {
+   "tmdb_id": 536869,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 5,
+   "logo_escolhido": {
+    "file_path": "/fsdazyxTF9lrY6aqcbYbpuhRcfC.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1663,
+    "altura": 1300,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9999,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9997,
+     "pixels_opacos": 35755,
+     "fracao_opaca": 0.1829,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 391,
+     "contraste_wcag": 18.878
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "chinatown": {
+   "tmdb_id": 829,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/os83qvlIUOhU8wjajznIlv4v9tC.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 684,
+    "altura": 298,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.7557,
+     "fracao_escura": 0.1018,
+     "saturacao_media": 0.4552,
+     "croma_medio": 0.3952,
+     "luminancia_relativa_media": 0.6314,
+     "pixels_opacos": 29481,
+     "fracao_opaca": 0.2705,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 218,
+     "contraste_wcag": 12.254
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "cidade-de-deus": {
+   "tmdb_id": 598,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/2pcA81BO9viDv8OXo2SMCCL4cBk.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 787,
+    "altura": 120,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.6399,
+     "fracao_escura": 0.1227,
+     "saturacao_media": 0.8623,
+     "croma_medio": 0.7784,
+     "luminancia_relativa_media": 0.4761,
+     "pixels_opacos": 25682,
+     "fracao_opaca": 0.6786,
+     "tinha_alfa": true,
+     "largura_medida": 498,
+     "altura_medida": 76,
+     "contraste_wcag": 9.461
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "cujo": {
+   "tmdb_id": 10489,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 6,
+   "logo_escolhido": {
+    "file_path": "/fxBkTUvznm3BMeSGYJDBsOcdOPb.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1821,
+    "altura": 1296,
+    "vote_average": 0.0,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.3919,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.8484,
+     "croma_medio": 0.7925,
+     "luminancia_relativa_media": 0.2216,
+     "pixels_opacos": 31144,
+     "fracao_opaca": 0.175,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 356,
+     "contraste_wcag": 4.884
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "cure": {
+   "tmdb_id": 36095,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4157,
+    "altura": 341,
+    "vote_average": 6.312,
+    "vote_count": 8,
+    "medida_w500": {
+     "luminancia_media": 0.5475,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.5079,
+     "croma_medio": 0.3456,
+     "luminancia_relativa_media": 0.2826,
+     "pixels_opacos": 2347,
+     "fracao_opaca": 0.1145,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 41,
+     "contraste_wcag": 5.981
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "district-9": {
+   "tmdb_id": 17654,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/gneH6YMq0WKVBLBXO8rzf1YBerp.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 2000,
+    "altura": 307,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9037,
+     "fracao_escura": 0.0134,
+     "saturacao_media": 0.1242,
+     "croma_medio": 0.1064,
+     "luminancia_relativa_media": 0.8859,
+     "pixels_opacos": 17849,
+     "fracao_opaca": 0.4636,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 77,
+     "contraste_wcag": 16.831
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "django-unchained": {
+   "tmdb_id": 68718,
+   "logos_disponiveis": {
+    "pt-BR": 5,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 4,
+    "sem_idioma": 0
+   },
+   "logos_total": 12,
+   "logo_escolhido": {
+    "file_path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 582,
+    "altura": 248,
+    "vote_average": 4.572,
+    "vote_count": 14,
+    "medida_w500": {
+     "luminancia_media": 0.4081,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.8588,
+     "croma_medio": 0.8072,
+     "luminancia_relativa_media": 0.2351,
+     "pixels_opacos": 64553,
+     "fracao_opaca": 0.6061,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 213,
+     "contraste_wcag": 5.127
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "do-the-right-thing": {
+   "tmdb_id": 925,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/wOEgtn3ACdItTa88Pt8kof4wndV.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 277,
+    "altura": 388,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.6768,
+     "fracao_escura": 0.1161,
+     "saturacao_media": 0.7893,
+     "croma_medio": 0.6327,
+     "luminancia_relativa_media": 0.5182,
+     "pixels_opacos": 136330,
+     "fracao_opaca": 0.3895,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 700,
+     "contraste_wcag": 10.218
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb": {
+   "tmdb_id": 935,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 4,
+    "sem_idioma": 2
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/a99uuyz8q0JCPHN4RfQmHfM5PI4.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1766,
+    "altura": 275,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.2575,
+     "fracao_escura": 0.1685,
+     "saturacao_media": 0.7924,
+     "croma_medio": 0.6168,
+     "luminancia_relativa_media": 0.136,
+     "pixels_opacos": 19227,
+     "fracao_opaca": 0.493,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 78,
+     "contraste_wcag": 3.345
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "drive-my-car": {
+   "tmdb_id": 758866,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 5,
+   "logo_escolhido": {
+    "file_path": "/hMiu2LVznsq8rgHLW6patHsIu6j.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4295,
+    "altura": 960,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.2525,
+     "fracao_escura": 0.5915,
+     "saturacao_media": 0.8989,
+     "croma_medio": 0.7759,
+     "luminancia_relativa_media": 0.1589,
+     "pixels_opacos": 6221,
+     "fracao_opaca": 0.1111,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 112,
+     "contraste_wcag": 3.757
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "dune-2021": {
+   "tmdb_id": 438631,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 17,
+    "sem_idioma": 0
+   },
+   "logos_total": 22,
+   "logo_escolhido": {
+    "file_path": "/2hY4HZrW6Ym8kZj34dVhOHLLnNh.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4319,
+    "altura": 443,
+    "vote_average": 1.714,
+    "vote_count": 7,
+    "medida_w500": {
+     "luminancia_media": 0.281,
+     "fracao_escura": 0.5571,
+     "saturacao_media": 0.4627,
+     "croma_medio": 0.1475,
+     "luminancia_relativa_media": 0.1177,
+     "pixels_opacos": 2339,
+     "fracao_opaca": 0.0923,
+     "tinha_alfa": true,
+     "largura_medida": 497,
+     "altura_medida": 51,
+     "contraste_wcag": 3.016
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "dune-part-two": {
+   "tmdb_id": 693134,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 8,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 15,
+   "logo_escolhido": {
+    "file_path": "/eYvF1LhPKuoBxOAmWjFTAK7EPWl.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4319,
+    "altura": 1299,
+    "vote_average": 4.722,
+    "vote_count": 9,
+    "medida_w500": {
+     "luminancia_media": 0.666,
+     "fracao_escura": 0.0012,
+     "saturacao_media": 0.5993,
+     "croma_medio": 0.5431,
+     "luminancia_relativa_media": 0.4387,
+     "pixels_opacos": 1620,
+     "fracao_opaca": 0.0216,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 150,
+     "contraste_wcag": 8.789
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "eighth-grade": {
+   "tmdb_id": 489925,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 2,
+   "logo_escolhido": {
+    "file_path": "/mtBjMCwFlv8smc8hd0BRclfh1xZ.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1734,
+    "altura": 732,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.8637,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.9945,
+     "croma_medio": 0.9862,
+     "luminancia_relativa_media": 0.7895,
+     "pixels_opacos": 61945,
+     "fracao_opaca": 0.5872,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 211,
+     "contraste_wcag": 15.097
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "everything-everywhere-all-at-once": {
+   "tmdb_id": 545611,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 11,
+    "sem_idioma": 0
+   },
+   "logos_total": 14,
+   "logo_escolhido": {
+    "file_path": "/mFA3RihM8JjIbVAPowmES4ZJxMo.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1096,
+    "altura": 404,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9995,
+     "pixels_opacos": 39646,
+     "fracao_opaca": 0.4318,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 184,
+     "contraste_wcag": 18.874
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "fight-club": {
+   "tmdb_id": 550,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 6,
+    "pt_sem_pais": 0,
+    "en": 23,
+    "sem_idioma": 0
+   },
+   "logos_total": 32,
+   "logo_escolhido": {
+    "file_path": "/lyFSC5i078jk12aNH4wUCNbCV8e.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 572,
+    "altura": 300,
+    "vote_average": 6.722,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.2778,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.9271,
+     "croma_medio": 0.8353,
+     "luminancia_relativa_media": 0.1903,
+     "pixels_opacos": 59460,
+     "fracao_opaca": 0.4539,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 262,
+     "contraste_wcag": 4.322
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "force-majeure-2014": {
+   "tmdb_id": 265189,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 2,
+   "logo_escolhido": {
+    "file_path": "/7bcd9abkjgVVTrR1z3MrHSMI9Y3.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4316,
+    "altura": 616,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.381,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.7459,
+     "croma_medio": 0.5458,
+     "luminancia_relativa_media": 0.1566,
+     "pixels_opacos": 17027,
+     "fracao_opaca": 0.4825,
+     "tinha_alfa": true,
+     "largura_medida": 497,
+     "altura_medida": 71,
+     "contraste_wcag": 3.715
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "friday-the-13th-2009": {
+   "tmdb_id": 13207,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/DkMLTZBaz55DssxhHJQiVZLIMS.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 800,
+    "altura": 117,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.273,
+     "fracao_escura": 0.2326,
+     "saturacao_media": 0.8269,
+     "croma_medio": 0.6392,
+     "luminancia_relativa_media": 0.1391,
+     "pixels_opacos": 8112,
+     "fracao_opaca": 0.2227,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 73,
+     "contraste_wcag": 3.401
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "get-out-2017": {
+   "tmdb_id": 419430,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 12,
+    "sem_idioma": 0
+   },
+   "logos_total": 15,
+   "logo_escolhido": {
+    "file_path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1276,
+    "altura": 200,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9996,
+     "pixels_opacos": 18946,
+     "fracao_opaca": 0.4877,
+     "tinha_alfa": true,
+     "largura_medida": 498,
+     "altura_medida": 78,
+     "contraste_wcag": 18.876
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "gladiator-2000": {
+   "tmdb_id": 98,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 23,
+    "sem_idioma": 0
+   },
+   "logos_total": 27,
+   "logo_escolhido": {
+    "file_path": "/n5Mwi61zHyCk26YHRrwCNvP0Sf3.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4318,
+    "altura": 384,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.6126,
+     "fracao_escura": 0.041,
+     "saturacao_media": 0.539,
+     "croma_medio": 0.3902,
+     "luminancia_relativa_media": 0.3854,
+     "pixels_opacos": 5738,
+     "fracao_opaca": 0.2635,
+     "tinha_alfa": true,
+     "largura_medida": 495,
+     "altura_medida": 44,
+     "contraste_wcag": 7.83
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "goodfellas": {
+   "tmdb_id": 769,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 11,
+   "logo_escolhido": {
+    "file_path": "/d4zBnh2AlvT9vStIjceZAyvcBak.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 536,
+    "altura": 181,
+    "vote_average": 1.066,
+    "vote_count": 5,
+    "medida_w500": {
+     "luminancia_media": 0.9992,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9981,
+     "pixels_opacos": 25626,
+     "fracao_opaca": 0.3033,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 169,
+     "contraste_wcag": 18.849
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "guillermo-del-toros-pinocchio": {
+   "tmdb_id": 555604,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 11,
+    "sem_idioma": 0
+   },
+   "logos_total": 12,
+   "logo_escolhido": {
+    "file_path": "/sFHqRdrAw1xvX8ltoJkyAVsHjPh.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1169,
+    "altura": 206,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.4688,
+     "fracao_escura": 0.0789,
+     "saturacao_media": 0.7768,
+     "croma_medio": 0.5894,
+     "luminancia_relativa_media": 0.2714,
+     "pixels_opacos": 19713,
+     "fracao_opaca": 0.4489,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 88,
+     "contraste_wcag": 5.78
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "happy-hour-2015-1": {
+   "tmdb_id": 354759,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 2,
+   "logo_escolhido": {
+    "file_path": "/9KywbVkZgLnSSF5zxQfFIVvaaYf.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4932,
+    "altura": 1542,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.8089,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.9587,
+     "croma_medio": 0.9519,
+     "luminancia_relativa_media": 0.6851,
+     "pixels_opacos": 12472,
+     "fracao_opaca": 0.1602,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 156,
+     "contraste_wcag": 13.22
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "hard-to-be-a-god": {
+   "tmdb_id": 110402,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 4,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/3oE8aYKwwYeMybQeOi5uv4nbeI4.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1846,
+    "altura": 303,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9994,
+     "pixels_opacos": 10138,
+     "fracao_opaca": 0.2473,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 82,
+     "contraste_wcag": 18.872
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "hereditary": {
+   "tmdb_id": 493922,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 10,
+   "logo_escolhido": {
+    "file_path": "/fXhfzLMyJCNYpnP61kyF4haGfAI.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 356,
+    "altura": 132,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9993,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9983,
+     "pixels_opacos": 6259,
+     "fracao_opaca": 0.0678,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 185,
+     "contraste_wcag": 18.852
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "im-still-here-2024": {
+   "tmdb_id": 1000837,
+   "logos_disponiveis": {
+    "pt-BR": 7,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 10,
+   "logo_escolhido": {
+    "file_path": "/mNEinPcj374nOKwbxCCRQCaQO8J.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 6442,
+    "altura": 1768,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9995,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9989,
+     "pixels_opacos": 6954,
+     "fracao_opaca": 0.1017,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 137,
+     "contraste_wcag": 18.863
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "incendies": {
+   "tmdb_id": 46738,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 4,
+    "sem_idioma": 0
+   },
+   "logos_total": 5,
+   "logo_escolhido": {
+    "file_path": "/jDADVUZdWCTArACWXIdiedbfi1i.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1273,
+    "altura": 171,
+    "vote_average": 3.334,
+    "vote_count": 4,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 14402,
+     "fracao_opaca": 0.4299,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 67,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "inception": {
+   "tmdb_id": 27205,
+   "logos_disponiveis": {
+    "pt-BR": 4,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 0
+   },
+   "logos_total": 14,
+   "logo_escolhido": {
+    "file_path": "/xxgYI7UcYiFalWa8EimBSoc7dlT.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2186,
+    "altura": 256,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.3504,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.8509,
+     "croma_medio": 0.7804,
+     "luminancia_relativa_media": 0.2004,
+     "pixels_opacos": 11496,
+     "fracao_opaca": 0.3897,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 59,
+     "contraste_wcag": 4.503
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "inglourious-basterds": {
+   "tmdb_id": 16869,
+   "logos_disponiveis": {
+    "pt-BR": 5,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 8,
+    "sem_idioma": 0
+   },
+   "logos_total": 15,
+   "logo_escolhido": {
+    "file_path": "/ckZoF4j35HL1USGG2iX8GeQ7058.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3985,
+    "altura": 1299,
+    "vote_average": 1.75,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.9651,
+     "fracao_escura": 0.033,
+     "saturacao_media": 0.0385,
+     "croma_medio": 0.0275,
+     "luminancia_relativa_media": 0.9569,
+     "pixels_opacos": 30789,
+     "fracao_opaca": 0.3778,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 163,
+     "contraste_wcag": 18.108
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "interstellar": {
+   "tmdb_id": 157336,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 17,
+    "sem_idioma": 0
+   },
+   "logos_total": 20,
+   "logo_escolhido": {
+    "file_path": "/7GN6eZ1xw4apwobsmohLtgZB6K6.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1000,
+    "altura": 182,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.3666,
+     "fracao_escura": 0.0887,
+     "saturacao_media": 0.438,
+     "croma_medio": 0.1502,
+     "luminancia_relativa_media": 0.1846,
+     "pixels_opacos": 11545,
+     "fracao_opaca": 0.2537,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 91,
+     "contraste_wcag": 4.219
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "joker-2019": {
+   "tmdb_id": 475557,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 6,
+   "logo_escolhido": {
+    "file_path": "/ckRklE1gzQUzdVQ8BaKL652oO7V.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3573,
+    "altura": 1294,
+    "vote_average": 3.334,
+    "vote_count": 3,
+    "medida_w500": {
+     "luminancia_media": 0.9994,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9986,
+     "pixels_opacos": 58848,
+     "fracao_opaca": 0.6503,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 181,
+     "contraste_wcag": 18.858
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "joker-folie-a-deux": {
+   "tmdb_id": 889737,
+   "logos_disponiveis": {
+    "pt-BR": 7,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 12,
+    "sem_idioma": 0
+   },
+   "logos_total": 21,
+   "logo_escolhido": {
+    "file_path": "/gIOXjK4tS7cYemLEe0w5HuiUGH9.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3630,
+    "altura": 1299,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.999,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9978,
+     "pixels_opacos": 63489,
+     "fracao_opaca": 0.7094,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 179,
+     "contraste_wcag": 18.843
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "la-haine": {
+   "tmdb_id": 406,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 2,
+   "logo_escolhido": {
+    "file_path": "/8VWm0tNRtt8VjYI4efiMeodKfW0.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4308,
+    "altura": 499,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 21609,
+     "fracao_opaca": 0.7451,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 58,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "longlegs": {
+   "tmdb_id": 1226578,
+   "logos_disponiveis": {
+    "pt-BR": 7,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 14,
+   "logo_escolhido": {
+    "file_path": "/gmNwiZjD9CkbcNhqVD2UZpkS9qJ.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3358,
+    "altura": 951,
+    "vote_average": 1.222,
+    "vote_count": 3,
+    "medida_w500": {
+     "luminancia_media": 0.2117,
+     "fracao_escura": 1.0,
+     "saturacao_media": 1.0,
+     "croma_medio": 0.9959,
+     "luminancia_relativa_media": 0.2106,
+     "pixels_opacos": 33642,
+     "fracao_opaca": 0.4738,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 142,
+     "contraste_wcag": 4.687
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "mad-max-fury-road": {
+   "tmdb_id": 76341,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 0
+   },
+   "logos_total": 15,
+   "logo_escolhido": {
+    "file_path": "/1XYQTYx4kcIhzNwSttv9xooioeI.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2000,
+    "altura": 300,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.7641,
+     "fracao_escura": 0.0028,
+     "saturacao_media": 0.6827,
+     "croma_medio": 0.6393,
+     "luminancia_relativa_media": 0.5954,
+     "pixels_opacos": 23459,
+     "fracao_opaca": 0.6256,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 75,
+     "contraste_wcag": 11.607
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "malcolm-x-1992": {
+   "tmdb_id": 1883,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 2,
+   "logo_escolhido": {
+    "file_path": "/hmsi0KPsXxyqxSOOxM2YQaakU4W.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 4315,
+    "altura": 574,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9996,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9991,
+     "pixels_opacos": 8193,
+     "fracao_opaca": 0.2446,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 67,
+     "contraste_wcag": 18.867
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "marty-supreme": {
+   "tmdb_id": 1317288,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/37hfr9UXKAfXRNmps8BO5cuAO9J.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1713,
+    "altura": 1877,
+    "vote_average": 6.042,
+    "vote_count": 12,
+    "medida_w500": {
+     "luminancia_media": 0.7967,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0029,
+     "croma_medio": 0.0023,
+     "luminancia_relativa_media": 0.6019,
+     "pixels_opacos": 200098,
+     "fracao_opaca": 0.7303,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 548,
+     "contraste_wcag": 11.724
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "memento": {
+   "tmdb_id": 77,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/w5Wpi1sRP6CZd6fbNHPJ8LTTU8O.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1007,
+    "altura": 285,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9779,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.954,
+     "pixels_opacos": 16669,
+     "fracao_opaca": 0.2348,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 142,
+     "contraste_wcag": 18.056
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "memories-of-murder": {
+   "tmdb_id": 11423,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/uzVGePBZLsdzeMUJArknO5TsB78.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1921,
+    "altura": 1157,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.6258,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.071,
+     "croma_medio": 0.0457,
+     "luminancia_relativa_media": 0.3516,
+     "pixels_opacos": 21981,
+     "fracao_opaca": 0.1461,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 301,
+     "contraste_wcag": 7.222
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "mother-2017": {
+   "tmdb_id": 381283,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/5NirokqjePXDkbGmdnhfLzXHKh5.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 788,
+    "altura": 213,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.7673,
+     "fracao_escura": 0.1661,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.7102,
+     "pixels_opacos": 7259,
+     "fracao_opaca": 0.1078,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 135,
+     "contraste_wcag": 13.671
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "napoleon-2023": {
+   "tmdb_id": 753342,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 5,
+    "pt_sem_pais": 0,
+    "en": 8,
+    "sem_idioma": 0
+   },
+   "logos_total": 13,
+   "logo_escolhido": {
+    "file_path": "/dkjivK8Mm7f3m8BtmueCZJuanbw.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 2016,
+    "altura": 264,
+    "vote_average": 7.542,
+    "vote_count": 12,
+    "medida_w500": {
+     "luminancia_media": 0.2091,
+     "fracao_escura": 1.0,
+     "saturacao_media": 0.9525,
+     "croma_medio": 0.7902,
+     "luminancia_relativa_media": 0.1418,
+     "pixels_opacos": 18704,
+     "fracao_opaca": 0.5755,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 65,
+     "contraste_wcag": 3.449
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "neighboring-sounds": {
+   "tmdb_id": 97989,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 764,
+    "altura": 295,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.6551,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.2128,
+     "croma_medio": 0.1541,
+     "luminancia_relativa_media": 0.3927,
+     "pixels_opacos": 42089,
+     "fracao_opaca": 0.4362,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 193,
+     "contraste_wcag": 7.961
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "obsession-2025": {
+   "tmdb_id": 1339713,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 14,
+    "sem_idioma": 0
+   },
+   "logos_total": 19,
+   "logo_escolhido": {
+    "file_path": "/3iwqmEyyMGawO30DQd19kBXqAZA.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1000,
+    "altura": 311,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.8892,
+     "fracao_escura": 0.0019,
+     "saturacao_media": 0.1468,
+     "croma_medio": 0.1301,
+     "luminancia_relativa_media": 0.8196,
+     "pixels_opacos": 42921,
+     "fracao_opaca": 0.5503,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 156,
+     "contraste_wcag": 15.639
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "oppenheimer-2023": {
+   "tmdb_id": 872585,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 12,
+    "sem_idioma": 0
+   },
+   "logos_total": 14,
+   "logo_escolhido": {
+    "file_path": "/e0NcrovoxPi2ZI7rTFzymjN96U8.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2864,
+    "altura": 383,
+    "vote_average": 3.334,
+    "vote_count": 3,
+    "medida_w500": {
+     "luminancia_media": 0.5761,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.7401,
+     "croma_medio": 0.7388,
+     "luminancia_relativa_media": 0.3894,
+     "pixels_opacos": 9625,
+     "fracao_opaca": 0.2873,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 67,
+     "contraste_wcag": 7.902
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "parasite-2019": {
+   "tmdb_id": 496243,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/rRj7LWPPl9ASsSy5Cehq32FegIa.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 500,
+    "altura": 80,
+    "vote_average": 1.066,
+    "vote_count": 5,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 15241,
+     "fracao_opaca": 0.381,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 80,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "pearl-2022": {
+   "tmdb_id": 949423,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 11,
+    "sem_idioma": 0
+   },
+   "logos_total": 11,
+   "logo_escolhido": {
+    "file_path": "/wNp1gb3OkXN5VyngQU06uzBsvt0.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1086,
+    "altura": 780,
+    "vote_average": 10.0,
+    "vote_count": 4,
+    "medida_w500": {
+     "luminancia_media": 0.3264,
+     "fracao_escura": 0.1997,
+     "saturacao_media": 0.5947,
+     "croma_medio": 0.4519,
+     "luminancia_relativa_media": 0.1695,
+     "pixels_opacos": 19851,
+     "fracao_opaca": 0.1106,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 359,
+     "contraste_wcag": 3.947
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "perfect-days-2023": {
+   "tmdb_id": 976893,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/2VSRdZhkQ4Dqs4lR1pKr4CEsF2Q.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1980,
+    "altura": 215,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.8826,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0483,
+     "croma_medio": 0.0433,
+     "luminancia_relativa_media": 0.7541,
+     "pixels_opacos": 16156,
+     "fracao_opaca": 0.602,
+     "tinha_alfa": true,
+     "largura_medida": 497,
+     "altura_medida": 54,
+     "contraste_wcag": 14.461
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "pinocchio-2022": {
+   "tmdb_id": 532639,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 8,
+    "sem_idioma": 0
+   },
+   "logos_total": 11,
+   "logo_escolhido": {
+    "file_path": "/hQbVaYetCKr4RM4fADzL7ihKCQO.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1917,
+    "altura": 398,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9995,
+     "pixels_opacos": 19006,
+     "fracao_opaca": 0.3655,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 104,
+     "contraste_wcag": 18.874
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "porco-rosso": {
+   "tmdb_id": 11621,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/5XkvUkROBNlIfsSiCHzir8IKpqI.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 780,
+    "altura": 133,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9994,
+     "pixels_opacos": 18582,
+     "fracao_opaca": 0.439,
+     "tinha_alfa": true,
+     "largura_medida": 498,
+     "altura_medida": 85,
+     "contraste_wcag": 18.872
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "portrait-of-a-lady-on-fire": {
+   "tmdb_id": 531428,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/9yGHOV8NmNzkwBn3wXrB5IgaaNH.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3445,
+    "altura": 445,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9765,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0056,
+     "croma_medio": 0.0053,
+     "luminancia_relativa_media": 0.9486,
+     "pixels_opacos": 3606,
+     "fracao_opaca": 0.111,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 65,
+     "contraste_wcag": 17.959
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "princess-mononoke": {
+   "tmdb_id": 128,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 5,
+   "logo_escolhido": {
+    "file_path": "/a87lLp1CUwGDn4mfDyxbyYsz4A7.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 780,
+    "altura": 194,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9995,
+     "pixels_opacos": 26295,
+     "fracao_opaca": 0.425,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 124,
+     "contraste_wcag": 18.874
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "prisoners": {
+   "tmdb_id": 146233,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/slGwR0Xq2OSeHOT4bY7LIIrg5hS.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4288,
+    "altura": 343,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9282,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.004,
+     "croma_medio": 0.0019,
+     "luminancia_relativa_media": 0.8902,
+     "pixels_opacos": 3596,
+     "fracao_opaca": 0.1798,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 40,
+     "contraste_wcag": 16.908
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "satantango": {
+   "tmdb_id": 31414,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 1,
+   "logo_escolhido": {
+    "file_path": "/1KME4tIFqEPl5XwRnV6WlcwjsRH.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 736,
+    "altura": 152,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.3064,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.9023,
+     "croma_medio": 0.7186,
+     "luminancia_relativa_media": 0.1479,
+     "pixels_opacos": 27487,
+     "fracao_opaca": 0.5348,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 103,
+     "contraste_wcag": 3.559
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "se7en": {
+   "tmdb_id": 807,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 19,
+    "sem_idioma": 0
+   },
+   "logos_total": 23,
+   "logo_escolhido": {
+    "file_path": "/xqMDJ8aFKn0YpajNnFtyi1ZscmN.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 786,
+    "altura": 196,
+    "vote_average": 0.958,
+    "vote_count": 4,
+    "medida_w500": {
+     "luminancia_media": 0.9011,
+     "fracao_escura": 0.0368,
+     "saturacao_media": 0.0377,
+     "croma_medio": 0.0296,
+     "luminancia_relativa_media": 0.8692,
+     "pixels_opacos": 21197,
+     "fracao_opaca": 0.3392,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 125,
+     "contraste_wcag": 16.531
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "shutter-island": {
+   "tmdb_id": 11324,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 5,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 0
+   },
+   "logos_total": 17,
+   "logo_escolhido": {
+    "file_path": "/8Nd8wAHEhFvWZ782Frnb2p9X01w.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1270,
+    "altura": 522,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.2327,
+     "fracao_escura": 0.9508,
+     "saturacao_media": 0.8708,
+     "croma_medio": 0.6354,
+     "luminancia_relativa_media": 0.1124,
+     "pixels_opacos": 36748,
+     "fracao_opaca": 0.3568,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 206,
+     "contraste_wcag": 2.921
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "escuro_cor",
+   "override": null,
+   "classe": "escuro_cor"
+  },
+  "sinners-2025": {
+   "tmdb_id": 1233413,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 5,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 0
+   },
+   "logos_total": 17,
+   "logo_escolhido": {
+    "file_path": "/d7pA3cdwXiGaiHrGiBtIRTfMvWk.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4310,
+    "altura": 602,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.8943,
+     "fracao_escura": 0.0002,
+     "saturacao_media": 0.254,
+     "croma_medio": 0.2448,
+     "luminancia_relativa_media": 0.7996,
+     "pixels_opacos": 13495,
+     "fracao_opaca": 0.3856,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 70,
+     "contraste_wcag": 15.279
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "soul-2020": {
+   "tmdb_id": 508442,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 0
+   },
+   "logos_total": 13,
+   "logo_escolhido": {
+    "file_path": "/x0zdKfh6qqud6BZAITgP6zhmE1g.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 2031,
+    "altura": 1270,
+    "vote_average": 10.0,
+    "vote_count": 4,
+    "medida_w500": {
+     "luminancia_media": 0.5208,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.8322,
+     "croma_medio": 0.7233,
+     "luminancia_relativa_media": 0.3241,
+     "pixels_opacos": 49748,
+     "fracao_opaca": 0.3179,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 313,
+     "contraste_wcag": 6.728
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "speak-no-evil-2022": {
+   "tmdb_id": 833339,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 6,
+   "logo_escolhido": {
+    "file_path": "/2KZ7lGvEnMKKcYyjpzx5vuAYOAj.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 3180,
+    "altura": 189,
+    "vote_average": 8.908,
+    "vote_count": 9,
+    "medida_w500": {
+     "luminancia_media": 0.5211,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.7495,
+     "croma_medio": 0.6471,
+     "luminancia_relativa_media": 0.2817,
+     "pixels_opacos": 1480,
+     "fracao_opaca": 0.0987,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 30,
+     "contraste_wcag": 5.965
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "spider-man-across-the-spider-verse": {
+   "tmdb_id": 569094,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 9,
+    "sem_idioma": 0
+   },
+   "logos_total": 13,
+   "logo_escolhido": {
+    "file_path": "/yucbV7s34jCNRAfqOEiyOSPvIkT.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4185,
+    "altura": 1296,
+    "vote_average": 1.75,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 26380,
+     "fracao_opaca": 0.3404,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 155,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "talk-to-me-2022": {
+   "tmdb_id": 1008042,
+   "logos_disponiveis": {
+    "pt-BR": 4,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 3238,
+    "altura": 828,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.5383,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.3614,
+     "croma_medio": 0.225,
+     "luminancia_relativa_media": 0.2569,
+     "pixels_opacos": 23499,
+     "fracao_opaca": 0.3672,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 128,
+     "contraste_wcag": 5.519
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-battle-of-algiers": {
+   "tmdb_id": 17295,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/mVSoOqDUIspvRduxoiWwnHziace.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 702,
+    "altura": 343,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9243,
+     "fracao_escura": 0.0391,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.8933,
+     "pixels_opacos": 31485,
+     "fracao_opaca": 0.2586,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 244,
+     "contraste_wcag": 16.964
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-brutalist": {
+   "tmdb_id": 549509,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 9,
+    "sem_idioma": 0
+   },
+   "logos_total": 11,
+   "logo_escolhido": {
+    "file_path": "/isrOcpeplAtUoxBBV469GMBBVCW.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2450,
+    "altura": 1299,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9994,
+     "pixels_opacos": 53405,
+     "fracao_opaca": 0.4031,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 265,
+     "contraste_wcag": 18.872
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-cloud-capped-star": {
+   "tmdb_id": 59239,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 0,
+    "sem_idioma": 0
+   },
+   "logos_total": 0,
+   "logo_escolhido": null,
+   "idioma_logo": null,
+   "titulo_difere_do_logo": false,
+   "classe_medida": null,
+   "override": null,
+   "classe": null
+  },
+  "the-gentlemen": {
+   "tmdb_id": 522627,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/863trX5l5X2H1IvJjV1R3cYe8Y7.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4287,
+    "altura": 243,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9986,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9968,
+     "pixels_opacos": 3809,
+     "fracao_opaca": 0.2754,
+     "tinha_alfa": true,
+     "largura_medida": 494,
+     "altura_medida": 28,
+     "contraste_wcag": 18.826
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-godfather": {
+   "tmdb_id": 238,
+   "logos_disponiveis": {
+    "pt-BR": 5,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 25,
+    "sem_idioma": 0
+   },
+   "logos_total": 32,
+   "logo_escolhido": {
+    "file_path": "/nWjlUrwVcSPHvbF7frdx0cKBAHl.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 981,
+    "altura": 1110,
+    "vote_average": 4.3,
+    "vote_count": 10,
+    "medida_w500": {
+     "luminancia_media": 0.5647,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.7815,
+     "croma_medio": 0.5672,
+     "luminancia_relativa_media": 0.2997,
+     "pixels_opacos": 110792,
+     "fracao_opaca": 0.3915,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 566,
+     "contraste_wcag": 6.289
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-hateful-eight": {
+   "tmdb_id": 273248,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 16,
+    "sem_idioma": 0
+   },
+   "logos_total": 18,
+   "logo_escolhido": {
+    "file_path": "/viU3jzYsvR94YZcV4fINkx10NeR.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1274,
+    "altura": 527,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9995,
+     "pixels_opacos": 52144,
+     "fracao_opaca": 0.5038,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 207,
+     "contraste_wcag": 18.874
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-northman": {
+   "tmdb_id": 639933,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 1
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/wRUsm1am2uilmEDCrJ9rJJ9uFJd.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1790,
+    "altura": 238,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 8928,
+     "fracao_opaca": 0.2705,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 66,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-prestige": {
+   "tmdb_id": 1124,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 8,
+    "sem_idioma": 0
+   },
+   "logos_total": 13,
+   "logo_escolhido": {
+    "file_path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 600,
+    "altura": 42,
+    "vote_average": 1.31,
+    "vote_count": 7,
+    "medida_w500": {
+     "luminancia_media": 0.999,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9978,
+     "pixels_opacos": 5793,
+     "fracao_opaca": 0.331,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 35,
+     "contraste_wcag": 18.843
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-revenant-2015": {
+   "tmdb_id": 281957,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 3,
+    "pt_sem_pais": 0,
+    "en": 10,
+    "sem_idioma": 2
+   },
+   "logos_total": 18,
+   "logo_escolhido": {
+    "file_path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4320,
+    "altura": 567,
+    "vote_average": 0.5,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.5003,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.4479,
+     "croma_medio": 0.2882,
+     "luminancia_relativa_media": 0.2219,
+     "pixels_opacos": 12327,
+     "fracao_opaca": 0.3735,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 66,
+     "contraste_wcag": 4.89
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-second-mother": {
+   "tmdb_id": 310569,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/dvYqCaQflbvC8J2o9fLnKWEyfbG.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1280,
+    "altura": 544,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9997,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9993,
+     "pixels_opacos": 36045,
+     "fracao_opaca": 0.3385,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 213,
+     "contraste_wcag": 18.87
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-spongebob-movie-search-for-squarepants": {
+   "tmdb_id": 991494,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 5,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/qCS7gkIz0t37kMj183F4xVvDkDs.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 707,
+    "altura": 258,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.5906,
+     "fracao_escura": 0.192,
+     "saturacao_media": 0.8649,
+     "croma_medio": 0.6859,
+     "luminancia_relativa_media": 0.4569,
+     "pixels_opacos": 46006,
+     "fracao_opaca": 0.5066,
+     "tinha_alfa": true,
+     "largura_medida": 499,
+     "altura_medida": 182,
+     "contraste_wcag": 9.116
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-substance": {
+   "tmdb_id": 933260,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 10,
+   "logo_escolhido": {
+    "file_path": "/tl8Bpz1Q3y2AVhzHCazGCcIguQQ.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4319,
+    "altura": 1040,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9819,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9593,
+     "pixels_opacos": 38077,
+     "fracao_opaca": 0.6372,
+     "tinha_alfa": true,
+     "largura_medida": 498,
+     "altura_medida": 120,
+     "contraste_wcag": 18.151
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-swimming-pool": {
+   "tmdb_id": 4946,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/gKT2fMi5curdg4V77MuPOE60Lzd.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 835,
+    "altura": 157,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.4254,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.7674,
+     "croma_medio": 0.584,
+     "luminancia_relativa_media": 0.1895,
+     "pixels_opacos": 23912,
+     "fracao_opaca": 0.5088,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 94,
+     "contraste_wcag": 4.307
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-truman-show": {
+   "tmdb_id": 37165,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 2,
+    "pt_sem_pais": 0,
+    "en": 25,
+    "sem_idioma": 1
+   },
+   "logos_total": 29,
+   "logo_escolhido": {
+    "file_path": "/g4NnPHqujkLrpO9u64jmMWSgfcb.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1367,
+    "altura": 295,
+    "vote_average": 1.444,
+    "vote_count": 6,
+    "medida_w500": {
+     "luminancia_media": 0.2893,
+     "fracao_escura": 0.0805,
+     "saturacao_media": 0.7757,
+     "croma_medio": 0.6268,
+     "luminancia_relativa_media": 0.1447,
+     "pixels_opacos": 25802,
+     "fracao_opaca": 0.4778,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 108,
+     "contraste_wcag": 3.501
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-turin-horse": {
+   "tmdb_id": 81401,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 3,
+    "sem_idioma": 0
+   },
+   "logos_total": 4,
+   "logo_escolhido": {
+    "file_path": "/5YnrSw3cn439D2AstdBMRnoyT9c.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 695,
+    "altura": 311,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.9612,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0002,
+     "croma_medio": 0.0002,
+     "luminancia_relativa_media": 0.9198,
+     "pixels_opacos": 7606,
+     "fracao_opaca": 0.0679,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 224,
+     "contraste_wcag": 17.441
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-wailing": {
+   "tmdb_id": 293670,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 2,
+    "sem_idioma": 4
+   },
+   "logos_total": 7,
+   "logo_escolhido": {
+    "file_path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 1691,
+    "altura": 564,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9482,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0156,
+     "croma_medio": 0.0148,
+     "luminancia_relativa_media": 0.8871,
+     "pixels_opacos": 15902,
+     "fracao_opaca": 0.1904,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 167,
+     "contraste_wcag": 16.853
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "the-wolf-of-wall-street": {
+   "tmdb_id": 106646,
+   "logos_disponiveis": {
+    "pt-BR": 4,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 12,
+    "sem_idioma": 0
+   },
+   "logos_total": 17,
+   "logo_escolhido": {
+    "file_path": "/1VdpZBlBC59xgqYRdqwv1P6ufOR.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 6044,
+    "altura": 384,
+    "vote_average": 3.334,
+    "vote_count": 1,
+    "medida_w500": {
+     "luminancia_media": 0.7144,
+     "fracao_escura": 0.0025,
+     "saturacao_media": 0.9086,
+     "croma_medio": 0.8596,
+     "luminancia_relativa_media": 0.5306,
+     "pixels_opacos": 6494,
+     "fracao_opaca": 0.4059,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 32,
+     "contraste_wcag": 10.441
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "top-gun-maverick": {
+   "tmdb_id": 361743,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 15,
+    "sem_idioma": 0
+   },
+   "logos_total": 16,
+   "logo_escolhido": {
+    "file_path": "/wbuiGa8NTw6uOkjzWsszXNUIqHP.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 4256,
+    "altura": 1290,
+    "vote_average": 3.334,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9996,
+     "pixels_opacos": 34176,
+     "fracao_opaca": 0.4497,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 152,
+     "contraste_wcag": 18.876
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "uncut-gems": {
+   "tmdb_id": 473033,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 3,
+   "logo_escolhido": {
+    "file_path": "/f1IJSjZuAbPYdTSsq1iQyWUIjO5.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 986,
+    "altura": 212,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.9998,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 0.9997,
+     "pixels_opacos": 31685,
+     "fracao_opaca": 0.5868,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 108,
+     "contraste_wcag": 18.878
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "whiplash-2014": {
+   "tmdb_id": 244786,
+   "logos_disponiveis": {
+    "pt-BR": 2,
+    "pt-PT": 1,
+    "pt_sem_pais": 0,
+    "en": 6,
+    "sem_idioma": 0
+   },
+   "logos_total": 9,
+   "logo_escolhido": {
+    "file_path": "/6CPHlVEUXysNUTNI0iucYgQEApt.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 500,
+    "altura": 244,
+    "vote_average": 2.278,
+    "vote_count": 2,
+    "medida_w500": {
+     "luminancia_media": 1.0,
+     "fracao_escura": 0.0,
+     "saturacao_media": 0.0,
+     "croma_medio": 0.0,
+     "luminancia_relativa_media": 1.0,
+     "pixels_opacos": 58664,
+     "fracao_opaca": 0.4809,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 244,
+     "contraste_wcag": 18.883
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "wicked-2024": {
+   "tmdb_id": 402431,
+   "logos_disponiveis": {
+    "pt-BR": 3,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 20,
+    "sem_idioma": 0
+   },
+   "logos_total": 23,
+   "logo_escolhido": {
+    "file_path": "/ms75wl4cMU8zhXG4QwwCdaWlzLT.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 2744,
+    "altura": 1299,
+    "vote_average": 3.334,
+    "vote_count": 3,
+    "medida_w500": {
+     "luminancia_media": 0.2036,
+     "fracao_escura": 0.5695,
+     "saturacao_media": 0.3979,
+     "croma_medio": 0.1765,
+     "luminancia_relativa_media": 0.086,
+     "pixels_opacos": 59360,
+     "fracao_opaca": 0.5009,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 237,
+     "contraste_wcag": 2.446
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "escuro_cor",
+   "override": null,
+   "classe": "escuro_cor"
+  },
+  "woman-of-fire": {
+   "tmdb_id": 108175,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 0,
+    "sem_idioma": 0
+   },
+   "logos_total": 0,
+   "logo_escolhido": null,
+   "idioma_logo": null,
+   "titulo_difere_do_logo": false,
+   "classe_medida": null,
+   "override": null,
+   "classe": null
+  },
+  "wonka": {
+   "tmdb_id": 787699,
+   "logos_disponiveis": {
+    "pt-BR": 1,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 7,
+    "sem_idioma": 0
+   },
+   "logos_total": 8,
+   "logo_escolhido": {
+    "file_path": "/cUzMzh1XrairgWBeD53LnwBKx0z.png",
+    "idioma": "pt-BR",
+    "iso_639_1_original": "pt",
+    "iso_3166_1": "BR",
+    "file_type": "png",
+    "largura": 394,
+    "altura": 240,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.963,
+     "fracao_escura": 0.0002,
+     "saturacao_media": 0.0001,
+     "croma_medio": 0.0001,
+     "luminancia_relativa_media": 0.9319,
+     "pixels_opacos": 38490,
+     "fracao_opaca": 0.2524,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 305,
+     "contraste_wcag": 17.658
+    }
+   },
+   "idioma_logo": "pt-BR",
+   "titulo_difere_do_logo": false,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  },
+  "zama": {
+   "tmdb_id": 326382,
+   "logos_disponiveis": {
+    "pt-BR": 0,
+    "pt-PT": 0,
+    "pt_sem_pais": 0,
+    "en": 1,
+    "sem_idioma": 0
+   },
+   "logos_total": 1,
+   "logo_escolhido": {
+    "file_path": "/a3PpPJ71VhO9B98fnjAKB6yXMpI.png",
+    "idioma": "en",
+    "iso_639_1_original": "en",
+    "iso_3166_1": "US",
+    "file_type": "png",
+    "largura": 1698,
+    "altura": 2035,
+    "vote_average": 0.0,
+    "vote_count": 0,
+    "medida_w500": {
+     "luminancia_media": 0.3117,
+     "fracao_escura": 0.256,
+     "saturacao_media": 0.737,
+     "croma_medio": 0.5047,
+     "luminancia_relativa_media": 0.1276,
+     "pixels_opacos": 129381,
+     "fracao_opaca": 0.432,
+     "tinha_alfa": true,
+     "largura_medida": 500,
+     "altura_medida": 599,
+     "contraste_wcag": 3.194
+    }
+   },
+   "idioma_logo": "en",
+   "titulo_difere_do_logo": true,
+   "classe_medida": "claro",
+   "override": null,
+   "classe": "claro"
+  }
+ }
+}

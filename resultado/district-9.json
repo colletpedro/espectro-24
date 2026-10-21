@@ -116,7 +116,12 @@
       "titulo_tmdb_correspondente": "District 9",
       "ano_tmdb": 2009,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "NZ",
+      "ZA",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 576950,

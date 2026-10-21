@@ -117,7 +117,16 @@
       "titulo_tmdb_correspondente": "Hard to Be a God",
       "ano_tmdb": 2014,
       "ano_divergente": true
-    }
+    },
+    "paises": [
+      "RU"
+    ],
+    "logo": {
+      "path": "/3oE8aYKwwYeMybQeOi5uv4nbeI4.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 18101,

@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Porco Rosso",
       "ano_tmdb": 1992,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "JP"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 610537,

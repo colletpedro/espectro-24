@@ -119,7 +119,10 @@
       "titulo_tmdb_correspondente": "Cars",
       "ano_tmdb": 2006,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2123070,

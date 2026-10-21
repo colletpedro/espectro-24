@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "The Prestige",
       "ano_tmdb": 2006,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ],
+    "logo": {
+      "path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 2179678,

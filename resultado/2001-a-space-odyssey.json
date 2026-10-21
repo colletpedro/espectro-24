@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "2001: A Space Odyssey",
       "ano_tmdb": 1968,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1602074,

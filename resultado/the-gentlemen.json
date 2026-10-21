@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "The Gentlemen",
       "ano_tmdb": 2020,
       "ano_divergente": true
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 685716,

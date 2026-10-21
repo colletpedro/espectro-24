@@ -118,7 +118,17 @@
       "titulo_tmdb_correspondente": "Burning",
       "ano_tmdb": 2018,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "KR",
+      "JP"
+    ],
+    "logo": {
+      "path": "/bILH1xVdtoAPt087S0Of3dWmQma.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 334962,

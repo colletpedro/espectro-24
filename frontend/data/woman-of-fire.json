@@ -66,7 +66,12 @@
       "titulo_tmdb_correspondente": "Woman of Fire",
       "ano_tmdb": 1971,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "KR"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 1145,

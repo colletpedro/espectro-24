@@ -117,7 +117,17 @@
       "titulo_tmdb_correspondente": "The Wailing",
       "ano_tmdb": 2016,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "KR",
+      "US"
+    ],
+    "logo": {
+      "path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 327019,

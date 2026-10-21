@@ -118,7 +118,16 @@
       "titulo_tmdb_correspondente": "A Brighter Summer Day",
       "ano_tmdb": 1991,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "TW"
+    ],
+    "logo": {
+      "path": "/lNzPGatbAcNxPpcK7Zp9LDRj3jk.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 81998,

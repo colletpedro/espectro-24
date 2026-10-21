@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Anatomy of a Murder",
       "ano_tmdb": 1959,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 100195,

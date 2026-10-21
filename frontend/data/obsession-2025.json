@@ -117,7 +117,17 @@
       "titulo_tmdb_correspondente": "Obsession",
       "ano_tmdb": 2026,
       "ano_divergente": true
-    }
+    },
+    "paises": [
+      "US",
+      "GB"
+    ],
+    "logo": {
+      "path": "/3iwqmEyyMGawO30DQd19kBXqAZA.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 4791609,

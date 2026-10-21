@@ -116,7 +116,17 @@
       "titulo_tmdb_correspondente": "Talk to Me",
       "ano_tmdb": 2023,
       "ano_divergente": true
-    }
+    },
+    "paises": [
+      "AU",
+      "GB"
+    ],
+    "logo": {
+      "path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 1484316,

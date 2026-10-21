@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Arrival",
       "ano_tmdb": 2016,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2720713,

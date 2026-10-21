@@ -93,7 +93,10 @@
       "titulo_tmdb_correspondente": "Neighboring Sounds",
       "ano_tmdb": 2012,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "BR"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 38214,

@@ -118,7 +118,10 @@
       "titulo_tmdb_correspondente": "Prisoners",
       "ano_tmdb": 2013,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2476613,

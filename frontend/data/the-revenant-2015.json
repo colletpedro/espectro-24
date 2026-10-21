@@ -118,7 +118,19 @@
       "titulo_tmdb_correspondente": "The Revenant",
       "ano_tmdb": 2015,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "CA",
+      "HK",
+      "TW",
+      "US"
+    ],
+    "logo": {
+      "path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
+      "idioma": "pt-BR",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": false
   },
   "distribuicao": {
     "n_notas_total": 1504094,

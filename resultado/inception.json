@@ -118,7 +118,11 @@
       "titulo_tmdb_correspondente": "Inception",
       "ano_tmdb": 2010,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "GB",
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 4448995,

@@ -105,7 +105,16 @@
         "still_largura": 2048,
         "still_altura": 1152
       }
-    ]
+    ],
+    "paises": [
+      "JP"
+    ],
+    "logo": {
+      "path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
+      "idioma": "en",
+      "classe": "claro"
+    },
+    "titulo_difere_do_logo": true
   },
   "distribuicao": {
     "n_notas_total": 375278,

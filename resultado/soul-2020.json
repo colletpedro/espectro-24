@@ -120,7 +120,10 @@
       "titulo_tmdb_correspondente": "Soul",
       "ano_tmdb": 2020,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "US"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 2623446,

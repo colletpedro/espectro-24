@@ -116,7 +116,10 @@
       "titulo_tmdb_correspondente": "The Cloud-Capped Star",
       "ano_tmdb": 1960,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "IN"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 7921,

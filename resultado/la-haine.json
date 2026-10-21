@@ -116,7 +116,10 @@
       "titulo_tmdb_correspondente": "La Haine",
       "ano_tmdb": 1995,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "FR"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 1191819,

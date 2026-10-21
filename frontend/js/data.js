@@ -209,7 +209,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/mCRRIzvGBDkzmKpuS2MyejDHHCF.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 338448,
@@ -1765,7 +1774,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "12 Angry Men",
           "ano_tmdb": 1957,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/cluD120ZWH3mYDHDVVcNJNYfgrC.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1730346,
@@ -3407,7 +3425,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "2001: A Space Odyssey",
           "ano_tmdb": 1968,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/9ntblcdsqyUj99RbfTTN973DZvx.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1602074,
@@ -5021,7 +5049,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "(500) Days of Summer",
           "ano_tmdb": 2009,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/Ab0wdaoQ7WtWr7Hhj2OezTx4Ju3.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3390233,
@@ -6660,7 +6697,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "A Brighter Summer Day",
           "ano_tmdb": 1991,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "TW"
+        ],
+        "logo": {
+          "path": "/lNzPGatbAcNxPpcK7Zp9LDRj3jk.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 81998,
@@ -8111,7 +8157,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 2560,
             "still_altura": 1441
           }
-        ]
+        ],
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/hZCqSZbRUSUyWIXglKtwuoM0AiV.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 1657928,
@@ -9668,7 +9724,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "All Quiet on the Western Front",
           "ano_tmdb": 2022,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DE"
+        ],
+        "logo": {
+          "path": "/5BI2vscWdROnvRlYibNjr1FOpDf.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1253405,
@@ -11270,7 +11335,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1846,
             "still_altura": 1038
           }
-        ]
+        ],
+        "paises": [
+          "FR"
+        ],
+        "logo": {
+          "path": "/fDgEeNkyUPBGzovS98t899SIdhN.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 1528627,
@@ -12826,7 +12900,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Anatomy of a Murder",
           "ano_tmdb": 1959,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/j7zUJ1Oh2isTuMjVDgLGnAPjXIZ.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 100195,
@@ -14445,7 +14528,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Arrival",
           "ano_tmdb": 2016,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/aKFYSSTPkReVysTEWrE3yaqmcMS.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2720713,
@@ -16021,7 +16113,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1920,
             "still_altura": 1080
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/8gmwT4NJ68ZtZEVpPWlPEdZOXa8.png",
+          "idioma": "pt-BR",
+          "classe": "escuro_cor"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3753819,
@@ -17599,7 +17700,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 1632,
             "still_altura": 918
           }
-        ]
+        ],
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/nsMnkuWIZCBxkBLPi0ZXuRloYL2.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 5967139,
@@ -19166,7 +19277,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 2080,
             "still_altura": 1170
           }
-        ]
+        ],
+        "paises": [
+          "IT",
+          "US"
+        ],
+        "logo": {
+          "path": "/bL5uoEftrLACHEG3vVCWkmTwqAF.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1301224,
@@ -20736,7 +20857,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Burning",
           "ano_tmdb": 2018,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "KR",
+          "JP"
+        ],
+        "logo": {
+          "path": "/bILH1xVdtoAPt087S0Of3dWmQma.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 334962,
@@ -22259,7 +22390,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Cars",
           "ano_tmdb": 2006,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/jrZp7apZ5hPvrMdOG3NPjPP7VNG.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2123070,
@@ -23889,7 +24029,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Catch Me If You Can",
           "ano_tmdb": 2002,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/r6Vr1kPwEyhX03xhMZCvhUSfnhB.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2682622,
@@ -25487,7 +25636,18 @@ window.ESPECTRO_DATA = {
             "still_largura": 1920,
             "still_altura": 1080
           }
-        ]
+        ],
+        "paises": [
+          "CN",
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/fsdazyxTF9lrY6aqcbYbpuhRcfC.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 185229,
@@ -27069,7 +27229,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Chinatown",
           "ano_tmdb": 1974,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/os83qvlIUOhU8wjajznIlv4v9tC.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 521462,
@@ -28666,7 +28835,18 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "BR",
+          "FR",
+          "DE"
+        ],
+        "logo": {
+          "path": "/2pcA81BO9viDv8OXo2SMCCL4cBk.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1216381,
@@ -30250,7 +30430,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Cujo",
           "ano_tmdb": 1983,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/fxBkTUvznm3BMeSGYJDBsOcdOPb.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 77285,
@@ -31834,7 +32023,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 2048,
             "still_altura": 1152
           }
-        ]
+        ],
+        "paises": [
+          "JP"
+        ],
+        "logo": {
+          "path": "/3mOFRLoCWetuCV9ljYCS5NBKOmR.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 375278,
@@ -33409,7 +33607,18 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "District 9",
           "ano_tmdb": 2009,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "NZ",
+          "ZA",
+          "US"
+        ],
+        "logo": {
+          "path": "/gneH6YMq0WKVBLBXO8rzf1YBerp.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 576950,
@@ -35037,7 +35246,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Django Unchained",
           "ano_tmdb": 2012,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/9yIn1pFo2Oumuo3OXb9qLn11sTL.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3499724,
@@ -36622,7 +36840,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Do the Right Thing",
           "ano_tmdb": 1989,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/wOEgtn3ACdItTa88Pt8kof4wndV.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 570245,
@@ -38247,7 +38474,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
           "ano_tmdb": 1964,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/a99uuyz8q0JCPHN4RfQmHfM5PI4.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 657151,
@@ -39835,7 +40072,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Drive My Car",
           "ano_tmdb": 2021,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "JP"
+        ],
+        "logo": {
+          "path": "/hMiu2LVznsq8rgHLW6patHsIu6j.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 395980,
@@ -41358,7 +41604,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1472,
             "still_altura": 828
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/2hY4HZrW6Ym8kZj34dVhOHLLnNh.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4323089,
@@ -42921,7 +43176,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 2487,
             "still_altura": 1399
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/eYvF1LhPKuoBxOAmWjFTAK7EPWl.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 3535690,
@@ -44470,7 +44734,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3500,
             "still_altura": 1969
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/mtBjMCwFlv8smc8hd0BRclfh1xZ.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 469004,
@@ -46035,7 +46308,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1849,
             "still_altura": 1040
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/mFA3RihM8JjIbVAPowmES4ZJxMo.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4060162,
@@ -47633,7 +47915,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Fight Club",
           "ano_tmdb": 1999,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DE",
+          "US"
+        ],
+        "logo": {
+          "path": "/lyFSC5i078jk12aNH4wUCNbCV8e.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 6063113,
@@ -49226,7 +49518,19 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Force Majeure",
           "ano_tmdb": 2014,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DK",
+          "FR",
+          "NO",
+          "SE"
+        ],
+        "logo": {
+          "path": "/7bcd9abkjgVVTrR1z3MrHSMI9Y3.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 138906,
@@ -50754,7 +51058,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1422,
             "still_altura": 800
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/DkMLTZBaz55DssxhHJQiVZLIMS.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 215405,
@@ -52339,7 +52652,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Get Out",
           "ano_tmdb": 2017,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/cOYIo0ymtQlJ4Nf94Yp8AKDLaVw.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4739915,
@@ -53871,7 +54193,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Gladiator",
           "ano_tmdb": 2000,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/n5Mwi61zHyCk26YHRrwCNvP0Sf3.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2314890,
@@ -55481,7 +55813,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "GoodFellas",
           "ano_tmdb": 1990,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/d4zBnh2AlvT9vStIjceZAyvcBak.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2347374,
@@ -57055,7 +57396,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Guillermo del Toro's Pinocchio",
           "ano_tmdb": 2022,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/sFHqRdrAw1xvX8ltoJkyAVsHjPh.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 714140,
@@ -58549,7 +58899,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Happy Hour",
           "ano_tmdb": 2015,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "JP"
+        ],
+        "logo": {
+          "path": "/9KywbVkZgLnSSF5zxQfFIVvaaYf.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 14888,
@@ -60065,7 +60424,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Hard to Be a God",
           "ano_tmdb": 2014,
           "ano_divergente": true
-        }
+        },
+        "paises": [
+          "RU"
+        ],
+        "logo": {
+          "path": "/3oE8aYKwwYeMybQeOi5uv4nbeI4.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 18101,
@@ -61596,7 +61964,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US",
+          "GB"
+        ],
+        "logo": {
+          "path": "/fXhfzLMyJCNYpnP61kyF4haGfAI.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2794208,
@@ -63156,7 +63534,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 2560,
             "still_altura": 1440
           }
-        ]
+        ],
+        "paises": [
+          "BR",
+          "FR"
+        ],
+        "logo": {
+          "path": "/mNEinPcj374nOKwbxCCRQCaQO8J.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 800305,
@@ -64742,7 +65130,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Incendies",
           "ano_tmdb": 2010,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "CA",
+          "FR"
+        ],
+        "logo": {
+          "path": "/jDADVUZdWCTArACWXIdiedbfi1i.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 664575,
@@ -66328,7 +66726,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Inception",
           "ano_tmdb": 2010,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/xxgYI7UcYiFalWa8EimBSoc7dlT.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4448995,
@@ -67949,7 +68357,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Inglourious Basterds",
           "ano_tmdb": 2009,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DE",
+          "US"
+        ],
+        "logo": {
+          "path": "/ckZoF4j35HL1USGG2iX8GeQ7058.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3950699,
@@ -69559,7 +69977,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 2244,
             "still_altura": 1262
           }
-        ]
+        ],
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/7GN6eZ1xw4apwobsmohLtgZB6K6.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 6173935,
@@ -71116,7 +71544,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Joker",
           "ano_tmdb": 2019,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "CA",
+          "US"
+        ],
+        "logo": {
+          "path": "/ckRklE1gzQUzdVQ8BaKL652oO7V.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4900424,
@@ -72715,7 +73153,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3247,
             "still_altura": 1826
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/gIOXjK4tS7cYemLEe0w5HuiUGH9.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 951241,
@@ -74277,7 +74724,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "La Haine",
           "ano_tmdb": 1995,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "FR"
+        ],
+        "logo": {
+          "path": "/8VWm0tNRtt8VjYI4efiMeodKfW0.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 1191819,
@@ -75855,7 +76311,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 1280,
             "still_altura": 720
           }
-        ]
+        ],
+        "paises": [
+          "CA",
+          "US"
+        ],
+        "logo": {
+          "path": "/gmNwiZjD9CkbcNhqVD2UZpkS9qJ.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1869284,
@@ -77422,7 +77888,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Mad Max: Fury Road",
           "ano_tmdb": 2015,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "AU",
+          "US"
+        ],
+        "logo": {
+          "path": "/1XYQTYx4kcIhzNwSttv9xooioeI.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2267070,
@@ -79038,7 +79514,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Malcolm X",
           "ano_tmdb": 1992,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US",
+          "AN"
+        ],
+        "logo": {
+          "path": "/hmsi0KPsXxyqxSOOxM2YQaakU4W.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 226643,
@@ -80634,7 +81120,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Marty Supreme",
           "ano_tmdb": 2025,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/37hfr9UXKAfXRNmps8BO5cuAO9J.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 3104553,
@@ -82234,7 +82729,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Memento",
           "ano_tmdb": 2000,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/w5Wpi1sRP6CZd6fbNHPJ8LTTU8O.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2181151,
@@ -83863,7 +84367,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Memories of Murder",
           "ano_tmdb": 2003,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "KR"
+        ],
+        "logo": {
+          "path": "/uzVGePBZLsdzeMUJArknO5TsB78.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 1098638,
@@ -85358,7 +85871,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1384,
             "still_altura": 778
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/5NirokqjePXDkbGmdnhfLzXHKh5.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 884774,
@@ -86916,7 +87438,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/dkjivK8Mm7f3m8BtmueCZJuanbw.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 598710,
@@ -88480,7 +89011,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Neighboring Sounds",
           "ano_tmdb": 2012,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "BR"
+        ],
+        "logo": {
+          "path": "/bH4OidYzpMz2F1U8APrtATLJItp.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 38214,
@@ -90002,7 +90542,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Obsession",
           "ano_tmdb": 2026,
           "ano_divergente": true
-        }
+        },
+        "paises": [
+          "US",
+          "GB"
+        ],
+        "logo": {
+          "path": "/3iwqmEyyMGawO30DQd19kBXqAZA.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4791609,
@@ -91581,7 +92131,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 1460,
             "still_altura": 821
           }
-        ]
+        ],
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/e0NcrovoxPi2ZI7rTFzymjN96U8.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4484625,
@@ -93154,7 +93714,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1920,
             "still_altura": 1080
           }
-        ]
+        ],
+        "paises": [
+          "KR"
+        ],
+        "logo": {
+          "path": "/rRj7LWPPl9ASsSy5Cehq32FegIa.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 5686550,
@@ -94706,7 +95275,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/wNp1gb3OkXN5VyngQU06uzBsvt0.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 2096463,
@@ -96276,7 +96854,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 2560,
             "still_altura": 1440
           }
-        ]
+        ],
+        "paises": [
+          "DE",
+          "JP"
+        ],
+        "logo": {
+          "path": "/2VSRdZhkQ4Dqs4lR1pKr4CEsF2Q.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 874872,
@@ -97839,7 +98427,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Pinocchio",
           "ano_tmdb": 2022,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/hQbVaYetCKr4RM4fADzL7ihKCQO.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 110315,
@@ -99371,7 +99968,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Porco Rosso",
           "ano_tmdb": 1992,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "JP"
+        ],
+        "logo": {
+          "path": "/5XkvUkROBNlIfsSiCHzir8IKpqI.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 610537,
@@ -100984,7 +101590,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Portrait of a Lady on Fire",
           "ano_tmdb": 2019,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "FR"
+        ],
+        "logo": {
+          "path": "/9yGHOV8NmNzkwBn3wXrB5IgaaNH.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1178572,
@@ -102590,7 +103205,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Princess Mononoke",
           "ano_tmdb": 1997,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "JP"
+        ],
+        "logo": {
+          "path": "/a87lLp1CUwGDn4mfDyxbyYsz4A7.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1815324,
@@ -104192,7 +104816,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Prisoners",
           "ano_tmdb": 2013,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/slGwR0Xq2OSeHOT4bY7LIIrg5hS.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2476613,
@@ -105832,7 +106465,18 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Sátántangó",
           "ano_tmdb": 1994,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DE",
+          "HU",
+          "CH"
+        ],
+        "logo": {
+          "path": "/1KME4tIFqEPl5XwRnV6WlcwjsRH.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 45536,
@@ -107345,7 +107989,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Se7en",
           "ano_tmdb": 1995,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/xqMDJ8aFKn0YpajNnFtyi1ZscmN.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3976785,
@@ -108946,7 +109599,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1451,
             "still_altura": 816
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/8Nd8wAHEhFvWZ782Frnb2p9X01w.png",
+          "idioma": "pt-BR",
+          "classe": "escuro_cor"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3640785,
@@ -110510,7 +111172,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Sinners",
           "ano_tmdb": 2025,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/d7pA3cdwXiGaiHrGiBtIRTfMvWk.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4858926,
@@ -112128,7 +112799,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Soul",
           "ano_tmdb": 2020,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/x0zdKfh6qqud6BZAITgP6zhmE1g.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 2623446,
@@ -113725,7 +114405,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Speak No Evil",
           "ano_tmdb": 2022,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "DK",
+          "NL"
+        ],
+        "logo": {
+          "path": "/2KZ7lGvEnMKKcYyjpzx5vuAYOAj.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 247174,
@@ -115247,7 +115937,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/yucbV7s34jCNRAfqOEiyOSPvIkT.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3912952,
@@ -116817,7 +117516,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Talk to Me",
           "ano_tmdb": 2023,
           "ano_divergente": true
-        }
+        },
+        "paises": [
+          "AU",
+          "GB"
+        ],
+        "logo": {
+          "path": "/nrh8gNhNnkGLDKugFa4iekq8cSi.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1484316,
@@ -118392,7 +119101,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Battle of Algiers",
           "ano_tmdb": 1966,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "IT",
+          "DZ"
+        ],
+        "logo": {
+          "path": "/mVSoOqDUIspvRduxoiWwnHziace.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 149745,
@@ -119971,7 +120690,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Brutalist",
           "ano_tmdb": 2024,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/isrOcpeplAtUoxBBV469GMBBVCW.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 799390,
@@ -121573,7 +122302,12 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Cloud-Capped Star",
           "ano_tmdb": 1960,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "IN"
+        ],
+        "logo": null,
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 7921,
@@ -123102,7 +123836,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Gentlemen",
           "ano_tmdb": 2020,
           "ano_divergente": true
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/863trX5l5X2H1IvJjV1R3cYe8Y7.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 685716,
@@ -124696,7 +125440,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1920,
             "still_altura": 1080
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/nWjlUrwVcSPHvbF7frdx0cKBAHl.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2842603,
@@ -126249,7 +127002,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 2048,
             "still_altura": 1152
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/viU3jzYsvR94YZcV4fINkx10NeR.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1307441,
@@ -127792,7 +128554,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 1600,
             "still_altura": 900
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/wRUsm1am2uilmEDCrJ9rJJ9uFJd.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 946031,
@@ -129386,7 +130157,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Prestige",
           "ano_tmdb": 2006,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/xVXv2E6dwxrwSplkdtqLE2OHhCW.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2179678,
@@ -131007,7 +131788,19 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Revenant",
           "ano_tmdb": 2015,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "CA",
+          "HK",
+          "TW",
+          "US"
+        ],
+        "logo": {
+          "path": "/6KGVQ6y6wBvhod1nNMRxxhld1Cy.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1504094,
@@ -132603,7 +133396,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Second Mother",
           "ano_tmdb": 2015,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "BR"
+        ],
+        "logo": {
+          "path": "/dvYqCaQflbvC8J2o9fLnKWEyfbG.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 149576,
@@ -134129,7 +134931,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The SpongeBob Movie: Search for SquarePants",
           "ano_tmdb": 2025,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/qCS7gkIz0t37kMj183F4xVvDkDs.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 108354,
@@ -135731,7 +136542,18 @@ window.ESPECTRO_DATA = {
             "still_largura": 1920,
             "still_altura": 1080
           }
-        ]
+        ],
+        "paises": [
+          "FR",
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/tl8Bpz1Q3y2AVhzHCazGCcIguQQ.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 3735113,
@@ -137317,7 +138139,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Swimming Pool",
           "ano_tmdb": 1969,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "FR",
+          "IT"
+        ],
+        "logo": {
+          "path": "/gKT2fMi5curdg4V77MuPOE60Lzd.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 91538,
@@ -138939,7 +139771,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Truman Show",
           "ano_tmdb": 1998,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/g4NnPHqujkLrpO9u64jmMWSgfcb.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 5305179,
@@ -140562,7 +141403,20 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Turin Horse",
           "ano_tmdb": 2011,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "HU",
+          "CH",
+          "FR",
+          "DE",
+          "US"
+        ],
+        "logo": {
+          "path": "/5YnrSw3cn439D2AstdBMRnoyT9c.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 47834,
@@ -142110,7 +142964,17 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Wailing",
           "ano_tmdb": 2016,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "KR",
+          "US"
+        ],
+        "logo": {
+          "path": "/yKKbJmhmNYL05NgNlUsMWesuRgv.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 327019,
@@ -143623,7 +144487,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "The Wolf of Wall Street",
           "ano_tmdb": 2013,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/1VdpZBlBC59xgqYRdqwv1P6ufOR.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4360608,
@@ -145228,7 +146101,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Top Gun: Maverick",
           "ano_tmdb": 2022,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/wbuiGa8NTw6uOkjzWsszXNUIqHP.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2397862,
@@ -146847,7 +147729,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Uncut Gems",
           "ano_tmdb": 2019,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/f1IJSjZuAbPYdTSsq1iQyWUIjO5.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1805456,
@@ -148489,7 +149380,16 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Whiplash",
           "ano_tmdb": 2014,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/6CPHlVEUXysNUTNI0iucYgQEApt.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 4774893,
@@ -150003,7 +150903,16 @@ window.ESPECTRO_DATA = {
             "still_largura": 3840,
             "still_altura": 2160
           }
-        ]
+        ],
+        "paises": [
+          "US"
+        ],
+        "logo": {
+          "path": "/ms75wl4cMU8zhXG4QwwCdaWlzLT.png",
+          "idioma": "pt-BR",
+          "classe": "escuro_cor"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 2819879,
@@ -151548,7 +152457,12 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Woman of Fire",
           "ano_tmdb": 1971,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "KR"
+        ],
+        "logo": null,
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1145,
@@ -152912,7 +153826,17 @@ window.ESPECTRO_DATA = {
             "still_largura": 1280,
             "still_altura": 720
           }
-        ]
+        ],
+        "paises": [
+          "GB",
+          "US"
+        ],
+        "logo": {
+          "path": "/cUzMzh1XrairgWBeD53LnwBKx0z.png",
+          "idioma": "pt-BR",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": false
       },
       "distribuicao": {
         "n_notas_total": 1712913,
@@ -154489,7 +155413,25 @@ window.ESPECTRO_DATA = {
           "titulo_tmdb_correspondente": "Zama",
           "ano_tmdb": 2017,
           "ano_divergente": false
-        }
+        },
+        "paises": [
+          "AR",
+          "BR",
+          "ES",
+          "PT",
+          "MX",
+          "FR",
+          "LB",
+          "NL",
+          "US",
+          "DO"
+        ],
+        "logo": {
+          "path": "/a3PpPJ71VhO9B98fnjAKB6yXMpI.png",
+          "idioma": "en",
+          "classe": "claro"
+        },
+        "titulo_difere_do_logo": true
       },
       "distribuicao": {
         "n_notas_total": 25021,

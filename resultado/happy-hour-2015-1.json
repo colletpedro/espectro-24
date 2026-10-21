@@ -94,7 +94,10 @@
       "titulo_tmdb_correspondente": "Happy Hour",
       "ano_tmdb": 2015,
       "ano_divergente": false
-    }
+    },
+    "paises": [
+      "JP"
+    ]
   },
   "distribuicao": {
     "n_notas_total": 14888,
