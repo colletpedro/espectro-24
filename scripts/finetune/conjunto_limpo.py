@@ -3,7 +3,14 @@ limpeza com o juiz v2.2 (`limpar_treino.py resumir`).
 
 A unidade do exemplo é o BUCKET (filme × bucket). Fica no conjunto limpo todo
 bucket de treino/validação do split que (a) é exemplo de síntese utilizável
-(`inventario.json`) e (b) NÃO saiu na limpeza. O teste não é lido aqui.
+(`inventario.json`), (b) NÃO saiu na limpeza e (c) NÃO está em
+`FORA_POR_COMPRIMENTO`. O teste não é lido aqui.
+
+`FORA_POR_COMPRIMENTO` (decisão do dono, 2026-10-22): `satantango/positivas`
+tem 15.414 tokens no tokenizer do Qwen3-8B e só o prompt (14.690) passa de
+`max_seq_length` 14.336 — truncado, perde o alvo inteiro. Sai do treino em vez
+de subir o `max_seq_length` por um exemplo. RESSALVA: é o exemplo mais longo e
+denso do treino; sem ele o modelo nunca vê o caso extremo de comprimento.
 
 Dois hashes, por definição escrita aqui (o que cada um prende):
 - `sha256_ids`: dos identificadores, uma linha `conjunto|slug|bucket` por
@@ -25,12 +32,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 
+FORA_POR_COMPRIMENTO = {("satantango", "positivas"):
+                        "15.414 tokens (Qwen3-8B); prompt 14.690 > max_seq_length 14.336"}
+
+
 def sha256_linhas(linhas: list[str]) -> str:
     return hashlib.sha256(("\n".join(linhas) + "\n").encode("utf-8")).hexdigest()
 
 
-def calcular(split: dict, inventario: dict, resumo: dict) -> dict:
-    """Puro: devolve o conjunto limpo e o que saiu, sem tocar em disco."""
+def calcular(split: dict, inventario: dict, resumo: dict,
+             fora_por_comprimento: dict | None = None) -> dict:
+    """Puro: devolve o conjunto limpo e o que saiu, sem tocar em disco.
+    `fora_por_comprimento`: {(slug, bucket): motivo}; só vale para o TREINO."""
+    fora_c = FORA_POR_COMPRIMENTO if fora_por_comprimento is None else fora_por_comprimento
     por_chave = {(b["slug"], b["bucket"]): b for b in resumo["buckets"]}
     pendentes = sorted(k for k, b in por_chave.items() if b["pendente"])
     if pendentes:
@@ -49,10 +63,13 @@ def calcular(split: dict, inventario: dict, resumo: dict) -> dict:
         raise ValueError(f"exemplo do split sem veredito da limpeza: {fora_do_resumo[:5]}")
     fica, sai = {}, {}
     for c, itens in base.items():
-        fica[c] = sorted(k for k in itens if not por_chave[k]["removido"])
         sai[c] = sorted(k for k in itens if por_chave[k]["removido"])
+        fica[c] = sorted(k for k in itens if not por_chave[k]["removido"]
+                         and not (c == "treino" and k in fora_c))
+    comprimento = sorted(k for k in fora_c if k in base["treino"] and not por_chave[k]["removido"])
     return {"base": {c: len(v) for c, v in base.items()},
-            "fica": fica, "sai": sai,
+            "fica": fica, "sai": sai, "fora_por_comprimento": comprimento,
+            "motivo_comprimento": {f"{s}/{b}": fora_c[(s, b)] for s, b in comprimento},
             "sha256_ids": sha256_linhas([f"{c}|{s}|{b}" for c in ("treino", "validacao")
                                          for s, b in fica[c]])}
 
@@ -74,7 +91,8 @@ def main() -> None:
            "resumo_sha256": K.sha256_arquivo(a.resumo),
            "n_base": r["base"],
            "n_treino": len(r["fica"]["treino"]), "n_validacao": len(r["fica"]["validacao"]),
-           "n_removidos": {c: len(v) for c, v in r["sai"].items()},
+           "n_removidos_pela_limpeza": {c: len(v) for c, v in r["sai"].items()},
+           "fora_por_comprimento": r["motivo_comprimento"],
            "sha256_ids": r["sha256_ids"],
            "treino": [f"{s}/{b}" for s, b in r["fica"]["treino"]],
            "validacao": [f"{s}/{b}" for s, b in r["fica"]["validacao"]],

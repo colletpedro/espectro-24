@@ -3,13 +3,14 @@ conjunto LIMPO (depois da limpeza com o juiz v2.2), com os tokens do
 tokenizer do Qwen3-8B.
 
 Mesma regra de escolha de `montar_dataset_smoke.py` (decisão 6 do gate 0), só
-que sobre os 141 exemplos que sobraram e em tokens do Qwen3-8B:
+que sobre os 140 exemplos que sobraram e em tokens do Qwen3-8B:
 - `mais_longo`: o maior total que cabe em 14.336 — com o tokenizer do Qwen3
   (mais tokens por texto que o do Gemma) o `satantango/positivas` tem 15.414
   tokens e só o PROMPT dele (14.690) já passa de 14.336: truncado, o alvo
   inteiro cairia fora e o exemplo não teria token treinável. Ele fica fora do
-  E1 por construção (é o outlier; a decisão é do dono) e vai listado em
-  `meta.json`; o E1 mede, portanto, o maior que cabe;
+  E1 por construção e, por decisão do dono (2026-10-22), SAI do treino
+  (`conjunto_limpo.FORA_POR_COMPRIMENTO`; o `max_seq_length` não sobe por um
+  exemplo) — registrado em `meta.json`; o E1 mede, portanto, o maior que cabe;
 - `mais_longo_12k`: o maior que cabe em 12.288 (o E1 cai para 12.288 se o
   anterior der OOM). Com este conjunto é o MESMO exemplo do `mais_longo`;
 - `mediano_1..4`: os 4 mais próximos da mediana do conjunto limpo, fora os
@@ -118,7 +119,11 @@ def main() -> None:
             "tokenizer_repo": K.CANDIDATOS_EXTRA[TOKENIZER]["repo"],
             "tokenizer_revisao": K.CANDIDATOS_EXTRA[TOKENIZER]["revisao"],
             "n_treino_limpo": len(treino), "n_validacao_limpo": len(limpo["fica"]["validacao"]),
+            "n_removidos_pela_limpeza": len(limpo["sai"]["treino"]),
+            "fora_por_comprimento": limpo["motivo_comprimento"],
             "n_treino_antes_da_limpeza": limpo["base"]["treino"],
+            "n_treino_depois_da_limpeza_antes_do_comprimento":
+                limpo["base"]["treino"] - len(limpo["sai"]["treino"]),
             "epocas_E3": 3, "sha256_ids_conjunto_limpo": limpo["sha256_ids"],
             "sha256_conteudo_treino_limpo": conteudo,
             "tokens_total_qwen3_8b": K.quantis([tot(x) for x in exemplos]),

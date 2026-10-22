@@ -131,6 +131,18 @@ def test_conjunto_limpo_tira_so_o_que_saiu_e_nunca_le_o_teste():
     assert all(s != "t" for c in r["fica"].values() for s, _ in c)
 
 
+def test_exemplo_fora_por_comprimento_sai_so_do_treino_e_fica_registrado():
+    split, inv, resumo = _mundo()
+    r = CL.calcular(split, inv, resumo, {("b", "negativas"): "longo demais",
+                                         ("v", "negativas"): "ignorado: validação"})
+    assert ("b", "negativas") not in r["fica"]["treino"] and len(r["fica"]["treino"]) == 4
+    assert ("v", "negativas") in r["fica"]["validacao"]            # só vale para o treino
+    assert r["fora_por_comprimento"] == [("b", "negativas")]
+    assert r["motivo_comprimento"] == {"b/negativas": "longo demais"}
+    sem = CL.calcular(split, inv, resumo, {})
+    assert sem["sha256_ids"] != r["sha256_ids"] and len(sem["fica"]["treino"]) == 5
+
+
 def test_hash_do_conjunto_muda_quando_um_exemplo_sai():
     split, inv, resumo = _mundo()
     h1 = CL.calcular(split, inv, resumo)["sha256_ids"]

@@ -507,8 +507,7 @@ def medir_modelo(nome: str, seq: int) -> dict:
             h = s_passo * n_ex * epocas / 3600
             reg["e3"] = {"s_por_passo_mediano": s_passo, "n_exemplos_treino_depois_da_limpeza": n_ex,
                          "epocas": epocas, "horas_projetadas": round(h, 2),
-                         "limite_h": LIMITE_E3_H, "passa": h <= LIMITE_E3_H,
-                         "sem_o_outlier_que_nao_cabe": round(s_passo * (n_ex - 1) * epocas / 3600, 2)}
+                         "limite_h": LIMITE_E3_H, "passa": h <= LIMITE_E3_H}
         else:
             reg["e3"] = {"erro": "sem s/passo do mediano ou sem n_treino_limpo no meta.json"}
         reg["meta_dataset"] = meta
