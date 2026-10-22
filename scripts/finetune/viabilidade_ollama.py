@@ -222,9 +222,11 @@ def partida_limpa(ram_partida_min_gb: float, espera_ram_s: float) -> dict:
     """Descarrega TUDO, confirma `ollama ps` vazio, reinicia o servidor e espera a
     RAM livre voltar. Devolve o registro da partida (`limpa` = pode medir)."""
     reg: dict = {"ram_partida_min_gb": ram_partida_min_gb}
-    proprio = None
-    if ollama_ps() is None:                 # servidor fora: sobe um só para poder perguntar
-        proprio = subir_ollama()
+    # Servidor PRÓPRIO antes de qualquer `ollama ps`: sem servidor o CLI tenta subir
+    # um, que herda o pipe de captura e pendura o `subprocess.run` (travou 1 h em
+    # 22/10, sem nada na tela depois do cabeçalho).
+    matar_ollama()
+    proprio = subir_ollama()
     reg["ps_antes"] = ollama_ps() or []
     for nome in reg["ps_antes"]:
         subprocess.run(["ollama", "stop", nome], capture_output=True, timeout=120)
