@@ -224,6 +224,14 @@ CANDIDATOS = {
                     "revisao": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
                     "familia": "gemma"},
 }
+# Qwen3-8B (reserva): o repositório que o Kaggle carrega (`smoke_treino.py`), na
+# revisão confirmada no pré-voo. Fora de `CANDIDATOS` de propósito: os scripts
+# da fase 0 (inventário, reconstrução) iteram `CANDIDATOS` e não mudam.
+CANDIDATOS_EXTRA = {
+    "Qwen3-8B": {"repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+                 "revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+                 "familia": "qwen"},
+}
 ARQUIVOS_TOKENIZER = ("tokenizer.json", "tokenizer_config.json", "chat_template.jinja",
                       "config.json")
 TOKENIZERS_DIR_PADRAO = Path(os.environ.get(
@@ -231,8 +239,18 @@ TOKENIZERS_DIR_PADRAO = Path(os.environ.get(
     Path.home() / ".cache" / "espectro24-finetune" / "tokenizers"))
 
 
+def _candidato(nome: str) -> dict:
+    return CANDIDATOS.get(nome) or CANDIDATOS_EXTRA[nome]
+
+
 def pasta_do_candidato(raiz: Path, nome: str) -> Path:
-    return Path(raiz) / CANDIDATOS[nome]["repo"].replace("/", "_")
+    return Path(raiz) / _candidato(nome)["repo"].replace("/", "_")
+
+
+def carregar_tokenizer(nome: str, raiz: Path = TOKENIZERS_DIR_PADRAO):
+    """Um só tokenizer (inclui os de `CANDIDATOS_EXTRA`)."""
+    from tokenizers import Tokenizer
+    return Tokenizer.from_file(str(pasta_do_candidato(raiz, nome) / "tokenizer.json"))
 
 
 def carregar_tokenizers(raiz: Path = TOKENIZERS_DIR_PADRAO) -> dict:
@@ -274,7 +292,7 @@ def tokens_do_par(toks: dict, system: str, user: str, saida: str) -> dict:
     e o total do exemplo de treino."""
     fora = {}
     for nome, tok in toks.items():
-        fam = CANDIDATOS[nome]["familia"]
+        fam = _candidato(nome)["familia"]
         p = contar(tok, chat(fam, system, user, None))
         tot = contar(tok, chat(fam, system, user, saida))
         fora[nome] = {"entrada": p, "saida": tot - p, "total": tot}

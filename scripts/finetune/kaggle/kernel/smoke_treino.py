@@ -40,6 +40,21 @@ T4 ÚNICA: o Kaggle só oferece T4 ×2 (`NvidiaTeslaT4`); este processo enxerga
 uma GPU só (`CUDA_VISIBLE_DEVICES=0`, antes de importar o torch).
 
 Nada aqui avalia qualidade. JSON inválido do modelo não treinado não é medido.
+
+Revisão de 2026-10-22 (Qwen3-8B; o critério e as configurações não mudam):
+- os candidatos vêm do `meta.json` do dataset (`candidatos`), não de um flag:
+  o kernel do Qwen3-8B roda só o Qwen3-8B; sem `meta.json`, E4B → 12B como antes;
+- as pastas de saída têm nome PREVISÍVEL: `<modelo>__<seq>` (ex.:
+  `qwen3-8b__14336`), exista erro ou não; o resultado está em `log.json`;
+- `unsloth` e `unsloth_zoo` ficam FIXADOS nas versões do primeiro smoke
+  (2026.10.7), para a comparação ser com a mesma pilha;
+- Qwen3: a parte de resposta da máscara inclui o bloco `<think>` VAZIO que o
+  template põe no prompt (`enable_thinking=False`): ele é prompt na inferência,
+  então fica mascarado; o log prova com os tokens treinados decodificados;
+- `atencao` no `log.json`: o backend de atenção EFETIVO (operadores do ATen e
+  kernels CUDA vistos por `torch.profiler` num passo curto) e o dtype;
+- `e1`, `e2` e `e3` já calculados no log (E3 com o nº real de exemplos de treino
+  depois da limpeza, do `meta.json`).
 """
 from __future__ import annotations
 
@@ -77,6 +92,11 @@ PASSOS_LONGO = 10
 PASSOS_MEDIANO = 5
 SEQ = {"14336": 14336, "12288": 12288}
 ORDEM = ["gemma-4-e4b", "gemma-4-12b"]          # E4B primeiro (pré-voo, item b)
+# A pilha do primeiro smoke (log.json: unsloth 2026.10.7). `ESPECTRO24_UNSLOTH_LIVRE=1`
+# instala a última versão (a comparação com o primeiro smoke deixa de valer).
+PACOTES_FIXOS = ["unsloth==2026.10.7", "unsloth_zoo==2026.10.7"]
+LIMITE_E1_GIB = 14.0
+LIMITE_E3_H = 20.0
 
 MODELOS = {
     "gemma-4-12b": {"repo": "unsloth/gemma-4-12b-it", "familia": "gemma",
@@ -87,8 +107,10 @@ MODELOS = {
                  "template": "qwen3", "loader": "FastLanguageModel", "gb_16bit": 16.4},
 }
 # Treinar só na resposta: o prefixo de cada turno, como o template o escreve.
+# Qwen3 com `enable_thinking=False`: o template abre o turno do assistente com o
+# bloco de raciocínio VAZIO, que na inferência já vem no prompt — não é alvo.
 PARTES = {"gemma": ("<|turn>user\n", "<|turn>model\n"),
-          "qwen": ("<|im_start|>user\n", "<|im_start|>assistant\n")}
+          "qwen": ("<|im_start|>user\n", "<|im_start|>assistant\n<think>\n\n</think>\n\n")}
 PROJECOES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
 # Disco para exportar: fusão 16-bit + GGUF intermediário 16-bit + Q4_K_M (~0,3
 # do 16-bit) + 10% de folga. ESTIMADO pelo tamanho dos pesos, não medido.
@@ -133,6 +155,15 @@ def _ler_dataset() -> list[dict]:
         if l.get("conjunto") != "treino":
             raise SystemExit(f"exemplo fora do treino no dataset: {l.get('slug')}")
     return linhas
+
+
+def _ler_meta() -> dict:
+    """`meta.json` do dataset (ao lado do `smoke.jsonl`); {} se não houver."""
+    achados = glob.glob(ENTRADA_GLOB, recursive=True)
+    if len(achados) != 1:
+        return {}
+    m = Path(achados[0]).with_name("meta.json")
+    return json.loads(m.read_text(encoding="utf-8")) if m.exists() else {}
 
 
 def _versoes() -> dict:
@@ -203,6 +234,103 @@ class _Marcas:
 
     def flush(self):
         return self.base.flush()
+
+
+# ---------------------------------------------------------------------------
+# backend de atenção EFETIVO
+# ---------------------------------------------------------------------------
+
+def sondar_atencao(model, tk, texto: str, torch, n_tokens: int = 1024) -> dict:
+    """Qual atenção RODA, não qual foi pedida: um passo curto (forward + backward
+    em `n_tokens`) sob `torch.profiler`, lendo os operadores do ATen e os kernels
+    CUDA que apareceram. O seletor do SDPA decide por dtype, GQA, máscara e
+    cabeça, nunca pelo comprimento; então o passo curto vale para o longo. Nunca
+    derruba a medição: erro vira `erro` no registro."""
+    import re
+    info: dict = {}
+    try:
+        cfg = getattr(model, "config", None)
+        info["attn_implementation_config"] = getattr(cfg, "_attn_implementation", None)
+        info["sdp_habilitados"] = {
+            "flash": torch.backends.cuda.flash_sdp_enabled(),
+            "mem_efficient": torch.backends.cuda.mem_efficient_sdp_enabled(),
+            "math": torch.backends.cuda.math_sdp_enabled(),
+            "cudnn": getattr(torch.backends.cuda, "cudnn_sdp_enabled", lambda: None)()}
+        info["env"] = {k: v for k, v in os.environ.items()
+                       if k.startswith(("UNSLOTH", "PYTORCH_CUDA"))}
+        try:
+            from unsloth.models import _utils as U
+            info["unsloth_flags"] = {k: getattr(U, k, None)
+                                     for k in ("HAS_XFORMERS", "HAS_FLASH_ATTENTION")}
+        except Exception as e:  # noqa: BLE001
+            info["unsloth_flags_erro"] = f"{type(e).__name__}: {e}"[:200]
+        camada = next((m for n, m in model.named_modules() if n.endswith("self_attn")), None)
+        vistos: dict = {}
+        hooks = []
+        if camada is not None:
+            info["classe_atencao"] = f"{type(camada).__module__}.{type(camada).__qualname__}"
+            info["forward_atencao"] = (f"{getattr(type(camada).forward, '__module__', '?')}."
+                                       f"{getattr(type(camada).forward, '__qualname__', '?')}")
+
+            def pre(_m, args, kw):
+                h = kw.get("hidden_states", args[0] if args else None)
+                if h is not None:
+                    vistos["entrada_dtype"] = str(h.dtype)
+                    vistos["entrada_shape"] = list(h.shape)
+
+            def pos(_m, _a, saida):
+                o = saida[0] if isinstance(saida, tuple) else saida
+                vistos["saida_dtype"] = str(o.dtype)
+
+            hooks = [camada.register_forward_pre_hook(pre, with_kwargs=True),
+                     camada.register_forward_hook(pos)]
+        ids = tk(texto, return_tensors="pt", truncation=True, max_length=n_tokens)["input_ids"]
+        ids = ids.to("cuda")
+        model.train()
+        from torch.profiler import ProfilerActivity, profile
+        with profile(activities=[ProfilerActivity.CPU, ProfilerActivity.CUDA],
+                     record_shapes=True) as prof:
+            perda = model(input_ids=ids, labels=ids).loss
+            perda.backward()
+            torch.cuda.synchronize()
+        for h in hooks:
+            h.remove()
+        model.zero_grad(set_to_none=True)
+        torch.cuda.empty_cache()
+        info["dtypes_vistos_na_camada_0"] = vistos
+        rx = re.compile(r"attention|sdpa|fmha|flash|xformers|cutlass.*f(16|32)", re.I)
+        ops, n_softmax = {}, 0
+        for e in prof.key_averages():
+            if rx.search(e.key):
+                ops[e.key] = {"n": e.count, "shapes": [str(x) for x in (e.input_shapes or [])[:1]]}
+            elif "softmax" in e.key.lower():
+                n_softmax += e.count          # sozinho não diz nada (perda, MLP), só contexto
+        info["softmax_chamadas"] = n_softmax
+        info["operadores_e_kernels"] = dict(sorted(ops.items(), key=lambda kv: -kv[1]["n"])[:30])
+        baixo = " ".join(ops).lower()
+        achados = []
+        if "xformers" in baixo:
+            achados.append("xformers")
+        if "efficient_attention" in baixo or "fmha_cutlass" in baixo:
+            achados.append("sdpa mem-efficient (cutlass)")
+        if "flash" in baixo:
+            achados.append("flash")
+        if "cudnn" in baixo:
+            achados.append("cudnn")
+        if "attention_math" in baixo:
+            achados.append("sdpa math")
+        info["backend_detectado"] = achados or ["nenhum operador de atenção reconhecido: "
+                                                "ver operadores_e_kernels"]
+        info["aviso"] = ("math = a matriz L×L é materializada; mem-efficient/flash/xformers = "
+                         "memória O(L). Kernels CUDA trazem o dtype no nome (f16/f32).")
+    except Exception as e:  # noqa: BLE001
+        info["erro"] = f"{type(e).__name__}: {e}"[:600]
+        try:
+            model.zero_grad(set_to_none=True)
+            torch.cuda.empty_cache()
+        except Exception:  # noqa: BLE001
+            pass
+    return info
 
 
 # ---------------------------------------------------------------------------
@@ -295,6 +423,9 @@ def medir_modelo(nome: str, seq: int) -> dict:
                                                          l["chat_esperado"][cfg["familia"]])
                                    for l in dados}
         gravar()
+        reg["atencao"] = sondar_atencao(model, getattr(tok, "tokenizer", tok),
+                                        textos[papel_longo].removeprefix("<bos>"), torch)
+        gravar()
 
         class Tempos(TrainerCallback):
             def __init__(self):
@@ -324,6 +455,21 @@ def medir_modelo(nome: str, seq: int) -> dict:
             # Máscara: só a resposta conta. Se o Unsloth montar os rótulos no
             # collator (sem coluna `labels`), a contagem fica None e o log diz.
             rot = [x for x in lote["labels"] if x != -100] if "labels" in lote else None
+            mascara = None
+            if rot is not None:
+                tk = getattr(tok, "tokenizer", tok)
+                treinado = tk.decode([i for i, y in zip(lote["input_ids"], lote["labels"])
+                                      if y != -100])
+                mascara = {"tokens_treinados": len(rot), "comeco": treinado[:80],
+                           "fim": treinado[-60:],
+                           "tem_bloco_think": "<think>" in treinado or "</think>" in treinado,
+                           "comeca_em_chave": treinado.lstrip().startswith("{")}
+                if not rot:
+                    raise RuntimeError("máscara vazia: nenhum token treinável (a parte de "
+                                       "resposta não foi achada no exemplo)")
+                if cfg["familia"] == "qwen" and (mascara["tem_bloco_think"]
+                                                 or not mascara["comeca_em_chave"]):
+                    raise RuntimeError(f"alvo do Qwen3 fora do esperado: {mascara}")
             cb = Tempos()
             tr.add_callback(cb)
             torch.cuda.empty_cache()
@@ -332,6 +478,7 @@ def medir_modelo(nome: str, seq: int) -> dict:
             perdas = [h["loss"] for h in tr.state.log_history if "loss" in h]
             return {"passos": passos, "tokens_entrada": len(lote["input_ids"]),
                     "tokens_treinados": None if rot is None else len(rot),
+                    "mascara": mascara,
                     "pico_vram_reserved_gib": round(torch.cuda.max_memory_reserved() / 2**30, 3),
                     "pico_vram_allocated_gib": round(torch.cuda.max_memory_allocated() / 2**30, 3),
                     "s_por_passo": cb.t,
@@ -347,6 +494,24 @@ def medir_modelo(nome: str, seq: int) -> dict:
         mon.mudar("treino_mediano")
         reg["mediano"] = treinar([textos[l["papel"]] for l in medianos] * 2,
                                  PASSOS_MEDIANO, "mediano")
+        reg["e1"] = {"limite_gib": LIMITE_E1_GIB, "max_seq_length": seq,
+                     "tokens_do_exemplo": reg["longo"]["tokens_entrada"],
+                     "pico_reserved_gib": reg["longo"]["pico_vram_reserved_gib"],
+                     "passa": reg["longo"]["pico_vram_reserved_gib"] <= LIMITE_E1_GIB}
+        reg["e2"] = {"perdas_finitas_longo": reg["longo"]["perdas_finitas"],
+                     "perdas_finitas_mediano": reg["mediano"]["perdas_finitas"],
+                     "passa": reg["longo"]["perdas_finitas"] and reg["mediano"]["perdas_finitas"]}
+        meta, s_passo = _ler_meta(), reg["mediano"]["s_por_passo_mediana_sem_1o"]
+        n_ex, epocas = meta.get("n_treino_limpo"), meta.get("epocas_E3", 3)
+        if s_passo is not None and n_ex:
+            h = s_passo * n_ex * epocas / 3600
+            reg["e3"] = {"s_por_passo_mediano": s_passo, "n_exemplos_treino_depois_da_limpeza": n_ex,
+                         "epocas": epocas, "horas_projetadas": round(h, 2),
+                         "limite_h": LIMITE_E3_H, "passa": h <= LIMITE_E3_H,
+                         "sem_o_outlier_que_nao_cabe": round(s_passo * (n_ex - 1) * epocas / 3600, 2)}
+        else:
+            reg["e3"] = {"erro": "sem s/passo do mediano ou sem n_treino_limpo no meta.json"}
+        reg["meta_dataset"] = meta
         reg["e1_e3_gravados_antes_da_exportacao"] = True
         gravar()                                         # E1–E3 no disco (fsync)
 
@@ -424,9 +589,12 @@ def medir_modelo(nome: str, seq: int) -> dict:
 
 def instalar() -> dict:
     t0 = time.time()
-    r = subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--upgrade",
-                        "unsloth", "unsloth_zoo"], capture_output=True, text=True)
-    return {"rc": r.returncode, "s": round(time.time() - t0, 1), "stderr_fim": r.stderr[-2000:]}
+    livre = os.environ.get("ESPECTRO24_UNSLOTH_LIVRE") == "1"
+    pacotes = ["unsloth", "unsloth_zoo"] if livre else PACOTES_FIXOS
+    r = subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--upgrade", *pacotes],
+                       capture_output=True, text=True)
+    return {"rc": r.returncode, "s": round(time.time() - t0, 1), "pacotes": pacotes,
+            "stderr_fim": r.stderr[-2000:]}
 
 
 def rodar_um(nome: str, seq: int, timeout_s: int) -> dict:
@@ -452,18 +620,27 @@ def rodar_um(nome: str, seq: int, timeout_s: int) -> dict:
 
 def orquestrar(incluir_qwen: bool) -> None:
     SAIDA.mkdir(parents=True, exist_ok=True)
+    meta = _ler_meta()
+    ordem = list(meta.get("candidatos") or (ORDEM + (["qwen3-8b"] if incluir_qwen else [])))
     resumo = {"inicio": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-              "df_inicio": _df(), "instalacao": instalar(), "ordem": ORDEM, "execucoes": []}
+              "df_inicio": _df(), "instalacao": instalar(), "ordem": ordem,
+              "meta_dataset": meta, "execucoes": []}
     _json(SAIDA / "resumo.json", resumo)
-    for nome in ORDEM + (["qwen3-8b"] if incluir_qwen else []):
+    for nome in ordem:
         try:
             for seq in (SEQ["14336"], SEQ["12288"]):
                 ex = rodar_um(nome, seq, timeout_s=4 * 3600)
+                # pasta PREVISÍVEL: <modelo>__<seq>, com ou sem erro (o Windows acha
+                # as que têm .gguf; o resultado está em log.json)
+                destino = SAIDA / f"{nome}__{seq}"
+                shutil.rmtree(destino, ignore_errors=True)
+                if (SAIDA / nome).exists():
+                    shutil.move(str(SAIDA / nome), str(destino))
+                ex["pasta"] = destino.name
                 resumo["execucoes"].append(ex)
                 _json(SAIDA / "resumo.json", resumo)
                 if not ex["oom"]:
                     break                       # 12.288 só depois de OOM de VRAM a 14.336
-                shutil.move(str(SAIDA / nome), str(SAIDA / f"{nome}__oom_{seq}"))
         except Exception:  # noqa: BLE001 — um candidato não derruba o outro
             resumo["execucoes"].append({"modelo": nome, "erro_orquestrador": traceback.format_exc()})
             _json(SAIDA / "resumo.json", resumo)

@@ -31,8 +31,11 @@ também sai (`resumir --indeterminado-fica` muda isso). O número sai no resumo.
 mais de 25% sobre o medido depois do 1º filme, o servidor é reiniciado. Dez
 filmes limitam a ~1 h o que um vazamento acumula; reiniciar custa a recarga
 do gpt-oss:20b (~1 min, < 2% do bloco) e o prefixo de KV, que é refeito no 1º
-par. Guarda: RAM livre < `--ram-livre-min-gb` (2 GB) para o processo — a
-retomada continua de onde parou.
+par. Guarda: LATÊNCIA (`_latencia.py`) — uma chamada acima de 4× a mediana das
+últimas 20 pausa o processo e avisa (código 3); a retomada continua de onde
+parou. A guarda de RAM livre saiu: com o gpt-oss:20b carregado a RAM livre fica
+em ~0,3 GB por construção (a rodada de 20–21/10 correu com `--ram-livre-min-gb
+0`, 1.863 chamadas a 14,7 s de mediana, sem paginação).
 """
 from __future__ import annotations
 
@@ -48,6 +51,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _guarda  # noqa: E402,F401  (localhost passa; nenhuma API paga)
 import comum as K  # noqa: E402
+from _latencia import GuardaDeLatencia, LatenciaAnomala  # noqa: E402
 
 import checagem_bullets as C  # noqa: E402
 import juiz_bullets_v2 as J  # noqa: E402
@@ -266,10 +270,15 @@ def cmd_julgar(a) -> None:
     if m.get("config_sha256") != HASH_CONGELADO or not m.get("cabe"):
         raise SystemExit(f"sem {ARQ_CONTEXTO} válido — rode `medir-contexto` antes")
     J._exigir_modelo()
-    chamar = J._chamador(num_ctx=J.num_ctx(J.CONGELADA), num_predict=J.NUM_PREDICT,
-                         schema=J.schema(J.CONGELADA))
+    guarda = GuardaDeLatencia(janela=a.latencia_janela, fator=a.latencia_fator)
+    guarda.ignorar_proxima()                    # a 1ª chamada paga a carga do modelo
+    chamar = guarda.envolver(J._chamador(num_ctx=J.num_ctx(J.CONGELADA),
+                                         num_predict=J.NUM_PREDICT,
+                                         schema=J.schema(J.CONGELADA)))
     filmes = [s for s in alvo if any(p["slug"] == s for p in pares)]
-    print(f"juiz {J.MODELO} think={J.THINK} · {sha[:8]}… · {len(filmes)} filmes", flush=True)
+    print(f"juiz {J.MODELO} think={J.THINK} · {sha[:8]}… · {len(filmes)} filmes · "
+          f"guarda de latência {a.latencia_fator:g}× a mediana das últimas "
+          f"{a.latencia_janela}", flush=True)
     base_ws, t0 = None, time.time()
     for n, slug in enumerate(filmes, 1):
         ps = [p for p in pares if p["slug"] == slug]
@@ -279,11 +288,12 @@ def cmd_julgar(a) -> None:
                           key=lambda p: (p["bucket"], p["review_id"], p["i"]))
             if not lote:
                 break
-            _, livre = V.ram_gb()
-            if livre < a.ram_livre_min_gb:
-                raise SystemExit(f"RAM livre {livre:.1f} GB < {a.ram_livre_min_gb} — parado; "
-                                 f"rode `julgar` de novo para retomar")
-            J.rodar(lote, ARQ_SAIDA, chamar, versao=J.CONGELADA, progresso_a_cada=50)
+            try:
+                J.rodar(lote, ARQ_SAIDA, chamar, versao=J.CONGELADA, progresso_a_cada=50)
+            except LatenciaAnomala as e:
+                print(f"\nPAUSADO em {slug}: {e}. A chamada lenta foi gravada. Veja a RAM, o "
+                      f"swap e o `ollama ps`; rode `julgar` de novo para retomar.", flush=True)
+                raise SystemExit(3)
         est = estado_dos_bullets(ps, _registros())
         c = collections.Counter(e["estado"] for e in est.values())
         print(f"[{n}/{len(filmes)}] {slug}: {dict(c)} · {(time.time() - t0) / 60:.0f} min",
@@ -296,6 +306,7 @@ def cmd_julgar(a) -> None:
                   f"reiniciando", flush=True)
             V.matar_ollama()
             V.subir_ollama()
+            guarda.ignorar_proxima()            # recarga do modelo
     print("fim — rode `resumir`")
 
 
@@ -354,7 +365,9 @@ def main() -> None:
     sub.add_parser("preparar")
     sub.add_parser("medir-contexto")
     j = sub.add_parser("julgar")
-    j.add_argument("--ram-livre-min-gb", type=float, default=2.0)
+    j.add_argument("--latencia-fator", type=float, default=4.0,
+                   help="pausa se uma chamada passar de FATOR × a mediana das últimas JANELA")
+    j.add_argument("--latencia-janela", type=int, default=20)
     r = sub.add_parser("resumir")
     r.add_argument("--indeterminado-fica", action="store_true")
     a = ap.parse_args()

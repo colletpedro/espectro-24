@@ -13,6 +13,15 @@ de inferência do inventário, e grava:
 - se o texto devolvido parseia como o JSON da síntese
   (`synthesize._parse_llm_json`, e se tem `temas` em lista).
 
+PARTIDA LIMPA (2026-10-22). A 1ª medição do Qwen3-8B (20/10) começou sem memória
+livre porque o candidato anterior não tinha sido descarregado. Agora, ANTES de
+cada medição: `ollama stop` em todo modelo listado por `ollama ps`, confirmação
+de que `ollama ps` ficou VAZIO, reinício do servidor e espera (até
+`--espera-ram-s`) pela RAM livre voltar a `--ram-partida-min-gb`; a RAM livre
+de partida vai para o registro (`partida`). Se a RAM não voltar, a medição NÃO
+roda (`partida_contaminada`): um número medido sobre memória ocupada por outro
+modelo não vale.
+
 O Ollama é REINICIADO antes de cada candidato (o script mata `ollama.exe` /
 `ollama app.exe` e sobe `ollama serve` próprio, com `OLLAMA_NUM_PARALLEL=1`).
 Guarda de memória: se a RAM livre ficar abaixo de `--ram-livre-min-gb`
@@ -34,6 +43,9 @@ Subcomandos:
                   contra o template do HF com raciocínio desligado (corrige e
                   registra se não reproduzir), `ollama create`, confere a
                   contagem de tokens do prompt e mede como em `medir`
+    importar-pasta — percorre uma pasta de saída do Kaggle, ACHA as subpastas
+                  que têm `.gguf` Q4_K_M + `Modelfile` (sem supor o nome da
+                  pasta) e roda `importar` em cada uma
 """
 from __future__ import annotations
 
@@ -75,6 +87,11 @@ NUM_CTX_MAXIMO = 27648      # cobre o outlier (500-days-of-summer/positivas)
 NUM_PREDICT = 3000          # = LLM_MAX_TOKENS da síntese de produção
 PROBE_NUM_PREDICT = 16      # o probe só mede carga, memória e tempo
 E5_LIMITE_S = 20 * 60       # E5: o prompt p90 a 18.432 termina em ≤ 20 min
+# Partida limpa (PROPOSTO): a 1ª rodada fechou com 1,05–4,92 GB livres de mínimo
+# numa máquina de 15,2 GB; um ponto de partida abaixo de 6 GB livres já é metade
+# do notebook ocupada por outra coisa.
+RAM_PARTIDA_MIN_GB = 6.0
+ESPERA_RAM_S = 90.0
 URL = "http://127.0.0.1:11434"
 
 
@@ -167,7 +184,7 @@ class Monitor(threading.Thread):
 
 def matar_ollama() -> None:
     if os.name == "nt":
-        for im in ("ollama app.exe", "ollama.exe"):
+        for im in ("ollama app.exe", "ollama.exe", "ollama_llama_server.exe"):
             subprocess.run(["taskkill", "/F", "/IM", im], capture_output=True)
     else:
         subprocess.run(["pkill", "-f", "ollama"], capture_output=True)
@@ -187,6 +204,47 @@ def subir_ollama() -> subprocess.Popen:
             pass
         time.sleep(1)
     raise RuntimeError("ollama serve não respondeu em 60 s")
+
+
+def ollama_ps() -> list[str] | None:
+    """Nomes dos modelos carregados (`ollama ps`); None se o servidor não responde."""
+    try:
+        r = subprocess.run(["ollama", "ps"], capture_output=True, text=True, timeout=30)
+    except (OSError, subprocess.TimeoutExpired):
+        return None
+    if r.returncode != 0:
+        return None
+    linhas = [ln for ln in r.stdout.splitlines() if ln.strip()]
+    return [ln.split()[0] for ln in linhas[1:]]          # a 1ª linha é o cabeçalho
+
+
+def partida_limpa(ram_partida_min_gb: float, espera_ram_s: float) -> dict:
+    """Descarrega TUDO, confirma `ollama ps` vazio, reinicia o servidor e espera a
+    RAM livre voltar. Devolve o registro da partida (`limpa` = pode medir)."""
+    reg: dict = {"ram_partida_min_gb": ram_partida_min_gb}
+    proprio = None
+    if ollama_ps() is None:                 # servidor fora: sobe um só para poder perguntar
+        proprio = subir_ollama()
+    reg["ps_antes"] = ollama_ps() or []
+    for nome in reg["ps_antes"]:
+        subprocess.run(["ollama", "stop", nome], capture_output=True, timeout=120)
+    t0 = time.time()
+    while ollama_ps() and time.time() - t0 < 60:
+        time.sleep(1)
+    reg["ps_depois_do_stop"] = ollama_ps() or []
+    reg["ps_vazio"] = not reg["ps_depois_do_stop"]
+    if proprio is not None:
+        proprio.terminate()
+    matar_ollama()                          # servidor e runners fora: o resto é do cache do SO
+    _, livre = ram_gb()
+    t0 = time.time()
+    while livre < ram_partida_min_gb and time.time() - t0 < espera_ram_s:
+        time.sleep(2)
+        _, livre = ram_gb()
+    reg.update({"ram_livre_partida_gb": round(livre, 2), "espera_ram_s": round(time.time() - t0, 1),
+                "ws_ollama_partida_gb": ws_ollama_gb(), "vram_partida_gb": vram_gb(),
+                "limpa": reg["ps_vazio"] and livre >= ram_partida_min_gb})
+    return reg
 
 
 def versao_ollama() -> str:
@@ -214,17 +272,29 @@ def par_de_treino(par: str, split: Path) -> tuple[str, str, str, str]:
 
 
 def medir_um(nome: str, ref: str, system: str, user: str, num_ctx: int,
-             ram_min: float, num_predict: int = NUM_PREDICT, tipo: str = "medicao") -> dict:
+             ram_min: float, num_predict: int = NUM_PREDICT, tipo: str = "medicao",
+             ram_partida_min_gb: float = RAM_PARTIDA_MIN_GB,
+             espera_ram_s: float = ESPERA_RAM_S) -> dict:
     """`tipo="probe"`: mesmo prompt, `num_predict` curto — mede só se carrega,
     o pico de memória e o tempo na janela pedida."""
     from espectro24.local_ollama import LLMLocalFalhou, resposta_json_local
     from espectro24.synthesize import _parse_llm_json
 
-    matar_ollama()
-    srv = subir_ollama()
+    partida = partida_limpa(ram_partida_min_gb, espera_ram_s)
     reg = {"tipo": tipo, "candidato": nome, "modelo": ref, "num_ctx": num_ctx,
-           "num_predict": num_predict,
+           "num_predict": num_predict, "partida": partida,
            "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+    print(f"   partida: ps antes {partida['ps_antes']} · ps vazio {partida['ps_vazio']} · "
+          f"RAM livre {partida['ram_livre_partida_gb']} GB", flush=True)
+    if not partida["limpa"]:
+        reg.update({"ok": False, "partida_contaminada": True, "abortado_por_memoria": False,
+                    "erro": "partida contaminada: o `ollama ps` não esvaziou ou a RAM livre não "
+                            f"voltou a {ram_partida_min_gb} GB — feche o que ocupa memória e "
+                            "rode de novo; NENHUMA medição foi feita"})
+        if tipo == "medicao":
+            reg["E5_ate_20_min"] = None          # não medido (≠ reprovado)
+        return reg
+    srv = subir_ollama()
     mon = Monitor(ram_min, ao_estourar=matar_ollama)
     mon.start()
     t0 = time.time()
@@ -270,13 +340,15 @@ def medir_um(nome: str, ref: str, system: str, user: str, num_ctx: int,
 
 def _medir_e_sondar(nome: str, ref: str, s: str, u: str, a) -> list[dict]:
     regs = []
-    print(f"-- {nome} · {ref} · num_ctx {a.num_ctx}", flush=True)
-    regs.append(medir_um(nome, ref, s, u, a.num_ctx, a.ram_livre_min_gb))
-    _resumo(regs[-1])
+    partida = dict(ram_partida_min_gb=a.ram_partida_min_gb, espera_ram_s=a.espera_ram_s)
+    if not getattr(a, "so_probe", False):
+        print(f"-- {nome} · {ref} · num_ctx {a.num_ctx}", flush=True)
+        regs.append(medir_um(nome, ref, s, u, a.num_ctx, a.ram_livre_min_gb, **partida))
+        _resumo(regs[-1])
     if not a.sem_probe:
         print(f"-- {nome} · {ref} · PROBE num_ctx {NUM_CTX_MAXIMO}", flush=True)
         regs.append(medir_um(nome, ref, s, u, NUM_CTX_MAXIMO, a.ram_livre_min_gb,
-                             num_predict=PROBE_NUM_PREDICT, tipo="probe"))
+                             num_predict=PROBE_NUM_PREDICT, tipo="probe", **partida))
         _resumo(regs[-1])
     return regs
 
@@ -284,7 +356,8 @@ def _medir_e_sondar(nome: str, ref: str, s: str, u: str, a) -> list[dict]:
 def _resumo(reg: dict) -> None:
     print({k: reg.get(k) for k in ("tipo", "ok", "gerou_texto", "json_parseia", "parede_s",
                                    "E5_ate_20_min", "tokens_s_leitura", "tokens_s_geracao",
-                                   "abortado_por_memoria", "memoria", "erro")}, flush=True)
+                                   "abortado_por_memoria", "partida_contaminada", "memoria",
+                                   "erro")}, flush=True)
 
 
 def _cabecalho(a) -> tuple[dict, str, str]:
@@ -298,7 +371,8 @@ def _cabecalho(a) -> tuple[dict, str, str]:
              "ram_total_gb": round(total, 2), "par": f"{slug}/{bucket}",
              "chars_system": len(s), "chars_user": len(u),
              "system_sha256": K.sha256_texto(s), "user_sha256": K.sha256_texto(u),
-             "ram_livre_min_gb": a.ram_livre_min_gb, "medicoes": []}, s, u)
+             "ram_livre_min_gb": a.ram_livre_min_gb,
+             "ram_partida_min_gb": a.ram_partida_min_gb, "medicoes": []}, s, u)
 
 
 def _gravar(saida: dict, pasta: Path, prefixo: str) -> None:
@@ -445,6 +519,49 @@ def cmd_importar(a) -> None:
     _gravar(saida, a.saida, f"importar_{a.nome}")
 
 
+def achar_exportacoes(raiz: Path) -> list[dict]:
+    """Subpastas de `raiz` (em qualquer profundidade) que têm um `.gguf` Q4_K_M E um
+    `Modelfile` — sem supor o nome da pasta (o smoke grava `<modelo>__<seq>`, mas
+    o que vale é haver o arquivo). Família: do `modelo` do `log.json` ao lado,
+    senão do nome da pasta."""
+    achados = []
+    for d in sorted({g.parent for g in Path(raiz).rglob("*.gguf")}):
+        ggufs = [g for g in sorted(d.glob("*.gguf")) if "q4_k_m" in g.name.lower()]
+        if not ggufs or not (d / "Modelfile").exists():
+            continue
+        modelo = ""
+        if (d / "log.json").exists():
+            try:
+                modelo = str(json.loads((d / "log.json").read_text(encoding="utf-8")).get("modelo", ""))
+            except ValueError:
+                pass
+        base = (modelo or d.name).lower()
+        familia = "qwen" if base.startswith("qwen") else "gemma" if base.startswith("gemma") else None
+        nome = re.sub(r"[^a-z0-9.-]+", "-", (modelo or d.name).lower()).strip("-")
+        achados.append({"pasta": d, "gguf": ggufs[0], "modelfile": d / "Modelfile",
+                        "familia": familia, "nome": f"espectro-{nome}"})
+    return achados
+
+
+def cmd_importar_pasta(a) -> None:
+    achados = achar_exportacoes(a.pasta)
+    print(f"{len(achados)} exportação(ões) com .gguf Q4_K_M + Modelfile em {a.pasta}:")
+    for x in achados:
+        print(f"  {x['pasta']} → {x['gguf'].name} · família {x['familia']} · {x['nome']}")
+    if not achados:
+        raise SystemExit(f"nenhuma pasta com .gguf Q4_K_M e Modelfile em {a.pasta} — o "
+                         f"download do `kaggle kernels output` terminou? a exportação falhou "
+                         f"(veja gguf_erro no log.json)?")
+    sem_familia = [x for x in achados if x["familia"] is None]
+    if sem_familia:
+        raise SystemExit(f"família desconhecida (nem o log.json nem o nome da pasta dizem): "
+                         f"{[str(x['pasta']) for x in sem_familia]}")
+    for x in achados:
+        print(f"\n== importando {x['pasta']}", flush=True)
+        cmd_importar(argparse.Namespace(**{**vars(a), "gguf": x["gguf"], "modelfile": x["modelfile"],
+                                           "familia": x["familia"], "nome": x["nome"]}))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -457,21 +574,33 @@ def main() -> None:
         p.add_argument("--num-ctx", type=int, default=NUM_CTX_PADRAO)
         p.add_argument("--sem-probe", action="store_true",
                        help=f"não roda o probe de memória com num_ctx {NUM_CTX_MAXIMO}")
-        p.add_argument("--ram-livre-min-gb", type=float, default=2.0)
+        p.add_argument("--ram-livre-min-gb", type=float, default=2.0,
+                       help="guarda DURANTE a chamada: derruba o servidor abaixo disto "
+                            "(0 desliga; a guarda já derrubou as sondas de 27.648 de 20/10)")
+        p.add_argument("--ram-partida-min-gb", type=float, default=RAM_PARTIDA_MIN_GB,
+                       help="RAM livre exigida DEPOIS de descarregar tudo, antes de medir")
+        p.add_argument("--espera-ram-s", type=float, default=ESPERA_RAM_S)
         p.add_argument("--saida", type=Path, default=K.FINETUNE_DIR / "viabilidade")
 
     m = sub.add_parser("medir")
     comuns(m)
     m.add_argument("--candidato", action="append", choices=list(CANDIDATOS))
     m.add_argument("--fallback-biblioteca", action="store_true")
+    m.add_argument("--so-probe", action="store_true",
+                   help=f"só o probe de memória com num_ctx {NUM_CTX_MAXIMO} (não repete a medição)")
     i = sub.add_parser("importar", help="GGUF + Modelfile do Kaggle → ollama create → mede")
     comuns(i)
     i.add_argument("--gguf", required=True)
     i.add_argument("--modelfile", required=True)
     i.add_argument("--familia", choices=list(TEMPLATES), required=True)
     i.add_argument("--nome", required=True, help="nome do modelo no Ollama")
+    ip = sub.add_parser("importar-pasta", help="acha as pastas do Kaggle que têm .gguf e importa cada uma")
+    comuns(ip)
+    ip.add_argument("--pasta", type=Path, required=True,
+                    help="a saída baixada do Kaggle (a pasta que contém `<modelo>__<seq>/`)")
     a = ap.parse_args()
-    {"baixar": cmd_baixar, "medir": cmd_medir, "importar": cmd_importar}[a.cmd](a)
+    {"baixar": cmd_baixar, "medir": cmd_medir, "importar": cmd_importar,
+     "importar-pasta": cmd_importar_pasta}[a.cmd](a)
 
 
 if __name__ == "__main__":

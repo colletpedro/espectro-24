@@ -15,14 +15,20 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from comum import ARQUIVOS_TOKENIZER, CANDIDATOS, TOKENIZERS_DIR_PADRAO, pasta_do_candidato  # noqa: E402
+from comum import (ARQUIVOS_TOKENIZER, CANDIDATOS, CANDIDATOS_EXTRA,  # noqa: E402
+                   TOKENIZERS_DIR_PADRAO, pasta_do_candidato)
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--destino", type=Path, default=TOKENIZERS_DIR_PADRAO)
+    ap.add_argument("--candidato", action="append", choices=[*CANDIDATOS, *CANDIDATOS_EXTRA],
+                    help="só este(s); sem a opção, os de CANDIDATOS (fase 0)")
     a = ap.parse_args()
-    for nome, c in CANDIDATOS.items():
+    todos = {**CANDIDATOS, **CANDIDATOS_EXTRA}
+    escolhidos = a.candidato or list(CANDIDATOS)
+    for nome in escolhidos:
+        c = todos[nome]
         pasta = pasta_do_candidato(a.destino, nome)
         pasta.mkdir(parents=True, exist_ok=True)
         for arq in ARQUIVOS_TOKENIZER:
