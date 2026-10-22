@@ -19,7 +19,7 @@ branch `finetune`, pasta `finetune/`): `inventario.{json,md}`,
 `metricas/palavras_quantidade.txt`, `kaggle/smoke_dataset/`,
 `limpeza/entrada{.jsonl,_meta.json}`.
 
-Scripts novos de 2026-10-22 (`main` `d6456c87162b0699dffea48a87b7f97563db4822`): `_latencia.py` (guarda de
+Scripts novos de 2026-10-22 (`main` `d6456c87162b0699dffea48a87b7f97563db4822`; filtro de comprimento em `9e5692fcc3f0fb57270e2d06074bea9b293b820c`): `_latencia.py` (guarda de
 latência do juiz), `conjunto_limpo.py`, `kaggle/montar_dataset_smoke_qwen3.py`,
 `kaggle/kernel_qwen3/kernel-metadata.json`; revistos: `kaggle/kernel/smoke_treino.py`,
 `viabilidade_ollama.py`, `limpar_treino.py`, `comum.py`, `baixar_tokenizers.py`.
@@ -471,7 +471,9 @@ medições está commitado antes delas: `CRITERIO_ESCOLHA_BASE.md`, commit
   T4 ~10–30 min; medianos ~5 min; llama.cpp + fusão + Q4_K_M ~30–50 min; o
   E4B em cerca de metade disso → **~2–4 h de GPU** (a sessão inteira conta,
   inclusive a parte de CPU). A cota semanal não está na página de docs
-  (aparece em Settings da conta) — NÃO CONFIRMADA.
+  (aparece em Settings da conta) — NÃO CONFIRMADA em 20/10; MEDIDA em 22/10
+  com `kaggle quota`: GPU **30,00 h/semana**, 0,36 h usadas, 29,64 h restantes,
+  renova em 2026-10-24 00:00.
 
 **Windows — viabilidade (E4, E5)**: `scripts/finetune/viabilidade_ollama.py`.
 Candidatos `hf.co/unsloth/gemma-4-12b-it-GGUF:Q4_K_M` (7,12 GB),
@@ -761,14 +763,29 @@ seção e).
   `cidade-de-deus` tem 10.428 caracteres (caberia, pelo 0,28), o de posto 4 do
   `pinocchio-2022` tem 37.728 (não caberia). `resumir --indeterminado-fica`
   devolveria os 2 buckets ao treino (143).
-- **Sobram: 141 exemplos de treino e 19 de validação** (180 − 39 e 24 − 5).
+- **Sobram: 141 exemplos de treino e 19 de validação** (180 − 39 e 24 − 5);
+  **140 de treino** depois de tirar o `satantango/positivas` por comprimento
+  (seção do Qwen3-8B).
+- **RISCO CONHECIDO para a fase de treino (não bloqueio):** a limpeza removeu
+  **21,7% do treino** (39 de 180), contra os **~13% ESTIMADOS** na referência
+  (IC 95% 3,7–37,9%: o valor real cai dentro do intervalo, mas acima do ponto
+  central). Restam 141 exemplos (140 com o filtro de comprimento) de uma base
+  que já era pequena: menos dados que o planejado, e a perda não é uniforme
+  (treino: V4-Flash 28,3%, V4.1-Flash 18,3%; medianas 16 de 60, negativas 12,
+  positivas 11). Risco registrado para o dimensionamento do treino (épocas,
+  regularização, poder da avaliação); `resumir --indeterminado-fica` devolveria
+  2 buckets se for preciso (143 → 142 sem o outlier).
 - **Conjunto limpo:** `finetune/limpeza/conjunto_limpo.json`
-  (`scripts/finetune/conjunto_limpo.py`). `sha256_ids` =
-  `52debafa445935e9f4485241e4929c4b2af93c5014e791e5f9e3383e6604f2c8`
-  (hash das linhas `conjunto|slug|bucket` dos 160 exemplos que ficam, em ordem;
-  prende QUAIS exemplos ficaram). `sha256_conteudo` do treino (141 linhas
+  (`scripts/finetune/conjunto_limpo.py`; a limpeza pelo juiz + o filtro por
+  comprimento). `sha256_ids` =
+  `ecdd5558b5881f4104ce922c1ba3dd8775184b0d5c997f5af72a60f503395438`
+  (hash das linhas `conjunto|slug|bucket` dos 159 exemplos que ficam: 140 de
+  treino + 19 de validação, em ordem; prende QUAIS exemplos ficaram). Sem o
+  filtro de comprimento (só a limpeza, 141 de treino) o hash era
+  `52debafa445935e9f4485241e4929c4b2af93c5014e791e5f9e3383e6604f2c8`.
+  `sha256_conteudo` do treino (140 linhas
   `treino|slug|bucket|sha256(texto de chat do Qwen)`; prende prompt e alvo) =
-  `6b2e6915adc31938c23cbe5a2b660c858373ebcfa7183b6eab9577acad024f16`.
+  `983dd01bd611899b4153a1d1b2926c59efcd19ba101bfc8d3875d63bfaed6d4a`.
   `split.json` `3232b2ad…`, `resumo.json` `0afc947d…`.
 - **A rodada correu com a guarda de RAM desligada
   (`--ram-livre-min-gb 0`), e por quê:** com o gpt-oss:20b carregado a RAM livre
@@ -813,6 +830,12 @@ não voltar, a medição NÃO roda (`partida_contaminada`, `E5_ate_20_min` nulo,
 reprovado). Novos: `--so-probe` e `importar-pasta` (acha as pastas do Kaggle
 pelo `.gguf` Q4_K_M + `Modelfile`, sem supor o nome).
 
+**Regras da repetição (decisão do dono, 2026-10-22).** Sonda de 27.648 SEM guarda
+de memória: não. Se a guarda derrubar a sonda do Qwen3-8B, para-se e reportam-se
+os números (`partida`, `memoria`, `abortado_por_memoria`); a guarda não é
+desligada. No Windows todo Python é `.\venv\Scripts\python.exe` (o `python` do
+sistema não tem os pacotes) e o repositório é `C:\espectro\espectro-24`.
+
 ## Smoke do Qwen3-8B (preparado em 2026-10-22; quem roda é o dono)
 
 Critério e configuração iguais (QLoRA 4-bit, r=16 em todas as projeções, checkpointing
@@ -827,27 +850,34 @@ flush do pré-voo). `unsloth` e `unsloth_zoo` FIXADOS em 2026.10.7.
   `chat_template.jinja` oficial e o `qwen3_template` do Unsloth: os dois dão o
   mesmo texto, e `comum.chat('qwen')` bate com ele (treino e prompt de inferência).
   O turno do assistente abre com `<think>\n\n</think>\n\n` **vazio**; o alvo
-  (o JSON) não tem `<think>` nem `</think>` em nenhum dos 141 exemplos
+  (o JSON) não tem `<think>` nem `</think>` em nenhum dos 141 exemplos limpos (nem nos 140 finais)
   (conferido na montagem). Como o bloco vazio é PROMPT na inferência, a parte
   de resposta da máscara é `<|im_start|>assistant\n<think>\n\n</think>\n\n`: o
   bloco fica mascarado e o `log.json` grava os tokens treinados decodificados
   (`mascara`: começo, fim, `tem_bloco_think`, `comeca_em_chave`); o kernel
   levanta erro se a máscara sair vazia ou o alvo tiver `<think>`.
-- **Mais longo e mediano, com o tokenizer do Qwen3-8B** (141 exemplos de
-  treino limpos): mediana 6.857, p90 9.345, p99 12.014, máx 15.414. O tokenizer
-  gera mais tokens que o do Gemma: `satantango/positivas` tem **15.414** tokens
-  e só o prompt dele (14.690) passa de 14.336 — truncado, o alvo cairia fora
-  inteiro e o exemplo não teria token treinável. Ele fica fora do E1 por
-  construção (único acima de 14.336 e de 12.288; é o outlier) e a decisão sobre
-  ele é do dono. O E1 mede o maior que cabe: `the-turin-horse/negativas`,
-  **12.014** tokens, tanto no corte de 14.336 quanto no de 12.288 (é o MESMO
-  exemplo: um OOM a 14.336 se repete a 12.288 sem mudar nada, e o kernel roda
-  as duas por fidelidade à letra do critério). **Limitação:** o E1 passa a medir
-  12.014 tokens, não ~14 mil; passar não prova 14.336. Medianos (6.854–6.868,
-  mediana do conjunto 6.857): `inception/positivas`,
-  `happy-hour-2015-1/negativas`, `inglourious-basterds/negativas`,
-  `memories-of-murder/positivas`. Dataset `smoke_dataset_qwen3/`, `smoke.jsonl`
-  sha256 `136d4450060ce38f1d9225fe81774a2707641acea16369fb406bafc79bec0435`.
+- **Mais longo e mediano, com o tokenizer do Qwen3-8B.** O tokenizer gera mais
+  tokens que o do Gemma: `satantango/positivas` tem **15.414** tokens e só o
+  prompt dele (14.690) passa de 14.336 — truncado, o alvo cairia fora inteiro e
+  o exemplo não teria token treinável. **Decisão do dono (2026-10-22): filtrar
+  do treino, não subir o `max_seq_length` por um exemplo.** Motivo: único
+  exemplo acima de 14.336 e de 12.288. **RESSALVA:** é o exemplo mais longo e
+  denso do treino; sem ele o modelo nunca vê o caso extremo de comprimento (o
+  maior que sobra tem 12.014). Implementado em
+  `conjunto_limpo.FORA_POR_COMPRIMENTO` e gravado em `conjunto_limpo.json` e no
+  `meta.json`. **Tamanho final do treino: 140 exemplos** (180 − 39 da limpeza −
+  1 por comprimento); validação 19. Com 140: mediana 6.855,5, p90 9.156, p99
+  11.947, máx 12.014. O E1 mede o maior que cabe, agora o MAIOR do conjunto:
+  `the-turin-horse/negativas`, **12.014** tokens, nos cortes de 14.336 e de
+  12.288 (é o MESMO exemplo: um OOM a 14.336 se repete a 12.288, e o kernel roda
+  as duas por fidelidade à letra do critério). **Limitação:** o E1 mede 12.014
+  tokens, não ~14 mil; como nenhum exemplo do treino passa de 12.014, o E1
+  cobre o pior caso do treino que existirá, mas passar não prova 14.336.
+  Medianos (6.843–6.865): `happy-hour-2015-1/negativas`, `inception/positivas`,
+  `inglourious-basterds/negativas`, `bones-and-all/medianas`. Dataset
+  `smoke_dataset_qwen3/`, `smoke.jsonl` sha256
+  `ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f`
+  (substitui o `136d4450…` da primeira montagem, com 141).
 - **Atenção:** o kernel grava `atencao` no `log.json`: configuração, flags do
   Unsloth, classe/forward da atenção, dtype visto na camada 0 e, num passo curto
   (1.024 tokens) sob `torch.profiler`, os operadores do ATen e os kernels CUDA
@@ -855,8 +885,8 @@ flush do pré-voo). `unsloth` e `unsloth_zoo` FIXADOS em 2026.10.7.
   traz f16/f32). A leitura do código dá o esperado (NÃO medido): o `model_type`
   `qwen3` não está em `FORCE_FLOAT32` (só `qwen3_moe` e `qwen3_5` estão), então
   a atenção fica em fp16 no caminho rápido do Unsloth.
-- **E3:** `s/passo (mediano) × 141 × 3 / 3600 ≤ 20` passa se o s/passo for
-  **≤ 170,2 s** (171,4 s com 140, sem o outlier). O kernel já grava `e3`
+- **E3:** `s/passo (mediano) × 140 × 3 / 3600 ≤ 20` passa se o s/passo for
+  **≤ 171,4 s** (era 170,2 s com 141). O kernel já grava `e3`
   com o s/passo medido nos medianos e o nº de exemplos do `meta.json`.
   Substitui a conta com 156 do critério ("180 − 24", ESTIMADO).
 - **Pastas de saída previsíveis:** `<modelo>__<seq>` (`qwen3-8b__14336`,
@@ -881,7 +911,8 @@ usado em nenhuma conta.
   de viabilidade decide).
 - Tempo da recuperação (e5) dos bullets de treino; determinismo do juiz sob
   outra ordem de chamadas.
-- A cota semanal de GPU do Kaggle desta conta.
+- (resolvido em 22/10) A cota semanal de GPU do Kaggle desta conta: 30 h
+  (`kaggle quota`).
 - (fechamento do gate 0) O teste de fumaça no Kaggle, a viabilidade e o
   import no Windows, e o juiz da limpeza: preparados, não rodados. A
   cota de GPU (~2–4 h) e as ~7,9 h de juiz são ESTIMATIVAS.

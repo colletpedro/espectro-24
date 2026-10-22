@@ -7,13 +7,16 @@
   "treino": 180,
   "validacao": 24
  },
- "n_treino": 141,
+ "n_treino": 140,
  "n_validacao": 19,
- "n_removidos": {
+ "n_removidos_pela_limpeza": {
   "treino": 39,
   "validacao": 5
  },
- "sha256_ids": "52debafa445935e9f4485241e4929c4b2af93c5014e791e5f9e3383e6604f2c8",
+ "fora_por_comprimento": {
+  "satantango/positivas": "15.414 tokens (Qwen3-8B); prompt 14.690 > max_seq_length 14.336"
+ },
+ "sha256_ids": "ecdd5558b5881f4104ce922c1ba3dd8775184b0d5c997f5af72a60f503395438",
  "treino": [
   "12-angry-men/medianas",
   "12-angry-men/negativas",
@@ -116,7 +119,6 @@
   "prisoners/positivas",
   "satantango/medianas",
   "satantango/negativas",
-  "satantango/positivas",
   "se7en/medianas",
   "se7en/negativas",
   "se7en/positivas",
