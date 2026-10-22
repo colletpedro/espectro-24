@@ -1,0 +1,2372 @@
+{
+ "juiz_config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "regra_remocao": [
+  "indeterminado",
+  "sem_apoio"
+ ],
+ "pares_julgados": 1863,
+ "pares_na_entrada": 6115,
+ "estados_bullets": {
+  "com_apoio": 1176,
+  "sem_apoio": 45,
+  "indeterminado": 2
+ },
+ "buckets": [
+  {
+   "slug": "12-angry-men",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "12-angry-men",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "12-angry-men",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "all-quiet-on-the-western-front-2022",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "all-quiet-on-the-western-front-2022",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "sem_apoio": 1,
+    "com_apoio": 5
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "all-quiet-on-the-western-front-2022",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "arrival-2016",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "arrival-2016",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "arrival-2016",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "avengers-endgame",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "avengers-endgame",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "avengers-endgame",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "barbie",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "barbie",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "barbie",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "bones-and-all",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "bones-and-all",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "bones-and-all",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cars",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cars",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cars",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "catch-me-if-you-can-2002",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "catch-me-if-you-can-2002",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "catch-me-if-you-can-2002",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cats-2019",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cats-2019",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cats-2019",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "chinatown",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "chinatown",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "chinatown",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cidade-de-deus",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cidade-de-deus",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "indeterminado": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cidade-de-deus",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cujo",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cujo",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cujo",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "cure",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cure",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "cure",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "district-9",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "district-9",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "district-9",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "do-the-right-thing",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "do-the-right-thing",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "do-the-right-thing",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "drive-my-car",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "drive-my-car",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "drive-my-car",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "dune-part-two",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "dune-part-two",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "dune-part-two",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "eighth-grade",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "eighth-grade",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "eighth-grade",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "everything-everywhere-all-at-once",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "everything-everywhere-all-at-once",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "everything-everywhere-all-at-once",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "fight-club",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "fight-club",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "fight-club",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "get-out-2017",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "get-out-2017",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "get-out-2017",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "goodfellas",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "goodfellas",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "goodfellas",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "happy-hour-2015-1",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "happy-hour-2015-1",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "happy-hour-2015-1",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "hard-to-be-a-god",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "hard-to-be-a-god",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "hard-to-be-a-god",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "im-still-here-2024",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "im-still-here-2024",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "im-still-here-2024",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inception",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inception",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inception",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inglourious-basterds",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inglourious-basterds",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "inglourious-basterds",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "interstellar",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "interstellar",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "interstellar",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "joker-folie-a-deux",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "joker-folie-a-deux",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "joker-folie-a-deux",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "la-haine",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "la-haine",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "la-haine",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "longlegs",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "longlegs",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "longlegs",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "mad-max-fury-road",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "mad-max-fury-road",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "mad-max-fury-road",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "malcolm-x-1992",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "malcolm-x-1992",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "malcolm-x-1992",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "marty-supreme",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "marty-supreme",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "marty-supreme",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "memories-of-murder",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "memories-of-murder",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "memories-of-murder",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "neighboring-sounds",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "neighboring-sounds",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "neighboring-sounds",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "oppenheimer-2023",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "oppenheimer-2023",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "oppenheimer-2023",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "parasite-2019",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "parasite-2019",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "parasite-2019",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "pearl-2022",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "pearl-2022",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "pearl-2022",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "perfect-days-2023",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "perfect-days-2023",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "perfect-days-2023",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "indeterminado": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "porco-rosso",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "porco-rosso",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "porco-rosso",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "princess-mononoke",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "princess-mononoke",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "princess-mononoke",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "prisoners",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "prisoners",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "prisoners",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "satantango",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "satantango",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "satantango",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "se7en",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "se7en",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "se7en",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "sinners-2025",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "sinners-2025",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "sinners-2025",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 4,
+    "sem_apoio": 2
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "speak-no-evil-2022",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "speak-no-evil-2022",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "speak-no-evil-2022",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "talk-to-me-2022",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "talk-to-me-2022",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "talk-to-me-2022",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-brutalist",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-brutalist",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-brutalist",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-cloud-capped-star",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-cloud-capped-star",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-cloud-capped-star",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-gentlemen",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-gentlemen",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-gentlemen",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-godfather",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-godfather",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-godfather",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-hateful-eight",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-hateful-eight",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-hateful-eight",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-northman",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-northman",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-northman",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-spongebob-movie-search-for-squarepants",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-spongebob-movie-search-for-squarepants",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-spongebob-movie-search-for-squarepants",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-swimming-pool",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-swimming-pool",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-swimming-pool",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-truman-show",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-truman-show",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-truman-show",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-turin-horse",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-turin-horse",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-turin-horse",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "the-wolf-of-wall-street",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-wolf-of-wall-street",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "the-wolf-of-wall-street",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "top-gun-maverick",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "top-gun-maverick",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "top-gun-maverick",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "uncut-gems",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "uncut-gems",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "uncut-gems",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "whiplash-2014",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "whiplash-2014",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "sem_apoio": 2,
+    "com_apoio": 4
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "whiplash-2014",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "wonka",
+   "bucket": "medianas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "wonka",
+   "bucket": "negativas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 4,
+    "sem_apoio": 2
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "wonka",
+   "bucket": "positivas",
+   "conjunto": "treino",
+   "epoca": "V4-Flash",
+   "estados": {
+    "com_apoio": 5,
+    "sem_apoio": 1
+   },
+   "removido": true,
+   "pendente": false
+  },
+  {
+   "slug": "zama",
+   "bucket": "medianas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "zama",
+   "bucket": "negativas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  },
+  {
+   "slug": "zama",
+   "bucket": "positivas",
+   "conjunto": "validacao",
+   "epoca": "V4.1-Flash",
+   "estados": {
+    "com_apoio": 6
+   },
+   "removido": false,
+   "pendente": false
+  }
+ ],
+ "por_conjunto_e_epoca": {
+  "treino|V4-Flash": {
+   "buckets": 60,
+   "removidos": 17,
+   "pendentes": 0
+  },
+  "treino|V4.1-Flash": {
+   "buckets": 120,
+   "removidos": 22,
+   "pendentes": 0
+  },
+  "validacao|V4-Flash": {
+   "buckets": 9,
+   "removidos": 3,
+   "pendentes": 0
+  },
+  "validacao|V4.1-Flash": {
+   "buckets": 15,
+   "removidos": 2,
+   "pendentes": 0
+  }
+ },
+ "buckets_removidos": [
+  "all-quiet-on-the-western-front-2022/negativas",
+  "arrival-2016/positivas",
+  "avengers-endgame/medianas",
+  "barbie/medianas",
+  "bones-and-all/positivas",
+  "cars/medianas",
+  "cars/negativas",
+  "catch-me-if-you-can-2002/positivas",
+  "chinatown/negativas",
+  "cidade-de-deus/medianas",
+  "cidade-de-deus/negativas",
+  "cujo/medianas",
+  "cujo/positivas",
+  "cure/positivas",
+  "do-the-right-thing/medianas",
+  "eighth-grade/positivas",
+  "everything-everywhere-all-at-once/medianas",
+  "everything-everywhere-all-at-once/negativas",
+  "fight-club/positivas",
+  "hard-to-be-a-god/medianas",
+  "longlegs/medianas",
+  "longlegs/positivas",
+  "pearl-2022/negativas",
+  "pinocchio-2022/medianas",
+  "pinocchio-2022/negativas",
+  "porco-rosso/medianas",
+  "prisoners/medianas",
+  "soul-2020/negativas",
+  "speak-no-evil-2022/negativas",
+  "talk-to-me-2022/medianas",
+  "talk-to-me-2022/negativas",
+  "the-cloud-capped-star/positivas",
+  "the-gentlemen/positivas",
+  "the-godfather/medianas",
+  "the-northman/medianas",
+  "the-northman/negativas",
+  "the-turin-horse/positivas",
+  "the-wailing/medianas",
+  "the-wailing/positivas",
+  "uncut-gems/medianas",
+  "whiplash-2014/negativas",
+  "wonka/medianas",
+  "wonka/negativas",
+  "wonka/positivas"
+ ]
+}

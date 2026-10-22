@@ -1,0 +1,62 @@
+{
+ "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "medidos": [
+  {
+   "id_par": "publicado|talk-to-me-2022|positivas|4|viewing:1437238381",
+   "chars_prompt": 8692,
+   "prompt_eval_count": 2053
+  },
+  {
+   "id_par": "publicado|uncut-gems|negativas|2|viewing:1496558974",
+   "chars_prompt": 8386,
+   "prompt_eval_count": 2177
+  },
+  {
+   "id_par": "publicado|pinocchio-2022|positivas|4|viewing:1445422235",
+   "chars_prompt": 8279,
+   "prompt_eval_count": 2318
+  },
+  {
+   "id_par": "publicado|everything-everywhere-all-at-once|negativas|1|viewing:1438355625",
+   "chars_prompt": 8105,
+   "prompt_eval_count": 1934
+  },
+  {
+   "id_par": "publicado|sinners-2025|negativas|2|viewing:1486641353",
+   "chars_prompt": 8084,
+   "prompt_eval_count": 1928
+  },
+  {
+   "id_par": "publicado|cujo|medianas|0|viewing:1483363084",
+   "chars_prompt": 8029,
+   "prompt_eval_count": 1932
+  },
+  {
+   "id_par": "publicado|cars|negativas|0|viewing:1495786121",
+   "chars_prompt": 8004,
+   "prompt_eval_count": 1997
+  },
+  {
+   "id_par": "publicado|the-truman-show|positivas|0|viewing:1497832734",
+   "chars_prompt": 7975,
+   "prompt_eval_count": 1942
+  },
+  {
+   "id_par": "publicado|cujo|positivas|2|viewing:1464134598",
+   "chars_prompt": 7923,
+   "prompt_eval_count": 1835
+  },
+  {
+   "id_par": "publicado|all-quiet-on-the-western-front-2022|negativas|2|viewing:1496527594",
+   "chars_prompt": 7528,
+   "prompt_eval_count": 1844
+  }
+ ],
+ "max_prompt_tokens": 2318,
+ "num_predict": 1024,
+ "precisa": 3342,
+ "num_ctx": 4096,
+ "folga": 754,
+ "cabe": true,
+ "menor_multiplo_512": 3584
+}
