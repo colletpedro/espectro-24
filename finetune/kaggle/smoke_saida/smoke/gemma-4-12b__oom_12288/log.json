@@ -1,0 +1,121 @@
+{
+ "modelo": "gemma-4-12b",
+ "repo": "unsloth/gemma-4-12b-it",
+ "max_seq_length": 12288,
+ "seed": 3407,
+ "rascunho": "/tmp/espectro24_smoke",
+ "df_inicio": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  324K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n",
+ "dispositivos_cuda": 1,
+ "gpu": "Tesla T4",
+ "bf16_suportado": false,
+ "versoes": {
+  "python": "3.13.15",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu128",
+  "peft": "0.20.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.14.0",
+  "datasets": "4.8.5",
+  "xformers": "0.0.35",
+  "triton": "3.6.0",
+  "kaggle_env": {
+   "KAGGLE_URL_BASE": "https://api.kaggle.com",
+   "KAGGLE_DOCKER_IMAGE": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+   "KAGGLE_KERNEL_INTEGRATIONS": "",
+   "KAGGLE_DATA_PROXY_PROJECT": "kaggle-161607",
+   "KAGGLE_KERNEL_RUN_TYPE": "Batch",
+   "KAGGLE_GCP_ZONE": "asia-southeast1-a",
+   "KAGGLE_CONTAINER_NAME": "kaggle_fzkl6cj7WidFTURPEU7mRpLMOyzyghykc8NaPJLIl8-360547715-webtier",
+   "KAGGLE_GRPC_DATA_PROXY_URL": "dp.kaggle.net:443",
+   "KAGGLE_DATA_PROXY_URL": "https://dp.kaggle.net"
+  },
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/gemma-4-12b-it",
+  "sha": "55cdba0740a9765956f49501f689a66b098feda3",
+  "gated": false
+ },
+ "carga_s": 119.1,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "projecoes_faltando": [],
+ "template_confere": {
+  "mais_longo": {
+   "igual": false,
+   "posicao": 53261,
+   "obtido": "едкие лучики солнца и думаю: а чем моя жизнь лучше чем его?<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      ",
+   "esperado": "едкие лучики солнца и думаю: а чем моя жизнь лучше чем его?<turn|>\n<|turn>model\n{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Duração e ritmo len",
+   "len_obtido": 55601,
+   "len_esperado": 55573
+  },
+  "mais_longo_12k": {
+   "igual": false,
+   "posicao": 42841,
+   "obtido": "a się, je i dogląda gospodarstwa a na dworze szaleje wiatr.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      ",
+   "esperado": "a się, je i dogląda gospodarstwa a na dworze szaleje wiatr.<turn|>\n<|turn>model\n{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo excessivament",
+   "len_obtido": 46339,
+   "len_esperado": 46311
+  },
+  "mediano_1": {
+   "igual": false,
+   "posicao": 21823,
+   "obtido": "ie. Not great, Not terrible - the Chernobyl score. 2 stars.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      ",
+   "esperado": "ie. Not great, Not terrible - the Chernobyl score. 2 stars.<turn|>\n<|turn>model\n{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e arras",
+   "len_obtido": 23895,
+   "len_esperado": 23867
+  },
+  "mediano_2": {
+   "igual": false,
+   "posicao": 23803,
+   "obtido": "h each other to the point you can't even conclude anything.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      ",
+   "esperado": "h each other to the point you can't even conclude anything.<turn|>\n<|turn>model\n{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Duração excessiva e",
+   "len_obtido": 26399,
+   "len_esperado": 26371
+  },
+  "mediano_3": {
+   "igual": false,
+   "posicao": 23380,
+   "obtido": "ة  اما من ناحية التمثيل ف الشخصيات أدت الأدوار بشكل ممتاز .<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      ",
+   "esperado": "ة  اما من ناحية التمثيل ف الشخصيات أدت الأدوار بشكل ممتاز .<turn|>\n<|turn>model\n{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Final decepcionante",
+   "len_obtido": 25623,
+   "len_esperado": 25595
+  },
+  "mediano_4": {
+   "igual": false,
+   "posicao": 23066,
+   "obtido": "ately. But yea I don't really understand the hate for this.<turn|>\n<|turn>model\n<|channel>thought\n<channel|>{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"",
+   "esperado": "ately. But yea I don't really understand the hate for this.<turn|>\n<|turn>model\n{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Efeitos visuais e CG",
+   "len_obtido": 25425,
+   "len_esperado": 25397
+  }
+ },
+ "pico_ram_por_fase_gib": {
+  "carga": 2.6,
+  "treino_longo": 9.4
+ },
+ "df_por_fase": [
+  {
+   "fase": "carga",
+   "ts": 1792527414.537078,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  324K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "treino_longo",
+   "ts": 1792527562.890332,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  344K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  }
+ ],
+ "erro": "nsloth/trainer.py\", line 2088, in _train_with_reset\n    return _orig_train(*train_args, **train_kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth/utils/flash_impl.py\", line 573, in train\n    return original(*args, **kwargs)\n  File \"/tmp/espectro24_smoke/unsloth_compiled_cache/UnslothSFTTrainer.py\", line 121, in wrapper\n    output = f(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/fast_grad_params.py\", line 238, in wrapped\n    return train(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth/models/_gc_train_scope.py\", line 98, in train\n    return original_train(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 1458, in train\n    return inner_training_loop(\n        args=args,\n    ...<2 lines>...\n        ignore_keys_for_eval=ignore_keys_for_eval,\n    )\n  File \"<string>\", line 81, in _fast_inner_training_loop\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/trainer.py\", line 1768, in _run_epoch\n    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)\n  File \"/tmp/espectro24_smoke/unsloth_compiled_cache/UnslothSFTTrainer.py\", line 2248, in training_step\n    return super().training_step(*args, **kwargs)\n           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth/models/_utils.py\", line 5530, in _unsloth_training_step_settling_fallbacks\n    return _training_step_before_settle(self, *args, **kwargs)\n  File \"<string>\", line 70, in _unsloth_training_step\n  File \"/usr/local/lib/python3.13/dist-packages/accelerate/accelerator.py\", line 2850, in backward\n    loss.backward(**kwargs)\n    ~~~~~~~~~~~~~^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_tensor.py\", line 631, in backward\n    torch.autograd.backward(\n    ~~~~~~~~~~~~~~~~~~~~~~~^\n        self, gradient, retain_graph, create_graph, inputs=inputs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/__init__.py\", line 381, in backward\n    _engine_run_backward(\n    ~~~~~~~~~~~~~~~~~~~~^\n        tensors,\n        ^^^^^^^^\n    ...<5 lines>...\n        accumulate_grad=True,\n        ^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py\", line 869, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        t_outputs, *args, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )  # Calls into the C++ engine to run the backward pass\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py\", line 317, in apply\n    return user_fn(self, *args)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/gradient_checkpointing.py\", line 1635, in backward\n    torch.autograd.backward(outputs_with_grad, args_with_grad)\n    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/__init__.py\", line 381, in backward\n    _engine_run_backward(\n    ~~~~~~~~~~~~~~~~~~~~^\n        tensors,\n        ^^^^^^^^\n    ...<5 lines>...\n        accumulate_grad=True,\n        ^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/graph.py\", line 869, in _engine_run_backward\n    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        t_outputs, *args, **kwargs\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )  # Calls into the C++ engine to run the backward pass\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/autograd/function.py\", line 317, in apply\n    return user_fn(self, *args)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py\", line 2748, in backward\n    return impl_fn()\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py\", line 2734, in impl_fn\n    out = CompiledFunction._backward_impl(ctx, all_args)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py\", line 2918, in _backward_impl\n    out = call_func_at_runtime_with_args(\n        CompiledFunction.compiled_bw,\n    ...<2 lines>...\n        disable_amp=disable_amp,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_functorch/_aot_autograd/utils.py\", line 138, in call_func_at_runtime_with_args\n    out = normalize_as_list(f(args))\n                            ~^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_inductor/output_code.py\", line 656, in __call__\n    return self.current_callable(inputs)\n           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_inductor/utils.py\", line 3401, in run\n    out = model(new_inputs)\n  File \"/tmp/torchinductor_root/7l/c7lqog3usmxupuqzw74glfpkcgew2b4x726lgab5apg6gfx7qvoa.py\", line 439, in call\n    buf26 = empty_strided_cuda((s27, 15360), (15360, 1), torch.float16)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 334.00 MiB. GPU 0 has a total capacity of 14.56 GiB of which 254.81 MiB is free. Including non-PyTorch memory, this process has 14.30 GiB memory in use. Of the allocated memory 13.69 GiB is allocated by PyTorch, and 465.64 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+ "fase_do_erro": "treino_longo"
+}

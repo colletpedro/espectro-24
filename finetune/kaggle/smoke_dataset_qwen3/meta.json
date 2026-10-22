@@ -1,0 +1,29 @@
+{
+ "candidatos": [
+  "qwen3-8b"
+ ],
+ "tokenizer": "Qwen3-8B",
+ "tokenizer_repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+ "tokenizer_revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+ "n_treino_limpo": 141,
+ "n_validacao_limpo": 19,
+ "n_treino_antes_da_limpeza": 180,
+ "epocas_E3": 3,
+ "sha256_ids_conjunto_limpo": "52debafa445935e9f4485241e4929c4b2af93c5014e791e5f9e3383e6604f2c8",
+ "sha256_conteudo_treino_limpo": "6b2e6915adc31938c23cbe5a2b660c858373ebcfa7183b6eab9577acad024f16",
+ "tokens_total_qwen3_8b": {
+  "n": 141,
+  "mediana": 6857,
+  "p90": 9345,
+  "p99": 12014,
+  "max": 15414
+ },
+ "mediana_total": 6857,
+ "smoke_sha256": "136d4450060ce38f1d9225fe81774a2707641acea16369fb406bafc79bec0435",
+ "acima_de_14336": [
+  "satantango/positivas:15414 (prompt 14690)"
+ ],
+ "acima_de_12288": [
+  "satantango/positivas:15414"
+ ]
+}

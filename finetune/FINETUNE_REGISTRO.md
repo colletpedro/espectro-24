@@ -19,6 +19,11 @@ branch `finetune`, pasta `finetune/`): `inventario.{json,md}`,
 `metricas/palavras_quantidade.txt`, `kaggle/smoke_dataset/`,
 `limpeza/entrada{.jsonl,_meta.json}`.
 
+Scripts novos de 2026-10-22 (`main` `d6456c87162b0699dffea48a87b7f97563db4822`): `_latencia.py` (guarda de
+latência do juiz), `conjunto_limpo.py`, `kaggle/montar_dataset_smoke_qwen3.py`,
+`kaggle/kernel_qwen3/kernel-metadata.json`; revistos: `kaggle/kernel/smoke_treino.py`,
+`viabilidade_ollama.py`, `limpar_treino.py`, `comum.py`, `baixar_tokenizers.py`.
+
 ## Invariantes
 
 1. A unidade é o FILME. Nenhum filme de teste entra no treino em estágio
@@ -587,6 +592,283 @@ sorteio dos 60 + 6 itens da validação ficam para depois.
    Kaggle CLI (`kaggle kernels output …`) e importada com
    `viabilidade_ollama.py importar`.
 
+## Smoke do Kaggle (20/10): diagnóstico do OOM e aplicação do critério (2026-10-22)
+
+Insumos: `finetune/kaggle/smoke_saida/` (4 rodadas + `resumo.json` + log do kernel,
+MEDIDO em 2026-10-20 20:04–20:25 UTC) e o código instalado na rodada, lido em
+2026-10-22 (`unsloth 2026.10.7` e `unsloth_zoo 2026.10.7`, as mesmas versões do
+`log.json`, baixadas só para leitura; nada foi executado). Ambiente MEDIDO no
+log: 1 GPU (`CUDA_VISIBLE_DEVICES=0`, `dispositivos_cuda` 1), Tesla T4,
+`bf16_suportado` False, torch 2.11.0+cu128, transformers 5.16.1, trl 1.15.0,
+peft 0.20.0, bitsandbytes 0.50.2, xformers 0.0.35, Python 3.13.15. LoRA em
+q/k/v/o/gate/up/down nas 4 rodadas (`projecoes_faltando` vazio).
+
+**O que as 4 rodadas mediram (MEDIDO):** todas caíram por OOM de VRAM na fase
+`treino_longo`. Nenhuma chegou aos medianos, ao adaptador nem à exportação:
+E2, E3 e E4 desses candidatos NÃO foram medidos. O log não tem VRAM por fase
+(só RAM, que ficou em 8,7–9,5 GiB de 31,35 GiB), nem o passo em que cada uma
+caiu.
+
+### Tabela do diagnóstico (MEDIDO, `log.json` → `erro`)
+
+| rodada | exemplo (Gemma, tokens) | tentou alocar | em uso no processo | livre / total | ponto do traceback |
+|---|---|---|---|---|---|
+| E4B @ 14.336 | satantango/positivas, 13.857 | **5,72 GiB** | 9,91 GiB (9,58 PyTorch + 0,21 reservado-livre) | 4,65 / 14,56 GiB | **forward**, dentro do gradient checkpointing: `modeling_gemma4.py:1402 self_attn` → `unsloth_zoo/temporary_patches/gemma4_float32.py:507 scaled_dot_product_attention` |
+| E4B @ 12.288 | the-turin-horse/negativas, 11.357 | **3,84 GiB** | 12,54 GiB (12,30 + 0,12) | 2,02 / 14,56 GiB | o mesmo ponto (`gemma4_float32.py:507`) |
+| 12B @ 14.336 | 13.857 | 408,00 MiB | 14,37 GiB (14,03 + 0,19) | 178,81 MiB / 14,56 GiB | **backward**: `loss.backward()` → `unsloth_zoo/gradient_checkpointing.py:1635 backward` → AOT autograd `_backward_impl` → kernel do inductor `empty_strided_cuda((s27, 15360), (15360, 1), torch.float16)` |
+| 12B @ 12.288 | 11.357 | 334,00 MiB | 14,30 GiB (13,69 + 0,47) | 254,81 MiB / 14,56 GiB | o mesmo; o processo ainda saiu com `rc` −11 (SIGSEGV) depois da exceção |
+
+Tempo na fase `treino_longo` até o erro (linha do tempo de RAM): 59 s, 22 s,
+124 s, 385 s. O buffer (`s27`, 15.360) em fp16 do 12B é o intermediário do MLP
+(`intermediate_size` 15.360): 408 MiB ↔ 13.926 tokens e 334 MiB ↔ 11.401, 0,5%
+e 0,4% acima dos 13.857/11.357 contados no Mac (diferença NÃO explicada;
+possível preenchimento do shape compilado).
+
+### A hipótese do tech lead, contra os números
+
+Hipótese: na T4 (sem bf16) o Unsloth roda a atenção do Gemma 4 em fp32; o SDPA
+cai no backend matemático, que materializa L×L; a memória cresce com L².
+
+**Confirmada para o E4B, com exatidão (MEDIDO + conta).** Cabeças de atenção do
+E4B: 8 (`num_attention_heads` 8, `num_key_value_heads` 2, `head_dim` 256,
+`global_head_dim` 512; config da revisão carregada). Matriz de pontuação em
+fp32, batch 1: `cabeças × L² × 4 B`.
+
+| | L (tokens) | 8 × L² × 4 B | falhou ao alocar |
+|---|---|---|---|
+| E4B @ 14.336 | 13.857 | **5,723 GiB** | 5,72 GiB |
+| E4B @ 12.288 | 11.357 | **3,844 GiB** | 3,84 GiB |
+
+Alternativas descartadas pela mesma conta: fp16 daria 2,861 e 1,922 GiB; a
+máscara aditiva fp32 L×L daria 0,715 e 0,480 GiB. Só 8 × L² × 4 B bate, nos
+dois comprimentos (razão 5,723/3,844 = 1,489 = (13.857/11.357)², como L² manda).
+
+**Backend de SDPA usado: matemático (INFERIDO da alocação; o log não registra o
+backend).** Um kernel mem-efficient ou flash nunca aloca L×L; alocar
+`cabeças × L² × 4 B` é o que o backend matemático faz. Por que o seletor cai
+nele (LIDO no código, não observado em execução):
+
+1. **dtype:** `gemma4_float32.py` converte q, k e v para fp32 explicitamente
+   (linhas 397, 406–407, 418, 422) e a máscara para fp32 (linha 486). O flash
+   do PyTorch exige sm ≥ 80 e não aceita fp32 (`sdp_utils.cpp` v2.11.0:
+   `check_flash_attention_hardware_support`, `check_dtypes_flash_attention`); a
+   T4 é sm75. Fora o flash, sobra o mem-efficient.
+2. **GQA:** a chamada passa `enable_gqa = num_key_value_groups != 1`
+   (linha 515) e o E4B tem 8 cabeças de query para 2 de key/value. O
+   mem-efficient não suporta GQA (`check_batch_size_and_num_heads_dense<false /*
+   supports_grouped_query_attention */>` no mesmo arquivo); o `unsloth_zoo` diz o
+   mesmo num comentário (`gemma4_banded_attention.py`: "enable_gqa would put
+   fp32 on the math kernel"). Resultado: math.
+3. **Máscara:** aditiva fp32, `is_causal` False quando há máscara (linha 487);
+   por si só não tira o mem-efficient. **Softcapping de atenção:** o Gemma 4 não
+   tem (`attn_logit_softcapping` ausente do `text_config`; só
+   `final_logit_softcapping` 30, aplicado no `lm_head`). Não entra.
+4. **O que ligou o fp32:** `loader.py` (linhas 2745–2757) põe
+   `UNSLOTH_FORCE_FLOAT32=1` se o `model_type` contém `gemma4` e
+   (`dtype == float16` **ou** `not SUPPORTS_BFLOAT16`). Na T4 a segunda condição
+   é verdadeira sozinha: o fp32 viria mesmo sem o `fp16` do critério.
+5. **Por que as camadas deslizantes também pagam L²:** o `unsloth_zoo` tem um
+   roteador O(S·janela) para as camadas de janela deslizante
+   (`gemma4_flash_sliding.py`, registrado em `ALL_ATTENTION_FUNCTIONS["sdpa"]`).
+   O forward fp32 de `gemma4_float32.py` só usa essa tabela se `attn_impl` não
+   for `sdpa`/`eager` (linhas 437–445); com `sdpa` cai no ramo SDPA cru (linhas
+   483–516) e **contorna o roteador**. No E4B são 35 de 42 camadas deslizantes
+   (janela 512) pagando L² sem precisar.
+
+**NÃO confirmada para o 12B (MEDIDO).** Com 16 cabeças de query
+(`num_attention_heads` 16, `num_key_value_heads` 8), a mesma conta daria
+**11,445 GiB** a 14.336 e **7,688 GiB** a 12.288 numa única chamada de SDPA. O
+12B não caiu aí: o forward inteiro terminou e a falha veio no backward, num
+buffer de 408/334 MiB, com 14 GiB já alocados. A hipótese, estendida ao 12B,
+prevê um OOM que o log não mostra. O 12B é `gemma4_unified`
+(`Gemma4UnifiedForConditionalGeneration`, `num_kv_shared_layers` 0), e o log
+não diz por qual caminho de atenção ele passou (a hipótese mais simples é que o
+patch fp32 não tenha sido aplicado à classe unificada e ele tenha usado o
+roteador padrão; NÃO verificada). O que o log do 12B prova é só: memória
+esgotada no backward do MLP com ~14 GiB em uso, nos dois comprimentos.
+
+**Observação do 12B, fora do OOM (MEDIDO):** `template_confere` deu 0/6 nas duas
+rodadas do 12B (6/6 no E4B). A diferença é um canal de raciocínio vazio,
+`<|channel>thought\n<channel|>`, que o template do 12B escreve antes da resposta
+(+28 caracteres em 55.601) e `comum.chat('gemma')` não escreve. Não explica o
+OOM; deixa de importar com o Gemma fora, mas fica registrado: o `comum.chat`
+não reproduz o template do Gemma 4 12B.
+
+### Classificação da causa
+
+- **E4B: (a)** — propriedade do modelo nesta plataforma, sob a configuração
+  fixada pelo critério. Demonstrada: a conta bate a 3 algarismos nos dois
+  comprimentos e o código instalado explica cada passo (dtype fp32 forçado pela
+  falta de bf16, GQA → math, roteador contornado). Nada no script o causa:
+  `smoke_treino.py` não fixa `attn_implementation`, não chama `sdpa_kernel` e
+  não define variável de ambiente de atenção; só pede `dtype=torch.float16`, o
+  que o critério manda.
+- **12B: não é (b) — não achei, no script nem na configuração, nada fora do
+  critério que o explique** (QLoRA 4-bit, r=16 nas 7 projeções, checkpointing
+  "unsloth", fp16, batch 1, `max_seq_length` 14.336 e 12.288, seed 3407). **Mas
+  a causa (a) não está demonstrada**: o mecanismo da hipótese não foi o que
+  falhou. O E1 reprova por medição, sem depender da causa: o processo esgotou
+  os 14,56 GiB da T4 (14,37 em uso a 14.336) e o critério pede pico ≤ 14,0
+  GiB.
+- Reprodutibilidade (ressalva do script, não causa): `pip install --upgrade
+  unsloth unsloth_zoo` sem versão. A rodada usou 2026.10.7; o próximo smoke
+  fixa essas versões.
+
+### Aplicação do critério (CRITERIO_ESCOLHA_BASE.md, sem alteração)
+
+- **Gemma 4 12B reprova no E1** a 14.336 e a 12.288 (OOM; 14,37 e 14,30 GiB em
+  uso de 14,56). **Gemma 4 E4B reprova no E1** a 14.336 e a 12.288 (OOM no
+  SDPA; 5,72 e 3,84 GiB pedidos). A causa está demonstrada para o E4B e NÃO
+  para o 12B (acima).
+- Regra pré-registrada: nenhum Gemma aprovado → entra o **Qwen3-8B** (o
+  critério já o nomeia como reserva e o `smoke_treino.py` o roda só nesse caso).
+- **Achado:** o Gemma 4 E4B não é treinável na T4 gratuita do Kaggle com o
+  Unsloth 2026.10.7, em fp16, nos nossos comprimentos (12.288 e 14.336); o 12B
+  também não coube. Reabrir exige dado novo: uma correção no Unsloth (por
+  exemplo o forward fp32 passar a respeitar o roteador deslizante e o GQA fora
+  do math) ou uma GPU com bf16.
+- **Não foi feito:** nenhum ajuste de comprimento, dtype, backend ou
+  configuração para "salvar" o Gemma. Mudar qualquer um depois de ver o
+  resultado mudaria o critério.
+
+## Limpeza do treino com o juiz v2.2 (resultado, 2026-10-20/21)
+
+Fonte: `finetune/limpeza/` (`resumo.json`, `resumo.md`, `saida_v2.2.jsonl`,
+`contexto_medido.json`). Juiz `44606cf1…` (congelado). Substitui a ESTIMATIVA da
+seção e).
+
+- **Pares:** 1.863 julgados de 6.115 (parada no 1º "sim"), todos `ok`. Janela:
+  20/10 22:59 → 21/10 07:22 UTC = 8,4 h de parede (16,2 s/par); latência por
+  chamada: mediana 14,73 s, p90 24,86 s, máx 52,58 s. ESTIMADO era 7,9 h.
+- **Bullets (1.223, 68 filmes):** `com_apoio` 1.176 · `sem_apoio` 45 ·
+  `indeterminado` 2.
+- **Buckets removidos: 44 de 204** — treino **39 de 180** (21,7%; a
+  estimativa era ~24, faixa 7–68), validação **5 de 24**. Por época do
+  professor (treino): V4-Flash 17 de 60 (28,3%), V4.1-Flash 22 de 120
+  (18,3%); validação: V4-Flash 3 de 9, V4.1-Flash 2 de 15. Por bucket
+  (treino): medianas 16, negativas 12, positivas 11 (de 60 cada).
+- **Por filme:** 33 dos 68 filmes perdem ao menos um bucket (treino 29 de 60:
+  V4-Flash 11, V4.1-Flash 18; validação 4 de 8). 23 filmes perdem 1 bucket, 9
+  perdem 2, 1 perde 3 (`wonka`).
+- **Pares fora da janela do juiz (24 pares, 23 bullets, cota de 0,35
+  token/caractere):** 21 dos 23 bullets receberam "sim" em outro posto
+  (`com_apoio`); 2 ficaram `indeterminado` e por regra conservadora o bucket
+  sai: `cidade-de-deus/negativas` e `pinocchio-2022/negativas` (os dois de
+  treino). Esses 2 buckets são os únicos removidos por causa dos 24 pares;
+  nenhum `sem_apoio` tem par não julgável. ESTIMADO, sem medir: dos 24 pares,
+  10 caberiam na janela com a pior razão medida (0,28 token/caractere,
+  `contexto_medido.json`) e 18 com a menor (0,232); o par de posto 1 do
+  `cidade-de-deus` tem 10.428 caracteres (caberia, pelo 0,28), o de posto 4 do
+  `pinocchio-2022` tem 37.728 (não caberia). `resumir --indeterminado-fica`
+  devolveria os 2 buckets ao treino (143).
+- **Sobram: 141 exemplos de treino e 19 de validação** (180 − 39 e 24 − 5).
+- **Conjunto limpo:** `finetune/limpeza/conjunto_limpo.json`
+  (`scripts/finetune/conjunto_limpo.py`). `sha256_ids` =
+  `52debafa445935e9f4485241e4929c4b2af93c5014e791e5f9e3383e6604f2c8`
+  (hash das linhas `conjunto|slug|bucket` dos 160 exemplos que ficam, em ordem;
+  prende QUAIS exemplos ficaram). `sha256_conteudo` do treino (141 linhas
+  `treino|slug|bucket|sha256(texto de chat do Qwen)`; prende prompt e alvo) =
+  `6b2e6915adc31938c23cbe5a2b660c858373ebcfa7183b6eab9577acad024f16`.
+  `split.json` `3232b2ad…`, `resumo.json` `0afc947d…`.
+- **A rodada correu com a guarda de RAM desligada
+  (`--ram-livre-min-gb 0`), e por quê:** com o gpt-oss:20b carregado a RAM livre
+  fica perto de 0,3 GB por construção, então o limite de 2 GB pararia a rodada
+  inteira sem haver problema. Que não houve paginação lê-se no tempo por par:
+  14,73 s de latência mediana, 16,2 s de parede por par contra a referência de
+  ~16 s, e nenhuma chamada fora do padrão (simulei a nova guarda de latência
+  sobre as 1.863 chamadas em ordem de `ts`: 0 disparos; a mais lenta, 52,58 s,
+  é 3,6× a mediana). O que NÃO foi medido: a RAM durante a rodada (a guarda
+  estava desligada e nada mais a registrou).
+- **Guarda trocada** (`scripts/finetune/_latencia.py`, usada por
+  `limpar_treino.py julgar`): pausa e avisa (código 3, retomável) se UMA chamada
+  passar de 4× a mediana das últimas 20 chamadas. Vale com ≥ 10 chamadas na
+  janela; a chamada lenta é gravada e a SEGUINTE é barrada; a anômala não entra
+  na janela; a 1ª chamada depois de reiniciar o Ollama não é medida. A guarda de
+  RAM saiu de `julgar`; continua no `viabilidade_ollama.py`, que mede
+  memória (e não usa o juiz) e no `gerar_titulos_base.py` (Fase 1, em espera,
+  modelo base — não é o juiz).
+
+## Windows: a 1ª viabilidade (20/10) e por que o E5 do Qwen3-8B é refeito
+
+`finetune/viabilidade/viabilidade_20261020_170533.json` (Ollama 0.40.5, RAM
+15,19 GB, prompt `do-the-right-thing/negativas`):
+
+| candidato | medição @ 18.432 (E5) | probe @ 27.648 |
+|---|---|---|
+| Gemma 4 12B | ok, 248,3 s (≤ 20 min), 7.821 tokens de prompt, 652 de saída; RAM livre mín. 3,58 GB; 3,88 tok/s de geração | **abortada pela guarda de RAM** (livre mín. 1,05 GB < 2,0): o `ConnectionResetError` é o servidor derrubado pelo próprio script |
+| Gemma 4 E4B | ok, 100,4 s, 676 tokens de saída; livre mín. 4,92 GB; 10,89 tok/s | abortada pela guarda (livre mín. 2,00 GB) |
+| Qwen3-8B | **não medido**: abortada em 5,7 s pela guarda (livre mín. 1,97 GB < 2,0) | recusada (servidor já derrubado) |
+
+O Qwen3-8B começou sem memória livre porque o candidato anterior ainda estava
+carregado (pico de RAM usada de 13,22 GB nos 5,7 s da tentativa): a medição está contaminada e não
+conta. As sondas de 27.648 dos dois Gemma também morreram pela guarda, não por
+falha do Ollama; são não eliminatórias e não ficam como "falhou". E4 (importar o
+GGUF do Kaggle) ainda não foi medido para nenhum candidato.
+
+`viabilidade_ollama.py` agora faz **partida limpa** antes de cada medição:
+`ollama stop` em todo modelo de `ollama ps`, confirma `ollama ps` vazio, mata o
+servidor, espera a RAM livre voltar a `--ram-partida-min-gb` (PROPOSTO: 6 GB,
+até 90 s) e grava `partida` (RAM livre, working set, VRAM de partida). Se a RAM
+não voltar, a medição NÃO roda (`partida_contaminada`, `E5_ate_20_min` nulo, não
+reprovado). Novos: `--so-probe` e `importar-pasta` (acha as pastas do Kaggle
+pelo `.gguf` Q4_K_M + `Modelfile`, sem supor o nome).
+
+## Smoke do Qwen3-8B (preparado em 2026-10-22; quem roda é o dono)
+
+Critério e configuração iguais (QLoRA 4-bit, r=16 em todas as projeções, checkpointing
+"unsloth", fp16, batch 1, seed 3407, 10 passos no mais longo a 14.336 e, em
+OOM, a 12.288; 5 passos nos medianos; GGUF Q4_K_M e Modelfile; mesmo disco e
+flush do pré-voo). `unsloth` e `unsloth_zoo` FIXADOS em 2026.10.7.
+
+- **Repositório:** `unsloth/Qwen3-8B-unsloth-bnb-4bit`, revisão
+  `62efd7f9d748e394734a7adae2adf96e13a2abc8` (a do pré-voo). Tokenizer baixado
+  nessa revisão (`tokenizer.json` `aeb13307…`).
+- **Template:** `enable_thinking=False`. Conferido renderizando com jinja2 o
+  `chat_template.jinja` oficial e o `qwen3_template` do Unsloth: os dois dão o
+  mesmo texto, e `comum.chat('qwen')` bate com ele (treino e prompt de inferência).
+  O turno do assistente abre com `<think>\n\n</think>\n\n` **vazio**; o alvo
+  (o JSON) não tem `<think>` nem `</think>` em nenhum dos 141 exemplos
+  (conferido na montagem). Como o bloco vazio é PROMPT na inferência, a parte
+  de resposta da máscara é `<|im_start|>assistant\n<think>\n\n</think>\n\n`: o
+  bloco fica mascarado e o `log.json` grava os tokens treinados decodificados
+  (`mascara`: começo, fim, `tem_bloco_think`, `comeca_em_chave`); o kernel
+  levanta erro se a máscara sair vazia ou o alvo tiver `<think>`.
+- **Mais longo e mediano, com o tokenizer do Qwen3-8B** (141 exemplos de
+  treino limpos): mediana 6.857, p90 9.345, p99 12.014, máx 15.414. O tokenizer
+  gera mais tokens que o do Gemma: `satantango/positivas` tem **15.414** tokens
+  e só o prompt dele (14.690) passa de 14.336 — truncado, o alvo cairia fora
+  inteiro e o exemplo não teria token treinável. Ele fica fora do E1 por
+  construção (único acima de 14.336 e de 12.288; é o outlier) e a decisão sobre
+  ele é do dono. O E1 mede o maior que cabe: `the-turin-horse/negativas`,
+  **12.014** tokens, tanto no corte de 14.336 quanto no de 12.288 (é o MESMO
+  exemplo: um OOM a 14.336 se repete a 12.288 sem mudar nada, e o kernel roda
+  as duas por fidelidade à letra do critério). **Limitação:** o E1 passa a medir
+  12.014 tokens, não ~14 mil; passar não prova 14.336. Medianos (6.854–6.868,
+  mediana do conjunto 6.857): `inception/positivas`,
+  `happy-hour-2015-1/negativas`, `inglourious-basterds/negativas`,
+  `memories-of-murder/positivas`. Dataset `smoke_dataset_qwen3/`, `smoke.jsonl`
+  sha256 `136d4450060ce38f1d9225fe81774a2707641acea16369fb406bafc79bec0435`.
+- **Atenção:** o kernel grava `atencao` no `log.json`: configuração, flags do
+  Unsloth, classe/forward da atenção, dtype visto na camada 0 e, num passo curto
+  (1.024 tokens) sob `torch.profiler`, os operadores do ATen e os kernels CUDA
+  que rodaram (mem-efficient/cutlass, flash, xformers, math; o nome do kernel
+  traz f16/f32). A leitura do código dá o esperado (NÃO medido): o `model_type`
+  `qwen3` não está em `FORCE_FLOAT32` (só `qwen3_moe` e `qwen3_5` estão), então
+  a atenção fica em fp16 no caminho rápido do Unsloth.
+- **E3:** `s/passo (mediano) × 141 × 3 / 3600 ≤ 20` passa se o s/passo for
+  **≤ 170,2 s** (171,4 s com 140, sem o outlier). O kernel já grava `e3`
+  com o s/passo medido nos medianos e o nº de exemplos do `meta.json`.
+  Substitui a conta com 156 do critério ("180 − 24", ESTIMADO).
+- **Pastas de saída previsíveis:** `<modelo>__<seq>` (`qwen3-8b__14336`,
+  `qwen3-8b__12288`), com ou sem erro; `viabilidade_ollama.py importar-pasta`
+  acha as que têm `.gguf`.
+
+## Fase 1 — em espera
+
+A calibração está suspensa até o dono esclarecer a autoria dos rótulos de
+`rotulos_calibracao.csv`. Neste trabalho esse arquivo não foi lido, movido nem
+usado em nenhuma conta.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -610,3 +892,9 @@ sorteio dos 60 + 6 itens da validação ficam para depois.
 - (fase 1) Nenhuma medida de especificidade sobre título real: os rótulos da
   calibração ainda não voltaram; a validação nem foi montada.
 - O tamanho do disco temporário do Kaggle (a documentação não declara).
+- (22/10) O backend de SDPA do E4B foi INFERIDO da alocação e do código; o
+  smoke de 20/10 não o registrou. O mecanismo do OOM do 12B não está nos logs
+  (sem VRAM por fase, sem o passo da falha). Nem E2, E3 nem E4 de nenhum Gemma.
+- (22/10) A RAM durante a limpeza (guarda desligada). Se os 24 pares fora da
+  janela caberiam (`medir-contexto` só mediu os 10 maiores julgáveis).
+- (22/10) E5 e E4 do Qwen3-8B; o E1 do Qwen3-8B a ~14 mil tokens (só 12.014).

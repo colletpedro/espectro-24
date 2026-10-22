@@ -1,0 +1,91 @@
+{
+ "modelo": "gemma-4-e4b",
+ "repo": "unsloth/gemma-4-E4B-it-unsloth-bnb-4bit",
+ "max_seq_length": 14336,
+ "seed": 3407,
+ "rascunho": "/tmp/espectro24_smoke",
+ "df_inicio": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  87% /\n/dev/loop2       20G  172K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  87% /\n",
+ "dispositivos_cuda": 1,
+ "gpu": "Tesla T4",
+ "bf16_suportado": false,
+ "versoes": {
+  "python": "3.13.15",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu128",
+  "peft": "0.20.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.14.0",
+  "datasets": "4.8.5",
+  "xformers": "0.0.35",
+  "triton": "3.6.0",
+  "kaggle_env": {
+   "KAGGLE_URL_BASE": "https://api.kaggle.com",
+   "KAGGLE_DOCKER_IMAGE": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+   "KAGGLE_KERNEL_INTEGRATIONS": "",
+   "KAGGLE_DATA_PROXY_PROJECT": "kaggle-161607",
+   "KAGGLE_KERNEL_RUN_TYPE": "Batch",
+   "KAGGLE_GCP_ZONE": "asia-southeast1-a",
+   "KAGGLE_CONTAINER_NAME": "kaggle_fzkl6cj7WidFTURPEU7mRpLMOyzyghykc8NaPJLIl8-360547715-webtier",
+   "KAGGLE_GRPC_DATA_PROXY_URL": "dp.kaggle.net:443",
+   "KAGGLE_DATA_PROXY_URL": "https://dp.kaggle.net"
+  },
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/gemma-4-E4B-it-unsloth-bnb-4bit",
+  "sha": "6f10b2aa522ba471321d8246fd71a3dfa8c5b9a2",
+  "gated": false
+ },
+ "carga_s": 88.9,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "projecoes_faltando": [],
+ "template_confere": {
+  "mais_longo": {
+   "igual": true
+  },
+  "mais_longo_12k": {
+   "igual": true
+  },
+  "mediano_1": {
+   "igual": true
+  },
+  "mediano_2": {
+   "igual": true
+  },
+  "mediano_3": {
+   "igual": true
+  },
+  "mediano_4": {
+   "igual": true
+  }
+ },
+ "pico_ram_por_fase_gib": {
+  "carga": 7.87,
+  "treino_longo": 8.91
+ },
+ "df_por_fase": [
+  {
+   "fase": "carga",
+   "ts": 1792526700.4821763,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  87% /\n/dev/loop2       20G  172K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  87% /\n"
+  },
+  {
+   "fase": "treino_longo",
+   "ts": 1792526868.6492393,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  192K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  }
+ ],
+ "erro": "s, mm_token_type_ids=mm_token_type_ids, inputs_embeds=inputs_embeds, labels=labels, use_cache=use_cache, logits_to_keep=logits_to_keep, per_layer_inputs=per_layer_inputs, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/temporary_patches/utils.py\", line 2283, in forward\n    return disabled(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_dynamo/external_utils.py\", line 227, in nonrecursive_disable_wrapper\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 939, in wrapper\n    output = func(self, *args, **kwargs)\n  File \"/tmp/espectro24_smoke/unsloth_compiled_cache/unsloth_compiled_module_gemma4.py\", line 1720, in Gemma4ForConditionalGeneration_forward\n    outputs = self.model(\n        input_ids=input_ids,\n    ...<15 lines>...\n        **kwargs,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/temporary_patches/gemma4.py\", line 645, in forward\n    return _orig_forward(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 1068, in wrapper\n    output = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 939, in wrapper\n    output = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/gemma4/modeling_gemma4.py\", line 2411, in forward\n    outputs = self.language_model(\n        per_layer_inputs=per_layer_inputs,\n    ...<6 lines>...\n        **kwargs,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1885, in _call_impl\n    return inner()\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1833, in inner\n    result = forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/temporary_patches/gemma4.py\", line 645, in forward\n    return _orig_forward(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/generic.py\", line 1068, in wrapper\n    output = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/utils/output_capturing.py\", line 262, in wrapper\n    outputs = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/gemma4/modeling_gemma4.py\", line 1705, in forward\n    hidden_states = decoder_layer(\n        hidden_states,\n    ...<6 lines>...\n        **kwargs,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/temporary_patches/misc.py\", line 2464, in __call__\n    return original(self, *args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/modeling_layers.py\", line 113, in __call__\n    return self._gradient_checkpointing_func(partial(super().__call__, **kwargs), *args)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_compile.py\", line 54, in inner\n    return disable_fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n    return fn(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/utils/checkpoint.py\", line 512, in checkpoint\n    ret = function(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/transformers/models/gemma4/modeling_gemma4.py\", line 1402, in forward\n    hidden_states, _ = self.self_attn(\n                       ~~~~~~~~~~~~~~^\n        hidden_states=hidden_states,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<5 lines>...\n        **kwargs,\n        ^^^^^^^^^\n    )\n    ^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1779, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py\", line 1790, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth_zoo/temporary_patches/gemma4_float32.py\", line 507, in forward\n    attn_output = scaled_dot_product_attention(\n        query_states,\n    ...<6 lines>...\n        enable_gqa = getattr(self, \"num_key_value_groups\", 1) != 1,\n    )\n  File \"/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py\", line 1263, in _fn\n    return fn(*args, **kwargs)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.72 GiB. GPU 0 has a total capacity of 14.56 GiB of which 4.65 GiB is free. Including non-PyTorch memory, this process has 9.91 GiB memory in use. Of the allocated memory 9.58 GiB is allocated by PyTorch, and 206.60 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)\n",
+ "fase_do_erro": "treino_longo"
+}
