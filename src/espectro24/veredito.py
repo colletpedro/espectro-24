@@ -355,6 +355,26 @@ _NOME_DO_GRUPO = {"negativas": "QUEM NÃO RECOMENDA",
                   "medianas": "O MEIO-TERMO"}
 
 
+_RE_TOKEN_COM_ALGARISMO = re.compile(
+    r"(?:(?<=\s)|^)(?:(?:de|em|para|nos anos|dos anos|anos)\s+)?\S*\d\S*\s*",
+    re.IGNORECASE)
+
+
+def _tema_sem_algarismo(tema: str | None) -> str | None:
+    """O nome do tema como vai ao modelo: sem nenhum algarismo.
+
+    O tema é texto GERADO e pode trazer ano ("para 1968", "original de
+    2004") ou formato ("3D"). A serialização promete zero dígitos por
+    construção, então o token numérico — e a preposição que o rege — sai
+    daqui. Só o texto serializado muda: o dict do briefing, a seleção de
+    âncoras e o texto publicado ficam como estão. A exceção de ano do
+    briefing de CONDIÇÕES (SPEC §[CD]) não vale para este estágio.
+    """
+    if not tema:
+        return tema
+    return _RE_TOKEN_COM_ALGARISMO.sub("", tema).strip().rstrip(" ,;:")
+
+
 def serializar_briefing(b: dict) -> str:
     """O briefing como texto, para entrar na mensagem do usuário.
 
@@ -398,9 +418,11 @@ def serializar_briefing(b: dict) -> str:
         L.append("ASSUNTO QUE OS DOIS GRUPOS MAIS CITAM: "
                  + a["eixo_rotulo"].lower())
         if a["tema_negativas"]:
-            L.append(f"  · como quem NÃO recomenda vê: {a['tema_negativas']}")
+            L.append("  · como quem NÃO recomenda vê: "
+                     + _tema_sem_algarismo(a["tema_negativas"]))
         if a["tema_positivas"]:
-            L.append(f"  · como quem recomenda vê: {a['tema_positivas']}")
+            L.append("  · como quem recomenda vê: "
+                     + _tema_sem_algarismo(a["tema_positivas"]))
         if not a["tema_negativas"] and not a["tema_positivas"]:
             L.append("  · (sem tema nomeado dos dois lados — use só o nome do "
                      "assunto, não invente detalhe)")
@@ -412,7 +434,7 @@ def serializar_briefing(b: dict) -> str:
         if lift and lift["acima_da_margem"]:
             L.append(f"  ASSUNTO PRÓPRIO deste grupo: {lift['eixo_rotulo'].lower()}")
             if lift.get("tema"):
-                L.append(f"    tema: {lift['tema']}")
+                L.append(f"    tema: {_tema_sem_algarismo(lift['tema'])}")
         else:
             L.append("  ASSUNTO PRÓPRIO deste grupo: nenhum — o que este "
                      "grupo fala, os outros também falam.")
@@ -421,7 +443,7 @@ def serializar_briefing(b: dict) -> str:
             L.append(f"  ASSUNTO MAIS FALADO por este grupo: "
                      f"{freq['eixo_rotulo'].lower()}")
             if freq.get("tema"):
-                L.append(f"    tema: {freq['tema']}")
+                L.append(f"    tema: {_tema_sem_algarismo(freq['tema'])}")
             L.append(f"    quantificador AUTORIZADO (não use nenhum mais "
                      f"forte): {freq['rotulo_quantificador']}")
         else:

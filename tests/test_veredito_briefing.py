@@ -460,3 +460,16 @@ def test_a_serializacao_nao_nomeia_o_filme():
     b = V.montar_briefing(_dois_lados_com_lift())
     assert b["titulo"] == "Filme de Teste"        # no DICT, para telemetria
     assert "Filme de Teste" not in V.serializar_briefing(b)
+
+
+@pytest.mark.parametrize("tema,esperado", [
+    ("Efeitos visuais e técnicos impressionantes para 1968",
+     "Efeitos visuais e técnicos impressionantes"),
+    ("Comparação desfavorável com o filme original de 2004",
+     "Comparação desfavorável com o filme original"),
+    ("Efeitos em 3D exagerados", "Efeitos exagerados"),
+    ("Ritmo lento", "Ritmo lento"),
+])
+def test_tema_com_algarismo_chega_ao_modelo_sem_algarismo(tema, esperado):
+    assert V._tema_sem_algarismo(tema) == esperado
+    assert not re.search(r"\d", V._tema_sem_algarismo(tema))
