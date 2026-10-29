@@ -673,10 +673,10 @@ def test_prioridade_dos_quatro_ganchos():
         a = out[k + "+aniv"]
         assert a["gancho"] == "aniversario"
         assert a["gancho_conteudo"] == out[k]["gancho"]
-        # [rodada 4] a segunda frase NÃO repete o título: "Em X," → "Nele,"
+        # [rodada 4] a segunda frase NÃO repete o título: "X: o" → "Nele, o"
         # e "X está" → "Está"; o resto do texto de conteúdo é idêntico.
         t = filmes[k]["titulo"]
-        sem_titulo = (out[k]["texto"].replace("Em " + t + ",", "Nele,", 1)
+        sem_titulo = (out[k]["texto"].replace(t + ": o", "Nele, o", 1)
                       .replace(t + " está", "Está", 1))
         assert sem_titulo != out[k]["texto"]
         assert a["texto"] == t + " faz aniversário de estreia hoje. " + sem_titulo
@@ -1075,3 +1075,22 @@ def test_media_real_e_a_dos_publicados_menos_os_excluidos():
 def test_estreia_completa_em_todo_o_catalogo():
     assert all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", f["estreia"] or "")
                for f in FILMES_REAIS)
+
+
+@precisa_node
+def test_nenhuma_justificativa_tem_palavra_duplicada_em_sequencia():
+    """Os ganchos não dependem de preposição antes do título: "Em Chamas"
+    não vira "Em Em Chamas". Os 98 elegíveis, com e sem aniversário."""
+    out = _node("""
+        const r = [];
+        const S2 = S;
+        for (const f of S2.elegiveis(D)) {
+            r.push(T.justificar(f).texto);
+            r.push(T.justificar(Object.assign({}, f, {estreia: "1980-03-14"}), "2026-03-14").texto);
+        }
+        console.log(JSON.stringify(r));
+    """, FILMES_REAIS)
+    assert len(out) >= 196
+    for texto in out:
+        m = re.search(r"\b(\w+)\s+\1\b", texto, re.I)
+        assert not m, (m.group(0), texto)

@@ -2876,7 +2876,21 @@ body.lightbox-aberto { overflow: hidden; }
    fortes dos grupos (--neg/--med/--pos) continuam nesta rodada: cor é a
    próxima etapa. A barra RECEPÇÃO (geometria, callout, animação) não é
    tocada; só os rótulos em volta dela mudam de tipografia. */
+/* TRÊS LARGURAS: imagens, dados e prosa. Um eixo só (tudo centralizado). */
+:root {
+  --larg-imagem: 1180px;   /* topo, galeria, na mesma coleção */
+  --larg-dados: 960px;     /* RECEPÇÃO, o que cada grupo diz, para decidir */
+  --larg-prosa: 68ch;      /* veredito e narrativa, na fonte de cada bloco */
+}
 .pagina-filme { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .fp { max-width: var(--larg-imagem); }
+.pagina-filme .proportion,
+.pagina-filme .grupos,
+.pagina-filme .decide {
+  max-width: var(--larg-dados);
+  margin-left: auto;
+  margin-right: auto;
+}
 .pagina-filme .fp { padding-bottom: 8px; }
 
 /* rótulos de seção: os da home */
@@ -2945,8 +2959,8 @@ body.lightbox-aberto { overflow: hidden; }
   font-weight: 400;
   line-height: 1.45;
   color: var(--text);
-  max-width: none;
-  margin: 26px 0 0;
+  max-width: var(--larg-prosa);
+  margin: 26px auto 0;
   padding: 16px 0;
   border: 0;
   border-top: 1px solid var(--border);
@@ -2955,7 +2969,7 @@ body.lightbox-aberto { overflow: hidden; }
 .pagina-filme .verdict-absent { color: var(--text-dim); }
 
 /* --- 3. RECEPÇÃO ---------------------------------------------------------- */
-.pagina-filme .proportion { margin: 36px 0 0; }
+.pagina-filme .proportion { margin-top: 36px; }
 .pagina-filme .proportion__legend { font-family: var(--ed-fonte, var(--sans)); }
 .pagina-filme .proportion__legend-label {
   font-family: var(--ed-fonte, var(--sans));
@@ -2999,7 +3013,7 @@ body.lightbox-aberto { overflow: hidden; }
 .pagina-filme .mode-warning { border-radius: 0; }
 
 /* --- 5. para decidir -------------------------------------------------------- */
-.pagina-filme .decide { margin: 56px 0 0; }
+.pagina-filme .decide { margin-top: 56px; }
 .pagina-filme .decide__head,
 .pagina-filme .decide__peso,
 .pagina-filme .decide__meio { font-family: var(--ed-fonte, var(--sans)); }
@@ -3015,6 +3029,12 @@ body.lightbox-aberto { overflow: hidden; }
 
 /* --- 6. narrativa (fechada) -------------------------------------------------- */
 .pagina-filme .disclosure { margin: 52px 0 0; }
+.pagina-filme .disclosure--narrativa {
+  font-size: 1.06rem;
+  max-width: var(--larg-prosa);
+  margin-left: auto;
+  margin-right: auto;
+}
 .pagina-filme .disclosure > summary {
   font-family: var(--ed-fonte, var(--sans));
   font-weight: 600;
@@ -3023,7 +3043,7 @@ body.lightbox-aberto { overflow: hidden; }
   font-size: 0.78rem;
   border-radius: 0;
 }
-.pagina-filme .disclosure__body.narrativa { max-width: 46rem; }
+.pagina-filme .disclosure__body.narrativa p { font-size: 1em; }
 .pagina-filme .disclosure__body.narrativa p { font-family: var(--ed-fonte, var(--sans)); }
 
 /* --- 7. galeria: grade de 4 stills, em todas as larguras ----------------------- */

@@ -258,22 +258,23 @@
 
   // `semTitulo`: [rodada 4] quando o gancho de conteúdo vem DEPOIS da
   // frase de aniversário, que já nomeou o filme, a abertura troca o título
-  // por "Nele" / "Está" — o resto do texto é idêntico. Sem aniversário, os
+  // por "Nele" / "Está" (os ganchos abrem com "{título}:", sem preposição
+  // antes do título — "Em" + "Em Chamas" dava "Em Em Chamas") — o resto do texto é idêntico. Sem aniversário, os
   // textos são exatamente os da rodada 3.
   var TEMPLATES = {
     aniversario: function (t) {
       return t + " faz aniversário de estreia hoje.";
     },
     eixo: function (t, eixo, semTitulo) {
-      return (semTitulo ? "Nele" : "Em " + t) + ", " + TRES_GRUPOS
-        + " se afastam sobretudo num "
-        + "assunto: " + EIXO_NOME[eixo] + ". Um dos grupos fala disso bem "
+      return (semTitulo ? "Nele, o" : t + ": o") + " assunto em que "
+        + TRES_GRUPOS + " mais se afastam é " + EIXO_NOME[eixo]
+        + ". Um dos grupos fala disso bem "
         + "mais que os outros dois — a página mostra qual, e com que palavras.";
     },
     valorativo: function (t, eixo, semTitulo) {
-      return (semTitulo ? "Nele" : "Em " + t)
-        + ", um assunto aparece mais do que o habitual no "
-        + "catálogo, somando " + TRES_GRUPOS + ": " + EIXO_NOME[eixo] + ". Os "
+      return (semTitulo ? "Nele, o" : t + ": o")
+        + " assunto que aparece mais do que o habitual no "
+        + "catálogo, somando " + TRES_GRUPOS + ", é " + EIXO_NOME[eixo] + ". Os "
         + "três grupos falam dele e chegam a vereditos diferentes — o que muda "
         + "é o valor que cada um dá ao filme, não o tema da conversa.";
     },
