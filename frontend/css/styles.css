@@ -395,54 +395,9 @@ a { color: inherit; }
    divergirem, que é o defeito que o §3[E] já registrou uma vez.
    ======================================================================= */
 
-/* =======================================================================
-   [v1.9.43] GALERIA DO MOBILE — e por que ela VOLTOU depois de removida.
-
-   A v1.9.42 removeu a seção de rodapé porque a faixa do hero já mostrava
-   os mesmos stills: repetir era redundância. No MOBILE isso deixou de
-   valer, por uma razão medida na tela: com a janela mais estreita que um
-   quadro, a faixa mostra a maior parte do tempo UM quadro cortado ao
-   meio, que não é sequência nem é imagem. Então no mobile o hero volta a
-   ser a imagem estática de sempre e os stills aparecem aqui embaixo, na
-   MESMA posição de antes (depois da narrativa, antes da pesquisa).
-
-   No desktop esta seção NÃO EXISTE — não é escondida por CSS, não é
-   renderizada (ver `ehModoFaixa`, `filme.js`). Esconder deixaria o
-   navegador baixar 12 imagens que ninguém veria.
-
-   O LAYOUT é UMA COLUNA, de borda a borda, com respiro entre os itens.
-   Não é fileira de miniatura: cada quadro ocupa a largura inteira do
-   aparelho (375px num iPhone padrão), que é o maior tamanho que a tela
-   oferece. Duas colunas dariam 180px por item — miniatura de novo. E as
-   alturas são todas iguais de propósito: o acervo é 16:9 inteiro
-   (`_still_16_9`, `ficha.py`), então altura variada só sairia de recorte
-   inventado por nós.
-   ======================================================================= */
-.galeria-mobile { margin: 30px 0 8px; }
-.galeria-mobile__lista {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 14px;
-  /* de borda a borda, como o backdrop já faz no mobile */
-  width: calc(100% + 40px);
-  margin-left: -20px;
-  margin-right: -20px;
-}
-.galeria-mobile__item {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  /* é um `<button>`: abre o modo tela cheia. O reset acima existe para
-     que ele não pareça um botão — o alvo de toque é a imagem. */
-}
-.galeria-mobile__item:focus-visible {
-  outline: 2px solid var(--fg);
-  outline-offset: -3px;
-}
-.galeria-mobile .hero-still { display: block; width: 100%; }
+/* [rodada página do filme] A GALERIA virou grade de 4 stills em TODAS as
+   larguras (`.fp-galeria`, no fim do arquivo); a `.galeria-mobile` de uma
+   coluna, só abaixo de 1024px, saiu. O lightbox abaixo é o mesmo. */
 
 /* =======================================================================
    [v1.9.43] TELA CHEIA (lightbox) — abre ao tocar um item da galeria.
@@ -1709,7 +1664,7 @@ body.lightbox-aberto { overflow: hidden; }
   text-transform: uppercase;
   font-weight: 600;
 }
-.group__stars {
+.group__notas {
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.06em;
@@ -2910,4 +2865,207 @@ body.lightbox-aberto { overflow: hidden; }
   .ed-recem { margin-top: 40px; }
   .ed-recem__cabeca { flex-direction: column; align-items: flex-start; gap: 2px; }
   .ed-recem__grade { grid-template-columns: 1fr; gap: 16px; }
+}
+
+
+/* =======================================================================
+   PÁGINA DO FILME — linguagem editorial (rodada página do filme)
+   =======================================================================
+   Escopo: `body.pagina-filme`. Instrument Sans (`--ed-fonte`, de fonte.js),
+   rótulos de seção como os da home, cantos retos, nenhuma sombra. As cores
+   fortes dos grupos (--neg/--med/--pos) continuam nesta rodada: cor é a
+   próxima etapa. A barra RECEPÇÃO (geometria, callout, animação) não é
+   tocada; só os rótulos em volta dela mudam de tipografia. */
+.pagina-filme { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .fp { padding-bottom: 8px; }
+
+/* rótulos de seção: os da home */
+.pagina-filme .section-label {
+  font-family: var(--ed-fonte, var(--mono));
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: normal;
+  color: var(--text-dim);
+}
+.pagina-filme .fp-secao__cabeca {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.pagina-filme .fp-secao__cabeca .section-label { margin: 0; }
+.pagina-filme .fp-secao__cabeca .ed-link { white-space: nowrap; }
+.pagina-filme .ed-link { font-family: var(--ed-fonte, var(--mono)); font-size: 0.78rem; background: none; border: 0; padding: 0; cursor: pointer; }
+.pagina-filme .ed-link.mono { font-family: var(--ed-fonte, var(--mono)); }
+
+/* --- 1. topo ---------------------------------------------------------- */
+.fp-topo { position: relative; }
+/* a faixa: cantos retos, sem sombra, e SEM o fade da base — o texto não sobe
+   mais sobre a imagem (fica abaixo, em fundo sólido), então o degradê só
+   escureceria a metade de baixo dos stills */
+.pagina-filme .backdrop::after { content: none; }
+.pagina-filme .hero-faixa-caixa,
+.pagina-filme .hero-faixa .hero-still,
+.pagina-filme .ed-quadro,
+.pagina-filme .fp-galeria__item,
+.pagina-filme .fp-galeria .hero-still { border-radius: 0; }
+/* faixa e still estático: o texto vai ABAIXO, em fundo sólido */
+.fp-topo--faixa .ed-manchete__texto,
+.fp-topo--solido .ed-manchete__texto {
+  position: static;
+  max-width: var(--ed-largura);
+  margin: 0 auto;
+  padding: 22px 20px 0;
+  background: var(--bg);
+}
+.fp-topo--faixa .ed-manchete__caixa,
+.fp-topo--solido .ed-manchete__caixa {
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.fp-topo .ed-manchete__titulo { margin: 0 0 8px; }
+/* `?topo=estatico` no desktop: a caixa do véu é a da manchete da home */
+.pagina-filme .ed-manchete__titulo-texto { margin: 0; }
+.pagina-filme .ed-manchete__linha { margin: 0 0 4px; }
+@media (max-width: 699px) {
+  .fp-topo--faixa .ed-manchete__texto,
+  .fp-topo--solido .ed-manchete__texto { padding: 16px 16px 0; }
+}
+
+/* --- 2. veredito: linha fina, em corpo maior que o texto comum ---------- */
+.pagina-filme .verdict,
+.pagina-filme .verdict-absent {
+  font-family: var(--ed-fonte, var(--sans));
+  font-size: 1.28rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--text);
+  max-width: none;
+  margin: 26px 0 0;
+  padding: 16px 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.pagina-filme .verdict-absent { color: var(--text-dim); }
+
+/* --- 3. RECEPÇÃO ---------------------------------------------------------- */
+.pagina-filme .proportion { margin: 36px 0 0; }
+.pagina-filme .proportion__legend { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .proportion__legend-label {
+  font-family: var(--ed-fonte, var(--sans));
+  font-weight: 600;
+  letter-spacing: normal;
+}
+.pagina-filme .proportion__legend-notas {
+  font-family: var(--ed-fonte, var(--sans));
+  font-size: 0.78rem;
+  color: var(--text-mute);
+}
+.pagina-filme .proportion__pct { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .proportion__swatch { border-radius: 0; }
+
+/* --- 4. o que cada grupo diz ---------------------------------------------- */
+.pagina-filme .grupos { margin-top: 52px; }
+.pagina-filme .sentiment-wrap { margin-top: 0; }
+.pagina-filme .group__name {
+  font-family: var(--ed-fonte, var(--sans));
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+}
+.pagina-filme .group__dot { border-radius: 0; }
+.pagina-filme .group__notas,
+.pagina-filme .group__share {
+  font-family: var(--ed-fonte, var(--sans));
+  font-size: 0.78rem;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.pagina-filme .group__share { color: var(--text-dim); }
+.pagina-filme .theme__name { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .theme__toggle-label,
+.pagina-filme .group-note__label,
+.pagina-filme .group-note__texto { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .theme__toggle-label { letter-spacing: normal; text-transform: none; font-size: 0.82rem; }
+.pagina-filme .theme__example-inner { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .theme__bar,
+.pagina-filme .theme__bar span { border-radius: 0; }
+.pagina-filme .mode-warning { border-radius: 0; }
+
+/* --- 5. para decidir -------------------------------------------------------- */
+.pagina-filme .decide { margin: 56px 0 0; }
+.pagina-filme .decide__head,
+.pagina-filme .decide__peso,
+.pagina-filme .decide__meio { font-family: var(--ed-fonte, var(--sans)); }
+.pagina-filme .decide__head {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.pagina-filme .decide__peso { font-size: 0.8rem; color: var(--text-dim); letter-spacing: normal; }
+.pagina-filme .decide__text { font-family: var(--ed-fonte, var(--sans)); font-size: 1.04rem; }
+.pagina-filme .decide__meio { font-size: 0.82rem; }
+
+/* --- 6. narrativa (fechada) -------------------------------------------------- */
+.pagina-filme .disclosure { margin: 52px 0 0; }
+.pagina-filme .disclosure > summary {
+  font-family: var(--ed-fonte, var(--sans));
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  border-radius: 0;
+}
+.pagina-filme .disclosure__body.narrativa { max-width: 46rem; }
+.pagina-filme .disclosure__body.narrativa p { font-family: var(--ed-fonte, var(--sans)); }
+
+/* --- 7. galeria: grade de 4 stills, em todas as larguras ----------------------- */
+.fp-galeria { margin-top: 56px; }
+.fp-galeria__grade {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--ed-calha);
+}
+.fp-galeria__item {
+  min-width: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.fp-galeria__item:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+.fp-galeria .hero-still { display: block; width: 100%; position: relative; overflow: hidden; background: var(--bg-elev); }
+.fp-galeria .hero-still img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* --- 8. na mesma coleção --------------------------------------------------------- */
+.fp-colecao { margin-top: 56px; }
+.fp-colecao__grade {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ed-calha);
+}
+.fp-colecao__grade .ed-cartao__corpo { padding-right: 8px; }
+
+@media (max-width: 699px) {
+  .fp-galeria__grade { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .fp-colecao__grade { grid-template-columns: 1fr; gap: 16px; }
+  .pagina-filme .verdict,
+  .pagina-filme .verdict-absent { font-size: 1.12rem; }
+  .pagina-filme .grupos,
+  .pagina-filme .decide,
+  .pagina-filme .disclosure,
+  .fp-galeria,
+  .fp-colecao { margin-top: 40px; }
 }

@@ -128,30 +128,36 @@ def test_o_ponto_de_corte_e_1024_e_esta_num_lugar_so():
 
 
 def test_a_faixa_so_e_construida_no_modo_faixa():
+    """[rodada página do filme] O topo tem três montagens: `faixa` (desktop,
+    padrão), `manchete` (desktop, `?topo=estatico`) e `solido` (< 1024px).
+    A faixa só existe na primeira."""
+    corpo = _sem_comentarios(_corpo(_txt(FILME_JS), "chaveDoTopo"))
+    assert "!temStill || !ehModoFaixa()" in corpo
+    assert 'return "solido"' in corpo
+    assert 'TOPO_ESTATICO ? "manchete" : "faixa"' in corpo
+    topo = _sem_comentarios(_corpo(_txt(FILME_JS), "montarTopo"))
+    assert 'if (chave === "faixa") {' in topo and "heroFaixa(f)" in topo
+
+
+def test_a_galeria_e_construida_em_todas_as_larguras():
+    """A galeria de 4 stills com "ver todas" substitui a galeria só-mobile:
+    não há mais ramo por modo (`aplicarModoGaleria` saiu) e o CSS não a
+    esconde — as imagens da grade são as que se vê."""
     fonte = _txt(FILME_JS)
-    assert "(ehModoFaixa() ? heroFaixa(f, ano) : null)" in fonte
-
-
-def test_a_galeria_do_mobile_nao_e_construida_no_desktop():
-    """NÃO é `display: none`. Escondida, o navegador baixaria 12 imagens
-    que ninguém veria."""
-    corpo = _corpo(_txt(FILME_JS), "aplicarModoGaleria")
-    assert "var precisa = !ehModoFaixa();" in corpo
-    assert "galeriaEl.remove()" in corpo
+    assert "aplicarModoGaleria" not in fonte and "galeriaEl" not in fonte
+    corpo = _sem_comentarios(_corpo(fonte, "render"))
+    assert "galeriaEmGradeBlock(f)" in corpo and "ehModoFaixa" not in corpo
     css = _sem_comentarios(_txt(CSS))
-    m = re.search(r"\.galeria-mobile\s*\{([^}]*)\}", css)
-    assert m and "display: none" not in m.group(1), (
-        "a galeria passou a ser escondida por CSS em vez de não construída")
+    m = re.search(r"\.fp-galeria\s*\{([^}]*)\}", css)
+    assert m and "display: none" not in m.group(1)
 
 
 def test_a_troca_de_modo_e_idempotente():
-    """Reconciliar não pode reconstruir o hero quando o modo já está
-    certo: cada reconstrução troca o `<img>` por um igual e o topo da
-    página pisca."""
-    corpo = _corpo(_txt(FILME_JS), "aplicarModoHero")
-    assert "if (temFaixa === ehModoFaixa()) return;" in corpo
-    corpo_g = _corpo(_txt(FILME_JS), "aplicarModoGaleria")
-    assert "if (precisa === !!galeriaEl) return;" in corpo_g
+    """Reconciliar não pode reconstruir o topo quando a montagem já está
+    certa: cada reconstrução refaria a faixa e o topo da página piscaria."""
+    corpo = _corpo(_txt(FILME_JS), "montarTopo")
+    assert "if (topoEl.dataset.chave === chave) return;" in corpo
+    assert "function aoTrocarModo(f) { montarTopo(f); }" in _txt(FILME_JS)
 
 
 def test_a_reconciliacao_nao_depende_de_requestAnimationFrame():
@@ -169,28 +175,30 @@ def test_a_troca_ao_vivo_escuta_media_query_E_resize():
     assert 'window.addEventListener("resize", reconciliar);' in fonte
 
 
-def test_a_galeria_do_mobile_e_uma_coluna_com_respiro():
-    """'Não é fileira de miniaturas': uma coluna, borda a borda, com
-    espaço entre os itens."""
-    bloco = _regra(_txt(CSS), ".galeria-mobile__lista")
-    assert "grid-template-columns: 1fr" in bloco
-    assert re.search(r"gap: \d+px", bloco)
-    assert "width: calc(100% + 40px)" in bloco, (
-        "os itens deixaram de ir de borda a borda")
+def test_a_galeria_e_uma_grade_de_4_com_respiro():
+    """Grade de 4 stills (2 por linha abaixo de 700px), com a calha fina
+    da home entre eles; cada quadro é um botão que abre o lightbox."""
+    bloco = _regra(_txt(CSS), ".fp-galeria__grade")
+    assert "repeat(4, minmax(0, 1fr))" in bloco
+    assert "gap: var(--ed-calha)" in bloco
+    assert "var STILLS_NA_GRADE = 4;" in _txt(FILME_JS)
 
 
 def test_cada_item_da_galeria_e_um_botao():
     """Abrir tela cheia é ação: precisa estar no fluxo de teclado e
-    responder a Enter/Espaço sem que a gente reimplemente isso."""
-    corpo = _corpo(_txt(FILME_JS), "galeriaMobileBlock")
+    responder a Enter/Espaço sem que a gente reimplemente isso. O mesmo
+    vale para o "ver todas"."""
+    corpo = _corpo(_txt(FILME_JS), "galeriaEmGradeBlock")
     assert 'document.createElement("button")' in corpo
     assert 'botao.type = "button"' in corpo
-    assert ".galeria-mobile__item:focus-visible" in _txt(CSS)
+    assert 'todas.type = "button"' in corpo
+    assert "ESPECTRO_LIGHTBOX.abrir" in corpo
+    assert ".fp-galeria__item:focus-visible" in _txt(CSS)
 
 
-def test_a_galeria_do_mobile_nao_renderiza_sem_stills():
-    """Mesmo contrato de sempre — `talk-to-me-2022`."""
-    corpo = _corpo(_txt(FILME_JS), "galeriaMobileBlock")
+def test_a_galeria_nao_renderiza_sem_stills():
+    """Mesmo contrato de sempre — seção sem o que mostrar não renderiza."""
+    corpo = _corpo(_txt(FILME_JS), "galeriaEmGradeBlock")
     guarda = re.search(r"if \(!itens\.length\) return null;", corpo)
     section = re.search(r'createElement\("section"\)', corpo)
     assert guarda and section and guarda.start() < section.start()

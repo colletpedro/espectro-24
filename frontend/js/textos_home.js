@@ -163,6 +163,20 @@
     return partes;
   }
 
+  // [página do filme] A linha de metadado do TOPO da página do filme, no
+  // formato MUBI: as partes da manchete (título brasileiro quando
+  // `comTitulo`, diretor, país(es), ano) e mais gênero(s) (até MAX_GENEROS)
+  // e duração. A duração não está no índice: vem da ficha (`duracaoMin`).
+  var MAX_GENEROS = 2;
+
+  function partesDaFicha(filme, duracaoMin, comTitulo) {
+    var partes = partesDaManchete(filme, comTitulo);
+    var generos = (filme.generos || []).slice(0, MAX_GENEROS);
+    if (generos.length) partes.push({ tipo: "generos", texto: generos.join(", ") });
+    if (duracaoMin) partes.push({ tipo: "duracao", texto: duracaoMin + " min" });
+    return partes;
+  }
+
   function juntar(partes) {
     return partes.map(function (p) { return p.texto; }).join(SEPARADOR);
   }
@@ -329,6 +343,7 @@
     contadorDaPagina: contadorDaPagina, chipDesde: chipDesde,
     linhaDaManchete: linhaDaManchete, linhaDiretorAno: linhaDiretorAno,
     partesDaManchete: partesDaManchete, partesDiretorAno: partesDiretorAno,
+    partesDaFicha: partesDaFicha, MAX_GENEROS: MAX_GENEROS,
     SEPARADOR: SEPARADOR,
     textoDaColecao: textoDaColecao,
   };

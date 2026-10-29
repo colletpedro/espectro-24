@@ -55,62 +55,23 @@
     if (!caixa || !f) { if (caixa) caixa.hidden = true; return; }
     naPagina.push(f.slug);
     var j = T.justificar(f, DIA);
-    var modo = S.modoDoLogo(f);
     caixa.dataset.slug = f.slug;
     caixa.dataset.gancho = j.gancho;
     caixa.dataset.motivo = escolha.motivo;   // "aniversario" | "permutacao"
-    caixa.dataset.modoLogo = modo;           // "logo" | "logo_branco" | "texto"
 
     var rotulo = el("h2", "visually-hidden", T.ROTULO_FILME_DO_DIA);
     rotulo.id = "mancheteRotulo";
     caixa.appendChild(rotulo);
 
-    var visual = el("a", "ed-manchete__visual");
-    visual.href = hrefFilme(f.slug);
-    visual.tabIndex = -1;
-    visual.setAttribute("aria-hidden", "true");
-    visual.appendChild(quadro(f, "ed-manchete__quadro", "100vw", true, true));
-    visual.appendChild(faixaDosGrupos(f, "ed-faixa ed-manchete__faixa"));
-    caixa.appendChild(visual);
-
-    // O texto vai numa CAIXA com o véu atrás (canto inferior esquerdo do
-    // still) — a opacidade `--ed-veu` é MEDIDA para o contraste WCAG >= 4,5
-    // da justificativa (scripts/medir_legibilidade.py).
-    var texto = el("div", "ed-manchete__texto");
-    var caixaTexto = el("div", "ed-manchete__caixa");
-    texto.appendChild(caixaTexto);
-    var titulo = el("h3", "ed-manchete__titulo");
-    var link = el("a");
-    link.href = hrefFilme(f.slug);
-    function tituloEmTexto() {
-      link.innerHTML = "";
-      link.className = "ed-manchete__titulo-texto";
-      link.textContent = f.titulo;
-      caixa.dataset.modoLogo = "texto";
-      if (linha) preencherMeta(linha, T.partesDaManchete(f, false));
-    }
-    var linha = null;
-    if (modo === "logo" || modo === "logo_branco") {
-      var logo = el("img", "ed-manchete__logo" + (modo === "logo_branco" ? " is-branco" : ""));
-      logo.src = P.url(f.logo.path, TAMANHO_LOGO);
-      logo.alt = f.titulo;
-      logo.decoding = "async";
-      // logo que não carrega cai no título em texto
-      logo.addEventListener("error", tituloEmTexto);
-      link.appendChild(logo);
-    } else {
-      link.className = "ed-manchete__titulo-texto";
-      link.textContent = f.titulo;
-    }
-    titulo.appendChild(link);
-    caixaTexto.appendChild(titulo);
-    if (f.titulo_nativo) caixaTexto.appendChild(el("p", "ed-manchete__nativo", f.titulo_nativo));
-    // o título brasileiro abre a linha só quando o LOGO EXIBIDO escreve
-    // outra coisa (`tituloNaLinha`)
-    linha = preencherMeta(el("p", "ed-manchete__linha ed-meta"), T.partesDaManchete(f, S.tituloNaLinha(f)));
-    caixaTexto.appendChild(linha);
-    caixaTexto.appendChild(el("p", "ed-manchete__justificativa", j.texto));
-    caixa.appendChild(texto);
+    // o still, o véu e o bloco do título (logo, nativo, linha) são do
+    // componente compartilhado (cartoes.js); a home põe a justificativa
+    C.montarManchete(caixa, f, {
+      nivel: "h3",
+      href: hrefFilme(f.slug),
+      partes: function (comTitulo) { return T.partesDaManchete(f, comTitulo); },
+      justificativa: j.texto,
+      faixa: true,
+    });
   })();
 
   // ------------------------------------------------------------------

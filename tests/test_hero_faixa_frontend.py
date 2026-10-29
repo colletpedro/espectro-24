@@ -83,63 +83,58 @@ def test_render_nao_anexa_mais_nenhuma_secao_de_galeria():
 # --- nada mais na página se moveu -------------------------------------
 
 def test_a_ordem_dos_blocos_da_pagina_esta_intacta():
-    """[v1.9.43] A entrega troca QUEM ocupa a caixa da abertura e remove a
-    seção do rodapé — nada entre uma coisa e outra devia mudar de lugar.
-
-    [v1.9.44] Uma troca de posição INTENCIONAL entra depois: os bullets
-    (`sentimentGroupsBlock`) passam a vir antes das condições
-    (`condicoesBlock`), decisão do dono — os bullets tema a tema são o
-    trabalho central do produto e ganham prioridade de leitura. O
-    `detailDivider` ("EM DETALHE · TEMA A TEMA") viaja junto com os
-    bullets, que é o conteúdo que ele rotula. Esta lista de âncoras
-    continua afirmando ordem EXATA — só a ordem esperada mudou."""
+    """[rodada página do filme] A ordem NOVA, afirmada como EXATA: topo,
+    veredito, RECEPÇÃO, o que cada grupo diz, para decidir, narrativa,
+    galeria e na mesma coleção. (A ordem antiga — header, ficha, barra,
+    bullets, condições, veredito, narrativa, pesquisa — saiu com a rodada;
+    a pesquisa A/B também.)"""
     fonte = _filme_js()
+    i = fonte.index("  function render(f) {")
+    corpo = _sem_comentarios(fonte[i:fonte.index("\n  }\n", i)])
     ordem = [
-        r"app\.appendChild\(header\(f\)\)",
-        r"app\.appendChild\(fichaBlock\(",
-        r"app\.appendChild\(proporcaoBlock\(f\)\)",
-        r"app\.appendChild\(detailDivider\(\)\)",
-        r"app\.appendChild\(sentimentGroupsBlock\(f\)\)",
-        r"condicoesBlock\(f\)",
+        r"montarTopo\(f\)",
         r"veredictoBlock\(f\)",
+        r"proporcaoBlock\(f\)",
+        r"sentimentGroupsBlock\(f\)",
+        r"condicoesBlock\(f\)",
         r"narrativaCollapsedBlock\(f\.narrativa\)",
-        r"window\.mountSurvey\(app, f\)",
+        r"galeriaEmGradeBlock\(f\)",
+        r"naMesmaColecaoBlock\(f\)",
     ]
     pos = []
     for padrao in ordem:
-        m = re.search(padrao, fonte)
-        assert m, f"âncora não encontrada: {padrao}"
+        m = re.search(padrao, corpo)
+        assert m, f"âncora não encontrada no render: {padrao}"
         pos.append(m.start())
     assert pos == sorted(pos), "um bloco existente mudou de posição relativa"
+    assert "mountSurvey" not in _sem_comentarios(fonte)
 
 
-def test_entre_a_narrativa_e_a_pesquisa_so_entra_a_galeria_do_mobile():
-    """[v1.9.43] A posição da galeria voltou a ser esta — só que agora
-    condicionada ao modo. Entre narrativa e pesquisa só podem existir a
-    âncora (nó inerte) e a chamada que decide a galeria; qualquer outro
-    bloco ali seria conteúdo novo que a entrega não pediu."""
+def test_entre_a_narrativa_e_a_coleção_so_entra_a_galeria():
+    """A galeria é a única coisa entre a narrativa e 'na mesma coleção' —
+    qualquer outro bloco ali seria conteúdo novo que a rodada não pediu."""
     fonte = _filme_js()
-    i = re.search(r"narrativaCollapsedBlock\(f\.narrativa\)", fonte).start()
-    j = re.search(r"window\.mountSurvey\(app, f\)", fonte).start()
-    meio = _sem_comentarios(fonte[i:j])
+    i = fonte.index("  function render(f) {")
+    corpo = _sem_comentarios(fonte[i:fonte.index("\n  }\n", i)])
+    meio = corpo[re.search(r"narrativaCollapsedBlock\(f\.narrativa\)", corpo).start():
+                 re.search(r"naMesmaColecaoBlock\(f\)", corpo).start()]
     anexos = re.findall(r"app\.appendChild\((\w+)", meio)
-    assert anexos == ["ancoraGaleria"], (
-        f"outra coisa foi anexada entre narrativa e pesquisa: {anexos}")
-    assert "aplicarModoGaleria(f)" in meio
+    assert anexos == ["grade"], (
+        f"outra coisa foi anexada entre narrativa e coleção: {anexos}")
 
 
 # --- a faixa é o hero -------------------------------------------------
 
-def test_o_hero_monta_a_faixa_e_cai_no_backdrop_estatico_quando_nao_ha():
+def test_o_topo_monta_a_faixa_e_cai_no_still_estatico_quando_nao_ha():
     """O topo da página NUNCA fica vazio: `heroFaixa` devolve `null` e o
-    `montarBackdrop` de sempre assume. É o caminho de `talk-to-me-2022`
-    (filtro de duração), de filme sem ficha e de pool abaixo do piso."""
-    fonte = _filme_js()
-    assert re.search(
-        r"var abertura = \(ehModoFaixa\(\) \? heroFaixa\(f, ano\) : null\) \|\|\s*"
-        r"window\.ESPECTRO_POSTER\.montarBackdrop\(", fonte), (
-        "o hero não cai no backdrop estático quando não há faixa — ou "
-        "deixou de ser condicionado ao modo")
+    still estático (o backdrop, pelo componente da home) assume. É o
+    caminho de filme sem stills suficientes e de pool abaixo do piso."""
+    corpo = _sem_comentarios(_corpo(_filme_js(), "montarTopo"))
+    assert 'if (chave === "faixa") {' in corpo
+    assert "var faixa = heroFaixa(f);" in corpo
+    assert "if (faixa) opcoes.visual = faixa;" in corpo
+    assert re.search(r"if \(!opcoes\.visual && temStill && chave !== \"manchete\"\)", corpo)
+    assert "C.quadro(entrada" in corpo
 
 
 def test_hero_faixa_retorna_null_antes_de_criar_qualquer_elemento():

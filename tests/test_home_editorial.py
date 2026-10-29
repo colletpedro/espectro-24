@@ -73,14 +73,16 @@ def test_titulo_brasileiro_na_linha_so_com_logo_exibido_que_nao_e_pt_br():
         console.log(JSON.stringify(r));""", casos)
     assert out == {"en_claro": True, "en_mono": True, "br_claro": False,
                    "en_cor": False, "en_desligado": False, "sem_logo": False}
-    assert "S.tituloNaLinha(f)" in INICIO
+    # o bloco do título saiu de inicio.js para o componente da manchete
+    # (cartoes.js), compartilhado com a página do filme: a regra é chamada lá
+    assert "S.tituloNaLinha(f)" in CARTOES
 
 
 def test_logo_branco_por_filtro_css_e_logo_que_falha_vira_texto():
     css = _bloco_editorial_css()
     assert re.search(r"\.ed-manchete__logo\.is-branco\s*\{\s*filter:\s*brightness\(0\)\s+invert\(1\);", css)
-    assert '"logo_branco" ? " is-branco"' in INICIO
-    assert 'addEventListener("error", tituloEmTexto)' in INICIO
+    assert '"logo_branco" ? " is-branco"' in CARTOES
+    assert 'addEventListener("error", tituloEmTexto)' in CARTOES
 
 
 @precisa_node

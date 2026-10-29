@@ -6,7 +6,8 @@
    hover".
 
    `window.ESPECTRO_CARTOES`: quadro, cartao, preencherMeta, faixaDosGrupos,
-   fontes, sequencia e TAMANHO_LOGO. `cartao` recebe a RAIZ do site (vazia
+   fontes, sequencia, TAMANHO_LOGO e a MANCHETE (`montarManchete`, com o
+   bloco do título `blocoDoTitulo`: home e página do filme). `cartao` recebe a RAIZ do site (vazia
    na home, "../" em /filmes) para o link da página do filme. */
 (function () {
   "use strict";
@@ -159,9 +160,89 @@
   }
 
 
+  // ------------------------------------------------------------------
+  // A MANCHETE: o still 16:9 com o bloco do título sobre o véu (canto
+  // inferior esquerdo) — componente ÚNICO da home e da página do filme
+  // (`?topo=estatico`). A regra do logo (`modoDoLogo`: claro, escuro_mono
+  // com filtro, o resto em texto) e a do título brasileiro na linha
+  // (`tituloNaLinha`) moram em selecao.js e são chamadas AQUI, uma vez só.
+  //
+  // `opcoes`:
+  //   nivel          "h3" (home) | "h1" (página do filme)
+  //   href           link do título e do still; ausente = sem link
+  //   partes         function (comTitulo) → partes da linha de metadado
+  //   justificativa  texto sob a linha (só a home)
+  //   faixa          true = a faixa fina dos grupos na base do still
+  //   visual         elemento já pronto no lugar do still (página do filme)
+  // ------------------------------------------------------------------
+  function blocoDoTitulo(caixa, alvo, f, opcoes) {
+    var S = window.ESPECTRO_SELECAO;
+    var modo = S.modoDoLogo(f);
+    caixa.dataset.modoLogo = modo;           // "logo" | "logo_branco" | "texto"
+    var titulo = el(opcoes.nivel || "h3", "ed-manchete__titulo");
+    var link = el(opcoes.href ? "a" : "span");
+    if (opcoes.href) link.href = opcoes.href;
+    var linha = null;
+    function tituloEmTexto() {
+      link.innerHTML = "";
+      link.className = "ed-manchete__titulo-texto";
+      link.textContent = f.titulo;
+      caixa.dataset.modoLogo = "texto";
+      if (linha) preencherMeta(linha, opcoes.partes(false));
+    }
+    if (modo === "logo" || modo === "logo_branco") {
+      var logo = el("img", "ed-manchete__logo" + (modo === "logo_branco" ? " is-branco" : ""));
+      logo.src = P.url(f.logo.path, TAMANHO_LOGO);
+      logo.alt = f.titulo;
+      logo.decoding = "async";
+      // logo que não carrega cai no título em texto
+      logo.addEventListener("error", tituloEmTexto);
+      link.appendChild(logo);
+    } else {
+      link.className = "ed-manchete__titulo-texto";
+      link.textContent = f.titulo;
+    }
+    titulo.appendChild(link);
+    alvo.appendChild(titulo);
+    if (f.titulo_nativo) alvo.appendChild(el("p", "ed-manchete__nativo", f.titulo_nativo));
+    // o título brasileiro abre a linha só quando o LOGO EXIBIDO escreve
+    // outra coisa (`tituloNaLinha`)
+    linha = preencherMeta(el("p", "ed-manchete__linha ed-meta"), opcoes.partes(S.tituloNaLinha(f)));
+    alvo.appendChild(linha);
+    return linha;
+  }
+
+  function montarManchete(caixa, f, opcoes) {
+    if (opcoes.visual) {
+      // a página do filme traz o seu (a faixa animada ou o still do topo)
+      caixa.appendChild(opcoes.visual);
+    } else {
+      var visual = el(opcoes.href ? "a" : "div", "ed-manchete__visual");
+      if (opcoes.href) { visual.href = opcoes.href; visual.tabIndex = -1; }
+      visual.setAttribute("aria-hidden", "true");
+      visual.appendChild(quadro(f, "ed-manchete__quadro", "100vw", true, true));
+      if (opcoes.faixa) visual.appendChild(faixaDosGrupos(f, "ed-faixa ed-manchete__faixa"));
+      caixa.appendChild(visual);
+    }
+
+    // O texto vai numa CAIXA com o véu atrás (canto inferior esquerdo do
+    // still) — a opacidade `--ed-veu` é MEDIDA para o contraste WCAG >= 4,5
+    // da justificativa (scripts/medir_legibilidade.py).
+    var texto = el("div", "ed-manchete__texto");
+    var caixaTexto = el("div", "ed-manchete__caixa");
+    texto.appendChild(caixaTexto);
+    blocoDoTitulo(caixa, caixaTexto, f, opcoes);
+    if (opcoes.justificativa) {
+      caixaTexto.appendChild(el("p", "ed-manchete__justificativa", opcoes.justificativa));
+    }
+    caixa.appendChild(texto);
+    return caixa;
+  }
+
   window.ESPECTRO_CARTOES = {
     TAMANHO_LOGO: TAMANHO_LOGO, INTERVALO_HOVER: INTERVALO_HOVER,
     fontes: fontes, sequencia: sequencia, quadro: quadro, cartao: cartao,
     preencherMeta: preencherMeta, faixaDosGrupos: faixaDosGrupos, el: el,
+    blocoDoTitulo: blocoDoTitulo, montarManchete: montarManchete,
   };
 })();

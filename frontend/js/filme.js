@@ -3,14 +3,23 @@
    Regras de produto aplicadas aqui:
    - frequência SEMPRE "~X de N"; largura da barra = X/N.
    - modo degradado (reduzido/sem_analise) sempre visível, nunca escondido.
-   - nenhuma nota média/score; a faixa de estrelas é a COTA DE COLETA do
-     grupo, rotulada como tal.
+   - nenhuma nota média/score; a faixa de notas ("notas 3,5 a 5") é a COTA
+     DE COLETA do grupo, em texto, rotulada como tal.
+   [rodada página do filme] A página está na linguagem editorial da home
+   (Instrument Sans, cabecalho.js, cartoes.js): topo, veredito, RECEPÇÃO, o
+   que cada grupo diz, para decidir, narrativa, galeria e a mesma coleção.
    - nenhum texto de review bruto; só temas/paráfrases já validados. */
 (function () {
   "use strict";
 
   var DATA = window.ESPECTRO_DATA || { filmes: {} };
+  var IDX = window.ESPECTRO_INDICE || { filmes: [] };
+  var S = window.ESPECTRO_SELECAO;
+  var T = window.ESPECTRO_TEXTOS;
+  var C = window.ESPECTRO_CARTOES;
+  var P = window.ESPECTRO_POSTER;
   var app = document.getElementById("app");
+  var topoEl = document.getElementById("topo");
 
   // v1.9.14: rótulos dos 10 eixos (§2.5). O JSON carrega o identificador
   // técnico; a tela mostra português. Lista FECHADA — eixo desconhecido cai
@@ -44,6 +53,18 @@
   // `test_frontend_constantes_hoisted.py`, que existe desde a v1.9.37
   // exatamente para este erro.
   var MQ_MODO_FAIXA = "(min-width: 1024px)";
+
+  // As faixas de notas de cada grupo (a cota de coleta), em TEXTO. Mesmos
+  // limites que o pipeline coleta: HATERS 0,5–2, MIXED 2,5–3, FANS 3,5–5.
+  var FAIXA_DE_NOTAS = {
+    negativas: [0.5, 2], medianas: [2.5, 3], positivas: [3.5, 5],
+  };
+
+  // Quantos stills a grade da galeria mostra; "ver todas" abre o resto.
+  var STILLS_NA_GRADE = 4;
+  // Quantos cartões "Na mesma coleção" e quantos filmes a coleção precisa ter.
+  var CARTOES_DA_COLECAO = 3;
+  var PISO_DA_COLECAO = 4;
 
   // Permissões do piso escalonado (§3[C3]) — as MESMAS quatro do backend.
   // A linha do eixo acompanha o que cada bucket pode dizer, célula a célula.
@@ -112,6 +133,10 @@
   // dono do projeto comparar com/sem sem precisar de deploy. Ver `.is-tinted`
   // em styles.css — 2-3% de opacidade, mesmos tokens de cor de sempre.
   var TINT = params.get("tint") === "1";
+  // [rodada página do filme] `?topo=estatico`: no desktop, o still 16:9 fixo
+  // com o logo e o metadado sobre o véu (a manchete da home), em vez da faixa
+  // animada. Qualquer outro valor (ou nenhum) é a faixa.
+  var TOPO_ESTATICO = params.get("topo") === "estatico";
 
   var film = DATA.filmes[slug];
 
@@ -303,298 +328,110 @@
   }
 
   function render(f) {
-    app.appendChild(header(f));                       // 1 ano+título, 2 chip
-    app.appendChild(fichaBlock(f.ficha || {}, f.reviews_url)); // 3 metadados
-    app.appendChild(proporcaoBlock(f));               // 4 barra + nota da cota
+    montarTopo(f);                                    // 1 topo (faixa | still)
 
-    app.appendChild(detailDivider());                 // 5 linha arco-íris
-    app.appendChild(sentimentGroupsBlock(f));         // 6 bullets por grupo
-
-    var condicoes = condicoesBlock(f);                // 7 [v1.9.44] condições
-    if (condicoes) app.appendChild(condicoes);
-
-    var veredito = veredictoBlock(f);                 // 8 veredito (v1.9.26)
+    var veredito = veredictoBlock(f);                 // 2 veredito, linha fina
     if (veredito) app.appendChild(veredito);
 
-    if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 8
+    app.appendChild(proporcaoBlock(f));               // 3 RECEPÇÃO
 
-    // [v1.9.43] ÂNCORA da galeria do mobile — um nó inerte que marca o
-    // lugar exato onde a seção entra (depois da narrativa, antes da
-    // pesquisa), para que trocar de modo ao vivo não precise recalcular
-    // posição nem remontar a página inteira. Sem conteúdo e sem caixa:
-    // no modo faixa ele não desenha nada.
-    ancoraGaleria = document.createElement("div");
-    ancoraGaleria.hidden = true;
-    app.appendChild(ancoraGaleria);
-    aplicarModoGaleria(f);
+    var grupos = document.createElement("section");   // 4 o que cada grupo diz
+    grupos.className = "grupos";
+    grupos.appendChild(sectionLabel("O QUE CADA GRUPO DIZ"));
+    grupos.appendChild(sentimentGroupsBlock(f));
+    app.appendChild(grupos);
 
-    // micro-pesquisa (A/B) — módulo separado
-    if (window.mountSurvey) window.mountSurvey(app, f);
+    var condicoes = condicoesBlock(f);                // 5 para decidir
+    if (condicoes) app.appendChild(condicoes);
+
+    if (f.narrativa) app.appendChild(narrativaCollapsedBlock(f.narrativa)); // 6
+
+    var grade = galeriaEmGradeBlock(f);               // 7 galeria
+    if (grade) app.appendChild(grade);
+
+    var colecao = naMesmaColecaoBlock(f);             // 8 na mesma coleção
+    if (colecao) app.appendChild(colecao);
   }
 
-  // --- header ---
-  function header(f) {
-    var el = document.createElement("header");
-    el.className = "film-header";
-
-    // [v1.9.20, Entrega 2] "N reviews observadas" saiu — nenhuma contagem
-    // de review no texto. O ano sozinho já cumpria o papel de metadado
-    // rápido; sem contagem ao lado, o `<span class="dot">` (que separava
-    // os dois) também sai.
-    var ano = f.ficha && f.ficha.ano ? String(f.ficha.ano) : "";
-    var meta = null;
-    if (ano) {
-      meta = document.createElement("p");
-      meta.className = "film-header__meta";
-      meta.textContent = ano;
-    }
-
-    var h1 = document.createElement("h1");
-    h1.className = "film-header__title";
-    h1.textContent = titleOf(f);
-
-    // [v1.9.30] O BACKDROP abre a página do filme, no lugar que o pôster
-    // vertical ocupava desde a v1.9.29. DECISÃO DO DONO DO PROJETO: o
-    // pôster ocupa espaço vertical demais no topo, e um quadro 16:9 lê na
-    // horizontal, deixa a barra mais perto da primeira tela e dá uma
-    // abertura editorial em vez de uma capa de catálogo.
-    //
-    // ISTO É EXCEÇÃO EXPLÍCITA AO PRINCÍPIO ANTI-SPOILER DO §0. O TMDB não
-    // garante que um backdrop seja livre de spoiler — é quadro do filme, e
-    // pode ser do terceiro ato — e ele fica na posição MAIS PROEMINENTE da
-    // página, antes até da sinopse. O produto anuncia "0 spoilers" na home
-    // e resolve todo trade-off contra o spoiler em todo o resto (bullets
-    // filtrados, veredito proibido de citar reviravolta); aqui, e só aqui,
-    // essa promessa deixa de valer. Foi decidido com o trade-off na mesa,
-    // não por descuido, e o registro por extenso está em SPEC §3[E], "O
-    // BACKDROP no topo da página do filme". Não há como escrever isso sem
-    // tensão, e o comentário não tenta.
-    //
-    // O PÔSTER CONTINUA NA HOME. Esta troca é só da página do filme.
-    //
-    // FALLBACK, em dois degraus: filme sem backdrop usa o pôster que já
-    // estava aqui (contido, 200px — nada muda para ele); filme sem os dois
-    // cai no estado de ausência já desenhado, que é o que `montar` faz
-    // sozinho. Medido no catálogo: 34 dos 35 têm backdrop; o único sem é
-    // um filme sem acervo de backdrop.
-    //
-    // ORDEM PRESERVADA. A imagem entra ACIMA do par ano → título, exatamente
-    // onde o pôster entrava (§3[E], item 1 da ordem publicada), e o par
-    // segue como está. A BARRA não é tocada — nem posição, nem geometria,
-    // nem animação de entrada (§3[E], v1.9.28).
-    // [v1.9.32] O BACKDROP DEIXA DE SER BLOCO FECHADO e passa a se DISSOLVER
-    // no fundo, com o par ano → título começando PARCIALMENTE SOBRE a
-    // imagem, dentro do fade, e terminando no fundo escuro. A transição
-    // entre obra visual e conteúdo editorial vira contínua, não um corte.
-    //
-    // A ESTRUTURA que isso exige: um contêiner `.film-hero` com a imagem e
-    // um bloco de texto que SOBE por cima dela (margem negativa). O texto
-    // precisa ser irmão da imagem e vir DEPOIS dela — daí o wrapper, que é a
-    // única mudança de árvore aqui. A ordem publicada (§3[E]) não muda: a
-    // imagem continua acima do par ano → título.
-    //
-    // O CONTRASTE É GARANTIDO POR CONSTRUÇÃO, não por sorte com a imagem —
-    // ver `.backdrop::after` em styles.css. O fade termina numa FAIXA
-    // 100% OPACA na cor do fundo da página, e o recuo do texto é
-    // exatamente a altura dessa faixa (`--hero-overlap`): o texto nunca
-    // pousa em cima de pixel de imagem, só sobre fundo já chapado. É o
-    // mesmo princípio do degradê da célula do mosaico (v1.9.29, título
-    // sobre pôster claro), com a diferença de que lá a base é preta e aqui
-    // é `--bg`, porque aqui o degradê tem de casar com a página.
-    // [v1.9.42] A ABERTURA VIROU UMA FAIXA QUE ANDA. Correção de escopo do
-    // dono: a v1.9.41 tinha posto a faixa de stills numa seção "Galeria" no
-    // RODAPÉ da página — lugar errado. O hero deixa de ser uma imagem
-    // estática e passa a ser a faixa, ocupando exatamente o mesmo espaço e a
-    // mesma proporção de sempre, com um quadro por vez e os vizinhos
-    // entrando pela borda. A seção do rodapé foi REMOVIDA por inteiro
-    // (mesmo conteúdo duas vezes na mesma página).
-    //
-    // O QUE NÃO MUDOU, e é a maior parte: a posição do herói na página, o
-    // fade da base (`.backdrop::after`), o recuo do par ano → título, a
-    // barra, a ficha, as condições, os bullets, o veredito, a narrativa e a
-    // pesquisa. A troca é só de QUEM ocupa a caixa da abertura.
-    var hero = document.createElement("div");
-    hero.className = "film-hero";
-
-    if (window.ESPECTRO_POSTER && f.ficha) {
-      // [v1.9.43] A faixa só no MODO FAIXA. Abaixo de 1024px o hero volta
-      // a ser a imagem estática de sempre e os stills descem para a
-      // galeria — ver `MQ_MODO_FAIXA`.
-      var abertura = (ehModoFaixa() ? heroFaixa(f, ano) : null) ||
-        window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
-          titulo: titleOf(f), ano: ano,
-        });
-      // FALLBACK sem backdrop: o pôster contido volta, e com ele a
-      // composição ANTIGA — pôster fechado, texto INTEIRAMENTE abaixo dele.
-      // A sobreposição é do backdrop, não do pôster: um pôster 2:3 de 200px
-      // não tem faixa inferior larga onde um título de 3,6rem caiba, e
-      // deixar o título subir por cima dele cobriria o rosto do cartaz.
-      // `.film-hero--poster` é o que desliga o recuo negativo.
-      if (!abertura) {
-        hero.classList.add("film-hero--poster");
-        abertura = window.ESPECTRO_POSTER.montar(f.ficha, {
-          uso: "ficha", titulo: titleOf(f), ano: ano, lazy: false,
-        });
-      }
-      hero.appendChild(abertura);
-    }
-
-    var texto = document.createElement("div");
-    texto.className = "film-hero__text";
-    if (meta) texto.appendChild(meta);
-    texto.appendChild(h1);
-    hero.appendChild(texto);
-    el.appendChild(hero);
-
-    heroEl = hero;          // para a troca de modo ao vivo
-    heroAno = ano;
-    return el;
+  // --- o filme no índice -------------------------------------------------
+  // O índice (indice.js) traz o que a home usa: logo e sua classe, países,
+  // título brasileiro, eixos. Filme fora do índice (`teste-degradado`) ganha
+  // uma entrada mínima montada da ficha: sem logo, o título em texto.
+  function entradaDoIndice(f) {
+    var achado = null;
+    (IDX.filmes || []).forEach(function (x) { if (x.slug === f.slug) achado = x; });
+    if (achado) return achado;
+    var fi = f.ficha || {};
+    return {
+      slug: f.slug, titulo: titleOf(f), titulo_nativo: null,
+      ano: fi.ano || null, diretor: fi.diretor || null, generos: fi.generos || [],
+      paises: [], logo: null, titulo_difere_do_logo: false,
+      imagens: { backdrop_path: fi.backdrop_path || null },
+      stills: (fi.galeria_stills || []).map(function (g) { return g.still_path; }),
+    };
   }
 
-  // --- [v1.9.43] troca de modo ao vivo -------------------------------
+  // --- o TOPO -----------------------------------------------------------
+  // [v1.9.30] O backdrop abre a página do filme. ISTO É EXCEÇÃO EXPLÍCITA
+  // AO PRINCÍPIO ANTI-SPOILER DO §0: o TMDB não garante que um backdrop seja
+  // livre de spoiler, e ele fica na posição mais proeminente da página.
+  // Decidido com o trade-off na mesa; registro por extenso em SPEC §3[E].
   //
-  // Uma janela de desktop estreitada abaixo de 1024px (ou um tablet
-  // girado) precisa mudar de modo SEM recarregar. Só as duas peças que
-  // dependem do modo são refeitas — o hero e a galeria. A página inteira
-  // NÃO é remontada de propósito: `mountSurvey` guarda estado de A/B, e
-  // remontá-lo a cada arrasto da borda da janela reiniciaria o
-  // experimento do leitor.
-  var heroEl = null, heroAno = "", ancoraGaleria = null, galeriaEl = null;
-
-  function aplicarModoHero(f) {
-    if (!heroEl || !window.ESPECTRO_POSTER || !f.ficha) return;
-    var visual = heroEl.firstElementChild;
-    if (!visual) return;
-    // IDEMPOTENTE: se o hero já está no modo certo, não reconstrói. Sem
-    // isso, cada reconciliação trocaria o `<img>` por um igual, e o topo
-    // da página piscaria a cada chamada.
-    var temFaixa = visual.classList.contains("hero-faixa-caixa");
-    if (temFaixa === ehModoFaixa()) return;
-    var nova = (ehModoFaixa() ? heroFaixa(f, heroAno) : null) ||
-      window.ESPECTRO_POSTER.montarBackdrop(f.ficha, {
-        titulo: titleOf(f), ano: heroAno,
-      });
-    if (!nova) return;
-    heroEl.classList.toggle(
-      "film-hero--poster",
-      !nova.classList.contains("backdrop"));
-    heroEl.replaceChild(nova, visual);
+  // Três montagens, todas com o componente da manchete da home
+  // (`C.montarManchete`: a regra do logo e do `tituloNaLinha` moram lá):
+  //   faixa    (desktop, padrão)  a faixa de stills animada; logo e linha de
+  //                               metadado ABAIXO dela, sobre fundo sólido.
+  //   manchete (desktop, ?topo=estatico)  still fixo, logo e linha sobre o véu.
+  //   solido   (< 1024px, as duas variantes)  still estático em cima, logo e
+  //                               linha embaixo, sobre fundo sólido.
+  function ehModoFaixa() {
+    try {
+      return !!(window.matchMedia && window.matchMedia(MQ_MODO_FAIXA).matches);
+    } catch (e) { return true; }   // sem matchMedia, o modo de sempre
   }
 
-  function aplicarModoGaleria(f) {
-    if (!ancoraGaleria) return;
-    var precisa = !ehModoFaixa();
-    if (precisa === !!galeriaEl) return;      // já está como deveria
-    if (!precisa) {
-      galeriaEl.remove();
-      galeriaEl = null;
-      return;
+  function chaveDoTopo(temStill) {
+    if (!temStill || !ehModoFaixa()) return "solido";
+    return TOPO_ESTATICO ? "manchete" : "faixa";
+  }
+
+  function montarTopo(f) {
+    if (!topoEl) return;
+    var entrada = entradaDoIndice(f);
+    var temStill = C.sequencia(entrada).length > 0;
+    var chave = chaveDoTopo(temStill);
+    // IDEMPOTENTE: no modo certo, não reconstrói (o topo não pisca a cada
+    // reconciliação de `resize`).
+    if (topoEl.dataset.chave === chave) return;
+    topoEl.innerHTML = "";
+    topoEl.dataset.chave = chave;
+
+    var secao = document.createElement("section");
+    secao.className = "ed-manchete fp-topo fp-topo--" + chave;
+    secao.setAttribute("aria-label", "Topo do filme");
+    var duracao = f.ficha && f.ficha.duracao_min;
+    var opcoes = {
+      nivel: "h1",
+      partes: function (comTitulo) { return T.partesDaFicha(entrada, duracao, comTitulo); },
+      faixa: false,
+    };
+    if (chave === "faixa") {
+      var faixa = heroFaixa(f);
+      if (faixa) opcoes.visual = faixa;
     }
-    galeriaEl = galeriaMobileBlock(f);
-    if (galeriaEl) ancoraGaleria.parentNode.insertBefore(galeriaEl, ancoraGaleria);
-  }
-
-  function aoTrocarModo(f) {
-    aplicarModoHero(f);
-    aplicarModoGaleria(f);
-  }
-
-  // --- ficha (dado novo v1.3.0) ---
-  //
-  // [v1.9.32] A SINOPSE SAIU, e o card que a continha saiu com ela.
-  // DECISÃO FINAL do dono do projeto. Não é ocultar nem colapsar: o bloco
-  // não existe mais na página. O que sobrevive é a LINHA DE METADADOS,
-  // agora solta — sem fundo, sem borda, sem padding de card.
-  //
-  // A CONSEQUÊNCIA PREVISTA, registrada aqui e em SPEC §3[E] porque é ela
-  // que a decisão custa: o público-alvo é quem AINDA NÃO ASSISTIU, e a
-  // sinopse era o único elemento da página que dizia DO QUE O FILME TRATA.
-  // Sem ela os bullets chegam sem premissa onde se apoiar — "o ritmo
-  // arrasta" pressupõe saber o que arrasta. O custo é baixo nos 35 de hoje
-  // (filmes conhecidos, backdrop expressivo) e CRESCENTE na expansão, com
-  // filmes obscuros e estrangeiros em que ninguém traz contexto de casa.
-  //
-  // A ATRIBUIÇÃO AO TMDB NÃO É AFETADA e continua obrigatória: esta linha
-  // (diretor, gêneros, duração) vem toda do TMDB, e por isso o "fonte
-  // TMDB" continua nela, junto do aviso no rodapé de todas as páginas e da
-  // página de créditos (§3[E], "ATRIBUIÇÃO AO TMDB"). Tirar a sinopse
-  // reduz o que se usa da API; não reduz em nada o que se deve a ela.
-  function fichaBlock(ficha, reviewsUrl) {
-    var el = document.createElement("section");
-    el.className = "ficha";
-    el.setAttribute("aria-label", "Ficha técnica do filme");
-
-    // O DIRETOR EM CAIXA ALTA E SEM O PREFIXO "dir." — o esboço do dono
-    // abre a linha pelo nome, e o prefixo era uma muleta que só existia
-    // porque o nome vinha em caixa normal no meio de outros dados. A caixa
-    // alta é do CSS (`.ficha__dir`), NUNCA do dado: `toUpperCase()` em JS
-    // quebraria a busca por texto e o que o leitor de tela anuncia.
-    var parts = [];
-    if (ficha.generos && ficha.generos.length) parts.push(ficha.generos.join(", "));
-    if (ficha.duracao_min) parts.push(ficha.duracao_min + " min");
-    // "fonte TMDB" só quando há dado do TMDB na linha. Num filme sem ficha
-    // (`teste-degradado`, e qualquer filme cuja busca falhe — §3[F], a
-    // ficha é aditiva e a ausência é estado válido) a linha inteira não
-    // existe, e creditar uma fonte da qual não veio nada seria falso.
-    var temTmdb = !!(ficha.diretor || parts.length);
-    if (temTmdb) parts.push("fonte TMDB");
-
-    // [v1.9.26] A linha de metadados é SANS, caixa normal — decisão FINAL
-    // do dono do projeto, depois de comparar com a variante "Inter"
-    // auto-hospedada. O pedido original era "a fonte que a Apple usa": a
-    // pilha de sistema (`--sans-ui`) entrega a San Francisco de verdade em
-    // Mac e iPhone porque usa a fonte JÁ INSTALADA no aparelho — o motivo
-    // de a SF Pro não poder ser embutida está em `fonts/LEIA-ME.md`.
-    //
-    // [v1.9.32] Essa decisão CONTINUA VALENDO para gêneros, duração e
-    // fonte. A caixa alta nova é só do NOME DO DIRETOR, que abre a linha —
-    // não é uma volta ao mono-caixa-alta que a v1.9.26 removeu.
-    if (temTmdb) {
-      var line = document.createElement("p");
-      line.className = "ficha__line";
-      var html = "";
-      if (ficha.diretor) {
-        html += '<span class="ficha__dir">' + esc(ficha.diretor) + "</span>";
-        if (parts.length) html += '<span class="dot">·</span>';
-      }
-      html += parts.map(esc).join('<span class="dot">·</span>');
-      line.innerHTML = html;
-      el.appendChild(line);
+    if (!opcoes.visual && temStill && chave !== "manchete") {
+      var vis = document.createElement("div");
+      vis.className = "ed-manchete__visual";
+      vis.appendChild(C.quadro(entrada, "ed-manchete__quadro", "100vw", true, true));
+      opcoes.visual = vis;
     }
-
-    // [v1.9.32] O AVISO DE SINOPSE EM INGLÊS SAI JUNTO COM A SINOPSE. Ele
-    // existia para não deixar o leitor achar que estava lendo pt-BR quando
-    // não estava (§3[F], fallback de sinopse); sem sinopse na tela, ele
-    // passaria a avisar sobre um texto que não está mais ali. O campo
-    // `sinopse_fallback_en` continua no JSON, intocado, e volta a ter uso
-    // no dia em que a sinopse voltar.
-
-    // [v1.9.32] O LINK PARA O LETTERBOXD desce do topo para cá e DEIXA DE
-    // SER PILL: mono pequena, sem caixa, sem borda, sem fundo — a mesma
-    // direção do disclosure APROFUNDAR na v1.9.26 (parte do bloco
-    // editorial, não componente externo pousado nele).
-    //
-    // O QUE NÃO MUDA, porque é semântica e não estilo: continua `<a>` de
-    // verdade, com `target="_blank"` + `rel="noopener noreferrer"`, foco
-    // visível (`:focus-visible` em styles.css) e área de toque confortável
-    // no mobile — o padding vertical existe para isso, mesmo sem caixa
-    // desenhada.
-    //
-    // O TEXTO CONTINUA "reviews no Letterboxd", e não só "letterboxd": é o
-    // nome acessível do link, e o que ele promete é a LISTA DE REVIEWS
-    // daquele filme, não a home do site. Trocar seria a única perda de
-    // informação de uma entrega que só pedia tratamento visual.
-    if (reviewsUrl) {
-      var link = document.createElement("a");
-      link.className = "reviews-link";
-      link.href = reviewsUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.innerHTML = "reviews no Letterboxd&nbsp;↗";
-      el.appendChild(link);
-    }
-    return el;
+    C.montarManchete(secao, entrada, opcoes);
+    topoEl.appendChild(secao);
   }
+
+  // [v1.9.43] Troca de modo AO VIVO: uma janela arrastada por baixo de
+  // 1024px (ou um tablet girado) muda de topo sem recarregar.
+  function aoTrocarModo(f) { montarTopo(f); }
 
   // --- narrativa completa (v1.9.19: COLAPSADA, no fim da página — Entrega 1) ---
   // A narrativa continua existindo e continua no produto — só deixa de ser a
@@ -645,7 +482,7 @@
      rAF. Sem `faixa.js` no ar, a faixa nasce estática e rolável à mão —
      degradada, nunca quebrada, e o primeiro quadro visível continua sendo o
      mesmo backdrop de antes. */
-  function heroFaixa(f, ano) {
+  function heroFaixa(f) {
     if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarHeroFaixa) {
       return null;
     }
@@ -704,40 +541,25 @@
     return caixa;
   }
 
-  /* [v1.9.43] A GALERIA DO MOBILE — só no modo estático (< 1024px).
+  /* A GALERIA: grade de STILLS_NA_GRADE quadros, em todas as larguras, com
+     "ver todas" abrindo o modo tela cheia (lightbox.js) com o conjunto
+     inteiro. Como o backdrop já abre a página, a grade começa no SEGUNDO
+     still (quando há cinco ou mais); com menos, mostra do primeiro.
 
-     Volta a ocupar a MESMA posição da seção removida na v1.9.42 (depois
-     da narrativa, antes da pesquisa), com os MESMOS stills que a faixa
-     mostraria. No desktop ela não é escondida: não é construída, e por
-     isso o navegador não baixa as 12 imagens dela.
+     Cada quadro é um `<button>`: abre o modo tela cheia, e um elemento de
+     ação precisa estar no fluxo de teclado e se anunciar como botão. Os
+     DADOS das imagens vão para o lightbox, que monta os próprios `<img>`.
 
-     Cada quadro é um `<button>`, não um `<div>` com `onclick`: ele abre
-     um modo de tela cheia, que é ação, e um elemento de ação precisa
-     estar no fluxo de teclado, responder a Enter/Espaço e se anunciar
-     como botão sem que a gente reimplemente nada disso.
-
-     `null` quando não há stills — o mesmo contrato de sempre: seção que
-     não tem o que mostrar não renderiza. */
-  function galeriaMobileBlock(f) {
-    if (!window.ESPECTRO_POSTER || !window.ESPECTRO_POSTER.montarGaleriaMobile) {
-      return null;
-    }
-    var itens = window.ESPECTRO_POSTER.montarGaleriaMobile(f.ficha, {
+     `null` quando não há stills — seção que não tem o que mostrar não
+     renderiza. */
+  function galeriaEmGradeBlock(f) {
+    if (!P || !P.montarGaleriaMobile) return null;
+    var itens = P.montarGaleriaMobile(f.ficha, {
       titulo: titleOf(f),
       ano: f.ficha && f.ficha.ano ? String(f.ficha.ano) : "",
     });
     if (!itens.length) return null;
 
-    var el = document.createElement("section");
-    el.className = "galeria-mobile";
-    el.appendChild(sectionLabel("GALERIA"));
-
-    var lista = document.createElement("div");
-    lista.className = "galeria-mobile__lista";
-
-    // Os DADOS das imagens, para o modo tela cheia montar os seus
-    // próprios `<img>` em vez de mover estes — assim fechar não precisa
-    // desfazer nada aqui atrás.
     var dados = itens.map(function (caixa) {
       var img = caixa.querySelector("img");
       return img ? {
@@ -747,21 +569,113 @@
         alt: img.getAttribute("alt"),
       } : null;
     });
+    function abrir(i, origem) {
+      if (window.ESPECTRO_LIGHTBOX && window.ESPECTRO_LIGHTBOX.abrir) {
+        window.ESPECTRO_LIGHTBOX.abrir(dados.filter(Boolean), i, origem);
+      }
+    }
 
-    itens.forEach(function (caixa, i) {
+    var el = document.createElement("section");
+    el.className = "fp-galeria";
+    var cab = document.createElement("div");
+    cab.className = "fp-secao__cabeca";
+    cab.appendChild(sectionLabel("GALERIA"));
+    var todas = document.createElement("button");
+    todas.type = "button";
+    todas.className = "fp-ver-todas ed-link mono";
+    todas.textContent = "Ver todas →";
+    todas.addEventListener("click", function () { abrir(0, todas); });
+    cab.appendChild(todas);
+    el.appendChild(cab);
+
+    var inicio = itens.length >= STILLS_NA_GRADE + 1 ? 1 : 0;
+    var lista = document.createElement("div");
+    lista.className = "fp-galeria__grade";
+    itens.slice(inicio, inicio + STILLS_NA_GRADE).forEach(function (caixa, k) {
       var botao = document.createElement("button");
       botao.type = "button";
-      botao.className = "galeria-mobile__item";
+      botao.className = "fp-galeria__item";
       botao.appendChild(caixa);
-      botao.addEventListener("click", function () {
-        if (window.ESPECTRO_LIGHTBOX && window.ESPECTRO_LIGHTBOX.abrir) {
-          window.ESPECTRO_LIGHTBOX.abrir(dados.filter(Boolean), i, botao);
-        }
-      });
+      botao.addEventListener("click", function () { abrir(inicio + k, botao); });
       lista.appendChild(botao);
     });
-
     el.appendChild(lista);
+    return el;
+  }
+
+  /* NA MESMA COLEÇÃO: três cartões (cartoes.js, com o hover da home) da
+     PRIMEIRA coleção da ordem fixa da home (`S.ordemDasColecoes`) que
+     contém este filme e tem >= PISO_DA_COLECAO filmes. Os três são os que
+     SEGUEM este filme na ordem alfabética da coleção (circular), sem o
+     próprio filme e sem os da lista de exclusão — `ordemDasColecoes` já
+     parte dos elegíveis. Determinística: sem data, sem sorteio. Sem
+     coleção que sirva (ou filme excluído), os três recém-chegados mais
+     recentes, também sem o próprio filme. */
+  function filmesDaMesmaColecao(f, filmes) {
+    var ordem = S.ordemDasColecoes(filmes);
+    for (var i = 0; i < ordem.length; i++) {
+      var col = ordem[i];
+      if (col.filmes.length < PISO_DA_COLECAO) continue;
+      var pos = -1;
+      col.filmes.forEach(function (x, k) { if (x.slug === f.slug) pos = k; });
+      if (pos < 0) continue;
+      var n = col.filmes.length, saida = [];
+      for (var k = 1; k < n && saida.length < CARTOES_DA_COLECAO; k++) {
+        saida.push(col.filmes[(pos + k) % n]);
+      }
+      return { colecao: col, filmes: saida };
+    }
+    return null;
+  }
+
+  function recemParaOFilme(f, filmes) {
+    var r = S.recemChegados(filmes);
+    if (!r) return null;
+    var resto = r.filmes.filter(function (x) { return x.slug !== f.slug; });
+    return { desde: r.desde, filmes: resto.slice(0, CARTOES_DA_COLECAO) };
+  }
+
+  function naMesmaColecaoBlock(f) {
+    var todos = IDX.filmes || [];
+    if (!todos.length || !C || !S) return null;
+    var c = filmesDaMesmaColecao(f, todos);
+    var titulo, href;
+    var filmes;
+    if (c) {
+      titulo = T.textoDaColecao(c.colecao).titulo;
+      href = "filmes/?colecao=" + encodeURIComponent(c.colecao.chave);
+      filmes = c.filmes;
+    } else {
+      var r = recemParaOFilme(f, todos);
+      if (!r || !r.filmes.length) return null;
+      titulo = T.ROTULO_RECEM;
+      href = "filmes/?desde=" + r.desde;
+      filmes = r.filmes;
+    }
+    var el = document.createElement("section");
+    el.className = "fp-colecao";
+    el.dataset.origem = c ? "colecao" : "recem";
+    if (c) el.dataset.chave = c.colecao.chave;
+    var cab = document.createElement("div");
+    cab.className = "fp-secao__cabeca";
+    var h = sectionLabel(titulo);
+    h.id = "fpColecaoTitulo";
+    cab.appendChild(h);
+    var ver = document.createElement("a");
+    ver.className = "ed-link mono";
+    ver.href = href;
+    ver.textContent = (c ? T.ROTULO_COLECAO_TODOS : T.ROTULO_RECEM_TODOS).toLowerCase() + " →";
+    cab.appendChild(ver);
+    el.appendChild(cab);
+    var grade = document.createElement("ul");
+    grade.className = "fp-colecao__grade";
+    grade.setAttribute("aria-labelledby", "fpColecaoTitulo");
+    filmes.forEach(function (x) {
+      var li = document.createElement("li");
+      li.appendChild(C.cartao(x, null, "(max-width: 699px) 100vw, 33vw", T.partesDiretorAno, 0, ""));
+      grade.appendChild(li);
+    });
+    el.appendChild(grade);
     return el;
   }
 
@@ -1094,6 +1008,10 @@
       nm.textContent = rotuloDoGrupo(s.grupo);
       li.appendChild(sw);
       li.appendChild(nm);
+      var notas = document.createElement("span");
+      notas.className = "proportion__legend-notas";
+      notas.textContent = textoDasNotas(s.grupo);
+      li.appendChild(notas);
       leg.appendChild(li);
     });
     return leg;
@@ -1199,12 +1117,6 @@
   // divisor CONTINUA, agora só com a linha do espectro: ele é o que separa
   // a régua de PESO (a barra de recepção, acima) da régua de CONTEÚDO (o
   // que cada grupo disse). Sem ele os bullets encostam na barra.
-  function detailDivider() {
-    var el = document.createElement("div");
-    el.className = "detail-divider";
-    el.innerHTML = '<div class="spectrum-line" aria-hidden="true"></div>';
-    return el;
-  }
 
 
   // =====================================================================
@@ -1339,6 +1251,18 @@
     return sec;
   }
 
+  // O grupo de onde vêm as condições de uma coluna: o `bucket_origem`
+  // comum a todas elas, ou `null`.
+  function grupoDeOrigem(c, lado) {
+    var vistos = [];
+    (c[lado] || []).forEach(function (cond) {
+      if (cond.bucket_origem && vistos.indexOf(cond.bucket_origem) < 0) {
+        vistos.push(cond.bucket_origem);
+      }
+    });
+    return vistos.length === 1 ? vistos[0] : null;
+  }
+
   function colunaDeCondicoes(c, lado) {
     var col = document.createElement("div");
     col.className = "decide__col decide__col--"
@@ -1349,14 +1273,24 @@
     cab.textContent = ABERTURA_DA_COLUNA[lado] || "";
     col.appendChild(cab);
 
+    // O número da coluna é o peso do grupo de onde as condições VIERAM. O
+    // grupo não se presume do lado ("vale a pena" = FANS): sai de
+    // `bucket_origem` de cada condição da própria coluna, na ordem em que
+    // `ordem_colunas` a trouxe. Se as condições da coluna não concordam
+    // num grupo só (ou nenhuma o declara), o rótulo do grupo não aparece.
     var peso = (c.peso || {})[lado] || {};
-    if (peso.peso_texto) {
+    var grupo = grupoDeOrigem(c, lado);
+    var partesPeso = [];
+    if (peso.peso_texto) partesPeso.push(peso.peso_texto);
+    if (grupo && faixaDoGrupo(grupo)) partesPeso.push("quem deu de " + faixaDoGrupo(grupo));
+    // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
+    // veredito carrega em prosa e que as condições não carregavam.
+    if (peso.peso_texto && peso.nota_de_amostra) partesPeso.push(peso.nota_de_amostra);
+    if (partesPeso.length) {
       var p = document.createElement("p");
       p.className = "decide__peso";
-      // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
-      // veredito carrega em prosa e que as condições não carregavam.
-      p.textContent = peso.peso_texto
-        + (peso.nota_de_amostra ? " · " + peso.nota_de_amostra : "");
+      if (grupo) p.dataset.grupo = grupo;
+      p.textContent = partesPeso.join(" · ");
       col.appendChild(p);
     }
 
@@ -1423,9 +1357,20 @@
     // assinou. O Python garante que, existindo a chave, o texto não é vazio
     // (o template é a rede do estágio, §3[V]).
     var texto = f.veredito && f.veredito.texto;
-    if (!texto) return null;
+    var origem = "veredito";
+    if (!texto) {
+      // [rodada página do filme] Sem veredito, a linha é a JUSTIFICATIVA do
+      // filme, gerada pelos templates da home (`T.justificar`, a mesma
+      // função da manchete). Sem `dia`: só o gancho de conteúdo, nunca o
+      // de aniversário — a página não muda com a data.
+      var j = T.justificar(entradaDoIndice(f));
+      texto = j && j.texto;
+      origem = "justificativa";
+      if (!texto) return null;
+    }
     var el = document.createElement("p");
     el.className = "verdict";
+    el.dataset.origem = origem;
     el.textContent = texto;
     return el;
   }
@@ -1453,11 +1398,6 @@
   // publicado antes da v1.9.21. Ordem do mais FRACO ao mais FORTE, primeiro
   // match vence — é isso que resolve toda fronteira compartilhada para o
   // rótulo mais fraco ("50%" vira "muitos", não "a maioria").
-  var BANDAS_QUANTIFICADOR = [
-    ["poucos", 0, 10, false], ["alguns", 10, 25, true],
-    ["muitos", 25, 50, true], ["cerca de metade", 40, 60, true],
-    ["a maioria", 50, 80, true], ["quase todos", 80, 100, true],
-  ];
 
 
 
@@ -1641,12 +1581,12 @@
     // `.toUpperCase()` fica: os rótulos novos já são caixa alta, mas a
     // função não pode depender disso para o caso de reversão.
     name.textContent = meta.label.toUpperCase();
-    var stars = document.createElement("span");
-    stars.className = "group__stars";
-    stars.textContent = starBand(b.niveis);
+    var notas = document.createElement("span");
+    notas.className = "group__notas";
+    notas.textContent = textoDasNotas(b.bucket);
     head.appendChild(dot);
     head.appendChild(name);
-    head.appendChild(stars);
+    head.appendChild(notas);
     // v1.4.0: share real do grupo — mono, discreto, MESMO estilo e MESMO
     // formato nos três (neutralidade de TRATAMENTO; a assimetria vem do
     // dado). Omitido por completo quando o filme não tem distribuição.
@@ -1821,12 +1761,6 @@
       var inner = document.createElement("div");
       inner.className = "theme__example-inner";
       inner.textContent = t.exemplo_parafraseado;
-      if (t.aspas_removidas) {
-        var fl = document.createElement("span");
-        fl.className = "theme__flag";
-        fl.textContent = "aspas de citação removidas mecanicamente";
-        inner.appendChild(fl);
-      }
       clip.appendChild(inner);
       ex.appendChild(clip);
 
@@ -1871,14 +1805,17 @@
   }
 
   // --- helpers ---
-  function starBand(niveis) {
-    if (!niveis || !niveis.length) return "";
-    var vals = niveis.map(function (n) { return n.nivel; });
-    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
-    return "★ " + starTxt(lo) + "–" + starTxt(hi);
-  }
-  function starTxt(n) {
+  // A faixa de notas do grupo em TEXTO: "notas 0,5 a 2". Sem estrela.
+  function numeroBR(n) {
     return Number.isInteger(n) ? String(n) : String(n).replace(".", ",");
+  }
+  function faixaDoGrupo(bucket) {
+    var fx = FAIXA_DE_NOTAS[bucket];
+    return fx ? numeroBR(fx[0]) + " a " + numeroBR(fx[1]) : "";
+  }
+  function textoDasNotas(bucket) {
+    var fx = faixaDoGrupo(bucket);
+    return fx ? "notas " + fx : "";
   }
   function titleOf(f) {
     return (f.ficha && f.ficha.titulo) || f.slug;

@@ -1,0 +1,4645 @@
+{
+"12-angry-men": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 3,
+"negativas": 1,
+"positivas": 96
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~3% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"2001-a-space-odyssey": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 5,
+"positivas": 84
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"500-days-of-summer": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 22,
+"negativas": 6,
+"positivas": 72
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~22% ficaram no meio-termo"
+},
+"peso_meio": "~22% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"a-brighter-summer-day": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 5
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [],
+"entrada": {
+"n_cond": null,
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 5
+},
+"ordem_colunas": null,
+"share": {
+"medianas": 6,
+"negativas": 2,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"aftersun": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 3,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"all-quiet-on-the-western-front-2022": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+5,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 2,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"anatomy-of-a-fall": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 2,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"anatomy-of-a-murder": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+5,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 1,
+"positivas": 91
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"arrival-2016": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 12,
+"negativas": 3,
+"positivas": 85
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~12% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"avengers-endgame": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 14,
+"negativas": 4,
+"positivas": 81
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~14% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"barbie": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 22,
+"negativas": 8,
+"positivas": 70
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~22% ficaram no meio-termo"
+},
+"peso_meio": "~22% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"bones-and-all": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 6,
+"positivas": 76
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"burning-2018": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+5,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 13,
+"negativas": 4,
+"positivas": 82
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~13% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"cars": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 4,
+"positivas": 78
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"catch-me-if-you-can-2002": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+5,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 11,
+"negativas": 1,
+"positivas": 87
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~11% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"cats-2019": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"negativas",
+"positivas"
+],
+"condicoes": [
+{
+"lado": "neg",
+"n": 5
+},
+{
+"lado": "pos",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"talvez_evite",
+"vale_a_pena"
+],
+"share": {
+"medianas": 7,
+"negativas": 86,
+"positivas": 7
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"chinatown": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 2,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"cidade-de-deus": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 3,
+"negativas": 1,
+"positivas": 96
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~3% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"cujo": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"medianas",
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 48,
+"negativas": 16,
+"positivas": 35
+}
+},
+"layout": "3",
+"meio": null,
+"peso_meio": "~48% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"cure": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+5,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 2,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"district-9": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 18,
+"negativas": 5,
+"positivas": 77
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~18% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"django-unchained": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 1,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"do-the-right-thing": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 2,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"drive-my-car": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 3,
+"positivas": 87
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"dune-2021": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 16,
+"negativas": 5,
+"positivas": 79
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~16% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"dune-part-two": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 2,
+"positivas": 91
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"eighth-grade": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+3,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 18,
+"negativas": 6,
+"positivas": 75
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~18% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"everything-everywhere-all-at-once": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 5,
+"positivas": 86
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"fight-club": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 2,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"force-majeure-2014": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 4,
+"positivas": 80
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"friday-the-13th-2009": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"medianas",
+"negativas",
+"positivas"
+],
+"condicoes": [
+{
+"lado": "neg",
+"n": 4
+},
+{
+"lado": "pos",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"talvez_evite",
+"vale_a_pena"
+],
+"share": {
+"medianas": 41,
+"negativas": 33,
+"positivas": 26
+}
+},
+"layout": "3",
+"meio": null,
+"peso_meio": "~41% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"get-out-2017": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 11,
+"negativas": 2,
+"positivas": 87
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~11% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"gladiator-2000": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 2,
+"positivas": 89
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"goodfellas": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 94
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"guillermo-del-toros-pinocchio": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+3,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 12,
+"negativas": 3,
+"positivas": 85
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~12% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"happy-hour-2015-1": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 2,
+"positivas": 91
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"hard-to-be-a-god": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 16,
+"negativas": 11,
+"positivas": 73
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~16% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"hereditary": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+5,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 14,
+"negativas": 6,
+"positivas": 80
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~14% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"im-still-here-2024": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 4,
+"negativas": 1,
+"positivas": 96
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~4% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"incendies": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 2
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+2,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 94
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"inception": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+3,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 2,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"inglourious-basterds": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+5,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"interstellar": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+3,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 2,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"joker-2019": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 5,
+"positivas": 77
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"joker-folie-a-deux": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"negativas",
+"positivas"
+],
+"condicoes": [
+{
+"lado": "neg",
+"n": 4
+},
+{
+"lado": "pos",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"talvez_evite",
+"vale_a_pena"
+],
+"share": {
+"medianas": 33,
+"negativas": 46,
+"positivas": 21
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~33% ficaram no meio-termo"
+},
+"peso_meio": "~33% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"la-haine": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"longlegs": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 31,
+"negativas": 13,
+"positivas": 57
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~31% ficaram no meio-termo"
+},
+"peso_meio": "~31% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"mad-max-fury-road": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 12,
+"negativas": 4,
+"positivas": 85
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~12% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"malcolm-x-1992": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 8,
+"negativas": 1,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~8% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"marty-supreme": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 12,
+"negativas": 4,
+"positivas": 84
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~12% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"memento": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+4,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 2,
+"positivas": 89
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"memories-of-murder": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 94
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"mother-2017": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 22,
+"negativas": 14,
+"positivas": 64
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~22% ficaram no meio-termo"
+},
+"peso_meio": "~22% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"napoleon-2023": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"medianas",
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 45,
+"negativas": 22,
+"positivas": 33
+}
+},
+"layout": "3",
+"meio": null,
+"peso_meio": "~45% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"neighboring-sounds": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 18,
+"negativas": 5,
+"positivas": 77
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~18% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"obsession-2025": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 3,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"oppenheimer-2023": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 11,
+"negativas": 3,
+"positivas": 85
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~11% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"parasite-2019": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 94
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"pearl-2022": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 20,
+"negativas": 5,
+"positivas": 76
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~20% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"perfect-days-2023": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 2,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"pinocchio-2022": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"negativas",
+"positivas"
+],
+"condicoes": [
+{
+"lado": "neg",
+"n": 5
+},
+{
+"lado": "pos",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"talvez_evite",
+"vale_a_pena"
+],
+"share": {
+"medianas": 25,
+"negativas": 60,
+"positivas": 15
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~25% ficaram no meio-termo"
+},
+"peso_meio": "~25% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"porco-rosso": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 12,
+"negativas": 2,
+"positivas": 86
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~12% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"portrait-of-a-lady-on-fire": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+5,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 2,
+"positivas": 92
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"princess-mononoke": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"prisoners": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+5,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"satantango": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 5,
+"positivas": 88
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"se7en": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 2
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+2,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"shutter-island": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 2
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+2,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 2,
+"positivas": 89
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"sinners-2025": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 3,
+"positivas": 87
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"soul-2020": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+3,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 16,
+"negativas": 4,
+"positivas": 80
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~16% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"speak-no-evil-2022": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 2
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+2,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 28,
+"negativas": 11,
+"positivas": 61
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~28% ficaram no meio-termo"
+},
+"peso_meio": "~28% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"spider-man-across-the-spider-verse": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"talk-to-me-2022": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 25,
+"negativas": 8,
+"positivas": 67
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~25% ficaram no meio-termo"
+},
+"peso_meio": "~25% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"teste-degradado": {
+"bullets": {
+"medianas": 0,
+"negativas": 2,
+"positivas": 2
+},
+"colunas": [
+"negativas",
+"positivas"
+],
+"condicoes": [],
+"entrada": {
+"n_cond": null,
+"n_temas": {
+"medianas": 0,
+"negativas": 2,
+"positivas": 2
+},
+"ordem_colunas": null,
+"share": {}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "uma parte ficou no meio-termo"
+},
+"peso_meio": null
+},
+"the-battle-of-algiers": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 94
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-brutalist": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 15,
+"negativas": 5,
+"positivas": 80
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~15% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-cloud-capped-star": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 3,
+"positivas": 87
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-gentlemen": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 4,
+"positivas": 78
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-godfather": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 2
+}
+],
+"entrada": {
+"n_cond": [
+4,
+2
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 2,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-hateful-eight": {
+"bullets": {
+"medianas": 5,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 5,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 13,
+"negativas": 3,
+"positivas": 84
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~13% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-invite-2026": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+3,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 2,
+"positivas": 91
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-northman": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 18,
+"negativas": 6,
+"positivas": 76
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~18% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-prestige": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 7,
+"negativas": 1,
+"positivas": 91
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~7% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-revenant-2015": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 16,
+"negativas": 4,
+"positivas": 79
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~16% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-second-mother": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 5,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~5% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-spongebob-movie-search-for-squarepants": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"medianas",
+"negativas",
+"positivas"
+],
+"condicoes": [
+{
+"lado": "neg",
+"n": 4
+},
+{
+"lado": "pos",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"talvez_evite",
+"vale_a_pena"
+],
+"share": {
+"medianas": 40,
+"negativas": 36,
+"positivas": 25
+}
+},
+"layout": "3",
+"meio": null,
+"peso_meio": "~40% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"the-substance": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 18,
+"negativas": 7,
+"positivas": 75
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~18% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-swimming-pool": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 21,
+"negativas": 3,
+"positivas": 75
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~21% ficaram no meio-termo"
+},
+"peso_meio": "~21% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"the-truman-show": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+3,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 9,
+"negativas": 1,
+"positivas": 90
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~9% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-turin-horse": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 6
+}
+],
+"entrada": {
+"n_cond": [
+5,
+6
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 10,
+"negativas": 5,
+"positivas": 85
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~10% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-wailing": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 2
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+2,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 13,
+"negativas": 4,
+"positivas": 83
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~13% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"the-wolf-of-wall-street": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 14,
+"negativas": 4,
+"positivas": 82
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~14% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"top-gun-maverick": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+5,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 14,
+"negativas": 4,
+"positivas": 82
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~14% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"uncut-gems": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 3
+},
+{
+"lado": "neg",
+"n": 5
+}
+],
+"entrada": {
+"n_cond": [
+3,
+5
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 14,
+"negativas": 5,
+"positivas": 81
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~14% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"whiplash-2014": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 6,
+"negativas": 1,
+"positivas": 93
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~6% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"wicked-2024": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 5
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+5,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 17,
+"negativas": 7,
+"positivas": 76
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~17% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"woman-of-fire": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [],
+"entrada": {
+"n_cond": null,
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": null,
+"share": {
+"medianas": 29,
+"negativas": 5,
+"positivas": 66
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~29% ficaram no meio-termo"
+},
+"peso_meio": null
+},
+"wonka": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 4
+}
+],
+"entrada": {
+"n_cond": [
+4,
+4
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 34,
+"negativas": 15,
+"positivas": 50
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~34% ficaram no meio-termo"
+},
+"peso_meio": "~34% das notas ficaram no meio-termo — sem coluna própria aqui."
+},
+"zama": {
+"bullets": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"colunas": [
+"positivas",
+"negativas"
+],
+"condicoes": [
+{
+"lado": "pos",
+"n": 4
+},
+{
+"lado": "neg",
+"n": 3
+}
+],
+"entrada": {
+"n_cond": [
+4,
+3
+],
+"n_temas": {
+"medianas": 6,
+"negativas": 6,
+"positivas": 6
+},
+"ordem_colunas": [
+"vale_a_pena",
+"talvez_evite"
+],
+"share": {
+"medianas": 25,
+"negativas": 9,
+"positivas": 66
+}
+},
+"layout": "2",
+"meio": {
+"aberto": false,
+"resumo": "~25% ficaram no meio-termo"
+},
+"peso_meio": "~25% das notas ficaram no meio-termo — sem coluna própria aqui."
+}
+}

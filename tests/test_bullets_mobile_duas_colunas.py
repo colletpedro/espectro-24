@@ -266,7 +266,11 @@ def test_as_strings_com_algarismo_continuam_as_mesmas_no_js():
     """
     js = _txt(FILME_JS)
     assert 'share.textContent = "~" + b.share_real + "% das notas";' in js
-    assert 'return "★ " + starTxt(lo) + "–" + starTxt(hi);' in js
+    # [rodada página do filme] a faixa de estrelas virou texto ("notas 0,5
+    # a 2"): sem "★", a faixa vem de `FAIXA_DE_NOTAS`
+    assert 'return fx ? "notas " + fx : "";' in js
+    assert "★" not in "\n".join(
+        l for l in js.splitlines() if not l.lstrip().startswith("//"))
 
 
 def test_a_janela_da_amostra_nao_e_mais_montada_no_js():
@@ -283,66 +287,17 @@ def test_a_janela_da_amostra_nao_e_mais_montada_no_js():
 
 def test_a_proveniencia_do_bullet_nao_virou_disclosure():
     """A barra de frequência é a proveniência visível de cada bullet e ela
-    não pode ter sido escondida atrás de clique para o bloco caber: a
-    `.theme__bar` continua fora de qualquer `.theme__example`, e o bloco
-    mobile só ajusta a margem dela."""
-    js = _txt(FILME_JS)
-    assert 'bar.className = "theme__bar"' in js
-    assert "row.appendChild(bar);" in js
-    bloco = _bloco_mobile()
-    m = re.search(r"\.theme__bar\s*\{([^}]*)\}", bloco)
-    assert m, "`.theme__bar` saiu do bloco mobile"
-    assert set(re.findall(r"([a-z-]+):", m.group(1))) <= {"margin"}, (
-        "o bloco mobile passou a mexer em mais que a margem da barra")
-
-
-# =====================================================================
-# 7. [v1.9.48] O que saiu da tela não volta pela porta dos fundos
-# =====================================================================
-
-def test_a_observacao_geral_do_grupo_nao_e_mais_montada_no_js():
-    """O parágrafo em serifa abaixo dos bullets ("As reviews positivas
-    destacam…") saiu da tela, decisão do dono.
-
-    O DADO fica: `observacao_geral` continua sendo gerada, validada e
-    testada no pipeline (tom, fluência, escopo), e continua alimentando a
-    narrativa completa. O que este teste trava é o RENDER — que o parágrafo
-    não volte a ser construído sem que a decisão seja retomada.
-    """
-    codigo = "\n".join(
-        l for l in _txt(FILME_JS).splitlines() if not l.lstrip().startswith("//"))
-    for morto in ("obsBlock", "group__obs"):
-        assert morto not in codigo, f"`{morto}` voltou ao filme.js"
-
-
-def test_o_rotulo_em_detalhe_saiu_e_o_divisor_ficou():
-    """[v1.9.48] "EM DETALHE · TEMA A TEMA" sai — o bloco se explica
-    sozinho. O DIVISOR fica: a linha do espectro é o que separa a régua de
-    PESO (a barra de recepção) da régua de CONTEÚDO (o que cada grupo
-    disse), e sem ela os bullets encostam na barra.
-
-    Este teste é o par exato disso: o rótulo fora, o divisor dentro. Falha
-    tanto se o texto voltar quanto se alguém aproveitar a remoção para
-    apagar o divisor junto.
+    sozinha. [rodada página do filme] O divisor arco-íris (`detailDivider`)
+    SAIU junto com o resto da linguagem antiga; o bloco de bullets ganhou
+    um rótulo de seção nomeado ("O QUE CADA GRUPO DIZ"), como as outras
+    seções da página, e o "EM DETALHE" continua fora.
     """
     js = _txt(FILME_JS)
-    # só o CÓDIGO: o arquivo comenta o vaivém histórico do rótulo (saiu na
-    # v1.9.26, voltou na v1.9.32, saiu de novo agora), e esse registro é
-    # justamente o que não se deve apagar.
     codigo = "\n".join(
         l for l in js.splitlines() if not l.lstrip().startswith("//"))
     assert "EM DETALHE" not in codigo, "o rótulo voltou"
-    m = re.search(r"function detailDivider\(\) \{(.*?)\n  \}", js, re.S)
-    assert m, "`detailDivider` sumiu do filme.js"
-    corpo = m.group(1)
-    assert 'el.className = "detail-divider"' in corpo
-    assert "spectrum-line" in corpo
-    assert "sectionLabel" not in corpo, (
-        "o divisor voltou a carregar um rótulo de seção")
-    # e ele continua sendo MONTADO na página — contra `codigo`, não contra
-    # o arquivo cru: comentar a chamada é a forma mais fácil de apagar o
-    # divisor sem que uma busca por substring perceba.
-    assert "app.appendChild(detailDivider());" in codigo
+    assert "detailDivider" not in codigo, "o divisor arco-íris voltou"
+    assert 'sectionLabel("O QUE CADA GRUPO DIZ")' in codigo
 
 
 def test_sectionLabel_continua_viva_para_as_outras_secoes():
