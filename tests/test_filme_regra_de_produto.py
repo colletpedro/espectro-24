@@ -280,3 +280,29 @@ def test_a_linha_de_metadado_do_topo_diretor_paises_ano_generos_duracao():
     assert o["sem"][3] == "generos=Drama, Ficção científica"          # até 2
     assert o["com"][0] == "titulo"
     assert o["nada"] == ["ano"]
+
+
+# --- 9. uma margem esquerda só -------------------------------------------------
+
+def test_os_blocos_de_texto_compartilham_a_mesma_regra_de_coluna():
+    """Todo bloco que não é imagem começa na margem esquerda da coluna de
+    `--larg-dados`: a regra é UMA (um seletor agrupado, `--col-esq`), e a
+    prosa só estreita o bloco, sem recentralizar."""
+    css = re.sub(r"/\*.*?\*/", "", (RAIZ / "frontend" / "css" / "styles.css").read_text(encoding="utf-8"), flags=re.S)
+    m = re.search(r"((?:\.pagina-filme [^{,]+,\s*)+\.pagina-filme \.disclosure--narrativa)\s*\{([^}]*)\}", css)
+    assert m, "a regra de coluna única sumiu"
+    seletores = {x.strip() for x in m.group(1).split(",")}
+    assert seletores == {".pagina-filme .verdict", ".pagina-filme .verdict-absent",
+                         ".pagina-filme .proportion", ".pagina-filme .grupos",
+                         ".pagina-filme .decide", ".pagina-filme .disclosure--narrativa"}
+    assert "max-width: var(--larg-dados)" in m.group(2)
+    assert "margin-left: var(--col-esq)" in m.group(2)
+    assert "--col-esq: max(0px, calc((100% - var(--larg-dados)) / 2))" in css
+    # o topo usa a mesma `--col-esq` (com o piso do gutter)
+    assert css.count("max(20px, var(--col-esq))") >= 2
+    # nada recentraliza esses blocos depois
+    for sel in (".verdict", ".proportion", ".grupos", ".decide", ".disclosure--narrativa"):
+        for corpo in re.findall(r"\.pagina-filme " + re.escape(sel) + r"\s*\{([^}]*)\}", css):
+            assert "margin-left: auto" not in corpo and not re.search(r"margin:\s*[^;]*auto", corpo), sel
+    # a prosa: 68ch, alinhada à esquerda
+    assert re.search(r"\.disclosure--narrativa \{ max-width: var\(--larg-prosa\); \}", css)

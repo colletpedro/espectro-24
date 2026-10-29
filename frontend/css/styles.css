@@ -2884,13 +2884,27 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .pagina-filme { font-family: var(--ed-fonte, var(--sans)); }
 .pagina-filme .fp { max-width: var(--larg-imagem); }
+/* UMA COLUNA de leitura (`--larg-dados`), centralizada na página; todo bloco
+   que não é imagem começa na MESMA margem esquerda dela. `--col-esq` é a
+   margem que centraliza a coluna (% resolve contra o contêiner: o `.fp` no
+   corpo, a janela no topo) e vale 0 quando o contêiner é mais estreito. A
+   prosa só estreita o bloco (`--larg-prosa`) e continua alinhada à esquerda. */
+.pagina-filme {
+  --col-esq: max(0px, calc((100% - var(--larg-dados)) / 2));
+}
+.pagina-filme .verdict,
+.pagina-filme .verdict-absent,
 .pagina-filme .proportion,
 .pagina-filme .grupos,
-.pagina-filme .decide {
+.pagina-filme .decide,
+.pagina-filme .disclosure--narrativa {
   max-width: var(--larg-dados);
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: var(--col-esq);
+  margin-right: 0;
 }
+.pagina-filme .verdict,
+.pagina-filme .verdict-absent,
+.pagina-filme .disclosure--narrativa { max-width: var(--larg-prosa); }
 .pagina-filme .fp { padding-bottom: 8px; }
 
 /* rótulos de seção: os da home */
@@ -2929,10 +2943,19 @@ body.lightbox-aberto { overflow: hidden; }
 .fp-topo--faixa .ed-manchete__texto,
 .fp-topo--solido .ed-manchete__texto {
   position: static;
-  max-width: var(--ed-largura);
-  margin: 0 auto;
-  padding: 22px 20px 0;
+  /* o bloco do logo e da linha começa na MESMA margem da coluna de 960px
+     (`--col-esq`, com piso de 20px de gutter: o topo não está no `.fp`) */
+  max-width: var(--larg-dados);
+  margin: 0 0 0 max(20px, var(--col-esq));
+  padding: 22px 20px 0 0;
   background: var(--bg);
+}
+/* `?topo=estatico`: o bloco sobre o still alinha pela mesma margem; a caixa
+   do véu invade 20px à esquerda (`margin-left: -20px`), como na home */
+.fp-topo--manchete .ed-manchete__texto {
+  max-width: var(--larg-dados);
+  margin: 0 0 0 max(20px, var(--col-esq));
+  padding: 0 20px 28px 0;
 }
 .fp-topo--faixa .ed-manchete__caixa,
 .fp-topo--solido .ed-manchete__caixa {
@@ -2948,7 +2971,7 @@ body.lightbox-aberto { overflow: hidden; }
 .pagina-filme .ed-manchete__linha { margin: 0 0 4px; }
 @media (max-width: 699px) {
   .fp-topo--faixa .ed-manchete__texto,
-  .fp-topo--solido .ed-manchete__texto { padding: 16px 16px 0; }
+  .fp-topo--solido .ed-manchete__texto { margin-left: 16px; padding: 16px 16px 0 0; }
 }
 
 /* --- 2. veredito: linha fina, em corpo maior que o texto comum ---------- */
@@ -2960,7 +2983,7 @@ body.lightbox-aberto { overflow: hidden; }
   line-height: 1.45;
   color: var(--text);
   max-width: var(--larg-prosa);
-  margin: 26px auto 0;
+  margin-top: 26px;
   padding: 16px 0;
   border: 0;
   border-top: 1px solid var(--border);
@@ -3028,12 +3051,9 @@ body.lightbox-aberto { overflow: hidden; }
 .pagina-filme .decide__meio { font-size: 0.82rem; }
 
 /* --- 6. narrativa (fechada) -------------------------------------------------- */
-.pagina-filme .disclosure { margin: 52px 0 0; }
+.pagina-filme .disclosure { margin-top: 52px; }
 .pagina-filme .disclosure--narrativa {
   font-size: 1.06rem;
-  max-width: var(--larg-prosa);
-  margin-left: auto;
-  margin-right: auto;
 }
 .pagina-filme .disclosure > summary {
   font-family: var(--ed-fonte, var(--sans));
