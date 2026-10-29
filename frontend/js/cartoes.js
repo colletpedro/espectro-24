@@ -125,8 +125,8 @@
 
   // A faixa fina dos três grupos (a mesma semântica e paleta do mosaico).
   var GRUPOS = ["negativas", "medianas", "positivas"];
-  var COR_GRUPO_HOME = {
-    negativas: "var(--neg-home)", medianas: "var(--med-home)", positivas: "var(--pos-home)",
+  var COR_GRUPO = {
+    negativas: "var(--grupo-neg)", medianas: "var(--grupo-med)", positivas: "var(--grupo-pos)",
   };
 
   function faixaDosGrupos(f, classe) {
@@ -138,7 +138,7 @@
     GRUPOS.forEach(function (g) {
       if (!(d[g] > 0)) return;
       var seg = el("span", "ed-faixa__seg");
-      seg.style.background = COR_GRUPO_HOME[g];
+      seg.style.background = COR_GRUPO[g];
       seg.style.width = (d[g] / total) * 100 + "%";
       strip.appendChild(seg);
     });

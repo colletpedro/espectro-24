@@ -347,10 +347,15 @@ def test_o_traco_passa_o_piso_de_contraste_nos_tres_grupos():
     encosta no fundo da página, não na trilha — e o fundo é mais escuro
     que a trilha era, então o contraste SUBIU nos três. O teste existe
     para o dia em que alguém mexer num token de grupo."""
+    # [rodada cor] os tokens são `--grupo-*`, um por paleta (`?cor=`): as
+    # TRÊS paletas passam o piso de 3:1 das barras.
     fundo = _luminancia(_token("bg"))
     for nome in ("neg", "med", "pos"):
-        l = _luminancia(_token(nome))
-        hi, lo = max(l, fundo), min(l, fundo)
-        razao = (hi + 0.05) / (lo + 0.05)
-        assert razao >= 3.0, (
-            f"--{nome} contra --bg: {razao:.2f}:1, abaixo do piso de 3:1")
+        cores = re.findall(r"--grupo-" + nome + r":\s*(#[0-9a-fA-F]{6})", _txt(CSS))
+        assert len(cores) == 3, f"--grupo-{nome}: esperava 3 paletas"
+        for cor in cores:
+            l = _luminancia(cor)
+            hi, lo = max(l, fundo), min(l, fundo)
+            razao = (hi + 0.05) / (lo + 0.05)
+            assert razao >= 3.0, (
+                f"--grupo-{nome} {cor} contra --bg: {razao:.2f}:1, abaixo do piso de 3:1")

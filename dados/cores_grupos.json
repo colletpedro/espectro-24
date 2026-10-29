@@ -1,0 +1,159 @@
+{
+ "fundo": "#0b0c10",
+ "limites": {
+  "texto": 4.5,
+  "barra": 3.0,
+  "de2000": 20.0,
+  "luminancia": 0.25,
+  "saturacao_editorial": 0.45
+ },
+ "paletas": {
+  "atual": {
+   "hex": {
+    "neg": "#e0673f",
+    "med": "#e3b23c",
+    "pos": "#4d90e5"
+   },
+   "contraste": {
+    "neg": 5.75,
+    "med": 9.96,
+    "pos": 5.99
+   },
+   "saturacao_hsl": {
+    "neg": 0.722,
+    "med": 0.749,
+    "pos": 0.745
+   },
+   "luminancia": {
+    "neg": 0.2591,
+    "med": 0.485,
+    "pos": 0.2718
+   },
+   "luminancia_desvio_da_media": {
+    "neg": -0.235,
+    "med": 0.432,
+    "pos": -0.197
+   },
+   "de2000": {
+    "normal": {
+     "neg-med": 30.5,
+     "neg-pos": 45.9,
+     "med-pos": 54.5
+    },
+    "deuteranopia": {
+     "neg-med": 12.6,
+     "neg-pos": 53.6,
+     "med-pos": 59.3
+    },
+    "protanopia": {
+     "neg-med": 20.0,
+     "neg-pos": 49.0,
+     "med-pos": 56.5
+    }
+   },
+   "falhas": [
+    "luminância med +43% fora de ±25%",
+    "ΔE neg-med em deuteranopia: 12.6 < 20.0"
+   ],
+   "passa": false
+  },
+  "apagada": {
+   "hex": {
+    "neg": "#9c5f4e",
+    "med": "#a8874f",
+    "pos": "#5b7a99"
+   },
+   "contraste": {
+    "neg": 3.87,
+    "med": 5.81,
+    "pos": 4.36
+   },
+   "saturacao_hsl": {
+    "neg": 0.333,
+    "med": 0.36,
+    "pos": 0.254
+   },
+   "luminancia": {
+    "neg": 0.158,
+    "med": 0.2622,
+    "pos": 0.1844
+   },
+   "luminancia_desvio_da_media": {
+    "neg": -0.216,
+    "med": 0.301,
+    "pos": -0.085
+   },
+   "de2000": {
+    "normal": {
+     "neg-med": 20.9,
+     "neg-pos": 32.7,
+     "med-pos": 35.1
+    },
+    "deuteranopia": {
+     "neg-med": 11.5,
+     "neg-pos": 32.5,
+     "med-pos": 38.5
+    },
+    "protanopia": {
+     "neg-med": 15.5,
+     "neg-pos": 27.7,
+     "med-pos": 35.4
+    }
+   },
+   "falhas": [
+    "texto neg 3.87 < 4.5",
+    "luminância med +30% fora de ±25%",
+    "texto pos 4.36 < 4.5",
+    "ΔE neg-med em deuteranopia: 11.5 < 20.0",
+    "ΔE neg-med em protanopia: 15.5 < 20.0"
+   ],
+   "passa": false
+  },
+  "editorial": {
+   "hex": {
+    "neg": "#c1a85c",
+    "med": "#95c6ba",
+    "pos": "#7e97c8"
+   },
+   "contraste": {
+    "neg": 8.4,
+    "med": 10.3,
+    "pos": 6.65
+   },
+   "saturacao_hsl": {
+    "neg": 0.449,
+    "med": 0.301,
+    "pos": 0.402
+   },
+   "luminancia": {
+    "neg": 0.4012,
+    "med": 0.5032,
+    "pos": 0.3074
+   },
+   "luminancia_desvio_da_media": {
+    "neg": -0.007,
+    "med": 0.246,
+    "pos": -0.239
+   },
+   "de2000": {
+    "normal": {
+     "neg-med": 26.7,
+     "neg-pos": 42.3,
+     "med-pos": 26.7
+    },
+    "deuteranopia": {
+     "neg-med": 23.4,
+     "neg-pos": 44.4,
+     "med-pos": 20.5
+    },
+    "protanopia": {
+     "neg-med": 21.0,
+     "neg-pos": 43.0,
+     "med-pos": 23.5
+    }
+   },
+   "falhas": [],
+   "passa": true
+  }
+ }
+}

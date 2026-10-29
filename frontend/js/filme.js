@@ -109,9 +109,9 @@
   var GRUPO_LABEL = { negativas: "HATERS", medianas: "MIXED", positivas: "FANS" };
 
   var GRUPO_META = {
-    negativas: { label: GRUPO_LABEL.negativas, color: "var(--neg)", cap: "quem não gostou" },
-    medianas:  { label: GRUPO_LABEL.medianas,  color: "var(--med)", cap: "quem ficou no meio" },
-    positivas: { label: GRUPO_LABEL.positivas, color: "var(--pos)", cap: "quem gostou" },
+    negativas: { label: GRUPO_LABEL.negativas, color: "var(--grupo-neg)", cap: "quem não gostou" },
+    medianas:  { label: GRUPO_LABEL.medianas,  color: "var(--grupo-med)", cap: "quem ficou no meio" },
+    positivas: { label: GRUPO_LABEL.positivas, color: "var(--grupo-pos)", cap: "quem gostou" },
   };
 
   // Ordem de leitura dos três grupos — a mesma do resto do site (quem não
@@ -144,7 +144,7 @@
     app.innerHTML =
       '<div class="section"><h1 class="film-header__title serif">Filme não encontrado</h1>' +
       '<p class="disclaimer">Nenhuma análise para este endereço. ' +
-      '<a href="index.html" style="color:var(--pos)">Voltar ao início</a>.</p></div>';
+      '<a href="index.html" style="color:var(--grupo-pos)">Voltar ao início</a>.</p></div>';
     return;
   }
 

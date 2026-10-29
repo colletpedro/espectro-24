@@ -21,30 +21,13 @@
       #e5484d 0%, #f5820b 30%, #f5c518 48%,
       #46a758 68%, #3b82f6 100%);
 
-  /* cores dos 3 grupos */
-  --neg:      #e0673f;  /* negativas — âmbar-avermelhado */
-  --neg-soft: #e0673f33;
-  --med:      #e3b23c;  /* medianas — dourado */
-  --med-soft: #e3b23c33;
-  --pos:      #4d90e5;  /* positivas — azul */
-  --pos-soft: #4d90e533;
+  /* [rodada cor] as cores dos 3 grupos NÃO moram aqui: são os tokens
+     `--grupo-neg/med/pos` (e `-soft`) da paleta ativa, definidos em
+     `:root[data-cor=...]` no fim deste arquivo e escolhidos por `js/cor.js`
+     (`?cor=`). Uma fonte só: faixa da home, cartões, RECEPÇÃO, bullets e
+     condições leem os mesmos tokens. */
 
   --warn:     #f5c518;
-
-  /* [v1.9.18] paleta PARALELA, só para a faixa fina do mosaico da home.
-     --neg/--med/--pos (acima) continuam a paleta oficial dos 3 grupos —
-     usada em `filme.html` inteiro (grupos, gráficos, legendas) — e não
-     mudam. A v1.9.17 tentou reusar essas mesmas cores em BLOCO CHEIO
-     preenchendo a célula inteira do mosaico: saturadas e em área grande,
-     ficaram agressivas, e como a maioria do catálogo é majoritariamente
-     positiva, a home virava ~30 retângulos azuis quase idênticos — o
-     visual não distinguia nada. Decisão do dono do projeto: uma paleta
-     mais apagada (terracota/ocre/azul-ardósia), só para a faixa fina de
-     5px na base da célula — mesma semântica, mesma ordem, tom sóbrio.
-     Divergência DELIBERADA, registrada aqui para não parecer acidente. */
-  --neg-home: #9c5f4e;
-  --med-home: #a8874f;
-  --pos-home: #5b7a99;
 
   /* tipografia */
   --serif: Georgia, "Iowan Old Style", "Times New Roman", "Noto Serif", serif;
@@ -905,7 +888,7 @@ body.lightbox-aberto { overflow: hidden; }
    (negativas → mornos → positivas, mesma ordem de leitura do resto do
    site). Sangra até as bordas do card — fica com o arredondamento inferior
    porque `.mosaic-cell` já tem `overflow: hidden` + `border-radius`. Cores
-   da paleta PARALELA `--neg-home/--med-home/--pos-home` (ver `:root`) —
+   dos tokens `--grupo-neg/med/pos` (ver o fim do arquivo) —
    nunca as do resto do site. */
 .mosaic-cell__strip {
   position: absolute;
@@ -948,9 +931,9 @@ body.lightbox-aberto { overflow: hidden; }
   font-weight: 600;
   letter-spacing: 0.1em;
 }
-.mosaic-hint__neg { color: var(--neg-home); }
-.mosaic-hint__med { color: var(--med-home); }
-.mosaic-hint__pos { color: var(--pos-home); }
+.mosaic-hint__neg { color: var(--grupo-neg); }
+.mosaic-hint__med { color: var(--grupo-med); }
+.mosaic-hint__pos { color: var(--grupo-pos); }
 
 @media (max-width: 900px) {
   .mosaic { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
@@ -1046,7 +1029,7 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .reviews-link:hover { color: var(--text-dim); border-bottom-color: #ffffff3d; }
 .reviews-link:focus-visible {
-  outline: 2px solid var(--pos);
+  outline: 2px solid var(--grupo-pos);
   outline-offset: 3px;
   border-radius: 2px;
   color: var(--text);
@@ -1184,12 +1167,12 @@ body.lightbox-aberto { overflow: hidden; }
   font-weight: 600;
 }
 .proportion__swatch { width: 10px; height: 10px; border-radius: 2px; flex: none; }
-.proportion__swatch[data-group="negativas"] { background: var(--neg); }
-.proportion__swatch[data-group="medianas"]  { background: var(--med); }
-.proportion__swatch[data-group="positivas"] { background: var(--pos); }
-.proportion__legend li[data-group="negativas"] .proportion__legend-label { color: var(--neg); }
-.proportion__legend li[data-group="medianas"]  .proportion__legend-label { color: var(--med); }
-.proportion__legend li[data-group="positivas"] .proportion__legend-label { color: var(--pos); }
+.proportion__swatch[data-group="negativas"] { background: var(--grupo-neg); }
+.proportion__swatch[data-group="medianas"]  { background: var(--grupo-med); }
+.proportion__swatch[data-group="positivas"] { background: var(--grupo-pos); }
+.proportion__legend li[data-group="negativas"] .proportion__legend-label { color: var(--grupo-neg); }
+.proportion__legend li[data-group="medianas"]  .proportion__legend-label { color: var(--grupo-med); }
+.proportion__legend li[data-group="positivas"] .proportion__legend-label { color: var(--grupo-pos); }
 
 /* [v1.9.26, Entrega 1] O DISCLAIMER DA COTA, preservado. A informação que
    ele carrega ("profundidade igual por grupo ≠ peso igual") fica ancorada
@@ -1294,9 +1277,9 @@ body.lightbox-aberto { overflow: hidden; }
   width: 100%;
   clip-path: none;
 }
-.proportion__layer[data-group="negativas"] { background: var(--neg); }
-.proportion__layer[data-group="medianas"]  { background: var(--med); }
-.proportion__layer[data-group="positivas"] { background: var(--pos); }
+.proportion__layer[data-group="negativas"] { background: var(--grupo-neg); }
+.proportion__layer[data-group="medianas"]  { background: var(--grupo-med); }
+.proportion__layer[data-group="positivas"] { background: var(--grupo-pos); }
 
 /* =======================================================================
    [v1.9.27, Entrega 3] CALLOUT DE PERCENTUAL — os três números abaixo da
@@ -1381,9 +1364,9 @@ body.lightbox-aberto { overflow: hidden; }
   --cx:  calc(var(--c) * 1%);              /* centro VERDADEIRO da fatia */
   --lcx: calc(var(--x) + var(--half));     /* centro do rótulo, já movido */
 }
-.proportion__anchor[data-group="negativas"] { --g: var(--neg); --g-soft: var(--neg-soft); }
-.proportion__anchor[data-group="medianas"]  { --g: var(--med); --g-soft: var(--med-soft); }
-.proportion__anchor[data-group="positivas"] { --g: var(--pos); --g-soft: var(--pos-soft); }
+.proportion__anchor[data-group="negativas"] { --g: var(--grupo-neg); --g-soft: var(--grupo-neg-soft); }
+.proportion__anchor[data-group="medianas"]  { --g: var(--grupo-med); --g-soft: var(--grupo-med-soft); }
+.proportion__anchor[data-group="positivas"] { --g: var(--grupo-pos); --g-soft: var(--grupo-pos-soft); }
 
 /* [v1.9.28] O ESTADO ACESO PERMANENTE. Estes dois tokens são o REPOUSO do
    neon — e, por serem o estado base, são também o que `prefers-reduced-
@@ -1684,9 +1667,9 @@ body.lightbox-aberto { overflow: hidden; }
      empurrado pra direita, mesmo lugar de sempre. */
   margin-left: auto;
 }
-.group[data-group="negativas"] .group__name { color: var(--neg); }
-.group[data-group="medianas"]  .group__name { color: var(--med); }
-.group[data-group="positivas"] .group__name { color: var(--pos); }
+.group[data-group="negativas"] .group__name { color: var(--grupo-neg); }
+.group[data-group="medianas"]  .group__name { color: var(--grupo-med); }
+.group[data-group="positivas"] .group__name { color: var(--grupo-pos); }
 
 /* [v1.9.19] tint de fundo por sentimento — atrás de FLAG (Entrega 7),
    NUNCA ligado por padrão. Ativa com `?tint=1` na URL (ver filme.js) —
@@ -1694,9 +1677,9 @@ body.lightbox-aberto { overflow: hidden; }
    agora que o meio saiu do meio-a-meio; existe pra o dono do projeto
    comparar com e sem, olhando, antes de decidir. 2-3% de opacidade, os
    MESMOS tokens `--neg/--med/--pos` de sempre (nenhuma cor nova). */
-.group.is-tinted[data-group="negativas"] { background: #e0673f08; border-radius: var(--radius); padding: 14px 16px; }
-.group.is-tinted[data-group="medianas"]  { background: #e3b23c08; border-radius: var(--radius); padding: 14px 16px; }
-.group.is-tinted[data-group="positivas"] { background: #4d90e508; border-radius: var(--radius); padding: 14px 16px; }
+.group.is-tinted[data-group="negativas"] { background: color-mix(in srgb, var(--grupo-neg) 3%, transparent); border-radius: var(--radius); padding: 14px 16px; }
+.group.is-tinted[data-group="medianas"]  { background: color-mix(in srgb, var(--grupo-med) 3%, transparent); border-radius: var(--radius); padding: 14px 16px; }
+.group.is-tinted[data-group="positivas"] { background: color-mix(in srgb, var(--grupo-pos) 3%, transparent); border-radius: var(--radius); padding: 14px 16px; }
 
 /* [2026-09-17] NOTA EDITORIAL do grupo — "modo reduzido" saiu do alerta
    de sistema abaixo (`.mode-warning`) para esta gramática, a mesma do
@@ -1725,9 +1708,9 @@ body.lightbox-aberto { overflow: hidden; }
   text-transform: uppercase;
   margin-bottom: 4px;
 }
-.group[data-group="negativas"] .group-note__label { color: var(--neg); }
-.group[data-group="medianas"]  .group-note__label { color: var(--med); }
-.group[data-group="positivas"] .group-note__label { color: var(--pos); }
+.group[data-group="negativas"] .group-note__label { color: var(--grupo-neg); }
+.group[data-group="medianas"]  .group-note__label { color: var(--grupo-med); }
+.group[data-group="positivas"] .group-note__label { color: var(--grupo-pos); }
 
 /* aviso de modo degradado — NUNCA escondido (regra de produto) */
 .mode-warning {
@@ -1848,9 +1831,9 @@ body.lightbox-aberto { overflow: hidden; }
   border-radius: 999px;
   transition: width 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.group[data-group="negativas"] .theme__bar span { background: var(--neg); }
-.group[data-group="medianas"]  .theme__bar span { background: var(--med); }
-.group[data-group="positivas"] .theme__bar span { background: var(--pos); }
+.group[data-group="negativas"] .theme__bar span { background: var(--grupo-neg); }
+.group[data-group="medianas"]  .theme__bar span { background: var(--grupo-med); }
+.group[data-group="positivas"] .theme__bar span { background: var(--grupo-pos); }
 
 /* =======================================================================
    [v1.9.26, Entrega 4] O DISCLOSURE "APROFUNDAR".
@@ -1900,9 +1883,9 @@ body.lightbox-aberto { overflow: hidden; }
    NENHUM uso na folha. Registrados aqui e mantidos em `:root` de
    propósito: apagar cor da paleta é decisão de paleta, não efeito colateral
    de um redesenho de controle. */
-.group[data-group="negativas"] .theme__toggle { color: var(--neg); }
-.group[data-group="medianas"]  .theme__toggle { color: var(--med); }
-.group[data-group="positivas"] .theme__toggle { color: var(--pos); }
+.group[data-group="negativas"] .theme__toggle { color: var(--grupo-neg); }
+.group[data-group="medianas"]  .theme__toggle { color: var(--grupo-med); }
+.group[data-group="positivas"] .theme__toggle { color: var(--grupo-pos); }
 
 /* ESTADOS: repouso (acima), hover, foco, aberto. Todos pela mesma via —
    opacidade —, para que nenhum deles reintroduza caixa ou borda. */
@@ -2068,7 +2051,7 @@ body.lightbox-aberto { overflow: hidden; }
 .disclosure__body.narrativa p:first-of-type { color: var(--text); }
 /* meio-termo recolhido: o pill some (o `<details>` inteiro já é o
    controle), o rótulo fica na cor do meio. */
-.disclosure--meio > summary { color: var(--med); }
+.disclosure--meio > summary { color: var(--grupo-med); }
 .disclosure--meio > summary:hover { color: var(--text); }
 .disclosure--meio .disclosure__body { margin-top: 26px; }
 
@@ -2099,9 +2082,9 @@ body.lightbox-aberto { overflow: hidden; }
   transition: border-color 0.15s, background 0.15s;
 }
 .survey__opt:hover { border-color: #3a4152; background: var(--bg-elev-2); }
-.survey__opt input { accent-color: #4d90e5; width: 17px; height: 17px; flex-shrink: 0; }
+.survey__opt input { accent-color: var(--grupo-pos); width: 17px; height: 17px; flex-shrink: 0; }
 .survey__opt span { font-size: 0.98rem; }
-.survey__opt:focus-within { border-color: #4d90e5; box-shadow: 0 0 0 3px #3b82f61f; }
+.survey__opt:focus-within { border-color: var(--grupo-pos); box-shadow: 0 0 0 3px #3b82f61f; }
 .survey textarea {
   width: 100%;
   background: var(--bg);
@@ -2138,7 +2121,7 @@ body.lightbox-aberto { overflow: hidden; }
   border: 1px solid var(--border);
 }
 .btn--ghost:hover { border-color: #3a4152; color: var(--text); opacity: 1; }
-.btn:focus-visible { outline: 2px solid #4d90e5; outline-offset: 2px; }
+.btn:focus-visible { outline: 2px solid var(--grupo-pos); outline-offset: 2px; }
 .survey__thanks { display: none; }
 .survey__thanks.is-visible { display: block; }
 .survey__thanks p { margin: 0 0 16px; color: var(--text-dim); }
@@ -2149,7 +2132,7 @@ body.lightbox-aberto { overflow: hidden; }
   font-size: 0.66rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--pos);
+  color: var(--grupo-pos);
   opacity: 0;
   transition: opacity 0.2s;
 }
@@ -2357,8 +2340,8 @@ body.lightbox-aberto { overflow: hidden; }
   border-left: 2px solid var(--border);
   min-width: 0;            /* impede transbordo horizontal no grid */
 }
-.decide__col--pos { border-left-color: var(--pos); }
-.decide__col--neg { border-left-color: var(--neg); }
+.decide__col--pos { border-left-color: var(--grupo-pos); }
+.decide__col--neg { border-left-color: var(--grupo-neg); }
 
 .decide__head {
   font-family: var(--mono);
@@ -2367,8 +2350,8 @@ body.lightbox-aberto { overflow: hidden; }
   text-transform: uppercase;
   margin: 0 0 4px;
 }
-.decide__col--pos .decide__head { color: var(--pos); }
-.decide__col--neg .decide__head { color: var(--neg); }
+.decide__col--pos .decide__head { color: var(--grupo-pos); }
+.decide__col--neg .decide__head { color: var(--grupo-neg); }
 
 .decide__peso {
   font-family: var(--mono);
@@ -3108,4 +3091,35 @@ body.lightbox-aberto { overflow: hidden; }
   .pagina-filme .disclosure,
   .fp-galeria,
   .fp-colecao { margin-top: 40px; }
+}
+
+
+/* =======================================================================
+   [rodada cor] PALETAS DOS GRUPOS — `?cor=atual|apagada|editorial`
+   =======================================================================
+   `js/cor.js` marca `<html data-cor>`; o padrão é a constante `COR_PADRAO`
+   LÁ (uma linha). Os hex são os de `scripts/medir_cores.py` (PALETAS), que
+   mede contraste, ΔE2000 (normal, deuteranopia, protanopia) e luminância;
+   `tests/test_cores_grupos.py` confere que os dois concordam. Sem JS, vale
+   a `atual`. O `-soft` é o mesmo tom a 20% (preenchimento do callout). */
+:root,
+:root[data-cor="atual"] {
+  --grupo-neg: #e0673f;
+  --grupo-med: #e3b23c;
+  --grupo-pos: #4d90e5;
+}
+:root[data-cor="apagada"] {
+  --grupo-neg: #9c5f4e;
+  --grupo-med: #a8874f;
+  --grupo-pos: #5b7a99;
+}
+:root[data-cor="editorial"] {
+  --grupo-neg: #c1a85c;
+  --grupo-med: #95c6ba;
+  --grupo-pos: #7e97c8;
+}
+:root {
+  --grupo-neg-soft: color-mix(in srgb, var(--grupo-neg) 20%, transparent);
+  --grupo-med-soft: color-mix(in srgb, var(--grupo-med) 20%, transparent);
+  --grupo-pos-soft: color-mix(in srgb, var(--grupo-pos) 20%, transparent);
 }

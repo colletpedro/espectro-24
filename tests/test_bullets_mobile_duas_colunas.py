@@ -97,7 +97,7 @@ def test_o_bloco_mobile_nao_distingue_um_grupo_do_outro():
     assert "data-group" not in bloco, (
         "uma regra do modo mobile passou a olhar para o grupo — a "
         "neutralidade estrutural do §0 quebra aqui")
-    for cor in ("--neg", "--pos", "--med"):
+    for cor in ("--neg", "--pos", "--med", "--grupo-"):
         assert cor not in bloco, (
             f"{cor} entrou no bloco mobile: cor de grupo dentro de uma "
             "regra de leiaute é tratamento assimétrico disfarçado")
