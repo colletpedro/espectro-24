@@ -3158,3 +3158,20 @@ body.lightbox-aberto { overflow: hidden; }
 .peso-barra[data-g="negativas"] .peso-barra__fill { background: var(--grupo-neg); }
 .peso-barra[data-g="medianas"] .peso-barra__fill { background: var(--grupo-med); }
 .peso-barra[data-g="positivas"] .peso-barra__fill { background: var(--grupo-pos); }
+
+/* =======================================================================
+   [rodada cabeçalho em 3 colunas] A linha do peso ("barra + ~X% das notas")
+   é UMA peça: nunca quebra por dentro. Se não cabe ao lado de "NOME notas a
+   a b", desce inteira para a segunda linha, alinhada à ESQUERDA; se cabe
+   (duas colunas, ou o Mixed recolhido em largura cheia), fica na primeira,
+   empurrada para a direita como sempre. Quem decide é a largura do próprio
+   grupo (container query), a mesma regra em 2 e 3 colunas e no mobile. */
+.pagina-filme .group { container-type: inline-size; }
+.pagina-filme .group__share {
+  margin-left: 0;
+  white-space: nowrap;
+}
+.pagina-filme .group__share--barra { flex-wrap: nowrap; }
+@container (min-width: 380px) {
+  .pagina-filme .group__share { margin-left: auto; }
+}

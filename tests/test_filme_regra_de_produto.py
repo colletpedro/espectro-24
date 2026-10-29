@@ -403,3 +403,14 @@ def test_pct_e_constante_unica_e_padrao_barra(padrao):
     # sem parâmetro, todo grupo tem a barra
     for g in padrao["top-gun-maverick"]["pesos_grupo"]:
         assert g["barra"], g
+
+
+def test_a_linha_do_peso_do_grupo_nunca_quebra_por_dentro():
+    """A barra e o número são uma peça só (nowrap); a linha desce inteira,
+    alinhada à esquerda, quando não cabe, e só vai para a direita quando o
+    grupo tem largura para isso (container query)."""
+    css = re.sub(r"/\*.*?\*/", "", (RAIZ / "frontend" / "css" / "styles.css").read_text(encoding="utf-8"), flags=re.S)
+    assert re.search(r"\.pagina-filme \.group \{ container-type: inline-size; \}", css)
+    corpos = re.findall(r"\.pagina-filme \.group__share \{([^}]*)\}", css)
+    assert any("white-space: nowrap" in c and "margin-left: 0" in c for c in corpos)
+    assert re.search(r"@container \(min-width: 380px\) \{\s*\.pagina-filme \.group__share \{ margin-left: auto; \}", css)
