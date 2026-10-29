@@ -13,6 +13,7 @@
 
    variáveis de ambiente:
      HARNESS_TOPO=estatico   roda com `?topo=estatico`
+     HARNESS_PCT=frase|barra roda com `?pct=`
      HARNESS_COLECOES=1      imprime só a ordem das coleções e os recém-chegados
      HARNESS_PATCH='{"slug":..., "lado":..., "bucket":..., "ordem":[...]}'
                              troca o `bucket_origem` das condições de um lado
@@ -107,6 +108,7 @@ function novoContexto() {
   const elementos = {};
   const doc = {
     createElement: (t) => new El(t),
+    createTextNode: (t) => { const e = new El("#text"); e._text = String(t); return e; },
     getElementById: (id) => elementos[id] || null,
     documentElement: new El("html"),
     body: new El("body"),
@@ -174,6 +176,19 @@ function extrair(app, topo) {
                       titulo: achar(col, "section-label")[0].textContent,
                       slugs: achar(col, "ed-cartao").map((a) => a.dataset.slug),
                       href: achar(col, "ed-link")[0].href } : null;
+  // o peso de cada grupo (cabeçalho) e de cada coluna (para decidir)
+  const pesoDe = (el) => {
+    const extra = achar(el, "peso-extra")[0];
+    const barra = achar(el, "peso-barra")[0];
+    const fill = barra && achar(barra, "peso-barra__fill")[0];
+    return { texto: el.textContent, extra: extra ? extra.textContent : null,
+             barra: barra ? { largura: fill.style.width, aria: barra.getAttribute("aria-label"), g: barra.attrs["data-g"] || null } : null };
+  };
+  s.pesos_grupo = achar(app, "group").map((g) => Object.assign({ g: g.dataset.group }, achar(g, "group__share")[0] ? pesoDe(achar(g, "group__share")[0]) : { texto: null }));
+  s.pesos_coluna = achar(app, "decide__col").map((c) => {
+    const p = achar(c, "decide__peso")[0];
+    return p ? pesoDe(p) : null;
+  });
   s.texto_da_pagina = app.children.map((c) => c.textContent).join("\n");
   return s;
 }
@@ -194,6 +209,13 @@ if (process.env.HARNESS_PATCH) {
   const f = DATA.filmes[pt.slug];
   if (pt.lado) f.condicoes[pt.lado].forEach((c) => { c.bucket_origem = pt.bucket; });
   if (pt.ordem) f.condicoes.ordem_colunas = pt.ordem;
+  // `share`: {bucket: share_real}; `peso_pct`: {lado: peso_pct} (e o texto)
+  Object.entries(pt.share || {}).forEach(([b, v]) => {
+    f.buckets.forEach((x) => { if (x.bucket === b) x.share_real = v; });
+  });
+  Object.entries(pt.peso_pct || {}).forEach(([lado, v]) => {
+    f.condicoes.peso[lado].peso_pct = v; f.condicoes.peso[lado].peso_texto = "~" + v + "% das notas";
+  });
 }
 
 const saida = {};
@@ -205,7 +227,8 @@ Object.keys(DATA.filmes).sort().filter((k) => !filtro.length || filtro.includes(
     ESPECTRO_SELECAO: base.janela.ESPECTRO_SELECAO, ESPECTRO_TEXTOS: base.janela.ESPECTRO_TEXTOS,
   });
   ["app", "topo", "footerReviews"].forEach((id) => { elementos[id] = new El("div"); });
-  location.search = "?slug=" + slug + (process.env.HARNESS_TOPO ? "&topo=" + process.env.HARNESS_TOPO : "");
+  location.search = "?slug=" + slug + (process.env.HARNESS_TOPO ? "&topo=" + process.env.HARNESS_TOPO : "")
+    + (process.env.HARNESS_PCT ? "&pct=" + process.env.HARNESS_PCT : "");
   // as entradas da entrada: dados de entrada da regra, para o teste saber
   // quando um republish mudou o INPUT (e não a regra)
   const f = DATA.filmes[slug];

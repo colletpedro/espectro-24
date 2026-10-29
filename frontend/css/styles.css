@@ -3123,3 +3123,38 @@ body.lightbox-aberto { overflow: hidden; }
   --grupo-med-soft: color-mix(in srgb, var(--grupo-med) 20%, transparent);
   --grupo-pos-soft: color-mix(in srgb, var(--grupo-pos) 20%, transparent);
 }
+
+
+/* =======================================================================
+   [rodada destaque] `?pct=` — peso do grupo: frase e barra
+   =======================================================================
+   `frase`: "cerca de 1 em cada N" depois do "~X% das notas", no mesmo corpo
+   e em cor secundária. `barra`: 48px à esquerda do número, trilho sutil
+   (`--trilho-pct`, contraste >= 1,5 contra o fundo) e preenchimento do
+   tamanho do share, na cor do grupo, cantos retos. */
+:root { --trilho-pct: #3a3e48; }
+.pagina-filme .peso-extra { color: var(--text-mute); }
+.pagina-filme .group__share--barra,
+.pagina-filme .decide__peso--barra {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.peso-barra {
+  display: inline-block;
+  flex: none;
+  width: 48px;
+  height: 6px;
+  background: var(--trilho-pct);
+  border-radius: 0;
+}
+.peso-barra__fill {
+  display: block;
+  height: 100%;
+  min-width: 1px;
+  background: var(--text-dim);
+  border-radius: 0;
+}
+.peso-barra[data-g="negativas"] .peso-barra__fill { background: var(--grupo-neg); }
+.peso-barra[data-g="medianas"] .peso-barra__fill { background: var(--grupo-med); }
+.peso-barra[data-g="positivas"] .peso-barra__fill { background: var(--grupo-pos); }

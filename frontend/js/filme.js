@@ -137,6 +137,15 @@
   // com o logo e o metadado sobre o véu (a manchete da home), em vez da faixa
   // animada. Qualquer outro valor (ou nenhum) é a faixa.
   var TOPO_ESTATICO = params.get("topo") === "estatico";
+  // [rodada destaque] `?pct=` — como o peso de um grupo aparece no cabeçalho
+  // do grupo e na coluna de "Para decidir" (a RECEPÇÃO não muda):
+  //   nenhum (padrão)  só "~X% das notas"
+  //   frase            grupo com share <= LIMIAR_PCT_PEQUENO ganha "cerca de
+  //                    1 em cada N" (qualquer grupo, pelo tamanho)
+  //   barra            TODOS os grupos ganham uma barra de 48px com o share
+  var PCT_VARIANTE = ["frase", "barra"].indexOf(params.get("pct")) >= 0
+    ? params.get("pct") : "nenhum";
+  var LIMIAR_PCT_PEQUENO = 5;
 
   var film = DATA.filmes[slug];
 
@@ -1263,6 +1272,34 @@
     return vistos.length === 1 ? vistos[0] : null;
   }
 
+  // "cerca de 1 em cada N", N = round(100 / pct); abaixo de 1% não há N
+  // honesto, e a frase é "menos de 1 em cada 100". Todo número é do código.
+  function umEmCadaN(pct) {
+    if (pct < 1) return "menos de 1 em cada 100";
+    return "cerca de 1 em cada " + Math.round(100 / pct);
+  }
+
+  function fraseDeGrupoPequeno(pct) {
+    if (PCT_VARIANTE !== "frase" || typeof pct !== "number") return null;
+    return pct <= LIMIAR_PCT_PEQUENO ? umEmCadaN(pct) : null;
+  }
+
+  // A barra de 48px: trilho sutil e preenchimento do tamanho do share, na cor
+  // do grupo (CSS, por `data-g`), cantos retos. O leitor de tela ouve "cerca
+  // de X% das notas"; o texto visível fica `aria-hidden` para não repetir.
+  function barraDePeso(pct, grupo) {
+    var el = document.createElement("span");
+    el.className = "peso-barra";
+    el.setAttribute("role", "img");
+    el.setAttribute("aria-label", "cerca de " + pct + "% das notas");
+    if (grupo) el.setAttribute("data-g", grupo);
+    var fill = document.createElement("span");
+    fill.className = "peso-barra__fill";
+    fill.style.width = Math.max(0, Math.min(100, pct)) + "%";
+    el.appendChild(fill);
+    return el;
+  }
+
   function colunaDeCondicoes(c, lado) {
     var col = document.createElement("div");
     col.className = "decide__col decide__col--"
@@ -1280,17 +1317,35 @@
     // num grupo só (ou nenhuma o declara), o rótulo do grupo não aparece.
     var peso = (c.peso || {})[lado] || {};
     var grupo = grupoDeOrigem(c, lado);
-    var partesPeso = [];
-    if (peso.peso_texto) partesPeso.push(peso.peso_texto);
-    if (grupo && faixaDoGrupo(grupo)) partesPeso.push("quem deu de " + faixaDoGrupo(grupo));
-    // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
-    // veredito carrega em prosa e que as condições não carregavam.
-    if (peso.peso_texto && peso.nota_de_amostra) partesPeso.push(peso.nota_de_amostra);
-    if (partesPeso.length) {
+    var faixaTxt = grupo && faixaDoGrupo(grupo) ? "quem deu de " + faixaDoGrupo(grupo) : null;
+    var nota = peso.peso_texto && peso.nota_de_amostra ? peso.nota_de_amostra : null;
+    var frasePeso = peso.peso_texto ? fraseDeGrupoPequeno(peso.peso_pct) : null;
+    var barra = PCT_VARIANTE === "barra" && peso.peso_texto && typeof peso.peso_pct === "number";
+    if (peso.peso_texto || faixaTxt) {
       var p = document.createElement("p");
       p.className = "decide__peso";
       if (grupo) p.dataset.grupo = grupo;
-      p.textContent = partesPeso.join(" · ");
+      // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
+      // veredito carrega em prosa e que as condições não carregavam.
+      var texto = [peso.peso_texto, frasePeso, faixaTxt, nota].filter(Boolean).join(" · ");
+      if (barra) {
+        p.classList.add("decide__peso--barra");
+        p.appendChild(barraDePeso(peso.peso_pct, grupo));
+        var rotulo = document.createElement("span");
+        rotulo.setAttribute("aria-hidden", "true");
+        rotulo.textContent = texto;
+        p.appendChild(rotulo);
+      } else if (frasePeso) {
+        p.appendChild(document.createTextNode(peso.peso_texto));
+        var ex = document.createElement("span");
+        ex.className = "peso-extra";
+        ex.textContent = " · " + frasePeso;
+        p.appendChild(ex);
+        p.appendChild(document.createTextNode(
+          [faixaTxt, nota].filter(Boolean).map(function (t) { return " · " + t; }).join("")));
+      } else {
+        p.textContent = texto;
+      }
       col.appendChild(p);
     }
 
@@ -1597,7 +1652,24 @@
     if (typeof b.share_real === "number") {
       var share = document.createElement("span");
       share.className = "group__share";
-      share.textContent = "~" + b.share_real + "% das notas";
+      var textoShare = "~" + b.share_real + "% das notas";
+      if (PCT_VARIANTE === "barra") {
+        share.classList.add("group__share--barra");
+        share.appendChild(barraDePeso(b.share_real, b.bucket));
+        var rot = document.createElement("span");
+        rot.setAttribute("aria-hidden", "true");
+        rot.textContent = textoShare;
+        share.appendChild(rot);
+      } else {
+        share.textContent = textoShare;
+      }
+      var frase = fraseDeGrupoPequeno(b.share_real);
+      if (frase) {
+        var extra = document.createElement("span");
+        extra.className = "peso-extra";
+        extra.textContent = " · " + frase;
+        share.appendChild(extra);
+      }
       head.appendChild(share);
     }
     el.appendChild(head);

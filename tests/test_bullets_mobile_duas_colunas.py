@@ -265,7 +265,9 @@ def test_as_strings_com_algarismo_continuam_as_mesmas_no_js():
     travadas caractere a caractere.
     """
     js = _txt(FILME_JS)
-    assert 'share.textContent = "~" + b.share_real + "% das notas";' in js
+    # [rodada destaque] a string agora é montada uma vez (`textoShare`) e vai
+    # para o cabeçalho com ou sem a barra de `?pct=barra`
+    assert 'var textoShare = "~" + b.share_real + "% das notas";' in js
     # [rodada página do filme] a faixa de estrelas virou texto ("notas 0,5
     # a 2"): sem "★", a faixa vem de `FAIXA_DE_NOTAS`
     assert 'return fx ? "notas " + fx : "";' in js

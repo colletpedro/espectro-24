@@ -306,3 +306,96 @@ def test_os_blocos_de_texto_compartilham_a_mesma_regra_de_coluna():
             assert "margin-left: auto" not in corpo and not re.search(r"margin:\s*[^;]*auto", corpo), sel
     # a prosa: 68ch, alinhada à esquerda
     assert re.search(r"\.disclosure--narrativa \{ max-width: var\(--larg-prosa\); \}", css)
+
+
+# --- 10. destaque discreto de grupo pequeno (?pct=) -----------------------------------
+
+def _pct(variante, patch=None, slug="top-gun-maverick"):
+    env = {"HARNESS_PCT": variante}
+    if patch:
+        env["HARNESS_PATCH"] = json.dumps({"slug": slug, **patch})
+    return _rodar(env, slug)[slug]
+
+
+def test_o_N_de_1_em_cada_N_e_calculado_certo():
+    for share, esperado in ((4, "cerca de 1 em cada 25"), (3.2, "cerca de 1 em cada 31"),
+                            (5, "cerca de 1 em cada 20"), (1, "cerca de 1 em cada 100"),
+                            (0.6, "menos de 1 em cada 100"), (0, "menos de 1 em cada 100")):
+        d = _pct("frase", {"share": {"negativas": share}})
+        g = next(x for x in d["pesos_grupo"] if x["g"] == "negativas")
+        assert g["extra"] == " · " + esperado, (share, g)
+
+
+def test_a_frase_so_aparece_abaixo_do_limiar_e_para_qualquer_grupo():
+    base = _pct("frase")
+    for g in base["pesos_grupo"]:
+        assert (g["extra"] is not None) == (g["g"] == "negativas"), g      # 4% → sim; 14% e 82% → não
+    # o limiar é inclusivo (<= 5) e vale para FANS e MIXED, não só HATERS
+    d = _pct("frase", {"share": {"positivas": 3, "negativas": 6, "medianas": 5}})
+    por = {g["g"]: g for g in d["pesos_grupo"]}
+    assert por["positivas"]["extra"] == " · cerca de 1 em cada 33"
+    assert por["medianas"]["extra"] == " · cerca de 1 em cada 20"
+    assert por["negativas"]["extra"] is None                                # 6% > limiar
+    # a coluna de "Para decidir" segue o mesmo peso
+    d = _pct("frase", {"peso_pct": {"vale_a_pena": 2}})
+    pos = next(c for c, r in zip(d["pesos_coluna"], d["rotulos"]) if r["lado"] == "pos")
+    assert pos["extra"] == " · cerca de 1 em cada 50"
+    assert pos["texto"].startswith("~2% das notas · cerca de 1 em cada 50 · quem deu de 3,5 a 5")
+
+
+def test_a_barra_aparece_em_todos_os_grupos_com_largura_proporcional():
+    d = _pct("barra")
+    assert len(d["pesos_grupo"]) == 3
+    for g in d["pesos_grupo"]:
+        assert g["barra"], g
+        pct = int(re.search(r"~(\d+)%", g["texto"]).group(1))
+        assert g["barra"]["largura"] == f"{pct}%", g
+        assert g["barra"]["aria"] == f"cerca de {pct}% das notas"
+        assert g["barra"]["g"] == g["g"]
+    for c in d["pesos_coluna"]:
+        assert c["barra"] and c["barra"]["largura"].endswith("%")
+    assert not any(g["extra"] for g in d["pesos_grupo"])        # barra não traz a frase
+
+
+def test_sem_pct_a_pagina_e_a_de_antes(padrao):
+    d = padrao["top-gun-maverick"]
+    assert all(g["extra"] is None and g["barra"] is None for g in d["pesos_grupo"])
+    assert all(c is None or (c["extra"] is None and c["barra"] is None) for c in d["pesos_coluna"])
+
+
+def test_pct_nao_muda_a_regra_de_produto(padrao):
+    for variante in ("frase", "barra"):
+        outra = _rodar({"HARNESS_PCT": variante})
+        for slug, p in padrao.items():
+            for campo in CAMPOS_DA_REGRA + ("secoes", "topo"):
+                assert p[campo] == outra[slug][campo], (variante, slug, campo)
+
+
+def test_a_frase_nova_nao_tem_vocabulario_proibido():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("t_home", RAIZ / "tests" / "test_home_nova.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    for share in (0, 0.6, 1, 2, 3.2, 4, 5):
+        d = _pct("frase", {"share": {"negativas": share}})
+        frase = next(g for g in d["pesos_grupo"] if g["g"] == "negativas")["extra"]
+        assert not mod._proibidos_em(frase.replace("·", "")), (share, frase)
+
+
+def test_o_trilho_da_barra_tem_contraste_minimo_de_1_5_contra_o_fundo():
+    css = (RAIZ / "frontend" / "css" / "styles.css").read_text(encoding="utf-8")
+    trilho = re.search(r"--trilho-pct:\s*(#[0-9a-fA-F]{6})", css).group(1)
+
+    def lum(h):
+        c = [int(h.lstrip("#")[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+        c = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+        return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+    a, b = lum(trilho), lum("#0b0c10")
+    assert (a + 0.05) / (b + 0.05) >= 1.5
+    assert "width: 48px" in css and "border-radius: 0" in css
+
+
+def test_pct_e_constante_unica_e_padrao_nenhum():
+    js = FILME_JS.read_text(encoding="utf-8")
+    assert "var LIMIAR_PCT_PEQUENO = 5;" in js
+    assert 'indexOf(params.get("pct")) >= 0' in js and ': "nenhum";' in js
