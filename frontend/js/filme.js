@@ -139,12 +139,14 @@
   var TOPO_ESTATICO = params.get("topo") === "estatico";
   // [rodada destaque] `?pct=` — como o peso de um grupo aparece no cabeçalho
   // do grupo e na coluna de "Para decidir" (a RECEPÇÃO não muda):
-  //   nenhum (padrão)  só "~X% das notas"
+  //   nenhum           só "~X% das notas"
   //   frase            grupo com share <= LIMIAR_PCT_PEQUENO ganha "cerca de
   //                    1 em cada N" (qualquer grupo, pelo tamanho)
   //   barra            TODOS os grupos ganham uma barra de 48px com o share
-  var PCT_VARIANTE = ["frase", "barra"].indexOf(params.get("pct")) >= 0
-    ? params.get("pct") : "nenhum";
+  //   [padrão: barra — escolha do dono; `?pct=nenhum` volta ao texto só]
+  var PCT_PADRAO = "barra";
+  var PCT_VARIANTE = ["nenhum", "frase", "barra"].indexOf(params.get("pct")) >= 0
+    ? params.get("pct") : PCT_PADRAO;
   var LIMIAR_PCT_PEQUENO = 5;
 
   var film = DATA.filmes[slug];

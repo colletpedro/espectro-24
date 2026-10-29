@@ -357,8 +357,8 @@ def test_a_barra_aparece_em_todos_os_grupos_com_largura_proporcional():
     assert not any(g["extra"] for g in d["pesos_grupo"])        # barra não traz a frase
 
 
-def test_sem_pct_a_pagina_e_a_de_antes(padrao):
-    d = padrao["top-gun-maverick"]
+def test_pct_nenhum_e_a_pagina_de_antes():
+    d = _pct("nenhum")
     assert all(g["extra"] is None and g["barra"] is None for g in d["pesos_grupo"])
     assert all(c is None or (c["extra"] is None and c["barra"] is None) for c in d["pesos_coluna"])
 
@@ -395,7 +395,11 @@ def test_o_trilho_da_barra_tem_contraste_minimo_de_1_5_contra_o_fundo():
     assert "width: 48px" in css and "border-radius: 0" in css
 
 
-def test_pct_e_constante_unica_e_padrao_nenhum():
+def test_pct_e_constante_unica_e_padrao_barra(padrao):
     js = FILME_JS.read_text(encoding="utf-8")
     assert "var LIMIAR_PCT_PEQUENO = 5;" in js
-    assert 'indexOf(params.get("pct")) >= 0' in js and ': "nenhum";' in js
+    assert len(re.findall(r'var PCT_PADRAO = "[a-z]+";', js)) == 1
+    assert 'var PCT_PADRAO = "barra";' in js
+    # sem parâmetro, todo grupo tem a barra
+    for g in padrao["top-gun-maverick"]["pesos_grupo"]:
+        assert g["barra"], g
