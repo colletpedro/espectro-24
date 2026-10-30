@@ -944,6 +944,37 @@ escrito. Contingência pré-registrada: se houver < 15 E distintos,
 `especificidade_bullet.py lote-extra` (40 itens, quartis de M-anc 5/5/10/20,
 semente 20261031) antes de `medir`.
 
+**Calibração v2 (MEDIDO, 2026-10-30).** Rótulos do dono:
+`docs/arquivo-de-estudos/finetune-fase1/rotulos_calibracao_v2.csv` (fora do
+git; sha256 `a210d475…`), com 90 itens e todos válidos. Entre os 80 distintos,
+**63 G e 17 E**. Como 17 ≥ 15, pela regra pré-registrada a calibração TEM
+poder e **não houve lote extra** (a contagem de E foi a única conta feita antes
+de `medir`). Consistência do dono nos 10 repetidos: **10/10 (1,00)**. e5: 0
+truncados (máx. 86 tokens). Limiares congelados em
+`especificidade/limiares_v2.json` (sha256 `dbe0b135…`, escrito uma vez pelo
+`especificidade_bullet.py medir`, código `ff71747e…`).
+
+| medida | AUC calib. (pond.) | limiar (G se score ≥) | TPR (G) | TNR (E) | acur. bal. |
+|---|---|---|---|---|---|
+| M-disp | **0,861** | 0,02643 | 0,794 | 0,882 | **0,838** |
+| M-anc (score = −M-anc) | 0,616 | −1,7346 | 0,397 | 0,941 | 0,669 |
+| M-comb | 0,862 | prob. 0,7975 | 0,794 | 0,882 | 0,838 |
+
+- A AUC de calibração é otimista por construção, porque limiar e M-comb foram
+  ajustados nos mesmos 80. O que decide é a VALIDAÇÃO, ainda não montada.
+- Matriz da M-disp no limiar: os pesos dos quartis são quase iguais
+  (11,8–11,85), então as taxas ponderadas correspondem às contagens
+  **G→G 50, G→E 13, E→E 15, E→G 2** (50/63 = 0,794; 15/17 = 0,882). Essas
+  contagens são DERIVADAS das taxas, não recontadas.
+- A M-comb dá peso quase nulo à M-anc (coeficientes padronizados: M-disp 1,60;
+  M-anc 0,05) e cai no mesmo ponto de Youden da M-disp. Pela regra da mais
+  simples, se as duas passarem na validação, fica a M-disp.
+- Nada foi revisto depois dos rótulos: fórmula, k, orientação e pesos são os
+  do PROTOCOLO_v2.
+
+**Próximo (não feito):** a validação (60 + 6), depois da escolha do modelo
+base, com `gerar_titulos_base.py` adaptado para gravar o exemplo.
+
 ## Kaggle — correção do registro e invalidação das versões 2 e 3 (2026-10-30)
 
 - **Correção:** o relatório anterior citava o sha256 `136d4450…` como o do
@@ -991,9 +1022,9 @@ semente 20261031) antes de `medir`.
   (o teste de fumaça registra a comparação em `template_confere`).
 - Se a cota de 0,35 token/caractere separa bem os pares que cabem na janela
   do juiz (`medir-contexto` confere os 10 maiores julgáveis no servidor).
-- (fase 1) Nenhuma medida de especificidade sobre item rotulado: os rótulos de
-  títulos foram arquivados sem conta (DESVIO_01); os da v2 (bullet completo)
-  ainda não voltaram; a validação nem foi montada.
+- (fase 1) A validação da medida de especificidade: só a calibração v2 rodou
+  (AUC de calibração, otimista); os rótulos de títulos foram arquivados sem
+  conta (DESVIO_01); a validação nem foi montada.
 - O tamanho do disco temporário do Kaggle (a documentação não declara).
 - (22/10) O backend de SDPA do E4B foi INFERIDO da alocação e do código; o
   smoke de 20/10 não o registrou. O mecanismo do OOM do 12B não está nos logs

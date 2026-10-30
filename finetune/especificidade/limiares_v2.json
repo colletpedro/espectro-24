@@ -1,0 +1,60 @@
+{
+ "rotulos_sha256": "a210d4754f9f66217e7280197ee4f12503e642555213f6eafdc22fe44f7713fa",
+ "n": 80,
+ "n_G": 63,
+ "n_E": 17,
+ "lote_extra": false,
+ "consistencia_dono": 1.0,
+ "n_repetidos": 10,
+ "e5": {
+  "limite_tokens": 512,
+  "textos": 80,
+  "truncados": 0,
+  "comprimentos_truncados": [],
+  "max_tokens": 86,
+  "mediana_tokens": 49
+ },
+ "medidas": {
+  "M-disp": {
+   "auc_calibracao": 0.8607,
+   "limiar": 0.02642717957496643,
+   "J": 0.6758216724546363,
+   "tpr": 0.7935271604109313,
+   "tnr": 0.882294512043705,
+   "acuracia_balanceada": 0.8379108362273181
+  },
+  "M-anc": {
+   "auc_calibracao": 0.6161,
+   "limiar": -1.7346010553881064,
+   "J": 0.33791083622731816,
+   "tpr": 0.39676358020546565,
+   "tnr": 0.9411472560218525,
+   "acuracia_balanceada": 0.6689554181136591
+  },
+  "M-comb": {
+   "auc_calibracao": 0.8617,
+   "limiar": 0.7974923489955031,
+   "J": 0.6758216724546363,
+   "tpr": 0.7935271604109313,
+   "tnr": 0.882294512043705,
+   "acuracia_balanceada": 0.8379108362273181,
+   "modelo": {
+    "coef": [
+     1.883823373216888,
+     1.5954506824304522,
+     0.05123668501708712
+    ],
+    "media": [
+     0.029398300871253013,
+     2.5160119428566636
+    ],
+    "desvio": [
+     0.00976797595513598,
+     1.2779159537279396
+    ],
+    "convergiu": true
+   }
+  }
+ },
+ "orientacao": "score alto = G; M-anc entra com sinal trocado"
+}
