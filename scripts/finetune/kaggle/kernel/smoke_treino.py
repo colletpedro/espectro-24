@@ -55,6 +55,11 @@ Revisão de 2026-10-22 (Qwen3-8B; o critério e as configurações não mudam):
   kernels CUDA vistos por `torch.profiler` num passo curto) e o dtype;
 - `e1`, `e2` e `e3` já calculados no log (E3 com o nº real de exemplos de treino
   depois da limpeza, do `meta.json`).
+
+Revisão de 2026-10-30: ao iniciar (orquestrador e cada subprocesso), o sha256 do
+`smoke.jsonl` lido é conferido contra `meta.json["smoke_sha256"]` e gravado em
+`resumo.json`/`log.json` (`dataset`); divergência, ou `meta.json` sem o sha,
+aborta antes de instalar ou treinar.
 """
 from __future__ import annotations
 
@@ -164,6 +169,26 @@ def _ler_meta() -> dict:
         return {}
     m = Path(achados[0]).with_name("meta.json")
     return json.loads(m.read_text(encoding="utf-8")) if m.exists() else {}
+
+
+def _conferir_dataset() -> dict:
+    """sha256 do `smoke.jsonl` LIDO contra `meta.json["smoke_sha256"]`; aborta
+    se divergir ou se o `meta.json` não trouxer o sha (sem ele não há o que
+    conferir). As versões 2 e 3 do kernel do Qwen3-8B rodaram sobre uma versão
+    do dataset que não se pôde verificar (FINETUNE_REGISTRO.md): esta conferência
+    é o que impede isso de passar calado. Vale para todo kernel de treino."""
+    achados = glob.glob(ENTRADA_GLOB, recursive=True)
+    if len(achados) != 1:
+        raise SystemExit(f"esperava 1 smoke.jsonl em /kaggle/input, achei {achados}")
+    lido = _sha256(Path(achados[0]))
+    esperado = _ler_meta().get("smoke_sha256")
+    conf = {"arquivo": achados[0], "sha256_lido": lido, "sha256_meta": esperado,
+            "confere": lido == esperado}
+    print(f"[dataset] smoke.jsonl sha256 lido {lido} / meta.json {esperado}", flush=True)
+    if not conf["confere"]:
+        raise SystemExit(f"smoke.jsonl lido ({lido}) não é o do meta.json ({esperado}): "
+                         f"dataset errado ou desatualizado no Kaggle — abortado")
+    return conf
 
 
 def _versoes() -> dict:
@@ -366,7 +391,7 @@ def medir_modelo(nome: str, seq: int) -> dict:
     mon = Monitor(pasta / "linha_do_tempo.jsonl")
     mon.start()
     reg = {"modelo": nome, "repo": cfg["repo"], "max_seq_length": seq, "seed": SEED,
-           "rascunho": RASCUNHO, "df_inicio": _df()}
+           "rascunho": RASCUNHO, "df_inicio": _df(), "dataset": _conferir_dataset()}
 
     def gravar():
         reg["pico_ram_por_fase_gib"] = {k: round(v, 2) for k, v in mon.picos.items()}
@@ -619,10 +644,11 @@ def rodar_um(nome: str, seq: int, timeout_s: int) -> dict:
 
 def orquestrar(incluir_qwen: bool) -> None:
     SAIDA.mkdir(parents=True, exist_ok=True)
+    dataset = _conferir_dataset()            # antes de instalar ou treinar qualquer coisa
     meta = _ler_meta()
     ordem = list(meta.get("candidatos") or (ORDEM + (["qwen3-8b"] if incluir_qwen else [])))
     resumo = {"inicio": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-              "df_inicio": _df(), "instalacao": instalar(), "ordem": ordem,
+              "dataset": dataset, "df_inicio": _df(), "instalacao": instalar(), "ordem": ordem,
               "meta_dataset": meta, "execucoes": []}
     _json(SAIDA / "resumo.json", resumo)
     for nome in ordem:
