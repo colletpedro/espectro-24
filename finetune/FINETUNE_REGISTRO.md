@@ -893,11 +893,82 @@ flush do pré-voo). `unsloth` e `unsloth_zoo` FIXADOS em 2026.10.7.
   `qwen3-8b__12288`), com ou sem erro; `viabilidade_ollama.py importar-pasta`
   acha as que têm `.gguf`.
 
-## Fase 1 — em espera
+## Fase 1 — títulos arquivados e troca da unidade (2026-10-30)
 
-A calibração está suspensa até o dono esclarecer a autoria dos rótulos de
-`rotulos_calibracao.csv`. Neste trabalho esse arquivo não foi lido, movido nem
-usado em nenhuma conta.
+**Achado (informado pelo dono).** O dono rotulou pessoalmente os 90 títulos da
+calibração v1: **77 G e 13 E (85,6% G)**. Isso sugere que o título sozinho, sem
+filme e sem contexto, não carrega a especificidade que a premissa atribui ao
+publicado. O arquivo de rótulos não foi aberto. Nenhuma medida (M-disp, M-anc,
+M-comb), AUC, limiar ou consistência foi calculada sobre ele, e nunca será. Ele
+não entra em calibração nem em validação. Rótulos e documento arquivados, fora
+do git, em `docs/arquivo-de-estudos/finetune-fase1/titulos_arquivado/`
+(`rotulos_calibracao.csv` sha256 `9064da6a…`; `rotulagem_calibracao.md`
+`66cfdce2…`).
+
+**Desvio.** `especificidade/DESVIO_01.md` (commit próprio `2440345`): a unidade
+passa a ser o BULLET COMPLETO. O bloco do bullet no frontend só mostra o título
+e a barra (`frontend/js/filme.js:1781`, `1768`, `1785–1793`); o único texto
+além do título é o `exemplo_parafraseado` ("Aprofundar", `filme.js:1819–1837`;
+schema `src/espectro24/models.py:93–97`). A leitura cega anterior mostrava
+"tema — exemplo". Decisão do dono: **bullet completo = `tema` + " — " +
+`exemplo_parafraseado`**, sem contagens nem nome do bucket.
+
+**Pré-registro v2.** `especificidade/PROTOCOLO_v2.md`, commit próprio `b9649e7`
+(sha256 `2716b42e…`), ANTES do documento. Código
+`scripts/finetune/especificidade_bullet.py` (sha256 `ff71747e…`, `main`
+`50522eb6…`; copiado sem alteração para este branch), que importa sem
+alteração as medidas de `especificidade.py` (`7d40e620…`).
+
+**Referência v2.** `especificidade/referencia_bullets.jsonl`, sha256
+`da8723a62ebf8de16b8344e1e73a0891cc64bb4c76505a7046ddcd963de54522`: os mesmos
+1.223 bullets (68 filmes; 1.079 treino, 144 validação), com o exemplo. Os
+`tema` e `exemplo_parafraseado` são idênticos em `resultado/` de `main` e deste
+branch (MEDIDO: 0 divergências). e5 com `query:`: **0 truncados** (máx. 97
+tokens, mediana 49; limite 512).
+
+**Calibração v2 preparada.** Pool elegível de TREINO = 1.079 − 133 = **946**
+(80 pelo id da amostra v1 + 53 com o mesmo título normalizado). Limitação: a
+exclusão por título tira títulos recorrentes, que tendem ao genérico. 20 por
+quartil de M-disp no pool (237/236/237/236 → pesos 11,85/11,8/11,85/11,8),
+semente 20261030, mais 10 repetidos a ≥ 40 posições: **90 itens**, 47 filmes
+distintos, 0 colisões com a amostra v1. Documento cego
+`docs/arquivo-de-estudos/finetune-fase1/rotulagem_calibracao_v2.md` (fora do
+git; sha256 `beb743e5…`; 3.501 palavras), respostas em branco
+`rotulos_calibracao_v2.csv` (`62d3aa51…`), mapa
+`especificidade/mapa/calibracao_v2_mapa.json` (selo
+`1dc2dc09888a19b1e011cf220a2f72ce733c11a24d2256b20cf4c070cc6d9c16`; só o
+quartil, nenhum valor de medida). Em 16 linhas do documento (13 bullets distintos;
+3 deles aparecem também como repetidos), o próprio exemplo publicado cita o grupo ("reviews
+negativas", "medianas"…). O texto não foi alterado, porque é o bullet como está
+escrito. Contingência pré-registrada: se houver < 15 E distintos,
+`especificidade_bullet.py lote-extra` (40 itens, quartis de M-anc 5/5/10/20,
+semente 20261031) antes de `medir`.
+
+## Kaggle — correção do registro e invalidação das versões 2 e 3 (2026-10-30)
+
+- **Correção:** o relatório anterior citava o sha256 `136d4450…` como o do
+  dataset do smoke do Qwen3-8B. Esse é o da primeira montagem, com 141
+  exemplos, de ANTES da saída do `satantango/positivas`. O correto é
+  `ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f` (140).
+- **Versões 2 e 3 do kernel qwen3:** rodaram ANTES de o dataset ser versionado
+  no Kaggle, sobre uma versão antiga cujo conteúdo não foi possível verificar
+  (o download deu 404). Por isso foram **canceladas e invalidadas**: nenhum
+  número delas entra em critério nenhum.
+- **Versão 4:** enviada DEPOIS da versão nova do dataset (`ae74737d…`). Os
+  logs ainda não chegaram.
+- **Conferência pronta:** `scripts/finetune/kaggle/conferir_saida_smoke.py
+  --saida <pasta baixada>` (em `main`) compara os logs com os 6 exemplos do
+  `smoke_dataset_qwen3/smoke.jsonl`. Ela confere o sha do dataset local, o
+  `meta_dataset.smoke_sha256` lido no Kaggle, o `template_confere` dos 6 papéis
+  e, no longo e no 1º mediano, slug/bucket, `tokens_entrada` = `tokens.total` e
+  `tokens_treinados` = `tokens.saida`, em igualdade exata, com código de saída
+  1 se algo divergir. Limitação: o log só conta tokens do 1º lote de cada
+  treino; os medianos 2–4 ficam conferidos pelo texto renderizado.
+- **Kernel (`main`):** `smoke_treino.py` calcula o sha256 do `smoke.jsonl` lido
+  ao iniciar (orquestrador e cada subprocesso), grava o sha em
+  `resumo.json`/`log.json` (`dataset`) e no stdout, e ABORTA se ele divergir de
+  `meta.json["smoke_sha256"]` ou se o `meta.json` não trouxer o sha. Regra para
+  todo kernel de treino futuro. Nada foi reenviado ao Kaggle.
 
 ## O que NÃO foi medido
 
@@ -920,8 +991,9 @@ usado em nenhuma conta.
   (o teste de fumaça registra a comparação em `template_confere`).
 - Se a cota de 0,35 token/caractere separa bem os pares que cabem na janela
   do juiz (`medir-contexto` confere os 10 maiores julgáveis no servidor).
-- (fase 1) Nenhuma medida de especificidade sobre título real: os rótulos da
-  calibração ainda não voltaram; a validação nem foi montada.
+- (fase 1) Nenhuma medida de especificidade sobre item rotulado: os rótulos de
+  títulos foram arquivados sem conta (DESVIO_01); os da v2 (bullet completo)
+  ainda não voltaram; a validação nem foi montada.
 - O tamanho do disco temporário do Kaggle (a documentação não declara).
 - (22/10) O backend de SDPA do E4B foi INFERIDO da alocação e do código; o
   smoke de 20/10 não o registrou. O mecanismo do OOM do 12B não está nos logs
