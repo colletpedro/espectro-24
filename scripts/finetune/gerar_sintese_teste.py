@@ -4,11 +4,16 @@ para o treinado. PREPARADO, NÃO RODADO (2026-10-31).
 Os dois lados passam pelo mesmo caminho: GGUF Q4_K_M exportado no Kaggle pela
 mesma função, importado no Ollama do Windows com o Modelfile canônico
 (`viabilidade_ollama.py importar-pasta`, o do E4) e chamado pelo caminho de
-produção (`local_ollama.resposta_json_local`, `think` false, JSON livre,
-`num_predict` 3.000). A base é o export do kernel
+produção: `synthesize.synthesize_bucket` (a mesma retentativa de produção:
+1 nova chamada em JSON inválido; 1 retentativa com `_REFORCO_VALIDACAO` se
+idioma ou escopo falharem) com `local_ollama.resposta_json_local` injetado
+(`think` false, JSON livre, `num_predict` 3.000, temperatura 0,8 e seed
+20261019 EXPLÍCITAS — `PREREGISTRO_AVALIACAO.md`, seção 2). A base é o export do kernel
 `kaggle/kernel_base/exportar_base.py`, NÃO o `hf.co/unsloth/Qwen3-8B-GGUF`.
 
 Travas:
+- `ESPECTRO24_OLLAMA_TEMPERATURE` no ambiente aborta a geração (a temperatura
+  é a do pré-registro, passada em cada chamada);
 - só filmes de TESTE de `split.json`; recusa qualquer outro (e qualquer filme
   que esteja também em treino ou validação); o bucket do Gemini
   (`a-brighter-summer-day/positivas`, `buckets_excluidos`) fica fora: 89 pares;
@@ -29,11 +34,14 @@ Travas:
   RAM livre ≥ 2 GB DURANTE cada chamada (a mesma do `viabilidade_ollama`; não
   se desliga: se ela derrubar o servidor, a série para e o par fica gravado
   com `abortado_por_memoria`), com o pico de RAM/VRAM de cada chamada gravado;
-- retomável: par com `ok: true` não é refeito;
+- memória: par derrubado pela guarda de RAM é tentado de novo UMA vez (na
+  próxima execução, depois de nova partida limpa); se cair de novo, fica
+  `fora_por_memoria` (sai dos DOIS lados de toda comparação e não é refeito);
+- retomável: par com `ok: true` (ou `fora_por_memoria`) não é refeito;
 - saída: `finetune/fase2/sintese_<lado>/<slug>__<bucket>.json` e
-  `manifesto.json` (sha256 de cada arquivo), reescrito a cada par. Grava o
-  texto cru e o JSON parseado; o pós-processamento de produção
-  (`_construir_temas`) é aplicado na hora de medir, com o mesmo n do publicado.
+  `manifesto.json` (sha256 de cada arquivo), reescrito a cada par. Grava cada
+  tentativa (texto cru, tempos, se levou o reforço) e o bucket FINAL que a
+  produção publicaria (`_construir_temas`, flags de idioma e escopo).
 
 Subcomandos:
     plano   (Mac) tokens exatos e `num_ctx` dos 89 pares → `fase2/plano_teste.json`
@@ -61,6 +69,13 @@ TETO_SAIDA = 3000
 MARGEM = 0.10
 RAM_LIVRE_MIN_GB = 2.0
 LADOS = {"base": "espectro-qwen3-8b-base", "treinado": "espectro-qwen3-8b-ft"}
+# PREREGISTRO_AVALIACAO.md, seção 2: o valor que o pipeline usa de fato (o Modelfile
+# corrigido não tem PARAMETER temperature → padrão do Ollama, 0,8) e o seed do juiz
+# (`juiz_bullets_v2.SEED`); passados em CADA chamada
+TEMPERATURA = 0.8
+SEED = 20261019
+VAR_TEMPERATURA = "ESPECTRO24_OLLAMA_TEMPERATURE"
+MAX_ABORTOS_MEMORIA = 2
 
 
 def num_ctx_da_chamada(tokens_prompt: int) -> int:
@@ -80,6 +95,11 @@ def excluidos(split: dict) -> set[tuple[str, str]]:
 
 
 def pares(split: dict):
+    for slug, nome, s, u, _ in buckets_de_teste(split):
+        yield slug, nome, s, u
+
+
+def buckets_de_teste(split: dict):
     fora = excluidos(split)
     teste = set(filmes_de_teste(split))
     for slug in sorted(teste):
@@ -92,7 +112,7 @@ def pares(split: dict):
                 continue
             assert slug in teste
             s, u = K.prompt_sintese(b)
-            yield slug, b.nome, s, u
+            yield slug, b.nome, s, u, b
 
 
 def cmd_plano(a) -> None:
@@ -158,14 +178,54 @@ def gravar_manifesto(pasta: Path) -> None:
 
 
 def ja_feito(arq: Path) -> bool:
-    return arq.exists() and K.ler_json(arq).get("ok") is True
+    if not arq.exists():
+        return False
+    reg = K.ler_json(arq)
+    return reg.get("ok") is True or reg.get("fora_por_memoria") is True
+
+
+def abortos_anteriores(arq: Path) -> int:
+    return K.ler_json(arq).get("abortos_memoria", 0) if arq.exists() else 0
+
+
+def recusar_temperatura_do_ambiente() -> None:
+    if VAR_TEMPERATURA in os.environ:
+        raise SystemExit(f"{VAR_TEMPERATURA} está no ambiente: a temperatura é a do "
+                         f"pré-registro ({TEMPERATURA}), passada em cada chamada — remova-a")
+
+
+def bucket_final(b) -> dict:
+    """O que a produção publicaria deste bucket (forma de `validar_publicado`)."""
+    from dataclasses import asdict
+    return {"temas": [asdict(t) for t in b.temas], "observacao_geral": b.observacao_geral,
+            "n_validas": b.n_validas, "n_analisadas": len(b.reviews_analisadas),
+            "idioma_invalido": b.idioma_invalido, "escopo_suspeito": b.escopo_suspeito}
+
+
+def cliente_registrado(chamar, s: str, nome: str, num_ctx: int, tentativas: list):
+    """O `client_call` que `synthesize_bucket` recebe: cada chamada vai ao Ollama
+    com a configuração do pré-registro e fica gravada em `tentativas`."""
+    def client_call(system: str, user: str, model: str) -> str:
+        r = chamar(system, user, estagio="sintese", modelo=nome, schema="json", prazo=3600,
+                   num_predict=TETO_SAIDA, num_ctx=num_ctx, think="false", seed=SEED,
+                   temperatura=TEMPERATURA)
+        tentativas.append({"reforco": system != s, "system_sha256": K.sha256_texto(system),
+                           "texto": r["texto"],
+                           **{k: r.get(k) for k in ("modelo_efetivo", "finish_reason",
+                                                    "latencia_s", "leitura_prompt_s",
+                                                    "geracao_s", "carga_s",
+                                                    "prompt_eval_count", "eval_count")}})
+        return r["texto"]
+    return client_call
 
 
 def cmd_gerar(a) -> None:
     if os.environ.get("CLAUDECODE"):
         raise SystemExit("rode FORA do Claude Code (CLAUDECODE está no ambiente)")
+    recusar_temperatura_do_ambiente()
+    import copy
     from espectro24.local_ollama import LLMLocalFalhou, resposta_json_local
-    from espectro24.synthesize import _parse_llm_json
+    from espectro24.synthesize import _parse_llm_json, synthesize_bucket
     from _latencia import GuardaDeLatencia, LatenciaAnomala
     import viabilidade_ollama as V
 
@@ -176,7 +236,7 @@ def cmd_gerar(a) -> None:
     if plano_doc["split_sha256"] != K.sha256_arquivo(a.split):
         raise SystemExit("split.json mudou desde o plano: rode `plano` no Mac")
     plano = {(p["slug"], p["bucket"]): p for p in plano_doc["pares"]}
-    todos = {(x[0], x[1]): x for x in pares(split)}
+    todos = {(x[0], x[1]): x for x in buckets_de_teste(split)}
     if set(todos) != set(plano):
         raise SystemExit("plano_teste.json não cobre exatamente os pares de teste: rode `plano`")
     teste = set(split["teste"])
@@ -200,57 +260,69 @@ def cmd_gerar(a) -> None:
     srv = V.subir_ollama()
     try:
         for chave in falta:
-            slug, bucket, s, u = todos[chave]
+            slug, bucket, s, u, b = todos[chave]
             p = plano[chave]
             if (K.sha256_texto(s), K.sha256_texto(u)) != (p["system_sha256"], p["user_sha256"]):
                 raise SystemExit(f"{slug}/{bucket}: o prompt remontado não é o do plano")
             reg = {"lado": a.lado, "modelo": nome, "origem": origem, "slug": slug,
                    "bucket": bucket, "num_ctx": p["num_ctx"],
                    "tokens_prompt_plano": p["tokens_prompt"], "num_predict": TETO_SAIDA,
-                   "think": "false", "system_sha256": p["system_sha256"],
+                   "think": "false", "temperatura": TEMPERATURA, "seed": SEED,
+                   "system_sha256": p["system_sha256"],
                    "user_sha256": p["user_sha256"], "partida": partida,
                    "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
+            arq = pasta / f"{slug}__{bucket}.json"
+            tentativas: list[dict] = []
             mon = V.Monitor(RAM_LIVRE_MIN_GB, ao_estourar=V.matar_ollama)
             mon.start()
             t0 = time.time()
             try:
-                r = chamar(s, u, estagio="sintese", modelo=nome, schema="json", prazo=3600,
-                           num_predict=TETO_SAIDA, num_ctx=p["num_ctx"], think="false")
-                reg.update({k: r.get(k) for k in ("modelo_efetivo", "finish_reason", "latencia_s",
-                                                  "leitura_prompt_s", "geracao_s", "carga_s",
-                                                  "prompt_eval_count", "eval_count")})
-                reg["texto"] = r["texto"]
+                final = synthesize_bucket(copy.deepcopy(b), model=nome, client_call=cliente_registrado(
+                    chamar, s, nome, p["num_ctx"], tentativas))
                 reg["ok"] = True
-                try:
-                    reg["json"] = _parse_llm_json(r["texto"])
-                    reg["json_parseia"] = True
-                except ValueError as e:
-                    reg.update({"json_parseia": False, "erro_json": str(e)[:200]})
+                reg["bucket_final"] = bucket_final(final)
+                reg["json_parseia"] = final.observacao_geral != "Falha ao obter JSON válido do LLM."
+                reg["json_parseia_1a_tentativa"] = None
+                if tentativas:                    # `sem_analise` não chama o modelo
+                    try:
+                        _parse_llm_json(tentativas[0]["texto"])
+                        reg["json_parseia_1a_tentativa"] = True
+                    except ValueError:
+                        reg["json_parseia_1a_tentativa"] = False
             except LLMLocalFalhou as e:
                 reg.update({"ok": False, "erro": str(e)[:500]})
+            except LatenciaAnomala as e:      # a guarda barrou a retentativa: par refeito ao retomar
+                reg.update({"ok": False, "erro": f"retentativa barrada pela guarda de latência: {e}"})
             finally:
                 mon.parar.set()
                 mon.join(timeout=5)
             reg["parede_s"] = round(time.time() - t0, 1)
             reg["memoria"] = {k: (round(v, 2) if isinstance(v, float) else v)
                               for k, v in mon.pico.items()}
+            reg["tentativas"] = tentativas
+            reg["n_chamadas"] = len(tentativas)
             reg["abortado_por_memoria"] = mon.estourou
-            if reg.get("ok") and reg.get("prompt_eval_count") != p["tokens_prompt"]:
-                reg["aviso_tokens"] = (f"prompt_eval_count {reg.get('prompt_eval_count')} ≠ "
-                                       f"plano {p['tokens_prompt']}")
+            reg["abortos_memoria"] = abortos_anteriores(arq) + (1 if mon.estourou else 0)
+            reg["fora_por_memoria"] = reg["abortos_memoria"] >= MAX_ABORTOS_MEMORIA
+            pec = tentativas[0].get("prompt_eval_count") if tentativas else None
+            if reg.get("ok") and pec != p["tokens_prompt"]:
+                reg["aviso_tokens"] = f"prompt_eval_count {pec} ≠ plano {p['tokens_prompt']}"
             anomala = guarda.pendente
             if anomala is not None:
                 reg["latencia_anomala"] = str(anomala)
-            arq = pasta / f"{slug}__{bucket}.json"
             arq.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
             gravar_manifesto(pasta)
             print(f"{slug}/{bucket}: ok {reg.get('ok')} · json {reg.get('json_parseia')} · "
+                  f"{reg['n_chamadas']} chamada(s) · "
                   f"ctx {p['num_ctx']} · {reg['parede_s']} s · RAM livre mín. "
                   f"{reg['memoria'].get('ram_livre_min_gb')} GB", flush=True)
             if mon.estourou:
+                destino = ("fica FORA POR MEMÓRIA (sai dos dois lados de toda comparação)"
+                           if reg["fora_por_memoria"] else
+                           "será tentado UMA vez mais na próxima execução (partida limpa)")
                 raise SystemExit(f"{slug}/{bucket}: a guarda de RAM derrubou o servidor (RAM "
-                                 f"livre < {RAM_LIVRE_MIN_GB} GB). Par gravado; a série parou. "
-                                 f"Reporte os números; a guarda não é desligada.")
+                                 f"livre < {RAM_LIVRE_MIN_GB} GB). Par gravado; {destino}; a "
+                                 f"série parou. Rode de novo para seguir; a guarda não é desligada.")
             if anomala is not None:
                 raise anomala
     except LatenciaAnomala as e:
