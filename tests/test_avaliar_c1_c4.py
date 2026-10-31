@@ -15,7 +15,16 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "scripts" / "finetune"))
 
+# o módulo importa `_guarda`, que troca `load_dotenv` e o socket do processo; este
+# arquivo é coletado ANTES de `test_dotenv.py`: os originais voltam logo depois do import
+import socket  # noqa: E402
+
+import dotenv  # noqa: E402
+
+_ORIGINAIS = (dotenv.load_dotenv, socket.socket.connect, socket.create_connection)
 import avaliar_c1_c4 as A  # noqa: E402
+
+dotenv.load_dotenv, socket.socket.connect, socket.create_connection = _ORIGINAIS
 
 
 def _par(b, rank, julgavel=True, slug="f1", bucket="positivas"):
