@@ -154,17 +154,18 @@ def nivel_think() -> str:
 
 
 def _opcoes(num_predict: int | None = None, num_ctx: int | None = None,
-            seed: int | None = None, temperatura: float | None = None) -> dict:
+            seed: int | None = None, amostragem: dict | None = None) -> dict:
+    """`amostragem` (temperature, top_p, top_k, min_p, repeat_penalty...) vai
+    inteira para `options` e sobrepõe o ambiente."""
     op = {"num_ctx": num_ctx or int(os.environ.get("ESPECTRO24_OLLAMA_NUM_CTX")
                                     or NUM_CTX_PADRAO),
           "num_predict": num_predict or int(
               os.environ.get("ESPECTRO24_OLLAMA_NUM_PREDICT")
               or FALLBACK_CONTEUDO_MAX_TOKENS_JSON)}
     temp = os.environ.get("ESPECTRO24_OLLAMA_TEMPERATURE")
-    if temperatura is not None:
-        op["temperature"] = float(temperatura)
-    elif temp:
+    if temp:
         op["temperature"] = float(temp)
+    op.update(amostragem or {})
     if seed is not None:
         op["seed"] = int(seed)
     return op
@@ -182,7 +183,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
                         schema: dict | str, prazo: float | None = None,
                         num_predict: int | None = None,
                         num_ctx: int | None = None, think: str | None = None,
-                        seed: int | None = None, temperatura: float | None = None) -> dict:
+                        seed: int | None = None, amostragem: dict | None = None) -> dict:
     """Uma chamada de JSON CURTO sobre UMA review no Ollama.
 
     Devolve o mesmo formato de `resposta_json_gemini` (`texto`, `provider`,
@@ -199,7 +200,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
 
     `think`: `false` por padrão (ver `nivel_think` para os outros níveis; o
     nível usado vai em `think` no retorno, `"omitido"` se o servidor recusou
-    o campo). `think`, `seed` e `temperatura` explícitos sobrepõem o ambiente — para quem
+    o campo). `think`, `seed` e `amostragem` explícitos sobrepõem o ambiente — para quem
     precisa fixar a configuração no código (o juiz v2 dos bullets, cuja
     configuração inteira entra num hash). Com `false`, um modelo com "raciocínio" (família qwen3, deepseek-r1)
     gastaria o teto de saída pensando — na CPU, minutos por chamada — e a
@@ -214,7 +215,7 @@ def resposta_json_local(system: str, user: str, *, estagio: str, modelo: str,
         raise ValueError(f"think={think!r} inválido — use um de {', '.join(NIVEIS_THINK)}")
     corpo = {"model": modelo, "stream": False, "keep_alive": KEEP_ALIVE,
              "format": schema, "think": False if nivel == "false" else nivel,
-             "options": _opcoes(num_predict, num_ctx, seed, temperatura),
+             "options": _opcoes(num_predict, num_ctx, seed, amostragem),
              "messages": [{"role": "system", "content": system},
                           {"role": "user", "content": user}]}
     limite = prazo if prazo is not None else prazo_s()

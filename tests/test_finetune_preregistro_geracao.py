@@ -1,7 +1,9 @@
 """[2026-10-31] Geração da avaliação conforme `PREREGISTRO_AVALIACAO.md`, seção 2.
 
-- temperatura 0,8 e seed 20261019 explícitas em CADA chamada; a variável
-  `ESPECTRO24_OLLAMA_TEMPERATURE` aborta a geração;
+- amostragem do DESVIO_P01 (temperature 0,7, top_p 0,8, top_k 20, min_p 0,
+  repeat_penalty 1,0) e seed 20261019 explícitas em CADA chamada, até o corpo
+  da requisição ao Ollama; a variável `ESPECTRO24_OLLAMA_TEMPERATURE` aborta
+  a geração; o hash do juiz não muda;
 - a retentativa é a de produção (`synthesize_bucket` com o cliente local
   injetado): JSON inválido ganha UMA nova chamada, e o reforço de validação vai
   só no system;
@@ -44,11 +46,44 @@ def test_temperatura_do_ambiente_aborta(monkeypatch):
     G.recusar_temperatura_do_ambiente()
 
 
-def test_temperatura_explicita_sobrepoe_o_ambiente(monkeypatch):
+def test_amostragem_explicita_sobrepoe_o_ambiente(monkeypatch):
     monkeypatch.setenv("ESPECTRO24_OLLAMA_TEMPERATURE", "0.2")
-    op = L._opcoes(3000, 8192, 20261019, 0.8)
-    assert op["temperature"] == 0.8 and op["seed"] == 20261019
+    op = L._opcoes(3000, 8192, 20261019, G.AMOSTRAGEM)
+    assert op["temperature"] == 0.7 and op["seed"] == 20261019
     assert L._opcoes(3000, 8192)["temperature"] == 0.2
+
+
+def test_amostragem_do_desvio_p01():
+    assert G.AMOSTRAGEM == {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "min_p": 0.0,
+                            "repeat_penalty": 1.0}
+    assert G.SEED == 20261019
+
+
+def test_os_seis_parametros_chegam_a_requisicao(monkeypatch):
+    from test_provider_local import OllamaFalso, _corpo_ok
+    f = OllamaFalso()
+    monkeypatch.setenv("ESPECTRO24_OLLAMA_URL", f.url)
+    monkeypatch.delenv("OLLAMA_HOST", raising=False)
+    f.respostas = [_corpo_ok({"x": 1}), _corpo_ok({"x": 1})]
+    try:
+        tentativas = []
+        cli = G.cliente_registrado(L.resposta_json_local, "S", "m", 9216, tentativas)
+        cli("S", "U", "m")
+        cli("S" + "reforço", "U", "m")
+    finally:
+        f.fechar()
+    for req in f.requisicoes:
+        op = req["options"]
+        assert {k: op[k] for k in G.AMOSTRAGEM} == G.AMOSTRAGEM
+        assert op["seed"] == 20261019 and op["num_ctx"] == 9216 and op["num_predict"] == 3000
+        assert req["think"] is False
+    assert [t["reforco"] for t in tentativas] == [False, True]
+
+
+def test_hash_do_juiz_nao_muda():
+    sys.path.insert(0, str(RAIZ / "scripts"))
+    import juiz_bullets_v2 as J
+    assert J.config_sha256() == "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669"
 
 
 def test_retentativa_de_producao_com_temperatura_e_seed_do_preregistro():
@@ -63,7 +98,7 @@ def test_retentativa_de_producao_com_temperatura_e_seed_do_preregistro():
     final = synthesize_bucket(b, model="m", client_call=G.cliente_registrado(
         chamar, s, "m", 8192, tentativas))
     assert len(pedidos) == 2                          # chamada + 1 retentativa de JSON
-    assert all(k["temperatura"] == 0.8 and k["seed"] == 20261019 for k in pedidos)
+    assert all(k["amostragem"] == G.AMOSTRAGEM and k["seed"] == 20261019 for k in pedidos)
     assert all(k["num_ctx"] == 8192 and k["think"] == "false" for k in pedidos)
     assert [t["texto"] for t in tentativas] == ["isto não é JSON", VALIDO]
     bf = G.bucket_final(final)

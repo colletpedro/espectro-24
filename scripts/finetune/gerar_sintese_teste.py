@@ -7,13 +7,15 @@ mesma função, importado no Ollama do Windows com o Modelfile canônico
 produção: `synthesize.synthesize_bucket` (a mesma retentativa de produção:
 1 nova chamada em JSON inválido; 1 retentativa com `_REFORCO_VALIDACAO` se
 idioma ou escopo falharem) com `local_ollama.resposta_json_local` injetado
-(`think` false, JSON livre, `num_predict` 3.000, temperatura 0,8 e seed
-20261019 EXPLÍCITAS — `PREREGISTRO_AVALIACAO.md`, seção 2). A base é o export do kernel
+(`think` false, JSON livre, `num_predict` 3.000; amostragem e seed EXPLÍCITAS
+em cada chamada — `PREREGISTRO_AVALIACAO.md`, seção 2, com o `DESVIO_P01.md`:
+temperature 0,7, top_p 0,8, top_k 20, min_p 0, repeat_penalty 1,0, seed
+20261019). A base é o export do kernel
 `kaggle/kernel_base/exportar_base.py`, NÃO o `hf.co/unsloth/Qwen3-8B-GGUF`.
 
 Travas:
-- `ESPECTRO24_OLLAMA_TEMPERATURE` no ambiente aborta a geração (a temperatura
-  é a do pré-registro, passada em cada chamada);
+- `ESPECTRO24_OLLAMA_TEMPERATURE` no ambiente aborta a geração (a amostragem
+  é a do DESVIO_P01, passada em cada chamada);
 - só filmes de TESTE de `split.json`; recusa qualquer outro (e qualquer filme
   que esteja também em treino ou validação); o bucket do Gemini
   (`a-brighter-summer-day/positivas`, `buckets_excluidos`) fica fora: 89 pares;
@@ -69,10 +71,12 @@ TETO_SAIDA = 3000
 MARGEM = 0.10
 RAM_LIVRE_MIN_GB = 2.0
 LADOS = {"base": "espectro-qwen3-8b-base", "treinado": "espectro-qwen3-8b-ft"}
-# PREREGISTRO_AVALIACAO.md, seção 2: o valor que o pipeline usa de fato (o Modelfile
-# corrigido não tem PARAMETER temperature → padrão do Ollama, 0,8) e o seed do juiz
-# (`juiz_bullets_v2.SEED`); passados em CADA chamada
-TEMPERATURA = 0.8
+# DESVIO_P01.md (substitui a temperatura 0,8 do PREREGISTRO_AVALIACAO.md, seção 2):
+# os valores do model card do Qwen3-8B para o modo SEM raciocínio (README.md:328,
+# revisão b968826d), repeat_penalty 1,0 explícito; o seed é o do juiz
+# (`juiz_bullets_v2.SEED`). Passados em CADA chamada.
+AMOSTRAGEM = {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "min_p": 0.0,
+              "repeat_penalty": 1.0}
 SEED = 20261019
 VAR_TEMPERATURA = "ESPECTRO24_OLLAMA_TEMPERATURE"
 MAX_ABORTOS_MEMORIA = 2
@@ -191,7 +195,7 @@ def abortos_anteriores(arq: Path) -> int:
 def recusar_temperatura_do_ambiente() -> None:
     if VAR_TEMPERATURA in os.environ:
         raise SystemExit(f"{VAR_TEMPERATURA} está no ambiente: a temperatura é a do "
-                         f"pré-registro ({TEMPERATURA}), passada em cada chamada — remova-a")
+                         f"DESVIO_P01 ({AMOSTRAGEM['temperature']}), passada em cada chamada — remova-a")
 
 
 def bucket_final(b) -> dict:
@@ -208,7 +212,7 @@ def cliente_registrado(chamar, s: str, nome: str, num_ctx: int, tentativas: list
     def client_call(system: str, user: str, model: str) -> str:
         r = chamar(system, user, estagio="sintese", modelo=nome, schema="json", prazo=3600,
                    num_predict=TETO_SAIDA, num_ctx=num_ctx, think="false", seed=SEED,
-                   temperatura=TEMPERATURA)
+                   amostragem=dict(AMOSTRAGEM))
         tentativas.append({"reforco": system != s, "system_sha256": K.sha256_texto(system),
                            "texto": r["texto"],
                            **{k: r.get(k) for k in ("modelo_efetivo", "finish_reason",
@@ -267,7 +271,7 @@ def cmd_gerar(a) -> None:
             reg = {"lado": a.lado, "modelo": nome, "origem": origem, "slug": slug,
                    "bucket": bucket, "num_ctx": p["num_ctx"],
                    "tokens_prompt_plano": p["tokens_prompt"], "num_predict": TETO_SAIDA,
-                   "think": "false", "temperatura": TEMPERATURA, "seed": SEED,
+                   "think": "false", "amostragem": AMOSTRAGEM, "seed": SEED,
                    "system_sha256": p["system_sha256"],
                    "user_sha256": p["user_sha256"], "partida": partida,
                    "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
