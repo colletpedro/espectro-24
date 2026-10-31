@@ -1335,6 +1335,74 @@ Tempo ESTIMADO por lado: ~3,7–4,5 h.
 **c) `PROPOSTA_FASE2.md`** (sha256 `99c9b127…`): métricas, margens, critérios e
 custo, para revisão. NÃO é o pré-registro.
 
+## Fase 1 — validação (MEDIDO, 2026-10-31): RESULTADO NEGATIVO
+
+`scripts/finetune/especificidade_validacao.py avaliar` (sha256 `5793250b…`,
+`main`), que aplica os limiares CONGELADOS de `limiares_v2.json` (`dbe0b135…`,
+conferido contra o mapa) às medidas de `especificidade.py` e
+`especificidade_bullet.py`, sem alteração. Nenhum limiar, fórmula ou seleção
+foi revisto. Saída: `especificidade/validacao_v2_resultado.json` (sha256
+`b569e53e…`, com o score de cada item; sem os rótulos), escrita UMA vez.
+
+- **Rótulos.** O dono entregou `Validation Labels v2.csv` (sha256
+  `d5cb9e25…`), copiado sem alteração para
+  `docs/arquivo-de-estudos/finetune-fase1/rotulos_validacao_v2.csv` (fora do
+  git, como os da calibração). Conferido: 66 linhas, só G ou E, os ids e a ordem
+  do mapa (selo `695b20b4…`). **60 distintos: 54 G e 6 E.**
+- **e5:** 0 dos 60 textos truncados (máximo 63 tokens).
+- **Não pré-registrado, fixado aqui:** a semente do bootstrap (20261022, a da
+  validação); a AUC da validação é SEM peso (a amostra é uniforme dentro de cada
+  fonte); reamostras sem as duas classes ficam fora e são contadas; IC pelo
+  percentil 2,5 / 97,5. A unidade da reamostragem é o filme (23 filmes).
+
+**Medidas (MEDIDO; acurácia balanceada = AB, no limiar congelado):**
+
+| medida | AUC | IC 95% (filme) | reamostras sem as 2 classes | AB total | AB publicado | AB local | diferença | passa? |
+|---|---|---|---|---|---|---|---|---|
+| M-disp | 0,623 | 0,212–0,879 | 36 / 10.000 | 0,722 | 0,667 | indefinida | indefinida | não (AUC, AB) |
+| M-anc | 0,560 | 0,310–0,843 | 45 / 10.000 | 0,528 | 0,542 | indefinida | indefinida | não (AUC, AB) |
+| M-comb | 0,627 | 0,194–0,885 | 32 / 10.000 | 0,722 | 0,667 | indefinida | indefinida | não (AUC, AB) |
+
+- **AB local indefinida:** o dono rotulou os 30 bullets do modelo base como G;
+  sem E no subconjunto, a TNR local não existe, e o critério 3 (diferença
+  ≤ 0,15) não tem como ser cumprido. Não muda o veredito: as três medidas já
+  reprovam nos critérios 1 e 2.
+- **Consistência do dono: 6 / 6 = 1,00** (teto ≥ 0,80: o critério não está
+  acima do alcançável). Limitação: os 6 repetidos são todos G, então ela não
+  diz nada sobre a estabilidade do E.
+- **Veredito pelo critério pré-registrado: NENHUMA medida passa. Resultado
+  NEGATIVO.** Não há "mais simples entre as aprovadas". Pela regra do
+  protocolo (e da `PROPOSTA_FASE2.md`, métrica 2), a M-disp SAI da Fase 2 e a
+  **especificidade fica coberta só pela leitura cega da Fase 4.** Um juiz LLM
+  de especificidade, só numa rodada própria, por decisão do dono.
+
+**Matriz de confusão da M-disp (nenhuma passou), limiar 0,02643; linhas = rótulo
+do dono, colunas = predição:**
+
+| subconjunto | G→G | G→E | E→G | E→E | TPR | TNR |
+|---|---|---|---|---|---|---|
+| publicado (30) | 16 | 8 | 2 | 4 | 0,667 | 0,667 |
+| local (30) | 26 | 4 | 0 | 0 | 0,867 | — |
+| total (60) | 42 | 12 | 2 | 4 | 0,778 | 0,667 |
+
+(A M-comb dá a mesma matriz no total e por subconjunto.)
+
+**Proporção de E por subconjunto (MEDIDO, descritiva):**
+
+- publicado: **6 / 30 = 20%** (validação 4/15, treino 2/15). Os 6 E vêm de 5
+  filmes: perfect-days-2023 (2), longlegs, zama, 12-angry-men e
+  memories-of-murder. Na calibração v2 (publicados de treino) foi 17/80 = 21%.
+- local (Qwen3-8B base, sem treino): **0 / 30 = 0%**.
+- Leitura (ESTIMADO, não testado): é o primeiro sinal de que o modelo base é
+  mais genérico que o publicado, no julgamento do dono. Duas ressalvas: com 6 E
+  no total, a diferença tem pouco poder; e a fonte pode ter vazado pelo estilo
+  (limitação registrada na montagem), então o 0/30 pode refletir em parte o
+  estilo e não só a especificidade.
+- Por que as medidas falham (ESTIMADO): com 6 E em 60, a AUC tem IC de
+  ~0,2 a ~0,88; o limiar de calibração (AUC otimista de 0,861 nos mesmos itens)
+  não generalizou. A M-disp marca como E 4 bullets do base que o dono chamou de
+  G, e erra 8 dos 24 G publicados.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -1376,7 +1444,10 @@ custo, para revisão. NÃO é o pré-registro.
   geração base da Fase 1. Continuam sem medida: o tempo e a memória com o
   prompt real do outlier do teste (~22–25 mil tokens, `num_ctx` 28.672–31.744
   pela regra); o texto que o Ollama monta pelo TEMPLATE (só a contagem bate);
-  a validação da especificidade (documento montado, rótulos pendentes); o
-  GGUF da base pelo caminho do treinado (kernel preparado, não rodado) e se ele
+  o GGUF da base pelo caminho do treinado (kernel preparado, não rodado) e se ele
   é idêntico ao da biblioteca; o commit do llama.cpp do smoke v4 (o log não o
   gravou).
+- (31/10, validação) Resolvida: a validação da especificidade (NEGATIVA,
+  nenhuma medida passa). Não medido: a estabilidade do rótulo E do dono (os 6
+  repetidos são todos G); quanto do 0/30 de E no base vem do estilo e não da
+  especificidade.

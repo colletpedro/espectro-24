@@ -1,0 +1,781 @@
+{
+ "gerado_por": "scripts/finetune/especificidade_validacao.py avaliar",
+ "rotulos_sha256": "d5cb9e25d174135c6a6ec0fee8517da71982b2816f81146e5219e198fd6d9e64",
+ "mapa_sha256": "695b20b4941cc7c0020c4d89da37f3206aee6d5fc7aed68f30ce0872cfc183fe",
+ "limiares_v2_sha256": "dbe0b135225df484ca4f8f29b2aa71a0166936a542363477290d2ac27cd1bac5",
+ "script_sha256": "5793250be83291fd8682a4b6f73ce2ecc372875fee2d34c8bb907d2a4ea2b3db",
+ "semente_bootstrap": 20261022,
+ "n_distintos": 60,
+ "n_G": 54,
+ "n_E": 6,
+ "proporcao_E_por_subconjunto": {
+  "publicado": {
+   "E": 6,
+   "n": 30
+  },
+  "local": {
+   "E": 0,
+   "n": 30
+  }
+ },
+ "consistencia_dono": {
+  "iguais": 6,
+  "repetidos": 6,
+  "pares": [
+   {
+    "id": "V06",
+    "original": "V39",
+    "igual": true
+   },
+   {
+    "id": "V23",
+    "original": "V55",
+    "igual": true
+   },
+   {
+    "id": "V27",
+    "original": "V58",
+    "igual": true
+   },
+   {
+    "id": "V54",
+    "original": "V22",
+    "igual": true
+   },
+   {
+    "id": "V59",
+    "original": "V29",
+    "igual": true
+   },
+   {
+    "id": "V66",
+    "original": "V36",
+    "igual": true
+   }
+  ]
+ },
+ "e5": {
+  "limite_tokens": 512,
+  "textos": 60,
+  "truncados": 0,
+  "comprimentos_truncados": [],
+  "max_tokens": 63,
+  "mediana_tokens": 47
+ },
+ "medidas": {
+  "M-disp": {
+   "limiar_congelado": 0.02642717957496643,
+   "auc": 0.6234567901234568,
+   "bootstrap": {
+    "ic95": [
+     0.21176470588235294,
+     0.8790123456790123
+    ],
+    "reamostras": 10000,
+    "validas": 9964,
+    "sem_as_duas_classes": 36,
+    "filmes": 23
+   },
+   "total": {
+    "GG": 42,
+    "GE": 12,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 54,
+    "n_E": 6,
+    "tpr": 0.7777777777777778,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.7222222222222222
+   },
+   "publicado": {
+    "GG": 16,
+    "GE": 8,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 24,
+    "n_E": 6,
+    "tpr": 0.6666666666666666,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.6666666666666666,
+    "auc": 0.5625
+   },
+   "local": {
+    "GG": 26,
+    "GE": 4,
+    "EG": 0,
+    "EE": 0,
+    "n_G": 30,
+    "n_E": 0,
+    "tpr": 0.8666666666666667,
+    "tnr": null,
+    "acuracia_balanceada": null,
+    "auc": null
+   },
+   "diferenca_ab": null,
+   "criterio": {
+    "auc>=0.80": false,
+    "ab>=0.75": false,
+    "dif<=0.15": false
+   },
+   "aprovada": false
+  },
+  "M-anc": {
+   "limiar_congelado": -1.7346010553881064,
+   "auc": 0.5601851851851852,
+   "bootstrap": {
+    "ic95": [
+     0.30952380952380953,
+     0.842741935483871
+    ],
+    "reamostras": 10000,
+    "validas": 9955,
+    "sem_as_duas_classes": 45,
+    "filmes": 23
+   },
+   "total": {
+    "GG": 21,
+    "GE": 33,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 54,
+    "n_E": 6,
+    "tpr": 0.3888888888888889,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.5277777777777778
+   },
+   "publicado": {
+    "GG": 10,
+    "GE": 14,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 24,
+    "n_E": 6,
+    "tpr": 0.4166666666666667,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.5416666666666666,
+    "auc": 0.5173611111111112
+   },
+   "local": {
+    "GG": 11,
+    "GE": 19,
+    "EG": 0,
+    "EE": 0,
+    "n_G": 30,
+    "n_E": 0,
+    "tpr": 0.36666666666666664,
+    "tnr": null,
+    "acuracia_balanceada": null,
+    "auc": null
+   },
+   "diferenca_ab": null,
+   "criterio": {
+    "auc>=0.80": false,
+    "ab>=0.75": false,
+    "dif<=0.15": false
+   },
+   "aprovada": false
+  },
+  "M-comb": {
+   "limiar_congelado": 0.7974923489955031,
+   "auc": 0.6265432098765432,
+   "bootstrap": {
+    "ic95": [
+     0.19444444444444445,
+     0.8846153846153846
+    ],
+    "reamostras": 10000,
+    "validas": 9968,
+    "sem_as_duas_classes": 32,
+    "filmes": 23
+   },
+   "total": {
+    "GG": 42,
+    "GE": 12,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 54,
+    "n_E": 6,
+    "tpr": 0.7777777777777778,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.7222222222222222
+   },
+   "publicado": {
+    "GG": 16,
+    "GE": 8,
+    "EG": 2,
+    "EE": 4,
+    "n_G": 24,
+    "n_E": 6,
+    "tpr": 0.6666666666666666,
+    "tnr": 0.6666666666666666,
+    "acuracia_balanceada": 0.6666666666666666,
+    "auc": 0.5694444444444444
+   },
+   "local": {
+    "GG": 26,
+    "GE": 4,
+    "EG": 0,
+    "EE": 0,
+    "n_G": 30,
+    "n_E": 0,
+    "tpr": 0.8666666666666667,
+    "tnr": null,
+    "acuracia_balanceada": null,
+    "auc": null
+   },
+   "diferenca_ab": null,
+   "criterio": {
+    "auc>=0.80": false,
+    "ab>=0.75": false,
+    "dif<=0.15": false
+   },
+   "aprovada": false
+  }
+ },
+ "aprovadas": [],
+ "escolhida": null,
+ "matriz_reportada": "M-disp",
+ "veredito": "NEGATIVO: nenhuma medida passou; a especificidade fica só com a leitura cega da Fase 4",
+ "itens": [
+  {
+   "id": "V01",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "longlegs",
+   "m_disp": 0.04231526255607605,
+   "m_anc": 3.5263605246161616,
+   "m_comb": 0.9826066674007636
+  },
+  {
+   "id": "V02",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.029984432458877563,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.885731096874888
+  },
+  {
+   "id": "V03",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "cats-2019",
+   "m_disp": 0.033297890424728395,
+   "m_anc": 0.02985296314968113,
+   "m_comb": 0.9184208683604239
+  },
+  {
+   "id": "V04",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "cats-2019",
+   "m_disp": 0.01961635947227478,
+   "m_anc": 1.7346010553881064,
+   "m_comb": 0.5633481946423902
+  },
+  {
+   "id": "V05",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.024101781845092773,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.7300147659169545
+  },
+  {
+   "id": "V07",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "sinners-2025",
+   "m_disp": 0.04878872036933899,
+   "m_anc": 1.5114575040738967,
+   "m_comb": 0.9933777622898816
+  },
+  {
+   "id": "V08",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.03033905029296875,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.8822031333807457
+  },
+  {
+   "id": "V09",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "se7en",
+   "m_disp": 0.03789855837821961,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.9657927393966497
+  },
+  {
+   "id": "V10",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "soul-2020",
+   "m_disp": 0.028659170866012572,
+   "m_anc": 0.02985296314968113,
+   "m_comb": 0.8406962676620385
+  },
+  {
+   "id": "V11",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "perfect-days-2023",
+   "m_disp": 0.02208462357521057,
+   "m_anc": 1.3862943611198906,
+   "m_comb": 0.655645887798475
+  },
+  {
+   "id": "V12",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "chinatown",
+   "m_disp": 0.04804650545120239,
+   "m_anc": 2.1400661634962708,
+   "m_comb": 0.9927151833862351
+  },
+  {
+   "id": "V13",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "the-turin-horse",
+   "m_disp": 0.030311000347137452,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.8817261826133356
+  },
+  {
+   "id": "V14",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.0270330548286438,
+   "m_anc": 2.4277482359480516,
+   "m_comb": 0.8166715251375907
+  },
+  {
+   "id": "V15",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.04557737708091736,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.9890392159662078
+  },
+  {
+   "id": "V16",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "zama",
+   "m_disp": 0.03445490598678589,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.9414777097666941
+  },
+  {
+   "id": "V17",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.03859902024269104,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.9665150713957266
+  },
+  {
+   "id": "V18",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.027730149030685425,
+   "m_anc": 2.6100697927420065,
+   "m_comb": 0.8341220181369087
+  },
+  {
+   "id": "V19",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "do-the-right-thing",
+   "m_disp": 0.04137380719184876,
+   "m_anc": 0.5306282510621704,
+   "m_comb": 0.9772513658631662
+  },
+  {
+   "id": "V20",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "soul-2020",
+   "m_disp": 0.029432791471481323,
+   "m_anc": 0.7230001437096264,
+   "m_comb": 0.860274048283597
+  },
+  {
+   "id": "V21",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "se7en",
+   "m_disp": 0.02982378602027893,
+   "m_anc": 0.0,
+   "m_comb": 0.8644136942339887
+  },
+  {
+   "id": "V22",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "dune-part-two",
+   "m_disp": 0.02480751872062683,
+   "m_anc": 1.329135947279942,
+   "m_comb": 0.7477036311697697
+  },
+  {
+   "id": "V24",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "cujo",
+   "m_disp": 0.016832709312438965,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.47495210507222835
+  },
+  {
+   "id": "V25",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "cujo",
+   "m_disp": 0.014025980234146118,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.3638454995270041
+  },
+  {
+   "id": "V26",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "se7en",
+   "m_disp": 0.021982789039611816,
+   "m_anc": 2.6100697927420065,
+   "m_comb": 0.6629309800459363
+  },
+  {
+   "id": "V28",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.03427777290344238,
+   "m_anc": 1.128465251817791,
+   "m_comb": 0.932464575226619
+  },
+  {
+   "id": "V29",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "soul-2020",
+   "m_disp": 0.02422654628753662,
+   "m_anc": 1.7346010553881064,
+   "m_comb": 0.7325827011381391
+  },
+  {
+   "id": "V30",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "pinocchio-2022",
+   "m_disp": 0.03550209403038025,
+   "m_anc": 3.5263605246161616,
+   "m_comb": 0.9488891043620328
+  },
+  {
+   "id": "V31",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "goodfellas",
+   "m_disp": 0.03628703951835632,
+   "m_anc": 1.1749852674526837,
+   "m_comb": 0.9505099635945787
+  },
+  {
+   "id": "V32",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "interstellar",
+   "m_disp": 0.04144392609596252,
+   "m_anc": 0.0,
+   "m_comb": 0.9770319824257246
+  },
+  {
+   "id": "V33",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.03014759421348572,
+   "m_anc": 2.833213344056216,
+   "m_comb": 0.8827700054869643
+  },
+  {
+   "id": "V34",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.03781380653381348,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.9621066145594221
+  },
+  {
+   "id": "V35",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.026538264751434327,
+   "m_anc": 2.0222831278398874,
+   "m_comb": 0.8016890131526855
+  },
+  {
+   "id": "V36",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.034226083755493165,
+   "m_anc": 1.4469189829363254,
+   "m_comb": 0.9327364573226519
+  },
+  {
+   "id": "V37",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.0274793803691864,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.8243898375644935
+  },
+  {
+   "id": "V38",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "pearl-2022",
+   "m_disp": 0.01491081714630127,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.3979084760617688
+  },
+  {
+   "id": "V39",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "chinatown",
+   "m_disp": 0.033342492580413816,
+   "m_anc": 2.6100697927420065,
+   "m_comb": 0.9263425228864421
+  },
+  {
+   "id": "V40",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "sinners-2025",
+   "m_disp": 0.028050768375396728,
+   "m_anc": 3.5263605246161616,
+   "m_comb": 0.8460868118145303
+  },
+  {
+   "id": "V41",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "the-truman-show",
+   "m_disp": 0.036492788791656496,
+   "m_anc": 2.4277482359480516,
+   "m_comb": 0.9543079242276464
+  },
+  {
+   "id": "V42",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "pinocchio-2022",
+   "m_disp": 0.028591591119766235,
+   "m_anc": 3.5263605246161616,
+   "m_comb": 0.8572418848097789
+  },
+  {
+   "id": "V43",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.02846553921699524,
+   "m_anc": 2.0222831278398874,
+   "m_comb": 0.847053461770307
+  },
+  {
+   "id": "V44",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.01480002999305725,
+   "m_anc": 0.28768207245178085,
+   "m_comb": 0.3566520107260311
+  },
+  {
+   "id": "V45",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.03248679041862488,
+   "m_anc": 0.5306282510621704,
+   "m_comb": 0.9095933193046708
+  },
+  {
+   "id": "V46",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.02917017340660095,
+   "m_anc": 1.916922612182061,
+   "m_comb": 0.8608709106803848
+  },
+  {
+   "id": "V47",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "longlegs",
+   "m_disp": 0.03153442740440369,
+   "m_anc": 2.4277482359480516,
+   "m_comb": 0.9028401885185757
+  },
+  {
+   "id": "V48",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "memories-of-murder",
+   "m_disp": 0.023929572105407713,
+   "m_anc": 1.2237754316221157,
+   "m_comb": 0.7188528829368329
+  },
+  {
+   "id": "V49",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "chinatown",
+   "m_disp": 0.02051975727081299,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.6229169688255384
+  },
+  {
+   "id": "V50",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.034282135963439944,
+   "m_anc": 1.3862943611198906,
+   "m_comb": 0.9331571272091412
+  },
+  {
+   "id": "V51",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "pinocchio-2022",
+   "m_disp": 0.029239559173583986,
+   "m_anc": 3.5263605246161616,
+   "m_comb": 0.86971080369406
+  },
+  {
+   "id": "V52",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "the-wailing",
+   "m_disp": 0.03452194333076477,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.9420780926862468
+  },
+  {
+   "id": "V53",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "hereditary",
+   "m_disp": 0.03296000361442566,
+   "m_anc": 1.4469189829363254,
+   "m_comb": 0.9185426923230088
+  },
+  {
+   "id": "V55",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "pinocchio-2022",
+   "m_disp": 0.03847730755805969,
+   "m_anc": 2.833213344056216,
+   "m_comb": 0.9670563815778116
+  },
+  {
+   "id": "V56",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "soul-2020",
+   "m_disp": 0.03654792904853821,
+   "m_anc": 0.45830758948254424,
+   "m_comb": 0.951158724895282
+  },
+  {
+   "id": "V57",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "soul-2020",
+   "m_disp": 0.024304962158203124,
+   "m_anc": 1.4469189829363254,
+   "m_comb": 0.7328321586631198
+  },
+  {
+   "id": "V58",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "goodfellas",
+   "m_disp": 0.04152575731277466,
+   "m_anc": 1.65455834771457,
+   "m_comb": 0.9787541796081892
+  },
+  {
+   "id": "V60",
+   "fonte": "publicado",
+   "conjunto": "treino",
+   "slug": "12-angry-men",
+   "m_disp": 0.025366324186325073,
+   "m_anc": 2.1400661634962708,
+   "m_comb": 0.7703322123995299
+  },
+  {
+   "id": "V61",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "perfect-days-2023",
+   "m_disp": 0.020193028450012206,
+   "m_anc": 2.4277482359480516,
+   "m_comb": 0.5930872992686748
+  },
+  {
+   "id": "V62",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "perfect-days-2023",
+   "m_disp": 0.03739560842514038,
+   "m_anc": 3.120895416507997,
+   "m_comb": 0.9613694140637106
+  },
+  {
+   "id": "V63",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "the-gentlemen",
+   "m_disp": 0.01916056275367737,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.5695325007340702
+  },
+  {
+   "id": "V64",
+   "fonte": "publicado",
+   "conjunto": "validacao",
+   "slug": "longlegs",
+   "m_disp": 0.037535303831100465,
+   "m_anc": 1.3862943611198906,
+   "m_comb": 0.9595960371936747
+  },
+  {
+   "id": "V65",
+   "fonte": "base",
+   "conjunto": "treino",
+   "slug": "fight-club",
+   "m_disp": 0.030328160524368285,
+   "m_anc": 4.219507705176107,
+   "m_comb": 0.8912915145616863
+  }
+ ]
+}
