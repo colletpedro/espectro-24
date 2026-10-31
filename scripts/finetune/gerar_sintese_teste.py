@@ -19,9 +19,11 @@ Travas:
 - só filmes de TESTE de `split.json`; recusa qualquer outro (e qualquer filme
   que esteja também em treino ou validação); o bucket do Gemini
   (`a-brighter-summer-day/positivas`, `buckets_excluidos`) fica fora: 89 pares;
-- o modelo do lado tem de ter um `importar_<nome>_*.json` com
-  `E4_importa_e_gera` true, e o sha256 do GGUF importado tem de ser o do
-  `log.json` do kernel (`--log-kernel`). Na base, o log tem de provar o
+- o modelo é ESCOLHIDO pelo sha256 do GGUF do `log.json` do kernel
+  (`--log-kernel`): a importação mais recente desse GGUF com
+  `E4_importa_e_gera` true dá o nome no Ollama; recusa se o nome foi
+  reimportado depois com outro GGUF, se base e treinado têm o mesmo nome ou o
+  mesmo GGUF. Na base, o log tem de provar o
   adaptador identidade e a fusão sem alteração; no treinado, o commit do
   llama.cpp tem de ser o da base (`--log-kernel-base`): os dois só diferem
   pelo adaptador;
@@ -70,7 +72,9 @@ TOKENIZER = "Qwen3-8B"
 TETO_SAIDA = 3000
 MARGEM = 0.10
 RAM_LIVRE_MIN_GB = 2.0
-LADOS = {"base": "espectro-qwen3-8b-base", "treinado": "espectro-qwen3-8b-ft"}
+# nomes que o `importar-pasta` dá (do `modelo` do log.json do kernel); só conferência:
+# o modelo chamado é o importado com o sha256 do GGUF do log do kernel
+LADOS = {"base": "espectro-qwen3-8b-base", "treinado": "espectro-qwen3-8b-treinado"}
 # DESVIO_P01.md (substitui a temperatura 0,8 do PREREGISTRO_AVALIACAO.md, seção 2):
 # os valores do model card do Qwen3-8B para o modo SEM raciocínio (README.md:328,
 # revisão b968826d), repeat_penalty 1,0 explícito; o seed é o do juiz
@@ -149,7 +153,32 @@ def _gguf_do_log(log: dict) -> str:
     return g[0]["sha256"]
 
 
-def conferir_modelo(lado: str, nome: str, log_kernel: Path, log_base: Path | None) -> dict:
+def _importacoes() -> list[tuple[Path, dict]]:
+    """Os `importar_<nome>_<AAAAMMDD_HHMMSS>.json`, do mais antigo ao mais recente."""
+    arqs = sorted(VIABILIDADE.glob("importar_*.json"), key=lambda p: p.stem[-15:])
+    return [(a, K.ler_json(a)) for a in arqs]
+
+
+def modelo_pelo_sha(sha: str) -> tuple[str, str]:
+    """(nome no Ollama, arquivo da importação) do GGUF com este sha256: a importação
+    mais recente dele com E4 true; recusa se o nome foi reaproveitado DEPOIS por
+    outro GGUF (o `ollama create` sobrescreve)."""
+    imps = _importacoes()
+    com = [(a, i) for a, i in imps if i.get("E4_importa_e_gera") is True
+           and (i.get("importacao") or {}).get("gguf_sha256") == sha]
+    if not com:
+        raise SystemExit(f"nenhuma importação com E4 true do GGUF {sha[:12]}… do kernel")
+    arq, imp = com[-1]
+    nome = imp["importacao"]["nome_ollama"]
+    depois = [i for a, i in imps if a.stem[-15:] > arq.stem[-15:]
+              and (i.get("importacao") or {}).get("nome_ollama") == nome]
+    if any((i.get("importacao") or {}).get("gguf_sha256") != sha for i in depois):
+        raise SystemExit(f"o nome {nome} foi reimportado com OUTRO GGUF depois de {arq.name}: "
+                         f"reimporte este GGUF (`importar-pasta`) antes de gerar")
+    return nome, arq.name
+
+
+def conferir_modelo(lado: str, nome: str | None, log_kernel: Path, log_base: Path | None) -> dict:
     log = K.ler_json(log_kernel)
     sha = _gguf_do_log(log)
     if lado == "base":
@@ -160,18 +189,25 @@ def conferir_modelo(lado: str, nome: str, log_kernel: Path, log_base: Path | Non
     else:
         if log_base is None:
             raise SystemExit("--log-kernel-base é obrigatório no lado treinado")
-        cb = (K.ler_json(log_base).get("llama_cpp") or {}).get("commit")
+        lb = K.ler_json(log_base)
+        cb = (lb.get("llama_cpp") or {}).get("commit")
         ct = (log.get("llama_cpp") or {}).get("commit")
         if not cb or cb != ct:
             raise SystemExit(f"llama.cpp do treinado ({ct}) ≠ o da base ({cb}): os GGUF não "
                              f"diferem só pelo adaptador — reexporte a base com o mesmo commit")
-    for arq in sorted(VIABILIDADE.glob(f"importar_{nome}_*.json"), reverse=True):
-        imp = K.ler_json(arq)
-        if imp.get("E4_importa_e_gera") is True and imp["importacao"]["gguf_sha256"] == sha:
-            return {"importacao": arq.name, "gguf_sha256": sha, "log_kernel": str(log_kernel),
-                    "log_kernel_sha256": K.sha256_arquivo(log_kernel),
-                    "modelfile_usado": imp["importacao"]["modelfile_usado"]}
-    raise SystemExit(f"nenhum importar_{nome}_*.json com E4 true e o GGUF {sha[:12]}… do kernel")
+        sha_base = _gguf_do_log(lb)
+        if sha_base == sha:
+            raise SystemExit("o GGUF do treinado é o da base (mesmo sha256)")
+        nome_base, _ = modelo_pelo_sha(sha_base)
+    escolhido, importacao = modelo_pelo_sha(sha)
+    if lado == "treinado" and escolhido == nome_base:
+        raise SystemExit(f"base e treinado com o mesmo nome no Ollama ({escolhido})")
+    if nome and nome != escolhido:
+        raise SystemExit(f"--nome {nome}, mas o GGUF do kernel está importado como {escolhido}")
+    imp = K.ler_json(VIABILIDADE / importacao)
+    return {"importacao": importacao, "nome_ollama": escolhido, "gguf_sha256": sha,
+            "log_kernel": str(log_kernel), "log_kernel_sha256": K.sha256_arquivo(log_kernel),
+            "modelfile_usado": imp["importacao"]["modelfile_usado"]}
 
 
 def gravar_manifesto(pasta: Path) -> None:
@@ -233,8 +269,8 @@ def cmd_gerar(a) -> None:
     from _latencia import GuardaDeLatencia, LatenciaAnomala
     import viabilidade_ollama as V
 
-    nome = a.nome or LADOS[a.lado]
-    origem = conferir_modelo(a.lado, nome, a.log_kernel, a.log_kernel_base)
+    origem = conferir_modelo(a.lado, a.nome, a.log_kernel, a.log_kernel_base)
+    nome = origem["nome_ollama"]
     split = K.ler_json(a.split)
     plano_doc = K.ler_json(ARQ_PLANO)
     if plano_doc["split_sha256"] != K.sha256_arquivo(a.split):
@@ -345,7 +381,8 @@ def main() -> None:
     p.add_argument("--tokenizers", type=Path, default=K.TOKENIZERS_DIR_PADRAO)
     g = sub.add_parser("gerar", help="(Windows) gera os pares de teste que faltam")
     g.add_argument("--lado", choices=list(LADOS), required=True)
-    g.add_argument("--nome", help=f"nome no Ollama (padrão: {LADOS})")
+    g.add_argument("--nome", help=f"(só conferência) o nome esperado no Ollama, ex. {LADOS}; "
+                                  f"o modelo é escolhido pelo sha256 do GGUF do log do kernel")
     g.add_argument("--log-kernel", type=Path, required=True,
                    help="log.json do kernel que exportou o GGUF deste lado")
     g.add_argument("--log-kernel-base", type=Path,

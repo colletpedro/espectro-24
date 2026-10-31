@@ -39,17 +39,19 @@ def test_bucket_do_gemini_fica_fora():
     assert G.excluidos(split) == {("a-brighter-summer-day", "positivas")}
 
 
-def _log(tmp_path: Path, nome: str, **extra) -> Path:
+def _log(tmp_path: Path, nome: str, sha: str = "abc", **extra) -> Path:
     p = tmp_path / nome
-    p.write_text(json.dumps({"gguf_arquivos": [{"nome": "Qwen3-8B.Q4_K_M.gguf", "sha256": "abc"},
+    p.write_text(json.dumps({"gguf_arquivos": [{"nome": "Qwen3-8B.Q4_K_M.gguf", "sha256": sha},
                                                {"nome": "Modelfile", "sha256": "x"}], **extra}))
     return p
 
 
-def _importacao(pasta: Path, nome: str, sha: str, e4: bool = True) -> None:
+def _importacao(pasta: Path, nome: str, sha: str, e4: bool = True,
+                ts: str = "20261101_000000") -> None:
     pasta.mkdir(exist_ok=True)
-    (pasta / f"importar_{nome}_20261101_000000.json").write_text(json.dumps(
-        {"E4_importa_e_gera": e4, "importacao": {"gguf_sha256": sha, "modelfile_usado": "FROM x"}}))
+    (pasta / f"importar_{nome}_{ts}.json").write_text(json.dumps(
+        {"E4_importa_e_gera": e4, "importacao": {"gguf_sha256": sha, "modelfile_usado": "FROM x",
+                                                 "nome_ollama": nome}}))
 
 
 def test_base_exige_prova_do_adaptador_e_da_fusao(tmp_path, monkeypatch):
@@ -73,7 +75,8 @@ def test_base_recusa_gguf_que_nao_e_o_do_kernel(tmp_path, monkeypatch):
 def test_treinado_exige_o_mesmo_llama_cpp_da_base(tmp_path, monkeypatch):
     monkeypatch.setattr(G, "VIABILIDADE", tmp_path / "viab")
     _importacao(tmp_path / "viab", "espectro-qwen3-8b-ft", "abc")
-    base = _log(tmp_path, "base.json", llama_cpp={"commit": "c1"})
+    _importacao(tmp_path / "viab", "espectro-qwen3-8b-base", "sha-base")
+    base = _log(tmp_path, "base.json", llama_cpp={"commit": "c1"}, sha="sha-base")
     outro = _log(tmp_path, "ft1.json", llama_cpp={"commit": "c2"})
     with pytest.raises(SystemExit):
         G.conferir_modelo("treinado", "espectro-qwen3-8b-ft", outro, base)
