@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "soul-2020",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5673,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "57b99e0a3c7ab7bf696c6ed61c588d945aeeda8eb9442b5c303a1fc6ed1121ec",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:38:10+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 146.08,
+ "leitura_prompt_s": 8.197,
+ "geracao_s": 135.671,
+ "carga_s": 0.006,
+ "prompt_eval_count": 5673,
+ "eval_count": 632,
+ "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"encontrar propósito na vida\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as reviews destacam a ideia de que o propósito da vida não está necessariamente ligado a grandes conquistas ou ambições, mas sim ao simples ato de viver e encontrar significado nos momentos cotidianos\"\n    },\n    {\n      \"tema\": \"apreciação dos momentos cotidianos\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"muitas críticas ressaltam a importância de valorizar as pequenas coisas da vida, como conversas, música ou simplesmente estar presente, como forma de encontrar satisfação e paz\"\n    },\n    {\n      \"tema\": \"música e arte como expressão\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a música, especialmente o jazz, é mencionada como um meio de expressão e conexão emocional, que ajuda a refletir sobre a vida e a busca por significado\"\n    },\n    {\n      \"tema\": \"reflexão existencial\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as reviews evidenciam uma reflexão sobre a existência, a busca por sentido e a compreensão de que a vida pode ser vivida com plenitude mesmo sem grandes objetivos\"\n    },\n    {\n      \"tema\": \"mensagem de vida e vivência\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a mensagem central do filme é frequentemente destacada como uma lembrete de que a vida é feita de pequenos momentos e que viver é o próprio propósito\"\n    },\n    {\n      \"tema\": \"apreciação da animação e do visual\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas críticas elogiam a qualidade visual do filme, a animação e a forma como os elementos artísticos são apresentados\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas apontam para a reflexão sobre o propósito da vida e a valorização dos momentos cotidianos, além de destacar a importância da música e da arte como expressão emocional.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "encontrar propósito na vida",
+   "exemplo_parafraseado": "as reviews destacam a ideia de que o propósito da vida não está necessariamente ligado a grandes conquistas ou ambições, mas sim ao simples ato de viver e encontrar significado nos momentos cotidianos",
+   "texto": "encontrar propósito na vida — as reviews destacam a ideia de que o propósito da vida não está necessariamente ligado a grandes conquistas ou ambições, mas sim ao simples ato de viver e encontrar significado nos momentos cotidianos",
+   "completo": true
+  },
+  {
+   "tema": "apreciação dos momentos cotidianos",
+   "exemplo_parafraseado": "muitas críticas ressaltam a importância de valorizar as pequenas coisas da vida, como conversas, música ou simplesmente estar presente, como forma de encontrar satisfação e paz",
+   "texto": "apreciação dos momentos cotidianos — muitas críticas ressaltam a importância de valorizar as pequenas coisas da vida, como conversas, música ou simplesmente estar presente, como forma de encontrar satisfação e paz",
+   "completo": true
+  },
+  {
+   "tema": "música e arte como expressão",
+   "exemplo_parafraseado": "a música, especialmente o jazz, é mencionada como um meio de expressão e conexão emocional, que ajuda a refletir sobre a vida e a busca por significado",
+   "texto": "música e arte como expressão — a música, especialmente o jazz, é mencionada como um meio de expressão e conexão emocional, que ajuda a refletir sobre a vida e a busca por significado",
+   "completo": true
+  },
+  {
+   "tema": "reflexão existencial",
+   "exemplo_parafraseado": "as reviews evidenciam uma reflexão sobre a existência, a busca por sentido e a compreensão de que a vida pode ser vivida com plenitude mesmo sem grandes objetivos",
+   "texto": "reflexão existencial — as reviews evidenciam uma reflexão sobre a existência, a busca por sentido e a compreensão de que a vida pode ser vivida com plenitude mesmo sem grandes objetivos",
+   "completo": true
+  },
+  {
+   "tema": "mensagem de vida e vivência",
+   "exemplo_parafraseado": "a mensagem central do filme é frequentemente destacada como uma lembrete de que a vida é feita de pequenos momentos e que viver é o próprio propósito",
+   "texto": "mensagem de vida e vivência — a mensagem central do filme é frequentemente destacada como uma lembrete de que a vida é feita de pequenos momentos e que viver é o próprio propósito",
+   "completo": true
+  },
+  {
+   "tema": "apreciação da animação e do visual",
+   "exemplo_parafraseado": "algumas críticas elogiam a qualidade visual do filme, a animação e a forma como os elementos artísticos são apresentados",
+   "texto": "apreciação da animação e do visual — algumas críticas elogiam a qualidade visual do filme, a animação e a forma como os elementos artísticos são apresentados",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 146.1
+}

@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "pinocchio-2022",
+ "bucket": "negativas",
+ "num_ctx": 19456,
+ "tokens_prompt_plano": 14267,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "e6d0bbb61f91e5034a37762ac0571171dcb862163b5699f80c33c6bcb44c82c0",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:23:55+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 266.44,
+ "leitura_prompt_s": 23.212,
+ "geracao_s": 236.674,
+ "carga_s": 4.413,
+ "prompt_eval_count": 14267,
+ "eval_count": 660,
+ "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"falta de alma e originalidade\",\n      \"mencoes_aproximadas\": 32,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas ressaltam que o filme não traz qualquer inovação ou contribuição artística, apenas uma reprodução mecânica do original, sem a essência que tornava a história única.\"\n    },\n    {\n      \"tema\": \"fotografia e efeitos visuais desagradáveis\",\n      \"mencoes_aproximadas\": 27,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews menciona a desagradável estética digital, com cenários e personagens que parecem artificialmente construídos, perdendo a textura e a vivacidade do original.\"\n    },\n    {\n      \"tema\": \"roteiro fraco e sem profundidade\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam que o roteiro não desenvolve temas de forma significativa, mantendo-se apenas na superfície, sem explorar a complexidade moral ou emocional da história.\"\n    },\n    {\n      \"tema\": \"atuações insatisfatórias\",\n      \"mencoes_aproximadas\": 21,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Tom Hanks e outros personagens é criticada por ser excessivamente caricata ou artificial, sem conseguir transmitir a naturalidade ou o impacto emocional esperado.\"\n    },\n    {\n      \"tema\": \"falta de ritmo e engajamento\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews destacam a monotonia e a lentidão do filme, que não consegue manter o interesse do espectador, tornando a experiência visual e narrativa cansativa.\"\n    },\n    {\n      \"tema\": \"comparação desfavorável com o original\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas frequentemente enfatizam que o filme não consegue rivalizar com a versão animada, perdendo a magia, o encanto e a profundidade que tornavam o original inesquecível.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam uma ausência de inovação, uma estética artificial e uma narrativa fraca que não consegue capturar a essência do original.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "falta de alma e originalidade",
+   "exemplo_parafraseado": "As críticas ressaltam que o filme não traz qualquer inovação ou contribuição artística, apenas uma reprodução mecânica do original, sem a essência que tornava a história única.",
+   "texto": "falta de alma e originalidade — As críticas ressaltam que o filme não traz qualquer inovação ou contribuição artística, apenas uma reprodução mecânica do original, sem a essência que tornava a história única.",
+   "completo": true
+  },
+  {
+   "tema": "fotografia e efeitos visuais desagradáveis",
+   "exemplo_parafraseado": "A maioria das reviews menciona a desagradável estética digital, com cenários e personagens que parecem artificialmente construídos, perdendo a textura e a vivacidade do original.",
+   "texto": "fotografia e efeitos visuais desagradáveis — A maioria das reviews menciona a desagradável estética digital, com cenários e personagens que parecem artificialmente construídos, perdendo a textura e a vivacidade do original.",
+   "completo": true
+  },
+  {
+   "tema": "roteiro fraco e sem profundidade",
+   "exemplo_parafraseado": "As críticas apontam que o roteiro não desenvolve temas de forma significativa, mantendo-se apenas na superfície, sem explorar a complexidade moral ou emocional da história.",
+   "texto": "roteiro fraco e sem profundidade — As críticas apontam que o roteiro não desenvolve temas de forma significativa, mantendo-se apenas na superfície, sem explorar a complexidade moral ou emocional da história.",
+   "completo": true
+  },
+  {
+   "tema": "atuações insatisfatórias",
+   "exemplo_parafraseado": "A atuação de Tom Hanks e outros personagens é criticada por ser excessivamente caricata ou artificial, sem conseguir transmitir a naturalidade ou o impacto emocional esperado.",
+   "texto": "atuações insatisfatórias — A atuação de Tom Hanks e outros personagens é criticada por ser excessivamente caricata ou artificial, sem conseguir transmitir a naturalidade ou o impacto emocional esperado.",
+   "completo": true
+  },
+  {
+   "tema": "falta de ritmo e engajamento",
+   "exemplo_parafraseado": "Muitas reviews destacam a monotonia e a lentidão do filme, que não consegue manter o interesse do espectador, tornando a experiência visual e narrativa cansativa.",
+   "texto": "falta de ritmo e engajamento — Muitas reviews destacam a monotonia e a lentidão do filme, que não consegue manter o interesse do espectador, tornando a experiência visual e narrativa cansativa.",
+   "completo": true
+  },
+  {
+   "tema": "comparação desfavorável com o original",
+   "exemplo_parafraseado": "As críticas frequentemente enfatizam que o filme não consegue rivalizar com a versão animada, perdendo a magia, o encanto e a profundidade que tornavam o original inesquecível.",
+   "texto": "comparação desfavorável com o original — As críticas frequentemente enfatizam que o filme não consegue rivalizar com a versão animada, perdendo a magia, o encanto e a profundidade que tornavam o original inesquecível.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 266.4
+}

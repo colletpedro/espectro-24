@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "pinocchio-2022",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6202,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "6320826c32d36b469643868d9e9598e7e40ce77515958beb452a638ad7b971f4",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:28:21+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 146.47,
+ "leitura_prompt_s": 9.05,
+ "geracao_s": 130.506,
+ "carga_s": 4.82,
+ "prompt_eval_count": 6202,
+ "eval_count": 591,
+ "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"atuações\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Tom Hanks é geralmente elogiada, mas alguns críticos acham que ele não tem destaque suficiente, especialmente em comparação com outros papéis.\"\n    },\n    {\n      \"tema\": \"fotografia\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As cenas visuais são consideradas boas, com destaque para a fotografia e os efeitos visuais, mas há críticas sobre a inconsistência em alguns momentos.\"\n    },\n    {\n      \"tema\": \"roteiro\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é visto como uma adaptação fiel, mas alguns críticos acham que há alterações que não contribuem de maneira significativa para a narrativa.\"\n    },\n    {\n      \"tema\": \"ritmo\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo da narrativa é considerado lento em alguns momentos, o que pode afetar a imersão do espectador.\"\n    },\n    {\n      \"tema\": \"música\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A música é geralmente elogiada, especialmente os números musicais, mas há críticas sobre a falta de profundidade emocional.\"\n    },\n    {\n      \"tema\": \"estilo\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O estilo da produção é visto como uma tentativa de equilibrar entre a animação e a versão em ação real, mas alguns críticos acham que o resultado é descoordenado.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas apontam uma avaliação equilibrada, com elogios à atuação de Tom Hanks e à fotografia, mas críticas sobre o ritmo e a consistência do roteiro.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "atuações",
+   "exemplo_parafraseado": "A atuação de Tom Hanks é geralmente elogiada, mas alguns críticos acham que ele não tem destaque suficiente, especialmente em comparação com outros papéis.",
+   "texto": "atuações — A atuação de Tom Hanks é geralmente elogiada, mas alguns críticos acham que ele não tem destaque suficiente, especialmente em comparação com outros papéis.",
+   "completo": true
+  },
+  {
+   "tema": "fotografia",
+   "exemplo_parafraseado": "As cenas visuais são consideradas boas, com destaque para a fotografia e os efeitos visuais, mas há críticas sobre a inconsistência em alguns momentos.",
+   "texto": "fotografia — As cenas visuais são consideradas boas, com destaque para a fotografia e os efeitos visuais, mas há críticas sobre a inconsistência em alguns momentos.",
+   "completo": true
+  },
+  {
+   "tema": "roteiro",
+   "exemplo_parafraseado": "O roteiro é visto como uma adaptação fiel, mas alguns críticos acham que há alterações que não contribuem de maneira significativa para a narrativa.",
+   "texto": "roteiro — O roteiro é visto como uma adaptação fiel, mas alguns críticos acham que há alterações que não contribuem de maneira significativa para a narrativa.",
+   "completo": true
+  },
+  {
+   "tema": "ritmo",
+   "exemplo_parafraseado": "O ritmo da narrativa é considerado lento em alguns momentos, o que pode afetar a imersão do espectador.",
+   "texto": "ritmo — O ritmo da narrativa é considerado lento em alguns momentos, o que pode afetar a imersão do espectador.",
+   "completo": true
+  },
+  {
+   "tema": "música",
+   "exemplo_parafraseado": "A música é geralmente elogiada, especialmente os números musicais, mas há críticas sobre a falta de profundidade emocional.",
+   "texto": "música — A música é geralmente elogiada, especialmente os números musicais, mas há críticas sobre a falta de profundidade emocional.",
+   "completo": true
+  },
+  {
+   "tema": "estilo",
+   "exemplo_parafraseado": "O estilo da produção é visto como uma tentativa de equilibrar entre a animação e a versão em ação real, mas alguns críticos acham que o resultado é descoordenado.",
+   "texto": "estilo — O estilo da produção é visto como uma tentativa de equilibrar entre a animação e a versão em ação real, mas alguns críticos acham que o resultado é descoordenado.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 146.5
+}

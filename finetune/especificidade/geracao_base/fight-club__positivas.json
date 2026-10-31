@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "fight-club",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5678,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "cf8cf9a84f161d6642d6cd21233e04d47c3d082e9ce4ead7eb339f855a8ee755",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:14:21+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 153.42,
+ "leitura_prompt_s": 8.13,
+ "geracao_s": 143.079,
+ "carga_s": 0.007,
+ "prompt_eval_count": 5678,
+ "eval_count": 673,
+ "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"identidade e autenticidade\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a ideia de que o filme explora a busca por autenticidade e a luta contra a perda de si mesmo em um mundo consumista, com destaque para a transformação do protagonista em busca de uma identidade verdadeira.\"\n    },\n    {\n      \"tema\": \"crítica ao consumismo\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas ressaltam a abordagem crítica do filme sobre o consumismo e como a sociedade moderna pode ser uma prisão para os indivíduos, limitando suas possibilidades de expressão pessoal.\"\n    },\n    {\n      \"tema\": \"interpretação de personagens\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As avaliações elogiam a atuação dos protagonistas, especialmente a dualidade entre o narrador e Tyler Durden, que é interpretada como uma representação do conflito interno e da busca por liberdade.\"\n    },\n    {\n      \"tema\": \"estilo e narrativa\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A narrativa complexa e o estilo cinematográfico são apontados como elementos que enriquecem a experiência do filme, com menção à forma como a história se desenrola e ao impacto do desfecho surpresa.\"\n    },\n    {\n      \"tema\": \"reavaliação e reflexão\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam que o filme provoca uma reavaliação de ideias e comportamentos, muitas vezes levando o espectador a refletir sobre suas próprias escolhas e valores.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das críticas destaca o impacto emocional do filme, destacando como ele consegue provocar sentimentos intensos e uma reflexão profunda sobre a vida e a identidade.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas destacam a forma como o filme explora temas complexos como identidade, consumismo e liberdade, além de elogiar a atuação e o estilo narrativo.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "identidade e autenticidade",
+   "exemplo_parafraseado": "As reviews destacam a ideia de que o filme explora a busca por autenticidade e a luta contra a perda de si mesmo em um mundo consumista, com destaque para a transformação do protagonista em busca de uma identidade verdadeira.",
+   "texto": "identidade e autenticidade — As reviews destacam a ideia de que o filme explora a busca por autenticidade e a luta contra a perda de si mesmo em um mundo consumista, com destaque para a transformação do protagonista em busca de uma identidade verdadeira.",
+   "completo": true
+  },
+  {
+   "tema": "crítica ao consumismo",
+   "exemplo_parafraseado": "Muitas críticas ressaltam a abordagem crítica do filme sobre o consumismo e como a sociedade moderna pode ser uma prisão para os indivíduos, limitando suas possibilidades de expressão pessoal.",
+   "texto": "crítica ao consumismo — Muitas críticas ressaltam a abordagem crítica do filme sobre o consumismo e como a sociedade moderna pode ser uma prisão para os indivíduos, limitando suas possibilidades de expressão pessoal.",
+   "completo": true
+  },
+  {
+   "tema": "interpretação de personagens",
+   "exemplo_parafraseado": "As avaliações elogiam a atuação dos protagonistas, especialmente a dualidade entre o narrador e Tyler Durden, que é interpretada como uma representação do conflito interno e da busca por liberdade.",
+   "texto": "interpretação de personagens — As avaliações elogiam a atuação dos protagonistas, especialmente a dualidade entre o narrador e Tyler Durden, que é interpretada como uma representação do conflito interno e da busca por liberdade.",
+   "completo": true
+  },
+  {
+   "tema": "estilo e narrativa",
+   "exemplo_parafraseado": "A narrativa complexa e o estilo cinematográfico são apontados como elementos que enriquecem a experiência do filme, com menção à forma como a história se desenrola e ao impacto do desfecho surpresa.",
+   "texto": "estilo e narrativa — A narrativa complexa e o estilo cinematográfico são apontados como elementos que enriquecem a experiência do filme, com menção à forma como a história se desenrola e ao impacto do desfecho surpresa.",
+   "completo": true
+  },
+  {
+   "tema": "reavaliação e reflexão",
+   "exemplo_parafraseado": "As reviews mencionam que o filme provoca uma reavaliação de ideias e comportamentos, muitas vezes levando o espectador a refletir sobre suas próprias escolhas e valores.",
+   "texto": "reavaliação e reflexão — As reviews mencionam que o filme provoca uma reavaliação de ideias e comportamentos, muitas vezes levando o espectador a refletir sobre suas próprias escolhas e valores.",
+   "completo": true
+  },
+  {
+   "tema": "impacto emocional",
+   "exemplo_parafraseado": "A maioria das críticas destaca o impacto emocional do filme, destacando como ele consegue provocar sentimentos intensos e uma reflexão profunda sobre a vida e a identidade.",
+   "texto": "impacto emocional — A maioria das críticas destaca o impacto emocional do filme, destacando como ele consegue provocar sentimentos intensos e uma reflexão profunda sobre a vida e a identidade.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 153.4
+}

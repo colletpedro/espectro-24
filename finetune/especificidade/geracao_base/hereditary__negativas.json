@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "hereditary",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6594,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "b024a742500db249421afe72981a67708b04f0388538f3d547fdd239d22e0024",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:16:54+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 149.8,
+ "leitura_prompt_s": 9.481,
+ "geracao_s": 133.803,
+ "carga_s": 4.406,
+ "prompt_eval_count": 6594,
+ "eval_count": 611,
+ "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"ritmo lento e monótono\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam que o ritmo do filme é excessivamente lento, com longos intervalos entre eventos que não geram tensão ou envolvimento.\"\n    },\n    {\n      \"tema\": \"falta de sustentação narrativa\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas destacam que a narrativa carece de coesão, com elementos que não se conectam de forma satisfatória e que parecem forçados.\"\n    },\n    {\n      \"tema\": \"falta de impacto emocional\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam que o filme não consegue gerar emoção ou susto, mesmo com elementos visuais e atmosféricos que deveriam criar tensão.\"\n    },\n    {\n      \"tema\": \"falta de originalidade\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que consideram o filme repetitivo e que não oferece novidade, especialmente em comparação com outras produções do gênero.\"\n    },\n    {\n      \"tema\": \"falta de desenvolvimento de personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentários apontam que os personagens são pouco desenvolvidos, com comportamentos que não se explicam ou que parecem estereotipados.\"\n    },\n    {\n      \"tema\": \"esperança frustrada\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews expressam frustração com as expectativas altas geradas pela divulgação do filme, que não foram atendidas pelos resultados finais.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam para uma experiência desapontante, com ritmo excessivamente lento, falta de sustentação narrativa e pouco impacto emocional, mesmo com elementos visuais que deveriam criar tensão.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ritmo lento e monótono",
+   "exemplo_parafraseado": "As reviews apontam que o ritmo do filme é excessivamente lento, com longos intervalos entre eventos que não geram tensão ou envolvimento.",
+   "texto": "ritmo lento e monótono — As reviews apontam que o ritmo do filme é excessivamente lento, com longos intervalos entre eventos que não geram tensão ou envolvimento.",
+   "completo": true
+  },
+  {
+   "tema": "falta de sustentação narrativa",
+   "exemplo_parafraseado": "Muitas críticas destacam que a narrativa carece de coesão, com elementos que não se conectam de forma satisfatória e que parecem forçados.",
+   "texto": "falta de sustentação narrativa — Muitas críticas destacam que a narrativa carece de coesão, com elementos que não se conectam de forma satisfatória e que parecem forçados.",
+   "completo": true
+  },
+  {
+   "tema": "falta de impacto emocional",
+   "exemplo_parafraseado": "As reviews mencionam que o filme não consegue gerar emoção ou susto, mesmo com elementos visuais e atmosféricos que deveriam criar tensão.",
+   "texto": "falta de impacto emocional — As reviews mencionam que o filme não consegue gerar emoção ou susto, mesmo com elementos visuais e atmosféricos que deveriam criar tensão.",
+   "completo": true
+  },
+  {
+   "tema": "falta de originalidade",
+   "exemplo_parafraseado": "Há críticas que consideram o filme repetitivo e que não oferece novidade, especialmente em comparação com outras produções do gênero.",
+   "texto": "falta de originalidade — Há críticas que consideram o filme repetitivo e que não oferece novidade, especialmente em comparação com outras produções do gênero.",
+   "completo": true
+  },
+  {
+   "tema": "falta de desenvolvimento de personagens",
+   "exemplo_parafraseado": "Alguns comentários apontam que os personagens são pouco desenvolvidos, com comportamentos que não se explicam ou que parecem estereotipados.",
+   "texto": "falta de desenvolvimento de personagens — Alguns comentários apontam que os personagens são pouco desenvolvidos, com comportamentos que não se explicam ou que parecem estereotipados.",
+   "completo": true
+  },
+  {
+   "tema": "esperança frustrada",
+   "exemplo_parafraseado": "As reviews expressam frustração com as expectativas altas geradas pela divulgação do filme, que não foram atendidas pelos resultados finais.",
+   "texto": "esperança frustrada — As reviews expressam frustração com as expectativas altas geradas pela divulgação do filme, que não foram atendidas pelos resultados finais.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 149.8
+}

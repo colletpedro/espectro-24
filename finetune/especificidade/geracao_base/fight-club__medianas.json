@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "fight-club",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5786,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "64257808009f87891cc4dcad4325813e622be221831390893fd6773a4c95c9c9",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:11:50+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 150.75,
+ "leitura_prompt_s": 8.312,
+ "geracao_s": 135.883,
+ "carga_s": 4.424,
+ "prompt_eval_count": 5786,
+ "eval_count": 637,
+ "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"narrativa confusa\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias críticas mencionam que a estrutura da história é complexa e, em alguns casos, difícil de seguir, com elementos que podem soar desconexos ou forçados.\"\n    },\n    {\n      \"tema\": \"crítica ao consumismo\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abordagem crítica ao consumismo é destacada, mas algumas avaliações apontam que a mensagem pode ser mal aplicada ou pouco impactante, especialmente no segundo tempo do filme.\"\n    },\n    {\n      \"tema\": \"estética e estilo\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estética visual do filme, incluindo a fotografia e o uso de cores, é elogiada, mas algumas críticas apontam que o estilo pode ser excessivo ou desgastante ao longo da narrativa.\"\n    },\n    {\n      \"tema\": \"desenvolvimento dos personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos acham que os personagens não são bem desenvolvidos, especialmente em relação à complexidade de Tyler Durden e à dinâmica entre os protagonistas.\"\n    },\n    {\n      \"tema\": \"final revelador\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O twist final é mencionado como um ponto de destaque, mas algumas críticas apontam que a revelação pode ser previsível ou pouco impactante para quem já conhece a trama.\"\n    },\n    {\n      \"tema\": \"ritmo e tensão\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo do filme é considerado lento em alguns momentos, com críticas apontando que a tensão pode ser insuficiente ou pouco consistente ao longo da narrativa.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas destacam a complexidade narrativa e a crítica ao consumismo, mas apontam que o filme pode ser confuso, com desenvolvimento de personagens insuficiente e ritmo desgastante.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "narrativa confusa",
+   "exemplo_parafraseado": "Várias críticas mencionam que a estrutura da história é complexa e, em alguns casos, difícil de seguir, com elementos que podem soar desconexos ou forçados.",
+   "texto": "narrativa confusa — Várias críticas mencionam que a estrutura da história é complexa e, em alguns casos, difícil de seguir, com elementos que podem soar desconexos ou forçados.",
+   "completo": true
+  },
+  {
+   "tema": "crítica ao consumismo",
+   "exemplo_parafraseado": "A abordagem crítica ao consumismo é destacada, mas algumas avaliações apontam que a mensagem pode ser mal aplicada ou pouco impactante, especialmente no segundo tempo do filme.",
+   "texto": "crítica ao consumismo — A abordagem crítica ao consumismo é destacada, mas algumas avaliações apontam que a mensagem pode ser mal aplicada ou pouco impactante, especialmente no segundo tempo do filme.",
+   "completo": true
+  },
+  {
+   "tema": "estética e estilo",
+   "exemplo_parafraseado": "A estética visual do filme, incluindo a fotografia e o uso de cores, é elogiada, mas algumas críticas apontam que o estilo pode ser excessivo ou desgastante ao longo da narrativa.",
+   "texto": "estética e estilo — A estética visual do filme, incluindo a fotografia e o uso de cores, é elogiada, mas algumas críticas apontam que o estilo pode ser excessivo ou desgastante ao longo da narrativa.",
+   "completo": true
+  },
+  {
+   "tema": "desenvolvimento dos personagens",
+   "exemplo_parafraseado": "Alguns críticos acham que os personagens não são bem desenvolvidos, especialmente em relação à complexidade de Tyler Durden e à dinâmica entre os protagonistas.",
+   "texto": "desenvolvimento dos personagens — Alguns críticos acham que os personagens não são bem desenvolvidos, especialmente em relação à complexidade de Tyler Durden e à dinâmica entre os protagonistas.",
+   "completo": true
+  },
+  {
+   "tema": "final revelador",
+   "exemplo_parafraseado": "O twist final é mencionado como um ponto de destaque, mas algumas críticas apontam que a revelação pode ser previsível ou pouco impactante para quem já conhece a trama.",
+   "texto": "final revelador — O twist final é mencionado como um ponto de destaque, mas algumas críticas apontam que a revelação pode ser previsível ou pouco impactante para quem já conhece a trama.",
+   "completo": true
+  },
+  {
+   "tema": "ritmo e tensão",
+   "exemplo_parafraseado": "O ritmo do filme é considerado lento em alguns momentos, com críticas apontando que a tensão pode ser insuficiente ou pouco consistente ao longo da narrativa.",
+   "texto": "ritmo e tensão — O ritmo do filme é considerado lento em alguns momentos, com críticas apontando que a tensão pode ser insuficiente ou pouco consistente ao longo da narrativa.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 150.7
+}

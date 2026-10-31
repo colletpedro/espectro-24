@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "hereditary",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4826,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "157f0a2b02135dcfb37c8ea29fdf52f5c27f51ffe893e2d3b55605416b20ba43",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:19:24+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 141.41,
+ "leitura_prompt_s": 6.885,
+ "geracao_s": 128.3,
+ "carga_s": 4.14,
+ "prompt_eval_count": 4826,
+ "eval_count": 643,
+ "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"ambiente tenso\",\n      \"mencoes_aproximadas\": 26,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews destacam o clima de medo e inquietação constante, com uma atmosfera que mantém o espectador em alerta durante boa parte do filme.\"\n    },\n    {\n      \"tema\": \"desenvolvimento do roteiro\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é criticado por não se consolidar de forma clara, com alguns fios condutores deixando o espectador confuso, especialmente no final.\"\n    },\n    {\n      \"tema\": \"performances dos atores\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são elogiadas por muitos, especialmente a de Toni Collette, que é considerada uma das partes mais fortes do filme.\"\n    },\n    {\n      \"tema\": \"ritmo do filme\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns acham que o ritmo é lento no início e que isso afeta a tensão, mas outros consideram que isso é intencional para criar um clima de inquietação.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria dos críticos menciona que o filme consegue causar desconforto e tensão, mas não deixa um impacto duradouro.\"\n    },\n    {\n      \"tema\": \"sobrecarga de elementos\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns acham que o filme tenta abordar muitos temas ao mesmo tempo, o que pode confundir o espectador e distrair do núcleo da narrativa.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas destacam uma atmosfera tensa e um ritmo que pode ser lento, mas que geram desconforto. muitos elogiam as performances dos atores, especialmente de Toni Collette, mas criticam o roteiro por não se consolidar de forma clara e por confundir o espectador com seu final ambíguo.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ambiente tenso",
+   "exemplo_parafraseado": "Muitas reviews destacam o clima de medo e inquietação constante, com uma atmosfera que mantém o espectador em alerta durante boa parte do filme.",
+   "texto": "ambiente tenso — Muitas reviews destacam o clima de medo e inquietação constante, com uma atmosfera que mantém o espectador em alerta durante boa parte do filme.",
+   "completo": true
+  },
+  {
+   "tema": "desenvolvimento do roteiro",
+   "exemplo_parafraseado": "O roteiro é criticado por não se consolidar de forma clara, com alguns fios condutores deixando o espectador confuso, especialmente no final.",
+   "texto": "desenvolvimento do roteiro — O roteiro é criticado por não se consolidar de forma clara, com alguns fios condutores deixando o espectador confuso, especialmente no final.",
+   "completo": true
+  },
+  {
+   "tema": "performances dos atores",
+   "exemplo_parafraseado": "As atuações são elogiadas por muitos, especialmente a de Toni Collette, que é considerada uma das partes mais fortes do filme.",
+   "texto": "performances dos atores — As atuações são elogiadas por muitos, especialmente a de Toni Collette, que é considerada uma das partes mais fortes do filme.",
+   "completo": true
+  },
+  {
+   "tema": "ritmo do filme",
+   "exemplo_parafraseado": "Alguns acham que o ritmo é lento no início e que isso afeta a tensão, mas outros consideram que isso é intencional para criar um clima de inquietação.",
+   "texto": "ritmo do filme — Alguns acham que o ritmo é lento no início e que isso afeta a tensão, mas outros consideram que isso é intencional para criar um clima de inquietação.",
+   "completo": true
+  },
+  {
+   "tema": "impacto emocional",
+   "exemplo_parafraseado": "A maioria dos críticos menciona que o filme consegue causar desconforto e tensão, mas não deixa um impacto duradouro.",
+   "texto": "impacto emocional — A maioria dos críticos menciona que o filme consegue causar desconforto e tensão, mas não deixa um impacto duradouro.",
+   "completo": true
+  },
+  {
+   "tema": "sobrecarga de elementos",
+   "exemplo_parafraseado": "Alguns acham que o filme tenta abordar muitos temas ao mesmo tempo, o que pode confundir o espectador e distrair do núcleo da narrativa.",
+   "texto": "sobrecarga de elementos — Alguns acham que o filme tenta abordar muitos temas ao mesmo tempo, o que pode confundir o espectador e distrair do núcleo da narrativa.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 141.4
+}

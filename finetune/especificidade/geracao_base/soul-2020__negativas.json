@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "soul-2020",
+ "bucket": "negativas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 4202,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "8838d4c747d58b5898d1d67ddb4f2249104553a7acb02ffb595b3f066eab0466",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:33:35+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 121.36,
+ "leitura_prompt_s": 5.983,
+ "geracao_s": 109.168,
+ "carga_s": 4.126,
+ "prompt_eval_count": 4202,
+ "eval_count": 603,
+ "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"ritmo monótono\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"Muitas críticas destacam que o filme tem um ritmo lento e cansativo, com momentos que parecem repetitivos e sem dinamismo.\"\n    },\n    {\n      \"tema\": \"falta de profundidade emocional\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"As reviews apontam que o filme não consegue gerar uma conexão emocional forte com o público, deixando a experiência sem impacto.\"\n    },\n    {\n      \"tema\": \"estilo de animação descontextualizado\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"Alguns críticos acham que a animação, embora técnica, não se encaixa bem com os temas do filme, criando uma desconexão visual.\"\n    },\n    {\n      \"tema\": \"mensagem superficial\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"As reviews criticam a falta de profundidade na exploração de temas como vida, morte e existência, considerando a mensagem pouco elaborada.\"\n    },\n    {\n      \"tema\": \"figura de 22 irritante\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"A personagem 22 é vista como excessivamente irritante e pouco envolvente, atrapalhando a narrativa principal.\"\n    },\n    {\n      \"tema\": \"excesso de elementos filosóficos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"Há críticas que acham que o filme aborda temas filosóficos de forma excessiva e descontextualizada, sem dar espaço para a história se desenvolver.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam para uma experiência desgastante, com ritmo lento e falta de conexão emocional, além de críticas ao tratamento de temas filosóficos e à personagem 22.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ritmo monótono",
+   "exemplo_parafraseado": "Muitas críticas destacam que o filme tem um ritmo lento e cansativo, com momentos que parecem repetitivos e sem dinamismo.",
+   "texto": "ritmo monótono — Muitas críticas destacam que o filme tem um ritmo lento e cansativo, com momentos que parecem repetitivos e sem dinamismo.",
+   "completo": true
+  },
+  {
+   "tema": "falta de profundidade emocional",
+   "exemplo_parafraseado": "As reviews apontam que o filme não consegue gerar uma conexão emocional forte com o público, deixando a experiência sem impacto.",
+   "texto": "falta de profundidade emocional — As reviews apontam que o filme não consegue gerar uma conexão emocional forte com o público, deixando a experiência sem impacto.",
+   "completo": true
+  },
+  {
+   "tema": "estilo de animação descontextualizado",
+   "exemplo_parafraseado": "Alguns críticos acham que a animação, embora técnica, não se encaixa bem com os temas do filme, criando uma desconexão visual.",
+   "texto": "estilo de animação descontextualizado — Alguns críticos acham que a animação, embora técnica, não se encaixa bem com os temas do filme, criando uma desconexão visual.",
+   "completo": true
+  },
+  {
+   "tema": "mensagem superficial",
+   "exemplo_parafraseado": "As reviews criticam a falta de profundidade na exploração de temas como vida, morte e existência, considerando a mensagem pouco elaborada.",
+   "texto": "mensagem superficial — As reviews criticam a falta de profundidade na exploração de temas como vida, morte e existência, considerando a mensagem pouco elaborada.",
+   "completo": true
+  },
+  {
+   "tema": "figura de 22 irritante",
+   "exemplo_parafraseado": "A personagem 22 é vista como excessivamente irritante e pouco envolvente, atrapalhando a narrativa principal.",
+   "texto": "figura de 22 irritante — A personagem 22 é vista como excessivamente irritante e pouco envolvente, atrapalhando a narrativa principal.",
+   "completo": true
+  },
+  {
+   "tema": "excesso de elementos filosóficos",
+   "exemplo_parafraseado": "Há críticas que acham que o filme aborda temas filosóficos de forma excessiva e descontextualizada, sem dar espaço para a história se desenvolver.",
+   "texto": "excesso de elementos filosóficos — Há críticas que acham que o filme aborda temas filosóficos de forma excessiva e descontextualizada, sem dar espaço para a história se desenvolver.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 121.4
+}

@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "soul-2020",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5509,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "9f3a56b1a79b97bbb1f6aba5202ebdfe0d4233a550108e7bb88d3e1f5df9c3d0",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:35:36+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 154.14,
+ "leitura_prompt_s": 7.787,
+ "geracao_s": 140.106,
+ "carga_s": 4.16,
+ "prompt_eval_count": 5509,
+ "eval_count": 658,
+ "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"mensagem filosófica\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam para uma mensagem sobre a busca por significado e a aceitação da vida, mesmo em situações cotidianas, com críticas sobre a complexidade e a ambiguidade do conceito.\"\n    },\n    {\n      \"tema\": \"desenvolvimento de personagens\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos mencionam a dificuldade em se conectar com os personagens, especialmente o protagonista, que é descrito como egoísta e pouco evoluído ao longo da narrativa.\"\n    },\n    {\n      \"tema\": \"estilo visual e animação\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há elogios ao estilo visual e à qualidade da animação, mas também críticas sobre a repetição de elementos e a falta de coesão no design.\"\n    },\n    {\n      \"tema\": \"contradições e coerência\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam a ambiguidade e as contradições nas ideias centrais do filme, especialmente em relação ao conceito de propósito e à construção da narrativa.\"\n    },\n    {\n      \"tema\": \"recepção emocional\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas sobre a falta de impacto emocional em certos momentos e a sensação de que a narrativa não consegue transmitir com clareza as emoções esperadas.\"\n    },\n    {\n      \"tema\": \"tema da música\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A música é mencionada como um aspecto positivo, com elogios ao uso do jazz e à harmonia, embora alguns críticos considerem que o tema poderia ser explorado mais profundamente.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas apontam para uma crítica moderada sobre a narrativa, o desenvolvimento dos personagens e a coesão dos temas, com elogios ao estilo visual e à música, mas também ressalvas sobre a complexidade e a ambiguidade do filme.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "mensagem filosófica",
+   "exemplo_parafraseado": "As reviews apontam para uma mensagem sobre a busca por significado e a aceitação da vida, mesmo em situações cotidianas, com críticas sobre a complexidade e a ambiguidade do conceito.",
+   "texto": "mensagem filosófica — As reviews apontam para uma mensagem sobre a busca por significado e a aceitação da vida, mesmo em situações cotidianas, com críticas sobre a complexidade e a ambiguidade do conceito.",
+   "completo": true
+  },
+  {
+   "tema": "desenvolvimento de personagens",
+   "exemplo_parafraseado": "Alguns críticos mencionam a dificuldade em se conectar com os personagens, especialmente o protagonista, que é descrito como egoísta e pouco evoluído ao longo da narrativa.",
+   "texto": "desenvolvimento de personagens — Alguns críticos mencionam a dificuldade em se conectar com os personagens, especialmente o protagonista, que é descrito como egoísta e pouco evoluído ao longo da narrativa.",
+   "completo": true
+  },
+  {
+   "tema": "estilo visual e animação",
+   "exemplo_parafraseado": "Há elogios ao estilo visual e à qualidade da animação, mas também críticas sobre a repetição de elementos e a falta de coesão no design.",
+   "texto": "estilo visual e animação — Há elogios ao estilo visual e à qualidade da animação, mas também críticas sobre a repetição de elementos e a falta de coesão no design.",
+   "completo": true
+  },
+  {
+   "tema": "contradições e coerência",
+   "exemplo_parafraseado": "Várias reviews destacam a ambiguidade e as contradições nas ideias centrais do filme, especialmente em relação ao conceito de propósito e à construção da narrativa.",
+   "texto": "contradições e coerência — Várias reviews destacam a ambiguidade e as contradições nas ideias centrais do filme, especialmente em relação ao conceito de propósito e à construção da narrativa.",
+   "completo": true
+  },
+  {
+   "tema": "recepção emocional",
+   "exemplo_parafraseado": "Há críticas sobre a falta de impacto emocional em certos momentos e a sensação de que a narrativa não consegue transmitir com clareza as emoções esperadas.",
+   "texto": "recepção emocional — Há críticas sobre a falta de impacto emocional em certos momentos e a sensação de que a narrativa não consegue transmitir com clareza as emoções esperadas.",
+   "completo": true
+  },
+  {
+   "tema": "tema da música",
+   "exemplo_parafraseado": "A música é mencionada como um aspecto positivo, com elogios ao uso do jazz e à harmonia, embora alguns críticos considerem que o tema poderia ser explorado mais profundamente.",
+   "texto": "tema da música — A música é mencionada como um aspecto positivo, com elogios ao uso do jazz e à harmonia, embora alguns críticos considerem que o tema poderia ser explorado mais profundamente.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 154.1
+}

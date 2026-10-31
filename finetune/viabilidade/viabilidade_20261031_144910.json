@@ -1,0 +1,55 @@
+{
+ "gerado_por": "scripts/finetune/viabilidade_ollama.py",
+ "ollama": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.40.13",
+ "ram_total_gb": 15.19,
+ "par": "do-the-right-thing/negativas",
+ "chars_system": 2195,
+ "chars_user": 31118,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+ "ram_livre_min_gb": 2.0,
+ "ram_partida_min_gb": 6.0,
+ "medicoes": [
+  {
+   "tipo": "probe",
+   "candidato": "Qwen3-8B",
+   "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "num_ctx": 27648,
+   "num_predict": 16,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 9.24,
+    "espera_ram_s": 0.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.212890625,
+    "limpa": true
+   },
+   "ts": "2026-10-31T17:48:41+00:00",
+   "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "finish_reason": "length",
+   "latencia_s": 21.34,
+   "leitura_prompt_s": 12.269,
+   "geracao_s": 3.076,
+   "carga_s": 3.867,
+   "total_s": 19.251,
+   "prompt_eval_count": 8019,
+   "eval_count": 16,
+   "think": "false",
+   "tokens_s_geracao": 5.2,
+   "tokens_s_leitura": 653.6,
+   "gerou_texto": true,
+   "ok": true,
+   "parede_s": 21.3,
+   "memoria": {
+    "ram_usada_gb": 11.19,
+    "ram_livre_min_gb": 4.0,
+    "ws_ollama_gb": 0.05,
+    "vram_gb": 2.56
+   },
+   "abortado_por_memoria": false
+  }
+ ]
+}

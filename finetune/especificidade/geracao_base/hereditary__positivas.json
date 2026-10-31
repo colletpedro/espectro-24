@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "hereditary",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4585,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "13500d48edcda3d37c3e4267666efd6b0125f452dd26254877580b67046ba83c",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:21:45+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 129.19,
+ "leitura_prompt_s": 6.542,
+ "geracao_s": 120.428,
+ "carga_s": 0.007,
+ "prompt_eval_count": 4585,
+ "eval_count": 621,
+ "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"atuações intensas\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das críticas destaca a performance de Toni Collette, considerada uma das melhores do cinema, e a atuação de Alex Wolff, que transmite emoção e tensão com naturalidade.\"\n    },\n    {\n      \"tema\": \"ambiente e atmosfera\",\n      \"mencoes_aproximadas\": 21,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ambiente do filme é descrito como misterioso e opressivo, com uma atmosfera que se constrói lentamente, criando uma sensação de inquietação constante.\"\n    },\n    {\n      \"tema\": \"construção narrativa\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas elogiam a forma como a história se desenvolve, combinando elementos de drama familiar com suspense, sem revelar os desfechos de forma previsível.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como profundamente perturbador, capaz de causar desconforto emocional e deixar uma impressão duradoura nos espectadores.\"\n    },\n    {\n      \"tema\": \"fotografia e direção\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia é elogiada por criar espaços inusitados e tensos, com planos que reforçam a sensação de claustrofobia e o desconforto do espectador.\"\n    },\n    {\n      \"tema\": \"originalidade\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a originalidade do filme, que foge do modelo tradicional de terror e se baseia em temas psicológicos e familiares.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas apontam para uma experiência envolvente e perturbadora, com destaque para atuações intensas e uma atmosfera opressiva que se desenvolve de forma cuidadosa.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "atuações intensas",
+   "exemplo_parafraseado": "A maioria das críticas destaca a performance de Toni Collette, considerada uma das melhores do cinema, e a atuação de Alex Wolff, que transmite emoção e tensão com naturalidade.",
+   "texto": "atuações intensas — A maioria das críticas destaca a performance de Toni Collette, considerada uma das melhores do cinema, e a atuação de Alex Wolff, que transmite emoção e tensão com naturalidade.",
+   "completo": true
+  },
+  {
+   "tema": "ambiente e atmosfera",
+   "exemplo_parafraseado": "O ambiente do filme é descrito como misterioso e opressivo, com uma atmosfera que se constrói lentamente, criando uma sensação de inquietação constante.",
+   "texto": "ambiente e atmosfera — O ambiente do filme é descrito como misterioso e opressivo, com uma atmosfera que se constrói lentamente, criando uma sensação de inquietação constante.",
+   "completo": true
+  },
+  {
+   "tema": "construção narrativa",
+   "exemplo_parafraseado": "As críticas elogiam a forma como a história se desenvolve, combinando elementos de drama familiar com suspense, sem revelar os desfechos de forma previsível.",
+   "texto": "construção narrativa — As críticas elogiam a forma como a história se desenvolve, combinando elementos de drama familiar com suspense, sem revelar os desfechos de forma previsível.",
+   "completo": true
+  },
+  {
+   "tema": "impacto emocional",
+   "exemplo_parafraseado": "O filme é visto como profundamente perturbador, capaz de causar desconforto emocional e deixar uma impressão duradoura nos espectadores.",
+   "texto": "impacto emocional — O filme é visto como profundamente perturbador, capaz de causar desconforto emocional e deixar uma impressão duradoura nos espectadores.",
+   "completo": true
+  },
+  {
+   "tema": "fotografia e direção",
+   "exemplo_parafraseado": "A fotografia é elogiada por criar espaços inusitados e tensos, com planos que reforçam a sensação de claustrofobia e o desconforto do espectador.",
+   "texto": "fotografia e direção — A fotografia é elogiada por criar espaços inusitados e tensos, com planos que reforçam a sensação de claustrofobia e o desconforto do espectador.",
+   "completo": true
+  },
+  {
+   "tema": "originalidade",
+   "exemplo_parafraseado": "As críticas destacam a originalidade do filme, que foge do modelo tradicional de terror e se baseia em temas psicológicos e familiares.",
+   "texto": "originalidade — As críticas destacam a originalidade do filme, que foge do modelo tradicional de terror e se baseia em temas psicológicos e familiares.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 129.2
+}

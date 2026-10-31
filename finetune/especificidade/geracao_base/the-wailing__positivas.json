@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "the-wailing",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6812,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "e3cffc38e63b2a244dfa8e1c697cd8cfcd4de44ce18adf089010cbc6815eab0f",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:45:42+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 163.72,
+ "leitura_prompt_s": 10.109,
+ "geracao_s": 151.348,
+ "carga_s": 0.006,
+ "prompt_eval_count": 6812,
+ "eval_count": 657,
+ "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"ambiente e atmosfera\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a construção de um ambiente sombrio e tenso, com descrições de paisagens desoladas e cenários que reforçam a sensação de inquietação e medo.\"\n    },\n    {\n      \"tema\": \"construção narrativa e surpresas\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam a maneira como a narrativa se desenvolve de forma imprevisível, com revelações que desafiam a percepção do espectador e mantêm o interesse ao longo do filme.\"\n    },\n    {\n      \"tema\": \"estética cinematográfica\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A cinematografia é frequentemente mencionada como um ponto forte, com destaque para as cenas de rituais e a utilização de cores e paisagens que contribuem para o clima sobrenatural.\"\n    },\n    {\n      \"tema\": \"desenvolvimento dos personagens\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam para a complexidade dos personagens, especialmente o protagonista, que é apresentado como alguém desorientado e envolvido em conflitos internos e externos.\"\n    },\n    {\n      \"tema\": \"temática cultural e social\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A obra é vista como um reflexo de temas culturais e históricos, como a colonização e o conflito entre tradições e modernidade, que são explorados de forma simbólica.\"\n    },\n    {\n      \"tema\": \"ritmo e tensão\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo do filme é descrito como lento e envolvente, com momentos de tensão crescente que mantêm o espectador em alerta, mesmo em cenas sem uso de sustos tradicionais.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atmosfera sombria e a construção narrativa envolvente, além da estética cinematográfica e da complexidade dos personagens.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ambiente e atmosfera",
+   "exemplo_parafraseado": "As reviews destacam a construção de um ambiente sombrio e tenso, com descrições de paisagens desoladas e cenários que reforçam a sensação de inquietação e medo.",
+   "texto": "ambiente e atmosfera — As reviews destacam a construção de um ambiente sombrio e tenso, com descrições de paisagens desoladas e cenários que reforçam a sensação de inquietação e medo.",
+   "completo": true
+  },
+  {
+   "tema": "construção narrativa e surpresas",
+   "exemplo_parafraseado": "Muitas críticas elogiam a maneira como a narrativa se desenvolve de forma imprevisível, com revelações que desafiam a percepção do espectador e mantêm o interesse ao longo do filme.",
+   "texto": "construção narrativa e surpresas — Muitas críticas elogiam a maneira como a narrativa se desenvolve de forma imprevisível, com revelações que desafiam a percepção do espectador e mantêm o interesse ao longo do filme.",
+   "completo": true
+  },
+  {
+   "tema": "estética cinematográfica",
+   "exemplo_parafraseado": "A cinematografia é frequentemente mencionada como um ponto forte, com destaque para as cenas de rituais e a utilização de cores e paisagens que contribuem para o clima sobrenatural.",
+   "texto": "estética cinematográfica — A cinematografia é frequentemente mencionada como um ponto forte, com destaque para as cenas de rituais e a utilização de cores e paisagens que contribuem para o clima sobrenatural.",
+   "completo": true
+  },
+  {
+   "tema": "desenvolvimento dos personagens",
+   "exemplo_parafraseado": "As críticas apontam para a complexidade dos personagens, especialmente o protagonista, que é apresentado como alguém desorientado e envolvido em conflitos internos e externos.",
+   "texto": "desenvolvimento dos personagens — As críticas apontam para a complexidade dos personagens, especialmente o protagonista, que é apresentado como alguém desorientado e envolvido em conflitos internos e externos.",
+   "completo": true
+  },
+  {
+   "tema": "temática cultural e social",
+   "exemplo_parafraseado": "A obra é vista como um reflexo de temas culturais e históricos, como a colonização e o conflito entre tradições e modernidade, que são explorados de forma simbólica.",
+   "texto": "temática cultural e social — A obra é vista como um reflexo de temas culturais e históricos, como a colonização e o conflito entre tradições e modernidade, que são explorados de forma simbólica.",
+   "completo": true
+  },
+  {
+   "tema": "ritmo e tensão",
+   "exemplo_parafraseado": "O ritmo do filme é descrito como lento e envolvente, com momentos de tensão crescente que mantêm o espectador em alerta, mesmo em cenas sem uso de sustos tradicionais.",
+   "texto": "ritmo e tensão — O ritmo do filme é descrito como lento e envolvente, com momentos de tensão crescente que mantêm o espectador em alerta, mesmo em cenas sem uso de sustos tradicionais.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 163.7
+}

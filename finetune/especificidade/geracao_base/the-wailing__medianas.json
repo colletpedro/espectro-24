@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "the-wailing",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6702,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "f28e41cb27636fb19d0d7c4f58a4d3de119ed3f5028872322b901813835a756f",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:43:03+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 158.92,
+ "leitura_prompt_s": 9.854,
+ "geracao_s": 142.242,
+ "carga_s": 4.756,
+ "prompt_eval_count": 6702,
+ "eval_count": 624,
+ "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"ambiguidade narrativa\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a dificuldade em seguir a trama devido à falta de clareza em certos momentos, com críticas sobre a complexidade excessiva e a ausência de resolução direta em partes do filme.\"\n    },\n    {\n      \"tema\": \"atuações\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews elogiam as atuações, especialmente de personagens principais, considerando-as como um dos pontos positivos do filme.\"\n    },\n    {\n      \"tema\": \"ritmo e duração\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo do filme é criticado por ser lento e excessivamente longo, com algumas reviews mencionando que a duração contribui para a frustração do espectador.\"\n    },\n    {\n      \"tema\": \"ambiente e atmosfera\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atmosfera e o ambiente do filme são frequentemente mencionados como elementos que contribuem para o clima de tensão e suspense.\"\n    },\n    {\n      \"tema\": \"estilo cinematográfico\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews elogiam a fotografia e o estilo visual do filme, destacando a utilização de técnicas cinematográficas para criar tensão e atmosfera.\"\n    },\n    {\n      \"tema\": \"interpretação do espectador\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos mencionam que o filme depende da interpretação do espectador para entender certas partes, o que pode gerar confusão ou frustração.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam para uma experiência desafiadora, com críticas sobre a complexidade narrativa, a duração excessiva e a dificuldade de seguir a trama, embora algumas elogiem as atuações e o estilo cinematográfico.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ambiguidade narrativa",
+   "exemplo_parafraseado": "As reviews destacam a dificuldade em seguir a trama devido à falta de clareza em certos momentos, com críticas sobre a complexidade excessiva e a ausência de resolução direta em partes do filme.",
+   "texto": "ambiguidade narrativa — As reviews destacam a dificuldade em seguir a trama devido à falta de clareza em certos momentos, com críticas sobre a complexidade excessiva e a ausência de resolução direta em partes do filme.",
+   "completo": true
+  },
+  {
+   "tema": "atuações",
+   "exemplo_parafraseado": "Muitas reviews elogiam as atuações, especialmente de personagens principais, considerando-as como um dos pontos positivos do filme.",
+   "texto": "atuações — Muitas reviews elogiam as atuações, especialmente de personagens principais, considerando-as como um dos pontos positivos do filme.",
+   "completo": true
+  },
+  {
+   "tema": "ritmo e duração",
+   "exemplo_parafraseado": "O ritmo do filme é criticado por ser lento e excessivamente longo, com algumas reviews mencionando que a duração contribui para a frustração do espectador.",
+   "texto": "ritmo e duração — O ritmo do filme é criticado por ser lento e excessivamente longo, com algumas reviews mencionando que a duração contribui para a frustração do espectador.",
+   "completo": true
+  },
+  {
+   "tema": "ambiente e atmosfera",
+   "exemplo_parafraseado": "A atmosfera e o ambiente do filme são frequentemente mencionados como elementos que contribuem para o clima de tensão e suspense.",
+   "texto": "ambiente e atmosfera — A atmosfera e o ambiente do filme são frequentemente mencionados como elementos que contribuem para o clima de tensão e suspense.",
+   "completo": true
+  },
+  {
+   "tema": "estilo cinematográfico",
+   "exemplo_parafraseado": "As reviews elogiam a fotografia e o estilo visual do filme, destacando a utilização de técnicas cinematográficas para criar tensão e atmosfera.",
+   "texto": "estilo cinematográfico — As reviews elogiam a fotografia e o estilo visual do filme, destacando a utilização de técnicas cinematográficas para criar tensão e atmosfera.",
+   "completo": true
+  },
+  {
+   "tema": "interpretação do espectador",
+   "exemplo_parafraseado": "Alguns críticos mencionam que o filme depende da interpretação do espectador para entender certas partes, o que pode gerar confusão ou frustração.",
+   "texto": "interpretação do espectador — Alguns críticos mencionam que o filme depende da interpretação do espectador para entender certas partes, o que pode gerar confusão ou frustração.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 158.9
+}

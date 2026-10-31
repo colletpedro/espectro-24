@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "the-wailing",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5992,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "3601db1444ae2cbeab7e215d5cc30ea233943d97a3c4664a71c7a9c941cca742",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:40:36+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 146.73,
+ "leitura_prompt_s": 8.789,
+ "geracao_s": 135.686,
+ "carga_s": 0.006,
+ "prompt_eval_count": 5992,
+ "eval_count": 620,
+ "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"incoerência narrativa\",\n      \"mencoes_aproximadas\": 27,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a falta de coesão no desenvolvimento da história, com revelações que parecem ser introduzidas de forma arbitrária e sem justificativa lógica.\"\n    },\n    {\n      \"tema\": \"pacing desorganizado\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estrutura do filme é vista como excessivamente prolongada e sem direção clara, com momentos que parecem ser adicionados apenas para prolongar a duração.\"\n    },\n    {\n      \"tema\": \"falta de tensão\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam que o filme não consegue gerar suspense ou medo de maneira eficaz, tornando a experiência visualmente atraente, mas emocionalmente desinteressante.\"\n    },\n    {\n      \"tema\": \"repetição e excesso de elementos\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O uso excessivo de tropos de horror e a repetição de cenas são criticados como elementos que desgastam a experiência do espectador.\"\n    },\n    {\n      \"tema\": \"falta de profundidade temática\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a ausência de uma abordagem consistente em relação a temas como fé, moralidade ou sobrenatural, tornando a narrativa superficial.\"\n    },\n    {\n      \"tema\": \"falta de clareza nas revelações\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A complexidade do roteiro é criticada por não oferecer respostas satisfatórias ou claras, deixando o espectador confuso e desinteressado.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam para uma narrativa incoerente e desorganizada, com excesso de elementos que não contribuem para a construção do suspense ou da tensão emocional.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "incoerência narrativa",
+   "exemplo_parafraseado": "As críticas destacam a falta de coesão no desenvolvimento da história, com revelações que parecem ser introduzidas de forma arbitrária e sem justificativa lógica.",
+   "texto": "incoerência narrativa — As críticas destacam a falta de coesão no desenvolvimento da história, com revelações que parecem ser introduzidas de forma arbitrária e sem justificativa lógica.",
+   "completo": true
+  },
+  {
+   "tema": "pacing desorganizado",
+   "exemplo_parafraseado": "A estrutura do filme é vista como excessivamente prolongada e sem direção clara, com momentos que parecem ser adicionados apenas para prolongar a duração.",
+   "texto": "pacing desorganizado — A estrutura do filme é vista como excessivamente prolongada e sem direção clara, com momentos que parecem ser adicionados apenas para prolongar a duração.",
+   "completo": true
+  },
+  {
+   "tema": "falta de tensão",
+   "exemplo_parafraseado": "As críticas apontam que o filme não consegue gerar suspense ou medo de maneira eficaz, tornando a experiência visualmente atraente, mas emocionalmente desinteressante.",
+   "texto": "falta de tensão — As críticas apontam que o filme não consegue gerar suspense ou medo de maneira eficaz, tornando a experiência visualmente atraente, mas emocionalmente desinteressante.",
+   "completo": true
+  },
+  {
+   "tema": "repetição e excesso de elementos",
+   "exemplo_parafraseado": "O uso excessivo de tropos de horror e a repetição de cenas são criticados como elementos que desgastam a experiência do espectador.",
+   "texto": "repetição e excesso de elementos — O uso excessivo de tropos de horror e a repetição de cenas são criticados como elementos que desgastam a experiência do espectador.",
+   "completo": true
+  },
+  {
+   "tema": "falta de profundidade temática",
+   "exemplo_parafraseado": "As críticas destacam a ausência de uma abordagem consistente em relação a temas como fé, moralidade ou sobrenatural, tornando a narrativa superficial.",
+   "texto": "falta de profundidade temática — As críticas destacam a ausência de uma abordagem consistente em relação a temas como fé, moralidade ou sobrenatural, tornando a narrativa superficial.",
+   "completo": true
+  },
+  {
+   "tema": "falta de clareza nas revelações",
+   "exemplo_parafraseado": "A complexidade do roteiro é criticada por não oferecer respostas satisfatórias ou claras, deixando o espectador confuso e desinteressado.",
+   "texto": "falta de clareza nas revelações — A complexidade do roteiro é criticada por não oferecer respostas satisfatórias ou claras, deixando o espectador confuso e desinteressado.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 146.7
+}

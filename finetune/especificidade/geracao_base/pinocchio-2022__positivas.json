@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "pinocchio-2022",
+ "bucket": "positivas",
+ "num_ctx": 13312,
+ "tokens_prompt_plano": 8668,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "0a6dbdb91e97be5d65b60a4986735984c49f91cfbd9d6cbd4528c6528cc752c4",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:30:48+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 167.2,
+ "leitura_prompt_s": 12.873,
+ "geracao_s": 148.109,
+ "carga_s": 4.121,
+ "prompt_eval_count": 8668,
+ "eval_count": 591,
+ "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"fidelidade à essência da história original\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a manutenção da narrativa central e dos valores transmitidos na versão original, como a importância da honestidade e da coragem.\"\n    },\n    {\n      \"tema\": \"design e estética visuais\",\n      \"mencoes_aproximadas\": 21,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam a qualidade do design, a fidelidade aos personagens e os detalhes que reforçam a atmosfera mágica e nostálgica.\"\n    },\n    {\n      \"tema\": \"atuações e expressão dos personagens\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A interpretação dos atores, especialmente dos personagens principais, é apontada como um elemento que contribui para a conexão emocional com a narrativa.\"\n    },\n    {\n      \"tema\": \"mensagem e ensinamentos\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam a relevância das lições transmitidas, como a importância de ser honesto e de valorizar a amizade.\"\n    },\n    {\n      \"tema\": \"inovação e elementos novos\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos apreciam a inclusão de elementos inéditos que enriquecem a narrativa, como referências a outros clássicos da Disney.\"\n    },\n    {\n      \"tema\": \"recepção emocional\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews destaca a capacidade do filme de gerar emoção e conexão com o espectador, especialmente em momentos de vulnerabilidade.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas ressaltam a fidelidade à essência da história original, a beleza visual e a mensagem emocional do filme.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "fidelidade à essência da história original",
+   "exemplo_parafraseado": "As reviews destacam a manutenção da narrativa central e dos valores transmitidos na versão original, como a importância da honestidade e da coragem.",
+   "texto": "fidelidade à essência da história original — As reviews destacam a manutenção da narrativa central e dos valores transmitidos na versão original, como a importância da honestidade e da coragem.",
+   "completo": true
+  },
+  {
+   "tema": "design e estética visuais",
+   "exemplo_parafraseado": "Muitas críticas elogiam a qualidade do design, a fidelidade aos personagens e os detalhes que reforçam a atmosfera mágica e nostálgica.",
+   "texto": "design e estética visuais — Muitas críticas elogiam a qualidade do design, a fidelidade aos personagens e os detalhes que reforçam a atmosfera mágica e nostálgica.",
+   "completo": true
+  },
+  {
+   "tema": "atuações e expressão dos personagens",
+   "exemplo_parafraseado": "A interpretação dos atores, especialmente dos personagens principais, é apontada como um elemento que contribui para a conexão emocional com a narrativa.",
+   "texto": "atuações e expressão dos personagens — A interpretação dos atores, especialmente dos personagens principais, é apontada como um elemento que contribui para a conexão emocional com a narrativa.",
+   "completo": true
+  },
+  {
+   "tema": "mensagem e ensinamentos",
+   "exemplo_parafraseado": "As reviews mencionam a relevância das lições transmitidas, como a importância de ser honesto e de valorizar a amizade.",
+   "texto": "mensagem e ensinamentos — As reviews mencionam a relevância das lições transmitidas, como a importância de ser honesto e de valorizar a amizade.",
+   "completo": true
+  },
+  {
+   "tema": "inovação e elementos novos",
+   "exemplo_parafraseado": "Alguns críticos apreciam a inclusão de elementos inéditos que enriquecem a narrativa, como referências a outros clássicos da Disney.",
+   "texto": "inovação e elementos novos — Alguns críticos apreciam a inclusão de elementos inéditos que enriquecem a narrativa, como referências a outros clássicos da Disney.",
+   "completo": true
+  },
+  {
+   "tema": "recepção emocional",
+   "exemplo_parafraseado": "A maioria das reviews destaca a capacidade do filme de gerar emoção e conexão com o espectador, especialmente em momentos de vulnerabilidade.",
+   "texto": "recepção emocional — A maioria das reviews destaca a capacidade do filme de gerar emoção e conexão com o espectador, especialmente em momentos de vulnerabilidade.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 167.2
+}

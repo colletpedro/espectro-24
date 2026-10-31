@@ -1,0 +1,73 @@
+{
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "slug": "fight-club",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6397,
+ "num_predict": 3000,
+ "think": "false",
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "b050fb2ace2c64535a8b2f4cb249f3d47f5648034cc0ff908bae39daf3e248cf",
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 8.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2177734375,
+  "limpa": true
+ },
+ "ts": "2026-10-31T17:09:07+00:00",
+ "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "finish_reason": "stop",
+ "latencia_s": 162.83,
+ "leitura_prompt_s": 9.345,
+ "geracao_s": 143.673,
+ "carga_s": 7.688,
+ "prompt_eval_count": 6397,
+ "eval_count": 629,
+ "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"ritmo lento e repetitivo\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"Muitas críticas destacam que o filme possui um ritmo lento e repetitivo, especialmente no início, o que dificulta a imersão do espectador.\"\n    },\n    {\n      \"tema\": \"crítica à violência e à masculinidade tóxica\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"Alguns críticos apontam que o filme, embora critique a masculinidade tóxica, reforça padrões de violência e agressividade, o que gera desconforto.\"\n    },\n    {\n      \"tema\": \"falta de clareza na narrativa\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"Muitas críticas mencionam a complexidade da narrativa, que se torna difícil de seguir e não oferece clareza suficiente para o espectador.\"\n    },\n    {\n      \"tema\": \"construção do personagem principal\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"O protagonista é frequentemente criticado por ser antipático e difícil de empatizar, o que afeta a experiência de assistir ao filme.\"\n    },\n    {\n      \"tema\": \"excesso de violência e caos\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"Críticas destacam que o filme se torna excessivamente violento e caótico, o que pode ser desagradável para alguns espectadores.\"\n    },\n    {\n      \"tema\": \"superestimado e hype excessivo\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 39,\n      \"exemplo_parafraseado\": \"Várias críticas mencionam que o filme é superestimado, com um hype excessivo que não corresponde à experiência real de assistir ao filme.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam para uma experiência desgastante, com ritmo lento, narrativa confusa e excesso de violência, além de críticas à construção dos personagens e ao hype do filme.\"\n}",
+ "ok": true,
+ "bullets": [
+  {
+   "tema": "ritmo lento e repetitivo",
+   "exemplo_parafraseado": "Muitas críticas destacam que o filme possui um ritmo lento e repetitivo, especialmente no início, o que dificulta a imersão do espectador.",
+   "texto": "ritmo lento e repetitivo — Muitas críticas destacam que o filme possui um ritmo lento e repetitivo, especialmente no início, o que dificulta a imersão do espectador.",
+   "completo": true
+  },
+  {
+   "tema": "crítica à violência e à masculinidade tóxica",
+   "exemplo_parafraseado": "Alguns críticos apontam que o filme, embora critique a masculinidade tóxica, reforça padrões de violência e agressividade, o que gera desconforto.",
+   "texto": "crítica à violência e à masculinidade tóxica — Alguns críticos apontam que o filme, embora critique a masculinidade tóxica, reforça padrões de violência e agressividade, o que gera desconforto.",
+   "completo": true
+  },
+  {
+   "tema": "falta de clareza na narrativa",
+   "exemplo_parafraseado": "Muitas críticas mencionam a complexidade da narrativa, que se torna difícil de seguir e não oferece clareza suficiente para o espectador.",
+   "texto": "falta de clareza na narrativa — Muitas críticas mencionam a complexidade da narrativa, que se torna difícil de seguir e não oferece clareza suficiente para o espectador.",
+   "completo": true
+  },
+  {
+   "tema": "construção do personagem principal",
+   "exemplo_parafraseado": "O protagonista é frequentemente criticado por ser antipático e difícil de empatizar, o que afeta a experiência de assistir ao filme.",
+   "texto": "construção do personagem principal — O protagonista é frequentemente criticado por ser antipático e difícil de empatizar, o que afeta a experiência de assistir ao filme.",
+   "completo": true
+  },
+  {
+   "tema": "excesso de violência e caos",
+   "exemplo_parafraseado": "Críticas destacam que o filme se torna excessivamente violento e caótico, o que pode ser desagradável para alguns espectadores.",
+   "texto": "excesso de violência e caos — Críticas destacam que o filme se torna excessivamente violento e caótico, o que pode ser desagradável para alguns espectadores.",
+   "completo": true
+  },
+  {
+   "tema": "superestimado e hype excessivo",
+   "exemplo_parafraseado": "Várias críticas mencionam que o filme é superestimado, com um hype excessivo que não corresponde à experiência real de assistir ao filme.",
+   "texto": "superestimado e hype excessivo — Várias críticas mencionam que o filme é superestimado, com um hype excessivo que não corresponde à experiência real de assistir ao filme.",
+   "completo": true
+  }
+ ],
+ "json_parseia": true,
+ "parede_s": 162.8
+}
