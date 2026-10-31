@@ -127,8 +127,7 @@ def ws_ollama_gb() -> float | None:
     if os.name != "nt":
         return None
     try:
-        out = subprocess.run(["tasklist", "/FO", "CSV", "/NH"], capture_output=True,
-                             text=True, timeout=10).stdout
+        out = K.rodar_texto(["tasklist", "/FO", "CSV", "/NH"], timeout=10).stdout
     except (OSError, subprocess.TimeoutExpired):
         return None
     kb = 0
@@ -143,9 +142,8 @@ def vram_gb() -> float | None:
     if not shutil.which("nvidia-smi"):
         return None
     try:
-        out = subprocess.run(["nvidia-smi", "--query-gpu=memory.used",
-                              "--format=csv,noheader,nounits"],
-                             capture_output=True, text=True, timeout=10).stdout
+        out = K.rodar_texto(["nvidia-smi", "--query-gpu=memory.used",
+                             "--format=csv,noheader,nounits"], timeout=10).stdout
         return sum(float(x) for x in out.split()) / 1024
     except (OSError, ValueError, subprocess.TimeoutExpired):
         return None
@@ -209,7 +207,7 @@ def subir_ollama() -> subprocess.Popen:
 def ollama_ps() -> list[str] | None:
     """Nomes dos modelos carregados (`ollama ps`); None se o servidor não responde."""
     try:
-        r = subprocess.run(["ollama", "ps"], capture_output=True, text=True, timeout=30)
+        r = K.rodar_texto(["ollama", "ps"], timeout=30)
     except (OSError, subprocess.TimeoutExpired):
         return None
     if r.returncode != 0:
@@ -251,8 +249,7 @@ def partida_limpa(ram_partida_min_gb: float, espera_ram_s: float) -> dict:
 
 def versao_ollama() -> str:
     try:
-        return subprocess.run(["ollama", "--version"], capture_output=True, text=True,
-                              timeout=20).stdout.strip()
+        return K.rodar_texto(["ollama", "--version"], timeout=20).stdout.strip()
     except OSError as e:
         raise SystemExit(f"`ollama` não está no PATH: {e}")
 
@@ -485,6 +482,25 @@ def contagem_template(nome_ollama: str, familia: str, s: str, u: str) -> dict:
         matar_ollama()
 
 
+def modelo_existe(nome: str) -> bool:
+    """`ollama show` devolve 0 só se o modelo existe (servidor já no ar)."""
+    return K.rodar_texto(["ollama", "show", nome], timeout=60).returncode == 0
+
+
+def remover_modelo(nome: str) -> dict:
+    """`ollama rm` antes do `create`: a medição não pode herdar um modelo de mesmo
+    nome deixado por uma tentativa anterior (o import de 30/10 caiu depois de
+    criar). Aborta se o modelo continuar existindo."""
+    existia = modelo_existe(nome)
+    reg = {"existia": existia}
+    if existia:
+        r = K.rodar_texto(["ollama", "rm", nome], timeout=120)
+        reg.update({"rm_rc": r.returncode, "rm_saida": (r.stdout + r.stderr)[-500:]})
+        if modelo_existe(nome):
+            raise SystemExit(f"`ollama rm {nome}` não removeu o modelo: {reg['rm_saida']}")
+    return reg
+
+
 def cmd_importar(a) -> None:
     saida, s, u = _cabecalho(a)
     gguf, mf = Path(a.gguf), Path(a.modelfile)
@@ -501,11 +517,18 @@ def cmd_importar(a) -> None:
     matar_ollama()
     srv = subir_ollama()
     try:
+        reg["recriado_do_zero"] = remover_modelo(a.nome)
         t0 = time.time()
-        c = subprocess.run(["ollama", "create", a.nome, "-f", str(arq_mf)],
-                           capture_output=True, text=True)
+        c = K.rodar_texto(["ollama", "create", a.nome, "-f", str(arq_mf)])
         reg["create"] = {"rc": c.returncode, "s": round(time.time() - t0, 1),
                          "stderr_fim": c.stderr[-2000:]}
+    except Exception as e:
+        # Falha do SCRIPT, não do modelo: o registro sai gravado e o E4 fica
+        # sem valor (None), para não contar como reprovação.
+        saida.update({"importacao": reg, "E4_importa_e_gera": None,
+                      "erro_do_script": f"{type(e).__name__}: {e}"})
+        _gravar(saida, a.saida, f"importar_{a.nome}")
+        raise
     finally:
         srv.terminate()
         matar_ollama()

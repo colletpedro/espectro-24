@@ -13,6 +13,7 @@ import json
 import math
 import os
 import statistics
+import subprocess
 import sys
 from pathlib import Path
 
@@ -74,6 +75,21 @@ EXCLUIR_FILMES = {
 # Fora como EXEMPLO de síntese, mas o filme fica no seu conjunto (a unidade do
 # split é o filme): bucket cuja síntese não é DeepSeek.
 EXCLUIR_BUCKETS_SINTESE_MOTIVO = "fallback_conteudo: síntese deste bucket feita pelo Gemini"
+
+
+def rodar_texto(args: list[str], **kw) -> subprocess.CompletedProcess:
+    """`subprocess.run` que lê a saída como TEXTO sem depender do locale.
+
+    No Windows o padrão de `text=True` é o cp1252: o `ollama create` imprime
+    bytes que não existem nele (0x8f, do spinner em UTF-8), a thread de leitura
+    cai com UnicodeDecodeError e `stderr` volta None (2026-10-30). Aqui a
+    saída é sempre UTF-8 com `errors="replace"`, e `stdout`/`stderr` voltam
+    `""` em vez de None. Captura por padrão; `timeout` e `env` passam direto."""
+    kw.setdefault("capture_output", True)
+    r = subprocess.run(args, text=True, encoding="utf-8", errors="replace", **kw)
+    r.stdout = r.stdout or ""
+    r.stderr = r.stderr or ""
+    return r
 
 
 def ler_json(p: Path):
@@ -268,10 +284,15 @@ def chat(familia: str, system: str, user: str, saida: str | None) -> str:
     - Gemma 4: o padrão do template já é `enable_thinking=false` (sem o
       token `<|think|>` no system).
 
-    `saida=None` devolve só o prompt (até o início da resposta)."""
+    `saida=None` devolve só o prompt (até o início da resposta).
+
+    Qwen3: o template NÃO apara o conteúdo. Até 2026-10-30 o `user` era aparado
+    aqui, e o `\\n` final do prompt de síntese sumia; o Kaggle (v4 do smoke)
+    renderizou com ele, e os 6 exemplos ficaram com 1 caractere a mais (e até 1
+    token) do que o `chat_esperado` gravado no dataset `ae74737d…`."""
     if familia == "qwen":
-        p = (f"<|im_start|>system\n{system.strip()}<|im_end|>\n"
-             f"<|im_start|>user\n{user.strip()}<|im_end|>\n"
+        p = (f"<|im_start|>system\n{system}<|im_end|>\n"
+             f"<|im_start|>user\n{user}<|im_end|>\n"
              f"<|im_start|>assistant\n<think>\n\n</think>\n\n")
         fim = "<|im_end|>\n"
     elif familia == "gemma":

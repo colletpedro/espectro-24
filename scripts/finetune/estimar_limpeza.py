@@ -30,7 +30,6 @@ import argparse
 import collections
 import json
 import math
-import subprocess
 import sys
 from pathlib import Path
 
@@ -44,8 +43,7 @@ RAMO_REFERENCIA = "gate-local"
 
 
 def _git_show(ramo: str, caminho: str) -> str:
-    r = subprocess.run(["git", "-C", str(K.RAIZ), "show", f"{ramo}:{caminho}"],
-                       capture_output=True, text=True)
+    r = K.rodar_texto(["git", "-C", str(K.RAIZ), "show", f"{ramo}:{caminho}"])
     if r.returncode:
         raise SystemExit(f"sem {ramo}:{caminho}: {r.stderr.strip()}")
     return r.stdout

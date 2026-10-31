@@ -15,7 +15,6 @@ import argparse
 import collections
 import json
 import re
-import subprocess
 import sys
 from pathlib import Path
 
@@ -36,8 +35,7 @@ MARGEM = 0.10  # PROPOSTO: 10% sobre o maior total observado
 
 
 def _git(*a) -> str:
-    return subprocess.run(["git", "-C", str(K.RAIZ), *a], capture_output=True,
-                          text=True).stdout
+    return K.rodar_texto(["git", "-C", str(K.RAIZ), *a]).stdout
 
 
 def _hash_temas(d: dict) -> str:

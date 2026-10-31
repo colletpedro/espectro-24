@@ -142,8 +142,9 @@ def _sha256(p: Path) -> str:
 
 
 def _df() -> str:
-    r = subprocess.run(["df", "-h", "/tmp", "/kaggle/working", "/"], capture_output=True, text=True)
-    return r.stdout
+    r = subprocess.run(["df", "-h", "/tmp", "/kaggle/working", "/"], capture_output=True,
+                       text=True, encoding="utf-8", errors="replace")
+    return r.stdout or ""
 
 
 def _livre_gb(caminho: str) -> float:
@@ -616,9 +617,9 @@ def instalar() -> dict:
     livre = os.environ.get("ESPECTRO24_UNSLOTH_LIVRE") == "1"
     pacotes = ["unsloth", "unsloth_zoo"] if livre else PACOTES_FIXOS
     r = subprocess.run([sys.executable, "-m", "pip", "install", "-q", "--upgrade", *pacotes],
-                       capture_output=True, text=True)
+                       capture_output=True, text=True, encoding="utf-8", errors="replace")
     return {"rc": r.returncode, "s": round(time.time() - t0, 1), "pacotes": pacotes,
-            "stderr_fim": r.stderr[-2000:]}
+            "stderr_fim": (r.stderr or "")[-2000:]}
 
 
 def rodar_um(nome: str, seq: int, timeout_s: int) -> dict:
@@ -626,8 +627,8 @@ def rodar_um(nome: str, seq: int, timeout_s: int) -> dict:
     try:
         r = subprocess.run([sys.executable, SCRIPT, "--modelo", nome,
                             "--seq", str(seq)], capture_output=True, text=True,
-                           timeout=timeout_s)
-        rc, err = r.returncode, r.stdout[-3000:] + "\n" + r.stderr[-6000:]
+                           encoding="utf-8", errors="replace", timeout=timeout_s)
+        rc, err = r.returncode, (r.stdout or "")[-3000:] + "\n" + (r.stderr or "")[-6000:]
     except subprocess.TimeoutExpired:
         rc, err = "timeout", ""
     log = SAIDA / nome / "log.json"

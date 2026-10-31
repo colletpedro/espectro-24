@@ -180,6 +180,7 @@ m = importlib.util.module_from_spec(spec); sys.modules["smoke"] = m; spec.loader
 tmp = Path({str(tmp_path)!r})
 m.SAIDA, m.ENTRADA_GLOB = tmp / "smoke", str(tmp / "input" / "**" / "smoke.jsonl")
 m.instalar = lambda: {{"rc": 0}}
+m._conferir_dataset = lambda: {{"confere": True}}   # a guarda do sha tem teste próprio
 chamadas = []
 def falso(nome, seq, timeout_s):
     chamadas.append((nome, seq))
