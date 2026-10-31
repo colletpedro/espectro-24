@@ -1,0 +1,60 @@
+{
+ "gerado_por": "scripts/finetune/viabilidade_ollama.py",
+ "ollama": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.40.6",
+ "ram_total_gb": 15.19,
+ "par": "do-the-right-thing/negativas",
+ "chars_system": 2195,
+ "chars_user": 31118,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+ "ram_livre_min_gb": 2.0,
+ "ram_partida_min_gb": 6.0,
+ "medicoes": [
+  {
+   "tipo": "medicao",
+   "candidato": "Qwen3-8B",
+   "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "num_ctx": 18432,
+   "num_predict": 3000,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 9.52,
+    "espera_ram_s": 0.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.1708984375,
+    "limpa": true
+   },
+   "ts": "2026-10-22T17:31:37+00:00",
+   "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "finish_reason": "stop",
+   "latencia_s": 199.97,
+   "leitura_prompt_s": 12.464,
+   "geracao_s": 175.694,
+   "carga_s": 9.705,
+   "total_s": 197.91,
+   "prompt_eval_count": 8019,
+   "eval_count": 642,
+   "think": "false",
+   "tokens_s_geracao": 3.65,
+   "tokens_s_leitura": 643.37,
+   "gerou_texto": true,
+   "json_parseia": true,
+   "json_tem_temas_em_lista": true,
+   "n_temas": 6,
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"representação estereotipada\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a representação de personagens negros como estereótipos de indivíduos desonestos, agressivos e sem propósito, reforçando visões racistas e reacionárias.\"\n    },\n    {\n      \"tema\": \"escalada de violência\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews criticam a forma como a violência é exibida de maneira excessiva e descontextualizada, sem uma narrativa clara ou uma resolução satisfatória.\"\n    },\n    {\n      \"tema\": \"estilo cinematográfico excessivo\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O estilo visual e a direção são elogiados, mas muitos consideram que o excesso de elementos dramáticos e dramatizações atrapalham a narrativa.\"\n    },\n    {\n      \"tema\": \"confusão narrativa\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam a falta de uma estrutura clara e coesa, com diálogos que parecem forçados e uma falta de desenvolvimento de personagens.\"\n    },\n    {\n      \"tema\": \"falta de empatia\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas sobre a ausência de empatia com os personagens, especialmente com Sal, que é visto como um vilão sem justificativa clara.\"\n    },\n    {\n      \"tema\": \"ambiguidade moral\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a ambiguidade moral do filme, especialmente em relação à violência e ao racismo, que não são sempre resolvidos de forma satisfatória.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas apontam para uma crítica severa à representação estereotipada de personagens negros e à escalada de violência sem contexto, além de reclamar do estilo excessivo e da falta de clareza narrativa.\"\n}",
+   "ok": true,
+   "parede_s": 200.0,
+   "memoria": {
+    "ram_usada_gb": 10.23,
+    "ram_livre_min_gb": 4.96,
+    "ws_ollama_gb": 0.05,
+    "vram_gb": 2.41
+   },
+   "abortado_por_memoria": false,
+   "E5_ate_20_min": true
+  }
+ ]
+}

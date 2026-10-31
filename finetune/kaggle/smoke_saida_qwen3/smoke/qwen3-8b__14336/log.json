@@ -1,0 +1,441 @@
+{
+ "modelo": "qwen3-8b",
+ "repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+ "max_seq_length": 14336,
+ "seed": 3407,
+ "rascunho": "/tmp/espectro24_smoke",
+ "df_inicio": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  192K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n",
+ "dispositivos_cuda": 1,
+ "gpu": "Tesla T4",
+ "bf16_suportado": false,
+ "versoes": {
+  "python": "3.13.15",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu128",
+  "peft": "0.20.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.14.0",
+  "datasets": "4.8.5",
+  "xformers": "0.0.35",
+  "triton": "3.6.0",
+  "kaggle_env": {
+   "KAGGLE_URL_BASE": "https://api.kaggle.com",
+   "KAGGLE_DOCKER_IMAGE": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+   "KAGGLE_KERNEL_INTEGRATIONS": "",
+   "KAGGLE_DATA_PROXY_PROJECT": "kaggle-161607",
+   "KAGGLE_KERNEL_RUN_TYPE": "Batch",
+   "KAGGLE_GCP_ZONE": "us-west1-b",
+   "KAGGLE_CONTAINER_NAME": "kaggle_AyBCPjTUEpUom8PM2jYfDTi82WgiADF4yrpQIe0w-364016064-webtier",
+   "KAGGLE_GRPC_DATA_PROXY_URL": "dp.kaggle.net:443",
+   "KAGGLE_DATA_PROXY_URL": "https://dp.kaggle.net"
+  },
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "sha": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+  "gated": false
+ },
+ "carga_s": 54.6,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "projecoes_faltando": [],
+ "template_confere": {
+  "mais_longo": {
+   "igual": false,
+   "posicao": 42833,
+   "obtido": "a ludzi wstaje, ubiera się, je i dogląda gospodarstwa a na dworze szaleje wiatr.\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n",
+   "esperado": "a ludzi wstaje, ubiera się, je i dogląda gospodarstwa a na dworze szaleje wiatr.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n ",
+   "len_obtido": 46359,
+   "len_esperado": 46358
+  },
+  "mais_longo_12k": {
+   "igual": false,
+   "posicao": 42833,
+   "obtido": "a ludzi wstaje, ubiera się, je i dogląda gospodarstwa a na dworze szaleje wiatr.\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n",
+   "esperado": "a ludzi wstaje, ubiera się, je i dogląda gospodarstwa a na dworze szaleje wiatr.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n ",
+   "len_obtido": 46359,
+   "len_esperado": 46358
+  },
+  "mediano_1": {
+   "igual": false,
+   "posicao": 23669,
+   "obtido": "S of course there's a lot here) but I'm just not reliable for that right now. :(\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n",
+   "esperado": "S of course there's a lot here) but I'm just not reliable for that right now. :(<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n ",
+   "len_obtido": 25893,
+   "len_esperado": 25892
+  },
+  "mediano_2": {
+   "igual": false,
+   "posicao": 21987,
+   "obtido": "atek nadal sie zastanawiam czemu jeden sen musial byc z tym sniegiem i gorami XD\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"positivas\",\n",
+   "esperado": "atek nadal sie zastanawiam czemu jeden sen musial byc z tym sniegiem i gorami XD<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"positivas\",\n ",
+   "len_obtido": 24625,
+   "len_esperado": 24624
+  },
+  "mediano_3": {
+   "igual": false,
+   "posicao": 22250,
+   "obtido": "ad more, out loud. 5k run in doc martens. is that why i want to watch this movie\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n",
+   "esperado": "ad more, out loud. 5k run in doc martens. is that why i want to watch this movie<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"negativas\",\n ",
+   "len_obtido": 24601,
+   "len_esperado": 24600
+  },
+  "mediano_4": {
+   "igual": false,
+   "posicao": 20959,
+   "obtido": "o tão agradável. Realmente um filme que n foi bem criticado pelo público. 7,5/10\n<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"medianas\",\n ",
+   "esperado": "o tão agradável. Realmente um filme que n foi bem criticado pelo público. 7,5/10<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n{\n  \"bucket\": \"medianas\",\n  ",
+   "len_obtido": 23617,
+   "len_esperado": 23616
+  }
+ },
+ "pico_ram_por_fase_gib": {
+  "carga": 4.7,
+  "treino_longo": 8.59,
+  "treino_mediano": 8.54,
+  "exportacao_fusao": 9.89,
+  "exportacao_conversao": 12.39,
+  "copia": 8.57
+ },
+ "df_por_fase": [
+  {
+   "fase": "carga",
+   "ts": 1793391145.6787288,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  192K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "treino_longo",
+   "ts": 1793391293.570122,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  212K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "treino_mediano",
+   "ts": 1793391867.2807367,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  268K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "salvar_adaptador",
+   "ts": 1793392005.5581062,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  280K   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "exportacao",
+   "ts": 1793392006.7596135,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  178M   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "exportacao_fusao",
+   "ts": 1793392006.796497,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  178M   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "exportacao_conversao",
+   "ts": 1793392201.5121927,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  178M   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+  },
+  {
+   "fase": "copia",
+   "ts": 1793392838.2172084,
+   "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T 1022G  88% /\n/dev/loop2       20G  178M   20G   1% /kaggle/working\noverlay         8.0T  7.0T 1022G  88% /\n"
+  }
+ ],
+ "atencao": {
+  "attn_implementation_config": "sdpa",
+  "sdp_habilitados": {
+   "flash": true,
+   "mem_efficient": true,
+   "math": true,
+   "cudnn": true
+  },
+  "env": {
+   "UNSLOTH_IS_PRESENT": "1",
+   "UNSLOTH_ENABLE_CCE": "0",
+   "UNSLOTH_ZOO_IS_PRESENT": "1",
+   "UNSLOTH_PATCHED": "1",
+   "UNSLOTH_HAS_FBGEMM": "0",
+   "UNSLOTH_IGNORED_TOKENIZER_NAMES": "unsloth/qwen2.5-coder-1.5b-instruct-bnb-4bit\nunsloth/qwen2.5-coder-7b-instruct\nunsloth/qwen2.5-coder-7b-instruct-bnb-4bit\nunsloth/qwen2.5-coder-1.5b-instruct",
+   "UNSLOTH_USE_NEW_MODEL": "0",
+   "UNSLOTH_MIXED_PRECISION": "float32"
+  },
+  "unsloth_flags": {
+   "HAS_XFORMERS": null,
+   "HAS_FLASH_ATTENTION": false
+  },
+  "classe_atencao": "transformers.models.qwen3.modeling_qwen3.Qwen3Attention",
+  "forward_atencao": "unsloth.models.qwen3.Qwen3Attention_fast_forward",
+  "dtypes_vistos_na_camada_0": {
+   "entrada_dtype": "torch.float16",
+   "entrada_shape": [
+    1,
+    1024,
+    4096
+   ],
+   "saida_dtype": "torch.float16"
+  },
+  "softmax_chamadas": 26,
+  "operadores_e_kernels": {
+   "aten::_efficient_attention_forward": {
+    "n": 324,
+    "shapes": []
+   },
+   "fmha_cutlassF_f16_aligned_32x128_rf_sm75(PyTorchMemEffAttention::AttentionKernel<cutlass::half_t, cutlass::arch::Sm75, true, 32, 128, 128, true, true>::Params)": {
+    "n": 324,
+    "shapes": []
+   },
+   "void cutlass::Kernel2<cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tn_align8>(cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tn_align8::Params)": {
+    "n": 252,
+    "shapes": []
+   },
+   "void cutlass::Kernel2<cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_nn_align8>(cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_nn_align8::Params)": {
+    "n": 72,
+    "shapes": []
+   },
+   "void cutlass::Kernel2<cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tt_align8>(cutlass_75_wmma_tensorop_f16_s161616gemm_f16_16x16_128x2_tt_align8::Params)": {
+    "n": 72,
+    "shapes": []
+   },
+   "_fMHA": {
+    "n": 36,
+    "shapes": []
+   },
+   "autograd::engine::evaluate_function: _fMHABackward": {
+    "n": 36,
+    "shapes": []
+   },
+   "_fMHABackward": {
+    "n": 36,
+    "shapes": []
+   },
+   "aten::_efficient_attention_backward": {
+    "n": 36,
+    "shapes": []
+   },
+   "fmha_cutlassB_f16_aligned_128x64_k128_sm75(PyTorchMemEffAttention::AttentionBackwardKernel<cutlass::arch::Sm75, cutlass::half_t, true, false, false, 128, 64, 128, false>::Params)": {
+    "n": 36,
+    "shapes": []
+   }
+  },
+  "backend_detectado": [
+   "sdpa mem-efficient (cutlass)"
+  ],
+  "aviso": "math = a matriz L×L é materializada; mem-efficient/flash/xformers = memória O(L). Kernels CUDA trazem o dtype no nome (f16/f32)."
+ },
+ "longo": {
+  "papel": "mais_longo",
+  "slug": "the-turin-horse",
+  "bucket": "negativas",
+  "passos": 10,
+  "tokens_entrada": 12014,
+  "tokens_treinados": 996,
+  "mascara": {
+   "tokens_treinados": 996,
+   "comeco": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo excessivament",
+   "fim": "e à ausência de desenvolvimento de personagens.\"\n}<|im_end|>",
+   "tem_bloco_think": false,
+   "comeca_em_chave": true
+  },
+  "pico_vram_reserved_gib": 10.463,
+  "pico_vram_allocated_gib": 9.626,
+  "s_por_passo": [
+   50.37,
+   51.425,
+   53.65,
+   56.832,
+   57.928,
+   57.56,
+   61.095,
+   59.755,
+   58.73,
+   60.295
+  ],
+  "s_por_passo_mediana_sem_1o": 57.928,
+  "perdas": [
+   0.9361411333084106,
+   0.8046892285346985,
+   0.7076712846755981,
+   0.6296933889389038,
+   0.5453433990478516,
+   0.4542953073978424,
+   0.36402520537376404,
+   0.27347907423973083,
+   0.19199886918067932,
+   0.12686000764369965
+  ],
+  "perdas_finitas": true,
+  "train_runtime_s": 567.8812
+ },
+ "mediano": {
+  "passos": 5,
+  "tokens_entrada": 6855,
+  "tokens_treinados": 659,
+  "mascara": {
+   "tokens_treinados": 659,
+   "comeco": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Duração excessiva e",
+   "fim": "ultando em uma experiência tediosa para muitos.\"\n}<|im_end|>",
+   "tem_bloco_think": false,
+   "comeca_em_chave": true
+  },
+  "pico_vram_reserved_gib": 9.586,
+  "pico_vram_allocated_gib": 8.829,
+  "s_por_passo": [
+   26.249,
+   27.407,
+   27.282,
+   26.833,
+   26.678
+  ],
+  "s_por_passo_mediana_sem_1o": 27.057499999999997,
+  "perdas": [
+   0.942288875579834,
+   0.8617511987686157,
+   0.9958180785179138,
+   0.7572943568229675,
+   1.0010677576065063
+  ],
+  "perdas_finitas": true,
+  "train_runtime_s": 134.5305
+ },
+ "e1": {
+  "limite_gib": 14.0,
+  "max_seq_length": 14336,
+  "tokens_do_exemplo": 12014,
+  "pico_reserved_gib": 10.463,
+  "passa": true
+ },
+ "e2": {
+  "perdas_finitas_longo": true,
+  "perdas_finitas_mediano": true,
+  "passa": true
+ },
+ "e3": {
+  "s_por_passo_mediano": 27.057499999999997,
+  "n_exemplos_treino_depois_da_limpeza": 140,
+  "epocas": 3,
+  "horas_projetadas": 3.16,
+  "limite_h": 20.0,
+  "passa": true
+ },
+ "meta_dataset": {
+  "candidatos": [
+   "qwen3-8b"
+  ],
+  "tokenizer": "Qwen3-8B",
+  "tokenizer_repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "tokenizer_revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+  "n_treino_limpo": 140,
+  "n_validacao_limpo": 19,
+  "n_removidos_pela_limpeza": 39,
+  "fora_por_comprimento": {
+   "satantango/positivas": "15.414 tokens (Qwen3-8B); prompt 14.690 > max_seq_length 14.336"
+  },
+  "n_treino_antes_da_limpeza": 180,
+  "n_treino_depois_da_limpeza_antes_do_comprimento": 141,
+  "epocas_E3": 3,
+  "sha256_ids_conjunto_limpo": "ecdd5558b5881f4104ce922c1ba3dd8775184b0d5c997f5af72a60f503395438",
+  "sha256_conteudo_treino_limpo": "983dd01bd611899b4153a1d1b2926c59efcd19ba101bfc8d3875d63bfaed6d4a",
+  "tokens_total_qwen3_8b": {
+   "n": 140,
+   "mediana": 6855.5,
+   "p90": 9156,
+   "p99": 11947,
+   "max": 12014
+  },
+  "mediana_total": 6855.5,
+  "smoke_sha256": "ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f",
+  "acima_de_14336": [],
+  "acima_de_12288": []
+ },
+ "e1_e3_gravados_antes_da_exportacao": true,
+ "adaptador": [
+  {
+   "nome": "README.md",
+   "bytes": 5242,
+   "sha256": "68465bd79d10f4be8c69e3a46eab668b07e85cc97af354ad98184b6fa4b53b67"
+  },
+  {
+   "nome": "adapter_config.json",
+   "bytes": 1300,
+   "sha256": "8c0165c13cca40843ba98b1ab6e0cd286b7032f3df088b47d75524815ab3fa7f"
+  },
+  {
+   "nome": "adapter_model.safetensors",
+   "bytes": 174655536,
+   "sha256": "0339398a9d124474fbac29789b40448b83204b6b4555a9cc2b134ea92a637eed"
+  },
+  {
+   "nome": "chat_template.jinja",
+   "bytes": 4718,
+   "sha256": "f2e03cfdf930fb26e7c88ca83abc3a0c1e7c5b1fe68ee43ba81d0c47c8460ceb"
+  },
+  {
+   "nome": "tokenizer.json",
+   "bytes": 11422924,
+   "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+  },
+  {
+   "nome": "tokenizer_config.json",
+   "bytes": 5130,
+   "sha256": "d1c413325be7b54aff47239f0177e2527ddf1e6af4f50780fba274a66302f8e0"
+  }
+ ],
+ "exportacao_disco": {
+  "precisa_gib_estimado": 41.5,
+  "livre_gib": 1041.3,
+  "cabe_pela_estimativa": true,
+  "df_h": "Filesystem      Size  Used Avail Use% Mounted on\noverlay         8.0T  7.0T  1.1T  88% /\n/dev/loop2       20G  178M   20G   1% /kaggle/working\noverlay         8.0T  7.0T  1.1T  88% /\n"
+ },
+ "gguf_ok": true,
+ "gguf_tempo_s": 831.5,
+ "gguf_arquivos": [
+  {
+   "nome": "Modelfile",
+   "bytes": 1695,
+   "sha256": "e04049cf03177d6c792e585c893229d11b43c49b719c3609fa30a2b9b05d7edf"
+  },
+  {
+   "nome": "Qwen3-8B.Q4_K_M.gguf",
+   "bytes": 5027784288,
+   "sha256": "3f6ea31b02659578ca7e591c82df69b006443bfdeb21b0de8ddb15c96b090331"
+  }
+ ],
+ "gguf_todos_arquivos_gerados": [
+  "gguf/.cache/huggingface/.gitignore",
+  "gguf/.cache/huggingface/CACHEDIR.TAG",
+  "gguf/.cache/huggingface/download/model-00001-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00001-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00002-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00002-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00003-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00003-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00004-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00004-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model.safetensors.index.json.lock",
+  "gguf/.cache/huggingface/download/model.safetensors.index.json.metadata",
+  "gguf/.cache/huggingface/download/tokenizer.model.lock",
+  "gguf/.cache/huggingface/trees/946bc9ac74a6c1f8cf012497c503a119b2fcf2eb.json",
+  "gguf/chat_template.jinja",
+  "gguf/config.json",
+  "gguf/generation_config.json",
+  "gguf/model-00001-of-00004.safetensors",
+  "gguf/model-00002-of-00004.safetensors",
+  "gguf/model-00003-of-00004.safetensors",
+  "gguf/model-00004-of-00004.safetensors",
+  "gguf/model.safetensors.index.json",
+  "gguf/tokenizer.json",
+  "gguf/tokenizer_config.json",
+  "gguf_gguf/Modelfile",
+  "gguf_gguf/Qwen3-8B.Q4_K_M.gguf"
+ ],
+ "modelfile": "\nFROM Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}\"\"\"\nPARAMETER stop \"<|im_end|>\"\nPARAMETER stop \"<|im_start|>\"\nPARAMETER temperature 0.6\nPARAMETER min_p 0.0\nPARAMETER top_k 20\nPARAMETER top_p 0.95\nPARAMETER repeat_penalty 1"
+}

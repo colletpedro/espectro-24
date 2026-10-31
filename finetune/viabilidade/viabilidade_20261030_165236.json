@@ -1,0 +1,60 @@
+{
+ "gerado_por": "scripts/finetune/viabilidade_ollama.py",
+ "ollama": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.40.13",
+ "ram_total_gb": 15.19,
+ "par": "do-the-right-thing/negativas",
+ "chars_system": 2195,
+ "chars_user": 31118,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+ "ram_livre_min_gb": 2.0,
+ "ram_partida_min_gb": 6.0,
+ "medicoes": [
+  {
+   "tipo": "medicao",
+   "candidato": "Qwen3-8B",
+   "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "num_ctx": 18432,
+   "num_predict": 3000,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 9.7,
+    "espera_ram_s": 0.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.1513671875,
+    "limpa": true
+   },
+   "ts": "2026-10-30T19:48:38+00:00",
+   "modelo_efetivo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "finish_reason": "stop",
+   "latencia_s": 231.12,
+   "leitura_prompt_s": 26.106,
+   "geracao_s": 176.362,
+   "carga_s": 26.526,
+   "total_s": 229.045,
+   "prompt_eval_count": 8019,
+   "eval_count": 717,
+   "think": "false",
+   "tokens_s_geracao": 4.07,
+   "tokens_s_leitura": 307.17,
+   "gerou_texto": true,
+   "json_parseia": true,
+   "json_tem_temas_em_lista": true,
+   "n_temas": 6,
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Estereótipos e representação\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a representação de personagens negros como estereótipos, frequentemente retratados como racistas, violentos e sem propósito, o que gera descontentamento com a falta de profundidade e autenticidade.\"\n    },\n    {\n      \"tema\": \"Violência e justiça\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews criticam a forma como a violência é utilizada no filme, muitas vezes como um mecanismo de resolução de conflitos, sem uma abordagem que explore a justiça ou as responsabilidades de todos os envolvidos.\"\n    },\n    {\n      \"tema\": \"Ritmo e estrutura narrativa\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A narrativa é considerada desorganizada e desgastante, com um ritmo lento e uma estrutura que não entrega uma trama clara ou envolvente, tornando o filme difícil de acompanhar.\"\n    },\n    {\n      \"tema\": \"Cinematografia e estilo\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Embora a cinematografia e o estilo visual sejam elogiados, muitos críticos acham que esses elementos não são suficientes para compensar a falta de conteúdo narrativo e a repetição de cenas.\"\n    },\n    {\n      \"tema\": \"Mensagens e críticas sociais\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas questionam a forma como as mensagens sociais são apresentadas, muitas vezes considerando-as previsíveis, superficiais ou mal articuladas, sem uma abordagem mais profunda ou equilibrada.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são elogiadas em alguns casos, mas os personagens são frequentemente considerados estereotipados, sem desenvolvimento, e muitas vezes usados para reforçar preconceitos.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam a representação estereotipada de personagens negros, a falta de profundidade narrativa e a crítica à forma como a violência é abordada no filme, além de questionar a coesão e o impacto das mensagens sociais apresentadas.\"\n}",
+   "ok": true,
+   "parede_s": 231.2,
+   "memoria": {
+    "ram_usada_gb": 10.39,
+    "ram_livre_min_gb": 4.8,
+    "ws_ollama_gb": 0.05,
+    "vram_gb": 2.41
+   },
+   "abortado_por_memoria": false,
+   "E5_ate_20_min": true
+  }
+ ]
+}

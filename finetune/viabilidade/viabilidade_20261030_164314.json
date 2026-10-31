@@ -1,0 +1,38 @@
+{
+ "gerado_por": "scripts/finetune/viabilidade_ollama.py",
+ "ollama": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.40.13",
+ "ram_total_gb": 15.19,
+ "par": "do-the-right-thing/negativas",
+ "chars_system": 2195,
+ "chars_user": 31118,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+ "ram_livre_min_gb": 2.0,
+ "ram_partida_min_gb": 6.0,
+ "medicoes": [
+  {
+   "tipo": "medicao",
+   "candidato": "Qwen3-8B",
+   "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+   "num_ctx": 18432,
+   "num_predict": 3000,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 5.87,
+    "espera_ram_s": 90.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.431640625,
+    "limpa": false
+   },
+   "ts": "2026-10-30T19:43:14+00:00",
+   "ok": false,
+   "partida_contaminada": true,
+   "abortado_por_memoria": false,
+   "erro": "partida contaminada: o `ollama ps` não esvaziou ou a RAM livre não voltou a 6.0 GB — feche o que ocupa memória e rode de novo; NENHUMA medição foi feita",
+   "E5_ate_20_min": null
+  }
+ ]
+}
