@@ -29,8 +29,14 @@ nas fontes inteiras, não nos itens sorteados): o modelo base escreve 90/90
 temas com minúscula inicial (o publicado, 18/1.223) e 6/90 exemplos sem ponto
 final (o publicado, 0/1.223). O mapa guarda os dois textos.
 
-Subcomando:
+Subcomandos:
     amostrar   documento cego FORA do git, respostas em branco, mapa com selo
+    avaliar    (depois dos rótulos) aplica os limiares CONGELADOS aos 60 itens
+               distintos: AUC com IC por bootstrap POR FILME, acurácia
+               balanceada (total, publicado, local, diferença), consistência do
+               dono, veredito pelo critério e matriz de confusão; grava
+               `validacao_v2_resultado.json` UMA vez. Nenhum limiar, fórmula ou
+               seleção é revisto aqui.
 """
 from __future__ import annotations
 
@@ -58,6 +64,11 @@ SEMENTE_VAL = B.E1.SEMENTE_VAL                   # 20261022 (PROTOCOLO e PROTOCO
 N_VALIDACAO, N_TREINO, N_BASE = 15, 15, 30
 N_REPETIDOS = 6
 DIST_MIN_REPETIDO = 30                           # não pré-registrado: ~45% de 66, como 40/90
+ARQ_RESULTADO = DIR / "validacao_v2_resultado.json"
+N_BOOT = 10_000
+SEMENTE_BOOT = SEMENTE_VAL                       # não pré-registrada: a da validação
+AUC_MIN, AB_MIN, DIF_MAX = 0.80, 0.75, 0.15      # critério do PROTOCOLO (inalterado)
+ORDEM_SIMPLES = ("M-disp", "M-anc", "M-comb")
 PONTUACAO_FINAL = (".", "!", "?", "…", '"', "”", ")")
 
 
@@ -241,6 +252,141 @@ def cmd_amostrar(a) -> None:
                       "mapa": str(ARQ_MAPA), "selo": selo}, ensure_ascii=False, indent=1))
 
 
+# ---------------------------------------------------------------------------
+# avaliação (só depois dos rótulos)
+# ---------------------------------------------------------------------------
+
+def _confusao(score: list[float], y: list[int], limiar: float) -> dict:
+    """G = classe positiva (1); classifica G quando score ≥ limiar."""
+    c = {"GG": 0, "GE": 0, "EG": 0, "EE": 0}      # rótulo do dono, depois a predição
+    for s_, yi in zip(score, y):
+        c[("G" if yi else "E") + ("G" if s_ >= limiar else "E")] += 1
+    n_g, n_e = c["GG"] + c["GE"], c["EG"] + c["EE"]
+    tpr = c["GG"] / n_g if n_g else None
+    tnr = c["EE"] / n_e if n_e else None
+    ab = (tpr + tnr) / 2 if tpr is not None and tnr is not None else None
+    return {**c, "n_G": n_g, "n_E": n_e, "tpr": tpr, "tnr": tnr, "acuracia_balanceada": ab}
+
+
+def _auc(score: list[float], y: list[int]) -> float | None:
+    if 0 < sum(y) < len(y):
+        return B.E1.auc_ponderada(score, y, [1.0] * len(y))
+    return None
+
+
+def bootstrap_auc(score: list[float], y: list[int], filmes: list[str], rng: random.Random,
+                  n: int = N_BOOT) -> dict:
+    """Reamostra FILMES com reposição; AUC sem peso nos itens dos filmes sorteados.
+    Reamostras sem as duas classes não têm AUC: ficam fora e são contadas."""
+    por_filme = collections.defaultdict(list)
+    for s_, yi, f in zip(score, y, filmes):
+        por_filme[f].append((s_, yi))
+    lista = sorted(por_filme)
+    aucs, sem_duas_classes = [], 0
+    for _ in range(n):
+        sv, yv = [], []
+        for f in rng.choices(lista, k=len(lista)):
+            for s_, yi in por_filme[f]:
+                sv.append(s_)
+                yv.append(yi)
+        a = _auc(sv, yv)
+        if a is None:
+            sem_duas_classes += 1
+        else:
+            aucs.append(a)
+    aucs.sort()
+    q = lambda p: aucs[min(len(aucs) - 1, int(p * len(aucs)))]
+    return {"ic95": [q(0.025), q(0.975)] if aucs else None, "reamostras": n,
+            "validas": len(aucs), "sem_as_duas_classes": sem_duas_classes,
+            "filmes": len(lista)}
+
+
+def cmd_avaliar(a) -> None:
+    if ARQ_RESULTADO.exists():
+        raise SystemExit(f"{ARQ_RESULTADO} já existe: a validação é avaliada UMA vez")
+    mapa = K.ler_json(ARQ_MAPA)
+    if a.selo and K.sha256_arquivo(ARQ_MAPA) != a.selo:
+        raise SystemExit("o mapa não tem o selo impresso no documento")
+    for p, chave in ((B.ARQ_REF, "referencia_sha256"), (B.ARQ_LIMIARES, "limiares_v2_sha256"),
+                     (B.ARQ_PROTOCOLO, "protocolo_v2_sha256")):
+        if K.sha256_arquivo(p) != mapa[chave]:
+            raise SystemExit(f"{p} mudou desde o sorteio")
+    split = K.ler_json(a.split)
+    itens = mapa["itens"]
+    if any(i["slug"] in set(split["teste"]) for i in itens):
+        raise SystemExit("filme de TESTE no mapa: recusado")
+    ids = [i["id"] for i in itens]
+    linhas = list(csv.DictReader(open(a.rotulos, encoding="utf-8")))
+    if [l["id"].strip() for l in linhas] != ids:
+        raise SystemExit("os ids do CSV não são os do mapa (na mesma ordem)")
+    rot = B.E1.ler_rotulos(Path(a.rotulos), ids)
+    rep = [i for i in itens if i["repete"]]
+    consist = [{"id": i["id"], "original": i["repete_de"],
+                "igual": rot[i["id"]] == rot[i["repete_de"]]} for i in rep]
+    dist = [i for i in itens if not i["repete"]]
+    y = [rot[i["id"]] for i in dist]
+    textos = [i["texto"] for i in dist]
+    filmes = [i["slug"] for i in dist]
+    lim = K.ler_json(B.ARQ_LIMIARES)["medidas"]
+
+    ref = B.ler_referencia()
+    enc = B.E1._encoder()
+    md = B.disp(ref, enc).medir(textos, filmes)
+    filmes_ref = sorted({r["slug"] for r in ref})
+    vocab = B.E1.vocabulario_das_reviews(filmes_ref)
+    ma = [B.E1.m_anc(t, f, vocab, filmes_ref) for t, f in zip(textos, filmes)]
+    scores = {"M-disp": md, "M-anc": [-x for x in ma],          # orientação FIXA: alto = G
+              "M-comb": [B.E1.prob_logistica(lim["M-comb"]["modelo"], [d, x])
+                         for d, x in zip(md, ma)]}
+    sub = {"publicado": [k for k, i in enumerate(dist) if i["fonte"] == "publicado"],
+           "local": [k for k, i in enumerate(dist) if i["fonte"] == "base"]}
+    rng = random.Random(SEMENTE_BOOT)
+    medidas, aprovadas = {}, []
+    for nome in ORDEM_SIMPLES:
+        s_ = scores[nome]
+        L = lim[nome]["limiar"]
+        r = {"limiar_congelado": L, "auc": _auc(s_, y),
+             "bootstrap": bootstrap_auc(s_, y, filmes, rng),
+             "total": _confusao(s_, y, L)}
+        for k, idx in sub.items():
+            r[k] = _confusao([s_[j] for j in idx], [y[j] for j in idx], L)
+            r[k]["auc"] = _auc([s_[j] for j in idx], [y[j] for j in idx])
+        ap_, al_ = r["publicado"]["acuracia_balanceada"], r["local"]["acuracia_balanceada"]
+        r["diferenca_ab"] = abs(ap_ - al_) if ap_ is not None and al_ is not None else None
+        crit = {"auc>=0.80": r["auc"] is not None and r["auc"] >= AUC_MIN,
+                "ab>=0.75": (r["total"]["acuracia_balanceada"] or 0) >= AB_MIN,
+                "dif<=0.15": r["diferenca_ab"] is not None and r["diferenca_ab"] <= DIF_MAX}
+        r["criterio"] = crit
+        r["aprovada"] = all(crit.values())
+        if r["aprovada"]:
+            aprovadas.append(nome)
+        medidas[nome] = r
+    escolhida = aprovadas[0] if aprovadas else None
+    prop_e = {k: {"E": sum(1 for j in idx if y[j] == 0), "n": len(idx)} for k, idx in sub.items()}
+    out = {"gerado_por": "scripts/finetune/especificidade_validacao.py avaliar",
+           "rotulos_sha256": K.sha256_arquivo(Path(a.rotulos)),
+           "mapa_sha256": K.sha256_arquivo(ARQ_MAPA),
+           "limiares_v2_sha256": K.sha256_arquivo(B.ARQ_LIMIARES),
+           "script_sha256": K.sha256_arquivo(Path(__file__)),
+           "semente_bootstrap": SEMENTE_BOOT, "n_distintos": len(dist),
+           "n_G": sum(y), "n_E": len(y) - sum(y),
+           "proporcao_E_por_subconjunto": prop_e,
+           "consistencia_dono": {"iguais": sum(c["igual"] for c in consist),
+                                 "repetidos": len(consist), "pares": consist},
+           "e5": B.truncamento(textos, enc),
+           "medidas": medidas, "aprovadas": aprovadas, "escolhida": escolhida,
+           "matriz_reportada": escolhida or "M-disp",
+           "veredito": (f"aprovada: {escolhida}" if escolhida else
+                        "NEGATIVO: nenhuma medida passou; a especificidade fica só com a "
+                        "leitura cega da Fase 4"),
+           "itens": [{"id": i["id"], "fonte": i["fonte"], "conjunto": i["conjunto"],
+                      "slug": i["slug"],                # o rótulo fica FORA do git (CSV)
+                      "m_disp": md[k], "m_anc": ma[k], "m_comb": scores["M-comb"][k]}
+                     for k, i in enumerate(dist)]}
+    ARQ_RESULTADO.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(json.dumps({k: v for k, v in out.items() if k != "itens"}, ensure_ascii=False, indent=1))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--split", type=Path, default=K.FINETUNE_DIR / "split.json")
@@ -250,8 +396,14 @@ def main() -> None:
     s = sub.add_parser("amostrar")
     s.add_argument("--refazer", action="store_true",
                    help="só se o mapa anterior NÃO chegou ao dono")
+    v = sub.add_parser("avaliar")
+    v.add_argument("--rotulos", default=str(B.DOC_DIR_PADRAO / RESPOSTAS))
+    v.add_argument("--selo", default="", help="o selo impresso no fim do documento")
     a = ap.parse_args()
-    {"amostrar": cmd_amostrar}[a.cmd](a)
+    if a.cmd == "avaliar" and a.doc_dir != str(B.DOC_DIR_PADRAO) \
+            and a.rotulos == str(B.DOC_DIR_PADRAO / RESPOSTAS):
+        a.rotulos = str(Path(a.doc_dir) / RESPOSTAS)
+    {"amostrar": cmd_amostrar, "avaliar": cmd_avaliar}[a.cmd](a)
 
 
 if __name__ == "__main__":
