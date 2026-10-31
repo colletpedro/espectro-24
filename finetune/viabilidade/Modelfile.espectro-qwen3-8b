@@ -1,0 +1,14 @@
+FROM C:\Users\salve\espectro24-kaggle\qwen3\smoke\qwen3-8b__14336\Qwen3-8B.Q4_K_M.gguf
+TEMPLATE """{{- range .Messages }}{{- if eq .Role "system" }}<|im_start|>system
+{{ .Content }}<|im_end|>
+{{ else if eq .Role "user" }}<|im_start|>user
+{{ .Content }}<|im_end|>
+{{ else if eq .Role "assistant" }}<|im_start|>assistant
+{{ .Content }}<|im_end|>
+{{ end }}{{- end }}<|im_start|>assistant
+<think>
+
+</think>
+
+"""
+PARAMETER stop "<|im_end|>"
