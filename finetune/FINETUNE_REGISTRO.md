@@ -1156,6 +1156,185 @@ Fase 2): comando separado, `viabilidade_ollama.py medir --candidato Qwen3-8B
 --so-probe` (16 tokens de saída; ESTIMADO 1–3 min com a partida limpa). O
 `importar-pasta` também roda um probe, no modelo IMPORTADO.
 
+## E4 do Qwen3-8B (MEDIDO, 2026-10-31)
+
+Fonte: `viabilidade/importar_espectro-qwen3-8b_20261031_140521.json` (commit
+`7f73375`), `viabilidade_ollama.py importar-pasta` corrigido (`main` `7e2ace9`).
+Ollama 0.40.13, RAM 15,19 GB, par `do-the-right-thing/negativas` (system
+`0f86c667…`, user `bcf51de7…`, os mesmos do E5).
+
+- GGUF do smoke v4: `Qwen3-8B.Q4_K_M.gguf`, 5.027.784.288 bytes, sha256
+  `3f6ea31b02659578ca7e591c82df69b006443bfdeb21b0de8ddb15c96b090331` (o do
+  `log.json` do Kaggle). `ollama rm` antes (o modelo da tentativa de 30/10
+  existia e foi removido, `rm_rc` 0); `ollama create` rc 0 em 24,0 s.
+- Medição a 18.432 (partida limpa, 9,26 GB livres): **250,2 s** de parede,
+  `prompt_eval_count` **8.019**, 922 tokens de saída, `finish_reason` stop,
+  3,97 tok/s de geração, 661,7 tok/s de leitura, JSON válido com 6 temas;
+  RAM livre mín. 4,69 GB, VRAM 2,39 GB; sem aborto por memória.
+- **`E4_importa_e_gera`: true.**
+
+## Template treino × inferência (MEDIDO, 2026-10-31)
+
+- **Contagem.** O prompt do E4, renderizado no Mac pelo `chat_template.jinja`
+  oficial do HF (jinja2 3.1.6, `add_generation_prompt`, `enable_thinking=False`,
+  SEM aparar; template `96fd16d3…`, tokenizer `aeb13307…`) dá **8.019**
+  tokens; o Ollama mediu `prompt_eval_count` **8.019** no modelo importado (e
+  8.019 também no texto cru do `comum.chat` via `raw`). **Bate.** Aparado, o
+  mesmo prompt daria 8.018. O render do HF é byte a byte o `comum.chat("qwen")`
+  no Mac (`<|im_start|>assistant\n<think>\n\n</think>\n\n` no fim).
+- **A comparação é por CONTAGEM de tokens, não byte a byte:** o Ollama não
+  devolve o texto que montou.
+- **O Modelfile PRECISOU de correção (e foi corrigido pelo script).** O import
+  gravou `template_reproduz_hf: false`: o TEMPLATE que o Unsloth escreveu no
+  `Modelfile` do Kaggle é o template genérico de chat do Qwen3 no Ollama (ramos
+  de tools, `.System`/`.Prompt`) e NÃO abre o turno do assistente com o bloco
+  `<think>\n\n</think>\n\n` vazio. O `importar` o trocou pelo canônico
+  (`viabilidade_ollama.TEMPLATES["qwen"]`, só `stop "<|im_end|>"`), com o diff
+  no registro (`importacao.correcao`) e o arquivo usado em
+  `viabilidade/Modelfile.espectro-qwen3-8b`. **O 8.019 = 8.019 vale para o
+  Modelfile CORRIGIDO.** Consequência: todo GGUF da Fase 2 (base e treinado)
+  entra pelo mesmo `importar-pasta`, que aplica a mesma troca.
+
+## Modelo base escolhido: Qwen3-8B (2026-10-31)
+
+`CRITERIO_ESCOLHA_BASE.md` + adendo, sem alteração. E1–E5 aprovados:
+
+| | critério | medido | veredito |
+|---|---|---|---|
+| **E1** | pico `max_memory_reserved` ≤ 14,0 GiB no mais longo, a 14.336 | **10,463 GiB** (9,626 alocado), `the-turin-horse/negativas`, **12.014 tokens** | passa |
+| **E2** | perda finita, fp16 | longo 0,936 → 0,127 (10 passos); mediano 0,757–1,001 (5) | passa |
+| **E3** | s/passo × 140 × 3 / 3600 ≤ 20 h | **27,06 s/passo → 3,16 h** | passa |
+| **E4** | GGUF Q4_K_M do Kaggle importa no Ollama do Windows e gera | create rc 0 (24,0 s); 250,2 s, 922 tokens, JSON válido, 6 temas | passa |
+| **E5** | p90 de treino com `num_ctx` 18.432 em ≤ 20 min | **231,1 s** (8.019 de prompt, 717 de saída; GGUF da biblioteca, 30/10) | passa |
+
+- **Backend de atenção (MEDIDO, smoke v4):** SDPA **mem-efficient** (cutlass,
+  `fmha_cutlassF_f16…sm75`), **fp16**, sem kernel math; Tesla T4, sem bf16.
+- **O E1 mediu 12.014 tokens, o maior exemplo de treino** (o
+  `satantango/positivas`, 15.414, saiu por decisão do dono em 22/10). Cobre o
+  pior caso do treino que existe; não prova que 14.336 tokens cabem.
+
+## Probe de 27.648 (MEDIDO, 2026-10-31)
+
+| modelo | arquivo | parede | RAM livre mín. | VRAM | resultado |
+|---|---|---|---|---|---|
+| `hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` (biblioteca) | `viabilidade_20261031_144910.json` | 21,3 s | 4,00 GB | 2,56 GB | ok, sem aborto |
+| `espectro-qwen3-8b` (importado do Kaggle) | `importar_espectro-qwen3-8b_20261031_140521.json` | 21,4 s | 4,37 GB | 2,48 GB | ok, sem aborto |
+
+**Passou na memória nos dois.** Mas os dois usaram o prompt **p90 (8.019
+tokens)** com a janela de 27.648 e 16 tokens de saída: a janela foi
+alocada, o prompt longo não. **O tempo e a memória com o prompt REAL do
+outlier do teste (`500-days-of-summer/positivas`, ~22–25 mil tokens com o
+tokenizer do Qwen3, ESTIMADO) NÃO foram medidos**; serão medidos na Fase 2.
+ESTIMADO pelo inventário (tokenizer do Qwen3.5 × 1,032–1,147, a razão medida
+nos 15 pares da Fase 1): pela regra, o `num_ctx` dele fica entre **28.672 e
+31.744**, ACIMA dos 27.648 do probe.
+
+## Fase 1 — geração do modelo base (MEDIDO, 2026-10-31)
+
+Fonte: `especificidade/geracao_base/` (commit `b65cfc4`),
+`gerar_titulos_base.py gerar` (`main` `7e2ace9`), modelo
+`hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` (o caminho do E5, como pré-registrado).
+
+- **Manifesto conferido:** o sha256 de cada um dos 16 arquivos (15 pares +
+  `plano.json`) bate com `manifesto.json`.
+- **15 buckets, 6 bullets em cada (90)**, todos `ok`, JSON válido,
+  `finish_reason` stop, todos completos (tema e exemplo); `prompt_eval_count` =
+  tokens do plano nos 15 (a contagem exata do Mac); nenhuma pausa da guarda de
+  latência; partida limpa (8,72 GB livres).
+- **Tempos:** 17:09–17:45 UTC; soma de parede **39,3 min**; por bucket
+  mediana **150,7 s** (121,4–266,4 s; o maior é `pinocchio-2022/negativas`,
+  14.267 tokens de prompt); saída mediana 629 tokens, 4,43 tok/s de geração.
+  ESTIMADO era ≈ 55 min.
+- **Os 5 filmes são de TREINO** (fight-club, hereditary, pinocchio-2022,
+  soul-2020, the-wailing): todos em `split.treino`, nenhum em validação, teste
+  ou referência.
+- Formato (contado nas fontes inteiras): o modelo base escreve 90/90 temas com
+  minúscula inicial (o publicado, 18/1.223) e 6/90 exemplos sem ponto final e
+  com minúscula inicial (um bucket inteiro; o publicado, 0/1.223 sem ponto).
+
+## Fase 1 — documento de validação (montado, 2026-10-31; SEM medida)
+
+`scripts/finetune/especificidade_validacao.py amostrar` (`main` `b7c8b78`,
+sha256 `92bbffb3…`), que importa SEM alteração `especificidade_bullet.py`
+(`ff71747e…`) e `especificidade.py` (`7d40e620…`). Pelo `PROTOCOLO_v2`,
+seção "Validação":
+
+- **60 + 6 itens**, semente **20261022**, um único `random.Random`: 15 dos 144
+  bullets de VALIDAÇÃO; 15 dos **866** de TREINO elegíveis (946 do pool da
+  calibração v2 − os 80 da calibração v2; o pool já exclui a amostra de títulos
+  arquivada pelo id e pelo título normalizado); 30 dos 90 da geração base
+  (fight-club 9, the-wailing 6, hereditary 6, soul-2020 5, pinocchio-2022 4);
+  shuffle dos 60; 6 repetidos (3 publicados, 3 base), a ≥ 30 posições do
+  original. 23 filmes distintos. Nenhum item da calibração v2 nem da amostra
+  arquivada; nenhum filme de teste.
+- **Não pré-registrado, fixado aqui:** a distância mínima dos repetidos
+  (30 de 66, a mesma proporção de 40 de 90) e a ordem do sorteio acima.
+- **Documento cego**
+  `docs/arquivo-de-estudos/finetune-fase1/rotulagem_validacao_v2.md` (fora do
+  git; sha256 `c5baeb6e…`; 2.510 palavras): só id (`V01…V66`) e bullet
+  (**tema** — exemplo), no formato da calibração v2. Respostas em branco em
+  `rotulos_validacao_v2.csv` (`28b6040e…`). Mapa
+  `especificidade/mapa/validacao_v2_mapa.json`, selo
+  `695b20b4941cc7c0020c4d89da37f3206aee6d5fc7aed68f30ce0872cfc183fe` (impresso
+  no fim do documento; fonte, conjunto, filme, bucket; nenhum valor de medida).
+- **Formato igual nas duas fontes, com uma diferença inevitável registrada.** O
+  texto MEDIDO é o do protocolo (`texto`, sem mudança). O texto EXIBIDO passa,
+  nas duas fontes, pela mesma regra: 1ª letra do tema e do exemplo em
+  maiúscula; ponto final no exemplo que não termina em pontuação. Mudou a
+  exibição de 30 itens (todos do base: a minúscula inicial do tema); nenhum
+  publicado mudou. Logo, o rótulo é dado sobre um texto que difere do medido só
+  na caixa da 1ª letra (e, em até 1 bucket do base, num ponto final).
+- **Limitação: a fonte pode vazar.** O rótulo pede especificidade, não fonte,
+  mas erros de português, o estilo do modelo base (temas mais curtos: mediana
+  22,5 caracteres contra 31 no publicado) e 5 linhas de publicados que citam o
+  grupo ("reviews negativas"…) podem denunciar a origem.
+- **Nenhuma medida foi calculada sobre os itens.** A avaliação (AUC ≥ 0,80 com
+  IC por filme; acurácia balanceada ≥ 0,75 no limiar de `limiares_v2.json`,
+  sha `dbe0b135…` gravado no mapa; |publicados − locais| ≤ 0,15) só roda depois
+  de os rótulos voltarem.
+
+## Fase 2 — preparo (2026-10-31; NADA rodado)
+
+**a) Base pelo mesmo caminho do treinado.** `scripts/finetune/kaggle/kernel_base/`
+(`exportar_base.py`, sha256 `ee4bef33…`, e `kernel-metadata.json`, privado,
+T4, sem dataset; `main` `b7c8b78`). Mesma pilha (unsloth 2026.10.7), mesmo
+repositório e revisão (`62efd7f9…`, aborta se o HF mudar), mesma carga
+(14.336, 4-bit, fp16), mesmo `get_peft_model` (r 16, as 7 projeções, seed
+3407), mesmo `get_chat_template("qwen3")` e mesma `save_pretrained_gguf(...,
+"q4_k_m")`, sem treino. O adaptador recém-criado tem `lora_B` = 0 (padrão do
+PEFT): o kernel prova `max|lora_B|` = 0, compara perda e logits com e sem
+adaptador num texto fixo, e confere a FUSÃO tensor a tensor contra os shards
+16-bit originais que o Unsloth baixa para fundir (no smoke v4: "Preparing
+safetensor model files" 4/4, revisão `946bc9ac…` no cache). Grava o sha256 e o
+tipo de cada tensor do GGUF (`tensores.json`) e o commit do llama.cpp.
+- **O sha do GGUF da base NÃO existe ainda** (o kernel não rodou); sai em
+  `log.json` → `gguf_arquivos`.
+- **GGUF da biblioteca × kernel: sem evidência de quantização idêntica**, então
+  a base sai do kernel. Motivos: o arquivo do `hf.co/unsloth/Qwen3-8B-GGUF` não
+  tem procedência registrada (commit do llama.cpp, imatrix ou não, de qual
+  16-bit), e o caminho do treinado parte do repositório bnb-4bit com fusão no
+  16-bit e um llama.cpp clonado na hora. O kernel baixa o Q4_K_M da biblioteca
+  e compara tensor a tensor (`biblioteca` no `log.json`): é registro, não muda
+  a regra.
+- **Requisito para a Fase 3 (PROPOSTO):** o GGUF treinado tem de sair com o
+  MESMO commit do llama.cpp da base (o Unsloth clona na hora); o
+  `gerar_sintese_teste.py` recusa se diferirem. Se diferirem, reexporta-se a
+  base no mesmo kernel do treino. Com os dois `tensores.json`, todo tensor fora
+  das 7 projeções tem de ser idêntico.
+
+**b) Geração nos 30 filmes de teste.** `scripts/finetune/gerar_sintese_teste.py`
+(sha256 `df8b802d…`; `plano` no Mac, `gerar --lado base|treinado` no
+Windows): 89 pares (o Gemini fora), recusa filme fora do teste, `num_ctx` pela
+regra com os tokens exatos, ordem por `num_ctx` (outlier por último), partida
+limpa, guarda de latência e guarda de RAM ≥ 2 GB com o pico por chamada,
+retomável, manifesto. Só aceita o GGUF cujo sha está no `log.json` do kernel e
+que passou no import (E4 true); na base exige as provas do adaptador e da
+fusão. NÃO rodado, nem o `plano` (nenhum filme de teste nesta rodada).
+Tempo ESTIMADO por lado: ~3,7–4,5 h.
+
+**c) `PROPOSTA_FASE2.md`** (sha256 `99c9b127…`): métricas, margens, critérios e
+custo, para revisão. NÃO é o pré-registro.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -1193,3 +1372,11 @@ Fase 2): comando separado, `viabilidade_ollama.py medir --candidato Qwen3-8B
   modelo base para a validação da Fase 1 (preparada, condicional ao E4).
 - (30/10) A igualdade byte a byte do texto treinado na v4 além da janela da 1ª
   diferença (sustentada pelo comprimento e pela contagem de tokens).
+- (31/10) Resolvidos: E4 (true), probe de 27.648 (passou, nos dois GGUF) e a
+  geração base da Fase 1. Continuam sem medida: o tempo e a memória com o
+  prompt real do outlier do teste (~22–25 mil tokens, `num_ctx` 28.672–31.744
+  pela regra); o texto que o Ollama monta pelo TEMPLATE (só a contagem bate);
+  a validação da especificidade (documento montado, rótulos pendentes); o
+  GGUF da base pelo caminho do treinado (kernel preparado, não rodado) e se ele
+  é idêntico ao da biblioteca; o commit do llama.cpp do smoke v4 (o log não o
+  gravou).
