@@ -1,0 +1,129 @@
+{
+ "gerado_por": "scripts/finetune/gerar_titulos_base.py plano",
+ "modelo": "hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M",
+ "tokenizer": "Qwen3-8B",
+ "regra_num_ctx": "(tokens do prompt + 3.000) × 1,10, arredondado para cima no múltiplo de 1.024",
+ "num_predict": 3000,
+ "pares": [
+  {
+   "slug": "fight-club",
+   "bucket": "negativas",
+   "tokens_prompt": 6397,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "b050fb2ace2c64535a8b2f4cb249f3d47f5648034cc0ff908bae39daf3e248cf"
+  },
+  {
+   "slug": "fight-club",
+   "bucket": "medianas",
+   "tokens_prompt": 5786,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "64257808009f87891cc4dcad4325813e622be221831390893fd6773a4c95c9c9"
+  },
+  {
+   "slug": "fight-club",
+   "bucket": "positivas",
+   "tokens_prompt": 5678,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "cf8cf9a84f161d6642d6cd21233e04d47c3d082e9ce4ead7eb339f855a8ee755"
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "negativas",
+   "tokens_prompt": 6594,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "b024a742500db249421afe72981a67708b04f0388538f3d547fdd239d22e0024"
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "medianas",
+   "tokens_prompt": 4826,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "157f0a2b02135dcfb37c8ea29fdf52f5c27f51ffe893e2d3b55605416b20ba43"
+  },
+  {
+   "slug": "hereditary",
+   "bucket": "positivas",
+   "tokens_prompt": 4585,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "13500d48edcda3d37c3e4267666efd6b0125f452dd26254877580b67046ba83c"
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "negativas",
+   "tokens_prompt": 14267,
+   "num_ctx": 19456,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "e6d0bbb61f91e5034a37762ac0571171dcb862163b5699f80c33c6bcb44c82c0"
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "medianas",
+   "tokens_prompt": 6202,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "6320826c32d36b469643868d9e9598e7e40ce77515958beb452a638ad7b971f4"
+  },
+  {
+   "slug": "pinocchio-2022",
+   "bucket": "positivas",
+   "tokens_prompt": 8668,
+   "num_ctx": 13312,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "0a6dbdb91e97be5d65b60a4986735984c49f91cfbd9d6cbd4528c6528cc752c4"
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "negativas",
+   "tokens_prompt": 4202,
+   "num_ctx": 8192,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "8838d4c747d58b5898d1d67ddb4f2249104553a7acb02ffb595b3f066eab0466"
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "medianas",
+   "tokens_prompt": 5509,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "9f3a56b1a79b97bbb1f6aba5202ebdfe0d4233a550108e7bb88d3e1f5df9c3d0"
+  },
+  {
+   "slug": "soul-2020",
+   "bucket": "positivas",
+   "tokens_prompt": 5673,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "57b99e0a3c7ab7bf696c6ed61c588d945aeeda8eb9442b5c303a1fc6ed1121ec"
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "negativas",
+   "tokens_prompt": 5992,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "3601db1444ae2cbeab7e215d5cc30ea233943d97a3c4664a71c7a9c941cca742"
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "medianas",
+   "tokens_prompt": 6702,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "f28e41cb27636fb19d0d7c4f58a4d3de119ed3f5028872322b901813835a756f"
+  },
+  {
+   "slug": "the-wailing",
+   "bucket": "positivas",
+   "tokens_prompt": 6812,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e3cffc38e63b2a244dfa8e1c697cd8cfcd4de44ce18adf089010cbc6815eab0f"
+  }
+ ]
+}

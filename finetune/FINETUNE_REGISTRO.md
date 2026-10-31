@@ -849,6 +849,8 @@ flush do pré-voo). `unsloth` e `unsloth_zoo` FIXADOS em 2026.10.7.
 - **Template:** `enable_thinking=False`. Conferido renderizando com jinja2 o
   `chat_template.jinja` oficial e o `qwen3_template` do Unsloth: os dois dão o
   mesmo texto, e `comum.chat('qwen')` bate com ele (treino e prompt de inferência).
+  **[Corrigido em 30/10: não bate para o prompt de síntese real, que termina em
+  `\n`; ver "Smoke do Qwen3-8B, versão 4".]**
   O turno do assistente abre com `<think>\n\n</think>\n\n` **vazio**; o alvo
   (o JSON) não tem `<think>` nem `</think>` em nenhum dos 141 exemplos limpos (nem nos 140 finais)
   (conferido na montagem). Como o bloco vazio é PROMPT na inferência, a parte
@@ -986,7 +988,7 @@ base, com `gerar_titulos_base.py` adaptado para gravar o exemplo.
   (o download deu 404). Por isso foram **canceladas e invalidadas**: nenhum
   número delas entra em critério nenhum.
 - **Versão 4:** enviada DEPOIS da versão nova do dataset (`ae74737d…`). Os
-  logs ainda não chegaram.
+  logs chegaram em 30/10; ver "Smoke do Qwen3-8B, versão 4".
 - **Conferência pronta:** `scripts/finetune/kaggle/conferir_saida_smoke.py
   --saida <pasta baixada>` (em `main`) compara os logs com os 6 exemplos do
   `smoke_dataset_qwen3/smoke.jsonl`. Ela confere o sha do dataset local, o
@@ -1000,6 +1002,159 @@ base, com `gerar_titulos_base.py` adaptado para gravar o exemplo.
   `resumo.json`/`log.json` (`dataset`) e no stdout, e ABORTA se ele divergir de
   `meta.json["smoke_sha256"]` ou se o `meta.json` não trouxer o sha. Regra para
   todo kernel de treino futuro. Nada foi reenviado ao Kaggle.
+
+## Smoke do Qwen3-8B, versão 4: os dados que de fato treinou (2026-10-30)
+
+Insumo: `finetune/kaggle/smoke_saida_qwen3/` (commit `423ec30`), a única versão
+válida. A v4 rodou com o kernel ANTERIOR à conferência de sha. Conferência:
+`scripts/finetune/kaggle/conferir_saida_smoke.py` (`main` `7e2ace9`), saída em
+`finetune/kaggle/conferencia_v4_qwen3.json` (sha256 `8df17964…`). **Todas as
+conferências que contam: OK (código de saída 0).**
+
+- Dataset: o `smoke.jsonl` local tem o sha `ae74737d…`, que é o do `meta.json`
+  local e o `meta_dataset.smoke_sha256` que o kernel leu no Kaggle. O
+  `dataset.sha256_lido` não existe nesse log (kernel antigo).
+- 1ª passada (MEDIDO): os ids batiam (longo = `the-turin-horse/negativas`;
+  1º mediano = `happy-hour-2015-1/negativas`), mas as contagens diferiam do
+  campo `tokens` gravado no dataset em 1 token, e o `template_confere` deu
+  `igual: false` nos 6 papéis:
+
+  | | log (Kaggle) | campo gravado no dataset |
+  |---|---|---|
+  | longo: entrada / treinados | 12.014 / 996 | 12.014 / 997 |
+  | mediano_1: entrada / treinados | 6.855 / 659 | 6.854 / 660 |
+
+- Causa (MEDIDO): o `comum.chat` aparava o conteúdo do usuário, e o template
+  do Qwen3 não apara. O prompt de síntese termina em `\n`, e o Kaggle renderizou
+  `…wiatr.\n<|im_end|>` onde o `chat_esperado` tinha `…wiatr.<|im_end|>`. A
+  máscara treina `alvo + <|im_end|>`, e o `tokens.saida` gravado contava também
+  o `\n` depois do fim de turno. Remontando sem aparar: o comprimento (46.359,
+  25.893, 24.625, 24.601, 23.617), a janela de 160 caracteres em volta da 1ª
+  diferença e as contagens (12.014/996 e 6.855/659) batem com o log nos 6
+  exemplos. Confirmação independente: no par do E5, o prompt sem aparar dá
+  8.019 tokens, o mesmo `prompt_eval_count` do Ollama; aparado, dá 8.018.
+- **Decisão do dono (2026-10-30): bate, os dados estão certos.** A diferença
+  é de convenção do texto esperado, não de dados. A v4 é válida.
+- Corrigido em `main` `7e2ace9`: `comum.chat("qwen")` não apara mais; a
+  conferência remonta o texto pelo template real e reconta os tokens, com os
+  campos gravados mantidos como informativos (`conta: false`).
+- **Correção do registro de 22/10:** "`comum.chat('qwen')` bate com ele" (seção
+  do smoke do Qwen3-8B) estava errado para o prompt de síntese real, que termina
+  em `\n`. O dataset `ae74737d…` NÃO foi remontado: o `chat_esperado` e o
+  `tokens` dele ficam como estão (convenção antiga). Os números de tokens do
+  inventário, da limpeza e do `meta.json` vieram do `comum.chat` antigo e podem
+  estar 1 token abaixo por exemplo; o máximo do treino (12.014) não muda, e o
+  `satantango/positivas` continua fora.
+- Limite: quando o log não deu `igual`, ele guarda só o comprimento e a janela
+  da 1ª diferença. A igualdade do resto do texto é sustentada pelo comprimento e
+  pela contagem de tokens do exemplo inteiro, não por comparação byte a byte. Os
+  medianos 2–4 ficam conferidos só pelo texto (o log não conta os tokens deles).
+
+## Windows: o import do GGUF caiu no script (E4 não medido, 2026-10-30)
+
+- O `importar-pasta` caiu antes de medir. Primeiro veio o UnicodeDecodeError
+  'charmap' (cp1252, byte 0x8f) na thread que lia a saída do `ollama create`;
+  depois, o TypeError em `viabilidade_ollama.py:508` (`c.stderr[-2000:]` com
+  `stderr` None). A linha "TEMPLATE CORRIGIDO: False" saiu na tela, mas o JSON
+  não foi gravado. Só o `Modelfile.espectro-qwen3-8b` chegou ao commit `fc0d4e4`.
+- **É falha do script, não do modelo.** Não conta como reprovação.
+- Corrigido em `main` `7e2ace9`:
+  - toda leitura de texto de subprocesso em `scripts/finetune` passa por
+    `comum.rodar_texto` (UTF-8, `errors="replace"`, `stdout`/`stderr` nunca
+    None); o kernel declara o mesmo à mão;
+  - o import faz `ollama rm` antes do `create` quando o modelo já existe e aborta
+    se ele continuar existindo, para a medição não herdar o modelo criado na
+    tentativa que caiu (`recriado_do_zero` no registro);
+  - se o script cair no meio do import, o JSON sai gravado com
+    `E4_importa_e_gera: null` e `erro_do_script`;
+  - teste com bytes fora do cp1252 e teste que impede `text=True` sem
+    `encoding`.
+- O GGUF existe (MEDIDO, `log.json`): `gguf_ok` true, 831,5 s,
+  `Qwen3-8B.Q4_K_M.gguf` com 5.027.784.288 bytes, sha256 `3f6ea31b…`. A
+  exportação no Kaggle NÃO falhou, então o adendo (caminho alternativo no Mac)
+  não se aplica.
+
+## Aplicação do critério ao Qwen3-8B (2026-10-30) — E4 PENDENTE, modelo NÃO escolhido
+
+`CRITERIO_ESCOLHA_BASE.md` + adendo, sem alteração. Fontes: `log.json` da v4
+(`qwen3-8b__14336`) e `viabilidade_20261030_165236.json`.
+
+| | critério | medido | veredito |
+|---|---|---|---|
+| **E1** | pico `max_memory_reserved` ≤ 14,0 GiB no mais longo, a 14.336 (ou 12.288 se falhar) | a 14.336: **10,463 GiB** reservado (9,626 alocado), em `the-turin-horse/negativas`, 12.014 tokens; 12.288: não rodado (a regra só o pede se 14.336 falhar; seria o mesmo exemplo) | **passa** |
+| **E2** | perda finita nos passos do smoke, fp16 | longo, 10 passos: 0,936 → 0,127; mediano, 5 passos: 0,757–1,001; todas finitas | **passa** |
+| **E3** | ≤ 20 h = s/passo mediano × 140 × 3 / 3600; equivale a ≤ 171,4 s/passo | **27,06 s/passo** (mediana sem o 1º) → **3,16 h** | **passa** |
+| **E4** | GGUF Q4_K_M do Kaggle importa no Ollama do Windows e gera texto | GGUF gerado no Kaggle; import caiu por falha do script | **PENDENTE** (não é reprovação) |
+| **E5** | p90 de treino com `num_ctx` 18.432 em ≤ 20 min | **231,1 s**, partida limpa (9,7 GB livres), 8.019 tokens de prompt, 717 de saída, JSON válido com 6 temas | **passa** |
+
+- **E1 mediu o comprimento real do maior exemplo de treino (12.014 tokens), não
+  14.336 tokens de fato.** Isso basta porque o `satantango/positivas` (15.414
+  tokens) saiu do treino por decisão do dono (2026-10-22), e nenhum dos 140
+  exemplos passa de 12.014. O E1 cobre o pior caso do treino que vai existir.
+  Passar não prova que 14.336 tokens cabem.
+- **Backend e dtype (MEDIDO, `atencao`):** `attn_implementation` sdpa; forward
+  `unsloth.models.qwen3.Qwen3Attention_fast_forward`; kernels
+  `aten::_efficient_attention_forward` e `fmha_cutlassF_f16…sm75` (SDPA
+  mem-efficient, cutlass), sem kernel math. Entrada e saída da camada 0 em
+  float16. Tesla T4, `bf16_suportado` false, treino em fp16, 1 GPU visível.
+  **O Qwen3 escapou do problema L×L dos Gemma:** nenhum kernel materializa a
+  matriz L×L: nenhum kernel math aparece. As 26 chamadas de softmax não indicam
+  atenção, porque o kernel as conta à parte, fora dos operadores de atenção. O
+  pico de 10,46 GiB a 12.014 tokens é coerente com memória O(L).
+- **Template e máscara (MEDIDO):** texto renderizado pelo template real do
+  Qwen3 com `enable_thinking=False`, com o turno do assistente aberto por
+  `<think>\n\n</think>\n\n` vazio, que fica no PROMPT. Tokens treinados
+  decodificados: começam em `{` e terminam em `}<|im_end|>`; `tem_bloco_think`
+  false e `comeca_em_chave` true no longo e no mediano. **O `<think>` está
+  mascarado e nenhum alvo tem `<think>`.** LoRA nas 7 projeções, nenhuma
+  faltando.
+- **Decisão pela regra:** E1, E2, E3 e E5 passam. O **E4 está PENDENTE** por
+  falha do script, e o modelo base **NÃO é declarado escolhido**. A seção
+  "Modelo base escolhido" só é escrita depois do E4.
+
+## Fase 1 — geração do modelo base para a validação (preparada, CONDICIONAL ao E4, 2026-10-30)
+
+Não rodada. `scripts/finetune/gerar_titulos_base.py` (`main` `7e2ace9`):
+
+- grava o BULLET COMPLETO da unidade v2 (`tema`, `exemplo_parafraseado` e o
+  texto `tema — exemplo`, o mesmo do `especificidade_bullet.texto_do_bullet`),
+  sem as contagens;
+- modelo: Qwen3-8B SEM treino, `hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` (o mesmo
+  caminho do E5), `think` false, JSON livre, `num_predict` 3.000;
+- prompt: o da síntese de produção (`comum.prompt_sintese`);
+- `num_ctx` por chamada pela regra do gate 0, com os tokens do prompt EXATOS
+  (tokenizer do Qwen3-8B, `comum.chat` corrigido), contados no Mac em
+  `finetune/especificidade/geracao_base/plano.json` (sha256 `7b2f60c5…`). No
+  Windows, o script remonta o prompt e recusa se o sha256 do system ou do user
+  não bater. A cota de 0,35 token/caractere saiu;
+- filmes: os 5 de TREINO de `validacao_filmes.json` (fight-club, hereditary,
+  pinocchio-2022, soul-2020, the-wailing), nos 3 buckets: 15 pares. Recusa se a
+  lista mudar ou se algum for de validação, de teste ou da referência;
+- só roda com um `importar_espectro-qwen3-8b_*.json` com
+  `E4_importa_e_gera: true` em `finetune/viabilidade/`;
+- partida limpa do Ollama antes da série; guarda de LATÊNCIA (4× a mediana das
+  últimas 20, com mínimo de 10; a 1ª chamada, que paga a carga, não entra);
+  retomável (refaz só o que não tem `ok: true`); saída em
+  `finetune/especificidade/geracao_base/<slug>__<bucket>.json`, com
+  `manifesto.json` (sha256 de cada arquivo) reescrito a cada par.
+
+`num_ctx` dos 15 pares (tokens do prompt): de 8.192 (soul-2020/negativas, 4.202)
+a 19.456 (pinocchio-2022/negativas, 14.267); 97.893 tokens de prompt no total.
+
+**Tempo (ESTIMADO pelo E5):**
+- leitura: 97.893 / 307 tok/s ≈ 5 min;
+- geração: 15 × 717 / 4,07 tok/s ≈ 44 min, supondo a saída do tamanho da do E5;
+- carga: ≈ 10 × 26,5 s ≈ 4 min, porque o `num_ctx` muda 9 vezes entre pares
+  seguidos e o Ollama recarrega a cada mudança.
+
+Total: **≈ 55 min**, até ~1 h 15 se as saídas forem mais longas ou se a geração
+ficar mais lenta com contexto maior. O documento de validação NÃO é montado
+agora: é montado depois da geração, pelo seletor pré-registrado.
+
+Probe de 27.648 (não eliminatório, para dimensionar o outlier do teste na
+Fase 2): comando separado, `viabilidade_ollama.py medir --candidato Qwen3-8B
+--so-probe` (16 tokens de saída; ESTIMADO 1–3 min com a partida limpa). O
+`importar-pasta` também roda um probe, no modelo IMPORTADO.
 
 ## O que NÃO foi medido
 
@@ -1018,8 +1173,8 @@ base, com `gerar_titulos_base.py` adaptado para gravar o exemplo.
 - (fechamento do gate 0) O teste de fumaça no Kaggle, a viabilidade e o
   import no Windows, e o juiz da limpeza: preparados, não rodados. A
   cota de GPU (~2–4 h) e as ~7,9 h de juiz são ESTIMATIVAS.
-- Se o template que o Unsloth aplica no Kaggle é idêntico ao `comum.chat`
-  (o teste de fumaça registra a comparação em `template_confere`).
+- (resolvido em 30/10) Se o template que o Unsloth aplica no Kaggle é idêntico
+  ao `comum.chat`: não era (o `\n` final do usuário); corrigido o `comum.chat`.
 - Se a cota de 0,35 token/caractere separa bem os pares que cabem na janela
   do juiz (`medir-contexto` confere os 10 maiores julgáveis no servidor).
 - (fase 1) A validação da medida de especificidade: só a calibração v2 rodou
@@ -1032,3 +1187,9 @@ base, com `gerar_titulos_base.py` adaptado para gravar o exemplo.
 - (22/10) A RAM durante a limpeza (guarda desligada). Se os 24 pares fora da
   janela caberiam (`medir-contexto` só mediu os 10 maiores julgáveis).
 - (22/10) E5 e E4 do Qwen3-8B; o E1 do Qwen3-8B a ~14 mil tokens (só 12.014).
+  Em 30/10: E5 medido (231 s); E4 PENDENTE (o script de import caiu); o E1
+  continua medido só a 12.014 tokens.
+- (30/10) O E4 do Qwen3-8B; o probe de 27.648 do Qwen3-8B base; a geração do
+  modelo base para a validação da Fase 1 (preparada, condicional ao E4).
+- (30/10) A igualdade byte a byte do texto treinado na v4 além da janela da 1ª
+  diferença (sustentada pelo comprimento e pela contagem de tokens).

@@ -1,0 +1,138 @@
+{
+ "todas_ok": true,
+ "itens": [
+  {
+   "conferencia": "dataset local = sha esperado = meta.json",
+   "ok": true,
+   "sha256_local": "ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f",
+   "esperado": "ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f",
+   "meta": "ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f"
+  },
+  {
+   "conferencia": "resumo.meta_dataset.smoke_sha256 = esperado",
+   "ok": true,
+   "lido_no_kaggle": "ae74737defb435017b763f11e13e0f82bdf5bcdc1f136f2366d2765cd81ac14f"
+  },
+  {
+   "conferencia": "resumo.dataset (sha do arquivo lido)",
+   "ok": true,
+   "nota": "ausente: kernel anterior a 2026-10-30; vale só o meta_dataset"
+  },
+  {
+   "conferencia": "qwen3-8b__14336: template_confere = chat_esperado gravado, nos 6 papéis",
+   "ok": false,
+   "diferentes": [
+    "mais_longo",
+    "mais_longo_12k",
+    "mediano_1",
+    "mediano_2",
+    "mediano_3",
+    "mediano_4"
+   ],
+   "conta": false
+  },
+  {
+   "conferencia": "qwen3-8b__14336: texto do Kaggle = texto remontado pelo template real, nos 6 papéis",
+   "ok": true,
+   "papeis_log": [
+    "mais_longo",
+    "mais_longo_12k",
+    "mediano_1",
+    "mediano_2",
+    "mediano_3",
+    "mediano_4"
+   ],
+   "papeis_dataset": [
+    "mais_longo",
+    "mais_longo_12k",
+    "mediano_1",
+    "mediano_2",
+    "mediano_3",
+    "mediano_4"
+   ],
+   "por_papel": {
+    "mais_longo": {
+     "len_log": 46359,
+     "len_remontado": 46359,
+     "confere": true
+    },
+    "mais_longo_12k": {
+     "len_log": 46359,
+     "len_remontado": 46359,
+     "confere": true
+    },
+    "mediano_1": {
+     "len_log": 25893,
+     "len_remontado": 25893,
+     "confere": true
+    },
+    "mediano_2": {
+     "len_log": 24625,
+     "len_remontado": 24625,
+     "confere": true
+    },
+    "mediano_3": {
+     "len_log": 24601,
+     "len_remontado": 24601,
+     "confere": true
+    },
+    "mediano_4": {
+     "len_log": 23617,
+     "len_remontado": 23617,
+     "confere": true
+    }
+   }
+  },
+  {
+   "conferencia": "qwen3-8b__14336: longo = mais_longo (the-turin-horse/negativas)",
+   "ok": true,
+   "slug_bucket_log": "the-turin-horse/negativas",
+   "tokens_entrada": [
+    12014,
+    12014
+   ],
+   "tokens_treinados": [
+    996,
+    996
+   ]
+  },
+  {
+   "conferencia": "qwen3-8b__14336: longo = tokens gravados no dataset",
+   "ok": false,
+   "tokens_entrada": [
+    12014,
+    12014
+   ],
+   "tokens_treinados": [
+    996,
+    997
+   ],
+   "conta": false
+  },
+  {
+   "conferencia": "qwen3-8b__14336: mediano (1º lote = mediano_1)",
+   "ok": true,
+   "tokens_entrada": [
+    6855,
+    6855
+   ],
+   "tokens_treinados": [
+    659,
+    659
+   ]
+  },
+  {
+   "conferencia": "qwen3-8b__14336: mediano = tokens gravados no dataset",
+   "ok": false,
+   "tokens_entrada": [
+    6855,
+    6854
+   ],
+   "tokens_treinados": [
+    659,
+    660
+   ],
+   "conta": false
+  }
+ ]
+}
