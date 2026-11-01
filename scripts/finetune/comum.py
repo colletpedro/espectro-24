@@ -8,6 +8,7 @@ publicado, que é só lido.
 """
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import json
 import math
@@ -15,6 +16,7 @@ import os
 import statistics
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[2]
@@ -23,6 +25,13 @@ sys.path[:0] = [str(RAIZ / "src"), str(RAIZ / "scripts")]
 RESULTADO_DIR = RAIZ / "resultado"
 BRUTO_DIR = RAIZ / "dados" / "bruto"
 FINETUNE_DIR = RAIZ / "finetune"
+
+# As medições das Fases 2 e 4 leem as entradas (publicados, bruto dos filmes,
+# consenso verificado) de um commit FIXO de main, nunca da árvore de trabalho:
+# outras sessões deixam ali mudanças não commitadas (ex.: o
+# `consenso_verificado.jsonl`). Ver `entradas_do_commit`.
+ENTRADAS_COMMIT = "742cfe3c7d443decd7cfd395e32dce080011bd45"
+ENTRADAS_EXTRA = ("resultado/votacao-3/consenso_verificado.jsonl", "resultado/votacao-3/amostra.json")
 BUCKETS = ("negativas", "medianas", "positivas")
 
 # Os 5 filmes da medição de referência (checagem-bullets, branch gate-local).
@@ -106,6 +115,69 @@ def sha256_arquivo(p: Path) -> str:
 
 def sha256_texto(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
+
+
+def arquivos_de_entrada(slugs, commit: str = ENTRADAS_COMMIT) -> list[str]:
+    """Os publicados (todos: a referência do e5 usa o catálogo inteiro), o bruto
+    dos `slugs` e o consenso verificado, como estão no `commit`."""
+    def ls(*caminhos, r=False):
+        out = rodar_texto(["git", "-C", str(RAIZ), "ls-tree", *(["-r"] if r else []), "--name-only",
+                           commit, "--", *caminhos])
+        if out.returncode != 0:
+            raise SystemExit(f"git ls-tree {commit} falhou: {out.stderr.strip()}")
+        return out.stdout.split("\n")
+    fora = [p for p in ls("resultado/") if p.endswith(".json") and p.count("/") == 1]
+    for slug in sorted(set(slugs)):
+        b = [p for p in ls(f"dados/bruto/{slug}/", r=True) if p]
+        if not b:
+            raise SystemExit(f"dados/bruto/{slug} não está no commit {commit}")
+        fora += b
+    return sorted(set(fora) | set(ENTRADAS_EXTRA))
+
+
+def extrair_entradas(destino: Path, slugs, commit: str = ENTRADAS_COMMIT) -> dict:
+    """`git archive` dos arquivos de entrada do `commit` em `destino`, com o sha256
+    de cada um e um sha256 do conjunto (das linhas "caminho sha256" ordenadas)."""
+    import io
+    import tarfile
+    caminhos = arquivos_de_entrada(slugs, commit)
+    # sem conversão de fim de linha: os bytes são os do blob no Mac e no Windows
+    r = subprocess.run(["git", "-C", str(RAIZ), "-c", "core.autocrlf=false", "-c", "core.eol=lf",
+                        "archive", "--format=tar", commit, "--", *caminhos], capture_output=True)
+    if r.returncode != 0:
+        raise SystemExit(f"git archive {commit} falhou: {r.stderr.decode('utf-8', 'replace').strip()}")
+    with tarfile.open(fileobj=io.BytesIO(r.stdout)) as tar:
+        try:
+            tar.extractall(destino, filter="data")
+        except TypeError:                 # Python sem o `filter` (anterior a 3.10.12)
+            tar.extractall(destino)
+    arquivos = {c: sha256_arquivo(destino / c) for c in caminhos}
+    return {"commit": rodar_texto(["git", "-C", str(RAIZ), "rev-parse", commit]).stdout.strip(),
+            "n_arquivos": len(arquivos),
+            "sha256": sha256_texto("".join(f"{c} {s}\n" for c, s in sorted(arquivos.items()))),
+            "arquivos": arquivos}
+
+
+@contextlib.contextmanager
+def entradas_do_commit(slugs, commit: str = ENTRADAS_COMMIT):
+    """Extrai as entradas do `commit` numa pasta temporária e aponta
+    `RESULTADO_DIR` e `BRUTO_DIR` para ela enquanto durar o bloco. Devolve o
+    manifesto de `extrair_entradas` com `raiz` (a pasta)."""
+    global RESULTADO_DIR, BRUTO_DIR
+    antigos = RESULTADO_DIR, BRUTO_DIR
+    with tempfile.TemporaryDirectory(prefix="espectro24_entradas_") as tmp:
+        man = extrair_entradas(Path(tmp), slugs, commit)
+        RESULTADO_DIR, BRUTO_DIR = Path(tmp) / "resultado", Path(tmp) / "dados" / "bruto"
+        try:
+            yield {**man, "raiz": Path(tmp)}
+        finally:
+            RESULTADO_DIR, BRUTO_DIR = antigos
+
+
+def resumo_entradas(man: dict) -> dict:
+    """O que vai para os metadados: commit, quantos arquivos, o sha do conjunto e
+    o sha de cada arquivo."""
+    return {k: man[k] for k in ("commit", "n_arquivos", "sha256", "arquivos")}
 
 
 def publicados() -> dict[str, dict]:

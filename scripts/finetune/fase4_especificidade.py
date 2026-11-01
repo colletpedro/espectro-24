@@ -201,12 +201,14 @@ def cmd_amostrar(a) -> None:
     fora = fora_por_memoria(regs_t, regs_b)
     ficam = [k for k in pares if k not in fora]
     t = bullets_treinado(regs_t, ficam)
-    p = bullets_publicado(ficam)
+    with K.entradas_do_commit(sorted({s for s, _ in pares})) as ent:     # o publicado do commit fixo
+        p = bullets_publicado(ficam)
     rng = random.Random(SEMENTE)
     itens = numerar(sortear(t, p, rng))
     mapa = {"gerado_por": "scripts/finetune/fase4_especificidade.py amostrar",
             "semente": SEMENTE, "preregistro_sha256": K.sha256_arquivo(ARQ_PREREGISTRO),
             "split_sha256": K.sha256_arquivo(a.split),
+            "entradas": {k: ent[k] for k in ("commit", "n_arquivos", "sha256")},
             "manifesto_treinado_sha256": K.sha256_arquivo(pasta_sintese("treinado") / "manifesto.json"),
             "fora_por_memoria": sorted(f"{s}/{b}" for s, b in fora),
             "frame": {"treinado": len(t), "publicado": len(p)},

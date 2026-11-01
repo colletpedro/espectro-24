@@ -15,9 +15,10 @@ Confere, antes de gravar:
 Saída (`--saida`): `treino.jsonl` (o sha256 dele é o "sha do dataset" do
 TREINO_CONFIG), `treino.sha256`, `dataset-metadata.json` (`USUARIO` no lugar do
 usuário) e `meta.json`. O `meta.json` leva também, com `--log-kernel-base`, o
-commit do llama.cpp e o sha256 do GGUF da BASE (o kernel de treino clona o
-llama.cpp NESSE commit e aborta sem ele) e o `tensores.json` da base, copiado
-ao lado (para conferir que só as 7 projeções mudaram).
+commit do llama.cpp e o sha256 do GGUF da BASE e o `tensores.json` da base,
+copiado ao lado (para conferir que só as 7 projeções mudaram). O kernel de
+treino aborta se esse commit não for o `LLAMA_CPP_COMMIT` fixo dos dois
+kernels.
 """
 from __future__ import annotations
 
@@ -113,8 +114,10 @@ def main() -> None:
         log = K.ler_json(a.log_kernel_base)
         commit = (log.get("llama_cpp") or {}).get("commit")
         g = [x for x in log.get("gguf_arquivos") or [] if x["nome"].endswith(".gguf")]
-        if not commit or len(g) != 1 or not log.get("gguf_ok"):
-            raise SystemExit("o log da base não tem llama.cpp, GGUF único e gguf_ok")
+        if not commit or len(g) != 1 or not log.get("gguf_ok") \
+                or not (log.get("llama_cpp_depois") or {}).get("ok"):
+            raise SystemExit("o log da base não tem llama.cpp, GGUF único, gguf_ok e "
+                             "llama_cpp_depois.ok (o llama.cpp fixo)")
         meta["llama_cpp_commit"] = commit
         meta["base"] = {"log_sha256": K.sha256_arquivo(a.log_kernel_base), "gguf_sha256": g[0]["sha256"],
                         "unsloth": (log.get("versoes") or {}).get("unsloth"),

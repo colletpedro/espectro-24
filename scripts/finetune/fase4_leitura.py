@@ -104,8 +104,10 @@ def cmd_montar(a) -> None:
               if (F.pasta_sintese("base") / "manifesto.json").exists() else {})
     fora = F.fora_por_memoria(regs_t, regs_b)
     filmes = []
+    with K.entradas_do_commit(slugs) as ent:                      # o publicado do commit fixo
+        pubs = {slug: K.ler_json(K.RESULTADO_DIR / f"{slug}.json") for slug in slugs}
     for slug in slugs:
-        pub = K.ler_json(K.RESULTADO_DIR / f"{slug}.json")
+        pub = pubs[slug]
         pb = {b["bucket"]: b for b in pub["buckets"]}
         f = {"slug": slug, "titulo": pub["ficha"]["titulo"], "treinado": {}, "publicado": {}}
         for bucket in K.BUCKETS:
@@ -118,6 +120,7 @@ def cmd_montar(a) -> None:
     mapa = {"gerado_por": "scripts/finetune/fase4_leitura.py montar", "semente": SEMENTE,
             "a_e": a_e, "filmes": slugs, "fora_por_memoria": sorted(f"{s}/{b}" for s, b in fora),
             "preregistro_sha256": K.sha256_arquivo(F.ARQ_PREREGISTRO),
+            "entradas": {k: ent[k] for k in ("commit", "n_arquivos", "sha256")},
             "manifesto_treinado_sha256": K.sha256_arquivo(
                 F.pasta_sintese("treinado") / "manifesto.json"),
             "script_sha256": K.sha256_arquivo(Path(__file__))}

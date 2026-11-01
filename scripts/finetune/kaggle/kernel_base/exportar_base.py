@@ -23,10 +23,12 @@ E4), tudo o que leva do repositório ao GGUF, e pula só o treino:
    Cada tensor fundido é comparado com o do shard original (mesmo repositório e
    revisão, baixado à parte): com B = 0 a fusão tem de deixar TODOS iguais;
 6. grava o sha256 do GGUF, o tipo e o sha256 de CADA tensor do GGUF
-   (`tensores.json`, via `gguf-py` do llama.cpp que o Unsloth clonou) e o
-   commit do llama.cpp. O GGUF do modelo treinado terá de sair com o mesmo
-   commit; com os dois `tensores.json`, os tensores fora das 7 projeções têm de
-   ser idênticos;
+   (`tensores.json`, via `gguf-py` do llama.cpp fixado) e o commit do
+   llama.cpp. O llama.cpp é um commit FIXO (`LLAMA_CPP_COMMIT`, o mesmo bloco
+   do `treino.py`), compilado do código-fonte ANTES de carregar o modelo; o
+   kernel aborta se o compilado não for esse commit, e de novo depois da
+   exportação se o Unsloth não tiver usado ESSE llama.cpp. Com os dois
+   `tensores.json`, os tensores fora das 7 projeções têm de ser idênticos;
 7. (`ESPECTRO24_COMPARAR_BIBLIOTECA`, padrão 1) baixa o Q4_K_M de
    `unsloth/Qwen3-8B-GGUF` — o que o Ollama puxa como
    `hf.co/unsloth/Qwen3-8B-GGUF:Q4_K_M` — e compara tensor a tensor. É a
@@ -50,6 +52,10 @@ os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
 os.environ.setdefault("HF_HOME", f"{RASCUNHO}/hf")
 os.environ.setdefault("HF_HUB_CACHE", f"{RASCUNHO}/hf/hub")
 os.environ.setdefault("TRITON_CACHE_DIR", f"{RASCUNHO}/triton")
+# A prova da identidade compara logits; sem isto o Unsloth devolve logits vazios
+# quando há `labels` (versão 1 deste kernel: NotImplementedError). Só aqui: no
+# treino materializaria os logits de 12k tokens. Não toca nos pesos exportados.
+os.environ["UNSLOTH_RETURN_LOGITS"] = "1"
 os.makedirs(RASCUNHO, exist_ok=True)
 os.chdir(RASCUNHO)            # llama.cpp e unsloth_compiled_cache nascem no cwd
 
@@ -121,6 +127,110 @@ def _pico_ram_gib() -> float:
     return round((vm.total - vm.available) / 2**30, 2)
 
 
+# >>> llama.cpp fixo — bloco IDÊNTICO em exportar_base.py e treino.py (o teste confere)
+# ggml-org/llama.cpp, tag b11985 (commit de 2026-10-29): a base upstream da release
+# `b11985-mix-c116c32` da fork unslothai/llama.cpp, a mais nova quando o smoke v4
+# rodou (2026-10-30). O kernel compila ESTE commit do código-fonte e aponta o
+# Unsloth para ele: quantizador e gguf-py (`UNSLOTH_LLAMA_CPP_PATH`) e conversor
+# (`UNSLOTH_LLAMA_CPP_SCRIPTS_DIR`). Com `UNSLOTH_AUTO_INSTALL=0`, se o Unsloth não
+# aceitar a pasta, a exportação falha em vez de baixar um pré-compilado.
+LLAMA_CPP_URL = "https://github.com/ggml-org/llama.cpp"
+LLAMA_CPP_COMMIT = "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad"
+LLAMA_CPP_DIR = Path(RASCUNHO) / "llama.cpp"
+ALVOS_LLAMA = ["llama-quantize", "llama-gguf-split"]
+# do que o `install_llama_cpp` do Unsloth instalaria para o conversor, só o que o
+# Qwen3 pode usar, e só se faltar (o gguf vem do gguf-py do checkout; o
+# mistral_common é só para modelos Mistral)
+DEPS_CONVERSOR = {"sentencepiece": "sentencepiece", "google.protobuf": "protobuf"}
+
+
+def _tem_modulo(nome: str) -> bool:
+    import importlib.util
+    try:
+        return importlib.util.find_spec(nome) is not None
+    except ModuleNotFoundError:
+        return False
+os.environ["UNSLOTH_LLAMA_CPP_PATH"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_LLAMA_CPP_SCRIPTS_DIR"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_AUTO_INSTALL"] = "0"
+
+
+def _commit_compilado(d: Path) -> str | None:
+    """O commit que o CMake gravou no build-info do llama.cpp compilado."""
+    for p in (d / "build").rglob("build-info.cpp"):
+        for linha in p.read_text(encoding="utf-8", errors="replace").splitlines():
+            if "LLAMA_COMMIT" in linha and '"' in linha:
+                return linha.split('"')[1]
+    return None
+
+
+def _confere_commit(d: Path) -> dict:
+    head = _rodar(["git", "-C", str(d), "rev-parse", "HEAD"]).stdout.strip()
+    curto = _commit_compilado(d)
+    q = d / "llama-quantize"
+    r = _rodar([str(q), "--help"], timeout=60) if q.exists() else None
+    saida = ((r.stdout + r.stderr) if r else "")
+    no_binario = q.exists() and (curto or "?").encode() in q.read_bytes()
+    fora = {"commit_pedido": LLAMA_CPP_COMMIT, "commit_clonado": head, "commit_compilado": curto,
+            "commit_no_binario": no_binario,
+            "llama_quantize_sha256": _sha256(q) if q.exists() else None,
+            "llama_quantize_versao": next((l for l in saida.splitlines() if l.startswith("version:")), None)}
+    fora["ok"] = bool(head == LLAMA_CPP_COMMIT and curto and LLAMA_CPP_COMMIT.startswith(curto)
+                      and len(curto) >= 7 and no_binario)
+    return fora
+
+
+def preparar_llama_cpp() -> dict:
+    """Clona e compila o llama.cpp em LLAMA_CPP_COMMIT, ANTES de carregar o modelo.
+    Aborta se o que compilou não for exatamente esse commit."""
+    d = LLAMA_CPP_DIR
+    shutil.rmtree(d, ignore_errors=True)
+    t0 = time.time()
+    passos = [["git", "init", "-q", str(d)],
+              ["git", "-C", str(d), "remote", "add", "origin", LLAMA_CPP_URL],
+              ["git", "-C", str(d), "fetch", "-q", "--depth", "1", "origin", LLAMA_CPP_COMMIT],
+              ["git", "-C", str(d), "checkout", "-q", "--detach", "FETCH_HEAD"],
+              ["cmake", "-S", str(d), "-B", str(d / "build"), "-DCMAKE_BUILD_TYPE=Release",
+               "-DGGML_CUDA=OFF", "-DLLAMA_OPENSSL=OFF", "-DBUILD_SHARED_LIBS=OFF",
+               "-DLLAMA_BUILD_TESTS=OFF", "-DLLAMA_BUILD_EXAMPLES=OFF", "-DLLAMA_BUILD_SERVER=OFF"],
+              ["cmake", "--build", str(d / "build"), "--config", "Release", "-j",
+               str(os.cpu_count() or 4), "--target", *ALVOS_LLAMA]]
+    for p in passos:
+        r = _rodar(p, timeout=3600)
+        if r.returncode != 0:
+            raise SystemExit(f"llama.cpp: `{' '.join(p)}` falhou: {(r.stdout + r.stderr)[-1500:]}")
+    for alvo in ALVOS_LLAMA:                       # o Unsloth procura na raiz da pasta
+        shutil.copy2(d / "build" / "bin" / alvo, d / alvo)
+    faltando = [pip for mod, pip in DEPS_CONVERSOR.items() if not _tem_modulo(mod)]
+    if faltando:
+        r = _rodar([sys.executable, "-m", "pip", "install", "-q", *faltando])
+        if r.returncode != 0:
+            raise SystemExit(f"pip install {faltando} falhou: {r.stderr[-1500:]}")
+    fora = _confere_commit(d)
+    fora.update({"s": round(time.time() - t0, 1), "deps_instaladas": faltando,
+                 "cmake": passos[4][5:]})
+    print(f"[llama.cpp] {json.dumps(fora, ensure_ascii=False)}", flush=True)
+    if not fora["ok"]:
+        raise SystemExit(f"llama.cpp compilado não é {LLAMA_CPP_COMMIT}: {fora} — abortado")
+    return fora
+
+
+def conferir_llama_cpp_depois(preparo: dict) -> dict:
+    """Depois do `save_pretrained_gguf`: o mesmo checkout, o mesmo binário e nenhum
+    llama.cpp baixado pelo Unsloth no lugar padrão."""
+    fora = _confere_commit(LLAMA_CPP_DIR)
+    padrao = Path.home() / ".unsloth" / "llama.cpp"
+    fora["llama_cpp_padrao_do_unsloth_existe"] = padrao.exists()
+    fora["mesmo_binario_do_preparo"] = fora["llama_quantize_sha256"] == preparo["llama_quantize_sha256"]
+    fora["arvore_alterada"] = _rodar(["git", "-C", str(LLAMA_CPP_DIR), "status", "--porcelain",
+                                      "--untracked-files=no"]
+                                     ).stdout.splitlines()[:50]
+    fora["ok"] = bool(fora["ok"] and fora["mesmo_binario_do_preparo"]
+                      and not fora["llama_cpp_padrao_do_unsloth_existe"])
+    return fora
+# <<< llama.cpp fixo
+
+
 # ---------------------------------------------------------------------------
 # provas
 # ---------------------------------------------------------------------------
@@ -140,6 +250,8 @@ def prova_adaptador_identidade(model, tok, torch) -> dict:
         com = model(input_ids=ids, labels=ids)
         with model.disable_adapter():
             sem = model(input_ids=ids, labels=ids)
+    if com.logits.numel() == 0 or sem.logits.numel() == 0:
+        raise SystemExit("logits vazios na prova do adaptador (UNSLOTH_RETURN_LOGITS) — abortado")
     dif = float((com.logits.float() - sem.logits.float()).abs().max())
     return {"modulos_lora": n, "max_abs_lora_B": b_max, "max_abs_lora_A": a_norma,
             "B_zero": b_max == 0.0, "tokens_texto": int(ids.shape[1]),
@@ -207,7 +319,7 @@ def prova_fusao(dst: Path, torch) -> dict:
 
 def tensores_gguf(gguf: Path) -> dict:
     """Tipo, forma e sha256 de cada tensor; chaves de metadados (sem os vetores)."""
-    sys.path.insert(0, str(TMP / "llama.cpp" / "gguf-py"))
+    sys.path.insert(0, str(LLAMA_CPP_DIR / "gguf-py"))
     from gguf import GGUFReader
     rd = GGUFReader(str(gguf))
     tens = [{"nome": t.name, "tipo": t.tensor_type.name, "forma": [int(x) for x in t.shape],
@@ -228,7 +340,7 @@ def tensores_gguf(gguf: Path) -> dict:
 
 
 def llama_cpp() -> dict:
-    d = TMP / "llama.cpp"
+    d = LLAMA_CPP_DIR
     if not d.exists():
         return {"existe": False}
     fora = {"existe": True,
@@ -283,6 +395,8 @@ def exportar() -> dict:
     reg = {"modelo": NOME, "repo": REPO, "revisao_esperada": REVISAO, "max_seq_length": SEQ,
            "seed": SEED, "rascunho": RASCUNHO, "treino": "nenhum (adaptador recém-inicializado)"}
     try:
+        reg["llama_cpp_preparo"] = preparar_llama_cpp()      # antes do modelo: falha cedo
+        _json(log, reg)
         import torch
         from huggingface_hub import HfApi
         import unsloth  # noqa: F401 — tem de vir antes de transformers/trl
@@ -323,7 +437,11 @@ def exportar() -> dict:
         reg["gguf_todos_arquivos_gerados"] = [str(p.relative_to(TMP / NOME))
                                               for p in sorted((TMP / NOME).rglob("*")) if p.is_file()]
         reg["llama_cpp"] = llama_cpp()
+        reg["llama_cpp_depois"] = conferir_llama_cpp_depois(reg["llama_cpp_preparo"])
         _json(log, reg)
+        if not reg["llama_cpp_depois"]["ok"]:
+            raise SystemExit(f"a exportação não usou o llama.cpp {LLAMA_CPP_COMMIT}: "
+                             f"{reg['llama_cpp_depois']} — GGUF não copiado")
 
         del model
         torch.cuda.empty_cache()

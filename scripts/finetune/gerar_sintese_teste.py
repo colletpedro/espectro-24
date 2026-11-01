@@ -24,9 +24,10 @@ Travas:
   `E4_importa_e_gera` true dá o nome no Ollama; recusa se o nome foi
   reimportado depois com outro GGUF, se base e treinado têm o mesmo nome ou o
   mesmo GGUF. Na base, o log tem de provar o
-  adaptador identidade e a fusão sem alteração; no treinado, o commit do
-  llama.cpp tem de ser o da base (`--log-kernel-base`): os dois só diferem
-  pelo adaptador;
+  adaptador identidade e a fusão sem alteração; nos dois, que a exportação
+  usou o llama.cpp do commit fixo (`llama_cpp_depois.ok`), e no treinado que
+  esse commit é o da base (`--log-kernel-base`): os dois só diferem pelo
+  adaptador;
 - `num_ctx` POR CHAMADA pela regra do gate 0: (tokens do prompt + 3.000) × 1,10,
   arredondado para cima no múltiplo de 1.024, com os tokens EXATOS do prompt
   contados no Mac (`plano`, tokenizer do Qwen3-8B, template sem aparar); no
@@ -127,18 +128,19 @@ def cmd_plano(a) -> None:
     split = K.ler_json(a.split)
     tok = K.carregar_tokenizer(TOKENIZER, a.tokenizers)
     linhas = []
-    for slug, bucket, s, u in pares(split):
-        n = K.contar(tok, K.chat("qwen", s, u, None))
-        linhas.append({"slug": slug, "bucket": bucket, "tokens_prompt": n,
-                       "num_ctx": num_ctx_da_chamada(n),
-                       "system_sha256": K.sha256_texto(s), "user_sha256": K.sha256_texto(u)})
+    with K.entradas_do_commit(filmes_de_teste(split)) as ent:       # bruto e publicado do commit fixo
+        for slug, bucket, s, u in pares(split):
+            n = K.contar(tok, K.chat("qwen", s, u, None))
+            linhas.append({"slug": slug, "bucket": bucket, "tokens_prompt": n,
+                           "num_ctx": num_ctx_da_chamada(n),
+                           "system_sha256": K.sha256_texto(s), "user_sha256": K.sha256_texto(u)})
     linhas.sort(key=lambda p: (p["num_ctx"], p["slug"], p["bucket"]))
     plano = {"gerado_por": "scripts/finetune/gerar_sintese_teste.py plano",
              "tokenizer": TOKENIZER, "split_sha256": K.sha256_arquivo(a.split),
              "regra_num_ctx": "(tokens do prompt + 3.000) × 1,10, arredondado para cima no "
                               "múltiplo de 1.024", "num_predict": TETO_SAIDA,
              "buckets_excluidos": sorted(f"{s}/{b}" for s, b in excluidos(split)),
-             "pares": linhas}
+             "entradas": K.resumo_entradas(ent), "pares": linhas}
     PASTA.mkdir(parents=True, exist_ok=True)
     ARQ_PLANO.write_text(json.dumps(plano, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"gravado: {ARQ_PLANO} ({len(linhas)} pares, {sum(p['tokens_prompt'] for p in linhas)} "
@@ -181,6 +183,9 @@ def modelo_pelo_sha(sha: str) -> tuple[str, str]:
 def conferir_modelo(lado: str, nome: str | None, log_kernel: Path, log_base: Path | None) -> dict:
     log = K.ler_json(log_kernel)
     sha = _gguf_do_log(log)
+    if not (log.get("llama_cpp_depois") or {}).get("ok"):
+        raise SystemExit("o log do kernel não prova que a exportação usou o llama.cpp fixo "
+                         "(`llama_cpp_depois.ok`)")
     if lado == "base":
         if not (log.get("prova_adaptador") or {}).get("B_zero"):
             raise SystemExit("o log do kernel da base não prova lora_B = 0")
@@ -276,7 +281,10 @@ def cmd_gerar(a) -> None:
     if plano_doc["split_sha256"] != K.sha256_arquivo(a.split):
         raise SystemExit("split.json mudou desde o plano: rode `plano` no Mac")
     plano = {(p["slug"], p["bucket"]): p for p in plano_doc["pares"]}
-    todos = {(x[0], x[1]): x for x in buckets_de_teste(split)}
+    with K.entradas_do_commit(filmes_de_teste(split)) as ent:       # bruto e publicado do commit fixo
+        if ent["sha256"] != (plano_doc.get("entradas") or {}).get("sha256"):
+            raise SystemExit(f"as entradas do commit {ent['commit']} não são as do plano: rode `plano`")
+        todos = {(x[0], x[1]): x for x in buckets_de_teste(split)}
     if set(todos) != set(plano):
         raise SystemExit("plano_teste.json não cobre exatamente os pares de teste: rode `plano`")
     teste = set(split["teste"])
@@ -309,7 +317,8 @@ def cmd_gerar(a) -> None:
                    "tokens_prompt_plano": p["tokens_prompt"], "num_predict": TETO_SAIDA,
                    "think": "false", "amostragem": AMOSTRAGEM, "seed": SEED,
                    "system_sha256": p["system_sha256"],
-                   "user_sha256": p["user_sha256"], "partida": partida,
+                   "user_sha256": p["user_sha256"], "entradas": {k: ent[k] for k in ("commit", "sha256")},
+                   "partida": partida,
                    "ts": datetime.now(timezone.utc).isoformat(timespec="seconds")}
             arq = pasta / f"{slug}__{bucket}.json"
             tentativas: list[dict] = []

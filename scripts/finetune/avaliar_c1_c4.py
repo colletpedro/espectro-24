@@ -30,6 +30,12 @@ Implementa a seção 3 (C1–C4) e a 5 (ordem e integridade) sem mudar nada:
   (`buckets_excluidos`) nunca entra.
 - **δ₂:** recalculado pela taxa de apoio ≥ 2 do publicado (`fixar-delta2`),
   gravado UMA vez, antes de gerar o treinado.
+- **Entradas de um commit fixo:** `preparar`, `calcular`, `fixar-delta2` e
+  `conferir-reuso` leem os publicados, o bruto dos filmes de teste e o
+  consenso verificado de `comum.ENTRADAS_COMMIT` (`git archive` numa pasta
+  temporária), nunca da árvore de trabalho. O commit e o sha256 de cada
+  arquivo vão para o `entrada_meta.json`; `calcular` e `fixar-delta2` recusam
+  se o conjunto não for o mesmo do `preparar`.
 
 Subcomandos:
     preparar        (Mac) recuperação e5 → `fase2/juiz/<lado>/entrada.jsonl`
@@ -38,6 +44,8 @@ Subcomandos:
     julgar          (Windows) parada no 2º "sim", retomável, guarda de latência
     calcular        C1–C4 dos lados disponíveis (na Fase 2, descritivo)
     fixar-delta2    δ₂ pela taxa medida do publicado → `fase2/delta2.json`
+    conferir-reuso  (Mac) só o sha256 do reaproveitamento dos 5 de referência,
+                    sem gravar nada
 """
 from __future__ import annotations
 
@@ -220,27 +228,19 @@ def registros_reaproveitados(pares_5: set[str]) -> list[dict]:
 # preparar (Mac)
 # ---------------------------------------------------------------------------
 
-def cmd_preparar(a) -> None:
+def montar_pares(lado: str, pares_teste: list, regs: dict, ent: dict,
+                 filmes: list[str]) -> tuple[list[dict], dict]:
+    """Recuperação e5 dos `filmes` → pares (bullet, review); no publicado, o
+    `ids_com_eixo` dos 5 de referência. Lê as entradas de `ent` (o commit fixo)."""
     import encoder_e5 as E5
     from espectro24 import eixos as EX
     from espectro24.pipeline import amostra_do_bruto
 
-    L.exigir_juiz()
-    split = K.ler_json(a.split)
-    pares_teste = F.pares_de_teste(split)
-    if len(pares_teste) != C4_TOTAL:
-        raise SystemExit(f"{len(pares_teste)} pares de teste (esperados {C4_TOTAL})")
-    regs = registros_gerados(pares_teste)
-    if a.lado != "publicado" and a.lado not in regs:
-        raise SystemExit(f"sem a síntese do lado {a.lado} (`gerar_sintese_teste.py gerar`)")
-    destino = dir_lado(a.lado)
-    if (destino / "entrada.jsonl").exists():
-        raise SystemExit(f"{destino / 'entrada.jsonl'} já existe: a entrada é montada UMA vez")
     enc = L._CacheQueries(E5.Encoder.do_disco())
-    catalogo = EX.carregar_classificacao(K.RAIZ / EX.CONSENSO_VERIFICADO) \
-        if a.lado == "publicado" else None
+    catalogo = EX.carregar_classificacao(ent["raiz"] / EX.CONSENSO_VERIFICADO) \
+        if lado == "publicado" else None
     pares, docs, com_eixo, t0 = [], {}, {}, time.time()
-    filmes = sorted({s for s, _ in pares_teste})
+    montar_pares.e5_snapshot = enc.enc._dir.name
     for n, slug in enumerate(filmes, 1):
         doc = docs.setdefault(slug, K.ler_json(K.RESULTADO_DIR / f"{slug}.json"))
         reviews = amostra_do_bruto(slug, coleta=doc["coleta"], raiz=K.BRUTO_DIR)
@@ -250,10 +250,10 @@ def cmd_preparar(a) -> None:
         bl = []
         for slug_, bucket in pares_teste:
             if slug_ == slug:
-                bl += bullets_do_bucket(a.lado, slug, bucket,
-                                        bucket_do_lado(a.lado, slug, bucket, regs, docs))
+                bl += bullets_do_bucket(lado, slug, bucket,
+                                        bucket_do_lado(lado, slug, bucket, regs, docs))
         grupos = {(slug, bk): rs for bk, rs in reviews.items() if (slug, bk) in set(pares_teste)}
-        ref = C.textos_de_referencia(excluir={slug})
+        ref = C.textos_de_referencia(K.RESULTADO_DIR, excluir={slug})
         rec = C.recuperar(bl, grupos, enc, ref)
         por_id = {b["id_bullet"]: b for b in bl}
         rev = {(bk, r.id): r for (s, bk), rs in grupos.items() for r in rs}
@@ -262,7 +262,7 @@ def cmd_preparar(a) -> None:
             for t in r["top"]:
                 rv = rev[(b["bucket"], t["id"])]
                 p = {"id_par": f"{b['id_bullet']}|{t['id']}", "id_bullet": b["id_bullet"],
-                     "lado": a.lado, "slug": slug, "bucket": b["bucket"], "i": b["i"],
+                     "lado": lado, "slug": slug, "bucket": b["bucket"], "i": b["i"],
                      "tema": b["tema"], "exemplo": b["exemplo"], "review_id": t["id"],
                      "nivel": rv.nivel, "texto": rv.texto, "rank": t["rank"], "sim": t["sim"],
                      "score": t["score"]}
@@ -271,20 +271,47 @@ def cmd_preparar(a) -> None:
                 p["cota_tokens"] = math.ceil(J.RAZAO_TOKENS_POR_CHAR * ch)
                 p["julgavel_estimado"] = p["cota_tokens"] + J.NUM_PREDICT <= J.num_ctx(J.CONGELADA)
                 pares.append(p)
-        if a.lado == "publicado" and slug in REFERENCIA_5:
+        if lado == "publicado" and slug in REFERENCIA_5:
             com_eixo.update(ids_com_eixo_publicado(slug, doc, reviews, catalogo))
         print(f"  {n}/{len(filmes)} {slug}: {len(bl)} bullets · {time.time() - t0:.0f}s", flush=True)
+    return pares, com_eixo
+
+
+def _pares_de_teste(split: dict) -> list:
+    pares_teste = F.pares_de_teste(split)
+    if len(pares_teste) != C4_TOTAL:
+        raise SystemExit(f"{len(pares_teste)} pares de teste (esperados {C4_TOTAL})")
+    return pares_teste
+
+
+def cmd_preparar(a) -> None:
+    import encoder_e5 as E5
+
+    L.exigir_juiz()
+    split = K.ler_json(a.split)
+    pares_teste = _pares_de_teste(split)
+    regs = registros_gerados(pares_teste)
+    if a.lado != "publicado" and a.lado not in regs:
+        raise SystemExit(f"sem a síntese do lado {a.lado} (`gerar_sintese_teste.py gerar`)")
+    destino = dir_lado(a.lado)
+    if (destino / "entrada.jsonl").exists():
+        raise SystemExit(f"{destino / 'entrada.jsonl'} já existe: a entrada é montada UMA vez")
+    t0 = time.time()
+    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent:
+        pares, com_eixo = montar_pares(a.lado, pares_teste, regs, ent,
+                                       sorted({s for s, _ in pares_teste}))
     destino.mkdir(parents=True, exist_ok=True)
     (destino / "entrada.jsonl").write_text(
         "".join(json.dumps(p, ensure_ascii=False) + "\n" for p in pares), encoding="utf-8")
     meta = {"gerado_por": "scripts/finetune/avaliar_c1_c4.py preparar", "lado": a.lado,
             "juiz_config_sha256": L.HASH_CONGELADO, "modelo_e5": E5.MODELO_ID,
-            "e5_snapshot": enc.enc._dir.name, "k": C.K_RECUPERADAS, "pares": len(pares),
+            "e5_snapshot": montar_pares.e5_snapshot, "k": C.K_RECUPERADAS, "pares": len(pares),
             "bullets": len({p["id_bullet"] for p in pares}),
             "pares_nao_julgaveis_estimados": sum(not p["julgavel_estimado"] for p in pares),
             "split_sha256": K.sha256_arquivo(a.split),
             "entrada_sha256": K.sha256_arquivo(destino / "entrada.jsonl"),
-            "script_sha256": K.sha256_arquivo(Path(__file__)), "tempo_s": round(time.time() - t0, 1)}
+            "script_sha256": K.sha256_arquivo(Path(__file__)), "tempo_s": round(time.time() - t0, 1),
+            "entradas": K.resumo_entradas(ent)}
     if a.lado == "publicado":
         linhas = linhas_formato_antigo(pares, com_eixo)
         sha = sha_das_linhas(linhas)
@@ -300,6 +327,20 @@ def cmd_preparar(a) -> None:
     (destino / "entrada_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1),
                                                encoding="utf-8")
     print(json.dumps(meta, ensure_ascii=False, indent=1))
+
+
+def cmd_conferir_reuso(a) -> None:
+    """Só o sha256 das linhas do publicado dos 5 de referência no formato antigo
+    (nenhum arquivo gravado, nenhum juiz)."""
+    split = K.ler_json(a.split)
+    pares_teste = _pares_de_teste(split)
+    cinco = [k for k in pares_teste if k[0] in REFERENCIA_5]
+    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent:
+        pares, com_eixo = montar_pares("publicado", cinco, {}, ent, list(REFERENCIA_5))
+    sha = sha_das_linhas(linhas_formato_antigo(pares, com_eixo))
+    print(json.dumps({"entradas_commit": ent["commit"], "entradas_sha256": ent["sha256"],
+                      "linhas": len(linhas_formato_antigo(pares, com_eixo)), "sha256": sha,
+                      "esperado": REUSO_SHA, "bate": sha == REUSO_SHA}, ensure_ascii=False, indent=1))
 
 
 # ---------------------------------------------------------------------------
@@ -506,14 +547,32 @@ def criterios(pf_t: dict, pf_p: dict, filmes: list[str], boot: list, delta2: flo
 # calcular, fixar-delta2
 # ---------------------------------------------------------------------------
 
-def _lado_completo(lado: str, split: dict, mantidos: list, regs: dict) -> tuple[dict, dict, dict]:
+def _lado_completo(lado: str, split: dict, mantidos: list, regs: dict,
+                   ent: dict) -> tuple[dict, dict, dict]:
     import metricas as M
+    feito = (K.ler_json(dir_lado(lado) / "entrada_meta.json").get("entradas") or {}).get("sha256")
+    if feito != ent["sha256"]:
+        raise SystemExit(f"{lado}: as entradas do `preparar` ({feito}) não são as do commit "
+                         f"{ent['commit']} ({ent['sha256']})")
     docs: dict = {}
     buckets = {k: bucket_do_lado(lado, k[0], k[1], regs, docs) for k in mantidos}
     pares = [p for p in _entrada(lado, split) if (p["slug"], p["bucket"]) in set(mantidos)]
     est = estados(pares, registros_do_juiz(lado))
     pf = por_filme(est, buckets, M.compilar(M.carregar_lista()))
     return pf, est, buckets
+
+
+def _resumo_do_lado(lado, split, mantidos, regs, ent, filmes) -> tuple[dict, dict]:
+    pf, est, _ = _lado_completo(lado, split, mantidos, regs, ent)
+    cont = collections.Counter(e["estado"] for e in est.values())
+    r = {"estados": dict(cont), **{m: taxa(pf, filmes, m) for m in METRICAS},
+         "c4_ok": sum(c.get("c4_ok", 0) for c in pf.values()), "buckets": len(mantidos)}
+    if lado in regs:
+        primeira = [bucket_da_1a_tentativa(regs[lado][k]) for k in mantidos]
+        r["c4_ok_1a_tentativa"] = sum(c4_do_bucket(b) for b in primeira)
+        r["chamadas"] = dict(collections.Counter(regs[lado][k].get("n_chamadas") for k in mantidos))
+        r["parede_s"] = [regs[lado][k].get("parede_s") for k in mantidos]
+    return pf, r
 
 
 def cmd_calcular(a) -> None:
@@ -529,25 +588,16 @@ def cmd_calcular(a) -> None:
     boot = reamostras(filmes)
     lados = ["publicado"] + [l for l in GERADOS if l in regs and (dir_lado(l) / "entrada.jsonl").exists()]
     pf, resumo = {}, {}
-    for lado in lados:
-        pf[lado], est, buckets = _lado_completo(lado, split, mantidos, regs)
-        cont = collections.Counter(e["estado"] for e in est.values())
-        resumo[lado] = {"estados": dict(cont),
-                        **{m: taxa(pf[lado], filmes, m) for m in METRICAS},
-                        "c4_ok": sum(c.get("c4_ok", 0) for c in pf[lado].values()),
-                        "buckets": len(mantidos)}
-        if lado in regs:
-            primeira = [bucket_da_1a_tentativa(regs[lado][k]) for k in mantidos]
-            resumo[lado]["c4_ok_1a_tentativa"] = sum(c4_do_bucket(b) for b in primeira)
-            resumo[lado]["chamadas"] = dict(collections.Counter(
-                regs[lado][k].get("n_chamadas") for k in mantidos))
-            resumo[lado]["parede_s"] = [regs[lado][k].get("parede_s") for k in mantidos]
+    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent:
+        for lado in lados:
+            pf[lado], resumo[lado] = _resumo_do_lado(lado, split, mantidos, regs, ent, filmes)
     delta2 = K.ler_json(ARQ_DELTA2)["delta2_pp"] if ARQ_DELTA2.exists() else DELTA2_PADRAO_PP
     out = {"gerado_por": "scripts/finetune/avaliar_c1_c4.py calcular",
            "script_sha256": K.sha256_arquivo(Path(__file__)), "juiz": L.HASH_CONGELADO,
            "semente_bootstrap": SEMENTE_BOOT, "reamostras": N_BOOT, "filmes": len(filmes),
            "buckets_mantidos": len(mantidos), "fora_por_memoria": [f"{s}/{b}" for s, b in fora],
            "delta2_pp": delta2, "delta2_fixado": ARQ_DELTA2.exists(), "lados": resumo,
+           "entradas": {k: ent[k] for k in ("commit", "n_arquivos", "sha256")},
            "descritivo": {}, "decisao": None}
     for lado in lados[1:]:
         out["descritivo"][f"{lado}_contra_publicado"] = criterios(pf[lado], pf["publicado"], filmes,
@@ -575,14 +625,16 @@ def cmd_fixar_delta2(a) -> None:
     L.exigir_juiz()
     pares_teste = F.pares_de_teste(split)
     mantidos, fora = buckets_mantidos(pares_teste, registros_gerados(pares_teste))
-    pf, _, _ = _lado_completo("publicado", split, mantidos, {})
+    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent:
+        pf, _, _ = _lado_completo("publicado", split, mantidos, {}, ent)
     filmes = sorted({s for s, _ in mantidos})
     p0 = taxa(pf, filmes, "apoio_2")
     out = {"gerado_por": "scripts/finetune/avaliar_c1_c4.py fixar-delta2", "p0_apoio_2": p0,
            "bullets_julgados": sum(c.get("julgados", 0) for c in pf.values()),
            "formula": "poder.mde_analitico no sentido da queda; n = 30·18/(1 + 17·0,023)",
            "delta2_pp": delta2_pp(p0), "fora_por_memoria": [f"{s}/{b}" for s, b in fora],
-           "script_sha256": K.sha256_arquivo(Path(__file__))}
+           "script_sha256": K.sha256_arquivo(Path(__file__)),
+           "entradas": {k: ent[k] for k in ("commit", "n_arquivos", "sha256")}}
     ARQ_DELTA2.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(out, ensure_ascii=False, indent=1))
 
@@ -599,9 +651,11 @@ def main() -> None:
             s.add_argument("--latencia-fator", type=float, default=4.0)
     sub.add_parser("calcular")
     sub.add_parser("fixar-delta2")
+    sub.add_parser("conferir-reuso")
     a = ap.parse_args()
     {"preparar": cmd_preparar, "medir-contexto": cmd_medir_contexto, "julgar": cmd_julgar,
-     "calcular": cmd_calcular, "fixar-delta2": cmd_fixar_delta2}[a.cmd](a)
+     "calcular": cmd_calcular, "fixar-delta2": cmd_fixar_delta2,
+     "conferir-reuso": cmd_conferir_reuso}[a.cmd](a)
 
 
 if __name__ == "__main__":

@@ -5,8 +5,8 @@ fp16, `get_peft_model`, template, perda só na resposta, exportação), mais:
 
 - dados: `treino.jsonl` do dataset privado (140 de TREINO + 19 de VALIDAÇÃO).
   Aborta, antes de instalar ou treinar, se: o sha256 lido ≠ `meta.json` ≠
-  `DATASET_SHA256` (o do TREINO_CONFIG); faltar o commit do llama.cpp da base
-  no `meta.json`; algum exemplo for de filme fora do seu conjunto (ou de
+  `DATASET_SHA256` (o do TREINO_CONFIG); o commit do llama.cpp que a base
+  gravou (`meta.json`) não for o `LLAMA_CPP_COMMIT` fixo; algum exemplo for de filme fora do seu conjunto (ou de
   teste). Depois de carregar: aborta se `template_confere` for falso em
   QUALQUER exemplo ou se algum passar de `max_seq_length` (sem truncar);
 - QLoRA 4-bit, r 16, alpha 16, dropout 0, as 7 projeções, gradient
@@ -21,9 +21,11 @@ fp16, `get_peft_model`, template, perda só na resposta, exportação), mais:
   hiperparâmetros;
 - exportação: SÓ o checkpoint escolhido (o adaptador dele é carregado e a
   perda na validação é refeita e conferida), adaptador salvo, depois o MESMO
-  `save_pretrained_gguf(..., "q4_k_m")` da base, com o llama.cpp clonado e
-  compilado ANTES no commit da base (`meta.json`). Se o commit usado não for o
-  da base, o GGUF NÃO é copiado para a saída (o adaptador fica). Com o
+  `save_pretrained_gguf(..., "q4_k_m")` da base, com o llama.cpp no commit FIXO
+  `LLAMA_CPP_COMMIT` (o mesmo bloco do `exportar_base.py`), compilado do
+  código-fonte ANTES do treino; aborta antes de treinar se o compilado não for
+  esse commit. Se a exportação não tiver usado ESSE llama.cpp, o GGUF NÃO é
+  copiado para a saída (o adaptador fica). Com o
   `tensores_base.json` do dataset, confere que só os tensores das 7 projeções
   mudaram.
 
@@ -83,8 +85,6 @@ HIPER = {"seed": 3407, "r": 16, "lora_alpha": 16, "lora_dropout": 0, "learning_r
          "max_seq_length": SEQ, "use_gradient_checkpointing": "unsloth"}
 CASAS_EMPATE = 4
 TOL_REAVALIACAO = 1e-3
-LLAMA_CPP_URL = "https://github.com/ggml-org/llama.cpp"
-ALVOS_LLAMA = ["llama-quantize", "llama-cli", "llama-gguf-split"]
 
 
 def _json(p: Path, obj) -> None:
@@ -142,8 +142,9 @@ def conferir_dataset() -> tuple[list[dict], dict, dict]:
           flush=True)
     if not (lido == conf["sha256_meta"] == DATASET_SHA256):
         raise SystemExit("treino.jsonl não é o do meta.json e do TREINO_CONFIG — abortado")
-    if not meta.get("llama_cpp_commit"):
-        raise SystemExit("meta.json sem o commit do llama.cpp da base (`--log-kernel-base`) — abortado")
+    if meta.get("llama_cpp_commit") != LLAMA_CPP_COMMIT:
+        raise SystemExit(f"o llama.cpp da base no meta.json ({meta.get('llama_cpp_commit')}) não é "
+                         f"o fixo {LLAMA_CPP_COMMIT} (`--log-kernel-base`) — abortado")
     linhas = [json.loads(l) for l in arq.read_text(encoding="utf-8").split("\n") if l.strip()]
     filmes = meta["filmes"]
     teste = set(filmes["teste"])
@@ -159,37 +160,115 @@ def conferir_dataset() -> tuple[list[dict], dict, dict]:
 
 
 # ---------------------------------------------------------------------------
-# llama.cpp no commit da base
+# llama.cpp
 # ---------------------------------------------------------------------------
 
-def preparar_llama_cpp(commit: str) -> dict:
-    """Clona o llama.cpp NO commit da base e compila o que a exportação usa, ANTES
-    do `save_pretrained_gguf` (que acha a pasta no cwd e não clona de novo)."""
-    d = TMP / "llama.cpp"
+# >>> llama.cpp fixo — bloco IDÊNTICO em exportar_base.py e treino.py (o teste confere)
+# ggml-org/llama.cpp, tag b11985 (commit de 2026-10-29): a base upstream da release
+# `b11985-mix-c116c32` da fork unslothai/llama.cpp, a mais nova quando o smoke v4
+# rodou (2026-10-30). O kernel compila ESTE commit do código-fonte e aponta o
+# Unsloth para ele: quantizador e gguf-py (`UNSLOTH_LLAMA_CPP_PATH`) e conversor
+# (`UNSLOTH_LLAMA_CPP_SCRIPTS_DIR`). Com `UNSLOTH_AUTO_INSTALL=0`, se o Unsloth não
+# aceitar a pasta, a exportação falha em vez de baixar um pré-compilado.
+LLAMA_CPP_URL = "https://github.com/ggml-org/llama.cpp"
+LLAMA_CPP_COMMIT = "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad"
+LLAMA_CPP_DIR = Path(RASCUNHO) / "llama.cpp"
+ALVOS_LLAMA = ["llama-quantize", "llama-gguf-split"]
+# do que o `install_llama_cpp` do Unsloth instalaria para o conversor, só o que o
+# Qwen3 pode usar, e só se faltar (o gguf vem do gguf-py do checkout; o
+# mistral_common é só para modelos Mistral)
+DEPS_CONVERSOR = {"sentencepiece": "sentencepiece", "google.protobuf": "protobuf"}
+
+
+def _tem_modulo(nome: str) -> bool:
+    import importlib.util
+    try:
+        return importlib.util.find_spec(nome) is not None
+    except ModuleNotFoundError:
+        return False
+os.environ["UNSLOTH_LLAMA_CPP_PATH"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_LLAMA_CPP_SCRIPTS_DIR"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_AUTO_INSTALL"] = "0"
+
+
+def _commit_compilado(d: Path) -> str | None:
+    """O commit que o CMake gravou no build-info do llama.cpp compilado."""
+    for p in (d / "build").rglob("build-info.cpp"):
+        for linha in p.read_text(encoding="utf-8", errors="replace").splitlines():
+            if "LLAMA_COMMIT" in linha and '"' in linha:
+                return linha.split('"')[1]
+    return None
+
+
+def _confere_commit(d: Path) -> dict:
+    head = _rodar(["git", "-C", str(d), "rev-parse", "HEAD"]).stdout.strip()
+    curto = _commit_compilado(d)
+    q = d / "llama-quantize"
+    r = _rodar([str(q), "--help"], timeout=60) if q.exists() else None
+    saida = ((r.stdout + r.stderr) if r else "")
+    no_binario = q.exists() and (curto or "?").encode() in q.read_bytes()
+    fora = {"commit_pedido": LLAMA_CPP_COMMIT, "commit_clonado": head, "commit_compilado": curto,
+            "commit_no_binario": no_binario,
+            "llama_quantize_sha256": _sha256(q) if q.exists() else None,
+            "llama_quantize_versao": next((l for l in saida.splitlines() if l.startswith("version:")), None)}
+    fora["ok"] = bool(head == LLAMA_CPP_COMMIT and curto and LLAMA_CPP_COMMIT.startswith(curto)
+                      and len(curto) >= 7 and no_binario)
+    return fora
+
+
+def preparar_llama_cpp() -> dict:
+    """Clona e compila o llama.cpp em LLAMA_CPP_COMMIT, ANTES de carregar o modelo.
+    Aborta se o que compilou não for exatamente esse commit."""
+    d = LLAMA_CPP_DIR
     shutil.rmtree(d, ignore_errors=True)
     t0 = time.time()
-    passos = [["git", "init", str(d)],
+    passos = [["git", "init", "-q", str(d)],
               ["git", "-C", str(d), "remote", "add", "origin", LLAMA_CPP_URL],
-              ["git", "-C", str(d), "fetch", "--depth", "1", "origin", commit],
-              ["git", "-C", str(d), "checkout", "--detach", "FETCH_HEAD"],
-              ["cmake", "-S", str(d), "-B", str(d / "build"), "-DGGML_CUDA=OFF",
-               "-DLLAMA_CURL=OFF", "-DBUILD_SHARED_LIBS=OFF"],
+              ["git", "-C", str(d), "fetch", "-q", "--depth", "1", "origin", LLAMA_CPP_COMMIT],
+              ["git", "-C", str(d), "checkout", "-q", "--detach", "FETCH_HEAD"],
+              ["cmake", "-S", str(d), "-B", str(d / "build"), "-DCMAKE_BUILD_TYPE=Release",
+               "-DGGML_CUDA=OFF", "-DLLAMA_OPENSSL=OFF", "-DBUILD_SHARED_LIBS=OFF",
+               "-DLLAMA_BUILD_TESTS=OFF", "-DLLAMA_BUILD_EXAMPLES=OFF", "-DLLAMA_BUILD_SERVER=OFF"],
               ["cmake", "--build", str(d / "build"), "--config", "Release", "-j",
                str(os.cpu_count() or 4), "--target", *ALVOS_LLAMA]]
     for p in passos:
         r = _rodar(p, timeout=3600)
         if r.returncode != 0:
             raise SystemExit(f"llama.cpp: `{' '.join(p)}` falhou: {(r.stdout + r.stderr)[-1500:]}")
-    for b in (d / "build" / "bin").glob("llama-*"):
-        shutil.copy2(b, d / b.name)
-    head = _rodar(["git", "-C", str(d), "rev-parse", "HEAD"]).stdout.strip()
-    _rodar([sys.executable, "-m", "pip", "install", "-q", "-e", str(d / "gguf-py")])
-    return {"commit_pedido": commit, "commit_clonado": head, "s": round(time.time() - t0, 1),
-            "binarios": sorted(p.name for p in d.glob("llama-*") if p.is_file())}
+    for alvo in ALVOS_LLAMA:                       # o Unsloth procura na raiz da pasta
+        shutil.copy2(d / "build" / "bin" / alvo, d / alvo)
+    faltando = [pip for mod, pip in DEPS_CONVERSOR.items() if not _tem_modulo(mod)]
+    if faltando:
+        r = _rodar([sys.executable, "-m", "pip", "install", "-q", *faltando])
+        if r.returncode != 0:
+            raise SystemExit(f"pip install {faltando} falhou: {r.stderr[-1500:]}")
+    fora = _confere_commit(d)
+    fora.update({"s": round(time.time() - t0, 1), "deps_instaladas": faltando,
+                 "cmake": passos[4][5:]})
+    print(f"[llama.cpp] {json.dumps(fora, ensure_ascii=False)}", flush=True)
+    if not fora["ok"]:
+        raise SystemExit(f"llama.cpp compilado não é {LLAMA_CPP_COMMIT}: {fora} — abortado")
+    return fora
+
+
+def conferir_llama_cpp_depois(preparo: dict) -> dict:
+    """Depois do `save_pretrained_gguf`: o mesmo checkout, o mesmo binário e nenhum
+    llama.cpp baixado pelo Unsloth no lugar padrão."""
+    fora = _confere_commit(LLAMA_CPP_DIR)
+    padrao = Path.home() / ".unsloth" / "llama.cpp"
+    fora["llama_cpp_padrao_do_unsloth_existe"] = padrao.exists()
+    fora["mesmo_binario_do_preparo"] = fora["llama_quantize_sha256"] == preparo["llama_quantize_sha256"]
+    fora["arvore_alterada"] = _rodar(["git", "-C", str(LLAMA_CPP_DIR), "status", "--porcelain",
+                                      "--untracked-files=no"]
+                                     ).stdout.splitlines()[:50]
+    fora["ok"] = bool(fora["ok"] and fora["mesmo_binario_do_preparo"]
+                      and not fora["llama_cpp_padrao_do_unsloth_existe"])
+    return fora
+# <<< llama.cpp fixo
 
 
 def llama_cpp() -> dict:
-    d = TMP / "llama.cpp"
+    d = LLAMA_CPP_DIR
     if not d.exists():
         return {"existe": False}
     fora = {"existe": True,
@@ -206,7 +285,7 @@ def llama_cpp() -> dict:
 
 
 def tensores_gguf(gguf: Path) -> dict:
-    sys.path.insert(0, str(TMP / "llama.cpp" / "gguf-py"))
+    sys.path.insert(0, str(LLAMA_CPP_DIR / "gguf-py"))
     from gguf import GGUFReader
     rd = GGUFReader(str(gguf))
     tens = [{"nome": t.name, "tipo": t.tensor_type.name, "forma": [int(x) for x in t.shape],
@@ -265,9 +344,11 @@ def treinar() -> dict:
     log = SAIDA / "log.json"
     linhas, meta, conf = conferir_dataset()
     reg = {"modelo": NOME, "repo": REPO, "revisao_esperada": REVISAO, "hiperparametros": HIPER,
-           "dataset": conf, "llama_cpp_esperado": meta["llama_cpp_commit"], "base": meta.get("base"),
+           "dataset": conf, "llama_cpp_esperado": LLAMA_CPP_COMMIT, "base": meta.get("base"),
            "rascunho": RASCUNHO}
     try:
+        reg["llama_cpp_preparo"] = preparar_llama_cpp()      # antes de treinar: falha cedo
+        _json(log, reg)
         import torch
         from datasets import Dataset
         from huggingface_hub import HfApi
@@ -384,16 +465,16 @@ def treinar() -> dict:
                             for p in sorted(ad.iterdir()) if p.is_file()]
         _json(log, reg)
 
-        # ---- exportação: o mesmo caminho da base, com o llama.cpp dela ----
-        reg["llama_cpp_preparo"] = preparar_llama_cpp(meta["llama_cpp_commit"])
-        _json(log, reg)
+        # ---- exportação: o mesmo caminho e o mesmo llama.cpp da base ----
         dst = TMP / NOME / "gguf"
         shutil.rmtree(dst, ignore_errors=True)
         t0 = time.time()
         model.save_pretrained_gguf(str(dst), tok, quantization_method="q4_k_m")
         reg["gguf_tempo_s"] = round(time.time() - t0, 1)
         reg["llama_cpp"] = llama_cpp()
-        reg["llama_cpp_igual_ao_da_base"] = reg["llama_cpp"].get("commit") == meta["llama_cpp_commit"]
+        reg["llama_cpp_depois"] = conferir_llama_cpp_depois(reg["llama_cpp_preparo"])
+        reg["llama_cpp_igual_ao_da_base"] = bool(reg["llama_cpp_depois"]["ok"]
+                                                 and reg["llama_cpp"].get("commit") == meta["llama_cpp_commit"])
         _json(log, reg)
         gerados = sorted(p for p in (TMP / NOME).rglob("*") if p.is_file()
                          and ((p.suffix == ".gguf" and "Q4_K_M" in p.name.upper()) or p.name == "Modelfile"))
@@ -407,8 +488,8 @@ def treinar() -> dict:
             reg["comparacao_com_base"] = comparar_com_base(tens, json.loads(tb.read_text(encoding="utf-8")))
         if not reg["llama_cpp_igual_ao_da_base"]:
             reg["gguf_ok"] = False
-            reg["gguf_motivo"] = (f"llama.cpp {reg['llama_cpp'].get('commit')} ≠ o da base "
-                                  f"{meta['llama_cpp_commit']}: GGUF NÃO copiado (o adaptador ficou)")
+            reg["gguf_motivo"] = (f"a exportação não usou o llama.cpp {LLAMA_CPP_COMMIT} (o da base): "
+                                  f"{reg['llama_cpp_depois']} — GGUF NÃO copiado (o adaptador ficou)")
             return reg
         arquivos = []
         for p in gerados:

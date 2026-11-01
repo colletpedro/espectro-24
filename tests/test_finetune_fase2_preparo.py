@@ -42,7 +42,8 @@ def test_bucket_do_gemini_fica_fora():
 def _log(tmp_path: Path, nome: str, sha: str = "abc", **extra) -> Path:
     p = tmp_path / nome
     p.write_text(json.dumps({"gguf_arquivos": [{"nome": "Qwen3-8B.Q4_K_M.gguf", "sha256": sha},
-                                               {"nome": "Modelfile", "sha256": "x"}], **extra}))
+                                               {"nome": "Modelfile", "sha256": "x"}],
+                             "llama_cpp_depois": {"ok": True}, **extra}))
     return p
 
 
@@ -102,3 +103,10 @@ def test_kernel_da_base_compila():
                        "kernel-metadata.json").read_text())
     assert meta["code_file"] == "exportar_base.py" and meta["is_private"] is True
     assert meta["dataset_sources"] == []
+
+
+def test_log_sem_prova_do_llama_cpp_fixo_e_recusado(tmp_path):
+    log = _log(tmp_path, "b.json", prova_adaptador={"B_zero": True}, prova_fusao={"ok": True},
+               llama_cpp_depois={"ok": False})
+    with pytest.raises(SystemExit, match="llama.cpp fixo"):
+        G.conferir_modelo("base", None, log, None)

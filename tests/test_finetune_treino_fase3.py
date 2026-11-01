@@ -2,7 +2,8 @@
 
 - `kernel_treino/treino.py` compila; a regra de escolha é a do TREINO_CONFIG
   (menor perda na validação na 4ª casa; empate → menos épocas); o sha do
-  dataset é o do TREINO_CONFIG; o kernel lê o llama.cpp do meta.json;
+  dataset é o do TREINO_CONFIG; o llama.cpp é o commit fixo (ver
+  `test_finetune_llama_cpp_fixo.py`);
 - `gerar_sintese_teste.conferir_modelo` escolhe o modelo do Ollama pelo sha256
   do GGUF do log do kernel, recusa nome reimportado com outro GGUF e base e
   treinado com o mesmo nome."""
@@ -82,9 +83,9 @@ def test_base_e_treinado_nao_colidem(tmp_path, monkeypatch):
     _imp(v, "espectro-x", "sha-t", "20261105_000000")       # o treinado sobrescreveu a base
     lb = tmp_path / "base.json"
     lb.write_text(json.dumps({"gguf_arquivos": [{"nome": "a.Q4_K_M.gguf", "sha256": "sha-base"}],
-                              "llama_cpp": {"commit": "c1"}}))
+                              "llama_cpp": {"commit": "c1"}, "llama_cpp_depois": {"ok": True}}))
     lt = tmp_path / "t.json"
     lt.write_text(json.dumps({"gguf_arquivos": [{"nome": "a.Q4_K_M.gguf", "sha256": "sha-t"}],
-                              "llama_cpp": {"commit": "c1"}}))
+                              "llama_cpp": {"commit": "c1"}, "llama_cpp_depois": {"ok": True}}))
     with pytest.raises(SystemExit):
         G.conferir_modelo("treinado", None, lt, lb)
