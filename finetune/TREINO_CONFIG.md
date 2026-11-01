@@ -34,7 +34,8 @@ TREINO e de VALIDAÇÃO, e o treinado só é medido na Fase 4.
 - **O kernel aborta**, antes de instalar ou treinar, se:
   - o sha256 do `treino.jsonl` lido ≠ o do `meta.json` ≠ o desta página
     (constante `DATASET_SHA256` no kernel);
-  - o `meta.json` não tiver o commit do llama.cpp da base;
+  - o `meta.json` não tiver o commit do llama.cpp da base (desde o DESVIO T01:
+    se esse commit não for o fixo);
   - algum exemplo for de filme fora do seu conjunto, ou de teste;
   - não forem exatamente 140 + 19.
   E, depois de carregar o modelo, se `template_confere` for falso em QUALQUER
@@ -64,10 +65,11 @@ TREINO e de VALIDAÇÃO, e o treinado só é medido na Fase 4.
   smoke v4 (MEDIDO): torch 2.11.0+cu128, transformers 5.16.1, trl 1.15.0, peft
   0.20.0, bitsandbytes 0.50.2. Limitação: a imagem do Kaggle não é fixável pela
   API; a comparação com a base sai dos dois `log.json`.
-- **llama.cpp:** o MESMO commit da exportação da base, lido do `meta.json`. O
-  kernel clona e compila o llama.cpp nesse commit ANTES da exportação; depois,
-  confere o commit usado. Se não for o da base, o GGUF NÃO é copiado para a
-  saída (o adaptador fica), e o `gerar_sintese_teste.py` também recusa.
+- **llama.cpp:** ~~o MESMO commit da exportação da base, lido do `meta.json`~~
+  (substituído pelo DESVIO T01, abaixo). O kernel clona e compila o llama.cpp
+  nesse commit ANTES da exportação; depois, confere o commit usado. Se não for
+  o da base, o GGUF NÃO é copiado para a saída (o adaptador fica), e o
+  `gerar_sintese_teste.py` também recusa.
 - A carga da base foi com `max_seq_length` 14.336 e a do treino é com 12.288:
   isso muda o comprimento que o treino aceita, não os pesos exportados
   (ESTIMADO pelo código: o `max_seq_length` não entra na fusão).
@@ -112,3 +114,50 @@ TREINO e de VALIDAÇÃO, e o treinado só é medido na Fase 4.
   (~14 min). Carga e instalação: ~10 min.
 - **Total: ~3,7–4,5 h de GPU** numa sessão (o limite do Kaggle é 12 h; o
   orquestrador corta em 11 h e os checkpoints por época permitem retomar).
+
+## DESVIO T01 — llama.cpp em commit fixo (2026-10-31, ANTES de qualquer treino)
+
+O treino não rodou; nenhum hiperparâmetro, dado ou regra de escolha muda.
+
+- **Antes:** o treino herdava o commit do llama.cpp que a exportação da base
+  gravasse. **Agora:** os DOIS kernels (`exportar_base.py` e `treino.py`)
+  trazem o mesmo bloco, idêntico byte a byte (um teste confere), com
+  `LLAMA_CPP_COMMIT = 6d194531e1e5876d5d1a0641ce3ca7dae23f94ad`
+  (`ggml-org/llama.cpp`, tag b11985, commit de 2026-10-29).
+- **Por que este commit:** é a base upstream da release `b11985-mix-c116c32`
+  da fork `unslothai/llama.cpp`, a mais nova publicada (2026-10-30 04:51 UTC)
+  quando o smoke v4 rodou (2026-10-30 20:12 UTC). ESTIMADO: o smoke v4 não
+  gravou o llama.cpp (`llama_cpp` ausente do log). O upstream fica no lugar
+  da fork porque é compilado do código-fonte, num commit verificável. O que
+  importa para o princípio é que base e treinado usem o MESMO commit.
+- **Por que o risco existia** (lido no `unsloth_zoo` 2026.10.7): o Unsloth
+  procura o llama.cpp em `~/.unsloth/llama.cpp` e, sem ele, baixa o
+  pré-compilado mais novo da fork. A pasta que o kernel antigo compilava no
+  cwd só era usada por compatibilidade, e o conversor vinha de outra
+  resolução. A "herança" poderia ter caído em commits diferentes.
+- **Como fica:**
+  - o kernel compila o commit antes de carregar o modelo (o treino, antes de
+    treinar);
+  - aponta o Unsloth para essa pasta: `UNSLOTH_LLAMA_CPP_PATH` (quantizador e
+    gguf-py) e `UNSLOTH_LLAMA_CPP_SCRIPTS_DIR` (conversor);
+  - desliga a instalação automática (`UNSLOTH_AUTO_INSTALL=0`): se o Unsloth
+    não aceitar a pasta, a exportação falha em vez de trocar de llama.cpp.
+- **Conferência no log:** antes de usar o llama.cpp, o kernel aborta se não
+  baterem com o commit fixo o `HEAD`, o `LLAMA_COMMIT` do `build-info.cpp`
+  gerado pelo CMake e o hash curto embutido no `llama-quantize`
+  (`llama_cpp_preparo.ok`). Depois da exportação, confere de novo:
+  - o mesmo binário;
+  - nenhum `~/.unsloth/llama.cpp` criado (`llama_cpp_depois.ok`).
+
+  Se falhar, a base não copia o GGUF; o treino copia só o adaptador. O
+  `gerar_sintese_teste.py` e o `montar_dataset_treino.py` exigem
+  `llama_cpp_depois.ok`, e o treino aborta se o commit da base no `meta.json`
+  não for o fixo.
+- **Ambiente:** o kernel antigo de treino fazia `pip install -e gguf-py`; isso
+  saiu, e os dois kernels agora têm o mesmo ambiente. Só se faltarem, os dois
+  instalam `sentencepiece` e `protobuf`.
+- **Custo:** clone e compilação de 2 alvos (`llama-quantize`,
+  `llama-gguf-split`), ~5–15 min (ESTIMADO), já contados no total acima.
+- **Não testado no Kaggle (ESTIMADO):** se o CMake desse commit compila na
+  imagem do dia. Se não compilar, o kernel aborta nos primeiros minutos, antes
+  do modelo.
