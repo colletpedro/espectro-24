@@ -1,0 +1,41 @@
+{
+ "modelo": "qwen3-8b-base",
+ "repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+ "revisao_esperada": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+ "max_seq_length": 14336,
+ "seed": 3407,
+ "rascunho": "/tmp/espectro24_base",
+ "treino": "nenhum (adaptador recém-inicializado)",
+ "dispositivos_cuda": 1,
+ "gpu": "Tesla T4",
+ "versoes": {
+  "python": "3.13.15",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu128",
+  "peft": "0.20.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.14.0",
+  "safetensors": "0.8.0",
+  "huggingface_hub": "1.29.0",
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:9a6bcfda6d03b2cd9aa347ee8c1bae62043328ed0f4afe9bda014e4f8bbf9435"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "sha": "62efd7f9d748e394734a7adae2adf96e13a2abc8"
+ },
+ "carga_s": 52.0,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "projecoes_faltando": [],
+ "erro": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 312, in exportar\n    reg[\"prova_adaptador\"] = prova_adaptador_identidade(model, tok, torch)\n                             ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/src/script.py\", line 143, in prova_adaptador_identidade\n    dif = float((com.logits.float() - sem.logits.float()).abs().max())\n                 ~~~~~~~~~~~~~~~~^^\n  File \"/usr/local/lib/python3.13/dist-packages/unsloth/models/_utils.py\", line 6865, in raise_logits_error\n    raise NotImplementedError(LOGITS_ERROR_STRING)\nNotImplementedError: Unsloth: Logits are empty from 2024.11 onwards. To get raw logits again, please set the environment variable `UNSLOTH_RETURN_LOGITS` to `\"1\" BEFORE starting to train ie before `trainer.train()`. For example:\n```\nimport os\nos.environ['UNSLOTH_RETURN_LOGITS'] = '1'\ntrainer.train()\n```\nNo need to restart your console - just add `os.environ['UNSLOTH_RETURN_LOGITS'] = '1'` before trainer.train() and re-run the cell!\n"
+}
