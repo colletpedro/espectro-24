@@ -1403,6 +1403,74 @@ do dono, colunas = predição:**
   não generalizou. A M-disp marca como E 4 bullets do base que o dono chamou de
   G, e erra 8 dos 24 G publicados.
 
+## Fase 2a — exportação da base, versão 1: FALHOU antes da exportação (MEDIDO, 2026-10-31)
+
+O kernel `exportar_base` versão 1 (`main` `b7c8b78`, imagem
+`9a6bcfda…`, 20:50–20:53 UTC) terminou COMPLETE, mas sem GGUF. Os logs que o
+dono commitou em `ecf232d` foram movidos para
+`finetune/kaggle/base_saida_qwen3_v1_falhou/`: `log.json`, `resumo.json` e o
+log do kernel.
+
+**Onde parou e por quê** (MEDIDO pelos logs):
+- o subprocesso saiu com `rc` 1 aos 138,5 s; o kernel fica COMPLETE porque o
+  orquestrador só registra o `rc`;
+- instalação ok, revisão do HF ok (`62efd7f9…`), carga em 52 s, as 7
+  projeções com LoRA;
+- caiu em `prova_adaptador_identidade`, ao ler `com.logits`:
+  `NotImplementedError: Unsloth: Logits are empty from 2024.11 onwards`. Com
+  `labels`, o Unsloth funde a perda e devolve logits vazios, a não ser que
+  `UNSLOTH_RETURN_LOGITS=1`;
+- **não houve `gguf_erro`:** a exportação nem começou (sem `gguf_tempo_s`,
+  sem `llama_cpp`).
+
+**Classificação:** SCRIPT. Não é infraestrutura: disco, RAM, compilação do
+llama.cpp e download nem chegaram a ser exercitados.
+
+**O que mudou em relação ao smoke v4** (que exportou 5,03 GB em 831,5 s pelo
+mesmo `save_pretrained_gguf`):
+- a **prova do adaptador** é nova: o smoke nunca chamou `model(...)` fora do
+  trainer para ler logits;
+- a imagem do Kaggle mudou (`2757e0c7…` no smoke, `9a6bcfda…` agora). As
+  versões das bibliotecas são as mesmas: torch 2.11.0+cu128, transformers
+  5.16.1, unsloth 2026.10.7;
+- **o llama.cpp do smoke v4 não está no log** (`llama_cpp` ausente; o smoke
+  não o gravava). Lido no `unsloth_zoo` 2026.10.7: sem `~/.unsloth/llama.cpp`,
+  o Unsloth baixa o pré-compilado mais novo da fork `unslothai/llama.cpp`, e
+  a pasta que os kernels compilavam no cwd só seria usada por compatibilidade.
+  A herança "commit que a base gravou" não garantia o mesmo commit.
+
+**Correção** (`main` `dd25292`; o princípio fica: base e treinado diferem SÓ
+pelo adaptador):
+- `UNSLOTH_RETURN_LOGITS=1`, só no kernel da base. Muda o que o forward
+  devolve, não os pesos. No treino materializaria os logits de 12 mil tokens.
+  Logits vazios agora abortam com mensagem;
+- llama.cpp em commit FIXO nos dois kernels: `ggml-org/llama.cpp`
+  `6d194531e1e5876d5d1a0641ce3ca7dae23f94ad` (tag b11985). Os motivos e as
+  conferências estão no `TREINO_CONFIG.md`, DESVIO T01. O llama.cpp é
+  compilado antes do modelo e conferido (HEAD, `build-info.cpp`, binário)
+  antes e depois da exportação. Se não bater, o GGUF não é copiado. Isso
+  substitui a herança e elimina o risco 1 do relatório anterior;
+- `exportar_base.py` sha256 `de6f0a27…`; `treino.py` sha256 `d9430e12…`. Um
+  teste confere que o bloco do llama.cpp é idêntico nos dois.
+
+**Entradas da medição de um commit fixo** (`comum.entradas_do_commit`):
+- `plano`, `gerar`, `preparar`, `calcular`, `fixar-delta2` e os passos da
+  Fase 4 leem os publicados, o bruto dos 30 filmes de teste e o
+  `consenso_verificado.jsonl` (+ `amostra.json`) de `main`
+  `742cfe3c7d443decd7cfd395e32dce080011bd45` (`git archive`), nunca da árvore
+  de trabalho;
+- conjunto: 162 arquivos, sha256 `f2a7a0ba…`, com o sha de cada arquivo
+  gravado. As mudanças não commitadas de outras sessões em
+  `resultado/votacao-3/` não foram tocadas;
+- o `consenso_verificado.jsonl` de `742cfe3` é idêntico ao de `91397da`, de
+  onde saiu a entrada antiga do juiz.
+
+**Reaproveitamento dos 5 de referência** (MEDIDO, só o hash, `avaliar_c1_c4.py
+conferir-reuso`): as 450 linhas montadas agora dão sha256 `059f3825…`, e o
+esperado é `a68a6c9b…`. **NÃO bate:** o publicado é julgado inteiro, cerca de
+1,3 h a mais de juiz (ESTIMADO). A causa não foi investigada (pedido: só o
+hash).
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -1451,3 +1519,6 @@ do dono, colunas = predição:**
   nenhuma medida passa). Não medido: a estabilidade do rótulo E do dono (os 6
   repetidos são todos G); quanto do 0/30 de E no base vem do estilo e não da
   especificidade.
+- (31/10) Se o llama.cpp `6d194531…` compila na imagem do Kaggle do dia e se o
+  Unsloth 2026.10.7 aceita a pasta indicada (lido no código, não rodado). Por
+  que o sha do reaproveitamento dos 5 não bate.
