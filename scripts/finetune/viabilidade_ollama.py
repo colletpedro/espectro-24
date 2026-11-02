@@ -568,6 +568,20 @@ def achar_exportacoes(raiz: Path) -> list[dict]:
     return achados
 
 
+def conferir_treinados(achados: list[dict]) -> None:
+    """Antes de importar um TREINADO: a embedding e o lm_head do `tensores.json` ao
+    lado têm os sha256 da base aceita (DESVIO_P02). Aborta tudo se algum divergir."""
+    for x in achados:
+        if "treinado" not in x["nome"]:
+            continue
+        t = x["pasta"] / "tensores.json"
+        if not t.exists():
+            raise SystemExit(f"{x['pasta']}: treinado sem tensores.json — a igualdade da embedding "
+                             f"e do lm_head com a base não é conferível")
+        print(f"  {x['nome']}: embedding e lm_head = os da base "
+              f"{K.conferir_vocab_igual_base(K.ler_json(t))}", flush=True)
+
+
 def cmd_importar_pasta(a) -> None:
     achados = achar_exportacoes(a.pasta)
     print(f"{len(achados)} exportação(ões) com .gguf Q4_K_M + Modelfile em {a.pasta}:")
@@ -581,6 +595,7 @@ def cmd_importar_pasta(a) -> None:
     if sem_familia:
         raise SystemExit(f"família desconhecida (nem o log.json nem o nome da pasta dizem): "
                          f"{[str(x['pasta']) for x in sem_familia]}")
+    conferir_treinados(achados)
     for x in achados:
         print(f"\n== importando {x['pasta']}", flush=True)
         cmd_importar(argparse.Namespace(**{**vars(a), "gguf": x["gguf"], "modelfile": x["modelfile"],

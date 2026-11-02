@@ -117,6 +117,51 @@ def sha256_texto(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 
+# ---------------------------------------------------------------------------
+# Fase 2a: a fusão da base e a igualdade base × treinado (finetune/DESVIO_P02.md)
+# ---------------------------------------------------------------------------
+
+# O único padrão de `prova_fusao` falsa aceito: o Unsloth zera a linha 151654
+# (<|vision_pad|>) do embed_tokens em `from_pretrained`; max_abs = o da linha original.
+FUSAO_EXCECAO_TENSOR = "model.embed_tokens.weight"
+FUSAO_EXCECAO_MAX_ABS = 0.029541015625
+# sha256 no `tensores.json` da base aceita (GGUF c9f3c701…): o treinado tem de repetir.
+SHA_VOCAB_BASE = {
+    "token_embd.weight": "70a40c465d023c8bfb8bddb9bd51377d314fd33583f76cc2da2e6f092f163728",
+    "output.weight": "05d7a76c29a32e067f41ad91df565341b21f4bedeeffbbf9e10957aaa9f78cc1",
+}
+
+
+def prova_fusao_aceita(prova: dict | None) -> bool:
+    """`ok`, OU exatamente a exceção do DESVIO_P02 (1 tensor, o embed_tokens, aquele
+    max_abs, chaves iguais em todos os shards). Qualquer outro padrão reprova."""
+    prova = prova or {}
+    if prova.get("ok") is True:
+        return True
+    dif = prova.get("diferentes") or []
+    shards = (prova.get("shards") or {}).values()
+    return (prova.get("n_diferentes") == 1 and len(dif) == 1
+            and dif[0].get("tensor") == FUSAO_EXCECAO_TENSOR
+            and dif[0].get("max_abs") == FUSAO_EXCECAO_MAX_ABS
+            and bool(shards) and all(s.get("chaves_iguais") is True for s in shards))
+
+
+def conferir_vocab_igual_base(tens_treinado: dict, tens_base: dict | None = None) -> dict:
+    """`token_embd.weight` e `output.weight` do treinado com os sha256 da base aceita
+    (e, se dado, iguais aos do `tensores.json` da base). Aborta se divergir."""
+    def shas(t: dict) -> dict:
+        return {x["nome"]: x["sha256"] for x in t.get("tensores") or [] if x.get("nome") in SHA_VOCAB_BASE}
+    tt = shas(tens_treinado)
+    fora = {n: tt.get(n) for n, s in SHA_VOCAB_BASE.items() if tt.get(n) != s}
+    if tens_base is not None:
+        tb = shas(tens_base)
+        fora.update({f"base:{n}": tb.get(n) for n, s in SHA_VOCAB_BASE.items() if tb.get(n) != s})
+    if fora:
+        raise SystemExit(f"embedding/lm_head do treinado ≠ os da base (DESVIO_P02): {fora} — "
+                         f"base e treinado não diferem só pelo adaptador")
+    return {n: tt[n] for n in SHA_VOCAB_BASE}
+
+
 def arquivos_de_entrada(slugs, commit: str = ENTRADAS_COMMIT) -> list[str]:
     """Os publicados (todos: a referência do e5 usa o catálogo inteiro), o bruto
     dos `slugs` e o consenso verificado, como estão no `commit`."""

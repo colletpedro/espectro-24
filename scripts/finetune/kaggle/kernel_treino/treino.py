@@ -27,7 +27,8 @@ fp16, `get_peft_model`, template, perda só na resposta, exportação), mais:
   esse commit. Se a exportação não tiver usado ESSE llama.cpp, o GGUF NÃO é
   copiado para a saída (o adaptador fica). Com o
   `tensores_base.json` do dataset, confere que só os tensores das 7 projeções
-  mudaram.
+  mudaram. Grava (só registro, DESVIO_P02) as linhas do `embed_tokens` fundido
+  que diferem do shard 16-bit original, com o max_abs de cada uma.
 
 Saída (`/kaggle/working/treino/qwen3-8b-treinado__12288/`):
 `Qwen3-8B.Q4_K_M.gguf`, `Modelfile`, `log.json` (`modelo` qwen3-8b-treinado →
@@ -77,6 +78,8 @@ PROJECOES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "do
 # os nomes das 7 projeções no GGUF (llama.cpp): o resto tem de sair igual ao da base
 PROJECOES_GGUF = ("attn_q.", "attn_k.", "attn_v.", "attn_output.", "ffn_gate.", "ffn_up.",
                   "ffn_down.")
+REPOS_16BIT = ("unsloth/Qwen3-8B", "Qwen/Qwen3-8B")      # onde procurar a revisão da fusão
+EMBED = "model.embed_tokens.weight"
 PARTES = ("<|im_start|>user\n", "<|im_start|>assistant\n<think>\n\n</think>\n\n")
 HIPER = {"seed": 3407, "r": 16, "lora_alpha": 16, "lora_dropout": 0, "learning_rate": 2e-4,
          "lr_scheduler_type": "cosine", "warmup_ratio": 0.05, "num_train_epochs": 3,
@@ -307,6 +310,48 @@ def comparar_com_base(meus: dict, base: dict) -> dict:
             "so_projecoes_mudaram": set(a) == set(b) and not dif_fora}
 
 
+def linhas_diferentes(a, b, torch, bloco: int = 8192) -> dict:
+    """As linhas em que `a` difere de `b` (mesma forma), com o max_abs de cada uma."""
+    linhas, maximo = [], 0.0
+    for i in range(0, a.shape[0], bloco):
+        d = (a[i:i + bloco].float() - b[i:i + bloco].float()).abs().amax(dim=1)
+        for j in torch.nonzero(d).flatten().tolist():
+            linhas.append({"id": i + j, "max_abs": float(d[j])})
+        maximo = max(maximo, float(d.max()))
+    return {"n_linhas": len(linhas), "linhas": linhas[:200], "max_abs": maximo}
+
+
+def embed_contra_original(dst: Path, torch) -> dict:
+    """SÓ REGISTRO (DESVIO_P02): as linhas do `embed_tokens` fundido que diferem do
+    shard 16-bit original que o Unsloth baixou para fundir. Na base: só a 151654."""
+    from huggingface_hub import HfApi, hf_hub_download
+    from safetensors import safe_open
+    shard = json.loads((dst / "model.safetensors.index.json").read_text(encoding="utf-8"))["weight_map"][EMBED]
+    meta = (dst / ".cache" / "huggingface" / "download" / f"{shard}.metadata").read_text(encoding="utf-8")
+    rev = meta.split("\n")[0].strip()
+    repo = None
+    for r in REPOS_16BIT:
+        try:
+            if HfApi().model_info(r, revision=rev).sha == rev:
+                repo = r
+                break
+        except Exception:  # noqa: BLE001 — a revisão não é deste repositório
+            continue
+    if repo is None:
+        return {"erro": f"revisão {rev} não achada em {REPOS_16BIT}", "shard": shard}
+    orig = Path(hf_hub_download(repo, shard, revision=rev, cache_dir=str(TMP / "orig16")))
+    try:
+        with safe_open(str(dst / shard), framework="pt") as ff, safe_open(str(orig), framework="pt") as fo:
+            a, b = ff.get_tensor(EMBED), fo.get_tensor(EMBED)
+    finally:
+        orig.unlink(missing_ok=True)
+    fora = {"repo_16bit": repo, "revisao": rev, "shard": shard,
+            "dtype": [str(a.dtype), str(b.dtype)], "forma": [list(a.shape), list(b.shape)]}
+    if a.shape != b.shape:
+        return {**fora, "erro": "formas diferentes"}
+    return {**fora, **linhas_diferentes(a, b, torch)}
+
+
 # ---------------------------------------------------------------------------
 # escolha do checkpoint (função pura)
 # ---------------------------------------------------------------------------
@@ -486,6 +531,12 @@ def treinar() -> dict:
         tb = Path(_arquivo_dataset()).with_name("tensores_base.json")
         if tb.exists():
             reg["comparacao_com_base"] = comparar_com_base(tens, json.loads(tb.read_text(encoding="utf-8")))
+        try:                                     # só registro: nunca aborta o treino
+            import torch
+            reg["embed_contra_original"] = embed_contra_original(dst, torch)
+        except Exception as e:  # noqa: BLE001
+            reg["embed_contra_original"] = {"erro": f"{type(e).__name__}: {e}"}
+        _json(log, reg)
         if not reg["llama_cpp_igual_ao_da_base"]:
             reg["gguf_ok"] = False
             reg["gguf_motivo"] = (f"a exportação não usou o llama.cpp {LLAMA_CPP_COMMIT} (o da base): "

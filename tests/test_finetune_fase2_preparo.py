@@ -84,6 +84,10 @@ def test_treinado_exige_o_mesmo_llama_cpp_da_base(tmp_path, monkeypatch):
     with pytest.raises(SystemExit):
         G.conferir_modelo("treinado", "espectro-qwen3-8b-ft", outro, None)
     igual = _log(tmp_path, "ft2.json", llama_cpp={"commit": "c1"})
+    # (DESVIO_P02) o treinado exige o tensores.json com a embedding da base, ao lado de cada log
+    import comum as K
+    (tmp_path / "tensores.json").write_text(json.dumps({"tensores": [
+        {"nome": n, "sha256": s} for n, s in K.SHA_VOCAB_BASE.items()]}))
     assert G.conferir_modelo("treinado", "espectro-qwen3-8b-ft", igual, base)["gguf_sha256"] == "abc"
 
 

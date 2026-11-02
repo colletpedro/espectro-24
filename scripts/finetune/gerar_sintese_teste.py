@@ -189,8 +189,9 @@ def conferir_modelo(lado: str, nome: str | None, log_kernel: Path, log_base: Pat
     if lado == "base":
         if not (log.get("prova_adaptador") or {}).get("B_zero"):
             raise SystemExit("o log do kernel da base não prova lora_B = 0")
-        if not (log.get("prova_fusao") or {}).get("ok"):
-            raise SystemExit("o log do kernel da base não prova a fusão sem alteração")
+        if not K.prova_fusao_aceita(log.get("prova_fusao")):
+            raise SystemExit("o log do kernel da base não prova a fusão sem alteração "
+                             "(nem é a exceção exata do DESVIO_P02)")
     else:
         if log_base is None:
             raise SystemExit("--log-kernel-base é obrigatório no lado treinado")
@@ -203,6 +204,11 @@ def conferir_modelo(lado: str, nome: str | None, log_kernel: Path, log_base: Pat
         sha_base = _gguf_do_log(lb)
         if sha_base == sha:
             raise SystemExit("o GGUF do treinado é o da base (mesmo sha256)")
+        tt, tb = log_kernel.with_name("tensores.json"), log_base.with_name("tensores.json")
+        if not tt.exists() or not tb.exists():
+            raise SystemExit(f"sem tensores.json ao lado dos logs ({tt}, {tb}): a igualdade da "
+                             f"embedding e do lm_head com a base não é conferível")
+        K.conferir_vocab_igual_base(K.ler_json(tt), K.ler_json(tb))
         nome_base, _ = modelo_pelo_sha(sha_base)
     escolhido, importacao = modelo_pelo_sha(sha)
     if lado == "treinado" and escolhido == nome_base:
