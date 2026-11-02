@@ -311,6 +311,34 @@ def test_rotulo_forca_suprimido_nos_estados_de_piso():
 # BRIEFING — as garantias por construção
 # ===========================================================================
 
+_EXCECAO_PORCO_ROSSO = {"slug": "porco-rosso", "item": "NEG-A",
+                        "origem": ("buckets", 0, "temas", 0),
+                        "texto": "17 anos", "algarismos": ["17"]}
+
+
+def _sem_excecao_do_porco_rosso(d, b, proibidos):
+    """Exceção EXATA, decisão do dono de 2026-09-16 (ABERTO.md:256, "passa
+    todos menos o porco rosso"; idade de personagem, "personagem de 17
+    anos", não exemptada por regra, só este caso). Vale só para o item
+    NEG-A (`buckets[0].temas[0]`) e só para a string "17 anos". Qualquer
+    outro algarismo, inclusive em outro item do mesmo filme, continua
+    falhando. Obsoleta (a paráfrase mudou, o item mudou de lugar ou o
+    algarismo sumiu) = o teste falha, para a exceção não ficar sobrando."""
+    e = _EXCECAO_PORCO_ROSSO
+    nó = d
+    for k in e["origem"]:
+        nó = nó[k]
+    assert e["texto"] in nó["exemplo_parafraseado"], "exceção obsoleta: origem"
+    itens = [t for ts in b["selecao"].values() for t in ts
+             if t["id"] == e["item"]]
+    assert len(itens) == 1 and e["texto"] in itens[0]["exemplo"], (
+        "exceção obsoleta: item")
+    assert proibidos == e["algarismos"], (
+        f"exceção obsoleta ou outro algarismo no filme: {proibidos}")
+    itens[0]["exemplo"] = itens[0]["exemplo"].replace(e["texto"], "XX anos")
+    return b, C.algarismos_proibidos_no_briefing(b)
+
+
 def test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme():
     """A garantia "zero dígitos" do §3[V] é mais fraca aqui do que lá — o
     briefing precisa carregar a paráfrase (P4 REVISADO) e a paráfrase não é
@@ -329,7 +357,10 @@ def test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme():
         b = C.montar_briefing(d)
         if b is None:
             continue
-        assert C.algarismos_proibidos_no_briefing(b) == [], d["slug"]
+        proibidos = C.algarismos_proibidos_no_briefing(b)
+        if d["slug"] == _EXCECAO_PORCO_ROSSO["slug"]:
+            b, proibidos = _sem_excecao_do_porco_rosso(d, b, proibidos)
+        assert proibidos == [], d["slug"]
 
 
 def _output_com_tema(tema, exemplo="o grupo comenta isso com frequência"):

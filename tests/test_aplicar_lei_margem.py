@@ -463,7 +463,14 @@ def test_o_catalogo_publicado_esta_sob_a_lei(alm):
     v = [s for s, x in estados.items() if x == "valorativo"]
     assert len(t) + len(v) + len(sem) == len(estados), (
         "a soma dos três estados não bate com o catálogo publicado")
-    assert sem == [], f"filme(s) publicado(s) sem estado de contraste: {sem}"
+    # Decisão de Pedro, 2026-11-02: `woman-of-fire` fica publicado sem estado
+    # (negativas n=9 < MARGEM_N_MINIMO); a página exibe o aviso de amostra
+    # pequena. Allowlist EXATA: qualquer outro filme sem estado falha, e se
+    # `woman-of-fire` ganhar estado a allowlist está obsoleta e falha também.
+    sem_estado_aceito = ["woman-of-fire"]
+    assert sem == sem_estado_aceito, (
+        f"filme(s) publicado(s) sem estado de contraste: {sem} "
+        f"(aceito: {sem_estado_aceito})")
     assert "obsession-2025" in t
 
 
