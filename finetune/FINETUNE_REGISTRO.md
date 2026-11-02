@@ -1471,6 +1471,124 @@ esperado é `a68a6c9b…`. **NÃO bate:** o publicado é julgado inteiro, cerca 
 1,3 h a mais de juiz (ESTIMADO). A causa não foi investigada (pedido: só o
 hash).
 
+## Fase 2a — exportação da base, versão 2: `prova_fusao` FALSA (2026-11-02; import SUSPENSO)
+
+O kernel `exportar_base` v2 (`exportar_base.py` `de6f0a27…`, unsloth/zoo
+2026.10.7, llama.cpp `6d194531…` antes e depois) gerou o GGUF: sha256
+`c9f3c701…`, 5.027.784.288 bytes, igual no Windows. Conferência:
+`llama_cpp_preparo` ok, `llama_cpp_depois` ok, `B_zero` true, perda e logits
+com e sem adaptador idênticos, **`prova_fusao` false**. Logs em
+`finetune/kaggle/base_saida_qwen3/`. Nada importado, treino não começou.
+
+**O que a prova compara** (lido no kernel): cada tensor dos 4 shards fundidos
+contra o shard original de `unsloth/Qwen3-8B` na revisão que o Unsloth baixou,
+com `torch.equal` (dtype, forma e bits iguais). **Sem tolerância.**
+
+**Resultado** (MEDIDO, `log.json`):
+- 398 de 399 tensores iguais. Diferente só `model.embed_tokens.weight`, bf16
+  nos dois lados, max_abs 0,029541015625. O log não grava média nem linhas;
+- shard 1 com sha diferente; shards 2, 3 e 4 idênticos byte a byte;
+- os 4 shards baixados para a fusão e o comparado são da revisão
+  `946bc9ac…` de `unsloth/Qwen3-8B`. A `62efd7f9…` é a do repositório 4-bit
+  da carga, que é outro repositório.
+
+**Hipóteses:**
+- (a) bf16 → fp16: DESCARTADA. bf16 nos dois lados, e só 1 tensor mudou;
+- (b) revisão diferente: DESCARTADA. `946bc9ac…` nos 4 metadados e na
+  comparação;
+- (c) a fusão alterou pesos (dequantização do 4-bit): DESCARTADA. As 252
+  projeções com LoRA ficaram idênticas;
+- (d) prova mal implementada: DESCARTADA. A igualdade é exata e achou uma
+  diferença real;
+- (e) o Unsloth alterou a embedding na carga: **CONFIRMADA** pelo código e
+  pela magnitude.
+
+**Mecanismo** (lido no código dos wheels do PyPI, `unsloth` sha256
+`3ffd1dc0…`, `unsloth_zoo` `4161df8e…`):
+1. `FastQwen3Model.from_pretrained` chama `FastLlamaModel.from_pretrained`,
+   que chama `zero_pad_embedding_rows(model, tokenizer)`
+   (`unsloth/models/llama.py:4201–4203`). Essa função
+   (`unsloth/tokenizer_utils.py:173–195`) zera a linha do `pad_token_id` em
+   todo `nn.Embedding` cujo `padding_idx` é o pad. As exceções são pad = EOS,
+   pad adicionado a toda entrada, e embedding amarrada ao `lm_head`;
+2. no repositório da carga, o pad é `<|vision_pad|>`, id **151654**
+   (`config.json` `pad_token_id`, `tokenizer_config.json`). O EOS é 151645 e
+   `tie_word_embeddings` é false. Nenhuma exceção se aplica, e a linha 151654
+   fica zero em memória;
+3. na fusão, a embedding e o `lm_head` sem LoRA entram como "vocab overrides"
+   (`unsloth_zoo/saving_utils.py:1015–1056`, chamada em `:1137` e `:1362`).
+   `_with_live_vocab_rows` (`:525–541`) copia para o shard só as linhas em
+   que o peso vivo difere do original convertido ao dtype vivo (fp16). Linhas
+   intactas não mudam, por isso não há arredondamento bf16 → fp16 no resto.
+   A linha zerada é gravada como zero.
+
+**Conta local** (MEDIDO; só leitura por HTTP Range do shard 1 original
+`946bc9ac…`, 2 × 8.192 bytes, sem Kaggle):
+- linha 151654 original: max_abs **0,029541015625**, igual ao do log, até o
+  último bit. Média absoluta 0,00697, norma L2 0,562, 30 de 4.096 entradas
+  já eram zero. Com a linha zerada, a divergência é a própria linha:
+  max_abs 0,0295, média absoluta 0,00697, relativa 100%;
+- referência: a linha 151643 (`<|endoftext|>`) tem max_abs 0,111.
+
+**Quantas linhas mudaram:** 1 (INFERIDO). Pelo código, `zero_pad` só toca o
+`padding_idx`, e `_with_live_vocab_rows` só grava linhas que diferem; o
+max_abs bate exato com essa linha. O log não grava a diferença por linha, e
+o shard fundido ficou no `/tmp` do Kaggle. Para MEDIR sem Kaggle:
+dequantizar no Windows (gguf-py do llama.cpp `6d194531`) a linha 151654 do
+`token_embd.weight` do GGUF. Se ela der zero, o mecanismo fica confirmado. O
+Q4_K quantiza por blocos de 256 dentro da linha. Provar que as outras
+151.935 linhas não mudaram exigiria reconverter o shard original pelo mesmo
+llama.cpp e comparar bloco a bloco. Isso é proposta, não foi feito.
+
+**Uso do token 151654** (MEDIDO, grep do texto):
+- 0 ocorrências de `<|vision_pad|>` no `chat_template.jinja` da carga, no
+  `Modelfile` exportado e no `treino.jsonl` (140 de treino + 19 de
+  validação). O teste não foi aberto;
+- o template usa `<|im_start|>` 151644, `<|im_end|>` 151645, `<think>`
+  151667, `</think>` 151668 e quebras de linha. Nenhum deles é 151654;
+- o treino tem batch 1 e `packing=False`, então o SFT não insere o pad. Na
+  geração, o Ollama não alimenta o pad.
+
+**`lm_head`** (não amarrado no Qwen3-8B): fica no shard 4 (`index.json` de
+`946bc9ac…`), e o shard 4 é idêntico byte a byte. Não mudou. Por isso não
+aparece na lista: a prova lista só os tensores diferentes. `zero_pad` toca
+só `nn.Embedding`, e o `lm_head` é `Linear`. O `tensores.json` (do GGUF) tem
+`output.weight` Q6_K e `token_embd.weight` Q4_K só com sha por tensor, sem
+nada por linha.
+
+**Consequência para "base e treinado diferem SÓ pelo adaptador"**:
+- `treino.py` (`d9430e12…`) carrega pela MESMA chamada (mesmo repositório e
+  revisão, 4-bit, fp16). A carga passa pela mesma `zero_pad_embedding_rows` e
+  a exportação pela mesma `save_pretrained_gguf` e pelo mesmo override de
+  vocabulário. O treinado sai com a mesma linha 151654 zerada (INFERIDO do
+  código);
+- o treino acrescenta `fix_untrained_tokens` e `fix_zero_training_loss`, que
+  o SFTTrainer do Unsloth injeta. Com `embed_tokens` e `lm_head` congelados,
+  `fix_untrained_tokens` só retorna ou levanta erro (`tokenizer_utils.py` do
+  zoo, ramo `bad_not_trainable`); a escrita na média só roda se forem
+  treináveis. O pad é excluído explicitamente. `fix_zero_training_loss` só
+  lê os `labels`. Nenhum dos dois escreve pesos;
+- a base NÃO é inválida: a alteração é do caminho, não dos pesos de origem, e
+  é a mesma nos dois. A diferença de `max_seq_length` (14.336 na base, 12.288
+  no treino) não toca nos pesos.
+
+**Propostas** (PROPOSTO, nada decidido):
+1. **Usar este GGUF**, com a causa registrada aqui. A prova continua como
+   está: falsa, com a explicação. A igualdade de caminho já vale.
+   Recomendado;
+2. reexportar sem a alteração (por exemplo, restaurando a linha antes de
+   `save_pretrained_gguf`). Isso quebraria a igualdade, a menos que o treino
+   faça o mesmo. Não traz ganho, porque o token não é usado;
+3. treino: nenhuma mudança é necessária para a igualdade de caminho. Para
+   MEDIR a igualdade em vez de inferi-la: (i) conferir que o sha256 do
+   `token_embd.weight` e do `output.weight` no `tensores.json` do treinado é
+   igual ao da base (`70a40c46…` e `05d7a76c…`; já é a regra "fora das 7
+   projeções, idênticos"); (ii) opcional, gravar no treino a diferença POR
+   LINHA da embedding contra o original (ids das linhas e max_abs de cada
+   uma), sem mudar o critério da prova da base;
+4. antes do import: dequantizar a linha 151654 do GGUF no Windows, que custa
+   segundos e é local.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
