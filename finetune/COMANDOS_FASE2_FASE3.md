@@ -3,8 +3,11 @@
 Data: 2026-10-31. Quem roda é o dono. Pré-registro `8339a678…`, `DESVIO_P01`
 `fb9ec740…`, `TREINO_CONFIG` `ff041237…` (com o DESVIO T01). Scripts em
 `main` `dd25292` (2026-10-31: llama.cpp em commit fixo nos dois kernels;
-entradas da medição lidas de `main` `742cfe3`). Etiquetas: **MEDIDO**,
-**ESTIMADO**.
+entradas da medição lidas de `main` `742cfe3`) e `main` `386bd6d`
+(2026-11-02, `DESVIO_P02`: exceção exata da prova de fusão; igualdade da
+embedding e do lm_head base × treinado conferida no import e no `gerar`;
+registro por linha do `embed_tokens` no kernel de treino). Etiquetas:
+**MEDIDO**, **ESTIMADO**.
 
 **Entradas da medição de um commit fixo.** `plano`, `gerar`, `preparar`,
 `calcular`, `fixar-delta2` e `conferir-reuso` NÃO leem `resultado/` nem
@@ -70,32 +73,35 @@ cd ~/Downloads/espectro-24 && rm -rf /tmp/kbase && mkdir /tmp/kbase && find scri
 kaggle kernels status pedrocollet1/espectro24-finetune-base-qwen3
 ```
 
-Windows (bloco 0 antes). Baixa, importa SÓ a pasta da base (nome
-`espectro-qwen3-8b-base`) e guarda os logs sem o GGUF:
+**Estado em 2026-11-02 (MEDIDO):** a versão 2 terminou e o GGUF já está
+baixado em `$HOME\espectro24-kaggle\qwen3\base` (sha256 `c9f3c701…`,
+5.027.784.288 bytes, conferido no Windows). Os logs já estão no git
+(`finetune/kaggle/base_saida_qwen3/`, `db9dbd7`). A `prova_fusao` é falsa
+pela causa do `DESVIO_P02` (o Unsloth zera a linha 151654 do
+`embed_tokens` na carga) e foi ACEITA pelo dono com exceção exata. **Não
+baixe de novo e não reenvie o kernel.**
 
-Só quando o `status` disser `COMPLETE`. A 1ª linha apaga a pasta LOCAL do
-download da versão 1 (os logs dela já estão no git, em `ecf232d` e em
-`base_saida_qwen3_v1_falhou`), para a saída da versão 2 não se misturar com
-ela. A 4ª linha tem de imprimir `True` cinco vezes: llama.cpp antes e depois,
-fusão, `gguf_ok` e `lora_B` = 0. Se não imprimir, PARE: não importe.
+Windows (bloco 0 antes) — importa SÓ a pasta da base (nome
+`espectro-qwen3-8b-base`) a partir do download que já existe. A 2ª linha
+tem de imprimir o sha `c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475`.
+A 3ª linha tem de imprimir `True` cinco vezes: llama.cpp antes e depois,
+fusão aceita (ok OU a exceção exata do DESVIO_P02), `gguf_ok` e `lora_B` = 0.
+Depois vem o commit `6d194531e1e5876d5d1a0641ce3ca7dae23f94ad`. Se não
+imprimir isso, PARE: não importe.
 
 ```powershell
-$B="$HOME\espectro24-kaggle\qwen3\base"; Remove-Item -Recurse -Force $B -ErrorAction SilentlyContinue; New-Item -ItemType Directory -Force $B | Out-Null
-kaggle kernels output pedrocollet1/espectro24-finetune-base-qwen3 -p $B
-Get-ChildItem $B -Recurse -Include *.gguf,log.json | Select FullName,Length
-.\venv\Scripts\python.exe -c "import json,sys; d=json.load(open(sys.argv[1],encoding='utf-8')); print([(d.get(k) or {}).get('ok') for k in ('llama_cpp_preparo','llama_cpp_depois','prova_fusao')], d.get('gguf_ok'), (d.get('prova_adaptador') or {}).get('B_zero'), (d.get('llama_cpp') or {}).get('commit'))" $B\base\qwen3-8b-base__14336\log.json
+$B="$HOME\espectro24-kaggle\qwen3\base"
+(Get-FileHash $B\base\qwen3-8b-base__14336\Qwen3-8B.Q4_K_M.gguf -Algorithm SHA256).Hash.ToLower()
+.\venv\Scripts\python.exe -c "import json,sys; sys.path.insert(0,'scripts/finetune'); import comum as K; d=json.load(open(sys.argv[1],encoding='utf-8')); print([(d.get(k) or {}).get('ok') for k in ('llama_cpp_preparo','llama_cpp_depois')], K.prova_fusao_aceita(d.get('prova_fusao')), d.get('gguf_ok'), (d.get('prova_adaptador') or {}).get('B_zero'), (d.get('llama_cpp') or {}).get('commit'))" $B\base\qwen3-8b-base__14336\log.json
 .\venv\Scripts\python.exe scripts\finetune\viabilidade_ollama.py importar-pasta --pasta $B\base\qwen3-8b-base__14336
-robocopy $B finetune\kaggle\base_saida_qwen3 /E /XF *.gguf *.safetensors *.bin
 ollama list | Select-String espectro-qwen3-8b
-git add finetune\kaggle\base_saida_qwen3 finetune\viabilidade
-git commit -m "finetune: export da base (kernel v2, llama.cpp fixo) e importacao" -- finetune\kaggle\base_saida_qwen3 finetune\viabilidade
+git add finetune\viabilidade
+git commit -m "finetune: importacao da base (kernel v2, DESVIO_P02)" -- finetune\viabilidade
 ```
 
-O commit do llama.cpp impresso na 4ª linha tem de ser
-`6d194531e1e5876d5d1a0641ce3ca7dae23f94ad`.
-
-(fecho do Windows). Se a base já foi importada, este bloco não se repete: o
-`gerar` confere o sha do GGUF no `log.json` e a prova do adaptador e da fusão.
+(fecho do Windows). Se a base já foi importada, este bloco não se repete. O
+`gerar` confere o sha do GGUF no `log.json`, a prova do adaptador e a fusão
+(ok ou a exceção exata).
 
 ### b) Plano (Mac) e síntese da BASE nos 89 buckets (Windows, retomável)
 
@@ -241,7 +247,12 @@ e rode o `push` de novo: o kernel retoma do último checkpoint de época.
 
 Windows (bloco 0 antes) — baixa, importa SÓ a pasta do treinado (nome
 `espectro-qwen3-8b-treinado`, distinto da base) e guarda os logs sem GGUF,
-adaptador e checkpoints:
+adaptador e checkpoints. O `importar-pasta` ABORTA antes de importar se o
+`token_embd.weight` ou o `output.weight` do `tensores.json` do treinado não
+tiverem os sha256 da base (`70a40c46…`, `05d7a76c…`; DESVIO_P02). O
+`gerar --lado treinado` confere de novo contra o `tensores.json` da base.
+O `log.json` traz `embed_contra_original`: as linhas do `embed_tokens`
+fundido que diferem do original (esperado: só a 151654). É só registro:
 
 ```powershell
 $T="$HOME\espectro24-kaggle\qwen3\treino"; New-Item -ItemType Directory -Force $T | Out-Null
