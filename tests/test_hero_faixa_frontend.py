@@ -436,8 +436,13 @@ def test_o_primeiro_quadro_da_faixa_e_o_backdrop_publicado_ou_gemeo_dele():
             assert distancia(memo[bp], memo[primeiro]) <= 2 * LIMIAR_PHASH, (
                 f"{p.stem}: a faixa abre num quadro que NÃO é o backdrop "
                 f"publicado nem um gêmeo dele")
+    # [decisão do dono, 2026-11-02] os 7 novos do catálogo expandido foram
+    # aceitos: o padrão (hero colapsa num gêmeo perceptual) é o documentado em
+    # `ficha._stills`. Um 15º caso continua sendo uma conversa.
     assert divergentes == [
-        "anatomy-of-a-fall", "cats-2019", "dune-2021", "dune-part-two",
-        "everything-everywhere-all-at-once", "friday-the-13th-2009",
-        "the-substance",
+        "12-angry-men", "2001-a-space-odyssey", "anatomy-of-a-fall",
+        "cats-2019", "chinatown", "django-unchained", "dune-2021",
+        "dune-part-two", "everything-everywhere-all-at-once",
+        "friday-the-13th-2009", "goodfellas", "guillermo-del-toros-pinocchio",
+        "the-prestige", "the-substance",
     ], f"mudou o conjunto de filmes cujo hero colapsou num gêmeo: {divergentes}"
