@@ -386,7 +386,8 @@ def test_ordem_das_secoes_da_home():
     html = re.sub(r"<!--.*?-->", "", (FRONT / "index.html").read_text(encoding="utf-8"), flags=re.S)
     ordem = [html.index(i) for i in ('id="busca"', 'id="edLinkFilmes"', 'id="edLinkMetodo"',
                                     'id="manchete"', 'id="colecaoDoDia"',
-                                    'id="recemChegados"', 'id="explorar"')]
+                                    'id="recemChegados"', 'id="selecaoDecada"',
+                                    'id="generoUm"', 'id="generoDois"', 'id="explorar"')]
     assert ordem == sorted(ordem)
     assert 'id="prateleiras"' not in html
 

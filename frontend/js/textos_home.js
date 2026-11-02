@@ -90,6 +90,7 @@
   var ROTULO_GRUPO_EXPLORAR = {
     assunto: "Por assunto", decada: "Por década", genero: "Por gênero", pais: "Por país",
   };
+  var RESUMO_EXPLORAR = "Explorar por assunto, década, gênero e país";
   var LINK_INDICE = "Índice A–Z";
   var VISTA_GRADE = "Grade";
   var VISTA_INDICE = "Índice A–Z";
@@ -105,6 +106,14 @@
   function chipDesde(dia) {
     var p = dia.split("-");
     return "Recém-chegados desde " + p[2] + "/" + p[1] + "/" + p[0];
+  }
+
+  // [home semanal] A seleção da década: título e linha FIXOS. Os únicos
+  // algarismos são os da própria década (o dado do bloco, como o ano no
+  // título de um filme); `decada` é o primeiro ano (1990).
+  function tituloDaDecada(decada) { return "Seleção anos " + String(decada % 100).padStart(2, "0"); }
+  function descricaoDaDecada(decada) {
+    return "Filmes do catálogo lançados entre " + decada + " e " + (decada + 9) + ".";
   }
 
   // Descrição FIXA de cada eixo, para o bloco de texto da coleção do dia.
@@ -337,7 +346,8 @@
     ROTULO_COLECAO: ROTULO_COLECAO, ROTULO_COLECAO_TODOS: ROTULO_COLECAO_TODOS,
     DESCRICAO_EIXO: DESCRICAO_EIXO, FRASE_TIPO: FRASE_TIPO,
     MAX_PAISES: MAX_PAISES, nomesDosPaises: nomesDosPaises, nomeDoPais: nomeDoPais,
-    TITULO_EXPLORAR: TITULO_EXPLORAR, ROTULO_GRUPO_EXPLORAR: ROTULO_GRUPO_EXPLORAR,
+    TITULO_EXPLORAR: TITULO_EXPLORAR, RESUMO_EXPLORAR: RESUMO_EXPLORAR,
+    tituloDaDecada: tituloDaDecada, descricaoDaDecada: descricaoDaDecada, ROTULO_GRUPO_EXPLORAR: ROTULO_GRUPO_EXPLORAR,
     LINK_INDICE: LINK_INDICE, VISTA_GRADE: VISTA_GRADE, VISTA_INDICE: VISTA_INDICE,
     MOSTRAR_MAIS: MOSTRAR_MAIS, FILTRO_VAZIO: FILTRO_VAZIO, LIMPAR_FILTROS: LIMPAR_FILTROS,
     REMOVER_FILTRO: REMOVER_FILTRO, QUALQUER: QUALQUER,

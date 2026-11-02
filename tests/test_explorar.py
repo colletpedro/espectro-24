@@ -114,7 +114,10 @@ def test_home_monta_o_explorar_com_os_elegiveis():
     assert "X.gruposDoExplorar(FILMES, { elegiveis: true, piso: X.PISO_HOME })" in fonte
     assert 'var PARAM = { assunto: "colecao", decada: "decada", genero: "genero", pais: "pais" };' in fonte
     assert 'HREF_CATALOGO + "?vista=indice"' in fonte
-    assert 'el("details", "ed-explorar__grupo")' in fonte and 'el("summary"' in fonte
+    # [home semanal] um único <details> fechado, sem contagens na home
+    assert fonte.count('el("details"') == 1 and 'el("details", "ed-explorar__caixa")' in fonte
+    assert 'T.RESUMO_EXPLORAR' in fonte and '"ed-explorar__n"' not in fonte and "quantos" not in fonte
+    assert "open = " not in fonte and "matchMedia" not in fonte
 
 
 # ===========================================================================

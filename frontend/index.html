@@ -26,7 +26,8 @@
 
   <!-- [rodada editorial] ESTRUTURA da home editorial; tipografia e paleta
        são a próxima rodada (fontes e cores são as atuais). Ordem fixa:
-       cabeçalho, manchete (o filme do dia), coleção do dia, recém-chegados
+       cabeçalho, manchete (o filme do dia), coleção do dia, recém-chegados,
+       seleção da década, duas fileiras de gênero (semanais, js/semanal.js)
        e o bloco Explorar (as portas de entrada de /filmes). Só stills/backdrops 16:9, nunca pôster. Toda a
        prosa vem de js/textos_home.js; a seleção, de js/selecao.js; a busca,
        de js/busca.js; o DOM, de js/inicio.js. -->
@@ -60,6 +61,12 @@
 
     <section class="ed-recem ed-largura" id="recemChegados" aria-labelledby="recemTitulo"></section>
 
+    <section class="ed-colecao ed-decada ed-largura" id="selecaoDecada" aria-labelledby="decadaTitulo"></section>
+
+    <section class="ed-genero ed-largura" id="generoUm" aria-labelledby="generoUmTitulo"></section>
+
+    <section class="ed-genero ed-largura" id="generoDois" aria-labelledby="generoDoisTitulo"></section>
+
     <section class="ed-explorar ed-largura" id="explorar" aria-labelledby="explorarTitulo"></section>
   </main>
 
@@ -82,6 +89,7 @@
   <script src="js/selecao.js"></script>
   <script src="js/textos_home.js"></script>
   <script src="js/explorar.js"></script>
+  <script src="js/semanal.js"></script>
   <script src="js/cartoes.js"></script>
   <script src="js/cabecalho.js"></script>
   <script src="js/inicio.js"></script>

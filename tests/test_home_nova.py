@@ -708,7 +708,7 @@ def test_aniversario_define_o_filme_do_dia_e_a_home_usa_o_dia_da_url():
     assert out["prat"][0] == out["prat"][1]
     fonte = (JS / "inicio.js").read_text(encoding="utf-8")
     assert 'get("dia")' in fonte and "T.justificar(f, DIA)" in fonte
-    assert "S.escolhaDoDia(FILMES, DIA)" in fonte
+    assert "W.homeDoDia(FILMES, DIA)" in fonte  # [home semanal] a escolha vem da montagem única
 
 
 # [4b] Os testes sintéticos de aniversário usam 60 filmes: com a carência de

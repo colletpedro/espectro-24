@@ -2627,25 +2627,55 @@ body.lightbox-aberto { overflow: hidden; }
 }
 .ed-recem__grade .ed-cartao__corpo { padding-right: 8px; }
 
-/* --- 4. Explorar: só texto, quatro grupos lado a lado (desktop) --- */
-.ed-explorar { margin-top: 56px; margin-bottom: 8px; }
-.ed-explorar__grupos {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 32px;
+/* --- 4. seleção da década: o mesmo layout da coleção do dia (.ed-colecao) --- */
+
+/* --- 5 e 6. fileiras de gênero: grade de 4 (2 no mobile) --- */
+.ed-genero { margin-top: 56px; }
+.ed-genero__cabeca {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
-.ed-explorar__nome {
+.ed-genero__titulo { margin: 0; }
+.ed-genero__grade {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--ed-calha);
+}
+.ed-genero__grade .ed-cartao__corpo { padding-right: 8px; }
+
+/* --- 7. Explorar discreto: um <details> fechado, só texto --- */
+.ed-explorar { margin-top: 56px; margin-bottom: 8px; }
+.ed-explorar__resumo {
+  cursor: pointer;
   font-family: var(--ed-fonte, var(--mono));
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-mute);
-  margin-bottom: 10px;
+  padding: 8px 0;
 }
-.ed-explorar__nome::-webkit-details-marker { display: none; }
-.ed-explorar.is-colunas .ed-explorar__nome { cursor: default; }
-.ed-explorar.is-colunas .ed-explorar__quantos { display: none; }
+.ed-explorar__resumo:hover,
+.ed-explorar__caixa[open] > .ed-explorar__resumo { color: var(--text-dim); }
+.ed-explorar__grupos {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-top: 14px;
+}
+.ed-explorar__nome {
+  font-family: var(--ed-fonte, var(--mono));
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0 0 10px;
+}
 .ed-explorar__lista { list-style: none; margin: 0; padding: 0; }
 .ed-explorar__lista li { margin: 0 0 6px; line-height: 1.35; }
 .ed-explorar__item {
@@ -2654,7 +2684,6 @@ body.lightbox-aberto { overflow: hidden; }
   text-decoration: none;
 }
 .ed-explorar__item:hover { text-decoration: underline; text-underline-offset: 3px; }
-.ed-explorar__n { color: var(--text-mute); font-family: var(--sans); font-size: 0.85em; }
 .ed-explorar__indice { margin: 24px 0 0; }
 
 /* =======================================================
@@ -2831,13 +2860,11 @@ body.lightbox-aberto { overflow: hidden; }
   }
   .ed-colecao__fileira .ed-cartao__corpo { padding: 0; }
 
-  .ed-explorar__grupos { grid-template-columns: 1fr; gap: 0; }
-  .ed-explorar__grupo { border-top: 1px solid var(--border-soft); }
-  .ed-explorar__grupo:last-child { border-bottom: 1px solid var(--border-soft); }
-  .ed-explorar__nome { cursor: pointer; margin: 0; padding: 14px 0; }
-  .ed-explorar__nome::after { content: "+"; float: right; }
-  .ed-explorar__grupo[open] .ed-explorar__nome::after { content: "–"; }
-  .ed-explorar__lista { padding: 0 0 14px; }
+  .ed-explorar__grupos { grid-template-columns: 1fr; gap: 20px; }
+
+  .ed-genero { margin-top: 40px; }
+  .ed-genero__cabeca { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .ed-genero__grade { grid-template-columns: repeat(2, 1fr); gap: 16px 12px; }
 
   .ex-topo { flex-direction: column; gap: 0; }
   .ex-vistas { margin-bottom: 14px; }

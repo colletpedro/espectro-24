@@ -154,6 +154,15 @@
 
   function modulo(a, n) { return ((a % n) + n) % n; }
 
+  /* SEMANA: o contador das seleções semanais da home (década e gêneros).
+     Semanas de segunda a domingo na data civil de São Paulo — a EPOCA
+     (2026-01-01) é uma quinta, então a semana 0 começa na segunda
+     2025-12-29 e a semana 1, na segunda 2026-01-05. Vale para qualquer
+     `?dia=`: a semana é a do dia pedido. */
+  function semanaDe(dia) {
+    return Math.floor((diasDesdeEpoca(dia) + 3) / 7);
+  }
+
   // FNV-1a, 32 bits. Escolhido por ser curto, conhecido e idêntico em
   // qualquer motor JS (só usa Math.imul e >>> 0).
   function fnv1a(texto) {
@@ -387,6 +396,7 @@
     LIMITE_COLECAO: LIMITE_COLECAO,
     ORDEM_EIXOS: ORDEM_EIXOS, PREFIXO_VALORATIVA: PREFIXO_VALORATIVA,
     diaEmSaoPaulo: diaEmSaoPaulo, diasDesdeEpoca: diasDesdeEpoca,
+    semanaDe: semanaDe, modulo: modulo,
     fnv1a: fnv1a, elegiveis: elegiveis, permutacao: permutacao,
     filmeDoDia: filmeDoDia, filmeDoDiaEm: filmeDoDiaEm,
     fazAniversario: fazAniversario, filmeDaPermutacao: filmeDaPermutacao,
