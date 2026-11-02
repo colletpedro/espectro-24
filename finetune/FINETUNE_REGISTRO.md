@@ -1522,3 +1522,8 @@ hash).
 - (31/10) Se o llama.cpp `6d194531…` compila na imagem do Kaggle do dia e se o
   Unsloth 2026.10.7 aceita a pasta indicada (lido no código, não rodado). Por
   que o sha do reaproveitamento dos 5 não bate.
+- (02/11) Quantas linhas da embedding o shard fundido da base mudou: 1
+  (151654) é INFERIDO do código e do max_abs exato; o log não grava a
+  diferença por linha e o shard fundido não existe mais. Não foi medido que a
+  linha 151654 do `token_embd` do GGUF é zero nem que o treinado sai com a
+  mesma linha zerada (inferido do código do Unsloth 2026.10.7).
