@@ -1,0 +1,243 @@
+{
+ "modelo": "qwen3-8b-base",
+ "repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+ "revisao_esperada": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+ "max_seq_length": 14336,
+ "seed": 3407,
+ "rascunho": "/tmp/espectro24_base",
+ "treino": "nenhum (adaptador recém-inicializado)",
+ "llama_cpp_preparo": {
+  "commit_pedido": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_clonado": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_compilado": "6d19453",
+  "commit_no_binario": true,
+  "llama_quantize_sha256": "6dacef54dcc5295c47dd217009ba8bf5473d18f2e6a69dd04124091762b7eca4",
+  "llama_quantize_versao": null,
+  "ok": true,
+  "s": 232.9,
+  "deps_instaladas": [],
+  "cmake": [
+   "-DCMAKE_BUILD_TYPE=Release",
+   "-DGGML_CUDA=OFF",
+   "-DLLAMA_OPENSSL=OFF",
+   "-DBUILD_SHARED_LIBS=OFF",
+   "-DLLAMA_BUILD_TESTS=OFF",
+   "-DLLAMA_BUILD_EXAMPLES=OFF",
+   "-DLLAMA_BUILD_SERVER=OFF"
+  ]
+ },
+ "dispositivos_cuda": 1,
+ "gpu": "Tesla T4",
+ "versoes": {
+  "python": "3.13.15",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.16.1",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu128",
+  "peft": "0.20.0",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.14.0",
+  "safetensors": "0.8.0",
+  "huggingface_hub": "1.29.0",
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:9a6bcfda6d03b2cd9aa347ee8c1bae62043328ed0f4afe9bda014e4f8bbf9435"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "sha": "62efd7f9d748e394734a7adae2adf96e13a2abc8"
+ },
+ "carga_s": 50.9,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "projecoes_faltando": [],
+ "prova_adaptador": {
+  "modulos_lora": 252,
+  "max_abs_lora_B": 0.0,
+  "max_abs_lora_A": 0.015625,
+  "B_zero": true,
+  "tokens_texto": 57,
+  "perda_com_adaptador": 2.6928584575653076,
+  "perda_sem_adaptador": 2.6928584575653076,
+  "max_abs_dif_logits": 0.0,
+  "saida_identica": true
+ },
+ "gguf_tempo_s": 760.2,
+ "pico_ram_depois_da_exportacao_gib": 2.89,
+ "gguf_todos_arquivos_gerados": [
+  "gguf/.cache/huggingface/.gitignore",
+  "gguf/.cache/huggingface/CACHEDIR.TAG",
+  "gguf/.cache/huggingface/download/model-00001-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00001-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00002-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00002-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00003-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00003-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model-00004-of-00004.safetensors.lock",
+  "gguf/.cache/huggingface/download/model-00004-of-00004.safetensors.metadata",
+  "gguf/.cache/huggingface/download/model.safetensors.index.json.lock",
+  "gguf/.cache/huggingface/download/model.safetensors.index.json.metadata",
+  "gguf/.cache/huggingface/download/tokenizer.model.lock",
+  "gguf/.cache/huggingface/trees/946bc9ac74a6c1f8cf012497c503a119b2fcf2eb.json",
+  "gguf/chat_template.jinja",
+  "gguf/config.json",
+  "gguf/generation_config.json",
+  "gguf/model-00001-of-00004.safetensors",
+  "gguf/model-00002-of-00004.safetensors",
+  "gguf/model-00003-of-00004.safetensors",
+  "gguf/model-00004-of-00004.safetensors",
+  "gguf/model.safetensors.index.json",
+  "gguf/tokenizer.json",
+  "gguf/tokenizer_config.json",
+  "gguf_gguf/Modelfile",
+  "gguf_gguf/Qwen3-8B.Q4_K_M.gguf"
+ ],
+ "llama_cpp": {
+  "existe": true,
+  "commit": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "describe": "6d19453",
+  "convert_hf_to_gguf_sha256": "c9f5f413dcb77b1272f80b26a270ef44c82612a2af7c70712cfdd8446b0788f2",
+  "llama_quantize": {
+   "caminho": "llama-quantize",
+   "sha256": "6dacef54dcc5295c47dd217009ba8bf5473d18f2e6a69dd04124091762b7eca4",
+   "versao": " or  Q4_K_M  :  4.58G, +0.1754 ppl @ Llama-3-8B\n  17  or  Q5_K    : alias for Q5_K_M\n  16  or  Q5_K_S  :  5.21G, +0.1049 ppl @ Llama-3-8B\n  17  or  Q5_K_M  :  5.33G, +0.0569 ppl @ Llama-3-8B\n  18  or  Q6_K    :  6.14G, +0.0217 ppl @ Llama-3-8B\n   7  or  Q8_0    :  7.96G, +0.0026 ppl @ Llama-3-8B\n   1  or  F16     : 14.00G, +0.0020 ppl @ Mistral-7B\n  32  or  BF16    : 14.00G, -0.0050 ppl @ Mistral-7B\n   0  or  F32     : 26.00G              @ 7B\n          COPY    : only copy tensors, no quantizing"
+  }
+ },
+ "llama_cpp_depois": {
+  "commit_pedido": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_clonado": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_compilado": "6d19453",
+  "commit_no_binario": true,
+  "llama_quantize_sha256": "6dacef54dcc5295c47dd217009ba8bf5473d18f2e6a69dd04124091762b7eca4",
+  "llama_quantize_versao": null,
+  "ok": true,
+  "llama_cpp_padrao_do_unsloth_existe": false,
+  "mesmo_binario_do_preparo": true,
+  "arvore_alterada": [
+   " M conversion/base.py"
+  ]
+ },
+ "prova_fusao": {
+  "repo_16bit": "unsloth/Qwen3-8B",
+  "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+  "metadata": {
+   "model-00001-of-00004.safetensors": {
+    "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+    "etag": "c0dc64934ae0f730ddc80d99af44968d01a89e8454df07d762096ea1356446bc"
+   },
+   "model-00002-of-00004.safetensors": {
+    "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+    "etag": "d58533b468c31caa0222540a8aefddea1d74dc6e1fee928da8556d3d85729d6e"
+   },
+   "model-00003-of-00004.safetensors": {
+    "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+    "etag": "74927fec432e050365bf757bb30348f560a44394efac89f492680b7c910b64fd"
+   },
+   "model-00004-of-00004.safetensors": {
+    "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+    "etag": "cb73f466fade5716702bda38d4e3b321c9358c39889e46fb9d613fb038bfcb2f"
+   }
+  },
+  "shards": {
+   "model-00001-of-00004.safetensors": {
+    "sha256_fundido": "d2ec88aea4da2840c93f2407b5a2bd72fac469f459b63fe2214b831e6c23161d",
+    "sha256_original": "c0dc64934ae0f730ddc80d99af44968d01a89e8454df07d762096ea1356446bc",
+    "arquivo_identico": false,
+    "chaves_iguais": true
+   },
+   "model-00002-of-00004.safetensors": {
+    "sha256_fundido": "d58533b468c31caa0222540a8aefddea1d74dc6e1fee928da8556d3d85729d6e",
+    "sha256_original": "d58533b468c31caa0222540a8aefddea1d74dc6e1fee928da8556d3d85729d6e",
+    "arquivo_identico": true,
+    "chaves_iguais": true
+   },
+   "model-00003-of-00004.safetensors": {
+    "sha256_fundido": "74927fec432e050365bf757bb30348f560a44394efac89f492680b7c910b64fd",
+    "sha256_original": "74927fec432e050365bf757bb30348f560a44394efac89f492680b7c910b64fd",
+    "arquivo_identico": true,
+    "chaves_iguais": true
+   },
+   "model-00004-of-00004.safetensors": {
+    "sha256_fundido": "cb73f466fade5716702bda38d4e3b321c9358c39889e46fb9d613fb038bfcb2f",
+    "sha256_original": "cb73f466fade5716702bda38d4e3b321c9358c39889e46fb9d613fb038bfcb2f",
+    "arquivo_identico": true,
+    "chaves_iguais": true
+   }
+  },
+  "tensores": 399,
+  "iguais": 398,
+  "diferentes": [
+   {
+    "tensor": "model.embed_tokens.weight",
+    "dtype": [
+     "torch.bfloat16",
+     "torch.bfloat16"
+    ],
+    "max_abs": 0.029541015625
+   }
+  ],
+  "n_diferentes": 1,
+  "ok": false
+ },
+ "gguf_arquivos": [
+  {
+   "nome": "Modelfile",
+   "bytes": 1695,
+   "sha256": "e04049cf03177d6c792e585c893229d11b43c49b719c3609fa30a2b9b05d7edf"
+  },
+  {
+   "nome": "Qwen3-8B.Q4_K_M.gguf",
+   "bytes": 5027784288,
+   "sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475"
+  }
+ ],
+ "modelfile": "\nFROM Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}\"\"\"\nPARAMETER stop \"<|im_end|>\"\nPARAMETER stop \"<|im_start|>\"\nPARAMETER temperature 0.6\nPARAMETER min_p 0.0\nPARAMETER top_k 20\nPARAMETER top_p 0.95\nPARAMETER repeat_penalty 1",
+ "tensores": {
+  "arquivo": "tensores.json",
+  "n": 399,
+  "sha256": "8afba50e12e0d21162e6510299f4123f5b81e96a21e33c7dadd967a94f74c838",
+  "tipos": {
+   "F32": 145,
+   "Q4_K": 217,
+   "Q6_K": 37
+  }
+ },
+ "gguf_ok": true,
+ "biblioteca": {
+  "repo": "unsloth/Qwen3-8B-GGUF",
+  "revisao": "a6adef130ffb23ddaf1a62fec9dced968c9bc482",
+  "arquivo": "Qwen3-8B-Q4_K_M.gguf",
+  "bytes": 5027784512,
+  "sha256": "120307ba529eb2439d6c430d94104dabd578497bc7bfe7e322b5d9933b449bd4",
+  "sha256_lfs_no_hf": "120307ba529eb2439d6c430d94104dabd578497bc7bfe7e322b5d9933b449bd4",
+  "tensores_so_nossos": [],
+  "tensores_so_deles": [],
+  "comuns": 399,
+  "tipo_diferente": 0,
+  "sha_diferente": 253,
+  "exemplos_tipo_diferente": [],
+  "metadados_deles": {
+   "general.architecture": "qwen3",
+   "general.type": "model",
+   "general.name": "Qwen3-8B",
+   "general.basename": "Qwen3-8B",
+   "general.quantized_by": "Unsloth",
+   "general.size_label": "8B",
+   "general.repo_url": "https://huggingface.co/unsloth",
+   "general.quantization_version": 2,
+   "general.file_type": 15,
+   "quantize.imatrix.file": "Qwen3-8B-GGUF/imatrix_unsloth.dat",
+   "quantize.imatrix.dataset": "unsloth_calibration_Qwen3-8B.txt",
+   "quantize.imatrix.entries_count": 252,
+   "quantize.imatrix.chunks_count": 685
+  },
+  "quantizacao_identica": false
+ },
+ "fim": "2026-11-02T02:03:25Z"
+}
