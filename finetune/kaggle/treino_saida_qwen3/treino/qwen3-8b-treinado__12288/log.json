@@ -1,0 +1,257 @@
+{
+ "modelo": "qwen3-8b-treinado",
+ "repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+ "revisao_esperada": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+ "hiperparametros": {
+  "seed": 3407,
+  "r": 16,
+  "lora_alpha": 16,
+  "lora_dropout": 0,
+  "learning_rate": 0.0002,
+  "lr_scheduler_type": "cosine",
+  "warmup_ratio": 0.05,
+  "num_train_epochs": 3,
+  "per_device_train_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "optim": "adamw_8bit",
+  "weight_decay": 0.0,
+  "fp16": true,
+  "bf16": false,
+  "max_seq_length": 12288,
+  "use_gradient_checkpointing": "unsloth"
+ },
+ "dataset": {
+  "arquivo": "/kaggle/input/datasets/pedrocollet1/espectro24-finetune-treino-qwen3-dados/treino.jsonl",
+  "sha256_lido": "36f81ac1a48d11bdc1b7f1fc27e71fb3dd54ca063b29caa862ff4459ee45e53d",
+  "sha256_meta": "36f81ac1a48d11bdc1b7f1fc27e71fb3dd54ca063b29caa862ff4459ee45e53d",
+  "sha256_config": "36f81ac1a48d11bdc1b7f1fc27e71fb3dd54ca063b29caa862ff4459ee45e53d",
+  "n": {
+   "treino": 140,
+   "validacao": 19
+  }
+ },
+ "llama_cpp_esperado": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+ "base": {
+  "log_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "unsloth": "2026.10.7",
+  "repo_revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+  "tensores_sha256": "8afba50e12e0d21162e6510299f4123f5b81e96a21e33c7dadd967a94f74c838"
+ },
+ "rascunho": "/tmp/espectro24_treino",
+ "llama_cpp_preparo": {
+  "commit_pedido": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_clonado": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_compilado": "6d19453",
+  "commit_no_binario": true,
+  "llama_quantize_sha256": "edc6220bd580e5b4e6d937b810a120d2d062455204398a3d5a67aa98cb6c3ca8",
+  "llama_quantize_versao": null,
+  "ok": true,
+  "s": 235.6,
+  "deps_instaladas": [],
+  "cmake": [
+   "-DCMAKE_BUILD_TYPE=Release",
+   "-DGGML_CUDA=OFF",
+   "-DLLAMA_OPENSSL=OFF",
+   "-DBUILD_SHARED_LIBS=OFF",
+   "-DLLAMA_BUILD_TESTS=OFF",
+   "-DLLAMA_BUILD_EXAMPLES=OFF",
+   "-DLLAMA_BUILD_SERVER=OFF"
+  ]
+ },
+ "gpu": "Tesla T4",
+ "versoes": {
+  "python": "3.13.16",
+  "unsloth": "2026.10.7",
+  "unsloth_zoo": "2026.10.7",
+  "transformers": "5.17.0",
+  "trl": "1.15.0",
+  "torch": "2.11.0+cu130",
+  "peft": "0.21.2",
+  "bitsandbytes": "0.50.2",
+  "accelerate": "1.15.0",
+  "datasets": "4.8.5",
+  "safetensors": "0.8.0",
+  "huggingface_hub": "1.33.0",
+  "imagem_kaggle": "gcr.io/kaggle-gpu-images/python@sha256:de153e6d303881930c51286216393d56f56b26458d0661350305a1e8144eea01"
+ },
+ "repo_confirmado": {
+  "id": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+  "sha": "62efd7f9d748e394734a7adae2adf96e13a2abc8"
+ },
+ "carga_s": 54.2,
+ "modulos_lora": [
+  "down_proj",
+  "gate_proj",
+  "k_proj",
+  "o_proj",
+  "q_proj",
+  "up_proj",
+  "v_proj"
+ ],
+ "template_confere": {
+  "todos": true,
+  "falsos": []
+ },
+ "acima_de_max_seq": [],
+ "mascara": {
+  "treino": {
+   "tokens": 5360,
+   "treinados": 667,
+   "comeca_em_chave": true,
+   "tem_think": false
+  },
+  "validacao": {
+   "tokens": 6556,
+   "treinados": 662,
+   "comeca_em_chave": true,
+   "tem_think": false
+  }
+ },
+ "retomado_de": null,
+ "treino_s": 13176.5,
+ "train_metrics": {
+  "train_runtime": 13175.1793,
+  "train_samples_per_second": 0.032,
+  "train_steps_per_second": 0.008,
+  "total_flos": 1.3785329607008256e+17,
+  "train_loss": 0.5427018628233955,
+  "epoch": 3.0
+ },
+ "curva_validacao": [
+  {
+   "epoca": 1,
+   "passo": 35,
+   "eval_loss": 0.5768505930900574
+  },
+  {
+   "epoca": 2,
+   "passo": 70,
+   "eval_loss": 0.5491840243339539
+  },
+  {
+   "epoca": 3,
+   "passo": 105,
+   "eval_loss": 0.5566595196723938
+  }
+ ],
+ "escolhida": {
+  "epoca": 2,
+  "passo": 70,
+  "eval_loss": 0.5491840243339539
+ },
+ "reavaliacao": {
+  "checkpoint": "checkpoint-70",
+  "eval_loss": 0.5491840243339539,
+  "confere": true
+ },
+ "adaptador": [
+  {
+   "nome": "README.md",
+   "bytes": 5242,
+   "sha256": "c373b9fe28009ba8532ada07975b7a91d1ba8b1e6cb078484461ea489d1f18e1"
+  },
+  {
+   "nome": "adapter_config.json",
+   "bytes": 1323,
+   "sha256": "1cd24792292fabeca65fca258bc8164b45eabb638d318c6c36e7c4a1cf793789"
+  },
+  {
+   "nome": "adapter_model.safetensors",
+   "bytes": 174655536,
+   "sha256": "18e0e68877cc6849a720970d7b350a91d3358f8844e7ae03310b90cbc10036d4"
+  },
+  {
+   "nome": "chat_template.jinja",
+   "bytes": 4718,
+   "sha256": "f2e03cfdf930fb26e7c88ca83abc3a0c1e7c5b1fe68ee43ba81d0c47c8460ceb"
+  },
+  {
+   "nome": "tokenizer.json",
+   "bytes": 11422924,
+   "sha256": "476870a1f2fb6f6a2759a6ede2383bf9d5d738f17844563b65c91965b722ae09"
+  },
+  {
+   "nome": "tokenizer_config.json",
+   "bytes": 5130,
+   "sha256": "d1c413325be7b54aff47239f0177e2527ddf1e6af4f50780fba274a66302f8e0"
+  }
+ ],
+ "gguf_tempo_s": 823.0,
+ "llama_cpp": {
+  "existe": true,
+  "commit": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "describe": "6d19453",
+  "convert_hf_to_gguf_sha256": "c9f5f413dcb77b1272f80b26a270ef44c82612a2af7c70712cfdd8446b0788f2",
+  "llama_quantize": {
+   "caminho": "llama-quantize",
+   "sha256": "edc6220bd580e5b4e6d937b810a120d2d062455204398a3d5a67aa98cb6c3ca8",
+   "versao": " or  Q4_K_M  :  4.58G, +0.1754 ppl @ Llama-3-8B\n  17  or  Q5_K    : alias for Q5_K_M\n  16  or  Q5_K_S  :  5.21G, +0.1049 ppl @ Llama-3-8B\n  17  or  Q5_K_M  :  5.33G, +0.0569 ppl @ Llama-3-8B\n  18  or  Q6_K    :  6.14G, +0.0217 ppl @ Llama-3-8B\n   7  or  Q8_0    :  7.96G, +0.0026 ppl @ Llama-3-8B\n   1  or  F16     : 14.00G, +0.0020 ppl @ Mistral-7B\n  32  or  BF16    : 14.00G, -0.0050 ppl @ Mistral-7B\n   0  or  F32     : 26.00G              @ 7B\n          COPY    : only copy tensors, no quantizing"
+  }
+ },
+ "llama_cpp_depois": {
+  "commit_pedido": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_clonado": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+  "commit_compilado": "6d19453",
+  "commit_no_binario": true,
+  "llama_quantize_sha256": "edc6220bd580e5b4e6d937b810a120d2d062455204398a3d5a67aa98cb6c3ca8",
+  "llama_quantize_versao": null,
+  "ok": true,
+  "llama_cpp_padrao_do_unsloth_existe": false,
+  "mesmo_binario_do_preparo": true,
+  "arvore_alterada": [
+   " M conversion/base.py"
+  ]
+ },
+ "llama_cpp_igual_ao_da_base": true,
+ "comparacao_com_base": {
+  "mesmos_nomes": true,
+  "fora_das_projecoes": 147,
+  "fora_das_projecoes_diferentes": [],
+  "projecoes": 252,
+  "projecoes_que_mudaram": 252,
+  "so_projecoes_mudaram": true
+ },
+ "embed_contra_original": {
+  "repo_16bit": "unsloth/Qwen3-8B",
+  "revisao": "946bc9ac74a6c1f8cf012497c503a119b2fcf2eb",
+  "shard": "model-00001-of-00004.safetensors",
+  "dtype": [
+   "torch.bfloat16",
+   "torch.bfloat16"
+  ],
+  "forma": [
+   [
+    151936,
+    4096
+   ],
+   [
+    151936,
+    4096
+   ]
+  ],
+  "n_linhas": 1,
+  "linhas": [
+   {
+    "id": 151654,
+    "max_abs": 0.029541015625
+   }
+  ],
+  "max_abs": 0.029541015625
+ },
+ "gguf_arquivos": [
+  {
+   "nome": "Modelfile",
+   "bytes": 1695,
+   "sha256": "e04049cf03177d6c792e585c893229d11b43c49b719c3609fa30a2b9b05d7edf"
+  },
+  {
+   "nome": "Qwen3-8B.Q4_K_M.gguf",
+   "bytes": 5027784288,
+   "sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac"
+  }
+ ],
+ "modelfile": "\nFROM Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}\"\"\"\nPARAMETER stop \"<|im_end|>\"\nPARAMETER stop \"<|im_start|>\"\nPARAMETER temperature 0.6\nPARAMETER min_p 0.0\nPARAMETER top_k 20\nPARAMETER top_p 0.95\nPARAMETER repeat_penalty 1",
+ "gguf_ok": true,
+ "fim": "2026-11-03T06:02:32Z"
+}

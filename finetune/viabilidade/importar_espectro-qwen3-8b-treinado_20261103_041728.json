@@ -1,0 +1,128 @@
+{
+ "gerado_por": "scripts/finetune/viabilidade_ollama.py",
+ "ollama": "ollama version is 0.40.13",
+ "ram_total_gb": 15.19,
+ "par": "do-the-right-thing/negativas",
+ "chars_system": 2195,
+ "chars_user": 31118,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "bcf51de79d4716cabfe07765c95c9359f200692b16f7ea9e85bb011eb24b0f84",
+ "ram_livre_min_gb": 2.0,
+ "ram_partida_min_gb": 6.0,
+ "medicoes": [
+  {
+   "tipo": "medicao",
+   "candidato": "espectro-qwen3-8b-treinado",
+   "modelo": "espectro-qwen3-8b-treinado",
+   "num_ctx": 18432,
+   "num_predict": 3000,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 10.24,
+    "espera_ram_s": 0.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.1982421875,
+    "limpa": true
+   },
+   "ts": "2026-11-03T07:12:48+00:00",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 231.08,
+   "leitura_prompt_s": 12.316,
+   "geracao_s": 212.008,
+   "carga_s": 4.671,
+   "total_s": 229.048,
+   "prompt_eval_count": 8019,
+   "eval_count": 733,
+   "think": "false",
+   "tokens_s_geracao": 3.46,
+   "tokens_s_leitura": 651.1,
+   "gerou_texto": true,
+   "json_parseia": true,
+   "json_tem_temas_em_lista": true,
+   "n_temas": 6,
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e falta de história\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas reclamam que o filme começa e termina de forma arrastada, com longos períodos em que nada acontece, tornando a experiência tediosa e sem envolvimento.\"\n    },\n    {\n      \"tema\": \"Roteiro confuso e mensagem ambígua\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o roteiro parece não ter um foco claro, misturando ideias e deixando a mensagem de luta contra o racismo embaraçosa e contraditória, com cotações de MLK e Malcolm X que não se complementam.\"\n    },\n    {\n      \"tema\": \"Atuações exageradas e personagens estereotipados\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas negativas dizem que os personagens são caricaturizados e que as atuações soam forçadas e sem naturalidade, com uma atmosfera de exagero que atrapalha a imersão.\"\n    },\n    {\n      \"tema\": \"Violência e escolha de violência como resposta\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews criticam a forma como o filme trata a violência, considerando que a reação violenta é uma resposta equivocada e que a violência não resolve os problemas, apenas agravando a situação.\"\n    },\n    {\n      \"tema\": \"Falta de empatia e personagens irritantes\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo afirma que os personagens são difíceis de apoiar, sendo descritos como egoístas e racistas, o que torna a experiência desconfortável e pouco envolvente.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo visual elogiados, mas não salvam o filme\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews reconhecem a qualidade da fotografia e do estilo visual, mas afirmam que isso não compensa os problemas narrativos e o ritmo arrastado, deixando a obra sem força.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas apontam para um filme que, apesar de ter uma fotografia e um estilo visual elogiados, sofre com um ritmo lento, um roteiro confuso e personagens que parecem caricaturizados, tornando a experiência tediosa e pouco envolvente.\"\n}",
+   "ok": true,
+   "parede_s": 231.3,
+   "memoria": {
+    "ram_usada_gb": 9.51,
+    "ram_livre_min_gb": 5.68,
+    "ws_ollama_gb": 0.05,
+    "vram_gb": 2.46
+   },
+   "abortado_por_memoria": false,
+   "E5_ate_20_min": true
+  },
+  {
+   "tipo": "probe",
+   "candidato": "espectro-qwen3-8b-treinado",
+   "modelo": "espectro-qwen3-8b-treinado",
+   "num_ctx": 27648,
+   "num_predict": 16,
+   "partida": {
+    "ram_partida_min_gb": 6.0,
+    "ps_antes": [],
+    "ps_depois_do_stop": [],
+    "ps_vazio": true,
+    "ram_livre_partida_gb": 10.38,
+    "espera_ram_s": 0.0,
+    "ws_ollama_partida_gb": 0.0,
+    "vram_partida_gb": 0.1982421875,
+    "limpa": true
+   },
+   "ts": "2026-11-03T07:16:57+00:00",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "length",
+   "latencia_s": 23.91,
+   "leitura_prompt_s": 12.506,
+   "geracao_s": 3.892,
+   "carga_s": 5.429,
+   "total_s": 21.885,
+   "prompt_eval_count": 8019,
+   "eval_count": 16,
+   "think": "false",
+   "tokens_s_geracao": 4.11,
+   "tokens_s_leitura": 641.21,
+   "gerou_texto": true,
+   "ok": true,
+   "parede_s": 23.9,
+   "memoria": {
+    "ram_usada_gb": 10.06,
+    "ram_livre_min_gb": 5.13,
+    "ws_ollama_gb": 0.19,
+    "vram_gb": 2.55
+   },
+   "abortado_por_memoria": false
+  }
+ ],
+ "importacao": {
+  "modelfile_original": "\nFROM Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}\"\"\"\nPARAMETER stop \"<|im_end|>\"\nPARAMETER stop \"<|im_start|>\"\nPARAMETER temperature 0.6\nPARAMETER min_p 0.0\nPARAMETER top_k 20\nPARAMETER top_p 0.95\nPARAMETER repeat_penalty 1",
+  "template_original": "{{- if .Messages }}\n{{- if or .System .Tools }}<|im_start|>system\n{{- if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end }}<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ end }}\n{{- end }}\n{{- else }}\n{{- if .System }}<|im_start|>system\n{{ .System }}<|im_end|>\n{{ end }}{{ if .Prompt }}<|im_start|>user\n{{ .Prompt }}<|im_end|>\n{{ end }}<|im_start|>assistant\n{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}",
+  "template_canonico": "{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "template_reproduz_hf": false,
+  "correcao": "--- template_unsloth\n+++ template_canonico\n@@ -1,50 +1,11 @@\n-{{- if .Messages }}\n-{{- if or .System .Tools }}<|im_start|>system\n-{{- if .System }}\n-{{ .System }}\n-{{- end }}\n-{{- if .Tools }}\n-\n-# Tools\n-\n-You may call one or more functions to assist with the user query.\n-\n-You are provided with function signatures within <tools></tools> XML tags:\n-<tools>\n-{{- range .Tools }}\n-{\"type\": \"function\", \"function\": {{ .Function }}}\n-{{- end }}\n-</tools>\n-\n-For each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n-<tool_call>\n-{\"name\": <function-name>, \"arguments\": <args-json-object>}\n-</tool_call>\n-{{- end }}<|im_end|>\n-{{ end }}\n-{{- range $i, $_ := .Messages }}\n-{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n-{{- if eq .Role \"user\" }}<|im_start|>user\n+{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n+{{ .Content }}<|im_end|>\n+{{ else if eq .Role \"user\" }}<|im_start|>user\n {{ .Content }}<|im_end|>\n {{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n-{{ if .Content }}{{ .Content }}\n-{{- else if .ToolCalls }}<tool_call>\n-{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n-{{ end }}</tool_call>\n-{{- end }}{{ if not $last }}<|im_end|>\n-{{ end }}\n-{{- else if eq .Role \"tool\" }}<|im_start|>user\n-<tool_response>\n-{{ .Content }}\n-</tool_response><|im_end|>\n-{{ end }}\n-{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n-{{ end }}\n-{{- end }}\n-{{- else }}\n-{{- if .System }}<|im_start|>system\n-{{ .System }}<|im_end|>\n-{{ end }}{{ if .Prompt }}<|im_start|>user\n-{{ .Prompt }}<|im_end|>\n-{{ end }}<|im_start|>assistant\n-{{ end }}{{ .Response }}{{ if .Response }}<|im_end|>{{ end }}+{{ .Content }}<|im_end|>\n+{{ end }}{{- end }}<|im_start|>assistant\n+<think>\n+\n+</think>\n+\n",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n",
+  "gguf": "C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "gguf_bytes": 5027784288,
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "recriado_do_zero": {
+   "existia": false
+  },
+  "create": {
+   "rc": 0,
+   "s": 25.6,
+   "stderr_fim": "A\u001b[1Ggathering model components \u001b[K\ncopying file sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac 100% \u001b[K\nparsing GGUF \u001b[K\nusing existing layer sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac \u001b[K\nusing existing layer sha256:e3e03532b1b785b3fe1f864740f42f4723fc74ffec4970b3072c03ba07ecb3c6 \u001b[K\nusing existing layer sha256:bf328696c54fb5bd2cc49838d5ef407545504cfdd4faa6ff3a6fbeeffe63435c \u001b[K\nwriting manifest ⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[1Ggathering model components \u001b[K\ncopying file sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac 100% \u001b[K\nparsing GGUF \u001b[K\nusing existing layer sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac \u001b[K\nusing existing layer sha256:e3e03532b1b785b3fe1f864740f42f4723fc74ffec4970b3072c03ba07ecb3c6 \u001b[K\nusing existing layer sha256:bf328696c54fb5bd2cc49838d5ef407545504cfdd4faa6ff3a6fbeeffe63435c \u001b[K\nwriting manifest ⠹ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[1Ggathering model components \u001b[K\ncopying file sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac 100% \u001b[K\nparsing GGUF \u001b[K\nusing existing layer sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac \u001b[K\nusing existing layer sha256:e3e03532b1b785b3fe1f864740f42f4723fc74ffec4970b3072c03ba07ecb3c6 \u001b[K\nusing existing layer sha256:bf328696c54fb5bd2cc49838d5ef407545504cfdd4faa6ff3a6fbeeffe63435c \u001b[K\nwriting manifest ⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[A\u001b[1Ggathering model components \u001b[K\ncopying file sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac 100% \u001b[K\nparsing GGUF \u001b[K\nusing existing layer sha256:e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac \u001b[K\nusing existing layer sha256:e3e03532b1b785b3fe1f864740f42f4723fc74ffec4970b3072c03ba07ecb3c6 \u001b[K\nusing existing layer sha256:bf328696c54fb5bd2cc49838d5ef407545504cfdd4faa6ff3a6fbeeffe63435c \u001b[K\nwriting manifest \u001b[K\nsuccess \u001b[K\u001b[?25h\u001b[?2026l\n"
+  }
+ },
+ "contagem_template": {
+  "tokens_via_template": 8019,
+  "tokens_cru_esperado": 8019,
+  "iguais": true,
+  "erro": null
+ },
+ "E4_importa_e_gera": true
+}
