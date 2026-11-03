@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dune-2021",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6642,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "9d435a769f593af6611d9b47008c41853f7ea7eb1b366556dcb2521d39b9cb1b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.65,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:48:26+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "atuações insuficientes",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam que os atores, especialmente Timothée Chalamet e Zendaya, não conseguem transmitir o necessário carisma ou profundidade para os personagens, tornando-os pouco envolventes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "roteiro confuso e lento",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews apontam que o roteiro é excessivamente longo e desorganizado, com uma narrativa que se arrasta e falta clareza, dificultando o engajamento do espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de emoção e envolvimento",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas mencionam que o filme não consegue gerar emoção ou conexão com os personagens, deixando o espectador indiferente ao que acontece na tela.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "fotografia e cenário exagerados",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Embora a fotografia e os cenários sejam elogiados, algumas críticas acham que eles são exagerados e não contribuem para uma narrativa envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "espera por sequências",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que consideram o filme apenas uma introdução para uma série, com uma estrutura que parece estar sempre se preparando para uma continuação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "som e música excessivos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos destacam que o som e a música, especialmente a de Hans Zimmer, são excessivos e dominam a experiência, tornando o filme cansativo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas ressaltam a insatisfação com a atuação dos protagonistas, o roteiro confuso e o excesso de elementos visuais que não contribuem para uma narrativa envolvente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 158.5,
+ "memoria": {
+  "ram_usada_gb": 11.11,
+  "ram_livre_min_gb": 4.09,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.62
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"atuações insuficientes\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam que os atores, especialmente Timothée Chalamet e Zendaya, não conseguem transmitir o necessário carisma ou profundidade para os personagens, tornando-os pouco envolventes.\"\n    },\n    {\n      \"tema\": \"roteiro confuso e lento\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam que o roteiro é excessivamente longo e desorganizado, com uma narrativa que se arrasta e falta clareza, dificultando o engajamento do espectador.\"\n    },\n    {\n      \"tema\": \"falta de emoção e envolvimento\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas mencionam que o filme não consegue gerar emoção ou conexão com os personagens, deixando o espectador indiferente ao que acontece na tela.\"\n    },\n    {\n      \"tema\": \"fotografia e cenário exagerados\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Embora a fotografia e os cenários sejam elogiados, algumas críticas acham que eles são exagerados e não contribuem para uma narrativa envolvente.\"\n    },\n    {\n      \"tema\": \"espera por sequências\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que consideram o filme apenas uma introdução para uma série, com uma estrutura que parece estar sempre se preparando para uma continuação.\"\n    },\n    {\n      \"tema\": \"som e música excessivos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos destacam que o som e a música, especialmente a de Hans Zimmer, são excessivos e dominam a experiência, tornando o filme cansativo.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas ressaltam a insatisfação com a atuação dos protagonistas, o roteiro confuso e o excesso de elementos visuais que não contribuem para uma narrativa envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 158.45,
+   "leitura_prompt_s": 9.324,
+   "geracao_s": 146.861,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6642,
+   "eval_count": 641
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

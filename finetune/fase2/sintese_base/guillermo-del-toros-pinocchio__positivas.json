@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "guillermo-del-toros-pinocchio",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5579,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "736c1556025797add12a5dd2ff9274c486c4bb08226376e9d5f4d51afc240c87",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.77,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:59:30+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "arte e animação",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a qualidade da animação, elogiando a técnica e a atenção aos detalhes, considerando-a um exemplo de excelência na indústria.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temas profundos e filosóficos",
+    "mencoes_aproximadas": 27,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é elogiado por abordar temas como a morte, o luto, a identidade e a busca por significado, com profundidade e sensibilidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relação entre personagens",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A dinâmica entre os personagens, especialmente entre Geppetto e Pinocchio, é celebrada por transmitir emoção e complexidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética e atmosfera",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam a beleza visual e a atmosfera do filme, destacando a paleta de cores e o estilo cinematográfico.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trabalho do diretor",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Guillermo del Toro é elogiado por sua abordagem criativa e pela forma como reconta a história clássica, trazendo uma nova perspectiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "experiência emocional",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews ressaltam o impacto emocional do filme, com muitos espectadores relatando que ficaram comovidos e que a experiência foi intensa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a qualidade da animação, a profundidade dos temas e a emoção transmitida pelo filme, valorizando a abordagem criativa de Guillermo del Toro.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 137.4,
+ "memoria": {
+  "ram_usada_gb": 10.97,
+  "ram_livre_min_gb": 4.22,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"arte e animação\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a qualidade da animação, elogiando a técnica e a atenção aos detalhes, considerando-a um exemplo de excelência na indústria.\"\n    },\n    {\n      \"tema\": \"temas profundos e filosóficos\",\n      \"mencoes_aproximadas\": 27,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é elogiado por abordar temas como a morte, o luto, a identidade e a busca por significado, com profundidade e sensibilidade.\"\n    },\n    {\n      \"tema\": \"relação entre personagens\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A dinâmica entre os personagens, especialmente entre Geppetto e Pinocchio, é celebrada por transmitir emoção e complexidade.\"\n    },\n    {\n      \"tema\": \"estética e atmosfera\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam a beleza visual e a atmosfera do filme, destacando a paleta de cores e o estilo cinematográfico.\"\n    },\n    {\n      \"tema\": \"trabalho do diretor\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Guillermo del Toro é elogiado por sua abordagem criativa e pela forma como reconta a história clássica, trazendo uma nova perspectiva.\"\n    },\n    {\n      \"tema\": \"experiência emocional\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews ressaltam o impacto emocional do filme, com muitos espectadores relatando que ficaram comovidos e que a experiência foi intensa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a qualidade da animação, a profundidade dos temas e a emoção transmitida pelo filme, valorizando a abordagem criativa de Guillermo del Toro.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 137.27,
+   "leitura_prompt_s": 8.444,
+   "geracao_s": 126.622,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5579,
+   "eval_count": 594
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

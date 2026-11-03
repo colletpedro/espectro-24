@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "joker-2019",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6570,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "fb28d5aec64fa172164e56a535d4a8885d0902dd2af319651549a30c5e3ffad0",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.54,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.271484375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T11:05:12+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "atuação",
+    "mencoes_aproximadas": 34,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a atuação de Joaquin Phoenix como um dos pontos mais fortes do filme, com elogios à sua capacidade de transmitir a complexidade emocional do personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "construção narrativa",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews elogiam a construção narrativa do filme, que apresenta uma evolução gradual e envolvente da personalidade de Arthur, levando-o à transformação em Joker.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática social e psicológica",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas ressaltam a abordagem da temática social e psicológica, mostrando como a marginalização e a falta de apoio social contribuem para a transformação do personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética e direção",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam a estética do filme, destacando sua fotografia e direção como elementos que reforçam a atmosfera sombria e o tom do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam o impacto emocional do filme, que consegue envolver o espectador e provocar reflexões sobre temas complexos como a sanidade e a realidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "originalidade",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos elogiam a originalidade do filme, que apresenta uma visão diferente do personagem Joker, focando mais em sua humanidade do que em sua violência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a atuação de Joaquin Phoenix, a construção narrativa envolvente e a abordagem de temas sociais e psicológicos, além da estética do filme.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 156.0,
+ "memoria": {
+  "ram_usada_gb": 10.18,
+  "ram_livre_min_gb": 5.01,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.62
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"atuação\",\n      \"mencoes_aproximadas\": 34,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a atuação de Joaquin Phoenix como um dos pontos mais fortes do filme, com elogios à sua capacidade de transmitir a complexidade emocional do personagem.\"\n    },\n    {\n      \"tema\": \"construção narrativa\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews elogiam a construção narrativa do filme, que apresenta uma evolução gradual e envolvente da personalidade de Arthur, levando-o à transformação em Joker.\"\n    },\n    {\n      \"tema\": \"temática social e psicológica\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas ressaltam a abordagem da temática social e psicológica, mostrando como a marginalização e a falta de apoio social contribuem para a transformação do personagem.\"\n    },\n    {\n      \"tema\": \"estética e direção\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam a estética do filme, destacando sua fotografia e direção como elementos que reforçam a atmosfera sombria e o tom do filme.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam o impacto emocional do filme, que consegue envolver o espectador e provocar reflexões sobre temas complexos como a sanidade e a realidade.\"\n    },\n    {\n      \"tema\": \"originalidade\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos elogiam a originalidade do filme, que apresenta uma visão diferente do personagem Joker, focando mais em sua humanidade do que em sua violência.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atuação de Joaquin Phoenix, a construção narrativa envolvente e a abordagem de temas sociais e psicológicos, além da estética do filme.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 155.98,
+   "leitura_prompt_s": 10.085,
+   "geracao_s": 143.632,
+   "carga_s": 0.008,
+   "prompt_eval_count": 6570,
+   "eval_count": 630
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

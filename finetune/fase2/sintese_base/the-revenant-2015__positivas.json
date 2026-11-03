@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-revenant-2015",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6000,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "92525f7e3678386595fbf2b3192fb43cdee628183fc1b4224a4f7978920c04e5",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:32:20+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "natureza e paisagens",
+    "mencoes_aproximadas": 35,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a beleza dos cenários naturais e a cinematografia que retrata a paisagem americana do século XIX com grande detalhe e realismo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuação de leonardo dicaprio",
+    "mencoes_aproximadas": 32,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Leonardo DiCaprio é elogiada por sua intensidade, especialmente em cenas com pouca fala, transmitindo emoções de forma contundente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e duração",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews menciona o ritmo lento do filme, mas considera que isso é parte da experiência de imersão e da narrativa de sobrevivência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "direção e fotografia",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção e a fotografia são criticadas por criar uma atmosfera imersiva, com planos longos e uso da luz natural que reforçam o ambiente de fronteira.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática de vingança e sobrevivência",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A temática de vingança e sobrevivência é vista como central, com críticas que destacam a complexidade dos personagens e a luta contra a natureza.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "tom hardy e outros atores",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Tom Hardy é elogiado por sua atuação como antagonista, com críticas que destacam sua capacidade de transmitir o mal e a crueldade do personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a cinematografia e a atuação, especialmente de Leonardo DiCaprio, além da imersão proporcionada pelo ritmo lento e a temática de sobrevivência.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 146.9,
+ "memoria": {
+  "ram_usada_gb": 13.03,
+  "ram_livre_min_gb": 2.16,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"natureza e paisagens\",\n      \"mencoes_aproximadas\": 35,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a beleza dos cenários naturais e a cinematografia que retrata a paisagem americana do século XIX com grande detalhe e realismo.\"\n    },\n    {\n      \"tema\": \"atuação de leonardo dicaprio\",\n      \"mencoes_aproximadas\": 32,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Leonardo DiCaprio é elogiada por sua intensidade, especialmente em cenas com pouca fala, transmitindo emoções de forma contundente.\"\n    },\n    {\n      \"tema\": \"ritmo e duração\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews menciona o ritmo lento do filme, mas considera que isso é parte da experiência de imersão e da narrativa de sobrevivência.\"\n    },\n    {\n      \"tema\": \"direção e fotografia\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção e a fotografia são criticadas por criar uma atmosfera imersiva, com planos longos e uso da luz natural que reforçam o ambiente de fronteira.\"\n    },\n    {\n      \"tema\": \"temática de vingança e sobrevivência\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A temática de vingança e sobrevivência é vista como central, com críticas que destacam a complexidade dos personagens e a luta contra a natureza.\"\n    },\n    {\n      \"tema\": \"tom hardy e outros atores\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Tom Hardy é elogiado por sua atuação como antagonista, com críticas que destacam sua capacidade de transmitir o mal e a crueldade do personagem.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a cinematografia e a atuação, especialmente de Leonardo DiCaprio, além da imersão proporcionada pelo ritmo lento e a temática de sobrevivência.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 146.88,
+   "leitura_prompt_s": 9.158,
+   "geracao_s": 135.477,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6000,
+   "eval_count": 626
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

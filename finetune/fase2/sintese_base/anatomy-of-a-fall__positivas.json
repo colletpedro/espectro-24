@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-fall",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5898,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "54a60f7400e7eef84d032d8a622201b2acb7989726d0652498178b6a6a75c4fc",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:34:28+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "relação de casal e complexidade emocional",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "as reviews destacam a representação da dinâmica de um casal em crise, com foco na dificuldade de compreender os sentimentos e intenções do outro, e na forma como conflitos pessoais se manifestam em um contexto judicial",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e interpretações",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a atuação dos principais protagonistas, especialmente a de Sandra Hüller, é elogiada por sua capacidade de transmitir nuances emocionais através de expressões faciais e gestos sutis",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e construção narrativa",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "algumas críticas apontam que o ritmo do filme é lento em certos momentos, mas isso é justificado pela profundidade da narrativa e pela necessidade de explorar a complexidade dos personagens",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiente e atmosfera",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a atmosfera fria e austera do ambiente do filme é vista como uma metáfora para a relação de casal e para o clima tenso que se forma durante o processo judicial",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "uso da música e som",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o uso da música, especialmente a versão instrumental de P.I.M.P., é elogiado por criar tensão e reforçar a atmosfera dramática do filme",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": true
+   },
+   {
+    "tema": "crítica ao sistema judicial",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "algumas reviews mencionam a crítica ao sistema judicial francês, destacando a complexidade e a ambiguidade das decisões tomadas durante o processo",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews positivas destacam a profundidade emocional e a complexidade da narrativa, elogiando a atuação dos protagonistas e a construção de personagens, mesmo reconhecendo algumas limitações no ritmo do filme",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 152.3,
+ "memoria": {
+  "ram_usada_gb": 10.8,
+  "ram_livre_min_gb": 4.39,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"relação de casal e complexidade emocional\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as reviews destacam a representação da dinâmica de um casal em crise, com foco na dificuldade de compreender os sentimentos e intenções do outro, e na forma como conflitos pessoais se manifestam em um contexto judicial\"\n    },\n    {\n      \"tema\": \"atuações e interpretações\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a atuação dos principais protagonistas, especialmente a de Sandra Hüller, é elogiada por sua capacidade de transmitir nuances emocionais através de expressões faciais e gestos sutis\"\n    },\n    {\n      \"tema\": \"ritmo e construção narrativa\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas críticas apontam que o ritmo do filme é lento em certos momentos, mas isso é justificado pela profundidade da narrativa e pela necessidade de explorar a complexidade dos personagens\"\n    },\n    {\n      \"tema\": \"ambiente e atmosfera\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a atmosfera fria e austera do ambiente do filme é vista como uma metáfora para a relação de casal e para o clima tenso que se forma durante o processo judicial\"\n    },\n    {\n      \"tema\": \"uso da música e som\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o uso da música, especialmente a versão instrumental de 'P.I.M.P.', é elogiado por criar tensão e reforçar a atmosfera dramática do filme\"\n    },\n    {\n      \"tema\": \"crítica ao sistema judicial\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas reviews mencionam a crítica ao sistema judicial francês, destacando a complexidade e a ambiguidade das decisões tomadas durante o processo\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas destacam a profundidade emocional e a complexidade da narrativa, elogiando a atuação dos protagonistas e a construção de personagens, mesmo reconhecendo algumas limitações no ritmo do filme\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 152.11,
+   "leitura_prompt_s": 9.069,
+   "geracao_s": 140.816,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5898,
+   "eval_count": 657
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

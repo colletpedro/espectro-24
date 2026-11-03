@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "aftersun",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6045,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "fce8f5cb5af415af1173c7f5fc96800fd7bde7bce109172acf69df4ccc84c085",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:29:17+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "ritmo lento",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam que o ritmo da obra é muito devagar, com uma narrativa que parece prolongar a experiência de um dia em uma estação, sem oferecer uma trama clara ou eventos marcantes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "fotografia e estética",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria dos críticos elogia a fotografia e o aspecto visual da obra, reconhecendo que o filme possui uma estética envolvente, com cenas que destacam a beleza de momentos simples e cotidianos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relacionamento entre os personagens",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como uma representação do vínculo entre um pai e uma filha, com críticas que apontam que a relação é apresentada de forma natural e emocional, embora com certa dificuldade em transmitir o impacto completo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiguidade e interpretação",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos mencionam que a obra depende de uma interpretação subjetiva do espectador, com elementos que podem ser entendidos de diferentes formas, o que gera uma reflexão pessoal sobre a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "espera por emoção",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que expressam frustração com o fato de o filme não entregar emoção de imediato, exigindo que o espectador se envolva mais profundamente para sentir o impacto da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "sugestão de reexperiência",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos mencionam que o filme pode ser melhor compreendido em uma reexperiência posterior, sugerindo que a primeira vez de assistir pode não revelar todos os significados da obra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a beleza visual e a narrativa contemplativa do filme, mas também apontam que o ritmo lento e a ambiguidade da trama podem dificultar a conexão emocional com o espectador.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 162.9,
+ "memoria": {
+  "ram_usada_gb": 9.83,
+  "ram_livre_min_gb": 5.36,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"ritmo lento\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam que o ritmo da obra é muito devagar, com uma narrativa que parece prolongar a experiência de um dia em uma estação, sem oferecer uma trama clara ou eventos marcantes.\"\n    },\n    {\n      \"tema\": \"fotografia e estética\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria dos críticos elogia a fotografia e o aspecto visual da obra, reconhecendo que o filme possui uma estética envolvente, com cenas que destacam a beleza de momentos simples e cotidianos.\"\n    },\n    {\n      \"tema\": \"relacionamento entre os personagens\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como uma representação do vínculo entre um pai e uma filha, com críticas que apontam que a relação é apresentada de forma natural e emocional, embora com certa dificuldade em transmitir o impacto completo.\"\n    },\n    {\n      \"tema\": \"ambiguidade e interpretação\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos mencionam que a obra depende de uma interpretação subjetiva do espectador, com elementos que podem ser entendidos de diferentes formas, o que gera uma reflexão pessoal sobre a narrativa.\"\n    },\n    {\n      \"tema\": \"espera por emoção\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que expressam frustração com o fato de o filme não entregar emoção de imediato, exigindo que o espectador se envolva mais profundamente para sentir o impacto da narrativa.\"\n    },\n    {\n      \"tema\": \"sugestão de reexperiência\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos mencionam que o filme pode ser melhor compreendido em uma reexperiência posterior, sugerindo que a primeira vez de assistir pode não revelar todos os significados da obra.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a beleza visual e a narrativa contemplativa do filme, mas também apontam que o ritmo lento e a ambiguidade da trama podem dificultar a conexão emocional com o espectador.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 162.95,
+   "leitura_prompt_s": 9.253,
+   "geracao_s": 151.392,
+   "carga_s": 0.067,
+   "prompt_eval_count": 6045,
+   "eval_count": 701
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "shutter-island",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4896,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "fb46651cd664d8b04d2da9d5fd14398c0b2b747393515a4bdd1e6a0add940b4a",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:15:52+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "atmosfera tensa e imersiva",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a capacidade do filme de criar uma atmosfera assustadora e envolvente, com elementos como som, música e cenário contribuindo para uma sensação de isolamento e insegurança.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "construção do enredo e reviravoltas",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas elogiam a forma como o filme apresenta uma estrutura narrativa complexa, com revelações que mudam a interpretação dos eventos anteriores, mantendo o espectador em suspense.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuação e direção",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Leonardo DiCaprio e a direção de Martin Scorsese são frequentemente citadas como elementos-chave que elevam a experiência cinematográfica do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional e reflexivo",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam que o filme consegue provocar uma forte reação emocional, deixando o espectador em dúvida sobre a realidade e incentivando reflexões sobre a natureza da sanidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "uso de elementos visuais e sonoros",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A cinematografia, a música e o uso de sons ambientais são destacados como ferramentas que reforçam a tensão psicológica e o clima de mistério do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "replay e reavaliação",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias críticas mencionam que o filme ganha nova camada de significado ao ser assistido novamente, com novas interpretações dos eventos e da estrutura narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a habilidade do filme em criar uma atmosfera imersiva e tensa, combinada com uma narrativa complexa que mantém o espectador em suspense e estimula reflexões sobre a realidade e a sanidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 143.2,
+ "memoria": {
+  "ram_usada_gb": 10.52,
+  "ram_livre_min_gb": 4.67,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"atmosfera tensa e imersiva\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a capacidade do filme de criar uma atmosfera assustadora e envolvente, com elementos como som, música e cenário contribuindo para uma sensação de isolamento e insegurança.\"\n    },\n    {\n      \"tema\": \"construção do enredo e reviravoltas\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam a forma como o filme apresenta uma estrutura narrativa complexa, com revelações que mudam a interpretação dos eventos anteriores, mantendo o espectador em suspense.\"\n    },\n    {\n      \"tema\": \"atuação e direção\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Leonardo DiCaprio e a direção de Martin Scorsese são frequentemente citadas como elementos-chave que elevam a experiência cinematográfica do filme.\"\n    },\n    {\n      \"tema\": \"impacto emocional e reflexivo\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam que o filme consegue provocar uma forte reação emocional, deixando o espectador em dúvida sobre a realidade e incentivando reflexões sobre a natureza da sanidade.\"\n    },\n    {\n      \"tema\": \"uso de elementos visuais e sonoros\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A cinematografia, a música e o uso de sons ambientais são destacados como ferramentas que reforçam a tensão psicológica e o clima de mistério do filme.\"\n    },\n    {\n      \"tema\": \"replay e reavaliação\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias críticas mencionam que o filme ganha nova camada de significado ao ser assistido novamente, com novas interpretações dos eventos e da estrutura narrativa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a habilidade do filme em criar uma atmosfera imersiva e tensa, combinada com uma narrativa complexa que mantém o espectador em suspense e estimula reflexões sobre a realidade e a sanidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 143.11,
+   "leitura_prompt_s": 7.485,
+   "geracao_s": 133.411,
+   "carga_s": 0.006,
+   "prompt_eval_count": 4896,
+   "eval_count": 673
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

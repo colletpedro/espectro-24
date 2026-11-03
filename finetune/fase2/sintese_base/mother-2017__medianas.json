@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "mother-2017",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5122,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8dbcbfe886740e44e8ac81cfedbdcea27828a566896ce9fa451d7a62f3e8700b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:44:51+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "simbolismo e metáfora",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a presença de símbolos e metáforas complexas, como a representação do ego e da religião, que geram uma interpretação ambígua e provocativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "tensão e ansiedade",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas mencionam a intensa tensão e o clima de ansiedade criado durante a narrativa, especialmente no início do filme, que mantém o espectador em constante alerta.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuação de jennifer lawrence",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jennifer Lawrence é frequentemente destacada como um dos pontos fortes, mesmo com o filme sendo criticado por sua complexidade narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "desenvolvimento narrativo descontínuo",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que apontam para uma narrativa que começa com potencial, mas se torna confusa e desorganizada, especialmente no segundo ato, dificultando a compreensão do espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional intenso",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews mencionam o impacto emocional intenso do filme, que gera desconforto e até choque, especialmente em sequências que envolvem violência e violência psicológica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiguidade e interpretação",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas apontam para a ambiguidade do filme, que exige uma interpretação cuidadosa e que muitos espectadores acham difícil de seguir sem ajuda adicional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews medianas destacam a complexidade e o impacto emocional do filme, mas também apontam para uma narrativa descontínua e ambígua que dificulta a compreensão do espectador.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 144.4,
+ "memoria": {
+  "ram_usada_gb": 12.88,
+  "ram_livre_min_gb": 2.31,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"simbolismo e metáfora\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a presença de símbolos e metáforas complexas, como a representação do ego e da religião, que geram uma interpretação ambígua e provocativa.\"\n    },\n    {\n      \"tema\": \"tensão e ansiedade\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas mencionam a intensa tensão e o clima de ansiedade criado durante a narrativa, especialmente no início do filme, que mantém o espectador em constante alerta.\"\n    },\n    {\n      \"tema\": \"atuação de jennifer lawrence\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jennifer Lawrence é frequentemente destacada como um dos pontos fortes, mesmo com o filme sendo criticado por sua complexidade narrativa.\"\n    },\n    {\n      \"tema\": \"desenvolvimento narrativo descontínuo\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que apontam para uma narrativa que começa com potencial, mas se torna confusa e desorganizada, especialmente no segundo ato, dificultando a compreensão do espectador.\"\n    },\n    {\n      \"tema\": \"impacto emocional intenso\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam o impacto emocional intenso do filme, que gera desconforto e até choque, especialmente em sequências que envolvem violência e violência psicológica.\"\n    },\n    {\n      \"tema\": \"ambiguidade e interpretação\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam para a ambiguidade do filme, que exige uma interpretação cuidadosa e que muitos espectadores acham difícil de seguir sem ajuda adicional.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas destacam a complexidade e o impacto emocional do filme, mas também apontam para uma narrativa descontínua e ambígua que dificulta a compreensão do espectador.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 144.38,
+   "leitura_prompt_s": 7.779,
+   "geracao_s": 134.412,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5122,
+   "eval_count": 661
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "portrait-of-a-lady-on-fire",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6510,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "16055b8c14f4f2f5eccf1c3e0b0d65c616b26211bd1948b376771318bb89e052",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.54,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.271484375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T11:10:34+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "cinematografia e estética",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a beleza visual do filme, comparando as cenas a pinturas e elogiando a composição dos quadros, a iluminação e a paleta de cores utilizadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relação entre as personagens",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas ressaltam a intensidade e a profundidade da relação entre as duas mulheres, com destaque para a forma como elas se observam e se conectam sem falar muito.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "silêncio e comunicação não verbal",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews destacam o uso do silêncio como ferramenta narrativa, que reforça a tensão e a proibição de expressar sentimentos de forma explícita.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática feminista e de liberdade",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews menciona a representação feminina e a liberdade das personagens, destacando a falta de figuras masculinas e a autodeterminação das mulheres.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas apontam para o forte impacto emocional do filme, com muitos espectadores relatando que ficaram profundamente afetados e com sentimentos duradouros.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "interpretação da lenda de Orfeu e Eurídice",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos relacionam a narrativa do filme à lenda de Orfeu e Eurídice, destacando a temática da perda e da memória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a cinematografia e a intensidade da relação entre as personagens, além de ressaltar o impacto emocional do filme e sua abordagem feminista.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 157.3,
+ "memoria": {
+  "ram_usada_gb": 11.2,
+  "ram_livre_min_gb": 3.99,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.62
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"cinematografia e estética\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a beleza visual do filme, comparando as cenas a pinturas e elogiando a composição dos quadros, a iluminação e a paleta de cores utilizadas.\"\n    },\n    {\n      \"tema\": \"relação entre as personagens\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas ressaltam a intensidade e a profundidade da relação entre as duas mulheres, com destaque para a forma como elas se observam e se conectam sem falar muito.\"\n    },\n    {\n      \"tema\": \"silêncio e comunicação não verbal\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews destacam o uso do silêncio como ferramenta narrativa, que reforça a tensão e a proibição de expressar sentimentos de forma explícita.\"\n    },\n    {\n      \"tema\": \"temática feminista e de liberdade\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews menciona a representação feminina e a liberdade das personagens, destacando a falta de figuras masculinas e a autodeterminação das mulheres.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam para o forte impacto emocional do filme, com muitos espectadores relatando que ficaram profundamente afetados e com sentimentos duradouros.\"\n    },\n    {\n      \"tema\": \"interpretação da lenda de Orfeu e Eurídice\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos relacionam a narrativa do filme à lenda de Orfeu e Eurídice, destacando a temática da perda e da memória.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a cinematografia e a intensidade da relação entre as personagens, além de ressaltar o impacto emocional do filme e sua abordagem feminista.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 157.31,
+   "leitura_prompt_s": 9.951,
+   "geracao_s": 145.124,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6510,
+   "eval_count": 643
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

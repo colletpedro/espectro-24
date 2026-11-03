@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "force-majeure-2014",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5121,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "1b59c440f77073526517e4e3f4443406ba41c9a02fa151913498dc4919b4be27",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:35:46+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "insegurança masculina",
+    "mencoes_aproximadas": 32,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "as reviews destacam a análise crítica da fragilidade da identidade masculina, especialmente em situações de crise, onde os personagens são desafiados a confrontar seus instintos e limites",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "silêncios e tensão",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a construção do clima de tensão é alcançada por meio de silêncios e interações que revelam o desconforto e a complexidade das relações humanas",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "cinematografia e ritmo",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o ritmo lento e a cinematografia que envolve os personagens criam uma sensação de imersão, reforçando a atmosfera de isolamento e reflexão",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "dramatização de relações familiares",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a dinâmica familiar é explorada de forma intensa, com momentos de conflito e reavaliação que questionam normas sociais e expectativas",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "comparação com outras obras",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "algumas reviews mencionam a comparação com outras obras do diretor, destacando a evolução de seu estilo e a profundidade temática",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "conforto e desconforto",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o filme equilibra momentos de conforto com situações que geram desconforto, explorando a dualidade entre o social e o instintivo",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews positivas destacam a profundidade temática e a habilidade do filme em provocar reflexão sobre identidade, relações e normas sociais, com uma abordagem que combina tensão e humor.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 136.4,
+ "memoria": {
+  "ram_usada_gb": 11.61,
+  "ram_livre_min_gb": 3.58,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"insegurança masculina\",\n      \"mencoes_aproximadas\": 32,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as reviews destacam a análise crítica da fragilidade da identidade masculina, especialmente em situações de crise, onde os personagens são desafiados a confrontar seus instintos e limites\"\n    },\n    {\n      \"tema\": \"silêncios e tensão\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a construção do clima de tensão é alcançada por meio de silêncios e interações que revelam o desconforto e a complexidade das relações humanas\"\n    },\n    {\n      \"tema\": \"cinematografia e ritmo\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o ritmo lento e a cinematografia que envolve os personagens criam uma sensação de imersão, reforçando a atmosfera de isolamento e reflexão\"\n    },\n    {\n      \"tema\": \"dramatização de relações familiares\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a dinâmica familiar é explorada de forma intensa, com momentos de conflito e reavaliação que questionam normas sociais e expectativas\"\n    },\n    {\n      \"tema\": \"comparação com outras obras\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas reviews mencionam a comparação com outras obras do diretor, destacando a evolução de seu estilo e a profundidade temática\"\n    },\n    {\n      \"tema\": \"conforto e desconforto\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o filme equilibra momentos de conforto com situações que geram desconforto, explorando a dualidade entre o social e o instintivo\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas destacam a profundidade temática e a habilidade do filme em provocar reflexão sobre identidade, relações e normas sociais, com uma abordagem que combina tensão e humor.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 136.2,
+   "leitura_prompt_s": 7.638,
+   "geracao_s": 126.364,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5121,
+   "eval_count": 621
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

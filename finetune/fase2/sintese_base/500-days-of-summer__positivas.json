@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "500-days-of-summer",
+ "bucket": "positivas",
+ "num_ctx": 31744,
+ "tokens_prompt_plano": 25546,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "3e3936b2f6b2653811aa8f07aaf849ba0dc92919d506b7aaf6a438757a3b4eca",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.57,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T12:31:05+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Idealização e expectativas",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a forma como os personagens idealizam a relação, especialmente Tom, que cria uma versão da Summer que não corresponde à realidade, enquanto ela mantém limites claros sobre o que deseja.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Relação assimétrica e desentendidos",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews apontam a diferença entre a percepção de Tom e Summer sobre a relação, com Tom acreditando que ela corresponde às suas expectativas, enquanto ela insiste em manter sua autonomia e clareza sobre seus desejos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Narrativa não linear e memória",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam a estrutura narrativa fragmentada do filme, que reflete a forma como a memória e a percepção de Tom são organizadas ao longo do tempo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Apropriação de sentimentos e limites",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há crítica sobre a maneira como Tom apropria os sentimentos de Summer, ignorando suas limites e agradando-se com uma versão idealizada dela.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Apropriação de sentimentos e limites",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a ambiguidade emocional de Summer, que, embora tenha limites claros, também demonstra dificuldade em lidar com o impacto de sua própria proximidade e ações.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Estética e trilha sonora",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A estética do filme e a trilha sonora são citadas como elementos que contribuem para a atmosfera e a narrativa, criando uma experiência sensorial envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a complexidade da relação entre os personagens, a narrativa fragmentada e a forma como sentimentos são idealizados e interpretados de maneira subjetiva.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 495.4,
+ "memoria": {
+  "ram_usada_gb": 10.19,
+  "ram_livre_min_gb": 5.0,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.57
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Idealização e expectativas\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a forma como os personagens idealizam a relação, especialmente Tom, que cria uma versão da Summer que não corresponde à realidade, enquanto ela mantém limites claros sobre o que deseja.\"\n    },\n    {\n      \"tema\": \"Relação assimétrica e desentendidos\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews apontam a diferença entre a percepção de Tom e Summer sobre a relação, com Tom acreditando que ela corresponde às suas expectativas, enquanto ela insiste em manter sua autonomia e clareza sobre seus desejos.\"\n    },\n    {\n      \"tema\": \"Narrativa não linear e memória\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam a estrutura narrativa fragmentada do filme, que reflete a forma como a memória e a percepção de Tom são organizadas ao longo do tempo.\"\n    },\n    {\n      \"tema\": \"Apropriação de sentimentos e limites\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há crítica sobre a maneira como Tom apropria os sentimentos de Summer, ignorando suas limites e agradando-se com uma versão idealizada dela.\"\n    },\n    {\n      \"tema\": \"Apropriação de sentimentos e limites\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a ambiguidade emocional de Summer, que, embora tenha limites claros, também demonstra dificuldade em lidar com o impacto de sua própria proximidade e ações.\"\n    },\n    {\n      \"tema\": \"Estética e trilha sonora\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estética do filme e a trilha sonora são citadas como elementos que contribuem para a atmosfera e a narrativa, criando uma experiência sensorial envolvente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a complexidade da relação entre os personagens, a narrativa fragmentada e a forma como sentimentos são idealizados e interpretados de maneira subjetiva.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 495.39,
+   "leitura_prompt_s": 48.988,
+   "geracao_s": 439.761,
+   "carga_s": 4.472,
+   "prompt_eval_count": 25546,
+   "eval_count": 669
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

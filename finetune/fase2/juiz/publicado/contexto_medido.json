@@ -1,0 +1,62 @@
+{
+ "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "medidos": [
+  {
+   "id_par": "publicado|the-second-mother|medianas|5|viewing:1459832442",
+   "chars_prompt": 8064,
+   "prompt_eval_count": 2077
+  },
+  {
+   "id_par": "publicado|burning-2018|positivas|5|viewing:1488335771",
+   "chars_prompt": 8045,
+   "prompt_eval_count": 2059
+  },
+  {
+   "id_par": "publicado|the-prestige|positivas|3|viewing:1497632323",
+   "chars_prompt": 7514,
+   "prompt_eval_count": 1798
+  },
+  {
+   "id_par": "publicado|mother-2017|negativas|3|viewing:1421122067",
+   "chars_prompt": 7266,
+   "prompt_eval_count": 1753
+  },
+  {
+   "id_par": "publicado|aftersun|negativas|3|viewing:1418189165",
+   "chars_prompt": 7003,
+   "prompt_eval_count": 1768
+  },
+  {
+   "id_par": "publicado|burning-2018|positivas|3|viewing:1388371929",
+   "chars_prompt": 6974,
+   "prompt_eval_count": 1729
+  },
+  {
+   "id_par": "publicado|dune-2021|medianas|4|viewing:196256506",
+   "chars_prompt": 6918,
+   "prompt_eval_count": 1828
+  },
+  {
+   "id_par": "publicado|guillermo-del-toros-pinocchio|negativas|1|viewing:1305433599",
+   "chars_prompt": 6916,
+   "prompt_eval_count": 1708
+  },
+  {
+   "id_par": "publicado|spider-man-across-the-spider-verse|medianas|0|viewing:395327855",
+   "chars_prompt": 6817,
+   "prompt_eval_count": 1670
+  },
+  {
+   "id_par": "publicado|the-battle-of-algiers|negativas|5|viewing:1160262134",
+   "chars_prompt": 6799,
+   "prompt_eval_count": 1616
+  }
+ ],
+ "max_prompt_tokens": 2077,
+ "num_predict": 1024,
+ "precisa": 3101,
+ "num_ctx": 4096,
+ "folga": 995,
+ "cabe": true,
+ "menor_multiplo_512": 3584
+}

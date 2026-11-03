@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-substance",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5033,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "818b1306003bbd704c6ba658fb2605ef91c39c0ca3441092c98ecd6695efc266",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:20:21+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "gore excessivo",
+    "mencoes_aproximadas": 26,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a presença constante de elementos gore, que são descritos como exagerados e sem propósito, causando desconforto e repulsa ao espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "pornografia e exploração corporal",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews criticam o uso repetitivo de cenas de nudez e exploração do corpo feminino, considerando isso como uma estratégia de entretenimento sem profundidade ou significado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "roteiro desorganizado e sem foco",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é visto como confuso, sem direção e repetitivo, com uma narrativa que não consegue manter o interesse do público ao longo da duração do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética excessiva e cansativa",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A estética do filme é considerada excessiva, com uma abordagem visual que, embora chamativa, se torna desgastante e pouco original.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de subtextos e profundidade",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews apontam a ausência de subtextos e de uma abordagem mais profunda sobre os temas abordados, que são considerados superficiais e pouco elaborados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "duração excessiva e cansativa",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A duração do filme é criticada por ser longa demais, com momentos que não contribuem para a narrativa e que deixam o espectador desinteressado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews negativas destacam uma crítica à excessiva dependência de elementos gore e pornografia, além de uma narrativa confusa e cansativa que não consegue equilibrar a estética com a mensagem.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 136.3,
+ "memoria": {
+  "ram_usada_gb": 11.4,
+  "ram_livre_min_gb": 3.79,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"gore excessivo\",\n      \"mencoes_aproximadas\": 26,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a presença constante de elementos gore, que são descritos como exagerados e sem propósito, causando desconforto e repulsa ao espectador.\"\n    },\n    {\n      \"tema\": \"pornografia e exploração corporal\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews criticam o uso repetitivo de cenas de nudez e exploração do corpo feminino, considerando isso como uma estratégia de entretenimento sem profundidade ou significado.\"\n    },\n    {\n      \"tema\": \"roteiro desorganizado e sem foco\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é visto como confuso, sem direção e repetitivo, com uma narrativa que não consegue manter o interesse do público ao longo da duração do filme.\"\n    },\n    {\n      \"tema\": \"estética excessiva e cansativa\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estética do filme é considerada excessiva, com uma abordagem visual que, embora chamativa, se torna desgastante e pouco original.\"\n    },\n    {\n      \"tema\": \"falta de subtextos e profundidade\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam a ausência de subtextos e de uma abordagem mais profunda sobre os temas abordados, que são considerados superficiais e pouco elaborados.\"\n    },\n    {\n      \"tema\": \"duração excessiva e cansativa\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A duração do filme é criticada por ser longa demais, com momentos que não contribuem para a narrativa e que deixam o espectador desinteressado.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas destacam uma crítica à excessiva dependência de elementos gore e pornografia, além de uma narrativa confusa e cansativa que não consegue equilibrar a estética com a mensagem.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 136.33,
+   "leitura_prompt_s": 7.663,
+   "geracao_s": 126.421,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5033,
+   "eval_count": 636
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

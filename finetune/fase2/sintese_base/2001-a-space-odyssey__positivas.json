@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "2001-a-space-odyssey",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7380,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "e6634598bee7e70ef9eb9c553147b333b7efdff9d3dbdde0cfc731e8c79ace01",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.86,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T11:29:22+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "visão visionária e inovadora",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a originalidade e a antecipação de conceitos futuristas, como a representação de viagens espaciais e inteligência artificial, que parecem avançadas para a época em que o filme foi produzido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética e fotografia impressionantes",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas elogiam a qualidade técnica do filme, especialmente a fotografia, os efeitos visuais e a maneira como o espaço é representado, considerados inacreditáveis para o período em que foi feito.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "construção narrativa e ambiguidade",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A estrutura do filme é descrita como complexa e envolta em mistério, com uma narrativa que deixa espaço para interpretações, especialmente no final, o que gera fascínio e reflexão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto na cultura e no cinema",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews menciona o papel do filme como precursor e influenciador da cinematografia moderna, especialmente no gênero sci-fi, com efeitos visuais e conceitos que se tornaram fundamentais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "experiência sensorial e atmosférica",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas ressaltam a forma como o filme envolve o espectador em uma experiência sensorial, com uma atmosfera de suspense e uma narrativa que se torna quase meditativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e construção do filme",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos mencionam o ritmo lento e a construção do filme como elementos que, embora desafiadores, contribuem para a imersão e a reflexão sobre os temas apresentados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a originalidade, a estética impressionante e o impacto do filme na cinematografia, mesmo que reconheçam a complexidade e a ambiguidade de sua narrativa.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 194.9,
+ "memoria": {
+  "ram_usada_gb": 9.69,
+  "ram_livre_min_gb": 5.5,
+  "ws_ollama_gb": 0.16,
+  "vram_gb": 2.61
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"visão visionária e inovadora\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a originalidade e a antecipação de conceitos futuristas, como a representação de viagens espaciais e inteligência artificial, que parecem avançadas para a época em que o filme foi produzido.\"\n    },\n    {\n      \"tema\": \"estética e fotografia impressionantes\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam a qualidade técnica do filme, especialmente a fotografia, os efeitos visuais e a maneira como o espaço é representado, considerados inacreditáveis para o período em que foi feito.\"\n    },\n    {\n      \"tema\": \"construção narrativa e ambiguidade\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estrutura do filme é descrita como complexa e envolta em mistério, com uma narrativa que deixa espaço para interpretações, especialmente no final, o que gera fascínio e reflexão.\"\n    },\n    {\n      \"tema\": \"impacto na cultura e no cinema\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews menciona o papel do filme como precursor e influenciador da cinematografia moderna, especialmente no gênero sci-fi, com efeitos visuais e conceitos que se tornaram fundamentais.\"\n    },\n    {\n      \"tema\": \"experiência sensorial e atmosférica\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas ressaltam a forma como o filme envolve o espectador em uma experiência sensorial, com uma atmosfera de suspense e uma narrativa que se torna quase meditativa.\"\n    },\n    {\n      \"tema\": \"ritmo e construção do filme\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos mencionam o ritmo lento e a construção do filme como elementos que, embora desafiadores, contribuem para a imersão e a reflexão sobre os temas apresentados.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a originalidade, a estética impressionante e o impacto do filme na cinematografia, mesmo que reconheçam a complexidade e a ambiguidade de sua narrativa.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 194.89,
+   "leitura_prompt_s": 11.78,
+   "geracao_s": 170.57,
+   "carga_s": 10.481,
+   "prompt_eval_count": 7380,
+   "eval_count": 689
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

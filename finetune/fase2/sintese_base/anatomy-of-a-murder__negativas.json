@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-murder",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5622,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "515d60765787ebfe192ae03d4727de2169d8b79bd4517f64afcc048bb9f986b1",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:39:26+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "pobreza de roteiro",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a falta de originalidade e profundidade no roteiro, que é visto como fraco e sem propósito, com uma narrativa que não consegue envolver o espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de tensão e desenvolvimento",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews apontam que o filme não consegue gerar tensão ou interesse, com um ritmo lento e uma trama que não se desenvolve de forma envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estereótipos e misoginia",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a presença de estereótipos e uma abordagem que, segundo algumas reviews, traz uma visão misóginica da mulher, especialmente em relação a temas como violência e agressão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "excesso de duração",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O tempo de duração é considerado excessivo e desgastante, com o filme sendo visto como muito longo para o conteúdo oferecido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações mecânicas",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As performances são descritas como pouco convincentes e mecânicas, com personagens que não se desenvolvem de forma satisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de impacto emocional",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme não consegue gerar empatia ou impacto emocional, com personagens que não são compreendidos ou envolventes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas apontam para uma narrativa fraca, excesso de duração, ausência de tensão e uma abordagem que gera insatisfação com o ritmo e o desenvolvimento da trama.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 141.7,
+ "memoria": {
+  "ram_usada_gb": 11.72,
+  "ram_livre_min_gb": 3.47,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"pobreza de roteiro\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a falta de originalidade e profundidade no roteiro, que é visto como fraco e sem propósito, com uma narrativa que não consegue envolver o espectador.\"\n    },\n    {\n      \"tema\": \"falta de tensão e desenvolvimento\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam que o filme não consegue gerar tensão ou interesse, com um ritmo lento e uma trama que não se desenvolve de forma envolvente.\"\n    },\n    {\n      \"tema\": \"estereótipos e misoginia\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a presença de estereótipos e uma abordagem que, segundo algumas reviews, traz uma visão misóginica da mulher, especialmente em relação a temas como violência e agressão.\"\n    },\n    {\n      \"tema\": \"excesso de duração\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O tempo de duração é considerado excessivo e desgastante, com o filme sendo visto como muito longo para o conteúdo oferecido.\"\n    },\n    {\n      \"tema\": \"atuações mecânicas\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As performances são descritas como pouco convincentes e mecânicas, com personagens que não se desenvolvem de forma satisfatória.\"\n    },\n    {\n      \"tema\": \"falta de impacto emocional\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme não consegue gerar empatia ou impacto emocional, com personagens que não são compreendidos ou envolventes.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas apontam para uma narrativa fraca, excesso de duração, ausência de tensão e uma abordagem que gera insatisfação com o ritmo e o desenvolvimento da trama.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 141.62,
+   "leitura_prompt_s": 8.532,
+   "geracao_s": 130.851,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5622,
+   "eval_count": 628
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

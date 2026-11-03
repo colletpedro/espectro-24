@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-murder",
+ "bucket": "positivas",
+ "num_ctx": 13312,
+ "tokens_prompt_plano": 8791,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "4b17de35dd2f22cc504ad88199768ac2e879289b8543d3fa1081ae76acf75595",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.57,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T12:08:26+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "julgamento e justiça",
+    "mencoes_aproximadas": 40,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a complexidade do sistema judicial e como ele é influenciado por narrativas e emoções, não apenas por evidências objetivas.",
+    "mencoes_clampadas": true,
+    "mencoes_valor_original": 111,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "performance dos atores",
+    "mencoes_aproximadas": 40,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jimmy Stewart é elogiada por sua naturalidade e capacidade de transmitir nuances emocionais, especialmente em debates jurídicos.",
+    "mencoes_clampadas": true,
+    "mencoes_valor_original": 68,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estrutura e ritmo",
+    "mencoes_aproximadas": 40,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A narrativa é descrita como envolvente, com um ritmo que mantém o espectador engajado mesmo em partes longas.",
+    "mencoes_clampadas": true,
+    "mencoes_valor_original": 44,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "discussão sobre gênero e poder",
+    "mencoes_aproximadas": 38,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas abordam como a representação de mulheres e gênero influencia o julgamento e a percepção de justiça.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiguidade e interpretação",
+    "mencoes_aproximadas": 33,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A falta de respostas claras e a ambiguidade do caso são apontadas como pontos fortes, que mantêm o espectador em suspense.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trabalho do diretor",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Otto Preminger é elogiado por sua direção precisa e pela forma como consegue equilibrar drama e realismo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam o envolvimento do espectador com o processo judicial, a complexidade dos temas abordados e a qualidade da atuação dos protagonistas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 179.7,
+ "memoria": {
+  "ram_usada_gb": 10.43,
+  "ram_livre_min_gb": 4.76,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.52
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"julgamento e justiça\",\n      \"mencoes_aproximadas\": 111,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a complexidade do sistema judicial e como ele é influenciado por narrativas e emoções, não apenas por evidências objetivas.\"\n    },\n    {\n      \"tema\": \"performance dos atores\",\n      \"mencoes_aproximadas\": 68,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jimmy Stewart é elogiada por sua naturalidade e capacidade de transmitir nuances emocionais, especialmente em debates jurídicos.\"\n    },\n    {\n      \"tema\": \"estrutura e ritmo\",\n      \"mencoes_aproximadas\": 44,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A narrativa é descrita como envolvente, com um ritmo que mantém o espectador engajado mesmo em partes longas.\"\n    },\n    {\n      \"tema\": \"discussão sobre gênero e poder\",\n      \"mencoes_aproximadas\": 38,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas abordam como a representação de mulheres e gênero influencia o julgamento e a percepção de justiça.\"\n    },\n    {\n      \"tema\": \"ambiguidade e interpretação\",\n      \"mencoes_aproximadas\": 33,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A falta de respostas claras e a ambiguidade do caso são apontadas como pontos fortes, que mantêm o espectador em suspense.\"\n    },\n    {\n      \"tema\": \"trabalho do diretor\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Otto Preminger é elogiado por sua direção precisa e pela forma como consegue equilibrar drama e realismo.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam o envolvimento do espectador com o processo judicial, a complexidade dos temas abordados e a qualidade da atuação dos protagonistas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 179.66,
+   "leitura_prompt_s": 16.483,
+   "geracao_s": 160.875,
+   "carga_s": 0.005,
+   "prompt_eval_count": 8791,
+   "eval_count": 575
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "gladiator-2000",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5751,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "abde002176f9686db0c71a8b3b27d88861ea2adc367f6d09ab3f19a41445261f",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.77,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:57:04+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "fotografia e estética",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das críticas destaca a fotografia e a estética do filme, reconhecendo a grandiosidade visual e o cuidado com os figurinos e cenários.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "roteiro e desenvolvimento",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é visto como previsível e, em alguns casos, pouco envolvente, com críticas apontando que a narrativa pode ser lenta e pouco original.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ação e espetáculo",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As cenas de ação são elogiadas por sua grandiosidade, mas algumas críticas apontam que elas podem ser excessivamente repetitivas ou mal filmadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e personagens",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são reconhecidas, especialmente de Russell Crowe e Joaquin Phoenix, mas há críticas que apontam que alguns personagens não são bem desenvolvidos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática e conteúdo",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos destacam a temática histórica do filme, reconhecendo sua abordagem do Império Romano, embora alguns considerem que a narrativa pode ser simplista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "esperança e entretenimento",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Apesar das críticas, muitos reconhecem o filme como entretenimento, com momentos memoráveis e uma experiência visual satisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews medianas apontam que o filme é visualmente impressionante e possui momentos de ação bem executados, mas algumas críticas destacam que o roteiro pode ser previsível e que a narrativa não é totalmente envolvente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 146.8,
+ "memoria": {
+  "ram_usada_gb": 10.73,
+  "ram_livre_min_gb": 4.46,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"fotografia e estética\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das críticas destaca a fotografia e a estética do filme, reconhecendo a grandiosidade visual e o cuidado com os figurinos e cenários.\"\n    },\n    {\n      \"tema\": \"roteiro e desenvolvimento\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é visto como previsível e, em alguns casos, pouco envolvente, com críticas apontando que a narrativa pode ser lenta e pouco original.\"\n    },\n    {\n      \"tema\": \"ação e espetáculo\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As cenas de ação são elogiadas por sua grandiosidade, mas algumas críticas apontam que elas podem ser excessivamente repetitivas ou mal filmadas.\"\n    },\n    {\n      \"tema\": \"atuações e personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são reconhecidas, especialmente de Russell Crowe e Joaquin Phoenix, mas há críticas que apontam que alguns personagens não são bem desenvolvidos.\"\n    },\n    {\n      \"tema\": \"temática e conteúdo\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos destacam a temática histórica do filme, reconhecendo sua abordagem do Império Romano, embora alguns considerem que a narrativa pode ser simplista.\"\n    },\n    {\n      \"tema\": \"esperança e entretenimento\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Apesar das críticas, muitos reconhecem o filme como entretenimento, com momentos memoráveis e uma experiência visual satisfatória.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas apontam que o filme é visualmente impressionante e possui momentos de ação bem executados, mas algumas críticas destacam que o roteiro pode ser previsível e que a narrativa não é totalmente envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 146.55,
+   "leitura_prompt_s": 8.851,
+   "geracao_s": 135.449,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5751,
+   "eval_count": 629
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

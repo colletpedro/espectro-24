@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "wicked-2024",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4582,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "dd81b73c2c84141f6d9b71b9a43710871c7f80804ce52cc020a5d0c672566c6b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:24:34+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "cenas musicais",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "As reviews destacam a qualidade e o impacto das cenas musicais, com elogios à forma como as canções são integradas à narrativa e à expressão dos personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "A atuação dos protagonistas é elogiada, especialmente por sua capacidade de transmitir emoção e profundidade, com destaque para a performance de Cynthia Erivo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "visual e estética",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "A estética visual do filme é apreciada, com menções positivas à coloração, ao design de cenários e à atmosfera criada, especialmente em momentos como a cidade esmeralda.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relação entre personagens",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "A dinâmica entre os personagens é vista como envolvente, com destaque para a amizade e o desenvolvimento emocional entre os protagonistas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e narrativa",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "O ritmo da narrativa é considerado envolvente, com críticas que elogiam a forma como o filme equilibra ação e desenvolvimento dos personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 37,
+    "exemplo_parafraseado": "As reviews destacam o impacto emocional do filme, com menções a momentos que geram forte conexão e reações intensas dos espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a qualidade das cenas musicais, a atuação dos protagonistas e a estética visual do filme, além de elogios ao ritmo da narrativa e ao impacto emocional.",
+  "n_validas": 37,
+  "n_analisadas": 37,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 124.5,
+ "memoria": {
+  "ram_usada_gb": 12.11,
+  "ram_livre_min_gb": 3.08,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"cenas musicais\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"As reviews destacam a qualidade e o impacto das cenas musicais, com elogios à forma como as canções são integradas à narrativa e à expressão dos personagens.\"\n    },\n    {\n      \"tema\": \"atuações\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"A atuação dos protagonistas é elogiada, especialmente por sua capacidade de transmitir emoção e profundidade, com destaque para a performance de Cynthia Erivo.\"\n    },\n    {\n      \"tema\": \"visual e estética\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"A estética visual do filme é apreciada, com menções positivas à coloração, ao design de cenários e à atmosfera criada, especialmente em momentos como a cidade esmeralda.\"\n    },\n    {\n      \"tema\": \"relação entre personagens\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"A dinâmica entre os personagens é vista como envolvente, com destaque para a amizade e o desenvolvimento emocional entre os protagonistas.\"\n    },\n    {\n      \"tema\": \"ritmo e narrativa\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"O ritmo da narrativa é considerado envolvente, com críticas que elogiam a forma como o filme equilibra ação e desenvolvimento dos personagens.\"\n    },\n    {\n      \"tema\": \"impacto emocional\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 37,\n      \"exemplo_parafraseado\": \"As reviews destacam o impacto emocional do filme, com menções a momentos que geram forte conexão e reações intensas dos espectadores.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a qualidade das cenas musicais, a atuação dos protagonistas e a estética visual do filme, além de elogios ao ritmo da narrativa e ao impacto emocional.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 124.5,
+   "leitura_prompt_s": 6.883,
+   "geracao_s": 115.406,
+   "carga_s": 0.004,
+   "prompt_eval_count": 4582,
+   "eval_count": 608
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

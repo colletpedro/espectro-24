@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5369,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "7d0a5cdb95a1dc7702796ed24e308ff8ff39265cc33a4381ed0ef4afb607a174",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:31:06+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "humor satírico",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "as reviews destacam o uso do humor como ferramenta para criticar políticas e ideologias, com destaque para a sátira de figuras políticas e o absurdo da situação apresentada",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "crítica política",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a maioria das reviews aponta a intenção de criticar a imbecilidade política e a falta de coesão nas decisões governamentais, especialmente no contexto da Guerra Fria",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "performances dos atores",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "as críticas elogiam as performances dos atores, especialmente a habilidade de Peter Sellers em desempenhar múltiplos papéis com naturalidade e graça",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética cinematográfica",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "algumas reviews destacam a qualidade visual da produção, com elogios à fotografia e à concepção de cenários que contribuem para a imersão no filme",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "absurdo e ironia",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a ironia e o absurdo da narrativa são citados como elementos que reforçam a crítica social e a comédia negra",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relevância histórica",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "algumas reviews ressaltam a atualidade do filme, comparando-o a temas contemporâneos como o uso de tecnologia e o medo de catástrofes globais",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews positivas destacam a habilidade de Kubrick em unir humor e crítica social, com elogios às performances dos atores e à construção absurda da narrativa.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 137.5,
+ "memoria": {
+  "ram_usada_gb": 10.69,
+  "ram_livre_min_gb": 4.5,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"humor satírico\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as reviews destacam o uso do humor como ferramenta para criticar políticas e ideologias, com destaque para a sátira de figuras políticas e o absurdo da situação apresentada\"\n    },\n    {\n      \"tema\": \"crítica política\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a maioria das reviews aponta a intenção de criticar a imbecilidade política e a falta de coesão nas decisões governamentais, especialmente no contexto da Guerra Fria\"\n    },\n    {\n      \"tema\": \"performances dos atores\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as críticas elogiam as performances dos atores, especialmente a habilidade de Peter Sellers em desempenhar múltiplos papéis com naturalidade e graça\"\n    },\n    {\n      \"tema\": \"estética cinematográfica\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas reviews destacam a qualidade visual da produção, com elogios à fotografia e à concepção de cenários que contribuem para a imersão no filme\"\n    },\n    {\n      \"tema\": \"absurdo e ironia\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a ironia e o absurdo da narrativa são citados como elementos que reforçam a crítica social e a comédia negra\"\n    },\n    {\n      \"tema\": \"relevância histórica\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"algumas reviews ressaltam a atualidade do filme, comparando-o a temas contemporâneos como o uso de tecnologia e o medo de catástrofes globais\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews positivas destacam a habilidade de Kubrick em unir humor e crítica social, com elogios às performances dos atores e à construção absurda da narrativa.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 137.53,
+   "leitura_prompt_s": 8.135,
+   "geracao_s": 127.174,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5369,
+   "eval_count": 610
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

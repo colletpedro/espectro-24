@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "joker-2019",
+ "bucket": "medianas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 4223,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "a08cc4d73ec998d610aabc4b618de25c29c9a23f36a8b4fd4e02b57b3e994fd4",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:19:14+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "interpretação do personagem",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews destaca a atuação de Joaquin Phoenix como um ponto positivo, com elogios à intensidade e autenticidade com que o personagem é vivido, mas também menciona que a interpretação não consegue superar a falta de profundidade na narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "narrativa e profundidade",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews apontam que a narrativa do filme carece de consistência e não consegue desenvolver o personagem de forma satisfatória, muitas vezes parecendo frágil e sem direção clara.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática da saúde mental",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que ressaltam a abordagem da saúde mental como um tema central, mas muitas consideram que o filme não consegue tratar da questão com subtileza ou profundidade adequada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estilo e atmosfera",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O estilo sombrio e a atmosfera tensa são mencionados como elementos positivos, mas também são associados à monotonia e à falta de desenvolvimento narrativo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "comparação com outras obras",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos comparam o filme a outras obras, como Taxi Driver e The King of Comedy, destacando que ele não consegue se destacar como uma inovação dentro do gênero.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "esperança e crítica social",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A crítica social é abordada de forma geral, com alguns críticos mencionando a importância de temas como exclusão e desigualdade, mas considerando que o filme não consegue avançar muito nesse sentido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a atuação de Joaquin Phoenix como um ponto forte, mas criticam a narrativa por falta de profundidade e originalidade, além de mencionar a abordagem da saúde mental como um tema central, porém não bem explorado.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 137.4,
+ "memoria": {
+  "ram_usada_gb": 9.39,
+  "ram_livre_min_gb": 5.8,
+  "ws_ollama_gb": 0.23,
+  "vram_gb": 2.57
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"interpretação do personagem\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews destaca a atuação de Joaquin Phoenix como um ponto positivo, com elogios à intensidade e autenticidade com que o personagem é vivido, mas também menciona que a interpretação não consegue superar a falta de profundidade na narrativa.\"\n    },\n    {\n      \"tema\": \"narrativa e profundidade\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews apontam que a narrativa do filme carece de consistência e não consegue desenvolver o personagem de forma satisfatória, muitas vezes parecendo frágil e sem direção clara.\"\n    },\n    {\n      \"tema\": \"temática da saúde mental\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que ressaltam a abordagem da saúde mental como um tema central, mas muitas consideram que o filme não consegue tratar da questão com subtileza ou profundidade adequada.\"\n    },\n    {\n      \"tema\": \"estilo e atmosfera\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O estilo sombrio e a atmosfera tensa são mencionados como elementos positivos, mas também são associados à monotonia e à falta de desenvolvimento narrativo.\"\n    },\n    {\n      \"tema\": \"comparação com outras obras\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos comparam o filme a outras obras, como Taxi Driver e The King of Comedy, destacando que ele não consegue se destacar como uma inovação dentro do gênero.\"\n    },\n    {\n      \"tema\": \"esperança e crítica social\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A crítica social é abordada de forma geral, com alguns críticos mencionando a importância de temas como exclusão e desigualdade, mas considerando que o filme não consegue avançar muito nesse sentido.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a atuação de Joaquin Phoenix como um ponto forte, mas criticam a narrativa por falta de profundidade e originalidade, além de mencionar a abordagem da saúde mental como um tema central, porém não bem explorado.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 137.44,
+   "leitura_prompt_s": 6.393,
+   "geracao_s": 123.389,
+   "carga_s": 5.62,
+   "prompt_eval_count": 4223,
+   "eval_count": 689
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

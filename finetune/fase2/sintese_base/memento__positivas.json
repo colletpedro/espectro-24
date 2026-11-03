@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "memento",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5452,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "b0f683b6d1d8c26a7164294cfd940c82d88dda50c76f89dbd4d7d57cbefbcfcc",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.77,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:08:46+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "estrutura não linear",
+    "mencoes_aproximadas": 38,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a forma inusitada como a narrativa se desenrola, com o espectador sendo levado a refletir sobre a confusão e a lógica do enredo, criando uma experiência envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "confusão e desorientação",
+    "mencoes_aproximadas": 36,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das críticas menciona a complexidade do enredo, que exige do espectador uma certa dose de concentração e reflexão para acompanhar a narrativa, mesmo que a confusão seja parte da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e personagens",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A interpretação do protagonista e a construção de sua psicologia são elogiadas, com destaque para a forma como a atuação transmite sua luta interna e a construção de sua narrativa pessoal.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática filosófica",
+    "mencoes_aproximadas": 26,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A crítica ressalta a reflexão sobre a memória, a mentira e a busca por sentido, destacando a forma como a narrativa questiona a natureza da realidade e da identidade do personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "repetição e ciclos",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A ideia de que o personagem se enquadra em um ciclo sem fim é comum nas avaliações, com críticas que apreciam a forma como o filme explora essa ideia de repetição e desespero.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "satisfação com o desfecho",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas elogiam o desfecho do filme, que é visto como uma revelação sutil e impactante, mesmo que não seja o mais tradicional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a estrutura não linear como um elemento central da experiência, combinando confusão e desorientação com uma reflexão filosófica sobre a memória e a realidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 154.4,
+ "memoria": {
+  "ram_usada_gb": 12.84,
+  "ram_livre_min_gb": 2.36,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"estrutura não linear\",\n      \"mencoes_aproximadas\": 38,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a forma inusitada como a narrativa se desenrola, com o espectador sendo levado a refletir sobre a confusão e a lógica do enredo, criando uma experiência envolvente.\"\n    },\n    {\n      \"tema\": \"confusão e desorientação\",\n      \"mencoes_aproximadas\": 36,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das críticas menciona a complexidade do enredo, que exige do espectador uma certa dose de concentração e reflexão para acompanhar a narrativa, mesmo que a confusão seja parte da experiência.\"\n    },\n    {\n      \"tema\": \"atuações e personagens\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A interpretação do protagonista e a construção de sua psicologia são elogiadas, com destaque para a forma como a atuação transmite sua luta interna e a construção de sua narrativa pessoal.\"\n    },\n    {\n      \"tema\": \"temática filosófica\",\n      \"mencoes_aproximadas\": 26,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A crítica ressalta a reflexão sobre a memória, a mentira e a busca por sentido, destacando a forma como a narrativa questiona a natureza da realidade e da identidade do personagem.\"\n    },\n    {\n      \"tema\": \"repetição e ciclos\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A ideia de que o personagem se enquadra em um ciclo sem fim é comum nas avaliações, com críticas que apreciam a forma como o filme explora essa ideia de repetição e desespero.\"\n    },\n    {\n      \"tema\": \"satisfação com o desfecho\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam o desfecho do filme, que é visto como uma revelação sutil e impactante, mesmo que não seja o mais tradicional.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a estrutura não linear como um elemento central da experiência, combinando confusão e desorientação com uma reflexão filosófica sobre a memória e a realidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 154.45,
+   "leitura_prompt_s": 8.461,
+   "geracao_s": 143.736,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5452,
+   "eval_count": 679
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

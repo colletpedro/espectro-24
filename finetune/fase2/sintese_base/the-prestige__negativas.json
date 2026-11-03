@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-prestige",
+ "bucket": "negativas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7414,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "11e39403fe63c529254fbc5b9af6e3c42bc9f3e15505d271cd8ce90b2bbf958d",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.57,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T11:59:36+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "falta de profundidade nos personagens",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "os personagens são apresentados de forma superficial, sem desenvolvimento emocional ou motivações claras, o que torna difícil se interessar por suas ações",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "roteiro confuso e excessivamente explicativo",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o roteiro revela demais informações de antemão, deixando a narrativa previsível e sem mistério, o que desgosta os espectadores",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "excesso de diálogo e monótonia",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o filme é marcado por diálogos excessivos e repetitivos, que não contribuem para a tensão ou a narrativa, tornando o ritmo cansativo",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de coesão narrativa",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "a estrutura da história é fragmentada e pouco coesa, com eventos que não se conectam de forma natural, dificultando a compreensão",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "tratamento desrespeitoso das mulheres",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "as mulheres são frequentemente retratadas como ferramentas para os desejos dos protagonistas, sem desenvolvimento ou agência própria",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "repetição de temas e estilos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "o filme parece repetir padrões narrativos e estilísticos de outras obras de Nolan, gerando uma sensação de fórmula previsível e sem inovação",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews negativas destacam a falta de profundidade nos personagens, o roteiro excessivamente explicativo e a monotonia do ritmo, além de críticas ao tratamento das mulheres e à repetição de estilos narrativos.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 168.4,
+ "memoria": {
+  "ram_usada_gb": 11.45,
+  "ram_livre_min_gb": 3.74,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"falta de profundidade nos personagens\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"os personagens são apresentados de forma superficial, sem desenvolvimento emocional ou motivações claras, o que torna difícil se interessar por suas ações\"\n    },\n    {\n      \"tema\": \"roteiro confuso e excessivamente explicativo\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o roteiro revela demais informações de antemão, deixando a narrativa previsível e sem mistério, o que desgosta os espectadores\"\n    },\n    {\n      \"tema\": \"excesso de diálogo e monótonia\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o filme é marcado por diálogos excessivos e repetitivos, que não contribuem para a tensão ou a narrativa, tornando o ritmo cansativo\"\n    },\n    {\n      \"tema\": \"falta de coesão narrativa\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"a estrutura da história é fragmentada e pouco coesa, com eventos que não se conectam de forma natural, dificultando a compreensão\"\n    },\n    {\n      \"tema\": \"tratamento desrespeitoso das mulheres\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"as mulheres são frequentemente retratadas como ferramentas para os desejos dos protagonistas, sem desenvolvimento ou agência própria\"\n    },\n    {\n      \"tema\": \"repetição de temas e estilos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"o filme parece repetir padrões narrativos e estilísticos de outras obras de Nolan, gerando uma sensação de fórmula previsível e sem inovação\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas destacam a falta de profundidade nos personagens, o roteiro excessivamente explicativo e a monotonia do ritmo, além de críticas ao tratamento das mulheres e à repetição de estilos narrativos.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 168.38,
+   "leitura_prompt_s": 10.84,
+   "geracao_s": 155.272,
+   "carga_s": 0.004,
+   "prompt_eval_count": 7414,
+   "eval_count": 619
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "shutter-island",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4549,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "53c6fd888cb911b58aa453df2ee215effec1b725906371cf14715dabc482eee6",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:11:14+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "enredo e revelações",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam que o enredo é complexo e envolve revelações surpreendentes, mas algumas acham que a previsibilidade do desfecho reduz a intensidade da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e desempenho dos atores",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação dos atores, especialmente de Leonardo DiCaprio e Ben Kingsley, é frequentemente elogiada, mas algumas críticas mencionam que o desempenho pode parecer exagerado ou forçado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e estrutura do filme",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O ritmo do filme é considerado lento ou desacelerado, o que pode atrair atenção negativa, embora algumas ressalvem que a lentidão contribui para o clima de tensão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "impacto emocional e imersão",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos mencionam que o filme consegue gerar tensão e imersão, mas outros acham que o estilo exagerado ou a excessiva explicação do enredo prejudicam o impacto emocional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "comparação com outros filmes",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews frequentemente comparam o filme a outros de gênero, destacando que ele pode ser considerado inferior a algumas obras da mesma categoria.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "esperança e reexperiência",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos mencionam que o filme merece ser assistido mais de uma vez, pois revela camadas de significado que só ficam claras com uma reexperiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme possui um enredo complexo e uma atuação sólida, mas algumas ressaltam que o ritmo lento e a previsibilidade do desfecho podem limitar a experiência de imersão.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 133.5,
+ "memoria": {
+  "ram_usada_gb": 9.86,
+  "ram_livre_min_gb": 5.33,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"enredo e revelações\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam que o enredo é complexo e envolve revelações surpreendentes, mas algumas acham que a previsibilidade do desfecho reduz a intensidade da experiência.\"\n    },\n    {\n      \"tema\": \"atuações e desempenho dos atores\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação dos atores, especialmente de Leonardo DiCaprio e Ben Kingsley, é frequentemente elogiada, mas algumas críticas mencionam que o desempenho pode parecer exagerado ou forçado.\"\n    },\n    {\n      \"tema\": \"ritmo e estrutura do filme\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo do filme é considerado lento ou desacelerado, o que pode atrair atenção negativa, embora algumas ressalvem que a lentidão contribui para o clima de tensão.\"\n    },\n    {\n      \"tema\": \"impacto emocional e imersão\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos mencionam que o filme consegue gerar tensão e imersão, mas outros acham que o estilo exagerado ou a excessiva explicação do enredo prejudicam o impacto emocional.\"\n    },\n    {\n      \"tema\": \"comparação com outros filmes\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews frequentemente comparam o filme a outros de gênero, destacando que ele pode ser considerado inferior a algumas obras da mesma categoria.\"\n    },\n    {\n      \"tema\": \"esperança e reexperiência\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos mencionam que o filme merece ser assistido mais de uma vez, pois revela camadas de significado que só ficam claras com uma reexperiência.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme possui um enredo complexo e uma atuação sólida, mas algumas ressaltam que o ritmo lento e a previsibilidade do desfecho podem limitar a experiência de imersão.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 133.5,
+   "leitura_prompt_s": 6.921,
+   "geracao_s": 124.384,
+   "carga_s": 0.007,
+   "prompt_eval_count": 4549,
+   "eval_count": 668
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

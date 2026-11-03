@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "500-days-of-summer",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5172,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "f0e292fbc42058555c0af5e7047f1c9e2dc475ed0edd0b0e90b935e2602c3484",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:21:32+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "idealização e projeção de expectativas",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a forma como Tom idealiza Summer, projetando expectativas que não correspondem à realidade do relacionamento, o que gera frustração e confusão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de clareza e comunicação",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas apontam para a ausência de comunicação clara entre os personagens, com ambas as partes mal definindo os limites e expectativas do relacionamento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "desenvolvimento de personagens limitado",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam que os personagens não têm um desenvolvimento suficiente, especialmente Summer, que é retratada de forma superficial e sem profundidade emocional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "relação tóxica e desequilibrada",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que apontam para a relação ser desequilibrada e tóxica, com Tom sendo excessivamente dependente e Summer sendo vista como alguém que não se importa com os sentimentos do outro.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "mensagem sobre relacionamentos e autoestima",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos destacam a mensagem do filme sobre a importância de definir limites e respeitar a autonomia dos outros, especialmente em contextos de relacionamentos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estilo narrativo e ritmo",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A narrativa do filme é criticada por alguns por ter um ritmo lento e por não explorar o potencial de suas ideias de forma mais profunda.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews medianas apontam para uma crítica ao relacionamento entre os personagens, destacando a falta de clareza, a idealização e a ausência de desenvolvimento emocional, além de uma mensagem sobre a importância de respeitar limites e autenticidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 153.5,
+ "memoria": {
+  "ram_usada_gb": 9.43,
+  "ram_livre_min_gb": 5.76,
+  "ws_ollama_gb": 0.18,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"idealização e projeção de expectativas\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a forma como Tom idealiza Summer, projetando expectativas que não correspondem à realidade do relacionamento, o que gera frustração e confusão.\"\n    },\n    {\n      \"tema\": \"falta de clareza e comunicação\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas apontam para a ausência de comunicação clara entre os personagens, com ambas as partes mal definindo os limites e expectativas do relacionamento.\"\n    },\n    {\n      \"tema\": \"desenvolvimento de personagens limitado\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam que os personagens não têm um desenvolvimento suficiente, especialmente Summer, que é retratada de forma superficial e sem profundidade emocional.\"\n    },\n    {\n      \"tema\": \"relação tóxica e desequilibrada\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que apontam para a relação ser desequilibrada e tóxica, com Tom sendo excessivamente dependente e Summer sendo vista como alguém que não se importa com os sentimentos do outro.\"\n    },\n    {\n      \"tema\": \"mensagem sobre relacionamentos e autoestima\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos destacam a mensagem do filme sobre a importância de definir limites e respeitar a autonomia dos outros, especialmente em contextos de relacionamentos.\"\n    },\n    {\n      \"tema\": \"estilo narrativo e ritmo\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A narrativa do filme é criticada por alguns por ter um ritmo lento e por não explorar o potencial de suas ideias de forma mais profunda.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews medianas apontam para uma crítica ao relacionamento entre os personagens, destacando a falta de clareza, a idealização e a ausência de desenvolvimento emocional, além de uma mensagem sobre a importância de respeitar limites e autenticidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 153.42,
+   "leitura_prompt_s": 8.073,
+   "geracao_s": 134.73,
+   "carga_s": 8.568,
+   "prompt_eval_count": 5172,
+   "eval_count": 654
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

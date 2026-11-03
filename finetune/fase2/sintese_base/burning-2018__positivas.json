@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "burning-2018",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7850,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "c0a865d65ad0e4d251750b00823453319aea29974f17e6fd4b37b5d6396a1712",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.86,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T11:38:23+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "ambiguidade e interpretação",
+    "mencoes_aproximadas": 21,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a importância da interpretação pessoal do filme, com muitos espectadores mencionando que a ambiguidade é um dos pontos fortes da narrativa, deixando espaço para teorias e reflexões.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e construção narrativa",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas elogiam o ritmo lento e a construção cuidadosa da história, destacando que o filme consegue manter o interesse mesmo com uma abordagem menos direta.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "fotografia e estética",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A cinematografia é frequentemente citada como um dos aspectos mais marcantes do filme, com críticas destacando a beleza visual e a forma como a imagem contribui para o clima geral.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuação e personagens",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação dos protagonistas é elogiada, especialmente por sua capacidade de transmitir complexidade emocional e a forma como os personagens são desenvolvidos ao longo da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temas sociais e classe",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias críticas apontam a crítica à desigualdade social e à classe como um dos elementos centrais do filme, com a narrativa explorando as relações de poder entre diferentes grupos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiente e locações",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As locações são mencionadas como um aspecto que contribui para a atmosfera do filme, com críticas destacando como o ambiente se torna parte da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a ambiguidade e a construção narrativa como pontos fortes, além da fotografia e da atuação. Muitos críticos elogiam a forma como o filme explora temas sociais e a estética visual.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 185.2,
+ "memoria": {
+  "ram_usada_gb": 11.49,
+  "ram_livre_min_gb": 3.71,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"ambiguidade e interpretação\",\n      \"mencoes_aproximadas\": 21,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a importância da interpretação pessoal do filme, com muitos espectadores mencionando que a ambiguidade é um dos pontos fortes da narrativa, deixando espaço para teorias e reflexões.\"\n    },\n    {\n      \"tema\": \"ritmo e construção narrativa\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam o ritmo lento e a construção cuidadosa da história, destacando que o filme consegue manter o interesse mesmo com uma abordagem menos direta.\"\n    },\n    {\n      \"tema\": \"fotografia e estética\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A cinematografia é frequentemente citada como um dos aspectos mais marcantes do filme, com críticas destacando a beleza visual e a forma como a imagem contribui para o clima geral.\"\n    },\n    {\n      \"tema\": \"atuação e personagens\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação dos protagonistas é elogiada, especialmente por sua capacidade de transmitir complexidade emocional e a forma como os personagens são desenvolvidos ao longo da narrativa.\"\n    },\n    {\n      \"tema\": \"temas sociais e classe\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 43,\n      \"exemplo_parafraseado\": \"Várias críticas apontam a crítica à desigualdade social e à classe como um dos elementos centrais do filme, com a narrativa explorando as relações de poder entre diferentes grupos.\"\n    },\n    {\n      \"tema\": \"ambiente e locações\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As locações são mencionadas como um aspecto que contribui para a atmosfera do filme, com críticas destacando como o ambiente se torna parte da narrativa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a ambiguidade e a construção narrativa como pontos fortes, além da fotografia e da atuação. Muitos críticos elogiam a forma como o filme explora temas sociais e a estética visual.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 185.11,
+   "leitura_prompt_s": 11.309,
+   "geracao_s": 171.508,
+   "carga_s": 0.004,
+   "prompt_eval_count": 7850,
+   "eval_count": 662
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

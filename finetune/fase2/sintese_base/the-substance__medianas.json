@@ -1,0 +1,127 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-substance",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5978,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "35524def8ec44efe2d826dbb0317d5f8d22288c3be03314203822e894d9a4e41",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.65,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:35:15+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "desconexão entre o início e o final",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam um desalinhamento entre o começo da obra e o desfecho, que parece ser uma escolha deliberada para enfatizar uma mensagem ou provocar reações específicas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "crítica ao tratamento corporal e ao estereótipo de beleza",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como uma reflexão sobre a pressão social por parte do corpo feminino, especialmente em relação à beleza e à juventude, mas é criticado por exagerar esse tema em excesso.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética e estilo visual",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A estética do filme é frequentemente elogiada, com destaque para a fotografia, o design e a edição, que são vistos como elementos que contribuem para a experiência cinematográfica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "sobrecarga de elementos visuais e narrativos",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A complexidade dos elementos visuais e narrativos é mencionada como um aspecto que pode dificultar a compreensão ou atrair atenção excessiva, especialmente em partes finais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "recepção ambígua e crítica à exageração",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há uma percepção de que o filme, embora tenha uma boa base conceitual, pode exagerar em certos aspectos, especialmente em seu desfecho, o que gera uma reação mista entre os espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam uma crítica ao desfecho do filme, que é visto como exagerado e desconectado do início, além de abordar temas como pressão corporal e estética, mas com uma avaliação ambígua sobre sua execução.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 147.7,
+ "memoria": {
+  "ram_usada_gb": 9.49,
+  "ram_livre_min_gb": 5.7,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"desconexão entre o início e o final\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam um desalinhamento entre o começo da obra e o desfecho, que parece ser uma escolha deliberada para enfatizar uma mensagem ou provocar reações específicas.\"\n    },\n    {\n      \"tema\": \"crítica ao tratamento corporal e ao estereótipo de beleza\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como uma reflexão sobre a pressão social por parte do corpo feminino, especialmente em relação à beleza e à juventude, mas é criticado por exagerar esse tema em excesso.\"\n    },\n    {\n      \"tema\": \"estética e estilo visual\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estética do filme é frequentemente elogiada, com destaque para a fotografia, o design e a edição, que são vistos como elementos que contribuem para a experiência cinematográfica.\"\n    },\n    {\n      \"tema\": \"sobrecarga de elementos visuais e narrativos\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A complexidade dos elementos visuais e narrativos é mencionada como um aspecto que pode dificultar a compreensão ou atrair atenção excessiva, especialmente em partes finais.\"\n    },\n    {\n      \"tema\": \"recepção ambígua e crítica à exageração\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há uma percepção de que o filme, embora tenha uma boa base conceitual, pode exagerar em certos aspectos, especialmente em seu desfecho, o que gera uma reação mista entre os espectadores.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam uma crítica ao desfecho do filme, que é visto como exagerado e desconectado do início, além de abordar temas como pressão corporal e estética, mas com uma avaliação ambígua sobre sua execução.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 147.69,
+   "leitura_prompt_s": 9.081,
+   "geracao_s": 128.651,
+   "carga_s": 7.907,
+   "prompt_eval_count": 5978,
+   "eval_count": 600
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 1,
+ "fora_por_memoria": false
+}

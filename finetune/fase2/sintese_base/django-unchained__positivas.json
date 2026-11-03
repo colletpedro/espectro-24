@@ -1,0 +1,127 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "django-unchained",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5758,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "c5d0693ec600870cab4ae80891e203518d5e277250fa1574eae25763038f4e93",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.77,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:49:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "direção e estilo tarantino",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam a forma como o filme é construído com uma narrativa envolvente e um estilo visual marcante, que reflete a estética e a abordagem única de Tarantino.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações dos principais elencos",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews elogia a atuação dos principais protagonistas, especialmente a performance de Christoph Waltz, que é considerada destaque, assim como a interpretação de Leonardo DiCaprio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ambiente e estética visual",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A ambientação e a estética visual do filme são frequentemente citadas como pontos fortes, com críticas destacando a atenção aos detalhes e a atmosfera cinematográfica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e estrutura da narrativa",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria dos críticos menciona o ritmo do filme como um aspecto que mantém o interesse, embora alguns observem que o início pode ser mais lento que o restante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trilha sonora e música",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora é elogiada por sua consistência e por se encaixar bem no tom e no estilo do filme, contribuindo para a experiência cinematográfica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a narrativa envolvente, a estética visual marcante e a atuação dos principais elencos, com elogios à construção do filme e ao estilo de Tarantino.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 137.4,
+ "memoria": {
+  "ram_usada_gb": 9.37,
+  "ram_livre_min_gb": 5.82,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"direção e estilo tarantino\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam a forma como o filme é construído com uma narrativa envolvente e um estilo visual marcante, que reflete a estética e a abordagem única de Tarantino.\"\n    },\n    {\n      \"tema\": \"atuações dos principais elencos\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews elogia a atuação dos principais protagonistas, especialmente a performance de Christoph Waltz, que é considerada destaque, assim como a interpretação de Leonardo DiCaprio.\"\n    },\n    {\n      \"tema\": \"ambiente e estética visual\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A ambientação e a estética visual do filme são frequentemente citadas como pontos fortes, com críticas destacando a atenção aos detalhes e a atmosfera cinematográfica.\"\n    },\n    {\n      \"tema\": \"ritmo e estrutura da narrativa\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria dos críticos menciona o ritmo do filme como um aspecto que mantém o interesse, embora alguns observem que o início pode ser mais lento que o restante.\"\n    },\n    {\n      \"tema\": \"trilha sonora e música\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora é elogiada por sua consistência e por se encaixar bem no tom e no estilo do filme, contribuindo para a experiência cinematográfica.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a narrativa envolvente, a estética visual marcante e a atuação dos principais elencos, com elogios à construção do filme e ao estilo de Tarantino.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 137.41,
+   "leitura_prompt_s": 8.836,
+   "geracao_s": 118.845,
+   "carga_s": 7.663,
+   "prompt_eval_count": 5758,
+   "eval_count": 555
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 1,
+ "fora_por_memoria": false
+}

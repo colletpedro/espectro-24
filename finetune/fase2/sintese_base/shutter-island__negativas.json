@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "shutter-island",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5377,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "b270938235ef4874076220c54e34ab2c9ac05a1a6352df28cecd54a94706dc18",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.61,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2763671875,
+  "limpa": true
+ },
+ "ts": "2026-11-03T09:13:27+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "ritmo lento",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas destacam que o filme tem um ritmo excessivamente lento, o que dificulta o engajamento do espectador e contribui para a percepção de monótonia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "confusão e previsibilidade",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos mencionam que a narrativa é confusa e previsível, com elementos que não se conectam de forma satisfatória, deixando a experiência de assistir desinteressante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de envolvimento emocional",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews afirma que o filme não consegue gerar emoção ou conexão com o público, tornando a experiência de assistir desapontadora.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "excesso de elementos confusos",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas apontam que o filme tem uma quantidade excessiva de elementos que não se encaixam bem, como flashbacks e referências que não contribuem para a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "falta de profundidade no roteiro",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é considerado superficial, com pouca profundidade e uma abordagem que não se sustenta ao longo da trama, deixando a experiência insatisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "desconexão com o público",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que ressaltam que o filme não consegue se conectar com o espectador, mesmo com elementos que poderiam ser interessantes, mas que não se traduzem em uma experiência envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam a dificuldade em se engajar com o filme, a confusão na narrativa e a percepção de que o ritmo e a estrutura não contribuem para uma experiência satisfatória.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 144.8,
+ "memoria": {
+  "ram_usada_gb": 10.26,
+  "ram_livre_min_gb": 4.93,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"ritmo lento\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas destacam que o filme tem um ritmo excessivamente lento, o que dificulta o engajamento do espectador e contribui para a percepção de monótonia.\"\n    },\n    {\n      \"tema\": \"confusão e previsibilidade\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos mencionam que a narrativa é confusa e previsível, com elementos que não se conectam de forma satisfatória, deixando a experiência de assistir desinteressante.\"\n    },\n    {\n      \"tema\": \"falta de envolvimento emocional\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews afirma que o filme não consegue gerar emoção ou conexão com o público, tornando a experiência de assistir desapontadora.\"\n    },\n    {\n      \"tema\": \"excesso de elementos confusos\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas apontam que o filme tem uma quantidade excessiva de elementos que não se encaixam bem, como flashbacks e referências que não contribuem para a narrativa.\"\n    },\n    {\n      \"tema\": \"falta de profundidade no roteiro\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é considerado superficial, com pouca profundidade e uma abordagem que não se sustenta ao longo da trama, deixando a experiência insatisfatória.\"\n    },\n    {\n      \"tema\": \"desconexão com o público\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que ressaltam que o filme não consegue se conectar com o espectador, mesmo com elementos que poderiam ser interessantes, mas que não se traduzem em uma experiência envolvente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam a dificuldade em se engajar com o filme, a confusão na narrativa e a percepção de que o ritmo e a estrutura não contribuem para uma experiência satisfatória.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 144.56,
+   "leitura_prompt_s": 8.192,
+   "geracao_s": 134.173,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5377,
+   "eval_count": 649
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

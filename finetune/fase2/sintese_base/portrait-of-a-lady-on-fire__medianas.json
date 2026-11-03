@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "portrait-of-a-lady-on-fire",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5970,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "7980188a53f5b2eb4f1d4f9f7a90f58a8bcb302f9cd558e70603e9702366f050",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:16:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "fotografia e estética",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a beleza visual do filme, com elogios à fotografia, cores e composição de cena, que são descritas como impressionantes e que contribuem para a atmosfera do longa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e velocidade",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas mencionam que o ritmo do filme é lento e pode ser cansativo, com alguns espectadores achando que a narrativa demora demais para se desenvolver.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "interpretações e atuações",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são elogiadas por sua naturalidade e profundidade, com críticas reconhecendo a capacidade das atrizes de transmitir emoções sem precisar de diálogos excessivos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trabalho com silêncio e expressão",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há menção a como o uso do silêncio e a expressão facial são usados para transmitir sentimentos, sendo visto como uma forma eficaz de contar história sem recorrer a diálogos explícitos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "construção de romance e conexão emocional",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores acham que a construção do romance é fraca e que a conexão emocional entre os personagens não é suficientemente explorada, o que pode dificultar o envolvimento com a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "temática e abordagem do amor",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A temática do amor e da liberdade é frequentemente citada, com críticas reconhecendo o potencial da abordagem, mas também apontando que ela pode não ser suficientemente desenvolvida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a beleza visual e a profundidade emocional do filme, mas também apontam críticas ao ritmo lento e à construção do romance, que pode ser considerada insuficiente para alguns espectadores.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 160.5,
+ "memoria": {
+  "ram_usada_gb": 10.06,
+  "ram_livre_min_gb": 5.13,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"fotografia e estética\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a beleza visual do filme, com elogios à fotografia, cores e composição de cena, que são descritas como impressionantes e que contribuem para a atmosfera do longa.\"\n    },\n    {\n      \"tema\": \"ritmo e velocidade\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas mencionam que o ritmo do filme é lento e pode ser cansativo, com alguns espectadores achando que a narrativa demora demais para se desenvolver.\"\n    },\n    {\n      \"tema\": \"interpretações e atuações\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são elogiadas por sua naturalidade e profundidade, com críticas reconhecendo a capacidade das atrizes de transmitir emoções sem precisar de diálogos excessivos.\"\n    },\n    {\n      \"tema\": \"trabalho com silêncio e expressão\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há menção a como o uso do silêncio e a expressão facial são usados para transmitir sentimentos, sendo visto como uma forma eficaz de contar história sem recorrer a diálogos explícitos.\"\n    },\n    {\n      \"tema\": \"construção de romance e conexão emocional\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores acham que a construção do romance é fraca e que a conexão emocional entre os personagens não é suficientemente explorada, o que pode dificultar o envolvimento com a narrativa.\"\n    },\n    {\n      \"tema\": \"temática e abordagem do amor\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A temática do amor e da liberdade é frequentemente citada, com críticas reconhecendo o potencial da abordagem, mas também apontando que ela pode não ser suficientemente desenvolvida.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a beleza visual e a profundidade emocional do filme, mas também apontam críticas ao ritmo lento e à construção do romance, que pode ser considerada insuficiente para alguns espectadores.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 160.48,
+   "leitura_prompt_s": 8.277,
+   "geracao_s": 149.982,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5970,
+   "eval_count": 687
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-fall",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4675,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "9aef6e93e7a5e63f0e9fbd3aba0d5e5e2095719d957c58275fe3856264d5d19c",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.39,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.275390625,
+  "limpa": true
+ },
+ "ts": "2026-11-03T08:24:05+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "longo e cansativo",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam que o filme é considerado excessivamente longo, o que gera cansaço e desinteresse, especialmente em momentos em que a narrativa se torna repetitiva ou desgastante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "processo judicial e análise de provas",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas críticas ressaltam a atenção ao processo judicial e à forma como as provas são apresentadas, apesar de algumas acharem que a abordagem pode ser excessivamente detalhada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e interpretações",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são elogiadas, especialmente a de Sandra Hüller, mas alguns críticos acham que o desempenho do fiscal e do psiquiatra não é tão convincente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "tema da mentira e da manipulação",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como uma reflexão sobre a mentira, a manipulação e a complexidade da verdade, com críticas que destacam como a narrativa explora esses temas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "esperança por um desfecho mais envolvente",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores esperavam mais tensão ou revelações no final, achando que a abordagem mais contemplativa pode ter sido menos impactante do que esperado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "interesse por aspectos visuais e narrativos",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a construção narrativa são apreciadas, com críticas que destacam a beleza visual e a forma como o filme explora a dinâmica familiar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a complexidade da narrativa e a qualidade das atuações, mas também apontam para a percepção de que o filme pode ser excessivamente longo e, em alguns momentos, cansativo.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 137.2,
+ "memoria": {
+  "ram_usada_gb": 9.65,
+  "ram_livre_min_gb": 5.55,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.56
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"longo e cansativo\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam que o filme é considerado excessivamente longo, o que gera cansaço e desinteresse, especialmente em momentos em que a narrativa se torna repetitiva ou desgastante.\"\n    },\n    {\n      \"tema\": \"processo judicial e análise de provas\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas ressaltam a atenção ao processo judicial e à forma como as provas são apresentadas, apesar de algumas acharem que a abordagem pode ser excessivamente detalhada.\"\n    },\n    {\n      \"tema\": \"atuações e interpretações\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são elogiadas, especialmente a de Sandra Hüller, mas alguns críticos acham que o desempenho do fiscal e do psiquiatra não é tão convincente.\"\n    },\n    {\n      \"tema\": \"tema da mentira e da manipulação\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como uma reflexão sobre a mentira, a manipulação e a complexidade da verdade, com críticas que destacam como a narrativa explora esses temas.\"\n    },\n    {\n      \"tema\": \"esperança por um desfecho mais envolvente\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores esperavam mais tensão ou revelações no final, achando que a abordagem mais contemplativa pode ter sido menos impactante do que esperado.\"\n    },\n    {\n      \"tema\": \"interesse por aspectos visuais e narrativos\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a construção narrativa são apreciadas, com críticas que destacam a beleza visual e a forma como o filme explora a dinâmica familiar.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a complexidade da narrativa e a qualidade das atuações, mas também apontam para a percepção de que o filme pode ser excessivamente longo e, em alguns momentos, cansativo.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 137.05,
+   "leitura_prompt_s": 6.12,
+   "geracao_s": 128.661,
+   "carga_s": 0.032,
+   "prompt_eval_count": 4675,
+   "eval_count": 659
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

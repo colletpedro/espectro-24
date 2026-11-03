@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "woman-of-fire",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7626,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "9fb73baa0a67cb1ebe1864c9e79544239bfb175076479099d92ab72e5f727a17",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.57,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T12:02:24+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "estilo visual e cores",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam o uso de cores vibrantes, como vermelho e azul, e a estética de febre de cinema, com uma paleta visual que cria um ambiente surreal e envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuações e desempenho dos atores",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas elogiam a atuação de Youn Yuh-jung, destacando sua capacidade de transmitir complexidade emocional e o impacto de seu desempenho no filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "reinterpretação e originalidade",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews mencionam a reinterpretação do roteiro, com elementos que diferem da versão original, trazendo uma nova dinâmica e uma abordagem mais moderna.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e tensão",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas ressaltam o ritmo acelerado do filme, com uma tensão constante que mantém o espectador envolvido em cada cena.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "influência e contexto histórico",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos destacam a influência do filme no cinema coreano moderno, bem como o contexto histórico da produção durante a ditadura da Coreia do Sul.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trabalho de edição e técnica",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam a técnica de edição experimental e a maneira como a cinematografia contribui para a construção da narrativa e do clima psicológico.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam o estilo visual envolvente, a atuação notável de Youn Yuh-jung e a reinterpretação do roteiro com elementos modernos e estilizados.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 175.2,
+ "memoria": {
+  "ram_usada_gb": 11.82,
+  "ram_livre_min_gb": 3.38,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"estilo visual e cores\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam o uso de cores vibrantes, como vermelho e azul, e a estética de febre de cinema, com uma paleta visual que cria um ambiente surreal e envolvente.\"\n    },\n    {\n      \"tema\": \"atuações e desempenho dos atores\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas elogiam a atuação de Youn Yuh-jung, destacando sua capacidade de transmitir complexidade emocional e o impacto de seu desempenho no filme.\"\n    },\n    {\n      \"tema\": \"reinterpretação e originalidade\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews mencionam a reinterpretação do roteiro, com elementos que diferem da versão original, trazendo uma nova dinâmica e uma abordagem mais moderna.\"\n    },\n    {\n      \"tema\": \"ritmo e tensão\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas ressaltam o ritmo acelerado do filme, com uma tensão constante que mantém o espectador envolvido em cada cena.\"\n    },\n    {\n      \"tema\": \"influência e contexto histórico\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos destacam a influência do filme no cinema coreano moderno, bem como o contexto histórico da produção durante a ditadura da Coreia do Sul.\"\n    },\n    {\n      \"tema\": \"trabalho de edição e técnica\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews mencionam a técnica de edição experimental e a maneira como a cinematografia contribui para a construção da narrativa e do clima psicológico.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam o estilo visual envolvente, a atuação notável de Youn Yuh-jung e a reinterpretação do roteiro com elementos modernos e estilizados.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 174.98,
+   "leitura_prompt_s": 12.087,
+   "geracao_s": 160.648,
+   "carga_s": 0.005,
+   "prompt_eval_count": 7626,
+   "eval_count": 633
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

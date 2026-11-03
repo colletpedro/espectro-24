@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "wicked-2024",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5951,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "1d8481d31a94b29ce3274fc56d107cdd9cfc1423aa24ca44f39ae978acbb00e1",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.65,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:37:43+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "cenas repetitivas",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "as críticas destacam que as cenas musicais são repetitivas e não agregam valor à narrativa, gerando uma sensação de monotonia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo lento",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "as reviews apontam que o ritmo da obra é excessivamente lento, fazendo com que o espectador perca o interesse.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "atuação insipiente",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "algumas críticas mencionam que a atuação dos atores parece desconectada e sem empatia, dificultando a conexão com o público.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "produção excessivamente elaborada",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "as reviews comentam que a produção é excessivamente elaborada, mas isso não se traduz em uma experiência cinematográfica satisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "estética artificial",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "há críticas que destacam a estética como artificial e excessivamente colorida, gerando uma sensação de desconforto visual.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "trama confusa",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "algumas reviews apontam que a trama é confusa e pouco desenvolvida, dificultando a compreensão do enredo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "as reviews negativas destacam a monotonia das cenas, o ritmo lento e a falta de conexão emocional, além de criticar a estética artificial e a trama pouco envolvente.",
+  "n_validas": 38,
+  "n_analisadas": 38,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 133.2,
+ "memoria": {
+  "ram_usada_gb": 10.0,
+  "ram_livre_min_gb": 5.19,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.59
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"cenas repetitivas\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"as críticas destacam que as cenas musicais são repetitivas e não agregam valor à narrativa, gerando uma sensação de monotonia.\"\n    },\n    {\n      \"tema\": \"ritmo lento\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"as reviews apontam que o ritmo da obra é excessivamente lento, fazendo com que o espectador perca o interesse.\"\n    },\n    {\n      \"tema\": \"atuação insipiente\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"algumas críticas mencionam que a atuação dos atores parece desconectada e sem empatia, dificultando a conexão com o público.\"\n    },\n    {\n      \"tema\": \"produção excessivamente elaborada\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"as reviews comentam que a produção é excessivamente elaborada, mas isso não se traduz em uma experiência cinematográfica satisfatória.\"\n    },\n    {\n      \"tema\": \"estética artificial\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"há críticas que destacam a estética como artificial e excessivamente colorida, gerando uma sensação de desconforto visual.\"\n    },\n    {\n      \"tema\": \"trama confusa\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"algumas reviews apontam que a trama é confusa e pouco desenvolvida, dificultando a compreensão do enredo.\"\n    }\n  ],\n  \"observacao_geral\": \"as reviews negativas destacam a monotonia das cenas, o ritmo lento e a falta de conexão emocional, além de criticar a estética artificial e a trama pouco envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 133.14,
+   "leitura_prompt_s": 9.032,
+   "geracao_s": 121.866,
+   "carga_s": 0.006,
+   "prompt_eval_count": 5951,
+   "eval_count": 568
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "base",
+ "modelo": "espectro-qwen3-8b-base",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-base_20261102_190548.json",
+  "nome_ollama": "espectro-qwen3-8b-base",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "log_kernel": "finetune\\kaggle\\base_saida_qwen3\\base\\qwen3-8b-base__14336\\log.json",
+  "log_kernel_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\base\\base\\qwen3-8b-base__14336\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "friday-the-13th-2009",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6394,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "d8ac153f697010bb2c94abcd49e4e05d879ca54f006d1f0f69e63f826e13251d",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.65,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.2734375,
+  "limpa": true
+ },
+ "ts": "2026-11-03T10:53:32+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "estilo cinematográfico",
+    "mencoes_aproximadas": 21,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam o uso de câmera instável e a influência de estilos de filmes dos anos 2000, que muitas vezes são criticados por parecerem forçados ou excessivamente exagerados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "personagens",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos mencionam que os personagens são pouco desenvolvidos, repetitivos e muitas vezes estereotipados, com um foco excessivo em elementos como sexualidade e comportamentos agressivos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "jason",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O Jason é descrito como uma figura imponente e aterrorizante, com habilidades físicas e mentais que o tornam uma ameaça real, embora alguns considerem que seu comportamento ainda segue padrões de gênero.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "ritmo e tensão",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que apontam para uma falta de suspense e uma narrativa que, embora rápida, não consegue manter o nível de tensão esperado em um filme de terror.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "referências e homenagens",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam a presença de referências ao universo original da franquia, que são vistas como um ponto positivo, embora alguns considerem que elas são exageradas ou forçadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "gênero e estética",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A estética do filme é frequentemente associada ao estilo dos anos 2000, com críticas que apontam para uma falta de inovação e um visual que muitas vezes é considerado desgastado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a presença de Jason como uma figura aterrorizante, mas criticam a falta de inovação no ritmo e na construção dos personagens. A cinematografia e o estilo do filme são vistos como forçados, com uma narrativa que se mantém no limite da aceitação, mas não consegue se destacar.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 167.6,
+ "memoria": {
+  "ram_usada_gb": 12.14,
+  "ram_livre_min_gb": 3.05,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.62
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"estilo cinematográfico\",\n      \"mencoes_aproximadas\": 21,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam o uso de câmera instável e a influência de estilos de filmes dos anos 2000, que muitas vezes são criticados por parecerem forçados ou excessivamente exagerados.\"\n    },\n    {\n      \"tema\": \"personagens\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos mencionam que os personagens são pouco desenvolvidos, repetitivos e muitas vezes estereotipados, com um foco excessivo em elementos como sexualidade e comportamentos agressivos.\"\n    },\n    {\n      \"tema\": \"jason\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O Jason é descrito como uma figura imponente e aterrorizante, com habilidades físicas e mentais que o tornam uma ameaça real, embora alguns considerem que seu comportamento ainda segue padrões de gênero.\"\n    },\n    {\n      \"tema\": \"ritmo e tensão\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que apontam para uma falta de suspense e uma narrativa que, embora rápida, não consegue manter o nível de tensão esperado em um filme de terror.\"\n    },\n    {\n      \"tema\": \"referências e homenagens\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam a presença de referências ao universo original da franquia, que são vistas como um ponto positivo, embora alguns considerem que elas são exageradas ou forçadas.\"\n    },\n    {\n      \"tema\": \"gênero e estética\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A estética do filme é frequentemente associada ao estilo dos anos 2000, com críticas que apontam para uma falta de inovação e um visual que muitas vezes é considerado desgastado.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a presença de Jason como uma figura aterrorizante, mas criticam a falta de inovação no ritmo e na construção dos personagens. A cinematografia e o estilo do filme são vistos como forçados, com uma narrativa que se mantém no limite da aceitação, mas não consegue se destacar.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-base",
+   "finish_reason": "stop",
+   "latencia_s": 167.56,
+   "leitura_prompt_s": 9.85,
+   "geracao_s": 155.469,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6394,
+   "eval_count": 702
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}
