@@ -1,0 +1,893 @@
+{
+ "gerado_por": "scripts/finetune/gerar_sintese_teste.py plano",
+ "tokenizer": "Qwen3-8B",
+ "split_sha256": "3232b2ad48178aaf19c4825aff6e17aa53a5de2ef4b15c2d19a574c0180be423",
+ "regra_num_ctx": "(tokens do prompt + 3.000) × 1,10, arredondado para cima no múltiplo de 1.024",
+ "num_predict": 3000,
+ "buckets_excluidos": [
+  "a-brighter-summer-day/positivas"
+ ],
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "n_arquivos": 162,
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45",
+  "arquivos": {
+   "dados/bruto/2001-a-space-odyssey/meta.json": "c3ec29e37c63e3e65b20e2cccff4342c46eb78414073a3527d7c2c988711628d",
+   "dados/bruto/2001-a-space-odyssey/reviews.jsonl": "f975b6909d05ab28fb768e4a1892e02819afbb389e442549b86a96b6610bd12d",
+   "dados/bruto/500-days-of-summer/meta.json": "b4b70403ea7db27638aed0def826f286ceda16d4e9b20e07fbab3fa96ab25bec",
+   "dados/bruto/500-days-of-summer/reviews.jsonl": "6a456d59c8552cd4c0902ddac1cb808181d72250c7925038e8ac188dfbdf7ee6",
+   "dados/bruto/a-brighter-summer-day/meta.json": "7e4472a31f7402ce039b1ad3a22b3530659e9e83d3500538e349d01a031fe5e5",
+   "dados/bruto/a-brighter-summer-day/reviews.jsonl": "35e9c1875069ea7592b01ed9dd4ca9cd19bc57cdc27a6280a7b395ee70de867d",
+   "dados/bruto/aftersun/meta.json": "283a992545baf45f049aaa478538c64ceb572421f65a49ddd5dce6db052ca694",
+   "dados/bruto/aftersun/reviews.jsonl": "4a3a15dbc59560cea180eb22165cf6b92879fb69f509cbdf9ff1940add1b7b46",
+   "dados/bruto/anatomy-of-a-fall/meta.json": "f762d364dc203cc6381529f2164adf1ef846180d3575e92e9d764c15d1c54b19",
+   "dados/bruto/anatomy-of-a-fall/reviews.jsonl": "f737003ffe7a51a1b926bda52961b6e89dd5f6bf051542f5a2ffeeb2d00b7a42",
+   "dados/bruto/anatomy-of-a-murder/meta.json": "22f05a9e41930c6d667c81b955918661903b53016124012db2c1f74177446cfd",
+   "dados/bruto/anatomy-of-a-murder/reviews.jsonl": "6e2fb0733bab558c5b516cb791e10d33f75e913db61724883a6841e1432ef05e",
+   "dados/bruto/burning-2018/meta.json": "522f6d573af2a5772b5ddb6f02a7dae3396e3455f7b9ebbca62c09dba4a09f1b",
+   "dados/bruto/burning-2018/reviews.jsonl": "1c2317e26c24c81efbc76180b9068dbb3e4ff782294e2913a886ea7ed81fda0e",
+   "dados/bruto/django-unchained/meta.json": "ef6012bf94c6d0834bded7d5bc1c2b35076c73c49916426c265b49ccf491bc38",
+   "dados/bruto/django-unchained/reviews.jsonl": "21422701fca402024f6b7bfe0ed0b9ec1dcfbcefb6839ac213bcc66021bc6b12",
+   "dados/bruto/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb/meta.json": "2984f4a198afcfcc901696bd31fc58c4371ac90f1dfd0fe491f3d9b089cbf275",
+   "dados/bruto/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb/reviews.jsonl": "8cebb3036812ec1a23995a26161ef6f6c3ab940fc43f9340161fb053914b7406",
+   "dados/bruto/dune-2021/meta.json": "2d140691b15da08c2c3e3bc47a7cbc8609444d3c02540e8cf3c022eb7c903e59",
+   "dados/bruto/dune-2021/reviews.jsonl": "b90b6de5ec0d25d04b3d8f428143394e955947e9a560b2745bdabd357688885f",
+   "dados/bruto/force-majeure-2014/meta.json": "356667cbefa96f9a1d749f5bfb51052f572c5695078501a9fa7eacd7c4346d25",
+   "dados/bruto/force-majeure-2014/reviews.jsonl": "9f274125272266df364781e0420f3a5f093e6fed718dca2c1533bcd5fb771650",
+   "dados/bruto/friday-the-13th-2009/meta.json": "d96c1fe61ff43a79347298dfd10c569a59650f965fda839864e922c002b67826",
+   "dados/bruto/friday-the-13th-2009/reviews.jsonl": "c5314c86710d2412e80a1a3e8c52caea05f5e1a5be84b24a9ddbef0cdf8731e2",
+   "dados/bruto/gladiator-2000/meta.json": "14cec0f80d68138a049d4bfb34b6c2c6c5975a9acde90c408c7523f88d42c747",
+   "dados/bruto/gladiator-2000/reviews.jsonl": "9e38d71076086d96744cbcc3cbc9393e5d7cfba97fde15bb246da7c591f2062c",
+   "dados/bruto/guillermo-del-toros-pinocchio/meta.json": "a2b38cd6498789bddcccc35451a30bc9bd9ff444ab5957d53d2653752cc776e8",
+   "dados/bruto/guillermo-del-toros-pinocchio/reviews.jsonl": "4b0857da605dba9ed5261114d9dce00312b8f0fb8e683a9a12c2dc92285c4845",
+   "dados/bruto/incendies/meta.json": "fb931839c76a527d6308607d06f438c8f96f0ea594ff5b538e6be258c2d76193",
+   "dados/bruto/incendies/reviews.jsonl": "41f75f750abf64be55ef6d0ec5068106556328fdf38f549d41c0e3bfd029e7e0",
+   "dados/bruto/joker-2019/meta.json": "7838eb9b458226831e2b4a2a985e508a30f8245239ed7cdbda88b9c9d783fa3c",
+   "dados/bruto/joker-2019/reviews.jsonl": "6e666e0b882e320c83272209d9f14a8086d5e307acef29fb4427a71ad554eaa0",
+   "dados/bruto/memento/meta.json": "a5b56097f6acd7160d2f1fc1c6da4bca5231d4450d34d29324d0230cdaf36840",
+   "dados/bruto/memento/reviews.jsonl": "ba6b7f1830ef7c4bc94fb1464444ac824ecec17768e686d7600c426d5d2f5bbe",
+   "dados/bruto/mother-2017/meta.json": "673573719f4f4c3f1aa183b200d46af09586ad454e4d838f562a5eb3c7b942d5",
+   "dados/bruto/mother-2017/reviews.jsonl": "fc623417a0147e7c9a29a77f8047d9a00d119b15a8f7f09f7d9b8cbdd7897a4e",
+   "dados/bruto/napoleon-2023/meta.json": "8f03a694e8f408fc2e7f2f70bf50fb43483b709317c3785735f24c8cf552a16b",
+   "dados/bruto/napoleon-2023/reviews.jsonl": "4c099a510cfceacd88b91fc8ddf0f1aa6d774a29b07612ceb45de49963060a03",
+   "dados/bruto/portrait-of-a-lady-on-fire/meta.json": "6e7d8cb70e9e09c2515e41ad5ed8e7bd5f973121b208dead3d182b1d1f56ffd4",
+   "dados/bruto/portrait-of-a-lady-on-fire/reviews.jsonl": "70391f0e10e6fdcb6866ce25ed6a5d8f662b86cd45fd7ed1b8b96d0f38c2dc92",
+   "dados/bruto/shutter-island/meta.json": "fa6b79dd9f3385173ebdd1467d752ef1decb437eb9a0654a7ee414fc2e626aee",
+   "dados/bruto/shutter-island/reviews.jsonl": "d9776d350b8c4d87fff03076c1d00f44601f5bb65d2facc919f54df0e9d6246e",
+   "dados/bruto/spider-man-across-the-spider-verse/meta.json": "73a96de276b4db6fb3a60823afca74023ef130ab685d858f6077f19d72cc4f96",
+   "dados/bruto/spider-man-across-the-spider-verse/reviews.jsonl": "21096744267f5ae10649443671a24b88f090b3ffa8122b826e499e2697ad2dff",
+   "dados/bruto/the-battle-of-algiers/meta.json": "3c6b26082505e43e83598e490ec6c4aeae4b1d8ed2fbf5a481b000372cb00b0e",
+   "dados/bruto/the-battle-of-algiers/reviews.jsonl": "9177dde37ef01973b21403fc6a31f304bd43c3759438393c246a6b720ca6d3b5",
+   "dados/bruto/the-invite-2026/meta.json": "c4bcbec69d7d5264b5fc320790019b0ffa307eb704889fd202e1be72a0788425",
+   "dados/bruto/the-invite-2026/reviews.jsonl": "3500ce0ab355610b2d0f01363a2ee33462ace2692bfe31486ad0c7c8ec959067",
+   "dados/bruto/the-prestige/meta.json": "049815d4d614b64b62a337d385e6b820434954388057de498fd7f418f38f9266",
+   "dados/bruto/the-prestige/reviews.jsonl": "a56dd74baac09c46a3a05b4f42efa47998a25892c80305674cbe7261fafc1715",
+   "dados/bruto/the-revenant-2015/meta.json": "f06e23f06aa7ed9bc0bc373a8a5fedd17c5c9402ebbbc119835d37a986e71c3c",
+   "dados/bruto/the-revenant-2015/reviews.jsonl": "7708e930ddf2858ff78aed4b77e4eaedab32190a6c86118d8f08f448b941a0a8",
+   "dados/bruto/the-second-mother/meta.json": "cf5318df9c8818d84c17572be360bbda295bc8c6cd8b938956ab6e540d123d37",
+   "dados/bruto/the-second-mother/reviews.jsonl": "28853bbe46327390272fae937dd0dc7a3eb431739520e2fd89a0a20d1d4a56e4",
+   "dados/bruto/the-substance/meta.json": "c2b4441ed12659a1eada74f714d6cb8fecc5f4e1bf7e2be64c116482c9d0934e",
+   "dados/bruto/the-substance/reviews.jsonl": "435df7ce079b0b10f9fa075c5e27626b450f25e05c793cae5b1533194e1e9fc3",
+   "dados/bruto/wicked-2024/meta.json": "3cdcadb5ea0be26b773fd2e2a3a11bbad608a5c615a96f285dc90977dff91395",
+   "dados/bruto/wicked-2024/reviews.jsonl": "1104feaa31d1454a8fef2119a82332799530a29289409b2b72c2fa3ad1a5581b",
+   "dados/bruto/woman-of-fire/meta.json": "5b5d560e785bf5a3de0ff0b4d447df675f8c8598bc0af846ed7810cbb57b0272",
+   "dados/bruto/woman-of-fire/reviews.jsonl": "9edb7935d335b0a7ab269612359313b472c53e620c724bd1d1316a39a4545db6",
+   "resultado/12-angry-men.json": "2b4e10bcd106444e5be65a001004fb279a3a6eb4dac82aecbd5ecba168068106",
+   "resultado/2001-a-space-odyssey.json": "2d91fb7da2cc787b521f32f88b97c46f513372ca299ff92de564ce4925e03632",
+   "resultado/500-days-of-summer.json": "63e5232d11891ebafcb41c1d80b7f497c5b4809c41f347e8ec11bc5380b425e5",
+   "resultado/a-brighter-summer-day.json": "8d46f58eb7d773031498d4d216f42ed6b2675fba08132db1e8d7fb8d61802dc1",
+   "resultado/aftersun.json": "da407e9853b6f33fb658aee14e21efbe30b9098159d661d8653a3de27764648c",
+   "resultado/all-quiet-on-the-western-front-2022.json": "aa11df7f9e3018105015c400452a2dcb3f89f0188099c7792f624c788b4bfdb2",
+   "resultado/anatomy-of-a-fall.json": "b163413e60744c0f85f37d8c87ba302be80858e67c8445743084bbc606bc255e",
+   "resultado/anatomy-of-a-murder.json": "ffa06c75941f85db48335e11bc1e621581dd9bc9bc7ac3230eaaa71b915bb468",
+   "resultado/arrival-2016.json": "6b2bba5ce4f19aafabb3db1ae1c50113ac48d41cc54725711218cb8593a68dd5",
+   "resultado/avengers-endgame.json": "0f27eee7753b945acaa1de6c398a508e15878c4fb8bffd80faf3b49604d554bd",
+   "resultado/barbie.json": "d9c0d9bcc0a060ae4b3c05d82fa05fdedb641f04dbc76a13c18066f33dde8994",
+   "resultado/bones-and-all.json": "0deeaea8096f2e3b8ded6d40d5362824e22e366d201c1f40b20bb51569e23855",
+   "resultado/burning-2018.json": "7a3f9fbd3da44b64e21b520b7ebecd596849cfff52c6594ead0d007bdd57503b",
+   "resultado/cars.json": "e52cc8032b866bc4b45cfd4ee57ad1909e0d2bee615cc774f0fff35db73d15eb",
+   "resultado/catch-me-if-you-can-2002.json": "bb105fe729e09d50f5c981ef08a6e01f856ce41a8825f479753c398af5e068a7",
+   "resultado/cats-2019.json": "7a8bde5ac624a5afe1c2eb3f10763fdd3669f792a78c570996b953b941ab9dc8",
+   "resultado/chinatown.json": "74992d718f5f1f81bbefb781a1638fa49c3c15e5b255d3f96c8ed8bd207c83d7",
+   "resultado/cidade-de-deus.json": "a4623eb0575febd491be5c6a64faea010abb05e2e9b186b76a3d9d1259dc13ab",
+   "resultado/como-fazer-um-curta-metragem-experimental-cult-e-pseudo-intelectual.json": "5d48614674149177ecada1eb578a93dc159ef3ceedc8b709735c771e35fdcbd9",
+   "resultado/cujo.json": "f365412042ed32fee382d0eeee9cf90be869cefd147442158b5bd6a04e1afb2c",
+   "resultado/cure.json": "c0a73f37f5d7a5f4fcdb801b19c48e1e7721e797a555a4d24ccd568a24ad761c",
+   "resultado/district-9.json": "07b78c53819bf6ecea2e94a2e6f766a34df8f346cca735feaef23902888b2eef",
+   "resultado/django-unchained.json": "61e59979b77175a9389b7f4735816ac4ba7e8a63d03ab4b9302d8f3ad7a4aa3b",
+   "resultado/do-the-right-thing.json": "fb9a107c2bdf003b095e68d8d8ccda9742c1bc0021a18fa9feb68bd15102ebde",
+   "resultado/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb.json": "bfc1df680286d0e3e10eb12d97d75041ab2f7f4f0b4989118ab55941d97c76a3",
+   "resultado/drive-my-car.json": "e1a29cbadc125500c318bd2f6a0b5d82544d759aeebbe6d80f1b512db104a0a3",
+   "resultado/dune-2021.json": "17b08bbc78b974438426284bcee791d99bdd37bc641fe9b116fe580213afce8a",
+   "resultado/dune-part-two.json": "c8e7dab276b4b21a4337182be557610138ee5372aac70ba8a44e0ddd39b87a9c",
+   "resultado/eighth-grade.json": "8d692558559d27fe82f5f508f2b914e594a1c95db8c5f6132f3ff1544dd38945",
+   "resultado/everything-everywhere-all-at-once.json": "b6241c6c860184d29232d6ab5e4f0a9bd53d6cd9c302fc2654a88c87de27691b",
+   "resultado/fight-club.json": "d884b721b00ed59e1c2232c2a8f7a0b00d0aa2e8df1442e6220eb1d7f30581a9",
+   "resultado/force-majeure-2014.json": "119cbde7d15c725cfbe923a6439314a3d9d7589755ca22ddcc57b1deb4843f9b",
+   "resultado/friday-the-13th-2009.json": "d3c22f39d863e41b7b0e3ed4e0e7beff919118258af67d1d6d9d8bf52a131481",
+   "resultado/get-out-2017.json": "b94de9dee79936b5a1d9618568fbeba884b206652235aabe6948e33d66e216f2",
+   "resultado/gladiator-2000.json": "acefb594b02b136a7e440bb0988578c2e464fa6f8372d6cc8a09db5ad3a46614",
+   "resultado/goodfellas.json": "367881e47e4717b300526123b01f11636161914a2c3b2a5d384ce75f30b26ebc",
+   "resultado/guillermo-del-toros-pinocchio.json": "fc5f427a214a4a027a04aa4f6e003ee1baaf10e4cfaa78af52e0fc759270c679",
+   "resultado/happy-hour-2015-1.json": "523199aedf6c265520b971c900c80c2c77800b59e2776d968afe3263ebce3224",
+   "resultado/hard-to-be-a-god.json": "9819ebead8607e8570906062233b8e7a8b54a48b30918a90a8303fcd0a945580",
+   "resultado/hereditary.json": "6ece52791347c43b68de5b0ebf7c79da042515c8c2336421e79691373b052fe0",
+   "resultado/im-still-here-2024.json": "ae06f50aea31af5fb036dd527ecac38cfaa4ad1b87245c1f28af1576742a6373",
+   "resultado/incendies.json": "aae51c4db4858bb99c5d2a46856d041c93f759ef439cb54167c7256a3da0edf0",
+   "resultado/inception.json": "2b33a0fa9ea2eef29ba60f9f84315e905bf94f029369f01095e412070d411e94",
+   "resultado/inglourious-basterds.json": "74e038048b2adb0d3ce415babb333db82802c814b8691fdf2922d3cebf1c81fe",
+   "resultado/interstellar.json": "05be49dba0439515139cd4657aecb84c4582d95b43778ddf2d1b38499c0b0142",
+   "resultado/joker-2019.json": "2d9be7837b480f7acf9aad35ffe54f2201bc88ded49bd71bd033d774151b140d",
+   "resultado/joker-folie-a-deux.json": "f9f6da1ccc52dd345b056de2d84ff4e9368818f7ccda1001c48fea49874ba6ad",
+   "resultado/la-haine.json": "9aedeec00ac8ec42099ca487d7cad855d7242f5df0c8088da8a3419737805952",
+   "resultado/longlegs.json": "49fe3dede0850a3b84762c8b2617ac29377d2bb2afc26d0a2464ce1157d2a63f",
+   "resultado/mad-max-fury-road.json": "2b508223fe036ad7a313474d361e5cab4c95d400013a4ad28bb79d787656989c",
+   "resultado/malcolm-x-1992.json": "f2085fc0749afe3588dd28093df2e737c3ca4685a06b0c1cdb04c9658d608a8a",
+   "resultado/marty-supreme.json": "f8e0ab55f750cfdb3035aa7f239c72819813b54baad4d66788d172eefe54d018",
+   "resultado/memento.json": "4e00df5a702ce5e5d9811b0fe4f42bd6599890ac0957198e704ece7a0061f9f6",
+   "resultado/memories-of-murder.json": "31b4851b8dd8a15ede6afa4df6df8e9f8a068b788432ec7db870fccc5d8e05b3",
+   "resultado/mother-2017.json": "9813613229ad22a717f551f3e3b47191dc0fa57a9720b8cce720284cdb71743c",
+   "resultado/napoleon-2023.json": "33a4fb1dff8a314b8866ff5d942a6414157ded18f5cf4ecd8fb032c4f6b4a27b",
+   "resultado/neighboring-sounds.json": "70413e85c615dc5d3bd6b7f9a5c9b014fb35a8a6b480a20917b1c7888cf197ad",
+   "resultado/obsession-2025.json": "a1e92715d80a90f4504f1d45481d1f2770064da34261880ec41a825b3844738c",
+   "resultado/oppenheimer-2023.json": "c212e93c6990f9fc4330ea0cf304acf97f2b51751155e3d3d24e7045cc5232b4",
+   "resultado/parasite-2019.json": "5fe810a30820a4de0c2410ad72d1e435c84dc97b9555e05f203dd751ed5b91fa",
+   "resultado/pearl-2022.json": "c6f87425c51bb6e29cfc185b8d91b52a30a999955d333fe822df18c42c1173aa",
+   "resultado/perfect-days-2023.json": "84711e3975ed16daeaef8323a0ba8be2203c43b58e3d5bf266f67fe505f534a9",
+   "resultado/pinocchio-2022.json": "2051fcfa37610b06e0e5fc8ef44723fc07539175aa4a9b9ecb6862d14498b5f8",
+   "resultado/porco-rosso.json": "8bf8d8d50302f3eedfc24707f7da62cf36c7080dadf4aebd60c13b39aae01f35",
+   "resultado/portrait-of-a-lady-on-fire.json": "8dd75d2fde846f6ab9727ed8721165d45c6ad5ea4801cdbdf0b6429a11d1f00d",
+   "resultado/princess-mononoke.json": "7a5bb1709eba3c15c5fe80f714a95b2de68aa96796851d99aa0f16f28b6264ab",
+   "resultado/prisoners.json": "694ed8b0084bb5f497ad0d6b1cdb9d1d49c2ca5d2e1af9bbd86b98b67f0cfebf",
+   "resultado/satantango.json": "b370412ca4d3a7f72bcf91010daa2689d60b1a83821d24076fa92339bf877985",
+   "resultado/se7en.json": "5de70ca734b9f0be273a2fbf90e4af0bf1c75df171a095548a91566077afc722",
+   "resultado/shutter-island.json": "a879ea49943c969a0e4ca7456a58b4f62f70f2f38e9230c0d8fe6e948772aacf",
+   "resultado/sinners-2025.json": "5bfd6fc24d4fc91f140e0c27573246e566cc4f70976696cfade7e75212a01092",
+   "resultado/soul-2020.json": "774a7ebd4f7a7565c1f35abdd37607b64450d972df4a7351c727f8ff5703286d",
+   "resultado/speak-no-evil-2022.json": "f93b85fff5ad9c496f71e006875a1d7ad444b66efe52744c34369b5c6eee5d30",
+   "resultado/spider-man-across-the-spider-verse.json": "8d2aa3bb2345fdf82be554f8a7697d51e359fa48639c132c6fed2f8515d5e0c4",
+   "resultado/talk-to-me-2022.json": "651596a1ce3142d337c6f800d75a8fdd4b0d2f1d3a5f99dbbffab2cb6fea6f75",
+   "resultado/the-battle-of-algiers.json": "e3783e68b7b48adeddb0c0ffbfe795c3d73a6c622db3f2bc996177050792f2a7",
+   "resultado/the-brutalist.json": "03b071a07302840e9b56f718fbce8d472a03f614286842dd3bcc0fa74d72efb5",
+   "resultado/the-cloud-capped-star.json": "9c1e8cb4c84a26960ad468853f9ba63c1d41db4091b6a1047c8ea8004f5fdf8b",
+   "resultado/the-gentlemen.json": "d1507e44229858f151d76dd245becab30805673273d4cdaf1b835672805e8701",
+   "resultado/the-godfather.json": "48835695bec9d21730d979fe31cbc1274ac4bac5d5dfcf8cb60ce6b699f5a444",
+   "resultado/the-hateful-eight.json": "dfbced72d4df251ff182bc9c74babd21048b5922e581024dee15afcf9c82e1ed",
+   "resultado/the-invite-2026.json": "ef3901347a1e1070c4e89b01c2a7bc2818ba7b7ce83159d4698ed7e20c3e424c",
+   "resultado/the-northman.json": "57bb8beebad36ae75971e39edca6423b2acf44b61186cd6f59904adc9c4ae1e6",
+   "resultado/the-prestige.json": "3bc50515bcb951db15c389e361d2df3c03b3a5f1a91260f048c3b3d5e4344551",
+   "resultado/the-revenant-2015.json": "3be168320f271b5256282320c5c245edb26212189a1bb758448b979ee7bd4464",
+   "resultado/the-second-mother.json": "4cd3a07619ca76f7b4722337d2f65203fbfd35c3726bddf9cbff80f4972b40e4",
+   "resultado/the-spongebob-movie-search-for-squarepants.json": "a2e994ebba3e2c66a50c9c8fcb57056063442a3fb254a2328e26f159491188c4",
+   "resultado/the-substance.json": "bf63932bf82479a78a73717fef9dc4cca12c50bfe3681c37798d71ff27e0934d",
+   "resultado/the-swimming-pool.json": "005d898695f9cd14469bd8c7fccad5394ddff7771a7d8475b2763bc9d1157c23",
+   "resultado/the-truman-show.json": "e9a6771dfb08d16b0ddd4d46c578f3ca5a0e6871d993767dfaf1aa8296f6d0f4",
+   "resultado/the-turin-horse.json": "0414c30321019f9a746582fd7cf0d84631d29d2429329b84dcbea21bc5ba7f50",
+   "resultado/the-wailing.json": "20b30107a174bc8d4ae83d9339d9ae69a0670cf9fcc9a1120606b476306aa49f",
+   "resultado/the-wolf-of-wall-street.json": "55fa62d9abef6aa03869c32164c38598fc0c7a28373cf8bc00b62d730eb9f3bf",
+   "resultado/top-gun-maverick.json": "8b1dd8754aa10a359a5b1ebdf249720147019255c4279fa8b06aa6ceb2af9b03",
+   "resultado/uncut-gems.json": "3d69b8a6ca7a2c6838a463b27b5750bbc458396b3d4c7824e3c3f0f6876d1c85",
+   "resultado/votacao-3/amostra.json": "dfe24b5d0ba4ef3d789a18e549ebeaf6df46f02d48eb904bfe830e15b6c58abf",
+   "resultado/votacao-3/consenso_verificado.jsonl": "5ba034f2c93a6c877f835c7afcfb94fa8d82c3c18c898983915dbe659d0b33d0",
+   "resultado/whiplash-2014.json": "5177a01a1e6d517dfd7adb4b879e795cb7f7b54279f5db0b76c02b0cdacd5730",
+   "resultado/wicked-2024.json": "bc98e75ed931f25a1708d0551060b6791129bf9a31fe7a685f4d1cefccd480e6",
+   "resultado/woman-of-fire.json": "6018b87c030fda90aeaf9f245a87dd371a01deb8c5e23423e3f563d68e22af31",
+   "resultado/wonka.json": "2373eb243460539023d6021b50d5f337c62a32dd8333dc3645d8a675e1ab3d4f",
+   "resultado/zama.json": "f3c12b14930f161349d21a85e405ee3c610659499104eaed7c37562896886588"
+  }
+ },
+ "pares": [
+  {
+   "slug": "woman-of-fire",
+   "bucket": "negativas",
+   "tokens_prompt": 2005,
+   "num_ctx": 6144,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "5112e106453619c1771e995af8485deeae0561189329d824535d014b2ea088f0"
+  },
+  {
+   "slug": "joker-2019",
+   "bucket": "medianas",
+   "tokens_prompt": 4223,
+   "num_ctx": 8192,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "a08cc4d73ec998d610aabc4b618de25c29c9a23f36a8b4fd4e02b57b3e994fd4"
+  },
+  {
+   "slug": "500-days-of-summer",
+   "bucket": "medianas",
+   "tokens_prompt": 5172,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "f0e292fbc42058555c0af5e7047f1c9e2dc475ed0edd0b0e90b935e2602c3484"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "bucket": "medianas",
+   "tokens_prompt": 4675,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "9aef6e93e7a5e63f0e9fbd3aba0d5e5e2095719d957c58275fe3856264d5d19c"
+  },
+  {
+   "slug": "burning-2018",
+   "bucket": "medianas",
+   "tokens_prompt": 5095,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "6d5dbb5c89df6bf0bc988138b9148d67821fae541db7e096bec0a83602f4a5b7"
+  },
+  {
+   "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+   "bucket": "medianas",
+   "tokens_prompt": 5272,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "19c3e7e7719186f91226eb8faced4cf8f472f82b1a2c439c919707d7ab2f0faf"
+  },
+  {
+   "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+   "bucket": "positivas",
+   "tokens_prompt": 5369,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "7d0a5cdb95a1dc7702796ed24e308ff8ff39265cc33a4381ed0ef4afb607a174"
+  },
+  {
+   "slug": "force-majeure-2014",
+   "bucket": "negativas",
+   "tokens_prompt": 5349,
+   "num_ctx": 9216,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "6cb8930b3bdce02ffbff3daf20889202be95a4e733d76047cf416501951e8538"
+  },
+  {
+   "slug": "force-majeure-2014",
+   "bucket": "positivas",
+   "tokens_prompt": 5121,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "1b59c440f77073526517e4e3f4443406ba41c9a02fa151913498dc4919b4be27"
+  },
+  {
+   "slug": "gladiator-2000",
+   "bucket": "negativas",
+   "tokens_prompt": 5365,
+   "num_ctx": 9216,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "5101373ee2c116f21b87c73f45e23fd8b41ebf4890e7129548053bec4a5e9d39"
+  },
+  {
+   "slug": "gladiator-2000",
+   "bucket": "positivas",
+   "tokens_prompt": 5274,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e1998a3ccc680fcfb23aee5c03cf12ae91a24e2561c61747b1f6243eaf996eca"
+  },
+  {
+   "slug": "memento",
+   "bucket": "negativas",
+   "tokens_prompt": 4546,
+   "num_ctx": 9216,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "c808884fc6a7191023bd72faef703ed5d9cfd2fb08ed180e0579190a238f9b8b"
+  },
+  {
+   "slug": "mother-2017",
+   "bucket": "medianas",
+   "tokens_prompt": 5122,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "8dbcbfe886740e44e8ac81cfedbdcea27828a566896ce9fa451d7a62f3e8700b"
+  },
+  {
+   "slug": "mother-2017",
+   "bucket": "positivas",
+   "tokens_prompt": 5171,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "960ea2725d67cf09675dab5adf776fd2af3a916855e814531b932fc9897b5c0e"
+  },
+  {
+   "slug": "shutter-island",
+   "bucket": "medianas",
+   "tokens_prompt": 4549,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "53c6fd888cb911b58aa453df2ee215effec1b725906371cf14715dabc482eee6"
+  },
+  {
+   "slug": "shutter-island",
+   "bucket": "negativas",
+   "tokens_prompt": 5377,
+   "num_ctx": 9216,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "b270938235ef4874076220c54e34ab2c9ac05a1a6352df28cecd54a94706dc18"
+  },
+  {
+   "slug": "shutter-island",
+   "bucket": "positivas",
+   "tokens_prompt": 4896,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "fb46651cd664d8b04d2da9d5fd14398c0b2b747393515a4bdd1e6a0add940b4a"
+  },
+  {
+   "slug": "the-prestige",
+   "bucket": "medianas",
+   "tokens_prompt": 5109,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "031827daf29053d56e6e626e43395693f98c764048e2b8605feb8bc6a474ced6"
+  },
+  {
+   "slug": "the-substance",
+   "bucket": "negativas",
+   "tokens_prompt": 5033,
+   "num_ctx": 9216,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "818b1306003bbd704c6ba658fb2605ef91c39c0ca3441092c98ecd6695efc266"
+  },
+  {
+   "slug": "wicked-2024",
+   "bucket": "medianas",
+   "tokens_prompt": 4797,
+   "num_ctx": 9216,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "64028a042a3cecb550b5bd83a403f0ce89b02aa48a9df519833923e91a53e902"
+  },
+  {
+   "slug": "wicked-2024",
+   "bucket": "positivas",
+   "tokens_prompt": 4582,
+   "num_ctx": 9216,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "dd81b73c2c84141f6d9b71b9a43710871c7f80804ce52cc020a5d0c672566c6b"
+  },
+  {
+   "slug": "2001-a-space-odyssey",
+   "bucket": "negativas",
+   "tokens_prompt": 5765,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "8d6d2a2aa615c780108d91ef34ce50ba4724bef69372b75ed03591af69244ad2"
+  },
+  {
+   "slug": "aftersun",
+   "bucket": "medianas",
+   "tokens_prompt": 6045,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "fce8f5cb5af415af1173c7f5fc96800fd7bde7bce109172acf69df4ccc84c085"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "bucket": "negativas",
+   "tokens_prompt": 5631,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "ea7b705a11ca50e5738edb9bd36b29b628148f893ed9316dc69f5d88ec8b8d8d"
+  },
+  {
+   "slug": "anatomy-of-a-fall",
+   "bucket": "positivas",
+   "tokens_prompt": 5898,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "54a60f7400e7eef84d032d8a622201b2acb7989726d0652498178b6a6a75c4fc"
+  },
+  {
+   "slug": "anatomy-of-a-murder",
+   "bucket": "medianas",
+   "tokens_prompt": 5748,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "78ef17831f685d7bb40570f7100ec51d132da796cf816d77e367324e0010fb17"
+  },
+  {
+   "slug": "anatomy-of-a-murder",
+   "bucket": "negativas",
+   "tokens_prompt": 5622,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "515d60765787ebfe192ae03d4727de2169d8b79bd4517f64afcc048bb9f986b1"
+  },
+  {
+   "slug": "burning-2018",
+   "bucket": "negativas",
+   "tokens_prompt": 5962,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "222a2a6b2b6bcafbfb176329b458a0c282ff6e92ca452b720eba226236b39d95"
+  },
+  {
+   "slug": "django-unchained",
+   "bucket": "medianas",
+   "tokens_prompt": 5904,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "b567cef1c81317c9dd4caf1f9d31bf43aef24ab4c7aae27602fcecddd5e03f38"
+  },
+  {
+   "slug": "django-unchained",
+   "bucket": "negativas",
+   "tokens_prompt": 6042,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "74b361be6f86afb0506c84efff06cf379919e9c3196d81eeebf79139c1295dcc"
+  },
+  {
+   "slug": "django-unchained",
+   "bucket": "positivas",
+   "tokens_prompt": 5758,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "c5d0693ec600870cab4ae80891e203518d5e277250fa1574eae25763038f4e93"
+  },
+  {
+   "slug": "force-majeure-2014",
+   "bucket": "medianas",
+   "tokens_prompt": 6008,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "eb1711e0366b132ec292fc8797231cad5309eafc58917e7a040c398bf370a1b4"
+  },
+  {
+   "slug": "friday-the-13th-2009",
+   "bucket": "positivas",
+   "tokens_prompt": 6266,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "5fd993fe2f5da23913f1d19ee7cdbb7d4d556a7829f0385f834ad4698b4e3f8e"
+  },
+  {
+   "slug": "gladiator-2000",
+   "bucket": "medianas",
+   "tokens_prompt": 5751,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "abde002176f9686db0c71a8b3b27d88861ea2adc367f6d09ab3f19a41445261f"
+  },
+  {
+   "slug": "guillermo-del-toros-pinocchio",
+   "bucket": "positivas",
+   "tokens_prompt": 5579,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "736c1556025797add12a5dd2ff9274c486c4bb08226376e9d5f4d51afc240c87"
+  },
+  {
+   "slug": "incendies",
+   "bucket": "positivas",
+   "tokens_prompt": 5535,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "67703d416c364499bf54c0674ec97bc72d5bf1cb064eea5fca6a6915f0fe2d25"
+  },
+  {
+   "slug": "joker-2019",
+   "bucket": "negativas",
+   "tokens_prompt": 5832,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "f923cf9ef86ba3aae3032b48c740fc4c9f68ac3a16451c7786697f53b28ef97b"
+  },
+  {
+   "slug": "memento",
+   "bucket": "medianas",
+   "tokens_prompt": 5712,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "3c69ca4ff95371a41d219dacee1012f4eec349b30e429147d54413a0aca91589"
+  },
+  {
+   "slug": "memento",
+   "bucket": "positivas",
+   "tokens_prompt": 5452,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "b0f683b6d1d8c26a7164294cfd940c82d88dda50c76f89dbd4d7d57cbefbcfcc"
+  },
+  {
+   "slug": "mother-2017",
+   "bucket": "negativas",
+   "tokens_prompt": 5660,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "491c2313e16608186befb8a6720d49d04a6b2998712c3695cf17b93676e434af"
+  },
+  {
+   "slug": "napoleon-2023",
+   "bucket": "medianas",
+   "tokens_prompt": 6039,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "d941630bebabeeb203750b6d782d2eb3eaa5352249945750c80bb8e829656fd3"
+  },
+  {
+   "slug": "portrait-of-a-lady-on-fire",
+   "bucket": "medianas",
+   "tokens_prompt": 5970,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "7980188a53f5b2eb4f1d4f9f7a90f58a8bcb302f9cd558e70603e9702366f050"
+  },
+  {
+   "slug": "portrait-of-a-lady-on-fire",
+   "bucket": "negativas",
+   "tokens_prompt": 5634,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "0a33851e6d03add1c94023f26c49cda84deee82a6ec76fd9abbe404872249029"
+  },
+  {
+   "slug": "the-invite-2026",
+   "bucket": "medianas",
+   "tokens_prompt": 5764,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "02a712dd093f7451ab592ed20e3d2c28d9a5e9f1fc844f82aea7ef4e4085879a"
+  },
+  {
+   "slug": "the-invite-2026",
+   "bucket": "positivas",
+   "tokens_prompt": 5739,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "31663d9b0a5538a747ff554060aca6dbe5a9245755d4a95d6f68fdd9ba39cf84"
+  },
+  {
+   "slug": "the-prestige",
+   "bucket": "positivas",
+   "tokens_prompt": 6055,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "7678ceb3b55f8967041ed193916f2468d3966343864b5aa796efa0539c58c616"
+  },
+  {
+   "slug": "the-revenant-2015",
+   "bucket": "negativas",
+   "tokens_prompt": 5916,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "da61f7e53d6dda3cd875b7e0eb2f85e038d70797d00e8522c0ba58adddf46ef2"
+  },
+  {
+   "slug": "the-revenant-2015",
+   "bucket": "positivas",
+   "tokens_prompt": 6000,
+   "num_ctx": 10240,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "92525f7e3678386595fbf2b3192fb43cdee628183fc1b4224a4f7978920c04e5"
+  },
+  {
+   "slug": "the-substance",
+   "bucket": "medianas",
+   "tokens_prompt": 5978,
+   "num_ctx": 10240,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "35524def8ec44efe2d826dbb0317d5f8d22288c3be03314203822e894d9a4e41"
+  },
+  {
+   "slug": "wicked-2024",
+   "bucket": "negativas",
+   "tokens_prompt": 5951,
+   "num_ctx": 10240,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "1d8481d31a94b29ce3274fc56d107cdd9cfc1423aa24ca44f39ae978acbb00e1"
+  },
+  {
+   "slug": "2001-a-space-odyssey",
+   "bucket": "medianas",
+   "tokens_prompt": 7051,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "33a850c0940a658e639c5619971d5b154dacfbb72616edc70525c0b7d73bc3ed"
+  },
+  {
+   "slug": "500-days-of-summer",
+   "bucket": "negativas",
+   "tokens_prompt": 6861,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "2db7db639ae207efb0375fc39f7d00079179262b2cc38c2fa8914369e55ffe8c"
+  },
+  {
+   "slug": "aftersun",
+   "bucket": "negativas",
+   "tokens_prompt": 6744,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "e55a6dc7d2970cb0fa34d24989b0640c87475609864b732bdb4359f73f677cea"
+  },
+  {
+   "slug": "dune-2021",
+   "bucket": "negativas",
+   "tokens_prompt": 6642,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "9d435a769f593af6611d9b47008c41853f7ea7eb1b366556dcb2521d39b9cb1b"
+  },
+  {
+   "slug": "dune-2021",
+   "bucket": "positivas",
+   "tokens_prompt": 6507,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "372d69e7fcf2e77f530f2ba697c26d3301751fdaddf698562b96b6a907edaae2"
+  },
+  {
+   "slug": "friday-the-13th-2009",
+   "bucket": "medianas",
+   "tokens_prompt": 6394,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "d8ac153f697010bb2c94abcd49e4e05d879ca54f006d1f0f69e63f826e13251d"
+  },
+  {
+   "slug": "guillermo-del-toros-pinocchio",
+   "bucket": "medianas",
+   "tokens_prompt": 6500,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "6642659a9b17bf484b372d8a60a131ff38ddc237ea6106bbae16cca3369ec23c"
+  },
+  {
+   "slug": "incendies",
+   "bucket": "medianas",
+   "tokens_prompt": 6741,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "8467cbf82195f3bc46f16b6c6b73a90aaad88508cf71de04c82b201957ff607c"
+  },
+  {
+   "slug": "incendies",
+   "bucket": "negativas",
+   "tokens_prompt": 6560,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "e79c150caf3a13b98921d8cfde6fa7700dca63c9e3f4dcb457f5aaa13b6c64ac"
+  },
+  {
+   "slug": "joker-2019",
+   "bucket": "positivas",
+   "tokens_prompt": 6570,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "fb28d5aec64fa172164e56a535d4a8885d0902dd2af319651549a30c5e3ffad0"
+  },
+  {
+   "slug": "napoleon-2023",
+   "bucket": "negativas",
+   "tokens_prompt": 6354,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "2d33f6b2ffc79cd090e725964a757bef7f97ba7e4d742d725c4e05938741d827"
+  },
+  {
+   "slug": "portrait-of-a-lady-on-fire",
+   "bucket": "positivas",
+   "tokens_prompt": 6510,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "16055b8c14f4f2f5eccf1c3e0b0d65c616b26211bd1948b376771318bb89e052"
+  },
+  {
+   "slug": "spider-man-across-the-spider-verse",
+   "bucket": "positivas",
+   "tokens_prompt": 6477,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "21dad596ba4f18f7ec71765528e364dad007ed59cfb7f5d6acac0fdfa44b5ef0"
+  },
+  {
+   "slug": "the-battle-of-algiers",
+   "bucket": "negativas",
+   "tokens_prompt": 7053,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "260c2243fb345fc5754c4c62c4e261b2abe9e5ecc2db53a3dbe25ffe60de363b"
+  },
+  {
+   "slug": "the-battle-of-algiers",
+   "bucket": "positivas",
+   "tokens_prompt": 6530,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e82d72bbca8e5cd3a9c2ba0efc48bfa991fbc28ce7783786467cb2f9efd5adca"
+  },
+  {
+   "slug": "the-revenant-2015",
+   "bucket": "medianas",
+   "tokens_prompt": 6566,
+   "num_ctx": 11264,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "4176e77b136d64522ae6491b33710a414fa047867abe8618985b715234513c9c"
+  },
+  {
+   "slug": "the-second-mother",
+   "bucket": "negativas",
+   "tokens_prompt": 7154,
+   "num_ctx": 11264,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "842584ef1dec37b3e8de37bc2537556f6ca6f54ca0b6ef74fa6a0612a46e459d"
+  },
+  {
+   "slug": "the-substance",
+   "bucket": "positivas",
+   "tokens_prompt": 6422,
+   "num_ctx": 11264,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "fa7f0bc7de4595c434793128ca2cd9c35fd21f8bbd0a2d0f2c6c078853797a17"
+  },
+  {
+   "slug": "2001-a-space-odyssey",
+   "bucket": "positivas",
+   "tokens_prompt": 7380,
+   "num_ctx": 12288,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e6634598bee7e70ef9eb9c553147b333b7efdff9d3dbdde0cfc731e8c79ace01"
+  },
+  {
+   "slug": "a-brighter-summer-day",
+   "bucket": "negativas",
+   "tokens_prompt": 7708,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "f0886ceadfafc0dc4cf98f873cbd5538b293c51c51669c1a15a1d601ca82c98b"
+  },
+  {
+   "slug": "aftersun",
+   "bucket": "positivas",
+   "tokens_prompt": 7301,
+   "num_ctx": 12288,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "4c60c3879ef164aff53a506015e2ea64091162e9bd178d4f32ac3a448a8887e8"
+  },
+  {
+   "slug": "burning-2018",
+   "bucket": "positivas",
+   "tokens_prompt": 7850,
+   "num_ctx": 12288,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "c0a865d65ad0e4d251750b00823453319aea29974f17e6fd4b37b5d6396a1712"
+  },
+  {
+   "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+   "bucket": "negativas",
+   "tokens_prompt": 7574,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "761cf495534c933ea898de3b9e334bb756fe12373e57547f51660d1443df35c7"
+  },
+  {
+   "slug": "friday-the-13th-2009",
+   "bucket": "negativas",
+   "tokens_prompt": 7483,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "83c72d4abd57f08cb5079f28a4253d2e27219a7c03b6f766c4798df77920eee7"
+  },
+  {
+   "slug": "napoleon-2023",
+   "bucket": "positivas",
+   "tokens_prompt": 7338,
+   "num_ctx": 12288,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "3d0a99c7d5697927f996ab15e8b909c3f4f40e3cbd7a560d00990fd83715e3f4"
+  },
+  {
+   "slug": "spider-man-across-the-spider-verse",
+   "bucket": "medianas",
+   "tokens_prompt": 7884,
+   "num_ctx": 12288,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "b622ebccc106562dd9bccec9e4f64a70006533d465504269942075da861ee542"
+  },
+  {
+   "slug": "spider-man-across-the-spider-verse",
+   "bucket": "negativas",
+   "tokens_prompt": 7589,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "fdfe98c1df6e9cf4e9931eee8dd3a8cf1c048423f0afe672176192aff617c557"
+  },
+  {
+   "slug": "the-invite-2026",
+   "bucket": "negativas",
+   "tokens_prompt": 7264,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "a5402afb4d0dc1e3dbb76d7ff46a03cc7b003061ac3e451e8cb6dcf1f0c6da5b"
+  },
+  {
+   "slug": "the-prestige",
+   "bucket": "negativas",
+   "tokens_prompt": 7414,
+   "num_ctx": 12288,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "11e39403fe63c529254fbc5b9af6e3c42bc9f3e15505d271cd8ce90b2bbf958d"
+  },
+  {
+   "slug": "woman-of-fire",
+   "bucket": "positivas",
+   "tokens_prompt": 7626,
+   "num_ctx": 12288,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "9fb73baa0a67cb1ebe1864c9e79544239bfb175076479099d92ab72e5f727a17"
+  },
+  {
+   "slug": "a-brighter-summer-day",
+   "bucket": "medianas",
+   "tokens_prompt": 8336,
+   "num_ctx": 13312,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "ab40dbc3ba5c78a7d441266b98f122c7a176316ab97072619d35c13caad772be"
+  },
+  {
+   "slug": "anatomy-of-a-murder",
+   "bucket": "positivas",
+   "tokens_prompt": 8791,
+   "num_ctx": 13312,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "4b17de35dd2f22cc504ad88199768ac2e879289b8543d3fa1081ae76acf75595"
+  },
+  {
+   "slug": "guillermo-del-toros-pinocchio",
+   "bucket": "negativas",
+   "tokens_prompt": 8449,
+   "num_ctx": 13312,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "ee9605ff422266d9eeefc2289aef61d608c0c2467b8d816a452897f0315aad70"
+  },
+  {
+   "slug": "the-battle-of-algiers",
+   "bucket": "medianas",
+   "tokens_prompt": 8535,
+   "num_ctx": 13312,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "e20226ea6ad6abf92a45db1c323903afa9052d238bf705ff65203a33cc93369c"
+  },
+  {
+   "slug": "the-second-mother",
+   "bucket": "positivas",
+   "tokens_prompt": 8975,
+   "num_ctx": 13312,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "3f587aa9b589da31eb1094b33b9d377dd43d33873d0d9f25ee595ff15cf087c4"
+  },
+  {
+   "slug": "woman-of-fire",
+   "bucket": "medianas",
+   "tokens_prompt": 8253,
+   "num_ctx": 13312,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "8ed46e90c1212ecb6888196a41233bb061af114810ce47cafe5f3ebacf81619e"
+  },
+  {
+   "slug": "dune-2021",
+   "bucket": "medianas",
+   "tokens_prompt": 9391,
+   "num_ctx": 14336,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "01c4de46e156b7235ba3cee7f32dab5695ba61daf5da80e22f6dd6c36df46d71"
+  },
+  {
+   "slug": "the-second-mother",
+   "bucket": "medianas",
+   "tokens_prompt": 10025,
+   "num_ctx": 14336,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "17589a6e10eba50938f3050d2287104fea99c35cdbb99ffc8a48bbee916224cd"
+  },
+  {
+   "slug": "500-days-of-summer",
+   "bucket": "positivas",
+   "tokens_prompt": 25546,
+   "num_ctx": 31744,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "3e3936b2f6b2653811aa8f07aaf849ba0dc92919d506b7aaf6a438757a3b4eca"
+  }
+ ]
+}
