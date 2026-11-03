@@ -43,6 +43,10 @@ Travas:
   próxima execução, depois de nova partida limpa); se cair de novo, fica
   `fora_por_memoria` (sai dos DOIS lados de toda comparação e não é refeito);
 - retomável: par com `ok: true` (ou `fora_por_memoria`) não é refeito;
+- gate da Fase 2: o lado TREINADO só é gerado com `finetune/GATE_FASE2.md`
+  COMMITADO (rastreado no git e igual ao HEAD) e com o `c1_c4_fase2.json` e o
+  `delta2.json` de que ele dá o sha256 (`gate_fase2.py`, que só roda depois de
+  C1–C4 da base e do publicado calculados e do δ₂ fixado);
 - saída: `finetune/fase2/sintese_<lado>/<slug>__<bucket>.json` e
   `manifesto.json` (sha256 de cada arquivo), reescrito a cada par. Grava cada
   tentativa (texto cru, tempos, se levou o reforço) e o bucket FINAL que a
@@ -85,6 +89,8 @@ AMOSTRAGEM = {"temperature": 0.7, "top_p": 0.8, "top_k": 20, "min_p": 0.0,
 SEED = 20261019
 VAR_TEMPERATURA = "ESPECTRO24_OLLAMA_TEMPERATURE"
 MAX_ABORTOS_MEMORIA = 2
+ARQ_GATE = K.FINETUNE_DIR / "GATE_FASE2.md"
+MARCA_GATE = "<!-- gate_fase2 "          # a linha que o `gate_fase2.py` grava, com os sha256
 
 
 def num_ctx_da_chamada(tokens_prompt: int) -> int:
@@ -245,6 +251,36 @@ def recusar_temperatura_do_ambiente() -> None:
                          f"DESVIO_P01 ({AMOSTRAGEM['temperature']}), passada em cada chamada — remova-a")
 
 
+def ler_marca_gate(texto: str) -> dict:
+    linha = next((l for l in texto.splitlines() if l.startswith(MARCA_GATE)), None)
+    if linha is None or not linha.endswith(" -->"):
+        raise SystemExit(f"{ARQ_GATE.name} sem a linha `{MARCA_GATE.strip()} {{…}} -->`: "
+                         f"escreva-o com `gate_fase2.py`")
+    return json.loads(linha[len(MARCA_GATE):-len(" -->")])
+
+
+def exigir_gate_fase2(arq: Path = ARQ_GATE, pasta: Path = PASTA) -> dict:
+    """O treinado não é gerado antes do gate da Fase 2: `GATE_FASE2.md` rastreado
+    no git, sem diferença para o HEAD, e o `c1_c4_fase2.json` e o `delta2.json`
+    com os sha256 que ele registra."""
+    if not arq.exists():
+        raise SystemExit(f"sem {arq.name}: o treinado só é gerado depois do gate da Fase 2 "
+                         f"(C1–C4 da base e do publicado, δ₂ fixado, `gate_fase2.py`, commit)")
+    real = arq.resolve()                  # no Mac, `finetune` é link para o worktree
+    repo, nome = real.parent, real.name
+    if K.rodar_texto(["git", "-C", str(repo), "ls-files", "--error-unmatch", nome]).returncode:
+        raise SystemExit(f"{arq.name} existe mas não está commitado: commite-o antes")
+    if K.rodar_texto(["git", "-C", str(repo), "diff", "--quiet", "HEAD", "--", nome]).returncode:
+        raise SystemExit(f"{arq.name} difere do commitado (HEAD): o gate é o commitado")
+    marca = ler_marca_gate(real.read_text(encoding="utf-8"))
+    for chave, nome_arq in (("c1_c4_fase2_sha256", "c1_c4_fase2.json"),
+                            ("delta2_sha256", "delta2.json")):
+        f = pasta / nome_arq
+        if not f.exists() or K.sha256_arquivo(f) != marca.get(chave):
+            raise SystemExit(f"{nome_arq} ausente ou diferente do que o {arq.name} registra")
+    return marca
+
+
 def bucket_final(b) -> dict:
     """O que a produção publicaria deste bucket (forma de `validar_publicado`)."""
     from dataclasses import asdict
@@ -274,6 +310,8 @@ def cmd_gerar(a) -> None:
     if os.environ.get("CLAUDECODE"):
         raise SystemExit("rode FORA do Claude Code (CLAUDECODE está no ambiente)")
     recusar_temperatura_do_ambiente()
+    if a.lado == "treinado":
+        exigir_gate_fase2()
     import copy
     from espectro24.local_ollama import LLMLocalFalhou, resposta_json_local
     from espectro24.synthesize import _parse_llm_json, synthesize_bucket
