@@ -132,6 +132,12 @@
   "p99": 10029,
   "max": 10029
  },
- "llama_cpp_commit": null,
- "base": null
+ "llama_cpp_commit": "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad",
+ "base": {
+  "log_sha256": "1c5df07ba87869213bf54a9b2a278f97484a2886834d4516190146a6937246a0",
+  "gguf_sha256": "c9f3c7016b886143f79b8d86e4e8ff26fb55dee7475e674272e211fbf1f23475",
+  "unsloth": "2026.10.7",
+  "repo_revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+  "tensores_sha256": "8afba50e12e0d21162e6510299f4123f5b81e96a21e33c7dadd967a94f74c838"
+ }
 }
