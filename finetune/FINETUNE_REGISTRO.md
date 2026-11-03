@@ -1589,6 +1589,66 @@ nada por linha.
 4. antes do import: dequantizar a linha 151654 do GGUF no Windows, que custa
    segundos e é local.
 
+## Fase 3 — treino do Qwen3-8B (MEDIDO, 2026-11-03)
+
+Kernel `pedrocollet1/espectro24-finetune-treino-qwen3`, versão 2
+(a versão 1 abortou em `conferir_dataset` por causa do `meta.json` antigo; o
+dataset foi refeito em `65cef1a`). Logs em
+`finetune/kaggle/treino_saida_qwen3/`, import em `finetune/viabilidade/`
+(`9cacb4b`).
+
+**Entradas (MEDIDO, no log):** `treino.jsonl` `36f81ac1…`, com o mesmo valor
+lido, no meta e na config; 140 de treino e 19 de validação. Repo
+`unsloth/Qwen3-8B-unsloth-bnb-4bit` revisão `62efd7f9…`, Unsloth 2026.10.7,
+T4, fp16. llama.cpp `6d194531…` antes e depois, com o mesmo binário da base
+(`llama_cpp_igual_ao_da_base` true; `conversion/base.py` aparece alterado,
+igual na base). `template_confere` true, nenhum exemplo acima de 12.288
+tokens, máscara começando na chave e sem `<think>`.
+
+**Treino (MEDIDO):** 105 passos (3 épocas × 35), 13.176,5 s (3,66 h), kernel
+inteiro 14.660 s (4,07 h, dentro do ESTIMADO de 3,7–4,5 h). `train_loss`
+médio 0,5427.
+
+| época | passo | eval_loss |
+|---|---|---|
+| 1 | 35 | 0,5769 |
+| 2 | 70 | **0,5492** |
+| 3 | 105 | 0,5567 |
+
+Escolhido o checkpoint-70 (época 2, menor eval_loss); a reavaliação desse
+checkpoint confere (0,5492). A época 3 subiu 0,0075, sinal de começo de
+sobreajuste nos 19 de validação. A diferença é pequena e foi medida numa
+amostra só de 19, então não serve para concluir nada.
+
+**Igualdade base × treinado (MEDIDO):**
+- no kernel: `comparacao_com_base` dá os mesmos nomes; as 252 projeções
+  mudaram; nenhum dos 147 tensores fora delas mudou;
+- no Mac, pelo `tensores.json` dos dois GGUF: 399 tensores com os mesmos nomes
+  e tipos; diferem exatamente os 252 `attn_q/k/v/output` e `ffn_gate/up/down`
+  (36 de cada); `token_embd`, `output`, `output_norm` e as normas são
+  idênticos;
+- `embed_contra_original` (DESVIO_P02): **1 linha** difere do original 16-bit
+  (`unsloth/Qwen3-8B` `946bc9ac…`), a **151654**, com max_abs
+  0,029541015625. A inferência do DESVIO_P02 agora está MEDIDA para o
+  treinado. Na base ela segue inferida, mas a base tem o mesmo sha de
+  `token_embd`;
+- o `importar-pasta` conferiu os sha `70a40c46…` e `05d7a76c…` antes de
+  importar.
+
+**GGUF e import (MEDIDO):** `Qwen3-8B.Q4_K_M.gguf` `e488697e…`, 5.027.784.288
+bytes (o mesmo tamanho da base); a exportação levou 823 s. No Windows virou
+`espectro-qwen3-8b-treinado` (id `1fe5f6bf49ed`). O Modelfile é igual ao da
+base, só muda o `FROM`.
+
+| | base (02/11) | treinado (03/11) |
+|---|---|---|
+| E5, num_ctx 18.432 | 213,5 s | 231,3 s |
+| geração tokens/s | 3,50 | 3,46 |
+| probe 27.648 | ok, 21,4 s | ok, 23,9 s |
+| RAM livre mínima | 5,17 GB | 5,68 GB |
+
+O treinado NÃO foi gerado nem medido no teste: isso é a Fase 4.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
@@ -1645,3 +1705,8 @@ nada por linha.
   diferença por linha e o shard fundido não existe mais. Não foi medido que a
   linha 151654 do `token_embd` do GGUF é zero nem que o treinado sai com a
   mesma linha zerada (inferido do código do Unsloth 2026.10.7).
+- (03/11) Resolvido para o treinado: só a linha 151654 da embedding difere
+  do original (`embed_contra_original`). Continua sem medida: a linha 151654
+  dequantizada de algum dos dois GGUF; se o eval_loss da época 2 contra o da
+  3 indica alguma diferença real de qualidade (19 exemplos); qualquer medida
+  do treinado no teste (Fase 4).
