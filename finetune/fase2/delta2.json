@@ -1,0 +1,14 @@
+{
+ "gerado_por": "scripts/finetune/avaliar_c1_c4.py fixar-delta2",
+ "p0_apoio_2": 0.8558052434456929,
+ "bullets_julgados": 534,
+ "formula": "poder.mde_analitico no sentido da queda; n = 30·18/(1 + 17·0,023)",
+ "delta2_pp": 7.8,
+ "fora_por_memoria": [],
+ "script_sha256": "54bc680b83ab01107e3d43e030d4eaeb4ffa0a86225cf763f26cb3ebd1c3c807",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "n_arquivos": 162,
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ }
+}
