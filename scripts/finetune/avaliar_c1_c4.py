@@ -28,6 +28,9 @@ Implementa a seção 3 (C1–C4) e a 5 (ordem e integridade) sem mudar nada:
 - **Regra do outlier / de memória:** bucket `fora_por_memoria` em QUALQUER lado
   gerado sai de TODOS os lados antes de qualquer conta; o bucket do Gemini
   (`buckets_excluidos`) nunca entra.
+- **Cegueira do dono (Fase 4):** no lado treinado, `preparar`, `julgar` e
+  `calcular` mandam contagens e taxas para `finetune/fase4/cego/` (`_cego.py`);
+  a tela mostra só progresso e sha256.
 - **δ₂:** recalculado pela taxa de apoio ≥ 2 do publicado (`fixar-delta2`),
   gravado UMA vez, antes de gerar o treinado.
 - **Entradas de um commit fixo:** `preparar`, `calcular`, `fixar-delta2` e
@@ -42,7 +45,8 @@ Subcomandos:
                     (no publicado: a conferência do reaproveitamento)
     medir-contexto  (Windows) os 10 maiores prompts julgáveis no servidor
     julgar          (Windows) parada no 2º "sim", retomável, guarda de latência
-    calcular        C1–C4 dos lados disponíveis (na Fase 2, descritivo)
+    calcular        C1–C4 dos lados disponíveis (na Fase 2, descritivo; na Fase 4,
+                    `fase4/cego/c1_c4_fase4.json`, só o sha256 na tela)
     fixar-delta2    δ₂ pela taxa medida do publicado → `fase2/delta2.json`
     conferir-reuso  (Mac) só o sha256 do reaproveitamento dos 5 de referência,
                     sem gravar nada
@@ -63,6 +67,7 @@ from statistics import NormalDist
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _guarda  # noqa: E402,F401  (localhost passa; nenhuma API paga)
 import comum as K  # noqa: E402
+import _cego  # noqa: E402
 import fase4_especificidade as F  # noqa: E402
 import limpar_treino as L  # noqa: E402  (exigir_juiz, _apoio, _CacheQueries)
 
@@ -71,6 +76,7 @@ C, J = L.C, L.J
 DIR = K.FINETUNE_DIR / "fase2"
 DIR_JUIZ = DIR / "juiz"
 ARQ_DELTA2 = DIR / "delta2.json"
+ARQ_FASE4 = _cego.PASTA / "c1_c4_fase4.json"     # cegueira do dono até o C5 e o C6
 LADOS = ("publicado", "base", "treinado")
 GERADOS = ("base", "treinado")
 REFERENCIA_5 = tuple(sorted(K.REFERENCIA_5))
@@ -297,7 +303,8 @@ def cmd_preparar(a) -> None:
     if (destino / "entrada.jsonl").exists():
         raise SystemExit(f"{destino / 'entrada.jsonl'} já existe: a entrada é montada UMA vez")
     t0 = time.time()
-    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent:
+    out = _cego.Saida(a.lado, "preparar_treinado.log")
+    with K.entradas_do_commit(sorted({s for s, _ in pares_teste})) as ent, out.silenciar():
         pares, com_eixo = montar_pares(a.lado, pares_teste, regs, ent,
                                        sorted({s for s, _ in pares_teste}))
     destino.mkdir(parents=True, exist_ok=True)
@@ -326,7 +333,8 @@ def cmd_preparar(a) -> None:
             meta["reaproveitamento"]["registros_copiados"] = len(regs5)
     (destino / "entrada_meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1),
                                                encoding="utf-8")
-    print(json.dumps(meta, ensure_ascii=False, indent=1))
+    out(json.dumps(meta, ensure_ascii=False, indent=1),
+        curto=f"preparado, entrada_meta.json sha256 {K.sha256_arquivo(destino / 'entrada_meta.json')}")
 
 
 def cmd_conferir_reuso(a) -> None:
@@ -400,6 +408,7 @@ def cmd_julgar(a) -> None:
     chamar = guarda.envolver(J._chamador(num_ctx=J.num_ctx(J.CONGELADA), num_predict=J.NUM_PREDICT,
                                          schema=J.schema(J.CONGELADA)))
     saida = dir_lado(a.lado) / "saida.jsonl"
+    out = _cego.Saida(a.lado, "julgar_treinado.log")   # treinado: tela só com progresso
     filmes = sorted({p["slug"] for p in pares})
     print(f"juiz {J.MODELO} · {sha[:8]}… · lado {a.lado} · {len(filmes)} filmes · parada no "
           f"{PARADA}º sim", flush=True)
@@ -413,13 +422,15 @@ def cmd_julgar(a) -> None:
             if not lote:
                 break
             try:
-                J.rodar(lote, saida, chamar, versao=J.CONGELADA, progresso_a_cada=50)
+                with out.silenciar():         # as contagens de pendentes revelam a taxa
+                    J.rodar(lote, saida, chamar, versao=J.CONGELADA, progresso_a_cada=50)
             except LatenciaAnomala as e:
                 print(f"\nPAUSADO em {slug}: {e}. A chamada lenta foi gravada; rode `julgar` "
                       f"de novo para retomar.", flush=True)
                 raise SystemExit(3)
         c = collections.Counter(e["estado"] for e in estados(ps, registros_do_juiz(a.lado)).values())
-        print(f"[{n}/{len(filmes)}] {slug}: {dict(c)} · {(time.time() - t0) / 60:.0f} min", flush=True)
+        out(f"[{n}/{len(filmes)}] {slug}: {dict(c)} · {(time.time() - t0) / 60:.0f} min",
+            curto=f"[{n}/{len(filmes)}] {slug} · {(time.time() - t0) / 60:.0f} min")
         ws = V.ws_ollama_gb()
         if n == 1:
             base_ws = ws
@@ -611,9 +622,14 @@ def cmd_calcular(a) -> None:
         out["decisao"] = out["descritivo"].pop("treinado_contra_publicado")
     if "base" in pf:
         out["achado_base_satisfaz_c1_c4"] = out["descritivo"]["base_contra_publicado"]["C1_a_C4_passam"]
-    nome = "c1_c4_fase4.json" if "treinado" in pf else "c1_c4_fase2.json"
-    (DIR / nome).write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(json.dumps(out, ensure_ascii=False, indent=1))
+    arq = ARQ_FASE4 if "treinado" in pf else DIR / "c1_c4_fase2.json"
+    if "treinado" in pf and arq.exists():
+        raise SystemExit(f"{arq} já existe: o C1–C4 do treinado é calculado UMA vez")
+    arq.parent.mkdir(parents=True, exist_ok=True)
+    arq.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
+    _cego.Saida("treinado" if "treinado" in pf else "fase2", "calcular_treinado.log")(
+        json.dumps(out, ensure_ascii=False, indent=1),
+        curto=f"calculado, {arq.name} sha256 {K.sha256_arquivo(arq)}")
 
 
 def cmd_fixar_delta2(a) -> None:

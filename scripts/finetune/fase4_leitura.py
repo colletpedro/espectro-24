@@ -69,8 +69,9 @@ def documento(filmes: list[dict], a_e: dict[str, str], selo: str, respostas: Pat
     """`filmes`: [{slug, titulo, treinado: {bucket: dict|None}, publicado: {...}}]."""
     L = ["# Leitura cega — síntese do Espectro 24", "",
          "Para cada filme, duas sínteses, **A** e **B**, de duas origens que não são "
-         "reveladas. Leia os três grupos de reviews de cada lado e marque se publicaria "
-         "sem mudança (A / B / ambos / nenhum) e qual lê melhor (A / B / empate). "
+         "reveladas. Leia os três grupos de reviews de cada lado e responda: **o lado A "
+         "é publicável? o lado B é publicável?** (sem mudança; marque A / B / ambos / "
+         "nenhum) e qual lê melhor (A / B / empate). "
          f"Responda em `{respostas.name}` (mesma pasta), uma linha por filme.", "", "---", ""]
     for n, f in enumerate(filmes, 1):
         a = a_e[f["slug"]]
@@ -80,7 +81,7 @@ def documento(filmes: list[dict], a_e: dict[str, str], selo: str, respostas: Pat
             L += [f"#### {letra}", ""]
             for bucket in K.BUCKETS:
                 L += [f"**{ROTULO_BUCKET[bucket]}**"] + bloco(f[lado][bucket])
-        L += ["**Sua leitura deste filme:**", "",
+        L += ["**Sua leitura deste filme:** o lado A é publicável? o lado B é publicável?", "",
               "| bloco | melhor (A / B / empate) | publicaria sem mudança (A / B / ambos / nenhum) |",
               "|---|---|---|", "| bullets | | |", "", "---", ""]
     L += [f"_Selo do mapeamento (sha256): `{selo}`_", ""]
@@ -136,10 +137,8 @@ def cmd_montar(a) -> None:
         wr.writerow(["filme", "publicaria", "melhor"])
         for n in range(1, len(slugs) + 1):
             wr.writerow([n, "", ""])
-    print(json.dumps({"documento": str(doc_dir / DOC), "palavras": len(texto.split()),
-                      "respostas": str(doc_dir / RESPOSTAS), "mapa": str(ARQ_MAPA),
-                      "selo": selo, "fora_por_memoria": mapa["fora_por_memoria"]},
-                     ensure_ascii=False, indent=1))
+    print(json.dumps({"documento": str(doc_dir / DOC), "respostas": str(doc_dir / RESPOSTAS),
+                      "selo": selo}, ensure_ascii=False, indent=1))
 
 
 def avaliar(a_e: dict[str, str], filmes: list[str], respostas: list[dict]) -> dict:
@@ -174,7 +173,8 @@ def cmd_avaliar(a) -> None:
            "mapa_sha256": K.sha256_arquivo(ARQ_MAPA),
            **avaliar(mapa["a_e"], mapa["filmes"], respostas)}
     ARQ_RESULTADO.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(json.dumps(out, ensure_ascii=False, indent=1))
+    # o resultado só é revelado no RESULTADO_FASE4.md
+    print(f"avaliado, {ARQ_RESULTADO.name} sha256 {K.sha256_arquivo(ARQ_RESULTADO)}")
 
 
 def main() -> None:

@@ -19,6 +19,10 @@ lá está:
   ocorrência) ≥ 10%; IC de Wilson 95% nos dois lados; consistência dos
   repetidos.
 
+Cegueira do dono: `amostrar` e `avaliar` não mostram contagem nem proporção
+na tela (só caminhos, selo e sha256); o resultado é revelado no
+`RESULTADO_FASE4.md`, depois do C6.
+
 Subcomandos:
     amostrar   (depois da geração do treinado) documento, respostas em branco,
                mapa com selo — sem medida nenhuma
@@ -39,6 +43,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _guarda  # noqa: E402,F401
 import comum as K  # noqa: E402
+import _cego  # noqa: E402
 import especificidade_bullet as B  # noqa: E402
 import especificidade_validacao as V  # noqa: E402
 import gerar_sintese_teste as G  # noqa: E402
@@ -221,11 +226,14 @@ def cmd_amostrar(a) -> None:
     doc_dir = Path(a.doc_dir)
     doc_dir.mkdir(parents=True, exist_ok=True)
     palavras = _documento(doc_dir / DOC, doc_dir / RESPOSTAS, itens, selo)
-    print(json.dumps({"itens": len(itens), "frame": mapa["frame"],
-                      "fora_por_memoria": mapa["fora_por_memoria"],
-                      "documento": str(doc_dir / DOC), "palavras": palavras,
-                      "respostas": str(doc_dir / RESPOSTAS), "mapa": str(ARQ_MAPA),
-                      "selo": selo}, ensure_ascii=False, indent=1))
+    # o frame e os fora por memória dizem quantos bullets o treinado deu: só no log
+    _cego.Saida("treinado", "c5_amostrar.log")(
+        json.dumps({"itens": len(itens), "frame": mapa["frame"],
+                    "fora_por_memoria": mapa["fora_por_memoria"], "palavras": palavras},
+                   ensure_ascii=False),
+        curto=json.dumps({"itens": len(itens), "documento": str(doc_dir / DOC),
+                          "respostas": str(doc_dir / RESPOSTAS), "selo": selo},
+                         ensure_ascii=False, indent=1))
 
 
 # ---------------------------------------------------------------------------
@@ -276,7 +284,8 @@ def cmd_avaliar(a) -> None:
            "mapa_sha256": K.sha256_arquivo(ARQ_MAPA),
            "script_sha256": K.sha256_arquivo(Path(__file__)), **avaliar(itens, rot)}
     ARQ_RESULTADO.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(json.dumps(out, ensure_ascii=False, indent=1))
+    # o resultado só é revelado no RESULTADO_FASE4.md, depois do C6
+    print(f"avaliado, {ARQ_RESULTADO.name} sha256 {K.sha256_arquivo(ARQ_RESULTADO)}")
 
 
 def main() -> None:

@@ -43,6 +43,9 @@ Travas:
   próxima execução, depois de nova partida limpa); se cair de novo, fica
   `fora_por_memoria` (sai dos DOIS lados de toda comparação e não é refeito);
 - retomável: par com `ok: true` (ou `fora_por_memoria`) não é refeito;
+- cegueira do dono (Fase 4): no lado TREINADO a linha de cada par (ok, JSON,
+  chamadas, tempo) vai para `finetune/fase4/cego/gerar_treinado.log`; a tela
+  mostra só "[k/N] filme/bucket: gravado" (`_cego.py`);
 - gate da Fase 2: o lado TREINADO só é gerado com `finetune/GATE_FASE2.md`
   COMMITADO (rastreado no git e igual ao HEAD) e com o `c1_c4_fase2.json` e o
   `delta2.json` de que ele dá o sha256 (`gate_fase2.py`, que só roda depois de
@@ -69,6 +72,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _guarda  # noqa: E402,F401
 import comum as K  # noqa: E402
+import _cego  # noqa: E402
 
 PASTA = K.FINETUNE_DIR / "fase2"
 ARQ_PLANO = PASTA / "plano_teste.json"
@@ -346,12 +350,13 @@ def cmd_gerar(a) -> None:
     partida = V.partida_limpa(a.ram_partida_min_gb, a.espera_ram_s)
     if not partida["limpa"]:
         raise SystemExit(f"partida contaminada, nada foi gerado: {partida}")
+    out = _cego.Saida(a.lado, "gerar_treinado.log")   # treinado: tela só com progresso
     guarda = GuardaDeLatencia()
     guarda.ignorar_proxima()                      # a 1ª paga a carga do modelo
     chamar = guarda.envolver(resposta_json_local)
     srv = V.subir_ollama()
     try:
-        for chave in falta:
+        for n_par, chave in enumerate(falta, 1):
             slug, bucket, s, u, b = todos[chave]
             p = plano[chave]
             if (K.sha256_texto(s), K.sha256_texto(u)) != (p["system_sha256"], p["user_sha256"]):
@@ -405,10 +410,13 @@ def cmd_gerar(a) -> None:
                 reg["latencia_anomala"] = str(anomala)
             arq.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
             gravar_manifesto(pasta)
-            print(f"{slug}/{bucket}: ok {reg.get('ok')} · json {reg.get('json_parseia')} · "
-                  f"{reg['n_chamadas']} chamada(s) · "
-                  f"ctx {p['num_ctx']} · {reg['parede_s']} s · RAM livre mín. "
-                  f"{reg['memoria'].get('ram_livre_min_gb')} GB", flush=True)
+            refazer = not (reg.get("ok") or reg["fora_por_memoria"])
+            out(f"{slug}/{bucket}: ok {reg.get('ok')} · json {reg.get('json_parseia')} · "
+                f"{reg['n_chamadas']} chamada(s) · "
+                f"ctx {p['num_ctx']} · {reg['parede_s']} s · RAM livre mín. "
+                f"{reg['memoria'].get('ram_livre_min_gb')} GB",
+                curto=f"[{n_par}/{len(falta)}] {slug}/{bucket}: gravado"
+                      + (" (erro do servidor: refeito ao rodar de novo)" if refazer else ""))
             if mon.estourou:
                 destino = ("fica FORA POR MEMÓRIA (sai dos dois lados de toda comparação)"
                            if reg["fora_por_memoria"] else
