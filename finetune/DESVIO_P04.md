@@ -17,7 +17,7 @@ nem no publicado.
 
 ## O que muda
 
-Só em `scripts/finetune/gerar_sintese_teste.py` (`main` `0576943`), no lado treinado e
+Só em `scripts/finetune/gerar_sintese_teste.py` (`main` `0576943`, corrigido em `eb8f27d`), no lado treinado e
 no base: a função de parse usada por `synthesize_bucket` passa a exigir a estrutura que a
 produção supõe (objeto; `temas` ausente, nulo ou lista de objetos). Estrutura
 impossível levanta `ValueError` e entra na regra que já existia: 1 nova chamada;
@@ -39,3 +39,13 @@ conta como falha do modelo no C4 (não é "fora por memória"). `synthesize.py` 
 Com seed e prompt iguais, a nova chamada pode repetir a mesma saída; então o
 par pode terminar como falha. É o efeito da regra pré-registrada, não de
 escolha. A resposta crua da 1ª ocorrência não foi guardada.
+
+## Correção do próprio desvio (2026-11-04)
+
+A 1ª versão (`0576943`) tinha um erro meu: `parse_estrito` importava
+`_parse_llm_json` de `synthesize` na hora da chamada, depois de o `gerar` trocar
+esse nome por ele mesmo, e entrava em recursão (`RecursionError`, antes de
+qualquer chamada ao modelo; nada foi gerado nem gravado). Em `eb8f27d` ele usa o corpo
+original (`json.loads(_strip_fences(raw))`). Conferido fim a fim com cliente falso e o
+`synthesize_bucket` real: estrutura impossível + resposta válida = 2 chamadas e
+temas; duas inválidas = "Falha ao obter JSON válido do LLM.".
