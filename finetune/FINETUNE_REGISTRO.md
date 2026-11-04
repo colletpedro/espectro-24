@@ -1649,6 +1649,15 @@ base, só muda o `FROM`.
 
 O treinado NÃO foi gerado nem medido no teste: isso é a Fase 4.
 
+## Gate da Fase 2 — aprovado pelo dono (2026-11-04)
+
+- O `GATE_FASE2.md` (commit `275ca16`, sha256 `ef2f6621…`) foi **aprovado
+  pelo dono em 04/11/2026**. O arquivo não muda: a guarda do
+  `gerar_sintese_teste.py --lado treinado` lê os sha256 dele.
+- Nota de produto (decisão do dono, sem efeito na avaliação): a prosa
+  (narrativa e veredito) sai do produto. A Fase 4 avalia só a síntese, como
+  já estava no pré-registro (C6: "Narrativa, veredito e condições NÃO entram").
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
