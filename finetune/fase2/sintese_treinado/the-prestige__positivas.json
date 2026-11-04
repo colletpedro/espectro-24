@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-prestige",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6055,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "7678ceb3b55f8967041ed193916f2468d3966343864b5aa796efa0539c58c616",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.32,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:09:09+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Giro de roteiro e reviravolta",
+    "mencoes_aproximadas": 27,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas frequentemente destacam que o giro final é surpreendente e eficaz, tornando a história mais envolvente e capaz de ser revisitada, pois revela camadas anteriores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Rivalidade entre os magos",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A tensão e o conflito entre os dois protagonistas são elogiados por serem intensos e contribuírem para o desenvolvimento da trama, com a competição de obsessão como um ponto alto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e elenco",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As performances de Christian Bale e Hugh Jackman são frequentemente mencionadas como fortes, com destaque para a habilidade de expressão física e a química entre os dois.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia, direção e atmosfera",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção de Christopher Nolan, a fotografia sombria e a atmosfera sombria e misteriosa são elogiadas, criando uma experiência imersiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fosca e truques de magia",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A abordagem dos truques de magia e a magia real em cena são apreciadas, com muitos espectadores dizendo que a história é inspiradora e cativante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração e ritmo",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews comentam que o filme é lento no início, mas que a narrativa e o giro final compensam a duração, mantendo o interesse até o final.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo destacam o giro final como um dos pontos mais fortes, capaz de transformar a experiência e tornar a obra um clássico. A rivalidade entre os protagonistas, as atuações e a atmosfera sombria também são frequentemente elogiadas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 156.5,
+ "memoria": {
+  "ram_usada_gb": 13.08,
+  "ram_livre_min_gb": 2.11,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Giro de roteiro e reviravolta\",\n      \"mencoes_aproximadas\": 27,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas frequentemente destacam que o giro final é surpreendente e eficaz, tornando a história mais envolvente e capaz de ser revisitada, pois revela camadas anteriores.\"\n    },\n    {\n      \"tema\": \"Rivalidade entre os magos\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A tensão e o conflito entre os dois protagonistas são elogiados por serem intensos e contribuírem para o desenvolvimento da trama, com a competição de obsessão como um ponto alto.\"\n    },\n    {\n      \"tema\": \"Atuações e elenco\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As performances de Christian Bale e Hugh Jackman são frequentemente mencionadas como fortes, com destaque para a habilidade de expressão física e a química entre os dois.\"\n    },\n    {\n      \"tema\": \"Fotografia, direção e atmosfera\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção de Christopher Nolan, a fotografia sombria e a atmosfera sombria e misteriosa são elogiadas, criando uma experiência imersiva.\"\n    },\n    {\n      \"tema\": \"Fosca e truques de magia\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abordagem dos truques de magia e a magia real em cena são apreciadas, com muitos espectadores dizendo que a história é inspiradora e cativante.\"\n    },\n    {\n      \"tema\": \"Duração e ritmo\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews comentam que o filme é lento no início, mas que a narrativa e o giro final compensam a duração, mantendo o interesse até o final.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo destacam o giro final como um dos pontos mais fortes, capaz de transformar a experiência e tornar a obra um clássico. A rivalidade entre os protagonistas, as atuações e a atmosfera sombria também são frequentemente elogiadas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 156.45,
+   "leitura_prompt_s": 7.883,
+   "geracao_s": 146.305,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6055,
+   "eval_count": 676
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

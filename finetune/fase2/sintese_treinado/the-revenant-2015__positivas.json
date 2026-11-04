@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-revenant-2015",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6000,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "92525f7e3678386595fbf2b3192fb43cdee628183fc1b4224a4f7978920c04e5",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:21:08+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e paisagens naturais",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam a fotografia de alta qualidade, com paisagens naturais e planos que destacam a grandiosidade e a beleza da natureza, contribuindo para a imersão na história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Leonardo DiCaprio",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Leonardo DiCaprio é amplamente elogiada, sendo considerada uma das melhores de sua carreira, com destaque para a expressão facial e a capacidade de transmitir emoção sem diálogo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo lento e duração longa",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews positivas mencionam que o filme tem um ritmo lento e uma duração longa, o que pode ser cansativo para alguns, mas é visto como parte do design da experiência de sobrevivência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Tom Hardy",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Tom Hardy, especialmente como o antagonista, é frequentemente destacada como intensa e memorável, contribuindo para o conflito e o desenvolvimento da trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Vingança e sobrevivência",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O tema da vingança e da sobrevivência é frequentemente abordado como o motor da história, com muitos espectadores encontrando força e significado na jornada do protagonista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Direção e direção de fotografia",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção de Alejandro G. Iñárritu e a direção de fotografia de Emmanuel Lubezki são elogiadas por sua capacidade de criar uma atmosfera imersiva e visualmente impressionante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo destacam a fotografia e as paisagens naturais como pontos altos, além da atuação de Leonardo DiCaprio, que é frequentemente considerada uma das melhores de sua carreira. Apesar de alguns comentários sobre o ritmo lento e a duração longa, a maioria enxerga o filme como uma experiência visual e emocional intensa.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 168.6,
+ "memoria": {
+  "ram_usada_gb": 9.25,
+  "ram_livre_min_gb": 5.94,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e paisagens naturais\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam a fotografia de alta qualidade, com paisagens naturais e planos que destacam a grandiosidade e a beleza da natureza, contribuindo para a imersão na história.\"\n    },\n    {\n      \"tema\": \"Atuação de Leonardo DiCaprio\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Leonardo DiCaprio é amplamente elogiada, sendo considerada uma das melhores de sua carreira, com destaque para a expressão facial e a capacidade de transmitir emoção sem diálogo.\"\n    },\n    {\n      \"tema\": \"Ritmo lento e duração longa\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews positivas mencionam que o filme tem um ritmo lento e uma duração longa, o que pode ser cansativo para alguns, mas é visto como parte do design da experiência de sobrevivência.\"\n    },\n    {\n      \"tema\": \"Atuação de Tom Hardy\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Tom Hardy, especialmente como o antagonista, é frequentemente destacada como intensa e memorável, contribuindo para o conflito e o desenvolvimento da trama.\"\n    },\n    {\n      \"tema\": \"Vingança e sobrevivência\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O tema da vingança e da sobrevivência é frequentemente abordado como o motor da história, com muitos espectadores encontrando força e significado na jornada do protagonista.\"\n    },\n    {\n      \"tema\": \"Direção e direção de fotografia\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção de Alejandro G. Iñárritu e a direção de fotografia de Emmanuel Lubezki são elogiadas por sua capacidade de criar uma atmosfera imersiva e visualmente impressionante.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo destacam a fotografia e as paisagens naturais como pontos altos, além da atuação de Leonardo DiCaprio, que é frequentemente considerada uma das melhores de sua carreira. Apesar de alguns comentários sobre o ritmo lento e a duração longa, a maioria enxerga o filme como uma experiência visual e emocional intensa.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 168.48,
+   "leitura_prompt_s": 8.748,
+   "geracao_s": 157.522,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6000,
+   "eval_count": 714
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "incendies",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5535,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "67703d416c364499bf54c0674ec97bc72d5bf1cb064eea5fca6a6915f0fe2d25",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.32,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T14:39:27+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e direção de Villeneuve",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam que a fotografia do filme e a direção de Denis Villeneuve são excepcionais, com planos longos e uma abordagem visual que transmite o desolamento e a severidade do ambiente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Trilha sonora e uso de música",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora, que inclui apenas uma música, é mencionada por alguns como um dos pontos altos, com a música de Radiohead sendo vista tanto como um desafio quanto como um recurso eficaz.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e estrutura não linear",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro e a estrutura não linear são elogiados por permitirem que a história se desenrole lentamente, preparando o espectador para os saltos temporais e revelações.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e personagens",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são frequentemente destacadas, com particular menção à performance de Lubna Azabal e à capacidade do elenco de carregar a complexidade emocional da história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews comentam que o ritmo é lento e a duração longa, mas que isso contribui para a tensão e a imersão na experiência emocional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final e reviravolta",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O final e a reviravolta são amplamente mencionados como pontos de impacto emocional, sendo descritos como brutais e reveladores, embora alguns apontem que a conclusão é forçada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a força emocional e a qualidade técnica do filme, com elogios à fotografia, direção e atuações. A maioria considera o roteiro e a estrutura não linear bem executados, embora alguns apontem que o ritmo é lento e a reviravolta é brutal e pouco convencional.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 178.0,
+ "memoria": {
+  "ram_usada_gb": 8.8,
+  "ram_livre_min_gb": 6.39,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e direção de Villeneuve\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que a fotografia do filme e a direção de Denis Villeneuve são excepcionais, com planos longos e uma abordagem visual que transmite o desolamento e a severidade do ambiente.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e uso de música\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora, que inclui apenas uma música, é mencionada por alguns como um dos pontos altos, com a música de Radiohead sendo vista tanto como um desafio quanto como um recurso eficaz.\"\n    },\n    {\n      \"tema\": \"Roteiro e estrutura não linear\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro e a estrutura não linear são elogiados por permitirem que a história se desenrole lentamente, preparando o espectador para os saltos temporais e revelações.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são frequentemente destacadas, com particular menção à performance de Lubna Azabal e à capacidade do elenco de carregar a complexidade emocional da história.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews comentam que o ritmo é lento e a duração longa, mas que isso contribui para a tensão e a imersão na experiência emocional.\"\n    },\n    {\n      \"tema\": \"Final e reviravolta\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O final e a reviravolta são amplamente mencionados como pontos de impacto emocional, sendo descritos como brutais e reveladores, embora alguns apontem que a conclusão é forçada.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a força emocional e a qualidade técnica do filme, com elogios à fotografia, direção e atuações. A maioria considera o roteiro e a estrutura não linear bem executados, embora alguns apontem que o ritmo é lento e a reviravolta é brutal e pouco convencional.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 178.0,
+   "leitura_prompt_s": 7.938,
+   "geracao_s": 161.809,
+   "carga_s": 6.168,
+   "prompt_eval_count": 5535,
+   "eval_count": 699
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 1,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-substance",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5033,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "818b1306003bbd704c6ba658fb2605ef91c39c0ca3441092c98ecd6695efc266",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T13:03:45+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro fraco e final arrastado",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews apontam que o roteiro é simples e sem sentido, com uma história que se perde e uma conclusão que arrasta o filme para um desastre. Alguns comentam que a trama é tão previsível que se sente que já sabe como vai terminar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Gore excessivo e pornografia desnecessária",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo considera que o filme se torna um verdadeiro festival de gore e pornografia, sem um propósito claro, apenas para choque. As cenas de nudez e violência são vistas como exageradas e sem necessidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração longa e ritmo arrastado",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores reclamam que o filme é muito longo e que o ritmo se torna lento e entediante, com uma duração que poderia ser cortada sem prejudicar a história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de sustentação do conceito",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos dizem que o filme tem uma ideia interessante, mas que não consegue desenvolvê-la adequadamente, deixando a mensagem pouco clara e o propósito confuso.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens irritantes e sem empatia",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Certas reviews mencionam que os personagens são desagradáveis e difíceis de torcer, o que dificulta a conexão emocional com a história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de subtileza e uso excessivo de efeitos",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas que apontam que o filme é muito direto em suas mensagens e que os efeitos visuais e sonoros são usados de forma excessiva, tornando a experiência desconfortável e pouco sutil.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o roteiro fraco e o final arrastado, além de uma quantidade excessiva de gore e pornografia que parece ser a única forma de manter o interesse. A duração longa e a falta de sustentação do conceito também são pontos frequentemente mencionados, resultando em uma experiência considerada arrastada e pouco envolvente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 165.3,
+ "memoria": {
+  "ram_usada_gb": 10.83,
+  "ram_livre_min_gb": 4.36,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro fraco e final arrastado\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontam que o roteiro é simples e sem sentido, com uma história que se perde e uma conclusão que arrasta o filme para um desastre. Alguns comentam que a trama é tão previsível que se sente que já sabe como vai terminar.\"\n    },\n    {\n      \"tema\": \"Gore excessivo e pornografia desnecessária\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo considera que o filme se torna um verdadeiro festival de gore e pornografia, sem um propósito claro, apenas para choque. As cenas de nudez e violência são vistas como exageradas e sem necessidade.\"\n    },\n    {\n      \"tema\": \"Duração longa e ritmo arrastado\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores reclamam que o filme é muito longo e que o ritmo se torna lento e entediante, com uma duração que poderia ser cortada sem prejudicar a história.\"\n    },\n    {\n      \"tema\": \"Falta de sustentação do conceito\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos dizem que o filme tem uma ideia interessante, mas que não consegue desenvolvê-la adequadamente, deixando a mensagem pouco clara e o propósito confuso.\"\n    },\n    {\n      \"tema\": \"Personagens irritantes e sem empatia\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Certas reviews mencionam que os personagens são desagradáveis e difíceis de torcer, o que dificulta a conexão emocional com a história.\"\n    },\n    {\n      \"tema\": \"Falta de subtileza e uso excessivo de efeitos\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas que apontam que o filme é muito direto em suas mensagens e que os efeitos visuais e sonoros são usados de forma excessiva, tornando a experiência desconfortável e pouco sutil.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o roteiro fraco e o final arrastado, além de uma quantidade excessiva de gore e pornografia que parece ser a única forma de manter o interesse. A duração longa e a falta de sustentação do conceito também são pontos frequentemente mencionados, resultando em uma experiência considerada arrastada e pouco envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 165.22,
+   "leitura_prompt_s": 7.152,
+   "geracao_s": 155.855,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5033,
+   "eval_count": 747
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

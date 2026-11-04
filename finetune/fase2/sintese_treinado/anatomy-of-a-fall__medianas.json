@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-fall",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4675,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "9aef6e93e7a5e63f0e9fbd3aba0d5e5e2095719d957c58275fe3856264d5d19c",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:08:26+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Duração excessiva e ritmo lento",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas consideram o filme muito longo, com um ritmo que se estende demais, tornando a experiência cansativa e difícil de manter o foco.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações elogiadas, especialmente a do perro e da protagonista",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos comentários elogiam as atuações, destacando especialmente a performance do cachorro e a intensidade da protagonista, que é vista como convincente e bem representada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final aberto e falta de resolução",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas criticam o final, achando que ele deixa muitas perguntas sem resposta e não atende às expectativas de um desfecho mais envolvente ou revelador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro jurídico e processo judicial",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A abordagem jurídica e o retrato do processo são mencionados como pontos fortes e fracos: alguns acham que o foco no tribunal é interessante e realista, enquanto outros consideram que isso distorce a história e torna a narrativa pesada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de tensão e reviravoltas",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas apontam que a trama não oferece tensão suficiente ou reviravoltas marcantes, resultando em uma experiência que não desperta grande interesse ou emoção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação do fiscal general e personagens irritantes",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação do fiscal general é frequentemente citada como irritante ou pouco convincente, e alguns espectadores reclamam que certos personagens são difíceis de acompanhar e parecem insuportáveis.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam principalmente a duração excessiva e o ritmo lento como os principais pontos negativos, além de elogios às atuações, especialmente à protagonista e ao cachorro. A abordagem jurídica e o final aberto também são mencionados como aspectos que geram opiniões divididas dentro deste grupo.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 147.6,
+ "memoria": {
+  "ram_usada_gb": 9.8,
+  "ram_livre_min_gb": 5.39,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Duração excessiva e ritmo lento\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas consideram o filme muito longo, com um ritmo que se estende demais, tornando a experiência cansativa e difícil de manter o foco.\"\n    },\n    {\n      \"tema\": \"Atuações elogiadas, especialmente a do perro e da protagonista\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentários elogiam as atuações, destacando especialmente a performance do cachorro e a intensidade da protagonista, que é vista como convincente e bem representada.\"\n    },\n    {\n      \"tema\": \"Final aberto e falta de resolução\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam o final, achando que ele deixa muitas perguntas sem resposta e não atende às expectativas de um desfecho mais envolvente ou revelador.\"\n    },\n    {\n      \"tema\": \"Roteiro jurídico e processo judicial\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abordagem jurídica e o retrato do processo são mencionados como pontos fortes e fracos: alguns acham que o foco no tribunal é interessante e realista, enquanto outros consideram que isso distorce a história e torna a narrativa pesada.\"\n    },\n    {\n      \"tema\": \"Falta de tensão e reviravoltas\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que a trama não oferece tensão suficiente ou reviravoltas marcantes, resultando em uma experiência que não desperta grande interesse ou emoção.\"\n    },\n    {\n      \"tema\": \"Atuação do fiscal general e personagens irritantes\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação do fiscal general é frequentemente citada como irritante ou pouco convincente, e alguns espectadores reclamam que certos personagens são difíceis de acompanhar e parecem insuportáveis.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam principalmente a duração excessiva e o ritmo lento como os principais pontos negativos, além de elogios às atuações, especialmente à protagonista e ao cachorro. A abordagem jurídica e o final aberto também são mencionados como aspectos que geram opiniões divididas dentro deste grupo.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 147.64,
+   "leitura_prompt_s": 5.748,
+   "geracao_s": 139.69,
+   "carga_s": 0.004,
+   "prompt_eval_count": 4675,
+   "eval_count": 725
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

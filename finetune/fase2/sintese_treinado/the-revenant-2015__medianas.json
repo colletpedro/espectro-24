@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-revenant-2015",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6566,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "4176e77b136d64522ae6491b33710a414fa047867abe8618985b715234513c9c",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T16:48:52+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme se arrasta, com longos períodos sem muita ação e uma duração que poderia ser encurtada em 30 a 40 minutos. A monotonia e a repetição de cenas soam cansativas, especialmente no segundo ato.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção de arte impressionantes",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews medianas elogiam a fotografia de alta qualidade, as paisagens naturais e o uso de locações reais que criam uma experiência visual marcante. A direção de arte e o storyboard são frequentemente citados como pontos altos, com planos belos e um estilo épico.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações de Leonardo DiCaprio e Tom Hardy",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações de Leonardo DiCaprio e Tom Hardy são frequentemente mencionadas como um dos aspectos mais fortes do filme. Apesar de alguns considerarem que a performance de DiCaprio não é sua melhor, a força de Hardy no papel de antagonista é destacada como um fator que salva a obra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e falta de mensagem",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns comentam que o roteiro é simples e focado apenas na vingança, sem uma mensagem mais profunda ou desenvolvimento de personagens. A falta de uma trama mais complexa ou de consequências reais para as ações é um ponto criticado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Gore e violência",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A violência e o gore são frequentemente mencionados como pontos que tornam o filme desagradável ou exagerados. Alguns consideram a violência excessiva e artificial, especialmente para a época em que a história se passa, o que pode ser difícil de aceitar para alguns espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de engajamento emocional",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas relatam que o filme não gerou emoção forte ou envolvimento com os personagens, apesar do tema de vingança e sobrevivência. A ausência de tensão e de motivos convincentes para o personagem principal faz com que a experiência se torne passiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam uma experiência visualmente impressionante e uma fotografia de alta qualidade, mas criticam o ritmo lento, a duração excessiva e a falta de engajamento emocional. Este grupo também aponta que o roteiro é simples e que as atuações, embora boas, não são suficientes para compensar as deficiências narrativas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 201.5,
+ "memoria": {
+  "ram_usada_gb": 11.63,
+  "ram_livre_min_gb": 3.57,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme se arrasta, com longos períodos sem muita ação e uma duração que poderia ser encurtada em 30 a 40 minutos. A monotonia e a repetição de cenas soam cansativas, especialmente no segundo ato.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção de arte impressionantes\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas elogiam a fotografia de alta qualidade, as paisagens naturais e o uso de locações reais que criam uma experiência visual marcante. A direção de arte e o storyboard são frequentemente citados como pontos altos, com planos belos e um estilo épico.\"\n    },\n    {\n      \"tema\": \"Atuações de Leonardo DiCaprio e Tom Hardy\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações de Leonardo DiCaprio e Tom Hardy são frequentemente mencionadas como um dos aspectos mais fortes do filme. Apesar de alguns considerarem que a performance de DiCaprio não é sua melhor, a força de Hardy no papel de antagonista é destacada como um fator que salva a obra.\"\n    },\n    {\n      \"tema\": \"Roteiro e falta de mensagem\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentam que o roteiro é simples e focado apenas na vingança, sem uma mensagem mais profunda ou desenvolvimento de personagens. A falta de uma trama mais complexa ou de consequências reais para as ações é um ponto criticado.\"\n    },\n    {\n      \"tema\": \"Gore e violência\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A violência e o gore são frequentemente mencionados como pontos que tornam o filme desagradável ou exagerados. Alguns consideram a violência excessiva e artificial, especialmente para a época em que a história se passa, o que pode ser difícil de aceitar para alguns espectadores.\"\n    },\n    {\n      \"tema\": \"Falta de engajamento emocional\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas relatam que o filme não gerou emoção forte ou envolvimento com os personagens, apesar do tema de vingança e sobrevivência. A ausência de tensão e de motivos convincentes para o personagem principal faz com que a experiência se torne passiva.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam uma experiência visualmente impressionante e uma fotografia de alta qualidade, mas criticam o ritmo lento, a duração excessiva e a falta de engajamento emocional. Este grupo também aponta que o roteiro é simples e que as atuações, embora boas, não são suficientes para compensar as deficiências narrativas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 201.45,
+   "leitura_prompt_s": 9.633,
+   "geracao_s": 189.518,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6566,
+   "eval_count": 843
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-battle-of-algiers",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6530,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "e82d72bbca8e5cd3a9c2ba0efc48bfa991fbc28ce7783786467cb2f9efd5adca",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T16:45:56+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e estilo documental",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam que a película parece um documentário encontrado, com uma fotografia realista e um estilo de direção que imergem o espectador na realidade da guerra, tornando a experiência intensa e imediata.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e abordagem política",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas elogiam o roteiro pela forma como aborda a luta pela independência da Argélia sem romantizar a revolução, mostrando a brutalidade e as consequências de ambos os lados da guerra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Música de Ennio Morricone",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora de Morricone é frequentemente citada como um dos pontos altos da obra, com uma banda sonora que intensifica a tensão e acompanha o ritmo da história de forma marcante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e elenco não profissionais",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews positivas menciona que o elenco é composto por pessoas não profissionais, incluindo ex-militantes, o que contribui para a autenticidade e a imersão da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews comentam que o ritmo da primeira metade é mais envolvente, enquanto a segunda metade se torna mais lenta, mas isso não prejudica a qualidade da obra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Relevância histórica e contemporânea",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews positivas destacam que a película ainda é extremamente relevante hoje em dia, ilustrando as consequências do colonialismo e como movimentos de resistência se formam.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a fotografia realista, o estilo documental e a música marcante de Morricone como pontos fortes da obra. Elas também elogiam a abordagem política e a autenticidade do elenco, embora algumas mencionem que o ritmo da segunda metade é mais lento. Este grupo enxerga a película como um marco da história do cinema e um exemplo poderoso de resistência.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 176.2,
+ "memoria": {
+  "ram_usada_gb": 11.15,
+  "ram_livre_min_gb": 4.04,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e estilo documental\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que a película parece um documentário encontrado, com uma fotografia realista e um estilo de direção que imergem o espectador na realidade da guerra, tornando a experiência intensa e imediata.\"\n    },\n    {\n      \"tema\": \"Roteiro e abordagem política\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas elogiam o roteiro pela forma como aborda a luta pela independência da Argélia sem romantizar a revolução, mostrando a brutalidade e as consequências de ambos os lados da guerra.\"\n    },\n    {\n      \"tema\": \"Música de Ennio Morricone\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora de Morricone é frequentemente citada como um dos pontos altos da obra, com uma banda sonora que intensifica a tensão e acompanha o ritmo da história de forma marcante.\"\n    },\n    {\n      \"tema\": \"Atuações e elenco não profissionais\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews positivas menciona que o elenco é composto por pessoas não profissionais, incluindo ex-militantes, o que contribui para a autenticidade e a imersão da experiência.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews comentam que o ritmo da primeira metade é mais envolvente, enquanto a segunda metade se torna mais lenta, mas isso não prejudica a qualidade da obra.\"\n    },\n    {\n      \"tema\": \"Relevância histórica e contemporânea\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews positivas destacam que a película ainda é extremamente relevante hoje em dia, ilustrando as consequências do colonialismo e como movimentos de resistência se formam.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a fotografia realista, o estilo documental e a música marcante de Morricone como pontos fortes da obra. Elas também elogiam a abordagem política e a autenticidade do elenco, embora algumas mencionem que o ritmo da segunda metade é mais lento. Este grupo enxerga a película como um marco da história do cinema e um exemplo poderoso de resistência.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 176.16,
+   "leitura_prompt_s": 9.464,
+   "geracao_s": 164.354,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6530,
+   "eval_count": 736
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

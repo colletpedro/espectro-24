@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "burning-2018",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5962,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "222a2a6b2b6bcafbfb176329b458a0c282ff6e92ca452b720eba226236b39d95",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.93,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T13:59:49+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam que o filme se arrasta lentamente e demora mais de duas horas e meia, o que torna a experiência arrastada e entediante, especialmente para quem tem curta atenção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de desenvolvimento e conclusão insatisfatória",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores sentem que a história não se desenvolve de forma satisfatória, deixando perguntas sem resposta e um desfecho que não responde à expectativa criada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ambiguidade e falta de clareza",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A abordagem ambígua e a falta de respostas concretas são frequentemente criticadas, com alguns achando que a pretensão de ser profundo se perde na confusão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens pouco desenvolvidos e anti-heróicos",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores consideram os personagens insuportáveis, sem motivações claras e com um protagonista apático que não inspira empatia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e fotografia elogiadas como único alívio",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Apesar das críticas, muitos reconhecem a força da atuação de Steven Yeun e a bela fotografia como pontos positivos que salvam um filme considerado entediante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Expectativa frustrada e superestimação",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews mencionam que o filme foi superestimado e que a experiência não correspondeu às altas expectativas criadas por críticas e elogios anteriores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e a duração excessiva como os principais problemas, além de criticarem a falta de desenvolvimento da trama e a ambiguidade que deixa a conclusão insatisfatória. Apesar disso, alguns reconhecem a fotografia e as atuações como pontos positivos, mas consideram que não compensam o aspecto arrastado.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 190.5,
+ "memoria": {
+  "ram_usada_gb": 9.68,
+  "ram_livre_min_gb": 5.52,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que o filme se arrasta lentamente e demora mais de duas horas e meia, o que torna a experiência arrastada e entediante, especialmente para quem tem curta atenção.\"\n    },\n    {\n      \"tema\": \"Falta de desenvolvimento e conclusão insatisfatória\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores sentem que a história não se desenvolve de forma satisfatória, deixando perguntas sem resposta e um desfecho que não responde à expectativa criada.\"\n    },\n    {\n      \"tema\": \"Ambiguidade e falta de clareza\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abordagem ambígua e a falta de respostas concretas são frequentemente criticadas, com alguns achando que a pretensão de ser profundo se perde na confusão.\"\n    },\n    {\n      \"tema\": \"Personagens pouco desenvolvidos e anti-heróicos\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores consideram os personagens insuportáveis, sem motivações claras e com um protagonista apático que não inspira empatia.\"\n    },\n    {\n      \"tema\": \"Atuações e fotografia elogiadas como único alívio\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Apesar das críticas, muitos reconhecem a força da atuação de Steven Yeun e a bela fotografia como pontos positivos que salvam um filme considerado entediante.\"\n    },\n    {\n      \"tema\": \"Expectativa frustrada e superestimação\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam que o filme foi superestimado e que a experiência não correspondeu às altas expectativas criadas por críticas e elogios anteriores.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento e a duração excessiva como os principais problemas, além de criticarem a falta de desenvolvimento da trama e a ambiguidade que deixa a conclusão insatisfatória. Apesar disso, alguns reconhecem a fotografia e as atuações como pontos positivos, mas consideram que não compensam o aspecto arrastado.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 190.49,
+   "leitura_prompt_s": 7.938,
+   "geracao_s": 180.363,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5962,
+   "eval_count": 719
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

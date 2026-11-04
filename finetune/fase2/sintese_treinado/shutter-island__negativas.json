@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "shutter-island",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5377,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "b270938235ef4874076220c54e34ab2c9ac05a1a6352df28cecd54a94706dc18",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T12:55:22+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e tédio",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews negativas reclamam que o filme é muito lento e arrasta, com uma narrativa que perde o interesse ao longo do tempo, tornando a experiência tediosa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro confuso e previsível",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores consideram o roteiro complexo e difícil de acompanhar, com uma trama que parece se arrastar e muitos ganchos que não se sustentam, resultando em uma experiência frustrante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Desfecho decepcionante",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das críticas negativas menciona que o desfecho não é tão surpreendente quanto prometido, e que a revelação soa previsível ou mal executada, enfraquecendo o impacto do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações consideradas fracassadas",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews apontam que as atuações não são convincentes, com elencos que falham em transmitir a intensidade necessária, especialmente em comparação com outras obras do diretor.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Representação de transtornos mentais como problemática",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias críticas negativas criticam a forma como os transtornos mentais são retratados, considerando a representação ofensiva e estereotipada, e questionando a sensibilidade com que a temática é abordada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e estilo visuais elogiados, mas não suficientes",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Embora algumas reviews reconheçam a fotografia e o estilo visuais como pontos positivos, muitos apontam que esses elementos não compensam os problemas narrativos e de ritmo do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e a narrativa confusa, que resultam em tédio e frustração. Ainda assim, alguns espectadores reconhecem a fotografia e o estilo visuais, mas consideram que esses aspectos não são suficientes para tornar o filme envolvente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 166.2,
+ "memoria": {
+  "ram_usada_gb": 9.84,
+  "ram_livre_min_gb": 5.35,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e tédio\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews negativas reclamam que o filme é muito lento e arrasta, com uma narrativa que perde o interesse ao longo do tempo, tornando a experiência tediosa.\"\n    },\n    {\n      \"tema\": \"Roteiro confuso e previsível\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores consideram o roteiro complexo e difícil de acompanhar, com uma trama que parece se arrastar e muitos ganchos que não se sustentam, resultando em uma experiência frustrante.\"\n    },\n    {\n      \"tema\": \"Desfecho decepcionante\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das críticas negativas menciona que o desfecho não é tão surpreendente quanto prometido, e que a revelação soa previsível ou mal executada, enfraquecendo o impacto do filme.\"\n    },\n    {\n      \"tema\": \"Atuações consideradas fracassadas\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que as atuações não são convincentes, com elencos que falham em transmitir a intensidade necessária, especialmente em comparação com outras obras do diretor.\"\n    },\n    {\n      \"tema\": \"Representação de transtornos mentais como problemática\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias críticas negativas criticam a forma como os transtornos mentais são retratados, considerando a representação ofensiva e estereotipada, e questionando a sensibilidade com que a temática é abordada.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo visuais elogiados, mas não suficientes\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Embora algumas reviews reconheçam a fotografia e o estilo visuais como pontos positivos, muitos apontam que esses elementos não compensam os problemas narrativos e de ritmo do filme.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento e a narrativa confusa, que resultam em tédio e frustração. Ainda assim, alguns espectadores reconhecem a fotografia e o estilo visuais, mas consideram que esses aspectos não são suficientes para tornar o filme envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 166.23,
+   "leitura_prompt_s": 7.816,
+   "geracao_s": 156.179,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5377,
+   "eval_count": 733
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

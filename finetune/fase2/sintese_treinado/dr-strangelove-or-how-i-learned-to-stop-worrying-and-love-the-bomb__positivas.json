@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5369,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "7d0a5cdb95a1dc7702796ed24e308ff8ff39265cc33a4381ed0ef4afb607a174",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:16:59+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Humor e comédia negra",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos elogiam a capacidade do filme de unir humor com crítica social, com piadas que parecem absurdas mas ilustram a loucura humana, e a comédia negra é frequentemente descrita como um dos pontos altos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e elenco",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As performances são destacadas, especialmente as de Peter Sellers e George C. Scott, com elogios à versatilidade e à química do elenco em criar personagens caricatos e hilários.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Crítica à Guerra Fria e política",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como uma sátira aguda da paranoia da Guerra Fria, dos líderes políticos e da estupidez humana, com muitos elogios à sua relevância histórica e crítica social.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção de Kubrick",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção e a fotografia são frequentemente elogiadas por sua originalidade, a habilidade de Kubrick de misturar gêneros e a visão cinematográfica que impressiona até hoje.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e escrita",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é descrito como inteligente e bem estruturado, com diálogos que parecem irreais mas capturam a realidade política e a falta de caráter, contribuindo para a comédia e a crítica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final e impacto emocional",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O desfecho é mencionado como um dos melhores e mais memoráveis, capaz de causar tanto riso quanto medo, e muitos dizem que o filme continua a ser perturbador e relevante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a habilidade do filme em equilibrar humor com crítica social, elogiando as atuações, a direção de Kubrick e a relevância histórica. Este grupo também valoriza o roteiro inteligente e o final impactante.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 154.4,
+ "memoria": {
+  "ram_usada_gb": 10.31,
+  "ram_livre_min_gb": 4.88,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Humor e comédia negra\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos elogiam a capacidade do filme de unir humor com crítica social, com piadas que parecem absurdas mas ilustram a loucura humana, e a comédia negra é frequentemente descrita como um dos pontos altos.\"\n    },\n    {\n      \"tema\": \"Atuações e elenco\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As performances são destacadas, especialmente as de Peter Sellers e George C. Scott, com elogios à versatilidade e à química do elenco em criar personagens caricatos e hilários.\"\n    },\n    {\n      \"tema\": \"Crítica à Guerra Fria e política\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como uma sátira aguda da paranoia da Guerra Fria, dos líderes políticos e da estupidez humana, com muitos elogios à sua relevância histórica e crítica social.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção de Kubrick\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção e a fotografia são frequentemente elogiadas por sua originalidade, a habilidade de Kubrick de misturar gêneros e a visão cinematográfica que impressiona até hoje.\"\n    },\n    {\n      \"tema\": \"Roteiro e escrita\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é descrito como inteligente e bem estruturado, com diálogos que parecem irreais mas capturam a realidade política e a falta de caráter, contribuindo para a comédia e a crítica.\"\n    },\n    {\n      \"tema\": \"Final e impacto emocional\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O desfecho é mencionado como um dos melhores e mais memoráveis, capaz de causar tanto riso quanto medo, e muitos dizem que o filme continua a ser perturbador e relevante.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a habilidade do filme em equilibrar humor com crítica social, elogiando as atuações, a direção de Kubrick e a relevância histórica. Este grupo também valoriza o roteiro inteligente e o final impactante.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 154.28,
+   "leitura_prompt_s": 7.843,
+   "geracao_s": 144.207,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5369,
+   "eval_count": 705
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

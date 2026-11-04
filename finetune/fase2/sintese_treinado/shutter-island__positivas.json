@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "shutter-island",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4896,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "fb46651cd664d8b04d2da9d5fd14398c0b2b747393515a4bdd1e6a0add940b4a",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T12:58:09+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Reviravolta final impactante",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam que a reviravolta final é um dos pontos mais memoráveis do filme, com muitos espectadores sentindo que a revelação muda completamente a forma como entende a trama, mesmo que parte da premissa tenha sido previsível.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atmosfera e tensão psicológica",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo de reviews elogia a atmosfera opressiva e a tensão psicológica criadas pelo filme, com comentários frequentemente mencionando como o som, a fotografia e a direção de Scorsese contribuem para um senso constante de desconforto e paranoia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Leonardo DiCaprio",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Leonardo DiCaprio é citada como um dos aspectos mais marcantes do filme, com muitos elogiando sua capacidade de transmitir a desesperança e a loucura do personagem, que se intensifica à medida que a história avança.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e construção do mistério",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam que o roteiro é bem construído, com um mistério que mantém o espectador envolvido e questionando a realidade, embora alguns comentem que parte da reviravolta é previsível de cedo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e som",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e o som são frequentemente mencionados como elementos que contribuem para a imersão no filme, com destaque para a música original e a utilização do som para criar uma sensação de isolamento e tensão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração e ritmo",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns comentários apontam que o filme tem um ritmo irregular, com certos trechos sendo considerados mais lentos ou confusos, embora isso não comprometa a experiência para muitos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam que o filme é um exercício de inteligência e um estudo da mente, com uma reviravolta final impactante e uma atmosfera opressiva que envolve o espectador. A atuação de Leonardo DiCaprio e a construção do mistério são frequentemente citadas como pontos altos, embora alguns comentem que o ritmo pode ser irregular.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 169.3,
+ "memoria": {
+  "ram_usada_gb": 10.3,
+  "ram_livre_min_gb": 4.9,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Reviravolta final impactante\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam que a reviravolta final é um dos pontos mais memoráveis do filme, com muitos espectadores sentindo que a revelação muda completamente a forma como entende a trama, mesmo que parte da premissa tenha sido previsível.\"\n    },\n    {\n      \"tema\": \"Atmosfera e tensão psicológica\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo de reviews elogia a atmosfera opressiva e a tensão psicológica criadas pelo filme, com comentários frequentemente mencionando como o som, a fotografia e a direção de Scorsese contribuem para um senso constante de desconforto e paranoia.\"\n    },\n    {\n      \"tema\": \"Atuação de Leonardo DiCaprio\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Leonardo DiCaprio é citada como um dos aspectos mais marcantes do filme, com muitos elogiando sua capacidade de transmitir a desesperança e a loucura do personagem, que se intensifica à medida que a história avança.\"\n    },\n    {\n      \"tema\": \"Roteiro e construção do mistério\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam que o roteiro é bem construído, com um mistério que mantém o espectador envolvido e questionando a realidade, embora alguns comentem que parte da reviravolta é previsível de cedo.\"\n    },\n    {\n      \"tema\": \"Fotografia e som\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e o som são frequentemente mencionados como elementos que contribuem para a imersão no filme, com destaque para a música original e a utilização do som para criar uma sensação de isolamento e tensão.\"\n    },\n    {\n      \"tema\": \"Duração e ritmo\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentários apontam que o filme tem um ritmo irregular, com certos trechos sendo considerados mais lentos ou confusos, embora isso não comprometa a experiência para muitos.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam que o filme é um exercício de inteligência e um estudo da mente, com uma reviravolta final impactante e uma atmosfera opressiva que envolve o espectador. A atuação de Leonardo DiCaprio e a construção do mistério são frequentemente citadas como pontos altos, embora alguns comentem que o ritmo pode ser irregular.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 169.27,
+   "leitura_prompt_s": 6.98,
+   "geracao_s": 160.023,
+   "carga_s": 0.005,
+   "prompt_eval_count": 4896,
+   "eval_count": 771
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

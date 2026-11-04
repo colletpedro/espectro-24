@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "friday-the-13th-2009",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6266,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "5fd993fe2f5da23913f1d19ee7cdbb7d4d556a7829f0385f834ad4698b4e3f8e",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.93,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T14:29:16+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atores e atuações",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam a atuação de Jared Padalecki e Danielle Panabaker como pontos fortes, com alguns fãs mencionando que o elenco é composto por atores que possuem seguidores na sua série de TV.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção são elogiadas por várias reviews, com comentários sobre a forma como a história é contada de maneira envolvente e o aspecto visual ser impactante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens e desenvolvimento",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews apontam que os personagens são um tanto quanto caricatos e que a trama se concentra em uma missão específica, mas isso é considerado parte do estilo da franquia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Sequência de abertura e ritmo",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A abertura do filme é frequentemente elogiada como uma das melhores sequências de abertura de um filme de terror, contribuindo para o ritmo dinâmico da obra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Trilha sonora e efeitos de som",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora e os efeitos de som são mencionados como parte do que torna a experiência de terror envolvente, embora alguns possam considerar certos elementos como exagerados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e adaptação",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro e a adaptação são destacados como uma forma de reunir e expandir a história da franquia, com alguns fãs considerando a abordagem como uma homenagem bem-sucedida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas apontam que o filme é divertido e bem executado, com destaque para a atuação de Jared Padalecki e Danielle Panabaker, a fotografia e a direção. A abertura é frequentemente elogiada como uma das melhores sequências de abertura de um filme de terror, contribuindo para o ritmo dinâmico da obra.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 193.0,
+ "memoria": {
+  "ram_usada_gb": 11.86,
+  "ram_livre_min_gb": 3.33,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atores e atuações\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam a atuação de Jared Padalecki e Danielle Panabaker como pontos fortes, com alguns fãs mencionando que o elenco é composto por atores que possuem seguidores na sua série de TV.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção são elogiadas por várias reviews, com comentários sobre a forma como a história é contada de maneira envolvente e o aspecto visual ser impactante.\"\n    },\n    {\n      \"tema\": \"Personagens e desenvolvimento\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que os personagens são um tanto quanto caricatos e que a trama se concentra em uma missão específica, mas isso é considerado parte do estilo da franquia.\"\n    },\n    {\n      \"tema\": \"Sequência de abertura e ritmo\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abertura do filme é frequentemente elogiada como uma das melhores sequências de abertura de um filme de terror, contribuindo para o ritmo dinâmico da obra.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e efeitos de som\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora e os efeitos de som são mencionados como parte do que torna a experiência de terror envolvente, embora alguns possam considerar certos elementos como exagerados.\"\n    },\n    {\n      \"tema\": \"Roteiro e adaptação\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro e a adaptação são destacados como uma forma de reunir e expandir a história da franquia, com alguns fãs considerando a abordagem como uma homenagem bem-sucedida.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas apontam que o filme é divertido e bem executado, com destaque para a atuação de Jared Padalecki e Danielle Panabaker, a fotografia e a direção. A abertura é frequentemente elogiada como uma das melhores sequências de abertura de um filme de terror, contribuindo para o ritmo dinâmico da obra.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 192.88,
+   "leitura_prompt_s": 9.317,
+   "geracao_s": 181.3,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6266,
+   "eval_count": 704
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

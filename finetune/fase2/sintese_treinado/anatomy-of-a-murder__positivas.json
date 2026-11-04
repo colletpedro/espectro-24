@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-murder",
+ "bucket": "positivas",
+ "num_ctx": 13312,
+ "tokens_prompt_plano": 8791,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "4b17de35dd2f22cc504ad88199768ac2e879289b8543d3fa1081ae76acf75595",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.4,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:42:43+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Jimmy Stewart",
+    "mencoes_aproximadas": 35,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jimmy Stewart é frequentemente elogiada como um dos destaques do filme, com muitos críticos destacando sua naturalidade e carisma, que elevam a trama de forma impressionante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e diálogos inteligentes",
+    "mencoes_aproximadas": 32,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é descrito como inteligente e bem escrito, com diálogos ágeis e cheios de punchlines, que tornam a experiência de assistir ao filme envolvente e entretenida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração e ritmo",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A duração do filme, que se estende por quase três horas, é um ponto de discussão, com alguns elogiando o ritmo que parece voar e outros sentindo que ele se arrasta em certos momentos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Crítica ao sistema judicial",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos apontam que o filme critica de forma eficaz o sistema judicial, mostrando como a justiça é influenciada por narrativas e emoções, e não apenas por evidências objetivas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Cinematografia e trilha sonora",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A cinematografia é elogiada por sua qualidade e o uso da trilha sonora de Duke Ellington, que contribui para a atmosfera e a tensão da trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Sexismo e preconceitos do período",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é criticado por retratar de forma problemática o sexismo e os preconceitos de sua época, especialmente como o comportamento e a aparência das mulheres são usados como fatores na construção do caso.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a atuação de Jimmy Stewart e o roteiro inteligente como os principais pontos fortes, além de elogiarem a crítica ao sistema judicial e a trilha sonora. A duração é um ponto de discussão, mas a maioria considera que o filme não se arrasta.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 202.0,
+ "memoria": {
+  "ram_usada_gb": 9.65,
+  "ram_livre_min_gb": 5.54,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.39
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Jimmy Stewart\",\n      \"mencoes_aproximadas\": 35,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jimmy Stewart é frequentemente elogiada como um dos destaques do filme, com muitos críticos destacando sua naturalidade e carisma, que elevam a trama de forma impressionante.\"\n    },\n    {\n      \"tema\": \"Roteiro e diálogos inteligentes\",\n      \"mencoes_aproximadas\": 32,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é descrito como inteligente e bem escrito, com diálogos ágeis e cheios de punchlines, que tornam a experiência de assistir ao filme envolvente e entretenida.\"\n    },\n    {\n      \"tema\": \"Duração e ritmo\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A duração do filme, que se estende por quase três horas, é um ponto de discussão, com alguns elogiando o ritmo que parece voar e outros sentindo que ele se arrasta em certos momentos.\"\n    },\n    {\n      \"tema\": \"Crítica ao sistema judicial\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos apontam que o filme critica de forma eficaz o sistema judicial, mostrando como a justiça é influenciada por narrativas e emoções, e não apenas por evidências objetivas.\"\n    },\n    {\n      \"tema\": \"Cinematografia e trilha sonora\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A cinematografia é elogiada por sua qualidade e o uso da trilha sonora de Duke Ellington, que contribui para a atmosfera e a tensão da trama.\"\n    },\n    {\n      \"tema\": \"Sexismo e preconceitos do período\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é criticado por retratar de forma problemática o sexismo e os preconceitos de sua época, especialmente como o comportamento e a aparência das mulheres são usados como fatores na construção do caso.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atuação de Jimmy Stewart e o roteiro inteligente como os principais pontos fortes, além de elogiarem a crítica ao sistema judicial e a trilha sonora. A duração é um ponto de discussão, mas a maioria considera que o filme não se arrasta.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 202.05,
+   "leitura_prompt_s": 15.506,
+   "geracao_s": 184.239,
+   "carga_s": 0.005,
+   "prompt_eval_count": 8791,
+   "eval_count": 702
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "burning-2018",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5095,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "6d5dbb5c89df6bf0bc988138b9148d67821fae541db7e096bec0a83602f4a5b7",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:10:54+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme se arrasta, com uma longa introdução que pouco acontece e que poderia ser encurtada. Apesar de reconhecerem a qualidade técnica, muitos sentem que o ritmo é arrastado demais, com uma duração que não justifica o desenvolvimento da trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro ambíguo e falta de respostas",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas críticas medianas apontam que a abordagem ambígua e a falta de um desfecho satisfatório deixam a experiência frustrante. Muitos sentem que as metáforas e os mistérios plantados não levam a um encerramento que justifique o esforço, deixando a narrativa sem resposta definitiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção elogiados",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews medianas destacam a fotografia de Hong Kyung-pyo, que é descrita como vibrante e cheia de cores e luz quente. A direção também é mencionada como competente, com uma atmosfera aconchegante e momentos que merecem destaque por sua beleza visual.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagem principal desagradável e desenvolvimento insuficiente",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias críticas medianas consideram o protagonista irritante e sem carisma, o que prejudica a conexão emocional com a história. Além disso, muitos comentam que o desenvolvimento dos personagens, especialmente do protagonista, é insuficiente, deixando suas motivações e escolhas pouco convincentes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de suspense e previsibilidade",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas mencionam que o filme não entrega o suspense prometido, com uma premissa que parece se arrastar sem avanços significativos. A previsibilidade do desfecho também é apontada como um problema, especialmente quando o filme tenta mudar de tom para um thriller.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Comparação com a obra original (livro) e adaptação",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Parte das reviews medianas compara o filme com a obra original, dizendo que a adaptação poderia ter sido mais eficiente ou que a história em si não agrega o que o livro oferece. Algumas também mencionam que ler o livro antes ajuda a entender melhor a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme tem uma fotografia bela e uma direção competente, mas sofre com um ritmo lento e uma duração excessiva que poderia ser encurtada. A abordagem ambígua e a falta de respostas deixam a experiência frustrante, e o protagonista é frequentemente criticado por ser desagradável e mal desenvolvido.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 191.9,
+ "memoria": {
+  "ram_usada_gb": 10.24,
+  "ram_livre_min_gb": 4.95,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme se arrasta, com uma longa introdução que pouco acontece e que poderia ser encurtada. Apesar de reconhecerem a qualidade técnica, muitos sentem que o ritmo é arrastado demais, com uma duração que não justifica o desenvolvimento da trama.\"\n    },\n    {\n      \"tema\": \"Roteiro ambíguo e falta de respostas\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas críticas medianas apontam que a abordagem ambígua e a falta de um desfecho satisfatório deixam a experiência frustrante. Muitos sentem que as metáforas e os mistérios plantados não levam a um encerramento que justifique o esforço, deixando a narrativa sem resposta definitiva.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção elogiados\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas destacam a fotografia de Hong Kyung-pyo, que é descrita como vibrante e cheia de cores e luz quente. A direção também é mencionada como competente, com uma atmosfera aconchegante e momentos que merecem destaque por sua beleza visual.\"\n    },\n    {\n      \"tema\": \"Personagem principal desagradável e desenvolvimento insuficiente\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias críticas medianas consideram o protagonista irritante e sem carisma, o que prejudica a conexão emocional com a história. Além disso, muitos comentam que o desenvolvimento dos personagens, especialmente do protagonista, é insuficiente, deixando suas motivações e escolhas pouco convincentes.\"\n    },\n    {\n      \"tema\": \"Falta de suspense e previsibilidade\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que o filme não entrega o suspense prometido, com uma premissa que parece se arrastar sem avanços significativos. A previsibilidade do desfecho também é apontada como um problema, especialmente quando o filme tenta mudar de tom para um thriller.\"\n    },\n    {\n      \"tema\": \"Comparação com a obra original (livro) e adaptação\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Parte das reviews medianas compara o filme com a obra original, dizendo que a adaptação poderia ter sido mais eficiente ou que a história em si não agrega o que o livro oferece. Algumas também mencionam que ler o livro antes ajuda a entender melhor a narrativa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme tem uma fotografia bela e uma direção competente, mas sofre com um ritmo lento e uma duração excessiva que poderia ser encurtada. A abordagem ambígua e a falta de respostas deixam a experiência frustrante, e o protagonista é frequentemente criticado por ser desagradável e mal desenvolvido.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 191.89,
+   "leitura_prompt_s": 6.476,
+   "geracao_s": 183.226,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5095,
+   "eval_count": 899
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

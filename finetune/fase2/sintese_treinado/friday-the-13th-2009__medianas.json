@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "friday-the-13th-2009",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6394,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "d8ac153f697010bb2c94abcd49e4e05d879ca54f006d1f0f69e63f826e13251d",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:44:58+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo e abertura impressionantes",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas destacam que a abertura do filme é bastante eficaz, criando tensão de cara e apresentando um Jason que soa mais ameaçador e inteligente do que em outras versões. A parte inicial é frequentemente citada como um dos melhores momentos da franquia, com uma longa introdução que mantém o espectador interessado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Derek Mears como Jason",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Derek Mears no papel de Jason é amplamente elogiada, sendo considerada mais intimidadora e física do que a de Kane Hodder. Muitos comentam que ele parece um monstro de força e que sua presença é marcante, contribuindo para a percepção de que Jason é mais assustador nessa versão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e personagens fracos",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é frequentemente criticado por ser previsível, seguir gênero e ter diálogos pobres. Os personagens são descritos como rasos, sem profundidade, e o enredo parece se repetir em círculos, sem trazer nada novo à série.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e personagens fracos",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é frequentemente criticado por ser previsível, seguir gênero e ter diálogos pobres. Os personagens são descritos como rasos, sem profundidade, e o enredo parece se repetir em círculos, sem trazer nada novo à série.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e estilo cinematográfico",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e o estilo cinematográfico são mencionados como pontos fortes, com elogios à iluminação noturna e ao contraste de cores. Por outro lado, algumas reviews apontam que a abordagem de câmera de mão é exagerada e distraente, tornando a experiência menos imersiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Comparação com outras versões da franquia",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas comparam este remake a outras versões da franquia, destacando que ele se encaixa bem dentro da fórmula estabelecida. Alguns apontam que ele é um dos melhores da série, enquanto outros consideram que ele não traz inovações suficientes e apenas se mantém na linha de outros filmes do gênero.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que este filme é um remake que reúne elementos de versões anteriores da franquia e entrega uma experiência de slasher clássica. Embora a abertura e a atuação de Derek Mears sejam frequentemente elogiadas, o roteiro e os personagens são criticados por serem fracos e previsíveis. A fotografia e o estilo cinematográfico também recebem críticas mistas, com alguns considerando o filme um dos melhores da série e outros achando que ele não traz nada de novo.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 221.5,
+ "memoria": {
+  "ram_usada_gb": 11.5,
+  "ram_livre_min_gb": 3.69,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo e abertura impressionantes\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas destacam que a abertura do filme é bastante eficaz, criando tensão de cara e apresentando um Jason que soa mais ameaçador e inteligente do que em outras versões. A parte inicial é frequentemente citada como um dos melhores momentos da franquia, com uma longa introdução que mantém o espectador interessado.\"\n    },\n    {\n      \"tema\": \"Atuação de Derek Mears como Jason\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Derek Mears no papel de Jason é amplamente elogiada, sendo considerada mais intimidadora e física do que a de Kane Hodder. Muitos comentam que ele parece um monstro de força e que sua presença é marcante, contribuindo para a percepção de que Jason é mais assustador nessa versão.\"\n    },\n    {\n      \"tema\": \"Roteiro e personagens fracos\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente criticado por ser previsível, seguir gênero e ter diálogos pobres. Os personagens são descritos como rasos, sem profundidade, e o enredo parece se repetir em círculos, sem trazer nada novo à série.\"\n    },\n    {\n      \"tema\": \"Roteiro e personagens fracos\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente criticado por ser previsível, seguir gênero e ter diálogos pobres. Os personagens são descritos como rasos, sem profundidade, e o enredo parece se repetir em círculos, sem trazer nada novo à série.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo cinematográfico\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e o estilo cinematográfico são mencionados como pontos fortes, com elogios à iluminação noturna e ao contraste de cores. Por outro lado, algumas reviews apontam que a abordagem de câmera de mão é exagerada e distraente, tornando a experiência menos imersiva.\"\n    },\n    {\n      \"tema\": \"Comparação com outras versões da franquia\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas comparam este remake a outras versões da franquia, destacando que ele se encaixa bem dentro da fórmula estabelecida. Alguns apontam que ele é um dos melhores da série, enquanto outros consideram que ele não traz inovações suficientes e apenas se mantém na linha de outros filmes do gênero.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que este filme é um remake que reúne elementos de versões anteriores da franquia e entrega uma experiência de slasher clássica. Embora a abertura e a atuação de Derek Mears sejam frequentemente elogiadas, o roteiro e os personagens são criticados por serem fracos e previsíveis. A fotografia e o estilo cinematográfico também recebem críticas mistas, com alguns considerando o filme um dos melhores da série e outros achando que ele não traz nada de novo.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 221.49,
+   "leitura_prompt_s": 9.347,
+   "geracao_s": 209.796,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6394,
+   "eval_count": 922
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

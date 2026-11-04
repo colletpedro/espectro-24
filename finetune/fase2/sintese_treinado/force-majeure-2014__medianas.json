@@ -1,0 +1,149 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "force-majeure-2014",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6008,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "eb1711e0366b132ec292fc8797231cad5309eafc58917e7a040c398bf370a1b4",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.93,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T14:12:19+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme se arrasta por mais de duas horas, com momentos que poderiam ser mais concisos, deixando a tensão a perder força e o interesse a diminuir na parte final.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Cinematografia e fotografia elogiados",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews medianas destacam a beleza da fotografia e da montagem, com cenas de neve e planos longos que criam uma atmosfera serena e visualmente impressionante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento da trama criticados",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos medianos consideram que a história se apoia em um incidente muito fraco, que não sustenta a duração e que deixa a narrativa sem profundidade, com desenvolvimento que poderia ser mais interessante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e personagens masculinos desagradáveis",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas apontam que o protagonista e outros personagens masculinos são retratados de forma insuportável, com comportamentos que geram vergonha e frustração, especialmente na maneira como lidam com a crise familiar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Exploração de gênero e papéis familiares",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo de reviews médias destaca a análise crítica sobre masculinidade, papéis de gênero e expectativas familiares, considerando o filme como uma reflexão sobre as convenções sociais e a luta interna de seus personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final insatisfatório ou previsível",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas criticam o desfecho do filme, achando-o fraco, clichê ou sem resolver as questões levantadas, o que deixa a experiência incompleta.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam uma mistura de elogios à fotografia e à fotografia, mas criticam o ritmo lento e a duração excessiva, além de considerarem o roteiro pouco desenvolvido e o desfecho insatisfatório. Este grupo também destaca a atuação e a construção dos personagens masculinos, que geram desconforto e insatisfação.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": false,
+ "parede_s": 1016.8,
+ "memoria": {
+  "ram_usada_gb": 11.35,
+  "ram_livre_min_gb": 3.84,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme se arrasta em certos momentos, com uma duração que poderia ser reduzida, tornando a narrativa mais enérgica e evitando que o interesse se desgaste.\"\n    },\n    {\n      \"tema\": \"Fotografia e cenário belos\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A beleza da fotografia e do cenário de neve é frequentemente destacada como um ponto positivo, contribuindo para a experiência cinematográfica mesmo em meio a críticas.\"\n    },\n    {\n      \"tema\": \"Roteiro superficial e falta de profundidade\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que a história se baseia em um incidente mínimo e que a trama carece de desenvolvimento, parecendo rastejar em vez de se aprofundar.\"\n    },\n    {\n      \"tema\": \"Exploração de gênero e masculinidade\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A abordagem crítica da masculinidade e dos papéis de gênero dentro da família é vista como um aspecto interessante e relevante, embora algumas reviews medianas considerem a construção um pouco preguiçosa.\"\n    },\n    {\n      \"tema\": \"Personagens masculinos fragilizados\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fragilidade dos personagens masculinos e a falta de reação de um deles em situações de crise são apontadas como pontos problemáticos, gerando frustração e ironia.\"\n    },\n    {\n      \"tema\": \"Comparação com outras obras\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca de obras anteriores, como \",\n      \"exemplo_parafraseado\": \"algumas reviews medianas mencionam que o filme é uma versão mais fraca",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "length",
+   "latencia_s": 830.7,
+   "leitura_prompt_s": 8.622,
+   "geracao_s": 819.875,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6008,
+   "eval_count": 3000
+  },
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme se arrasta por mais de duas horas, com momentos que poderiam ser mais concisos, deixando a tensão a perder força e o interesse a diminuir na parte final.\"\n    },\n    {\n      \"tema\": \"Cinematografia e fotografia elogiados\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas destacam a beleza da fotografia e da montagem, com cenas de neve e planos longos que criam uma atmosfera serena e visualmente impressionante.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento da trama criticados\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos medianos consideram que a história se apoia em um incidente muito fraco, que não sustenta a duração e que deixa a narrativa sem profundidade, com desenvolvimento que poderia ser mais interessante.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens masculinos desagradáveis\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que o protagonista e outros personagens masculinos são retratados de forma insuportável, com comportamentos que geram vergonha e frustração, especialmente na maneira como lidam com a crise familiar.\"\n    },\n    {\n      \"tema\": \"Exploração de gênero e papéis familiares\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo de reviews médias destaca a análise crítica sobre masculinidade, papéis de gênero e expectativas familiares, considerando o filme como uma reflexão sobre as convenções sociais e a luta interna de seus personagens.\"\n    },\n    {\n      \"tema\": \"Final insatisfatório ou previsível\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam o desfecho do filme, achando-o fraco, clichê ou sem resolver as questões levantadas, o que deixa a experiência incompleta.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam uma mistura de elogios à fotografia e à fotografia, mas criticam o ritmo lento e a duração excessiva, além de considerarem o roteiro pouco desenvolvido e o desfecho insatisfatório. Este grupo também destaca a atuação e a construção dos personagens masculinos, que geram desconforto e insatisfação.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 186.06,
+   "leitura_prompt_s": 0.322,
+   "geracao_s": 183.655,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6008,
+   "eval_count": 757
+  }
+ ],
+ "n_chamadas": 2,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

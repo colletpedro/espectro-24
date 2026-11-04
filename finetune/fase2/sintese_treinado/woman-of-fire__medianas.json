@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "woman-of-fire",
+ "bucket": "medianas",
+ "num_ctx": 13312,
+ "tokens_prompt_plano": 8253,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8ed46e90c1212ecb6888196a41233bb061af114810ce47cafe5f3ebacf81619e",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.4,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:56:18+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Uso de cores e estilo visual",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas destacam que o uso de cores vibrantes e uma estética colorida, em contraste com a preto e branco do original, é um ponto marcante do filme, mas que pode soar excessivo para alguns.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e narrativa previsíveis",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que a história e os desdobramentos são bastante previsíveis, seguindo um caminho semelhante ao original, o que reduz o impacto de surpresa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações exageradas e melodrama",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas criticam a intensidade e o estilo de atuação, que são descritos como exagerados e melodramáticos, o que pode tornar a experiência mais artificial.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Comparação com o original",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores medianas mencionam que, apesar das diferenças de estilo, o filme é um autorremake que se assemelha bastante ao original de 1960, o que pode gerar expectativa ou decepção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo irregular e duração",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o ritmo do filme pode ser lento ou irregular em alguns momentos, o que prejudica a imersão e o engajamento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens masculinos fracos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas criticam a falta de força dos personagens masculinos, que são vistos como fracos e pouco desenvolvidos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme apresenta uma estética colorida e um estilo visual marcante, mas que a narrativa e o roteiro são previsíveis e o melodrama excessivo pode soar artificial. A comparação com o original também é frequentemente mencionada, com opiniões mistas sobre o autorremake.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 189.0,
+ "memoria": {
+  "ram_usada_gb": 12.44,
+  "ram_livre_min_gb": 2.75,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.39
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Uso de cores e estilo visual\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas destacam que o uso de cores vibrantes e uma estética colorida, em contraste com a preto e branco do original, é um ponto marcante do filme, mas que pode soar excessivo para alguns.\"\n    },\n    {\n      \"tema\": \"Roteiro e narrativa previsíveis\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que a história e os desdobramentos são bastante previsíveis, seguindo um caminho semelhante ao original, o que reduz o impacto de surpresa.\"\n    },\n    {\n      \"tema\": \"Atuações exageradas e melodrama\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam a intensidade e o estilo de atuação, que são descritos como exagerados e melodramáticos, o que pode tornar a experiência mais artificial.\"\n    },\n    {\n      \"tema\": \"Comparação com o original\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores medianas mencionam que, apesar das diferenças de estilo, o filme é um autorremake que se assemelha bastante ao original de 1960, o que pode gerar expectativa ou decepção.\"\n    },\n    {\n      \"tema\": \"Ritmo irregular e duração\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o ritmo do filme pode ser lento ou irregular em alguns momentos, o que prejudica a imersão e o engajamento.\"\n    },\n    {\n      \"tema\": \"Personagens masculinos fracos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam a falta de força dos personagens masculinos, que são vistos como fracos e pouco desenvolvidos.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme apresenta uma estética colorida e um estilo visual marcante, mas que a narrativa e o roteiro são previsíveis e o melodrama excessivo pode soar artificial. A comparação com o original também é frequentemente mencionada, com opiniões mistas sobre o autorremake.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 188.98,
+   "leitura_prompt_s": 12.444,
+   "geracao_s": 174.139,
+   "carga_s": 0.005,
+   "prompt_eval_count": 8253,
+   "eval_count": 686
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

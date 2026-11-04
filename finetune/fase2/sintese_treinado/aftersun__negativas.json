@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "aftersun",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6744,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "e55a6dc7d2970cb0fa34d24989b0640c87475609864b732bdb4359f73f677cea",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:36:13+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e tédio",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews deste grupo descrevem o filme como arrastado e cansativo, com longos períodos sem acontecimentos que mantenham o interesse, levando à impressão de que a experiência se estende em vão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de narrativa e profundidade",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos deste grupo criticam a ausência de uma trama envolvente e de desenvolvimento dos personagens, com a sensação de que a história não se desenrola de forma clara ou significativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Paul Mescal",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews apontam que a atuação do ator não convence, especialmente em relação ao papel de pai, e que a falta de química entre ele e a atriz principal prejudica a relação central do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e estilo visual",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Apesar de alguns elogios à fotografia e ao estilo visual, críticas apontam que a abordagem é pretensiosa, confusa ou arrastada, com enquadramentos que dificultam o acompanhamento da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Expectativa não atendida",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews deste grupo mencionam que o filme não correspondeu às expectativas geradas por sua divulgação, deixando uma impressão de que a mensagem ou a emoção prometida não foram transmitidas de forma eficaz.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Dificuldade em se conectar emocionalmente",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews destacam que não foi possível sentir qualquer emoção forte ou se identificar com os personagens, resultando em uma experiência que soa vazia ou desconectada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas deste grupo criticam principalmente o ritmo lento, a falta de narrativa envolvente e a atuação de Paul Mescal, além de mencionarem que o filme não correspondeu às expectativas criadas. Mesmo que alguns reconheçam qualidades técnicas, como a fotografia, a maioria destaca que a experiência é tediosa e pouco emocionante.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 180.4,
+ "memoria": {
+  "ram_usada_gb": 9.92,
+  "ram_livre_min_gb": 5.27,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e tédio\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo descrevem o filme como arrastado e cansativo, com longos períodos sem acontecimentos que mantenham o interesse, levando à impressão de que a experiência se estende em vão.\"\n    },\n    {\n      \"tema\": \"Falta de narrativa e profundidade\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos deste grupo criticam a ausência de uma trama envolvente e de desenvolvimento dos personagens, com a sensação de que a história não se desenrola de forma clara ou significativa.\"\n    },\n    {\n      \"tema\": \"Atuação de Paul Mescal\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que a atuação do ator não convence, especialmente em relação ao papel de pai, e que a falta de química entre ele e a atriz principal prejudica a relação central do filme.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo visual\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Apesar de alguns elogios à fotografia e ao estilo visual, críticas apontam que a abordagem é pretensiosa, confusa ou arrastada, com enquadramentos que dificultam o acompanhamento da narrativa.\"\n    },\n    {\n      \"tema\": \"Expectativa não atendida\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo mencionam que o filme não correspondeu às expectativas geradas por sua divulgação, deixando uma impressão de que a mensagem ou a emoção prometida não foram transmitidas de forma eficaz.\"\n    },\n    {\n      \"tema\": \"Dificuldade em se conectar emocionalmente\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews destacam que não foi possível sentir qualquer emoção forte ou se identificar com os personagens, resultando em uma experiência que soa vazia ou desconectada.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas deste grupo criticam principalmente o ritmo lento, a falta de narrativa envolvente e a atuação de Paul Mescal, além de mencionarem que o filme não correspondeu às expectativas criadas. Mesmo que alguns reconheçam qualidades técnicas, como a fotografia, a maioria destaca que a experiência é tediosa e pouco emocionante.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 180.36,
+   "leitura_prompt_s": 8.94,
+   "geracao_s": 169.162,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6744,
+   "eval_count": 734
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

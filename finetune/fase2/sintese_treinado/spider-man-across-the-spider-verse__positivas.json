@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "spider-man-across-the-spider-verse",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6477,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "21dad596ba4f18f7ec71765528e364dad007ed59cfb7f5d6acac0fdfa44b5ef0",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T16:39:52+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Animação e estilo visual",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A animação é amplamente elogiada por sua originalidade e diversidade de estilos, com muitos comparando-a a uma obra de arte. A combinação de diferentes técnicas e visuais cria uma experiência visual que impressiona, com cada cena parecendo poder ser impressa como uma obra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews apontam que o ritmo é frenético e a história se arrasta em certos momentos, especialmente no segundo ato, o que pode tornar a experiência cansativa. No entanto, muitos reconhecem que o filme se equilibra e entrega uma conclusão satisfatória, apesar de deixar pontas soltas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Trilha sonora e música",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora, especialmente a contribuição de Metro Boomin, é frequentemente citada como um dos pontos altos do filme, com muitos destacando que a música intensifica a emoção e a ação, tornando a experiência imersiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Multiverso e desenvolvimento",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O uso do multiverso é visto como uma das maiores forças do filme, permitindo que diferentes versões do Homem-Aranha sejam exploradas de forma criativa. No entanto, alguns comentam que a complexidade pode ser um pouco cansativa, e que a história se sente incompleta, deixando expectativa para uma sequência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagem de Miles Morales",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O desenvolvimento de Miles Morales é amplamente elogiado, com muitos considerando que ele é o coração do filme e que sua jornada é emocionante e bem construída. A trama familiar e o conflito interno são pontos fortes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Expectativa para a sequência",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos fãs expressam entusiasmo pela continuação, com alguns mencionando que a conclusão deixada é insuficiente e que a espera por um terceiro filme é uma expectativa que aumenta o valor do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a animação como o principal atrativo, com muitos elogiando a diversidade de estilos e a qualidade visual. O ritmo é criticado em alguns trechos, mas a maioria concorda que o filme se equilibra e entrega uma experiência envolvente. A trilha sonora e o uso do multiverso também são pontos altos, mas a expectativa para uma sequência é elevada.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 193.9,
+ "memoria": {
+  "ram_usada_gb": 10.12,
+  "ram_livre_min_gb": 5.07,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Animação e estilo visual\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A animação é amplamente elogiada por sua originalidade e diversidade de estilos, com muitos comparando-a a uma obra de arte. A combinação de diferentes técnicas e visuais cria uma experiência visual que impressiona, com cada cena parecendo poder ser impressa como uma obra.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o ritmo é frenético e a história se arrasta em certos momentos, especialmente no segundo ato, o que pode tornar a experiência cansativa. No entanto, muitos reconhecem que o filme se equilibra e entrega uma conclusão satisfatória, apesar de deixar pontas soltas.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e música\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora, especialmente a contribuição de Metro Boomin, é frequentemente citada como um dos pontos altos do filme, com muitos destacando que a música intensifica a emoção e a ação, tornando a experiência imersiva.\"\n    },\n    {\n      \"tema\": \"Multiverso e desenvolvimento\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O uso do multiverso é visto como uma das maiores forças do filme, permitindo que diferentes versões do Homem-Aranha sejam exploradas de forma criativa. No entanto, alguns comentam que a complexidade pode ser um pouco cansativa, e que a história se sente incompleta, deixando expectativa para uma sequência.\"\n    },\n    {\n      \"tema\": \"Personagem de Miles Morales\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O desenvolvimento de Miles Morales é amplamente elogiado, com muitos considerando que ele é o coração do filme e que sua jornada é emocionante e bem construída. A trama familiar e o conflito interno são pontos fortes.\"\n    },\n    {\n      \"tema\": \"Expectativa para a sequência\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos fãs expressam entusiasmo pela continuação, com alguns mencionando que a conclusão deixada é insuficiente e que a espera por um terceiro filme é uma expectativa que aumenta o valor do filme.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a animação como o principal atrativo, com muitos elogiando a diversidade de estilos e a qualidade visual. O ritmo é criticado em alguns trechos, mas a maioria concorda que o filme se equilibra e entrega uma experiência envolvente. A trilha sonora e o uso do multiverso também são pontos altos, mas a expectativa para uma sequência é elevada.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 193.94,
+   "leitura_prompt_s": 8.634,
+   "geracao_s": 183.07,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6477,
+   "eval_count": 819
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

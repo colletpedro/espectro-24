@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "django-unchained",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5904,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "b567cef1c81317c9dd4caf1f9d31bf43aef24ab4c7aae27602fcecddd5e03f38",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.93,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T14:02:59+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Excesso de violência e sangue",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas criticam o uso excessivo de violência e sangue, considerando a brutalidade abordada como aberta, artificial e desnecessária para a trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração longa e ritmo arrastado",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que o filme é longo demais e que o ritmo, em certos trechos, se torna lento e entediante, com cenas que poderiam ser encurtadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e desempenho do elenco",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas elogiam as atuações, especialmente as de Leonardo DiCaprio e Christoph Waltz, mas criticam a falta de nuance ou o overacting de atores como Jamie Foxx.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Mensagem e abordagem da escravidão",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que a escravidão é retratada de forma simplista ou que a mensagem é pouco explorada, e que o foco está mais na violência do que na profundidade histórica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Excesso de referências e estilo pastelão",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Certas reviews medianas consideram o filme uma mistura excessiva de gêneros e referências, que soa artificial e sem originalidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Uso do termo n-words",
+    "mencoes_aproximadas": 4,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas criticam o uso frequente da palavra n-words, considerando isso desnecessário ou que não acrescenta profundidade à história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é bem executado, mas com problemas de ritmo, violência excessiva e falta de profundidade na abordagem da escravidão. Este grupo destaca que, apesar de alguns momentos boas, a experiência não se iguala ao que muitos esperavam.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 180.4,
+ "memoria": {
+  "ram_usada_gb": 10.11,
+  "ram_livre_min_gb": 5.09,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Excesso de violência e sangue\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam o uso excessivo de violência e sangue, considerando a brutalidade abordada como aberta, artificial e desnecessária para a trama.\"\n    },\n    {\n      \"tema\": \"Duração longa e ritmo arrastado\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que o filme é longo demais e que o ritmo, em certos trechos, se torna lento e entediante, com cenas que poderiam ser encurtadas.\"\n    },\n    {\n      \"tema\": \"Atuações e desempenho do elenco\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas elogiam as atuações, especialmente as de Leonardo DiCaprio e Christoph Waltz, mas criticam a falta de nuance ou o overacting de atores como Jamie Foxx.\"\n    },\n    {\n      \"tema\": \"Mensagem e abordagem da escravidão\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que a escravidão é retratada de forma simplista ou que a mensagem é pouco explorada, e que o foco está mais na violência do que na profundidade histórica.\"\n    },\n    {\n      \"tema\": \"Excesso de referências e estilo pastelão\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Certas reviews medianas consideram o filme uma mistura excessiva de gêneros e referências, que soa artificial e sem originalidade.\"\n    },\n    {\n      \"tema\": \"Uso do termo n-words\",\n      \"mencoes_aproximadas\": 4,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam o uso frequente da palavra n-words, considerando isso desnecessário ou que não acrescenta profundidade à história.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é bem executado, mas com problemas de ritmo, violência excessiva e falta de profundidade na abordagem da escravidão. Este grupo destaca que, apesar de alguns momentos boas, a experiência não se iguala ao que muitos esperavam.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 180.36,
+   "leitura_prompt_s": 8.694,
+   "geracao_s": 169.446,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5904,
+   "eval_count": 677
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "portrait-of-a-lady-on-fire",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6510,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "16055b8c14f4f2f5eccf1c3e0b0d65c616b26211bd1948b376771318bb89e052",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T16:37:04+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e composição visual",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam a fotografia de alta qualidade, comparando as cenas a pinturas e elogiando a composição de planos, cores e iluminação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e química entre as protagonistas",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews elogiam a química entre as atrizes e a forma como suas expressões e olhares transmitem o romance, com menções à atuação de Adèle Haenel e Noémie Merlant.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento emocional",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews apontam que o roteiro desenvolve bem a relação entre as personagens, mostrando a tensão e o progresso emocional de forma lenta e intensa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Trilha sonora e uso do silêncio",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A ausência de música e o uso estratégico do silêncio são mencionados como elementos que contribuem para a atmosfera e intensificam a experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Romance e feminismo",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam o romance como uma obra feminista, trazendo uma perspectiva de mulheres e desafiando convenções patriarcais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final e impacto emocional",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O final e a intensidade emocional do filme são frequentemente mencionados como pontos marcantes, causando reações fortes como choros e sentimentos de tristeza.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas apontam que o filme é uma obra visualmente deslumbrante, com uma fotografia que remete a pinturas, e que a química entre as protagonistas é intensa. O uso do silêncio e da ausência de trilha sonora é destacado como um recurso eficaz. Muitos elogiam o romance como uma história feminista e o impacto emocional, especialmente o final, que deixa uma impressão duradoura.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 167.6,
+ "memoria": {
+  "ram_usada_gb": 9.52,
+  "ram_livre_min_gb": 5.68,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e composição visual\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam a fotografia de alta qualidade, comparando as cenas a pinturas e elogiando a composição de planos, cores e iluminação.\"\n    },\n    {\n      \"tema\": \"Atuações e química entre as protagonistas\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews elogiam a química entre as atrizes e a forma como suas expressões e olhares transmitem o romance, com menções à atuação de Adèle Haenel e Noémie Merlant.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento emocional\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o roteiro desenvolve bem a relação entre as personagens, mostrando a tensão e o progresso emocional de forma lenta e intensa.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e uso do silêncio\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A ausência de música e o uso estratégico do silêncio são mencionados como elementos que contribuem para a atmosfera e intensificam a experiência.\"\n    },\n    {\n      \"tema\": \"Romance e feminismo\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam o romance como uma obra feminista, trazendo uma perspectiva de mulheres e desafiando convenções patriarcais.\"\n    },\n    {\n      \"tema\": \"Final e impacto emocional\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O final e a intensidade emocional do filme são frequentemente mencionados como pontos marcantes, causando reações fortes como choros e sentimentos de tristeza.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas apontam que o filme é uma obra visualmente deslumbrante, com uma fotografia que remete a pinturas, e que a química entre as protagonistas é intensa. O uso do silêncio e da ausência de trilha sonora é destacado como um recurso eficaz. Muitos elogiam o romance como uma história feminista e o impacto emocional, especialmente o final, que deixa uma impressão duradoura.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 167.64,
+   "leitura_prompt_s": 9.407,
+   "geracao_s": 155.965,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6510,
+   "eval_count": 703
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

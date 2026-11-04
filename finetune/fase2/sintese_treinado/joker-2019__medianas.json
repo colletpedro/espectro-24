@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "joker-2019",
+ "bucket": "medianas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 4223,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "a08cc4d73ec998d610aabc4b618de25c29c9a23f36a8b4fd4e02b57b3e994fd4",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:03:21+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Joaquin Phoenix",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews medianas elogia a atuação de Joaquin Phoenix, descrevendo-a como intensa, convincente e quase à beira do trauma, embora alguns apontem que a performance soa artificial ou que o ator não captura totalmente o espírito do personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de originalidade e roteiro",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas criticam a falta de originalidade, considerando o filme derivativo do gênero de super-heróis e comparando-o desfavoravelmente a outras obras, como Taxi Driver e The King of Comedy, e apontando que o roteiro é pouco desenvolvido e sem uma narrativa clara.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Abordagem da saúde mental",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas destacam a crítica à forma como a saúde mental é abordada, apontando que o filme exagera na representação de transtornos e que a mensagem sobre a doença mental é clara demais, sem profundidade suficiente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Cinematografia e trilha sonora",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A cinematografia e a trilha sonora são mencionadas como pontos fortes por alguns espectadores, com elogios à atmosfera sombria e à utilização de instrumentos de corda, embora alguns considerem que esses elementos não compensam a falta de roteiro.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Duração e ritmo",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas reclamam que o filme é longo e que o ritmo é lento em certos momentos, tornando a experiência arrastada, embora outros apontem que a narrativa se intensifica no final.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Conexão com a DC e a franquia",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Parte das reviews medianas questiona a necessidade de incluir referências à DC e ao universo Batman, sugerindo que o filme seria melhor sem a marca e como uma história isolada sobre o Coringa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é tecnicamente competente, com uma atuação marcante de Joaquin Phoenix, mas sofre com falta de originalidade e roteiro fraco. Este grupo destaca que a abordagem da saúde mental é exagerada e que a conexão com a franquia DC é desnecessária.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 151.4,
+ "memoria": {
+  "ram_usada_gb": 9.44,
+  "ram_livre_min_gb": 5.75,
+  "ws_ollama_gb": 0.32,
+  "vram_gb": 2.45
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Joaquin Phoenix\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews medianas elogia a atuação de Joaquin Phoenix, descrevendo-a como intensa, convincente e quase à beira do trauma, embora alguns apontem que a performance soa artificial ou que o ator não captura totalmente o espírito do personagem.\"\n    },\n    {\n      \"tema\": \"Falta de originalidade e roteiro\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam a falta de originalidade, considerando o filme derivativo do gênero de super-heróis e comparando-o desfavoravelmente a outras obras, como Taxi Driver e The King of Comedy, e apontando que o roteiro é pouco desenvolvido e sem uma narrativa clara.\"\n    },\n    {\n      \"tema\": \"Abordagem da saúde mental\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas destacam a crítica à forma como a saúde mental é abordada, apontando que o filme exagera na representação de transtornos e que a mensagem sobre a doença mental é clara demais, sem profundidade suficiente.\"\n    },\n    {\n      \"tema\": \"Cinematografia e trilha sonora\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A cinematografia e a trilha sonora são mencionadas como pontos fortes por alguns espectadores, com elogios à atmosfera sombria e à utilização de instrumentos de corda, embora alguns considerem que esses elementos não compensam a falta de roteiro.\"\n    },\n    {\n      \"tema\": \"Duração e ritmo\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas reclamam que o filme é longo e que o ritmo é lento em certos momentos, tornando a experiência arrastada, embora outros apontem que a narrativa se intensifica no final.\"\n    },\n    {\n      \"tema\": \"Conexão com a DC e a franquia\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Parte das reviews medianas questiona a necessidade de incluir referências à DC e ao universo Batman, sugerindo que o filme seria melhor sem a marca e como uma história isolada sobre o Coringa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é tecnicamente competente, com uma atuação marcante de Joaquin Phoenix, mas sofre com falta de originalidade e roteiro fraco. Este grupo destaca que a abordagem da saúde mental é exagerada e que a conexão com a franquia DC é desnecessária.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 151.34,
+   "leitura_prompt_s": 5.979,
+   "geracao_s": 138.449,
+   "carga_s": 4.826,
+   "prompt_eval_count": 4223,
+   "eval_count": 789
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

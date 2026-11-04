@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "woman-of-fire",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7626,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "9fb73baa0a67cb1ebe1864c9e79544239bfb175076479099d92ab72e5f727a17",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.4,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:35:43+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Remake estilizado e colorido",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam que a remontagem em cores é uma mudança marcante e visualmente atraente, com uma paleta de tons vibrantes que contribui para o clima surreal e distorcido do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Youn Yuh-jung",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A performance de Youn Yuh-jung é amplamente elogiada como uma estreia impressionante, com uma presença teatral e expressiva que carrega o papel de forma tão intensa e divertida que quase faz o público rir.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Estilo giallo e de terror psicológico",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews positivas descrevem o filme como uma mistura de giallo, terror psicológico e drama melódico, com uma direção ousada que mistura elementos de horror, drama e comédia negra.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo frenético e energia",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é descrito como um ritmo acelerado, cheio de energia e momentos que se tornam cada vez mais loucos, com uma atmosfera que se intensifica ao longo da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Feminismo e poder de gênero",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews positivas apontam que o filme aborda temas de feminismo e poder de gênero, especialmente a subjugação das mulheres em uma sociedade patriarcal, e como a protagonista se vinga de um sistema opressor.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Comparação com a versão original",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews positivas mencionam que, embora preferindo a versão original, ainda consideram esta remontagem uma experiência única e estilizada, com diferenças que a tornam interessante e moderna.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a estética colorida e o estilo giallo como pontos fortes, além da atuação marcante de Youn Yuh-jung e do ritmo frenético que mantém o interesse. Este grupo também aponta que o filme aborda questões de gênero de forma envolvente e oferece uma experiência visual e narrativa que, embora diferente da versão original, ainda é divertida e impactante.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 188.3,
+ "memoria": {
+  "ram_usada_gb": 10.73,
+  "ram_livre_min_gb": 4.46,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.37
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Remake estilizado e colorido\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam que a remontagem em cores é uma mudança marcante e visualmente atraente, com uma paleta de tons vibrantes que contribui para o clima surreal e distorcido do filme.\"\n    },\n    {\n      \"tema\": \"Atuação de Youn Yuh-jung\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A performance de Youn Yuh-jung é amplamente elogiada como uma estreia impressionante, com uma presença teatral e expressiva que carrega o papel de forma tão intensa e divertida que quase faz o público rir.\"\n    },\n    {\n      \"tema\": \"Estilo giallo e de terror psicológico\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews positivas descrevem o filme como uma mistura de giallo, terror psicológico e drama melódico, com uma direção ousada que mistura elementos de horror, drama e comédia negra.\"\n    },\n    {\n      \"tema\": \"Ritmo frenético e energia\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é descrito como um ritmo acelerado, cheio de energia e momentos que se tornam cada vez mais loucos, com uma atmosfera que se intensifica ao longo da narrativa.\"\n    },\n    {\n      \"tema\": \"Feminismo e poder de gênero\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews positivas apontam que o filme aborda temas de feminismo e poder de gênero, especialmente a subjugação das mulheres em uma sociedade patriarcal, e como a protagonista se vinga de um sistema opressor.\"\n    },\n    {\n      \"tema\": \"Comparação com a versão original\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews positivas mencionam que, embora preferindo a versão original, ainda consideram esta remontagem uma experiência única e estilizada, com diferenças que a tornam interessante e moderna.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a estética colorida e o estilo giallo como pontos fortes, além da atuação marcante de Youn Yuh-jung e do ritmo frenético que mantém o interesse. Este grupo também aponta que o filme aborda questões de gênero de forma envolvente e oferece uma experiência visual e narrativa que, embora diferente da versão original, ainda é divertida e impactante.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 188.33,
+   "leitura_prompt_s": 11.469,
+   "geracao_s": 174.527,
+   "carga_s": 0.005,
+   "prompt_eval_count": 7626,
+   "eval_count": 761
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

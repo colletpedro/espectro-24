@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "portrait-of-a-lady-on-fire",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5970,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "7980188a53f5b2eb4f1d4f9f7a90f58a8bcb302f9cd558e70603e9702366f050",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.32,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T14:58:02+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme demora demais para contar sua história, com cenas que parecem prolongadas e sem necessidade, fazendo com que a narrativa se torne cansativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e colorização elogiadas",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews medianas destaca a qualidade da fotografia e a beleza da colorização, descrevendo o filme como visualmente impressionante e com cada frame parecendo uma pintura.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Diálogos considerados fracos ou sem emoção",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas criticam os diálogos, achando-os pouco expressivos, sem profundidade emocional e repetitivos, o que prejudica a conexão com as personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens e desenvolvimento simples",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Parte do grupo de reviews medianas afirma que os personagens são reduzidos e suas motivações pouco exploradas, resultando em um roteiro que carece de complexidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Conexão emocional insuficiente",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews medianas relatarem que não conseguiram se envolver emocionalmente com a história, achando que o filme falta intensidade e profundidade nas relações.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final eficaz, mas não compensa o resto",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas reconhecem que o final é um dos pontos altos do filme, sendo movido e emocionante, mas que isso não consegue salvar a experiência da primeira parte.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam uma recepção dividida: elogiam a fotografia e o visual, mas criticam o ritmo lento, os diálogos e a falta de conexão emocional. Este grupo considera o filme belo e bem executado, porém insuficiente para satisfazer suas expectativas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 167.8,
+ "memoria": {
+  "ram_usada_gb": 11.55,
+  "ram_livre_min_gb": 3.65,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme demora demais para contar sua história, com cenas que parecem prolongadas e sem necessidade, fazendo com que a narrativa se torne cansativa.\"\n    },\n    {\n      \"tema\": \"Fotografia e colorização elogiadas\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews medianas destaca a qualidade da fotografia e a beleza da colorização, descrevendo o filme como visualmente impressionante e com cada frame parecendo uma pintura.\"\n    },\n    {\n      \"tema\": \"Diálogos considerados fracos ou sem emoção\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam os diálogos, achando-os pouco expressivos, sem profundidade emocional e repetitivos, o que prejudica a conexão com as personagens.\"\n    },\n    {\n      \"tema\": \"Personagens e desenvolvimento simples\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Parte do grupo de reviews medianas afirma que os personagens são reduzidos e suas motivações pouco exploradas, resultando em um roteiro que carece de complexidade.\"\n    },\n    {\n      \"tema\": \"Conexão emocional insuficiente\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas relatarem que não conseguiram se envolver emocionalmente com a história, achando que o filme falta intensidade e profundidade nas relações.\"\n    },\n    {\n      \"tema\": \"Final eficaz, mas não compensa o resto\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas reconhecem que o final é um dos pontos altos do filme, sendo movido e emocionante, mas que isso não consegue salvar a experiência da primeira parte.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam uma recepção dividida: elogiam a fotografia e o visual, mas criticam o ritmo lento, os diálogos e a falta de conexão emocional. Este grupo considera o filme belo e bem executado, porém insuficiente para satisfazer suas expectativas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 167.66,
+   "leitura_prompt_s": 7.876,
+   "geracao_s": 157.453,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5970,
+   "eval_count": 685
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

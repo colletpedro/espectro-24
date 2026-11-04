@@ -1,0 +1,149 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb",
+ "bucket": "negativas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7574,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "761cf495534c933ea898de3b9e334bb756fe12373e57547f51660d1443df35c7",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:10:12+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e tédio",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme é lento e entediante, com diálogos repetitivos que não avançam a história e uma duração que poderia ser mais curta, tornando a experiência cansativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Humor negro e comédia fracassam",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos negativos afirmam que o humor negro e a comédia satírica não funcionam, resultando em um filme que não faz rir ou divertir, apesar das intenções de Kubrick.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e falta de desenvolvimento",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o roteiro é fraco, com uma trama que não se desenvolve e personagens pouco cativantes, fazendo com que a narrativa fique vazia e sem propósito claro.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações sobreinterpretadas",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores criticam as atuações como sobreinterpretadas e forçadas, especialmente aquelas de Peter Sellers, que parecem exageradas e pouco convincentes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de humor e crítica eficaz",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo afirma que o filme não consegue transmitir a crítica que deveria, sendo considerado pouco engraçado e sem impacto, mesmo diante de uma situação tão grave como a Guerra Fria.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Efeitos práticos e trilha sonora",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews mencionam que os efeitos práticos são datados e a trilha sonora é mais interessante que o filme em si, contribuindo para uma experiência cinematográfica limitada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo lento e a falta de humor, considerando o filme entediante e sem graça. Além disso, muitos apontam que o roteiro é fraco e as atuações soam forçadas, resultando em uma experiência que não satisfaz as expectativas criadas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": false,
+ "parede_s": 293.4,
+ "memoria": {
+  "ram_usada_gb": 11.19,
+  "ram_livre_min_gb": 4.01,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.37
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e tédio\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo reclamam que o filme é lento e arrasta, com longos períodos de conversa e poucas ações, tornando a experiência maçante e difícil de manter o interesse.\"\n    },\n    {\n      \"tema\": \"Humor negro e satira fracassam\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores afirmam que o humor negro e a satira não funcionam como prometido, resultando em um filme que não é engraçado e que parece artificial, sem o impacto esperado.\"\n    },\n    {\n      \"tema\": \"Roteiro fraco e falta de desenvolvimento\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que a história é vazia, com personagens pouco desenvolvidos e uma trama que não se sustenta, tornando o filme sem substância e sem propósito claro.\"\n    },\n    {\n      \"tema\": \"Atuações superestilizadas e sobrejogadas\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentam que as atuações são exageradas e mal controladas, com personagens que parecem interpretar a comédia de forma artificial, sem naturalidade.\"\n    },\n    {\n      \"tema\": \"Comparação desfavorável com outras obras de Kubrick\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Vários espectadores afirmam que este filme não chega ao nível de outras produções do diretor, como o filme \" }, 10,\n      \"exemplo_parafraseado\" ]}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 131.08,
+   "leitura_prompt_s": 11.289,
+   "geracao_s": 117.407,
+   "carga_s": 0.006,
+   "prompt_eval_count": 7574,
+   "eval_count": 520
+  },
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e tédio\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo reclamam que o filme é lento e entediante, com diálogos repetitivos que não avançam a história e uma duração que poderia ser mais curta, tornando a experiência cansativa.\"\n    },\n    {\n      \"tema\": \"Humor negro e comédia fracassam\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos negativos afirmam que o humor negro e a comédia satírica não funcionam, resultando em um filme que não faz rir ou divertir, apesar das intenções de Kubrick.\"\n    },\n    {\n      \"tema\": \"Roteiro e falta de desenvolvimento\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o roteiro é fraco, com uma trama que não se desenvolve e personagens pouco cativantes, fazendo com que a narrativa fique vazia e sem propósito claro.\"\n    },\n    {\n      \"tema\": \"Atuações sobreinterpretadas\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores criticam as atuações como sobreinterpretadas e forçadas, especialmente aquelas de Peter Sellers, que parecem exageradas e pouco convincentes.\"\n    },\n    {\n      \"tema\": \"Falta de humor e crítica eficaz\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo afirma que o filme não consegue transmitir a crítica que deveria, sendo considerado pouco engraçado e sem impacto, mesmo diante de uma situação tão grave como a Guerra Fria.\"\n    },\n    {\n      \"tema\": \"Efeitos práticos e trilha sonora\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que os efeitos práticos são datados e a trilha sonora é mais interessante que o filme em si, contribuindo para uma experiência cinematográfica limitada.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas deste grupo destacam principalmente o ritmo lento e a falta de humor, considerando o filme entediante e sem graça. Além disso, muitos apontam que o roteiro é fraco e as atuações soam forçadas, resultando em uma experiência que não satisfaz as expectativas criadas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 162.19,
+   "leitura_prompt_s": 0.369,
+   "geracao_s": 159.706,
+   "carga_s": 0.005,
+   "prompt_eval_count": 7574,
+   "eval_count": 715
+  }
+ ],
+ "n_chamadas": 2,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

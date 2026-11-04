@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "wicked-2024",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5951,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "1d8481d31a94b29ce3274fc56d107cdd9cfc1423aa24ca44f39ae978acbb00e1",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:26:35+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Música e números musicais",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "A maioria das reviews negativas critica a música e os números musicais, considerando que as canções são repetitivas, sem impacto e que o ritmo da música não sustenta o filme. Alguns comentam que as canções são boas apenas em termos técnicos, mas a execução visual não é tão boa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "Muitas reviews negativas reclamam que o filme tem um ritmo lento e que a duração é excessiva, com longos períodos sem avanço na história. Algumas pessoas relatam que quiseram parar de assistir a metade do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro fraco e desenvolvimento insuficiente",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "O roteiro é frequentemente descrito como fraco, com uma história previsível e personagens pouco desenvolvidos. Alguns apontam que a trama não se sustenta e que a narrativa é arrastada, com momentos que parecem ser capítulo de relleno.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e dublagem",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "Algumas reviews negativas criticam as atuações, considerando que elas são estranhas ou que a dublagem não é boa. Outros comentam que a personagem principal, interpretada por Ariana Grande, não é tão boa quanto esperavam.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção de arte",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "A fotografia e a direção de arte são mencionadas de forma mista, com alguns elogiando a beleza visual e outros criticando a coloração e a falta de profundidade em certas cenas. Algumas pessoas acham que o visual é artificial ou que as cores não estão bem equilibradas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens e desenvolvimento",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 38,
+    "exemplo_parafraseado": "A falta de desenvolvimento dos personagens é um ponto comum nas reviews negativas. Alguns apontam que os personagens são rígidos e que as motivações não são bem exploradas, tornando a experiência pouco envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas deste grupo destacam principalmente a música e os números musicais como pontos fracos, além de criticarem o ritmo lento e a duração excessiva do filme. Muitos espectadores descrevem a experiência como entediante e repetitiva, mesmo quando reconhecem aspectos técnicos bem executados.",
+  "n_validas": 38,
+  "n_analisadas": 38,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 189.0,
+ "memoria": {
+  "ram_usada_gb": 10.18,
+  "ram_livre_min_gb": 5.01,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Música e números musicais\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"A maioria das reviews negativas critica a música e os números musicais, considerando que as canções são repetitivas, sem impacto e que o ritmo da música não sustenta o filme. Alguns comentam que as canções são boas apenas em termos técnicos, mas a execução visual não é tão boa.\"\n    },\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas reclamam que o filme tem um ritmo lento e que a duração é excessiva, com longos períodos sem avanço na história. Algumas pessoas relatam que quiseram parar de assistir a metade do filme.\"\n    },\n    {\n      \"tema\": \"Roteiro fraco e desenvolvimento insuficiente\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente descrito como fraco, com uma história previsível e personagens pouco desenvolvidos. Alguns apontam que a trama não se sustenta e que a narrativa é arrastada, com momentos que parecem ser capítulo de relleno.\"\n    },\n    {\n      \"tema\": \"Atuações e dublagem\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"Algumas reviews negativas criticam as atuações, considerando que elas são estranhas ou que a dublagem não é boa. Outros comentam que a personagem principal, interpretada por Ariana Grande, não é tão boa quanto esperavam.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção de arte\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de arte são mencionadas de forma mista, com alguns elogiando a beleza visual e outros criticando a coloração e a falta de profundidade em certas cenas. Algumas pessoas acham que o visual é artificial ou que as cores não estão bem equilibradas.\"\n    },\n    {\n      \"tema\": \"Personagens e desenvolvimento\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 38,\n      \"exemplo_parafraseado\": \"A falta de desenvolvimento dos personagens é um ponto comum nas reviews negativas. Alguns apontam que os personagens são rígidos e que as motivações não são bem exploradas, tornando a experiência pouco envolvente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas deste grupo destacam principalmente a música e os números musicais como pontos fracos, além de criticarem o ritmo lento e a duração excessiva do filme. Muitos espectadores descrevem a experiência como entediante e repetitiva, mesmo quando reconhecem aspectos técnicos bem executados.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 188.86,
+   "leitura_prompt_s": 8.674,
+   "geracao_s": 177.93,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5951,
+   "eval_count": 803
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

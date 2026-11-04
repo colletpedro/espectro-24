@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "spider-man-across-the-spider-verse",
+ "bucket": "medianas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7884,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "b622ebccc106562dd9bccec9e4f64a70006533d465504269942075da861ee542",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:21:07+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Animação e estilo visual impressionantes",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews medianas frequentemente destacam a qualidade da animação e o estilo visual, que são considerados espetaculares e impressionam, mesmo que algumas pessoas sintam que o estilo se torna repetitivo ou cansativo em certos momentos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento da história",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos comentários medianas criticam o roteiro, achando que a história é fraca, com desenvolvimento insuficiente e que o filme se arrasta, servindo mais como uma prequência para uma terceira parte do que como uma narrativa completa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Esperança na sequência e em uma conclusão",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas expressam frustração com o fato de que o filme é uma prequência de duas horas, deixando a tensão e o clímax em aberto para uma sequência que ainda não chegou, o que deixa a experiência incompleta.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Diversidade e representação",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns comentários medianas elogiam a representação da diversidade, destacando a inclusão de personagens de diferentes origens e culturas, mas alguns apontam que a representação queer é ausente e que poderia ser melhor.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores medianas reclamam que o filme é longo e que o ritmo é irregular, com momentos que parecem arrastados, especialmente na parte final, que poderia ser mais concisa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens e desenvolvimento de personagens",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas medianas sobre o desenvolvimento dos personagens, com alguns achando que os personagens secundários são pouco desenvolvidos ou que a trama de Miles Morales não é explorada de forma suficiente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que, embora a animação e o estilo visual sejam extremamente elogiados, o roteiro e o desenvolvimento da história são frequentemente considerados insuficientes, deixando a impressão de que o filme é uma prequência de duas horas em vez de uma narrativa completa. Este grupo destaca também a frustração com a duração e o ritmo, e a falta de conclusão, além de mencionar a diversidade representada de forma positiva, embora alguns apontem que poderia ser melhor.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 196.5,
+ "memoria": {
+  "ram_usada_gb": 12.92,
+  "ram_livre_min_gb": 2.27,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.37
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Animação e estilo visual impressionantes\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews medianas frequentemente destacam a qualidade da animação e o estilo visual, que são considerados espetaculares e impressionam, mesmo que algumas pessoas sintam que o estilo se torna repetitivo ou cansativo em certos momentos.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento da história\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentários medianas criticam o roteiro, achando que a história é fraca, com desenvolvimento insuficiente e que o filme se arrasta, servindo mais como uma prequência para uma terceira parte do que como uma narrativa completa.\"\n    },\n    {\n      \"tema\": \"Esperança na sequência e em uma conclusão\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas expressam frustração com o fato de que o filme é uma prequência de duas horas, deixando a tensão e o clímax em aberto para uma sequência que ainda não chegou, o que deixa a experiência incompleta.\"\n    },\n    {\n      \"tema\": \"Diversidade e representação\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentários medianas elogiam a representação da diversidade, destacando a inclusão de personagens de diferentes origens e culturas, mas alguns apontam que a representação queer é ausente e que poderia ser melhor.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores medianas reclamam que o filme é longo e que o ritmo é irregular, com momentos que parecem arrastados, especialmente na parte final, que poderia ser mais concisa.\"\n    },\n    {\n      \"tema\": \"Personagens e desenvolvimento de personagens\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas medianas sobre o desenvolvimento dos personagens, com alguns achando que os personagens secundários são pouco desenvolvidos ou que a trama de Miles Morales não é explorada de forma suficiente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que, embora a animação e o estilo visual sejam extremamente elogiados, o roteiro e o desenvolvimento da história são frequentemente considerados insuficientes, deixando a impressão de que o filme é uma prequência de duas horas em vez de uma narrativa completa. Este grupo destaca também a frustração com a duração e o ritmo, e a falta de conclusão, além de mencionar a diversidade representada de forma positiva, embora alguns apontem que poderia ser melhor.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 196.53,
+   "leitura_prompt_s": 11.894,
+   "geracao_s": 182.347,
+   "carga_s": 0.006,
+   "prompt_eval_count": 7884,
+   "eval_count": 796
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

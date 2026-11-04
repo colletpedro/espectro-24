@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "force-majeure-2014",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5349,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "6cb8930b3bdce02ffbff3daf20889202be95a4e733d76047cf416501951e8538",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:19:33+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews apontam que o filme é excessivamente longo e que o ritmo se arrasta, com cenas que poderiam ser encurtadas para manter o interesse.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de desenvolvimento e roteiro fraco",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos críticos consideram que a trama não é explorada de forma adequada e que o roteiro soa repetitivo e sem profundidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e personagens pouco convincentes",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews criticam a atuação do protagonista, achando que ele não transmite credibilidade, e que os personagens são vazios e pouco desenvolvidos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de interesse e tédio",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores se sentiram entediados e abandonaram a sessão antes do fim, considerando a experiência arrastada e sem motivo para ser vista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Uso de planos longos e fixos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas apontam que as cenas filmadas em planos fixos e em lenta duração contribuem para a monotonia e dificultam o engajamento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final fraco e anticlimático",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews criticam o desfecho, achando que ele não resolve bem as tensões criadas e deixa a sensação de anticlimax.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e a duração excessiva, considerando o filme arrastado e pouco envolvente. Muitos espectadores também criticam a falta de desenvolvimento do roteiro e a atuação do protagonista, além de mencionarem que o final é fraco e anticlimático.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 144.9,
+ "memoria": {
+  "ram_usada_gb": 10.75,
+  "ram_livre_min_gb": 4.44,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontam que o filme é excessivamente longo e que o ritmo se arrasta, com cenas que poderiam ser encurtadas para manter o interesse.\"\n    },\n    {\n      \"tema\": \"Falta de desenvolvimento e roteiro fraco\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos consideram que a trama não é explorada de forma adequada e que o roteiro soa repetitivo e sem profundidade.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens pouco convincentes\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam a atuação do protagonista, achando que ele não transmite credibilidade, e que os personagens são vazios e pouco desenvolvidos.\"\n    },\n    {\n      \"tema\": \"Falta de interesse e tédio\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores se sentiram entediados e abandonaram a sessão antes do fim, considerando a experiência arrastada e sem motivo para ser vista.\"\n    },\n    {\n      \"tema\": \"Uso de planos longos e fixos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Críticas apontam que as cenas filmadas em planos fixos e em lenta duração contribuem para a monotonia e dificultam o engajamento.\"\n    },\n    {\n      \"tema\": \"Final fraco e anticlimático\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam o desfecho, achando que ele não resolve bem as tensões criadas e deixa a sensação de anticlimax.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento e a duração excessiva, considerando o filme arrastado e pouco envolvente. Muitos espectadores também criticam a falta de desenvolvimento do roteiro e a atuação do protagonista, além de mencionarem que o final é fraco e anticlimático.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 144.78,
+   "leitura_prompt_s": 7.779,
+   "geracao_s": 134.757,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5349,
+   "eval_count": 660
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

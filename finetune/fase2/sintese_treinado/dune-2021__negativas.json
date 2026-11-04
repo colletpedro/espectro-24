@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dune-2021",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6642,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "9d435a769f593af6611d9b47008c41853f7ea7eb1b366556dcb2521d39b9cb1b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:39:14+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews deste grupo reclamam que o filme se arrasta, com uma trama que demora a engrenar e que exige quase duas horas e meia para avançar, o que torna a experiência cansativa e sem susto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro confuso e falta de desenvolvimento",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos comentam que a história é difícil de acompanhar, com muitas explicações e termos técnicos que se perdem, e que a trama se parece mais com um prólogo do que um filme completo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Timothée Chalamet insuficiente",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores criticam a atuação de Timothée Chalamet, dizendo que ele não transmite o peso da personagem e que suas cenas parecem mecânicas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de carisma e personagens vazios",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que os personagens não geram empatia e que o filme não desenvolve a história de forma que faça o público se importar com os personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Trilha sonora e som excessivos",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews mencionam que a trilha sonora de Hans Zimmer é dominante e arrasta, tornando a experiência mais desconfortável do que divertida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e efeitos visuais bonitos, mas não compensam",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos reconhecem que a fotografia e os efeitos visuais são impressionantes, mas que isso não basta para tornar a experiência envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, a duração excessiva e a falta de desenvolvimento da trama, além de criticarem a atuação de Timothée Chalamet e a trilha sonora. Este grupo considera o filme cansativo e sem emoção, apesar de reconhecer a qualidade técnica.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 171.3,
+ "memoria": {
+  "ram_usada_gb": 10.41,
+  "ram_livre_min_gb": 4.78,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo reclamam que o filme se arrasta, com uma trama que demora a engrenar e que exige quase duas horas e meia para avançar, o que torna a experiência cansativa e sem susto.\"\n    },\n    {\n      \"tema\": \"Roteiro confuso e falta de desenvolvimento\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentam que a história é difícil de acompanhar, com muitas explicações e termos técnicos que se perdem, e que a trama se parece mais com um prólogo do que um filme completo.\"\n    },\n    {\n      \"tema\": \"Atuação de Timothée Chalamet insuficiente\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores criticam a atuação de Timothée Chalamet, dizendo que ele não transmite o peso da personagem e que suas cenas parecem mecânicas.\"\n    },\n    {\n      \"tema\": \"Falta de carisma e personagens vazios\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que os personagens não geram empatia e que o filme não desenvolve a história de forma que faça o público se importar com os personagens.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e som excessivos\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que a trilha sonora de Hans Zimmer é dominante e arrasta, tornando a experiência mais desconfortável do que divertida.\"\n    },\n    {\n      \"tema\": \"Fotografia e efeitos visuais bonitos, mas não compensam\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos reconhecem que a fotografia e os efeitos visuais são impressionantes, mas que isso não basta para tornar a experiência envolvente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento, a duração excessiva e a falta de desenvolvimento da trama, além de criticarem a atuação de Timothée Chalamet e a trilha sonora. Este grupo considera o filme cansativo e sem emoção, apesar de reconhecer a qualidade técnica.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 171.3,
+   "leitura_prompt_s": 8.738,
+   "geracao_s": 160.286,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6642,
+   "eval_count": 703
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

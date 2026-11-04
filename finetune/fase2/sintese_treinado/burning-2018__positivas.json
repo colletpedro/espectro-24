@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "burning-2018",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7850,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "c0a865d65ad0e4d251750b00823453319aea29974f17e6fd4b37b5d6396a1712",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.5,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:07:15+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e direção de arte",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de arte são frequentemente citadas como aspectos que destacam a beleza e a atmosfera do filme, com menções à paleta azul, à luz natural e à maneira como os locais se tornam personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e ambiguidade",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos elogiam a construção do mistério e a falta de respostas claras, considerando isso um ponto forte que permite múltiplas interpretações e recontos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Steven Yeun",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Steven Yeun é frequentemente destacada como um dos pontos altos do filme, com críticas que elogiam sua capacidade de transmitir complexidade e emoção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews mencionam que o ritmo é lento, mas isso é considerado parte da experiência, com ressalvas que a duração se torna mais envolvente em seguida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Análise de classe e desigualdade social",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews interpretam o filme como uma crítica à desigualdade de classe e à situação dos trabalhadores em comparação com os ricos, destacando a tensão social como um tema central.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Metáforas e simbolismo",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A utilização de metáforas e símbolos é mencionada como uma característica marcante, com menções ao poço, à fome e ao incêndio como elementos que carregam significados profundos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a fotografia, a direção de arte e a atuação de Steven Yeun como pontos fortes, além da construção do mistério e da ambiguidade do roteiro. Muitos elogiam a abordagem lenta e o uso de metáforas, interpretando o filme como uma crítica à desigualdade social.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 176.5,
+ "memoria": {
+  "ram_usada_gb": 10.8,
+  "ram_livre_min_gb": 4.39,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.37
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e direção de arte\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de arte são frequentemente citadas como aspectos que destacam a beleza e a atmosfera do filme, com menções à paleta azul, à luz natural e à maneira como os locais se tornam personagens.\"\n    },\n    {\n      \"tema\": \"Roteiro e ambiguidade\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos elogiam a construção do mistério e a falta de respostas claras, considerando isso um ponto forte que permite múltiplas interpretações e recontos.\"\n    },\n    {\n      \"tema\": \"Atuação de Steven Yeun\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Steven Yeun é frequentemente destacada como um dos pontos altos do filme, com críticas que elogiam sua capacidade de transmitir complexidade e emoção.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que o ritmo é lento, mas isso é considerado parte da experiência, com ressalvas que a duração se torna mais envolvente em seguida.\"\n    },\n    {\n      \"tema\": \"Análise de classe e desigualdade social\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews interpretam o filme como uma crítica à desigualdade de classe e à situação dos trabalhadores em comparação com os ricos, destacando a tensão social como um tema central.\"\n    },\n    {\n      \"tema\": \"Metáforas e simbolismo\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A utilização de metáforas e símbolos é mencionada como uma característica marcante, com menções ao poço, à fome e ao incêndio como elementos que carregam significados profundos.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a fotografia, a direção de arte e a atuação de Steven Yeun como pontos fortes, além da construção do mistério e da ambiguidade do roteiro. Muitos elogiam a abordagem lenta e o uso de metáforas, interpretando o filme como uma crítica à desigualdade social.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 176.52,
+   "leitura_prompt_s": 10.812,
+   "geracao_s": 163.343,
+   "carga_s": 0.005,
+   "prompt_eval_count": 7850,
+   "eval_count": 716
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "incendies",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6741,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8467cbf82195f3bc46f16b6c6b73a90aaad88508cf71de04c82b201957ff607c",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:51:16+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas reclamam que o filme demora a engrenar e se arrasta por longos períodos, tornando a experiência cansativa, apesar de reconhecerem que o clímax e o giro de trama compensam o tempo gasto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Giro de trama previsível e impacto fraco",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores medianos sentiram que o desfecho e o giro de trama, apesar de surpreendentes, não geraram o impacto esperado, com alguns prevendo a reviravolta antes mesmo de chegar ao seu desenrolar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção técnicas elogiadas",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia, a direção e a estética visual são frequentemente citadas como pontos fortes, com elogios à qualidade técnica e à forma como a tristeza e o drama são capturados em tela.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e construção da história críticas",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas apontam que o roteiro e a estrutura da história são problemáticos, com subtramas que não se encaixam bem, personagens que parecem ser apenas instrumentos para o desfecho e uma trama que deixa a desejar em termos de desenvolvimento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Expectativa versus realidade",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há comentários medianos que mencionam ter esperado mais da obra, considerando-a superestimada, e que a experiência foi decepcionante em relação às altas expectativas criadas pela fama e pelos elogios anteriores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Crítica à abordagem de guerra e representação do Oriente Médio",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns espectadores medianos criticam a forma como a guerra e o Oriente Médio são abordados, considerando a representação artificial ou genérica, e apontam que a obra poderia ter explorado melhor a complexidade da guerra civil do Líbano.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam um equilíbrio entre elogios à técnica e críticas ao ritmo e à construção da história. Este grupo reconhece a qualidade artística do filme, mas muitos sentem que o giro de trama e o desenvolvimento são insuficientes para sustentar o impacto esperado.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 194.9,
+ "memoria": {
+  "ram_usada_gb": 12.45,
+  "ram_livre_min_gb": 2.74,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme demora a engrenar e se arrasta por longos períodos, tornando a experiência cansativa, apesar de reconhecerem que o clímax e o giro de trama compensam o tempo gasto.\"\n    },\n    {\n      \"tema\": \"Giro de trama previsível e impacto fraco\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores medianos sentiram que o desfecho e o giro de trama, apesar de surpreendentes, não geraram o impacto esperado, com alguns prevendo a reviravolta antes mesmo de chegar ao seu desenrolar.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção técnicas elogiadas\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia, a direção e a estética visual são frequentemente citadas como pontos fortes, com elogios à qualidade técnica e à forma como a tristeza e o drama são capturados em tela.\"\n    },\n    {\n      \"tema\": \"Roteiro e construção da história críticas\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que o roteiro e a estrutura da história são problemáticos, com subtramas que não se encaixam bem, personagens que parecem ser apenas instrumentos para o desfecho e uma trama que deixa a desejar em termos de desenvolvimento.\"\n    },\n    {\n      \"tema\": \"Expectativa versus realidade\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há comentários medianos que mencionam ter esperado mais da obra, considerando-a superestimada, e que a experiência foi decepcionante em relação às altas expectativas criadas pela fama e pelos elogios anteriores.\"\n    },\n    {\n      \"tema\": \"Crítica à abordagem de guerra e representação do Oriente Médio\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns espectadores medianos criticam a forma como a guerra e o Oriente Médio são abordados, considerando a representação artificial ou genérica, e apontam que a obra poderia ter explorado melhor a complexidade da guerra civil do Líbano.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam um equilíbrio entre elogios à técnica e críticas ao ritmo e à construção da história. Este grupo reconhece a qualidade artística do filme, mas muitos sentem que o giro de trama e o desenvolvimento são insuficientes para sustentar o impacto esperado.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 194.88,
+   "leitura_prompt_s": 8.914,
+   "geracao_s": 183.655,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6741,
+   "eval_count": 796
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

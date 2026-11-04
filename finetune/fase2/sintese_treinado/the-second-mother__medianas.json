@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-second-mother",
+ "bucket": "medianas",
+ "num_ctx": 14336,
+ "tokens_prompt_plano": 10025,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "17589a6e10eba50938f3050d2287104fea99c35cdbb99ffc8a48bbee916224cd",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.4,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T18:02:40+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro e desenvolvimento dos personagens",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas criticam o roteiro por parecer pouco incisivo na construção das personagens, com alguns personagens como Jéssica sendo considerados rasos ou mal desenvolvidos, o que prejudica a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Cenas e roteiro da relação entre o patrão e Jéssica",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A relação amorosa entre o patrão e Jéssica é frequentemente criticada como desnecessária e forçada, gerando desconforto e ruindade na narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e enquadramento",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas apontam que a fotografia e o enquadramento poderiam ser melhor trabalhados, com cenas que parecem desnecessárias ou que não contribuem de forma eficaz para o desenvolvimento da história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O ritmo lento do filme é mencionado como um ponto negativo, com cenas que demoram a se desenvolver e que poderiam ser mais dinâmicas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final e resolução da história",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O final é criticado por ser vazio ou pouco satisfatório, deixando a impressão de que a resolução do conflito é simplista e não resolve de forma adequada os problemas apresentados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Crítica social e mensagem",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A crítica social e a mensagem do filme são frequentemente elogiadas como importantes e relevantes, mas algumas reviews medianas sentem que a mensagem poderia ser mais incisiva ou que a obra não chega a uma conclusão satisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é bom na crítica social e na construção de personagens, mas que apresenta problemas de roteiro, ritmo e desenvolvimento, especialmente em relação à relação entre o patrão e Jéssica e ao final da história.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 198.2,
+ "memoria": {
+  "ram_usada_gb": 9.97,
+  "ram_livre_min_gb": 5.22,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.42
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro e desenvolvimento dos personagens\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam o roteiro por parecer pouco incisivo na construção das personagens, com alguns personagens como Jéssica sendo considerados rasos ou mal desenvolvidos, o que prejudica a narrativa.\"\n    },\n    {\n      \"tema\": \"Cenas e roteiro da relação entre o patrão e Jéssica\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A relação amorosa entre o patrão e Jéssica é frequentemente criticada como desnecessária e forçada, gerando desconforto e ruindade na narrativa.\"\n    },\n    {\n      \"tema\": \"Fotografia e enquadramento\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que a fotografia e o enquadramento poderiam ser melhor trabalhados, com cenas que parecem desnecessárias ou que não contribuem de forma eficaz para o desenvolvimento da história.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo lento do filme é mencionado como um ponto negativo, com cenas que demoram a se desenvolver e que poderiam ser mais dinâmicas.\"\n    },\n    {\n      \"tema\": \"Final e resolução da história\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O final é criticado por ser vazio ou pouco satisfatório, deixando a impressão de que a resolução do conflito é simplista e não resolve de forma adequada os problemas apresentados.\"\n    },\n    {\n      \"tema\": \"Crítica social e mensagem\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A crítica social e a mensagem do filme são frequentemente elogiadas como importantes e relevantes, mas algumas reviews medianas sentem que a mensagem poderia ser mais incisiva ou que a obra não chega a uma conclusão satisfatória.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é bom na crítica social e na construção de personagens, mas que apresenta problemas de roteiro, ritmo e desenvolvimento, especialmente em relação à relação entre o patrão e Jéssica e ao final da história.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 198.06,
+   "leitura_prompt_s": 14.577,
+   "geracao_s": 181.201,
+   "carga_s": 0.005,
+   "prompt_eval_count": 10025,
+   "eval_count": 697
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

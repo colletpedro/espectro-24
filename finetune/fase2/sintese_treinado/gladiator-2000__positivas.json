@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "gladiator-2000",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5274,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "e1998a3ccc680fcfb23aee5c03cf12ae91a24e2561c61747b1f6243eaf996eca",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:26:47+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro e construção da trama",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews destacam que o roteiro é bem construído, com uma história que se desenvolve de forma clara e envolvente, e que a trama tem uma boa narrativa de revanche, mantendo o interesse do espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações de Russell Crowe e Joaquin Phoenix são frequentemente citadas como pontos altos, sendo elogiadas por sua intensidade e capacidade de carregar o filme, com muitos considerando a atuação de Phoenix particularmente marcante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Cenas de ação e batalhas",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As cenas de ação e batalhas são um dos principais elogios, sendo descritas como épicas, dinâmicas e bem filmadas, com muitos apontando que elas são o que mais chama a atenção no filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de Ridley Scott são bastante elogiadas, com destaque para a grandiosidade visual, a beleza dos cenários e a capacidade de criar uma atmosfera imersiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Música e trilha sonora",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A música e a trilha sonora são frequentemente mencionadas como parte essencial da experiência, sendo descritas como poderosas e capazes de intensificar os momentos emocionantes do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews comentam sobre o ritmo, com alguns achando que o filme é lento em certos momentos, enquanto outros consideram que ele mantém o engajamento até o fim, embora alguns apontem que a duração poderia ser reduzida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam principalmente a qualidade do roteiro, as atuações de Russell Crowe e Joaquin Phoenix, as cenas de ação e a fotografia, considerando o filme uma obra-prima de ação e drama histórico. A trilha sonora também é um ponto alto, com muitos elogiando sua capacidade de intensificar a experiência.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 162.0,
+ "memoria": {
+  "ram_usada_gb": 12.09,
+  "ram_livre_min_gb": 3.1,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.44
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro e construção da trama\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que o roteiro é bem construído, com uma história que se desenvolve de forma clara e envolvente, e que a trama tem uma boa narrativa de revanche, mantendo o interesse do espectador.\"\n    },\n    {\n      \"tema\": \"Atuações\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações de Russell Crowe e Joaquin Phoenix são frequentemente citadas como pontos altos, sendo elogiadas por sua intensidade e capacidade de carregar o filme, com muitos considerando a atuação de Phoenix particularmente marcante.\"\n    },\n    {\n      \"tema\": \"Cenas de ação e batalhas\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As cenas de ação e batalhas são um dos principais elogios, sendo descritas como épicas, dinâmicas e bem filmadas, com muitos apontando que elas são o que mais chama a atenção no filme.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de Ridley Scott são bastante elogiadas, com destaque para a grandiosidade visual, a beleza dos cenários e a capacidade de criar uma atmosfera imersiva.\"\n    },\n    {\n      \"tema\": \"Música e trilha sonora\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A música e a trilha sonora são frequentemente mencionadas como parte essencial da experiência, sendo descritas como poderosas e capazes de intensificar os momentos emocionantes do filme.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews comentam sobre o ritmo, com alguns achando que o filme é lento em certos momentos, enquanto outros consideram que ele mantém o engajamento até o fim, embora alguns apontem que a duração poderia ser reduzida.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam principalmente a qualidade do roteiro, as atuações de Russell Crowe e Joaquin Phoenix, as cenas de ação e a fotografia, considerando o filme uma obra-prima de ação e drama histórico. A trilha sonora também é um ponto alto, com muitos elogiando sua capacidade de intensificar a experiência.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 161.98,
+   "leitura_prompt_s": 7.743,
+   "geracao_s": 152.021,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5274,
+   "eval_count": 744
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

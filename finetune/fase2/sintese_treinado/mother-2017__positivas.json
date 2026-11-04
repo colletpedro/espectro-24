@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "mother-2017",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5171,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "960ea2725d67cf09675dab5adf776fd2af3a916855e814531b932fc9897b5c0e",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.76,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T12:49:28+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Experiência perturbadora e assustadora",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews descrevem o filme como um pesadelo, causando ansiedade, desconforto e até crises de pânico, especialmente na parte final. A atmosfera opressiva e as longas sequências de pânico são frequentemente citadas como características marcantes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Jennifer Lawrence",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jennifer Lawrence é destacada como um dos pontos altos do filme, com muitos elogios à sua performance intensa, à sua capacidade de transmitir vulnerabilidade e à sua expressão facial que carrega toda a história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Metáfora religiosa e bíblica",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A maioria das reviews positivas menciona a presença de uma metáfora bíblica que apenas se torna clara no final, trazendo uma nova perspectiva e recontextualizando a experiência. Muitos aprovam a forma como a trama se desenvolve para revelar este significado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e tensão crescentes",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O ritmo do filme é frequentemente descrito como lento no início, gradualmente aumentando a tensão, culminando em uma sequência intensa e caótica. A tensão é mantida por longos períodos de suspense e uma construção emocional que envolve o espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Direção e fotografia impressionantes",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção de Darren Aronofsky e a fotografia são elogiadas por sua ousadia, com muitos comparando a experiência a um sonho perturbador ou a uma obra de arte visual. A utilização de longos planos e a perspectiva claustrofóbica são mencionadas como técnicas eficazes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Confusão e necessidade de explicações",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews positivas mencionam que o filme é confuso e que exigiu explicações posteriores para ser completamente apreciado. Apesar disso, muitos afirmam que a confusão faz parte da experiência e contribui para o impacto final.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a experiência intensa e perturbadora do filme, com elogios à atuação de Jennifer Lawrence e à direção de Darren Aronofsky. A metáfora religiosa e bíblica é frequentemente mencionada como um ponto de recontextualização e profundidade, mesmo que muitos tenham sentido confusão durante a exibição.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 203.7,
+ "memoria": {
+  "ram_usada_gb": 9.22,
+  "ram_livre_min_gb": 5.98,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Experiência perturbadora e assustadora\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews descrevem o filme como um pesadelo, causando ansiedade, desconforto e até crises de pânico, especialmente na parte final. A atmosfera opressiva e as longas sequências de pânico são frequentemente citadas como características marcantes.\"\n    },\n    {\n      \"tema\": \"Atuação de Jennifer Lawrence\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jennifer Lawrence é destacada como um dos pontos altos do filme, com muitos elogios à sua performance intensa, à sua capacidade de transmitir vulnerabilidade e à sua expressão facial que carrega toda a história.\"\n    },\n    {\n      \"tema\": \"Metáfora religiosa e bíblica\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A maioria das reviews positivas menciona a presença de uma metáfora bíblica que apenas se torna clara no final, trazendo uma nova perspectiva e recontextualizando a experiência. Muitos aprovam a forma como a trama se desenvolve para revelar este significado.\"\n    },\n    {\n      \"tema\": \"Ritmo e tensão crescentes\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo do filme é frequentemente descrito como lento no início, gradualmente aumentando a tensão, culminando em uma sequência intensa e caótica. A tensão é mantida por longos períodos de suspense e uma construção emocional que envolve o espectador.\"\n    },\n    {\n      \"tema\": \"Direção e fotografia impressionantes\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção de Darren Aronofsky e a fotografia são elogiadas por sua ousadia, com muitos comparando a experiência a um sonho perturbador ou a uma obra de arte visual. A utilização de longos planos e a perspectiva claustrofóbica são mencionadas como técnicas eficazes.\"\n    },\n    {\n      \"tema\": \"Confusão e necessidade de explicações\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews positivas mencionam que o filme é confuso e que exigiu explicações posteriores para ser completamente apreciado. Apesar disso, muitos afirmam que a confusão faz parte da experiência e contribui para o impacto final.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a experiência intensa e perturbadora do filme, com elogios à atuação de Jennifer Lawrence e à direção de Darren Aronofsky. A metáfora religiosa e bíblica é frequentemente mencionada como um ponto de recontextualização e profundidade, mesmo que muitos tenham sentido confusão durante a exibição.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 203.45,
+   "leitura_prompt_s": 7.705,
+   "geracao_s": 185.725,
+   "carga_s": 7.951,
+   "prompt_eval_count": 5171,
+   "eval_count": 821
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 1,
+ "fora_por_memoria": false
+}

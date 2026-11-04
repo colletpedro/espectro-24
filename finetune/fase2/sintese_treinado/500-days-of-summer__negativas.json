@@ -1,0 +1,137 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "500-days-of-summer",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6861,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "2db7db639ae207efb0375fc39f7d00079179262b2cc38c2fa8914369e55ffe8c",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.35,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:32:40+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Personagens insuportáveis e comportamento infantil",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews deste grupo consideram os personagens centrais insuportáveis, descrevendo o protagonista como um adulto que age como adolescente e a protagonista como confusa e sem responsabilidade emocional. Muitos criticam a falta de maturidade de ambos e a dinâmica de relacionamento que parece se basear em expectativas e manipulação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e enredo problemáticos",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é frequentemente descrito como fraco, confuso e sem profundidade, com uma trama que se arrasta e não entrega uma conclusão satisfatória. Várias reviews apontam que a história é cansativa e que a mensagem é repetitiva ou pouco convincente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Mensagens e críticas machistas",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews destacam a percepção de que o filme reforça estereótipos de gênero, especialmente a visão de que o protagonista é uma vítima e a protagonista é manipuladora. Há críticas ao tratamento de relações entre homens e mulheres, com alguns dizendo que o filme favorece um comportamento machista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de originalidade e referências excessivas",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O grupo aponta que o filme parece copiar referências de outros trabalhos, como músicas e filmes de comédia romântica, sem acrescentar algo novo. A trilha sonora e as cenas musicais são mencionadas como pontos que não contribuem de forma significativa para a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo arrastado e tédio",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews descrevem a experiência de assistir ao filme como entediante e arrastada, com uma duração que se sente longa demais. Algumas pessoas relatam que o filme perde o interesse ao longo da exibição, tornando a experiência cansativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Tom de comédia romântica sem graça",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews criticam a abordagem de comédia romântica do filme, considerando-a sem graça e artificial. A comparação com outras obras da mesma categoria é feita, destacando que o filme não consegue se destacar como uma obra original ou divertida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam uma série de problemas com o filme, incluindo personagens insuportáveis, roteiro fraco e falta de originalidade. Muitas pessoas descrevem a experiência como cansativa e arrastada, e há críticas a estereótipos de gênero presentes na narrativa.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 212.9,
+ "memoria": {
+  "ram_usada_gb": 9.41,
+  "ram_livre_min_gb": 5.78,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Personagens insuportáveis e comportamento infantil\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo consideram os personagens centrais insuportáveis, descrevendo o protagonista como um adulto que age como adolescente e a protagonista como confusa e sem responsabilidade emocional. Muitos criticam a falta de maturidade de ambos e a dinâmica de relacionamento que parece se basear em expectativas e manipulação.\"\n    },\n    {\n      \"tema\": \"Roteiro e enredo problemáticos\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente descrito como fraco, confuso e sem profundidade, com uma trama que se arrasta e não entrega uma conclusão satisfatória. Várias reviews apontam que a história é cansativa e que a mensagem é repetitiva ou pouco convincente.\"\n    },\n    {\n      \"tema\": \"Mensagens e críticas machistas\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews destacam a percepção de que o filme reforça estereótipos de gênero, especialmente a visão de que o protagonista é uma vítima e a protagonista é manipuladora. Há críticas ao tratamento de relações entre homens e mulheres, com alguns dizendo que o filme favorece um comportamento machista.\"\n    },\n    {\n      \"tema\": \"Falta de originalidade e referências excessivas\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O grupo aponta que o filme parece copiar referências de outros trabalhos, como músicas e filmes de comédia romântica, sem acrescentar algo novo. A trilha sonora e as cenas musicais são mencionadas como pontos que não contribuem de forma significativa para a narrativa.\"\n    },\n    {\n      \"tema\": \"Ritmo arrastado e tédio\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews descrevem a experiência de assistir ao filme como entediante e arrastada, com uma duração que se sente longa demais. Algumas pessoas relatam que o filme perde o interesse ao longo da exibição, tornando a experiência cansativa.\"\n    },\n    {\n      \"tema\": \"Tom de comédia romântica sem graça\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam a abordagem de comédia romântica do filme, considerando-a sem graça e artificial. A comparação com outras obras da mesma categoria é feita, destacando que o filme não consegue se destacar como uma obra original ou divertida.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam uma série de problemas com o filme, incluindo personagens insuportáveis, roteiro fraco e falta de originalidade. Muitas pessoas descrevem a experiência como cansativa e arrastada, e há críticas a estereótipos de gênero presentes na narrativa.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 212.91,
+   "leitura_prompt_s": 10.009,
+   "geracao_s": 200.559,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6863,
+   "eval_count": 860
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false,
+ "aviso_tokens": "prompt_eval_count 6863 ≠ plano 6861"
+}

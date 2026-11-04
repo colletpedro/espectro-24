@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-invite-2026",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5764,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "02a712dd093f7451ab592ed20e3d2c28d9a5e9f1fc844f82aea7ef4e4085879a",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.32,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T15:03:22+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Humor e piadas",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews medianas apontam que o humor é um dos pontos fortes, com piadas que geram risadas e momentos divertidos, embora alguns considerem o tom cômico previsível ou exagerado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são frequentemente mencionadas como um aspecto positivo, com destaque para a química do elenco e a naturalidade dos personagens, embora alguns críticos medianos não estejam convencidos com o desempenho de certos atores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento da história",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews medianas comentam que o roteiro é bom, mas a história soa simples ou pouco original, e que a trama carece de uma narrativa mais envolvente ou desenvolvimento mais profundo dos personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e construção da trama",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O ritmo e a construção da trama são criticados por alguns como arrastados ou previsíveis, com momentos que se estendem demais sem avançar significativamente, enquanto outros acham que o filme leva tempo para encontrar seu equilíbrio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Fotografia e direção de arte",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de arte são apontadas como um aspecto técnico competente, com elogios à estética e à utilização de um único cenário, embora alguns considerem a repetição de planos e a falta de variação visual como pontos fracos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Crítica ao protagonista Seth Rogen",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns críticos medianos mencionam que o desempenho de Seth Rogen é um dos pontos mais debatidos, com comentários mistos: alguns acham que ele se encaixa bem no papel, enquanto outros criticam seu humor ou seu tom de voz.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam um mix de elogios e críticas, com muitos destacando o humor e as atuações como pontos fortes, enquanto apontam que o roteiro e o ritmo são insuficientes ou previsíveis. Este grupo também critica o protagonista Seth Rogen de forma variada, sem um consenso claro.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 176.3,
+ "memoria": {
+  "ram_usada_gb": 12.19,
+  "ram_livre_min_gb": 3.0,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Humor e piadas\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o humor é um dos pontos fortes, com piadas que geram risadas e momentos divertidos, embora alguns considerem o tom cômico previsível ou exagerado.\"\n    },\n    {\n      \"tema\": \"Atuações\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são frequentemente mencionadas como um aspecto positivo, com destaque para a química do elenco e a naturalidade dos personagens, embora alguns críticos medianos não estejam convencidos com o desempenho de certos atores.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento da história\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas comentam que o roteiro é bom, mas a história soa simples ou pouco original, e que a trama carece de uma narrativa mais envolvente ou desenvolvimento mais profundo dos personagens.\"\n    },\n    {\n      \"tema\": \"Ritmo e construção da trama\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo e a construção da trama são criticados por alguns como arrastados ou previsíveis, com momentos que se estendem demais sem avançar significativamente, enquanto outros acham que o filme leva tempo para encontrar seu equilíbrio.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção de arte\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de arte são apontadas como um aspecto técnico competente, com elogios à estética e à utilização de um único cenário, embora alguns considerem a repetição de planos e a falta de variação visual como pontos fracos.\"\n    },\n    {\n      \"tema\": \"Crítica ao protagonista Seth Rogen\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos medianos mencionam que o desempenho de Seth Rogen é um dos pontos mais debatidos, com comentários mistos: alguns acham que ele se encaixa bem no papel, enquanto outros criticam seu humor ou seu tom de voz.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam um mix de elogios e críticas, com muitos destacando o humor e as atuações como pontos fortes, enquanto apontam que o roteiro e o ritmo são insuficientes ou previsíveis. Este grupo também critica o protagonista Seth Rogen de forma variada, sem um consenso claro.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 176.25,
+   "leitura_prompt_s": 8.455,
+   "geracao_s": 165.549,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5764,
+   "eval_count": 773
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

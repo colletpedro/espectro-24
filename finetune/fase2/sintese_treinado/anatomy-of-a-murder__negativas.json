@@ -1,0 +1,149 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "anatomy-of-a-murder",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5622,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "515d60765787ebfe192ae03d4727de2169d8b79bd4517f64afcc048bb9f986b1",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.93,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T13:53:34+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews apontam que o filme é muito longo e se arrasta, tornando a experiência tediosa e difícil de manter o interesse.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro fraco e falta de tensão",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o roteiro é simples, previsível e não cria tensão suficiente para envolver o espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Tratamento problemático de assuntos sensíveis",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews criticam o manejo da violência e da agressão sexual, que é tratada de forma superficial ou desrespeitosa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e direção considerados insuficientes",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há comentários que consideram a atuação excessivamente teatral e a direção rígida e pouco envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Tonalidade inconsistente e humor deslocado",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que o filme oscila entre ser muito sério e momentos cómicos que parecem fora de lugar, sem equilíbrio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Comparação desfavorável com outros clássicos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews mencionam que o filme não se compara a obras como 12 Angry Men ou A Acusação, sendo considerado inferior.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": true
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, a duração excessiva e o roteiro fraco como os principais defeitos, além de críticas ao tratamento de temas sensíveis e à atuação. Este grupo também compara o filme desfavoravelmente a outros clássicos do gênero.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": false,
+ "parede_s": 374.9,
+ "memoria": {
+  "ram_usada_gb": 9.91,
+  "ram_livre_min_gb": 5.29,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.46
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que o filme se arrasta, com uma duração que parece ser artificialmente prolongada, tornando a experiência tediosa e sem sustentação emocional. Muitos espectadores mencionam que o filme poderia ser mais curto e ainda ser mais envolvente.\"\n    },\n    {\n      \"tema\": \"Roteiro fraco e falta de tensão\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente criticado por ser previsível, sem desenvolver a história com profundidade ou surpresas. A tensão judicial não é bem construída, e o desfecho parece resolver pouco ou nada, deixando uma sensação de tédio.\"\n    },\n    {\n      \"tema\": \"Atuações e direção considerados deslocados\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que as atuações soam artificiais ou pouco convencionais, e a direção parece não equilibrar bem a seriedade e o humor. Ajudantes de justiça são criticados por se destacarem de forma pouco natural.\"\n    },\n    {\n      \"tema\": \"Problemas com o tratamento de assuntos sensíveis\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas apontam que a abordagem de temas como violência e violência sexual é problemática, com tom misógino e falta de empatia. A questão é levantada de forma que deixa uma impressão negativa e desconfortável.\"\n    },\n    {\n      \"tema\": \"Comparação desfavorável com outras obras do gênero\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo frequentemente compara o filme a outras produções do gênero, como \" }, 12, \" ou \" ], \"} e conclui que este é inferior em ritmo, tensão e desenvolvimento narrativo, não sendo tão envolvente quanto obras posteriores ou contemporâneas do mesmo gênero.\":\n    {\n      \"tema\": \"Trilha sonora elogiada como único ponto positivo\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Embora as reviews negativas sejam predominantemente críticas, algumas mencionam que a trilha sonora, especialmente a música de Duke Ellington, é um dos poucos aspectos que salva a experiência, sendo apreciada por sua elegância e contribuição para o clima do filme.\"\n    },\n    \"exemplo_parafraseado\": \"Algumas reviews negativas apontam que o filme não sustenta a própria narrativa, sendo longo e sem graça, e que o personagem do advogado é fraco e pouco interessante, o que prejudica a tensão e o envolvimento com a história.\"\n    }",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 214.86,
+   "leitura_prompt_s": 7.976,
+   "geracao_s": 200.649,
+   "carga_s": 4.164,
+   "prompt_eval_count": 5622,
+   "eval_count": 824
+  },
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontam que o filme é muito longo e se arrasta, tornando a experiência tediosa e difícil de manter o interesse.\"\n    },\n    {\n      \"tema\": \"Roteiro fraco e falta de tensão\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o roteiro é simples, previsível e não cria tensão suficiente para envolver o espectador.\"\n    },\n    {\n      \"tema\": \"Tratamento problemático de assuntos sensíveis\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam o manejo da violência e da agressão sexual, que é tratada de forma superficial ou desrespeitosa.\"\n    },\n    {\n      \"tema\": \"Atuações e direção considerados insuficientes\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há comentários que consideram a atuação excessivamente teatral e a direção rígida e pouco envolvente.\"\n    },\n    {\n      \"tema\": \"Tonalidade inconsistente e humor deslocado\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que o filme oscila entre ser muito sério e momentos cómicos que parecem fora de lugar, sem equilíbrio.\"\n    },\n    {\n      \"tema\": \"Comparação desfavorável com outros clássicos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews mencionam que o filme não se compara a obras como '12 Angry Men' ou 'A Acusação', sendo considerado inferior.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento, a duração excessiva e o roteiro fraco como os principais defeitos, além de críticas ao tratamento de temas sensíveis e à atuação. Este grupo também compara o filme desfavoravelmente a outros clássicos do gênero.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 160.01,
+   "leitura_prompt_s": 0.317,
+   "geracao_s": 157.628,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5622,
+   "eval_count": 635
+  }
+ ],
+ "n_chamadas": 2,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

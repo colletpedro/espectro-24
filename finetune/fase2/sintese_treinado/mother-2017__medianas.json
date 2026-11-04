@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "mother-2017",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5122,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8dbcbfe886740e44e8ac81cfedbdcea27828a566896ce9fa451d7a62f3e8700b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:32:02+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Tensão e ansiedade extremas",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos espectadores descreveram a experiência como extremamente estressante e perturbadora, mencionando que o filme gerou ansiedade constante e uma sensação de insegurança extrema.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo lento e desenvolvimento desigual",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews apontaram que a primeira parte é lenta e que o filme perde o interesse na metade, tornando-se mais confuso e sem direção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Metáforas e simbolismo forçados",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos comentaram que as metáforas e o simbolismo estão forçados e que a mensagem é mal transmitida, com alguns achando que a crítica religiosa é grosseira e não convincente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuação de Jennifer Lawrence",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jennifer Lawrence foi destacada como forte e capaz de sustentar o filme, com muitos elogiando sua capacidade de carregar a narrativa em meio à loucura dos personagens ao seu redor.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Final confuso e impactante",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O desfecho foi descrito como estranho e chocante, com alguns espectadores dizendo que o filme se perde na violência gratuita e que o final não faz sentido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Dificuldade de compreensão",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews mencionaram que o filme é difícil de entender, exigindo uma reflexão posterior e uma busca por explicações para os significados e metáforas apresentados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é um desafio emocional e intelectual, gerando ansiedade e desconforto em grande parte dos espectadores, mas com destaque para a atuação de Jennifer Lawrence e a tensão construída no início.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 144.2,
+ "memoria": {
+  "ram_usada_gb": 12.79,
+  "ram_livre_min_gb": 2.41,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Tensão e ansiedade extremas\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores descreveram a experiência como extremamente estressante e perturbadora, mencionando que o filme gerou ansiedade constante e uma sensação de insegurança extrema.\"\n    },\n    {\n      \"tema\": \"Ritmo lento e desenvolvimento desigual\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontaram que a primeira parte é lenta e que o filme perde o interesse na metade, tornando-se mais confuso e sem direção.\"\n    },\n    {\n      \"tema\": \"Metáforas e simbolismo forçados\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentaram que as metáforas e o simbolismo estão forçados e que a mensagem é mal transmitida, com alguns achando que a crítica religiosa é grosseira e não convincente.\"\n    },\n    {\n      \"tema\": \"Atuação de Jennifer Lawrence\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jennifer Lawrence foi destacada como forte e capaz de sustentar o filme, com muitos elogiando sua capacidade de carregar a narrativa em meio à loucura dos personagens ao seu redor.\"\n    },\n    {\n      \"tema\": \"Final confuso e impactante\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O desfecho foi descrito como estranho e chocante, com alguns espectadores dizendo que o filme se perde na violência gratuita e que o final não faz sentido.\"\n    },\n    {\n      \"tema\": \"Dificuldade de compreensão\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionaram que o filme é difícil de entender, exigindo uma reflexão posterior e uma busca por explicações para os significados e metáforas apresentados.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é um desafio emocional e intelectual, gerando ansiedade e desconforto em grande parte dos espectadores, mas com destaque para a atuação de Jennifer Lawrence e a tensão construída no início.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 144.12,
+   "leitura_prompt_s": 7.232,
+   "geracao_s": 134.655,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5122,
+   "eval_count": 670
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

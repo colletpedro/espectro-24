@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-invite-2026",
+ "bucket": "negativas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7264,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "a5402afb4d0dc1e3dbb76d7ff46a03cc7b003061ac3e451e8cb6dcf1f0c6da5b",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.4,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T17:29:51+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuações fracassadas, especialmente de Olivia Wilde",
+    "mencoes_aproximadas": 26,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews negativas criticam a atuação de Olivia Wilde, dizendo que ela se exagera demais e que sua presença na tela é artificial e desconfortável, com expressões e gestos forçados que parecem caricaturais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Roteiro previsível e sem profundidade",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo reclama que a história é arrastada e que a trama é simples demais, sem reviravoltas ou tensão, resultando em um filme que não cumpre as expectativas criadas pelo trailer.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de humor e enredo arrastado",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitas reviews negativas apontam que o filme não é engraçado e que o ritmo é lento, com muitas cenas que se estendem sem propósito, deixando a experiência arrastada e entediante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Uso excessivo de música e trilha sonora irritante",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews criticam a trilha sonora como sendo muito presente e incômoda, com música que parece superposta e não contribui de forma positiva para a experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Falta de originalidade e comparações desfavoráveis",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo compara o filme a outras produções do gênero e diz que ele não traz nada de novo, sendo apenas uma cópia de ideias já vistas, sem frescor ou originalidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Personagens pouco interessantes e relações sem profundidade",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews negativas apontam que os personagens não são cativantes e que as relações retratadas são superficiais, sem desenvolvimento ou camadas emocionais que justifiquem o tempo gasto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam atuações fracassadas, especialmente de Olivia Wilde, roteiro previsível e sem profundidade, além de ritmo lento e trilha sonora irritante. Este grupo também critica a falta de originalidade e a ausência de humor, considerando o filme entediante e sem carisma.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 177.5,
+ "memoria": {
+  "ram_usada_gb": 9.56,
+  "ram_livre_min_gb": 5.63,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.37
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuações fracassadas, especialmente de Olivia Wilde\",\n      \"mencoes_aproximadas\": 26,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews negativas criticam a atuação de Olivia Wilde, dizendo que ela se exagera demais e que sua presença na tela é artificial e desconfortável, com expressões e gestos forçados que parecem caricaturais.\"\n    },\n    {\n      \"tema\": \"Roteiro previsível e sem profundidade\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo reclama que a história é arrastada e que a trama é simples demais, sem reviravoltas ou tensão, resultando em um filme que não cumpre as expectativas criadas pelo trailer.\"\n    },\n    {\n      \"tema\": \"Falta de humor e enredo arrastado\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas apontam que o filme não é engraçado e que o ritmo é lento, com muitas cenas que se estendem sem propósito, deixando a experiência arrastada e entediante.\"\n    },\n    {\n      \"tema\": \"Uso excessivo de música e trilha sonora irritante\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam a trilha sonora como sendo muito presente e incômoda, com música que parece superposta e não contribui de forma positiva para a experiência.\"\n    },\n    {\n      \"tema\": \"Falta de originalidade e comparações desfavoráveis\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo compara o filme a outras produções do gênero e diz que ele não traz nada de novo, sendo apenas uma cópia de ideias já vistas, sem frescor ou originalidade.\"\n    },\n    {\n      \"tema\": \"Personagens pouco interessantes e relações sem profundidade\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews negativas apontam que os personagens não são cativantes e que as relações retratadas são superficiais, sem desenvolvimento ou camadas emocionais que justifiquem o tempo gasto.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam atuações fracassadas, especialmente de Olivia Wilde, roteiro previsível e sem profundidade, além de ritmo lento e trilha sonora irritante. Este grupo também critica a falta de originalidade e a ausência de humor, considerando o filme entediante e sem carisma.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 177.45,
+   "leitura_prompt_s": 9.895,
+   "geracao_s": 165.259,
+   "carga_s": 0.004,
+   "prompt_eval_count": 7264,
+   "eval_count": 732
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

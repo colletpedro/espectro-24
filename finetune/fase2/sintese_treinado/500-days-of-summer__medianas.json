@@ -1,0 +1,136 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "500-days-of-summer",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5172,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "f0e292fbc42058555c0af5e7047f1c9e2dc475ed0edd0b0e90b935e2602c3484",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "sha256": "f2a7a0ba4b767516e3c9936b3af4a7877c6cd7074d4a9fc25779284163c97e45"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.45,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1484375,
+  "limpa": true
+ },
+ "ts": "2026-11-04T07:05:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Crítica à personagem Summer",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Muitos comentários medianos criticam Summer por ser irritante, confusa ou por não corresponder às expectativas de um relacionamento romântico, embora alguns reconheçam sua validade em querer uma relação casual.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Problemas de comunicação e expectativas",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Várias reviews apontam que a relação entre Tom e Summer falha por falta de comunicação clara, com ambos misturando expectativas e sinais ambíguos que levam à confusão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Idealização e projeção de Tom",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O personagem Tom é frequentemente criticado por idealizar Summer e projetar sobre ela um tipo de garota que deseja, em vez de respeitar suas intenções reais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Mensagem sobre relacionamentos e autossuficiência",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Algumas reviews medianas valorizam a mensagem do filme sobre a importância de estabelecer limites e não idealizar relacionamentos, apontando que o amor romântico não é a única resposta para a solidão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Certas reviews medianas mencionam que o filme tem um ritmo arrastado em certos trechos ou que a duração poderia ser encurtada para melhorar a experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   },
+   {
+    "tema": "Atuações e trilha sonora",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Alguns comentários medianos elogiam a atuação de Joseph Gordon-Levitt e a trilha sonora, considerando esses aspectos um ponto positivo do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que este grupo critica principalmente a personagem Summer, os problemas de comunicação entre os dois protagonistas e a idealização de Tom. Mesmo assim, muitos reconhecem a mensagem do filme e a trilha sonora como pontos positivos.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 153.6,
+ "memoria": {
+  "ram_usada_gb": 9.5,
+  "ram_livre_min_gb": 5.69,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Crítica à personagem Summer\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentários medianos criticam Summer por ser irritante, confusa ou por não corresponder às expectativas de um relacionamento romântico, embora alguns reconheçam sua validade em querer uma relação casual.\"\n    },\n    {\n      \"tema\": \"Problemas de comunicação e expectativas\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontam que a relação entre Tom e Summer falha por falta de comunicação clara, com ambos misturando expectativas e sinais ambíguos que levam à confusão.\"\n    },\n    {\n      \"tema\": \"Idealização e projeção de Tom\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O personagem Tom é frequentemente criticado por idealizar Summer e projetar sobre ela um tipo de garota que deseja, em vez de respeitar suas intenções reais.\"\n    },\n    {\n      \"tema\": \"Mensagem sobre relacionamentos e autossuficiência\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas valorizam a mensagem do filme sobre a importância de estabelecer limites e não idealizar relacionamentos, apontando que o amor romântico não é a única resposta para a solidão.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Certas reviews medianas mencionam que o filme tem um ritmo arrastado em certos trechos ou que a duração poderia ser encurtada para melhorar a experiência.\"\n    },\n    {\n      \"tema\": \"Atuações e trilha sonora\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentários medianos elogiam a atuação de Joseph Gordon-Levitt e a trilha sonora, considerando esses aspectos um ponto positivo do filme.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que este grupo critica principalmente a personagem Summer, os problemas de comunicação entre os dois protagonistas e a idealização de Tom. Mesmo assim, muitos reconhecem a mensagem do filme e a trilha sonora como pontos positivos.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 153.62,
+   "leitura_prompt_s": 7.498,
+   "geracao_s": 139.113,
+   "carga_s": 4.906,
+   "prompt_eval_count": 5172,
+   "eval_count": 682
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}
