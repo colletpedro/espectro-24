@@ -43,6 +43,9 @@ Travas:
   próxima execução, depois de nova partida limpa); se cair de novo, fica
   `fora_por_memoria` (sai dos DOIS lados de toda comparação e não é refeito);
 - retomável: par com `ok: true` (ou `fora_por_memoria`) não é refeito;
+- DESVIO_P04: JSON que parseia mas tem `temas` fora da estrutura (ex.: inteiros
+  no lugar de objetos) estourava `_construir_temas` e derrubava a série; agora
+  é JSON inválido (1 nova chamada; depois "Falha ao obter JSON válido do LLM.");
 - cegueira do dono (Fase 4): no lado TREINADO a linha de cada par (ok, JSON,
   chamadas, tempo) vai para `finetune/fase4/cego/gerar_treinado.log`; a tela
   mostra só "[k/N] filme/bucket: gravado" (`_cego.py`);
@@ -285,6 +288,27 @@ def exigir_gate_fase2(arq: Path = ARQ_GATE, pasta: Path = PASTA) -> dict:
     return marca
 
 
+def estrutura_valida(data) -> bool:
+    """O que `_construir_temas` precisa para não estourar: um objeto com `temas`
+    ausente/nulo ou lista de objetos. O código de produção só trata JSON que não
+    parseia; com `temas: [3, 5]` ele levanta AttributeError (DESVIO_P04)."""
+    if not isinstance(data, dict):
+        return False
+    temas = data.get("temas")
+    return temas is None or (isinstance(temas, list) and all(isinstance(t, dict) for t in temas))
+
+
+def parse_estrito(raw: str) -> dict:
+    """`_parse_llm_json` + a estrutura que a produção supõe. Estrutura impossível =
+    JSON inválido (`ValueError`): vale a regra da produção (1 nova chamada; depois,
+    "Falha ao obter JSON válido do LLM."), sem tocar em `synthesize.py`."""
+    from espectro24.synthesize import _parse_llm_json
+    data = _parse_llm_json(raw)
+    if not estrutura_valida(data):
+        raise ValueError("JSON com estrutura de temas impossível")
+    return data
+
+
 def bucket_final(b) -> dict:
     """O que a produção publicaria deste bucket (forma de `validar_publicado`)."""
     from dataclasses import asdict
@@ -318,10 +342,12 @@ def cmd_gerar(a) -> None:
         exigir_gate_fase2()
     import copy
     from espectro24.local_ollama import LLMLocalFalhou, resposta_json_local
-    from espectro24.synthesize import _parse_llm_json, synthesize_bucket
+    from espectro24 import synthesize as S
+    from espectro24.synthesize import synthesize_bucket
     from _latencia import GuardaDeLatencia, LatenciaAnomala
     import viabilidade_ollama as V
 
+    S._parse_llm_json = parse_estrito          # DESVIO_P04: estrutura impossível = JSON inválido
     origem = conferir_modelo(a.lado, a.nome, a.log_kernel, a.log_kernel_base)
     nome = origem["nome_ollama"]
     split = K.ler_json(a.split)
@@ -383,7 +409,7 @@ def cmd_gerar(a) -> None:
                 reg["json_parseia_1a_tentativa"] = None
                 if tentativas:                    # `sem_analise` não chama o modelo
                     try:
-                        _parse_llm_json(tentativas[0]["texto"])
+                        parse_estrito(tentativas[0]["texto"])
                         reg["json_parseia_1a_tentativa"] = True
                     except ValueError:
                         reg["json_parseia_1a_tentativa"] = False

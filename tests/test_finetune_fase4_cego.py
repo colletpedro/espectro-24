@@ -95,3 +95,17 @@ def test_m2_razao_das_somas_e_bucket_sem_temas():
     assert abs(r["dam_relativa"] - 0.4 / 3) < 1e-12
     d = M2.diferenca_dam(ls, ls, ["f1", "f2"], [["f1", "f2"]])
     assert d["ponto"] == 0.0 and d["ic95"] == [0.0, 0.0]
+
+
+def test_estrutura_impossivel_de_temas_e_json_invalido_no_gerar():
+    import gerar_sintese_teste as G
+    import pytest
+    from espectro24 import synthesize as S
+    assert G.parse_estrito('{"temas": [{"tema": "a"}], "observacao_geral": "x"}')["temas"]
+    assert G.parse_estrito('{"observacao_geral": "x"}') == {"observacao_geral": "x"}
+    for ruim in ('{"temas": [3, 5]}', '{"temas": "abc"}', '{"temas": {"a": 1}}', '[1, 2]'):
+        with pytest.raises(ValueError):
+            G.parse_estrito(ruim)
+    # a produção estoura exatamente neste caso; o estrito o trata como JSON inválido
+    with pytest.raises(AttributeError):
+        S._construir_temas(S._parse_llm_json('{"temas": [3, 5]}'), 10)
