@@ -109,3 +109,17 @@ def test_estrutura_impossivel_de_temas_e_json_invalido_no_gerar():
     # a produção estoura exatamente neste caso; o estrito o trata como JSON inválido
     with pytest.raises(AttributeError):
         S._construir_temas(S._parse_llm_json('{"temas": [3, 5]}'), 10)
+
+
+def test_parse_estrito_funciona_com_o_nome_trocado_em_synthesize(monkeypatch):
+    """O `gerar` põe `parse_estrito` no lugar de `synthesize._parse_llm_json`; ele não
+    pode chamar o nome trocado (RecursionError na 1ª tentativa real)."""
+    import gerar_sintese_teste as G
+    import pytest
+    from espectro24 import synthesize as S
+    monkeypatch.setattr(S, "_parse_llm_json", G.parse_estrito)
+    assert S._parse_llm_json('```json\n{"temas": [{"tema": "a"}]}\n```')["temas"]
+    with pytest.raises(ValueError):
+        S._parse_llm_json('{"temas": [3, 5]}')
+    with pytest.raises(ValueError):
+        S._parse_llm_json("não é json")

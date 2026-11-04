@@ -302,8 +302,8 @@ def parse_estrito(raw: str) -> dict:
     """`_parse_llm_json` + a estrutura que a produção supõe. Estrutura impossível =
     JSON inválido (`ValueError`): vale a regra da produção (1 nova chamada; depois,
     "Falha ao obter JSON válido do LLM."), sem tocar em `synthesize.py`."""
-    from espectro24.synthesize import _parse_llm_json
-    data = _parse_llm_json(raw)
+    from espectro24.synthesize import _strip_fences
+    data = json.loads(_strip_fences(raw))       # o corpo de `_parse_llm_json`, sem passar pelo nome trocado
     if not estrutura_valida(data):
         raise ValueError("JSON com estrutura de temas impossível")
     return data
