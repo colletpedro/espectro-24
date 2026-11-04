@@ -1,0 +1,43 @@
+{
+ "gerado_por": "scripts/finetune/tau_m2.py fixar",
+ "criterio": "percentil 95 (posto mais próximo) de D₀, arredondado para cima na 3ª casa",
+ "tau": 0.963,
+ "percentil_95_bruto": 0.9626188278198242,
+ "D0": {
+  "n": 360,
+  "atribuicoes": 60,
+  "p05": 0.9062,
+  "p25": 0.9293,
+  "p50": 0.9412,
+  "p75": 0.95,
+  "p95": 0.9626
+ },
+ "D1": {
+  "n": 90,
+  "atribuicoes": 15,
+  "p05": 0.922,
+  "p25": 0.9365,
+  "p50": 0.9489,
+  "p75": 0.9611,
+  "p95": 0.9726,
+  "fracao_ge_tau": 0.1889
+ },
+ "filmes": [
+  "fight-club",
+  "hereditary",
+  "pinocchio-2022",
+  "soul-2020",
+  "the-wailing"
+ ],
+ "modelo_e5": "intfloat/multilingual-e5-base",
+ "e5_snapshot": "d128750597153bb5987e10b1c3493a34e5a4502a",
+ "desvio_sha256": "c836844b5744d766d415b6747d60fb236fe7c0a6bf304484677d5cf36e345548",
+ "manifesto_geracao_base_sha256": "f355df83d646f2da471d4aef338ab4ac086134f54a9eb89b8071537b4778a423",
+ "split_sha256": "3232b2ad48178aaf19c4825aff6e17aa53a5de2ef4b15c2d19a574c0180be423",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "n_arquivos": 112,
+  "sha256": "cf515c788b0e8aa8fc9cac635843f200d633022375b2bc01cc67ab93b1121d70"
+ },
+ "script_sha256": "c23efe6826900cd2fd786d9e5163d31bc0c953da0199ad01993ef5ac3f793342"
+}

@@ -1658,6 +1658,23 @@ O treinado NÃO foi gerado nem medido no teste: isso é a Fase 4.
   (narrativa e veredito) sai do produto. A Fase 4 avalia só a síntese, como
   já estava no pré-registro (C6: "Narrativa, veredito e condições NÃO entram").
 
+## DESVIO_P03 — τ do M2 fixado só com treino (MEDIDO, 2026-11-04)
+
+- Critério commitado ANTES da conta (`a8b849f`, `DESVIO_P03.md`, sha256
+  `c836844b…`): percentil 95 (posto mais próximo) da distribuição nula D₀
+  (base da Fase 1 × publicado de OUTRO filme de treino, mesmo bucket,
+  atribuição húngara do `metricas.parear`), arredondado para cima na 3ª casa.
+- Script `scripts/finetune/tau_m2.py fixar` (`main`, sha256 `c23efe68…`),
+  saída `finetune/fase4/tau_m2.json`. Entradas: commit `742cfe3`, 112
+  arquivos; e5 `intfloat/multilingual-e5-base`, snapshot `d1287505…`.
+- **τ = 0,963** (percentil 95 bruto 0,9626; D₀: 360 cossenos de 60
+  atribuições, mediana 0,941). D₁ (mesmo filme, 15 atribuições, 90
+  cossenos, mediana 0,949): **18,9% dos pares atribuídos ficam ≥ τ**.
+- Leitura (descritiva): os cossenos do e5 são comprimidos (D₀ e D₁ se
+  sobrepõem quase inteiros); com este τ o M2 da Fase 4 vai parear poucos
+  temas por bucket. O critério não é revisto por isso: o M2 é só descritivo.
+- Nada do teste foi lido; o treinado ainda não foi gerado.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
