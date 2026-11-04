@@ -1,0 +1,62 @@
+{
+ "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "medidos": [
+  {
+   "id_par": "base|the-battle-of-algiers|medianas|4|viewing:1496746252",
+   "chars_prompt": 8474,
+   "prompt_eval_count": 2004
+  },
+  {
+   "id_par": "base|anatomy-of-a-murder|positivas|5|viewing:1489911441",
+   "chars_prompt": 8397,
+   "prompt_eval_count": 2015
+  },
+  {
+   "id_par": "base|the-second-mother|medianas|2|viewing:1459832442",
+   "chars_prompt": 8073,
+   "prompt_eval_count": 2072
+  },
+  {
+   "id_par": "base|the-battle-of-algiers|medianas|3|viewing:1309712620",
+   "chars_prompt": 8044,
+   "prompt_eval_count": 1924
+  },
+  {
+   "id_par": "base|burning-2018|positivas|4|viewing:1488335771",
+   "chars_prompt": 8023,
+   "prompt_eval_count": 2052
+  },
+  {
+   "id_par": "base|woman-of-fire|medianas|4|viewing:649842386",
+   "chars_prompt": 7685,
+   "prompt_eval_count": 1817
+  },
+  {
+   "id_par": "base|spider-man-across-the-spider-verse|negativas|2|viewing:1399583636",
+   "chars_prompt": 7552,
+   "prompt_eval_count": 1851
+  },
+  {
+   "id_par": "base|dune-2021|positivas|0|viewing:194328338",
+   "chars_prompt": 7251,
+   "prompt_eval_count": 1817
+  },
+  {
+   "id_par": "base|napoleon-2023|negativas|5|viewing:1432186537",
+   "chars_prompt": 7041,
+   "prompt_eval_count": 1694
+  },
+  {
+   "id_par": "base|napoleon-2023|positivas|5|viewing:1409019652",
+   "chars_prompt": 7010,
+   "prompt_eval_count": 1802
+  }
+ ],
+ "max_prompt_tokens": 2072,
+ "num_predict": 1024,
+ "precisa": 3096,
+ "num_ctx": 4096,
+ "folga": 1000,
+ "cabe": true,
+ "menor_multiplo_512": 3584
+}
