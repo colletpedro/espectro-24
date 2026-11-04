@@ -410,6 +410,24 @@ def test_estado_igual_com_briefing_igual_NAO_regera(sandbox, alm):
             assert p["regerar_veredito"] is False
 
 
+SEM_ESTADO_ACEITO = ["woman-of-fire"]
+
+
+def _confere_sem_estado(sem, aceito):
+    assert sem == aceito, (
+        f"filme(s) publicado(s) sem estado de contraste: {sem} (aceito: {aceito})")
+
+
+def test_allowlist_de_sem_estado_dispara_quando_obsoleta_ou_incompleta():
+    _confere_sem_estado(["woman-of-fire"], SEM_ESTADO_ACEITO)          # hoje: passa
+    with pytest.raises(AssertionError):                                # ganhou estado
+        _confere_sem_estado([], SEM_ESTADO_ACEITO)
+    with pytest.raises(AssertionError):                                # outro sem estado
+        _confere_sem_estado(["woman-of-fire", "outro-filme"], SEM_ESTADO_ACEITO)
+    with pytest.raises(AssertionError):                                # só outro
+        _confere_sem_estado(["outro-filme"], SEM_ESTADO_ACEITO)
+
+
 def test_o_catalogo_publicado_esta_sob_a_lei(alm):
     """O estado FINAL, permanente — complementa os testes de migração acima.
 
@@ -467,10 +485,7 @@ def test_o_catalogo_publicado_esta_sob_a_lei(alm):
     # (negativas n=9 < MARGEM_N_MINIMO); a página exibe o aviso de amostra
     # pequena. Allowlist EXATA: qualquer outro filme sem estado falha, e se
     # `woman-of-fire` ganhar estado a allowlist está obsoleta e falha também.
-    sem_estado_aceito = ["woman-of-fire"]
-    assert sem == sem_estado_aceito, (
-        f"filme(s) publicado(s) sem estado de contraste: {sem} "
-        f"(aceito: {sem_estado_aceito})")
+    _confere_sem_estado(sem, SEM_ESTADO_ACEITO)
     assert "obsession-2025" in t
 
 

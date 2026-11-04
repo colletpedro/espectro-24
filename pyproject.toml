@@ -31,3 +31,8 @@ espectro24 = "espectro24.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+# `pytest` sem caminho conta o mesmo que `pytest tests` (os diretórios
+# *-arquivado têm testes antigos que não fazem parte da suíte)
+testpaths = ["tests"]

@@ -339,6 +339,58 @@ def _sem_excecao_do_porco_rosso(d, b, proibidos):
     return b, C.algarismos_proibidos_no_briefing(b)
 
 
+def _porco_rosso():
+    caminho = RESULTADO / "porco-rosso.json"
+    if not caminho.exists():
+        pytest.skip("porco-rosso.json indisponível neste checkout")
+    d = json.loads(caminho.read_text(encoding="utf-8"))
+    return d, C.montar_briefing(d)
+
+
+def test_excecao_do_porco_rosso_vale_hoje_e_zera_o_algarismo():
+    import copy
+    d, b = _porco_rosso()
+    proibidos = C.algarismos_proibidos_no_briefing(b)
+    assert proibidos == ["17"]
+    b2, depois = _sem_excecao_do_porco_rosso(copy.deepcopy(d), copy.deepcopy(b), proibidos)
+    assert depois == []
+
+
+def test_excecao_do_porco_rosso_obsoleta_dispara():
+    """A exceção não pode ficar sobrando: cada forma de ficar obsoleta, ou de
+    deixar passar outro algarismo, faz `_sem_excecao_do_porco_rosso` falhar."""
+    import copy
+    d, b = _porco_rosso()
+    proibidos = C.algarismos_proibidos_no_briefing(b)
+
+    def roda(d, b, proibidos):
+        return _sem_excecao_do_porco_rosso(copy.deepcopy(d), copy.deepcopy(b), proibidos)
+
+    # a paráfrase de origem mudou
+    d1 = copy.deepcopy(d)
+    t = d1["buckets"][0]["temas"][0]
+    t["exemplo_parafraseado"] = t["exemplo_parafraseado"].replace("17 anos", "pouca idade")
+    with pytest.raises(AssertionError, match="origem"):
+        roda(d1, b, proibidos)
+
+    # o item NEG-A do briefing já não traz "17 anos"
+    b1 = copy.deepcopy(b)
+    for ts in b1["selecao"].values():
+        for item in ts:
+            if item["id"] == "NEG-A":
+                item["exemplo"] = item["exemplo"].replace("17 anos", "pouca idade")
+    with pytest.raises(AssertionError, match="item"):
+        roda(d, b1, proibidos)
+
+    # o algarismo sumiu (nada a isentar)
+    with pytest.raises(AssertionError, match="obsoleta"):
+        roda(d, b, [])
+
+    # outro algarismo no mesmo filme não é isentado
+    with pytest.raises(AssertionError, match="obsoleta ou outro algarismo"):
+        roda(d, b, ["17", "3"])
+
+
 def test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme():
     """A garantia "zero dígitos" do §3[V] é mais fraca aqui do que lá — o
     briefing precisa carregar a paráfrase (P4 REVISADO) e a paráfrase não é
