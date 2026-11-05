@@ -1675,6 +1675,12 @@ O treinado NÃO foi gerado nem medido no teste: isso é a Fase 4.
   temas por bucket. O critério não é revisto por isso: o M2 é só descritivo.
 - Nada do teste foi lido; o treinado ainda não foi gerado.
 
+## Fase 4 — avaliação final do treinado (MEDIDO, 2026-11-05): NÃO PUBLICÁVEL
+
+- Relatório completo em `RESULTADO_FASE4.md`. C2, C4, C5 e C6 passam; **C1 falha**
+  (IC sup. 0,26 pp acima do limite) e **C3 falha** (M1 +25,7 pp, limite < +10).
+- Desvios da fase: `DESVIO_P03` (τ do M2), `DESVIO_P04` (estrutura impossível de `temas`).
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
