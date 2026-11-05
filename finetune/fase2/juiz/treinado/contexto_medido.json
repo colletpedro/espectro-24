@@ -1,0 +1,62 @@
+{
+ "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "medidos": [
+  {
+   "id_par": "treinado|the-substance|positivas|2|viewing:1439489161",
+   "chars_prompt": 8429,
+   "prompt_eval_count": 2076
+  },
+  {
+   "id_par": "treinado|the-second-mother|medianas|1|viewing:1459832442",
+   "chars_prompt": 8082,
+   "prompt_eval_count": 2082
+  },
+  {
+   "id_par": "treinado|the-battle-of-algiers|medianas|4|viewing:1309712620",
+   "chars_prompt": 8071,
+   "prompt_eval_count": 1933
+  },
+  {
+   "id_par": "treinado|wicked-2024|negativas|2|viewing:1436213185",
+   "chars_prompt": 7778,
+   "prompt_eval_count": 1903
+  },
+  {
+   "id_par": "treinado|spider-man-across-the-spider-verse|negativas|3|viewing:1399583636",
+   "chars_prompt": 7575,
+   "prompt_eval_count": 1858
+  },
+  {
+   "id_par": "treinado|mother-2017|negativas|4|viewing:1421122067",
+   "chars_prompt": 7265,
+   "prompt_eval_count": 1754
+  },
+  {
+   "id_par": "treinado|dune-2021|positivas|4|viewing:194328338",
+   "chars_prompt": 7254,
+   "prompt_eval_count": 1819
+  },
+  {
+   "id_par": "treinado|500-days-of-summer|negativas|3|viewing:1494472908",
+   "chars_prompt": 7027,
+   "prompt_eval_count": 1799
+  },
+  {
+   "id_par": "treinado|aftersun|negativas|1|viewing:1418189165",
+   "chars_prompt": 6999,
+   "prompt_eval_count": 1767
+  },
+  {
+   "id_par": "treinado|burning-2018|positivas|4|viewing:1388371929",
+   "chars_prompt": 6974,
+   "prompt_eval_count": 1729
+  }
+ ],
+ "max_prompt_tokens": 2082,
+ "num_predict": 1024,
+ "precisa": 3106,
+ "num_ctx": 4096,
+ "folga": 990,
+ "cabe": true,
+ "menor_multiplo_512": 3584
+}
