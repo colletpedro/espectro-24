@@ -49,3 +49,13 @@ qualquer chamada ao modelo; nada foi gerado nem gravado). Em `eb8f27d` ele usa o
 original (`json.loads(_strip_fences(raw))`). Conferido fim a fim com cliente falso e o
 `synthesize_bucket` real: estrutura impossível + resposta válida = 2 chamadas e
 temas; duas inválidas = "Falha ao obter JSON válido do LLM.".
+
+## Mesma regra na descrição da 1ª tentativa (2026-11-05)
+
+O `avaliar_c1_c4.py calcular` estourou com o mesmo `AttributeError` em
+`bucket_da_1a_tentativa` (a taxa de validade na 1ª tentativa, só descritiva),
+que reconstruía o bucket da 1ª resposta com o `_construir_temas` de produção.
+Parou antes de gravar qualquer arquivo. Em `main` `33db25d` essa função usa o
+mesmo parse estrito: 1ª resposta com estrutura impossível = JSON não parseou na
+1ª tentativa. O C4 (resultado final, com retentativa) não muda, porque lê o
+`bucket_final` já gravado.
