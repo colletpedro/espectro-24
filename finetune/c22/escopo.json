@@ -1,0 +1,547 @@
+{
+ "gerado_por": "scripts/finetune/c22.py escopo",
+ "data": "2026-11-05T17:08:18+00:00",
+ "regra": "C22 (55) − já publicados − sem classificação no consenso verificado − pendência de identidade (bloco do bruto) − pendência de corpus (guarda C14.8)",
+ "n_c22": 55,
+ "incluidos": [
+  {
+   "slug": "1917",
+   "titulo": "1917",
+   "ano": 2019,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "a-fistful-of-dollars",
+   "titulo": "A Fistful of Dollars",
+   "ano": 1964,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "aladdin-2019",
+   "titulo": "Aladdin",
+   "ano": 2019,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "american-sniper",
+   "titulo": "American Sniper",
+   "ano": 2014,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "blackkklansman",
+   "titulo": "BlacKkKlansman",
+   "ano": 2018,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "conclave",
+   "titulo": "Conclave",
+   "ano": 2024,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "dallas-buyers-club",
+   "titulo": "Dallas Buyers Club",
+   "ano": 2013,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "detachment",
+   "titulo": "Detachment",
+   "ano": 2011,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "eyes-wide-shut",
+   "titulo": "Eyes Wide Shut",
+   "ano": 1999,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "for-a-few-dollars-more",
+   "titulo": "For a Few Dollars More",
+   "ano": 1965,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "ford-v-ferrari",
+   "titulo": "Ford v Ferrari",
+   "ano": 2019,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "full-metal-jacket",
+   "titulo": "Full Metal Jacket",
+   "ano": 1987,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "green-book",
+   "titulo": "Green Book",
+   "ano": 2018,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "harry-potter-and-the-deathly-hallows-part-1",
+   "titulo": "Harry Potter and the Deathly Hallows: Part 1",
+   "ano": 2010,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "how-to-train-your-dragon",
+   "titulo": "How to Train Your Dragon",
+   "ano": 2010,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 30,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": [
+    "medianas"
+   ]
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "titulo": "Kill Bill: Vol. 2",
+   "ano": 2004,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "men-in-black",
+   "titulo": "Men in Black",
+   "ano": 1997,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "moneyball",
+   "titulo": "Moneyball",
+   "ano": 2011,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "perfect-blue",
+   "titulo": "Perfect Blue",
+   "ano": 1997,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "poor-things-2023",
+   "titulo": "Poor Things",
+   "ano": 2023,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "project-x-2012",
+   "titulo": "Project X",
+   "ano": 2012,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 30,
+    "positivas": 29
+   },
+   "bucket_abaixo_de_40": [
+    "medianas",
+    "positivas"
+   ]
+  },
+  {
+   "slug": "punch-drunk-love",
+   "titulo": "Punch-Drunk Love",
+   "ano": 2002,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "rango",
+   "titulo": "Rango",
+   "ano": 2011,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "saving-private-ryan",
+   "titulo": "Saving Private Ryan",
+   "ano": 1998,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "scarface-1983",
+   "titulo": "Scarface",
+   "ano": 1983,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "snatch",
+   "titulo": "Snatch",
+   "ano": 2000,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "spider-man-into-the-spider-verse",
+   "titulo": "Spider-Man: Into the Spider-Verse",
+   "ano": 2018,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 39,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": [
+    "medianas"
+   ]
+  },
+  {
+   "slug": "the-big-lebowski",
+   "titulo": "The Big Lebowski",
+   "ano": 1998,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "the-dark-knight",
+   "titulo": "The Dark Knight",
+   "ano": 2008,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "the-good-the-bad-and-the-ugly",
+   "titulo": "The Good, the Bad and the Ugly",
+   "ano": 1966,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "the-pursuit-of-happyness",
+   "titulo": "The Pursuit of Happyness",
+   "ano": 2006,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "titulo": "The Simpsons Movie",
+   "ano": 2007,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "toy-story-3",
+   "titulo": "Toy Story 3",
+   "ano": 2010,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "transformers",
+   "titulo": "Transformers",
+   "ano": 2007,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  },
+  {
+   "slug": "vertigo",
+   "titulo": "Vertigo",
+   "ano": 1958,
+   "n_por_bucket": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 40
+   },
+   "bucket_abaixo_de_40": []
+  }
+ ],
+ "excluidos": [
+  {
+   "slug": "a-quiet-place-2018",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "batman-begins",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "bullet-train",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "fantastic-mr-fox",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "guardians-of-the-galaxy",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "harry-potter-and-the-philosophers-stone",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "how-to-make-millions-before-grandma-dies",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "it-was-just-an-accident",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "logan-2017",
+   "estado": "excluido",
+   "motivo": "pendência de corpus (C14.8): positivas: 1 de 40 analisadas sem classificação (viewing:1499888309)"
+  },
+  {
+   "slug": "mid90s",
+   "estado": "excluido",
+   "motivo": "pendência de corpus (C14.8): negativas: 3 de 40 analisadas sem classificação (viewing:1430539803, viewing:1480251601, viewing:1481497476); medianas: 1 de 40 analisadas s"
+  },
+  {
+   "slug": "school-of-rock",
+   "estado": "excluido",
+   "motivo": "pendência de corpus (C14.8): medianas: 1 de 40 analisadas sem classificação (viewing:1372827870)"
+  },
+  {
+   "slug": "scream",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "superbad",
+   "estado": "excluido",
+   "motivo": "pendência de corpus (C14.8): negativas: 1 de 40 analisadas sem classificação (viewing:1477321154)"
+  },
+  {
+   "slug": "the-dark-knight-rises",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "the-drama",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "the-empire-strikes-back",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "the-whale-2022",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "there-will-be-blood",
+   "estado": "excluido",
+   "motivo": "pendência de corpus (C14.8): medianas: 1 de 40 analisadas sem classificação (viewing:1494729817)"
+  },
+  {
+   "slug": "train-dreams",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  },
+  {
+   "slug": "where-is-the-friends-house",
+   "estado": "excluido",
+   "motivo": "sem classificação no consenso verificado (ainda não classificado)"
+  }
+ ],
+ "buckets": 105,
+ "entradas_sha256": {
+  "resultado/votacao-3/consenso_verificado.jsonl": "3c5ab96a120d1df14a9550bae2fd649618c434b403a18d8aa74bcaa38086d60a",
+  "resultado/votacao-3/recusas_conteudo.json": "7eecb9332d73f8272ff5f4d00e1a56c2a58bb67af792d85c491c267f89302b7e",
+  "dados/publicados.json": "1dd02ae005e919476121b8a6506d2ca088d37ae45abf086c29c9f0a765c1da55",
+  "src/espectro24/excecao_c22.py": "3567206dfab011601fee5defeb1d7459fd0912016b5c8b9f93fec7df49e1e2cd"
+ },
+ "bruto_sha256": {
+  "1917": "58f2390dc58dd825b84bc4676bf15b81db115d57059566c60fc242ed7632344d",
+  "a-fistful-of-dollars": "df4391033a98845d02ec77c83081818de3f373fa3c72379eaefd1ffc875eb6e3",
+  "aladdin-2019": "4bbd95c508454cbfce3777f7eb0b4a591c9b1a3b352ee75a13483d4d3082d32c",
+  "american-sniper": "11e076262bbcd61f068952b6ebc50eda05d8929f9008c562c14b4bbcb6434ac1",
+  "blackkklansman": "4604c723b709148b7e42559c906e270a51b96f4f37b909a90483e2eeff3c325f",
+  "conclave": "912d17cc19991798e1bc758859876a8fd95718b4494f5f73fee1ae2f4a347162",
+  "dallas-buyers-club": "29db94a6f44c00bb2fc92a92ddb28c10a56b16c43bfe9f35988cddc17ee24414",
+  "detachment": "2e30e7b8437df957761798ae847e60225123c329e96766f3a3f97559d88f615f",
+  "eyes-wide-shut": "9ac17399d7c8b2f34414fbf546f05805ff2ac49fc227e9ed0e888eaf73da928c",
+  "for-a-few-dollars-more": "2de3986e6fa4431266ab5dd59ef873bab76174e62288ad4eec1b9cb8a8ed4571",
+  "ford-v-ferrari": "a885ca3b30737d7a9b0c67f21671ac36c8157b42660950a9edf042e6f092aa84",
+  "full-metal-jacket": "3dc887f23356f50c53eee5db894fb23fb6fe62d2507ffe06ece20d7af1a29d7f",
+  "green-book": "36492b8a2f56272932c3e34f5f856bedc6b7b0cd05aa68356dc73c3f20926384",
+  "harry-potter-and-the-deathly-hallows-part-1": "63c9071a7b0f521e2d2496e076634cba9499386bd4ddb27975ddb5efdc7a6595",
+  "how-to-train-your-dragon": "fd8c92a50f85525c83e2393800d512e34f4cbea685325d3214b9099612fd4526",
+  "kill-bill-vol-2": "76e7dde20b7c40918eacd0009e2fbe4faa2d2f41fffcbbc1dd547aeefe64dfca",
+  "men-in-black": "618644efcf7c56eb4a16a220a3d34a9cc3c0874150965efe98e055edaa439ff1",
+  "moneyball": "dd3cdb454fc4ca6bd8af191ad598c373ab36f6813a5c5be6eff8b35226b6f5cf",
+  "perfect-blue": "d425815e67482c9da3a42557e6e66ba79c31c7a1606d80caf505796d07d6b03c",
+  "poor-things-2023": "6d433a5003328ff0147773cb52a966c5968d4d1d287ee752f42854b034972651",
+  "project-x-2012": "9a0fbc0f0daf6230cd1dfa773b55a94bb4e506565475839b18ff01b1b11ff3cd",
+  "punch-drunk-love": "23b35dfcd68f5394404ca1909046d457e589fcc2f0d2f1b762dd0c35a5dd562f",
+  "rango": "67776b1f8b9a7c72f808b209582914d0c37d20f0e752ae956096ab66c8074423",
+  "saving-private-ryan": "7df7a4cc0e4295e925c6b6b4db3d9768a15f1c0c80d88f35f3db5a9cbd191079",
+  "scarface-1983": "41a7e981fde3f0e6a9d02e526aab02d97ed4dfafcea1931fce2a9e45d8ef6187",
+  "snatch": "94cca76c38c8277ee69e0f0905043a7cccc66a5320d3760c64a9464851f87c50",
+  "spider-man-into-the-spider-verse": "0ac7447941a46682214e62d9f4f9a6cc8f9295db1bd884a9727e22197fe77d74",
+  "the-big-lebowski": "6b9043f4d96e26d357c8884ba9158ff2a43580d796c737f5391f063a1c4fc2d1",
+  "the-dark-knight": "caaa42b2be2a915ccbe3336566f5d8773b410bcbe6c8ade0f39bfe426deeacb2",
+  "the-good-the-bad-and-the-ugly": "1e45991e2986336f49a0f2276137dd24b3a313d7fede62660ff858dafe623bd6",
+  "the-pursuit-of-happyness": "0e44218349bf78a791a2b0fb9c637887fa41f20e4d1972213ebe3cf09c963336",
+  "the-simpsons-movie": "d99b309ce6d67ca3eae751b8a8e0054843277a87e9867e961daf922d743b270d",
+  "toy-story-3": "6935c421d0ae1cad88d14e6027c429cb1e8aaa2925a58618d77a21ad19f09b7a",
+  "transformers": "c7c850b6a1dbb1675532ce08daa7f5fc56acb451966983af5671452de0fd42c4",
+  "vertigo": "40cb3488fa3b8ac1b7aa3431e3821650982422b9aa9ced5bebc09bc7be321d3d"
+ },
+ "limite": "A identidade foi conferida só pelo que o bruto guarda (título, ano, id do Letterboxd, ano do slug); a conferência contra o TMDB roda na publicação (ficha) e não foi feita aqui."
+}

@@ -1,0 +1,1059 @@
+{
+ "gerado_por": "scripts/finetune/c22.py plano",
+ "tokenizer": "Qwen3-8B",
+ "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+ "regra_num_ctx": "(tokens do prompt + 3.000) × 1,10, arredondado para cima no múltiplo de 1.024",
+ "num_predict": 3000,
+ "pares": [
+  {
+   "slug": "project-x-2012",
+   "bucket": "positivas",
+   "tokens_prompt": 3281,
+   "num_ctx": 7168,
+   "n_reviews": 29,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "a0eab0162c2af3b2646937c52c217c6fcf25d76fa04bde4102e577d70ecfdaf2",
+   "entrada_sha256": "91cc7e8de8ff69586d69f3dd9e81b8579733d64f290094c047f83eaa895d1d40"
+  },
+  {
+   "slug": "full-metal-jacket",
+   "bucket": "positivas",
+   "tokens_prompt": 3945,
+   "num_ctx": 8192,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "4874ba0020aac7cfc65d0fe5e47c20f27891afc33cff75826224568bfb38cbb5",
+   "entrada_sha256": "7c2462e503d6c28aac9b56bbb24607ec8dfff8ade19bf2dffe4da90239a759f8"
+  },
+  {
+   "slug": "how-to-train-your-dragon",
+   "bucket": "medianas",
+   "tokens_prompt": 4245,
+   "num_ctx": 8192,
+   "n_reviews": 30,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "8fabdad5c12748b44a702897e21dee3133cc205ad6fc3be716504b161bf321c9",
+   "entrada_sha256": "bb3e3eb8657b4ea8969c05c7f2b1fbec5264e2404483d40d267d194fb67f70b3"
+  },
+  {
+   "slug": "project-x-2012",
+   "bucket": "medianas",
+   "tokens_prompt": 3967,
+   "num_ctx": 8192,
+   "n_reviews": 30,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "d781993fe3c32a9167b73d005c64764a22c1b246b87f498514bb4978ae55dd55",
+   "entrada_sha256": "daff1e41b4440f05185e7e736bae170c4ac1e879a01f8ec314de3e7b16669d64"
+  },
+  {
+   "slug": "project-x-2012",
+   "bucket": "negativas",
+   "tokens_prompt": 4415,
+   "num_ctx": 8192,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "8baecf07f004eb91425a6b349066e1d8d48576a4ed8b2fb89454ce4f2a1bb4b1",
+   "entrada_sha256": "6f86ec4ab50706f0affddab8bae964f4ec196951764521d2bde514e7a9117ac6"
+  },
+  {
+   "slug": "toy-story-3",
+   "bucket": "medianas",
+   "tokens_prompt": 4332,
+   "num_ctx": 8192,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "179c0f3d822f26c836527e64654af906061aa9343a7c38f4e83eef529620fcf9",
+   "entrada_sha256": "de90fde3c099e0a3946c64e5d79740ea2ad90a3c3a1e00365c64902cf5c8b0ad"
+  },
+  {
+   "slug": "aladdin-2019",
+   "bucket": "medianas",
+   "tokens_prompt": 4645,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "b8c878cbf3dd9ffff9218d9471ffd31d3e9264cd41822e33f4183819bbe471b1",
+   "entrada_sha256": "bdfa024c51c314d8bc65b908f9d8519190987988022ebdac787c35e16b90239e"
+  },
+  {
+   "slug": "aladdin-2019",
+   "bucket": "positivas",
+   "tokens_prompt": 5199,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "5ca872ba7031360c09af11df1e44c2c6c54af4031133e0f94323ef9942c4c422",
+   "entrada_sha256": "0cc6ff5a53234a1bc418a1501dd763ee5b6e4746a03e545e742502bf1d1f29db"
+  },
+  {
+   "slug": "american-sniper",
+   "bucket": "negativas",
+   "tokens_prompt": 5051,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "4431bea2d0606ebbaa464f702fd1affb880456702bf8050df69d87227bb0edf7",
+   "entrada_sha256": "04ad7b8a6fbc1d4e3f305af8749ddd897322687a5fcf9fd09af13c94a1b48235"
+  },
+  {
+   "slug": "american-sniper",
+   "bucket": "positivas",
+   "tokens_prompt": 4949,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "95a378e87641a7d141258f187dc260ec48d0fb79c663e5810aa7854d8241dd7a",
+   "entrada_sha256": "fa92f7e2e6f7099e93020b0b8d6a8d46b6eb2060380fcb6924e30b6e8da29650"
+  },
+  {
+   "slug": "conclave",
+   "bucket": "medianas",
+   "tokens_prompt": 4991,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "42d1793abb3e182858333d5ea241ef7fb23c10d3a23b06e531fee73285c6e32d",
+   "entrada_sha256": "aaa89d634c519dc34852196478ecef7eb6330eb7173ee06c9e708cb8b3c3e12b"
+  },
+  {
+   "slug": "dallas-buyers-club",
+   "bucket": "positivas",
+   "tokens_prompt": 4941,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "56162c6f55a370c032a79d59f0f13c705a8e1184cc6a0cdbcf6620cc2069f676",
+   "entrada_sha256": "e7dd8a589cd456a423fc261a45f5055df062c2b4bf29db225147e51b891b61c1"
+  },
+  {
+   "slug": "ford-v-ferrari",
+   "bucket": "medianas",
+   "tokens_prompt": 4728,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "cc9da51476f737404d541d6c85f2fb7d0e56959cf5ca580476558b7952ead077",
+   "entrada_sha256": "c1fee1da7398859d0a20d219de4b8c1dabf18bec8859394dd3fdd459b188ac81"
+  },
+  {
+   "slug": "green-book",
+   "bucket": "medianas",
+   "tokens_prompt": 4933,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "192f0544f1be564635cb966e8bfa3745627717281f5a58ffd5a8a4b39bbb076f",
+   "entrada_sha256": "f31075402dc8f1ddade727f19d35aa82029ca880f467f10c62cd543e27c4c5f0"
+  },
+  {
+   "slug": "green-book",
+   "bucket": "positivas",
+   "tokens_prompt": 4765,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "9bd1218593d65753b08e8a3820b1b00ef7367a2b5b6bdc5ecaebbea5e780d879",
+   "entrada_sha256": "c16fe7aa0647e8a81de18dbaca7ef0aef006560c1b6565ed3d3acd52e74b3945"
+  },
+  {
+   "slug": "harry-potter-and-the-deathly-hallows-part-1",
+   "bucket": "negativas",
+   "tokens_prompt": 4735,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "75813a47b459da9c242f39af8528a0f37a41ca91a69dd97d34a856e26de8cabf",
+   "entrada_sha256": "65603f03cede881443a6f7d98c02ecf5abe9c0b40614f7af5495171264167dfa"
+  },
+  {
+   "slug": "harry-potter-and-the-deathly-hallows-part-1",
+   "bucket": "positivas",
+   "tokens_prompt": 4528,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "a7439165d9330aeb414f98257787f3bae6f18487a8eda599a63b48e6ff2708ab",
+   "entrada_sha256": "a0b94f65e9b095dcd4dfd54297abdb74a331a01d4fa7eca105b99feffe0d4c8d"
+  },
+  {
+   "slug": "how-to-train-your-dragon",
+   "bucket": "negativas",
+   "tokens_prompt": 4487,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "628713d3fd93b1168628ff2d3328dfba70349fb88267c2ebce5d11161a32bc4d",
+   "entrada_sha256": "726e4336534306b52b9404e90ef807f54781ab22313ce7b0cd77fc8de4adf392"
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "bucket": "negativas",
+   "tokens_prompt": 5296,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "492b49dfdae4db791eb458430c0e6ccb0637b92758c2de434cb2041e03d99f1f",
+   "entrada_sha256": "3e3108d231e18c6a9b090a612e112d8f1dc9b1b18888ebe0d0ba30d2663fd414"
+  },
+  {
+   "slug": "men-in-black",
+   "bucket": "medianas",
+   "tokens_prompt": 5372,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "aa6b7673460e1a003e9e690a755cc4094d020439815cf49f7195921690699b34",
+   "entrada_sha256": "094ce9c0213495b558176bed639b1c53412dd0853184069d505ed130c7f50882"
+  },
+  {
+   "slug": "men-in-black",
+   "bucket": "negativas",
+   "tokens_prompt": 5039,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "2d89b3f8a7ae0039184788a491c5f5b5eb2ad2eae263189f9fc5a7cb49359bb2",
+   "entrada_sha256": "9ed3b9a79c3f023e711092ac241528cbaf198869012e6f86ada1ba39b83973f0"
+  },
+  {
+   "slug": "scarface-1983",
+   "bucket": "medianas",
+   "tokens_prompt": 5242,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "f26ca2ba44352be4d13455f208be37e5aa87c39c24385bd1670e829d5e50d0a8",
+   "entrada_sha256": "6aaec75252ed71cd65098957a2e7704c37d1e044a9adb6d64abe9d68dccccbc2"
+  },
+  {
+   "slug": "scarface-1983",
+   "bucket": "negativas",
+   "tokens_prompt": 4470,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "f978ea55c367e117339870962363befa56d7d5479afbde87c48e4cdd098e7d88",
+   "entrada_sha256": "b10a773bbba61cf0ce5bb1bac66862646cb645f5dd64b3c73b435976402c8a1e"
+  },
+  {
+   "slug": "snatch",
+   "bucket": "medianas",
+   "tokens_prompt": 4690,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "9606c02fe536b74d80f2c61d61566e70dda54a4ee6a934bcf6f95a38641c826a",
+   "entrada_sha256": "31c1803640ab5fca960999c20e855ad1ab06f8e0210b712758448882ca3c3d81"
+  },
+  {
+   "slug": "snatch",
+   "bucket": "positivas",
+   "tokens_prompt": 5081,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "25e4588446435fc8dd7851d86c1261128bacc0ce01010cae105cc3fd3f4da9b6",
+   "entrada_sha256": "602e0434aee69e3dfe1fed2670e015f3f71a4f70adbe6627b2648cd6d4d44011"
+  },
+  {
+   "slug": "spider-man-into-the-spider-verse",
+   "bucket": "positivas",
+   "tokens_prompt": 4501,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "528700defbddd85bd7863704c4b0b3c9ed4b019e52946fed2e716e3515dc7c60",
+   "entrada_sha256": "b2b51d537c22245f69633f01e8d5a01b709ce4b8358f788618537432ef371d88"
+  },
+  {
+   "slug": "the-big-lebowski",
+   "bucket": "negativas",
+   "tokens_prompt": 5021,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "af05be1786b75a48664283d50dfbbe9dd756673b9d71426917f87a19dc3b50f9",
+   "entrada_sha256": "9a71f236b1802fbe6b1eed52144a5902bbff6feba10ba07611a86effe10d54ff"
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "bucket": "positivas",
+   "tokens_prompt": 5101,
+   "num_ctx": 9216,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "1b5147a7560a8867591773bab5ad2e34415066564d0e914b8310bd16c872983e",
+   "entrada_sha256": "778cdf17c457fbb1b347f39cac17064c54d6b16cb090c78deda35fe3facf9aa2"
+  },
+  {
+   "slug": "1917",
+   "bucket": "medianas",
+   "tokens_prompt": 5893,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "fd4457be0ebde717e9c30bf08273c0b881f6ad8feb77bb21d6ece010171b9a3f",
+   "entrada_sha256": "6f2a721570ceeab50eadcdc1213d8ad199df49685f9543fbebe62d42468bbef1"
+  },
+  {
+   "slug": "1917",
+   "bucket": "positivas",
+   "tokens_prompt": 5616,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "b13b2510171ba05b9c3fce80499be6f016559ca4962ae5989a29bfa454df5063",
+   "entrada_sha256": "337df29370d98617ee98bb7c16fde9d07aa8a6065845fb9886f8d7285e859a99"
+  },
+  {
+   "slug": "a-fistful-of-dollars",
+   "bucket": "medianas",
+   "tokens_prompt": 5542,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "bf511aa3184d3a0683112c8bd6383cd8370e3acb45d192ac0b49cad175afb66c",
+   "entrada_sha256": "e280215067d8461202a379c33265a41ca96868e74b827bedccf2bd4feedeb7f8"
+  },
+  {
+   "slug": "a-fistful-of-dollars",
+   "bucket": "negativas",
+   "tokens_prompt": 5837,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "413ce4194e89a2e229baa0c357bbfbbe1062410dd7112ef5d87ff4562c0cfa43",
+   "entrada_sha256": "e0e502f4283750c3fb338a5e0fda2b69dcb5d0cb69172d57e847ea85cad1254f"
+  },
+  {
+   "slug": "aladdin-2019",
+   "bucket": "negativas",
+   "tokens_prompt": 5453,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "b48eb34a8aebfc54073acf64c3a582ac17922a8d90c96e24e230002357df4ab4",
+   "entrada_sha256": "d423160f9e40991bdfbdf37969b8ecfea75368900f594fd50cb9c7b9b4f02cf8"
+  },
+  {
+   "slug": "american-sniper",
+   "bucket": "medianas",
+   "tokens_prompt": 5842,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "a91be9b9a6e073783b970937f24f066e4abee950457064e7d222f47da7b2e78e",
+   "entrada_sha256": "2898850a4b8d72f67f4bdc7a97810a9c7be240b15ad36a3db928c4f5677c79b3"
+  },
+  {
+   "slug": "blackkklansman",
+   "bucket": "positivas",
+   "tokens_prompt": 5528,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "740a8d593c0ec063c18d04f4a25b0765be473aaa02480c38903c4c35cde756ae",
+   "entrada_sha256": "3cc6286b26648cff2ca1ba56dc73a7a03d6c282c02a0045b023194814c6ff203"
+  },
+  {
+   "slug": "conclave",
+   "bucket": "negativas",
+   "tokens_prompt": 5821,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "d69a9b203c13add28d501cbd140ef21a20628fa5fdd99af12efd4e36f13c125f",
+   "entrada_sha256": "d0429829a8e6424674bc3166c24b3bccd90460ec5ea3f38b3441c0949b5430d7"
+  },
+  {
+   "slug": "conclave",
+   "bucket": "positivas",
+   "tokens_prompt": 5851,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "a3449e753d4720df5dbc86f1735f9c4c287689400b1dbb6db3b0181ac80a7306",
+   "entrada_sha256": "372319a900a855f94ca5d8eda2ac9921e751c4220a03b052cabd45692c3ff0c6"
+  },
+  {
+   "slug": "dallas-buyers-club",
+   "bucket": "medianas",
+   "tokens_prompt": 6196,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "8e950f40d627238dae16e8fd5ff81017a0fb65c549c6756b48776de3f75e8090",
+   "entrada_sha256": "d740e3878a791174559b7ee42a41ca04d10d58099caf9fd9a4fe53b835c6098c"
+  },
+  {
+   "slug": "detachment",
+   "bucket": "negativas",
+   "tokens_prompt": 6094,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "6aba3221439383b7ecbd92c07e9aa3e8e317d3e1a66c8e1519099843a38528da",
+   "entrada_sha256": "ec1cc11405fd12f6173e49c5a0d5a6935cc19ebad7d5b4bb972c29d2fd7585a0"
+  },
+  {
+   "slug": "eyes-wide-shut",
+   "bucket": "medianas",
+   "tokens_prompt": 6157,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "d696a2b86583fd262bdbe39a81c8f2f4343ba48ec31d7e2a580f45aee8b966e6",
+   "entrada_sha256": "de59deff8260f75f63e07992a86fd58bb9b3a8cc7510f990dd04d6fd291c906e"
+  },
+  {
+   "slug": "for-a-few-dollars-more",
+   "bucket": "medianas",
+   "tokens_prompt": 6080,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "e8143a810d5b3d5393582bb4788af8f877c6b1675428b09abb8f0a65ff34cd6a",
+   "entrada_sha256": "f3c4f8f1fd0f3886949a9e800fbc0d29a52eb6d6e0e0f4713cc9186f0400d6fe"
+  },
+  {
+   "slug": "for-a-few-dollars-more",
+   "bucket": "negativas",
+   "tokens_prompt": 5492,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "3dd5f34d40fb20c6e3e7679f96a131072992a64eeeeb2bd95bfc1db01d8ad7bc",
+   "entrada_sha256": "5b9637ebbe576e19fedda042f890e10c209ee5b74f2191ced2db7f02fd01449e"
+  },
+  {
+   "slug": "ford-v-ferrari",
+   "bucket": "negativas",
+   "tokens_prompt": 5528,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "492f51b333fd825782ffa3f2fdadfc009d8ae5bbf4f3f36fad3f7ed7354b09a7",
+   "entrada_sha256": "0b5f9708c01b0391f70192aa4d4e5c9ee747ceb6a31e15b4cf88f0828b41bac6"
+  },
+  {
+   "slug": "ford-v-ferrari",
+   "bucket": "positivas",
+   "tokens_prompt": 5901,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "9ee55033e7d8b69b6fc66f9e6a25463c49f95ffe2633c4305b63ed217219a6e9",
+   "entrada_sha256": "99603f42075d24ca5edbc0f68d698673d1dc43f55c8ba4951e0e308bd66b358e"
+  },
+  {
+   "slug": "full-metal-jacket",
+   "bucket": "medianas",
+   "tokens_prompt": 5960,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "a0d3e677313b7cbd0cc728941612183a9a6cae7a7f74455cb400e2e98660ba6a",
+   "entrada_sha256": "d285b67ffafe43bb4dd549e62817d8c4f02a47c5e21979a0b993478acee0946e"
+  },
+  {
+   "slug": "harry-potter-and-the-deathly-hallows-part-1",
+   "bucket": "medianas",
+   "tokens_prompt": 6046,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "b3d8ba9fe75c3f0fec5ccd863c48ab1ddbf6caf6412699fdf167d2e2c4967989",
+   "entrada_sha256": "912cc486746c5cf7d9b6c68cf5b1322f5b1f818e7c3920d1c6bdeddc4db43640"
+  },
+  {
+   "slug": "how-to-train-your-dragon",
+   "bucket": "positivas",
+   "tokens_prompt": 5649,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "794b5c7d7996a7ab42b44f27055c8b006383aae6c4d9646e2a5dc971de2f115c",
+   "entrada_sha256": "8b01894ef265b5ad5b8edb9372886ca4c8327748e31ac5de295ecebe598dcc48"
+  },
+  {
+   "slug": "moneyball",
+   "bucket": "medianas",
+   "tokens_prompt": 5719,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "85b7b0a7bf40eadedc7fe4b394721ec77fcc274bd91ccf3460f8cc6f32abbf5e",
+   "entrada_sha256": "300932b0c2abdc12dd25caa991fc0127069435c1ba003d888d31bacd4c6e027a"
+  },
+  {
+   "slug": "moneyball",
+   "bucket": "negativas",
+   "tokens_prompt": 5776,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "69ef677da6a26905866965e022c4007c53abab52c805b5c01fb610d31a3cb34e",
+   "entrada_sha256": "4192fce4a3807bfaa2792479958431e0854278d31abd280df7408182d3f30aa3"
+  },
+  {
+   "slug": "moneyball",
+   "bucket": "positivas",
+   "tokens_prompt": 6074,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "fbe6b48a25292219685dc728f440cc6f26cbfd5f051f087c8993fb52d512ecd3",
+   "entrada_sha256": "164f7ef782ac64e430274e77cf932b43ad68d05f212b7ba765b0da7b89d6861f"
+  },
+  {
+   "slug": "perfect-blue",
+   "bucket": "medianas",
+   "tokens_prompt": 5546,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "3a29913fc1519af4b8e7c330c9061106294d3de4ade678010e11ff619f62a40c",
+   "entrada_sha256": "e077321e2df719ad88e832514df5036edb6d9f99f225fdc5f43ebf4eafe52718"
+  },
+  {
+   "slug": "perfect-blue",
+   "bucket": "negativas",
+   "tokens_prompt": 5922,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "d9b79e6581cf88b764e7c4d54979524c74bc23a32ee9c0bcadb11eefc3d85346",
+   "entrada_sha256": "057dd0400a4b40a1d22d924c12fb3d76b14acd32d8e851a4aead92cd57a06fe6"
+  },
+  {
+   "slug": "poor-things-2023",
+   "bucket": "medianas",
+   "tokens_prompt": 6099,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "9f8a236e413eff35b35ab50c55866f93e553a4284e76358a4c302190c8af7b9b",
+   "entrada_sha256": "c6db47c7d74f578d815593d438d4dc58a2f45f2fa8c58b8b5d149caaafbb657c"
+  },
+  {
+   "slug": "poor-things-2023",
+   "bucket": "negativas",
+   "tokens_prompt": 6175,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "4c033a3e56cc5d784d0248d78c3e5ff289d33bb0fe33e6e7a4836cc79502692f",
+   "entrada_sha256": "245932e8db350617e21dfe82af92b991e6adcd3d17b03367e1e21671282af5b9"
+  },
+  {
+   "slug": "punch-drunk-love",
+   "bucket": "negativas",
+   "tokens_prompt": 5446,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "1843a0cebdc19f660f690b3b29c8d7bf05f6b2c56577ea642f497c881b004c94",
+   "entrada_sha256": "ba6bb980e93c2d72b2746ba47f058e292cd183b18ad1c36530a589b8e34b5ed6"
+  },
+  {
+   "slug": "punch-drunk-love",
+   "bucket": "positivas",
+   "tokens_prompt": 5929,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "228f553f1244bbabcaadcaddb2c8bc989e5bc304147df1256e4868bb8ab84713",
+   "entrada_sha256": "9d7b28b03fb68711cb7dfedbeb794fa4c7333362b0f170192f1c9b3011870e64"
+  },
+  {
+   "slug": "rango",
+   "bucket": "medianas",
+   "tokens_prompt": 5470,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "3579a86b2975a464a67d8caba281585afdbb646fce5f16afaa308e790390beb5",
+   "entrada_sha256": "3a13b9b8425e4a40e87fb4caae9141acb7ab4e91b8e4111a172aaf1b427e37f9"
+  },
+  {
+   "slug": "rango",
+   "bucket": "negativas",
+   "tokens_prompt": 5696,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "5600c10d454e859dc7863c2ba4fdb6b88ce8153db13ad21da065c2b87026c692",
+   "entrada_sha256": "f7874e88a79d5d89036be455828da5af70efb183c0f00b6479847e3628f6bd06"
+  },
+  {
+   "slug": "rango",
+   "bucket": "positivas",
+   "tokens_prompt": 5751,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "b57aa6e0da32ed40b7e935ccc305067ef4cef73127f35aaa3a8172ab411da776",
+   "entrada_sha256": "4fc6d93d6ad3c6c001c09d6d80d9345d2bf65878aced47a7bdffbccef6ed9a50"
+  },
+  {
+   "slug": "saving-private-ryan",
+   "bucket": "medianas",
+   "tokens_prompt": 5896,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "05a3bf3ae46ad6bb77c134fa5d5375c5ed55090bf3e6bc39aa07994b614e5860",
+   "entrada_sha256": "2d89f206a1340d4c45d306894aa9603c8b05cce00e3aac506e1d9d49c66dbca6"
+  },
+  {
+   "slug": "saving-private-ryan",
+   "bucket": "negativas",
+   "tokens_prompt": 6095,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "f0e1bb54e81a86a8dad1495b44ac94d3a83a15a9859c7919df4cc2de0b4b9a60",
+   "entrada_sha256": "337164af4327dc7ad6a625b0a203023bf187963822901d675e413eeaca5e00eb"
+  },
+  {
+   "slug": "snatch",
+   "bucket": "negativas",
+   "tokens_prompt": 5678,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "19e0c6456643256ae1555bdc8f847122f5793a11a2f1e03dab5ff278462150de",
+   "entrada_sha256": "01db8fec83a67532afdc99bcadf60c5918016d8ce730d71c2ba91c1e5d946ca4"
+  },
+  {
+   "slug": "spider-man-into-the-spider-verse",
+   "bucket": "medianas",
+   "tokens_prompt": 5819,
+   "num_ctx": 10240,
+   "n_reviews": 39,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "c80fdf248048acfcb2d775e4db036369db92410b2b3c67bd25f1346e4adc06b4",
+   "entrada_sha256": "fd2064668bb3f8097089bce64f6ad05e3a23f0de812647dc044f46d71b69cf76"
+  },
+  {
+   "slug": "the-big-lebowski",
+   "bucket": "positivas",
+   "tokens_prompt": 6221,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e4bc980f0b2ffb6d358dbb0dadb5c464d60b9affb0a79db90b3bf6367c7e5811",
+   "entrada_sha256": "fefa44f062cc20eccfdf30a7d90f465c9f8cb5551a0ae40f7120f10d3625ce47"
+  },
+  {
+   "slug": "the-dark-knight",
+   "bucket": "medianas",
+   "tokens_prompt": 6136,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "4005147dfe37b867c7262722e6c973423d12604c5dd41b647f6fb5fef56b0d2d",
+   "entrada_sha256": "e2f949d5b72d6d740c5c574583104abe274a268c0ab4b1fc8c77de4d2f82a73b"
+  },
+  {
+   "slug": "the-dark-knight",
+   "bucket": "positivas",
+   "tokens_prompt": 6155,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "eff032ef3f8e7b049e6bcfa14ae6a0a78a84230a2a00e3b6f45de6205b7376f3",
+   "entrada_sha256": "ca183873c19e820dc85f91ff35180d642f80afeee62a5cd3021f1a64075b532a"
+  },
+  {
+   "slug": "the-good-the-bad-and-the-ugly",
+   "bucket": "medianas",
+   "tokens_prompt": 5804,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "78ebf83f82f1185823d5a24329d1b237fa5f6624b98ae865fd62dbdd99cb977f",
+   "entrada_sha256": "e1e0b46a6fd04ca20197448d003245d704caeaf1b95e452c1f74d9a5e1786797"
+  },
+  {
+   "slug": "the-good-the-bad-and-the-ugly",
+   "bucket": "negativas",
+   "tokens_prompt": 5413,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "ee14851098149509aaa3255c9508b35bba2514491356db90288e2e691d20e815",
+   "entrada_sha256": "85e4718574dbc8c967da2d74cbcddd607734d5fdc70f28c581d19a2f513629c8"
+  },
+  {
+   "slug": "the-good-the-bad-and-the-ugly",
+   "bucket": "positivas",
+   "tokens_prompt": 6107,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "0d229e292883a7a8b993782eb379f9f37bf5504e2683fdd03ea86db1903c030d",
+   "entrada_sha256": "c4ed0596990de355e6d45e4bf1b16dd9cc2218545045eecbd2240dbfd065e9fa"
+  },
+  {
+   "slug": "the-pursuit-of-happyness",
+   "bucket": "positivas",
+   "tokens_prompt": 5501,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "ce901ff41507c968d393bde59edc8e75d7542abb3afdbbcb54ce61971e2553a8",
+   "entrada_sha256": "d79f833e1517f765b459e9d53a6952bf4627bf5af59a3794c718c83d3beb27eb"
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "bucket": "negativas",
+   "tokens_prompt": 5445,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "5d8e26f880e24856ae8fdbae9e5f63a7b3096c7cef7c78fe99b665830eef8de8",
+   "entrada_sha256": "f2e21cea11ada0e2a41cac699cf3a410c415756a94ffcfd839c1eda41e64ff08"
+  },
+  {
+   "slug": "toy-story-3",
+   "bucket": "positivas",
+   "tokens_prompt": 5781,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "7503af701a72a40cc82419fd29c2eecd3ed15f8983b50e72ca80572b31b8cf37",
+   "entrada_sha256": "38574f638409580fff456cca5fa731b7087e4365e8191e9ba14b9d039ab6cef4"
+  },
+  {
+   "slug": "transformers",
+   "bucket": "positivas",
+   "tokens_prompt": 5585,
+   "num_ctx": 10240,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "b1c830f02cebb372726912448d2d035d3ec1316f42a660994f4996f77ed59087",
+   "entrada_sha256": "5a10c5deabbb2bc94504a34582611d12939ace849c66a03758582d119e37cb83"
+  },
+  {
+   "slug": "a-fistful-of-dollars",
+   "bucket": "positivas",
+   "tokens_prompt": 7000,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "28f87c8559cc17b68390cb64aba0163b2bd3787249049a8fcaa84c8d3e15d13c",
+   "entrada_sha256": "efaa0aeaf92bb39a0b106d8e8a3e36211207b19facaa2b742224676a26fcf611"
+  },
+  {
+   "slug": "eyes-wide-shut",
+   "bucket": "negativas",
+   "tokens_prompt": 6645,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "64d6309a75d7fefcef0354c796779293c25c73f1b8d5093861947bad84170b69",
+   "entrada_sha256": "f00e8c53f5fa42118d1cf38595e78578e70d823dd0a615cd757e48a1b910927e"
+  },
+  {
+   "slug": "for-a-few-dollars-more",
+   "bucket": "positivas",
+   "tokens_prompt": 6476,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "e000788b6532e0dc5ee5d5bed1ef1914509c0130a26a1d4cb7ec604014beb81f",
+   "entrada_sha256": "26ffa472a3447d18aff9955c155a6511a9b49b7b5a56dbb2e232f1804fc2bf1a"
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "bucket": "medianas",
+   "tokens_prompt": 6365,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "ea3c67daa127c2fed628d33306fe9cba6d2d5e4df0a12d5f3f30b66b4ccb7c9e",
+   "entrada_sha256": "6bbad0b818362e3345c658256396d916ef7a4e9530f06c9296d962e1c2ebc71e"
+  },
+  {
+   "slug": "men-in-black",
+   "bucket": "positivas",
+   "tokens_prompt": 6524,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "3378f7ab5438296fe3221b7d3705f3fa810c7ed47294205c83984fff6f60656b",
+   "entrada_sha256": "d143737e18b04bd2ddc9cc85b091582cb5d816265894b8adc1cd43783fa97531"
+  },
+  {
+   "slug": "perfect-blue",
+   "bucket": "positivas",
+   "tokens_prompt": 6387,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "40b3c094138c7fa371da46594a2a45d0c7ecb86a7b32ed8feb6ee1bbfb5f980b",
+   "entrada_sha256": "97380e98d88565bab583b02ffb77ef43f02422bf1f9dd40f830bf0cc8f3dc90f"
+  },
+  {
+   "slug": "punch-drunk-love",
+   "bucket": "medianas",
+   "tokens_prompt": 6379,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "2f689310b5a667a2b3da8bbb439482461882c37ef7ec023636631f319af02b83",
+   "entrada_sha256": "e389ff5ddcf7e228b6cf94255884e5bb18f9299c7d44c73e979e67254400e9fc"
+  },
+  {
+   "slug": "saving-private-ryan",
+   "bucket": "positivas",
+   "tokens_prompt": 7060,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "8c3aae3657ab9bb7ae01f7406a11d117b43a5d5e1d604abe67d4fc3247acae76",
+   "entrada_sha256": "cb9bf49a439f97b8f9283357a3b16b1f2a9c7a5e081f95a1d7d02fb8c86568c6"
+  },
+  {
+   "slug": "spider-man-into-the-spider-verse",
+   "bucket": "negativas",
+   "tokens_prompt": 6461,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "33d52d075790f3f8277fe3c6e49beeb52b45c47c24a4653610985eec4c4ff6d3",
+   "entrada_sha256": "702942c1610b14ff3adc8a42addfe8fd7147c1553980309bacec9d870d33e1ea"
+  },
+  {
+   "slug": "the-big-lebowski",
+   "bucket": "medianas",
+   "tokens_prompt": 6644,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "be3d38b7c957d3dd145e239fbbe37113aedc67f0168a7dfb08f4983da3bb27e8",
+   "entrada_sha256": "60a11eabc570cd3a3cd274959c657b8fc8c10f9ca4dd059ce0cdb46d53300327"
+  },
+  {
+   "slug": "the-dark-knight",
+   "bucket": "negativas",
+   "tokens_prompt": 6965,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "d2f6f3a66fbaff7e7b01e4c5bd538b7782e184034aa0413b275a067b8e8c10ac",
+   "entrada_sha256": "3f1708a8782fe77c1ed652995ef2222ecd2427266d723fc0d301a1f752bb5088"
+  },
+  {
+   "slug": "the-pursuit-of-happyness",
+   "bucket": "negativas",
+   "tokens_prompt": 6405,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "524b25332170d365d915c933e307d50930bfc4d8b50917628844b80d44de23a2",
+   "entrada_sha256": "2add429d52dbbb508c5322982306d031d0014e7a884b298c3f99677d5b5b59c2"
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "bucket": "medianas",
+   "tokens_prompt": 6786,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "a5bc467f6702b8582f44db06682ce70f67c1f8b6f1c551b4902ae19e9720dcf1",
+   "entrada_sha256": "cf6f6586b3bf3699d3e8aac61d16de872a10d035fac2d70f5a34553658e335c2"
+  },
+  {
+   "slug": "toy-story-3",
+   "bucket": "negativas",
+   "tokens_prompt": 6812,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "bb940dbbf11d90013436564bbad035a42baeed270a5c78461805d328599ee3c3",
+   "entrada_sha256": "250877f440b22d9fbf300e0be1347d34830a9a79330f7dd46303b599a5f04472"
+  },
+  {
+   "slug": "transformers",
+   "bucket": "medianas",
+   "tokens_prompt": 7104,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "03d3e1b68a7038e71e9b592e7193a56551277ec00f9e9f189a627ae12e40a424",
+   "entrada_sha256": "6b8035b4c22a2f669b508ca3853d1412151ccc392ea18a855feaadde4219a427"
+  },
+  {
+   "slug": "transformers",
+   "bucket": "negativas",
+   "tokens_prompt": 6660,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "177ed8470b7eb2951e95ca5f26a90953cc8af90372d7426748da15ee2cc65d82",
+   "entrada_sha256": "923b37ae23e4e402c20c101069063ad3af72d48d0c6f8d57379a9b9a56b32dae"
+  },
+  {
+   "slug": "vertigo",
+   "bucket": "medianas",
+   "tokens_prompt": 6520,
+   "num_ctx": 11264,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "15f8f642cf79bd1387ff2b38319ff3f02188bb02fdffe8587f33ed3c496ef697",
+   "entrada_sha256": "9664b4fe96d944c8578faf35c0b5ac05acb32f441ef29caf940c45f0fc090976"
+  },
+  {
+   "slug": "blackkklansman",
+   "bucket": "medianas",
+   "tokens_prompt": 7379,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "1f6d3b017643c5900d49ae1f5cc39249035ecb04b2d87d6a7b766ec972a0e9fc",
+   "entrada_sha256": "409f367f4aaeddfe7da265ac69886f04bd3d96c8c1f3a8a02e303a5c95da7307"
+  },
+  {
+   "slug": "blackkklansman",
+   "bucket": "negativas",
+   "tokens_prompt": 7777,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "30861749afbc899db35c6c308d487a20b690778d12622fa22fc1c9f15ceb321f",
+   "entrada_sha256": "bc4f3c335787552c85e23b69cb27189b65f63df437cb4278caadc1e32a9aec41"
+  },
+  {
+   "slug": "detachment",
+   "bucket": "medianas",
+   "tokens_prompt": 7834,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "0629b9d1ffaaf858c6e7ba466060ebd5ebcd60477ae10f509c813f610f7f7ee4",
+   "entrada_sha256": "3c7a6ca17fb7dde1f3f6dbbede9a13b9fc37667ecb441ac1716f2807fbcaaf93"
+  },
+  {
+   "slug": "eyes-wide-shut",
+   "bucket": "positivas",
+   "tokens_prompt": 7774,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "697ee5ff00f2ea671bfdf94275d34b8f0f6074525c82bcaaf0b8dc5fa4d97512",
+   "entrada_sha256": "eb10c51e269997013d7f8b4eeefcd6e2ad71703948921d7a4737a7cbea98869a"
+  },
+  {
+   "slug": "full-metal-jacket",
+   "bucket": "negativas",
+   "tokens_prompt": 7506,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "596443a0ddd47e55d2d6d24487b117b9ec6979cb35430d71f67d61148a618d3d",
+   "entrada_sha256": "25690ff3b5c861fc89e9e9e03953b5d2904f3aca7e190491771eaa04b83ac16d"
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "bucket": "positivas",
+   "tokens_prompt": 7341,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "0d1faf4de98bddb291613ab4931fc846be4a8e0805b33e247d516a3cf9537b74",
+   "entrada_sha256": "ec4552320d854c1c9ae99e8ecf1803fe2b361357f39ce836b3002c89aeb20c3c"
+  },
+  {
+   "slug": "poor-things-2023",
+   "bucket": "positivas",
+   "tokens_prompt": 7449,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "fd2066bc772723a857617c83d37b49a3989ea72c0a36601fbf467ee2005a9434",
+   "entrada_sha256": "2f7d882d3bf33e81e331e4ff2123d05a66928721cdab634493a7d5fa0fbe32ed"
+  },
+  {
+   "slug": "scarface-1983",
+   "bucket": "positivas",
+   "tokens_prompt": 7371,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "4081d825f2e266d0b27eb0d4d614b0da880552590eb2770bf085c948458628c1",
+   "entrada_sha256": "6137535a93e0f3e1428410c5d99e106f086abcbe097ed3b219ea36a80ba90fe8"
+  },
+  {
+   "slug": "the-pursuit-of-happyness",
+   "bucket": "medianas",
+   "tokens_prompt": 7357,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "user_sha256": "0952f32e7b7159724dd3673dc2f90cef3d8086dffd2926f2eee416fa7d5f32b9",
+   "entrada_sha256": "4c9c36b60ee4b616bc91e8ed4eb6d8182c78566836186537136271af38ab467c"
+  },
+  {
+   "slug": "vertigo",
+   "bucket": "positivas",
+   "tokens_prompt": 7689,
+   "num_ctx": 12288,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "3959bf9eaa706b50bbc942e22c785908ce83374174739f77bafa275d6eddbe2a",
+   "entrada_sha256": "d9a91e2d1bfcef1e8d11a08dae6a32b5235dcf807e82ba29e4500cd16593ce18"
+  },
+  {
+   "slug": "1917",
+   "bucket": "negativas",
+   "tokens_prompt": 8271,
+   "num_ctx": 13312,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "0a5e2c69bd4bb43d0083b69f3163b891023ef876685af6947f5f8a81dad6d3da",
+   "entrada_sha256": "222be721bcb7f9d34ff6e8bf3f57e5a91d3b53fa22c623b6116adfbe1037e235"
+  },
+  {
+   "slug": "detachment",
+   "bucket": "positivas",
+   "tokens_prompt": 8987,
+   "num_ctx": 13312,
+   "n_reviews": 40,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "user_sha256": "d9b760909bf10b7aca91280940a80f5ffaa8506d664d30d0383319be036a6ca6",
+   "entrada_sha256": "e9e3b15e3696539d36d1009813304457136208c13869028b3023263cfff3eb19"
+  },
+  {
+   "slug": "green-book",
+   "bucket": "negativas",
+   "tokens_prompt": 8340,
+   "num_ctx": 13312,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "b0d8b081ab1358b9d51f93f4d3462449cad392be79eae3e04b0c73405db778e6",
+   "entrada_sha256": "f56f8a48560df8c36b2109fc126d34a9f27406b3400c44458b6f920f2640ccc8"
+  },
+  {
+   "slug": "dallas-buyers-club",
+   "bucket": "negativas",
+   "tokens_prompt": 9403,
+   "num_ctx": 14336,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "3918787d48dea6f9c44cdb6328bf341a77eb5d3696eed3ecf040527e75f44809",
+   "entrada_sha256": "cc3afbdf002c56f685b4a129aede566a2de1efa07f209d878e7f3ec6857bbbd3"
+  },
+  {
+   "slug": "vertigo",
+   "bucket": "negativas",
+   "tokens_prompt": 9773,
+   "num_ctx": 14336,
+   "n_reviews": 40,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "user_sha256": "12f87614f4b2f8f9a65a94bfcc6d42f17198f0f7d224d9b198f5e76b197aebaf",
+   "entrada_sha256": "83c8939835082c80e7a06051cb41e7087d2b426b3a8858ec8cc588921a7a25c1"
+  }
+ ]
+}

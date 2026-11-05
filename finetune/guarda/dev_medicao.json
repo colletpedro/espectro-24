@@ -1,0 +1,1100 @@
+{
+ "gerado_por": "scripts/finetune/medir_guarda.py medir",
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "lista_sha256": "a7fcd5a5663c3ebdc0112b27bd8821c839d47de86673ef4ebdea83c0524c14af",
+ "fontes": {
+  "treinado": {
+   "buckets": 89,
+   "bullets": 534,
+   "m1_antes": 440,
+   "m1_antes_pct": 82.4,
+   "m1_depois": 11,
+   "m1_depois_pct": 2.06,
+   "alterados": 434,
+   "alterados_pct_de_todos": 81.27,
+   "alterados_pct_dos_com_quantidade": 98.64,
+   "sem_reescrita_possivel": 11,
+   "buckets_com_pelo_menos_um_pendente": 11,
+   "regras": {
+    "quant+pessoas": 308,
+    "quant+verbo": 96,
+    "frequência": 78,
+    "quant+substantivo": 11,
+    "por/para+pronome": 8,
+    "maioria→plural": 8,
+    "certas+pessoas": 7,
+    "quant→certos+posicional": 5,
+    "alguns→certos+substantivo": 5,
+    "frequência (fim de oração)": 2,
+    "parte→plural": 2,
+    "quant+também+verbo": 2,
+    "quant+clítico+verbo": 1,
+    "parte→plural (complemento)": 1
+   },
+   "motivos_dos_pendentes": {
+    "muitos: quantificador sem substantivo logo depois": 1,
+    "muitas: seguido de 'outras' (não é substantivo plural simples)": 1,
+    "recorrente: 'recorrente' depois de substantivo fora da lista": 1,
+    "várias: precedido de artigo/negação/'outros'": 1,
+    "muitos: seguido de 'a' (não é substantivo plural simples)": 1,
+    "algumas: seguido de 'até' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'possam' (não é substantivo plural simples)": 1,
+    "muitos: seguido de 'deste' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'prevendo' (não é substantivo plural simples)": 1,
+    "parte do grupo: verbo seguinte fora da lista": 1,
+    "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)": 1
+   },
+   "temas_m1": 0,
+   "temas_m1_pct": 0.0,
+   "observacao_geral_m1": 55,
+   "observacao_geral_m1_pct": 61.8,
+   "violacoes_de_invariante": []
+  },
+  "base": {
+   "buckets": 89,
+   "bullets": 526,
+   "m1_antes": 242,
+   "m1_antes_pct": 46.01,
+   "m1_depois": 5,
+   "m1_depois_pct": 0.95,
+   "alterados": 238,
+   "alterados_pct_de_todos": 45.25,
+   "alterados_pct_dos_com_quantidade": 98.35,
+   "sem_reescrita_possivel": 5,
+   "buckets_com_pelo_menos_um_pendente": 5,
+   "regras": {
+    "quant+pessoas": 155,
+    "frequência": 41,
+    "maioria→plural": 24,
+    "quant+verbo": 20,
+    "alguns→certos+substantivo": 6,
+    "quant+substantivo": 5,
+    "quant→certos+posicional": 1
+   },
+   "motivos_dos_pendentes": {
+    "alguns: seguido de 'por' (não é substantivo plural simples)": 1,
+    "maior parte: 'maioria' fora de posição de sujeito": 1,
+    "parte do público: 'parte' fora de posição de sujeito": 1,
+    "algumas: seguido de 'ressalvem' (não é substantivo plural simples)": 1,
+    "muitos: seguido de 'dos' (não é substantivo plural simples)": 1
+   },
+   "temas_m1": 0,
+   "temas_m1_pct": 0.0,
+   "observacao_geral_m1": 9,
+   "observacao_geral_m1_pct": 10.11,
+   "violacoes_de_invariante": []
+  },
+  "publicado_teste": {
+   "buckets": 89,
+   "bullets": 534,
+   "m1_antes": 303,
+   "m1_antes_pct": 56.74,
+   "m1_depois": 31,
+   "m1_depois_pct": 5.81,
+   "alterados": 283,
+   "alterados_pct_de_todos": 53.0,
+   "alterados_pct_dos_com_quantidade": 93.4,
+   "sem_reescrita_possivel": 31,
+   "buckets_com_pelo_menos_um_pendente": 24,
+   "regras": {
+    "quant+pessoas": 148,
+    "quant+verbo": 66,
+    "frequência": 38,
+    "quant+substantivo": 15,
+    "alguns→certos+substantivo": 12,
+    "quant→certos+posicional": 9,
+    "parte→plural": 7,
+    "por/para+pronome": 6,
+    "há quem→plural": 5,
+    "certas+pessoas": 4,
+    "quant+clítico+verbo": 2,
+    "parte→plural (complemento)": 2
+   },
+   "motivos_dos_pendentes": {
+    "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)": 3,
+    "boa parte: 'maioria' fora de posição de sujeito": 3,
+    "grande parte: sintagma depois de 'maioria' fora do padrão": 2,
+    "recorrente: 'recorrente' depois de substantivo fora da lista": 2,
+    "unânime: sem regra segura (expressão com sentido próprio ou fora dos padrões)": 1,
+    "parte deste grupo: verbo seguinte fora da lista": 1,
+    "muitos: seguido de 'com' (não é substantivo plural simples)": 1,
+    "muitos: seguido de 'entraram' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'poucos' (não é substantivo plural simples)": 1,
+    "poucos: sem regra segura (expressão com sentido próprio ou fora dos padrões)": 1,
+    "alguns: quantificador sem substantivo logo depois": 1,
+    "maioria: 'maioria' sem artigo de sujeito": 1,
+    "guarda: trava final recusou a reescrita": 1,
+    "maioria: sintagma depois de 'maioria' fora do padrão": 1,
+    "vários: seguido de 'como' (não é substantivo plural simples)": 1,
+    "algumas: seguido de 'das' (não é substantivo plural simples)": 1,
+    "maioria: 'que' não é substantivo de pessoa": 1,
+    "recorrentes: 'recorrente' predicativo": 1,
+    "maior parte: 'maioria' fora de posição de sujeito": 1,
+    "maioria: 'maioria' fora de posição de sujeito": 1,
+    "parte do grupo: verbo seguinte fora da lista": 1,
+    "alguns: seguido de 'revelem' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'até' (não é substantivo plural simples)": 1,
+    "parte do público: verbo seguinte fora da lista": 1,
+    "alguns: seguido de 'levaram' (não é substantivo plural simples)": 1,
+    "quase todos: 'quase todos' sem substantivo de pessoa": 1
+   },
+   "temas_m1": 1,
+   "temas_m1_pct": 0.19,
+   "observacao_geral_m1": 52,
+   "observacao_geral_m1_pct": 58.43,
+   "violacoes_de_invariante": []
+  },
+  "publicado_treino": {
+   "buckets": 180,
+   "bullets": 1079,
+   "m1_antes": 591,
+   "m1_antes_pct": 54.77,
+   "m1_depois": 39,
+   "m1_depois_pct": 3.61,
+   "alterados": 570,
+   "alterados_pct_de_todos": 52.83,
+   "alterados_pct_dos_com_quantidade": 96.45,
+   "sem_reescrita_possivel": 39,
+   "buckets_com_pelo_menos_um_pendente": 34,
+   "regras": {
+    "quant+pessoas": 331,
+    "quant+verbo": 91,
+    "frequência": 72,
+    "quant+substantivo": 27,
+    "alguns→certos+substantivo": 23,
+    "quant→certos+posicional": 20,
+    "parte→plural": 16,
+    "por/para+pronome": 9,
+    "certas+pessoas": 8,
+    "quant+clítico+verbo": 6,
+    "parte→plural (complemento)": 5,
+    "há quem→plural": 4,
+    "maioria→plural": 3,
+    "quant+também+verbo": 1,
+    "frequência (fim de oração)": 1
+   },
+   "motivos_dos_pendentes": {
+    "parte do público: 'parte' fora de posição de sujeito": 4,
+    "alguns: seguido de 'a' (não é substantivo plural simples)": 3,
+    "alguns: seguido de 'tenham' (não é substantivo plural simples)": 2,
+    "boa parte: 'maioria' fora de posição de sujeito": 2,
+    "maioria: sintagma depois de 'maioria' fora do padrão": 2,
+    "maioria: 'maioria' sem artigo de sujeito": 2,
+    "muitos: seguido de 'concordam' (não é substantivo plural simples)": 1,
+    "muitos: seguido de 'foram' (não é substantivo plural simples)": 1,
+    "recorrentes: 'recorrente' predicativo": 1,
+    "alguns: seguido de 'sendo' (não é substantivo plural simples)": 1,
+    "muitos: seguido de 'que' (não é substantivo plural simples)": 1,
+    "muitos: precedido de artigo/negação/'outros'": 1,
+    "várias: seguido de 'delas' (não é substantivo plural simples)": 1,
+    "parte do grupo: 'parte' fora de posição de sujeito": 1,
+    "diversos: seguido de 'e' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'não' (não é substantivo plural simples)": 1,
+    "boa parte: sintagma depois de 'maioria' fora do padrão": 1,
+    "um número significativo: verbo seguinte fora da lista": 1,
+    "grande parte: 'maioria' fora de posição de sujeito": 1,
+    "muitos: seguido de 'se' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'às' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'dos' (não é substantivo plural simples)": 1,
+    "grande parte: sintagma depois de 'maioria' fora do padrão": 1,
+    "recorrentes: 'recorrente' depois de substantivo fora da lista": 1,
+    "consenso: sem regra segura (expressão com sentido próprio ou fora dos padrões)": 1,
+    "parte deste grupo: 'parte' fora de posição de sujeito": 1,
+    "alguns: seguido de 'contextualizem' (não é substantivo plural simples)": 1,
+    "algumas: seguido de 'ainda' (não é substantivo plural simples)": 1,
+    "alguns: seguido de 'chegam' (não é substantivo plural simples)": 1,
+    "recorrente: 'recorrente' depois de substantivo fora da lista": 1,
+    "muitos: seguido de 'ainda' (não é substantivo plural simples)": 1,
+    "algumas: seguido de 'são' (não é substantivo plural simples)": 1
+   },
+   "temas_m1": 0,
+   "temas_m1_pct": 0.0,
+   "observacao_geral_m1": 86,
+   "observacao_geral_m1_pct": 47.78,
+   "violacoes_de_invariante": []
+  }
+ },
+ "pendentes": {
+  "treinado": [
+   {
+    "slug": "2001-a-space-odyssey",
+    "bucket": "negativas",
+    "i": 5,
+    "texto": "Várias críticas expressam que a expectativa era alta devido à influência e à fama do filme, mas a realidade foi decepcionante, com um filme que não correspondeu às expectativas de muitos.",
+    "resultado": "Críticas expressam que a expectativa era alta devido à influência e à fama do filme, mas a realidade foi decepcionante, com um filme que não correspondeu às expectativas de muitos.",
+    "motivos": [
+     "muitos: quantificador sem substantivo logo depois"
+    ]
+   },
+   {
+    "slug": "2001-a-space-odyssey",
+    "bucket": "positivas",
+    "i": 3,
+    "texto": "O filme é visto como revolucionário por sua abordagem do espaço e da inteligência artificial, sendo considerado precursor de muitas outras obras de ficção científica.",
+    "resultado": "O filme é visto como revolucionário por sua abordagem do espaço e da inteligência artificial, sendo considerado precursor de muitas outras obras de ficção científica.",
+    "motivos": [
+     "muitas: seguido de 'outras' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "a-brighter-summer-day",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "A crítica à violência e à desigualdade social é um tema recorrente entre as reviews medianas. Muitos espectadores destacam a forma como o filme retrata o conflito entre gangs e a brutalidade de um sistema que persegue os jovens, além da crítica ao autoritarismo e à falta de oportunidades.",
+    "resultado": "A crítica à violência e à desigualdade social é um tema recorrente entre as reviews medianas. Espectadores destacam a forma como o filme retrata o conflito entre gangs e a brutalidade de um sistema que persegue os jovens, além da crítica ao autoritarismo e à falta de oportunidades.",
+    "motivos": [
+     "recorrente: 'recorrente' depois de substantivo fora da lista"
+    ]
+   },
+   {
+    "slug": "a-brighter-summer-day",
+    "bucket": "negativas",
+    "i": 2,
+    "texto": "Algumas reviews apontam que o roteiro é confuso e que as várias subtramas não se encaixam bem, tornando a narrativa fragmentada e difícil de seguir. Isso inclui problemas de roteiro em relação ao contexto histórico e à motivação dos personagens.",
+    "resultado": "Reviews apontam que o roteiro é confuso e que as várias subtramas não se encaixam bem, tornando a narrativa fragmentada e difícil de seguir. Isso inclui problemas de roteiro em relação ao contexto histórico e à motivação dos personagens.",
+    "motivos": [
+     "várias: precedido de artigo/negação/'outros'"
+    ]
+   },
+   {
+    "slug": "aftersun",
+    "bucket": "positivas",
+    "i": 3,
+    "texto": "A nostalgia e o tema das memórias são destacados como aspectos que ressoam profundamente, levando muitos a refletir sobre a infância e as experiências familiares que compartilham.",
+    "resultado": "A nostalgia e o tema das memórias são destacados como aspectos que ressoam profundamente, levando muitos a refletir sobre a infância e as experiências familiares que compartilham.",
+    "motivos": [
+     "muitos: seguido de 'a' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "Várias reviews criticam a quantidade de cenas sexuais e nus que o filme apresenta, considerando isso desnecessário e vergonhoso para um filme de terror. Algumas até mencionam que a pornografia prevalece sobre o terror, tornando a experiência desconfortável.",
+    "resultado": "Reviews criticam a quantidade de cenas sexuais e nus que o filme apresenta, considerando isso desnecessário e vergonhoso para um filme de terror. Algumas até mencionam que a pornografia prevalece sobre o terror, tornando a experiência desconfortável.",
+    "motivos": [
+     "algumas: seguido de 'até' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "A trilha sonora e os efeitos de som são mencionados como parte do que torna a experiência de terror envolvente, embora alguns possam considerar certos elementos como exagerados.",
+    "resultado": "A trilha sonora e os efeitos de som são mencionados como parte do que torna a experiência de terror envolvente, embora alguns possam considerar certos elementos como exagerados.",
+    "motivos": [
+     "alguns: seguido de 'possam' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "gladiator-2000",
+    "bucket": "negativas",
+    "i": 3,
+    "texto": "Muitos deste grupo consideram o filme sobrevalorado e decepcionante, especialmente diante do número de prêmios e do culto que conquistou.",
+    "resultado": "Muitos deste grupo consideram o filme sobrevalorado e decepcionante, especialmente diante do número de prêmios e do culto que conquistou.",
+    "motivos": [
+     "muitos: seguido de 'deste' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "incendies",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "Muitos espectadores medianos sentiram que o desfecho e o giro de trama, apesar de surpreendentes, não geraram o impacto esperado, com alguns prevendo a reviravolta antes mesmo de chegar ao seu desenrolar.",
+    "resultado": "Espectadores medianos sentiram que o desfecho e o giro de trama, apesar de surpreendentes, não geraram o impacto esperado, com alguns prevendo a reviravolta antes mesmo de chegar ao seu desenrolar.",
+    "motivos": [
+     "alguns: seguido de 'prevendo' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "portrait-of-a-lady-on-fire",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Parte do grupo de reviews medianas afirma que os personagens são reduzidos e suas motivações pouco exploradas, resultando em um roteiro que carece de complexidade.",
+    "resultado": "Parte do grupo de reviews medianas afirma que os personagens são reduzidos e suas motivações pouco exploradas, resultando em um roteiro que carece de complexidade.",
+    "motivos": [
+     "parte do grupo: verbo seguinte fora da lista"
+    ]
+   },
+   {
+    "slug": "the-second-mother",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "Este grupo destaca o filme por retratar de forma realista a vida de mulheres que trabalham no serviço doméstico, mostrando as dificuldades e a falta de oportunidades enfrentadas por essa parcela da população.",
+    "resultado": "Este grupo destaca o filme por retratar de forma realista a vida de mulheres que trabalham no serviço doméstico, mostrando as dificuldades e a falta de oportunidades enfrentadas por essa parcela da população.",
+    "motivos": [
+     "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   }
+  ],
+  "base": [
+   {
+    "slug": "500-days-of-summer",
+    "bucket": "medianas",
+    "i": 5,
+    "texto": "A narrativa do filme é criticada por alguns por ter um ritmo lento e por não explorar o potencial de suas ideias de forma mais profunda.",
+    "resultado": "A narrativa do filme é criticada por alguns por ter um ritmo lento e por não explorar o potencial de suas ideias de forma mais profunda.",
+    "motivos": [
+     "alguns: seguido de 'por' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "memento",
+    "bucket": "negativas",
+    "i": 3,
+    "texto": "As reviews destacam a sensação de tédio, com o filme sendo considerado monótono e repetitivo ao longo da maior parte da duração.",
+    "resultado": "As reviews destacam a sensação de tédio, com o filme sendo considerado monótono e repetitivo ao longo da maior parte da duração.",
+    "motivos": [
+     "maior parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "napoleon-2023",
+    "bucket": "negativas",
+    "i": 1,
+    "texto": "Muitas reviews apontam erros na representação histórica, como datas equivocadas, eventos distorcidos e falhas na contextualização, o que gera frustração por parte do público.",
+    "resultado": "Reviews apontam erros na representação histórica, como datas equivocadas, eventos distorcidos e falhas na contextualização, o que gera frustração por parte do público.",
+    "motivos": [
+     "parte do público: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "shutter-island",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "O ritmo do filme é considerado lento ou desacelerado, o que pode atrair atenção negativa, embora algumas ressalvem que a lentidão contribui para o clima de tensão.",
+    "resultado": "O ritmo do filme é considerado lento ou desacelerado, o que pode atrair atenção negativa, embora algumas ressalvem que a lentidão contribui para o clima de tensão.",
+    "motivos": [
+     "algumas: seguido de 'ressalvem' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-battle-of-algiers",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "As atuações são elogiadas por serem autênticas, com muitos dos atores sendo não profissionais, o que reforça o realismo da narrativa.",
+    "resultado": "As atuações são elogiadas por serem autênticas, com muitos dos atores sendo não profissionais, o que reforça o realismo da narrativa.",
+    "motivos": [
+     "muitos: seguido de 'dos' (não é substantivo plural simples)"
+    ]
+   }
+  ],
+  "publicado_teste": [
+   {
+    "slug": "2001-a-space-odyssey",
+    "bucket": "negativas",
+    "i": 3,
+    "texto": "Várias críticas questionam a aclamação unânime, sugerindo que o filme é superestimado e que seu valor reside mais em sua inovação técnica do que em sua qualidade como entretenimento.",
+    "resultado": "Críticas questionam a aclamação unânime, sugerindo que o filme é superestimado e que seu valor reside mais em sua inovação técnica do que em sua qualidade como entretenimento.",
+    "motivos": [
+     "unânime: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "500-days-of-summer",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "Parte deste grupo sustenta que o personagem masculino projetou expectativas irreais e preferiu se enganar a encarar a realidade, enquanto outros criticam a falta de responsabilidade afetiva da personagem feminina por insistir num vínculo que só confundia o outro.",
+    "resultado": "Parte deste grupo sustenta que o personagem masculino projetou expectativas irreais e preferiu se enganar a encarar a realidade, enquanto outros criticam a falta de responsabilidade afetiva da personagem feminina por insistir num vínculo que só confundia o outro.",
+    "motivos": [
+     "parte deste grupo: verbo seguinte fora da lista"
+    ]
+   },
+   {
+    "slug": "500-days-of-summer",
+    "bucket": "positivas",
+    "i": 0,
+    "texto": "Grande parte deste grupo enxerga o cerne do filme na tendência do protagonista de construir uma versão imaginada da pessoa amada em vez de enxergá-la como ela realmente é, e discute como esse mecanismo de projeção sustenta a relação e depois a destrói.",
+    "resultado": "Grande parte deste grupo enxerga o cerne do filme na tendência do protagonista de construir uma versão imaginada da pessoa amada em vez de enxergá-la como ela realmente é, e discute como esse mecanismo de projeção sustenta a relação e depois a destrói.",
+    "motivos": [
+     "grande parte: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "a-brighter-summer-day",
+    "bucket": "negativas",
+    "i": 1,
+    "texto": "Vários espectadores apontam que o grande número de personagens, muitos com aparência e nomes similares, dificulta a conexão emocional e a compreensão de quem é quem na história.",
+    "resultado": "Espectadores apontam que o grande número de personagens, muitos com aparência e nomes similares, dificulta a conexão emocional e a compreensão de quem é quem na história.",
+    "motivos": [
+     "muitos: seguido de 'com' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "aftersun",
+    "bucket": "negativas",
+    "i": 2,
+    "texto": "Uma parcela significativa considerou a atuação do protagonista masculino pouco crível, especialmente no papel de pai, o que enfraqueceu o filme para eles.",
+    "resultado": "Uma parcela significativa considerou a atuação do protagonista masculino pouco crível, especialmente no papel de pai, o que enfraqueceu o filme para eles.",
+    "motivos": [
+     "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "anatomy-of-a-fall",
+    "bucket": "negativas",
+    "i": 5,
+    "texto": "Devido ao enorme hype e aos prêmios recebidos, muitos entraram com altas expectativas e saíram decepcionados, considerando o filme superestimado.",
+    "resultado": "Devido ao enorme hype e aos prêmios recebidos, muitos entraram com altas expectativas e saíram decepcionados, considerando o filme superestimado.",
+    "motivos": [
+     "muitos: seguido de 'entraram' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "anatomy-of-a-murder",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "A performance de James Stewart é frequentemente elogiada como o ponto alto, com seu carisma e competência carregando boa parte do interesse do filme.",
+    "resultado": "A performance de James Stewart é elogiada como o ponto alto, com seu carisma e competência carregando boa parte do interesse do filme.",
+    "motivos": [
+     "boa parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "dune-2021",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Grande parte do filme é dedicada a apresentar o universo e deixar tudo pronto para a continuação, o que dá a impressão de que ele é apenas um longo prefácio.",
+    "resultado": "Grande parte do filme é dedicada a apresentar o universo e deixar tudo pronto para a continuação, o que dá a impressão de que ele é apenas um longo prefácio.",
+    "motivos": [
+     "grande parte: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "Muitos comentaram que os personagens são estereotipados, descartáveis e difíceis de torcer, com exceção de alguns poucos como Clay, Jenna e até Trent como um vilão memorável.",
+    "resultado": "Espectadores comentaram que os personagens são estereotipados, descartáveis e difíceis de torcer, com exceção de alguns poucos como Clay, Jenna e até Trent como um vilão memorável.",
+    "motivos": [
+     "alguns: seguido de 'poucos' (não é substantivo plural simples)",
+     "poucos: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "Parte do público apontou que o filme tem uma quantidade exagerada de conteúdo sexual e nudez, típica do terror dos anos 2000, o que chegou a incomodar alguns.",
+    "resultado": "Espectadores apontaram que o filme tem uma quantidade exagerada de conteúdo sexual e nudez, típica do terror dos anos 2000, o que chegou a incomodar alguns.",
+    "motivos": [
+     "alguns: quantificador sem substantivo logo depois"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "Muitas reviews positivas argumentam que o filme recebeu críticas injustas e que é superior a outros remakes e à maioria das sequências originais, sendo considerado uma das melhores entradas da série.",
+    "resultado": "Reviews positivas argumentam que o filme recebeu críticas injustas e que é superior a outros remakes e à maioria das sequências originais, sendo considerado uma das melhores entradas da série.",
+    "motivos": [
+     "maioria: 'maioria' sem artigo de sujeito"
+    ]
+   },
+   {
+    "slug": "friday-the-13th-2009",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "Embora muitos apreciem a diversão e o tom escrachado, parte do grupo considera as cenas de sexo exageradas e desnecessárias, sugerindo que sua redução melhoraria a aceitação do filme.",
+    "resultado": "Embora muitos apreciem a diversão e o tom escrachado, parte do grupo considera as cenas de sexo exageradas e desnecessárias, sugerindo que sua redução melhoraria a aceitação do filme.",
+    "motivos": [
+     "guarda: trava final recusou a reescrita"
+    ]
+   },
+   {
+    "slug": "incendies",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "A narrativa foi percebida como vagarosa por boa parte do grupo, com trechos que pareceram longos e pouco envolventes, tornando a experiência cansativa.",
+    "resultado": "A narrativa foi percebida como vagarosa por boa parte do grupo, com trechos que pareceram longos e pouco envolventes, tornando a experiência cansativa.",
+    "motivos": [
+     "boa parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "incendies",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "A reviravolta é frequentemente citada como chocante e brutal, mesmo por quem diz ter previsto o desfecho; alguns a consideram desnecessária, mas a maioria a descreve como um golpe que reconfigura toda a narrativa.",
+    "resultado": "A reviravolta é citada como chocante e brutal, mesmo por quem diz ter previsto o desfecho; espectadores a consideram desnecessária, mas a maioria a descreve como um golpe que reconfigura toda a narrativa.",
+    "motivos": [
+     "maioria: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "incendies",
+    "bucket": "positivas",
+    "i": 2,
+    "texto": "Villeneuve é elogiado por sua habilidade em construir tensão e conduzir a história, sendo este filme apontado por vários como uma de suas obras-primas ou um marco em sua filmografia.",
+    "resultado": "Villeneuve é elogiado por sua habilidade em construir tensão e conduzir a história, sendo este filme apontado por vários como uma de suas obras-primas ou um marco em sua filmografia.",
+    "motivos": [
+     "vários: seguido de 'como' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "memento",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "Várias reviews negativas relatam que a narrativa é confusa e difícil de acompanhar, com espectadores afirmando terem se sentido perdidos ou incapazes de entender o que estava acontecendo durante boa parte do filme.",
+    "resultado": "Reviews negativas relatam que a narrativa é confusa e difícil de acompanhar, com espectadores afirmando terem se sentido perdidos ou incapazes de entender o que estava acontecendo durante boa parte do filme.",
+    "motivos": [
+     "boa parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "memento",
+    "bucket": "medianas",
+    "i": 4,
+    "texto": "Algumas das reviews medianas classificam o ritmo como arrastado, com trechos tediosos que tornam a experiência cansativa, apesar de momentos pontuais de interesse.",
+    "resultado": "Algumas das reviews medianas classificam o ritmo como arrastado, com trechos tediosos que tornam a experiência cansativa, apesar de momentos pontuais de interesse.",
+    "motivos": [
+     "algumas: seguido de 'das' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "mother-2017",
+    "bucket": "negativas",
+    "i": 1,
+    "texto": "Uma parcela significativa relatou que assistir foi uma experiência extremamente angustiante, estressante e desagradável, a ponto de querer abandonar a sessão ou sentir sintomas físicos como taquicardia.",
+    "resultado": "Uma parcela significativa relatou que assistir foi uma experiência extremamente angustiante, estressante e desagradável, a ponto de querer abandonar a sessão ou sentir sintomas físicos como taquicardia.",
+    "motivos": [
+     "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "mother-2017",
+    "bucket": "negativas",
+    "i": 3,
+    "texto": "Um tema recorrente foi a irritação com a personagem feminina por sua passividade e por tolerar a invasão de seu espaço, e com o marido por ser egoísta, narcisista e por não respeitar os limites dela.",
+    "resultado": "Um tema recorrente foi a irritação com a personagem feminina por sua passividade e por tolerar a invasão de seu espaço, e com o marido por ser egoísta, narcisista e por não respeitar os limites dela.",
+    "motivos": [
+     "recorrente: 'recorrente' depois de substantivo fora da lista"
+    ]
+   },
+   {
+    "slug": "mother-2017",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "A maioria dos que comentaram sobre a experiência de assistir relatou que o filme provocou ansiedade extrema e desconforto, sendo uma obra difícil de rever ou de recomendar para os fracos.",
+    "resultado": "A maioria dos que comentaram sobre a experiência de assistir relatou que o filme provocou ansiedade extrema e desconforto, sendo uma obra difícil de rever ou de recomendar para os fracos.",
+    "motivos": [
+     "maioria: 'que' não é substantivo de pessoa"
+    ]
+   },
+   {
+    "slug": "mother-2017",
+    "bucket": "medianas",
+    "i": 5,
+    "texto": "Os elogios à fotografia e à direção de arte foram recorrentes, destacando a beleza das imagens e a eficiência em criar uma atmosfera opressiva e claustrofóbica.",
+    "resultado": "Os elogios à fotografia e à direção de arte foram recorrentes, destacando a beleza das imagens e a eficiência em criar uma atmosfera opressiva e claustrofóbica.",
+    "motivos": [
+     "recorrentes: 'recorrente' predicativo"
+    ]
+   },
+   {
+    "slug": "mother-2017",
+    "bucket": "positivas",
+    "i": 2,
+    "texto": "Muitos espectadores ficaram confusos durante a maior parte do filme, mas depois de entender o significado mais profundo, a obra ganhou um novo valor.",
+    "resultado": "Espectadores ficaram confusos durante a maior parte do filme, mas depois de entender o significado mais profundo, a obra ganhou um novo valor.",
+    "motivos": [
+     "maior parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "napoleon-2023",
+    "bucket": "medianas",
+    "i": 0,
+    "texto": "As sequências de batalha são amplamente elogiadas por sua grandiosidade e direção competente, sendo o ponto alto do filme para a maioria dos espectadores deste grupo.",
+    "resultado": "As sequências de batalha são amplamente elogiadas por sua grandiosidade e direção competente, sendo o ponto alto do filme para a maioria dos espectadores deste grupo.",
+    "motivos": [
+     "maioria: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "napoleon-2023",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "O filme dedica uma parcela desproporcional do tempo ao romance entre Napoleão e Josefina, em detrimento de sua carreira militar e política, o que desagrada os espectadores que esperavam um retrato mais abrangente.",
+    "resultado": "O filme dedica uma parcela desproporcional do tempo ao romance entre Napoleão e Josefina, em detrimento de sua carreira militar e política, o que desagrada os espectadores que esperavam um retrato mais abrangente.",
+    "motivos": [
+     "parcela: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "shutter-island",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Parte do grupo chegou com expectativas muito altas devido à fama da reviravolta e acabou se decepcionando, pois o resultado não foi tão impactante quanto o esperado.",
+    "resultado": "Parte do grupo chegou com expectativas muito altas devido à fama da reviravolta e acabou se decepcionando, pois o resultado não foi tão impactante quanto o esperado.",
+    "motivos": [
+     "parte do grupo: verbo seguinte fora da lista"
+    ]
+   },
+   {
+    "slug": "shutter-island",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "A reviravolta final é considerada memorável e muda a perspectiva de todo o filme, embora alguns revelem que já suspeitavam dela desde o início.",
+    "resultado": "A reviravolta final é considerada memorável e muda a perspectiva de todo o filme, embora alguns revelem que já suspeitavam dela desde o início.",
+    "motivos": [
+     "alguns: seguido de 'revelem' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-second-mother",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "Várias pessoas descrevem o filme como excessivamente devagar e entediante, com cenas longas que diluem o conflito e tornam a experiência cansativa, fazendo alguns até cochilarem.",
+    "resultado": "Pessoas descrevem o filme como excessivamente devagar e entediante, com cenas longas que diluem o conflito e tornam a experiência cansativa, fazendo alguns até cochilarem.",
+    "motivos": [
+     "alguns: seguido de 'até' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-second-mother",
+    "bucket": "negativas",
+    "i": 5,
+    "texto": "Mesmo reconhecendo a relevância do tema, parte do público não conseguiu se conectar emocionalmente com o filme, achando-o pouco emocionante e sem o impacto esperado.",
+    "resultado": "Mesmo reconhecendo a relevância do tema, parte do público não conseguiu se conectar emocionalmente com o filme, achando-o pouco emocionante e sem o impacto esperado.",
+    "motivos": [
+     "parte do público: verbo seguinte fora da lista"
+    ]
+   },
+   {
+    "slug": "the-second-mother",
+    "bucket": "positivas",
+    "i": 2,
+    "texto": "Este grupo elogia de forma recorrente a atuação de Regina Casé, descrita como natural e capaz de dar humanidade à personagem, além de destacar a qualidade do restante do elenco.",
+    "resultado": "Este grupo elogia de forma recorrente a atuação de Regina Casé, descrita como natural e capaz de dar humanidade à personagem, além de destacar a qualidade do restante do elenco.",
+    "motivos": [
+     "recorrente: 'recorrente' depois de substantivo fora da lista"
+    ]
+   },
+   {
+    "slug": "wicked-2024",
+    "bucket": "medianas",
+    "i": 0,
+    "texto": "Muitos reclamaram que o filme se arrasta e poderia ser mais curto, alguns levaram dias para terminar a sessão.",
+    "resultado": "Espectadores reclamaram que o filme se arrasta e poderia ser mais curto, alguns levaram dias para terminar a sessão.",
+    "motivos": [
+     "alguns: seguido de 'levaram' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "woman-of-fire",
+    "bucket": "negativas",
+    "i": 1,
+    "texto": "O filme é tratado como uma refilmagem supérflua de uma obra anterior do mesmo diretor, pior em quase todos os aspectos, incluindo a substituição da estrutura cautelar original por uma investigação policial clichê.",
+    "resultado": "O filme é tratado como uma refilmagem supérflua de uma obra anterior do mesmo diretor, pior em quase todos os aspectos, incluindo a substituição da estrutura cautelar original por uma investigação policial clichê.",
+    "motivos": [
+     "quase todos: 'quase todos' sem substantivo de pessoa"
+    ]
+   }
+  ],
+  "publicado_treino": [
+   {
+    "slug": "avengers-endgame",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "Parte dos fãs debateram se este filme é superior ou inferior ao anterior, com alguns preferindo a abordagem mais focada nos heróis e outros achando que a narrativa do filme anterior era mais coesa, mas muitos concordam que ambos são marcos do cinema.",
+    "resultado": "Parte dos fãs debateram se este filme é superior ou inferior ao anterior, com espectadores preferindo a abordagem mais focada nos heróis e outros achando que a narrativa do filme anterior era mais coesa, mas muitos concordam que ambos são marcos do cinema.",
+    "motivos": [
+     "muitos: seguido de 'concordam' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "barbie",
+    "bucket": "medianas",
+    "i": 5,
+    "texto": "Muitos foram ao cinema esperando uma história nostálgica e leve sobre a boneca, mas encontraram uma abordagem mais séria e com discurso social, o que decepcionou parte do público.",
+    "resultado": "Muitos foram ao cinema esperando uma história nostálgica e leve sobre a boneca, mas encontraram uma abordagem mais séria e com discurso social, o que decepcionou parte do público.",
+    "motivos": [
+     "muitos: seguido de 'foram' (não é substantivo plural simples)",
+     "parte do público: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "bones-and-all",
+    "bucket": "medianas",
+    "i": 0,
+    "texto": "Muitos espectadores relataram ter sentido náuseas ou desconforto intenso durante o filme, alguns a ponto de quase vomitar, e mencionaram que a violência gráfica e as cenas de canibalismo foram difíceis de assistir.",
+    "resultado": "Espectadores relataram ter sentido náuseas ou desconforto intenso durante o filme, alguns a ponto de quase vomitar, e mencionaram que a violência gráfica e as cenas de canibalismo foram difíceis de assistir.",
+    "motivos": [
+     "alguns: seguido de 'a' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "bones-and-all",
+    "bucket": "medianas",
+    "i": 4,
+    "texto": "A direção de Luca Guadagnino e a fotografia foram elogiadas por criar uma atmosfera visualmente bonita, embora alguns tenham sentido que o estilo visual não se manteve consistente ao longo do filme.",
+    "resultado": "A direção de Luca Guadagnino e a fotografia foram elogiadas por criar uma atmosfera visualmente bonita, embora alguns tenham sentido que o estilo visual não se manteve consistente ao longo do filme.",
+    "motivos": [
+     "alguns: seguido de 'tenham' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "cars",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "Este grupo frequentemente critica o fato de o filme ser longo demais para uma animação infantil e de ter partes arrastadas, com pouco acontecimento em boa parte da projeção.",
+    "resultado": "Este grupo critica o fato de o filme ser longo demais para uma animação infantil e de ter partes arrastadas, com pouco acontecimento em boa parte da projeção.",
+    "motivos": [
+     "boa parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "catch-me-if-you-can-2002",
+    "bucket": "negativas",
+    "i": 2,
+    "texto": "Há críticas recorrentes sobre a representação das mulheres no filme, vistas apenas como interesse amoroso ou alvos fáceis, o que incomoda parte do público.",
+    "resultado": "Há críticas sobre a representação das mulheres no filme, vistas apenas como interesse amoroso ou alvos fáceis, o que incomoda parte do público.",
+    "motivos": [
+     "parte do público: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "cats-2019",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "Os elogios às canções e à coreografia são recorrentes, destacando a força do elenco e a beleza dos números musicais.",
+    "resultado": "Os elogios às canções e à coreografia são recorrentes, destacando a força do elenco e a beleza dos números musicais.",
+    "motivos": [
+     "recorrentes: 'recorrente' predicativo"
+    ]
+   },
+   {
+    "slug": "cats-2019",
+    "bucket": "positivas",
+    "i": 5,
+    "texto": "Há comentários sobre performances de alguns atores, com alguns sendo criticados e outros elogiados como destaques.",
+    "resultado": "Há comentários sobre performances de certos atores, com alguns sendo criticados e outros elogiados como destaques.",
+    "motivos": [
+     "alguns: seguido de 'sendo' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "cidade-de-deus",
+    "bucket": "negativas",
+    "i": 5,
+    "texto": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
+    "resultado": "Muitos que não gostaram mencionam que não entendem a alta avaliação do filme, considerando-o superestimado e aquém das expectativas criadas pela fama.",
+    "motivos": [
+     "muitos: seguido de 'que' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "cidade-de-deus",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
+    "resultado": "A história é contada em fragmentos que não se conectam bem, tornando difícil acompanhar a trama e os muitos personagens.",
+    "motivos": [
+     "muitos: precedido de artigo/negação/'outros'"
+    ]
+   },
+   {
+    "slug": "do-the-right-thing",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "As reviews medianas apontam que a mensagem antirracista é reconhecida como relevante, mas várias delas a consideram confusa, didática demais ou mal executada, deixando a sensação de que o filme não conclui o que propõe discutir.",
+    "resultado": "As reviews medianas apontam que a mensagem antirracista é reconhecida como relevante, mas várias delas a consideram confusa, didática demais ou mal executada, deixando a sensação de que o filme não conclui o que propõe discutir.",
+    "motivos": [
+     "várias: seguido de 'delas' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "do-the-right-thing",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "O uso de cores saturadas, enquadramentos incomuns e a sensação transmitida de calor são elogiados por parte do grupo, que vê nesses recursos um acerto visual do filme.",
+    "resultado": "O uso de cores saturadas, enquadramentos incomuns e a sensação transmitida de calor são elogiados por parte do grupo, que vê nesses recursos um acerto visual do filme.",
+    "motivos": [
+     "parte do grupo: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "do-the-right-thing",
+    "bucket": "positivas",
+    "i": 0,
+    "texto": "As reviews positivas destacam a habilidade do filme em retratar a vida comunitária em um único quarteirão do Brooklyn, com personagens diversos e autênticos que representam diferentes camadas sociais e culturais.",
+    "resultado": "As reviews positivas destacam a habilidade do filme em retratar a vida comunitária em um único quarteirão do Brooklyn, com personagens diversos e autênticos que representam diferentes camadas sociais e culturais.",
+    "motivos": [
+     "diversos: seguido de 'e' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "drive-my-car",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "Há comentários elogiando a atuação contida do protagonista e a capacidade do elenco de transmitir emoção sem exageros, ainda que alguns não tenham se conectado a esse aspecto.",
+    "resultado": "Há comentários elogiando a atuação contida do protagonista e a capacidade do elenco de transmitir emoção sem exageros, ainda que alguns não tenham se conectado a esse aspecto.",
+    "motivos": [
+     "alguns: seguido de 'não' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "drive-my-car",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Boa parte deste grupo relata não ter conseguido se envolver com as questões dos personagens, mesmo reconhecendo a seriedade com que o luto e a melancolia são tratados.",
+    "resultado": "Boa parte deste grupo relata não ter conseguido se envolver com as questões dos personagens, mesmo reconhecendo a seriedade com que o luto e a melancolia são tratados.",
+    "motivos": [
+     "boa parte: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "eighth-grade",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Um número significativo de reviews apontou que o filme tem um ritmo arrastado em alguns trechos, o que gerou momentos de tédio mesmo para quem apreciou a obra.",
+    "resultado": "Um número significativo de reviews apontou que o filme tem um ritmo arrastado em certos trechos, o que gerou momentos de tédio mesmo para quem apreciou a obra.",
+    "motivos": [
+     "um número significativo: verbo seguinte fora da lista"
+    ]
+   },
+   {
+    "slug": "fight-club",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "O filme é visto como superestimado e não corresponde ao hype, sendo considerado mediano ou chato por grande parte deste grupo.",
+    "resultado": "O filme é visto como superestimado e não corresponde ao hype, sendo considerado mediano ou chato por grande parte deste grupo.",
+    "motivos": [
+     "grande parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "fight-club",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "Algumas reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo.",
+    "resultado": "Reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo.",
+    "motivos": [
+     "maioria: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "hereditary",
+    "bucket": "medianas",
+    "i": 5,
+    "texto": "Devido ao enorme hype, muitos se sentiram decepcionados, achando o filme bom mas não à altura das expectativas criadas, especialmente quando comparado a clássicos do terror.",
+    "resultado": "Devido ao enorme hype, muitos se sentiram decepcionados, achando o filme bom mas não à altura das expectativas criadas, especialmente quando comparado a clássicos do terror.",
+    "motivos": [
+     "muitos: seguido de 'se' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "interstellar",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "A maioria reclama que o filme se arrasta em vários momentos e que poderia ser mais curto, com a atenção se mantendo apenas nas cenas de maior impacto.",
+    "resultado": "A maioria reclama que o filme se arrasta em certos momentos e que poderia ser mais curto, com a atenção se mantendo apenas nas cenas de maior impacto.",
+    "motivos": [
+     "maioria: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "interstellar",
+    "bucket": "positivas",
+    "i": 1,
+    "texto": "A relação entre Cooper e Murph é o coração emocional do filme para muitos espectadores, que se dizem profundamente tocados pela separação e pela perda de tempo entre eles, levando alguns às lágrimas.",
+    "resultado": "A relação entre Cooper e Murph é o coração emocional do filme para espectadores, que se dizem profundamente tocados pela separação e pela perda de tempo entre eles, levando alguns às lágrimas.",
+    "motivos": [
+     "alguns: seguido de 'às' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "interstellar",
+    "bucket": "positivas",
+    "i": 2,
+    "texto": "Os visuais do filme são amplamente elogiados, com descrições de imagens de tirar o fôlego, especialmente das paisagens espaciais e dos buracos negros, que são considerados alguns dos melhores já vistos no cinema.",
+    "resultado": "Os visuais do filme são amplamente elogiados, com descrições de imagens de tirar o fôlego, especialmente das paisagens espaciais e dos buracos negros, que são considerados alguns dos melhores já vistos no cinema.",
+    "motivos": [
+     "alguns: seguido de 'dos' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "joker-folie-a-deux",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "As performances de Joaquin Phoenix e Lady Gaga foram destacadas como um ponto alto, com boa química entre eles, embora alguns tenham achado o papel de Harley Quinn subaproveitado.",
+    "resultado": "As performances de Joaquin Phoenix e Lady Gaga foram destacadas como um ponto alto, com boa química entre eles, embora alguns tenham achado o papel de Harley Quinn subaproveitado.",
+    "motivos": [
+     "alguns: seguido de 'tenham' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "mad-max-fury-road",
+    "bucket": "negativas",
+    "i": 4,
+    "texto": "Os diálogos são considerados pobres e as atuações, em sua maioria, não convencem, contribuindo para a falta de envolvimento.",
+    "resultado": "Os diálogos são considerados pobres e as atuações, em sua maioria, não convencem, contribuindo para a falta de envolvimento.",
+    "motivos": [
+     "maioria: 'maioria' sem artigo de sujeito"
+    ]
+   },
+   {
+    "slug": "marty-supreme",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "grande parte do grupo descreve o personagem central como insuportável, egoísta e narcisista, sem qualquer arco de evolução ou momento que desperte empatia, o que torna difícil torcer por ele.",
+    "resultado": "grande parte do grupo descreve o personagem central como insuportável, egoísta e narcisista, sem qualquer arco de evolução ou momento que desperte empatia, o que torna difícil torcer por ele.",
+    "motivos": [
+     "grande parte: sintagma depois de 'maioria' fora do padrão"
+    ]
+   },
+   {
+    "slug": "memories-of-murder",
+    "bucket": "negativas",
+    "i": 5,
+    "texto": "Algumas reviews questionam o status de obra-prima, afirmando que o filme é superestimado e que seu valor é exagerado por parte do público e da crítica.",
+    "resultado": "Reviews questionam o status de obra-prima, afirmando que o filme é superestimado e que seu valor é exagerado por parte do público e da crítica.",
+    "motivos": [
+     "parte do público: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "neighboring-sounds",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "A marca autoral do diretor é amplamente elogiada, com sua capacidade de misturar gêneros, explorar temas recorrentes e manter uma visão coesa e original, consolidando seu talento.",
+    "resultado": "A marca autoral do diretor é amplamente elogiada, com sua capacidade de misturar gêneros, explorar temas recorrentes e manter uma visão coesa e original, consolidando seu talento.",
+    "motivos": [
+     "recorrentes: 'recorrente' depois de substantivo fora da lista"
+    ]
+   },
+   {
+    "slug": "princess-mononoke",
+    "bucket": "medianas",
+    "i": 2,
+    "texto": "Mesmo nas críticas medianas, é consenso que a animação e o visual são impressionantes e cheios de detalhes.",
+    "resultado": "Mesmo nas críticas medianas, é consenso que a animação e o visual são impressionantes e cheios de detalhes.",
+    "motivos": [
+     "consenso: sem regra segura (expressão com sentido próprio ou fora dos padrões)"
+    ]
+   },
+   {
+    "slug": "prisoners",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "A conclusão do filme é vista como decepcionante por parte deste grupo, que a considera abrupta, ambígua demais ou pouco recompensadora após toda a tensão construída.",
+    "resultado": "A conclusão do filme é vista como decepcionante por parte deste grupo, que a considera abrupta, ambígua demais ou pouco recompensadora após toda a tensão construída.",
+    "motivos": [
+     "parte deste grupo: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "satantango",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "A sequência envolvendo um gato é frequentemente mencionada como perturbadora e difícil de assistir, gerando desconforto, embora alguns contextualizem que o animal não sofreu danos.",
+    "resultado": "A sequência envolvendo um gato é mencionada como perturbadora e difícil de assistir, gerando desconforto, embora alguns contextualizem que o animal não sofreu danos.",
+    "motivos": [
+     "alguns: seguido de 'contextualizem' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "se7en",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "Várias reviews deste grupo relatam tédio e sono durante boa parte da projeção, dizendo que a história demora a engrenar e que quase nada acontece até os minutos finais, o que torna a experiência arrastada.",
+    "resultado": "Reviews deste grupo relatam tédio e sono durante boa parte da projeção, dizendo que a história demora a engrenar e que quase nada acontece até os minutos finais, o que torna a experiência arrastada.",
+    "motivos": [
+     "boa parte: 'maioria' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "soul-2020",
+    "bucket": "positivas",
+    "i": 4,
+    "texto": "O jazz é mencionado não apenas como parte da trama, mas como uma força que inspira e dá sentido à vida, incentivando alguns a redescobrir o prazer pela música.",
+    "resultado": "O jazz é mencionado não apenas como parte da trama, mas como uma força que inspira e dá sentido à vida, incentivando alguns a redescobrir o prazer pela música.",
+    "motivos": [
+     "alguns: seguido de 'a' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-cloud-capped-star",
+    "bucket": "positivas",
+    "i": 3,
+    "texto": "O melodrama intenso e a carga emocional são vistos como centrais, com alguns considerando excessivo, mas na maioria das vezes eficaz e comovente.",
+    "resultado": "O melodrama intenso e a carga emocional são vistos como centrais, com espectadores considerando excessivo, mas na maioria das vezes eficaz e comovente.",
+    "motivos": [
+     "maioria: 'maioria' sem artigo de sujeito"
+    ]
+   },
+   {
+    "slug": "the-spongebob-movie-search-for-squarepants",
+    "bucket": "medianas",
+    "i": 1,
+    "texto": "As piadas são vistas como apelativas para crianças, com muitas piadas de baixo calão e momentos que soam forçados, embora algumas ainda arranquem risadas.",
+    "resultado": "As piadas são vistas como apelativas para crianças, com piadas de baixo calão e momentos que soam forçados, embora algumas ainda arranquem risadas.",
+    "motivos": [
+     "algumas: seguido de 'ainda' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-turin-horse",
+    "bucket": "negativas",
+    "i": 0,
+    "texto": "As críticas deste grupo descrevem a experiência de assistir ao filme como arrastada e entediante, com cenas que se estendem sem propósito claro, levando alguns a acelerar a reprodução ou até desistir no meio. A repetição de ações cotidianas sem variação significativa é apontada como um fator que torna a obra difícil de suportar.",
+    "resultado": "As críticas deste grupo descrevem a experiência de assistir ao filme como arrastada e entediante, com cenas que se estendem sem propósito claro, levando alguns a acelerar a reprodução ou até desistir no meio. A repetição de ações cotidianas sem variação significativa é apontada como um fator que torna a obra difícil de suportar.",
+    "motivos": [
+     "alguns: seguido de 'a' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-wailing",
+    "bucket": "negativas",
+    "i": 4,
+    "texto": "Vários textos apontam que o filme não consegue gerar suspense ou sustos eficazes, com cenas que se sucedem sem construir qualquer apreensão, e alguns chegam a dizer que riram mais do que se assustaram.",
+    "resultado": "Textos apontam que o filme não consegue gerar suspense ou sustos eficazes, com cenas que se sucedem sem construir qualquer apreensão, e alguns chegam a dizer que riram mais do que se assustaram.",
+    "motivos": [
+     "alguns: seguido de 'chegam' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "the-wolf-of-wall-street",
+    "bucket": "medianas",
+    "i": 3,
+    "texto": "Várias reviews apontam que o filme parece romantizar a ganância, o consumo de drogas e o estilo de vida criminoso, sem oferecer uma crítica moral suficientemente clara, o que incomoda parte do público.",
+    "resultado": "Reviews apontam que o filme parece romantizar a ganância, o consumo de drogas e o estilo de vida criminoso, sem oferecer uma crítica moral suficientemente clara, o que incomoda parte do público.",
+    "motivos": [
+     "parte do público: 'parte' fora de posição de sujeito"
+    ]
+   },
+   {
+    "slug": "the-wolf-of-wall-street",
+    "bucket": "positivas",
+    "i": 3,
+    "texto": "A longa duração é um ponto recorrente, com alguns espectadores sentindo que o filme poderia ser mais enxuto, embora muitos ainda o considerem divertido do início ao fim.",
+    "resultado": "A longa duração é um ponto recorrente, com espectadores sentindo que o filme poderia ser mais enxuto, embora muitos ainda o considerem divertido do início ao fim.",
+    "motivos": [
+     "recorrente: 'recorrente' depois de substantivo fora da lista",
+     "muitos: seguido de 'ainda' (não é substantivo plural simples)"
+    ]
+   },
+   {
+    "slug": "wonka",
+    "bucket": "medianas",
+    "i": 0,
+    "texto": "As músicas não são marcantes e algumas são consideradas fracas, com letras pouco inspiradas, apesar de haver algumas exceções agradáveis.",
+    "resultado": "As músicas não são marcantes e algumas são consideradas fracas, com letras pouco inspiradas, apesar de haver certas exceções agradáveis.",
+    "motivos": [
+     "algumas: seguido de 'são' (não é substantivo plural simples)"
+    ]
+   }
+  ]
+ },
+ "total": {
+  "buckets": 447,
+  "bullets": 2673,
+  "m1_antes": 1576,
+  "m1_depois": 86,
+  "alterados": 1525,
+  "sem_reescrita_possivel": 86,
+  "buckets_com_pelo_menos_um_pendente": 74,
+  "temas_m1": 1
+ }
+}
