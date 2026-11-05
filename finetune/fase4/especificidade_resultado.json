@@ -1,0 +1,80 @@
+{
+ "gerado_por": "scripts/finetune/fase4_especificidade.py avaliar",
+ "rotulos_sha256": "d0d5dde977fa74992ba807dccec79e1d71fa2379b458111a712a3fabe3dc37e3",
+ "mapa_sha256": "59f85058d8312cbe0ff6be39c1f0358c06fd58b1fd42f8105476f42e8d10f71c",
+ "script_sha256": "b524d634d090d9263a01fd2bdeb21b338ce5cbf94fb9d29fb96fd36b6451f972",
+ "por_lado": {
+  "treinado": {
+   "E": 18,
+   "n": 60,
+   "proporcao_E": 0.3,
+   "wilson95": [
+    0.19898166138769108,
+    0.42508707946914487
+   ],
+   "por_bucket": {
+    "negativas": 6,
+    "medianas": 5,
+    "positivas": 7
+   }
+  },
+  "publicado": {
+   "E": 24,
+   "n": 60,
+   "proporcao_E": 0.4,
+   "wilson95": [
+    0.2856949053488255,
+    0.5263394650795924
+   ],
+   "por_bucket": {
+    "negativas": 4,
+    "medianas": 9,
+    "positivas": 11
+   }
+  }
+ },
+ "consistencia_dono": {
+  "iguais": 6,
+  "repetidos": 6,
+  "pares": [
+   {
+    "id": "F053",
+    "original": "F013",
+    "lado": "treinado",
+    "igual": true
+   },
+   {
+    "id": "F065",
+    "original": "F108",
+    "lado": "publicado",
+    "igual": true
+   },
+   {
+    "id": "F068",
+    "original": "F027",
+    "lado": "publicado",
+    "igual": true
+   },
+   {
+    "id": "F074",
+    "original": "F033",
+    "lado": "treinado",
+    "igual": true
+   },
+   {
+    "id": "F075",
+    "original": "F117",
+    "lado": "publicado",
+    "igual": true
+   },
+   {
+    "id": "F079",
+    "original": "F120",
+    "lado": "treinado",
+    "igual": true
+   }
+  ]
+ },
+ "criterio": "proporção de E do treinado ≥ 10%",
+ "C5_passa": true
+}
