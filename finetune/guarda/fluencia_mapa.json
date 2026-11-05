@@ -1,0 +1,350 @@
+{
+ "gerado_por": "scripts/finetune/fluencia_guarda.py montar",
+ "semente": 20261106,
+ "n": 30,
+ "min_s": 27,
+ "populacao_textos_distintos": 1524,
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "criterio_sha256": "70385dd3d5af1f12df179efb5d107789c94474f03cf6cd03421e761f04b63d0b",
+ "script_sha256": "c30c992b39b1a4f286a91b449cd64b41adaf3cb12f0b2704c29581e3b0c19d6d",
+ "itens": [
+  {
+   "id": 1,
+   "fonte": "treinado",
+   "slug": "500-days-of-summer",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas",
+    "quant+verbo"
+   ],
+   "antes": "Várias reviews deste grupo consideram os personagens centrais insuportáveis, descrevendo o protagonista como um adulto que age como adolescente e a protagonista como confusa e sem responsabilidade emocional. Muitos criticam a falta de maturidade de ambos e a dinâmica de relacionamento que parece se basear em expectativas e manipulação.",
+   "depois": "Reviews deste grupo consideram os personagens centrais insuportáveis, descrevendo o protagonista como um adulto que age como adolescente e a protagonista como confusa e sem responsabilidade emocional. Espectadores criticam a falta de maturidade de ambos e a dinâmica de relacionamento que parece se basear em expectativas e manipulação."
+  },
+  {
+   "id": 2,
+   "fonte": "treinado",
+   "slug": "shutter-island",
+   "bucket": "medianas",
+   "regras": [
+    "quant+verbo"
+   ],
+   "antes": "A fotografia e a direção são mencionadas de forma mista, com alguns considerando que a direção soa artificial ou pouco scorseseana, enquanto outros elogiam a atmosfera sombria.",
+   "depois": "A fotografia e a direção são mencionadas de forma mista, com espectadores considerando que a direção soa artificial ou pouco scorseseana, enquanto outros elogiam a atmosfera sombria."
+  },
+  {
+   "id": 3,
+   "fonte": "treinado",
+   "slug": "2001-a-space-odyssey",
+   "bucket": "medianas",
+   "regras": [
+    "quant+verbo"
+   ],
+   "antes": "A música é mencionada como marcante, com alguns comentando que ela é capaz de manter o interesse, embora outros considerem que o volume é alto demais.",
+   "depois": "A música é mencionada como marcante, com espectadores comentando que ela é capaz de manter o interesse, embora outros considerem que o volume é alto demais."
+  },
+  {
+   "id": 4,
+   "fonte": "publicado_treino",
+   "slug": "inception",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Algumas reviews afirmam que o filme se apoia demais em efeitos visuais e cenas de ação, mas isso não compensa a falta de uma história envolvente ou de emoção genuína.",
+   "depois": "Reviews afirmam que o filme se apoia demais em efeitos visuais e cenas de ação, mas isso não compensa a falta de uma história envolvente ou de emoção genuína."
+  },
+  {
+   "id": 5,
+   "fonte": "base",
+   "slug": "the-prestige",
+   "bucket": "positivas",
+   "regras": [
+    "quant+pessoas",
+    "alguns→certos+substantivo"
+   ],
+   "antes": "Alguns críticos destacam a complexidade do filme e sua capacidade de gerar reflexão, mesmo que alguns elementos sejam criticados por serem excessivamente elaborados.",
+   "depois": "Críticos destacam a complexidade do filme e sua capacidade de gerar reflexão, mesmo que certos elementos sejam criticados por serem excessivamente elaborados."
+  },
+  {
+   "id": 6,
+   "fonte": "publicado_teste",
+   "slug": "spider-man-across-the-spider-verse",
+   "bucket": "medianas",
+   "regras": [
+    "frequência",
+    "quant+verbo",
+    "quant+verbo"
+   ],
+   "antes": "A animação é frequentemente elogiada como impressionante e inovadora, com muitos destacando a beleza visual e a criatividade dos diferentes estilos de cada universo, embora alguns achem o excesso de estilos visualmente cansativo.",
+   "depois": "A animação é elogiada como impressionante e inovadora, com espectadores destacando a beleza visual e a criatividade dos diferentes estilos de cada universo, embora espectadores achem o excesso de estilos visualmente cansativo."
+  },
+  {
+   "id": 7,
+   "fonte": "publicado_treino",
+   "slug": "joker-folie-a-deux",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Várias pessoas apontam que a história quase não avança, que não há desenvolvimento dos personagens e que o filme parece vazio, dependendo de repetições e voltas ao passado.",
+   "depois": "Pessoas apontam que a história quase não avança, que não há desenvolvimento dos personagens e que o filme parece vazio, dependendo de repetições e voltas ao passado."
+  },
+  {
+   "id": 8,
+   "fonte": "base",
+   "slug": "anatomy-of-a-murder",
+   "bucket": "medianas",
+   "regras": [
+    "quant+substantivo"
+   ],
+   "antes": "As reviews destacam que o ritmo da narrativa é mais lento do que o esperado, com muitas pausas e repetições que deixam a experiência de assistir mais cansativa.",
+   "depois": "As reviews destacam que o ritmo da narrativa é mais lento do que o esperado, com pausas e repetições que deixam a experiência de assistir mais cansativa."
+  },
+  {
+   "id": 9,
+   "fonte": "publicado_treino",
+   "slug": "arrival-2016",
+   "bucket": "medianas",
+   "regras": [
+    "há quem→plural"
+   ],
+   "antes": "Há quem diga que o filme recorre a clichês do gênero, como traumas familiares e personagens genéricos, o que faz a obra parecer derivada de outras ficções científicas.",
+   "depois": "Espectadores dizem que o filme recorre a clichês do gênero, como traumas familiares e personagens genéricos, o que faz a obra parecer derivada de outras ficções científicas."
+  },
+  {
+   "id": 10,
+   "fonte": "treinado",
+   "slug": "aftersun",
+   "bucket": "negativas",
+   "regras": [
+    "alguns→certos+substantivo"
+   ],
+   "antes": "Apesar de alguns elogios à fotografia e ao estilo visual, críticas apontam que a abordagem é pretensiosa, confusa ou arrastada, com enquadramentos que dificultam o acompanhamento da narrativa.",
+   "depois": "Apesar de certos elogios à fotografia e ao estilo visual, críticas apontam que a abordagem é pretensiosa, confusa ou arrastada, com enquadramentos que dificultam o acompanhamento da narrativa."
+  },
+  {
+   "id": 11,
+   "fonte": "treinado",
+   "slug": "2001-a-space-odyssey",
+   "bucket": "medianas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Várias reviews medianas criticam o ritmo lento e arrastado, com longos trechos que parecem se estender por muito tempo sem avançar a trama, o que torna a experiência entediante.",
+   "depois": "Reviews medianas criticam o ritmo lento e arrastado, com longos trechos que parecem se estender por muito tempo sem avançar a trama, o que torna a experiência entediante."
+  },
+  {
+   "id": 12,
+   "fonte": "treinado",
+   "slug": "mother-2017",
+   "bucket": "positivas",
+   "regras": [
+    "quant+substantivo"
+   ],
+   "antes": "A atuação de Jennifer Lawrence é destacada como um dos pontos altos do filme, com muitos elogios à sua performance intensa, à sua capacidade de transmitir vulnerabilidade e à sua expressão facial que carrega toda a história.",
+   "depois": "A atuação de Jennifer Lawrence é destacada como um dos pontos altos do filme, com elogios à sua performance intensa, à sua capacidade de transmitir vulnerabilidade e à sua expressão facial que carrega toda a história."
+  },
+  {
+   "id": 13,
+   "fonte": "treinado",
+   "slug": "the-second-mother",
+   "bucket": "medianas",
+   "regras": [
+    "frequência",
+    "quant+pessoas"
+   ],
+   "antes": "A crítica social e a mensagem do filme são frequentemente elogiadas como importantes e relevantes, mas algumas reviews medianas sentem que a mensagem poderia ser mais incisiva ou que a obra não chega a uma conclusão satisfatória.",
+   "depois": "A crítica social e a mensagem do filme são elogiadas como importantes e relevantes, mas reviews medianas sentem que a mensagem poderia ser mais incisiva ou que a obra não chega a uma conclusão satisfatória."
+  },
+  {
+   "id": 14,
+   "fonte": "treinado",
+   "slug": "spider-man-across-the-spider-verse",
+   "bucket": "positivas",
+   "regras": [
+    "frequência",
+    "quant+verbo"
+   ],
+   "antes": "A trilha sonora, especialmente a contribuição de Metro Boomin, é frequentemente citada como um dos pontos altos do filme, com muitos destacando que a música intensifica a emoção e a ação, tornando a experiência imersiva.",
+   "depois": "A trilha sonora, especialmente a contribuição de Metro Boomin, é citada como um dos pontos altos do filme, com espectadores destacando que a música intensifica a emoção e a ação, tornando a experiência imersiva."
+  },
+  {
+   "id": 15,
+   "fonte": "treinado",
+   "slug": "joker-2019",
+   "bucket": "positivas",
+   "regras": [
+    "quant+pessoas",
+    "quant+verbo"
+   ],
+   "antes": "Algumas reviews positivas mencionam que o filme é desconfortável e perturbador, mas que isso é parte do que o torna impactante, com muitos descrevendo a experiência como marcante e difícil de esquecer.",
+   "depois": "Reviews positivas mencionam que o filme é desconfortável e perturbador, mas que isso é parte do que o torna impactante, com espectadores descrevendo a experiência como marcante e difícil de esquecer."
+  },
+  {
+   "id": 16,
+   "fonte": "base",
+   "slug": "guillermo-del-toros-pinocchio",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Apesar da animação ser técnica e impressionante, muitas reviews a consideram desagradável, com críticas ao estilo visual que parece exagerado e desconfortável.",
+   "depois": "Apesar da animação ser técnica e impressionante, reviews a consideram desagradável, com críticas ao estilo visual que parece exagerado e desconfortável."
+  },
+  {
+   "id": 17,
+   "fonte": "publicado_treino",
+   "slug": "fight-club",
+   "bucket": "positivas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Algumas reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo.",
+   "depois": "Reviews apontam que certas partes, especialmente no início ou no meio, podem parecer arrastadas, embora a maioria considere que os pontos positivos superam esses momentos de menor ritmo."
+  },
+  {
+   "id": 18,
+   "fonte": "publicado_treino",
+   "slug": "cars",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Algumas reviews interpretam a mensagem como nostálgica de forma problemática, romantizando o passado e apresentando conotações políticas ou sociais controversas.",
+   "depois": "Reviews interpretam a mensagem como nostálgica de forma problemática, romantizando o passado e apresentando conotações políticas ou sociais controversas."
+  },
+  {
+   "id": 19,
+   "fonte": "base",
+   "slug": "woman-of-fire",
+   "bucket": "medianas",
+   "regras": [
+    "frequência"
+   ],
+   "antes": "As críticas mencionam a intensidade exagerada da narrativa, com emoções fortes e situações que muitas vezes são consideradas superestimadas ou dificultam a compreensão da trama.",
+   "depois": "As críticas mencionam a intensidade exagerada da narrativa, com emoções fortes e situações que são consideradas superestimadas ou dificultam a compreensão da trama."
+  },
+  {
+   "id": 20,
+   "fonte": "publicado_treino",
+   "slug": "satantango",
+   "bucket": "medianas",
+   "regras": [
+    "parte→plural (complemento)"
+   ],
+   "antes": "O ritmo vagaroso é apontado como um teste de paciência, com planos prolongados que tornam a experiência exaustiva para parte do público.",
+   "depois": "O ritmo vagaroso é apontado como um teste de paciência, com planos prolongados que tornam a experiência exaustiva para espectadores."
+  },
+  {
+   "id": 21,
+   "fonte": "publicado_teste",
+   "slug": "anatomy-of-a-murder",
+   "bucket": "positivas",
+   "regras": [
+    "frequência"
+   ],
+   "antes": "As reviews positivas destacam a performance magnética e carismática de James Stewart como o advogado protagonista, considerando-a um dos pontos mais altos do filme e frequentemente a razão principal para assisti-lo.",
+   "depois": "As reviews positivas destacam a performance magnética e carismática de James Stewart como o advogado protagonista, considerando-a um dos pontos mais altos do filme e a razão principal para assisti-lo."
+  },
+  {
+   "id": 22,
+   "fonte": "treinado",
+   "slug": "incendies",
+   "bucket": "medianas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Várias reviews medianas reclamam que o filme demora a engrenar e se arrasta por longos períodos, tornando a experiência cansativa, apesar de reconhecerem que o clímax e o giro de trama compensam o tempo gasto.",
+   "depois": "Reviews medianas reclamam que o filme demora a engrenar e se arrasta por longos períodos, tornando a experiência cansativa, apesar de reconhecerem que o clímax e o giro de trama compensam o tempo gasto."
+  },
+  {
+   "id": 23,
+   "fonte": "publicado_teste",
+   "slug": "anatomy-of-a-fall",
+   "bucket": "negativas",
+   "regras": [
+    "por/para+pronome"
+   ],
+   "antes": "A alternância entre francês e inglês foi vista por alguns como artificial e desconfortável, dificultando a imersão.",
+   "depois": "A alternância entre francês e inglês foi vista por espectadores como artificial e desconfortável, dificultando a imersão."
+  },
+  {
+   "id": 24,
+   "fonte": "base",
+   "slug": "the-second-mother",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Alguns críticos mencionam que as atuações não são convincentes, especialmente em relação à representação de personagens que deveriam ser complexas e multidimensionais.",
+   "depois": "Críticos mencionam que as atuações não são convincentes, especialmente em relação à representação de personagens que deveriam ser complexas e multidimensionais."
+  },
+  {
+   "id": 25,
+   "fonte": "publicado_teste",
+   "slug": "force-majeure-2014",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Vários comentários consideram que a abordagem das questões de gênero é simplista ou mal desenvolvida, ora acusando o filme de misoginia, ora de reforçar estereótipos de forma superficial.",
+   "depois": "Comentários consideram que a abordagem das questões de gênero é simplista ou mal desenvolvida, ora acusando o filme de misoginia, ora de reforçar estereótipos de forma superficial."
+  },
+  {
+   "id": 26,
+   "fonte": "treinado",
+   "slug": "napoleon-2023",
+   "bucket": "positivas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Várias reviews mencionam que o filme despertou interesse pela história de Napoleão, levando espectadores a buscar mais informações sobre o assunto.",
+   "depois": "Reviews mencionam que o filme despertou interesse pela história de Napoleão, levando espectadores a buscar mais informações sobre o assunto."
+  },
+  {
+   "id": 27,
+   "fonte": "base",
+   "slug": "the-revenant-2015",
+   "bucket": "negativas",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Muitos críticos consideram que o roteiro é fraco, com personagens unidimensionais e uma trama que não se desenvolve de forma envolvente ou significativa.",
+   "depois": "Críticos consideram que o roteiro é fraco, com personagens unidimensionais e uma trama que não se desenvolve de forma envolvente ou significativa."
+  },
+  {
+   "id": 28,
+   "fonte": "treinado",
+   "slug": "guillermo-del-toros-pinocchio",
+   "bucket": "medianas",
+   "regras": [
+    "quant+clítico+verbo"
+   ],
+   "antes": "A animação em stop motion é amplamente elogiada como um trabalho de arte e atenção à detalhe, mas alguns a acham estranha ou cansativa.",
+   "depois": "A animação em stop motion é amplamente elogiada como um trabalho de arte e atenção à detalhe, mas espectadores a acham estranha ou cansativa."
+  },
+  {
+   "id": 29,
+   "fonte": "treinado",
+   "slug": "mother-2017",
+   "bucket": "positivas",
+   "regras": [
+    "maioria→plural",
+    "quant+verbo"
+   ],
+   "antes": "A maioria das reviews positivas menciona a presença de uma metáfora bíblica que apenas se torna clara no final, trazendo uma nova perspectiva e recontextualizando a experiência. Muitos aprovam a forma como a trama se desenvolve para revelar este significado.",
+   "depois": "As reviews positivas mencionam a presença de uma metáfora bíblica que apenas se torna clara no final, trazendo uma nova perspectiva e recontextualizando a experiência. Espectadores aprovam a forma como a trama se desenvolve para revelar este significado."
+  },
+  {
+   "id": 30,
+   "fonte": "publicado_treino",
+   "slug": "wonka",
+   "bucket": "medianas",
+   "regras": [
+    "quant→certos+posicional"
+   ],
+   "antes": "O protagonista é carismático e encanta em alguns momentos, mas falta intensidade e presença vocal para sustentar o papel de um Willy Wonka mais excêntrico.",
+   "depois": "O protagonista é carismático e encanta em certos momentos, mas falta intensidade e presença vocal para sustentar o papel de um Willy Wonka mais excêntrico."
+  }
+ ]
+}
