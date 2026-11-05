@@ -174,7 +174,7 @@ tenham sido vistos.
    treino/validação): filtrar ou rebalancear exemplos com palavra de quantidade; menos épocas;
    mais dados (hoje 140 exemplos). O C1 passaria a ser o próximo ponto fraco (26/534 contra
    19/534).
-2. **Mudar o critério de produto, não o modelo:** se palavras de quantidade são tolerável, o C3
+2. **Mudar o critério de produto, não o modelo:** se palavras de quantidade são toleráveis, o C3
    deixa de decidir; isso é decisão do dono e exigiria reabrir o pré-registro (não deste teste).
 3. **Parar a frente local** e manter o DeepSeek: o treinado empata em qualidade percebida e não
    a supera; custo e latência locais não foram medidos como ganho.
