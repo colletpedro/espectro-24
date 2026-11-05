@@ -5,6 +5,37 @@ Data: 2026-11-05. Pré-registro: `PREREGISTRO_AVALIACAO.md` (sha256 `4e9d61b6…
 `DESVIO_P04` (estrutura impossível de `temas` = JSON inválido). Gate da Fase 2: `275ca16`,
 aprovado pelo dono em 04/11/2026. Etiquetas: **MEDIDO**, **ESTIMADO**, **PROPOSTO**.
 
+## Resumo para o tech lead
+
+- **O que foi testado:** um Qwen3-8B com LoRA (fine-tune da SÍNTESE: os temas e exemplos de cada
+  bucket de reviews), contra a síntese publicada (DeepSeek) e contra o mesmo Qwen3-8B sem treino
+  (base), em 30 filmes de teste e 89 buckets, uma única vez, com critérios e limiares
+  pré-registrados antes de qualquer medição no teste.
+- **Resultado:** o treinado **não passa**. Em qualidade percebida e especificidade ele
+  fica no nível do publicado (C5, C6) e valida o formato (C4). Reprova no excesso de
+  palavras de quantidade (C3, +25,7 pp) e, por 0,26 pp no IC, na taxa de bullets sem apoio nas
+  reviews (C1).
+- **A base também não passa** C1 a C4. Nenhum dos dois modelos locais substitui o publicado como
+  está.
+- **Causa do C3 (MEDIDO):** os alvos de treino têm 54,8% de exemplos com palavra de quantidade
+  (591/1.079, publicado dos filmes de treino); o treinado gerou 82,4% no teste. Ele **amplificou**
+  o padrão (+27,6 pp sobre o alvo), não o copiou. O porquê não foi investigado.
+- **Próxima fase:** ver "Opções para a próxima fase" no fim (PROPOSTO, não decidido).
+
+## Contexto (do `FINETUNE_REGISTRO.md`)
+
+- Base: `unsloth/Qwen3-8B` (bnb-4bit para o treino), Unsloth 2026.10.7, T4 no Kaggle.
+- Treino (Fase 3, MEDIDO): LoRA r 16, alpha 16, nas 7 projeções; **140 exemplos de treino e 19
+  de validação**; 3 épocas, 105 passos, 3,66 h; checkpoint da época 2 (eval_loss 0,5492; a
+  época 3 deu 0,5567, diferença pequena numa amostra de 19). GGUF Q4_K_M de 5,03 GB; só as 252
+  projeções diferem da base (conferido nos tensores).
+- Avaliação: Windows com Ollama (geração e juiz `gpt-oss:20b` v2.2 congelado); contas no Mac.
+  Entradas de um commit fixo de `main` (`742cfe3`, 162 arquivos).
+- Fase 1 (especificidade): a medida automática (M-disp) foi **negativa** e saiu; no lugar entrou a
+  rotulagem cega do dono (C5).
+- Fase 2 (gate): publicado e base medidos no teste antes de gerar o treinado; δ₂ fixado em
+  7,8 pp. Aprovado pelo dono em 04/11/2026.
+
 ## Decisão
 
 **NÃO PUBLICÁVEL (MEDIDO).** A decisão exigia C1 a C6 todos passando. **C1 e C3 falham.**
@@ -115,9 +146,9 @@ treinado: 1 pausa pela guarda de latência, retomada.
 ## O que NÃO foi medido
 
 - Qualquer efeito do treino fora dos 89 buckets de teste e dos 30 filmes.
-- A causa do M1 de 82%: não foi investigada (se vem do alvo de treino, do prompt, ou do
-  modelo). ESTIMADO como a explicação mais provável: o treino imita um padrão do professor; sem
-  teste.
+- **Por que** o treinado amplifica as palavras de quantidade. MEDIDO: alvo 54,8% → treinado
+  82,4% (a diferença não vem de os alvos terem muita quantidade). Não se testou nenhuma
+  hipótese (poucos exemplos, 3 épocas, temperatura 0,7, algo no prompt).
 - Variação entre gerações do treinado: uma geração por bucket, seed fixa (o pré-registro proíbe
   uma 2ª no teste).
 - Se o C1 reprovaria com outra amostra de filmes: o IC cobre o limite por 0,26 pp.
@@ -133,9 +164,20 @@ treinado: 1 pausa pela guarda de latência, retomada.
 - `fase4/especificidade_resultado.json` `0b1be275…`; `fase4/leitura_resultado.json` `7c96b990…`
 - Scripts em `main` até `33db25d`.
 
-## PROPOSTO (não decide nada)
+## Opções para a próxima fase (PROPOSTO, nada decidido)
 
-O treinado só foi gerado e medido uma vez, e o teste foi consumido. Qualquer nova rodada
-(retreino que ataque o excesso de palavras de quantidade, ou outro modelo) é um experimento
-novo, com pré-registro novo e conjunto de teste que não tenha sido visto. O C3 falha por
-margem larga e tem causa provável no alvo de treino ou no prompt; o C1 falha por 0,26 pp.
+O conjunto de teste foi consumido: o pré-registro proíbe uma 2ª geração do treinado nele.
+Qualquer nova rodada é um experimento novo, com pré-registro novo e filmes que ainda não
+tenham sido vistos.
+
+1. **Atacar o C3 no treino.** Hipóteses a medir ANTES de retreinar (cada uma barata, em
+   treino/validação): filtrar ou rebalancear exemplos com palavra de quantidade; menos épocas;
+   mais dados (hoje 140 exemplos). O C1 passaria a ser o próximo ponto fraco (26/534 contra
+   19/534).
+2. **Mudar o critério de produto, não o modelo:** se palavras de quantidade são tolerável, o C3
+   deixa de decidir; isso é decisão do dono e exigiria reabrir o pré-registro (não deste teste).
+3. **Parar a frente local** e manter o DeepSeek: o treinado empata em qualidade percebida e não
+   a supera; custo e latência locais não foram medidos como ganho.
+
+Recomendação do assistente (sem peso de decisão): 1, começando pela medida do porquê do C3,
+porque é a única falha clara e é barata de diagnosticar no treino.
