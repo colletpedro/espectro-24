@@ -1,0 +1,27 @@
+{
+ "gerado_por": "scripts/finetune/fase4_leitura.py montar",
+ "semente": 20261103,
+ "a_e": {
+  "anatomy-of-a-fall": "treinado",
+  "incendies": "treinado",
+  "mother-2017": "treinado",
+  "napoleon-2023": "publicado",
+  "the-substance": "publicado"
+ },
+ "filmes": [
+  "anatomy-of-a-fall",
+  "incendies",
+  "mother-2017",
+  "napoleon-2023",
+  "the-substance"
+ ],
+ "fora_por_memoria": [],
+ "preregistro_sha256": "4e9d61b6ab094ea7ffdf1a622370cd7ba6f345a988b7ff208bb1c9ef8557e7ca",
+ "entradas": {
+  "commit": "742cfe3c7d443decd7cfd395e32dce080011bd45",
+  "n_arquivos": 112,
+  "sha256": "3cb4bfa98664de56c2111d3ce0284e27031a5bcce72ee422bdc1cfb29a9628f9"
+ },
+ "manifesto_treinado_sha256": "3bf4175211d6377d566bb2fd90b4f90edead6d5f4a863c0222d3739831ed6a17",
+ "script_sha256": "3837da5468032d87703fcf132955ca6d722a0e8c7feda91ff47a7cd6f5235da0"
+}
