@@ -123,3 +123,13 @@ def test_parse_estrito_funciona_com_o_nome_trocado_em_synthesize(monkeypatch):
         S._parse_llm_json('{"temas": [3, 5]}')
     with pytest.raises(ValueError):
         S._parse_llm_json("não é json")
+
+
+def test_primeira_tentativa_com_estrutura_impossivel_nao_estoura():
+    """`bucket_da_1a_tentativa` (descrição do C4) usava o parse de produção e estourava
+    em `temas: [3, 5]`; agora conta como JSON inválido (DESVIO_P04)."""
+    reg = {"bucket_final": {"n_analisadas": 10, "n_validas": 10},
+           "tentativas": [{"texto": '{"temas": [3, 5], "observacao_geral": "x"}'}]}
+    b = A.bucket_da_1a_tentativa(reg)
+    assert b["json_parseia"] is False and b["temas"] == []
+    assert A.c4_do_bucket(b) is False

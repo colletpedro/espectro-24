@@ -457,7 +457,7 @@ def bucket_da_1a_tentativa(reg: dict) -> dict:
     bf = reg.get("bucket_final") or {}
     tent = reg.get("tentativas") or []
     try:
-        data = S._parse_llm_json(tent[0]["texto"])
+        data = F.G.parse_estrito(tent[0]["texto"])      # DESVIO_P04: estrutura impossível = JSON inválido
     except (ValueError, IndexError, KeyError):
         return {**bf, "temas": [], "json_parseia": False}
     temas = S._construir_temas(data, bf.get("n_analisadas", 0))
