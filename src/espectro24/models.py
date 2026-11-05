@@ -102,6 +102,14 @@ class Tema:
     # v1.1.2: True quando exemplo_parafraseado continha aspas de citação e o
     # código as removeu mecanicamente (violação da regra de paráfrase).
     aspas_removidas: bool = False
+    # Guarda de quantidade (2026-11-05, `guarda_quantidade.py`): True quando o
+    # código reescreveu mecanicamente expressões de quantidade do exemplo; o
+    # texto da resposta crua fica em `exemplo_antes_da_guarda`.
+    quantidade_reescrita: bool = False
+    exemplo_antes_da_guarda: str | None = None
+    # True quando, DEPOIS da guarda, o exemplo ainda casa com a lista de
+    # quantidade (nenhuma regra segura): candidato ao fallback do dono.
+    quantidade_pendente: bool = False
 
 
 @dataclass

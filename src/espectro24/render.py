@@ -116,6 +116,11 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                         "mencoes_clampadas": t.mencoes_clampadas,
                         "mencoes_valor_original": t.mencoes_valor_original,
                         "aspas_removidas": t.aspas_removidas,
+                        # guarda de quantidade: só aparece quando agiu ou ficou pendente
+                        **({"quantidade_reescrita": True,
+                            "exemplo_antes_da_guarda": t.exemplo_antes_da_guarda}
+                           if t.quantidade_reescrita else {}),
+                        **({"quantidade_pendente": True} if t.quantidade_pendente else {}),
                     }
                     for t in b.temas
                 ],

@@ -67,6 +67,7 @@ from .config import (
     nota_para_url,
 )
 from . import quantificador as _q
+from .guarda_quantidade import reescrever as reescrever_quantidade
 from .models import BucketResult, Tema
 
 
@@ -2105,15 +2106,21 @@ def _construir_temas(data: dict, n_analisadas: int) -> list[Tema]:
 
         exemplo_bruto = str(t.get("exemplo_parafraseado", ""))
         exemplo_limpo, aspas_removidas = _remover_aspas(exemplo_bruto)
+        # Guarda de quantidade: reescrita determinística, vale para qualquer
+        # provider. Nunca remove nem reordena tema; só o texto do exemplo.
+        guarda = reescrever_quantidade(exemplo_limpo)
 
         temas.append(Tema(
             tema=str(t.get("tema", "")),
             mencoes_aproximadas=clampado,
             n_reviews_analisadas=n_analisadas,
-            exemplo_parafraseado=exemplo_limpo,
+            exemplo_parafraseado=guarda.texto,
             mencoes_clampadas=foi_clampado,
             mencoes_valor_original=bruto if foi_clampado else None,
             aspas_removidas=aspas_removidas,
+            quantidade_reescrita=guarda.alterado,
+            exemplo_antes_da_guarda=exemplo_limpo if guarda.alterado else None,
+            quantidade_pendente=guarda.residual,
         ))
     temas.sort(key=lambda x: x.mencoes_aproximadas, reverse=True)  # §D.3
     return temas
