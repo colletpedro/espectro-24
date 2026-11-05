@@ -1,0 +1,41 @@
+{
+ "gerado_por": "scripts/finetune/fase4_leitura.py avaliar",
+ "respostas_sha256": "8846de548fc0608fc472d04a277111ed1f64e9f5843aaa49b98a5dfb0baab2de",
+ "mapa_sha256": "5ba9ea1ea56bb25e96bf0ce0ef9df9e637bd08d9225e049a86dc6b6ad42357e2",
+ "por_filme": [
+  {
+   "slug": "anatomy-of-a-fall",
+   "treinado_publicavel": true,
+   "publicado_publicavel": true,
+   "melhor": "publicado"
+  },
+  {
+   "slug": "incendies",
+   "treinado_publicavel": true,
+   "publicado_publicavel": true,
+   "melhor": "empate"
+  },
+  {
+   "slug": "mother-2017",
+   "treinado_publicavel": true,
+   "publicado_publicavel": true,
+   "melhor": "empate"
+  },
+  {
+   "slug": "napoleon-2023",
+   "treinado_publicavel": true,
+   "publicado_publicavel": true,
+   "melhor": "empate"
+  },
+  {
+   "slug": "the-substance",
+   "treinado_publicavel": true,
+   "publicado_publicavel": true,
+   "melhor": "publicado"
+  }
+ ],
+ "treinado_publicavel": 5,
+ "publicado_publicavel": 5,
+ "criterio": "treinado publicável em ≥ 4 de 5",
+ "C6_passa": true
+}
