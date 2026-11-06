@@ -1,0 +1,33 @@
+{
+ "gerado_por": "scripts/finetune/fluencia_guarda.py avaliar",
+ "respostas_sha256": "9a61b9a71e6a6ecc77f90f84f826acf1dee362bd07567979b1e78855b8b80df5",
+ "mapa_sha256": "aaa83747b8593ffd0ddc1202cc6db249f5cb1f2078499fcd570d66a51b33fa65",
+ "S": 28,
+ "N": 2,
+ "criterio": "≥ 27 de 30 S",
+ "passa": true,
+ "ids_N": [
+  16,
+  28
+ ],
+ "itens_N": [
+  {
+   "id": 16,
+   "fonte": "base",
+   "regras": [
+    "quant+pessoas"
+   ],
+   "antes": "Apesar da animação ser técnica e impressionante, muitas reviews a consideram desagradável, com críticas ao estilo visual que parece exagerado e desconfortável.",
+   "depois": "Apesar da animação ser técnica e impressionante, reviews a consideram desagradável, com críticas ao estilo visual que parece exagerado e desconfortável."
+  },
+  {
+   "id": 28,
+   "fonte": "treinado",
+   "regras": [
+    "quant+clítico+verbo"
+   ],
+   "antes": "A animação em stop motion é amplamente elogiada como um trabalho de arte e atenção à detalhe, mas alguns a acham estranha ou cansativa.",
+   "depois": "A animação em stop motion é amplamente elogiada como um trabalho de arte e atenção à detalhe, mas espectadores a acham estranha ou cansativa."
+  }
+ ]
+}
