@@ -1,0 +1,494 @@
+[2026-11-07T22:35:53+00:00] {
+ "gerado_por": "scripts/finetune/c22.py calcular",
+ "script_sha256": "342d2926fa107b8d7c92de06a12b92204877255e4432233a1a4d67b9e282c456",
+ "juiz": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "semente_bootstrap": 20261108,
+ "reamostras": 10000,
+ "filmes": 35,
+ "buckets_mantidos": 105,
+ "fora_por_memoria": [],
+ "estados_do_juiz": {
+  "apoio_2": 523,
+  "apoio_1": 78,
+  "sem_apoio": 28
+ },
+ "decisao": {
+  "C1": {
+   "ponto_pct": 4.451510333863275,
+   "ic95_pct": [
+    2.5396825396825395,
+    6.677265500794912
+   ],
+   "reamostras_validas": 10000,
+   "limites": "ponto ≤ 5.6% e limite superior < 7.6%",
+   "passa": true
+  },
+  "C2": {
+   "ponto_pct": 83.14785373608903,
+   "ic95_pct": [
+    80.15873015873017,
+    86.00953895071542
+   ],
+   "reamostras_validas": 10000,
+   "limites": "limite inferior > 77.8%",
+   "passa": true
+  },
+  "C3": {
+   "ponto_pct": 3.0206677265500796,
+   "ic95_pct": [
+    1.7488076311605723,
+    4.2993630573248405
+   ],
+   "reamostras_validas": 10000,
+   "limites": "ponto ≤ 10.0% e limite superior < 15.0%",
+   "passa": true
+  },
+  "C4": {
+   "ok": 104,
+   "buckets": 105,
+   "piso": 102,
+   "fracao": 0.9904761904761905,
+   "limites": "≥ 97% dos buckets válidos",
+   "passa": true
+  },
+  "C1_a_C4_passam": true
+ },
+ "guarda": {
+  "bullets": 629,
+  "m1_antes_da_guarda": 494,
+  "m1_depois_da_guarda": 19,
+  "textos_alterados": 487,
+  "textos_pendentes": 19
+ },
+ "c4_ok_1a_tentativa": 103,
+ "chamadas": {
+  "1": 104,
+  "2": 1
+ },
+ "parede_s": [
+  167.4,
+  210.4,
+  157.5,
+  158.0,
+  190.6,
+  188.1,
+  151.2,
+  163.9,
+  171.4,
+  191.9,
+  150.7,
+  155.0,
+  181.1,
+  204.1,
+  160.9,
+  134.7,
+  160.0,
+  177.9,
+  181.6,
+  223.3,
+  152.1,
+  193.8,
+  168.5,
+  205.3,
+  170.7,
+  157.8,
+  211.0,
+  189.7,
+  169.7,
+  208.6,
+  163.4,
+  158.9,
+  177.2,
+  174.8,
+  201.5,
+  158.3,
+  155.3,
+  390.7,
+  153.5,
+  183.1,
+  166.6,
+  132.5,
+  151.8,
+  149.6,
+  158.6,
+  200.0,
+  175.9,
+  188.8,
+  195.9,
+  155.0,
+  172.0,
+  161.6,
+  168.0,
+  160.5,
+  156.1,
+  162.0,
+  177.2,
+  161.8,
+  185.4,
+  210.5,
+  153.4,
+  152.6,
+  142.2,
+  169.2,
+  151.5,
+  189.9,
+  153.3,
+  144.2,
+  146.8,
+  165.0,
+  156.9,
+  203.8,
+  167.9,
+  156.2,
+  199.1,
+  149.5,
+  144.1,
+  162.7,
+  166.3,
+  187.4,
+  146.5,
+  154.0,
+  177.7,
+  152.3,
+  186.4,
+  229.8,
+  220.6,
+  171.2,
+  158.1,
+  185.6,
+  205.4,
+  177.0,
+  151.4,
+  189.6,
+  173.5,
+  202.2,
+  139.9,
+  183.8,
+  162.7,
+  189.8,
+  195.8,
+  262.3,
+  167.9,
+  187.2,
+  174.7
+ ],
+ "por_filme": {
+  "1917": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "a-fistful-of-dollars": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "aladdin-2019": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "american-sniper": {
+   "julgados": 18,
+   "sem_apoio": 2,
+   "apoio_2": 12,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "blackkklansman": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 17,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "conclave": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 17,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "dallas-buyers-club": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 17,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "detachment": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 2,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "eyes-wide-shut": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 12,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "for-a-few-dollars-more": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 17,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "ford-v-ferrari": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 14,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "full-metal-jacket": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 13,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "green-book": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "harry-potter-and-the-deathly-hallows-part-1": {
+   "julgados": 17,
+   "sem_apoio": 0,
+   "apoio_2": 17,
+   "m1_n": 17,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 2
+  },
+  "how-to-train-your-dragon": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 2,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "kill-bill-vol-2": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 2,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "men-in-black": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "moneyball": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 14,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "perfect-blue": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "poor-things-2023": {
+   "julgados": 18,
+   "sem_apoio": 2,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "project-x-2012": {
+   "julgados": 18,
+   "sem_apoio": 3,
+   "apoio_2": 12,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "punch-drunk-love": {
+   "julgados": 18,
+   "sem_apoio": 3,
+   "apoio_2": 14,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "rango": {
+   "julgados": 18,
+   "sem_apoio": 2,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "saving-private-ryan": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 14,
+   "m1_n": 18,
+   "m1_k": 2,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "scarface-1983": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "snatch": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "spider-man-into-the-spider-verse": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "the-big-lebowski": {
+   "julgados": 18,
+   "sem_apoio": 2,
+   "apoio_2": 13,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "the-dark-knight": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "the-good-the-bad-and-the-ugly": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 14,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "the-pursuit-of-happyness": {
+   "julgados": 18,
+   "sem_apoio": 1,
+   "apoio_2": 12,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "the-simpsons-movie": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "toy-story-3": {
+   "julgados": 18,
+   "sem_apoio": 5,
+   "apoio_2": 13,
+   "m1_n": 18,
+   "m1_k": 1,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "transformers": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 15,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  },
+  "vertigo": {
+   "julgados": 18,
+   "sem_apoio": 0,
+   "apoio_2": 16,
+   "m1_n": 18,
+   "m1_k": 0,
+   "buckets": 3,
+   "c4_ok": 3
+  }
+ },
+ "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+ "manifesto_sha256": "555291ab70108bb103488059fddf4e045bdae5df2a338b395f42a2fa0fd9cae8"
+}
