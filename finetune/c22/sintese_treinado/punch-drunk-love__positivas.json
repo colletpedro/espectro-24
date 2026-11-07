@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "punch-drunk-love",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5929,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "228f553f1244bbabcaadcaddb2c8bc989e5bc304147df1256e4868bb8ab84713",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.94,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:56:41+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Adam Sandler",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Adam Sandler é destacada como um ponto alto, especialmente por sua capacidade de transformar o personagem em algo crítico e autêntico, longe dos papéis cómicos habituais. Espectadores elogiam sua interpretação como uma das melhores de sua carreira, com destaque para sua expressão de ansiedade e nervosismo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Adam Sandler é frequentemente destacada como um ponto alto, especialmente por sua capacidade de transformar o personagem em algo crítico e autêntico, longe dos papéis cómicos habituais. Muitos elogiam sua interpretação como uma das melhores de sua carreira, com destaque para sua expressão de ansiedade e nervosismo.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Música e trilha sonora",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora e a música são citadas como elementos que intensificam a experiência, criando uma atmosfera de ansiedade e tensão que acompanha o protagonista. A coluna sonora é descrita como uma força motriz que envolve o espectador, contribuindo para a imersão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e direção de arte",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de arte são elogiadas por sua vivacidade, uso de cores e composição de planos que transmitem a soledade e o deslocamento do protagonista. A paleta de cores e a iluminação são mencionadas como elementos que reforçam a atmosfera do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a direção de arte são elogiadas por sua vivacidade, uso de cores e composição de planos que transmitem a soledade e o deslocamento do protagonista. A paleta de cores e a iluminação são frequentemente mencionadas como elementos que reforçam a atmosfera do filme.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e estrutura narrativa",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O ritmo e a estrutura narrativa são descritos como rápidos e desorientadores, com espectadores sentindo que a trama é confusa, mas isso é visto como parte da experiência única e imersiva do filme. Outros apreciam a forma como a narrativa é conduzida, com momentos que geram tensão e imersão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O ritmo e a estrutura narrativa são descritos como rápidos e desorientadores, com alguns espectadores sentindo que a trama é confusa, mas isso é visto como parte da experiência única e imersiva do filme. Outros apreciam a forma como a narrativa é conduzida, com momentos que geram tensão e imersão.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Romance e desenvolvimento de personagens",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O romance e o desenvolvimento do personagem principal são destacados como centrais para a mensagem do filme, com o amor sendo visto como uma força que liberta e transforma o protagonista. A jornada de Barry é descrita como um caminho de autoconhecimento e aceitação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com outras obras de PTA",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews comparam o filme a outras obras de Paul Thomas Anderson, como ",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews comparam o filme a outras obras de Paul Thomas Anderson, como ",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a atuação de Adam Sandler, a música e a fotografia como pontos altos, além de elogiarem o romance e o desenvolvimento do personagem. Este grupo enxerga o filme como uma experiência única e imersiva, apesar de alguns momentos serem descritos como confusos ou desorientadores.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 189.9,
+ "memoria": {
+  "ram_usada_gb": 11.8,
+  "ram_livre_min_gb": 3.4,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Adam Sandler\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Adam Sandler é frequentemente destacada como um ponto alto, especialmente por sua capacidade de transformar o personagem em algo crítico e autêntico, longe dos papéis cómicos habituais. Muitos elogiam sua interpretação como uma das melhores de sua carreira, com destaque para sua expressão de ansiedade e nervosismo.\"\n    },\n    {\n      \"tema\": \"Música e trilha sonora\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora e a música são citadas como elementos que intensificam a experiência, criando uma atmosfera de ansiedade e tensão que acompanha o protagonista. A coluna sonora é descrita como uma força motriz que envolve o espectador, contribuindo para a imersão.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção de arte\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de arte são elogiadas por sua vivacidade, uso de cores e composição de planos que transmitem a soledade e o deslocamento do protagonista. A paleta de cores e a iluminação são frequentemente mencionadas como elementos que reforçam a atmosfera do filme.\"\n    },\n    {\n      \"tema\": \"Ritmo e estrutura narrativa\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O ritmo e a estrutura narrativa são descritos como rápidos e desorientadores, com alguns espectadores sentindo que a trama é confusa, mas isso é visto como parte da experiência única e imersiva do filme. Outros apreciam a forma como a narrativa é conduzida, com momentos que geram tensão e imersão.\"\n    },\n    {\n      \"tema\": \"Romance e desenvolvimento de personagens\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O romance e o desenvolvimento do personagem principal são destacados como centrais para a mensagem do filme, com o amor sendo visto como uma força que liberta e transforma o protagonista. A jornada de Barry é descrita como um caminho de autoconhecimento e aceitação.\"\n    },\n    {\n      \"tema\": \"Comparação com outras obras de PTA\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews comparam o filme a outras obras de Paul Thomas Anderson, como \"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atuação de Adam Sandler, a música e a fotografia como pontos altos, além de elogiarem o romance e o desenvolvimento do personagem. Este grupo enxerga o filme como uma experiência única e imersiva, apesar de alguns momentos serem descritos como confusos ou desorientadores.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 189.88,
+   "leitura_prompt_s": 8.665,
+   "geracao_s": 178.94,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5929,
+   "eval_count": 818
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

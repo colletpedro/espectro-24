@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "full-metal-jacket",
+ "bucket": "negativas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7506,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "596443a0ddd47e55d2d6d24487b117b9ec6979cb35430d71f67d61148a618d3d",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.51,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T23:36:01+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews criticam o ritmo lento e a longa duração, com espectadores relatando que a parte final parece ser um filme completamente diferente da primeira metade, resultando em tédio e falta de conexão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews criticam o ritmo lento e a longa duração, com alguns espectadores relatando que a parte final parece ser um filme completamente diferente da primeira metade, resultando em tédio e falta de conexão.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e estrutura",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que o roteiro é fraco e que a estrutura em duas partes não se conecta bem, com a segunda metade sendo vista como um desvio da trama, deixando a narrativa confusa e sem sentido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews apontam que o roteiro é fraco e que a estrutura em duas partes não se conecta bem, com a segunda metade sendo vista como um desvio da trama, deixando a narrativa confusa e sem sentido.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens e atuações",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas mencionam que os personagens são típicos e pouco desenvolvidos, e que as atuações não são convincentes, especialmente na parte final, onde a falta de empatia torna a experiência insuportável.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas críticas mencionam que os personagens são típicos e pouco desenvolvidos, e que as atuações não são convincentes, especialmente na parte final, onde a falta de empatia torna a experiência insuportável.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e técnicas",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Embora espectadores reconheçam a qualidade técnica da fotografia e os planos magníficos, outras reviews criticam o som e a música, considerando-os ruins e capazes de prejudicar a experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Embora alguns reconheçam a qualidade técnica da fotografia e os planos magníficos, outras reviews criticam o som e a música, considerando-os ruins e capazes de prejudicar a experiência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica à guerra e retrato de personagens",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews criticam a abordagem da guerra como sendo anti-guerra de forma superficial, com personagens que não transmitem empatia e retratos que são vistos como racistas e misóginos, especialmente em relação à população vietnamita.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews criticam a abordagem da guerra como sendo anti-guerra de forma superficial, com personagens que não transmitem empatia e retratos que são vistos como racistas e misóginos, especialmente em relação à população vietnamita.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Expectativa vs. realidade",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Certas espectadoras esperavam um filme mais envolvente e emocionante, mas sentiram-se decepcionadas, considerando a obra técnica impressionante, mas emocionalmente vazia e sem profundidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas espectadoras esperavam um filme mais envolvente e emocionante, mas sentiram-se decepcionadas, considerando a obra técnica impressionante, mas emocionalmente vazia e sem profundidade.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, a estrutura fraca e a falta de empatia, com muitos espectadores achando o roteiro confuso e a trama sem sentido. Embora alguns reconheçam a qualidade técnica, a maioria considera o filme tédio e insuportável, especialmente na segunda metade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 201.5,
+ "memoria": {
+  "ram_usada_gb": 11.84,
+  "ram_livre_min_gb": 3.35,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.39
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews criticam o ritmo lento e a longa duração, com alguns espectadores relatando que a parte final parece ser um filme completamente diferente da primeira metade, resultando em tédio e falta de conexão.\"\n    },\n    {\n      \"tema\": \"Roteiro e estrutura\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews apontam que o roteiro é fraco e que a estrutura em duas partes não se conecta bem, com a segunda metade sendo vista como um desvio da trama, deixando a narrativa confusa e sem sentido.\"\n    },\n    {\n      \"tema\": \"Personagens e atuações\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas críticas mencionam que os personagens são típicos e pouco desenvolvidos, e que as atuações não são convincentes, especialmente na parte final, onde a falta de empatia torna a experiência insuportável.\"\n    },\n    {\n      \"tema\": \"Fotografia e técnicas\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Embora alguns reconheçam a qualidade técnica da fotografia e os planos magníficos, outras reviews criticam o som e a música, considerando-os ruins e capazes de prejudicar a experiência.\"\n    },\n    {\n      \"tema\": \"Crítica à guerra e retrato de personagens\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews criticam a abordagem da guerra como sendo anti-guerra de forma superficial, com personagens que não transmitem empatia e retratos que são vistos como racistas e misóginos, especialmente em relação à população vietnamita.\"\n    },\n    {\n      \"tema\": \"Expectativa vs. realidade\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas espectadoras esperavam um filme mais envolvente e emocionante, mas sentiram-se decepcionadas, considerando a obra técnica impressionante, mas emocionalmente vazia e sem profundidade.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento, a estrutura fraca e a falta de empatia, com muitos espectadores achando o roteiro confuso e a trama sem sentido. Embora alguns reconheçam a qualidade técnica, a maioria considera o filme tédio e insuportável, especialmente na segunda metade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 201.45,
+   "leitura_prompt_s": 11.194,
+   "geracao_s": 187.934,
+   "carga_s": 0.005,
+   "prompt_eval_count": 7506,
+   "eval_count": 742
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

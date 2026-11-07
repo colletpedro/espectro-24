@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-pursuit-of-happyness",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5501,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "ce901ff41507c968d393bde59edc8e75d7542abb3afdbbcb54ce61971e2553a8",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.88,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T17:34:08+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Relação pai-filho e empatia",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews destacam como a conexão entre Will Smith e Jaden Smith é genuína e emocionante, tornando a história muito envolvente e capaz de provocar sentimentos intensos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews destacam como a conexão entre Will Smith e Jaden Smith é genuína e emocionante, tornando a história muito envolvente e capaz de provocar sentimentos intensos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e elenco",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações são elogiadas, com destaque para Will Smith e Jaden Smith, que são descritos como capazes de transmitir emoções reais e criar uma química marcante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As atuações são frequentemente elogiadas, com destaque para Will Smith e Jaden Smith, que são descritos como capazes de transmitir emoções reais e criar uma química marcante.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Mensagem de superação e motivação",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo de reviews valoriza a mensagem de persistência e superação, com espectadores considerando o filme inspirador e capaz de ensinar lições importantes para a vida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo de reviews valoriza a mensagem de persistência e superação, com muitos considerando o filme inspirador e capaz de ensinar lições importantes para a vida.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e trilha sonora",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a trilha sonora são mencionadas como qualidades que contribuem para a atmosfera e a imersão na história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a trilha sonora são frequentemente mencionadas como qualidades que contribuem para a atmosfera e a imersão na história.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Emoção intensa e impacto emocional",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews descrevem o filme como extremamente emocionante, capaz de provocar lágrimas e deixar uma impressão duradoura.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews descrevem o filme como extremamente emocionante, capaz de provocar lágrimas e deixar uma impressão duradoura.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e desenvolvimento da trama",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews comentam sobre o ritmo da trama, apontando que, embora certos momentos sejam lentos, o desenvolvimento é coerente e a narrativa é envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews comentam sobre o ritmo da trama, apontando que, embora alguns momentos sejam lentos, o desenvolvimento é coerente e a narrativa é envolvente.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a relação pai-filho, as atuações e a mensagem de superação como pontos fortes, além de elogiar a fotografia e a trilha sonora. Muitas reviews também mencionam o impacto emocional intenso e a capacidade do filme de ensinar lições importantes.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 151.4,
+ "memoria": {
+  "ram_usada_gb": 9.97,
+  "ram_livre_min_gb": 5.22,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Relação pai-filho e empatia\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews destacam como a conexão entre Will Smith e Jaden Smith é genuína e emocionante, tornando a história muito envolvente e capaz de provocar sentimentos intensos.\"\n    },\n    {\n      \"tema\": \"Atuações e elenco\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações são frequentemente elogiadas, com destaque para Will Smith e Jaden Smith, que são descritos como capazes de transmitir emoções reais e criar uma química marcante.\"\n    },\n    {\n      \"tema\": \"Mensagem de superação e motivação\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo de reviews valoriza a mensagem de persistência e superação, com muitos considerando o filme inspirador e capaz de ensinar lições importantes para a vida.\"\n    },\n    {\n      \"tema\": \"Fotografia e trilha sonora\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a trilha sonora são frequentemente mencionadas como qualidades que contribuem para a atmosfera e a imersão na história.\"\n    },\n    {\n      \"tema\": \"Emoção intensa e impacto emocional\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews descrevem o filme como extremamente emocionante, capaz de provocar lágrimas e deixar uma impressão duradoura.\"\n    },\n    {\n      \"tema\": \"Ritmo e desenvolvimento da trama\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews comentam sobre o ritmo da trama, apontando que, embora alguns momentos sejam lentos, o desenvolvimento é coerente e a narrativa é envolvente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a relação pai-filho, as atuações e a mensagem de superação como pontos fortes, além de elogiar a fotografia e a trilha sonora. Muitas reviews também mencionam o impacto emocional intenso e a capacidade do filme de ensinar lições importantes.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 151.3,
+   "leitura_prompt_s": 7.078,
+   "geracao_s": 141.984,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5501,
+   "eval_count": 671
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

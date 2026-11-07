@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "full-metal-jacket",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5960,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "a0d3e677313b7cbd0cc728941612183a9a6cae7a7f74455cb400e2e98660ba6a",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.71,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:18:45+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas reclamam que a segunda parte do filme perde o fôlego e se torna arrastada, com uma narrativa que parece sem rumo, deixando a experiência enfadonha.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que a segunda parte do filme perde o fôlego e se torna arrastada, com uma narrativa que parece sem rumo, deixando a experiência enfadonha.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com outros filmes de guerra",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo compara o filme com outras produções de guerra, como Apocalypse Now e Full Metal Jacket, considerando-o inferior ou menos complexo, apesar de reconhecer sua importância histórica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": true,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo frequentemente compara o filme com outras produções de guerra, como Apocalypse Now e Full Metal Jacket, considerando-o inferior ou menos complexo, apesar de reconhecer sua importância histórica.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica à violência e ao comportamento dos soldados",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas destacam a crítica ao comportamento brutal e à violência dos soldados, descrevendo isso como um aspecto que não agradou ou que parece exagerado, especialmente em comparação com outras obras do gênero.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas destacam a crítica ao comportamento brutal e à violência dos soldados, descrevendo isso como um aspecto que não agradou ou que parece exagerado, especialmente em comparação com outras obras do gênero.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Através da primeira metade",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas elogiam a primeira metade do filme, que retrata a formação dos soldados e é considerada mais envolvente e memorável, contrastando com a segunda parte que deixa a desejar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas elogiam a primeira metade do filme, que retrata a formação dos soldados e é considerada mais envolvente e memorável, contrastando com a segunda parte que deixa a desejar.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e falta de história",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas medianas apontam que o roteiro carece de uma trama clara e de um desenvolvimento de personagens, resultando em uma narrativa fragmentada e pouco cativante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas críticas medianas apontam que o roteiro carece de uma trama clara e de um desenvolvimento de personagens, resultando em uma narrativa fragmentada e pouco cativante.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção e a fotografia são mencionadas como qualidades técnicas do filme, mas espectadores comentam que a abordagem cinematográfica não compensa a falta de tensão e a narrativa arrastada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A direção e a fotografia são mencionadas como qualidades técnicas do filme, mas alguns comentam que a abordagem cinematográfica não compensa a falta de tensão e a narrativa arrastada.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que este grupo é dividido entre quem aprecia a primeira metade e considera a segunda parte arrastada, além de críticas à violência e ao roteiro. A maioria destaca uma experiência que, embora técnica, não se sustenta de forma interessante ao longo de toda a duração.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 174.8,
+ "memoria": {
+  "ram_usada_gb": 11.02,
+  "ram_livre_min_gb": 4.17,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que a segunda parte do filme perde o fôlego e se torna arrastada, com uma narrativa que parece sem rumo, deixando a experiência enfadonha.\"\n    },\n    {\n      \"tema\": \"Comparação com outros filmes de guerra\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo frequentemente compara o filme com outras produções de guerra, como 'Apocalypse Now' e 'Full Metal Jacket', considerando-o inferior ou menos complexo, apesar de reconhecer sua importância histórica.\"\n    },\n    {\n      \"tema\": \"Crítica à violência e ao comportamento dos soldados\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas destacam a crítica ao comportamento brutal e à violência dos soldados, descrevendo isso como um aspecto que não agradou ou que parece exagerado, especialmente em comparação com outras obras do gênero.\"\n    },\n    {\n      \"tema\": \"Através da primeira metade\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas elogiam a primeira metade do filme, que retrata a formação dos soldados e é considerada mais envolvente e memorável, contrastando com a segunda parte que deixa a desejar.\"\n    },\n    {\n      \"tema\": \"Roteiro e falta de história\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas críticas medianas apontam que o roteiro carece de uma trama clara e de um desenvolvimento de personagens, resultando em uma narrativa fragmentada e pouco cativante.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção e a fotografia são mencionadas como qualidades técnicas do filme, mas alguns comentam que a abordagem cinematográfica não compensa a falta de tensão e a narrativa arrastada.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que este grupo é dividido entre quem aprecia a primeira metade e considera a segunda parte arrastada, além de críticas à violência e ao roteiro. A maioria destaca uma experiência que, embora técnica, não se sustenta de forma interessante ao longo de toda a duração.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 174.77,
+   "leitura_prompt_s": 8.732,
+   "geracao_s": 163.724,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5960,
+   "eval_count": 730
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

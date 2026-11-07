@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "men-in-black",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5372,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "aa6b7673460e1a003e9e690a755cc4094d020439815cf49f7195921690699b34",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:51:02+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Humor e piadas",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme é engraçado e que as piadas, embora antigos, ainda são divertidas, especialmente para quem assiste com crianças ou amigos. A comédia é um dos pontos mais elogiados, mas espectadores consideram que o humor não atinge o esperado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que o filme é engraçado e que as piadas, embora antigos, ainda são divertidas, especialmente para quem assiste com crianças ou amigos. A comédia é um dos pontos mais elogiados, mas alguns consideram que o humor não atinge o esperado.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Efeitos visuais e CGI",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A qualidade dos efeitos visuais, especialmente os práticos, é mencionada como um ponto positivo, mas espectadores comentam que o CGI da época não aguenta o tempo e parece artificial. Apesar disso, a combinação de efeitos ainda é vista como eficaz para a época.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A qualidade dos efeitos visuais, especialmente os práticos, é frequentemente mencionada como um ponto positivo, mas muitos comentam que o CGI da época não aguenta o tempo e parece artificial. Apesar disso, a combinação de efeitos ainda é vista como eficaz para a época.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e química entre os protagonistas",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A química entre Will Smith e Tommy Lee Jones é destacada como um dos melhores aspectos do filme, gerando risadas e uma dinâmica de mestre e aprendiz. A atuação de ambos, e especialmente a de Tommy Lee Jones, é mencionada como uma parte essencial do sucesso do longa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A química entre Will Smith e Tommy Lee Jones é frequentemente destacada como um dos melhores aspectos do filme, gerando risadas e uma dinâmica de mestre e aprendiz. A atuação de ambos, e especialmente a de Tommy Lee Jones, é mencionada como uma parte essencial do sucesso do longa.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Duração e ritmo",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas comentam que o filme é curto e que o ritmo é rápido, o que pode ser um ponto positivo ou um problema, dependendo do espectador. A duração é vista como adequada para um entretenimento leve, mas espectadores sentem que poderia ser mais profundo.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Alguns reviews medianas comentam que o filme é curto e que o ritmo é rápido, o que pode ser um ponto positivo ou um problema, dependendo do espectador. A duração é vista como adequada para um entretenimento leve, mas alguns sentem que poderia ser mais profundo.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento da trama",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é criticado por alguns por ser simples e não explorar todo o potencial da ideia de agentes secretos, mas outros apreciam que a história seja direta e funcione como um filme de ação cómica leve. A falta de profundidade é um ponto mencionado por espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O roteiro é criticado por alguns por ser simples e não explorar todo o potencial da ideia de agentes secretos, mas outros apreciam que a história seja direta e funcione como um filme de ação cómica leve. A falta de profundidade é um ponto mencionado por alguns.",
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Impacto cultural e nostalgia",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas reconhecem a importância cultural e a nostalgia do filme, especialmente para quem cresceu com ele. A nostalgia é citada como um fator que torna a experiência interessante, mesmo que a recepção seja mista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos reviews medianas reconhecem a importância cultural e a nostalgia do filme, especialmente para quem cresceu com ele. A nostalgia é frequentemente citada como um fator que torna a experiência interessante, mesmo que a recepção seja mista.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é divertido e bem entretido, com humor e efeitos visuais que ainda são considerados bons para a época. A química entre os protagonistas é um ponto alto, mas o roteiro e o desenvolvimento da trama são criticados por serem simples. A nostalgia e o impacto cultural são mencionados como fatores que contribuem para a recepção positiva, embora não seja unanimidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 195.9,
+ "memoria": {
+  "ram_usada_gb": 9.55,
+  "ram_livre_min_gb": 5.64,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Humor e piadas\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o filme é engraçado e que as piadas, embora antigos, ainda são divertidas, especialmente para quem assiste com crianças ou amigos. A comédia é um dos pontos mais elogiados, mas alguns consideram que o humor não atinge o esperado.\"\n    },\n    {\n      \"tema\": \"Efeitos visuais e CGI\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A qualidade dos efeitos visuais, especialmente os práticos, é frequentemente mencionada como um ponto positivo, mas muitos comentam que o CGI da época não aguenta o tempo e parece artificial. Apesar disso, a combinação de efeitos ainda é vista como eficaz para a época.\"\n    },\n    {\n      \"tema\": \"Atuações e química entre os protagonistas\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A química entre Will Smith e Tommy Lee Jones é frequentemente destacada como um dos melhores aspectos do filme, gerando risadas e uma dinâmica de mestre e aprendiz. A atuação de ambos, e especialmente a de Tommy Lee Jones, é mencionada como uma parte essencial do sucesso do longa.\"\n    },\n    {\n      \"tema\": \"Duração e ritmo\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns reviews medianas comentam que o filme é curto e que o ritmo é rápido, o que pode ser um ponto positivo ou um problema, dependendo do espectador. A duração é vista como adequada para um entretenimento leve, mas alguns sentem que poderia ser mais profundo.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento da trama\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é criticado por alguns por ser simples e não explorar todo o potencial da ideia de agentes secretos, mas outros apreciam que a história seja direta e funcione como um filme de ação cómica leve. A falta de profundidade é um ponto mencionado por alguns.\"\n    },\n    {\n      \"tema\": \"Impacto cultural e nostalgia\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos reviews medianas reconhecem a importância cultural e a nostalgia do filme, especialmente para quem cresceu com ele. A nostalgia é frequentemente citada como um fator que torna a experiência interessante, mesmo que a recepção seja mista.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é divertido e bem entretido, com humor e efeitos visuais que ainda são considerados bons para a época. A química entre os protagonistas é um ponto alto, mas o roteiro e o desenvolvimento da trama são criticados por serem simples. A nostalgia e o impacto cultural são mencionados como fatores que contribuem para a recepção positiva, embora não seja unanimidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 195.88,
+   "leitura_prompt_s": 7.709,
+   "geracao_s": 185.937,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5372,
+   "eval_count": 855
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

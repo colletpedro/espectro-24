@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "project-x-2012",
+ "bucket": "negativas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 4415,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "8baecf07f004eb91425a6b349066e1d8d48576a4ed8b2fb89454ce4f2a1bb4b1",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 6.36,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.4169921875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T02:53:25+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Falta de humor e roteiro fraco",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas criticam a ausência de piadas eficazes e a premissa que soa artificial e sem criatividade, com roteiro que parece copiar sem sucesso a obra Superbad.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews negativas criticam a ausência de piadas eficazes e a premissa que soa artificial e sem criatividade, com roteiro que parece copiar sem sucesso a obra Superbad.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo arrastado e duração excessiva",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Comentários apontam que o filme se estende demais, com um ritmo lento que desgasta e faz a experiência se tornar tediosa em vez de divertida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Vários comentários apontam que o filme se estende demais, com um ritmo lento que desgasta e faz a experiência se tornar tediosa em vez de divertida.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tratamento desrespeitoso das mulheres",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas destacam que o filme sexualiza e abusa da privacidade e dos limites das personagens femininas, com cenas que parecem reforçar uma visão regredida e objetificadora.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews negativas destacam que o filme sexualiza e abusa da privacidade e dos limites das personagens femininas, com cenas que parecem reforçar uma visão regredida e objetificadora.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e estilo de filmagem problemáticos",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas à qualidade da filmagem, que soa desengajada e não contribui para a experiência, além de mencionarem que o estilo de ripiar parece improvisado demais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação negativa com Superbad",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores consideram que o filme é uma versão mal executada de Superbad, que se saiu melhor em termos de roteiro, personagens e desenvolvimento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores consideram que o filme é uma versão mal executada de Superbad, que se saiu melhor em termos de roteiro, personagens e desenvolvimento.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Nostalgia e expectativa frustrada",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que, apesar de nostálgicas, a experiência não corresponde à expectativa criada por seu lançamento, e o filme soa antiquado mesmo para a época em que foi feito.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews mencionam que, apesar de nostálgicas, a experiência não corresponde à expectativa criada por seu lançamento, e o filme soa antiquado mesmo para a época em que foi feito.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas deste grupo criticam principalmente a falta de humor, o ritmo lento e o tratamento desrespeitoso das mulheres, além de compararem o filme de forma desfavorável com Superbad. Este grupo destaca que a premissa soa artificial e o roteiro sem criatividade contribuem para a experiência ser tediosa e pouco divertida.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 152.6,
+ "memoria": {
+  "ram_usada_gb": 12.96,
+  "ram_livre_min_gb": 2.23,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.66
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Falta de humor e roteiro fraco\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas criticam a ausência de piadas eficazes e a premissa que soa artificial e sem criatividade, com roteiro que parece copiar sem sucesso a obra Superbad.\"\n    },\n    {\n      \"tema\": \"Ritmo arrastado e duração excessiva\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Vários comentários apontam que o filme se estende demais, com um ritmo lento que desgasta e faz a experiência se tornar tediosa em vez de divertida.\"\n    },\n    {\n      \"tema\": \"Tratamento desrespeitoso das mulheres\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews negativas destacam que o filme sexualiza e abusa da privacidade e dos limites das personagens femininas, com cenas que parecem reforçar uma visão regredida e objetificadora.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo de filmagem problemáticos\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas à qualidade da filmagem, que soa desengajada e não contribui para a experiência, além de mencionarem que o estilo de ripiar parece improvisado demais.\"\n    },\n    {\n      \"tema\": \"Comparação negativa com Superbad\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores consideram que o filme é uma versão mal executada de Superbad, que se saiu melhor em termos de roteiro, personagens e desenvolvimento.\"\n    },\n    {\n      \"tema\": \"Nostalgia e expectativa frustrada\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que, apesar de nostálgicas, a experiência não corresponde à expectativa criada por seu lançamento, e o filme soa antiquado mesmo para a época em que foi feito.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas deste grupo criticam principalmente a falta de humor, o ritmo lento e o tratamento desrespeitoso das mulheres, além de compararem o filme de forma desfavorável com Superbad. Este grupo destaca que a premissa soa artificial e o roteiro sem criatividade contribuem para a experiência ser tediosa e pouco divertida.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 152.56,
+   "leitura_prompt_s": 6.383,
+   "geracao_s": 144.009,
+   "carga_s": 0.004,
+   "prompt_eval_count": 4415,
+   "eval_count": 714
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

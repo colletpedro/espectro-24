@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "detachment",
+ "bucket": "positivas",
+ "num_ctx": 13312,
+ "tokens_prompt_plano": 8987,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "d9b760909bf10b7aca91280940a80f5ffaa8506d664d30d0383319be036a6ca6",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.13,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.181640625,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-07T04:27:44+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro e abordagem complexa",
+    "mencoes_aproximadas": 35,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam que o roteiro explora camadas profundas da realidade, misturando questões de educação, solidão, geração e trauma, sem simplificar os problemas apresentados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Adrien Brody",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Adrien Brody é citada como um ponto alto, com espectadores descrevendo seu desempenho como emocionalmente carregado e capaz de transmitir nuances internas sem recorrer a excessos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Adrien Brody é frequentemente citada como um ponto alto, com muitos espectadores descrevendo seu desempenho como emocionalmente carregado e capaz de transmitir nuances internas sem recorrer a excessos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Impacto emocional e experiência de assistir",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas apontam que o filme é um choque emocional, deixando um forte impacto psicológico e provocando reflexões duradouras sobre a vida e as relações humanas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews positivas apontam que o filme é um choque emocional, deixando um forte impacto psicológico e provocando reflexões duradouras sobre a vida e as relações humanas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tratamento do tema da solidão e da distância",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como um retrato poderoso da solidão e da necessidade de se afastar emocionalmente como forma de sobreviver, com espectadores identificando-se com essa dualidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O filme é visto como um retrato poderoso da solidão e da necessidade de se afastar emocionalmente como forma de sobreviver, com muitos espectadores identificando-se com essa dualidade.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica à educação e à sociedade",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas ressaltam que o filme oferece uma crítica severa ao sistema educacional e à sociedade, mostrando as falhas e a pressão sobre professores e alunos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As reviews positivas frequentemente ressaltam que o filme oferece uma crítica severa ao sistema educacional e à sociedade, mostrando as falhas e a pressão sobre professores e alunos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e estilo visual",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e o estilo visual são mencionados como contribuições que ajudam a transmitir a atmosfera melancólica e introspectiva do filme, com ângulos e luz que reforçam o sentimento de isolamento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a profundidade do roteiro e o impacto emocional do filme, com elogios à atuação de Adrien Brody e à abordagem complexa da solidão e da educação. Este grupo enxerga o filme como uma obra que provoca reflexão sobre a vida e as relações humanas.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 205.3,
+ "memoria": {
+  "ram_usada_gb": 10.36,
+  "ram_livre_min_gb": 4.83,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.43
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro e abordagem complexa\",\n      \"mencoes_aproximadas\": 35,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam que o roteiro explora camadas profundas da realidade, misturando questões de educação, solidão, geração e trauma, sem simplificar os problemas apresentados.\"\n    },\n    {\n      \"tema\": \"Atuação de Adrien Brody\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Adrien Brody é frequentemente citada como um ponto alto, com muitos espectadores descrevendo seu desempenho como emocionalmente carregado e capaz de transmitir nuances internas sem recorrer a excessos.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo visual\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e o estilo visual são mencionados como contribuições que ajudam a transmitir a atmosfera melancólica e introspectiva do filme, com ângulos e luz que reforçam o sentimento de isolamento.\"\n    },\n    {\n      \"tema\": \"Impacto emocional e experiência de assistir\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews positivas apontam que o filme é um choque emocional, deixando um forte impacto psicológico e provocando reflexões duradouras sobre a vida e as relações humanas.\"\n    },\n    {\n      \"tema\": \"Tratamento do tema da solidão e da distância\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como um retrato poderoso da solidão e da necessidade de se afastar emocionalmente como forma de sobreviver, com muitos espectadores identificando-se com essa dualidade.\"\n    },\n    {\n      \"tema\": \"Crítica à educação e à sociedade\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas frequentemente ressaltam que o filme oferece uma crítica severa ao sistema educacional e à sociedade, mostrando as falhas e a pressão sobre professores e alunos.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a profundidade do roteiro e o impacto emocional do filme, com elogios à atuação de Adrien Brody e à abordagem complexa da solidão e da educação. Este grupo enxerga o filme como uma obra que provoca reflexão sobre a vida e as relações humanas.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 205.23,
+   "leitura_prompt_s": 13.743,
+   "geracao_s": 189.225,
+   "carga_s": 0.005,
+   "prompt_eval_count": 8987,
+   "eval_count": 722
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

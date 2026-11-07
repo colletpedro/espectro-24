@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "kill-bill-vol-2",
+ "bucket": "medianas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6365,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "ea3c67daa127c2fed628d33306fe9cba6d2d5e4df0a12d5f3f30b66b4ccb7c9e",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.88,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T17:55:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e arrastado",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme se torna lento e arrastado, com cenas que demoram a engrenar e momentos que poderiam ser mais dinâmicos. Reviews mencionam que a lentidão é tediosa e que a energia não atinge o mesmo nível da primeira parte.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que o filme se torna lento e arrastado, com cenas que demoram a engrenar e momentos que poderiam ser mais dinâmicos. Algumas mencionam que a lentidão é tediosa e que a energia não atinge o mesmo nível da primeira parte.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Diálogos excessivos e digressões",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas medianas reclamam que o roteiro se perde em diálogos longos e digressões, com informações que poderiam ser contadas de forma mais concisa. Reviews consideram que essas cenas quebram o ritmo e tornam a experiência menos envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas críticas medianas reclamam que o roteiro se perde em diálogos longos e digressões, com informações que poderiam ser contadas de forma mais concisa. Algumas consideram que essas cenas quebram o ritmo e tornam a experiência menos envolvente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de ação em relação à primeira parte",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que a segunda parte tem menos ação e que as sequências de luta são menos impressionantes do que as da primeira parte. Isso gera um sentimento de que a experiência é menos intensa e que a narrativa perde parte de sua energia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Diversas reviews medianas apontam que a segunda parte tem menos ação e que as sequências de luta são menos impressionantes do que as da primeira parte. Isso gera um sentimento de que a experiência é menos intensa e que a narrativa perde parte de sua energia.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro com explicações excessivas",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas medianas dizem que o roteiro se alonga demais em explicações e que a história poderia ser contada de forma mais direta. Isso inclui a necessidade de detalhar mais o passado da protagonista e a falta de uma conclusão satisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas críticas medianas dizem que o roteiro se alonga demais em explicações e que a história poderia ser contada de forma mais direta. Isso inclui a necessidade de detalhar mais o passado da protagonista e a falta de uma conclusão satisfatória.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens secundários pouco desenvolvidos",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas criticam que os personagens secundários não são tão bem desenvolvidos quanto os da primeira parte, especialmente os da facção de Bill. Isso gera a sensação de que a trama não se sustenta tão bem e que a profundidade é insuficiente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas criticam que os personagens secundários não são tão bem desenvolvidos quanto os da primeira parte, especialmente os da facção de Bill. Isso gera a sensação de que a trama não se sustenta tão bem e que a profundidade é insuficiente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com a primeira parte",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas medianas mencionam que este filme é um downshift em relação ao primeiro, com um ritmo e energia diferentes. Apesar disso, alguns ainda o consideram uma boa conclusão da história, embora não atinja o mesmo nível de impacto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas críticas medianas mencionam que este filme é um downshift em relação ao primeiro, com um ritmo e energia diferentes. Apesar disso, alguns ainda o consideram uma boa conclusão da história, embora não atinja o mesmo nível de impacto.",
+    "quantidade_pendente": true
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que este filme é um pouco mais lento e arrastado em comparação com a primeira parte, com diálogos excessivos e menos ação. Apesar disso, ainda é considerado uma boa conclusão da história, embora não atenda às expectativas de quem amou o primeiro volume.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 200.0,
+ "memoria": {
+  "ram_usada_gb": 10.69,
+  "ram_livre_min_gb": 4.5,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.52
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e arrastado\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o filme se torna lento e arrastado, com cenas que demoram a engrenar e momentos que poderiam ser mais dinâmicos. Algumas mencionam que a lentidão é tediosa e que a energia não atinge o mesmo nível da primeira parte.\"\n    },\n    {\n      \"tema\": \"Diálogos excessivos e digressões\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas medianas reclamam que o roteiro se perde em diálogos longos e digressões, com informações que poderiam ser contadas de forma mais concisa. Algumas consideram que essas cenas quebram o ritmo e tornam a experiência menos envolvente.\"\n    },\n    {\n      \"tema\": \"Falta de ação em relação à primeira parte\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Diversas reviews medianas apontam que a segunda parte tem menos ação e que as sequências de luta são menos impressionantes do que as da primeira parte. Isso gera um sentimento de que a experiência é menos intensa e que a narrativa perde parte de sua energia.\"\n    },\n    {\n      \"tema\": \"Roteiro com explicações excessivas\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas críticas medianas dizem que o roteiro se alonga demais em explicações e que a história poderia ser contada de forma mais direta. Isso inclui a necessidade de detalhar mais o passado da protagonista e a falta de uma conclusão satisfatória.\"\n    },\n    {\n      \"tema\": \"Personagens secundários pouco desenvolvidos\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam que os personagens secundários não são tão bem desenvolvidos quanto os da primeira parte, especialmente os da facção de Bill. Isso gera a sensação de que a trama não se sustenta tão bem e que a profundidade é insuficiente.\"\n    },\n    {\n      \"tema\": \"Comparação com a primeira parte\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas medianas mencionam que este filme é um downshift em relação ao primeiro, com um ritmo e energia diferentes. Apesar disso, alguns ainda o consideram uma boa conclusão da história, embora não atinja o mesmo nível de impacto.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que este filme é um pouco mais lento e arrastado em comparação com a primeira parte, com diálogos excessivos e menos ação. Apesar disso, ainda é considerado uma boa conclusão da história, embora não atenda às expectativas de quem amou o primeiro volume.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 199.94,
+   "leitura_prompt_s": 9.3,
+   "geracao_s": 188.339,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6365,
+   "eval_count": 830
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "moneyball",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6074,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "fbe6b48a25292219685dc728f440cc6f26cbfd5f051f087c8993fb52d512ecd3",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.94,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:40:24+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Brad Pitt",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Brad Pitt é elogiada como um dos destaques do filme, carregando a carisma e a gravidade do personagem com naturalidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Brad Pitt é frequentemente elogiada como um dos destaques do filme, carregando a carisma e a gravidade do personagem com naturalidade.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e diálogos inteligentes",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é descrito como afiado e envolvente, com diálogos que desafiam o pensamento convencional e apresentam uma abordagem estratégica interessante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e diálogos inteligentes",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é descrito como afiado e envolvente, com diálogos que desafiam o pensamento convencional e apresentam uma abordagem estratégica interessante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Mensagem sobre análise de dados e mudanças no esporte",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como um retrato da revolução analítica no esporte, mostrando como a análise de dados pode desafiar práticas tradicionais e inspirar mudanças em outros esportes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e ritmo",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia é elogiada por sua beleza e a abordagem do ritmo do filme é considerada envolvente, com momentos de tensão que sustentam a narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagem de Billy Beane e sua motivação",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A complexidade do personagem de Billy Beane, sua ambição e a luta contra a resistência interna são pontos que geram identificação e admiração.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a atuação de Brad Pitt, o roteiro inteligente e a mensagem sobre a revolução analítica no esporte. Este grupo valoriza a abordagem estratégica e a capacidade do filme de transformar algo aparentemente técnico em uma experiência emocionante.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 160.5,
+ "memoria": {
+  "ram_usada_gb": 9.16,
+  "ram_livre_min_gb": 6.03,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Brad Pitt\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Brad Pitt é frequentemente elogiada como um dos destaques do filme, carregando a carisma e a gravidade do personagem com naturalidade.\"\n    },\n    {\n      \"tema\": \"Roteiro e diálogos inteligentes\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é descrito como afiado e envolvente, com diálogos que desafiam o pensamento convencional e apresentam uma abordagem estratégica interessante.\"\n    },\n    {\n      \"tema\": \"Roteiro e diálogos inteligentes\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é descrito como afiado e envolvente, com diálogos que desafiam o pensamento convencional e apresentam uma abordagem estratégica interessante.\"\n    },\n    {\n      \"tema\": \"Mensagem sobre análise de dados e mudanças no esporte\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como um retrato da revolução analítica no esporte, mostrando como a análise de dados pode desafiar práticas tradicionais e inspirar mudanças em outros esportes.\"\n    },\n    {\n      \"tema\": \"Fotografia e ritmo\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia é elogiada por sua beleza e a abordagem do ritmo do filme é considerada envolvente, com momentos de tensão que sustentam a narrativa.\"\n    },\n    {\n      \"tema\": \"Personagem de Billy Beane e sua motivação\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A complexidade do personagem de Billy Beane, sua ambição e a luta contra a resistência interna são pontos que geram identificação e admiração.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atuação de Brad Pitt, o roteiro inteligente e a mensagem sobre a revolução analítica no esporte. Este grupo valoriza a abordagem estratégica e a capacidade do filme de transformar algo aparentemente técnico em uma experiência emocionante.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 160.48,
+   "leitura_prompt_s": 8.575,
+   "geracao_s": 144.177,
+   "carga_s": 5.64,
+   "prompt_eval_count": 6074,
+   "eval_count": 672
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 1,
+ "fora_por_memoria": false
+}

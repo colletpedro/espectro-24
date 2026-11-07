@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "scarface-1983",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5242,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "f26ca2ba44352be4d13455f208be37e5aa87c39c24385bd1670e829d5e50d0a8",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:56:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e duração excessiva",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar e se estende por três horas, tornando a experiência cansativa e pouco divertida, mesmo quando chega ao clímax.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme demora a engrenar e se estende por três horas, tornando a experiência cansativa e pouco divertida, mesmo quando chega ao clímax.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagem de Tony Montana pouco atraente",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores medianos consideram Tony uma figura insuportável, irritante e sem profundidade, tornando difícil torcer por ele e gerando frustração com seu comportamento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores medianos consideram Tony uma figura insuportável, irritante e sem profundidade, tornando difícil torcer por ele e gerando frustração com seu comportamento.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e direção",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Al Pacino é elogiada, mas espectadores acham seu estilo exagerado e pouco crível, enquanto a direção de Brian De Palma é vista como um ponto de destaque ou como um fator de desequilíbrio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Al Pacino é elogiada, mas alguns acham seu estilo exagerado e pouco crível, enquanto a direção de Brian De Palma é vista como um ponto de destaque ou como um fator de desequilíbrio.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica ao gênero e à glorificação do crime",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme idealiza o mundo do crime e o comportamento de criminosos, algo que não gera empatia e soa desagradável para espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas apontam que o filme idealiza o mundo do crime e o comportamento de criminosos, algo que não gera empatia e soa desagradável para alguns.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de subtítulo e dublagem",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que os diálogos em espanhol sem legendas ou dublagem dificultam a compreensão da trama, gerando desconforto e distração.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam que os diálogos em espanhol sem legendas ou dublagem dificultam a compreensão da trama, gerando desconforto e distração.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à estética e à trilha sonora",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Apesar das críticas, espectadores medianos reconhecem que a estética do filme e a trilha sonora são fortes pontos, contribuindo para a imersão e o visual marcante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Apesar das críticas, muitos espectadores medianos reconhecem que a estética do filme e a trilha sonora são fortes pontos, contribuindo para a imersão e o visual marcante.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que, embora o filme tenha qualidade técnica e seja icônico, a experiência é arrastada e o protagonista é pouco atraente, o que afeta o engajamento. Este grupo também destaca a crítica ao gênero e à representação do crime, mas reconhece aspectos positivos como a estética e a trilha sonora.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 167.9,
+ "memoria": {
+  "ram_usada_gb": 10.29,
+  "ram_livre_min_gb": 4.9,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e duração excessiva\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas reclamam que o filme demora a engrenar e se estende por três horas, tornando a experiência cansativa e pouco divertida, mesmo quando chega ao clímax.\"\n    },\n    {\n      \"tema\": \"Personagem de Tony Montana pouco atraente\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores medianos consideram Tony uma figura insuportável, irritante e sem profundidade, tornando difícil torcer por ele e gerando frustração com seu comportamento.\"\n    },\n    {\n      \"tema\": \"Atuações e direção\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Al Pacino é elogiada, mas alguns acham seu estilo exagerado e pouco crível, enquanto a direção de Brian De Palma é vista como um ponto de destaque ou como um fator de desequilíbrio.\"\n    },\n    {\n      \"tema\": \"Crítica ao gênero e à glorificação do crime\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que o filme idealiza o mundo do crime e o comportamento de criminosos, algo que não gera empatia e soa desagradável para alguns.\"\n    },\n    {\n      \"tema\": \"Falta de subtítulo e dublagem\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Diversas reviews medianas mencionam que os diálogos em espanhol sem legendas ou dublagem dificultam a compreensão da trama, gerando desconforto e distração.\"\n    },\n    {\n      \"tema\": \"Elogio à estética e à trilha sonora\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Apesar das críticas, muitos espectadores medianos reconhecem que a estética do filme e a trilha sonora são fortes pontos, contribuindo para a imersão e o visual marcante.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que, embora o filme tenha qualidade técnica e seja icônico, a experiência é arrastada e o protagonista é pouco atraente, o que afeta o engajamento. Este grupo também destaca a crítica ao gênero e à representação do crime, mas reconhece aspectos positivos como a estética e a trilha sonora.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 167.92,
+   "leitura_prompt_s": 7.773,
+   "geracao_s": 157.948,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5242,
+   "eval_count": 728
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

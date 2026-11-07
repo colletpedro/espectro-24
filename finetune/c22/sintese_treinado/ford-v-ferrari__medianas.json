@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "ford-v-ferrari",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4728,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "cc9da51476f737404d541d6c85f2fb7d0e56959cf5ca580476558b7952ead077",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:20:15+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo e duração excessiva",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme é longo demais, com uma duração de quase três horas que soa cansativa e que poderia ser encurtada sem perder a essência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que o filme é longo demais, com uma duração de quase três horas que soa cansativa e que poderia ser encurtada sem perder a essência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações principais",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Christian Bale e Matt Damon é elogiada como o ponto alto do filme, mas críticos medianos consideram que a performance de Damon é mais fraca ou que a voz de Bale com sotaque britânico soa artificial.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Christian Bale e Matt Damon é frequentemente elogiada como o ponto alto do filme, mas alguns críticos medianos consideram que a performance de Damon é mais fraca ou que a voz de Bale com sotaque britânico soa artificial.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e previsibilidade",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é descrito como previsível e com diálogos exagerados, com fãs medianos achando que a trama poderia ter mais desenvolvimento e que a falta de profundidade na história de Ken Miles é um ponto fraco.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O roteiro é descrito como previsível e com diálogos exagerados, com alguns fãs medianos achando que a trama poderia ter mais desenvolvimento e que a falta de profundidade na história de Ken Miles é um ponto fraco.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de James Mangold são elogiadas por críticos medianos, com destaque para a forma como as corridas são filmadas e para a qualidade técnica do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a direção de James Mangold são elogiadas por vários críticos medianos, com destaque para a forma como as corridas são filmadas e para a qualidade técnica do filme.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à trilha sonora",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora é mencionada como um dos pontos positivos do filme, com espectadores medianos apreciando a música de época que acompanha as cenas de corrida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A trilha sonora é frequentemente mencionada como um dos pontos positivos do filme, com muitos espectadores medianos apreciando a música de época que acompanha as cenas de corrida.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Final anticlimático",
+    "mencoes_aproximadas": 4,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticos medianos consideram o desfecho do filme anticlimático e decepcionante, sentindo que a narrativa perde força nas últimas cenas e que o resultado não corresponde ao que se espera de uma história baseada em fatos reais.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Alguns críticos medianos consideram o desfecho do filme anticlimático e decepcionante, sentindo que a narrativa perde força nas últimas cenas e que o resultado não corresponde ao que se espera de uma história baseada em fatos reais.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é bem executado tecnicamente, com atuações fortes e fotografia impressionante, mas sofre com ritmo lento, roteiro previsível e final que não atende às expectativas. Este grupo destaca que o filme é divertido e envolvente, mas não consegue despertar todo o interesse necessário para ser considerado um grande clássico.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 163.4,
+ "memoria": {
+  "ram_usada_gb": 11.39,
+  "ram_livre_min_gb": 3.8,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo e duração excessiva\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o filme é longo demais, com uma duração de quase três horas que soa cansativa e que poderia ser encurtada sem perder a essência.\"\n    },\n    {\n      \"tema\": \"Atuações principais\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Christian Bale e Matt Damon é frequentemente elogiada como o ponto alto do filme, mas alguns críticos medianos consideram que a performance de Damon é mais fraca ou que a voz de Bale com sotaque britânico soa artificial.\"\n    },\n    {\n      \"tema\": \"Roteiro e previsibilidade\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é descrito como previsível e com diálogos exagerados, com alguns fãs medianos achando que a trama poderia ter mais desenvolvimento e que a falta de profundidade na história de Ken Miles é um ponto fraco.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de James Mangold são elogiadas por vários críticos medianos, com destaque para a forma como as corridas são filmadas e para a qualidade técnica do filme.\"\n    },\n    {\n      \"tema\": \"Elogio à trilha sonora\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora é frequentemente mencionada como um dos pontos positivos do filme, com muitos espectadores medianos apreciando a música de época que acompanha as cenas de corrida.\"\n    },\n    {\n      \"tema\": \"Final anticlimático\",\n      \"mencoes_aproximadas\": 4,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns críticos medianos consideram o desfecho do filme anticlimático e decepcionante, sentindo que a narrativa perde força nas últimas cenas e que o resultado não corresponde ao que se espera de uma história baseada em fatos reais.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é bem executado tecnicamente, com atuações fortes e fotografia impressionante, mas sofre com ritmo lento, roteiro previsível e final que não atende às expectativas. Este grupo destaca que o filme é divertido e envolvente, mas não consegue despertar todo o interesse necessário para ser considerado um grande clássico.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 163.39,
+   "leitura_prompt_s": 6.983,
+   "geracao_s": 154.152,
+   "carga_s": 0.005,
+   "prompt_eval_count": 4728,
+   "eval_count": 748
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

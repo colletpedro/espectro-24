@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "aladdin-2019",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5199,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "5ca872ba7031360c09af11df1e44c2c6c54af4031133e0f94323ef9942c4c422",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:07:31+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro e adaptação",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o roteiro da versão de ação real consegue manter a essência da animação original, com mudanças que dão espaço para uma narrativa mais moderna e desenvolvida, incluindo uma música solo para Jasmine que aprofunda seu personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e elenco",
+    "mencoes_aproximadas": 17,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Will Smith como Genio é amplamente elogiada, sendo considerada hilária e carismática, enquanto a escolha de Naomi Scott para o papel de Jasmine é vista como perfeita, trazendo mais emoção e desenvolvimento para a personagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Músicas e coreografias",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As músicas e coreografias são apontadas como um dos pontos mais elogiados, com destaque para a canção A Whole New World que causa euforia e é mencionada como um dos momentos mais marcantes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": true,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As músicas e coreografias são apontadas como um dos pontos mais elogiados, com destaque para a canção A Whole New World que causa euforia e é frequentemente mencionada como um dos momentos mais marcantes.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Direção e fotografia",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A direção de Guy Ritchie e a fotografia são elogiadas por criar um visual opulento e vibrante, com cenários grandiosos que contribuem para a atmosfera mágica e encantadora do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Nostalgia e impacto emocional",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas mencionam que o filme evoca nostalgia, especialmente para quem cresceu com a animação original, e que é um divisor de águas emocional, sendo considerado um filme de conforto que acalma e aquece o coração.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews positivas mencionam que o filme evoca nostalgia, especialmente para quem cresceu com a animação original, e que é um divisor de águas emocional, sendo considerado um filme de conforto que acalma e aquece o coração.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e desenvolvimento",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que o filme tem um ritmo leve e divertido, embora espectadores considerem a segunda metade um pouco lenta, com perda de momentum, o que não impede que seja considerado uma experiência agradável.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews apontam que o filme tem um ritmo leve e divertido, embora alguns considerem a segunda metade um pouco lenta, com perda de momentum, o que não impede que seja considerado uma experiência agradável.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a qualidade de adaptação do filme, com roteiro modernizado, atuações elogiadas e música marcante, além de um visual opulento que recria a magia da animação original. Este grupo também valoriza o desenvolvimento de Jasmine e a nostalgia associada à história.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 171.4,
+ "memoria": {
+  "ram_usada_gb": 9.4,
+  "ram_livre_min_gb": 5.79,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro e adaptação\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o roteiro da versão de ação real consegue manter a essência da animação original, com mudanças que dão espaço para uma narrativa mais moderna e desenvolvida, incluindo uma música solo para Jasmine que aprofunda seu personagem.\"\n    },\n    {\n      \"tema\": \"Atuações e elenco\",\n      \"mencoes_aproximadas\": 17,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Will Smith como Genio é amplamente elogiada, sendo considerada hilária e carismática, enquanto a escolha de Naomi Scott para o papel de Jasmine é vista como perfeita, trazendo mais emoção e desenvolvimento para a personagem.\"\n    },\n    {\n      \"tema\": \"Músicas e coreografias\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As músicas e coreografias são apontadas como um dos pontos mais elogiados, com destaque para a canção 'A Whole New World' que causa euforia e é frequentemente mencionada como um dos momentos mais marcantes.\"\n    },\n    {\n      \"tema\": \"Direção e fotografia\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A direção de Guy Ritchie e a fotografia são elogiadas por criar um visual opulento e vibrante, com cenários grandiosos que contribuem para a atmosfera mágica e encantadora do filme.\"\n    },\n    {\n      \"tema\": \"Nostalgia e impacto emocional\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews positivas mencionam que o filme evoca nostalgia, especialmente para quem cresceu com a animação original, e que é um divisor de águas emocional, sendo considerado um filme de conforto que acalma e aquece o coração.\"\n    },\n    {\n      \"tema\": \"Ritmo e desenvolvimento\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o filme tem um ritmo leve e divertido, embora alguns considerem a segunda metade um pouco lenta, com perda de momentum, o que não impede que seja considerado uma experiência agradável.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a qualidade de adaptação do filme, com roteiro modernizado, atuações elogiadas e música marcante, além de um visual opulento que recria a magia da animação original. Este grupo também valoriza o desenvolvimento de Jasmine e a nostalgia associada à história.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 171.44,
+   "leitura_prompt_s": 8.196,
+   "geracao_s": 161.065,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5199,
+   "eval_count": 755
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

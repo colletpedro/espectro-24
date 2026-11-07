@@ -1,0 +1,600 @@
+"""Treino do Qwen3-8B (Fase 3) — a configuração de `finetune/TREINO_CONFIG.md`.
+
+Idêntico ao smoke v4 onde se aplica (pilha, repositório e revisão, carga 4-bit
+fp16, `get_peft_model`, template, perda só na resposta, exportação), mais:
+
+- dados: `treino.jsonl` do dataset privado (140 de TREINO + 19 de VALIDAÇÃO).
+  Aborta, antes de instalar ou treinar, se: o sha256 lido ≠ `meta.json` ≠
+  `DATASET_SHA256` (o do TREINO_CONFIG); o commit do llama.cpp que a base
+  gravou (`meta.json`) não for o `LLAMA_CPP_COMMIT` fixo; algum exemplo for de filme fora do seu conjunto (ou de
+  teste). Depois de carregar: aborta se `template_confere` for falso em
+  QUALQUER exemplo ou se algum passar de `max_seq_length` (sem truncar);
+- QLoRA 4-bit, r 16, alpha 16, dropout 0, as 7 projeções, gradient
+  checkpointing "unsloth", fp16, seed 3407, `max_seq_length` 12.288;
+  lr 2e-4, cosine, warmup 5%, 3 épocas, batch 1 × acumulação 4, adamw_8bit,
+  weight decay 0 (os do smoke);
+- perda na VALIDAÇÃO ao fim de cada época; checkpoint de cada época em
+  `/kaggle/working/treino/checkpoints` (com o estado do otimizador: retoma,
+  inclusive de uma saída anterior anexada como entrada do kernel);
+- escolha: menor perda na validação (arredondada na 4ª casa); empate → menos
+  épocas. A curva completa vai para `curva.json`. Nenhuma busca de
+  hiperparâmetros;
+- exportação: SÓ o checkpoint escolhido (o adaptador dele é carregado e a
+  perda na validação é refeita e conferida), adaptador salvo, depois o MESMO
+  `save_pretrained_gguf(..., "q4_k_m")` da base, com o llama.cpp no commit FIXO
+  `LLAMA_CPP_COMMIT` (o mesmo bloco do `exportar_base.py`), compilado do
+  código-fonte ANTES do treino; aborta antes de treinar se o compilado não for
+  esse commit. Se a exportação não tiver usado ESSE llama.cpp, o GGUF NÃO é
+  copiado para a saída (o adaptador fica). Com o
+  `tensores_base.json` do dataset, confere que só os tensores das 7 projeções
+  mudaram. Grava (só registro, DESVIO_P02) as linhas do `embed_tokens` fundido
+  que diferem do shard 16-bit original, com o max_abs de cada uma.
+
+Saída (`/kaggle/working/treino/qwen3-8b-treinado__12288/`):
+`Qwen3-8B.Q4_K_M.gguf`, `Modelfile`, `log.json` (`modelo` qwen3-8b-treinado →
+`espectro-qwen3-8b-treinado` no `importar-pasta`), `curva.json`,
+`tensores.json`, `adaptador_escolhido/`.
+"""
+from __future__ import annotations
+
+import os
+
+SCRIPT = os.path.abspath(__file__)        # antes do chdir abaixo
+RASCUNHO = "/tmp/espectro24_treino"
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
+os.environ.setdefault("HF_HOME", f"{RASCUNHO}/hf")
+os.environ.setdefault("HF_HUB_CACHE", f"{RASCUNHO}/hf/hub")
+os.environ.setdefault("TRITON_CACHE_DIR", f"{RASCUNHO}/triton")
+os.makedirs(RASCUNHO, exist_ok=True)
+os.chdir(RASCUNHO)            # llama.cpp e unsloth_compiled_cache nascem no cwd
+
+import argparse
+import glob
+import hashlib
+import json
+import math
+import platform
+import shutil
+import subprocess
+import sys
+import time
+import traceback
+from pathlib import Path
+
+NOME = "qwen3-8b-treinado"
+SEQ = 12288
+RAIZ_SAIDA = Path("/kaggle/working/treino")
+SAIDA = RAIZ_SAIDA / f"{NOME}__{SEQ}"
+CHECKPOINTS = RAIZ_SAIDA / "checkpoints"
+TMP = Path(RASCUNHO)
+ENTRADA_GLOB = "/kaggle/input/**/treino.jsonl"
+# sha256 do `treino.jsonl` (TREINO_CONFIG.md); o kernel não treina outro arquivo
+DATASET_SHA256 = "36f81ac1a48d11bdc1b7f1fc27e71fb3dd54ca063b29caa862ff4459ee45e53d"
+N_TREINO, N_VALIDACAO = 140, 19
+REPO = "unsloth/Qwen3-8B-unsloth-bnb-4bit"
+REVISAO = "62efd7f9d748e394734a7adae2adf96e13a2abc8"     # a do smoke v4 e da base
+PACOTES_FIXOS = ["unsloth==2026.10.7", "unsloth_zoo==2026.10.7"]
+PROJECOES = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+# os nomes das 7 projeções no GGUF (llama.cpp): o resto tem de sair igual ao da base
+PROJECOES_GGUF = ("attn_q.", "attn_k.", "attn_v.", "attn_output.", "ffn_gate.", "ffn_up.",
+                  "ffn_down.")
+REPOS_16BIT = ("unsloth/Qwen3-8B", "Qwen/Qwen3-8B")      # onde procurar a revisão da fusão
+EMBED = "model.embed_tokens.weight"
+PARTES = ("<|im_start|>user\n", "<|im_start|>assistant\n<think>\n\n</think>\n\n")
+HIPER = {"seed": 3407, "r": 16, "lora_alpha": 16, "lora_dropout": 0, "learning_rate": 2e-4,
+         "lr_scheduler_type": "cosine", "warmup_ratio": 0.05, "num_train_epochs": 3,
+         "per_device_train_batch_size": 1, "gradient_accumulation_steps": 4,
+         "optim": "adamw_8bit", "weight_decay": 0.0, "fp16": True, "bf16": False,
+         "max_seq_length": SEQ, "use_gradient_checkpointing": "unsloth"}
+CASAS_EMPATE = 4
+TOL_REAVALIACAO = 1e-3
+
+
+def _json(p: Path, obj) -> None:
+    p.parent.mkdir(parents=True, exist_ok=True)
+    with open(p, "w", encoding="utf-8") as f:
+        f.write(json.dumps(obj, ensure_ascii=False, indent=1, default=str))
+        f.flush()
+        os.fsync(f.fileno())
+
+
+def _sha256(p: Path) -> str:
+    h = hashlib.sha256()
+    with open(p, "rb") as f:
+        for bloco in iter(lambda: f.read(1 << 22), b""):
+            h.update(bloco)
+    return h.hexdigest()
+
+
+def _rodar(cmd: list[str], **kw) -> subprocess.CompletedProcess:
+    return subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8",
+                          errors="replace", **kw)
+
+
+def _versoes() -> dict:
+    import importlib.metadata as md
+    v = {"python": platform.python_version()}
+    for pkg in ("unsloth", "unsloth_zoo", "transformers", "trl", "torch", "peft",
+                "bitsandbytes", "accelerate", "datasets", "safetensors", "huggingface_hub"):
+        try:
+            v[pkg] = md.version(pkg)
+        except md.PackageNotFoundError:
+            v[pkg] = None
+    v["imagem_kaggle"] = os.environ.get("KAGGLE_DOCKER_IMAGE") or os.environ.get("KAGGLE_IMAGE")
+    return v
+
+
+# ---------------------------------------------------------------------------
+# dataset (conferido ANTES de instalar ou treinar)
+# ---------------------------------------------------------------------------
+
+def _arquivo_dataset() -> Path:
+    achados = glob.glob(ENTRADA_GLOB, recursive=True)
+    if len(achados) != 1:
+        raise SystemExit(f"esperava 1 treino.jsonl em /kaggle/input, achei {achados}")
+    return Path(achados[0])
+
+
+def conferir_dataset() -> tuple[list[dict], dict, dict]:
+    arq = _arquivo_dataset()
+    meta = json.loads(arq.with_name("meta.json").read_text(encoding="utf-8"))
+    lido = _sha256(arq)
+    conf = {"arquivo": str(arq), "sha256_lido": lido, "sha256_meta": meta.get("treino_sha256"),
+            "sha256_config": DATASET_SHA256}
+    print(f"[dataset] treino.jsonl {lido} / meta {conf['sha256_meta']} / config {DATASET_SHA256}",
+          flush=True)
+    if not (lido == conf["sha256_meta"] == DATASET_SHA256):
+        raise SystemExit("treino.jsonl não é o do meta.json e do TREINO_CONFIG — abortado")
+    if meta.get("llama_cpp_commit") != LLAMA_CPP_COMMIT:
+        raise SystemExit(f"o llama.cpp da base no meta.json ({meta.get('llama_cpp_commit')}) não é "
+                         f"o fixo {LLAMA_CPP_COMMIT} (`--log-kernel-base`) — abortado")
+    linhas = [json.loads(l) for l in arq.read_text(encoding="utf-8").split("\n") if l.strip()]
+    filmes = meta["filmes"]
+    teste = set(filmes["teste"])
+    for l in linhas:
+        c = l.get("conjunto")
+        if c not in ("treino", "validacao") or l["slug"] not in set(filmes[c]) or l["slug"] in teste:
+            raise SystemExit(f"{l['slug']}/{l['bucket']}: filme fora de treino/validação — abortado")
+    n = {c: sum(l["conjunto"] == c for l in linhas) for c in ("treino", "validacao")}
+    if (n["treino"], n["validacao"]) != (N_TREINO, N_VALIDACAO):
+        raise SystemExit(f"{n} exemplos (esperados {N_TREINO} + {N_VALIDACAO}) — abortado")
+    conf["n"] = n
+    return linhas, meta, conf
+
+
+# ---------------------------------------------------------------------------
+# llama.cpp
+# ---------------------------------------------------------------------------
+
+# >>> llama.cpp fixo — bloco IDÊNTICO em exportar_base.py e treino.py (o teste confere)
+# ggml-org/llama.cpp, tag b11985 (commit de 2026-10-29): a base upstream da release
+# `b11985-mix-c116c32` da fork unslothai/llama.cpp, a mais nova quando o smoke v4
+# rodou (2026-10-30). O kernel compila ESTE commit do código-fonte e aponta o
+# Unsloth para ele: quantizador e gguf-py (`UNSLOTH_LLAMA_CPP_PATH`) e conversor
+# (`UNSLOTH_LLAMA_CPP_SCRIPTS_DIR`). Com `UNSLOTH_AUTO_INSTALL=0`, se o Unsloth não
+# aceitar a pasta, a exportação falha em vez de baixar um pré-compilado.
+LLAMA_CPP_URL = "https://github.com/ggml-org/llama.cpp"
+LLAMA_CPP_COMMIT = "6d194531e1e5876d5d1a0641ce3ca7dae23f94ad"
+LLAMA_CPP_DIR = Path(RASCUNHO) / "llama.cpp"
+ALVOS_LLAMA = ["llama-quantize", "llama-gguf-split"]
+# do que o `install_llama_cpp` do Unsloth instalaria para o conversor, só o que o
+# Qwen3 pode usar, e só se faltar (o gguf vem do gguf-py do checkout; o
+# mistral_common é só para modelos Mistral)
+DEPS_CONVERSOR = {"sentencepiece": "sentencepiece", "google.protobuf": "protobuf"}
+
+
+def _tem_modulo(nome: str) -> bool:
+    import importlib.util
+    try:
+        return importlib.util.find_spec(nome) is not None
+    except ModuleNotFoundError:
+        return False
+os.environ["UNSLOTH_LLAMA_CPP_PATH"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_LLAMA_CPP_SCRIPTS_DIR"] = str(LLAMA_CPP_DIR)
+os.environ["UNSLOTH_AUTO_INSTALL"] = "0"
+
+
+def _commit_compilado(d: Path) -> str | None:
+    """O commit que o CMake gravou no build-info do llama.cpp compilado."""
+    for p in (d / "build").rglob("build-info.cpp"):
+        for linha in p.read_text(encoding="utf-8", errors="replace").splitlines():
+            if "LLAMA_COMMIT" in linha and '"' in linha:
+                return linha.split('"')[1]
+    return None
+
+
+def _confere_commit(d: Path) -> dict:
+    head = _rodar(["git", "-C", str(d), "rev-parse", "HEAD"]).stdout.strip()
+    curto = _commit_compilado(d)
+    q = d / "llama-quantize"
+    r = _rodar([str(q), "--help"], timeout=60) if q.exists() else None
+    saida = ((r.stdout + r.stderr) if r else "")
+    no_binario = q.exists() and (curto or "?").encode() in q.read_bytes()
+    fora = {"commit_pedido": LLAMA_CPP_COMMIT, "commit_clonado": head, "commit_compilado": curto,
+            "commit_no_binario": no_binario,
+            "llama_quantize_sha256": _sha256(q) if q.exists() else None,
+            "llama_quantize_versao": next((l for l in saida.splitlines() if l.startswith("version:")), None)}
+    fora["ok"] = bool(head == LLAMA_CPP_COMMIT and curto and LLAMA_CPP_COMMIT.startswith(curto)
+                      and len(curto) >= 7 and no_binario)
+    return fora
+
+
+def preparar_llama_cpp() -> dict:
+    """Clona e compila o llama.cpp em LLAMA_CPP_COMMIT, ANTES de carregar o modelo.
+    Aborta se o que compilou não for exatamente esse commit."""
+    d = LLAMA_CPP_DIR
+    shutil.rmtree(d, ignore_errors=True)
+    t0 = time.time()
+    passos = [["git", "init", "-q", str(d)],
+              ["git", "-C", str(d), "remote", "add", "origin", LLAMA_CPP_URL],
+              ["git", "-C", str(d), "fetch", "-q", "--depth", "1", "origin", LLAMA_CPP_COMMIT],
+              ["git", "-C", str(d), "checkout", "-q", "--detach", "FETCH_HEAD"],
+              ["cmake", "-S", str(d), "-B", str(d / "build"), "-DCMAKE_BUILD_TYPE=Release",
+               "-DGGML_CUDA=OFF", "-DLLAMA_OPENSSL=OFF", "-DBUILD_SHARED_LIBS=OFF",
+               "-DLLAMA_BUILD_TESTS=OFF", "-DLLAMA_BUILD_EXAMPLES=OFF", "-DLLAMA_BUILD_SERVER=OFF"],
+              ["cmake", "--build", str(d / "build"), "--config", "Release", "-j",
+               str(os.cpu_count() or 4), "--target", *ALVOS_LLAMA]]
+    for p in passos:
+        r = _rodar(p, timeout=3600)
+        if r.returncode != 0:
+            raise SystemExit(f"llama.cpp: `{' '.join(p)}` falhou: {(r.stdout + r.stderr)[-1500:]}")
+    for alvo in ALVOS_LLAMA:                       # o Unsloth procura na raiz da pasta
+        shutil.copy2(d / "build" / "bin" / alvo, d / alvo)
+    faltando = [pip for mod, pip in DEPS_CONVERSOR.items() if not _tem_modulo(mod)]
+    if faltando:
+        r = _rodar([sys.executable, "-m", "pip", "install", "-q", *faltando])
+        if r.returncode != 0:
+            raise SystemExit(f"pip install {faltando} falhou: {r.stderr[-1500:]}")
+    fora = _confere_commit(d)
+    fora.update({"s": round(time.time() - t0, 1), "deps_instaladas": faltando,
+                 "cmake": passos[4][5:]})
+    print(f"[llama.cpp] {json.dumps(fora, ensure_ascii=False)}", flush=True)
+    if not fora["ok"]:
+        raise SystemExit(f"llama.cpp compilado não é {LLAMA_CPP_COMMIT}: {fora} — abortado")
+    return fora
+
+
+def conferir_llama_cpp_depois(preparo: dict) -> dict:
+    """Depois do `save_pretrained_gguf`: o mesmo checkout, o mesmo binário e nenhum
+    llama.cpp baixado pelo Unsloth no lugar padrão."""
+    fora = _confere_commit(LLAMA_CPP_DIR)
+    padrao = Path.home() / ".unsloth" / "llama.cpp"
+    fora["llama_cpp_padrao_do_unsloth_existe"] = padrao.exists()
+    fora["mesmo_binario_do_preparo"] = fora["llama_quantize_sha256"] == preparo["llama_quantize_sha256"]
+    fora["arvore_alterada"] = _rodar(["git", "-C", str(LLAMA_CPP_DIR), "status", "--porcelain",
+                                      "--untracked-files=no"]
+                                     ).stdout.splitlines()[:50]
+    fora["ok"] = bool(fora["ok"] and fora["mesmo_binario_do_preparo"]
+                      and not fora["llama_cpp_padrao_do_unsloth_existe"])
+    return fora
+# <<< llama.cpp fixo
+
+
+def llama_cpp() -> dict:
+    d = LLAMA_CPP_DIR
+    if not d.exists():
+        return {"existe": False}
+    fora = {"existe": True,
+            "commit": _rodar(["git", "-C", str(d), "rev-parse", "HEAD"]).stdout.strip(),
+            "describe": _rodar(["git", "-C", str(d), "describe", "--tags", "--always"]).stdout.strip()}
+    conv = d / "convert_hf_to_gguf.py"
+    fora["convert_hf_to_gguf_sha256"] = _sha256(conv) if conv.exists() else None
+    q = [p for p in d.rglob("llama-quantize") if p.is_file() and os.access(p, os.X_OK)]
+    if q:
+        r = _rodar([str(q[0]), "--version"], timeout=60)
+        fora["llama_quantize"] = {"caminho": str(q[0].relative_to(d)), "sha256": _sha256(q[0]),
+                                  "versao": (r.stdout + r.stderr).strip()[-500:]}
+    return fora
+
+
+def tensores_gguf(gguf: Path) -> dict:
+    sys.path.insert(0, str(LLAMA_CPP_DIR / "gguf-py"))
+    from gguf import GGUFReader
+    rd = GGUFReader(str(gguf))
+    tens = [{"nome": t.name, "tipo": t.tensor_type.name, "forma": [int(x) for x in t.shape],
+             "sha256": hashlib.sha256(t.data.tobytes()).hexdigest()} for t in rd.tensors]
+    return {"n_tensores": len(tens), "tensores": tens}
+
+
+def comparar_com_base(meus: dict, base: dict) -> dict:
+    a = {t["nome"]: t for t in meus["tensores"]}
+    b = {t["nome"]: t for t in base["tensores"]}
+    proj = lambda n: any(p in n for p in PROJECOES_GGUF)  # noqa: E731
+    fora_proj = [n for n in sorted(set(a) & set(b)) if not proj(n)]
+    na_proj = [n for n in sorted(set(a) & set(b)) if proj(n)]
+    dif_fora = [n for n in fora_proj if (a[n]["tipo"], a[n]["sha256"]) != (b[n]["tipo"], b[n]["sha256"])]
+    mudaram = [n for n in na_proj if a[n]["sha256"] != b[n]["sha256"]]
+    return {"mesmos_nomes": set(a) == set(b), "fora_das_projecoes": len(fora_proj),
+            "fora_das_projecoes_diferentes": dif_fora[:50], "projecoes": len(na_proj),
+            "projecoes_que_mudaram": len(mudaram),
+            "so_projecoes_mudaram": set(a) == set(b) and not dif_fora}
+
+
+def linhas_diferentes(a, b, torch, bloco: int = 8192) -> dict:
+    """As linhas em que `a` difere de `b` (mesma forma), com o max_abs de cada uma."""
+    linhas, maximo = [], 0.0
+    for i in range(0, a.shape[0], bloco):
+        d = (a[i:i + bloco].float() - b[i:i + bloco].float()).abs().amax(dim=1)
+        for j in torch.nonzero(d).flatten().tolist():
+            linhas.append({"id": i + j, "max_abs": float(d[j])})
+        maximo = max(maximo, float(d.max()))
+    return {"n_linhas": len(linhas), "linhas": linhas[:200], "max_abs": maximo}
+
+
+def embed_contra_original(dst: Path, torch) -> dict:
+    """SÓ REGISTRO (DESVIO_P02): as linhas do `embed_tokens` fundido que diferem do
+    shard 16-bit original que o Unsloth baixou para fundir. Na base: só a 151654."""
+    from huggingface_hub import HfApi, hf_hub_download
+    from safetensors import safe_open
+    shard = json.loads((dst / "model.safetensors.index.json").read_text(encoding="utf-8"))["weight_map"][EMBED]
+    meta = (dst / ".cache" / "huggingface" / "download" / f"{shard}.metadata").read_text(encoding="utf-8")
+    rev = meta.split("\n")[0].strip()
+    repo = None
+    for r in REPOS_16BIT:
+        try:
+            if HfApi().model_info(r, revision=rev).sha == rev:
+                repo = r
+                break
+        except Exception:  # noqa: BLE001 — a revisão não é deste repositório
+            continue
+    if repo is None:
+        return {"erro": f"revisão {rev} não achada em {REPOS_16BIT}", "shard": shard}
+    orig = Path(hf_hub_download(repo, shard, revision=rev, cache_dir=str(TMP / "orig16")))
+    try:
+        with safe_open(str(dst / shard), framework="pt") as ff, safe_open(str(orig), framework="pt") as fo:
+            a, b = ff.get_tensor(EMBED), fo.get_tensor(EMBED)
+    finally:
+        orig.unlink(missing_ok=True)
+    fora = {"repo_16bit": repo, "revisao": rev, "shard": shard,
+            "dtype": [str(a.dtype), str(b.dtype)], "forma": [list(a.shape), list(b.shape)]}
+    if a.shape != b.shape:
+        return {**fora, "erro": "formas diferentes"}
+    return {**fora, **linhas_diferentes(a, b, torch)}
+
+
+# ---------------------------------------------------------------------------
+# escolha do checkpoint (função pura)
+# ---------------------------------------------------------------------------
+
+def curva_de_validacao(log_history: list[dict]) -> list[dict]:
+    return [{"epoca": round(h["epoch"]), "passo": h["step"], "eval_loss": h["eval_loss"]}
+            for h in log_history if "eval_loss" in h]
+
+
+def escolher(curva: list[dict]) -> dict:
+    """Menor perda na validação (arredondada na 4ª casa); empate → menos épocas."""
+    return min(curva, key=lambda c: (round(c["eval_loss"], CASAS_EMPATE), c["epoca"]))
+
+
+def _ultimo_checkpoint() -> str | None:
+    """O mais avançado em /kaggle/working ou numa saída anterior anexada como entrada."""
+    achados = [Path(p) for p in glob.glob(str(CHECKPOINTS / "checkpoint-*"))]
+    achados += [Path(p) for p in glob.glob("/kaggle/input/**/checkpoints/checkpoint-*", recursive=True)]
+    achados = [p for p in achados if (p / "trainer_state.json").exists()]
+    if not achados:
+        return None
+    melhor = max(achados, key=lambda p: int(p.name.split("-")[1]))
+    destino = CHECKPOINTS / melhor.name
+    if melhor != destino:
+        shutil.copytree(melhor, destino, dirs_exist_ok=True)
+    return str(destino)
+
+
+# ---------------------------------------------------------------------------
+# treino + exportação (subprocesso)
+# ---------------------------------------------------------------------------
+
+def treinar() -> dict:
+    SAIDA.mkdir(parents=True, exist_ok=True)
+    log = SAIDA / "log.json"
+    linhas, meta, conf = conferir_dataset()
+    reg = {"modelo": NOME, "repo": REPO, "revisao_esperada": REVISAO, "hiperparametros": HIPER,
+           "dataset": conf, "llama_cpp_esperado": LLAMA_CPP_COMMIT, "base": meta.get("base"),
+           "rascunho": RASCUNHO}
+    try:
+        reg["llama_cpp_preparo"] = preparar_llama_cpp()      # antes de treinar: falha cedo
+        _json(log, reg)
+        import torch
+        from datasets import Dataset
+        from huggingface_hub import HfApi
+        import unsloth  # noqa: F401 — tem de vir antes de transformers/trl
+        from unsloth import FastLanguageModel
+        from unsloth.chat_templates import get_chat_template, train_on_responses_only
+        from trl import SFTConfig, SFTTrainer
+
+        reg.update({"gpu": torch.cuda.get_device_name(0) if torch.cuda.is_available() else None,
+                    "versoes": _versoes()})
+        info = HfApi().model_info(REPO)
+        reg["repo_confirmado"] = {"id": info.id, "sha": info.sha}
+        if info.sha != REVISAO:
+            raise SystemExit(f"{REPO} está em {info.sha}, não em {REVISAO} — abortado")
+        t0 = time.time()
+        model, tok = FastLanguageModel.from_pretrained(model_name=REPO, max_seq_length=SEQ,
+                                                       load_in_4bit=True, dtype=torch.float16)
+        reg["carga_s"] = round(time.time() - t0, 1)
+        model = FastLanguageModel.get_peft_model(
+            model, r=HIPER["r"], lora_alpha=HIPER["lora_alpha"], lora_dropout=HIPER["lora_dropout"],
+            bias="none", target_modules=PROJECOES,
+            use_gradient_checkpointing=HIPER["use_gradient_checkpointing"], random_state=HIPER["seed"])
+        reg["modulos_lora"] = sorted({n.split(".")[-1] for n, m in model.named_modules()
+                                      if hasattr(m, "lora_A")})
+        if [p for p in PROJECOES if p not in reg["modulos_lora"]]:
+            raise SystemExit(f"projeções sem LoRA: {reg['modulos_lora']}")
+        tok = get_chat_template(tok, chat_template="qwen3")
+        base_tok = getattr(tok, "tokenizer", tok)
+        textos, conferencia, longos = {}, {}, []
+        for l in linhas:
+            chave = f"{l['conjunto']}|{l['slug']}|{l['bucket']}"
+            t = base_tok.apply_chat_template(l["messages"], tokenize=False,
+                                             add_generation_prompt=False, enable_thinking=False)
+            textos[chave] = t.removeprefix("<bos>")
+            conferencia[chave] = t.removeprefix("<bos>") == l["chat_esperado"]["qwen"].removeprefix("<bos>")
+            n_tok = len(base_tok(textos[chave], add_special_tokens=False).input_ids)
+            if n_tok > SEQ:
+                longos.append((chave, n_tok))
+        reg["template_confere"] = {"todos": all(conferencia.values()),
+                                   "falsos": sorted(k for k, v in conferencia.items() if not v)}
+        reg["acima_de_max_seq"] = longos
+        _json(log, reg)
+        if not reg["template_confere"]["todos"]:
+            raise SystemExit(f"template_confere falso em {reg['template_confere']['falsos'][:5]} — abortado")
+        if longos:
+            raise SystemExit(f"exemplos acima de {SEQ} tokens: {longos[:5]} — abortado (sem truncar)")
+
+        ds_t = Dataset.from_list([{"text": textos[k]} for k in textos if k.startswith("treino|")])
+        ds_v = Dataset.from_list([{"text": textos[k]} for k in textos if k.startswith("validacao|")])
+        params = SFTConfig.__init__.__code__.co_varnames
+        kw = dict(dataset_text_field="text", per_device_train_batch_size=1,
+                  per_device_eval_batch_size=1,
+                  gradient_accumulation_steps=HIPER["gradient_accumulation_steps"],
+                  num_train_epochs=HIPER["num_train_epochs"], learning_rate=HIPER["learning_rate"],
+                  lr_scheduler_type=HIPER["lr_scheduler_type"], warmup_ratio=HIPER["warmup_ratio"],
+                  logging_steps=1, optim=HIPER["optim"], weight_decay=HIPER["weight_decay"],
+                  seed=HIPER["seed"], data_seed=HIPER["seed"], fp16=True, bf16=False,
+                  output_dir=str(CHECKPOINTS), report_to="none", save_strategy="epoch",
+                  save_total_limit=None, save_only_model=False, packing=False, dataset_num_proc=1)
+        kw["eval_strategy" if "eval_strategy" in params else "evaluation_strategy"] = "epoch"
+        kw["max_length" if "max_length" in params else "max_seq_length"] = SEQ
+        tr = SFTTrainer(model=model, tokenizer=base_tok, train_dataset=ds_t, eval_dataset=ds_v,
+                        args=SFTConfig(**kw))
+        tr = train_on_responses_only(tr, instruction_part=PARTES[0], response_part=PARTES[1])
+        mascara = {}
+        for nome, ds in (("treino", tr.train_dataset), ("validacao", tr.eval_dataset)):
+            x = ds[0]
+            if "labels" not in x:
+                raise SystemExit(f"{nome}: sem coluna labels depois de train_on_responses_only")
+            rot = [i for i, y in zip(x["input_ids"], x["labels"]) if y != -100]
+            txt = base_tok.decode(rot)
+            mascara[nome] = {"tokens": len(x["input_ids"]), "treinados": len(rot),
+                             "comeca_em_chave": txt.lstrip().startswith("{"),
+                             "tem_think": "<think>" in txt}
+            if not rot or len(rot) == len(x["input_ids"]) or not mascara[nome]["comeca_em_chave"] \
+                    or mascara[nome]["tem_think"]:
+                raise SystemExit(f"máscara de {nome} fora do esperado: {mascara[nome]}")
+        reg["mascara"] = mascara
+        retomar = _ultimo_checkpoint()
+        reg["retomado_de"] = retomar
+        _json(log, reg)
+        t0 = time.time()
+        res = tr.train(resume_from_checkpoint=retomar)
+        reg["treino_s"] = round(time.time() - t0, 1)
+        reg["train_metrics"] = res.metrics
+        curva = {"treino": [{"passo": h["step"], "epoca": h["epoch"], "loss": h["loss"],
+                             "lr": h.get("learning_rate")} for h in tr.state.log_history if "loss" in h],
+                 "validacao": curva_de_validacao(tr.state.log_history)}
+        _json(SAIDA / "curva.json", curva)
+        if len(curva["validacao"]) != HIPER["num_train_epochs"]:
+            raise SystemExit(f"perda na validação em {len(curva['validacao'])} épocas, esperadas "
+                             f"{HIPER['num_train_epochs']}")
+        escolhida = escolher(curva["validacao"])
+        reg["curva_validacao"] = curva["validacao"]
+        reg["escolhida"] = escolhida
+        _json(log, reg)
+
+        # ---- carrega o checkpoint escolhido e confere a perda ----
+        from peft import set_peft_model_state_dict
+        from safetensors.torch import load_file
+        ck = CHECKPOINTS / f"checkpoint-{escolhida['passo']}"
+        sd = load_file(str(ck / "adapter_model.safetensors"))
+        set_peft_model_state_dict(model, sd)
+        reav = tr.evaluate()["eval_loss"]
+        reg["reavaliacao"] = {"checkpoint": ck.name, "eval_loss": reav,
+                              "confere": abs(reav - escolhida["eval_loss"]) <= TOL_REAVALIACAO}
+        _json(log, reg)
+        if not reg["reavaliacao"]["confere"]:
+            raise SystemExit(f"o checkpoint carregado dá {reav}, a curva diz {escolhida['eval_loss']}")
+        ad = SAIDA / "adaptador_escolhido"
+        model.save_pretrained(str(ad))
+        base_tok.save_pretrained(str(ad))
+        reg["adaptador"] = [{"nome": p.name, "bytes": p.stat().st_size, "sha256": _sha256(p)}
+                            for p in sorted(ad.iterdir()) if p.is_file()]
+        _json(log, reg)
+
+        # ---- exportação: o mesmo caminho e o mesmo llama.cpp da base ----
+        dst = TMP / NOME / "gguf"
+        shutil.rmtree(dst, ignore_errors=True)
+        t0 = time.time()
+        model.save_pretrained_gguf(str(dst), tok, quantization_method="q4_k_m")
+        reg["gguf_tempo_s"] = round(time.time() - t0, 1)
+        reg["llama_cpp"] = llama_cpp()
+        reg["llama_cpp_depois"] = conferir_llama_cpp_depois(reg["llama_cpp_preparo"])
+        reg["llama_cpp_igual_ao_da_base"] = bool(reg["llama_cpp_depois"]["ok"]
+                                                 and reg["llama_cpp"].get("commit") == meta["llama_cpp_commit"])
+        _json(log, reg)
+        gerados = sorted(p for p in (TMP / NOME).rglob("*") if p.is_file()
+                         and ((p.suffix == ".gguf" and "Q4_K_M" in p.name.upper()) or p.name == "Modelfile"))
+        ggufs = [p for p in gerados if p.suffix == ".gguf"]
+        if len(ggufs) != 1:
+            raise SystemExit(f"esperava 1 GGUF Q4_K_M, achei {[g.name for g in ggufs]}")
+        tens = tensores_gguf(ggufs[0])
+        _json(SAIDA / "tensores.json", tens)
+        tb = Path(_arquivo_dataset()).with_name("tensores_base.json")
+        if tb.exists():
+            reg["comparacao_com_base"] = comparar_com_base(tens, json.loads(tb.read_text(encoding="utf-8")))
+        try:                                     # só registro: nunca aborta o treino
+            import torch
+            reg["embed_contra_original"] = embed_contra_original(dst, torch)
+        except Exception as e:  # noqa: BLE001
+            reg["embed_contra_original"] = {"erro": f"{type(e).__name__}: {e}"}
+        _json(log, reg)
+        if not reg["llama_cpp_igual_ao_da_base"]:
+            reg["gguf_ok"] = False
+            reg["gguf_motivo"] = (f"a exportação não usou o llama.cpp {LLAMA_CPP_COMMIT} (o da base): "
+                                  f"{reg['llama_cpp_depois']} — GGUF NÃO copiado (o adaptador ficou)")
+            return reg
+        arquivos = []
+        for p in gerados:
+            alvo = SAIDA / p.name
+            shutil.copy2(p, alvo)
+            arquivos.append({"nome": p.name, "bytes": alvo.stat().st_size, "sha256": _sha256(alvo)})
+        reg["gguf_arquivos"] = arquivos
+        mf = SAIDA / "Modelfile"
+        reg["modelfile"] = mf.read_text(encoding="utf-8") if mf.exists() else None
+        reg["gguf_ok"] = True
+        shutil.rmtree(dst, ignore_errors=True)
+        reg["fim"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+        return reg
+    except BaseException:
+        reg["erro"] = traceback.format_exc()[-6000:]
+        raise
+    finally:
+        _json(log, reg)
+
+
+def instalar() -> dict:
+    t0 = time.time()
+    r = _rodar([sys.executable, "-m", "pip", "install", "-q", "--upgrade", *PACOTES_FIXOS])
+    return {"rc": r.returncode, "s": round(time.time() - t0, 1), "pacotes": PACOTES_FIXOS,
+            "stderr_fim": (r.stderr or "")[-2000:]}
+
+
+def orquestrar() -> None:
+    RAIZ_SAIDA.mkdir(parents=True, exist_ok=True)
+    _, _, conf = conferir_dataset()                 # antes de instalar ou treinar
+    resumo = {"inicio": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "dataset": conf,
+              "instalacao": instalar()}
+    _json(RAIZ_SAIDA / "resumo.json", resumo)
+    t0 = time.time()
+    try:
+        r = _rodar([sys.executable, SCRIPT, "--treinar"], timeout=11 * 3600)
+        resumo.update({"rc": r.returncode, "saida_fim": (r.stdout or "")[-4000:] + "\n"
+                       + (r.stderr or "")[-6000:]})
+    except subprocess.TimeoutExpired:
+        resumo["rc"] = "timeout"
+    resumo["s"] = round(time.time() - t0, 1)
+    resumo["fim"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    _json(RAIZ_SAIDA / "resumo.json", resumo)
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--treinar", action="store_true", help="(subprocesso) treina e exporta")
+    a, _ = ap.parse_known_args()
+    if a.treinar:
+        treinar()
+    else:
+        orquestrar()
+
+
+if __name__ == "__main__":
+    main()

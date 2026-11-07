@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "aladdin-2019",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5453,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "b48eb34a8aebfc54073acf64c3a582ac17922a8d90c96e24e230002357df4ab4",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.58,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.181640625,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T06:38:36+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Falta de magia e energia em relação ao original",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews deste grupo reclamam que o filme é insipido e sem a mesma mágica da animação, parecendo mais um comercial ou uma novela bíblica do que um remake.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews deste grupo reclamam que o filme é insipido e sem a mesma mágica da animação, parecendo mais um comercial ou uma novela bíblica do que um remake.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações fracassadas e falta de química",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação é criticada como irregular, com Will Smith sendo visto como uma boa escolha, mas sem atingir a grandiosidade de Robin Williams, e outras atuações também recebendo elogios limitados.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação é frequentemente criticada como irregular, com Will Smith sendo visto como uma boa escolha, mas sem atingir a grandiosidade de Robin Williams, e outras atuações também recebendo elogios limitados.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e direção questionáveis",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é apontado como fraco, com excesso de longos discursos e cenas que parecem arrastadas, e a direção de Guy Ritchie é criticada por falta de criatividade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Problemas de ritmo e duração",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores reclamam que o filme é lento, se estende desnecessariamente e que a narrativa se arrasta, tornando a experiência arrastada e entediante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores reclamam que o filme é lento, se estende desnecessariamente e que a narrativa se arrasta, tornando a experiência arrastada e entediante.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica à falta de respeito cultural e representação",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que o filme não representa a cultura árabe de forma adequada, misturando elementos indígenos e caindo em estereótipos, o que gera desconforto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews apontam que o filme não representa a cultura árabe de forma adequada, misturando elementos indígenos e caindo em estereótipos, o que gera desconforto.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de originalidade e superprodução",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o filme parece uma adaptação de musical e que, embora certos elementos sejam bons, a produção é vista como desnecessária e superproduzida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo destaca que o filme parece uma adaptação de musical e que, embora alguns elementos sejam bons, a produção é vista como desnecessária e superproduzida.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas criticam a falta de magia e energia em relação ao original, atuações fracassadas, roteiro e direção questionáveis, ritmo lento e problemas de representação cultural. Este grupo também considera o filme desnecessário e insipido, mesmo quando reconhecem alguns aspectos positivos.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 163.9,
+ "memoria": {
+  "ram_usada_gb": 10.8,
+  "ram_livre_min_gb": 4.39,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Falta de magia e energia em relação ao original\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews deste grupo reclamam que o filme é insipido e sem a mesma mágica da animação, parecendo mais um comercial ou uma novela bíblica do que um remake.\"\n    },\n    {\n      \"tema\": \"Atuações fracassadas e falta de química\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação é frequentemente criticada como irregular, com Will Smith sendo visto como uma boa escolha, mas sem atingir a grandiosidade de Robin Williams, e outras atuações também recebendo elogios limitados.\"\n    },\n    {\n      \"tema\": \"Roteiro e direção questionáveis\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é apontado como fraco, com excesso de longos discursos e cenas que parecem arrastadas, e a direção de Guy Ritchie é criticada por falta de criatividade.\"\n    },\n    {\n      \"tema\": \"Problemas de ritmo e duração\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores reclamam que o filme é lento, se estende desnecessariamente e que a narrativa se arrasta, tornando a experiência arrastada e entediante.\"\n    },\n    {\n      \"tema\": \"Crítica à falta de respeito cultural e representação\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o filme não representa a cultura árabe de forma adequada, misturando elementos indígenos e caindo em estereótipos, o que gera desconforto.\"\n    },\n    {\n      \"tema\": \"Falta de originalidade e superprodução\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o filme parece uma adaptação de musical e que, embora alguns elementos sejam bons, a produção é vista como desnecessária e superproduzida.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas criticam a falta de magia e energia em relação ao original, atuações fracassadas, roteiro e direção questionáveis, ritmo lento e problemas de representação cultural. Este grupo também considera o filme desnecessário e insipido, mesmo quando reconhecem alguns aspectos positivos.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 163.91,
+   "leitura_prompt_s": 6.984,
+   "geracao_s": 154.645,
+   "carga_s": 0.016,
+   "prompt_eval_count": 5453,
+   "eval_count": 712
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

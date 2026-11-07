@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "project-x-2012",
+ "bucket": "medianas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 3967,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "d781993fe3c32a9167b73d005c64764a22c1b246b87f498514bb4978ae55dd55",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 6.36,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.4169921875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T02:50:52+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Estilo de documentário falso e câmera de mão",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Reviews medianas destacam que a escolha de usar um estilo de documentário falso e câmera de mão cria uma sensação imersiva, mas que isso pode ser um pouco irregular ou que a técnica não é tão bem executada quanto poderia ser.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas destacam que a escolha de usar um estilo de documentário falso e câmera de mão cria uma sensação imersiva, mas que isso pode ser um pouco irregular ou que a técnica não é tão bem executada quanto poderia ser.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e humor absurdo",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Este grupo considera o filme divertido e engraçado, com situações ridículas e um humor exagerado, que, apesar de não ser para todos, é apreciado por espectadores como parte da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo considera o filme divertido e engraçado, com situações ridículas e um humor exagerado, que, apesar de não ser para todos, é apreciado por muitos como parte da experiência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparações com Superbad e outras comédias",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Reviews medianas mencionam que o filme lembra muito Superbad, e que essa comparação pode ser positiva ou negativa, dependendo do ponto de vista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que o filme lembra muito Superbad, e que essa comparação pode ser positiva ou negativa, dependendo do ponto de vista.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo acelerado e falta de história",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Este grupo aponta que o filme é divertido, mas que não tem uma trama muito desenvolvida, e que a falta de profundidade é um ponto fraco.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Festa como crítica à juventude e ao consumo excessivo",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Reviews medianas veem na festa uma crítica aos excessos da juventude e à busca por aceitação, com uma visão que pode ser vista como exagerada ou problemática.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas veem na festa uma crítica aos excessos da juventude e à busca por aceitação, com uma visão que pode ser vista como exagerada ou problemática.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de profundidade e roteiro simples",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Reviews medianas comentam que o filme é simples e não leva a lugar algum, e que o roteiro não tem muita profundidade, mas que isso não impede que seja divertido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas comentam que o filme é simples e não leva a lugar algum, e que o roteiro não tem muita profundidade, mas que isso não impede que seja divertido.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é divertido e engraçado, com um humor absurdo e um estilo de documentário falso que gera imersão, mas que não tem profundidade e que o ritmo acelerado e a falta de história são pontos fracos. Este grupo destaca que o filme é uma comédia de fãs e que, embora não seja um filme excelente, é entretentimento eficaz.",
+  "n_validas": 30,
+  "n_analisadas": 30,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 153.4,
+ "memoria": {
+  "ram_usada_gb": 12.99,
+  "ram_livre_min_gb": 2.2,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.66
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Estilo de documentário falso e câmera de mão\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Várias reviews medianas destacam que a escolha de usar um estilo de documentário falso e câmera de mão cria uma sensação imersiva, mas que isso pode ser um pouco irregular ou que a técnica não é tão bem executada quanto poderia ser.\"\n    },\n    {\n      \"tema\": \"Ritmo e humor absurdo\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Este grupo considera o filme divertido e engraçado, com situações ridículas e um humor exagerado, que, apesar de não ser para todos, é apreciado por muitos como parte da experiência.\"\n    },\n    {\n      \"tema\": \"Comparações com Superbad e outras comédias\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que o filme lembra muito Superbad, e que essa comparação pode ser positiva ou negativa, dependendo do ponto de vista.\"\n    },\n    {\n      \"tema\": \"Ritmo acelerado e falta de história\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Este grupo aponta que o filme é divertido, mas que não tem uma trama muito desenvolvida, e que a falta de profundidade é um ponto fraco.\"\n    },\n    {\n      \"tema\": \"Festa como crítica à juventude e ao consumo excessivo\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas veem na festa uma crítica aos excessos da juventude e à busca por aceitação, com uma visão que pode ser vista como exagerada ou problemática.\"\n    },\n    {\n      \"tema\": \"Falta de profundidade e roteiro simples\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Várias reviews medianas comentam que o filme é simples e não leva a lugar algum, e que o roteiro não tem muita profundidade, mas que isso não impede que seja divertido.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é divertido e engraçado, com um humor absurdo e um estilo de documentário falso que gera imersão, mas que não tem profundidade e que o ritmo acelerado e a falta de história são pontos fracos. Este grupo destaca que o filme é uma comédia de fãs e que, embora não seja um filme excelente, é entretentimento eficaz.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 153.36,
+   "leitura_prompt_s": 4.925,
+   "geracao_s": 146.224,
+   "carga_s": 0.005,
+   "prompt_eval_count": 3967,
+   "eval_count": 742
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

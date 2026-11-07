@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-simpsons-movie",
+ "bucket": "negativas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5445,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "5d8e26f880e24856ae8fdbae9e5f63a7b3096c7cef7c78fe99b665830eef8de8",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.88,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T17:36:40+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Humor e piadas fracassadas",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas reclamam que o filme é raso e que as piadas não caem bem, com espectadores considerando que a comédia é artificial e que o humor soa antiquado ou sem graça para o público adulto.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews negativas reclamam que o filme é raso e que as piadas não caem bem, com alguns considerando que a comédia é artificial e que o humor soa antiquado ou sem graça para o público adulto.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens deslocados e sem identidade",
+    "mencoes_aproximadas": 19,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As críticas negativas apontam que os personagens parecem desconectados da versão da série, com Homer sendo retratado de forma menos engraçado e mais irritante, e a caracterização geral soando forçada ou sem consistência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As críticas negativas frequentemente apontam que os personagens parecem desconectados da versão da série, com Homer sendo retratado de forma menos engraçado e mais irritante, e a caracterização geral soando forçada ou sem consistência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo lento e roteiro confuso",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas mencionam que o filme tem um ritmo arrastado e que o roteiro é desorganizado, com cenas que se estendem demais e uma narrativa que não se desenvolve de forma fluida, tornando a experiência tediosa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews negativas mencionam que o filme tem um ritmo arrastado e que o roteiro é desorganizado, com cenas que se estendem demais e uma narrativa que não se desenvolve de forma fluida, tornando a experiência tediosa.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de originalidade e crítica social",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews criticam o filme por não trazer nada de novo e por parecer uma versão estendida de um episódio da série, com uma mensagem de crítica social pouco convincente ou que não se sustenta em comparação com a série.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews criticam o filme por não trazer nada de novo e por parecer uma versão estendida de um episódio da série, com uma mensagem de crítica social pouco convincente ou que não se sustenta em comparação com a série.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Animação e qualidade de imagem",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que a animação é ruim, com uma qualidade de imagem inferior à da série, e que a integração de elementos 3D com o estilo 2D da série não funciona bem, resultando em uma aparência desagradável.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Certas reviews apontam que a animação é ruim, com uma qualidade de imagem inferior à da série, e que a integração de elementos 3D com o estilo 2D da série não funciona bem, resultando em uma aparência desagradável.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de emoção e desinteresse",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas mencionam que o filme não consegue gerar emoção e que a experiência é vazia, com uma falta de momentos que se conectem com o público adulto de forma significativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews negativas mencionam que o filme não consegue gerar emoção e que a experiência é vazia, com uma falta de momentos que se conectem com o público adulto de forma significativa.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam que o filme não mantém o humor e a qualidade da série, com piadas fracassadas, personagens sem identidade e um roteiro confuso. Além disso, muitos espectadores consideram a animação inferior e a experiência arrastada, resultando em uma obra que não se sustenta como um filme.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 173.5,
+ "memoria": {
+  "ram_usada_gb": 10.45,
+  "ram_livre_min_gb": 4.74,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Humor e piadas fracassadas\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews negativas reclamam que o filme é raso e que as piadas não caem bem, com alguns considerando que a comédia é artificial e que o humor soa antiquado ou sem graça para o público adulto.\"\n    },\n    {\n      \"tema\": \"Personagens deslocados e sem identidade\",\n      \"mencoes_aproximadas\": 19,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As críticas negativas frequentemente apontam que os personagens parecem desconectados da versão da série, com Homer sendo retratado de forma menos engraçado e mais irritante, e a caracterização geral soando forçada ou sem consistência.\"\n    },\n    {\n      \"tema\": \"Ritmo lento e roteiro confuso\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews negativas mencionam que o filme tem um ritmo arrastado e que o roteiro é desorganizado, com cenas que se estendem demais e uma narrativa que não se desenvolve de forma fluida, tornando a experiência tediosa.\"\n    },\n    {\n      \"tema\": \"Falta de originalidade e crítica social\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam o filme por não trazer nada de novo e por parecer uma versão estendida de um episódio da série, com uma mensagem de crítica social pouco convincente ou que não se sustenta em comparação com a série.\"\n    },\n    {\n      \"tema\": \"Animação e qualidade de imagem\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Certas reviews apontam que a animação é ruim, com uma qualidade de imagem inferior à da série, e que a integração de elementos 3D com o estilo 2D da série não funciona bem, resultando em uma aparência desagradável.\"\n    },\n    {\n      \"tema\": \"Falta de emoção e desinteresse\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews negativas mencionam que o filme não consegue gerar emoção e que a experiência é vazia, com uma falta de momentos que se conectem com o público adulto de forma significativa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam que o filme não mantém o humor e a qualidade da série, com piadas fracassadas, personagens sem identidade e um roteiro confuso. Além disso, muitos espectadores consideram a animação inferior e a experiência arrastada, resultando em uma obra que não se sustenta como um filme.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 173.53,
+   "leitura_prompt_s": 7.894,
+   "geracao_s": 163.384,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5445,
+   "eval_count": 769
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -8,12 +8,15 @@ publicado, que é só lido.
 """
 from __future__ import annotations
 
+import contextlib
 import hashlib
 import json
 import math
 import os
 import statistics
+import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[2]
@@ -22,6 +25,13 @@ sys.path[:0] = [str(RAIZ / "src"), str(RAIZ / "scripts")]
 RESULTADO_DIR = RAIZ / "resultado"
 BRUTO_DIR = RAIZ / "dados" / "bruto"
 FINETUNE_DIR = RAIZ / "finetune"
+
+# As medições das Fases 2 e 4 leem as entradas (publicados, bruto dos filmes,
+# consenso verificado) de um commit FIXO de main, nunca da árvore de trabalho:
+# outras sessões deixam ali mudanças não commitadas (ex.: o
+# `consenso_verificado.jsonl`). Ver `entradas_do_commit`.
+ENTRADAS_COMMIT = "742cfe3c7d443decd7cfd395e32dce080011bd45"
+ENTRADAS_EXTRA = ("resultado/votacao-3/consenso_verificado.jsonl", "resultado/votacao-3/amostra.json")
 BUCKETS = ("negativas", "medianas", "positivas")
 
 # Os 5 filmes da medição de referência (checagem-bullets, branch gate-local).
@@ -76,6 +86,21 @@ EXCLUIR_FILMES = {
 EXCLUIR_BUCKETS_SINTESE_MOTIVO = "fallback_conteudo: síntese deste bucket feita pelo Gemini"
 
 
+def rodar_texto(args: list[str], **kw) -> subprocess.CompletedProcess:
+    """`subprocess.run` que lê a saída como TEXTO sem depender do locale.
+
+    No Windows o padrão de `text=True` é o cp1252: o `ollama create` imprime
+    bytes que não existem nele (0x8f, do spinner em UTF-8), a thread de leitura
+    cai com UnicodeDecodeError e `stderr` volta None (2026-10-30). Aqui a
+    saída é sempre UTF-8 com `errors="replace"`, e `stdout`/`stderr` voltam
+    `""` em vez de None. Captura por padrão; `timeout` e `env` passam direto."""
+    kw.setdefault("capture_output", True)
+    r = subprocess.run(args, text=True, encoding="utf-8", errors="replace", **kw)
+    r.stdout = r.stdout or ""
+    r.stderr = r.stderr or ""
+    return r
+
+
 def ler_json(p: Path):
     return json.loads(Path(p).read_text(encoding="utf-8"))
 
@@ -90,6 +115,114 @@ def sha256_arquivo(p: Path) -> str:
 
 def sha256_texto(s: str) -> str:
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
+
+
+# ---------------------------------------------------------------------------
+# Fase 2a: a fusão da base e a igualdade base × treinado (finetune/DESVIO_P02.md)
+# ---------------------------------------------------------------------------
+
+# O único padrão de `prova_fusao` falsa aceito: o Unsloth zera a linha 151654
+# (<|vision_pad|>) do embed_tokens em `from_pretrained`; max_abs = o da linha original.
+FUSAO_EXCECAO_TENSOR = "model.embed_tokens.weight"
+FUSAO_EXCECAO_MAX_ABS = 0.029541015625
+# sha256 no `tensores.json` da base aceita (GGUF c9f3c701…): o treinado tem de repetir.
+SHA_VOCAB_BASE = {
+    "token_embd.weight": "70a40c465d023c8bfb8bddb9bd51377d314fd33583f76cc2da2e6f092f163728",
+    "output.weight": "05d7a76c29a32e067f41ad91df565341b21f4bedeeffbbf9e10957aaa9f78cc1",
+}
+
+
+def prova_fusao_aceita(prova: dict | None) -> bool:
+    """`ok`, OU exatamente a exceção do DESVIO_P02 (1 tensor, o embed_tokens, aquele
+    max_abs, chaves iguais em todos os shards). Qualquer outro padrão reprova."""
+    prova = prova or {}
+    if prova.get("ok") is True:
+        return True
+    dif = prova.get("diferentes") or []
+    shards = (prova.get("shards") or {}).values()
+    return (prova.get("n_diferentes") == 1 and len(dif) == 1
+            and dif[0].get("tensor") == FUSAO_EXCECAO_TENSOR
+            and dif[0].get("max_abs") == FUSAO_EXCECAO_MAX_ABS
+            and bool(shards) and all(s.get("chaves_iguais") is True for s in shards))
+
+
+def conferir_vocab_igual_base(tens_treinado: dict, tens_base: dict | None = None) -> dict:
+    """`token_embd.weight` e `output.weight` do treinado com os sha256 da base aceita
+    (e, se dado, iguais aos do `tensores.json` da base). Aborta se divergir."""
+    def shas(t: dict) -> dict:
+        return {x["nome"]: x["sha256"] for x in t.get("tensores") or [] if x.get("nome") in SHA_VOCAB_BASE}
+    tt = shas(tens_treinado)
+    fora = {n: tt.get(n) for n, s in SHA_VOCAB_BASE.items() if tt.get(n) != s}
+    if tens_base is not None:
+        tb = shas(tens_base)
+        fora.update({f"base:{n}": tb.get(n) for n, s in SHA_VOCAB_BASE.items() if tb.get(n) != s})
+    if fora:
+        raise SystemExit(f"embedding/lm_head do treinado ≠ os da base (DESVIO_P02): {fora} — "
+                         f"base e treinado não diferem só pelo adaptador")
+    return {n: tt[n] for n in SHA_VOCAB_BASE}
+
+
+def arquivos_de_entrada(slugs, commit: str = ENTRADAS_COMMIT) -> list[str]:
+    """Os publicados (todos: a referência do e5 usa o catálogo inteiro), o bruto
+    dos `slugs` e o consenso verificado, como estão no `commit`."""
+    def ls(*caminhos, r=False):
+        out = rodar_texto(["git", "-C", str(RAIZ), "ls-tree", *(["-r"] if r else []), "--name-only",
+                           commit, "--", *caminhos])
+        if out.returncode != 0:
+            raise SystemExit(f"git ls-tree {commit} falhou: {out.stderr.strip()}")
+        return out.stdout.split("\n")
+    fora = [p for p in ls("resultado/") if p.endswith(".json") and p.count("/") == 1]
+    for slug in sorted(set(slugs)):
+        b = [p for p in ls(f"dados/bruto/{slug}/", r=True) if p]
+        if not b:
+            raise SystemExit(f"dados/bruto/{slug} não está no commit {commit}")
+        fora += b
+    return sorted(set(fora) | set(ENTRADAS_EXTRA))
+
+
+def extrair_entradas(destino: Path, slugs, commit: str = ENTRADAS_COMMIT) -> dict:
+    """`git archive` dos arquivos de entrada do `commit` em `destino`, com o sha256
+    de cada um e um sha256 do conjunto (das linhas "caminho sha256" ordenadas)."""
+    import io
+    import tarfile
+    caminhos = arquivos_de_entrada(slugs, commit)
+    # sem conversão de fim de linha: os bytes são os do blob no Mac e no Windows
+    r = subprocess.run(["git", "-C", str(RAIZ), "-c", "core.autocrlf=false", "-c", "core.eol=lf",
+                        "archive", "--format=tar", commit, "--", *caminhos], capture_output=True)
+    if r.returncode != 0:
+        raise SystemExit(f"git archive {commit} falhou: {r.stderr.decode('utf-8', 'replace').strip()}")
+    with tarfile.open(fileobj=io.BytesIO(r.stdout)) as tar:
+        try:
+            tar.extractall(destino, filter="data")
+        except TypeError:                 # Python sem o `filter` (anterior a 3.10.12)
+            tar.extractall(destino)
+    arquivos = {c: sha256_arquivo(destino / c) for c in caminhos}
+    return {"commit": rodar_texto(["git", "-C", str(RAIZ), "rev-parse", commit]).stdout.strip(),
+            "n_arquivos": len(arquivos),
+            "sha256": sha256_texto("".join(f"{c} {s}\n" for c, s in sorted(arquivos.items()))),
+            "arquivos": arquivos}
+
+
+@contextlib.contextmanager
+def entradas_do_commit(slugs, commit: str = ENTRADAS_COMMIT):
+    """Extrai as entradas do `commit` numa pasta temporária e aponta
+    `RESULTADO_DIR` e `BRUTO_DIR` para ela enquanto durar o bloco. Devolve o
+    manifesto de `extrair_entradas` com `raiz` (a pasta)."""
+    global RESULTADO_DIR, BRUTO_DIR
+    antigos = RESULTADO_DIR, BRUTO_DIR
+    with tempfile.TemporaryDirectory(prefix="espectro24_entradas_") as tmp:
+        man = extrair_entradas(Path(tmp), slugs, commit)
+        RESULTADO_DIR, BRUTO_DIR = Path(tmp) / "resultado", Path(tmp) / "dados" / "bruto"
+        try:
+            yield {**man, "raiz": Path(tmp)}
+        finally:
+            RESULTADO_DIR, BRUTO_DIR = antigos
+
+
+def resumo_entradas(man: dict) -> dict:
+    """O que vai para os metadados: commit, quantos arquivos, o sha do conjunto e
+    o sha de cada arquivo."""
+    return {k: man[k] for k in ("commit", "n_arquivos", "sha256", "arquivos")}
 
 
 def publicados() -> dict[str, dict]:
@@ -224,6 +357,14 @@ CANDIDATOS = {
                     "revisao": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7",
                     "familia": "gemma"},
 }
+# Qwen3-8B (reserva): o repositório que o Kaggle carrega (`smoke_treino.py`), na
+# revisão confirmada no pré-voo. Fora de `CANDIDATOS` de propósito: os scripts
+# da fase 0 (inventário, reconstrução) iteram `CANDIDATOS` e não mudam.
+CANDIDATOS_EXTRA = {
+    "Qwen3-8B": {"repo": "unsloth/Qwen3-8B-unsloth-bnb-4bit",
+                 "revisao": "62efd7f9d748e394734a7adae2adf96e13a2abc8",
+                 "familia": "qwen"},
+}
 ARQUIVOS_TOKENIZER = ("tokenizer.json", "tokenizer_config.json", "chat_template.jinja",
                       "config.json")
 TOKENIZERS_DIR_PADRAO = Path(os.environ.get(
@@ -231,8 +372,18 @@ TOKENIZERS_DIR_PADRAO = Path(os.environ.get(
     Path.home() / ".cache" / "espectro24-finetune" / "tokenizers"))
 
 
+def _candidato(nome: str) -> dict:
+    return CANDIDATOS.get(nome) or CANDIDATOS_EXTRA[nome]
+
+
 def pasta_do_candidato(raiz: Path, nome: str) -> Path:
-    return Path(raiz) / CANDIDATOS[nome]["repo"].replace("/", "_")
+    return Path(raiz) / _candidato(nome)["repo"].replace("/", "_")
+
+
+def carregar_tokenizer(nome: str, raiz: Path = TOKENIZERS_DIR_PADRAO):
+    """Um só tokenizer (inclui os de `CANDIDATOS_EXTRA`)."""
+    from tokenizers import Tokenizer
+    return Tokenizer.from_file(str(pasta_do_candidato(raiz, nome) / "tokenizer.json"))
 
 
 def carregar_tokenizers(raiz: Path = TOKENIZERS_DIR_PADRAO) -> dict:
@@ -250,10 +401,15 @@ def chat(familia: str, system: str, user: str, saida: str | None) -> str:
     - Gemma 4: o padrão do template já é `enable_thinking=false` (sem o
       token `<|think|>` no system).
 
-    `saida=None` devolve só o prompt (até o início da resposta)."""
+    `saida=None` devolve só o prompt (até o início da resposta).
+
+    Qwen3: o template NÃO apara o conteúdo. Até 2026-10-30 o `user` era aparado
+    aqui, e o `\\n` final do prompt de síntese sumia; o Kaggle (v4 do smoke)
+    renderizou com ele, e os 6 exemplos ficaram com 1 caractere a mais (e até 1
+    token) do que o `chat_esperado` gravado no dataset `ae74737d…`."""
     if familia == "qwen":
-        p = (f"<|im_start|>system\n{system.strip()}<|im_end|>\n"
-             f"<|im_start|>user\n{user.strip()}<|im_end|>\n"
+        p = (f"<|im_start|>system\n{system}<|im_end|>\n"
+             f"<|im_start|>user\n{user}<|im_end|>\n"
              f"<|im_start|>assistant\n<think>\n\n</think>\n\n")
         fim = "<|im_end|>\n"
     elif familia == "gemma":
@@ -274,7 +430,7 @@ def tokens_do_par(toks: dict, system: str, user: str, saida: str) -> dict:
     e o total do exemplo de treino."""
     fora = {}
     for nome, tok in toks.items():
-        fam = CANDIDATOS[nome]["familia"]
+        fam = _candidato(nome)["familia"]
         p = contar(tok, chat(fam, system, user, None))
         tot = contar(tok, chat(fam, system, user, saida))
         fora[nome] = {"entrada": p, "saida": tot - p, "total": tot}

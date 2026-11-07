@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "scarface-1983",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4470,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "f978ea55c367e117339870962363befa56d7d5479afbde87c48e4cdd098e7d88",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:59:40+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Duração excessiva e tédio",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas reclamam que o filme é longo demais, com momentos que parecem se arrastar, tornando a experiência entediante e difícil de terminar.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews negativas reclamam que o filme é longo demais, com momentos que parecem se arrastar, tornando a experiência entediante e difícil de terminar.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Al Pacino e acento",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas se concentram na atuação de Al Pacino, especialmente no seu acento cubano, que é descrito como artificial, desagradável e prejudicando a imersão na história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas críticas se concentram na atuação de Al Pacino, especialmente no seu acento cubano, que é descrito como artificial, desagradável e prejudicando a imersão na história.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagem antiético e misoginia",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que o protagonista é um personagem repulsivo, descontrolado e misógino, e que a trama trata as mulheres como objetos em vez de personagens com profundidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo destaca que o protagonista é um personagem repulsivo, descontrolado e misógino, e que a trama frequentemente trata as mulheres como objetos em vez de personagens com profundidade.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro fraco e previsibilidade",
+    "mencoes_aproximadas": 11,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas apontam que o roteiro é fraco, com uma trama previsível e sem profundidade, que se encaixa no clichê do narcotraficante e da ascensão e queda de um protagonista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews negativas apontam que o roteiro é fraco, com uma trama previsível e sem profundidade, que se encaixa no clichê do narcotraficante e da ascensão e queda de um protagonista.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à fotografia e visual",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Apesar das críticas, reviews negativas reconhecem a fotografia e a direção de arte, que dão ao filme um visual impressionante, embora isso não compense a experiência arrastada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Apesar das críticas, algumas reviews negativas reconhecem a fotografia e a direção de arte, que dão ao filme um visual impressionante, embora isso não compense a experiência arrastada.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Mensagem de ódio e falta de enredo",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews negativas criticam a falta de uma mensagem significativa ou de um enredo que justifique o longo tempo, considerando o filme apenas uma sequência de violência e ganância sem propósito.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews negativas criticam a falta de uma mensagem significativa ou de um enredo que justifique o longo tempo, considerando o filme apenas uma sequência de violência e ganância sem propósito.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente a duração excessiva, a atuação de Al Pacino e o acento cubano, além da misoginia e da trama previsível e antiética. Mesmo entre as críticas, alguns reconhecem qualidades visuais, mas consideram que isso não salva o filme de ser entediante e mal executado.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 156.2,
+ "memoria": {
+  "ram_usada_gb": 10.44,
+  "ram_livre_min_gb": 4.76,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Duração excessiva e tédio\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews negativas reclamam que o filme é longo demais, com momentos que parecem se arrastar, tornando a experiência entediante e difícil de terminar.\"\n    },\n    {\n      \"tema\": \"Atuação de Al Pacino e acento\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas se concentram na atuação de Al Pacino, especialmente no seu acento cubano, que é descrito como artificial, desagradável e prejudicando a imersão na história.\"\n    },\n    {\n      \"tema\": \"Personagem antiético e misoginia\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que o protagonista é um personagem repulsivo, descontrolado e misógino, e que a trama frequentemente trata as mulheres como objetos em vez de personagens com profundidade.\"\n    },\n    {\n      \"tema\": \"Roteiro fraco e previsibilidade\",\n      \"mencoes_aproximadas\": 11,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews negativas apontam que o roteiro é fraco, com uma trama previsível e sem profundidade, que se encaixa no clichê do narcotraficante e da ascensão e queda de um protagonista.\"\n    },\n    {\n      \"tema\": \"Elogio à fotografia e visual\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Apesar das críticas, algumas reviews negativas reconhecem a fotografia e a direção de arte, que dão ao filme um visual impressionante, embora isso não compense a experiência arrastada.\"\n    },\n    {\n      \"tema\": \"Mensagem de ódio e falta de enredo\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews negativas criticam a falta de uma mensagem significativa ou de um enredo que justifique o longo tempo, considerando o filme apenas uma sequência de violência e ganância sem propósito.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente a duração excessiva, a atuação de Al Pacino e o acento cubano, além da misoginia e da trama previsível e antiética. Mesmo entre as críticas, alguns reconhecem qualidades visuais, mas consideram que isso não salva o filme de ser entediante e mal executado.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 156.24,
+   "leitura_prompt_s": 6.501,
+   "geracao_s": 147.521,
+   "carga_s": 0.005,
+   "prompt_eval_count": 4470,
+   "eval_count": 722
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

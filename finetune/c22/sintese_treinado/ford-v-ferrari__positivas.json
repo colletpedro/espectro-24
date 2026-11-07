@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "ford-v-ferrari",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5901,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "9ee55033e7d8b69b6fc66f9e6a25463c49f95ffe2633c4305b63ed217219a6e9",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.71,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:15:48+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuações de Christian Bale e Matt Damon",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews destacam que as atuações de Christian Bale e Matt Damon são excepcionais, com Bale carregando o papel de forma intensa e Damon complementando bem, criando uma química que faz o espectador se envolver com os personagens.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e tensão das corridas",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticas elogiam o ritmo sustentado e a tensão construída nas sequências de corrida, que são descritas como emocionantes, intensas e bem filmadas, contribuindo para a imersão do espectador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas críticas elogiam o ritmo sustentado e a tensão construída nas sequências de corrida, que são descritas como emocionantes, intensas e bem filmadas, contribuindo para a imersão do espectador.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e trilha sonora",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a trilha sonora são mencionadas como pontos fortes, com destaque para a captura dos detalhes dos carros e o som imersivo que intensifica a experiência de pilotagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a trilha sonora são frequentemente mencionadas como pontos fortes, com destaque para a captura dos detalhes dos carros e o som imersivo que intensifica a experiência de pilotagem.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Relação entre os personagens",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A amizade entre os protagonistas é citada como um elemento que humaniza a trama, gerando empatia e fazendo o público torcer por eles, mesmo em meio ao desafio técnico da corrida.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A amizade entre os protagonistas é frequentemente citada como um elemento que humaniza a trama, gerando empatia e fazendo o público torcer por eles, mesmo em meio ao desafio técnico da corrida.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à trilha sonora e som",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora e o design de som são destacados como elementos que elevam a experiência, com os sons dos motores e os efeitos de som criando uma atmosfera envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Impacto emocional e final",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme é emocionante e que o final, embora tenha gerado algum descontentamento, é poderoso e capaz de provocar sentimentos fortes, como lágrimas e reflexão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme é emocionante e que o final, embora tenha gerado algum descontentamento, é poderoso e capaz de provocar sentimentos fortes, como lágrimas e reflexão.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam principalmente as atuações de Christian Bale e Matt Damon, o ritmo e a tensão das corridas, a fotografia e a trilha sonora. Muitos elogiam a química entre os protagonistas e o impacto emocional do filme, apesar de alguns comentários levemente críticos ao final.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 177.2,
+ "memoria": {
+  "ram_usada_gb": 10.58,
+  "ram_livre_min_gb": 4.62,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuações de Christian Bale e Matt Damon\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews destacam que as atuações de Christian Bale e Matt Damon são excepcionais, com Bale carregando o papel de forma intensa e Damon complementando bem, criando uma química que faz o espectador se envolver com os personagens.\"\n    },\n    {\n      \"tema\": \"Ritmo e tensão das corridas\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas críticas elogiam o ritmo sustentado e a tensão construída nas sequências de corrida, que são descritas como emocionantes, intensas e bem filmadas, contribuindo para a imersão do espectador.\"\n    },\n    {\n      \"tema\": \"Fotografia e trilha sonora\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a trilha sonora são frequentemente mencionadas como pontos fortes, com destaque para a captura dos detalhes dos carros e o som imersivo que intensifica a experiência de pilotagem.\"\n    },\n    {\n      \"tema\": \"Relação entre os personagens\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A amizade entre os protagonistas é frequentemente citada como um elemento que humaniza a trama, gerando empatia e fazendo o público torcer por eles, mesmo em meio ao desafio técnico da corrida.\"\n    },\n    {\n      \"tema\": \"Elogio à trilha sonora e som\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora e o design de som são destacados como elementos que elevam a experiência, com os sons dos motores e os efeitos de som criando uma atmosfera envolvente.\"\n    },\n    {\n      \"tema\": \"Impacto emocional e final\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam que o filme é emocionante e que o final, embora tenha gerado algum descontentamento, é poderoso e capaz de provocar sentimentos fortes, como lágrimas e reflexão.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam principalmente as atuações de Christian Bale e Matt Damon, o ritmo e a tensão das corridas, a fotografia e a trilha sonora. Muitos elogiam a química entre os protagonistas e o impacto emocional do filme, apesar de alguns comentários levemente críticos ao final.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 177.05,
+   "leitura_prompt_s": 8.66,
+   "geracao_s": 166.133,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5901,
+   "eval_count": 744
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

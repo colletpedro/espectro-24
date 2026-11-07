@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "men-in-black",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6524,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "3378f7ab5438296fe3221b7d3705f3fa810c7ed47294205c83984fff6f60656b",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.88,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T17:59:13+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Charmo e nostalgia",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Fãs descrevem a obra como um clássico dos anos 90 que ainda ressoa com a mesma graça, lembrando momentos da infância e fazendo a experiência de assistir parecer mágica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos fãs descrevem a obra como um clássico dos anos 90 que ainda ressoa com a mesma graça, lembrando momentos da infância e fazendo a experiência de assistir parecer mágica.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Humor e entretenimento",
+    "mencoes_aproximadas": 22,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A crítica positiva destaca o humor leve e as piadas que ainda são eficazes, com brincadeiras e situações absurdas que mantêm o filme divertido sem jamais se tomar serio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Dinâmica entre Will Smith e Tommy Lee Jones",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A química entre os dois protagonistas é citada como um dos pontos altos, com a energia de Will Smith contrastando com a seriedade e o sarcasmo de Tommy Lee Jones.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A química entre os dois protagonistas é frequentemente citada como um dos pontos altos, com a energia de Will Smith contrastando com a seriedade e o sarcasmo de Tommy Lee Jones.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Efeitos práticos e design de criaturas",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews elogiam os efeitos práticos e o design de criaturas, mesmo que reconheçam que a tecnologia deixa um pouco a desejar em comparação com filmes modernos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews elogiam os efeitos práticos e o design de criaturas, mesmo que reconheçam que a tecnologia deixa um pouco a desejar em comparação com filmes modernos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e premissa",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A premissa de uma agência secreta que cuida dos alienígenas entre nós é destacada como original e envolvente, mesmo que espectadores a considerem simples.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A premissa de uma agência secreta que cuida dos alienígenas entre nós é frequentemente destacada como original e envolvente, mesmo que alguns a considerem simples.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com a trilogia e sequências posteriores",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme seria mais memorável sem os sequenciadores, ou que a premissa é tão boa que sequências posteriores parecem redundantes.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews mencionam que o filme seria mais memorável sem os sequenciadores, ou que a premissa é tão boa que sequências posteriores parecem redundantes.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam o charme e a nostalgia da obra, o humor leve e a química entre os protagonistas. Muitos elogiam os efeitos práticos e a premissa envolvente, embora alguns reconheçam que o filme soa mais simples do que alguns de seus sequenciadores.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 172.0,
+ "memoria": {
+  "ram_usada_gb": 11.25,
+  "ram_livre_min_gb": 3.94,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.52
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Charmo e nostalgia\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos fãs descrevem a obra como um clássico dos anos 90 que ainda ressoa com a mesma graça, lembrando momentos da infância e fazendo a experiência de assistir parecer mágica.\"\n    },\n    {\n      \"tema\": \"Humor e entretenimento\",\n      \"mencoes_aproximadas\": 22,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A crítica positiva destaca o humor leve e as piadas que ainda são eficazes, com brincadeiras e situações absurdas que mantêm o filme divertido sem jamais se tomar serio.\"\n    },\n    {\n      \"tema\": \"Dinâmica entre Will Smith e Tommy Lee Jones\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A química entre os dois protagonistas é frequentemente citada como um dos pontos altos, com a energia de Will Smith contrastando com a seriedade e o sarcasmo de Tommy Lee Jones.\"\n    },\n    {\n      \"tema\": \"Efeitos práticos e design de criaturas\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews elogiam os efeitos práticos e o design de criaturas, mesmo que reconheçam que a tecnologia deixa um pouco a desejar em comparação com filmes modernos.\"\n    },\n    {\n      \"tema\": \"Roteiro e premissa\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A premissa de uma agência secreta que cuida dos alienígenas entre nós é frequentemente destacada como original e envolvente, mesmo que alguns a considerem simples.\"\n    },\n    {\n      \"tema\": \"Comparação com a trilogia e sequências posteriores\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que o filme seria mais memorável sem os sequenciadores, ou que a premissa é tão boa que sequências posteriores parecem redundantes.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam o charme e a nostalgia da obra, o humor leve e a química entre os protagonistas. Muitos elogiam os efeitos práticos e a premissa envolvente, embora alguns reconheçam que o filme soa mais simples do que alguns de seus sequenciadores.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 171.83,
+   "leitura_prompt_s": 9.492,
+   "geracao_s": 159.958,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6524,
+   "eval_count": 704
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

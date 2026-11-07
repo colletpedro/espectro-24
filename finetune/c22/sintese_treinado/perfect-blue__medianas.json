@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "perfect-blue",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5546,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "3a29913fc1519af4b8e7c330c9061106294d3de4ade678010e11ff619f62a40c",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.94,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:43:04+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Distúrbio e desconforto",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas descrevem o filme como perturbador, assustador e desconfortável, com cenas que geram repulsa e desconforto. Espectadores relatam que o material é tão perturbador que quase desistem de assistir.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas descrevem o filme como perturbador, assustador e desconfortável, com cenas que geram repulsa e desconforto. Alguns espectadores relatam que o material é tão perturbador que quase desistem de assistir.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Mistério e confusão",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que a trama é confusa, difícil de acompanhar e que a estrutura narrativa não se mantém coerente ao longo da história, deixando o espectador perdido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas mencionam que a trama é confusa, difícil de acompanhar e que a estrutura narrativa não se mantém coerente ao longo da história, deixando o espectador perdido.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e construção",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas criticam a construção do roteiro, considerando que a segunda metade do filme perde a intensidade e que o desfecho é fraco ou desapontador.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas criticam a construção do roteiro, considerando que a segunda metade do filme perde a intensidade e que o desfecho é fraco ou desapontador.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e animação",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A animação e a fotografia são elogiadas como impressionantes e visuais, sendo um dos pontos positivos destacados por reviews.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A animação e a fotografia são frequentemente elogiadas como impressionantes e visuais, sendo um dos pontos positivos destacados por algumas reviews.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e personagens",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que as atuações são competentes e que os personagens são bem desenvolvidos, especialmente a protagonista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que as atuações são competentes e que os personagens são bem desenvolvidos, especialmente a protagonista.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tema da fama e controle da indústria",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas interpretam o filme como uma crítica à indústria da música e ao tratamento das celebridades, abordando o controle patriarcal sobre as mulheres.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Diversas reviews medianas interpretam o filme como uma crítica à indústria da música e ao tratamento das celebridades, abordando o controle patriarcal sobre as mulheres.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam que o filme é perturbador e confuso, gerando desconforto em muitos espectadores, mas também reconhecem sua qualidade técnica e a abordagem do tema da fama e controle da indústria. Este grupo destaca que, apesar de alguns pontos positivos, a experiência não se encaixa perfeitamente para todos.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 156.1,
+ "memoria": {
+  "ram_usada_gb": 9.72,
+  "ram_livre_min_gb": 5.48,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Distúrbio e desconforto\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas descrevem o filme como perturbador, assustador e desconfortável, com cenas que geram repulsa e desconforto. Alguns espectadores relatam que o material é tão perturbador que quase desistem de assistir.\"\n    },\n    {\n      \"tema\": \"Mistério e confusão\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas mencionam que a trama é confusa, difícil de acompanhar e que a estrutura narrativa não se mantém coerente ao longo da história, deixando o espectador perdido.\"\n    },\n    {\n      \"tema\": \"Roteiro e construção\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam a construção do roteiro, considerando que a segunda metade do filme perde a intensidade e que o desfecho é fraco ou desapontador.\"\n    },\n    {\n      \"tema\": \"Fotografia e animação\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A animação e a fotografia são frequentemente elogiadas como impressionantes e visuais, sendo um dos pontos positivos destacados por algumas reviews.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que as atuações são competentes e que os personagens são bem desenvolvidos, especialmente a protagonista.\"\n    },\n    {\n      \"tema\": \"Tema da fama e controle da indústria\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Diversas reviews medianas interpretam o filme como uma crítica à indústria da música e ao tratamento das celebridades, abordando o controle patriarcal sobre as mulheres.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam que o filme é perturbador e confuso, gerando desconforto em muitos espectadores, mas também reconhecem sua qualidade técnica e a abordagem do tema da fama e controle da indústria. Este grupo destaca que, apesar de alguns pontos positivos, a experiência não se encaixa perfeitamente para todos.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 155.98,
+   "leitura_prompt_s": 7.908,
+   "geracao_s": 145.856,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5546,
+   "eval_count": 691
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

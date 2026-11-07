@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "green-book",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4933,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "192f0544f1be564635cb966e8bfa3745627717281f5a58ffd5a8a4b39bbb076f",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:22:58+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Roteiro e mensagem",
+    "mencoes_aproximadas": 35,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas criticam o roteiro por ser previsível, com uma mensagem superficial sobre o racismo e a reconciliação racial, considerando a abordagem pouco profunda e o filme ser um retrato simplista das questões abordadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas criticam o roteiro por ser previsível, com uma mensagem superficial sobre o racismo e a reconciliação racial, considerando a abordagem pouco profunda e o filme ser um retrato simplista das questões abordadas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação dos protagonistas é destacada como um dos pontos fortes do filme, com destaque para a carisma de Mahershala Ali e a habilidade de Viggo Mortensen em transmitir humor e carisma.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação dos protagonistas é frequentemente destacada como um dos pontos fortes do filme, com destaque para a carisma de Mahershala Ali e a habilidade de Viggo Mortensen em transmitir humor e carisma.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que o filme tem um ritmo lento e que poderia ser mais curto, com momentos que se estendem demais e tornam a experiência cansativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que o filme tem um ritmo lento e que poderia ser mais curto, com momentos que se estendem demais e tornam a experiência cansativa.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e estética",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia é elogiada por retratar com elegância a era retrô e pela estética de prestígio, com quadros bem calculados e iluminação perfeita que contribuem para o visual do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e previsibilidade",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o roteiro é bastante previsível e que as reviravoltas não surpreendem, fazendo o filme parecer mais um clássico de comédia de viagem do que uma obra séria.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas apontam que o roteiro é bastante previsível e que as reviravoltas não surpreendem, fazendo o filme parecer mais um clássico de comédia de viagem do que uma obra séria.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Abordagem do racismo e crítica social",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas criticam a forma como o racismo é abordado, considerando que o filme não consegue transmitir a complexidade das questões raciais e que a mensagem é pouco convincente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas criticam a forma como o racismo é abordado, considerando que o filme não consegue transmitir a complexidade das questões raciais e que a mensagem é pouco convincente.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam que o filme é divertido e bem executado, mas que o roteiro é previsível e a mensagem é considerada superficial. A atuação dos protagonistas é amplamente elogiada como um dos principais pontos positivos.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 155.3,
+ "memoria": {
+  "ram_usada_gb": 11.77,
+  "ram_livre_min_gb": 3.42,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Roteiro e mensagem\",\n      \"mencoes_aproximadas\": 35,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam o roteiro por ser previsível, com uma mensagem superficial sobre o racismo e a reconciliação racial, considerando a abordagem pouco profunda e o filme ser um retrato simplista das questões abordadas.\"\n    },\n    {\n      \"tema\": \"Atuações\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação dos protagonistas é frequentemente destacada como um dos pontos fortes do filme, com destaque para a carisma de Mahershala Ali e a habilidade de Viggo Mortensen em transmitir humor e carisma.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que o filme tem um ritmo lento e que poderia ser mais curto, com momentos que se estendem demais e tornam a experiência cansativa.\"\n    },\n    {\n      \"tema\": \"Fotografia e estética\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia é elogiada por retratar com elegância a era retrô e pela estética de prestígio, com quadros bem calculados e iluminação perfeita que contribuem para o visual do filme.\"\n    },\n    {\n      \"tema\": \"Roteiro e previsibilidade\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas apontam que o roteiro é bastante previsível e que as reviravoltas não surpreendem, fazendo o filme parecer mais um clássico de comédia de viagem do que uma obra séria.\"\n    },\n    {\n      \"tema\": \"Abordagem do racismo e crítica social\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas criticam a forma como o racismo é abordado, considerando que o filme não consegue transmitir a complexidade das questões raciais e que a mensagem é pouco convincente.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam que o filme é divertido e bem executado, mas que o roteiro é previsível e a mensagem é considerada superficial. A atuação dos protagonistas é amplamente elogiada como um dos principais pontos positivos.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 155.27,
+   "leitura_prompt_s": 6.368,
+   "geracao_s": 146.685,
+   "carga_s": 0.005,
+   "prompt_eval_count": 4933,
+   "eval_count": 703
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

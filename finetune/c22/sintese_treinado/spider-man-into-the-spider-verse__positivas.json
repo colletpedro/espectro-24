@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "spider-man-into-the-spider-verse",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4501,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "528700defbddd85bd7863704c4b0b3c9ed4b019e52946fed2e716e3515dc7c60",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T04:07:29+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Animação e estilo visual",
+    "mencoes_aproximadas": 32,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas destacam a qualidade impressionante da animação e o estilo visual inovador, descrevendo a arte como um marco da história da animação e uma experiência única.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews positivas destacam a qualidade impressionante da animação e o estilo visual inovador, descrevendo a arte como um marco da história da animação e uma experiência única.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Trilha sonora e música",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora é elogiada, com críticas que a consideram essencial à experiência, capazes de criar emoção intensa e tornar cada cena memorável.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A trilha sonora é frequentemente elogiada, com críticas que a consideram essencial à experiência, capazes de criar emoção intensa e tornar cada cena memorável.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento de personagens",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é visto como bem construído, com personagens que se desenvolvem de forma convincente, especialmente a relação entre Miles e sua família, e uma narrativa que equilibra drama e ação sem ser confusa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Miles Morales como protagonista",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas celebram o protagonismo de Miles Morales, considerando sua representação como uma abordagem fresca e inspiradora para a franquia.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews positivas celebram o protagonismo de Miles Morales, considerando sua representação como uma abordagem fresca e inspiradora para a franquia.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com outras produções",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo compara o filme a outras produções, o elogiando como superior em animação e roteiro, e o considerando um dos melhores da década.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo compara o filme a outras produções, muitas vezes o elogiando como superior em animação e roteiro, e o considerando um dos melhores da década.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Experiência de reexibição e impacto duradouro",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme se torna um clássico com reexibições, e que continua a inspirar e a ser revisitado anos depois.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews mencionam que o filme se torna um clássico com reexibições, e que continua a inspirar e a ser revisitado anos depois.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo destacam a animação como um dos pontos mais elogiados, além da trilha sonora e do desenvolvimento de personagens. A maioria considera o filme um marco da animação e uma obra-prima da franquia, mesmo que alguns apontem pequenas imperfeições no ritmo ou na profundidade da trama.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 146.5,
+ "memoria": {
+  "ram_usada_gb": 11.58,
+  "ram_livre_min_gb": 3.61,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Animação e estilo visual\",\n      \"mencoes_aproximadas\": 32,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews positivas destacam a qualidade impressionante da animação e o estilo visual inovador, descrevendo a arte como um marco da história da animação e uma experiência única.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e música\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora é frequentemente elogiada, com críticas que a consideram essencial à experiência, capazes de criar emoção intensa e tornar cada cena memorável.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento de personagens\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é visto como bem construído, com personagens que se desenvolvem de forma convincente, especialmente a relação entre Miles e sua família, e uma narrativa que equilibra drama e ação sem ser confusa.\"\n    },\n    {\n      \"tema\": \"Miles Morales como protagonista\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews positivas celebram o protagonismo de Miles Morales, considerando sua representação como uma abordagem fresca e inspiradora para a franquia.\"\n    },\n    {\n      \"tema\": \"Comparação com outras produções\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo compara o filme a outras produções, muitas vezes o elogiando como superior em animação e roteiro, e o considerando um dos melhores da década.\"\n    },\n    {\n      \"tema\": \"Experiência de reexibição e impacto duradouro\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews mencionam que o filme se torna um clássico com reexibições, e que continua a inspirar e a ser revisitado anos depois.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo destacam a animação como um dos pontos mais elogiados, além da trilha sonora e do desenvolvimento de personagens. A maioria considera o filme um marco da animação e uma obra-prima da franquia, mesmo que alguns apontem pequenas imperfeições no ritmo ou na profundidade da trama.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 146.5,
+   "leitura_prompt_s": 5.536,
+   "geracao_s": 138.706,
+   "carga_s": 0.004,
+   "prompt_eval_count": 4501,
+   "eval_count": 681
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

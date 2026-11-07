@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-big-lebowski",
+ "bucket": "negativas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5021,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "af05be1786b75a48664283d50dfbbe9dd756673b9d71426917f87a19dc3b50f9",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T04:09:56+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo lento e tédio",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews reclamam que o filme é cansativo e demorado, com longos períodos em que a ação se repete sem ganho de interesse. Espectadores descrevem a experiência como uma tentativa de fazer o espectador se divertir que acaba resultando em tédio.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews reclamam que o filme é cansativo e demorado, com longos períodos em que a ação se repete sem ganho de interesse. Alguns descrevem a experiência como uma tentativa de fazer o espectador se divertir que acaba resultando em tédio.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Humor absurdo e falta de risadas",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores dizem não ter se divertido com o humor do filme, que eles consideram absurdo e sem graça. Reviews mencionam que as piadas parecem forçadas ou que o filme não é engraçado, apesar de ter certas sequências que geram risadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores dizem não ter se divertido com o humor do filme, que eles consideram absurdo e sem graça. Algumas reviews mencionam que as piadas parecem forçadas ou que o filme não é engraçado, apesar de ter algumas sequências que geram risadas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro confuso e sem sentido",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que a trama é difícil de acompanhar, com mudanças constantes de direção e uma narrativa que parece arrastada. Espectadores apontam que a falta de uma estrutura clara prejudica a experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo destaca que a trama é difícil de acompanhar, com mudanças constantes de direção e uma narrativa que parece arrastada. Alguns apontam que a falta de uma estrutura clara prejudica a experiência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens sem carisma",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews criticam a ausência de carisma dos personagens, considerando-os antipáticos ou pouco interessantes. Espectadores afirmam que não conseguiram se importar com os personagens, o que prejudicou a conexão emocional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews criticam a ausência de carisma dos personagens, considerando-os antipáticos ou pouco interessantes. Alguns espectadores afirmam que não conseguiram se importar com os personagens, o que prejudicou a conexão emocional.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de ritmo e cenas que não se encaixam",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que o filme não tem um ritmo coerente e que certas cenas parecem forçadas ou fora de lugar, contribuindo para a sensação de que a história não tem um propósito claro.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews apontam que o filme não tem um ritmo coerente e que certas cenas parecem forçadas ou fora de lugar, contribuindo para a sensação de que a história não tem um propósito claro.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações boas mas sem compensar",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo reconhece que as atuações são competentes, mas afirma que elas não foram suficientes para salvar o filme. Reviews mencionam que a qualidade do elenco não foi capaz de transformar o filme em algo divertido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo reconhece que as atuações são competentes, mas afirma que elas não foram suficientes para salvar o filme. Algumas reviews mencionam que a qualidade do elenco não foi capaz de transformar o filme em algo divertido.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento, o humor absurdo e a falta de graça, além de um roteiro confuso e personagens sem carisma. Este grupo não conseguiu se engajar com o filme, apesar de reconhecer alguns aspectos técnicos como a fotografia ou a direção.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 177.7,
+ "memoria": {
+  "ram_usada_gb": 12.0,
+  "ram_livre_min_gb": 3.19,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo lento e tédio\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews reclamam que o filme é cansativo e demorado, com longos períodos em que a ação se repete sem ganho de interesse. Alguns descrevem a experiência como uma tentativa de fazer o espectador se divertir que acaba resultando em tédio.\"\n    },\n    {\n      \"tema\": \"Humor absurdo e falta de risadas\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores dizem não ter se divertido com o humor do filme, que eles consideram absurdo e sem graça. Algumas reviews mencionam que as piadas parecem forçadas ou que o filme não é engraçado, apesar de ter algumas sequências que geram risadas.\"\n    },\n    {\n      \"tema\": \"Roteiro confuso e sem sentido\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que a trama é difícil de acompanhar, com mudanças constantes de direção e uma narrativa que parece arrastada. Alguns apontam que a falta de uma estrutura clara prejudica a experiência.\"\n    },\n    {\n      \"tema\": \"Personagens sem carisma\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews criticam a ausência de carisma dos personagens, considerando-os antipáticos ou pouco interessantes. Alguns espectadores afirmam que não conseguiram se importar com os personagens, o que prejudicou a conexão emocional.\"\n    },\n    {\n      \"tema\": \"Falta de ritmo e cenas que não se encaixam\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o filme não tem um ritmo coerente e que certas cenas parecem forçadas ou fora de lugar, contribuindo para a sensação de que a história não tem um propósito claro.\"\n    },\n    {\n      \"tema\": \"Atuações boas mas sem compensar\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo reconhece que as atuações são competentes, mas afirma que elas não foram suficientes para salvar o filme. Algumas reviews mencionam que a qualidade do elenco não foi capaz de transformar o filme em algo divertido.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas destacam principalmente o ritmo lento, o humor absurdo e a falta de graça, além de um roteiro confuso e personagens sem carisma. Este grupo não conseguiu se engajar com o filme, apesar de reconhecer alguns aspectos técnicos como a fotografia ou a direção.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 177.7,
+   "leitura_prompt_s": 7.17,
+   "geracao_s": 168.29,
+   "carga_s": 0.004,
+   "prompt_eval_count": 5021,
+   "eval_count": 787
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

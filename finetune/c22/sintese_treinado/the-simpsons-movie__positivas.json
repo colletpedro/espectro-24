@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-simpsons-movie",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 5101,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "1b5147a7560a8867591773bab5ad2e34415066564d0e914b8310bd16c872983e",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T04:12:53+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Humor e piadas",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam que o filme mantém a comédia que caracteriza a série, com piadas que envelhecem bem e continuam divertindo. Espectadores elogiam a quantidade de momentos engraçados, gags que ainda funcionam e a capacidade de fazer rir em certos momentos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As reviews positivas destacam que o filme mantém a comédia que caracteriza a série, com piadas que envelhecem bem e continuam divertindo. Muitos elogiam a quantidade de momentos engraçados, gags que ainda funcionam e a capacidade de fazer rir em diversos momentos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fidelidade à série",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo considera que o filme preserva o espírito e o estilo da série, mantendo a irreverência e a crítica social que são marcas registradas. Os comentários elogiam a fidelidade ao formato de episódios longos, embora espectadores apontem que isso o torna mais parecido com uma longa sequência de episódios do que uma produção cinematográfica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo considera que o filme preserva o espírito e o estilo da série, mantendo a irreverência e a crítica social que são marcas registradas. A maioria dos comentários elogia a fidelidade ao formato de episódios longos, embora alguns apontem que isso o torna mais parecido com uma longa sequência de episódios do que uma produção cinematográfica.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme tem um ritmo ágil e dinâmico, mas espectadores apontam que a duração prolongada em relação a um episódio da série pode fazer a experiência se tornar mais cansativa. Apesar disso, a maioria ainda considera que o ritmo é eficaz e mantém o interesse.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme tem um ritmo ágil e dinâmico, mas alguns apontam que a duração prolongada em relação a um episódio da série pode fazer a experiência se tornar mais cansativa. Apesar disso, a maioria ainda considera que o ritmo é eficaz e mantém o interesse.",
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Animação e qualidade visual",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A animação é citada como um ponto positivo, com comentários elogiando a qualidade e o estilo característico dos desenhos da série. Espectadores também destacam a utilização de perspectivas e a movimentação da câmera, que dão um aspecto cinematográfico à produção.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A animação é frequentemente citada como um ponto positivo, com muitos comentários elogiando a qualidade e o estilo característico dos desenhos da série. Alguns também destacam a utilização de perspectivas e a movimentação da câmera, que dão um aspecto cinematográfico à produção.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e personagens",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações dos personagens são mencionadas como bem-sucedidas, com destaque para a voz de Homer e a química entre a família Simpson. Espectadores elogiam a performance de Ned Flanders e a desenvoltura dos personagens secundários, que, embora não sejam foco principal, contribuem para a trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As atuações dos personagens são mencionadas como bem-sucedidas, com destaque para a voz de Homer e a química entre a família Simpson. Muitos elogiam a performance de Ned Flanders e a desenvoltura dos personagens secundários, que, embora não sejam foco principal, contribuem para a trama.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à nostalgia",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas apontam que o filme é uma experiência nostálgica, remetendo a momentos da infância ou à série em sua fase mais aclamada. Este sentimento é associado à memória de episódios clássicos e à sensação de estar assistindo algo que nunca perde a graça.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews positivas apontam que o filme é uma experiência nostálgica, remetendo a momentos da infância ou à série em sua fase mais aclamada. Este sentimento é frequentemente associado à memória de episódios clássicos e à sensação de estar assistindo algo que nunca perde a graça.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam que o filme é um retorno bem-sucedido à forma da série, com humor que se mantém fresco e piadas que ainda causam risadas. Apesar de alguns apontarem que a duração pode ser um pouco longa para um episódio, a maioria ainda considera a experiência divertida e emocionante, com momentos icônicos que se tornam memoráveis.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 202.2,
+ "memoria": {
+  "ram_usada_gb": 12.4,
+  "ram_livre_min_gb": 2.79,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Humor e piadas\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam que o filme mantém a comédia que caracteriza a série, com piadas que envelhecem bem e continuam divertindo. Muitos elogiam a quantidade de momentos engraçados, gags que ainda funcionam e a capacidade de fazer rir em diversos momentos.\"\n    },\n    {\n      \"tema\": \"Fidelidade à série\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo considera que o filme preserva o espírito e o estilo da série, mantendo a irreverência e a crítica social que são marcas registradas. A maioria dos comentários elogia a fidelidade ao formato de episódios longos, embora alguns apontem que isso o torna mais parecido com uma longa sequência de episódios do que uma produção cinematográfica.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam que o filme tem um ritmo ágil e dinâmico, mas alguns apontam que a duração prolongada em relação a um episódio da série pode fazer a experiência se tornar mais cansativa. Apesar disso, a maioria ainda considera que o ritmo é eficaz e mantém o interesse.\"\n    },\n    {\n      \"tema\": \"Animação e qualidade visual\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A animação é frequentemente citada como um ponto positivo, com muitos comentários elogiando a qualidade e o estilo característico dos desenhos da série. Alguns também destacam a utilização de perspectivas e a movimentação da câmera, que dão um aspecto cinematográfico à produção.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações dos personagens são mencionadas como bem-sucedidas, com destaque para a voz de Homer e a química entre a família Simpson. Muitos elogiam a performance de Ned Flanders e a desenvoltura dos personagens secundários, que, embora não sejam foco principal, contribuem para a trama.\"\n    },\n    {\n      \"tema\": \"Elogio à nostalgia\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews positivas apontam que o filme é uma experiência nostálgica, remetendo a momentos da infância ou à série em sua fase mais aclamada. Este sentimento é frequentemente associado à memória de episódios clássicos e à sensação de estar assistindo algo que nunca perde a graça.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam que o filme é um retorno bem-sucedido à forma da série, com humor que se mantém fresco e piadas que ainda causam risadas. Apesar de alguns apontarem que a duração pode ser um pouco longa para um episódio, a maioria ainda considera a experiência divertida e emocionante, com momentos icônicos que se tornam memoráveis.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 202.25,
+   "leitura_prompt_s": 7.206,
+   "geracao_s": 192.805,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5101,
+   "eval_count": 892
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

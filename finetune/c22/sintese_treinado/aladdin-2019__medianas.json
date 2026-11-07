@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "aladdin-2019",
+ "bucket": "medianas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4645,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "b8c878cbf3dd9ffff9218d9471ffd31d3e9264cd41822e33f4183819bbe471b1",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:05:00+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Will Smith como Genio",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Will Smith como Genio é mencionada, com críticas que variam entre elogios à sua energia e carisma e comparações desfavoráveis com a performance de Robin Williams.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Will Smith como Genio é frequentemente mencionada, com críticas que variam entre elogios à sua energia e carisma e comparações desfavoráveis com a performance de Robin Williams.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento dos personagens",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Comentários apontam que o roteiro não chega à profundidade da animação original e que certos personagens, como Jasmine e Jafar, sofrem com falta de desenvolvimento.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Vários comentários apontam que o roteiro não chega à profundidade da animação original e que alguns personagens, como Jasmine e Jafar, sofrem com falta de desenvolvimento.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Músicas e números musicais",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As músicas e os números musicais são um ponto de destaque, com elogios à sua execução e à coreografia, embora espectadores considerem que não atingem o mesmo nível épico da animação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As músicas e os números musicais são um ponto de destaque, com elogios à sua execução e à coreografia, embora alguns considerem que não atingem o mesmo nível épico da animação.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com a versão animada",
+    "mencoes_aproximadas": 13,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medias comparam o filme à animação original, geralmente considerando-o inferior, mas ainda divertido e envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medias comparam o filme à animação original, geralmente considerando-o inferior, mas ainda divertido e envolvente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Efeitos visuais e produção",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Os efeitos visuais e a produção são elogiados, especialmente os cenários coloridos e a grandiosidade dos números musicais, embora espectadores apontem falhas técnicas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Os efeitos visuais e a produção são frequentemente elogiados, especialmente os cenários coloridos e a grandiosidade dos números musicais, embora alguns apontem falhas técnicas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Naomi Scott como Jasmine",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Naomi Scott como Jasmine é destacada, com elogios à sua carisma e à forma como equilibra a personagem entre a rebelião e a vulnerabilidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Naomi Scott como Jasmine é frequentemente destacada, com elogios à sua carisma e à forma como equilibra a personagem entre a rebelião e a vulnerabilidade.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é divertido e visualmente bonito, mas não atinge a magia da animação original. A atuação de Will Smith como Genio é um dos pontos mais elogiados, enquanto o roteiro e o desenvolvimento dos personagens são criticados por falta de profundidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 151.2,
+ "memoria": {
+  "ram_usada_gb": 9.25,
+  "ram_livre_min_gb": 5.94,
+  "ws_ollama_gb": 0.12,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Will Smith como Genio\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Will Smith como Genio é frequentemente mencionada, com críticas que variam entre elogios à sua energia e carisma e comparações desfavoráveis com a performance de Robin Williams.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento dos personagens\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Vários comentários apontam que o roteiro não chega à profundidade da animação original e que alguns personagens, como Jasmine e Jafar, sofrem com falta de desenvolvimento.\"\n    },\n    {\n      \"tema\": \"Músicas e números musicais\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As músicas e os números musicais são um ponto de destaque, com elogios à sua execução e à coreografia, embora alguns considerem que não atingem o mesmo nível épico da animação.\"\n    },\n    {\n      \"tema\": \"Comparação com a versão animada\",\n      \"mencoes_aproximadas\": 13,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medias comparam o filme à animação original, geralmente considerando-o inferior, mas ainda divertido e envolvente.\"\n    },\n    {\n      \"tema\": \"Efeitos visuais e produção\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Os efeitos visuais e a produção são frequentemente elogiados, especialmente os cenários coloridos e a grandiosidade dos números musicais, embora alguns apontem falhas técnicas.\"\n    },\n    {\n      \"tema\": \"Atuação de Naomi Scott como Jasmine\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Naomi Scott como Jasmine é frequentemente destacada, com elogios à sua carisma e à forma como equilibra a personagem entre a rebelião e a vulnerabilidade.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é divertido e visualmente bonito, mas não atinge a magia da animação original. A atuação de Will Smith como Genio é um dos pontos mais elogiados, enquanto o roteiro e o desenvolvimento dos personagens são criticados por falta de profundidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 151.2,
+   "leitura_prompt_s": 6.737,
+   "geracao_s": 137.669,
+   "carga_s": 4.718,
+   "prompt_eval_count": 4645,
+   "eval_count": 678
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

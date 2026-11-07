@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "eyes-wide-shut",
+ "bucket": "positivas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7774,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "697ee5ff00f2ea671bfdf94275d34b8f0f6074525c82bcaaf0b8dc5fa4d97512",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.51,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T23:32:30+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews positivas mencionam que o ritmo inicial é lento, mas o filme ganha força conforme a trama se desenvolve, tornando-se mais envolvente em seus momentos mais tensos e misteriosos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews positivas mencionam que o ritmo inicial é lento, mas o filme ganha força conforme a trama se desenvolve, tornando-se mais envolvente em seus momentos mais tensos e misteriosos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações de Nicole Kidman e Tom Cruise",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações de Nicole Kidman e Tom Cruise são elogiadas por sua intensidade e profundidade, com destaque para a capacidade de Kidman de transmitir complexidade emocional e Cruise em sua dualidade de médico e personagem deslocado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As atuações de Nicole Kidman e Tom Cruise são frequentemente elogiadas por sua intensidade e profundidade, com destaque para a capacidade de Kidman de transmitir complexidade emocional e Cruise em sua dualidade de médico e personagem deslocado.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e atmosfera",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a atmosfera criada pelo filme são descritas como hipnóticas e perturbadoras, com destaque para o uso de luz, cor e sombra que contribuem para um ambiente de tensão constante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Nudidade e erotismo",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A presença de nudidade e o tratamento do erotismo no filme geram reações mistas, sendo vista por espectadores como excessiva e desagradável, enquanto outros enxergam sua função narrativa e simbólica.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A presença de nudidade e o tratamento do erotismo no filme geram reações mistas, sendo vista por alguns como excessiva e desagradável, enquanto outros enxergam sua função narrativa e simbólica.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e interpretação de desejos",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores analisam o roteiro como uma reflexão sobre desejos, identidade e poder, com destaque para a forma como o filme explora a complexidade dos desejos humanos e suas consequências.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores analisam o roteiro como uma reflexão sobre desejos, identidade e poder, com destaque para a forma como o filme explora a complexidade dos desejos humanos e suas consequências.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Trilha sonora e piano",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora, especialmente o uso do piano, é citada como um elemento essencial que intensifica o clima de suspense e desconforto ao longo do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A trilha sonora, especialmente o uso do piano, é frequentemente citada como um elemento essencial que intensifica o clima de suspense e desconforto ao longo do filme.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a atmosfera de tensão, a fotografia marcante e as atuações de Nicole Kidman e Tom Cruise como pontos fortes, além de reconhecerem a complexidade do roteiro e o papel do erotismo na narrativa. Apesar de alguns críticos mencionarem o ritmo lento e a nudez como pontos de discussão, a maioria ainda considera o filme uma obra-prima do cinema.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 211.0,
+ "memoria": {
+  "ram_usada_gb": 11.27,
+  "ram_livre_min_gb": 3.92,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.39
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews positivas mencionam que o ritmo inicial é lento, mas o filme ganha força conforme a trama se desenvolve, tornando-se mais envolvente em seus momentos mais tensos e misteriosos.\"\n    },\n    {\n      \"tema\": \"Atuações de Nicole Kidman e Tom Cruise\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações de Nicole Kidman e Tom Cruise são frequentemente elogiadas por sua intensidade e profundidade, com destaque para a capacidade de Kidman de transmitir complexidade emocional e Cruise em sua dualidade de médico e personagem deslocado.\"\n    },\n    {\n      \"tema\": \"Fotografia e atmosfera\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a atmosfera criada pelo filme são descritas como hipnóticas e perturbadoras, com destaque para o uso de luz, cor e sombra que contribuem para um ambiente de tensão constante.\"\n    },\n    {\n      \"tema\": \"Nudidade e erotismo\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A presença de nudidade e o tratamento do erotismo no filme geram reações mistas, sendo vista por alguns como excessiva e desagradável, enquanto outros enxergam sua função narrativa e simbólica.\"\n    },\n    {\n      \"tema\": \"Roteiro e interpretação de desejos\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores analisam o roteiro como uma reflexão sobre desejos, identidade e poder, com destaque para a forma como o filme explora a complexidade dos desejos humanos e suas consequências.\"\n    },\n    {\n      \"tema\": \"Trilha sonora e piano\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora, especialmente o uso do piano, é frequentemente citada como um elemento essencial que intensifica o clima de suspense e desconforto ao longo do filme.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a atmosfera de tensão, a fotografia marcante e as atuações de Nicole Kidman e Tom Cruise como pontos fortes, além de reconhecerem a complexidade do roteiro e o papel do erotismo na narrativa. Apesar de alguns críticos mencionarem o ritmo lento e a nudez como pontos de discussão, a maioria ainda considera o filme uma obra-prima do cinema.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 210.77,
+   "leitura_prompt_s": 14.679,
+   "geracao_s": 193.716,
+   "carga_s": 0.004,
+   "prompt_eval_count": 7774,
+   "eval_count": 752
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

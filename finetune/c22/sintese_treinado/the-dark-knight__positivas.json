@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-dark-knight",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6155,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "eff032ef3f8e7b049e6bcfa14ae6a0a78a84230a2a00e3b6f45de6205b7376f3",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.89,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T15:28:49+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Heath Ledger como Joker",
+    "mencoes_aproximadas": 28,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam a atuação de Heath Ledger como o Joker como uma das melhores da história do cinema, com uma performance que redefine vilões no cinema. Espectadores descrevem sua interpretação como mágica e carismática, capaz de transmitir a essência do personagem de forma tão convincente que quase parece real.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As reviews positivas destacam a atuação de Heath Ledger como o Joker como uma das melhores da história do cinema, com uma performance que redefine vilões no cinema. Muitos descrevem sua interpretação como mágica e carismática, capaz de transmitir a essência do personagem de forma tão convincente que quase parece real.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e direção de Christopher Nolan",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro e a direção de Christopher Nolan são elogiados por sua complexidade, profundidade e habilidade em equilibrar ação, drama e reflexão filosófica. Reviews mencionam que a trama é bem construída e que a direção demonstra uma maturidade técnica impressionante, com uma narrativa que se desenvolve de forma envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O roteiro e a direção de Christopher Nolan são frequentemente elogiados por sua complexidade, profundidade e habilidade em equilibrar ação, drama e reflexão filosófica. Várias reviews mencionam que a trama é bem construída e que a direção demonstra uma maturidade técnica impressionante, com uma narrativa que se desenvolve de forma envolvente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio à trilha sonora e à fotografia",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A trilha sonora e a fotografia são elogiadas por criar uma atmosfera intensa e sombria que complementa o ritmo acelerado e as cenas de ação. Reviews mencionam que a fotografia contribui para o impacto visual, com um estilo que se destaca pela sua capacidade de transmitir tensão e drama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A trilha sonora e a fotografia são elogiadas por criar uma atmosfera intensa e sombria que complementa o ritmo acelerado e as cenas de ação. Algumas reviews mencionam que a fotografia contribui para o impacto visual, com um estilo que se destaca pela sua capacidade de transmitir tensão e drama.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Christian Bale como Batman",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Christian Bale como Batman recebe elogios por sua consistência e por carregar o peso da trama de forma sólida. Apesar de críticos mencionarem que a versão de Bale não é tão boa quanto a de Matt Reeves, espectadores reconhecem sua contribuição para a construção do personagem e a autenticidade da trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Christian Bale como Batman recebe elogios por sua consistência e por carregar o peso da trama de forma sólida. Apesar de alguns críticos mencionarem que a versão de Bale não é tão boa quanto a de Matt Reeves, muitos reconhecem sua contribuição para a construção do personagem e a autenticidade da trama.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ação e cenas de perseguição",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As cenas de ação e perseguição são citadas como um dos pontos altos do filme, com momentos que impressionam pela sua execução e pela intensidade. Reviews mencionam que a ação é bem planejada e que as cenas de perseguição são dinâmicas e bem executadas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As cenas de ação e perseguição são frequentemente citadas como um dos pontos altos do filme, com momentos que impressionam pela sua execução e pela intensidade. Algumas reviews mencionam que a ação é bem planejada e que as cenas de perseguição são dinâmicas e bem executadas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Elogio ao impacto emocional e à mensagem do filme",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O impacto emocional e a mensagem do filme são destacados por reviews, com espectadores descrevendo a trama como uma obra que provoca reflexão sobre moral, esperança e responsabilidade. A mensagem de que a esperança pode ser um fator de esperança em tempos difíceis é mencionada como um dos aspectos mais fortes do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O impacto emocional e a mensagem do filme são destacados por várias reviews, com muitos descrevendo a trama como uma obra que provoca reflexão sobre moral, esperança e responsabilidade. A mensagem de que a esperança pode ser um fator de esperança em tempos difíceis é frequentemente mencionada como um dos aspectos mais fortes do filme.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo apontam que o filme é um dos melhores de super-herói, com uma atuação marcante de Heath Ledger e uma direção que eleva o gênero. O elogio à atuação de Christian Bale e à construção do roteiro também é recorrente, destacando a capacidade do filme de misturar ação, drama e reflexão filosófica de forma envolvente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 220.6,
+ "memoria": {
+  "ram_usada_gb": 12.34,
+  "ram_livre_min_gb": 2.86,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Heath Ledger como Joker\",\n      \"mencoes_aproximadas\": 28,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam a atuação de Heath Ledger como o Joker como uma das melhores da história do cinema, com uma performance que redefine vilões no cinema. Muitos descrevem sua interpretação como mágica e carismática, capaz de transmitir a essência do personagem de forma tão convincente que quase parece real.\"\n    },\n    {\n      \"tema\": \"Roteiro e direção de Christopher Nolan\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro e a direção de Christopher Nolan são frequentemente elogiados por sua complexidade, profundidade e habilidade em equilibrar ação, drama e reflexão filosófica. Várias reviews mencionam que a trama é bem construída e que a direção demonstra uma maturidade técnica impressionante, com uma narrativa que se desenvolve de forma envolvente.\"\n    },\n    {\n      \"tema\": \"Elogio à trilha sonora e à fotografia\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A trilha sonora e a fotografia são elogiadas por criar uma atmosfera intensa e sombria que complementa o ritmo acelerado e as cenas de ação. Algumas reviews mencionam que a fotografia contribui para o impacto visual, com um estilo que se destaca pela sua capacidade de transmitir tensão e drama.\"\n    },\n    {\n      \"tema\": \"Atuação de Christian Bale como Batman\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Christian Bale como Batman recebe elogios por sua consistência e por carregar o peso da trama de forma sólida. Apesar de alguns críticos mencionarem que a versão de Bale não é tão boa quanto a de Matt Reeves, muitos reconhecem sua contribuição para a construção do personagem e a autenticidade da trama.\"\n    },\n    {\n      \"tema\": \"Ação e cenas de perseguição\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As cenas de ação e perseguição são frequentemente citadas como um dos pontos altos do filme, com momentos que impressionam pela sua execução e pela intensidade. Algumas reviews mencionam que a ação é bem planejada e que as cenas de perseguição são dinâmicas e bem executadas.\"\n    },\n    {\n      \"tema\": \"Elogio ao impacto emocional e à mensagem do filme\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O impacto emocional e a mensagem do filme são destacados por várias reviews, com muitos descrevendo a trama como uma obra que provoca reflexão sobre moral, esperança e responsabilidade. A mensagem de que a esperança pode ser um fator de esperança em tempos difíceis é frequentemente mencionada como um dos aspectos mais fortes do filme.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo apontam que o filme é um dos melhores de super-herói, com uma atuação marcante de Heath Ledger e uma direção que eleva o gênero. O elogio à atuação de Christian Bale e à construção do roteiro também é recorrente, destacando a capacidade do filme de misturar ação, drama e reflexão filosófica de forma envolvente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 220.56,
+   "leitura_prompt_s": 8.832,
+   "geracao_s": 209.397,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6155,
+   "eval_count": 941
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

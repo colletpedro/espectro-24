@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "american-sniper",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5842,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "a91be9b9a6e073783b970937f24f066e4abee950457064e7d222f47da7b2e78e",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.58,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.181640625,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T06:41:20+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Crítica à propaganda e ao patriotismo",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme parece glorificar a guerra e o patriotismo americano, funcionando como propaganda que alimenta o poder de soft do país. Reviews consideram a abordagem simplista e que o filme não critica as ações militares de forma abrangente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que o filme parece glorificar a guerra e o patriotismo americano, funcionando como propaganda que alimenta o poder de soft do país. Algumas consideram a abordagem simplista e que o filme não critica as ações militares de forma abrangente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Trauma e PTSD",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca a forma como o filme aborda o trauma pós-combatimento e os efeitos psicológicos no retorno à vida civil. Reviews medianas elogiam a atenção dada a esse aspecto, enquanto outras criticam a falta de profundidade no tema.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo destaca a forma como o filme aborda o trauma pós-combatimento e os efeitos psicológicos no retorno à vida civil. Algumas reviews medianas elogiam a atenção dada a esse aspecto, enquanto outras criticam a falta de profundidade no tema.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e desenvolvimento da história",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o roteiro é bom, mas poderia ter mais nuance, especialmente no que diz respeito à guerra e às ações militares. A narrativa também é criticada por ser um tanto repetitiva e não explorar o conflito pessoal do protagonista de forma suficiente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas apontam que o roteiro é bom, mas poderia ter mais nuance, especialmente no que diz respeito à guerra e às ações militares. A narrativa também é criticada por ser um tanto repetitiva e não explorar o conflito pessoal do protagonista de forma suficiente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e direção",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Bradley Cooper é mencionada como um dos pontos altos do filme, e a direção de Clint Eastwood também recebe elogios por sua habilidade em retratar a guerra. Porém, espectadores comentam que a abordagem é excessivamente heroica e que o filme soa como propaganda.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Bradley Cooper é frequentemente mencionada como um dos pontos altos do filme, e a direção de Clint Eastwood também recebe elogios por sua habilidade em retratar a guerra. Porém, alguns comentam que a abordagem é excessivamente heroica e que o filme soa como propaganda.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Efeitos visuais e trilha sonora",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A qualidade dos efeitos visuais e da trilha sonora é mencionada de forma variável. Reviews medianas destacam a tensão criada pelas cenas de ação, enquanto outras apontam que a trilha sonora poderia ter mais impacto emocional.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A qualidade dos efeitos visuais e da trilha sonora é mencionada de forma variável. Algumas reviews medianas destacam a tensão criada pelas cenas de ação, enquanto outras apontam que a trilha sonora poderia ter mais impacto emocional.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de profundidade e crítica",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo aponta que o filme é interessante, mas não chega a nada em termos de crítica ao conflito e às ações militares. Reviews medianas consideram que a abordagem é unidimensional e que o filme poderia ter explorado mais as consequências do conflito.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo aponta que o filme é interessante, mas não chega a nada em termos de crítica ao conflito e às ações militares. Algumas reviews medianas consideram que a abordagem é unidimensional e que o filme poderia ter explorado mais as consequências do conflito.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é um bom filme de ação e que aborda o trauma pós-combatimento de forma realista, mas criticam a propaganda americana e a falta de crítica ao conflito. Este grupo destaca que a abordagem é simplista e que o roteiro poderia ter mais profundidade.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 191.9,
+ "memoria": {
+  "ram_usada_gb": 10.12,
+  "ram_livre_min_gb": 5.08,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Crítica à propaganda e ao patriotismo\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o filme parece glorificar a guerra e o patriotismo americano, funcionando como propaganda que alimenta o poder de soft do país. Algumas consideram a abordagem simplista e que o filme não critica as ações militares de forma abrangente.\"\n    },\n    {\n      \"tema\": \"Trauma e PTSD\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca a forma como o filme aborda o trauma pós-combatimento e os efeitos psicológicos no retorno à vida civil. Algumas reviews medianas elogiam a atenção dada a esse aspecto, enquanto outras criticam a falta de profundidade no tema.\"\n    },\n    {\n      \"tema\": \"Roteiro e desenvolvimento da história\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas apontam que o roteiro é bom, mas poderia ter mais nuance, especialmente no que diz respeito à guerra e às ações militares. A narrativa também é criticada por ser um tanto repetitiva e não explorar o conflito pessoal do protagonista de forma suficiente.\"\n    },\n    {\n      \"tema\": \"Atuações e direção\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Bradley Cooper é frequentemente mencionada como um dos pontos altos do filme, e a direção de Clint Eastwood também recebe elogios por sua habilidade em retratar a guerra. Porém, alguns comentam que a abordagem é excessivamente heroica e que o filme soa como propaganda.\"\n    },\n    {\n      \"tema\": \"Efeitos visuais e trilha sonora\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A qualidade dos efeitos visuais e da trilha sonora é mencionada de forma variável. Algumas reviews medianas destacam a tensão criada pelas cenas de ação, enquanto outras apontam que a trilha sonora poderia ter mais impacto emocional.\"\n    },\n    {\n      \"tema\": \"Falta de profundidade e crítica\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo aponta que o filme é interessante, mas não chega a nada em termos de crítica ao conflito e às ações militares. Algumas reviews medianas consideram que a abordagem é unidimensional e que o filme poderia ter explorado mais as consequências do conflito.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é um bom filme de ação e que aborda o trauma pós-combatimento de forma realista, mas criticam a propaganda americana e a falta de crítica ao conflito. Este grupo destaca que a abordagem é simplista e que o roteiro poderia ter mais profundidade.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 191.83,
+   "leitura_prompt_s": 8.555,
+   "geracao_s": 180.999,
+   "carga_s": 0.046,
+   "prompt_eval_count": 5842,
+   "eval_count": 821
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -44,8 +44,7 @@ NAO_E_REGISTRO = ("src/", "scripts/", "tests/", "experimentos-", "SPEC.md", "HIS
 
 
 def _git(*a) -> str:
-    return subprocess.run(["git", "-C", str(K.RAIZ), *a], capture_output=True,
-                          text=True).stdout
+    return K.rodar_texto(["git", "-C", str(K.RAIZ), *a]).stdout
 
 
 # ---------------------------------------------------------------------------
@@ -135,10 +134,10 @@ def remontar_por_epoca(filmes_inv: dict, atual: dict) -> dict:
             (dst / "coletas.json").write_text(json.dumps(coletas), encoding="utf-8")
             env = {k: v for k, v in os.environ.items() if k != "PYTHONPATH"}
             env["PYTHONPATH"] = str(dst / "src")
-            r = subprocess.run([sys.executable, str(AQUI / "_remontar_epoca.py"),
-                                "--src", str(dst / "src"), "--bruto", str(K.BRUTO_DIR),
-                                "--coletas", str(dst / "coletas.json")],
-                               capture_output=True, text=True, env=env)
+            env["PYTHONIOENCODING"] = "utf-8"
+            r = K.rodar_texto([sys.executable, str(AQUI / "_remontar_epoca.py"),
+                               "--src", str(dst / "src"), "--bruto", str(K.BRUTO_DIR),
+                               "--coletas", str(dst / "coletas.json")], env=env)
             if r.returncode != 0:
                 resultado[commit] = {"erro": r.stderr[-2000:], "slugs": slugs}
                 continue

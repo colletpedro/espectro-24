@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-pursuit-of-happyness",
+ "bucket": "medianas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7357,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "0952f32e7b7159724dd3673dc2f90cef3d8086dffd2926f2eee416fa7d5f32b9",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.13,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.181640625,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-07T04:17:54+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Crítica ao individualismo e ao capitalismo",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o filme glorifica um sistema capitalista e uma visão individualista da felicidade, promovendo a ideia de que a perseverança e o trabalho duro são suficientes para superar qualquer adversidade, o que é considerado uma mensagem simplista e problemática.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que o filme glorifica um sistema capitalista e uma visão individualista da felicidade, promovendo a ideia de que a perseverança e o trabalho duro são suficientes para superar qualquer adversidade, o que é considerado uma mensagem simplista e problemática.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Will Smith",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Will Smith é elogiada como um dos pontos altos do filme, com reviews medianas destacando sua capacidade de transmitir emoção e aprofundar o personagem, mesmo em meio a críticas à mensagem do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Will Smith é frequentemente elogiada como um dos pontos altos do filme, com muitas reviews medianas destacando sua capacidade de transmitir emoção e aprofundar o personagem, mesmo em meio a críticas à mensagem do filme.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo lento e repetitivo",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas reclamam que o filme se torna monótono e que o ritmo é lento, com uma sequência de dificuldades que pode cansar, tornando a experiência menos envolvente do que esperado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas reclamam que o filme se torna monótono e que o ritmo é lento, com uma sequência de dificuldades que pode cansar, tornando a experiência menos envolvente do que esperado.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de desenvolvimento emocional e críticas ao sistema",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há críticas medianas apontando que o filme não desenvolve profundamente os personagens, especialmente em relação às consequências emocionais da pobreza e à crítica ao sistema capitalista, que é considerado superficial e apoiador de uma visão de mundo individualista.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Mensagem idealizada e apelativa",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas criticam a mensagem do filme por ser idealizada e apelativa, sugerindo que ela não é realista e que a busca pela felicidade através do sucesso profissional é uma visão simplista e insatisfatória.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas criticam a mensagem do filme por ser idealizada e apelativa, sugerindo que ela não é realista e que a busca pela felicidade através do sucesso profissional é uma visão simplista e insatisfatória.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e música",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a música são mencionadas como pontos positivos em reviews medianas, contribuindo para a atmosfera e a imersão na história, embora não sejam consideradas suficientes para superar as críticas ao roteiro e à mensagem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a música são mencionadas como pontos positivos em algumas reviews medianas, contribuindo para a atmosfera e a imersão na história, embora não sejam consideradas suficientes para superar as críticas ao roteiro e à mensagem.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam um grupo de espectadores que valorizam a atuação de Will Smith e a mensagem de superação, mas criticam o filme por ser idealista, repetitivo e superficial, especialmente em relação à crítica ao sistema capitalista. Este grupo enxerga o filme como um clássico da indústria cinematográfica, mas não o considera totalmente satisfatório.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 205.4,
+ "memoria": {
+  "ram_usada_gb": 10.67,
+  "ram_livre_min_gb": 4.53,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.4
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Crítica ao individualismo e ao capitalismo\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que o filme glorifica um sistema capitalista e uma visão individualista da felicidade, promovendo a ideia de que a perseverança e o trabalho duro são suficientes para superar qualquer adversidade, o que é considerado uma mensagem simplista e problemática.\"\n    },\n    {\n      \"tema\": \"Atuação de Will Smith\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Will Smith é frequentemente elogiada como um dos pontos altos do filme, com muitas reviews medianas destacando sua capacidade de transmitir emoção e aprofundar o personagem, mesmo em meio a críticas à mensagem do filme.\"\n    },\n    {\n      \"tema\": \"Ritmo lento e repetitivo\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas reclamam que o filme se torna monótono e que o ritmo é lento, com uma sequência de dificuldades que pode cansar, tornando a experiência menos envolvente do que esperado.\"\n    },\n    {\n      \"tema\": \"Falta de desenvolvimento emocional e críticas ao sistema\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há críticas medianas apontando que o filme não desenvolve profundamente os personagens, especialmente em relação às consequências emocionais da pobreza e à crítica ao sistema capitalista, que é considerado superficial e apoiador de uma visão de mundo individualista.\"\n    },\n    {\n      \"tema\": \"Mensagem idealizada e apelativa\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas criticam a mensagem do filme por ser idealizada e apelativa, sugerindo que ela não é realista e que a busca pela felicidade através do sucesso profissional é uma visão simplista e insatisfatória.\"\n    },\n    {\n      \"tema\": \"Fotografia e música\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a música são mencionadas como pontos positivos em algumas reviews medianas, contribuindo para a atmosfera e a imersão na história, embora não sejam consideradas suficientes para superar as críticas ao roteiro e à mensagem.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam um grupo de espectadores que valorizam a atuação de Will Smith e a mensagem de superação, mas criticam o filme por ser idealista, repetitivo e superficial, especialmente em relação à crítica ao sistema capitalista. Este grupo enxerga o filme como um clássico da indústria cinematográfica, mas não o considera totalmente satisfatório.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 205.36,
+   "leitura_prompt_s": 11.149,
+   "geracao_s": 191.931,
+   "carga_s": 0.006,
+   "prompt_eval_count": 7357,
+   "eval_count": 796
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "perfect-blue",
+ "bucket": "positivas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6387,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "40b3c094138c7fa371da46594a2a45d0c7ecb86a7b32ed8feb6ee1bbfb5f980b",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.88,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T18:02:05+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Mente confusa e distorção da realidade",
+    "mencoes_aproximadas": 26,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews descrevem a experiência de se perder na trama, com cenas que alternam entre realidade e fantasia de forma tão eficaz que confunde o espectador, deixando uma sensação de paranoia e desorientação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews descrevem a experiência de se perder na trama, com cenas que alternam entre realidade e fantasia de forma tão eficaz que confunde o espectador, deixando uma sensação de paranoia e desorientação.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro complexo e reviravoltas",
+    "mencoes_aproximadas": 23,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores comentam que o roteiro é cheio de giraques e camadas narrativas que exigem atenção e reparações para se entenderem, com reviravoltas que surpreendem e complicam a história.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos comentam que o roteiro é cheio de giraques e camadas narrativas que exigem atenção e reparações para se entenderem, com reviravoltas que surpreendem e complicam a história.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tema da identidade e da obsessão",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme aborda de forma intensa a luta da protagonista contra a percepção que os outros têm dela, assim como a obsessão do fã que se torna uma ameaça real, explorando a psicologia de personagens e o preço da fama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Animação e visual impressionantes",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A animação é elogiada por sua originalidade, com planos bem compostos, uso de reflexos e efeitos visuais que contribuem para a atmosfera de sonho e terror que o filme transmite.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Experiência intensa e marcante",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews mencionam que o filme é um verdadeiro desafio emocional, deixando uma impressão duradoura e uma sensação de que a mente nunca voltará ao estado anterior.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As reviews frequentemente mencionam que o filme é um verdadeiro desafio emocional, deixando uma impressão duradoura e uma sensação de que a mente nunca voltará ao estado anterior.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Crítica à indústria e à internet",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Há comentários que interpretam a obra como uma crítica à exploração de celebridades e ao papel da internet na construção de uma imagem pública, mostrando como a indústria pode degradar e manipular a identidade.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas destacam a complexidade e a intensidade do filme, elogiando a abordagem da mente confusa e da identidade. Este grupo também valoriza a animação e a construção de uma experiência marcante, embora reconheça que o roteiro exige atenção e reparações.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 177.2,
+ "memoria": {
+  "ram_usada_gb": 11.75,
+  "ram_livre_min_gb": 3.45,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.52
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Mente confusa e distorção da realidade\",\n      \"mencoes_aproximadas\": 26,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews descrevem a experiência de se perder na trama, com cenas que alternam entre realidade e fantasia de forma tão eficaz que confunde o espectador, deixando uma sensação de paranoia e desorientação.\"\n    },\n    {\n      \"tema\": \"Roteiro complexo e reviravoltas\",\n      \"mencoes_aproximadas\": 23,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos comentam que o roteiro é cheio de giraques e camadas narrativas que exigem atenção e reparações para se entenderem, com reviravoltas que surpreendem e complicam a história.\"\n    },\n    {\n      \"tema\": \"Tema da identidade e da obsessão\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme aborda de forma intensa a luta da protagonista contra a percepção que os outros têm dela, assim como a obsessão do fã que se torna uma ameaça real, explorando a psicologia de personagens e o preço da fama.\"\n    },\n    {\n      \"tema\": \"Animação e visual impressionantes\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A animação é elogiada por sua originalidade, com planos bem compostos, uso de reflexos e efeitos visuais que contribuem para a atmosfera de sonho e terror que o filme transmite.\"\n    },\n    {\n      \"tema\": \"Experiência intensa e marcante\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews frequentemente mencionam que o filme é um verdadeiro desafio emocional, deixando uma impressão duradoura e uma sensação de que a mente nunca voltará ao estado anterior.\"\n    },\n    {\n      \"tema\": \"Crítica à indústria e à internet\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Há comentários que interpretam a obra como uma crítica à exploração de celebridades e ao papel da internet na construção de uma imagem pública, mostrando como a indústria pode degradar e manipular a identidade.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas destacam a complexidade e a intensidade do filme, elogiando a abordagem da mente confusa e da identidade. Este grupo também valoriza a animação e a construção de uma experiência marcante, embora reconheça que o roteiro exige atenção e reparações.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 177.2,
+   "leitura_prompt_s": 8.499,
+   "geracao_s": 166.334,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6387,
+   "eval_count": 740
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

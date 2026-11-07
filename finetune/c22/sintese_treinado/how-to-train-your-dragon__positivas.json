@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "how-to-train-your-dragon",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5649,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "794b5c7d7996a7ab42b44f27055c8b006383aae6c4d9646e2a5dc971de2f115c",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.71,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T14:24:43+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Mensagem de aceitação e superação",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews positivas destacam como o filme ensina que não precisamos ser quem os outros esperam, mas sim sermos autênticos, e que a empatia e a curiosidade podem transformar o medo em compreensão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Animação e banda sonora",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews elogiam a qualidade da animação, comparando-a à de filmes da mesma época e à de outras produções, além de destacarem a música como parte essencial da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews elogiam a qualidade da animação, comparando-a à de filmes da mesma época e à de outras produções, além de destacarem a música como parte essencial da experiência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Amizade entre Hiccup e Toothless",
+    "mencoes_aproximadas": 16,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A relação de amizade entre o protagonista e o dragão é citada como um dos pontos mais carinhosos e inspiradores do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A relação de amizade entre o protagonista e o dragão é frequentemente citada como um dos pontos mais carinhosos e inspiradores do filme.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Nostalgia e reencontro com a infância",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme evoca saudade da infância, lembrando momentos de lazer e diversão com animações clássicas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme evoca saudade da infância, lembrando momentos de lazer e diversão com animações clássicas.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens secundários e desenvolvimento",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores comentam sobre a importância dos personagens de apoio e como a trama deixa espaço para que eles se desenvolvam.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Alguns comentam sobre a importância dos personagens de apoio e como a trama deixa espaço para que eles se desenvolvam.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com versões posteriores e adaptações",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme se destaca em relação a versões mais recentes, como a adaptação ao vivo, por manter uma narrativa original e eficaz.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews mencionam que o filme se destaca em relação a versões mais recentes, como a adaptação ao vivo, por manter uma narrativa original e eficaz.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo destacam principalmente a mensagem de aceitação, a animação e a banda sonora como pontos fortes, além de valorizarem a amizade entre Hiccup e Toothless e a nostalgia que o filme evoca. Este grupo tende a elogiar a simplicidade e a eficácia da trama.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 158.6,
+ "memoria": {
+  "ram_usada_gb": 11.88,
+  "ram_livre_min_gb": 3.31,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.5
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Mensagem de aceitação e superação\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews positivas destacam como o filme ensina que não precisamos ser quem os outros esperam, mas sim sermos autênticos, e que a empatia e a curiosidade podem transformar o medo em compreensão.\"\n    },\n    {\n      \"tema\": \"Animação e banda sonora\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews elogiam a qualidade da animação, comparando-a à de filmes da mesma época e à de outras produções, além de destacarem a música como parte essencial da experiência.\"\n    },\n    {\n      \"tema\": \"Amizade entre Hiccup e Toothless\",\n      \"mencoes_aproximadas\": 16,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A relação de amizade entre o protagonista e o dragão é frequentemente citada como um dos pontos mais carinhosos e inspiradores do filme.\"\n    },\n    {\n      \"tema\": \"Nostalgia e reencontro com a infância\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam que o filme evoca saudade da infância, lembrando momentos de lazer e diversão com animações clássicas.\"\n    },\n    {\n      \"tema\": \"Personagens secundários e desenvolvimento\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Alguns comentam sobre a importância dos personagens de apoio e como a trama deixa espaço para que eles se desenvolvam.\"\n    },\n    {\n      \"tema\": \"Comparação com versões posteriores e adaptações\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews mencionam que o filme se destaca em relação a versões mais recentes, como a adaptação ao vivo, por manter uma narrativa original e eficaz.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo destacam principalmente a mensagem de aceitação, a animação e a banda sonora como pontos fortes, além de valorizarem a amizade entre Hiccup e Toothless e a nostalgia que o filme evoca. Este grupo tende a elogiar a simplicidade e a eficácia da trama.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 158.62,
+   "leitura_prompt_s": 8.119,
+   "geracao_s": 148.196,
+   "carga_s": 0.005,
+   "prompt_eval_count": 5649,
+   "eval_count": 678
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

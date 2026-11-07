@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-dark-knight",
+ "bucket": "negativas",
+ "num_ctx": 11264,
+ "tokens_prompt_plano": 6965,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+ "user_sha256": "d2f6f3a66fbaff7e7b01e4c5bd538b7782e184034aa0413b275a067b8e8c10ac",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.17,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T22:45:32+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuações e personagens",
+    "mencoes_aproximadas": 30,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que a atuação de Christian Bale como Batman é rígida e pouco carismática, enquanto o personagem da Rachel é considerado frágil e mal desenvolvido. Apesar da performance de Heath Ledger como Joker ser elogiada, espectadores criticam que o roteiro não oferece profundidade suficiente para o vilão.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews apontam que a atuação de Christian Bale como Batman é rígida e pouco carismática, enquanto o personagem da Rachel é considerado frágil e mal desenvolvido. Apesar da performance de Heath Ledger como Joker ser elogiada, muitos criticam que o roteiro não oferece profundidade suficiente para o vilão.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e construção da trama",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O roteiro é criticado por ser arrastado, com uma trama que soa pouco original e que não consegue sustentar o longo tempo de duração. Reviews mencionam que as ideias filosóficas são apresentadas de forma vazia e que a história parece mais um exercício de fôlego do que uma narrativa envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O roteiro é frequentemente criticado por ser arrastado, com uma trama que soa pouco original e que não consegue sustentar o longo tempo de duração. Algumas reviews mencionam que as ideias filosóficas são apresentadas de forma vazia e que a história parece mais um exercício de fôlego do que uma narrativa envolvente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Espectadores reclamam que o filme é lento e que a duração é excessiva, com a sensação de que a trama se arrasta e que há certos momentos de ação sem impacto. Reviews afirmam que o filme poderia ser mais conciso e que certos trechos parecem se estender desnecessariamente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos espectadores reclamam que o filme é lento e que a duração é excessiva, com a sensação de que a trama se arrasta e que há muitos momentos de ação sem impacto. Algumas reviews afirmam que o filme poderia ser mais conciso e que certos trechos parecem se estender desnecessariamente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção de Christopher Nolan são criticadas por serem muito sombrias e opressivas, com um visual que deixa a cidade de Gotham sem personalidade e o Batman parecendo ridículo em comparação. Reviews mencionam que a edição e o uso de aspectos diferentes contribuem para uma experiência visual confusa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A fotografia e a direção de Christopher Nolan são criticadas por serem muito sombrias e opressivas, com um visual que deixa a cidade de Gotham sem personalidade e o Batman parecendo ridículo em comparação. Algumas reviews mencionam que a edição e o uso de aspectos diferentes contribuem para uma experiência visual confusa.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Feminismo e representação de gênero",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As reviews negativas destacam que a representação feminina no filme é problemática, com personagens femininas sendo reduzidas e mal desenvolvidas. Reviews criticam a falta de profundidade e o tratamento misógino da trama, afirmando que a falta de mulheres fortes e bem construídas é um ponto fraco.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As reviews negativas destacam que a representação feminina no filme é problemática, com personagens femininas sendo reduzidas e mal desenvolvidas. Algumas reviews criticam a falta de profundidade e o tratamento misógino da trama, afirmando que a falta de mulheres fortes e bem construídas é um ponto fraco.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com outras obras e expectativa",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews mencionam que o filme não corresponde às expectativas criadas por sua fama, especialmente em comparação com o primeiro filme da trilogia. Pessoas sentem que o filme se perde na tentativa de ser mais sério e que o personagem do Joker não é tão interessante quanto o esperado.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme não corresponde às expectativas criadas por sua fama, especialmente em comparação com o primeiro filme da trilogia. Algumas pessoas sentem que o filme se perde na tentativa de ser mais sério e que o personagem do Joker não é tão interessante quanto o esperado.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews negativas deste grupo destacam principalmente problemas com a atuação e os personagens, o roteiro e a construção da trama, o ritmo e a duração excessiva, além de críticas à representação de gênero e à direção. Este grupo de espectadores geralmente considera a obra decepcionante em comparação com outras obras do gênero e com as expectativas criadas pela fama do filme.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 229.8,
+ "memoria": {
+  "ram_usada_gb": 10.64,
+  "ram_livre_min_gb": 4.55,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.51
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "0f86c66705c3808593fa15384267b03cfc245e619517b83920e52297b01ddb67",
+   "texto": "{\n  \"bucket\": \"negativas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuações e personagens\",\n      \"mencoes_aproximadas\": 30,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews apontam que a atuação de Christian Bale como Batman é rígida e pouco carismática, enquanto o personagem da Rachel é considerado frágil e mal desenvolvido. Apesar da performance de Heath Ledger como Joker ser elogiada, muitos criticam que o roteiro não oferece profundidade suficiente para o vilão.\"\n    },\n    {\n      \"tema\": \"Roteiro e construção da trama\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O roteiro é frequentemente criticado por ser arrastado, com uma trama que soa pouco original e que não consegue sustentar o longo tempo de duração. Algumas reviews mencionam que as ideias filosóficas são apresentadas de forma vazia e que a história parece mais um exercício de fôlego do que uma narrativa envolvente.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos espectadores reclamam que o filme é lento e que a duração é excessiva, com a sensação de que a trama se arrasta e que há muitos momentos de ação sem impacto. Algumas reviews afirmam que o filme poderia ser mais conciso e que certos trechos parecem se estender desnecessariamente.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção de Christopher Nolan são criticadas por serem muito sombrias e opressivas, com um visual que deixa a cidade de Gotham sem personalidade e o Batman parecendo ridículo em comparação. Algumas reviews mencionam que a edição e o uso de aspectos diferentes contribuem para uma experiência visual confusa.\"\n    },\n    {\n      \"tema\": \"Feminismo e representação de gênero\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As reviews negativas destacam que a representação feminina no filme é problemática, com personagens femininas sendo reduzidas e mal desenvolvidas. Algumas reviews criticam a falta de profundidade e o tratamento misógino da trama, afirmando que a falta de mulheres fortes e bem construídas é um ponto fraco.\"\n    },\n    {\n      \"tema\": \"Comparação com outras obras e expectativa\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews mencionam que o filme não corresponde às expectativas criadas por sua fama, especialmente em comparação com o primeiro filme da trilogia. Algumas pessoas sentem que o filme se perde na tentativa de ser mais sério e que o personagem do Joker não é tão interessante quanto o esperado.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews negativas deste grupo destacam principalmente problemas com a atuação e os personagens, o roteiro e a construção da trama, o ritmo e a duração excessiva, além de críticas à representação de gênero e à direção. Este grupo de espectadores geralmente considera a obra decepcionante em comparação com outras obras do gênero e com as expectativas criadas pela fama do filme.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 229.77,
+   "leitura_prompt_s": 10.127,
+   "geracao_s": 217.291,
+   "carga_s": 0.004,
+   "prompt_eval_count": 6965,
+   "eval_count": 919
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

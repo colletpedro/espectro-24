@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "detachment",
+ "bucket": "medianas",
+ "num_ctx": 12288,
+ "tokens_prompt_plano": 7834,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "0629b9d1ffaaf858c6e7ba466060ebd5ebcd60477ae10f509c813f610f7f7ee4",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.51,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T23:29:16+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Depressão e melancolia",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas descrevem o filme como depressivo e melancólico, com uma atmosfera que pode ser desgastante, mas reconhecem que a intensidade emocional é parte do propósito do trabalho.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas descrevem o filme como depressivo e melancólico, com uma atmosfera que pode ser desgastante, mas reconhecem que a intensidade emocional é parte do propósito do trabalho.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Adrien Brody",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Adrien Brody é elogiada como um ponto alto, com espectadores considerando-o a principal força do filme, embora alguns ainda tenham ressalvas.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Adrien Brody é frequentemente elogiada como um ponto alto, com muitos considerando-o a principal força do filme, embora alguns ainda tenham ressalvas.",
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Roteiro e mensagens",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que o roteiro aborda temas importantes, mas que a mensagem pode soar preguicosa ou que a profundidade das ideias não é explorada suficientemente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas mencionam que o roteiro aborda vários temas importantes, mas que a mensagem pode soar preguicosa ou que a profundidade das ideias não é explorada suficientemente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e estilo visual",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas comentam que a fotografia e o estilo visual são interessantes, mas que a edição e a abordagem de câmera podem ser repetitivas ou desconfortáveis.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas comentam que a fotografia e o estilo visual são interessantes, mas que a edição e a abordagem de câmera podem ser repetitivas ou desconfortáveis.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e duração",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Parte das reviews medianas apontam que o filme tem um ritmo lento e duração que poderia ser mais curta, o que afeta a experiência de quem o assiste.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Crítica ao sistema educacional",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas destacam que o filme critica o sistema educacional, mostrando as dificuldades enfrentadas por professores e alunos, mas que a abordagem pode ser vista como pessimista ou sem soluções.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas destacam que o filme critica o sistema educacional, mostrando as dificuldades enfrentadas por professores e alunos, mas que a abordagem pode ser vista como pessimista ou sem soluções.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas apontam que o filme é depressivo e melancólico, mas reconhecem a força da atuação de Adrien Brody. Este grupo destaca que o roteiro aborda diversos temas importantes, embora a mensagem possa soar preguicosa e a profundidade das ideias não seja explorada de forma suficiente.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 193.8,
+ "memoria": {
+  "ram_usada_gb": 10.73,
+  "ram_livre_min_gb": 4.46,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.39
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Depressão e melancolia\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas descrevem o filme como depressivo e melancólico, com uma atmosfera que pode ser desgastante, mas reconhecem que a intensidade emocional é parte do propósito do trabalho.\"\n    },\n    {\n      \"tema\": \"Atuação de Adrien Brody\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Adrien Brody é frequentemente elogiada como um ponto alto, com muitos considerando-o a principal força do filme, embora alguns ainda tenham ressalvas.\"\n    },\n    {\n      \"tema\": \"Roteiro e mensagens\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas mencionam que o roteiro aborda vários temas importantes, mas que a mensagem pode soar preguicosa ou que a profundidade das ideias não é explorada suficientemente.\"\n    },\n    {\n      \"tema\": \"Fotografia e estilo visual\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas comentam que a fotografia e o estilo visual são interessantes, mas que a edição e a abordagem de câmera podem ser repetitivas ou desconfortáveis.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Parte das reviews medianas apontam que o filme tem um ritmo lento e duração que poderia ser mais curta, o que afeta a experiência de quem o assiste.\"\n    },\n    {\n      \"tema\": \"Crítica ao sistema educacional\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas destacam que o filme critica o sistema educacional, mostrando as dificuldades enfrentadas por professores e alunos, mas que a abordagem pode ser vista como pessimista ou sem soluções.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas apontam que o filme é depressivo e melancólico, mas reconhecem a força da atuação de Adrien Brody. Este grupo destaca que o roteiro aborda diversos temas importantes, embora a mensagem possa soar preguicosa e a profundidade das ideias não seja explorada de forma suficiente.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 193.72,
+   "leitura_prompt_s": 11.948,
+   "geracao_s": 179.46,
+   "carga_s": 0.004,
+   "prompt_eval_count": 7834,
+   "eval_count": 694
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

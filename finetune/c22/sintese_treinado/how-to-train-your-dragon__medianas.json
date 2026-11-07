@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "how-to-train-your-dragon",
+ "bucket": "medianas",
+ "num_ctx": 8192,
+ "tokens_prompt_plano": 4245,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8fabdad5c12748b44a702897e21dee3133cc205ad6fc3be716504b161bf321c9",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 6.36,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.4169921875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T02:48:20+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Amizade entre Hiccup e Toothless",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Reviews medianas destacam a amizade entre o protagonista e o dragão como um dos pontos mais queridos, criando um vínculo emocionante que sustenta grande parte da narrativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas destacam a amizade entre o protagonista e o dragão como um dos pontos mais queridos, criando um vínculo emocionante que sustenta grande parte da narrativa.",
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Ritmo e duração do filme",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Este grupo menciona que o ritmo é dinâmico e a duração é curta, contribuindo para uma experiência leve e divertida, embora espectadores considerem a montagem arrastada em certos momentos.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo menciona que o ritmo é dinâmico e a duração é curta, contribuindo para uma experiência leve e divertida, embora alguns considerem a montagem arrastada em certos momentos.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Animação e estética",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "A animação e a estética são elogiadas, com destaque para a beleza visual e a nostalgia que remetem a animações clássicas, embora espectadores achem que não se encaixam bem em um filme moderno.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A animação e a estética são frequentemente elogiadas, com destaque para a beleza visual e a nostalgia que remetem a animações clássicas, embora alguns achem que não se encaixam bem em um filme moderno.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagens e desenvolvimento",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Críticos medianas apontam que o desenvolvimento de personagens, especialmente de Hiccup e do pai, é irregular, e que certos personagens secundários carecem de profundidade e motivação.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Alguns críticos medianas apontam que o desenvolvimento de personagens, especialmente de Hiccup e do pai, é irregular, e que certos personagens secundários carecem de profundidade e motivação.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e originalidade",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "Este grupo critica o roteiro por parecer clichê e seguir um caminho previsível, com pessoas sentindo que a história não traz surpresas e que a originalidade é limitada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo critica o roteiro por parecer clichê e seguir um caminho previsível, com algumas pessoas sentindo que a história não traz surpresas e que a originalidade é limitada.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Nostalgia e impacto emocional",
+    "mencoes_aproximadas": 7,
+    "n_reviews_analisadas": 30,
+    "exemplo_parafraseado": "A nostalgia é um fator importante para críticos medianas, que apreciam a conexão afetiva e os momentos que mexem com o coração, embora alguns não se sintam tão envolvidos ao assistir pela primeira vez.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A nostalgia é um fator importante para muitos críticos medianas, que apreciam a conexão afetiva e os momentos que mexem com o coração, embora alguns não se sintam tão envolvidos ao assistir pela primeira vez.",
+    "quantidade_pendente": true
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a amizade entre Hiccup e Toothless como um dos pontos mais queridos, além de elogiar a animação e o ritmo leve. No entanto, há críticas recorrentes ao desenvolvimento de personagens e à falta de originalidade no roteiro.",
+  "n_validas": 30,
+  "n_analisadas": 30,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 151.8,
+ "memoria": {
+  "ram_usada_gb": 12.61,
+  "ram_livre_min_gb": 2.58,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.66
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Amizade entre Hiccup e Toothless\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Várias reviews medianas destacam a amizade entre o protagonista e o dragão como um dos pontos mais queridos, criando um vínculo emocionante que sustenta grande parte da narrativa.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração do filme\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Este grupo menciona que o ritmo é dinâmico e a duração é curta, contribuindo para uma experiência leve e divertida, embora alguns considerem a montagem arrastada em certos momentos.\"\n    },\n    {\n      \"tema\": \"Animação e estética\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"A animação e a estética são frequentemente elogiadas, com destaque para a beleza visual e a nostalgia que remetem a animações clássicas, embora alguns achem que não se encaixam bem em um filme moderno.\"\n    },\n    {\n      \"tema\": \"Personagens e desenvolvimento\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Alguns críticos medianas apontam que o desenvolvimento de personagens, especialmente de Hiccup e do pai, é irregular, e que certos personagens secundários carecem de profundidade e motivação.\"\n    },\n    {\n      \"tema\": \"Roteiro e originalidade\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"Este grupo critica o roteiro por parecer clichê e seguir um caminho previsível, com algumas pessoas sentindo que a história não traz surpresas e que a originalidade é limitada.\"\n    },\n    {\n      \"tema\": \"Nostalgia e impacto emocional\",\n      \"mencoes_aproximadas\": 7,\n      \"n_reviews_analisadas\": 30,\n      \"exemplo_parafraseado\": \"A nostalgia é um fator importante para muitos críticos medianas, que apreciam a conexão afetiva e os momentos que mexem com o coração, embora alguns não se sintam tão envolvidos ao assistir pela primeira vez.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a amizade entre Hiccup e Toothless como um dos pontos mais queridos, além de elogiar a animação e o ritmo leve. No entanto, há críticas recorrentes ao desenvolvimento de personagens e à falta de originalidade no roteiro.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 151.62,
+   "leitura_prompt_s": 6.185,
+   "geracao_s": 143.212,
+   "carga_s": 0.006,
+   "prompt_eval_count": 4245,
+   "eval_count": 717
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "1917",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 5893,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "fd4457be0ebde717e9c30bf08273c0b881f6ad8feb77bb21d6ece010171b9a3f",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 10.1,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T04:16:16+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Fotografia e técnica cinematográfica impressionantes",
+    "mencoes_aproximadas": 25,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas destacam a fotografia de Roger Deakins, a iluminação e a cinematografia de plano sequência, descrevendo a experiência visual como espetacular e técnica impressionante.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas destacam a fotografia de Roger Deakins, a iluminação e a cinematografia de plano sequência, descrevendo a experiência visual como espetacular e técnica impressionante.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e tensão da filmagem em plano sequência",
+    "mencoes_aproximadas": 20,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que a técnica de plano sequência mantém uma tensão constante e uma sensação de imersão, mas também que, em certos momentos, a experiência se torna cansativa ou repetitiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que a técnica de plano sequência mantém uma tensão constante e uma sensação de imersão, mas também que, em alguns momentos, a experiência se torna cansativa ou repetitiva.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Falta de conexão emocional com a história",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que, apesar da qualidade técnica, o filme não conseguiu engajar emocionalmente ou criar um envolvimento com os personagens e a trama.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews medianas apontam que, apesar da qualidade técnica, o filme não conseguiu engajar emocionalmente ou criar um envolvimento com os personagens e a trama.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e história considerados simples ou sem impacto",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo destaca que a história é linear e sem muitos desvios, e que o roteiro não apresenta reviravoltas ou complexidade suficiente para manter o interesse por todo o filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": true
+   },
+   {
+    "tema": "Atuações e desempenho dos atores",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas mencionam que as atuações são competentes, especialmente a do protagonista, mas que a falta de desenvolvimento dos personagens limita o impacto da performance.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que as atuações são competentes, especialmente a do protagonista, mas que a falta de desenvolvimento dos personagens limita o impacto da performance.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Comparação com outras obras e expectativas",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas comparam o filme a outras produções do gênero e dizem que, embora tecnicamente bom, não se sobressai de forma significativa.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews medianas comparam o filme a outras produções do gênero e dizem que, embora tecnicamente bom, não se sobressai de forma significativa.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a qualidade técnica e a fotografia impressionantes, mas apontam que o filme não conseguiu criar uma conexão emocional ou envolvimento com a história e os personagens, resultando em uma experiência visual espetacular, porém sem impacto emocional significativo.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 167.4,
+ "memoria": {
+  "ram_usada_gb": 12.4,
+  "ram_livre_min_gb": 2.79,
+  "ws_ollama_gb": 0.07,
+  "vram_gb": 2.44
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Fotografia e técnica cinematográfica impressionantes\",\n      \"mencoes_aproximadas\": 25,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas destacam a fotografia de Roger Deakins, a iluminação e a cinematografia de plano sequência, descrevendo a experiência visual como espetacular e técnica impressionante.\"\n    },\n    {\n      \"tema\": \"Ritmo e tensão da filmagem em plano sequência\",\n      \"mencoes_aproximadas\": 20,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que a técnica de plano sequência mantém uma tensão constante e uma sensação de imersão, mas também que, em alguns momentos, a experiência se torna cansativa ou repetitiva.\"\n    },\n    {\n      \"tema\": \"Falta de conexão emocional com a história\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews medianas apontam que, apesar da qualidade técnica, o filme não conseguiu engajar emocionalmente ou criar um envolvimento com os personagens e a trama.\"\n    },\n    {\n      \"tema\": \"Roteiro e história considerados simples ou sem impacto\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo destaca que a história é linear e sem muitos desvios, e que o roteiro não apresenta reviravoltas ou complexidade suficiente para manter o interesse por todo o filme.\"\n    },\n    {\n      \"tema\": \"Atuações e desempenho dos atores\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas mencionam que as atuações são competentes, especialmente a do protagonista, mas que a falta de desenvolvimento dos personagens limita o impacto da performance.\"\n    },\n    {\n      \"tema\": \"Comparação com outras obras e expectativas\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews medianas comparam o filme a outras produções do gênero e dizem que, embora tecnicamente bom, não se sobressai de forma significativa.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a qualidade técnica e a fotografia impressionantes, mas apontam que o filme não conseguiu criar uma conexão emocional ou envolvimento com a história e os personagens, resultando em uma experiência visual espetacular, porém sem impacto emocional significativo.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 167.22,
+   "leitura_prompt_s": 8.534,
+   "geracao_s": 150.262,
+   "carga_s": 6.322,
+   "prompt_eval_count": 5893,
+   "eval_count": 702
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

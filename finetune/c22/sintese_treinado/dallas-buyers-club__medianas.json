@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "dallas-buyers-club",
+ "bucket": "medianas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6196,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+ "user_sha256": "8e950f40d627238dae16e8fd5ff81017a0fb65c549c6756b48776de3f75e8090",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.58,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.181640625,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T06:52:51+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Atuação de Matthew McConaughey",
+    "mencoes_aproximadas": 24,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Matthew McConaughey é citada como um dos pontos mais elogiados, com espectadores destacando seu carisma, a transformação física e a entrega emocional, considerando-a fundamental para a qualidade do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Matthew McConaughey é frequentemente citada como um dos pontos mais elogiados, com muitos destacando seu carisma, a transformação física e a entrega emocional, considerando-a fundamental para a qualidade do filme.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tom e ritmo do filme",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews medianas apontam que o ritmo é lento ou que o filme arrasta, especialmente na segunda metade, o que pode tornar a experiência tediosa ou cansativa para espectadores.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews medianas apontam que o ritmo é lento ou que o filme arrasta, especialmente na segunda metade, o que pode tornar a experiência tediosa ou cansativa para alguns espectadores.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e adaptação da história",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews criticam o roteiro por ser genérico, tomar licenças com a verdade ou não explorar o tema da AIDS de forma suficiente, resultando em uma história que soa vazia ou pouco envolvente.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews criticam o roteiro por ser genérico, tomar muitas licenças com a verdade ou não explorar o tema da AIDS de forma suficiente, resultando em uma história que soa vazia ou pouco envolvente.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuação de Jared Leto e sua escolha para o papel",
+    "mencoes_aproximadas": 9,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A atuação de Jared Leto e a decisão de ele interpretar uma mulher travesti geram críticas e opiniões mistas, com espectadores considerando a escolha problemática ou estranha, enquanto outros elogiam seu desempenho.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A atuação de Jared Leto e a decisão de ele interpretar uma mulher travesti geram críticas e opiniões mistas, com alguns considerando a escolha problemática ou estranha, enquanto outros elogiam seu desempenho.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e direção",
+    "mencoes_aproximadas": 6,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a direção são mencionadas de forma menos freqüente, com comentários que destacam a realidade e o estilo documental, mas também apontam que a direção poderia ter sido mais inventiva.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tema da AIDS e preconceito",
+    "mencoes_aproximadas": 5,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O filme é visto como uma tentativa interessante de retratar o preconceito e o impacto da AIDS, mas espectadores acham que o tema não é abordado de forma profunda o suficiente ou que a abordagem é superficial.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O filme é visto como uma tentativa interessante de retratar o preconceito e o impacto da AIDS, mas alguns acham que o tema não é abordado de forma profunda o suficiente ou que a abordagem é superficial.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews medianas destacam a atuação de Matthew McConaughey como um dos pontos mais elogiados, mas apontam críticas recorrentes ao ritmo lento e ao roteiro que parece genérico ou pouco envolvente. A escolha de Jared Leto para interpretar uma travesti também gera comentários mistos, com opiniões que variam entre crítica e elogio.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 181.6,
+ "memoria": {
+  "ram_usada_gb": 11.9,
+  "ram_livre_min_gb": 3.3,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "3ccc0876bfb920dfa115e721aa609da47ced0d4eb6c1e0d10addad42824ebcfa",
+   "texto": "{\n  \"bucket\": \"medianas\",\n  \"temas\": [\n    {\n      \"tema\": \"Atuação de Matthew McConaughey\",\n      \"mencoes_aproximadas\": 24,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Matthew McConaughey é frequentemente citada como um dos pontos mais elogiados, com muitos destacando seu carisma, a transformação física e a entrega emocional, considerando-a fundamental para a qualidade do filme.\"\n    },\n    {\n      \"tema\": \"Tom e ritmo do filme\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews medianas apontam que o ritmo é lento ou que o filme arrasta, especialmente na segunda metade, o que pode tornar a experiência tediosa ou cansativa para alguns espectadores.\"\n    },\n    {\n      \"tema\": \"Roteiro e adaptação da história\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews criticam o roteiro por ser genérico, tomar muitas licenças com a verdade ou não explorar o tema da AIDS de forma suficiente, resultando em uma história que soa vazia ou pouco envolvente.\"\n    },\n    {\n      \"tema\": \"Atuação de Jared Leto e sua escolha para o papel\",\n      \"mencoes_aproximadas\": 9,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A atuação de Jared Leto e a decisão de ele interpretar uma mulher travesti geram críticas e opiniões mistas, com alguns considerando a escolha problemática ou estranha, enquanto outros elogiam seu desempenho.\"\n    },\n    {\n      \"tema\": \"Fotografia e direção\",\n      \"mencoes_aproximadas\": 6,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a direção são mencionadas de forma menos freqüente, com comentários que destacam a realidade e o estilo documental, mas também apontam que a direção poderia ter sido mais inventiva.\"\n    },\n    {\n      \"tema\": \"Tema da AIDS e preconceito\",\n      \"mencoes_aproximadas\": 5,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O filme é visto como uma tentativa interessante de retratar o preconceito e o impacto da AIDS, mas alguns acham que o tema não é abordado de forma profunda o suficiente ou que a abordagem é superficial.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews medianas destacam a atuação de Matthew McConaughey como um dos pontos mais elogiados, mas apontam críticas recorrentes ao ritmo lento e ao roteiro que parece genérico ou pouco envolvente. A escolha de Jared Leto para interpretar uma travesti também gera comentários mistos, com opiniões que variam entre crítica e elogio.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 181.58,
+   "leitura_prompt_s": 8.863,
+   "geracao_s": 170.454,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6196,
+   "eval_count": 759
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

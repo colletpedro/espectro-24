@@ -1,0 +1,156 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "the-big-lebowski",
+ "bucket": "positivas",
+ "num_ctx": 10240,
+ "tokens_prompt_plano": 6221,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "e4bc980f0b2ffb6d358dbb0dadb5c464d60b9affb0a79db90b3bf6367c7e5811",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.89,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.1748046875,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T15:23:11+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Ritmo e estrutura",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews destacam que o filme se estende por mais de duas horas e, embora o ritmo se mantenha leve, reviews acham que a duração poderia ser encurtada.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Várias reviews destacam que o filme se estende por mais de duas horas e, embora o ritmo se mantenha leve, algumas acham que a duração poderia ser encurtada.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Humor e piadas",
+    "mencoes_aproximadas": 15,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Críticos elogiam o humor absurdo e as piadas de forma natural, com destaque para as tiradas e os diálogos memoráveis que tornam o filme divertido.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitos críticos elogiam o humor absurdo e as piadas de forma natural, com destaque para as tiradas e os diálogos memoráveis que tornam o filme divertido.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações, especialmente a de Jeff Bridges como The Dude e John Goodman como Walter, são citadas como pontos altos da experiência.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As atuações, especialmente a de Jeff Bridges como The Dude e John Goodman como Walter, são frequentemente citadas como pontos altos da experiência.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Fotografia e trilha sonora",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A fotografia e a trilha sonora são elogiadas por criar uma atmosfera única, contribuindo para o charme e o humor do filme.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Personagem de The Dude",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O personagem de The Dude é visto como um dos melhores da trama, sendo descrito como zen, descontraído e um exemplo de como viver uma vida simples.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": false,
+    "exemplo_antes_da_guarda": null,
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Roteiro e crítica social",
+    "mencoes_aproximadas": 8,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews apontam que o roteiro critica ideologias e a busca por dinheiro, sexo e violência, destacando a ironia e a sátira de como as pessoas se contradizem.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Algumas reviews apontam que o roteiro critica ideologias e a busca por dinheiro, sexo e violência, destacando a ironia e a sátira de como as pessoas se contradizem.",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "As reviews positivas deste grupo destacam o humor absurdo, as atuações marcantes e o estilo único do filme. Muitos apreciam o ritmo leve e a trilha sonora, enquanto outros veem a estrutura longa como um ponto a melhorar.",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 152.3,
+ "memoria": {
+  "ram_usada_gb": 11.29,
+  "ram_livre_min_gb": 3.91,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.49
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Ritmo e estrutura\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Várias reviews destacam que o filme se estende por mais de duas horas e, embora o ritmo se mantenha leve, algumas acham que a duração poderia ser encurtada.\"\n    },\n    {\n      \"tema\": \"Humor e piadas\",\n      \"mencoes_aproximadas\": 15,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitos críticos elogiam o humor absurdo e as piadas de forma natural, com destaque para as tiradas e os diálogos memoráveis que tornam o filme divertido.\"\n    },\n    {\n      \"tema\": \"Atuações\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações, especialmente a de Jeff Bridges como The Dude e John Goodman como Walter, são frequentemente citadas como pontos altos da experiência.\"\n    },\n    {\n      \"tema\": \"Fotografia e trilha sonora\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A fotografia e a trilha sonora são elogiadas por criar uma atmosfera única, contribuindo para o charme e o humor do filme.\"\n    },\n    {\n      \"tema\": \"Personagem de The Dude\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O personagem de The Dude é visto como um dos melhores da trama, sendo descrito como zen, descontraído e um exemplo de como viver uma vida simples.\"\n    },\n    {\n      \"tema\": \"Roteiro e crítica social\",\n      \"mencoes_aproximadas\": 8,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Algumas reviews apontam que o roteiro critica ideologias e a busca por dinheiro, sexo e violência, destacando a ironia e a sátira de como as pessoas se contradizem.\"\n    }\n  ],\n  \"observacao_geral\": \"As reviews positivas deste grupo destacam o humor absurdo, as atuações marcantes e o estilo único do filme. Muitos apreciam o ritmo leve e a trilha sonora, enquanto outros veem a estrutura longa como um ponto a melhorar.\"\n}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 152.31,
+   "leitura_prompt_s": 9.49,
+   "geracao_s": 140.497,
+   "carga_s": 0.005,
+   "prompt_eval_count": 6221,
+   "eval_count": 637
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}

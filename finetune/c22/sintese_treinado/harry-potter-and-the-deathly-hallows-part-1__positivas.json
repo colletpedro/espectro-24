@@ -1,0 +1,144 @@
+{
+ "lado": "treinado",
+ "modelo": "espectro-qwen3-8b-treinado",
+ "origem": {
+  "importacao": "importar_espectro-qwen3-8b-treinado_20261103_041728.json",
+  "nome_ollama": "espectro-qwen3-8b-treinado",
+  "gguf_sha256": "e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac",
+  "log_kernel": "finetune\\kaggle\\treino_saida_qwen3\\treino\\qwen3-8b-treinado__12288\\log.json",
+  "log_kernel_sha256": "2df59dd6ce0bed16549102e7a14d480b23cc45c876672c65ab6441e9993b9a2b",
+  "modelfile_usado": "FROM C:\\Users\\salve\\espectro24-kaggle\\qwen3\\treino\\treino\\qwen3-8b-treinado__12288\\Qwen3-8B.Q4_K_M.gguf\nTEMPLATE \"\"\"{{- range .Messages }}{{- if eq .Role \"system\" }}<|im_start|>system\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ .Content }}<|im_end|>\n{{ end }}{{- end }}<|im_start|>assistant\n<think>\n\n</think>\n\n\"\"\"\nPARAMETER stop \"<|im_end|>\"\n"
+ },
+ "slug": "harry-potter-and-the-deathly-hallows-part-1",
+ "bucket": "positivas",
+ "num_ctx": 9216,
+ "tokens_prompt_plano": 4528,
+ "num_predict": 3000,
+ "think": "false",
+ "amostragem": {
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0.0,
+  "repeat_penalty": 1.0
+ },
+ "seed": 20261019,
+ "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+ "user_sha256": "a7439165d9330aeb414f98257787f3bae6f18487a8eda599a63b48e6ff2708ab",
+ "preregistro": {
+  "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+  "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+  "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794"
+ },
+ "partida": {
+  "ram_partida_min_gb": 6.0,
+  "ps_antes": [],
+  "ps_depois_do_stop": [],
+  "ps_vazio": true,
+  "ram_livre_partida_gb": 9.72,
+  "espera_ram_s": 0.0,
+  "ws_ollama_partida_gb": 0.0,
+  "vram_partida_gb": 0.126953125,
+  "limpa": true
+ },
+ "guarda_sha256": "61da0b7d059c7c129532b55bf3d61ab516f991eae1eba2b6af1b80af2c671794",
+ "ts": "2026-11-06T03:30:54+00:00",
+ "ok": true,
+ "bucket_final": {
+  "temas": [
+   {
+    "tema": "Dobby e as mortes trágicas",
+    "mencoes_aproximadas": 18,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Reviews destacam o impacto emocional das mortes no filme, especialmente a de Dobby, que é descrita como um dos momentos mais desgarradores e que gera lágrimas. A morte de Hedwig e a lechuza também são mencionadas como momentos tristes que deixam uma impressão duradoura.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Muitas reviews destacam o impacto emocional das mortes no filme, especialmente a de Dobby, que é descrita como um dos momentos mais desgarradores e que gera lágrimas. A morte de Hedwig e a lechuza também são mencionadas como momentos tristes que deixam uma impressão duradoura.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Ritmo e duração da primeira parte",
+    "mencoes_aproximadas": 14,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "Este grupo de reviews analisa que a primeira parte do filme é lenta, com uma longa fase de construção, mas que compensa com uma conclusão intensa e emocionante. Reviews consideram que essa duração é necessária para desenvolver os personagens e a trama de forma mais profunda.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "Este grupo de reviews analisa que a primeira parte do filme é lenta, com uma longa fase de construção, mas que compensa com uma conclusão intensa e emocionante. Algumas consideram que essa duração é necessária para desenvolver os personagens e a trama de forma mais profunda.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Animação e visual",
+    "mencoes_aproximadas": 12,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "A animação, especialmente a sequência dos três irmãos, é elogiada como um visual maravilhoso que eleva o filme. A fotografia e o uso de sombras também são mencionados como elementos que criam uma atmosfera sombria e desesperadora.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "A animação, especialmente a sequência dos três irmãos, é frequentemente elogiada como um visual maravilhoso que eleva o filme. A fotografia e o uso de sombras também são mencionados como elementos que criam uma atmosfera sombria e desesperadora.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Atuações e personagens principais",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "As atuações dos personagens principais são elogiadas, com destaque para a química entre Harry e Hermione, que é vista como mais madura e desenvolvida. A atuação de Alan Rickman também é destacada, especialmente em seu retorno.",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "As atuações dos personagens principais são elogiadas, com destaque para a química entre Harry e Hermione, que é vista como mais madura e desenvolvida. A atuação de Alan Rickman também é frequentemente destacada, especialmente em seu retorno.",
+    "quantidade_pendente": false
+   },
+   {
+    "tema": "Tom sombrio e atmosfera de perda",
+    "mencoes_aproximadas": 10,
+    "n_reviews_analisadas": 40,
+    "exemplo_parafraseado": "O tom sombrio e a atmosfera de perda são apreciados como uma mudança de ritmo em relação às outras películas, criando uma experiência mais intensa e emocionante. Reviews compararam este filme ao ",
+    "mencoes_clampadas": false,
+    "mencoes_valor_original": null,
+    "aspas_removidas": false,
+    "quantidade_reescrita": true,
+    "exemplo_antes_da_guarda": "O tom sombrio e a atmosfera de perda são apreciados como uma mudança de ritmo em relação às outras películas, criando uma experiência mais intensa e emocionante. Muitas reviews compararam este filme ao ",
+    "quantidade_pendente": false
+   }
+  ],
+  "observacao_geral": "",
+  "n_validas": 40,
+  "n_analisadas": 40,
+  "idioma_invalido": false,
+  "escopo_suspeito": false
+ },
+ "json_parseia": true,
+ "json_parseia_1a_tentativa": true,
+ "parede_s": 132.5,
+ "memoria": {
+  "ram_usada_gb": 12.88,
+  "ram_livre_min_gb": 2.31,
+  "ws_ollama_gb": 0.05,
+  "vram_gb": 2.41
+ },
+ "tentativas": [
+  {
+   "reforco": false,
+   "system_sha256": "c3fc5682985aca2874c592803fc9bf12235d016ae89c624532c8d603791da73c",
+   "texto": "{\n  \"bucket\": \"positivas\",\n  \"temas\": [\n    {\n      \"tema\": \"Dobby e as mortes trágicas\",\n      \"mencoes_aproximadas\": 18,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Muitas reviews destacam o impacto emocional das mortes no filme, especialmente a de Dobby, que é descrita como um dos momentos mais desgarradores e que gera lágrimas. A morte de Hedwig e a lechuza também são mencionadas como momentos tristes que deixam uma impressão duradoura.\"\n    },\n    {\n      \"tema\": \"Ritmo e duração da primeira parte\",\n      \"mencoes_aproximadas\": 14,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"Este grupo de reviews analisa que a primeira parte do filme é lenta, com uma longa fase de construção, mas que compensa com uma conclusão intensa e emocionante. Algumas consideram que essa duração é necessária para desenvolver os personagens e a trama de forma mais profunda.\"\n    },\n    {\n      \"tema\": \"Animação e visual\",\n      \"mencoes_aproximadas\": 12,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"A animação, especialmente a sequência dos três irmãos, é frequentemente elogiada como um visual maravilhoso que eleva o filme. A fotografia e o uso de sombras também são mencionados como elementos que criam uma atmosfera sombria e desesperadora.\"\n    },\n    {\n      \"tema\": \"Atuações e personagens principais\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"As atuações dos personagens principais são elogiadas, com destaque para a química entre Harry e Hermione, que é vista como mais madura e desenvolvida. A atuação de Alan Rickman também é frequentemente destacada, especialmente em seu retorno.\"\n    },\n    {\n      \"tema\": \"Tom sombrio e atmosfera de perda\",\n      \"mencoes_aproximadas\": 10,\n      \"n_reviews_analisadas\": 40,\n      \"exemplo_parafraseado\": \"O tom sombrio e a atmosfera de perda são apreciados como uma mudança de ritmo em relação às outras películas, criando uma experiência mais intensa e emocionante. Muitas reviews compararam este filme ao \" }\n]}",
+   "modelo_efetivo": "espectro-qwen3-8b-treinado",
+   "finish_reason": "stop",
+   "latencia_s": 132.5,
+   "leitura_prompt_s": 6.435,
+   "geracao_s": 123.834,
+   "carga_s": 0.005,
+   "prompt_eval_count": 4528,
+   "eval_count": 616
+  }
+ ],
+ "n_chamadas": 1,
+ "abortado_por_memoria": false,
+ "abortos_memoria": 0,
+ "fora_por_memoria": false
+}
