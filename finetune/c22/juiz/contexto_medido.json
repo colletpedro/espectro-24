@@ -1,0 +1,62 @@
+{
+ "config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "medidos": [
+  {
+   "id_par": "treinado|the-big-lebowski|medianas|1|viewing:1497364922",
+   "chars_prompt": 8526,
+   "prompt_eval_count": 2188
+  },
+  {
+   "id_par": "treinado|ford-v-ferrari|negativas|4|viewing:1338964810",
+   "chars_prompt": 8420,
+   "prompt_eval_count": 2265
+  },
+  {
+   "id_par": "treinado|perfect-blue|positivas|2|viewing:1500127827",
+   "chars_prompt": 8099,
+   "prompt_eval_count": 1951
+  },
+  {
+   "id_par": "treinado|men-in-black|positivas|3|viewing:1461851865",
+   "chars_prompt": 7975,
+   "prompt_eval_count": 1908
+  },
+  {
+   "id_par": "treinado|transformers|medianas|0|viewing:1498727096",
+   "chars_prompt": 7667,
+   "prompt_eval_count": 1940
+  },
+  {
+   "id_par": "treinado|full-metal-jacket|negativas|2|viewing:1458197562",
+   "chars_prompt": 7543,
+   "prompt_eval_count": 2256
+  },
+  {
+   "id_par": "treinado|how-to-train-your-dragon|positivas|4|viewing:1467931107",
+   "chars_prompt": 7499,
+   "prompt_eval_count": 1945
+  },
+  {
+   "id_par": "treinado|the-big-lebowski|medianas|0|viewing:1484966357",
+   "chars_prompt": 7410,
+   "prompt_eval_count": 1789
+  },
+  {
+   "id_par": "treinado|perfect-blue|medianas|2|viewing:1499794889",
+   "chars_prompt": 7342,
+   "prompt_eval_count": 1796
+  },
+  {
+   "id_par": "treinado|eyes-wide-shut|medianas|2|viewing:1497561829",
+   "chars_prompt": 6937,
+   "prompt_eval_count": 1750
+  }
+ ],
+ "max_prompt_tokens": 2265,
+ "num_predict": 1024,
+ "precisa": 3289,
+ "num_ctx": 4096,
+ "folga": 807,
+ "cabe": true,
+ "menor_multiplo_512": 3584
+}
