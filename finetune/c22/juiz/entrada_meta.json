@@ -1,0 +1,18 @@
+{
+ "gerado_por": "scripts/finetune/c22.py preparar",
+ "juiz_config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "modelo_e5": "intfloat/multilingual-e5-base",
+ "e5_snapshot": "d128750597153bb5987e10b1c3493a34e5a4502a",
+ "k": 5,
+ "pares": 3145,
+ "bullets": 629,
+ "buckets_mantidos": 105,
+ "fora_por_memoria": [],
+ "pares_nao_julgaveis_estimados": 10,
+ "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+ "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+ "manifesto_sha256": "555291ab70108bb103488059fddf4e045bdae5df2a338b395f42a2fa0fd9cae8",
+ "entrada_sha256": "05ed5fe2e83a756e5950ce96cf8f348bd36de0868dd9c5a4e64034876a5cd49d",
+ "script_sha256": "342d2926fa107b8d7c92de06a12b92204877255e4432233a1a4d67b9e282c456",
+ "tempo_s": 14603.1
+}

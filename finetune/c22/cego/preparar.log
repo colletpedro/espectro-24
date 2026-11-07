@@ -1,0 +1,53 @@
+  1/35 1917 · 1129s
+  2/35 a-fistful-of-dollars · 1159s
+  3/35 aladdin-2019 · 1190s
+  4/35 american-sniper · 1225s
+  5/35 blackkklansman · 1270s
+  6/35 conclave · 1304s
+  7/35 dallas-buyers-club · 1338s
+  8/35 detachment · 1373s
+  9/35 eyes-wide-shut · 1406s
+  10/35 for-a-few-dollars-more · 1442s
+  11/35 ford-v-ferrari · 1488s
+  12/35 full-metal-jacket · 1828s
+  13/35 green-book · 1877s
+  14/35 harry-potter-and-the-deathly-hallows-part-1 · 1912s
+  15/35 how-to-train-your-dragon · 1940s
+  16/35 kill-bill-vol-2 · 2978s
+  17/35 men-in-black · 3014s
+  18/35 moneyball · 3042s
+  19/35 perfect-blue · 3081s
+  20/35 poor-things-2023 · 4116s
+  21/35 project-x-2012 · 4133s
+  22/35 punch-drunk-love · 4160s
+  23/35 rango · 4191s
+  24/35 saving-private-ryan · 5122s
+  25/35 scarface-1983 · 5146s
+  26/35 snatch · 6123s
+  27/35 spider-man-into-the-spider-verse · 6148s
+  28/35 the-big-lebowski · 6175s
+  29/35 the-dark-knight · 6596s
+  30/35 the-good-the-bad-and-the-ugly · 7306s
+  31/35 the-pursuit-of-happyness · 8524s
+  32/35 the-simpsons-movie · 8931s
+  33/35 toy-story-3 · 8964s
+  34/35 transformers · 10957s
+  35/35 vertigo · 14602s
+[2026-11-07T08:58:50+00:00] {
+ "gerado_por": "scripts/finetune/c22.py preparar",
+ "juiz_config_sha256": "44606cf17c88338692139cf3dc9c6d46fbbbb90e07da80f26350b68c40ce6669",
+ "modelo_e5": "intfloat/multilingual-e5-base",
+ "e5_snapshot": "d128750597153bb5987e10b1c3493a34e5a4502a",
+ "k": 5,
+ "pares": 3145,
+ "bullets": 629,
+ "buckets_mantidos": 105,
+ "fora_por_memoria": [],
+ "pares_nao_julgaveis_estimados": 10,
+ "escopo_sha256": "23cc978c5e9e0b350750ef5e2dea7d1f770f216c2218d53fc9694bb756161872",
+ "plano_sha256": "1701d08519845bab892c3348373857d77e7aa00751569d315b631a5cea36c111",
+ "manifesto_sha256": "555291ab70108bb103488059fddf4e045bdae5df2a338b395f42a2fa0fd9cae8",
+ "entrada_sha256": "05ed5fe2e83a756e5950ce96cf8f348bd36de0868dd9c5a4e64034876a5cd49d",
+ "script_sha256": "342d2926fa107b8d7c92de06a12b92204877255e4432233a1a4d67b9e282c456",
+ "tempo_s": 14603.1
+}
