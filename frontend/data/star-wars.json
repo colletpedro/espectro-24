@@ -1,0 +1,1567 @@
+{
+  "slug": "star-wars",
+  "data_coleta": "2026-11-08T06:04:55.575602+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 2918568,
+  "reviews_url": "https://letterboxd.com/film/star-wars/reviews/",
+  "ficha": {
+    "titulo": "Guerra nas Estrelas",
+    "sinopse_oficial": "A princesa Leia é mantida refém pelas forças imperiais comandadas por Darth Vader. Luke Skywalker e Han Solo precisam libertá-la e restaurar a liberdade e a justiça na galáxia.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Aventura",
+      "Ação",
+      "Ficção científica"
+    ],
+    "duracao_min": 121,
+    "diretor": "George Lucas",
+    "diretor_transliterado": false,
+    "ano": 1977,
+    "data_estreia": "1977-05-25",
+    "fonte": "tmdb",
+    "tmdb_id": 11,
+    "tmdb_fetched_at": "2026-11-08T05:58:42+00:00",
+    "poster_path": "/dw7X9YPjjAfIxKHW04V64Bb9TB0.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+      "/4qCqAdHcNKeAHcK8tJ8wNJZa9cx.jpg",
+      "/jBFxXKCrViA88hhO59fDx0Av4P.jpg",
+      "/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+      "/2w4xG178RpB4MDAIfTkqAuSJzec.jpg",
+      "/3H94YlnYWVLKQKEnfTBKvrCmHmt.jpg",
+      "/yrdAamkeqXHm0UYukk8xgoCvc7G.jpg",
+      "/1tSsgsfVVRULrLJrAclUGpQyEgm.jpg",
+      "/aDYSnJAK0BTVeE8osOy22Kz3SXY.jpg",
+      "/jNjT5y95BToczcxgVPl1NBB7goY.jpg"
+    ],
+    "backdrop_path": "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/iWEJuiNOlScWVxfNVyXiXf6lCiG.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4qCqAdHcNKeAHcK8tJ8wNJZa9cx.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/51nwO593cLtAXGVlI8gh1nlhc0J.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/6cVm9AhKKgbiV20hSk3fSiZTBkw.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/mhYiUu0QGaN5wxhuuVN1QuLh666.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/oKAsV0dYmoFUDcBmzXC94AzqpHb.jpg",
+        "still_largura": 3072,
+        "still_altura": 1728
+      },
+      {
+        "still_path": "/45Qwa327mQQlmC2YUxucLfpfLqx.jpg",
+        "still_largura": 1455,
+        "still_altura": 818
+      },
+      {
+        "still_path": "/aByCBFGABC5QT8qJnkr19TywExD.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/gaUGKDquy3lNB63yOiv0Akk41oj.jpg",
+        "still_largura": 1455,
+        "still_altura": 818
+      },
+      {
+        "still_path": "/khPpMCp0ZbYqAVIBRZa1aeCrr4R.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/rFwYU2oauGWlGWoiQs59wPLsgPi.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vU6fPCxeTF15RKtzJu5uoNTIIpi.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "star-wars",
+      "titulo_letterboxd": "Star Wars",
+      "ano_letterboxd": 1977,
+      "tmdb_id_letterboxd": 11,
+      "tmdb_id_escolhido": 11,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Star Wars",
+      "ano_tmdb": 1977,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 2918568,
+    "por_nivel": {
+      "0.5": 3648,
+      "1.0": 9500,
+      "1.5": 5041,
+      "2.0": 35576,
+      "2.5": 40516,
+      "3.0": 269439,
+      "3.5": 326196,
+      "4.0": 948878,
+      "4.5": 424437,
+      "5.0": 855337
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 11,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "star-wars",
+    "coletado_em": "2026-11-08T06:04:55.575602+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 3648,
+      "1.0": 9500,
+      "1.5": 5041,
+      "2.0": 35576,
+      "2.5": 40516,
+      "3.0": 269439,
+      "3.5": 326196,
+      "4.0": 948878,
+      "4.5": 424437,
+      "5.0": 855337
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 12,
+      "2.5": 6,
+      "3.0": 16,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 144,
+      "2.5": 72,
+      "3.0": 192,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 11,
+      "1.5": 4,
+      "2.0": 33,
+      "2.5": 17,
+      "3.0": 34,
+      "3.5": 5,
+      "4.0": 21,
+      "4.5": 10,
+      "5.0": 14
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 2,
+      "2.5": 0,
+      "3.0": 6,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 1
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.0": 6
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 46,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 1,
+      "2.0": 10,
+      "2.5": 11,
+      "3.0": 73,
+      "3.5": 88,
+      "4.0": 256,
+      "4.5": 115,
+      "5.0": 231
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 684,
+        "min": "1977-10-27",
+        "max": "2026-11-08",
+        "p5": "2026-09-24",
+        "p50": "2026-10-31",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "1977-10-27",
+          "max": "2026-11-07",
+          "p5": "2026-05-13",
+          "p50": "2026-10-14",
+          "p95": "2026-11-05"
+        },
+        "medianas": {
+          "n": 264,
+          "min": "2012-08-30",
+          "max": "2026-11-08",
+          "p5": "2026-10-14",
+          "p50": "2026-11-02",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2017-11-26",
+          "max": "2026-11-08",
+          "p5": "2026-10-16",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 22,
+      "dias_por_100_paginas": 17.322834645669293,
+      "paginas_para_1_ano": 2107
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 19,
+        "dias_por_100_paginas": 950.0,
+        "paginas_para_1_ano": 38
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 13,
+        "dias_por_100_paginas": 1300.0,
+        "paginas_para_1_ano": 28
+      },
+      "2.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 12,
+        "dias": 41,
+        "dias_por_100_paginas": 372.72727272727275,
+        "paginas_para_1_ano": 98
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 15,
+        "dias_por_100_paginas": 300.0,
+        "paginas_para_1_ano": 122
+      },
+      "3.0": {
+        "n_paginas": 16,
+        "pagina_min": 1,
+        "pagina_max": 36,
+        "dias": 24,
+        "dias_por_100_paginas": 68.57142857142857,
+        "paginas_para_1_ano": 532
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 0,
+        "dias_por_100_paginas": 0.0,
+        "paginas_para_1_ano": null
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 22,
+        "dias_por_100_paginas": 17.322834645669293,
+        "paginas_para_1_ano": 2107
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 29,
+        "dias": 7,
+        "dias_por_100_paginas": 25.0,
+        "paginas_para_1_ano": 1460
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 58,
+        "dias": 9,
+        "dias_por_100_paginas": 15.789473684210526,
+        "paginas_para_1_ano": 2312
+      }
+    },
+    "ano_lancamento": 1977,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "star-wars",
+      "titulo": "Star Wars",
+      "ano": 1977,
+      "tmdb_id_letterboxd": 11,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2006-07-20",
+        "max": "2026-11-04",
+        "p5": "2025-08-03",
+        "p50": "2026-10-11",
+        "p95": "2026-11-02"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 26,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 104,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 104,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Envelhecimento e efeitos datados",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas destacam que a produção envelheceu mal, com efeitos especiais e recursos técnicos que hoje soam ultrapassados e pouco convincentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo arrastado e partes entediantes",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que a narrativa se arrasta em certos momentos, tornando o filme lento e, por vezes, entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo aponta que a narrativa se arrasta em vários momentos, tornando o filme lento e, por vezes, entediante."
+        },
+        {
+          "tema": "Personagens e atuações fracos",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas consideram que os personagens são rasos e as atuações pouco inspiradas, com exceções pontuais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Diálogos e roteiro simplistas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica a escrita expositiva e previsível, com diálogos fracos e uma trama maniqueísta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia como principal mérito",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews negativas sugerem que o apreço pelo filme se deve mais à nostalgia e ao seu papel histórico do que à qualidade intrínseca.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ação e coreografias decepcionantes",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que as cenas de ação e as lutas de sabre de luz são simplórias e pouco empolgantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam para uma percepção de que o filme envelheceu mal, com ritmo lento, efeitos datados e personagens rasos, atribuindo seu status mais à nostalgia do que a qualidades intrínsecas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 36,
+        "p5": 1,
+        "p50": 8,
+        "p95": 18,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-19",
+        "max": "2026-11-08",
+        "p5": "2026-10-14",
+        "p50": "2026-11-03",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 35,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 155,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 155,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar e poderia ser mais curto, com certas partes arrastadas que tornam a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme demora a engrenar e poderia ser mais curto, com algumas partes arrastadas que tornam a experiência cansativa."
+        },
+        {
+          "tema": "Efeitos práticos e visuais marcantes",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia os efeitos práticos e o design de produção para a época, considerando-os impressionantes e um dos pontos altos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens carismáticos e dinâmica entre eles",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam o carisma dos personagens e a química entre o trio principal, além do humor dos droides.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro simplista e previsível",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que a narrativa é maniqueísta e cheia de clichês, com uma escrita que soa infantil e pouco profunda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas apontam que a narrativa é maniqueísta e cheia de clichês, com uma escrita que soa infantil e pouco profunda."
+        },
+        {
+          "tema": "Trilha sonora icônica",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música de John Williams é elogiada como um dos grandes trunfos do filme, elevando cenas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A música de John Williams é frequentemente elogiada como um dos grandes trunfos do filme, elevando várias cenas."
+        },
+        {
+          "tema": "Atuações e diálogos datados",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram a atuação exagerada e os diálogos pouco naturais, o que prejudica o envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews medianas consideram a atuação exagerada e os diálogos pouco naturais, o que prejudica o envolvimento com a história."
+        }
+      ],
+      "observacao_geral": "As reviews medianas equilibram admiração pelo legado técnico e pela trilha sonora com ressalvas sobre ritmo, roteiro e atuações. Este grupo específico parece assistir ao filme com expectativas moderadas, reconhecendo sua importância histórica, mas sem se envolver completamente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 11
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 13
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 7,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-25",
+        "max": "2026-11-08",
+        "p5": "2026-10-27",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 57,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 57,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Construção de mundo e universo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews elogiam a capacidade do filme de criar um universo rico e detalhado, com ambientações que fazem o espectador se sentir imerso em uma galáxia nova, com história e cultura próprias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews elogiam a capacidade do filme de criar um universo rico e detalhado, com ambientações que fazem o espectador se sentir imerso em uma galáxia nova, com história e cultura próprias."
+        },
+        {
+          "tema": "Personagens carismáticos e icônicos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews mencionam o carisma dos personagens, com destaque para a dupla de droides, a força de Leia e a presença marcante de Darth Vader, todos descritos como memoráveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora de John Williams",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é citada como um dos pontos altos, sendo descrita como icônica e capaz de elevar as cenas, tornando-se inesquecível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A música é frequentemente citada como um dos pontos altos, sendo descrita como icônica e capaz de elevar as cenas, tornando-se inesquecível."
+        },
+        {
+          "tema": "Efeitos visuais e práticos para a época",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores destacam que os efeitos, tanto visuais quanto práticos, eram revolucionários para os anos 1970 e ainda impressionam, com cenários e naves que parecem reais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos destacam que os efeitos, tanto visuais quanto práticos, eram revolucionários para os anos 1970 e ainda impressionam, com cenários e naves que parecem reais."
+        },
+        {
+          "tema": "Nostalgia e fator clássico",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas relatam que o filme desperta nostalgia e um sentimento de conforto, sendo uma obra que marcou gerações e permanece especial mesmo décadas após o lançamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias pessoas relatam que o filme desperta nostalgia e um sentimento de conforto, sendo uma obra que marcou gerações e permanece especial mesmo décadas após o lançamento."
+        },
+        {
+          "tema": "Ritmo e estrutura narrativa",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews comentam que o ritmo pode parecer lento em certos momentos, mas a estrutura de jornada do herói e a aventura simples e eficaz garantem o envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews comentam que o ritmo pode parecer lento em certos momentos, mas a estrutura de jornada do herói e a aventura simples e eficaz garantem o envolvimento."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a construção de mundo, a trilha sonora marcante, os efeitos revolucionários para a época e o carisma dos personagens como principais motivos de elogio. Este grupo também valoriza o aspecto nostálgico e clássico do filme, reconhecendo seu papel como marco cultural e base de uma franquia adorada.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 88
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e partes entediantes",
+            "exemplo_parafraseado": "Este grupo aponta que a narrativa se arrasta em certos momentos, tornando o filme lento e, por vezes, entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar e poderia ser mais curto, com certas partes arrastadas que tornam a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e estrutura narrativa",
+            "exemplo_parafraseado": "Reviews comentam que o ritmo pode parecer lento em certos momentos, mas a estrutura de jornada do herói e a aventura simples e eficaz garantem o envolvimento.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e atuações fracos",
+            "exemplo_parafraseado": "As reviews negativas consideram que os personagens são rasos e as atuações pouco inspiradas, com exceções pontuais.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e diálogos datados",
+            "exemplo_parafraseado": "Reviews medianas consideram a atuação exagerada e os diálogos pouco naturais, o que prejudica o envolvimento com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Envelhecimento e efeitos datados",
+            "exemplo_parafraseado": "As reviews negativas destacam que a produção envelheceu mal, com efeitos especiais e recursos técnicos que hoje soam ultrapassados e pouco convincentes.",
+            "temas_no_mesmo_eixo": [
+              "Ação e coreografias decepcionantes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos práticos e visuais marcantes",
+            "exemplo_parafraseado": "Este grupo elogia os efeitos práticos e o design de produção para a época, considerando-os impressionantes e um dos pontos altos do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos visuais e práticos para a época",
+            "exemplo_parafraseado": "Espectadores destacam que os efeitos, tanto visuais quanto práticos, eram revolucionários para os anos 1970 e ainda impressionam, com cenários e naves que parecem reais.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Diálogos e roteiro simplistas",
+            "exemplo_parafraseado": "Este grupo critica a escrita expositiva e previsível, com diálogos fracos e uma trama maniqueísta.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Personagens carismáticos e dinâmica entre eles",
+            "exemplo_parafraseado": "As reviews medianas destacam o carisma dos personagens e a química entre o trio principal, além do humor dos droides.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro simplista e previsível"
+            ]
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Construção de mundo e universo",
+            "exemplo_parafraseado": "Reviews elogiam a capacidade do filme de criar um universo rico e detalhado, com ambientações que fazem o espectador se sentir imerso em uma galáxia nova, com história e cultura próprias.",
+            "temas_no_mesmo_eixo": [
+              "Personagens carismáticos e icônicos"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora icônica",
+            "exemplo_parafraseado": "A música de John Williams é elogiada como um dos grandes trunfos do filme, elevando cenas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de John Williams",
+            "exemplo_parafraseado": "A música é citada como um dos pontos altos, sendo descrita como icônica e capaz de elevar as cenas, tornando-se inesquecível.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Nostalgia como principal mérito",
+            "exemplo_parafraseado": "As reviews negativas sugerem que o apreço pelo filme se deve mais à nostalgia e ao seu papel histórico do que à qualidade intrínseca.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e fator clássico",
+            "exemplo_parafraseado": "Pessoas relatam que o filme desperta nostalgia e um sentimento de conforto, sendo uma obra que marcou gerações e permanece especial mesmo décadas após o lançamento.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia a criação de um universo rico e detalhado, com cultura própria",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Construção de mundo e universo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por personagens carismáticos e memoráveis, como uma dupla de droides",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens carismáticos e icônicos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma trilha sonora marcante, capaz de dar força às cenas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora de John Williams",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera um ritmo lento em certos momentos, mas busca uma aventura simples e eficaz",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e estrutura narrativa",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com efeitos e recursos técnicos que o tempo deixou datados",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Envelhecimento e efeitos datados",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita narrativas que se arrastam, tornando o filme lento e entediante",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo arrastado e partes entediantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "espera personagens profundos e atuações inspiradas, não rasas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e atuações fracos",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "cliche",
+          "comprimento",
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 6,
+        "flags": [
+          "cliche",
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16451,
+      "completion_tokens": 993,
+      "cache_hit_tokens": 14888,
+      "cache_miss_tokens": 1563
+    },
+    "latencia_s": 8.16,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

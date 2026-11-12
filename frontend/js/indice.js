@@ -325,6 +325,54 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": true
   },
   {
+   "slug": "alien",
+   "titulo": "Alien: O Oitavo Passageiro",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Alien",
+   "chave_slug": "alien",
+   "ano": 1979,
+   "diretor": "Ridley Scott",
+   "generos": [
+    "Terror",
+    "Ficção científica"
+   ],
+   "imagens": {
+    "backdrop_path": "/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/4lCsYsPAzePbiAyCDj1nCdllVK.jpg",
+    "/86ETBohK7dMyhl80HNgxdO05C7T.jpg",
+    "/zUYFrUA9s9kmE8ngDm3NsVRXtn7.jpg",
+    "/iIc9tyskQedMEJpa7S4w4HkTBZz.jpg",
+    "/1ucXF1QXRxZ7CuCAoBupI30lmi6.jpg",
+    "/l4ovUyDxkrZP9ZkB46ZhUKS1Aj5.jpg",
+    "/9d74GjYLnFlKRqXcSGSVmbc6ajm.jpg",
+    "/cJUtVxkKoQ6c6WBN2oa4QqqPbvH.jpg",
+    "/fTdbkn5hFlOc7HDNokAF2i6rJxn.jpg",
+    "/jwHIgwg6beYUDtmpX1UOflk7cAu.jpg",
+    "/nwxVzq31dKtQcHwvajvzOuvLJjZ.jpg",
+    "/vK3oOsSE1asgNVsN86NCFpOAnmM.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 9,
+    "positivas": 89
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "direcao_imagem",
+   "estreia": "1979-05-25",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US",
+    "GB"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "all-quiet-on-the-western-front-2022",
    "titulo": "Nada de Novo no Front",
    "titulo_nativo": null,
@@ -374,6 +422,52 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Nada de Novo no Front"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "american-history-x",
+   "titulo": "A Outra História Americana",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "American History X",
+   "chave_slug": "american history x",
+   "ano": 1998,
+   "diretor": "Tony Kaye",
+   "generos": [
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+    "/9LSsSPbP715XT9B7acIZzantPyX.jpg",
+    "/74GoXLuOvnsFUgoUFKopPi1pUB3.jpg",
+    "/pT3Jk2PwVcfg8zKN7xolZgCCeN6.jpg",
+    "/xkFVbMilw8LzPEemcE0QilRBnCG.jpg",
+    "/1LjKtuhear8e2zPnknpqUUJ98Ox.jpg",
+    "/5frGGsdBOyVCXUvsHhqMljY3ndR.jpg",
+    "/AicXaanTahdY3MYbswks0vIMHAl.jpg",
+    "/d6h0aitieRIKguUxk6XQQe6e9zB.jpg",
+    "/ifNVxRaw5sMSqkV9YAjKEeo1sWP.jpg",
+    "/oul13Dvl6ZcBkpSAdWxMK6IGsOi.jpg",
+    "/uMrwTRpRYdtBLKNrAh7elwlbLG3.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 9,
+    "positivas": 89
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "critica_social",
+   "estreia": "1998-07-01",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -691,7 +785,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "impacto_emocional",
+   "assunto_comum": "tom_atmosfera",
    "estreia": "2022-11-18",
    "entrada": "2026-08-22",
    "paises": [
@@ -812,6 +906,53 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Carros"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "casablanca",
+   "titulo": "Casablanca",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Casablanca",
+   "chave_slug": "casablanca",
+   "ano": 1942,
+   "diretor": "Michael Curtiz",
+   "generos": [
+    "Drama",
+    "Romance"
+   ],
+   "imagens": {
+    "backdrop_path": "/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/87wqeMeUeMRLjsE1IWNKJcPlpuC.jpg",
+    "/bln0pnieTax3KrEpG5ZjN3fi1sw.jpg",
+    "/8nsDNWsm0CFsnbDCfUdMRHTsJFs.jpg",
+    "/spoTSsNvuvjwXvgrU0w6TXikmdG.jpg",
+    "/nPJWEg7Qbg92Ta3IzFLrfiTIOna.jpg",
+    "/lonZz9uxFBDMRpjqW3RhattfwE2.jpg",
+    "/oZnRe5ptFCM0LYhW2KghuNlh9qY.jpg",
+    "/40wA46x0t60PKo2ibkrsP3LDopx.jpg",
+    "/9ElMApxzqYmOpzbOp3t6G76Uh3F.jpg",
+    "/iEdQKQ9DGx8qzv4MUF7ma7qfxTQ.jpg",
+    "/qOM3c2nPADz1NXnw2KkyxJJCHAn.jpg",
+    "/uerY7rHy1LxkacLbVShqJLIeDp0.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 9,
+    "positivas": 89
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1943-01-15",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -1034,6 +1175,59 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "cinema-paradiso",
+   "titulo": "Cinema Paradiso",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Cinema Paradiso",
+   "chave_slug": "cinema paradiso",
+   "ano": 1988,
+   "diretor": "Giuseppe Tornatore",
+   "generos": [
+    "Drama",
+    "Romance"
+   ],
+   "imagens": {
+    "backdrop_path": "/zoVeIgKzGJzpdG6Gwnr7iOYfIMU.jpg",
+    "backdrop_largura": 3520,
+    "backdrop_altura": 1980
+   },
+   "stills": [
+    "/6JeDLq8bC81itC2wNJrdTWclFza.jpg",
+    "/LQbept4Ix8zlv1BtUhwSpOeImb.jpg",
+    "/xj3otWsBAf4WyyVn9Fyko8Xkl51.jpg",
+    "/7oHi3ZVKSFXuLH1UCZzAFIARycr.jpg",
+    "/jDA4l0rOdKOp9OgwvegoCN2VARP.jpg",
+    "/vqK5UJTKm1GSNAi8aGZGPCCs3KR.jpg",
+    "/45so5ISuSrFoa97Ou2445QBlVcr.jpg",
+    "/7syGcu1hQ2IXE7qcHTrTWI0yIQU.jpg",
+    "/dl2J5Zl8yQvwowbxmRMyevrEblD.jpg",
+    "/kinOKufC8g1txcIA37PN5CZM9bS.jpg",
+    "/tI9SGYeOYg9oWzMPZxVzHdlFMXp.jpg",
+    "/y1lEuJJigC14xFuvItphPRDSUaP.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 5,
+    "positivas": 94
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "ritmo",
+     "lift_pp": 40.0
+    }
+   ],
+   "assunto_comum": "tom_atmosfera",
+   "estreia": "1988-11-17",
+   "entrada": "2026-11-08",
+   "paises": [
+    "IT",
+    "FR"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "cujo",
    "titulo": "Cujo",
    "titulo_nativo": null,
@@ -1235,7 +1429,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "comparacoes",
+   "assunto_comum": "atuacao",
    "estreia": "2012-12-25",
    "entrada": "2026-09-17",
    "paises": [
@@ -1813,7 +2007,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "expectativa",
+   "assunto_comum": "critica_social",
    "estreia": "2017-02-24",
    "entrada": "2026-09-14",
    "paises": [
@@ -1924,7 +2118,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "comparacoes",
+   "assunto_comum": "ritmo",
    "estreia": "1990-09-12",
    "entrada": "2026-09-17",
    "paises": [
@@ -2038,6 +2232,54 @@ window.ESPECTRO_INDICE = {
     "titulo": "Happy Hour"
    },
    "titulo_difere_do_logo": true
+  },
+  {
+   "slug": "harakiri",
+   "titulo": "Harakiri",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Harakiri",
+   "chave_slug": "harakiri",
+   "ano": 1962,
+   "diretor": "Masaki Kobayashi",
+   "generos": [
+    "Ação",
+    "Drama",
+    "História"
+   ],
+   "imagens": {
+    "backdrop_path": "/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+    "backdrop_largura": 1412,
+    "backdrop_altura": 794
+   },
+   "stills": [
+    "/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+    "/nC3IjYhUgZWgfKfFX0ygMigFwgc.jpg",
+    "/XKPBYQQIhVhPmwqlizcCwrlSyN.jpg",
+    "/ths5IQjtBxZ9iw3JKfCtm78E5wx.jpg",
+    "/wen5hK2dMgBtFcCrtcn85mDcVAS.jpg",
+    "/7z6Vua7vJA94PVUZkWqL7dBHp1a.jpg",
+    "/ba7Qhgwhcbj4euPxgjd6pONgKsl.jpg",
+    "/dXwdU8dvRxaQvRmTnivzujTlx5C.jpg",
+    "/jm9fKfptAaLYi6zPZIpdkG8ozWg.jpg",
+    "/m5P96nLSU0Ox4Y1fthrs7ZJHT2N.jpg",
+    "/qFgevW20F447v0puN46ghlOsJIB.jpg",
+    "/vEjrhhPcCwJkPreAummU6wkLvFa.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 3,
+    "positivas": 96
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1962-09-15",
+   "entrada": "2026-11-08",
+   "paises": [
+    "JP"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "hard-to-be-a-god",
@@ -2415,6 +2657,54 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "its-a-wonderful-life",
+   "titulo": "A Felicidade Não Se Compra",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "It's a Wonderful Life",
+   "chave_slug": "its a wonderful life",
+   "ano": 1946,
+   "diretor": "Frank Capra",
+   "generos": [
+    "Drama",
+    "Família",
+    "Fantasia"
+   ],
+   "imagens": {
+    "backdrop_path": "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+    "backdrop_largura": 1589,
+    "backdrop_altura": 894
+   },
+   "stills": [
+    "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+    "/3q35nBLCIdEbxYfsr7D5ocYQXKz.jpg",
+    "/2vvEz4v1OaXiqOW3VmUNvfKfA3W.jpg",
+    "/3u30JNV6XNkBC9XILwRqHNZow1q.jpg",
+    "/rHUafSSt9v15LfufOO7ZSzbVHvQ.jpg",
+    "/8xfolnjssIopZeT83B6jjsqZy0D.jpg",
+    "/uAHu3l3BXsv78MrzcFTwNCjIyZT.jpg",
+    "/5sGefqDRJRHxSX6RUYloE36cWEH.jpg",
+    "/aHk90ZuMx9ib62bCGOosAQDUJkb.jpg",
+    "/gbIyzWW6Sa1o50stxcTD6xmeyjG.jpg",
+    "/n7IRaoSAevuP8gq0nezF6zf907k.jpg",
+    "/pnkK2g7foJUsBf6mdGnxiXfGyIg.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 7,
+    "positivas": 91
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1946-12-20",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "joker-2019",
    "titulo": "Coringa",
    "titulo_nativo": null,
@@ -2573,6 +2863,114 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": true
   },
   {
+   "slug": "leon-the-professional",
+   "titulo": "O Profissional",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Léon: The Professional",
+   "chave_slug": "leon the professional",
+   "ano": 1994,
+   "diretor": "Luc Besson",
+   "generos": [
+    "Crime",
+    "Drama",
+    "Ação"
+   ],
+   "imagens": {
+    "backdrop_path": "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+    "backdrop_largura": 2048,
+    "backdrop_altura": 1152
+   },
+   "stills": [
+    "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+    "/1UWszQdHI7j3zBqA4kx8Lk60Di8.jpg",
+    "/2hS80sTgsSmK0T61bd5J9YBc52k.jpg",
+    "/exlkyIr3JrQfRmyaraunYlc3JZt.jpg",
+    "/A4gVKikhhRKvniMbCVuGBRBvDzo.jpg",
+    "/wey0IbmVhAruc6zUH7i7deRKwyi.jpg",
+    "/vNbZkL8JlEWHfeFzbej0h9qHrSf.jpg",
+    "/yjKHDk0pAajISYNifTbDYWrrUNK.jpg",
+    "/5rBPNr1r0w9ze32LRxxMKgDvxXJ.jpg",
+    "/cgWmHDUw8e4OzLW4cWrrQ4C8mb3.jpg",
+    "/gr6mHAp1gU1Y0B6yueCix6Fb4R6.jpg",
+    "/pvfThXSmBQWtLyaIQrRHf2tKoRB.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 4,
+    "medianas": 12,
+    "positivas": 84
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "critica_social",
+   "estreia": "1994-09-14",
+   "entrada": "2026-11-08",
+   "paises": [
+    "FR"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "life-is-beautiful",
+   "titulo": "A Vida é Bela",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Life Is Beautiful",
+   "chave_slug": "life is beautiful",
+   "ano": 1997,
+   "diretor": "Roberto Benigni",
+   "generos": [
+    "Comédia",
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/2xzpMZCBG0PCCk3CWnxSfkJeyT0.jpg",
+    "/gavyCu1UaTaTNPsVaGXT6pe5u24.jpg",
+    "/zL6jPIVYPhssSkzONWyragGuS2S.jpg",
+    "/6JmcxU4Scb8ffjvj9vammMzc30z.jpg",
+    "/16vxMSVICZmXucbglF2I5zfukvm.jpg",
+    "/r3XyIsh9nYW7v9Qt51NZ55J3jxQ.jpg",
+    "/recdB08lqwwBBX6mS6Qnf5iIWyo.jpg",
+    "/zKxoWuWnmO7rLBhqOfM2RxAMfpC.jpg",
+    "/b9XHgI40uJIMnsdpZ4sXWSc1NDs.jpg",
+    "/AojA1wZMJLWvquw2qjW6qvywY2w.jpg",
+    "/qlcleVEGvECQfFb9gQB8Pjs73OY.jpg",
+    "/l5sIjKBTXp7rhfALluUtET396yQ.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 6,
+    "positivas": 92
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "impacto_emocional",
+     "lift_pp": 25.0
+    },
+    {
+     "eixo": "comparacoes",
+     "lift_pp": 25.0
+    },
+    {
+     "eixo": "critica_social",
+     "lift_pp": 30.0
+    }
+   ],
+   "assunto_comum": "tom_atmosfera",
+   "estreia": "1997-12-20",
+   "entrada": "2026-11-08",
+   "paises": [
+    "IT"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "longlegs",
    "titulo": "Longlegs - Vínculo Mortal",
    "titulo_nativo": null,
@@ -2723,7 +3121,7 @@ window.ESPECTRO_INDICE = {
      "lift_pp": 30.0
     }
    ],
-   "assunto_comum": "critica_social",
+   "assunto_comum": "atuacao",
    "estreia": "1992-11-18",
    "entrada": "2026-09-17",
    "paises": [
@@ -2896,6 +3294,54 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": true
   },
   {
+   "slug": "modern-times",
+   "titulo": "Tempos Modernos",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Modern Times",
+   "chave_slug": "modern times",
+   "ano": 1936,
+   "diretor": "Charlie Chaplin",
+   "generos": [
+    "Comédia",
+    "Drama",
+    "Romance"
+   ],
+   "imagens": {
+    "backdrop_path": "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+    "backdrop_largura": 1376,
+    "backdrop_altura": 774
+   },
+   "stills": [
+    "/uZs6esC62RsjVDgckSbKrgaRwIQ.jpg",
+    "/vc5I9fcKmAuqv9mKyGR3NmJybaR.jpg",
+    "/vzKzz7ObY3zNIV4ZYFY6Ib3X6ig.jpg",
+    "/wYfgf0cUgrXCkPiDd5dkC5090DG.jpg",
+    "/x0KeMvw5K1ZNaiNB7btN0ICcWrN.jpg",
+    "/yyi6rpwvH5INxUKmgcfttbxnQv3.jpg",
+    "/8DbTNSEOYJuuSaX1527RgSaGK7f.jpg",
+    "/bNvGJOwZrLu3U8R5yFL3RWFPixJ.jpg",
+    "/nY6V09SZUPZoJqtqBvsGbZgJSI3.jpg",
+    "/o9HdlZGDupvJVyHYpfkBLAniBAa.jpg",
+    "/t3vImPBh5aV9rU94hw4oT7m4nvk.jpg",
+    "/uetsZ3vj9bK0pHr84jyQT1jdupt.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 10,
+    "positivas": 88
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "critica_social",
+   "estreia": "1936-02-05",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "mother-2017",
    "titulo": "mãe!",
    "titulo_nativo": null,
@@ -2986,7 +3432,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "comparacoes",
+   "assunto_comum": "direcao_imagem",
    "estreia": "2023-11-22",
    "entrada": "2026-08-22",
    "paises": [
@@ -3104,6 +3550,114 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Obsessão"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "once-upon-a-time-in-the-west",
+   "titulo": "Era uma Vez no Oeste",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Once Upon a Time in the West",
+   "chave_slug": "once upon a time in the west",
+   "ano": 1968,
+   "diretor": "Sergio Leone",
+   "generos": [
+    "Drama",
+    "Faroeste"
+   ],
+   "imagens": {
+    "backdrop_path": "/26SUDI2iKhZTIKcU4ZzezTH1G15.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/26SUDI2iKhZTIKcU4ZzezTH1G15.jpg",
+    "/u5IhDThM1SClL4pkCUp8hOmsDQJ.jpg",
+    "/aKZ9hDmLJTaGSxWdhxqMTcvXmk4.jpg",
+    "/qPOQtAIjCbMbktccBfStLIbJzi2.jpg",
+    "/wOqFe9hkLi5CXh28sNy6NKbrxA2.jpg",
+    "/3ZHwrueqi0F6VE3P2whG4Rt8JaW.jpg",
+    "/8lgdw0n53G3Y3y2cG2SNWKRL8H9.jpg",
+    "/aEIogtM9YUqmzHW7fNj8kfJifW7.jpg",
+    "/hbKUL1tLzFmuVuSGk0h7Sg0Kpu6.jpg",
+    "/mndfm0rxGvmRBHKep3SPoVg4Dm0.jpg",
+    "/qzvyxN1XIN7ZDuq4JIZERNoXecb.jpg",
+    "/v3gkRwTZqudt5HpZt3Nl8lQQzfE.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 8,
+    "positivas": 91
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "ritmo",
+     "lift_pp": 25.0
+    }
+   ],
+   "assunto_comum": "som_trilha",
+   "estreia": "1968-12-21",
+   "entrada": "2026-11-08",
+   "paises": [
+    "IT",
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "one-flew-over-the-cuckoos-nest",
+   "titulo": "Um Estranho no Ninho",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "One Flew Over the Cuckoo's Nest",
+   "chave_slug": "one flew over the cuckoos nest",
+   "ano": 1975,
+   "diretor": "Miloš Forman",
+   "generos": [
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+    "/vMylmakO2K9cZexNUze8wa9muJp.jpg",
+    "/7aoKhnlwBtUO3aFKyLpnnoXIOQo.jpg",
+    "/2j9oIcG4Pz38ESaUMTnmYhL6UM2.jpg",
+    "/zuCBWvYSrZZJvEZxd4OFzu2ViZS.jpg",
+    "/LoDYW2OR5jWxhc6HpHgb2VpaAI.jpg",
+    "/hb3FLfyoFcm47l2KDyBtKP7x3eF.jpg",
+    "/1PZ9yFoeapMVYTCz1zI226IyQia.jpg",
+    "/8We2Ktv5EdDVef3OSsumjTQ5h8t.jpg",
+    "/eNPS3IEf1xDeEOFZGdJogfbiHJ2.jpg",
+    "/oyJaC8mdHcusQrJJX7Tt560THeo.jpg",
+    "/rv2ZYJnT52164Oi1xcg2Z7z481E.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 7,
+    "positivas": 92
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "atuacao",
+     "lift_pp": 25.0
+    },
+    {
+     "eixo": "tom_atmosfera",
+     "lift_pp": 27.5
+    }
+   ],
+   "assunto_comum": "atuacao",
+   "estreia": "1975-11-19",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -3598,6 +4152,155 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "psycho",
+   "titulo": "Psicose",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Psycho",
+   "chave_slug": "psycho",
+   "ano": 1960,
+   "diretor": "Alfred Hitchcock",
+   "generos": [
+    "Terror",
+    "Thriller",
+    "Mistério"
+   ],
+   "imagens": {
+    "backdrop_path": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "/wh5RmdhVNFDgyxq41wCyycZ4a2l.jpg",
+    "/mZFj3kh1v2tATT5pgf4RXe73Ig5.jpg",
+    "/3UJGE9MyoOCxKViDK78xz3PrJtf.jpg",
+    "/99fbznzjKaazKyeFKsuU3oiyAaK.jpg",
+    "/aayAUjB1FEic6u4V9QywytJdHyx.jpg",
+    "/e8IXgS0948z897RSQrOYzDJKdRj.jpg",
+    "/h8JT2cM5PV8p8YxGcMn3sSTKwpI.jpg",
+    "/lVESlez8khcmTAoEJdU5t2wrJen.jpg",
+    "/oWxAFzeeVnfZdWGfSTx5Jcj3Y4.jpg",
+    "/yNsxWYgk9cE0jze0wjxeHdnnXA3.jpg",
+    "/wdPQfLLejuHuiOZxhHNfQFycKzm.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 8,
+    "positivas": 91
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1960-06-22",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "pulp-fiction",
+   "titulo": "Pulp Fiction: Tempo de Violência",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Pulp Fiction",
+   "chave_slug": "pulp fiction",
+   "ano": 1994,
+   "diretor": "Quentin Tarantino",
+   "generos": [
+    "Thriller",
+    "Crime",
+    "Comédia"
+   ],
+   "imagens": {
+    "backdrop_path": "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "backdrop_largura": 2631,
+    "backdrop_altura": 1480
+   },
+   "stills": [
+    "/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "/5kD1o6exM1RbauVLJjtNzseiM1Q.jpg",
+    "/eDMZmfnH50DDboUxTRnOYYpE9aY.jpg",
+    "/tamCUHl16mptimLh1ZwJ1XH6QOr.jpg",
+    "/m7yrDpjpg6NfZj8qSRhaL8sd4mk.jpg",
+    "/liYaUkNjDejkRuSJlsGQK76tLvg.jpg",
+    "/1SUIPFsfuNnAQExdbWyawXBGf4v.jpg",
+    "/69JJC92pRqEfDrvajJdA15rZMXk.jpg",
+    "/9kdLfGQm43FUSnDhVwzNIHcwTzv.jpg",
+    "/ff0RvqHGy2Ja8zbsNDP4sqFKxrI.jpg",
+    "/kSbDQEF8nOZ2XNjKXSY23sUauBG.jpg",
+    "/syVKdpPl4lAwFRjcNtQ4PAPytVN.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 3,
+    "medianas": 10,
+    "positivas": 88
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1994-09-10",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "rear-window",
+   "titulo": "Janela Indiscreta",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Rear Window",
+   "chave_slug": "rear window",
+   "ano": 1954,
+   "diretor": "Alfred Hitchcock",
+   "generos": [
+    "Thriller",
+    "Mistério",
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+    "backdrop_largura": 1785,
+    "backdrop_altura": 1004
+   },
+   "stills": [
+    "/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+    "/zGs5tZOlvc9cprdcU6kDOVNpujf.jpg",
+    "/Jn2tqrG2xfRKrPIf6SHsD9XT5g.jpg",
+    "/sdfDFxck5VDaSPKd2lOIyTrOAfq.jpg",
+    "/1ABrBk4hIhhkNZ01TRHXV0jHroG.jpg",
+    "/mP72QWmpidCjalXiIc4ChUxoukc.jpg",
+    "/iaxEo5c2vfsMjA7ujcW2qOCBroB.jpg",
+    "/vqqh6lbQL4Ln0gtEj4j4o2edRor.jpg",
+    "/3gbQiQU4o4fqMqdCpRD95FDyzXY.jpg",
+    "/5y3Lq2qHX7Q4RnELGpCqsPoPweI.jpg",
+    "/ai5hg5Ro24XjbMH5LMDi3Z9xrlf.jpg",
+    "/jLrcJx2jcztok01UOMMjMuvzcXv.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 7,
+    "positivas": 92
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "ritmo",
+     "lift_pp": 27.5
+    }
+   ],
+   "assunto_comum": "ritmo",
+   "estreia": "1954-08-01",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "satantango",
    "titulo": "O Tango de Satã",
    "titulo_nativo": null,
@@ -3656,6 +4359,54 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": true
   },
   {
+   "slug": "schindlers-list",
+   "titulo": "A Lista de Schindler",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Schindler's List",
+   "chave_slug": "schindlers list",
+   "ano": 1993,
+   "diretor": "Steven Spielberg",
+   "generos": [
+    "Drama",
+    "História",
+    "Guerra"
+   ],
+   "imagens": {
+    "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "/3f92DMBTFqr3wgXpfxzrb0qv8nG.jpg",
+    "/3MiaheHjzC7DrIpBbBbkfhKyMMn.jpg",
+    "/1mP3MZTvZXIMDLHgwqZIuxqVWZG.jpg",
+    "/5p9Re50cg2eofxPEWtyThpoRMmK.jpg",
+    "/8mHiyTU9NxOiYSUC1P0WwNB61L1.jpg",
+    "/cPqfd0GFMuZRl39VaqWzOeZcNEG.jpg",
+    "/eqwtpFObteeFGprR3uCnzt30XFF.jpg",
+    "/mQExnTjz4mWA8FdLdCxxsuaGhTr.jpg",
+    "/rdpFecsJ3yezfjadUkWTfhwj4FO.jpg",
+    "/vMauMZceN7M5HGeCkfpcteGnlCC.jpg",
+    "/y1M212uK5zR5YFBc3nrlDO6yvyB.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 5,
+    "positivas": 94
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "critica_social",
+   "estreia": "1993-12-15",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "se7en",
    "titulo": "Seven - Os Sete Crimes Capitais",
    "titulo_nativo": null,
@@ -3706,6 +4457,53 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Seven - Os Sete Crimes Capitais"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "seven-samurai",
+   "titulo": "Os Sete Samurais",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Seven Samurai",
+   "chave_slug": "seven samurai",
+   "ano": 1954,
+   "diretor": "Akira Kurosawa",
+   "generos": [
+    "Ação",
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/qvZ91FwMq6O47VViAr8vZNQz3WI.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/bTGczYh4GSFjAPRrIb9oCi7CkSq.jpg",
+    "/mzI1JXm8sX5fia3ifPS2jGPUh2n.jpg",
+    "/5cCJtYijBUvluQqc5kW0rBvuRXl.jpg",
+    "/v6sVRa03SBAoZP5ZLbTWTb1vk28.jpg",
+    "/1XbxEuYvo92KGiChFATvI0dDOlN.jpg",
+    "/5mmrRa5Wk38MxBeGnYQxcsPUteh.jpg",
+    "/cnCa8lVlsUB2Yj9vqWAJacd1PZF.jpg",
+    "/eebxiSSIXuDUoTieLYLSgmSKnYW.jpg",
+    "/ggIRY8K70UcG4Bw7b4hP6g2ekfx.jpg",
+    "/lXGUrywwRmZi6JtNxGf2e3ZWi44.jpg",
+    "/pwRMuxhCGaAvki5J2ISHmU9UmXb.jpg",
+    "/ubDfi7d5wyw6heRbxODeyUOHKKy.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 4,
+    "positivas": 95
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "ritmo",
+   "estreia": "1954-04-26",
+   "entrada": "2026-11-08",
+   "paises": [
+    "JP"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -3860,7 +4658,7 @@ window.ESPECTRO_INDICE = {
      "lift_pp": 27.5
     }
    ],
-   "assunto_comum": "expectativa",
+   "assunto_comum": "som_trilha",
    "estreia": "2020-12-25",
    "entrada": "2026-09-17",
    "paises": [
@@ -3982,6 +4780,54 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "star-wars",
+   "titulo": "Guerra nas Estrelas",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Star Wars",
+   "chave_slug": "star wars",
+   "ano": 1977,
+   "diretor": "George Lucas",
+   "generos": [
+    "Aventura",
+    "Ação",
+    "Ficção científica"
+   ],
+   "imagens": {
+    "backdrop_path": "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg",
+    "/4qCqAdHcNKeAHcK8tJ8wNJZa9cx.jpg",
+    "/51nwO593cLtAXGVlI8gh1nlhc0J.jpg",
+    "/6cVm9AhKKgbiV20hSk3fSiZTBkw.jpg",
+    "/mhYiUu0QGaN5wxhuuVN1QuLh666.jpg",
+    "/oKAsV0dYmoFUDcBmzXC94AzqpHb.jpg",
+    "/45Qwa327mQQlmC2YUxucLfpfLqx.jpg",
+    "/aByCBFGABC5QT8qJnkr19TywExD.jpg",
+    "/gaUGKDquy3lNB63yOiv0Akk41oj.jpg",
+    "/khPpMCp0ZbYqAVIBRZa1aeCrr4R.jpg",
+    "/rFwYU2oauGWlGWoiQs59wPLsgPi.jpg",
+    "/vU6fPCxeTF15RKtzJu5uoNTIIpi.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 11,
+    "positivas": 88
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "expectativa",
+   "estreia": "1977-05-25",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "talk-to-me-2022",
    "titulo": "Fale Comigo",
    "titulo_nativo": null,
@@ -4031,6 +4877,55 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Fale Comigo"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "terminator-2-judgment-day",
+   "titulo": "O Exterminador do Futuro 2: O Julgamento Final",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Terminator 2: Judgment Day",
+   "chave_slug": "terminator 2 judgment day",
+   "ano": 1991,
+   "diretor": "James Cameron",
+   "generos": [
+    "Ação",
+    "Thriller",
+    "Ficção científica"
+   ],
+   "imagens": {
+    "backdrop_path": "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+    "/8MksSPtPvqcSDruLdpibPmTP7LY.jpg",
+    "/3WqbhRSMr9sj2U4l2JWB6c5b9Bm.jpg",
+    "/lhnR5tDuUL5w4UzDEBwAq0P73vD.jpg",
+    "/3kCmpjL4cYCuN95RtQBOmUh71Ri.jpg",
+    "/i5megxGRBadEZEUeej5ADFnYLlB.jpg",
+    "/68KXAcF9pcuXdrq79yU3c1ATdo0.jpg",
+    "/A9LZewcLw1QwXKftU5XKa7IsAfo.jpg",
+    "/8Ex3MeULEP0LMepJ4LkW7INj4YZ.jpg",
+    "/f3qG2Z8SsSEAvx8pzjvj9zTDMfk.jpg",
+    "/haLKp2TdbhJbMcfXjuT1XeffDlb.jpg",
+    "/uZvHKRmNpeQSNrZ8W9qzvWG0dhr.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 9,
+    "positivas": 89
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "comparacoes",
+   "estreia": "1991-07-03",
+   "entrada": "2026-11-08",
+   "paises": [
+    "FR",
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -4191,6 +5086,55 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "the-departed",
+   "titulo": "Os Infiltrados",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Departed",
+   "chave_slug": "the departed",
+   "ano": 2006,
+   "diretor": "Martin Scorsese",
+   "generos": [
+    "Drama",
+    "Thriller",
+    "Crime"
+   ],
+   "imagens": {
+    "backdrop_path": "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+    "/cDFtxTxEtE3ljadfQ5SwtRTi8Iw.jpg",
+    "/fwLJUUD02isNUbrINYw0Z7lKN94.jpg",
+    "/tyW7pzPAuaKopZKZTeOosqrDg5f.jpg",
+    "/28KajEw1aSkuP9N1s8Y4bk8wAk4.jpg",
+    "/5SVVLT7r1iSXSqpitf6DFXchFFU.jpg",
+    "/7DaYojLzvc2ZlgiJecP7vnHybYl.jpg",
+    "/foyAsrRVGLfJ6C0GnEqTuPDYiGM.jpg",
+    "/ikAh9xQKizR05wSZoqaJwiY3bk2.jpg",
+    "/oDuQR8MH9fgrenBPdPIzqjA6l8j.jpg",
+    "/susnVH5PQoZSkMFLO9rFctHn9Eg.jpg",
+    "/xCYUcZJhMYyhJRR9DPCiXBs2fcJ.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 6,
+    "positivas": 93
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "atuacao",
+   "estreia": "2006-10-04",
+   "entrada": "2026-11-08",
+   "paises": [
+    "HK",
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "the-gentlemen",
    "titulo": "Magnatas do Crime",
    "titulo_nativo": null,
@@ -4297,6 +5241,106 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "the-godfather-part-ii",
+   "titulo": "O Poderoso Chefão: Parte II",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Godfather Part II",
+   "chave_slug": "the godfather part ii",
+   "ano": 1974,
+   "diretor": "Francis Ford Coppola",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
+   "imagens": {
+    "backdrop_path": "/pGzqRKrYeK4LogoysNro0vG8d8N.jpg",
+    "backdrop_largura": 3000,
+    "backdrop_altura": 1688
+   },
+   "stills": [
+    "/AmQC2gLSijwzxGlTZ79OjPQkJjA.jpg",
+    "/kGzFbGhp99zva6oZODW5atUtnqi.jpg",
+    "/9UQlyZOC3vTWOmKNO9SuUN8nvp7.jpg",
+    "/1V257jmkyXpVXiyCjkClxdF6XkN.jpg",
+    "/4Q5yxhv0oORJ0F9sBRzamxbEOj9.jpg",
+    "/9ZPrT5QT5Tuplckmax61JvrnC2D.jpg",
+    "/bwNt4GzAnet23oloe6Mbghz7MtY.jpg",
+    "/fCJySHjqgleJRyaDapvL0F8qIaP.jpg",
+    "/jB6bgk4pKtQzSNxr1qiTPgPy9zV.jpg",
+    "/nApiCimx9aUSpWJMadDOaJKPjHy.jpg",
+    "/t3IbSYz3RAWfiBCa44y4i1Cs3OT.jpg",
+    "/wzwbStKUetxF6jLjGGFNKbaYGQk.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 4,
+    "positivas": 94
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "comparacoes",
+   "estreia": "1974-12-20",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-green-mile",
+   "titulo": "À Espera de um Milagre",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Green Mile",
+   "chave_slug": "the green mile",
+   "ano": 1999,
+   "diretor": "Frank Darabont",
+   "generos": [
+    "Fantasia",
+    "Drama",
+    "Crime"
+   ],
+   "imagens": {
+    "backdrop_path": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+    "/b6HWTOxn1xevvyHU2K9ICvaRU6g.jpg",
+    "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
+    "/A5H3OGC6xRHzu5m0u266afTgNyq.jpg",
+    "/voDxAJ3mrnRVKenEgDjngB4UZ4A.jpg",
+    "/7dEBYe1Qy4B9aZxmLy6qUyflagT.jpg",
+    "/AmuTD9xNREKHbokarF5hU2OEQ58.jpg",
+    "/cABVKUw7TeMh5MCbFZ5DtJ8bGgW.jpg",
+    "/fKtARnCtw7wmFzWuQahk2oVngbB.jpg",
+    "/iRNW9Mfpru7PwavLSjkPEcAeVul.jpg",
+    "/jont8NngrIwz1O7HtUfY0P5AgfO.jpg",
+    "/sFzQXJh5TqznI6cqGxoV65hWYKd.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 8,
+    "positivas": 90
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "impacto_emocional",
+     "lift_pp": 27.5
+    }
+   ],
+   "assunto_comum": "impacto_emocional",
+   "estreia": "1999-12-10",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "the-hateful-eight",
    "titulo": "Os Oito Odiados",
    "titulo_nativo": null,
@@ -4347,6 +5391,160 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Os Oito Odiados"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-intouchables",
+   "titulo": "Intocáveis",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Intouchables",
+   "chave_slug": "the intouchables",
+   "ano": 2011,
+   "diretor": "Éric Toledano",
+   "generos": [
+    "Drama",
+    "Comédia"
+   ],
+   "imagens": {
+    "backdrop_path": "/d9sMIwulLtwRHowmDk2INm0ugmP.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/d9sMIwulLtwRHowmDk2INm0ugmP.jpg",
+    "/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+    "/5YrkzA4e6imxVwBI1QdXMe0RuDP.jpg",
+    "/cK070s3Qdn1Ib7Gq8RgIyJKgvu3.jpg",
+    "/gv90M41TfykgxJl0q4yWF3KZAMu.jpg",
+    "/vGdHE9wpY0KPwHFMk62OcyP2IJP.jpg",
+    "/fOHMPh0OzlzwcQb33Z3nCiv9xnA.jpg",
+    "/4QuehtQDFSZmoiulFMAYKdYuIZB.jpg",
+    "/6iRGR8G5PHdnPpDIdjTafFH5AN9.jpg",
+    "/i0d63dUAImfQwrNKGzWWWrebwav.jpg",
+    "/oDTHNGAH1gZwNk45do1rOoU3oxN.jpg",
+    "/kQz1HNn77g9SUpgK34z3w7qTTSF.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 11,
+    "positivas": 87
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "critica_social",
+     "lift_pp": 30.0
+    }
+   ],
+   "assunto_comum": "critica_social",
+   "estreia": "2011-11-02",
+   "entrada": "2026-11-08",
+   "paises": [
+    "FR"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-lion-king",
+   "titulo": "O Rei Leão",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Lion King",
+   "chave_slug": "the lion king",
+   "ano": 1994,
+   "diretor": "Roger Allers",
+   "generos": [
+    "Animação",
+    "Família",
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+    "/6GF9uJs7AnbcJvyfoZyjZv063Oo.jpg",
+    "/kAZ0AtzFlsP9tikLevnz2x84QA8.jpg",
+    "/gB6wpMvHkFshldO2t0wYPqddusa.jpg",
+    "/3vSpvbyxkjtMSkVvl7gadIspQR4.jpg",
+    "/9bz4TnP2jiRkxeqyEpVfC7CUldR.jpg",
+    "/vMAPil6kuC7jW3wUMY95QrSfc6R.jpg",
+    "/5ObENVKzp0sQgLiO0h7Ls7qbfRz.jpg",
+    "/rBUNFedokLhOgt8YQrpRQBdtJx1.jpg",
+    "/521OttvHb53IXImx3Ivejm4F5U7.jpg",
+    "/eQvDYKqu9ldz5ivAps4INHFxAPu.jpg",
+    "/iXfQjEfB0IoTGWRZJOefR8pCjZW.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 11,
+    "positivas": 87
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "impacto_emocional",
+     "lift_pp": 30.0
+    }
+   ],
+   "assunto_comum": "som_trilha",
+   "estreia": "1994-06-15",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-lord-of-the-rings-the-two-towers",
+   "titulo": "O Senhor dos Anéis: As Duas Torres",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Lord of the Rings: The Two Towers",
+   "chave_slug": "the lord of the rings the two towers",
+   "ano": 2002,
+   "diretor": "Peter Jackson",
+   "generos": [
+    "Aventura",
+    "Fantasia",
+    "Ação"
+   ],
+   "imagens": {
+    "backdrop_path": "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+    "/jvF5BDGyrGxh88s00ImXTiyymz6.jpg",
+    "/4UZ9JGRTfeQGQollirsfGjvQkPw.jpg",
+    "/sFB2g6svd5tzHKAIabokg3LyHB7.jpg",
+    "/5EvCVSeTIFJg9nQ52mtqKKJn0rI.jpg",
+    "/8WXR3iG8iqDg8KbokwgHxupHyzh.jpg",
+    "/b3jI92cHUUnK7AXohjyGcDt5qD7.jpg",
+    "/dyG8DYlLO7Gza3FJbC1CERFzpVg.jpg",
+    "/ivCSeCelcxAiLvFXSqBwtXTpUNb.jpg",
+    "/mGpKF9OyyLuP3tPorNJOspYTbU5.jpg",
+    "/qDXf0ETrZGOXYrSpop9YDmt3G8y.jpg",
+    "/u49mn7xnHhhevo50sKzMqtDlbjH.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 5,
+    "medianas": 20,
+    "positivas": 75
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "comparacoes",
+   "estreia": "2002-12-18",
+   "entrada": "2026-11-08",
+   "paises": [
+    "NZ",
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -4401,6 +5599,61 @@ window.ESPECTRO_INDICE = {
     "titulo": "The Northman"
    },
    "titulo_difere_do_logo": true
+  },
+  {
+   "slug": "the-pianist",
+   "titulo": "O Pianista",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Pianist",
+   "chave_slug": "the pianist",
+   "ano": 2002,
+   "diretor": "Roman Polanski",
+   "generos": [
+    "Drama",
+    "Guerra"
+   ],
+   "imagens": {
+    "backdrop_path": "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+    "/1XqIhsqnAozznGhxlGdI0GPcCro.jpg",
+    "/gMnBNdBewy4NfP55HKbCGPHAT48.jpg",
+    "/hchJ0PTREmXveasCBsT4SdPY3JF.jpg",
+    "/fuFcyX9pXcLeKfsEpArtnqV3gyX.jpg",
+    "/43qoaxPabvW2cDDI60Dam6mHV0K.jpg",
+    "/A7r8GRpvOojI2Vl5EEJfAIfzCg9.jpg",
+    "/cij9EH5vuaKI4i142THb07mXjkW.jpg",
+    "/hBVF0ucMBHentwwb01EU6edCHpn.jpg",
+    "/tzGA6ip6dhYn9apYbGV2U2uRW8e.jpg",
+    "/56BW1218hJtF2H71ukujMEAMlJC.jpg",
+    "/r6nVZfPg5qM57UelvbANWfBkjBQ.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 5,
+    "positivas": 94
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "impacto_emocional",
+     "lift_pp": 32.5
+    }
+   ],
+   "assunto_comum": "critica_social",
+   "estreia": "2002-09-17",
+   "entrada": "2026-11-08",
+   "paises": [
+    "FR",
+    "DE",
+    "PL",
+    "GB"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
   },
   {
    "slug": "the-prestige",
@@ -4558,6 +5811,106 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Que Horas Ela Volta?"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-shawshank-redemption",
+   "titulo": "Um Sonho de Liberdade",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Shawshank Redemption",
+   "chave_slug": "the shawshank redemption",
+   "ano": 1994,
+   "diretor": "Frank Darabont",
+   "generos": [
+    "Drama",
+    "Crime"
+   ],
+   "imagens": {
+    "backdrop_path": "/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/pNjh59JSxChQktamG3LMp9ZoQzp.jpg",
+    "/ddzwhOgb35Ezu0t1Lo8J7wa2P65.jpg",
+    "/72rRSPAZ82p3KXoGLz2ddTioMQl.jpg",
+    "/2YYOTdAI7vN4Iid3ckvtfr4NhTE.jpg",
+    "/qgOl7k1ZjSOWPccDG4D4eqfAHY7.jpg",
+    "/aA5ESj5R37Zry9Q6koIMQcKSX6w.jpg",
+    "/mor5PrU9cQghuXp7qRw2LedyCRK.jpg",
+    "/4Sk5I8Huww3kRiFjCQqPRbeUcNQ.jpg",
+    "/7jsyNSFwgk2XFUMugSK92hjUQ8m.jpg",
+    "/gV5CvjcrFfOk0BlxpeCW2Hs3w2O.jpg",
+    "/mhZaP9v5kO6qabw9NvyJ9kmyShL.jpg",
+    "/qEULn1hjODqVzJwlKFT1iUs7M7Y.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 4,
+    "positivas": 96
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "impacto_emocional",
+     "lift_pp": 30.0
+    }
+   ],
+   "assunto_comum": "expectativa",
+   "estreia": "1994-09-23",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "the-silence-of-the-lambs",
+   "titulo": "O Silêncio dos Inocentes",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Silence of the Lambs",
+   "chave_slug": "the silence of the lambs",
+   "ano": 1991,
+   "diretor": "Jonathan Demme",
+   "generos": [
+    "Crime",
+    "Thriller",
+    "Drama"
+   ],
+   "imagens": {
+    "backdrop_path": "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+    "/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
+    "/aBuaXxmyD92wXbHOF16IXTc4R0J.jpg",
+    "/mW2hISHs00yihyYQBqahGYoCcHy.jpg",
+    "/lzx1ah4U8lEhKfpRK0Gs8XpuQTP.jpg",
+    "/v78H7jXVKKOY5hcYeJ76LsieByT.jpg",
+    "/88Vd2OEN31XsVFvsww0D4sH03Hn.jpg",
+    "/b2RTTpenlryC5z2h7oMmZ5X857x.jpg",
+    "/ipOdHg4RpCbXLNo70zcR8SJlibg.jpg",
+    "/mBKCBVAfZc8GQsA430hL5NtaLEi.jpg",
+    "/pUP6JKjmZthFPdAO1O6M5f5pp6G.jpg",
+    "/sMRHLhyApmQCeppROUHfyEXrRLR.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 1,
+    "medianas": 7,
+    "positivas": 92
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "atuacao",
+   "estreia": "1991-02-14",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {
@@ -4840,6 +6193,59 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": true
   },
   {
+   "slug": "the-usual-suspects",
+   "titulo": "Os Suspeitos",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "The Usual Suspects",
+   "chave_slug": "the usual suspects",
+   "ano": 1995,
+   "diretor": "Bryan Singer",
+   "generos": [
+    "Drama",
+    "Crime",
+    "Thriller"
+   ],
+   "imagens": {
+    "backdrop_path": "/9jrHaaXWB37VcA4KGemP8iF7bFB.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/9jrHaaXWB37VcA4KGemP8iF7bFB.jpg",
+    "/63fUh2fA2iswlmlc5Unr1Y4Oajs.jpg",
+    "/eNKLwN810eJVM8gwBhTpEZqCVVQ.jpg",
+    "/7G85luio3WsMQ3lOxxWTmXoANKs.jpg",
+    "/7NfHxCaYqgCADpy4e7yx6rS0S0J.jpg",
+    "/bYhY0qN1Cr0BgfbUh4Y9YvmKdSO.jpg",
+    "/dF5gwv8a9vt4GXBJIq1x0HJV6Ci.jpg",
+    "/eXbqFwNLeFvJ0P6ydcCurc3hGxc.jpg",
+    "/kb6RVMGQbXnOs1LvX0MjABT4mGa.jpg",
+    "/n2EijYNCfCaLEI3R7PB7J1l0QfX.jpg",
+    "/r3hEvMP8Y2I9ZUU2SZsKmmKZURJ.jpg",
+    "/vbietWcFLKPNeHk778ocjrTLRdp.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 11,
+    "positivas": 86
+   },
+   "contraste": "tematico",
+   "eixos_acima": [
+    {
+     "eixo": "comparacoes",
+     "lift_pp": 23.7
+    }
+   ],
+   "assunto_comum": "expectativa",
+   "estreia": "1995-07-19",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "the-wailing",
    "titulo": "O Lamento",
    "titulo_nativo": null,
@@ -4931,7 +6337,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "critica_social",
+   "assunto_comum": "atuacao",
    "estreia": "2013-12-25",
    "entrada": "2026-09-17",
    "paises": [
@@ -5053,6 +6459,54 @@ window.ESPECTRO_INDICE = {
     "classe": "claro",
     "titulo": "Joias Brutas"
    },
+   "titulo_difere_do_logo": false
+  },
+  {
+   "slug": "wall-e",
+   "titulo": "WALL-E",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "WALL·E",
+   "chave_slug": "wall e",
+   "ano": 2008,
+   "diretor": "Andrew Stanton",
+   "generos": [
+    "Animação",
+    "Família",
+    "Ficção científica"
+   ],
+   "imagens": {
+    "backdrop_path": "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080
+   },
+   "stills": [
+    "/t0ezrlozGCE16CX4wTaoG0MHa7G.jpg",
+    "/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg",
+    "/eete5ZAaagldSXxDetN62V3WXcg.jpg",
+    "/s0WDKWiHDcRaLd8NLtt0m8nvwZB.jpg",
+    "/mzwP8hkj5NBrqwBdjc76DZT36Rx.jpg",
+    "/1WBxHNtRCk3J4QYgjcxd1mgPWNq.jpg",
+    "/6KNe4jNOMP7xqR8G3sPMyRaEnsB.jpg",
+    "/cvgPMkQMksEuQrCik97QD2FjXLp.jpg",
+    "/g590P141KyOyMpz7Hv21D7FNVCL.jpg",
+    "/sH4fNyKKyGXB1CCQNiVAL8YHXrZ.jpg",
+    "/oIHOqa1fagsUlSorPNfeAtTJEXm.jpg",
+    "/vgz2wKrMMvetW35zoKTCeR74dsI.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 10,
+    "positivas": 88
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "critica_social",
+   "estreia": "2008-06-26",
+   "entrada": "2026-11-08",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
    "titulo_difere_do_logo": false
   },
   {

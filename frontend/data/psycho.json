@@ -1,0 +1,1595 @@
+{
+  "slug": "psycho",
+  "data_coleta": "2026-11-08T06:39:27.808410+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1513082,
+  "reviews_url": "https://letterboxd.com/film/psycho/reviews/",
+  "ficha": {
+    "titulo": "Psicose",
+    "sinopse_oficial": "Marion Crane é uma secretária que rouba 40 mil dólares da imobiliária onde trabalha para se casar e começar uma nova vida. Durante a fuga à carro, ela enfrenta uma forte tempestade, erra o caminho e chega em um velho hotel. O estabelecimento é administrado por um sujeito atencioso chamado Norman Bates, que nutre um forte respeito e temor por sua mãe. Marion decide passar a noite no local, sem saber o perigo que a cerca.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Thriller",
+      "Mistério"
+    ],
+    "duracao_min": 109,
+    "diretor": "Alfred Hitchcock",
+    "diretor_transliterado": false,
+    "ano": 1960,
+    "data_estreia": "1960-06-22",
+    "fonte": "tmdb",
+    "tmdb_id": 539,
+    "tmdb_fetched_at": "2026-11-08T06:34:03+00:00",
+    "poster_path": "/oC2iYT2on8c2iZnehah1l6AWqGu.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+      "/uif5fUshJrXyyDzfpzp1DLw3N0S.jpg",
+      "/kZGaVeXSkkvrpMYvD97sxHj291k.jpg",
+      "/k2ZDzJjZDtYZ3F4g7af4bb3eQ05.jpg",
+      "/5A9dsIpb7876nU9QrWEGziDmj0r.jpg",
+      "/tUbg5f11SyLIqvBnTVqLIN74Qr5.jpg",
+      "/57ZvQHWKznIZy81Pox5BNWIwBDC.jpg",
+      "/bU7A7MmvB9x1Zmc7AUphiK452r4.jpg",
+      "/q3OqYum8kcFUtcXcuHxeKXLLmoy.jpg",
+      "/eeAcIyIHOJwulGIHW1UfRo2s0TC.jpg"
+    ],
+    "backdrop_path": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/AsDXyPqNSlADqity4hiMpBPA9P1.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wh5RmdhVNFDgyxq41wCyycZ4a2l.jpg",
+        "still_largura": 3670,
+        "still_altura": 2065
+      },
+      {
+        "still_path": "/mZFj3kh1v2tATT5pgf4RXe73Ig5.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3UJGE9MyoOCxKViDK78xz3PrJtf.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/99fbznzjKaazKyeFKsuU3oiyAaK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/aayAUjB1FEic6u4V9QywytJdHyx.jpg",
+        "still_largura": 1849,
+        "still_altura": 1040
+      },
+      {
+        "still_path": "/e8IXgS0948z897RSQrOYzDJKdRj.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/h8JT2cM5PV8p8YxGcMn3sSTKwpI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/lVESlez8khcmTAoEJdU5t2wrJen.jpg",
+        "still_largura": 1849,
+        "still_altura": 1040
+      },
+      {
+        "still_path": "/oWxAFzeeVnfZdWGfSTx5Jcj3Y4.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/yNsxWYgk9cE0jze0wjxeHdnnXA3.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wdPQfLLejuHuiOZxhHNfQFycKzm.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "psycho",
+      "titulo_letterboxd": "Psycho",
+      "ano_letterboxd": 1960,
+      "tmdb_id_letterboxd": 539,
+      "tmdb_id_escolhido": 539,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Psycho",
+      "ano_tmdb": 1960,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1513082,
+    "por_nivel": {
+      "0.5": 1168,
+      "1.0": 2689,
+      "1.5": 2127,
+      "2.0": 13139,
+      "2.5": 16091,
+      "3.0": 104677,
+      "3.5": 137486,
+      "4.0": 468431,
+      "4.5": 282652,
+      "5.0": 484622
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 8,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "psycho",
+    "coletado_em": "2026-11-08T06:39:27.808410+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1168,
+      "1.0": 2689,
+      "1.5": 2127,
+      "2.0": 13139,
+      "2.5": 16091,
+      "3.0": 104677,
+      "3.5": 137486,
+      "4.0": 468431,
+      "4.5": 282652,
+      "5.0": 484622
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 3,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 13,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 36,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 156,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 7,
+      "1.5": 6,
+      "2.0": 32,
+      "2.5": 17,
+      "3.0": 35,
+      "3.5": 5,
+      "4.0": 15,
+      "4.5": 9,
+      "5.0": 22
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 0,
+      "3.0": 3,
+      "3.5": 0,
+      "4.0": 1,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "1.5": 1,
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 40,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 9,
+      "3.0": 55,
+      "3.5": 73,
+      "4.0": 247,
+      "4.5": 149,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 636,
+        "min": "2005-12-31",
+        "max": "2026-11-08",
+        "p5": "2026-10-07",
+        "p50": "2026-10-31",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 204,
+          "min": "2020-07-23",
+          "max": "2026-11-06",
+          "p5": "2026-09-22",
+          "p50": "2026-10-22",
+          "p95": "2026-11-05"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2005-12-31",
+          "max": "2026-11-07",
+          "p5": "2026-10-22",
+          "p50": "2026-11-01",
+          "p95": "2026-11-06"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2026-02-28",
+          "max": "2026-11-08",
+          "p5": "2026-10-28",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 8,
+      "dias_por_100_paginas": 6.299212598425197,
+      "paginas_para_1_ano": 5794
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 14,
+        "dias_por_100_paginas": 1400.0,
+        "paginas_para_1_ano": 26
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 10,
+        "dias_por_100_paginas": 1000.0,
+        "paginas_para_1_ano": 36
+      },
+      "1.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 15,
+        "dias_por_100_paginas": 750.0,
+        "paginas_para_1_ano": 49
+      },
+      "2.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 29,
+        "dias_por_100_paginas": 322.22222222222223,
+        "paginas_para_1_ano": 113
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 14,
+        "dias_por_100_paginas": 233.33333333333334,
+        "paginas_para_1_ano": 156
+      },
+      "3.0": {
+        "n_paginas": 13,
+        "pagina_min": 1,
+        "pagina_max": 28,
+        "dias": 14,
+        "dias_por_100_paginas": 51.851851851851855,
+        "paginas_para_1_ano": 704
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 1,
+        "dias_por_100_paginas": 100.0,
+        "paginas_para_1_ano": 365
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 62,
+        "dias": 8,
+        "dias_por_100_paginas": 13.114754098360656,
+        "paginas_para_1_ano": 2783
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 37,
+        "dias": 8,
+        "dias_por_100_paginas": 22.22222222222222,
+        "paginas_para_1_ano": 1642
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 10,
+        "dias_por_100_paginas": 7.874015748031496,
+        "paginas_para_1_ano": 4636
+      }
+    },
+    "ano_lancamento": 1960,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "psycho",
+      "titulo": "Psycho",
+      "ano": 1960,
+      "tmdb_id_letterboxd": 539,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-21",
+        "max": "2026-11-06",
+        "p5": "2026-10-07",
+        "p50": "2026-10-22",
+        "p95": "2026-11-04"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 28,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews consideram o filme arrastado e entediante, com trechos longos em que nada acontece, o que dificulta manter o interesse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews consideram o filme arrastado e entediante, com trechos longos em que nada acontece, o que dificulta manter o interesse."
+        },
+        {
+          "tema": "Superestimado e hype excessivo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas dizem não entender o hype e acham que a fama e as notas altas não condizem com a qualidade real do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias pessoas dizem não entender o hype e acham que a fama e as notas altas não condizem com a qualidade real do filme."
+        },
+        {
+          "tema": "Envelheceu mal / datado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Comentários apontam que o filme parece ultrapassado para os padrões atuais, com sustos previsíveis e efeitos que não causam mais impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas e direção criticada",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam a atuação do elenco como teatral ou exagerada, embora reconheçam que o intérprete de Norman se destaca.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews criticam a atuação do elenco como teatral ou exagerada, embora reconheçam que o intérprete de Norman se destaca."
+        },
+        {
+          "tema": "Roteiro com furos e explicação excessiva",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como cheio de buracos e com um final que explica tudo de forma didática, sem deixar espaço para interpretação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estilo visual elogiados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das críticas, reviews reconhecem que a fotografia em preto e branco e a ambientação são bonitas e bem construídas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Apesar das críticas, várias reviews reconhecem que a fotografia em preto e branco e a ambientação são bonitas e bem construídas."
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e o tédio, a percepção de que o filme é superestimado e envelheceu mal, além de críticas às atuações e ao roteiro. A fotografia e o estilo visual são os pontos mais elogiados dentro deste grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 8,
+        "p95": 14,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-25",
+        "max": "2026-11-07",
+        "p5": "2026-10-28",
+        "p50": "2026-11-02",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 35,
+          "n_alvo": 35,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 9,
+          "n_descartadas_curtas": 112,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 9,
+            "abaixo_min_chars": 112,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo e desenvolvimento do roteiro",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram que a primeira metade é mais interessante, mas a segunda metade arrasta ou perde o ritmo, com desenvolvimentos que não mantêm a tensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas consideram que a primeira metade é mais interessante, mas a segunda metade arrasta ou perde o ritmo, com desenvolvimentos que não mantêm a tensão."
+        },
+        {
+          "tema": "Explicação excessiva no final",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica fortemente a sequência final em que um personagem explica toda a psicologia do assassino, achando-a Didática demais e prejudicial ao mistério.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Anthony Perkins",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a performance de Anthony Perkins como Norman Bates, descrevendo-a como carismática e crível, mesmo quando o restante do elenco é considerado fraco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Twist previsível ou já conhecido",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos já sabiam da reviravolta antes de assistir, o que diminuiu o impacto, e espectadores acharam o desenrolar óbvio demais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos já sabiam da reviravolta antes de assistir, o que diminuiu o impacto, e alguns acharam o desenrolar óbvio demais.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Trilha sonora e fotografia",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é citada como eficaz para criar tensão, assim como a fotografia em preto e branco, embora espectadores a considerem datada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A trilha sonora é frequentemente citada como eficaz para criar tensão, assim como a fotografia em preto e branco, embora alguns a considerem datada."
+        },
+        {
+          "tema": "Suspense e tensão",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews sentem que o suspense é construído de forma eficiente, mas outras acham que ele não segura o espectador, com momentos arrastados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews sentem que o suspense é construído de forma eficiente, mas outras acham que ele não segura o espectador, com momentos arrastados."
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a importância histórica e alguns elementos técnicos, como a atuação de Perkins e a trilha sonora, mas criticam o ritmo irregular, a exposição excessiva no final e a falta de tensão para quem já conhece a reviravolta. Este grupo tende a considerar o filme datado e menos impactante do que sua reputação sugere.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 8
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 14,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-09",
+        "max": "2026-11-08",
+        "p5": "2026-10-17",
+        "p50": "2026-11-07",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Direção de Alfred Hitchcock e maestria técnica",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Hitchcock é elogiado por sua habilidade em construir suspense, pela direção precisa e inovadora, e por técnicas de filmagem que permanecem eficazes décadas depois.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Anthony Perkins como Norman Bates",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Anthony Perkins é vista como extraordinária, com expressões faciais sutis e uma qualidade moderna que se destaca do restante do elenco, tornando Norman Bates ao mesmo tempo estranho e cativante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e reviravoltas envolventes",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é considerado inteligente e cheio de reviravoltas que surpreendem mesmo quem já conhece a história, mantendo o espectador envolvido do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e design de som marcantes",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de Bernard Herrmann é destacada como icônica, especialmente o som estridente que intensifica as cenas de tensão, e o design de som é considerado extremamente eficaz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e enquadramentos inovadores",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco e os enquadramentos criativos, como a visão aérea da casa, são elogiados por sua beleza e impacto visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à cena explicativa do psicólogo",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews positivas criticam a cena final com o psicólogo, considerando-a desnecessária e excessivamente explicativa, preferindo que o filme terminasse de forma mais abrupta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews positivas criticam a cena final com o psicólogo, considerando-a desnecessária e excessivamente explicativa, preferindo que o filme terminasse de forma mais abrupta."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a atuação de Anthony Perkins, a direção de Hitchcock e os elementos técnicos como som e fotografia. Apesar de alguns apontarem falhas pontuais, como a explicação final, a maioria considera o filme um clássico atemporal e uma obra-prima.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 91
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Reviews consideram o filme arrastado e entediante, com trechos longos em que nada acontece, o que dificulta manter o interesse.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e desenvolvimento do roteiro",
+            "exemplo_parafraseado": "Reviews medianas consideram que a primeira metade é mais interessante, mas a segunda metade arrasta ou perde o ritmo, com desenvolvimentos que não mantêm a tensão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas e direção criticada",
+            "exemplo_parafraseado": "Reviews criticam a atuação do elenco como teatral ou exagerada, embora reconheçam que o intérprete de Norman se destaca.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Anthony Perkins",
+            "exemplo_parafraseado": "As reviews medianas elogiam a performance de Anthony Perkins como Norman Bates, descrevendo-a como carismática e crível, mesmo quando o restante do elenco é considerado fraco.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuação de Anthony Perkins como Norman Bates",
+            "exemplo_parafraseado": "A performance de Anthony Perkins é vista como extraordinária, com expressões faciais sutis e uma qualidade moderna que se destaca do restante do elenco, tornando Norman Bates ao mesmo tempo estranho e cativante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estilo visual elogiados",
+            "exemplo_parafraseado": "Apesar das críticas, reviews reconhecem que a fotografia em preto e branco e a ambientação são bonitas e bem construídas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Direção de Alfred Hitchcock e maestria técnica",
+            "exemplo_parafraseado": "Hitchcock é elogiado por sua habilidade em construir suspense, pela direção precisa e inovadora, e por técnicas de filmagem que permanecem eficazes décadas depois.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e enquadramentos inovadores"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro com furos e explicação excessiva",
+            "exemplo_parafraseado": "O roteiro é visto como cheio de buracos e com um final que explica tudo de forma didática, sem deixar espaço para interpretação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Explicação excessiva no final",
+            "exemplo_parafraseado": "Este grupo critica fortemente a sequência final em que um personagem explica toda a psicologia do assassino, achando-a Didática demais e prejudicial ao mistério.",
+            "temas_no_mesmo_eixo": [
+              "Twist previsível ou já conhecido"
+            ]
+          },
+          "positivas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e reviravoltas envolventes",
+            "exemplo_parafraseado": "O roteiro é considerado inteligente e cheio de reviravoltas que surpreendem mesmo quem já conhece a história, mantendo o espectador envolvido do início ao fim.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à cena explicativa do psicólogo"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e fotografia",
+            "exemplo_parafraseado": "A trilha sonora é citada como eficaz para criar tensão, assim como a fotografia em preto e branco, embora espectadores a considerem datada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e design de som marcantes",
+            "exemplo_parafraseado": "A trilha sonora de Bernard Herrmann é destacada como icônica, especialmente o som estridente que intensifica as cenas de tensão, e o design de som é considerado extremamente eficaz.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Suspense e tensão",
+            "exemplo_parafraseado": "Reviews sentem que o suspense é construído de forma eficiente, mas outras acham que ele não segura o espectador, com momentos arrastados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Envelheceu mal / datado",
+            "exemplo_parafraseado": "Comentários apontam que o filme parece ultrapassado para os padrões atuais, com sustos previsíveis e efeitos que não causam mais impacto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado e hype excessivo",
+            "exemplo_parafraseado": "Pessoas dizem não entender o hype e acham que a fama e as notas altas não condizem com a qualidade real do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia suspense construído com direção precisa e técnica que envelheceu bem",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Alfred Hitchcock e maestria técnica",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma atuação estranha e cativante, cheia de expressões faciais sutis",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Anthony Perkins como Norman Bates",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura um roteiro inteligente, construído em torno de reviravoltas",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e reviravoltas envolventes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se desinteressa por sustos previsíveis e recursos visuais sem força hoje",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Envelheceu mal / datado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera atuações teatralizadas, embora o intérprete de Norman se destaque",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações fracas e direção criticada",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com explicações didáticas que não deixam espaço para interpretação",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro com furos e explicação excessiva",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "aceita as críticas, mas busca fotografia em preto e branco bonita e bem construída",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e estilo visual elogiados",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "se impacienta com trechos longos em que nada acontece",
+        "tema_origem": "NEG-A",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      },
+      {
+        "texto": "desconfia de obras cuja reputação parece maior que o que entregam",
+        "tema_origem": "NEG-B",
+        "lado": "talvez_evite",
+        "flags": [
+          "ancora_nao_verificavel"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "nota_ou_score"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 2,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 5,
+        "flags": [
+          "exemplo_verbatim",
+          "nota_ou_score"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "nota_ou_score"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 18137,
+      "completion_tokens": 1332,
+      "cache_hit_tokens": 15703,
+      "cache_miss_tokens": 2434
+    },
+    "latencia_s": 7.53,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

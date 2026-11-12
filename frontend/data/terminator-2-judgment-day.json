@@ -1,0 +1,1580 @@
+{
+  "slug": "terminator-2-judgment-day",
+  "data_coleta": "2026-11-08T05:51:56.247640+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1126968,
+  "reviews_url": "https://letterboxd.com/film/terminator-2-judgment-day/reviews/",
+  "ficha": {
+    "titulo": "O Exterminador do Futuro 2: O Julgamento Final",
+    "sinopse_oficial": "O jovem John Connor é a chave para a vitória da civilização sobre uma rebelião de robôs do futuro. No entanto, ele torna-se alvo de T-1000, um exterminador que pode assumir a forma que desejar e que foi enviado do futuro para matá-lo. Outro exterminador, o renovado T-800, também é enviado de volta ao passado para proteger o garoto. Quando John e sua mãe embarcam na fuga com T-800, o menino cria um vínculo forte e inesperado com o robô.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Thriller",
+      "Ficção científica"
+    ],
+    "duracao_min": 136,
+    "diretor": "James Cameron",
+    "diretor_transliterado": false,
+    "ano": 1991,
+    "data_estreia": "1991-07-03",
+    "fonte": "tmdb",
+    "tmdb_id": 280,
+    "tmdb_fetched_at": "2026-11-08T05:46:53+00:00",
+    "poster_path": "/eTIY2LO5cDclxgKtCHuvIKdF3c3.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+      "/ztBeLd2UCbUATJ1cXwwHev3G3xX.jpg",
+      "/xKb6mtdfI5Qsggc44Hr9CCUDvaj.jpg",
+      "/8MksSPtPvqcSDruLdpibPmTP7LY.jpg",
+      "/vINgGecnz95iDL6fjQMARDsocgG.jpg",
+      "/umaoScaCsfl9g2dyrXrvMPp59Q7.jpg",
+      "/tLbmjVNul71s03FQ5fCjzcSG0cN.jpg",
+      "/lhnR5tDuUL5w4UzDEBwAq0P73vD.jpg",
+      "/9XGsojvtszYM1tnh6gERmOa29De.jpg",
+      "/diynPY0YqR4NDVvy3vBliTEaDVC.jpg"
+    ],
+    "backdrop_path": "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/t20pHpueiHXXv7a9ct0tJ3HcejH.jpg",
+    "poster_sem_texto_largura": 1280,
+    "poster_sem_texto_altura": 1920,
+    "galeria_stills": [
+      {
+        "still_path": "/izkMjmhauFx9DjoBQqM5sM5WAwE.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8MksSPtPvqcSDruLdpibPmTP7LY.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3WqbhRSMr9sj2U4l2JWB6c5b9Bm.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/lhnR5tDuUL5w4UzDEBwAq0P73vD.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3kCmpjL4cYCuN95RtQBOmUh71Ri.jpg",
+        "still_largura": 2552,
+        "still_altura": 1433
+      },
+      {
+        "still_path": "/i5megxGRBadEZEUeej5ADFnYLlB.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/68KXAcF9pcuXdrq79yU3c1ATdo0.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/A9LZewcLw1QwXKftU5XKa7IsAfo.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/8Ex3MeULEP0LMepJ4LkW7INj4YZ.jpg",
+        "still_largura": 1451,
+        "still_altura": 816
+      },
+      {
+        "still_path": "/f3qG2Z8SsSEAvx8pzjvj9zTDMfk.jpg",
+        "still_largura": 1900,
+        "still_altura": 1069
+      },
+      {
+        "still_path": "/haLKp2TdbhJbMcfXjuT1XeffDlb.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uZvHKRmNpeQSNrZ8W9qzvWG0dhr.jpg",
+        "still_largura": 2840,
+        "still_altura": 1598
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "terminator-2-judgment-day",
+      "titulo_letterboxd": "Terminator 2: Judgment Day",
+      "ano_letterboxd": 1991,
+      "tmdb_id_letterboxd": 280,
+      "tmdb_id_escolhido": 280,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Terminator 2: Judgment Day",
+      "ano_tmdb": 1991,
+      "ano_divergente": false
+    },
+    "paises": [
+      "FR",
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1126968,
+    "por_nivel": {
+      "0.5": 829,
+      "1.0": 2467,
+      "1.5": 1895,
+      "2.0": 13541,
+      "2.5": 14897,
+      "3.0": 86292,
+      "3.5": 111832,
+      "4.0": 327233,
+      "4.5": 221480,
+      "5.0": 346502
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "terminator-2-judgment-day",
+    "coletado_em": "2026-11-08T05:51:56.247640+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 829,
+      "1.0": 2467,
+      "1.5": 1895,
+      "2.0": 13541,
+      "2.5": 14897,
+      "3.0": 86292,
+      "3.5": 111832,
+      "4.0": 327233,
+      "4.5": 221480,
+      "5.0": 346502
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 13,
+      "3.5": 3,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 156,
+      "3.5": 36,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 12,
+      "1.0": 3,
+      "1.5": 11,
+      "2.0": 38,
+      "2.5": 17,
+      "3.0": 34,
+      "3.5": 7,
+      "4.0": 15,
+      "4.5": 13,
+      "5.0": 17
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 3,
+      "3.5": 1,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 1
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 64,
+        "n_validas_pos_extensao": 64,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 10,
+      "2.5": 11,
+      "3.0": 64,
+      "3.5": 83,
+      "4.0": 242,
+      "4.5": 164,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 636,
+        "min": "2010-01-01",
+        "max": "2026-11-08",
+        "p5": "2026-06-07",
+        "p50": "2026-10-14",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2013-10-17",
+          "max": "2026-11-07",
+          "p5": "2026-04-03",
+          "p50": "2026-09-02",
+          "p95": "2026-10-24"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2010-01-01",
+          "max": "2026-11-08",
+          "p5": "2026-08-23",
+          "p50": "2026-10-14",
+          "p95": "2026-11-06"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2023-01-08",
+          "max": "2026-11-08",
+          "p5": "2026-09-01",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 17,
+      "dias_por_100_paginas": 26.984126984126984,
+      "paginas_para_1_ano": 1353
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 78,
+        "dias_por_100_paginas": 7800.0,
+        "paginas_para_1_ano": 5
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 85,
+        "dias_por_100_paginas": 8500.0,
+        "paginas_para_1_ano": 4
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 34,
+        "dias_por_100_paginas": 3400.0,
+        "paginas_para_1_ano": 11
+      },
+      "2.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 98,
+        "dias_por_100_paginas": 1088.888888888889,
+        "paginas_para_1_ano": 34
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 57,
+        "dias_por_100_paginas": 1140.0,
+        "paginas_para_1_ano": 32
+      },
+      "3.0": {
+        "n_paginas": 13,
+        "pagina_min": 1,
+        "pagina_max": 32,
+        "dias": 62,
+        "dias_por_100_paginas": 200.0,
+        "paginas_para_1_ano": 182
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 3,
+        "dias_por_100_paginas": 150.0,
+        "paginas_para_1_ano": 243
+      },
+      "4.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 60,
+        "dias": 26,
+        "dias_por_100_paginas": 44.067796610169495,
+        "paginas_para_1_ano": 828
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 41,
+        "dias": 19,
+        "dias_por_100_paginas": 47.5,
+        "paginas_para_1_ano": 768
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 64,
+        "dias": 19,
+        "dias_por_100_paginas": 30.158730158730158,
+        "paginas_para_1_ano": 1210
+      }
+    },
+    "ano_lancamento": 1991,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "terminator-2-judgment-day",
+      "titulo": "Terminator 2: Judgment Day",
+      "ano": 1991,
+      "tmdb_id_letterboxd": 280,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 29
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 3,
+        "1.5": 4,
+        "2.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-05-22",
+        "max": "2026-11-07",
+        "p5": "2026-06-07",
+        "p50": "2026-09-03",
+        "p95": "2026-10-30"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 3,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 30,
+          "n_alvo": 29,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 75,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 75,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais, com sequências de perseguição e tiroteios que se repetem e fazem a história parecer arrastada, levando ao tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é longo demais, com sequências de perseguição e tiroteios que se repetem e fazem a história parecer arrastada, levando ao tédio."
+        },
+        {
+          "tema": "Atuação infantil irritante",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho do garoto que interpreta John Connor é citado como exagerado, afetado e difícil de suportar, prejudicando cenas importantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O desempenho do garoto que interpreta John Connor é frequentemente citado como exagerado, afetado e difícil de suportar, prejudicando cenas importantes."
+        },
+        {
+          "tema": "Efeitos especiais datados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores consideram que os efeitos visuais, embora revolucionários na época, envelheceram mal e hoje soam artificiais ou até risíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Alguns espectadores consideram que os efeitos visuais, embora revolucionários na época, envelheceram mal e hoje soam artificiais ou até risíveis."
+        },
+        {
+          "tema": "Roteiro simplista e previsível",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O argumento é criticado por ser raso, cheio de conveniências e com diálogos piegas, não explorando ideias interessantes que poderiam tornar a trama mais envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de ação repetitiva",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ênfase em cenas de perseguição e tiroteio é vista como cansativa, com pouca variação e sem construir tensão real, tornando o filme monótono.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem de Arnold Schwarzenegger e tom mais leve",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A transformação do Exterminador em protetor bonachão e a inclusão de alívios cômicos são apontadas como responsáveis por retirar a atmosfera ameaçadora e o impacto do original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva, o ritmo arrastado e a repetição das cenas de ação, além de criticarem a atuação infantil e o roteiro simplista. A mudança de tom e a humanização do personagem de Arnold também são vistas como fatores que enfraquecem a experiência em relação ao primeiro filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 32,
+        "p5": 1,
+        "p50": 6,
+        "p95": 16,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-16",
+        "max": "2026-11-07",
+        "p5": "2026-09-03",
+        "p50": "2026-10-20",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 116,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 116,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração e ritmo arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que a segunda metade se arrasta, com perseguições e cenas de ação repetitivas que cansam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme é longo demais e que a segunda metade se arrasta, com perseguições e cenas de ação repetitivas que cansam."
+        },
+        {
+          "tema": "Atuação infantil de John Connor",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O garoto que interpreta John é descrito como irritante e canastrão, prejudicando as cenas em que aparece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O garoto que interpreta John é frequentemente descrito como irritante e canastrão, prejudicando as cenas em que aparece."
+        },
+        {
+          "tema": "Efeitos especiais e práticos",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O visual do vilão de metal líquido e os efeitos práticos são elogiados como impressionantes, embora reviews achem que envelheceram mal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O visual do vilão de metal líquido e os efeitos práticos são elogiados como impressionantes, embora algumas reviews achem que envelheceram mal."
+        },
+        {
+          "tema": "Comparação com o primeiro filme",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews dizem preferir o clima mais sombrio e simples do original, considerando esta sequência mais grandiosa porém menos envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews dizem preferir o clima mais sombrio e simples do original, considerando esta sequência mais grandiosa porém menos envolvente."
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo critica a caracterização de Sarah Connor como instável ou pouco carismática e questiona a relação entre John e o Exterminador, vista como forçada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e lógica interna",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam furos de roteiro e decisões ilógicas dos personagens, como a ineficiência do vilão ou a falta de explicação para certos acontecimentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews apontam furos de roteiro e decisões ilógicas dos personagens, como a ineficiência do vilão ou a falta de explicação para certos acontecimentos."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam principalmente o ritmo arrastado e a duração excessiva, além de críticas à atuação infantil e à comparação desfavorável com o primeiro filme. Os efeitos especiais e práticos são elogiados, mas não compensam a percepção de que a história se repete e carece de desenvolvimento.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 9
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 60,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-05-22",
+        "max": "2026-11-08",
+        "p5": "2026-10-12",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Efeitos especiais e práticos",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam que os efeitos visuais e práticos envelheceram muito bem, com o CGI do vilão de metal líquido sendo especialmente impressionante e ainda eficaz para os padrões atuais.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sequência superior ao original",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews deste grupo consideram esta sequência superior ao primeiro filme, elogiando a evolução da história e a forma como expande o universo original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews deste grupo consideram esta sequência superior ao primeiro filme, elogiando a evolução da história e a forma como expande o universo original."
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são bastante elogiadas, especialmente a de Linda Hamilton como uma protagonista endurecida e a de Robert Patrick como um vilão intimidador, além de Arnold Schwarzenegger em um papel invertido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Cenas de ação e perseguições",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo exalta as sequências de ação, como perseguições de carro e moto, considerando-as espetaculares e muito bem executadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e desenvolvimento emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é elogiado por equilibrar ação com temas como humanidade, sacrifício e a relação entre os personagens, trazendo profundidade emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e fotografia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera intensa do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera intensa do filme."
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam especialmente os efeitos especiais inovadores, as cenas de ação emocionantes e as atuações marcantes, considerando esta sequência muitas vezes superior ao original. Este recorte é enviesado por construção e não representa a recepção geral do filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 89
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais, com sequências de perseguição e tiroteios que se repetem e fazem a história parecer arrastada, levando ao tédio.",
+            "temas_no_mesmo_eixo": [
+              "Excesso de ação repetitiva"
+            ]
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo arrastado",
+            "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que a segunda metade se arrasta, com perseguições e cenas de ação repetitivas que cansam.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação infantil irritante",
+            "exemplo_parafraseado": "O desempenho do garoto que interpreta John Connor é citado como exagerado, afetado e difícil de suportar, prejudicando cenas importantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Atuação infantil de John Connor",
+            "exemplo_parafraseado": "O garoto que interpreta John é descrito como irritante e canastrão, prejudicando as cenas em que aparece.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "As atuações são bastante elogiadas, especialmente a de Linda Hamilton como uma protagonista endurecida e a de Robert Patrick como um vilão intimidador, além de Arnold Schwarzenegger em um papel invertido.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos especiais datados",
+            "exemplo_parafraseado": "Espectadores consideram que os efeitos visuais, embora revolucionários na época, envelheceram mal e hoje soam artificiais ou até risíveis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos especiais e práticos",
+            "exemplo_parafraseado": "O visual do vilão de metal líquido e os efeitos práticos são elogiados como impressionantes, embora reviews achem que envelheceram mal.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos especiais e práticos",
+            "exemplo_parafraseado": "As reviews positivas destacam que os efeitos visuais e práticos envelheceram muito bem, com o CGI do vilão de metal líquido sendo especialmente impressionante e ainda eficaz para os padrões atuais.",
+            "temas_no_mesmo_eixo": [
+              "Cenas de ação e perseguições"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro simplista e previsível",
+            "exemplo_parafraseado": "O argumento é criticado por ser raso, cheio de conveniências e com diálogos piegas, não explorando ideias interessantes que poderiam tornar a trama mais envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e desenvolvimento",
+            "exemplo_parafraseado": "O grupo critica a caracterização de Sarah Connor como instável ou pouco carismática e questiona a relação entre John e o Exterminador, vista como forçada.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e lógica interna"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e desenvolvimento emocional",
+            "exemplo_parafraseado": "O roteiro é elogiado por equilibrar ação com temas como humanidade, sacrifício e a relação entre os personagens, trazendo profundidade emocional.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e fotografia",
+            "exemplo_parafraseado": "Reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera intensa do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Personagem de Arnold Schwarzenegger e tom mais leve",
+            "exemplo_parafraseado": "A transformação do Exterminador em protetor bonachão e a inclusão de alívios cômicos são apontadas como responsáveis por retirar a atmosfera ameaçadora e o impacto do original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Comparação com o primeiro filme",
+            "exemplo_parafraseado": "Reviews dizem preferir o clima mais sombrio e simples do original, considerando esta sequência mais grandiosa porém menos envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Sequência superior ao original",
+            "exemplo_parafraseado": "Reviews deste grupo consideram esta sequência superior ao primeiro filme, elogiando a evolução da história e a forma como expande o universo original.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se impressiona com efeitos visuais e práticos que continuam eficazes hoje",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Efeitos especiais e práticos",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "procura uma sequência que supere o original expandindo a história e o universo",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Sequência superior ao original",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações marcantes, com protagonista endurecida, vilão intimidador e papel invertido",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca perseguições de carro e moto espetaculares e bem executadas",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Cenas de ação e perseguições",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com longa duração e perseguições e tiroteios repetitivos que arrastam a história",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com atuação infantil exagerada e afetada que prejudica cenas importantes",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação infantil irritante",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera efeitos revolucionários na época, mas envelhecidos, artificiais ou risíveis hoje",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Efeitos especiais datados",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "dispensa um Exterminador bonachão e alívios cômicos que retiram a ameaça do original",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem de Arnold Schwarzenegger e tom mais leve",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 89,
+        "peso_texto": "~89% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16731,
+      "completion_tokens": 1080,
+      "cache_hit_tokens": 15029,
+      "cache_miss_tokens": 1702
+    },
+    "latencia_s": 6.52,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

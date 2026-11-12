@@ -1,0 +1,1580 @@
+{
+  "slug": "the-pianist",
+  "data_coleta": "2026-11-08T06:17:28.637935+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1412229,
+  "reviews_url": "https://letterboxd.com/film/the-pianist/reviews/",
+  "ficha": {
+    "titulo": "O Pianista",
+    "sinopse_oficial": "Um pianista judeu polonês vê Varsóvia mudar gradualmente à medida que a Segunda Guerra Mundial começa. Szpilman é forçado a ir para o Gueto de Varsóvia, mas depois é separado de sua família durante a Operação Reinhard. A partir deste momento até que os prisioneiros dos campos de concentração sejam liberados, Szpilman se esconde em vários locais entre as ruínas de Varsóvia.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Guerra"
+    ],
+    "duracao_min": 150,
+    "diretor": "Roman Polanski",
+    "diretor_transliterado": false,
+    "ano": 2002,
+    "data_estreia": "2002-09-17",
+    "fonte": "tmdb",
+    "tmdb_id": 423,
+    "tmdb_fetched_at": "2026-11-08T06:12:10+00:00",
+    "poster_path": "/g0s9Yb5tfka73UKxFAPxO9lPHBW.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/jZGNfJUGUj5U1bbr3GYrmKBnrIF.jpg",
+      "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+      "/1XqIhsqnAozznGhxlGdI0GPcCro.jpg",
+      "/cqOmm81h5zVl182kzbr0xSKD6nF.jpg",
+      "/dVr11o9or7AS8AMPfwjSpEU83iU.jpg",
+      "/hchJ0PTREmXveasCBsT4SdPY3JF.jpg",
+      "/1Pdtdxec3aCz0fVp86FmjwaAhxx.jpg",
+      "/fuFcyX9pXcLeKfsEpArtnqV3gyX.jpg",
+      "/giYF7lVVxDrMTsHCPVleLotmEfL.jpg",
+      "/A7r8GRpvOojI2Vl5EEJfAIfzCg9.jpg"
+    ],
+    "backdrop_path": "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/y1AZjyl473IVrpPct1tXZ12RQXp.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/c0fB9xk7D1aVb3Bg2rk2SVJcGn.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/1XqIhsqnAozznGhxlGdI0GPcCro.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/gMnBNdBewy4NfP55HKbCGPHAT48.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/hchJ0PTREmXveasCBsT4SdPY3JF.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fuFcyX9pXcLeKfsEpArtnqV3gyX.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/43qoaxPabvW2cDDI60Dam6mHV0K.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/A7r8GRpvOojI2Vl5EEJfAIfzCg9.jpg",
+        "still_largura": 2000,
+        "still_altura": 1125
+      },
+      {
+        "still_path": "/cij9EH5vuaKI4i142THb07mXjkW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/hBVF0ucMBHentwwb01EU6edCHpn.jpg",
+        "still_largura": 3648,
+        "still_altura": 2052
+      },
+      {
+        "still_path": "/tzGA6ip6dhYn9apYbGV2U2uRW8e.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/56BW1218hJtF2H71ukujMEAMlJC.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/r6nVZfPg5qM57UelvbANWfBkjBQ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-pianist",
+      "titulo_letterboxd": "The Pianist",
+      "ano_letterboxd": 2002,
+      "tmdb_id_letterboxd": 423,
+      "tmdb_id_escolhido": 423,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Pianist",
+      "ano_tmdb": 2002,
+      "ano_divergente": false
+    },
+    "paises": [
+      "FR",
+      "DE",
+      "PL",
+      "GB"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1412229,
+    "por_nivel": {
+      "0.5": 1906,
+      "1.0": 2525,
+      "1.5": 1605,
+      "2.0": 8870,
+      "2.5": 10769,
+      "3.0": 65172,
+      "3.5": 105179,
+      "4.0": 405796,
+      "4.5": 298300,
+      "5.0": 512107
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-pianist",
+    "coletado_em": "2026-11-08T06:17:28.637935+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1906,
+      "1.0": 2525,
+      "1.5": 1605,
+      "2.0": 8870,
+      "2.5": 10769,
+      "3.0": 65172,
+      "3.5": 105179,
+      "4.0": 405796,
+      "4.5": 298300,
+      "5.0": 512107
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 5,
+      "1.5": 2,
+      "2.0": 12,
+      "2.5": 5,
+      "3.0": 16,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 60,
+      "1.5": 24,
+      "2.0": 144,
+      "2.5": 60,
+      "3.0": 192,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 5,
+      "1.5": 6,
+      "2.0": 27,
+      "2.5": 11,
+      "3.0": 41,
+      "3.5": 5,
+      "4.0": 17,
+      "4.5": 16,
+      "5.0": 13
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 5,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 3,
+      "1.5": 0,
+      "2.0": 5,
+      "2.5": 0,
+      "3.0": 6,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "1.0": 3,
+          "2.0": 5
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 31,
+        "n_validas_pos_extensao": 43,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 15,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "3.0": 6
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 35,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 5,
+      "3.0": 33,
+      "3.5": 53,
+      "4.0": 203,
+      "4.5": 149,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 696,
+        "min": "2002-09-17",
+        "max": "2026-11-08",
+        "p5": "2026-04-07",
+        "p50": "2026-10-11",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 252,
+          "min": "2019-08-29",
+          "max": "2026-11-07",
+          "p5": "2026-04-07",
+          "p50": "2026-08-22",
+          "p95": "2026-10-30"
+        },
+        "medianas": {
+          "n": 252,
+          "min": "2008-06-27",
+          "max": "2026-11-07",
+          "p5": "2025-08-12",
+          "p50": "2026-10-14",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2002-09-17",
+          "max": "2026-11-08",
+          "p5": "2026-10-11",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 20,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 25,
+      "dias_por_100_paginas": 19.68503937007874,
+      "paginas_para_1_ano": 1854
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 32,
+        "dias_por_100_paginas": 3200.0,
+        "paginas_para_1_ano": 11
+      },
+      "1.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 5,
+        "dias": 115,
+        "dias_por_100_paginas": 2875.0,
+        "paginas_para_1_ano": 13
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 46,
+        "dias_por_100_paginas": 4600.0,
+        "paginas_para_1_ano": 8
+      },
+      "2.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 12,
+        "dias": 135,
+        "dias_por_100_paginas": 1227.2727272727273,
+        "paginas_para_1_ano": 30
+      },
+      "2.5": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 5,
+        "dias": 44,
+        "dias_por_100_paginas": 1100.0,
+        "paginas_para_1_ano": 33
+      },
+      "3.0": {
+        "n_paginas": 16,
+        "pagina_min": 1,
+        "pagina_max": 16,
+        "dias": 43,
+        "dias_por_100_paginas": 286.6666666666667,
+        "paginas_para_1_ano": 127
+      },
+      "4.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 51,
+        "dias": 22,
+        "dias_por_100_paginas": 44.0,
+        "paginas_para_1_ano": 830
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 37,
+        "dias": 18,
+        "dias_por_100_paginas": 50.0,
+        "paginas_para_1_ano": 730
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 27,
+        "dias_por_100_paginas": 21.25984251968504,
+        "paginas_para_1_ano": 1717
+      }
+    },
+    "ano_lancamento": 2002,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-pianist",
+      "titulo": "The Pianist",
+      "ano": 2002,
+      "tmdb_id_letterboxd": 423,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 5,
+        "1.0": 7,
+        "1.5": 4,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 5,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-09-12",
+        "max": "2026-11-07",
+        "p5": "2026-05-30",
+        "p50": "2026-08-31",
+        "p95": "2026-10-28"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 24,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 112,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 3,
+            "abaixo_min_chars": 112,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Associação com Roman Polanski e polêmica",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews negativas condenam o filme por causa do histórico criminal do diretor, argumentando que isso torna problemático assistir e elogiar a obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews negativas condenam o filme por causa do histórico criminal do diretor, argumentando que isso torna problemático assistir e elogiar a obra."
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores descrevem o filme como excessivamente longo e entediante, com trechos arrastados que não prendem a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos espectadores descrevem o filme como excessivamente longo e entediante, com trechos arrastados que não prendem a atenção."
+        },
+        {
+          "tema": "Percepção de propaganda sionista",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas acusam o filme de servir como propaganda sionista, promovendo uma narrativa unilateral e vitimista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas acusam o filme de servir como propaganda sionista, promovendo uma narrativa unilateral e vitimista."
+        },
+        {
+          "tema": "Crítica à abordagem do Holocausto como espetáculo",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores consideram que o filme explora o sofrimento histórico de forma sensacionalista, transformando a tragédia em mero entretenimento dramático.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há quem considere que o filme explora o sofrimento histórico de forma sensacionalista, transformando a tragédia em mero entretenimento dramático."
+        },
+        {
+          "tema": "Roteiro fraco e falta de profundidade",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que o roteiro é previsível, com personagens rasos e desenvolvimento insuficiente, apoiando-se em clichês dramáticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews apontam que o roteiro é previsível, com personagens rasos e desenvolvimento insuficiente, apoiando-se em clichês dramáticos."
+        },
+        {
+          "tema": "Atuação de Adrien Brody elogiada, mas insuficiente",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora a atuação de Adrien Brody seja reconhecida como competente, muitos argumentam que ela não compensa as falhas gerais do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_pendente": true
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a associação do filme com Roman Polanski, o ritmo lento, a percepção de propaganda sionista e a abordagem sensacionalista do Holocausto, além de críticas ao roteiro e à profundidade dos personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 6,
+        "p95": 12,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-07-25",
+        "max": "2026-11-07",
+        "p5": "2026-09-16",
+        "p50": "2026-10-25",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 192,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 143,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 4,
+            "abaixo_min_chars": 143,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e duração excessiva",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que o filme se arrasta, com a segunda metade perdendo o fôlego e dando a sensação de que nada acontece por longos períodos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews medianas frequentemente apontam que o filme se arrasta, com a segunda metade perdendo o fôlego e dando a sensação de que nada acontece por longos períodos."
+        },
+        {
+          "tema": "Comparações com A Lista de Schindler",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo compara o filme desfavoravelmente com A Lista de Schindler, considerando que a obra de Spielberg é mais impactante emocionalmente e melhor construída.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Adrien Brody",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Adrien Brody é bastante elogiada, com certos membros do grupo a descrevendo como crua e interessante, embora haja quem a considere superestimada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A performance de Adrien Brody é bastante elogiada, com alguns membros do grupo a descrevendo como crua e interessante, embora haja quem a considere superestimada."
+        },
+        {
+          "tema": "Fotografia e aspectos técnicos",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a fotografia e a recriação de época, mas espectadores acham o visual genérico ou com aparência de filme televisivo barato.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews medianas elogiam a fotografia e a recriação de época, mas alguns acham o visual genérico ou com aparência de filme televisivo barato."
+        },
+        {
+          "tema": "Roteiro episódico e falta de desenvolvimento",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é criticado por parecer uma sequência de eventos sem aprofundamento dos personagens, assemelhando-se a uma aula de história ou documentário.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Críticas ao diretor Roman Polanski",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas condenam Roman Polanski por seu histórico pessoal e questionam como isso afeta a recepção do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas condenam Roman Polanski por seu histórico pessoal e questionam como isso afeta a recepção do filme."
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews medianas destaca uma mistura de admiração pela história real e pela atuação de Adrien Brody com críticas ao ritmo arrastado, à falta de emoção e à abordagem episódica do roteiro. Muitos também mencionam comparações desfavoráveis com A Lista de Schindler e condenam o diretor Roman Polanski.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 5
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 12,
+        "4.5": 9,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 12,
+        "4.5": 12,
+        "5.0": 13
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2021-02-03",
+        "max": "2026-11-08",
+        "p5": "2026-10-11",
+        "p50": "2026-11-07",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 42,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 42,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 12,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 13,
+          "n_alvo": 16,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 56,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 56,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Impacto emocional e devastação",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews descrevem a experiência de assistir como emocionalmente arrasadora, capaz de abalar profundamente e permanecer na memória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Adrien Brody",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance do protagonista é elogiada como excepcional, destacando a entrega física e psicológica ao papel.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A performance do protagonista é frequentemente elogiada como excepcional, destacando a entrega física e psicológica ao papel."
+        },
+        {
+          "tema": "Retrato histórico e realismo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews enaltecem a fidelidade aos eventos reais e a forma crua e realista com que o filme retrata o horror do Holocausto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews enaltecem a fidelidade aos eventos reais e a forma crua e realista com que o filme retrata o horror do Holocausto."
+        },
+        {
+          "tema": "Fotografia e aspectos visuais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é citada por sua paleta desolada e composições que acentuam a atmosfera de sofrimento e ruína.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "A música como força vital",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O papel da música, especialmente do piano, é visto como um símbolo de humanidade e resistência em meio à barbárie.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Críticas ao ritmo e à duração",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o ritmo se arrasta em certos momentos e que a longa duração pode tornar a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam que o ritmo se arrasta em certos momentos e que a longa duração pode tornar a experiência cansativa."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam o forte impacto emocional, a atuação de Adrien Brody e o realismo histórico da obra, frequentemente descrevendo-a como uma experiência difícil, porém necessária. Este grupo também elogia a fotografia e o simbolismo da música, embora alguns apontem problemas de ritmo e duração.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 94
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Espectadores descrevem o filme como excessivamente longo e entediante, com trechos arrastados que não prendem a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e duração excessiva",
+            "exemplo_parafraseado": "As reviews medianas apontam que o filme se arrasta, com a segunda metade perdendo o fôlego e dando a sensação de que nada acontece por longos períodos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Críticas ao ritmo e à duração",
+            "exemplo_parafraseado": "Reviews mencionam que o ritmo se arrasta em certos momentos e que a longa duração pode tornar a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adrien Brody elogiada, mas insuficiente",
+            "exemplo_parafraseado": "Embora a atuação de Adrien Brody seja reconhecida como competente, muitos argumentam que ela não compensa as falhas gerais do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adrien Brody",
+            "exemplo_parafraseado": "A performance de Adrien Brody é bastante elogiada, com certos membros do grupo a descrevendo como crua e interessante, embora haja quem a considere superestimada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Adrien Brody",
+            "exemplo_parafraseado": "A performance do protagonista é elogiada como excepcional, destacando a entrega física e psicológica ao papel.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e aspectos técnicos",
+            "exemplo_parafraseado": "As reviews medianas elogiam a fotografia e a recriação de época, mas espectadores acham o visual genérico ou com aparência de filme televisivo barato.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e aspectos visuais",
+            "exemplo_parafraseado": "A fotografia é citada por sua paleta desolada e composições que acentuam a atmosfera de sofrimento e ruína.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e falta de profundidade",
+            "exemplo_parafraseado": "Reviews apontam que o roteiro é previsível, com personagens rasos e desenvolvimento insuficiente, apoiando-se em clichês dramáticos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro episódico e falta de desenvolvimento",
+            "exemplo_parafraseado": "O roteiro é criticado por parecer uma sequência de eventos sem aprofundamento dos personagens, assemelhando-se a uma aula de história ou documentário.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Retrato histórico e realismo",
+            "exemplo_parafraseado": "Reviews enaltecem a fidelidade aos eventos reais e a forma crua e realista com que o filme retrata o horror do Holocausto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "A música como força vital",
+            "exemplo_parafraseado": "O papel da música, especialmente do piano, é visto como um símbolo de humanidade e resistência em meio à barbárie.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -50.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -32.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 32.5,
+            "acima_da_margem": true,
+            "tema": "Impacto emocional e devastação",
+            "exemplo_parafraseado": "As reviews descrevem a experiência de assistir como emocionalmente arrasadora, capaz de abalar profundamente e permanecer na memória.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Associação com Roman Polanski e polêmica",
+            "exemplo_parafraseado": "Reviews negativas condenam o filme por causa do histórico criminal do diretor, argumentando que isso torna problemático assistir e elogiar a obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Comparações com A Lista de Schindler",
+            "exemplo_parafraseado": "Este grupo compara o filme desfavoravelmente com A Lista de Schindler, considerando que a obra de Spielberg é mais impactante emocionalmente e melhor construída.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Percepção de propaganda sionista",
+            "exemplo_parafraseado": "Críticas acusam o filme de servir como propaganda sionista, promovendo uma narrativa unilateral e vitimista.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à abordagem do Holocausto como espetáculo"
+            ]
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Críticas ao diretor Roman Polanski",
+            "exemplo_parafraseado": "Reviews medianas condenam Roman Polanski por seu histórico pessoal e questionam como isso afeta a recepção do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência emocionalmente arrasadora que permanece na memória",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e devastação",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza uma atuação excepcional que se entrega de corpo e alma ao papel",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Adrien Brody",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia um retrato histórico fiel e cru dos horrores do Holocausto",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Retrato histórico e realismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera um ritmo que se arrasta e uma longa duração em troca do restante",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Críticas ao ritmo e à duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com obras ligadas ao histórico criminal do diretor",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Associação com Roman Polanski e polêmica",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita trechos arrastados e uma duração excessiva que não prendem a atenção",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita narrativas que considera propaganda sionista unilateral e vitimista",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Percepção de propaganda sionista",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "se incomoda com o Holocausto tratado de forma sensacionalista como entretenimento",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica à abordagem do Holocausto como espetáculo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "embora reconheça a atuação competente de Adrien Brody, não acha que compense as falhas",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuação de Adrien Brody elogiada, mas insuficiente",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16676,
+      "completion_tokens": 1151,
+      "cache_hit_tokens": 15018,
+      "cache_miss_tokens": 1658
+    },
+    "latencia_s": 8.67,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

@@ -1,0 +1,1569 @@
+{
+  "slug": "alien",
+  "data_coleta": "2026-11-08T09:32:42.097323+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 2078155,
+  "reviews_url": "https://letterboxd.com/film/alien/reviews/",
+  "ficha": {
+    "titulo": "Alien: O Oitavo Passageiro",
+    "sinopse_oficial": "Quando a tripulação da sonda espacial Nostromo responde a um pedido de socorro vindo de um planeta inóspito, eles descobrem uma forma de vida mortal que se reproduz dentro de humanos. Agora, a tripulação deve lutar para permanecer viva e impedir que a criatura chegue até a Terra.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Terror",
+      "Ficção científica"
+    ],
+    "duracao_min": 117,
+    "diretor": "Ridley Scott",
+    "diretor_transliterado": false,
+    "ano": 1979,
+    "data_estreia": "1979-05-25",
+    "fonte": "tmdb",
+    "tmdb_id": 348,
+    "tmdb_fetched_at": "2026-11-08T09:25:53+00:00",
+    "poster_path": "/rFHzJrkO1kNIezb6rFog5oCJUEn.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/caZ3wsV1sQN8eZvZdXUZiHQcoib.jpg",
+      "/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+      "/cEobq5QrnOJjO6giDs8q4RxmMKh.jpg",
+      "/3BNbh8ODH68JRLEc4YveMHuTcH1.jpg",
+      "/3epzWQQbtQWWY8Lq8tJ0GTrhjls.jpg",
+      "/zo1X8fCK0E6EQIH5mzkLqNwgXHz.jpg",
+      "/9V0C4ipJkFhFJ6KrTzJ0ocAadTM.jpg",
+      "/vbDsM4Z7faA6lpBwpKSMze4rilg.jpg",
+      "/7JvTZ1SJGnBUBLShQDtkrz89Ocs.jpg",
+      "/zpJHMerrI6vK4BcXzkab1iMOPBR.jpg"
+    ],
+    "backdrop_path": "/AmR3JG1VQVxU8TfAvljUhfSFUOx.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/Ad19RSlBqRw4tQLJmYfQN6a8vEe.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/4lCsYsPAzePbiAyCDj1nCdllVK.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/86ETBohK7dMyhl80HNgxdO05C7T.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/zUYFrUA9s9kmE8ngDm3NsVRXtn7.jpg",
+        "still_largura": 2839,
+        "still_altura": 1597
+      },
+      {
+        "still_path": "/iIc9tyskQedMEJpa7S4w4HkTBZz.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1ucXF1QXRxZ7CuCAoBupI30lmi6.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/l4ovUyDxkrZP9ZkB46ZhUKS1Aj5.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/9d74GjYLnFlKRqXcSGSVmbc6ajm.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/cJUtVxkKoQ6c6WBN2oa4QqqPbvH.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fTdbkn5hFlOc7HDNokAF2i6rJxn.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/jwHIgwg6beYUDtmpX1UOflk7cAu.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/nwxVzq31dKtQcHwvajvzOuvLJjZ.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/vK3oOsSE1asgNVsN86NCFpOAnmM.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "alien",
+      "titulo_letterboxd": "Alien",
+      "ano_letterboxd": 1979,
+      "tmdb_id_letterboxd": 348,
+      "tmdb_id_escolhido": 348,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Alien",
+      "ano_tmdb": 1979,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US",
+      "GB"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 2078155,
+    "por_nivel": {
+      "0.5": 2120,
+      "1.0": 6401,
+      "1.5": 4612,
+      "2.0": 26728,
+      "2.5": 29541,
+      "3.0": 161889,
+      "3.5": 207040,
+      "4.0": 609444,
+      "4.5": 361917,
+      "5.0": 668463
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "alien",
+    "coletado_em": "2026-11-08T09:32:42.097323+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2120,
+      "1.0": 6401,
+      "1.5": 4612,
+      "2.0": 26728,
+      "2.5": 29541,
+      "3.0": 161889,
+      "3.5": 207040,
+      "4.0": 609444,
+      "4.5": 361917,
+      "5.0": 668463
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 6,
+      "1.5": 8,
+      "2.0": 30,
+      "2.5": 23,
+      "3.0": 32,
+      "3.5": 8,
+      "4.0": 14,
+      "4.5": 13,
+      "5.0": 18
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 1,
+      "4.0": 1,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "1.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 11,
+      "3.0": 62,
+      "3.5": 79,
+      "4.0": 233,
+      "4.5": 139,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 612,
+        "min": "2007-01-01",
+        "max": "2026-11-08",
+        "p5": "2026-10-14",
+        "p50": "2026-11-02",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 204,
+          "min": "2007-01-01",
+          "max": "2026-11-08",
+          "p5": "2026-10-08",
+          "p50": "2026-10-24",
+          "p95": "2026-11-06"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2025-02-18",
+          "max": "2026-11-08",
+          "p5": "2026-10-24",
+          "p50": "2026-11-03",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2023-01-22",
+          "max": "2026-11-08",
+          "p5": "2026-10-27",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 11,
+      "dias_por_100_paginas": 8.661417322834646,
+      "paginas_para_1_ano": 4214
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 12,
+        "dias_por_100_paginas": 1200.0,
+        "paginas_para_1_ano": 30
+      },
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 16,
+        "dias_por_100_paginas": 800.0,
+        "paginas_para_1_ano": 46
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 7,
+        "dias_por_100_paginas": 700.0,
+        "paginas_para_1_ano": 52
+      },
+      "2.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 22,
+        "dias_por_100_paginas": 244.44444444444446,
+        "paginas_para_1_ano": 149
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 7,
+        "dias_por_100_paginas": 140.0,
+        "paginas_para_1_ano": 261
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 31,
+        "dias": 13,
+        "dias_por_100_paginas": 43.333333333333336,
+        "paginas_para_1_ano": 842
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 1,
+        "dias_por_100_paginas": 50.0,
+        "paginas_para_1_ano": 730
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 58,
+        "dias": 7,
+        "dias_por_100_paginas": 12.280701754385966,
+        "paginas_para_1_ano": 2972
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 35,
+        "dias": 7,
+        "dias_por_100_paginas": 20.58823529411765,
+        "paginas_para_1_ano": 1773
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 12,
+        "dias_por_100_paginas": 9.448818897637794,
+        "paginas_para_1_ano": 3863
+      }
+    },
+    "ano_lancamento": 1979,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "alien",
+      "titulo": "Alien",
+      "ano": 1979,
+      "tmdb_id_letterboxd": 348,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 4,
+        "p95": 9,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2007-01-01",
+        "max": "2026-11-07",
+        "p5": "2026-10-14",
+        "p50": "2026-10-25",
+        "p95": "2026-11-05"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 82,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 82,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e cansativo",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews reclamam que o filme é excessivamente lento, com longos trechos em que nada acontece, chegando a ser entediante e arrastado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é excessivamente lento, com longos trechos em que nada acontece, chegando a ser entediante e arrastado."
+        },
+        {
+          "tema": "Personagens tomam decisões idiotas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O comportamento dos personagens é criticado como ilógico, com escolhas absurdas que tiram a credibilidade da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de tensão e sustos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews afirmam que o suspense não funciona e que o filme não dá medo, com momentos previsíveis e sem impacto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews afirmam que o suspense não funciona e que o filme não dá medo, com momentos previsíveis e sem impacto."
+        },
+        {
+          "tema": "Efeitos e criatura envelheceram mal",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas consideram os efeitos especiais e o alienígena datados, com aparência de fantasia ou pouco convincentes para os dias de hoje.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas pessoas consideram os efeitos especiais e o alienígena datados, com aparência de fantasia ou pouco convincentes para os dias de hoje."
+        },
+        {
+          "tema": "Superestimado e não entendo o hype",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews questionam a reputação de clássico, dizendo que não se justifica o exagero de elogios e que o filme não corresponde às expectativas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews questionam a reputação de clássico, dizendo que não se justifica o exagero de elogios e que o filme não corresponde às expectativas."
+        },
+        {
+          "tema": "Roteiro fraco e previsível",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como genérico, com desenvolvimento raso e reviravoltas óbvias, sem originalidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam principalmente para um ritmo lento e cansativo, personagens que tomam decisões inverossímeis e uma ausência de tensão eficaz. Este grupo também destaca que os efeitos e o roteiro envelheceram mal, além de considerar o filme superestimado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 31,
+        "p5": 1,
+        "p50": 5,
+        "p95": 31,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-02-18",
+        "max": "2026-11-08",
+        "p5": "2026-04-13",
+        "p50": "2026-11-03",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 15,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 34,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O início é muito arrastado e chega a dar sono; pessoas dizem que quase dormiram ou precisaram parar o filme antes de algo acontecer, e que o ritmo melhora apenas na segunda metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O início é muito arrastado e chega a dar sono; várias pessoas dizem que quase dormiram ou precisaram parar o filme antes de algo acontecer, e que o ritmo melhora apenas na segunda metade."
+        },
+        {
+          "tema": "Falta de terror ou tensão",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Não sentiram medo como esperavam; o filme parece mais ficção científica do que terror, com poucos sustos e o alienígena pouco ameaçador para espectadores deste grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Não sentiram medo como esperavam; o filme parece mais ficção científica do que terror, com poucos sustos e o alienígena pouco ameaçador para parte deste grupo.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Efeitos e design de produção envelhecidos, porém admiráveis",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os efeitos práticos e o design de produção são muito elogiados pelo contexto da época, mas espectadores notam que o alienígena parece um homem fantasiado e que, para os padrões atuais, tudo soa datado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Os efeitos práticos e o design de produção são muito elogiados pelo contexto da época, mas alguns notam que o alienígena parece um homem fantasiado e que, para os padrões atuais, tudo soa datado."
+        },
+        {
+          "tema": "Personagens rasos e decisões bobas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reclamam que a tripulação toma decisões idiotas e que, fora a Ripley, os personagens são genéricos e difíceis de lembrar; a atuação também é vista como fraca por espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Reclamam que a tripulação toma decisões idiotas e que, fora a Ripley, os personagens são genéricos e difíceis de lembrar; a atuação também é vista como fraca por alguns."
+        },
+        {
+          "tema": "Apreciação pelo visual e pela atmosfera",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo com as ressalvas, salientam a fotografia, a iluminação, os cenários e a ambientação opressiva como os pontos mais fortes e à frente do seu tempo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e subtrama do androide criticados",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A história é considerada simplória, sem desenvolvimento, e a subtrama do androide pareceu sem sentido ou sem impacto, como um detalhe aleatório.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas reconhecem a importância histórica e a qualidade visual do filme, mas criticam o ritmo arrastado, a falta de terror e personagens pouco desenvolvidos; este grupo demonstra mais respeito do que envolvimento com a obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 9
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-01-22",
+        "max": "2026-11-08",
+        "p5": "2026-10-27",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 8,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 8,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Efeitos práticos e design de produção",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a qualidade dos efeitos práticos e dos cenários construídos, destacando o cuidado artesanal e a atenção aos detalhes que, segundo elas, conferem ao filme uma textura tangível e duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atmosfera e tensão",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção de clima é citada, com o filme sendo descrito como opressivo, claustrofóbico e capaz de gerar desconforto e apreensão do início ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A construção de clima é frequentemente citada, com o filme sendo descrito como opressivo, claustrofóbico e capaz de gerar desconforto e apreensão do início ao fim."
+        },
+        {
+          "tema": "Design do alienígena e de H.R. Giger",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O visual do xenomorfo e a estética biomecânica são apontados como marcos do cinema, misturando organicidade e maquinário de forma inquietante e original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Sigourney Weaver e personagem Ripley",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A presença de Sigourney Weaver é celebrada, com Ripley sendo vista como uma protagonista forte e carismática, descrita como a melhor personagem do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A presença de Sigourney Weaver é celebrada, com Ripley sendo vista como uma protagonista forte e carismática, muitas vezes descrita como a melhor personagem do filme."
+        },
+        {
+          "tema": "Fotografia e direção de Ridley Scott",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a direção de Ridley Scott são exaltadas por criar composições visuais marcantes e um senso de escala e profundidade espacial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Som e trilha sonora",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desenho de som e a trilha sonora são lembrados como elementos essenciais para a imersão, com zumbidos constantes e variações tonais que amplificam a sensação de perigo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a combinação de efeitos práticos, atmosfera opressiva e design icônico do alienígena como pontos altos, além de enaltecerem a atuação de Sigourney Weaver e a direção de Ridley Scott. Este grupo também menciona com frequência o caráter visionário do filme e sua capacidade de manter a tensão mesmo décadas após o lançamento.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 89
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e cansativo",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é excessivamente lento, com longos trechos em que nada acontece, chegando a ser entediante e arrastado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "O início é muito arrastado e chega a dar sono; pessoas dizem que quase dormiram ou precisaram parar o filme antes de algo acontecer, e que o ritmo melhora apenas na segunda metade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Sigourney Weaver e personagem Ripley",
+            "exemplo_parafraseado": "A presença de Sigourney Weaver é celebrada, com Ripley sendo vista como uma protagonista forte e carismática, descrita como a melhor personagem do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Efeitos e criatura envelheceram mal",
+            "exemplo_parafraseado": "Pessoas consideram os efeitos especiais e o alienígena datados, com aparência de fantasia ou pouco convincentes para os dias de hoje.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos e design de produção envelhecidos, porém admiráveis",
+            "exemplo_parafraseado": "Os efeitos práticos e o design de produção são muito elogiados pelo contexto da época, mas espectadores notam que o alienígena parece um homem fantasiado e que, para os padrões atuais, tudo soa datado.",
+            "temas_no_mesmo_eixo": [
+              "Apreciação pelo visual e pela atmosfera"
+            ]
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Efeitos práticos e design de produção",
+            "exemplo_parafraseado": "As reviews elogiam a qualidade dos efeitos práticos e dos cenários construídos, destacando o cuidado artesanal e a atenção aos detalhes que, segundo elas, conferem ao filme uma textura tangível e duradoura.",
+            "temas_no_mesmo_eixo": [
+              "Design do alienígena e de H.R. Giger",
+              "Fotografia e direção de Ridley Scott"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens tomam decisões idiotas",
+            "exemplo_parafraseado": "O comportamento dos personagens é criticado como ilógico, com escolhas absurdas que tiram a credibilidade da trama.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro fraco e previsível"
+            ]
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens rasos e decisões bobas",
+            "exemplo_parafraseado": "Reclamam que a tripulação toma decisões idiotas e que, fora a Ripley, os personagens são genéricos e difíceis de lembrar; a atuação também é vista como fraca por espectadores.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e subtrama do androide criticados"
+            ]
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Som e trilha sonora",
+            "exemplo_parafraseado": "O desenho de som e a trilha sonora são lembrados como elementos essenciais para a imersão, com zumbidos constantes e variações tonais que amplificam a sensação de perigo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Falta de tensão e sustos",
+            "exemplo_parafraseado": "Reviews afirmam que o suspense não funciona e que o filme não dá medo, com momentos previsíveis e sem impacto.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de terror ou tensão",
+            "exemplo_parafraseado": "Não sentiram medo como esperavam; o filme parece mais ficção científica do que terror, com poucos sustos e o alienígena pouco ameaçador para espectadores deste grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atmosfera e tensão",
+            "exemplo_parafraseado": "A construção de clima é citada, com o filme sendo descrito como opressivo, claustrofóbico e capaz de gerar desconforto e apreensão do início ao fim.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado e não entendo o hype",
+            "exemplo_parafraseado": "Reviews questionam a reputação de clássico, dizendo que não se justifica o exagero de elogios e que o filme não corresponde às expectativas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "procura uma atmosfera opressiva e claustrofóbica, que gere desconforto e apreensão",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atmosfera e tensão",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por um visual biomecânico inquietante que mistura organicidade e maquinário",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Design do alienígena e de H.R. Giger",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com ritmo excessivamente lento, com trechos em que nada acontece",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e cansativo",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se irrita com escolhas ilógicas dos personagens que tiram a credibilidade da trama",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens tomam decisões idiotas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "espera um suspense que funcione e dê medo, sem momentos previsíveis",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de tensão e sustos",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 89,
+        "peso_texto": "~89% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "valoriza efeitos práticos e cenários construídos com cuidado artesanal e atenção aos detalhes",
+        "tema_origem": "POS-A",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16039,
+      "completion_tokens": 840,
+      "cache_hit_tokens": 14713,
+      "cache_miss_tokens": 1326
+    },
+    "latencia_s": 8.15,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

@@ -2412,7 +2412,7 @@ body.lightbox-aberto { overflow: hidden; }
      contraste WCAG >= 4,5 da justificativa sobre o pior still dos 98
      elegíveis (scripts/medir_legibilidade.py, dados/legibilidade_manchete.json).
      Constante ÚNICA. */
-  --ed-veu: 0.53;
+  --ed-veu: 0.58;
   --ed-calha: 4px;
   --ed-largura: 1180px;
 }

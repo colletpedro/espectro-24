@@ -1,0 +1,1582 @@
+{
+  "slug": "its-a-wonderful-life",
+  "data_coleta": "2026-11-08T05:20:55.677683+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 805359,
+  "reviews_url": "https://letterboxd.com/film/its-a-wonderful-life/reviews/",
+  "ficha": {
+    "titulo": "A Felicidade Não Se Compra",
+    "sinopse_oficial": "Em Bedford Falls, no Natal, George Bailey, que sempre ajudou a todos, pensa em se suicidar saltando de uma ponte, em razão das maquinações de Henry Potter, o homem mais rico da região. Mas tantas pessoas oram por ele que Clarence, um anjo que espera há 220 anos para ganhar asas, é mandado à Terra para tentar fazer George mudar de ideia, mostrando sua importância para todos através de flashbacks.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Família",
+      "Fantasia"
+    ],
+    "duracao_min": 130,
+    "diretor": "Frank Capra",
+    "diretor_transliterado": false,
+    "ano": 1946,
+    "data_estreia": "1946-12-20",
+    "fonte": "tmdb",
+    "tmdb_id": 1585,
+    "tmdb_fetched_at": "2026-11-08T05:14:45+00:00",
+    "poster_path": "/u9oQTcUTcWxJwv60JkGVjIBzfuB.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+      "/3q35nBLCIdEbxYfsr7D5ocYQXKz.jpg",
+      "/rqmE0aFFerz8E8PkGOKPAoIY5Ax.jpg",
+      "/rUITLSnNLW0JAIkZ99bS8wyCfVb.jpg",
+      "/mxd1UbyWvlmILEdpT09lk81uDmn.jpg",
+      "/2vvEz4v1OaXiqOW3VmUNvfKfA3W.jpg",
+      "/aWoUym4FZKFYJ4Racq7O2oxpaxu.jpg",
+      "/9t2bJvY75Gm4arrdN57Jnwyhvi3.jpg",
+      "/j4ThWGY9WLbVpApjjRBy4bm4guZ.jpg",
+      "/oYGqjzfWVPIxFZYmfd7u5WKigeI.jpg"
+    ],
+    "backdrop_path": "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+    "backdrop_largura": 1589,
+    "backdrop_altura": 894,
+    "poster_sem_texto_path": "/oQlDt8gomUvzXbNJ9eIaNKjQrv2.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1500,
+    "galeria_stills": [
+      {
+        "still_path": "/ch3lDc4xQ9MpsNEpnRhvR8PIxxK.jpg",
+        "still_largura": 1589,
+        "still_altura": 894
+      },
+      {
+        "still_path": "/3q35nBLCIdEbxYfsr7D5ocYQXKz.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/2vvEz4v1OaXiqOW3VmUNvfKfA3W.jpg",
+        "still_largura": 1960,
+        "still_altura": 1104
+      },
+      {
+        "still_path": "/3u30JNV6XNkBC9XILwRqHNZow1q.jpg",
+        "still_largura": 2667,
+        "still_altura": 1501
+      },
+      {
+        "still_path": "/rHUafSSt9v15LfufOO7ZSzbVHvQ.jpg",
+        "still_largura": 1558,
+        "still_altura": 877
+      },
+      {
+        "still_path": "/8xfolnjssIopZeT83B6jjsqZy0D.jpg",
+        "still_largura": 1436,
+        "still_altura": 808
+      },
+      {
+        "still_path": "/uAHu3l3BXsv78MrzcFTwNCjIyZT.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/5sGefqDRJRHxSX6RUYloE36cWEH.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/aHk90ZuMx9ib62bCGOosAQDUJkb.jpg",
+        "still_largura": 1457,
+        "still_altura": 820
+      },
+      {
+        "still_path": "/gbIyzWW6Sa1o50stxcTD6xmeyjG.jpg",
+        "still_largura": 2050,
+        "still_altura": 1153
+      },
+      {
+        "still_path": "/n7IRaoSAevuP8gq0nezF6zf907k.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/pnkK2g7foJUsBf6mdGnxiXfGyIg.jpg",
+        "still_largura": 1481,
+        "still_altura": 833
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "its-a-wonderful-life",
+      "titulo_letterboxd": "It's a Wonderful Life",
+      "ano_letterboxd": 1946,
+      "tmdb_id_letterboxd": 1585,
+      "tmdb_id_escolhido": 1585,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "It's a Wonderful Life",
+      "ano_tmdb": 1946,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 805359,
+    "por_nivel": {
+      "0.5": 1481,
+      "1.0": 3569,
+      "1.5": 1818,
+      "2.0": 10145,
+      "2.5": 9203,
+      "3.0": 47856,
+      "3.5": 55792,
+      "4.0": 178768,
+      "4.5": 136593,
+      "5.0": 360134
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 7,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "its-a-wonderful-life",
+    "coletado_em": "2026-11-08T05:20:55.677683+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1481,
+      "1.0": 3569,
+      "1.5": 1818,
+      "2.0": 10145,
+      "2.5": 9203,
+      "3.0": 47856,
+      "3.5": 55792,
+      "4.0": 178768,
+      "4.5": 136593,
+      "5.0": 360134
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 9
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 36,
+      "2.0": 108,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 108
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 10,
+      "1.5": 7,
+      "2.0": 31,
+      "2.5": 19,
+      "3.0": 39,
+      "3.5": 4,
+      "4.0": 11,
+      "4.5": 11,
+      "5.0": 26
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 1,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 1
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "0.5": 1,
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 58,
+        "n_validas_pos_extensao": 58,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 7,
+      "3.0": 34,
+      "3.5": 40,
+      "4.0": 127,
+      "4.5": 97,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 612,
+        "min": "0002-09-21",
+        "max": "2026-11-08",
+        "p5": "2025-04-19",
+        "p50": "2026-09-22",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "1861-04-12",
+          "max": "2026-11-07",
+          "p5": "2024-12-25",
+          "p50": "2026-07-07",
+          "p95": "2026-10-23"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "0002-09-21",
+          "max": "2026-11-07",
+          "p5": "2024-12-25",
+          "p50": "2026-09-19",
+          "p95": "2026-11-02"
+        },
+        "positivas": {
+          "n": 204,
+          "min": "2014-01-23",
+          "max": "2026-11-08",
+          "p5": "2025-12-26",
+          "p50": "2026-11-06",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 39,
+      "dias_por_100_paginas": 30.708661417322833,
+      "paginas_para_1_ano": 1189
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 55,
+        "dias_por_100_paginas": 5500.0,
+        "paginas_para_1_ano": 7
+      },
+      "1.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 168,
+        "dias_por_100_paginas": 5600.0,
+        "paginas_para_1_ano": 7
+      },
+      "1.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 151,
+        "dias_por_100_paginas": 7550.0,
+        "paginas_para_1_ano": 5
+      },
+      "2.0": {
+        "n_paginas": 9,
+        "pagina_min": 1,
+        "pagina_max": 9,
+        "dias": 263,
+        "dias_por_100_paginas": 3287.5,
+        "paginas_para_1_ano": 11
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 128,
+        "dias_por_100_paginas": 2133.3333333333335,
+        "paginas_para_1_ano": 17
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 17,
+        "dias": 115,
+        "dias_por_100_paginas": 718.75,
+        "paginas_para_1_ano": 51
+      },
+      "4.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 32,
+        "dias": 48,
+        "dias_por_100_paginas": 154.83870967741936,
+        "paginas_para_1_ano": 236
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 24,
+        "dias": 28,
+        "dias_por_100_paginas": 121.73913043478261,
+        "paginas_para_1_ano": 300
+      },
+      "5.0": {
+        "n_paginas": 9,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 44,
+        "dias_por_100_paginas": 34.645669291338585,
+        "paginas_para_1_ano": 1054
+      }
+    },
+    "ano_lancamento": 1946,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "its-a-wonderful-life",
+      "titulo": "It's a Wonderful Life",
+      "ano": 1946,
+      "tmdb_id_letterboxd": 1585,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 4,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 24
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 9,
+        "p5": 1,
+        "p50": 2,
+        "p95": 9,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2020-01-01",
+        "max": "2026-11-02",
+        "p5": "2025-11-16",
+        "p50": "2026-07-11",
+        "p95": "2026-10-31"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 24,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "ritmo lento e longa duração",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa."
+        },
+        {
+          "tema": "mensagem cristã e moral simplista",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "protagonista irritante e passivo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele."
+        },
+        {
+          "tema": "depressão e tom depressivo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera."
+        },
+        {
+          "tema": "crítica ao capitalismo e à estrutura social",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Certas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema."
+        },
+        {
+          "tema": "personagens femininas sem agência",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há menções à falta de desenvolvimento e relevância das personagens femininas, que recebem pouco espaço e agência na narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas destaca principalmente o ritmo lento, a moral cristã simplista, o protagonista pouco carismático e o tom depressivo como os principais pontos de insatisfação. Críticas à estrutura social e à falta de agência feminina também aparecem, mas com menor frequência.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 17,
+        "p5": 1,
+        "p50": 5,
+        "p95": 17,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-21",
+        "max": "2026-11-05",
+        "p5": "2025-08-26",
+        "p50": "2026-09-23",
+        "p95": "2026-11-01"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 78,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 78,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com alguns trechos entediantes."
+        },
+        {
+          "tema": "Final eficaz versus desenvolvimento irregular",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação."
+        },
+        {
+          "tema": "Roteiro previsível e personagens rasos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil."
+        },
+        {
+          "tema": "Atuação de James Stewart",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O desempenho do protagonista divide opiniões: alguns elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente."
+        },
+        {
+          "tema": "Excesso de otimismo e moral cristã",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial."
+        },
+        {
+          "tema": "Clássico superestimado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam principalmente problemas de ritmo e duração, além de uma visão crítica sobre o otimismo excessivo e a simplicidade dos personagens. Apesar disso, muitos reconhecem a eficácia do desfecho e a atuação de James Stewart, ainda que com ressalvas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 7
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 7,
+        "5.0": 20
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 10,
+        "4.5": 7,
+        "5.0": 20
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2014-01-23",
+        "max": "2026-11-08",
+        "p5": "2024-01-01",
+        "p50": "2026-11-06",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 20,
+          "n_alvo": 20,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 79,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 79,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Emoção e choro",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho."
+        },
+        {
+          "tema": "Atuação de James Stewart",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem sobre o valor da vida e da existência",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Clássico atemporal e natalino",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O filme é frequentemente descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura."
+        },
+        {
+          "tema": "Ritmo e estrutura narrativa",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final."
+        },
+        {
+          "tema": "Elenco e química entre os atores",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O elenco é elogiado, com destaque para a química entre os protagonistas e a atuação de Donna Reed, que contribuem para a autenticidade dos personagens.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a forte carga emocional, a atuação marcante de James Stewart e a mensagem inspiradora sobre o valor da vida. Este grupo também valoriza o filme como um clássico natalino atemporal, embora alguns apontem um ritmo inicial mais lento.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 91
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e estrutura narrativa",
+            "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de James Stewart",
+            "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de James Stewart",
+            "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
+            "temas_no_mesmo_eixo": [
+              "Elenco e química entre os atores"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "protagonista irritante e passivo",
+            "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
+            "temas_no_mesmo_eixo": [
+              "personagens femininas sem agência"
+            ]
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Final eficaz versus desenvolvimento irregular",
+            "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro previsível e personagens rasos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "depressão e tom depressivo",
+            "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Emoção e choro",
+            "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Clássico atemporal e natalino",
+            "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Clássico superestimado",
+            "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "mensagem cristã e moral simplista",
+            "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+            "temas_no_mesmo_eixo": [
+              "crítica ao capitalismo e à estrutura social"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de otimismo e moral cristã",
+            "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Mensagem sobre o valor da vida e da existência",
+            "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma história que emociona até as lágrimas e provoca forte comoção",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Emoção e choro",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma das melhores performances da carreira de James Stewart",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de James Stewart",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma reflexão sobre o peso de cada existência na vida de outros",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem sobre o valor da vida e da existência",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera um início lento sabendo que a narrativa ganha força na reta final",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e estrutura narrativa",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com uma primeira metade arrastada e uma experiência cansativa pela longa duração",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "ritmo lento e longa duração",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita uma moralidade simplista de forte orientação cristã que reduz questões complexas",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "mensagem cristã e moral simplista",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um protagonista queixoso, passivo e sem evolução",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "protagonista irritante e passivo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "evita obras cuja visão burguesa reforça estruturas injustas sem questionar o sistema",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "crítica ao capitalismo e à estrutura social",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 3,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17890,
+      "completion_tokens": 1085,
+      "cache_hit_tokens": 15517,
+      "cache_miss_tokens": 2373
+    },
+    "latencia_s": 7.26,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

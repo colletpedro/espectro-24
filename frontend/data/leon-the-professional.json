@@ -1,0 +1,1583 @@
+{
+  "slug": "leon-the-professional",
+  "data_coleta": "2026-11-08T09:08:22.542573+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1547320,
+  "reviews_url": "https://letterboxd.com/film/leon-the-professional/reviews/",
+  "ficha": {
+    "titulo": "O Profissional",
+    "sinopse_oficial": "Mathilda tem apenas 12 anos de idade mas já conhece o lado obscuro da vida: seu pai abusivo guarda drogas para policiais corruptos e a mãe a negligencia. O vizinho Léon gosta de cuidar de plantas, mas é um assassino de aluguel para o gângster Tony. Quando sua família é assassinada por um agente antidrogas desonesto, Mathilda se une a um relutante Léon para aprender o negócio mortal e vingar a morte da família.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Drama",
+      "Ação"
+    ],
+    "duracao_min": 111,
+    "diretor": "Luc Besson",
+    "diretor_transliterado": false,
+    "ano": 1994,
+    "data_estreia": "1994-09-14",
+    "fonte": "tmdb",
+    "tmdb_id": 101,
+    "tmdb_fetched_at": "2026-11-08T09:03:46+00:00",
+    "poster_path": "/lNyuX5XibtzRImuhACGy42jHXIs.jpg",
+    "poster_largura": 600,
+    "poster_altura": 900,
+    "backdrop_paths": [
+      "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+      "/g5iswWrQAmDN1t1foNveRtGOXgb.jpg",
+      "/1UWszQdHI7j3zBqA4kx8Lk60Di8.jpg",
+      "/erRKAGEjtz3XKYKp8TaSbLrIoB2.jpg",
+      "/jRJrQ72VLyEnVsvwfep8Xjlvu8c.jpg",
+      "/bguFhzIGpQdGQ6uizm07oMKbgHi.jpg",
+      "/jynfI114q3kOAbIiVjVfFFmttU2.jpg",
+      "/2hS80sTgsSmK0T61bd5J9YBc52k.jpg",
+      "/tF4ARbICMV9lw3zfdbcgH1VN3Qq.jpg",
+      "/tc3DRJOKHTcg7EKJaYjot9aRMwu.jpg"
+    ],
+    "backdrop_path": "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+    "backdrop_largura": 2048,
+    "backdrop_altura": 1152,
+    "poster_sem_texto_path": "/z4pKjZ7m8twgafsace8vpdwVH7v.jpg",
+    "poster_sem_texto_largura": 1400,
+    "poster_sem_texto_altura": 2100,
+    "galeria_stills": [
+      {
+        "still_path": "/fj0hwDJEOOHllRim2BMt5L7tbjf.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/1UWszQdHI7j3zBqA4kx8Lk60Di8.jpg",
+        "still_largura": 3790,
+        "still_altura": 2132
+      },
+      {
+        "still_path": "/2hS80sTgsSmK0T61bd5J9YBc52k.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/exlkyIr3JrQfRmyaraunYlc3JZt.jpg",
+        "still_largura": 2257,
+        "still_altura": 1270
+      },
+      {
+        "still_path": "/A4gVKikhhRKvniMbCVuGBRBvDzo.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wey0IbmVhAruc6zUH7i7deRKwyi.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/vNbZkL8JlEWHfeFzbej0h9qHrSf.jpg",
+        "still_largura": 2500,
+        "still_altura": 1406
+      },
+      {
+        "still_path": "/yjKHDk0pAajISYNifTbDYWrrUNK.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5rBPNr1r0w9ze32LRxxMKgDvxXJ.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/cgWmHDUw8e4OzLW4cWrrQ4C8mb3.jpg",
+        "still_largura": 2247,
+        "still_altura": 1264
+      },
+      {
+        "still_path": "/gr6mHAp1gU1Y0B6yueCix6Fb4R6.jpg",
+        "still_largura": 1300,
+        "still_altura": 731
+      },
+      {
+        "still_path": "/pvfThXSmBQWtLyaIQrRHf2tKoRB.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "leon-the-professional",
+      "titulo_letterboxd": "Léon: The Professional",
+      "ano_letterboxd": 1994,
+      "tmdb_id_letterboxd": 101,
+      "tmdb_id_escolhido": 101,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Léon: The Professional",
+      "ano_tmdb": 1994,
+      "ano_divergente": false
+    },
+    "paises": [
+      "FR"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1547320,
+    "por_nivel": {
+      "0.5": 9812,
+      "1.0": 13365,
+      "1.5": 8849,
+      "2.0": 33050,
+      "2.5": 37698,
+      "3.0": 150574,
+      "3.5": 210081,
+      "4.0": 512189,
+      "4.5": 225302,
+      "5.0": 346400
+    },
+    "por_bucket": {
+      "negativas": 4,
+      "medianas": 12,
+      "positivas": 84
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "leon-the-professional",
+    "coletado_em": "2026-11-08T09:08:22.542573+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 9812,
+      "1.0": 13365,
+      "1.5": 8849,
+      "2.0": 33050,
+      "2.5": 37698,
+      "3.0": 150574,
+      "3.5": 210081,
+      "4.0": 512189,
+      "4.5": 225302,
+      "5.0": 346400
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 36,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 48
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 15,
+      "1.0": 16,
+      "1.5": 8,
+      "2.0": 33,
+      "2.5": 26,
+      "3.0": 41,
+      "3.5": 13,
+      "4.0": 20,
+      "4.5": 16,
+      "5.0": 13
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 72,
+        "n_validas_pos_extensao": 72,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 67,
+        "n_validas_pos_extensao": 67,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 62,
+        "n_validas_pos_extensao": 62,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 5,
+      "1.0": 7,
+      "1.5": 4,
+      "2.0": 17,
+      "2.5": 19,
+      "3.0": 75,
+      "3.5": 105,
+      "4.0": 256,
+      "4.5": 113,
+      "5.0": 173
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 576,
+        "min": "2012-06-03",
+        "max": "2026-11-08",
+        "p5": "2026-09-27",
+        "p50": "2026-11-03",
+        "p95": "2026-11-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 192,
+          "min": "2020-11-03",
+          "max": "2026-11-08",
+          "p5": "2026-10-24",
+          "p50": "2026-11-02",
+          "p95": "2026-11-07"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2023-09-12",
+          "max": "2026-11-08",
+          "p5": "2026-10-08",
+          "p50": "2026-11-03",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2012-06-03",
+          "max": "2026-11-08",
+          "p5": "2026-09-26",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 16,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 41,
+      "dias_por_100_paginas": 32.28346456692913,
+      "paginas_para_1_ano": 1131
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 6,
+        "dias_por_100_paginas": 300.0,
+        "paginas_para_1_ano": 122
+      },
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 6,
+        "dias_por_100_paginas": 300.0,
+        "paginas_para_1_ano": 122
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 10,
+        "dias_por_100_paginas": 1000.0,
+        "paginas_para_1_ano": 36
+      },
+      "2.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 8,
+        "dias": 12,
+        "dias_por_100_paginas": 171.42857142857142,
+        "paginas_para_1_ano": 213
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 20,
+        "dias_por_100_paginas": 222.22222222222223,
+        "paginas_para_1_ano": 164
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 38,
+        "dias": 31,
+        "dias_por_100_paginas": 83.78378378378379,
+        "paginas_para_1_ano": 436
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 26,
+        "dias": 18,
+        "dias_por_100_paginas": 72.0,
+        "paginas_para_1_ano": 507
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 41,
+        "dias_por_100_paginas": 32.28346456692913,
+        "paginas_para_1_ano": 1131
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 28,
+        "dias": 21,
+        "dias_por_100_paginas": 77.77777777777777,
+        "paginas_para_1_ano": 469
+      },
+      "5.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 43,
+        "dias": 18,
+        "dias_por_100_paginas": 42.857142857142854,
+        "paginas_para_1_ano": 852
+      }
+    },
+    "ano_lancamento": 1994,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "leon-the-professional",
+      "titulo": "Léon: The Professional",
+      "ano": 1994,
+      "tmdb_id_letterboxd": 101,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 6,
+        "1.0": 8,
+        "1.5": 6,
+        "2.0": 20
+      },
+      "composicao_atingida": {
+        "0.5": 6,
+        "1.0": 8,
+        "1.5": 6,
+        "2.0": 20
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 8,
+        "p5": 1,
+        "p50": 2,
+        "p95": 8,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-25",
+        "max": "2026-11-07",
+        "p5": "2026-10-25",
+        "p50": "2026-11-02",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 20,
+          "n_alvo": 20,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Sexualização da personagem infantil",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews negativas criticam a sexualização explícita de uma personagem de 12 anos, considerando as cenas desconfortáveis e desnecessárias para a narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews negativas criticam a sexualização explícita de uma personagem de 12 anos, considerando as cenas desconfortáveis e desnecessárias para a narrativa."
+        },
+        {
+          "tema": "Histórico pessoal do diretor",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O histórico pessoal do diretor, incluindo seu relacionamento com uma adolescente, é citado como elemento que agrava a percepção negativa do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O histórico pessoal do diretor, incluindo seu relacionamento com uma adolescente, é frequentemente citado como elemento que agrava a percepção negativa do filme."
+        },
+        {
+          "tema": "Relação problemática entre os protagonistas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A dinâmica entre os dois protagonistas é vista como ambígua e desconfortável, com espectadores criticando a tentativa de retratar um romance entre um adulto e uma criança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A dinâmica entre os dois protagonistas é vista como ambígua e desconfortável, com muitos criticando a tentativa de retratar um romance entre um adulto e uma criança."
+        },
+        {
+          "tema": "Atuações elogiadas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das críticas, as atuações de Natalie Portman e Gary Oldman são elogiadas como pontos fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Apesar das críticas, as atuações de Natalie Portman e Gary Oldman são frequentemente elogiadas como pontos fortes do filme."
+        },
+        {
+          "tema": "Roteiro e desenvolvimento inconsistentes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam falhas no roteiro, especialmente no desenvolvimento da trama e na construção do relacionamento central, que soa forçado e sem profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews apontam falhas no roteiro, especialmente no desenvolvimento da trama e na construção do relacionamento central, que soa forçado e sem profundidade."
+        },
+        {
+          "tema": "Fotografia e estilo visual",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e o estilo visual são mencionados como aspectos positivos por espectadores, embora não compensem os problemas apontados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A fotografia e o estilo visual são mencionados como aspectos positivos por alguns, embora não compensem os problemas apontados."
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas destaca principalmente a sexualização da personagem infantil e a relação problemática entre os protagonistas, além de associar a obra ao histórico pessoal do diretor. Apesar disso, as atuações e a fotografia recebem alguns elogios, mas não são suficientes para superar o desconforto causado pelos temas centrais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 4
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 38,
+        "p5": 1,
+        "p50": 5,
+        "p95": 38,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-05-21",
+        "max": "2026-11-08",
+        "p5": "2026-10-07",
+        "p50": "2026-11-03",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 18,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 76,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 76,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "desconforto com a sexualização da personagem infantil",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas relatam incômodo com a forma como a menina de 12 anos é retratada de maneira sexualizada, com diálogos e situações que soam inadequados e perturbadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews medianas relatam incômodo com a forma como a menina de 12 anos é retratada de maneira sexualizada, com diálogos e situações que soam inadequados e perturbadores."
+        },
+        {
+          "tema": "relação entre os protagonistas deveria ser paternal",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Textos apontam que a dinâmica entre os dois personagens funcionaria melhor como uma relação de pai e filha ou mentor e aprendiz, em vez do tom romântico que consideram forçado e desconfortável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Vários textos apontam que a dinâmica entre os dois personagens funcionaria melhor como uma relação de pai e filha ou mentor e aprendiz, em vez do tom romântico que consideram forçado e desconfortável."
+        },
+        {
+          "tema": "referências à conduta do diretor",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews relacionam o desconforto do filme ao histórico pessoal do diretor, mencionando que isso influencia negativamente a experiência de assistir.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews relacionam o desconforto do filme ao histórico pessoal do diretor, mencionando que isso influencia negativamente a experiência de assistir."
+        },
+        {
+          "tema": "atuação de Natalie Portman",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação da jovem Natalie Portman é elogiada como um dos pontos altos, sendo descrita como impressionante para a idade dela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A atuação da jovem Natalie Portman é frequentemente elogiada como um dos pontos altos, sendo descrita como impressionante para a idade dela."
+        },
+        {
+          "tema": "atuação de Gary Oldman",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Gary Oldman é destacada como marcante e divertida, mesmo quando o filme como um todo é criticado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "cenas de ação",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de ação são elogiadas por sua qualidade, especialmente as do início, sendo consideradas dignas de filmes de espionagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas (2,5–3 estrelas) destacam um forte desconforto com a sexualização da personagem infantil e com a relação ambígua entre os protagonistas, que consideram inadequada. Apesar disso, muitos elogiam as atuações de Natalie Portman e Gary Oldman e as cenas de ação, mas o incômodo geral impede uma avaliação mais positiva.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 12
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 16,
+        "4.5": 7,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2016-07-17",
+        "max": "2026-11-08",
+        "p5": "2026-09-26",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 52,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 52,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações (Natalie Portman, Gary Oldman, Jean Reno)",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia especialmente a atuação de Natalie Portman ainda criança, considerada impressionante, e a intensidade de Gary Oldman como vilão, além da presença marcante de Jean Reno.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Relação entre Léon e Mathilda",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a complexidade e a ambiguidade da conexão entre os protagonistas, vista ora como laço paternal, ora como afeto confuso, e descrita como comovente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews positivas destacam a complexidade e a ambiguidade da conexão entre os protagonistas, vista ora como laço paternal, ora como afeto confuso, e frequentemente descrita como comovente."
+        },
+        {
+          "tema": "Desconforto com a sexualização da personagem infantil",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo entre as positivas, reviews mencionam incômodo com a forma como a personagem de 12 anos é filmada ou com a ambiguidade da relação, considerando essas escolhas problemáticas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Mesmo entre as positivas, muitas reviews mencionam incômodo com a forma como a personagem de 12 anos é filmada ou com a ambiguidade da relação, considerando essas escolhas problemáticas."
+        },
+        {
+          "tema": "Emoção e impacto pessoal",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo relata ter sido profundamente tocado, descrevendo o filme como comovente, triste e capaz de deixar uma impressão duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estilo visual",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e o estilo de direção são elogiados por sua beleza e impacto, com enquadramentos marcantes e uma estética que contribui para a atmosfera do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e música",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música, especialmente a canção que encerra o filme, é lembrada como um ponto alto, emocionante e memorável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas (3,5–5 estrelas) elogiam as atuações, a fotografia e a carga emocional do filme, mas muitas também expressam desconforto com a sexualização da personagem infantil e com a ambiguidade da relação central. Este grupo não é unânime em sua recepção, oscilando entre o afeto pela obra e a crítica a escolhas problemáticas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 84
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas",
+            "exemplo_parafraseado": "Apesar das críticas, as atuações de Natalie Portman e Gary Oldman são elogiadas como pontos fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "atuação de Natalie Portman",
+            "exemplo_parafraseado": "A atuação da jovem Natalie Portman é elogiada como um dos pontos altos, sendo descrita como impressionante para a idade dela.",
+            "temas_no_mesmo_eixo": [
+              "atuação de Gary Oldman"
+            ]
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações (Natalie Portman, Gary Oldman, Jean Reno)",
+            "exemplo_parafraseado": "Este grupo elogia especialmente a atuação de Natalie Portman ainda criança, considerada impressionante, e a intensidade de Gary Oldman como vilão, além da presença marcante de Jean Reno.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estilo visual",
+            "exemplo_parafraseado": "A fotografia e o estilo visual são mencionados como aspectos positivos por espectadores, embora não compensem os problemas apontados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "cenas de ação",
+            "exemplo_parafraseado": "As sequências de ação são elogiadas por sua qualidade, especialmente as do início, sendo consideradas dignas de filmes de espionagem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estilo visual",
+            "exemplo_parafraseado": "A fotografia e o estilo de direção são elogiados por sua beleza e impacto, com enquadramentos marcantes e uma estética que contribui para a atmosfera do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Relação problemática entre os protagonistas",
+            "exemplo_parafraseado": "A dinâmica entre os dois protagonistas é vista como ambígua e desconfortável, com espectadores criticando a tentativa de retratar um romance entre um adulto e uma criança.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e desenvolvimento inconsistentes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "relação entre os protagonistas deveria ser paternal",
+            "exemplo_parafraseado": "Textos apontam que a dinâmica entre os dois personagens funcionaria melhor como uma relação de pai e filha ou mentor e aprendiz, em vez do tom romântico que consideram forçado e desconfortável.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Relação entre Léon e Mathilda",
+            "exemplo_parafraseado": "As reviews positivas destacam a complexidade e a ambiguidade da conexão entre os protagonistas, vista ora como laço paternal, ora como afeto confuso, e descrita como comovente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e música",
+            "exemplo_parafraseado": "A música, especialmente a canção que encerra o filme, é lembrada como um ponto alto, emocionante e memorável.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Emoção e impacto pessoal",
+            "exemplo_parafraseado": "Este grupo relata ter sido profundamente tocado, descrevendo o filme como comovente, triste e capaz de deixar uma impressão duradoura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Sexualização da personagem infantil",
+            "exemplo_parafraseado": "Reviews negativas criticam a sexualização explícita de uma personagem de 12 anos, considerando as cenas desconfortáveis e desnecessárias para a narrativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "desconforto com a sexualização da personagem infantil",
+            "exemplo_parafraseado": "Reviews medianas relatam incômodo com a forma como a menina de 12 anos é retratada de maneira sexualizada, com diálogos e situações que soam inadequados e perturbadores.",
+            "temas_no_mesmo_eixo": [
+              "referências à conduta do diretor"
+            ]
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -55.0,
+            "acima_da_margem": false,
+            "tema": "Desconforto com a sexualização da personagem infantil",
+            "exemplo_parafraseado": "Mesmo entre as positivas, reviews mencionam incômodo com a forma como a personagem de 12 anos é filmada ou com a ambiguidade da relação, considerando essas escolhas problemáticas.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se impressiona com uma atuação infantil marcante e um vilão intenso",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações (Natalie Portman, Gary Oldman, Jean Reno)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma conexão ambígua e comovente entre os protagonistas",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Relação entre Léon e Mathilda",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera o incômodo com a filmagem de uma personagem infantil em troca do restante",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Desconforto com a sexualização da personagem infantil",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com a sexualização explícita de uma personagem infantil em cenas desconfortáveis",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Sexualização da personagem infantil",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "evita dinâmicas ambíguas e desconfortáveis entre um adulto e uma criança",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Relação problemática entre os protagonistas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita o filme apesar de reconhecer atuações elogiadas como pontos fortes",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações elogiadas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "não se deixa compensar por uma boa fotografia diante dos problemas apontados",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e estilo visual",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 84,
+        "peso_texto": "~84% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 4,
+        "peso_texto": "~4% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-B"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "considera o histórico pessoal do diretor um agravante para a percepção do filme",
+        "tema_origem": "NEG-B",
+        "lado": "talvez_evite",
+        "flags": [
+          "tema_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 6,
+        "flags": [
+          "comprimento",
+          "sem_discriminacao",
+          "tema_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17010,
+      "completion_tokens": 1053,
+      "cache_hit_tokens": 15152,
+      "cache_miss_tokens": 1858
+    },
+    "latencia_s": 6.11,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

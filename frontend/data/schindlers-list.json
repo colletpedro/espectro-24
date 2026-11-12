@@ -1,0 +1,1578 @@
+{
+  "slug": "schindlers-list",
+  "data_coleta": "2026-11-08T04:47:06.275667+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1563921,
+  "reviews_url": "https://letterboxd.com/film/schindlers-list/reviews/",
+  "ficha": {
+    "titulo": "A Lista de Schindler",
+    "sinopse_oficial": "O alemão Oskar Schindler viu na mão de obra judia uma solução barata e viável para lucrar com negócios durante a guerra. Com sua forte influência dentro do partido nazista, foi fácil conseguir as autorizações e abrir uma fábrica. O que poderia parecer uma atitude de um homem não muito bondoso, transformou-se em um dos maiores casos de amor à vida da História, pois este alemão abdicou de toda sua fortuna para salvar a vida de mais de mil judeus em plena luta contra o extermínio alemão.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "História",
+      "Guerra"
+    ],
+    "duracao_min": 195,
+    "diretor": "Steven Spielberg",
+    "diretor_transliterado": false,
+    "ano": 1993,
+    "data_estreia": "1993-12-15",
+    "fonte": "tmdb",
+    "tmdb_id": 424,
+    "tmdb_fetched_at": "2026-11-08T04:41:59+00:00",
+    "poster_path": "/lfJAj9OGsiSsbFxouRkGKqibHxf.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+      "/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
+      "/w2ezhZUk7ZJH9Mdk1Y6CTmaDRg5.jpg",
+      "/zZtNb5DZ9QXTh3I4HXq9o9Phbs9.jpg",
+      "/gXvNfaetPlZt3PUPsBFcfZuoUFe.jpg",
+      "/6x1aXm2jYHV0EOMS8cYuVrrYdWg.jpg",
+      "/3f92DMBTFqr3wgXpfxzrb0qv8nG.jpg",
+      "/rCfpnBNbPZ9UIkl3ktg48suWuf1.jpg",
+      "/3akIPnq3IYaUVy0ZgYEETR0WmBm.jpg",
+      "/ei5xjikx59WR2oDFl2lNLbtQHkx.jpg"
+    ],
+    "backdrop_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/vsZi3ob6iuVyXeZpWIhhFxdYhvF.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3f92DMBTFqr3wgXpfxzrb0qv8nG.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/3MiaheHjzC7DrIpBbBbkfhKyMMn.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1mP3MZTvZXIMDLHgwqZIuxqVWZG.jpg",
+        "still_largura": 2900,
+        "still_altura": 1631
+      },
+      {
+        "still_path": "/5p9Re50cg2eofxPEWtyThpoRMmK.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/8mHiyTU9NxOiYSUC1P0WwNB61L1.jpg",
+        "still_largura": 2900,
+        "still_altura": 1631
+      },
+      {
+        "still_path": "/cPqfd0GFMuZRl39VaqWzOeZcNEG.jpg",
+        "still_largura": 2900,
+        "still_altura": 1632
+      },
+      {
+        "still_path": "/eqwtpFObteeFGprR3uCnzt30XFF.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/mQExnTjz4mWA8FdLdCxxsuaGhTr.jpg",
+        "still_largura": 2896,
+        "still_altura": 1629
+      },
+      {
+        "still_path": "/rdpFecsJ3yezfjadUkWTfhwj4FO.jpg",
+        "still_largura": 2908,
+        "still_altura": 1634
+      },
+      {
+        "still_path": "/vMauMZceN7M5HGeCkfpcteGnlCC.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/y1M212uK5zR5YFBc3nrlDO6yvyB.jpg",
+        "still_largura": 2896,
+        "still_altura": 1629
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "schindlers-list",
+      "titulo_letterboxd": "Schindler's List",
+      "ano_letterboxd": 1993,
+      "tmdb_id_letterboxd": 424,
+      "tmdb_id_escolhido": 424,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Schindler's List",
+      "ano_tmdb": 1993,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1563921,
+    "por_nivel": {
+      "0.5": 2747,
+      "1.0": 3717,
+      "1.5": 1990,
+      "2.0": 10376,
+      "2.5": 10260,
+      "3.0": 63512,
+      "3.5": 81561,
+      "4.0": 356543,
+      "4.5": 295718,
+      "5.0": 737497
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 5,
+      "positivas": 94
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "schindlers-list",
+    "coletado_em": "2026-11-08T04:47:06.275667+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2747,
+      "1.0": 3717,
+      "1.5": 1990,
+      "2.0": 10376,
+      "2.5": 10260,
+      "3.0": 63512,
+      "3.5": 81561,
+      "4.0": 356543,
+      "4.5": 295718,
+      "5.0": 737497
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 9,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 4,
+      "3.0": 14,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 48,
+      "3.0": 168,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 95
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 7,
+      "1.0": 5,
+      "1.5": 6,
+      "2.0": 34,
+      "2.5": 12,
+      "3.0": 38,
+      "3.5": 3,
+      "4.0": 17,
+      "4.5": 6,
+      "5.0": 33
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 4,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 59,
+        "n_validas_pos_extensao": 59,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 4,
+      "2.5": 4,
+      "3.0": 22,
+      "3.5": 28,
+      "4.0": 124,
+      "4.5": 103,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 563,
+        "min": "1925-01-03",
+        "max": "2026-11-08",
+        "p5": "2025-07-24",
+        "p50": "2026-10-09",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2013-04-01",
+          "max": "2026-11-06",
+          "p5": "2026-06-05",
+          "p50": "2026-09-19",
+          "p95": "2026-11-01"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "1925-01-03",
+          "max": "2026-11-05",
+          "p5": "2025-08-14",
+          "p50": "2026-09-27",
+          "p95": "2026-10-29"
+        },
+        "positivas": {
+          "n": 191,
+          "min": "2015-11-11",
+          "max": "2026-11-08",
+          "p5": "2025-05-22",
+          "p50": "2026-11-06",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 20,
+      "dias_por_100_paginas": 15.748031496062993,
+      "paginas_para_1_ano": 2318
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 32,
+        "dias_por_100_paginas": 3200.0,
+        "paginas_para_1_ano": 11
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 12,
+        "dias_por_100_paginas": 1200.0,
+        "paginas_para_1_ano": 30
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 55,
+        "dias_por_100_paginas": 5500.0,
+        "paginas_para_1_ano": 7
+      },
+      "2.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 94,
+        "dias_por_100_paginas": 1566.6666666666667,
+        "paginas_para_1_ano": 23
+      },
+      "2.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 43,
+        "dias_por_100_paginas": 1433.3333333333333,
+        "paginas_para_1_ano": 25
+      },
+      "3.0": {
+        "n_paginas": 14,
+        "pagina_min": 1,
+        "pagina_max": 14,
+        "dias": 63,
+        "dias_por_100_paginas": 484.61538461538464,
+        "paginas_para_1_ano": 75
+      },
+      "4.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 31,
+        "dias": 31,
+        "dias_por_100_paginas": 103.33333333333333,
+        "paginas_para_1_ano": 353
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 26,
+        "dias": 20,
+        "dias_por_100_paginas": 80.0,
+        "paginas_para_1_ano": 456
+      },
+      "5.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 26,
+        "dias_por_100_paginas": 20.47244094488189,
+        "paginas_para_1_ano": 1783
+      }
+    },
+    "ano_lancamento": 1993,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "schindlers-list",
+      "titulo": "Schindler's List",
+      "ano": 1993,
+      "tmdb_id_letterboxd": 424,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 6,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 22
+      },
+      "composicao_atingida": {
+        "0.5": 6,
+        "1.0": 5,
+        "1.5": 4,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 6,
+        "p5": 1,
+        "p50": 2,
+        "p95": 6,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-02",
+        "max": "2026-11-06",
+        "p5": "2026-08-05",
+        "p50": "2026-10-03",
+        "p95": "2026-11-01"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 5,
+          "n_alvo": 8,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 22,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 48,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 0,
+            "abaixo_min_chars": 48,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Manipulação emocional e sentimentalismo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme força a emoção do espectador com recursos melodramáticos e piegas, em vez de confiar no peso do próprio tema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso do Holocausto como entretenimento ou espetáculo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A obra transforma uma tragédia histórica em um produto hollywoodiano, espetacularizando o sofrimento e banalizando a memória.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Propaganda sionista e apagamento de complexidades",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como propaganda que exalta o salvador branco e ignora as contradições do personagem, além de reforçar uma narrativa sionista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A longa duração e o ritmo arrastado tornam a experiência cansativa e desinteressante para espectadores deste grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A longa duração e o ritmo arrastado tornam a experiência cansativa e desinteressante para parte deste grupo."
+        },
+        {
+          "tema": "Estética vazia e superficial",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O preto e branco e os recursos visuais são criticados como artificiais e sem propósito, servindo apenas para embelezar o horror.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e roteiro inverossímeis",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A construção dos personagens e as motivações soam falsas ou mal desenvolvidas, com diálogos e situações pouco convincentes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas recusa a aclamação do filme, apontando manipulação emocional, espetacularização do Holocausto e propaganda ideológica como falhas centrais. Apesar de reconhecerem qualidades técnicas, consideram que a obra não justifica sua reputação.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 14,
+        "p5": 1,
+        "p50": 7,
+        "p95": 13,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-05-14",
+        "max": "2026-11-03",
+        "p5": "2026-02-02",
+        "p50": "2026-09-27",
+        "p95": "2026-10-30"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 124,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 124,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Manipulação emocional e espetacularização",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas criticam o uso de recursos melodramáticos e trilha sonora para forçar uma reação emocional, transformando o Holocausto em entretenimento hollywoodiano.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas criticam o uso de recursos melodramáticos e trilha sonora para forçar uma reação emocional, transformando o Holocausto em entretenimento hollywoodiano."
+        },
+        {
+          "tema": "Falta de humanização das vítimas judaicas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que os personagens judeus são tratados como figurantes ou símbolos de sofrimento, sem profundidade psicológica comparável à do protagonista nazista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Centralização no salvador branco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas questionam a escolha de narrar o Holocausto pela perspectiva de um empresário nazista em redenção, o que desloca o foco do genocídio para o arco heroico individual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sentimentalismo e final hollywoodiano",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho catártico e a estrutura de superação são vistos como inadequados para a dimensão da tragédia, soando artificiais ou mercantis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas mencionam que o filme é longo demais e que o ritmo se arrasta, especialmente no ato intermediário.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas mencionam que o filme é longo demais e que o ritmo se arrasta, especialmente no ato intermediário."
+        },
+        {
+          "tema": "Sionismo e apropriação política",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews interpretam o final e a abordagem do filme como propaganda sionista, criticando a associação entre a memória do Holocausto e a política israelense.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews interpretam o final e a abordagem do filme como propaganda sionista, criticando a associação entre a memória do Holocausto e a política israelense."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam uma forte tensão entre a competência técnica de Spielberg e o que consideram manipulação emocional e superficialidade no retrato das vítimas. Este grupo aponta que o foco no protagonista nazista e o tom hollywoodiano comprometem a seriedade do tema.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 5
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 10,
+        "4.5": 8,
+        "5.0": 20
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 10,
+        "4.5": 6,
+        "5.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 128,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-01-31",
+        "max": "2026-11-08",
+        "p5": "2026-10-07",
+        "p50": "2026-11-06",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 22,
+          "n_alvo": 20,
+          "n_brutas": 95,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Impacto emocional e peso do tema",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews deste grupo descrevem a obra como profundamente dolorosa e devastadora, ressaltando que a experiência de assistir é angustiante e marcante, exigindo pausas para assimilar o conteúdo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews deste grupo descrevem a obra como profundamente dolorosa e devastadora, ressaltando que a experiência de assistir é angustiante e marcante, muitas vezes exigindo pausas para assimilar o conteúdo."
+        },
+        {
+          "tema": "Fotografia em preto e branco e uso do vermelho",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A escolha do preto e branco é amplamente elogiada por conferir realismo e proximidade com o documentário, enquanto o uso pontual da cor vermelha é destacado como um recurso visual poderoso e memorável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações do elenco",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são exaltadas, com destaque para a intensidade e presença de Liam Neeson, a frieza ameaçadora de Ralph Fiennes e a atuação contida e humana de Ben Kingsley.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As atuações são frequentemente exaltadas, com destaque para a intensidade e presença de Liam Neeson, a frieza ameaçadora de Ralph Fiennes e a atuação contida e humana de Ben Kingsley."
+        },
+        {
+          "tema": "Direção de Spielberg e excelência técnica",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Spielberg é enaltecida pela habilidade em conduzir cenas complexas com grande número de pessoas e pela maestria técnica, sendo considerada por espectadores o auge de sua carreira.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A direção de Spielberg é enaltecida pela habilidade em conduzir cenas complexas com grande número de pessoas e pela maestria técnica, sendo considerada por muitos o auge de sua carreira."
+        },
+        {
+          "tema": "Trilha sonora de John Williams",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora de John Williams é lembrada por sua força emocional e por complementar as imagens sem se sobrepor a elas, contribuindo para o impacto geral do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração e ritmo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A longa duração é vista como necessária para o desenvolvimento da história, embora reviews sugiram que o filme poderia ser mais enxuto em certos momentos sem perder sua força.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A longa duração é vista como necessária para o desenvolvimento da história, embora algumas reviews sugiram que o filme poderia ser mais enxuto em certos momentos sem perder sua força."
+        }
+      ],
+      "observacao_geral": "As reviews positivas deste grupo destacam a potência emocional, a qualidade técnica e as atuações como pontos centrais, frequentemente descrevendo a obra como uma experiência difícil, porém marcante e essencial. Este recorte específico valoriza a abordagem sensível e o impacto duradouro do filme.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 94
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "A longa duração e o ritmo arrastado tornam a experiência cansativa e desinteressante para espectadores deste grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Críticas mencionam que o filme é longo demais e que o ritmo se arrasta, especialmente no ato intermediário.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo",
+            "exemplo_parafraseado": "A longa duração é vista como necessária para o desenvolvimento da história, embora reviews sugiram que o filme poderia ser mais enxuto em certos momentos sem perder sua força.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações do elenco",
+            "exemplo_parafraseado": "As atuações são exaltadas, com destaque para a intensidade e presença de Liam Neeson, a frieza ameaçadora de Ralph Fiennes e a atuação contida e humana de Ben Kingsley.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Estética vazia e superficial",
+            "exemplo_parafraseado": "O preto e branco e os recursos visuais são criticados como artificiais e sem propósito, servindo apenas para embelezar o horror.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia em preto e branco e uso do vermelho",
+            "exemplo_parafraseado": "A escolha do preto e branco é amplamente elogiada por conferir realismo e proximidade com o documentário, enquanto o uso pontual da cor vermelha é destacado como um recurso visual poderoso e memorável.",
+            "temas_no_mesmo_eixo": [
+              "Direção de Spielberg e excelência técnica"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e roteiro inverossímeis",
+            "exemplo_parafraseado": "A construção dos personagens e as motivações soam falsas ou mal desenvolvidas, com diálogos e situações pouco convincentes.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Sentimentalismo e final hollywoodiano",
+            "exemplo_parafraseado": "O desfecho catártico e a estrutura de superação são vistos como inadequados para a dimensão da tragédia, soando artificiais ou mercantis.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de John Williams",
+            "exemplo_parafraseado": "A trilha sonora de John Williams é lembrada por sua força emocional e por complementar as imagens sem se sobrepor a elas, contribuindo para o impacto geral do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Manipulação emocional e sentimentalismo",
+            "exemplo_parafraseado": "O filme força a emoção do espectador com recursos melodramáticos e piegas, em vez de confiar no peso do próprio tema.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Impacto emocional e peso do tema",
+            "exemplo_parafraseado": "As reviews deste grupo descrevem a obra como profundamente dolorosa e devastadora, ressaltando que a experiência de assistir é angustiante e marcante, exigindo pausas para assimilar o conteúdo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Uso do Holocausto como entretenimento ou espetáculo",
+            "exemplo_parafraseado": "A obra transforma uma tragédia histórica em um produto hollywoodiano, espetacularizando o sofrimento e banalizando a memória.",
+            "temas_no_mesmo_eixo": [
+              "Propaganda sionista e apagamento de complexidades"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Manipulação emocional e espetacularização",
+            "exemplo_parafraseado": "Reviews medianas criticam o uso de recursos melodramáticos e trilha sonora para forçar uma reação emocional, transformando o Holocausto em entretenimento hollywoodiano.",
+            "temas_no_mesmo_eixo": [
+              "Falta de humanização das vítimas judaicas",
+              "Centralização no salvador branco",
+              "Sionismo e apropriação política"
+            ]
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma experiência de dor profunda e devastadora, ainda que angustiante",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Impacto emocional e peso do tema",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia preto e branco com textura documental e toques pontuais de vermelho marcante",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia em preto e branco e uso do vermelho",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "valoriza atuações de forte intensidade, frieza ameaçadora e contenção humana",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações do elenco",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se comove com uma trilha que sustenta as imagens sem se sobrepor a elas",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora de John Williams",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "dispensa melodrama piegas que força a emoção em vez de confiar no tema",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Manipulação emocional e sentimentalismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "recusa ver tragédia histórica convertida em espetáculo hollywoodiano que banaliza a memória",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Uso do Holocausto como entretenimento ou espetáculo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com narrativa que exalta o salvador branco e reforça propaganda sionista",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Propaganda sionista e apagamento de complexidades",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita estética de preto e branco e efeitos visuais tidos como artificiais e gratuitos",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estética vazia e superficial",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 94,
+        "peso_texto": "~94% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-D"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "evita longa duração e ritmo arrastado que tornam a sessão cansativa",
+        "tema_origem": "NEG-D",
+        "lado": "talvez_evite",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16533,
+      "completion_tokens": 1210,
+      "cache_hit_tokens": 14889,
+      "cache_miss_tokens": 1644
+    },
+    "latencia_s": 8.65,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

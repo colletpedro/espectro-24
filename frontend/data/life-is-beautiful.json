@@ -1,0 +1,1589 @@
+{
+  "slug": "life-is-beautiful",
+  "data_coleta": "2026-11-08T05:46:18.299098+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 874239,
+  "reviews_url": "https://letterboxd.com/film/life-is-beautiful/reviews/",
+  "ficha": {
+    "titulo": "A Vida é Bela",
+    "sinopse_oficial": "Durante a Segunda Guerra Mundial na Itália, o judeu Guido e seu filho Giosué são levados para um campo de concentração nazista. Afastado da mulher, ele tem que usar sua imaginação para fazer o menino acreditar que estão participando de uma grande brincadeira, com o intuito de protegê-lo do terror e da violência que os cercam.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Drama"
+    ],
+    "duracao_min": 116,
+    "diretor": "Roberto Benigni",
+    "diretor_transliterado": false,
+    "ano": 1997,
+    "data_estreia": "1997-12-20",
+    "fonte": "tmdb",
+    "tmdb_id": 637,
+    "tmdb_fetched_at": "2026-11-08T05:41:13+00:00",
+    "poster_path": "/dkK48wCY4aVpWFDdPpS6DxQ1bvB.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+      "/gavyCu1UaTaTNPsVaGXT6pe5u24.jpg",
+      "/zL6jPIVYPhssSkzONWyragGuS2S.jpg",
+      "/kaQD976OCfS5eCsM92ODYYjJcJN.jpg",
+      "/uPhy27HEw7OKNY9DGh1ddNMC9MR.jpg",
+      "/6JmcxU4Scb8ffjvj9vammMzc30z.jpg",
+      "/zKxoWuWnmO7rLBhqOfM2RxAMfpC.jpg",
+      "/16vxMSVICZmXucbglF2I5zfukvm.jpg",
+      "/r3XyIsh9nYW7v9Qt51NZ55J3jxQ.jpg",
+      "/rIt6ON5s9lAFhkCPU7mVwENNFfE.jpg"
+    ],
+    "backdrop_path": "/6aNKD81RHR1DqUUa8kOZ1TBY1Lp.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/94nv4LxE7Wds85APuc9tyP1jnjE.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/2xzpMZCBG0PCCk3CWnxSfkJeyT0.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/gavyCu1UaTaTNPsVaGXT6pe5u24.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/zL6jPIVYPhssSkzONWyragGuS2S.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6JmcxU4Scb8ffjvj9vammMzc30z.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/16vxMSVICZmXucbglF2I5zfukvm.jpg",
+        "still_largura": 2506,
+        "still_altura": 1408
+      },
+      {
+        "still_path": "/r3XyIsh9nYW7v9Qt51NZ55J3jxQ.jpg",
+        "still_largura": 3700,
+        "still_altura": 2078
+      },
+      {
+        "still_path": "/recdB08lqwwBBX6mS6Qnf5iIWyo.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/zKxoWuWnmO7rLBhqOfM2RxAMfpC.jpg",
+        "still_largura": 1814,
+        "still_altura": 1019
+      },
+      {
+        "still_path": "/b9XHgI40uJIMnsdpZ4sXWSc1NDs.jpg",
+        "still_largura": 3686,
+        "still_altura": 2071
+      },
+      {
+        "still_path": "/AojA1wZMJLWvquw2qjW6qvywY2w.jpg",
+        "still_largura": 3648,
+        "still_altura": 2052
+      },
+      {
+        "still_path": "/qlcleVEGvECQfFb9gQB8Pjs73OY.jpg",
+        "still_largura": 3700,
+        "still_altura": 2078
+      },
+      {
+        "still_path": "/l5sIjKBTXp7rhfALluUtET396yQ.jpg",
+        "still_largura": 3680,
+        "still_altura": 2068
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "life-is-beautiful",
+      "titulo_letterboxd": "Life Is Beautiful",
+      "ano_letterboxd": 1997,
+      "tmdb_id_letterboxd": 637,
+      "tmdb_id_escolhido": 637,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "alternative_title",
+      "titulo_tmdb_correspondente": "Life Is Beautiful",
+      "ano_tmdb": 1997,
+      "ano_divergente": false
+    },
+    "paises": [
+      "IT"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 874239,
+    "por_nivel": {
+      "0.5": 2595,
+      "1.0": 3624,
+      "1.5": 2312,
+      "2.0": 9028,
+      "2.5": 10162,
+      "3.0": 43706,
+      "3.5": 62498,
+      "4.0": 213106,
+      "4.5": 159362,
+      "5.0": 367846
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 6,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "life-is-beautiful",
+    "coletado_em": "2026-11-08T05:46:18.299098+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2595,
+      "1.0": 3624,
+      "1.5": 2312,
+      "2.0": 9028,
+      "2.5": 10162,
+      "3.0": 43706,
+      "3.5": 62498,
+      "4.0": 213106,
+      "4.5": 159362,
+      "5.0": 367846
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 7,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 10
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 84,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 48,
+      "4.5": 36,
+      "5.0": 120
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 8,
+      "1.0": 11,
+      "1.5": 9,
+      "2.0": 24,
+      "2.5": 23,
+      "3.0": 34,
+      "3.5": 4,
+      "4.0": 11,
+      "4.5": 10,
+      "5.0": 27
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 4,
+      "4.5": 3,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 1,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 2
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 47,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 56,
+        "n_validas_pos_extensao": 56,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 7,
+      "3.0": 30,
+      "3.5": 43,
+      "4.0": 148,
+      "4.5": 111,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 575,
+        "min": "1998-10-24",
+        "max": "2026-11-08",
+        "p5": "2025-06-22",
+        "p50": "2026-10-14",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 167,
+          "min": "1998-11-07",
+          "max": "2026-11-05",
+          "p5": "2024-05-16",
+          "p50": "2026-09-04",
+          "p95": "2026-11-02"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "1999-10-13",
+          "max": "2026-11-08",
+          "p5": "2026-04-05",
+          "p50": "2026-10-06",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "1998-10-24",
+          "max": "2026-11-08",
+          "p5": "2026-09-15",
+          "p50": "2026-11-06",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 27,
+      "dias_por_100_paginas": 21.25984251968504,
+      "paginas_para_1_ano": 1717
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 35,
+        "dias_por_100_paginas": 3500.0,
+        "paginas_para_1_ano": 10
+      },
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 52,
+        "dias_por_100_paginas": 2600.0,
+        "paginas_para_1_ano": 14
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 39,
+        "dias_por_100_paginas": 3900.0,
+        "paginas_para_1_ano": 9
+      },
+      "2.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 115,
+        "dias_por_100_paginas": 1916.6666666666667,
+        "paginas_para_1_ano": 19
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 107,
+        "dias_por_100_paginas": 1783.3333333333333,
+        "paginas_para_1_ano": 20
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 15,
+        "dias": 69,
+        "dias_por_100_paginas": 492.85714285714283,
+        "paginas_para_1_ano": 74
+      },
+      "4.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 37,
+        "dias": 27,
+        "dias_por_100_paginas": 75.0,
+        "paginas_para_1_ano": 487
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 28,
+        "dias": 22,
+        "dias_por_100_paginas": 81.48148148148148,
+        "paginas_para_1_ano": 448
+      },
+      "5.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 30,
+        "dias_por_100_paginas": 23.62204724409449,
+        "paginas_para_1_ano": 1545
+      }
+    },
+    "ano_lancamento": 1997,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "life-is-beautiful",
+      "titulo": "Life Is Beautiful",
+      "ano": 1997,
+      "tmdb_id_letterboxd": 637,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 6,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 21
+      },
+      "composicao_atingida": {
+        "0.5": 6,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 7,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "1998-11-07",
+        "max": "2026-11-05",
+        "p5": "2026-07-01",
+        "p50": "2026-09-19",
+        "p95": "2026-11-03"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 35,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 21,
+          "n_alvo": 21,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 59,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 59,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Banalização do Holocausto",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam a forma como o filme suaviza e transforma o horror do Holocausto em entretenimento sentimental, tratando um genocídio como pano de fundo para piadas e otimismo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews criticam a forma como o filme suaviza e transforma o horror do Holocausto em entretenimento sentimental, tratando um genocídio como pano de fundo para piadas e otimismo."
+        },
+        {
+          "tema": "Humor forçado e sem graça",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O humor pastelão e as palhaçadas do protagonista são vistos como irritantes e desnecessários, soando falsos e sem graça diante da gravidade da situação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem protagonista irritante",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O protagonista é descrito como excessivamente otimista, intrometido e cansativo, com uma atuação exagerada que prejudica a conexão emocional com o público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de realismo e incoerências históricas",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A representação do campo de concentração é considerada irrealista, com situações impossíveis e falta de consequências para as ações do protagonista, comprometendo a verossimilhança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom inconsistente e manipulação emocional",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A mistura entre comédia e drama é vista como mal executada, resultando em momentos emocionais forçados e um sentimentalismo que soa artificial e manipulador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Propaganda e salvamento americano",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O final com a chegada das tropas americanas é criticado como ufanista e histórico incorreto, retratando os EUA como salvadores de forma simplista e ideológica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam para uma rejeição contundente da abordagem do filme, considerada desrespeitosa e artificial ao misturar comédia com Holocausto. Este grupo destaca principalmente a banalização do horror, o humor forçado e a falta de sensibilidade histórica.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 15,
+        "p5": 1,
+        "p50": 4,
+        "p95": 15,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-04-30",
+        "max": "2026-11-08",
+        "p5": "2026-08-17",
+        "p50": "2026-10-09",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 14,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 82,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 82,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Tom e tratamento do Holocausto (comédia e fábula)",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas questionam a escolha de misturar comédia e fábula com o Holocausto, considerando o tom leve e otimista inadequado para a gravidade do tema, chegando a ser desrespeitoso com as vítimas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas questionam a escolha de misturar comédia e fábula com o Holocausto, considerando o tom leve e otimista inadequado para a gravidade do tema, chegando a ser desrespeitoso com as vítimas."
+        },
+        {
+          "tema": "Contraste entre as duas metades do filme",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A primeira metade é descrita como uma comédia romântica arrastada e sem graça, enquanto a segunda, ambientada no campo de concentração, é vista como mais comovente e bem executada, mas a mudança brusca de tom gera estranhamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A primeira metade é frequentemente descrita como uma comédia romântica arrastada e sem graça, enquanto a segunda, ambientada no campo de concentração, é vista como mais comovente e bem executada, mas a mudança brusca de tom gera estranhamento."
+        },
+        {
+          "tema": "Atuação e figura de Roberto Benigni",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Benigni divide opiniões: espectadores a consideram exagerada e irritante, outros a veem como carismática e digna de premiação, embora haja quem questione o Oscar recebido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A performance de Benigni divide opiniões: alguns a consideram exagerada e irritante, outros a veem como carismática e digna de premiação, embora haja quem questione o Oscar recebido."
+        },
+        {
+          "tema": "Relação pai e filho como ponto forte",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O vínculo entre Guido e o filho é apontado como o aspecto mais tocante, com destaque para o esforço do pai em proteger a inocência da criança por meio de um jogo, mesmo diante do horror.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e comédia arrastados",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é criticado por ser lento e a comédia por não funcionar, tornando a experiência entediante em certos momentos, especialmente na parte inicial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O ritmo é criticado por ser lento e a comédia por não funcionar, tornando a experiência entediante em vários momentos, especialmente na parte inicial."
+        },
+        {
+          "tema": "Sinceridade e verossimilhança",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram que o filme se afasta da realidade do Holocausto, com situações inverossímeis e uma abordagem que suaviza ou até banaliza o sofrimento real.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas consideram que o filme se afasta da realidade do Holocausto, com situações inverossímeis e uma abordagem que suaviza ou até banaliza o sofrimento real."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam principalmente a mistura controversa de comédia e tragédia, o contraste entre as duas metades do filme e a atuação de Benigni, dividindo-se entre o reconhecimento de momentos tocantes e a crítica ao tom leve e ao ritmo arrastado. Este grupo específico aponta para uma experiência que, embora emocione em partes, não sustenta plenamente o renome que a obra carrega.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 6
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 18
+      },
+      "composicao_atingida": {
+        "3.5": 3,
+        "4.0": 11,
+        "4.5": 8,
+        "5.0": 18
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 37,
+        "p5": 1,
+        "p50": 3,
+        "p95": 28,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-03-19",
+        "max": "2026-11-08",
+        "p5": "2026-10-11",
+        "p50": "2026-11-06",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 7,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 7,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 3,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 88,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 88,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Amor paternal e proteção da inocência",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O pai transforma a realidade do campo em um jogo para preservar a inocência do filho, e esse gesto é visto como uma expressão máxima de amor e sacrifício.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Equilíbrio entre comédia e tragédia",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O contraste entre o humor inicial e a devastação posterior é apontado como responsável por potencializar o impacto emocional da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Roberto Benigni",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Benigni é elogiado por carregar o filme com carisma e por transmitir a dor e o amor do personagem, embora espectadores considerem que ele se sai melhor na comédia do que no drama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Benigni é elogiado por carregar o filme com carisma e por transmitir a dor e o amor do personagem, embora alguns considerem que ele se sai melhor na comédia do que no drama."
+        },
+        {
+          "tema": "Impacto emocional e choro",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews relatam choro intenso e comoção, citando a cena final e a despedida como momentos particularly dolorosos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews relatam choro intenso e comoção, frequentemente citando a cena final e a despedida como momentos particularly dolorosos."
+        },
+        {
+          "tema": "Abordagem do Holocausto e realismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores elogiam a sugestão do horror em vez da exibição explícita, enquanto outros criticam o retrato suavizado e a falta de peso realista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há quem elogie a sugestão do horror em vez da exibição explícita, enquanto outros criticam o retrato suavizado e a falta de peso realista."
+        },
+        {
+          "tema": "Primeira metade romântica e cômica",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O início é descrito como uma comédia romântica leve e cativante, com espectadores achando-o arrastado e outros destacando a química e o charme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O início é descrito como uma comédia romântica leve e cativante, com alguns achando-o arrastado e outros destacando a química e o charme."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam sobretudo o amor paternal e a forma como o humor é usado para proteger a inocência da criança, gerando forte emoção. Este grupo também elogia a atuação de Benigni e a comédia inicial, embora alguns apontem ressalvas quanto ao realismo da representação do Holocausto.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 92
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo e comédia arrastados",
+            "exemplo_parafraseado": "O ritmo é criticado por ser lento e a comédia por não funcionar, tornando a experiência entediante em certos momentos, especialmente na parte inicial.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Atuação e figura de Roberto Benigni",
+            "exemplo_parafraseado": "A performance de Benigni divide opiniões: espectadores a consideram exagerada e irritante, outros a veem como carismática e digna de premiação, embora haja quem questione o Oscar recebido.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Roberto Benigni",
+            "exemplo_parafraseado": "Benigni é elogiado por carregar o filme com carisma e por transmitir a dor e o amor do personagem, embora espectadores considerem que ele se sai melhor na comédia do que no drama.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Personagem protagonista irritante",
+            "exemplo_parafraseado": "O protagonista é descrito como excessivamente otimista, intrometido e cansativo, com uma atuação exagerada que prejudica a conexão emocional com o público.",
+            "temas_no_mesmo_eixo": [
+              "Falta de realismo e incoerências históricas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Contraste entre as duas metades do filme",
+            "exemplo_parafraseado": "A primeira metade é descrita como uma comédia romântica arrastada e sem graça, enquanto a segunda, ambientada no campo de concentração, é vista como mais comovente e bem executada, mas a mudança brusca de tom gera estranhamento.",
+            "temas_no_mesmo_eixo": [
+              "Relação pai e filho como ponto forte",
+              "Sinceridade e verossimilhança"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Amor paternal e proteção da inocência",
+            "exemplo_parafraseado": "O pai transforma a realidade do campo em um jogo para preservar a inocência do filho, e esse gesto é visto como uma expressão máxima de amor e sacrifício.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Humor forçado e sem graça",
+            "exemplo_parafraseado": "O humor pastelão e as palhaçadas do protagonista são vistos como irritantes e desnecessários, soando falsos e sem graça diante da gravidade da situação.",
+            "temas_no_mesmo_eixo": [
+              "Tom inconsistente e manipulação emocional"
+            ]
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Tom e tratamento do Holocausto (comédia e fábula)",
+            "exemplo_parafraseado": "Reviews medianas questionam a escolha de misturar comédia e fábula com o Holocausto, considerando o tom leve e otimista inadequado para a gravidade do tema, chegando a ser desrespeitoso com as vítimas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Equilíbrio entre comédia e tragédia",
+            "exemplo_parafraseado": "O contraste entre o humor inicial e a devastação posterior é apontado como responsável por potencializar o impacto emocional da história.",
+            "temas_no_mesmo_eixo": [
+              "Primeira metade romântica e cômica"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -50.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Impacto emocional e choro",
+            "exemplo_parafraseado": "Reviews relatam choro intenso e comoção, citando a cena final e a despedida como momentos particularly dolorosos.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 30.0,
+            "acima_da_margem": true,
+            "tema": "Banalização do Holocausto",
+            "exemplo_parafraseado": "Reviews criticam a forma como o filme suaviza e transforma o horror do Holocausto em entretenimento sentimental, tratando um genocídio como pano de fundo para piadas e otimismo.",
+            "temas_no_mesmo_eixo": [
+              "Propaganda e salvamento americano"
+            ]
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -40.0,
+            "acima_da_margem": false,
+            "tema": "Abordagem do Holocausto e realismo",
+            "exemplo_parafraseado": "Espectadores elogiam a sugestão do horror em vez da exibição explícita, enquanto outros criticam o retrato suavizado e a falta de peso realista.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "procura um contraste entre humor e devastação que potencialize o impacto emocional",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Equilíbrio entre comédia e tragédia",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "prefere o horror sugerido à exibição explícita, aceitando um retrato suavizado",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Abordagem do Holocausto e realismo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com a suavização do genocídio em tom de piada e otimismo",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Banalização do Holocausto",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "dispensa humor pastelão e palhaçadas que soam falsos diante da gravidade da situação",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Humor forçado e sem graça",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com um protagonista excessivamente otimista, intrometido e de atuação exagerada",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem protagonista irritante",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita representação irrealista do campo, com situações impossíveis e sem consequências",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de realismo e incoerências históricas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita mistura mal executada de comédia e drama, com sentimentalismo artificial e manipulador",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tom inconsistente e manipulação emocional",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-C"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "se comove com o pai que inventa um jogo para poupar o filho",
+        "tema_origem": "POS-A",
+        "lado": "vale_a_pena",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      },
+      {
+        "texto": "aprecia o carisma de Benigni, embora ele se saia melhor na comédia que no drama",
+        "tema_origem": "POS-C",
+        "lado": "vale_a_pena",
+        "flags": [
+          "comprimento"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 5,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 5,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 7,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17099,
+      "completion_tokens": 1302,
+      "cache_hit_tokens": 15118,
+      "cache_miss_tokens": 1981
+    },
+    "latencia_s": 37.14,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

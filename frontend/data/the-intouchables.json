@@ -1,0 +1,1568 @@
+{
+  "slug": "the-intouchables",
+  "data_coleta": "2026-11-08T09:19:23.511879+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1058674,
+  "reviews_url": "https://letterboxd.com/film/the-intouchables/reviews/",
+  "ficha": {
+    "titulo": "Intocáveis",
+    "sinopse_oficial": "Quando um ex-presidiário é contratado para cuidar de um aristocrata francês, seu novo trabalho se torna uma aventura imprevisível. Acelerar uma Maserati em Paris, seduzir mulheres, e fazer parapente sobre os Alpes é apenas o começo, pois ele vira o mundo da classe alta de Paris de cabeça para baixo.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Comédia"
+    ],
+    "duracao_min": 112,
+    "diretor": "Éric Toledano",
+    "diretor_transliterado": false,
+    "ano": 2011,
+    "data_estreia": "2011-11-02",
+    "fonte": "tmdb",
+    "tmdb_id": 77338,
+    "tmdb_fetched_at": "2026-11-08T09:14:53+00:00",
+    "poster_path": "/2tAzFC2xUAXEx96l5Xixb6WLAyO.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+      "/d9sMIwulLtwRHowmDk2INm0ugmP.jpg",
+      "/aNrvOopToSco9JU0w7loDKKVLCL.jpg",
+      "/cK070s3Qdn1Ib7Gq8RgIyJKgvu3.jpg",
+      "/5ATSg3rufgIMfcrHd2gEi678hZu.jpg",
+      "/gv90M41TfykgxJl0q4yWF3KZAMu.jpg",
+      "/utw4mp6OX3IZZdVL76UiQH8R3Tb.jpg",
+      "/i3i9YxpeQ5usXNTcgdHYVUNTTjb.jpg",
+      "/fTdhRmRCmlgDa3hYfEwBSoyOyDt.jpg",
+      "/c1xtax5MNEONnhTVgbRuS90qvn2.jpg"
+    ],
+    "backdrop_path": "/d9sMIwulLtwRHowmDk2INm0ugmP.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/8potEHABkPW5mMyOPblnUzYccFR.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/d9sMIwulLtwRHowmDk2INm0ugmP.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/q6OGlZ1KMEb14AC8KbPCxyNOal6.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5YrkzA4e6imxVwBI1QdXMe0RuDP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/cK070s3Qdn1Ib7Gq8RgIyJKgvu3.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/gv90M41TfykgxJl0q4yWF3KZAMu.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vGdHE9wpY0KPwHFMk62OcyP2IJP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/fOHMPh0OzlzwcQb33Z3nCiv9xnA.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4QuehtQDFSZmoiulFMAYKdYuIZB.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/6iRGR8G5PHdnPpDIdjTafFH5AN9.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/i0d63dUAImfQwrNKGzWWWrebwav.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/oDTHNGAH1gZwNk45do1rOoU3oxN.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/kQz1HNn77g9SUpgK34z3w7qTTSF.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-intouchables",
+      "titulo_letterboxd": "The Intouchables",
+      "ano_letterboxd": 2011,
+      "tmdb_id_letterboxd": 77338,
+      "tmdb_id_escolhido": 77338,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "The Intouchables",
+      "ano_tmdb": 2011,
+      "ano_divergente": false
+    },
+    "paises": [
+      "FR"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1058674,
+    "por_nivel": {
+      "0.5": 1429,
+      "1.0": 3159,
+      "1.5": 3023,
+      "2.0": 13225,
+      "2.5": 19332,
+      "3.0": 93124,
+      "3.5": 144165,
+      "4.0": 354768,
+      "4.5": 170383,
+      "5.0": 256066
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 11,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-intouchables",
+    "coletado_em": "2026-11-08T09:19:23.511879+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1429,
+      "1.0": 3159,
+      "1.5": 3023,
+      "2.0": 13225,
+      "2.5": 19332,
+      "3.0": 93124,
+      "3.5": 144165,
+      "4.0": 354768,
+      "4.5": 170383,
+      "5.0": 256066
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 14,
+      "3.5": 3,
+      "4.0": 9,
+      "4.5": 5,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 168,
+      "3.5": 36,
+      "4.0": 108,
+      "4.5": 60,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 8,
+      "2.0": 33,
+      "2.5": 21,
+      "3.0": 30,
+      "3.5": 5,
+      "4.0": 17,
+      "4.5": 9,
+      "5.0": 12
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 4
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 4,
+      "3.5": 0,
+      "4.0": 3,
+      "4.5": 2,
+      "5.0": 3
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 15,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 50,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "3.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 39,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 2,
+          "5.0": 3
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 29,
+        "n_validas_pos_extensao": 43,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 14,
+      "3.0": 67,
+      "3.5": 104,
+      "4.0": 256,
+      "4.5": 123,
+      "5.0": 185
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 708,
+        "min": "2012-01-19",
+        "max": "2026-11-08",
+        "p5": "2026-07-30",
+        "p50": "2026-10-28",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 180,
+          "min": "2012-01-19",
+          "max": "2026-11-08",
+          "p5": "2026-02-16",
+          "p50": "2026-10-03",
+          "p95": "2026-11-05"
+        },
+        "medianas": {
+          "n": 240,
+          "min": "2018-09-03",
+          "max": "2026-11-08",
+          "p5": "2026-09-08",
+          "p50": "2026-10-27",
+          "p95": "2026-11-06"
+        },
+        "positivas": {
+          "n": 288,
+          "min": "2020-05-16",
+          "max": "2026-11-08",
+          "p5": "2026-09-23",
+          "p50": "2026-11-06",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 44,
+      "dias_por_100_paginas": 34.645669291338585,
+      "paginas_para_1_ano": 1054
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 28,
+        "dias_por_100_paginas": 2800.0,
+        "paginas_para_1_ano": 13
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 35,
+        "dias_por_100_paginas": 3500.0,
+        "paginas_para_1_ano": 10
+      },
+      "2.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 102,
+        "dias_por_100_paginas": 1133.3333333333333,
+        "paginas_para_1_ano": 32
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 7,
+        "dias": 25,
+        "dias_por_100_paginas": 416.6666666666667,
+        "paginas_para_1_ano": 88
+      },
+      "3.0": {
+        "n_paginas": 14,
+        "pagina_min": 1,
+        "pagina_max": 34,
+        "dias": 60,
+        "dias_por_100_paginas": 181.8181818181818,
+        "paginas_para_1_ano": 201
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 26,
+        "dias": 18,
+        "dias_por_100_paginas": 72.0,
+        "paginas_para_1_ano": 507
+      },
+      "4.0": {
+        "n_paginas": 9,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 45,
+        "dias_por_100_paginas": 35.43307086614173,
+        "paginas_para_1_ano": 1030
+      },
+      "4.5": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 31,
+        "dias": 14,
+        "dias_por_100_paginas": 46.666666666666664,
+        "paginas_para_1_ano": 782
+      },
+      "5.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 46,
+        "dias": 12,
+        "dias_por_100_paginas": 26.666666666666668,
+        "paginas_para_1_ano": 1369
+      }
+    },
+    "ano_lancamento": 2011,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-intouchables",
+      "titulo": "The Intouchables",
+      "ano": 2011,
+      "tmdb_id_letterboxd": 77338,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2012-01-19",
+        "max": "2026-11-07",
+        "p5": "2026-07-25",
+        "p50": "2026-10-03",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 25,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 81,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 81,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estereótipos raciais e representação",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme reforça clichês raciais ao retratar o homem negro da periferia como inculto e dependente do branco rico para se civilizar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Clichês e previsibilidade",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é previsível e repleta de lugares-comuns, com uma estrutura de histórias infantis que não surpreende em momento algum.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Misoginia e piadas problemáticas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As piadas machistas e o tratamento das mulheres como objetos são incômodos e tornam o filme datado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado e sem profundidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é superestimado e superficial, sem a profundidade que sua fama sugere.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e falta de humor",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é arrastado e as piadas não funcionam, tornando a experiência tediosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e química do elenco",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar da química entre os protagonistas, as atuações são irregulares e o roteiro não ajuda.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam para um descontentamento com os estereótipos raciais, a misoginia e o humor datado, além de considerarem o filme superestimado e previsível. Este grupo destaca que, mesmo com momentos pontuais, a obra não sustenta a reputação que possui.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 10,
+        "3.0": 30
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 34,
+        "p5": 1,
+        "p50": 7,
+        "p95": 17,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-07",
+        "max": "2026-11-07",
+        "p5": "2026-10-12",
+        "p50": "2026-10-26",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 10,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 30,
+          "n_alvo": 33,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 137,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 137,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Estereótipos raciais e representação problemática",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que o personagem negro é construído a partir de clichês racistas, como a comparação com Barack Obama ao vestir terno, o comportamento supostamente exótico e a ideia do negro alegre e dançarino.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews apontam que o personagem negro é construído a partir de clichês racistas, como a comparação com Barack Obama ao vestir terno, o comportamento supostamente exótico e a ideia do negro alegre e dançarino."
+        },
+        {
+          "tema": "Humor e piadas datadas ou ofensivas",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O humor do filme é criticado por ter envelhecido mal, recorrendo a piadas misóginas, homofóbicas e situações de assédio tratadas como engraçadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Química entre os protagonistas e momentos emocionantes",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A relação entre os dois atores principais é elogiada pela naturalidade e pela capacidade de emocionar, mesmo que o restante do filme seja considerado formulaico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e convencional",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como clichê e previsível, com uma trama que não inova e resolve os conflitos de forma fácil, apelando para o sentimentalismo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica social superficial e paternalismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews consideram que o filme falha ao abordar questões sociais, adotando uma postura paternalista em que o personagem branco e rico educa o personagem negro e pobre.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews consideram que o filme falha ao abordar questões sociais, adotando uma postura paternalista em que o personagem branco e rico educa o personagem negro e pobre."
+        },
+        {
+          "tema": "Superestimado e sem profundidade",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há a percepção de que o filme é superestimado, carecendo de desenvolvimento e profundidade em temas como a deficiência e as diferenças de classe.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a química entre os protagonistas e alguns momentos emocionantes, mas criticam fortemente os estereótipos raciais, o humor datado e a abordagem superficial de questões sociais. Este grupo considera o filme simpático, porém problemático e superestimado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 11
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 6,
+        "4.0": 15,
+        "4.5": 8,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 16,
+        "4.5": 8,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 46,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-23",
+        "max": "2026-11-08",
+        "p5": "2026-10-20",
+        "p50": "2026-11-07",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 16,
+          "n_alvo": 15,
+          "n_brutas": 108,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 89,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 89,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 68,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 68,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Química e amizade entre os protagonistas",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A relação construída entre os dois personagens é apontada como o coração do filme, com uma cumplicidade que se desenvolve gradualmente e emociona.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor e timing cômico",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O humor é elogiado por ser eficaz, com situações engraçadas que arrancam risadas e um ritmo bem conduzido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O humor é frequentemente elogiado por ser eficaz, com situações engraçadas que arrancam risadas e um ritmo bem conduzido."
+        },
+        {
+          "tema": "Emoção e sensibilidade",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam momentos comoventes que equilibram o riso, proporcionando uma experiência que mistura leveza e comoção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Omar Sy e François Cluzet",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As performances dos dois atores principais são elogiadas pela naturalidade e carisma, com destaque para a energia contagiante de Omar Sy.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Críticas ao tratamento das mulheres e piadas misóginas",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews positivas apontam que certas piadas e abordagens envolvendo mulheres soam deslocadas e poderiam ser evitadas, mesmo gostando do filme como um todo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews positivas apontam que certas piadas e abordagens envolvendo mulheres soam deslocadas e poderiam ser evitadas, mesmo gostando do filme como um todo."
+        },
+        {
+          "tema": "Clássico do cinema francês e feel-good movie",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como um clássico moderno do cinema francês, reconfortante e com apelo popular, sendo recomendado para momentos de descontração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a química entre os protagonistas, o humor eficaz e a emoção da história, com elogios às atuações. Este grupo também menciona, em menor escala, ressalvas ao tratamento dado às mulheres em algumas piadas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 87
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e falta de humor",
+            "exemplo_parafraseado": "O ritmo é arrastado e as piadas não funcionam, tornando a experiência tediosa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e química do elenco",
+            "exemplo_parafraseado": "Apesar da química entre os protagonistas, as atuações são irregulares e o roteiro não ajuda.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Química e amizade entre os protagonistas",
+            "exemplo_parafraseado": "A relação construída entre os dois personagens é apontada como o coração do filme, com uma cumplicidade que se desenvolve gradualmente e emociona.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Omar Sy e François Cluzet"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Clichês e previsibilidade",
+            "exemplo_parafraseado": "A trama é previsível e repleta de lugares-comuns, com uma estrutura de histórias infantis que não surpreende em momento algum.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e convencional",
+            "exemplo_parafraseado": "O roteiro é visto como clichê e previsível, com uma trama que não inova e resolve os conflitos de forma fácil, apelando para o sentimentalismo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Humor e piadas datadas ou ofensivas",
+            "exemplo_parafraseado": "O humor do filme é criticado por ter envelhecido mal, recorrendo a piadas misóginas, homofóbicas e situações de assédio tratadas como engraçadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Humor e timing cômico",
+            "exemplo_parafraseado": "O humor é elogiado por ser eficaz, com situações engraçadas que arrancam risadas e um ritmo bem conduzido.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Química entre os protagonistas e momentos emocionantes",
+            "exemplo_parafraseado": "A relação entre os dois atores principais é elogiada pela naturalidade e pela capacidade de emocionar, mesmo que o restante do filme seja considerado formulaico.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Emoção e sensibilidade",
+            "exemplo_parafraseado": "As reviews destacam momentos comoventes que equilibram o riso, proporcionando uma experiência que mistura leveza e comoção.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Clássico do cinema francês e feel-good movie",
+            "exemplo_parafraseado": "O filme é descrito como um clássico moderno do cinema francês, reconfortante e com apelo popular, sendo recomendado para momentos de descontração.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Superestimado e sem profundidade",
+            "exemplo_parafraseado": "O filme é superestimado e superficial, sem a profundidade que sua fama sugere.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado e sem profundidade",
+            "exemplo_parafraseado": "Há a percepção de que o filme é superestimado, carecendo de desenvolvimento e profundidade em temas como a deficiência e as diferenças de classe.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 35,
+            "de_n": 40,
+            "freq_pct": 87.5,
+            "lift_pp": 30.0,
+            "acima_da_margem": true,
+            "tema": "Estereótipos raciais e representação",
+            "exemplo_parafraseado": "O filme reforça clichês raciais ao retratar o homem negro da periferia como inculto e dependente do branco rico para se civilizar.",
+            "temas_no_mesmo_eixo": [
+              "Misoginia e piadas problemáticas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Estereótipos raciais e representação problemática",
+            "exemplo_parafraseado": "Reviews apontam que o personagem negro é construído a partir de clichês racistas, como a comparação com Barack Obama ao vestir terno, o comportamento supostamente exótico e a ideia do negro alegre e dançarino.",
+            "temas_no_mesmo_eixo": [
+              "Crítica social superficial e paternalismo"
+            ]
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -65.0,
+            "acima_da_margem": false,
+            "tema": "Críticas ao tratamento das mulheres e piadas misóginas",
+            "exemplo_parafraseado": "Reviews positivas apontam que certas piadas e abordagens envolvendo mulheres soam deslocadas e poderiam ser evitadas, mesmo gostando do filme como um todo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "se emociona com uma amizade entre protagonistas construída em cumplicidade gradual",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Química e amizade entre os protagonistas",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "procura humor eficaz, com situações divertidas e ritmo cômico bem conduzido",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor e timing cômico",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "busca uma experiência que alterna leveza e comovência, com momentos sensíveis",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Emoção e sensibilidade",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "tolera piadas deslocadas envolvendo mulheres porque gosta do filme no todo",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Críticas ao tratamento das mulheres e piadas misóginas",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com clichês raciais que retratam o negro periférico como inculto e dependente",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estereótipos raciais e representação",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "evita tramas previsíveis repletas de lugares-comuns que não surpreendem",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Clichês e previsibilidade",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com piadas machistas e mulheres tratadas como objetos",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Misoginia e piadas problemáticas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "acha tedioso um ritmo arrastado em que as piadas não funcionam",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e falta de humor",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera atuações irregulares e roteiro fraco, apesar da química entre os protagonistas",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações e química do elenco",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 4,
+      "n_aplicadas": 4,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 5,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16794,
+      "completion_tokens": 1288,
+      "cache_hit_tokens": 15008,
+      "cache_miss_tokens": 1786
+    },
+    "latencia_s": 17.66,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

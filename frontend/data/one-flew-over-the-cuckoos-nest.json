@@ -1,0 +1,1500 @@
+{
+  "slug": "one-flew-over-the-cuckoos-nest",
+  "data_coleta": "2026-11-08T05:14:13.798189+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1072867,
+  "reviews_url": "https://letterboxd.com/film/one-flew-over-the-cuckoos-nest/reviews/",
+  "ficha": {
+    "titulo": "Um Estranho no Ninho",
+    "sinopse_oficial": "Randle Patrick McMurphy é um malandro que, após ser preso, se finge de louco para ir a um hospital psiquiátrico e assim esquivar-se a uma porção de trabalhos forçados na prisão. Lá ele começa a influenciar os outros internos e começa a sofrer oposição da cruel e sádica enfermeira Mildred Ratched. Com forte poder persuasivo, McMurphy instaura uma reviravolta na clínica, não sabendo o que isto pode lhe custar.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama"
+    ],
+    "duracao_min": 133,
+    "diretor": "Miloš Forman",
+    "diretor_transliterado": false,
+    "ano": 1975,
+    "data_estreia": "1975-11-19",
+    "fonte": "tmdb",
+    "tmdb_id": 510,
+    "tmdb_fetched_at": "2026-11-08T05:09:23+00:00",
+    "poster_path": "/nqz0NHRmbc57HZdZxi66shMzGKO.jpg",
+    "poster_largura": 960,
+    "poster_altura": 1440,
+    "backdrop_paths": [
+      "/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+      "/vMylmakO2K9cZexNUze8wa9muJp.jpg",
+      "/6Oa3zTiluBz2W8D2ou1MY16dUiF.jpg",
+      "/1w1O52wejAcmR89LXFq2mrx3N7k.jpg",
+      "/7aoKhnlwBtUO3aFKyLpnnoXIOQo.jpg",
+      "/oje9d0EXQyQcxsqHQor4xFVGjrd.jpg",
+      "/5hll0hYssHbJiKxFcsQQLL7BhSP.jpg",
+      "/2j9oIcG4Pz38ESaUMTnmYhL6UM2.jpg",
+      "/9rZrxsIt93YN6LwmyqiaTSLLuOR.jpg",
+      "/uqyP4eYsASAYcg8WLpPNkQJtHGg.jpg"
+    ],
+    "backdrop_path": "/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/wwDbalOYCUuwPt1nd3TONja9KGz.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vMylmakO2K9cZexNUze8wa9muJp.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7aoKhnlwBtUO3aFKyLpnnoXIOQo.jpg",
+        "still_largura": 3648,
+        "still_altura": 2052
+      },
+      {
+        "still_path": "/2j9oIcG4Pz38ESaUMTnmYhL6UM2.jpg",
+        "still_largura": 2400,
+        "still_altura": 1350
+      },
+      {
+        "still_path": "/zuCBWvYSrZZJvEZxd4OFzu2ViZS.jpg",
+        "still_largura": 1358,
+        "still_altura": 764
+      },
+      {
+        "still_path": "/LoDYW2OR5jWxhc6HpHgb2VpaAI.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/hb3FLfyoFcm47l2KDyBtKP7x3eF.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1PZ9yFoeapMVYTCz1zI226IyQia.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/8We2Ktv5EdDVef3OSsumjTQ5h8t.jpg",
+        "still_largura": 3690,
+        "still_altura": 2076
+      },
+      {
+        "still_path": "/eNPS3IEf1xDeEOFZGdJogfbiHJ2.jpg",
+        "still_largura": 2870,
+        "still_altura": 1614
+      },
+      {
+        "still_path": "/oyJaC8mdHcusQrJJX7Tt560THeo.jpg",
+        "still_largura": 2842,
+        "still_altura": 1598
+      },
+      {
+        "still_path": "/rv2ZYJnT52164Oi1xcg2Z7z481E.jpg",
+        "still_largura": 1500,
+        "still_altura": 843
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "one-flew-over-the-cuckoos-nest",
+      "titulo_letterboxd": "One Flew Over the Cuckoo's Nest",
+      "ano_letterboxd": 1975,
+      "tmdb_id_letterboxd": 510,
+      "tmdb_id_escolhido": 510,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "One Flew Over the Cuckoo's Nest",
+      "ano_tmdb": 1975,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1072867,
+    "por_nivel": {
+      "0.5": 971,
+      "1.0": 2232,
+      "1.5": 1837,
+      "2.0": 9213,
+      "2.5": 11306,
+      "3.0": 60711,
+      "3.5": 94802,
+      "4.0": 313509,
+      "4.5": 236302,
+      "5.0": 341984
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 7,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "one-flew-over-the-cuckoos-nest",
+    "coletado_em": "2026-11-08T05:14:13.798189+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 971,
+      "1.0": 2232,
+      "1.5": 1837,
+      "2.0": 9213,
+      "2.5": 11306,
+      "3.0": 60711,
+      "3.5": 94802,
+      "4.0": 313509,
+      "4.5": 236302,
+      "5.0": 341984
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 7,
+      "1.5": 12,
+      "2.0": 31,
+      "2.5": 28,
+      "3.0": 37,
+      "3.5": 4,
+      "4.0": 17,
+      "4.5": 11,
+      "5.0": 19
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 65,
+        "n_validas_pos_extensao": 65,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 51,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 7,
+      "2.5": 8,
+      "3.0": 45,
+      "3.5": 71,
+      "4.0": 235,
+      "4.5": 177,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 540,
+        "min": "2011-09-01",
+        "max": "2026-11-08",
+        "p5": "2026-08-25",
+        "p50": "2026-10-25",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2025-07-13",
+          "max": "2026-11-07",
+          "p5": "2026-08-21",
+          "p50": "2026-10-01",
+          "p95": "2026-11-02"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2011-09-01",
+          "max": "2026-11-07",
+          "p5": "2026-09-20",
+          "p50": "2026-10-25",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2015-03-28",
+          "max": "2026-11-08",
+          "p5": "2026-09-28",
+          "p50": "2026-11-07",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 38,
+      "dias_por_100_paginas": 29.921259842519685,
+      "paginas_para_1_ano": 1220
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 25,
+        "dias_por_100_paginas": 2500.0,
+        "paginas_para_1_ano": 15
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 33,
+        "dias_por_100_paginas": 3300.0,
+        "paginas_para_1_ano": 11
+      },
+      "2.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 8,
+        "dias": 71,
+        "dias_por_100_paginas": 1014.2857142857143,
+        "paginas_para_1_ano": 36
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 28,
+        "dias_por_100_paginas": 560.0,
+        "paginas_para_1_ano": 65
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 22,
+        "dias": 45,
+        "dias_por_100_paginas": 214.28571428571428,
+        "paginas_para_1_ano": 170
+      },
+      "4.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 59,
+        "dias": 28,
+        "dias_por_100_paginas": 48.275862068965516,
+        "paginas_para_1_ano": 756
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 44,
+        "dias": 20,
+        "dias_por_100_paginas": 46.51162790697674,
+        "paginas_para_1_ano": 785
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 40,
+        "dias_por_100_paginas": 31.496062992125985,
+        "paginas_para_1_ano": 1159
+      }
+    },
+    "ano_lancamento": 1975,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "one-flew-over-the-cuckoos-nest",
+      "titulo": "One Flew Over the Cuckoo's Nest",
+      "ano": 1975,
+      "tmdb_id_letterboxd": 510,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 3,
+        "p95": 7,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-09-18",
+        "max": "2026-11-03",
+        "p5": "2026-08-28",
+        "p50": "2026-09-24",
+        "p95": "2026-10-31"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 6,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 6,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 14,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 14,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 26,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 60,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 60,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Protagonista é um abusador sexual e o filme o trata como herói",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam que o personagem principal é apresentado como um estuprador e, ainda assim, a narrativa o coloca como símbolo de liberdade, sem consequências ou reflexão sobre esse histórico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews criticam que o personagem principal é apresentado como um estuprador e, ainda assim, a narrativa o coloca como símbolo de liberdade, sem consequências ou reflexão sobre esse histórico."
+        },
+        {
+          "tema": "Ritmo lento e falta de envolvimento",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como arrastado e entediante, com cenas que não prendem a atenção e uma duração excessiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O filme é frequentemente descrito como arrastado e entediante, com cenas que não prendem a atenção e uma duração excessiva."
+        },
+        {
+          "tema": "Mensagem e temas mal desenvolvidos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo considera que a crítica social é superficial e contraditória, com uma visão romantizada da rebeldia e uma moral duvidosa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações boas, mas não salvam o filme",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Embora espectadores elogiem as atuações, especialmente a de Jack Nicholson, elas não compensam os problemas de roteiro e direção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Embora muitos elogiem as atuações, especialmente a de Jack Nicholson, elas não compensam os problemas de roteiro e direção."
+        },
+        {
+          "tema": "Tratamento sexista e misógino das personagens femininas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que as mulheres são retratadas de forma estereotipada, seja como vilãs odiosas ou como objetos sexuais, e que a enfermeira Ratched é injustiçada pela narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews apontam que as mulheres são retratadas de forma estereotipada, seja como vilãs odiosas ou como objetos sexuais, e que a enfermeira Ratched é injustiçada pela narrativa."
+        },
+        {
+          "tema": "Personagens caricatos e relacionamentos pouco convincentes",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews mencionam que os personagens são rasos e os vínculos entre eles não são bem construídos, com destaque para a falta de profundidade dos pacientes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente a caracterização do protagonista como abusador sexual e a romantização de suas ações, além do ritmo lento e do tratamento sexista dispensado às personagens femininas. Este grupo também critica a falta de desenvolvimento dos temas e a construção caricata dos personagens, apesar de reconhecer a qualidade das atuações.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 1,
+        "p50": 5,
+        "p95": 22,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2011-09-01",
+        "max": "2026-11-07",
+        "p5": "2026-09-18",
+        "p50": "2026-10-28",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 5,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 22,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 77,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 6,
+            "abaixo_min_chars": 77,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e momentos de tédio",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com atos iniciais enfadonhos e uma sensação de que a história demora a engrenar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas consideram o filme arrastado, com atos iniciais enfadonhos e uma sensação de que a história demora a engrenar."
+        },
+        {
+          "tema": "Dificuldade de criar empatia pelo protagonista",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o protagonista é apresentado como criminoso e isso torna difícil torcer por ele ou sentir empatia por sua jornada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações elogiadas, especialmente Jack Nicholson",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam o elenco, em particular a performance de Jack Nicholson, mas ressaltam que isso não basta para salvar o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews medianas frequentemente elogiam o elenco, em particular a performance de Jack Nicholson, mas ressaltam que isso não basta para salvar o filme."
+        },
+        {
+          "tema": "Expectativa frustrada em relação à vilã",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A personagem da enfermeira é vista como uma vilã aquém da fama, já que suas ações não parecem tão más quanto o esperado ou são ofuscadas pelas atitudes do protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro raso e personagens unidimensionais",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam falta de profundidade nos personagens secundários e uma sensação de que o roteiro não explora bem o potencial da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews apontam falta de profundidade nos personagens secundários e uma sensação de que o roteiro não explora bem o potencial da história."
+        },
+        {
+          "tema": "Crítica à representação da saúde mental e do sistema",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo questiona se a abordagem do filme sobre instituições psiquiátricas e autoritarismo soa datada ou simplista, sem aprofundar questões complexas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas apontam uma experiência mista: embora reconheçam a qualidade das atuações e a relevância temática, frequentemente citam ritmo lento, dificuldade de conexão com o protagonista e uma decepção em relação às expectativas criadas. Este grupo específico não endossa unanimemente o status de clássico, destacando limitações narrativas e de caracterização.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 7
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-09-28",
+        "max": "2026-11-08",
+        "p5": "2026-10-10",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 41,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 41,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 33,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 33,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 49,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 2,
+            "abaixo_min_chars": 49,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a qualidade das atuações, destacando o desempenho de Jack Nicholson e a força do elenco coadjuvante, com menções a Danny DeVito e Christopher Lloyd.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem e temas (liberdade, rebeldia, saúde mental)",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a mensagem sobre liberdade individual, a luta contra sistemas opressores e a humanização dos pacientes, além da reflexão sobre sanidade e loucura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tom emocional e impacto (comédia, drama, final)",
+          "mencoes_aproximadas": 17,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas mencionam a mistura de humor e tragédia, com um final que emociona e deixa uma impressão duradoura, equilibrando esperança e melancolia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e história",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é elogiado pela simplicidade eficaz, pela adaptação da obra original e pela construção de personagens complexos e envolventes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são descritos como profundos e marcantes, com destaque para a caracterização do protagonista e da antagonista, além do carisma dos internos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção e realismo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção é elogiada pela imersão e pelo realismo da ambientação, fazendo o espectador sentir-se dentro do hospital psiquiátrico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente as atuações e a mensagem humanista do filme, com elogios à capacidade de equilibrar humor e drama. Este grupo também valoriza a profundidade dos personagens e a direção realista, resultando em uma experiência emocionante e marcante.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 92
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e falta de envolvimento",
+            "exemplo_parafraseado": "O filme é descrito como arrastado e entediante, com cenas que não prendem a atenção e uma duração excessiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e momentos de tédio",
+            "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com atos iniciais enfadonhos e uma sensação de que a história demora a engrenar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Atuações boas, mas não salvam o filme",
+            "exemplo_parafraseado": "Embora espectadores elogiem as atuações, especialmente a de Jack Nicholson, elas não compensam os problemas de roteiro e direção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas, especialmente Jack Nicholson",
+            "exemplo_parafraseado": "As reviews medianas elogiam o elenco, em particular a performance de Jack Nicholson, mas ressaltam que isso não basta para salvar o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As reviews elogiam a qualidade das atuações, destacando o desempenho de Jack Nicholson e a força do elenco coadjuvante, com menções a Danny DeVito e Christopher Lloyd.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Direção e realismo",
+            "exemplo_parafraseado": "A direção é elogiada pela imersão e pelo realismo da ambientação, fazendo o espectador sentir-se dentro do hospital psiquiátrico.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem e temas mal desenvolvidos",
+            "exemplo_parafraseado": "Este grupo considera que a crítica social é superficial e contraditória, com uma visão romantizada da rebeldia e uma moral duvidosa.",
+            "temas_no_mesmo_eixo": [
+              "Personagens caricatos e relacionamentos pouco convincentes"
+            ]
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Dificuldade de criar empatia pelo protagonista",
+            "exemplo_parafraseado": "Este grupo destaca que o protagonista é apresentado como criminoso e isso torna difícil torcer por ele ou sentir empatia por sua jornada.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro raso e personagens unidimensionais"
+            ]
+          },
+          "positivas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e história",
+            "exemplo_parafraseado": "O roteiro é elogiado pela simplicidade eficaz, pela adaptação da obra original e pela construção de personagens complexos e envolventes.",
+            "temas_no_mesmo_eixo": [
+              "Personagens e desenvolvimento"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "contraste"
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 22.5,
+            "acima_da_margem": false,
+            "tema": "Tom emocional e impacto (comédia, drama, final)",
+            "exemplo_parafraseado": "As reviews positivas mencionam a mistura de humor e tragédia, com um final que emociona e deixa uma impressão duradoura, equilibrando esperança e melancolia.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada em relação à vilã",
+            "exemplo_parafraseado": "A personagem da enfermeira é vista como uma vilã aquém da fama, já que suas ações não parecem tão más quanto o esperado ou são ofuscadas pelas atitudes do protagonista.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Protagonista é um abusador sexual e o filme o trata como herói",
+            "exemplo_parafraseado": "Reviews criticam que o personagem principal é apresentado como um estuprador e, ainda assim, a narrativa o coloca como símbolo de liberdade, sem consequências ou reflexão sobre esse histórico.",
+            "temas_no_mesmo_eixo": [
+              "Tratamento sexista e misógino das personagens femininas"
+            ]
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à representação da saúde mental e do sistema",
+            "exemplo_parafraseado": "Este grupo questiona se a abordagem do filme sobre instituições psiquiátricas e autoritarismo soa datada ou simplista, sem aprofundar questões complexas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": "Mensagem e temas (liberdade, rebeldia, saúde mental)",
+            "exemplo_parafraseado": "Este grupo destaca a mensagem sobre liberdade individual, a luta contra sistemas opressores e a humanização dos pacientes, além da reflexão sobre sanidade e loucura.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia um elenco forte, com destaque para o desempenho de Jack Nicholson",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e elenco",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "se interessa por uma mensagem sobre liberdade individual e humanização dos pacientes",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem e temas (liberdade, rebeldia, saúde mental)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma mistura de humor e tragédia que equilibra esperança e melancolia",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tom emocional e impacto (comédia, drama, final)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza um roteiro simples e eficaz na construção de personagens complexos",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Roteiro e história",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com um protagonista abusador tratado como símbolo de liberdade sem consequências",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Protagonista é um abusador sexual e o filme o trata como herói",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita um filme arrastado, com cenas entediantes e duração excessiva",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e falta de envolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com crítica social superficial e uma visão romantizada da rebeldia",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem e temas mal desenvolvidos",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera boas atuações, embora elas não compensem problemas de roteiro e direção",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações boas, mas não salvam o filme",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12588,
+      "completion_tokens": 968,
+      "cache_hit_tokens": 11787,
+      "cache_miss_tokens": 801
+    },
+    "latencia_s": 5.73,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

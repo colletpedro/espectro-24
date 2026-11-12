@@ -1,0 +1,1567 @@
+{
+  "slug": "harakiri",
+  "data_coleta": "2026-11-08T06:27:48.107911+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 277337,
+  "reviews_url": "https://letterboxd.com/film/harakiri/reviews/",
+  "ficha": {
+    "titulo": "Harakiri",
+    "sinopse_oficial": "No século 18, o Japão não está mais em guerra e o país é governado com firmeza. Hanshiro Tsugumo, um dos muitos ronin (samurais errantes) desempregados, decide bater à porta do poderoso clã Ii. Recebido por Kageyu Saito, o intendente do clã, ele pede permissão para cometer suicídio por harakiri na residência. Tentando dissuadi-lo, Saito começa a lhe contar a história de Motome Chijiwa, outro ronin que também queria realizar o mesmo ritual no local.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Ação",
+      "Drama",
+      "História"
+    ],
+    "duracao_min": 135,
+    "diretor": "Masaki Kobayashi",
+    "diretor_transliterado": false,
+    "ano": 1962,
+    "data_estreia": "1962-09-15",
+    "fonte": "tmdb",
+    "tmdb_id": 14537,
+    "tmdb_fetched_at": "2026-11-08T06:23:16+00:00",
+    "poster_path": "/o6oORLNmEHiwqXjgGEGDoN720Bk.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+      "/nC3IjYhUgZWgfKfFX0ygMigFwgc.jpg",
+      "/23XAzEpKuKUFLW2aWANbuNmqSvL.jpg",
+      "/e3hG3uadtcP0pYdRa5ch4ysQW76.jpg",
+      "/2tmaNfIDkld6yolcxiem8w8DiH1.jpg",
+      "/juTFerQXtFr8bBfXOfWx6x8aMCP.jpg",
+      "/ths5IQjtBxZ9iw3JKfCtm78E5wx.jpg",
+      "/XKPBYQQIhVhPmwqlizcCwrlSyN.jpg",
+      "/lT0ZOc7XT3sMYXFXz6gE5EhoV0N.jpg",
+      "/w6iAf20R6si6tHCt9TtmuPZ6rKV.jpg"
+    ],
+    "backdrop_path": "/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+    "backdrop_largura": 1412,
+    "backdrop_altura": 794,
+    "poster_sem_texto_path": "/frEFsM4fBDs1wiVQ4vDMUjNxIqp.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/5UOJ8wYxblPNE9KIdzbGCUC7gti.jpg",
+        "still_largura": 1412,
+        "still_altura": 794
+      },
+      {
+        "still_path": "/nC3IjYhUgZWgfKfFX0ygMigFwgc.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/XKPBYQQIhVhPmwqlizcCwrlSyN.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/ths5IQjtBxZ9iw3JKfCtm78E5wx.jpg",
+        "still_largura": 1449,
+        "still_altura": 815
+      },
+      {
+        "still_path": "/wen5hK2dMgBtFcCrtcn85mDcVAS.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7z6Vua7vJA94PVUZkWqL7dBHp1a.jpg",
+        "still_largura": 3440,
+        "still_altura": 1935
+      },
+      {
+        "still_path": "/ba7Qhgwhcbj4euPxgjd6pONgKsl.jpg",
+        "still_largura": 2109,
+        "still_altura": 1186
+      },
+      {
+        "still_path": "/dXwdU8dvRxaQvRmTnivzujTlx5C.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jm9fKfptAaLYi6zPZIpdkG8ozWg.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/m5P96nLSU0Ox4Y1fthrs7ZJHT2N.jpg",
+        "still_largura": 2123,
+        "still_altura": 1194
+      },
+      {
+        "still_path": "/qFgevW20F447v0puN46ghlOsJIB.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/vEjrhhPcCwJkPreAummU6wkLvFa.jpg",
+        "still_largura": 1344,
+        "still_altura": 756
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "harakiri",
+      "titulo_letterboxd": "Harakiri",
+      "ano_letterboxd": 1962,
+      "tmdb_id_letterboxd": 14537,
+      "tmdb_id_escolhido": 14537,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "title",
+      "titulo_tmdb_correspondente": "Harakiri",
+      "ano_tmdb": 1962,
+      "ano_divergente": false
+    },
+    "paises": [
+      "JP"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 277337,
+    "por_nivel": {
+      "0.5": 518,
+      "1.0": 510,
+      "1.5": 314,
+      "2.0": 1188,
+      "2.5": 1597,
+      "3.0": 6919,
+      "3.5": 12703,
+      "4.0": 49485,
+      "4.5": 65051,
+      "5.0": 139052
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 3,
+      "positivas": 96
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "harakiri",
+    "coletado_em": "2026-11-08T06:27:48.107911+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 518,
+      "1.0": 510,
+      "1.5": 314,
+      "2.0": 1188,
+      "2.5": 1597,
+      "3.0": 6919,
+      "3.5": 12703,
+      "4.0": 49485,
+      "4.5": 65051,
+      "5.0": 139052
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 3,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 4,
+      "5.0": 8
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 3,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 4,
+      "5.0": 8
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 36,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 72,
+      "2.5": 48,
+      "3.0": 120,
+      "3.5": 12,
+      "4.0": 36,
+      "4.5": 48,
+      "5.0": 96
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 6,
+      "1.0": 6,
+      "1.5": 11,
+      "2.0": 27,
+      "2.5": 20,
+      "3.0": 55,
+      "3.5": 7,
+      "4.0": 14,
+      "4.5": 23,
+      "5.0": 38
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 6,
+      "2.5": 4,
+      "3.0": 10,
+      "3.5": 1,
+      "4.0": 3,
+      "4.5": 4,
+      "5.0": 8
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 1,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 12,
+        "paginas_extensao": 1,
+        "extras_por_nivel": {
+          "0.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 48,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 14,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 75,
+        "n_validas_pos_extensao": 75,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 82,
+        "n_validas_pos_extensao": 82,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 2,
+      "2.5": 3,
+      "3.0": 13,
+      "3.5": 23,
+      "4.0": 91,
+      "4.5": 120,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 516,
+        "min": "2019-10-11",
+        "max": "2026-11-08",
+        "p5": "2026-08-03",
+        "p50": "2026-10-17",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2023-06-05",
+          "max": "2026-11-07",
+          "p5": "2026-07-23",
+          "p50": "2026-09-09",
+          "p95": "2026-11-02"
+        },
+        "medianas": {
+          "n": 168,
+          "min": "2020-09-14",
+          "max": "2026-11-06",
+          "p5": "2026-09-03",
+          "p50": "2026-10-07",
+          "p95": "2026-11-04"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2019-10-11",
+          "max": "2026-11-08",
+          "p5": "2026-10-01",
+          "p50": "2026-11-06",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 33,
+      "dias_por_100_paginas": 25.984251968503937,
+      "paginas_para_1_ano": 1405
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 59,
+        "dias_por_100_paginas": 2950.0,
+        "paginas_para_1_ano": 12
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 62,
+        "dias_por_100_paginas": 6200.0,
+        "paginas_para_1_ano": 6
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 47,
+        "dias_por_100_paginas": 4700.0,
+        "paginas_para_1_ano": 8
+      },
+      "2.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 78,
+        "dias_por_100_paginas": 1560.0,
+        "paginas_para_1_ano": 23
+      },
+      "2.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 53,
+        "dias_por_100_paginas": 1766.6666666666667,
+        "paginas_para_1_ano": 21
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 45,
+        "dias_por_100_paginas": 500.0,
+        "paginas_para_1_ano": 73
+      },
+      "4.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 23,
+        "dias": 21,
+        "dias_por_100_paginas": 95.45454545454545,
+        "paginas_para_1_ano": 382
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 30,
+        "dias": 21,
+        "dias_por_100_paginas": 72.41379310344827,
+        "paginas_para_1_ano": 504
+      },
+      "5.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 37,
+        "dias_por_100_paginas": 29.133858267716537,
+        "paginas_para_1_ano": 1253
+      }
+    },
+    "ano_lancamento": 1962,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "harakiri",
+      "titulo": "Harakiri",
+      "ano": 1962,
+      "tmdb_id_letterboxd": 14537,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 8,
+        "1.0": 8,
+        "1.5": 5,
+        "2.0": 19
+      },
+      "composicao_atingida": {
+        "0.5": 6,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 22
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 4,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 6,
+        "p5": 1,
+        "p50": 2,
+        "p95": 5,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-04",
+        "max": "2026-11-05",
+        "p5": "2026-07-15",
+        "p50": "2026-09-13",
+        "p95": "2026-11-02"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 8,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 12,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 12,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 22,
+          "n_alvo": 19,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores descrevem a experiência como arrastada e entediante, com relatos de cochilos durante a exibição e uma sensação de que o filme se prolonga excessivamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos espectadores descrevem a experiência como arrastada e entediante, com vários relatos de cochilos durante a exibição e uma sensação de que o filme se prolonga excessivamente."
+        },
+        {
+          "tema": "Expectativa frustrada pela nota alta",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas mencionam que criaram expectativas elevadas por causa da nota máxima que o filme tem na plataforma e se decepcionaram, considerando-o superestimado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias pessoas mencionam que criaram expectativas elevadas por causa da nota máxima que o filme tem na plataforma e se decepcionaram, considerando-o superestimado."
+        },
+        {
+          "tema": "Excesso de diálogos e pouco show",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é bastante criticado pelo excesso de exposição e monólogos longos, com a sensação de que a história é contada por meio de falas intermináveis, tornando a experiência maçante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão pessoal ou tédio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores afirmam que, apesar dos méritos técnicos e da importância histórica, simplesmente não conseguiram se envolver com a história ou se importar com o que acontecia na tela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Alguns espectadores afirmam que, apesar dos méritos técnicos e da importância histórica, simplesmente não conseguiram se envolver com a história ou se importar com o que acontecia na tela."
+        },
+        {
+          "tema": "Atuações e estilo teatral",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação é vista por espectadores como rígida ou teatral, com uma encenação que não convence e contribui para a falta de envolvimento com a história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A atuação é vista por alguns como rígida ou teatral, com uma encenação que não convence e contribui para a falta de envolvimento com a história."
+        },
+        {
+          "tema": "Ação escassa e má coreografia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há críticas à escassez de cenas de ação e à qualidade das coreografias de luta, que espectadores consideram decepcionantes, especialmente em um filme de samurai.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há críticas à escassez de cenas de ação e à qualidade das coreografias de luta, que alguns consideram decepcionantes, especialmente em um filme de samurai."
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam sobretudo o ritmo lento e o tédio, o excesso de diálogos expositivos e a decepção em relação à altíssima nota do filme na plataforma. Este grupo também aponta falta de conexão emocional, ação escassa e atuações teatrais como fatores que tornaram a experiência desagradável.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "composicao_atingida": {
+        "2.5": 8,
+        "3.0": 32
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 5,
+        "p95": 10,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-02-20",
+        "max": "2026-11-06",
+        "p5": "2026-09-16",
+        "p50": "2026-10-10",
+        "p95": "2026-11-05"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 32,
+          "n_alvo": 32,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 23,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e arrastado",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews deste grupo reclamam que o filme é excessivamente lento, com longos diálogos e um desenvolvimento que poderia ser mais curto, tornando a experiência entediante para espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews deste grupo reclamam que o filme é excessivamente lento, com longos diálogos e um desenvolvimento que poderia ser mais curto, tornando a experiência entediante para parte do público."
+        },
+        {
+          "tema": "Duração excessiva e roteiro arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas mediana apontam que a história se alonga além do necessário, com detalhes e reviravoltas que não justificam as mais de duas horas de projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias críticas mediana apontam que a história se alonga além do necessário, com detalhes e reviravoltas que não justificam as mais de duas horas de projeção."
+        },
+        {
+          "tema": "Superestimado em relação ao topo do Letterboxd",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas deste grupo questionam a posição do filme como número um do Letterboxd, considerando que não merece tanto destaque e que há obras melhores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas pessoas deste grupo questionam a posição do filme como número um do Letterboxd, considerando que não merece tanto destaque e que há obras melhores."
+        },
+        {
+          "tema": "Fotografia e atuação elogiadas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das ressalvas, reviews medianas reconhecem a qualidade da fotografia em preto e branco e a atuação do protagonista, que consideram pontos fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Apesar das ressalvas, diversas reviews medianas reconhecem a qualidade da fotografia em preto e branco e a atuação do protagonista, que consideram pontos fortes do filme."
+        },
+        {
+          "tema": "Crítica social ao conceito de honra",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme faz uma crítica contundente à noção de honra e às tradições samurais, mostrando como esses valores podem ser usados para mascarar injustiças.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Desconexão emocional ou tédio",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas mencionam que, apesar dos méritos técnicos, não conseguiram se envolver com a história ou se sentiram entediadas, chegando a cochilar durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas mencionam que, apesar dos méritos técnicos, não conseguiram se envolver com a história ou se sentiram entediadas, chegando a cochilar durante a exibição."
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para uma experiência dividida: reconhecem a qualidade técnica, a fotografia e a atuação, mas criticam fortemente o ritmo lento, a duração excessiva e a falta de envolvimento emocional. Este grupo também questiona a posição do filme como número um do Letterboxd, considerando-o superestimado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 3
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 2,
+        "4.0": 7,
+        "4.5": 10,
+        "5.0": 21
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 7,
+        "4.5": 10,
+        "5.0": 21
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 128,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-04-29",
+        "max": "2026-11-08",
+        "p5": "2026-10-01",
+        "p50": "2026-11-06",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 5,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 5,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 13,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 21,
+          "n_alvo": 21,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica ao código de honra e hipocrisia social",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam como o filme desconstrói a noção de honra samurai, expondo a hipocrisia de uma classe dominante que valoriza aparências e tradições em detrimento da dignidade humana.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro e estrutura narrativa",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é elogiado pela forma como revela detalhes gradualmente, mantendo o espectador envolvido e construindo uma narrativa trágica e coesa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O roteiro é frequentemente elogiado pela forma como revela detalhes gradualmente, mantendo o espectador envolvido e construindo uma narrativa trágica e coesa."
+        },
+        {
+          "tema": "Atuação de Tatsuya Nakadai",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A performance de Tatsuya Nakadai é amplamente reverenciada, com sua intensidade e presença cênica sendo apontadas como um dos pontos altos do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética em preto e branco",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A cinematografia em preto e branco é destacada por sua beleza e pela forma como realça a atmosfera claustrofóbica e os contrastes visuais da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o ritmo é por vezes lento e que o filme poderia ser mais curto, embora a maioria considere que a lentidão é compensada pela profundidade da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam que o ritmo é por vezes lento e que o filme poderia ser mais curto, embora a maioria considere que a lentidão é compensada pela profundidade da história.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Tragédia pessoal e emoção",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O aspecto trágico da jornada do protagonista e a carga emocional da história são ressaltados, com espectadores relatando se sentirem profundamente tocados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O aspecto trágico da jornada do protagonista e a carga emocional da história são ressaltados, com muitos espectadores relatando se sentirem profundamente tocados."
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para uma forte admiração pela crítica social do filme, pela atuação de Nakadai e pela construção narrativa, ainda que alguns mencionem certo distanciamento emocional ou lentidão. Este grupo destaca a obra como um marco do cinema, valorizando sua profundidade temática e qualidade técnica.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 96
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Espectadores descrevem a experiência como arrastada e entediante, com relatos de cochilos durante a exibição e uma sensação de que o filme se prolonga excessivamente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e arrastado",
+            "exemplo_parafraseado": "Reviews deste grupo reclamam que o filme é excessivamente lento, com longos diálogos e um desenvolvimento que poderia ser mais curto, tornando a experiência entediante para espectadores.",
+            "temas_no_mesmo_eixo": [
+              "Duração excessiva e roteiro arrastado"
+            ]
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews mencionam que o ritmo é por vezes lento e que o filme poderia ser mais curto, embora a maioria considere que a lentidão é compensada pela profundidade da história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuações e estilo teatral",
+            "exemplo_parafraseado": "A atuação é vista por espectadores como rígida ou teatral, com uma encenação que não convence e contribui para a falta de envolvimento com a história.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atuação elogiadas",
+            "exemplo_parafraseado": "Apesar das ressalvas, reviews medianas reconhecem a qualidade da fotografia em preto e branco e a atuação do protagonista, que consideram pontos fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Tatsuya Nakadai",
+            "exemplo_parafraseado": "A performance de Tatsuya Nakadai é amplamente reverenciada, com sua intensidade e presença cênica sendo apontadas como um dos pontos altos do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Ação escassa e má coreografia",
+            "exemplo_parafraseado": "Há críticas à escassez de cenas de ação e à qualidade das coreografias de luta, que espectadores consideram decepcionantes, especialmente em um filme de samurai.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética em preto e branco",
+            "exemplo_parafraseado": "A cinematografia em preto e branco é destacada por sua beleza e pela forma como realça a atmosfera claustrofóbica e os contrastes visuais da história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de diálogos e pouco show",
+            "exemplo_parafraseado": "O filme é bastante criticado pelo excesso de exposição e monólogos longos, com a sensação de que a história é contada por meio de falas intermináveis, tornando a experiência maçante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e estrutura narrativa",
+            "exemplo_parafraseado": "O roteiro é elogiado pela forma como revela detalhes gradualmente, mantendo o espectador envolvido e construindo uma narrativa trágica e coesa.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Falta de conexão pessoal ou tédio",
+            "exemplo_parafraseado": "Espectadores afirmam que, apesar dos méritos técnicos e da importância histórica, simplesmente não conseguiram se envolver com a história ou se importar com o que acontecia na tela.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Desconexão emocional ou tédio",
+            "exemplo_parafraseado": "Reviews medianas mencionam que, apesar dos méritos técnicos, não conseguiram se envolver com a história ou se sentiram entediadas, chegando a cochilar durante a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Tragédia pessoal e emoção",
+            "exemplo_parafraseado": "O aspecto trágico da jornada do protagonista e a carga emocional da história são ressaltados, com espectadores relatando se sentirem profundamente tocados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada pela nota alta",
+            "exemplo_parafraseado": "Pessoas mencionam que criaram expectativas elevadas por causa da nota máxima que o filme tem na plataforma e se decepcionaram, considerando-o superestimado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Superestimado em relação ao topo do Letterboxd",
+            "exemplo_parafraseado": "Pessoas deste grupo questionam a posição do filme como número um do Letterboxd, considerando que não merece tanto destaque e que há obras melhores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social ao conceito de honra",
+            "exemplo_parafraseado": "Este grupo destaca que o filme faz uma crítica contundente à noção de honra e às tradições samurais, mostrando como esses valores podem ser usados para mascarar injustiças.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica ao código de honra e hipocrisia social",
+            "exemplo_parafraseado": "As reviews destacam como o filme desconstrói a noção de honra samurai, expondo a hipocrisia de uma classe dominante que valoriza aparências e tradições em detrimento da dignidade humana.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca uma atuação de intensidade e presença cênica marcantes",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Tatsuya Nakadai",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera um ritmo por vezes lento, mas valoriza a profundidade que ele compensa",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo lento e longa duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com uma experiência arrastada que parece se prolongar demais",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "evita filmes que contam a história por meio de falas e monólogos intermináveis",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Excesso de diálogos e pouco show",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 96,
+        "peso_texto": "~96% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "se interessa por uma crítica à hipocrisia de uma classe que cultua aparências e tradições",
+        "tema_origem": "POS-A",
+        "lado": "vale_a_pena",
+        "flags": [
+          "comprimento"
+        ]
+      },
+      {
+        "texto": "aprecia um roteiro que revela detalhes aos poucos e mantém o envolvimento",
+        "tema_origem": "POS-B",
+        "lado": "vale_a_pena",
+        "flags": [
+          "quantidade_escrita"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 2,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 6,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim",
+          "nota_ou_score",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "nota_ou_score",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "comprimento",
+          "nota_ou_score",
+          "quantidade_escrita"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16656,
+      "completion_tokens": 1053,
+      "cache_hit_tokens": 14957,
+      "cache_miss_tokens": 1699
+    },
+    "latencia_s": 9.28,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

@@ -1,0 +1,1573 @@
+{
+  "slug": "the-lion-king",
+  "data_coleta": "2026-11-08T06:32:55.246483+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 2322962,
+  "reviews_url": "https://letterboxd.com/film/the-lion-king/reviews/",
+  "ficha": {
+    "titulo": "O Rei Leão",
+    "sinopse_oficial": "Mufasa, o Rei Leão, e a rainha Sarabi apresentam ao reino o herdeiro do trono, Simba. O recém-nascido recebe a bênção do sábio babuíno Rafiki, mas ao crescer é envolvido nas artimanhas de seu tio Scar, o invejoso e maquiavélico irmão de Mufasa, que planeja livrar-se do sobrinho e herdar o trono.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Família",
+      "Drama"
+    ],
+    "duracao_min": 89,
+    "diretor": "Roger Allers",
+    "diretor_transliterado": false,
+    "ano": 1994,
+    "data_estreia": "1994-06-15",
+    "fonte": "tmdb",
+    "tmdb_id": 8587,
+    "tmdb_fetched_at": "2026-11-08T06:28:14+00:00",
+    "poster_path": "/8aIvm8OaJISOpVTt7rMIh7X35G5.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+      "/6GF9uJs7AnbcJvyfoZyjZv063Oo.jpg",
+      "/q00H8EqULYSK74lgevMkhmGGLHn.jpg",
+      "/wXfAvsPZqBDJ8U78F2IAzsUxtNh.jpg",
+      "/yDaMQbBfyGzGWKxUsPMxzWVuJlY.jpg",
+      "/kAZ0AtzFlsP9tikLevnz2x84QA8.jpg",
+      "/zoBSVPbTY3rVBLIYJE2yYrsaX0s.jpg",
+      "/qYzO0XkIOWjrjUkYOOcAuPkAJRZ.jpg",
+      "/odvk4WdiDtQjKWgMawIxq30Mik8.jpg",
+      "/3gSpuqzgp4cXU23RDshAWDVS4w.jpg"
+    ],
+    "backdrop_path": "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/vvvO0YCqdfhYuohp7ZNecgukLkp.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/wXsQvli6tWqja51pYxXNG1LFIGV.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6GF9uJs7AnbcJvyfoZyjZv063Oo.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/kAZ0AtzFlsP9tikLevnz2x84QA8.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/gB6wpMvHkFshldO2t0wYPqddusa.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/3vSpvbyxkjtMSkVvl7gadIspQR4.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/9bz4TnP2jiRkxeqyEpVfC7CUldR.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vMAPil6kuC7jW3wUMY95QrSfc6R.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/5ObENVKzp0sQgLiO0h7Ls7qbfRz.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/rBUNFedokLhOgt8YQrpRQBdtJx1.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/521OttvHb53IXImx3Ivejm4F5U7.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/eQvDYKqu9ldz5ivAps4INHFxAPu.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/iXfQjEfB0IoTGWRZJOefR8pCjZW.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-lion-king",
+      "titulo_letterboxd": "The Lion King",
+      "ano_letterboxd": 1994,
+      "tmdb_id_letterboxd": 8587,
+      "tmdb_id_escolhido": 8587,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Lion King",
+      "ano_tmdb": 1994,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 2322962,
+    "por_nivel": {
+      "0.5": 2789,
+      "1.0": 7758,
+      "1.5": 4846,
+      "2.0": 34032,
+      "2.5": 34557,
+      "3.0": 225889,
+      "3.5": 229391,
+      "4.0": 691821,
+      "4.5": 298686,
+      "5.0": 793193
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 11,
+      "positivas": 87
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-lion-king",
+    "coletado_em": "2026-11-08T06:32:55.246483+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2789,
+      "1.0": 7758,
+      "1.5": 4846,
+      "2.0": 34032,
+      "2.5": 34557,
+      "3.0": 225889,
+      "3.5": 229391,
+      "4.0": 691821,
+      "4.5": 298686,
+      "5.0": 793193
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 18,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 3,
+      "4.0": 12,
+      "4.5": 2,
+      "5.0": 7
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 216,
+      "2.5": 72,
+      "3.0": 216,
+      "3.5": 36,
+      "4.0": 144,
+      "4.5": 24,
+      "5.0": 84
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 7,
+      "1.5": 7,
+      "2.0": 25,
+      "2.5": 6,
+      "3.0": 20,
+      "3.5": 4,
+      "4.0": 19,
+      "4.5": 7,
+      "5.0": 19
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 2,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 8,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 1,
+      "4.0": 6,
+      "4.5": 0,
+      "5.0": 1
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 32,
+        "n_validas_pos_extensao": 41,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 15,
+        "n_validas_pos_extensao": 26,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 6,
+          "5.0": 1
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 49,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 11,
+      "2.5": 11,
+      "3.0": 73,
+      "3.5": 74,
+      "4.0": 223,
+      "4.5": 96,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 864,
+        "min": "1994-07-10",
+        "max": "2026-11-08",
+        "p5": "2024-11-14",
+        "p50": "2026-10-06",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 288,
+          "min": "1994-09-08",
+          "max": "2026-11-07",
+          "p5": "2021-06-12",
+          "p50": "2026-07-26",
+          "p95": "2026-10-22"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "1994-07-10",
+          "max": "2026-11-08",
+          "p5": "2024-11-21",
+          "p50": "2026-10-07",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 288,
+          "min": "2010-02-18",
+          "max": "2026-11-08",
+          "p5": "2026-05-12",
+          "p50": "2026-11-05",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 23,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 30,
+      "dias_por_100_paginas": 23.62204724409449,
+      "paginas_para_1_ano": 1545
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 27,
+        "dias_por_100_paginas": 2700.0,
+        "paginas_para_1_ano": 14
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 46,
+        "dias_por_100_paginas": 4600.0,
+        "paginas_para_1_ano": 8
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 61,
+        "dias_por_100_paginas": 6100.0,
+        "paginas_para_1_ano": 6
+      },
+      "2.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 18,
+        "dias": 233,
+        "dias_por_100_paginas": 1370.5882352941176,
+        "paginas_para_1_ano": 27
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 54,
+        "dias_por_100_paginas": 1080.0,
+        "paginas_para_1_ano": 34
+      },
+      "3.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 36,
+        "dias": 90,
+        "dias_por_100_paginas": 257.14285714285717,
+        "paginas_para_1_ano": 142
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 5,
+        "dias_por_100_paginas": 250.0,
+        "paginas_para_1_ano": 146
+      },
+      "4.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 112,
+        "dias": 75,
+        "dias_por_100_paginas": 67.56756756756756,
+        "paginas_para_1_ano": 540
+      },
+      "4.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 0,
+        "dias_por_100_paginas": 0.0,
+        "paginas_para_1_ano": null
+      },
+      "5.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 33,
+        "dias_por_100_paginas": 25.984251968503937,
+        "paginas_para_1_ano": 1405
+      }
+    },
+    "ano_lancamento": 1994,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-lion-king",
+      "titulo": "The Lion King",
+      "ano": 1994,
+      "tmdb_id_letterboxd": 8587,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 7,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 3,
+        "p95": 14,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-04-11",
+        "max": "2026-11-07",
+        "p5": "2026-04-24",
+        "p50": "2026-08-25",
+        "p95": "2026-11-02"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 7,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 28,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 183,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 6,
+            "abaixo_min_chars": 183,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Mensagem ideológica e crítica à monarquia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam a exaltação de uma hierarquia monárquica e um suposto viés ideológico conservador, vendo a história como propaganda de desigualdade e dominação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews criticam a exaltação de uma hierarquia monárquica e um suposto viés ideológico conservador, vendo a história como propaganda de desigualdade e dominação."
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O protagonista é visto como pouco carismático ou mal desenvolvido, e a evolução da história é apontada como corrida e rasa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Músicas e número musical",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As músicas são consideradas irritantes ou mal encaixadas na narrativa, quebrando o ritmo em vez de contribuir para ele.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As músicas são frequentemente consideradas irritantes ou mal encaixadas na narrativa, quebrando o ritmo em vez de contribuir para ele."
+        },
+        {
+          "tema": "Ritmo e narrativa",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é descrita como apressada em certos momentos e arrastada em outros, com transições pouco convincentes e um clímax entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Nostalgia e superestimação",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O status de obra-prima é questionado, atribuindo a alta estima ao apego nostálgico da infância e não à qualidade intrínseca do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação e aspectos técnicos",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação, embora elogiada por espectadores, é criticada por envelhecida, com composição de planos e profundidade de campo insatisfatórias.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A animação, embora elogiada por alguns, é criticada por envelhecida, com composição de planos e profundidade de campo insatisfatórias."
+        }
+      ],
+      "observacao_geral": "Este grupo de reviews negativas destaca principalmente a mensagem ideológica, os personagens pouco cativantes, as músicas incômodas e a narrativa apressada. A nostalgia é apontada como principal motivo para a aclamação do filme, enquanto aspectos técnicos e de roteiro são criticados.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 26,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 20
+      },
+      "cascata_por_degrau": {
+        "150": 26
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 26,
+        "min": 1,
+        "max": 36,
+        "p5": 1,
+        "p50": 7,
+        "p95": 18,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 26,
+        "min": "2025-06-06",
+        "max": "2026-11-07",
+        "p5": "2026-08-09",
+        "p50": "2026-10-02",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 63,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 1,
+            "abaixo_min_chars": 63,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 20,
+          "n_alvo": 35,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 190,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 190,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Desenvolvimento e conexão com a história",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "Reviews medianas comentam que, apesar de reconhecerem a qualidade técnica, nunca conseguiram se envolver emocionalmente com a jornada do protagonista ou com a narrativa como um todo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas comentam que, apesar de reconhecerem a qualidade técnica, nunca conseguiram se envolver emocionalmente com a jornada do protagonista ou com a narrativa como um todo."
+        },
+        {
+          "tema": "Trilha sonora e canções",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "As reviews medianas elogiam as músicas, chamando-as de marcantes e algumas das melhores da Disney, embora haja quem diga que certas canções soam irritantes ou não funcionam tão bem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews medianas frequentemente elogiam as músicas, chamando-as de marcantes e algumas das melhores da Disney, embora haja quem diga que certas canções soam irritantes ou não funcionam tão bem.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Ritmo e estrutura narrativa",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "Reviews medianas apontam problemas de ritmo, com a trama dividida em seções e saltos temporais que tornam a progressão irregular e o desfecho pouco fluido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas apontam problemas de ritmo, com a trama dividida em seções e saltos temporais que tornam a progressão irregular e o desfecho pouco fluido."
+        },
+        {
+          "tema": "Comparação com Hamlet e originalidade",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "Este grupo de reviews medianas discute a adaptação da peça de Shakespeare, com opiniões divididas entre achar a transposição acessível e interessante ou considerá-la mal executada e inferior ao original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e suas motivações",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "As reviews medianas questionam a construção dos personagens, especialmente a falta de profundidade em suas funções narrativas e a rapidez com que certas mudanças de comportamento ocorrem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews medianas questionam a construção dos personagens, especialmente a falta de profundidade em suas funções narrativas e a rapidez com que algumas mudanças de comportamento ocorrem."
+        },
+        {
+          "tema": "Subtexto ideológico e visão de mundo",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 26,
+          "exemplo_parafraseado": "Reviews medianas identificam um subtexto conservador na valorização da monarquia hereditária e na forma como o filme retrata a autoridade e a responsabilidade de liderança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas identificam um subtexto conservador na valorização da monarquia hereditária e na forma como o filme retrata a autoridade e a responsabilidade de liderança."
+        }
+      ],
+      "observacao_geral": "As reviews medianas analisadas destacam a alta qualidade técnica da animação e a força das músicas, mas frequentemente apontam falta de conexão emocional com a história, ritmo irregular e questionamentos sobre originalidade e subtexto ideológico.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 11
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 14,
+        "4.5": 6,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 14,
+        "4.5": 6,
+        "5.0": 16
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 4,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2012-02-16",
+        "max": "2026-11-08",
+        "p5": "2026-10-02",
+        "p50": "2026-11-05",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 119,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 119,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 16,
+          "n_alvo": 16,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 64,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 64,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Trilha sonora e canções marcantes",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews elogiam a trilha sonora como um dos maiores trunfos do filme, com canções icônicas que permanecem na memória e emocionam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Animação e visual deslumbrantes",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A animação é descrita como bela, colorida e atemporal, com cenários grandiosos e expressividade que encantam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Emoção e nostalgia",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews destacam o forte apelo emocional e nostálgico, mencionando lágrimas e lembranças da infância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews destacam o forte apelo emocional e nostálgico, mencionando lágrimas e lembranças da infância."
+        },
+        {
+          "tema": "Vilão Scar",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Scar é citado como um vilão exemplar, carismático e assustador, que se destaca na história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Scar é frequentemente citado como um vilão exemplar, carismático e assustador, que se destaca na história."
+        },
+        {
+          "tema": "Personagens e desenvolvimento",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens, incluindo Simba e os alívios cômicos, são elogiados por seu carisma e arcos bem construídos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Classicismo e atemporalidade",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é visto como um clássico da Disney que permanece relevante e encantador através das gerações.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a animação deslumbrante, a trilha sonora inesquecível e o forte impacto emocional, frequentemente ligado à nostalgia. Este grupo também elogia a construção dos personagens e a atemporalidade do filme, consolidando-o como um clássico querido.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 87
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 26,
+      "limiar_pp": 28.32
+    },
+    "margem_lift_pp": 28.32,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -0.2,
+            "acima_da_margem": false,
+            "tema": "Ritmo e narrativa",
+            "exemplo_parafraseado": "A trama é descrita como apressada em certos momentos e arrastada em outros, com transições pouco convincentes e um clímax entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 26,
+            "freq_pct": 7.7,
+            "lift_pp": 0.2,
+            "acima_da_margem": false,
+            "tema": "Ritmo e estrutura narrativa",
+            "exemplo_parafraseado": "Reviews medianas apontam problemas de ritmo, com a trama dividida em seções e saltos temporais que tornam a progressão irregular e o desfecho pouco fluido.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 26,
+            "freq_pct": 3.8,
+            "lift_pp": -13.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Animação e aspectos técnicos",
+            "exemplo_parafraseado": "A animação, embora elogiada por espectadores, é criticada por envelhecida, com composição de planos e profundidade de campo insatisfatórias.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 26,
+            "freq_pct": 15.4,
+            "lift_pp": -14.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Animação e visual deslumbrantes",
+            "exemplo_parafraseado": "A animação é descrita como bela, colorida e atemporal, com cenários grandiosos e expressividade que encantam.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": -18.3,
+            "acima_da_margem": false,
+            "tema": "Personagens e desenvolvimento",
+            "exemplo_parafraseado": "O protagonista é visto como pouco carismático ou mal desenvolvido, e a evolução da história é apontada como corrida e rasa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 26,
+            "freq_pct": 80.8,
+            "lift_pp": 18.3,
+            "acima_da_margem": false,
+            "tema": "Desenvolvimento e conexão com a história",
+            "exemplo_parafraseado": "Reviews medianas comentam que, apesar de reconhecerem a qualidade técnica, nunca conseguiram se envolver emocionalmente com a jornada do protagonista ou com a narrativa como um todo.",
+            "temas_no_mesmo_eixo": [
+              "Personagens e suas motivações"
+            ]
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -28.3,
+            "acima_da_margem": false,
+            "tema": "Vilão Scar",
+            "exemplo_parafraseado": "Scar é citado como um vilão exemplar, carismático e assustador, que se destaca na história.",
+            "temas_no_mesmo_eixo": [
+              "Personagens e desenvolvimento"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -6.2,
+            "acima_da_margem": false,
+            "tema": "Músicas e número musical",
+            "exemplo_parafraseado": "As músicas são consideradas irritantes ou mal encaixadas na narrativa, quebrando o ritmo em vez de contribuir para ele.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 26,
+            "freq_pct": 46.2,
+            "lift_pp": 3.7,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e canções",
+            "exemplo_parafraseado": "As reviews medianas elogiam as músicas, chamando-as de marcantes e algumas das melhores da Disney, embora haja quem diga que certas canções soam irritantes ou não funcionam tão bem.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -3.7,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e canções marcantes",
+            "exemplo_parafraseado": "As reviews elogiam a trilha sonora como um dos maiores trunfos do filme, com canções icônicas que permanecem na memória e emocionam.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -0.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 26,
+            "freq_pct": 7.7,
+            "lift_pp": 0.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -0.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 26,
+            "freq_pct": 11.5,
+            "lift_pp": -33.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 30.0,
+            "acima_da_margem": true,
+            "tema": "Emoção e nostalgia",
+            "exemplo_parafraseado": "Reviews destacam o forte apelo emocional e nostálgico, mencionando lágrimas e lembranças da infância.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 26,
+            "freq_pct": 50.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com Hamlet e originalidade",
+            "exemplo_parafraseado": "Este grupo de reviews medianas discute a adaptação da peça de Shakespeare, com opiniões divididas entre achar a transposição acessível e interessante ou considerá-la mal executada e inferior ao original.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 1.5,
+            "acima_da_margem": false,
+            "tema": "Nostalgia e superestimação",
+            "exemplo_parafraseado": "O status de obra-prima é questionado, atribuindo a alta estima ao apego nostálgico da infância e não à qualidade intrínseca do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 26,
+            "freq_pct": 38.5,
+            "lift_pp": -1.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 25.8,
+            "acima_da_margem": false,
+            "tema": "Mensagem ideológica e crítica à monarquia",
+            "exemplo_parafraseado": "Reviews criticam a exaltação de uma hierarquia monárquica e um suposto viés ideológico conservador, vendo a história como propaganda de desigualdade e dominação.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 26,
+            "freq_pct": 19.2,
+            "lift_pp": -25.8,
+            "acima_da_margem": false,
+            "tema": "Subtexto ideológico e visão de mundo",
+            "exemplo_parafraseado": "Reviews medianas identificam um subtexto conservador na valorização da monarquia hereditária e na forma como o filme retrata a autoridade e a responsabilidade de liderança.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza uma trilha sonora marcante, com canções que ficam na memória",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora e canções marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia animação bela e colorida, com cenários grandiosos e expressivos",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Animação e visual deslumbrantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma experiência que emocione e reative lembranças da infância",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Emoção e nostalgia",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por um vilão carismático e assustador que se destaca",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Vilão Scar",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com histórias que exaltam hierarquia monárquica e desigualdade",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem ideológica e crítica à monarquia",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "prefere protagonistas carismáticos e uma evolução de história mais desenvolvida",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens e desenvolvimento",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "acha músicas irritantes e mal encaixadas, que quebram o ritmo da narrativa",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Músicas e número musical",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 87,
+        "peso_texto": "~87% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15961,
+      "completion_tokens": 1052,
+      "cache_hit_tokens": 14691,
+      "cache_miss_tokens": 1270
+    },
+    "latencia_s": 7.77,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

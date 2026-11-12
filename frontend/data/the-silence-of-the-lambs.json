@@ -1,0 +1,1590 @@
+{
+  "slug": "the-silence-of-the-lambs",
+  "data_coleta": "2026-11-08T05:30:36.211063+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 3530350,
+  "reviews_url": "https://letterboxd.com/film/the-silence-of-the-lambs/reviews/",
+  "ficha": {
+    "titulo": "O Silêncio dos Inocentes",
+    "sinopse_oficial": "Clarice Starling é uma das melhores estudantes da academia de treinamento do FBI. Jack Crawford quer que Clarice entreviste o Dr. Hannibal Lecter, um psiquiatra brilhante e também um psicopata violento, que cumpre prisão perpétua por vários atos de assassinato e canibalismo. Crawford acredita que Lecter pode ter uma visão em um caso e que Starling, como uma mulher jovem e atraente, pode ser a isca para atraí-lo.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Crime",
+      "Thriller",
+      "Drama"
+    ],
+    "duracao_min": 118,
+    "diretor": "Jonathan Demme",
+    "diretor_transliterado": false,
+    "ano": 1991,
+    "data_estreia": "1991-02-14",
+    "fonte": "tmdb",
+    "tmdb_id": 274,
+    "tmdb_fetched_at": "2026-11-08T05:21:34+00:00",
+    "poster_path": "/5fCrBDJLHxywiFr19o4aOWf92VN.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+      "/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
+      "/lDJx0ZKbfYbGoe8mwWmVKSQr0ub.jpg",
+      "/5EqT0WyG7yYs8v7GdoS4R9P75Gz.jpg",
+      "/pI9B4wppGflpsOD2T6rxgC5Clmz.jpg",
+      "/jouqsjgnYSP4GKbHfGlMck3H6hx.jpg",
+      "/dO3q2FUDSi5qwi9eKMF2FWm5lSQ.jpg",
+      "/mW2hISHs00yihyYQBqahGYoCcHy.jpg",
+      "/nvsseM5Ubp8383NtbfbLz0c18GS.jpg",
+      "/yVYsSh2U5E4EaYL4tI6w3C5469a.jpg"
+    ],
+    "backdrop_path": "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/k5cFI8YcUTZaP0hwcmvQI0rYZdT.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/mbOx1wxMLikzwWUO9TKAcFIy6op.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aYcnDyLMnpKce1FOYUpZrXtgUye.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/aBuaXxmyD92wXbHOF16IXTc4R0J.jpg",
+        "still_largura": 3072,
+        "still_altura": 1729
+      },
+      {
+        "still_path": "/mW2hISHs00yihyYQBqahGYoCcHy.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/lzx1ah4U8lEhKfpRK0Gs8XpuQTP.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/v78H7jXVKKOY5hcYeJ76LsieByT.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/88Vd2OEN31XsVFvsww0D4sH03Hn.jpg",
+        "still_largura": 2144,
+        "still_altura": 1206
+      },
+      {
+        "still_path": "/b2RTTpenlryC5z2h7oMmZ5X857x.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/ipOdHg4RpCbXLNo70zcR8SJlibg.jpg",
+        "still_largura": 2096,
+        "still_altura": 1179
+      },
+      {
+        "still_path": "/mBKCBVAfZc8GQsA430hL5NtaLEi.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/pUP6JKjmZthFPdAO1O6M5f5pp6G.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/sMRHLhyApmQCeppROUHfyEXrRLR.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-silence-of-the-lambs",
+      "titulo_letterboxd": "The Silence of the Lambs",
+      "ano_letterboxd": 1991,
+      "tmdb_id_letterboxd": 274,
+      "tmdb_id_escolhido": 274,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Silence of the Lambs",
+      "ano_tmdb": 1991,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 3530350,
+    "por_nivel": {
+      "0.5": 2382,
+      "1.0": 6154,
+      "1.5": 3894,
+      "2.0": 27092,
+      "2.5": 29885,
+      "3.0": 211273,
+      "3.5": 284073,
+      "4.0": 1043498,
+      "4.5": 670765,
+      "5.0": 1251334
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 7,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-silence-of-the-lambs",
+    "coletado_em": "2026-11-08T05:30:36.211063+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2382,
+      "1.0": 6154,
+      "1.5": 3894,
+      "2.0": 27092,
+      "2.5": 29885,
+      "3.0": 211273,
+      "3.5": 284073,
+      "4.0": 1043498,
+      "4.5": 670765,
+      "5.0": 1251334
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 14,
+      "2.5": 6,
+      "3.0": 13,
+      "3.5": 2,
+      "4.0": 8,
+      "4.5": 4,
+      "5.0": 8
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 168,
+      "2.5": 72,
+      "3.0": 156,
+      "3.5": 24,
+      "4.0": 96,
+      "4.5": 48,
+      "5.0": 91
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 5,
+      "1.0": 6,
+      "1.5": 5,
+      "2.0": 34,
+      "2.5": 14,
+      "3.0": 36,
+      "3.5": 2,
+      "4.0": 13,
+      "4.5": 10,
+      "5.0": 25
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 6,
+      "2.5": 0,
+      "3.0": 3,
+      "3.5": 0,
+      "4.0": 3,
+      "4.5": 1,
+      "5.0": 2
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "2.0": 6
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "3.0": 3
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 43,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 1,
+          "5.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 6,
+      "3.0": 43,
+      "3.5": 58,
+      "4.0": 213,
+      "4.5": 137,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 727,
+        "min": "2009-10-18",
+        "max": "2026-11-08",
+        "p5": "2026-10-19",
+        "p50": "2026-11-04",
+        "p95": "2026-11-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "2009-10-18",
+          "max": "2026-11-08",
+          "p5": "2026-10-18",
+          "p50": "2026-10-29",
+          "p95": "2026-11-07"
+        },
+        "medianas": {
+          "n": 228,
+          "min": "2020-11-07",
+          "max": "2026-11-08",
+          "p5": "2026-10-25",
+          "p50": "2026-11-04",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 259,
+          "min": "2020-04-09",
+          "max": "2026-11-08",
+          "p5": "2026-10-21",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 19,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 5,
+      "dias_por_100_paginas": 3.937007874015748,
+      "paginas_para_1_ano": 9271
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 10,
+        "dias_por_100_paginas": 1000.0,
+        "paginas_para_1_ano": 36
+      },
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 7,
+        "dias_por_100_paginas": 700.0,
+        "paginas_para_1_ano": 52
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 5,
+        "dias_por_100_paginas": 500.0,
+        "paginas_para_1_ano": 73
+      },
+      "2.0": {
+        "n_paginas": 14,
+        "pagina_min": 1,
+        "pagina_max": 14,
+        "dias": 20,
+        "dias_por_100_paginas": 153.84615384615384,
+        "paginas_para_1_ano": 237
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 6,
+        "dias_por_100_paginas": 120.0,
+        "paginas_para_1_ano": 304
+      },
+      "3.0": {
+        "n_paginas": 13,
+        "pagina_min": 1,
+        "pagina_max": 22,
+        "dias": 7,
+        "dias_por_100_paginas": 33.333333333333336,
+        "paginas_para_1_ano": 1095
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 0,
+        "dias_por_100_paginas": 0.0,
+        "paginas_para_1_ano": null
+      },
+      "4.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 53,
+        "dias": 4,
+        "dias_por_100_paginas": 7.6923076923076925,
+        "paginas_para_1_ano": 4745
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 34,
+        "dias": 3,
+        "dias_por_100_paginas": 9.090909090909092,
+        "paginas_para_1_ano": 4015
+      },
+      "5.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 5,
+        "dias_por_100_paginas": 3.937007874015748,
+        "paginas_para_1_ano": 9271
+      }
+    },
+    "ano_lancamento": 1991,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-silence-of-the-lambs",
+      "titulo": "The Silence of the Lambs",
+      "ano": 1991,
+      "tmdb_id_letterboxd": 274,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 4,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 13,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-20",
+        "max": "2026-11-08",
+        "p5": "2026-10-22",
+        "p50": "2026-10-30",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 18,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 18,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 28,
+          "n_brutas": 168,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 129,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 2,
+            "abaixo_min_chars": 129,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Transfobia e representação de gênero",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam a associação entre a identidade trans e o vilão, considerando a abordagem prejudicial e datada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews criticam a associação entre a identidade trans e o vilão, considerando a abordagem prejudicial e datada."
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como arrastado e entediante, com dificuldade em manter o interesse do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro previsível e inconsistente",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é visto como previsível e cheio de furos, com reviravoltas óbvias e falta de coesão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagem Hannibal desperdiçado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Hannibal Lecter é considerado subutilizado ou pouco ameaçador, apesar da atuação elogiada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas frustradas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores expressam decepção por não terem achado o filme tão impactante quanto o esperado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos expressam decepção por não terem achado o filme tão impactante quanto o esperado."
+        },
+        {
+          "tema": "Atuações elogiadas",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de Jodie Foster e Anthony Hopkins são destacadas como pontos positivos em meio às críticas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a transfobia percebida na representação do vilão, além de apontarem ritmo lento e roteiro previsível. As atuações são elogiadas, mas não compensam as falhas apontadas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 2,
+        "p50": 5,
+        "p95": 22,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-02-19",
+        "max": "2026-11-07",
+        "p5": "2026-10-25",
+        "p50": "2026-11-04",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 54,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 3,
+            "abaixo_min_chars": 54,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 35,
+          "n_alvo": 35,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 118,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 118,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação e presença de Anthony Hopkins",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas destacam a performance de Hopkins como o ponto alto, mas reviews acham que seu personagem é exagerado ou que sua presença reduzida ofusca o restante do elenco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas destacam a performance de Hopkins como o ponto alto, mas algumas acham que seu personagem é exagerado ou que sua presença reduzida ofusca o restante do elenco."
+        },
+        {
+          "tema": "Ritmo lento e comparação com o livro ou outros filmes",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona que a narrativa arrasta em certos momentos e que o livro é superior; espectadores também comparam desfavoravelmente com outros thrillers como Seven ou Primal Fear.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo menciona que a narrativa arrasta em certos momentos e que o livro é superior; alguns também comparam desfavoravelmente com outros thrillers como Seven ou Primal Fear."
+        },
+        {
+          "tema": "Transfobia e representação problemática",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas apontam que o filme reforça estereótipos transfóbicos ao associar a identidade trans à vilania e criticam a abordagem datada e ofensiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e atmosfera",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews elogiam a fotografia e a construção de atmosfera tensa, enquanto outras a consideram sem graça ou excessivamente próxima dos rostos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews elogiam a fotografia e a construção de atmosfera tensa, enquanto outras a consideram sem graça ou excessivamente próxima dos rostos."
+        },
+        {
+          "tema": "Roteiro previsível e resolução fraca",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o roteiro por ser previsível, com resolução decepcionante e desenvolvimento insuficiente de certas relações e subtramas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Decepção com o hype e expectativas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas expressam que o filme não correspondeu à fama, achando-o superestimado ou aquém das expectativas criadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas expressam que o filme não correspondeu à fama, achando-o superestimado ou aquém das expectativas criadas."
+        }
+      ],
+      "observacao_geral": "As reviews medianas revelam uma recepção morna: reconhecem a qualidade da atuação e da atmosfera, mas criticam o ritmo, a previsibilidade e, sobretudo, a representação transfóbica. Este grupo específico não endossa o entusiasmo geral e aponta falhas que o impedem de ser considerado uma obra-prima.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 7
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 2,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 17
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 53,
+        "p5": 1,
+        "p50": 4,
+        "p95": 34,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-11",
+        "max": "2026-11-08",
+        "p5": "2026-10-30",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 2,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 75,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 5,
+            "abaixo_min_chars": 75,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 17,
+          "n_alvo": 15,
+          "n_brutas": 91,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 64,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 64,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Atuação de Anthony Hopkins",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews elogiam a performance de Anthony Hopkins como Hannibal Lecter, descrevendo-a como hipnotizante, assustadora e digna de ser lembrada entre as maiores do cinema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews elogiam a performance de Anthony Hopkins como Hannibal Lecter, descrevendo-a como hipnotizante, assustadora e digna de ser lembrada entre as maiores do cinema."
+        },
+        {
+          "tema": "Direção e construção de suspense",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Jonathan Demme é elogiada pela forma precisa como constrói tensão, usando enquadramentos fechados e um ritmo que mantém o espectador em estado de alerta constante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Jodie Foster",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A atuação de Jodie Foster é destacada como o coração do filme, com sua habilidade de transmitir vulnerabilidade e determinação, sem precisar de diálogo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A atuação de Jodie Foster é destacada como o coração do filme, com sua habilidade de transmitir vulnerabilidade e determinação, muitas vezes sem precisar de diálogo."
+        },
+        {
+          "tema": "Roteiro e adaptação",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é apontado como inteligente e econômico, sem cenas desnecessárias, e a adaptação do livro é considerada competente, mesmo com cortes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética visual",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia é mencionada como marcante, com uso de close-ups e cores que reforçam a atmosfera opressiva e a beleza sombria do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Temas feministas e representação da mulher",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews destacam a forma como o filme retrata o machismo enfrentado pela protagonista em um ambiente profissional dominado por homens, considerado um ponto forte e atual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews destacam a forma como o filme retrata o machismo enfrentado pela protagonista em um ambiente profissional dominado por homens, considerado um ponto forte e atual."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam especially as atuações de Anthony Hopkins e Jodie Foster, a direção precisa de Jonathan Demme e a construção de suspense. Este grupo também valoriza os temas feministas e a fotografia, consolidando uma visão entusiasmada da obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 92
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "O filme é descrito como arrastado e entediante, com dificuldade em manter o interesse do espectador.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e comparação com o livro ou outros filmes",
+            "exemplo_parafraseado": "Este grupo menciona que a narrativa arrasta em certos momentos e que o livro é superior; espectadores também comparam desfavoravelmente com outros thrillers como Seven ou Primal Fear.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Atuações elogiadas",
+            "exemplo_parafraseado": "As atuações de Jodie Foster e Anthony Hopkins são destacadas como pontos positivos em meio às críticas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação e presença de Anthony Hopkins",
+            "exemplo_parafraseado": "Reviews medianas destacam a performance de Hopkins como o ponto alto, mas reviews acham que seu personagem é exagerado ou que sua presença reduzida ofusca o restante do elenco.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Atuação de Anthony Hopkins",
+            "exemplo_parafraseado": "Reviews elogiam a performance de Anthony Hopkins como Hannibal Lecter, descrevendo-a como hipnotizante, assustadora e digna de ser lembrada entre as maiores do cinema.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Jodie Foster"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e atmosfera",
+            "exemplo_parafraseado": "Reviews elogiam a fotografia e a construção de atmosfera tensa, enquanto outras a consideram sem graça ou excessivamente próxima dos rostos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética visual",
+            "exemplo_parafraseado": "A fotografia é mencionada como marcante, com uso de close-ups e cores que reforçam a atmosfera opressiva e a beleza sombria do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e inconsistente",
+            "exemplo_parafraseado": "O roteiro é visto como previsível e cheio de furos, com reviravoltas óbvias e falta de coesão.",
+            "temas_no_mesmo_eixo": [
+              "Personagem Hannibal desperdiçado"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e resolução fraca",
+            "exemplo_parafraseado": "Este grupo critica o roteiro por ser previsível, com resolução decepcionante e desenvolvimento insuficiente de certas relações e subtramas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro e adaptação",
+            "exemplo_parafraseado": "O roteiro é apontado como inteligente e econômico, sem cenas desnecessárias, e a adaptação do livro é considerada competente, mesmo com cortes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Direção e construção de suspense",
+            "exemplo_parafraseado": "A direção de Jonathan Demme é elogiada pela forma precisa como constrói tensão, usando enquadramentos fechados e um ritmo que mantém o espectador em estado de alerta constante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Expectativas frustradas",
+            "exemplo_parafraseado": "Espectadores expressam decepção por não terem achado o filme tão impactante quanto o esperado.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Decepção com o hype e expectativas",
+            "exemplo_parafraseado": "Reviews medianas expressam que o filme não correspondeu à fama, achando-o superestimado ou aquém das expectativas criadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": "Transfobia e representação de gênero",
+            "exemplo_parafraseado": "Reviews criticam a associação entre a identidade trans e o vilão, considerando a abordagem prejudicial e datada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "Transfobia e representação problemática",
+            "exemplo_parafraseado": "Reviews medianas apontam que o filme reforça estereótipos transfóbicos ao associar a identidade trans à vilania e criticam a abordagem datada e ofensiva.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Temas feministas e representação da mulher",
+            "exemplo_parafraseado": "Reviews destacam a forma como o filme retrata o machismo enfrentado pela protagonista em um ambiente profissional dominado por homens, considerado um ponto forte e atual.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "procura uma atuação hipnotizante e assustadora, digna de memória",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Anthony Hopkins",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "aprecia uma direção precisa que constrói tensão com enquadramentos fechados",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção e construção de suspense",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma atuação que transmite vulnerabilidade e determinação sem diálogo",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuação de Jodie Foster",
+        "rotulo_forca": "muitos",
+        "par_recusado": "NEG-F"
+      },
+      {
+        "texto": "se interessa por uma protagonista mulher enfrentando o machismo num meio profissional masculino",
+        "tema_origem": "POS-F",
+        "bucket_origem": "positivas",
+        "tema_texto": "Temas feministas e representação da mulher",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com a ligação entre identidade trans e o vilão, vista como prejudicial",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Transfobia e representação de gênero",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita filmes arrastados que têm dificuldade em manter o interesse",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com roteiro previsível, cheio de furos e falta de coesão",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro previsível e inconsistente",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera um Hannibal pouco ameaçador, embora a atuação seja elogiada",
+        "tema_origem": "NEG-D",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagem Hannibal desperdiçado",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-F"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "NEG-F",
+        "lado": "talvez_evite",
+        "regra": "R12",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 4,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim",
+          "recusa_regra_invalida"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "recusa_regra_invalida",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17450,
+      "completion_tokens": 1253,
+      "cache_hit_tokens": 14474,
+      "cache_miss_tokens": 2976
+    },
+    "latencia_s": 8.11,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

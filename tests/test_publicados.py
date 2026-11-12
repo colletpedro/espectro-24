@@ -39,7 +39,7 @@ def _data_js() -> dict:
 
 def test_lista_versionada_sem_repeticao(bd):
     slugs = bd.ler_publicados()
-    assert len(slugs) == len(set(slugs)) == 99
+    assert len(slugs) == len(set(slugs)) == 128
     assert slugs == sorted(slugs)
 
 

@@ -1,0 +1,1562 @@
+{
+  "slug": "the-departed",
+  "data_coleta": "2026-11-08T08:53:08.776337+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1810381,
+  "reviews_url": "https://letterboxd.com/film/the-departed/reviews/",
+  "ficha": {
+    "titulo": "Os Infiltrados",
+    "sinopse_oficial": "Billy Costigan, um jovem policial, recebe a missão de se infiltrar na máfia, mais especificamente no grupo comandado por Frank Costello. Billy conquista sua confiança ao mesmo tempo em que Colin Sullivan, um criminoso que atuou na polícia como informante de Costello, também ascende dentro da corporação. Tanto Billy quanto Colin se sentem aflitos devido à vida dupla que levam. Mas quando a máfia e a polícia descobrem que há um espião entre eles, a vida de ambos passa a correr perigo.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "duracao_min": 151,
+    "diretor": "Martin Scorsese",
+    "diretor_transliterado": false,
+    "ano": 2006,
+    "data_estreia": "2006-10-04",
+    "fonte": "tmdb",
+    "tmdb_id": 1422,
+    "tmdb_fetched_at": "2026-11-08T06:40:06+00:00",
+    "poster_path": "/qtnAwzDapzOML4Q9p7lv2bk5gvz.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+      "/cDFtxTxEtE3ljadfQ5SwtRTi8Iw.jpg",
+      "/9RuC3UD6mNZ0p1J6RbfJDUkQ03i.jpg",
+      "/slQO3vwrtHtT9YJYrHJXOEW66T0.jpg",
+      "/iNtiuXiPsnqrugmKTblDGRfJ2oN.jpg",
+      "/kEOphuj2uWuYvObtsZGxuDo96NG.jpg",
+      "/jpId5NEg6bDazNgEkGX0ZYy6ab7.jpg",
+      "/j0stmN6ktCpqoWE5nT6xHCyDpwP.jpg",
+      "/tQSoGeA53RsRvqtjOH7RjkjaHwI.jpg",
+      "/pC6oJsuQsSbuQtUJOyTgk90eIw2.jpg"
+    ],
+    "backdrop_path": "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/blYwTSK03UCj0TY1i7zC0CtqRAw.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/6WRrGYalXXveItfpnipYdayFkQB.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/cDFtxTxEtE3ljadfQ5SwtRTi8Iw.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fwLJUUD02isNUbrINYw0Z7lKN94.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/tyW7pzPAuaKopZKZTeOosqrDg5f.jpg",
+        "still_largura": 1408,
+        "still_altura": 792
+      },
+      {
+        "still_path": "/28KajEw1aSkuP9N1s8Y4bk8wAk4.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/5SVVLT7r1iSXSqpitf6DFXchFFU.jpg",
+        "still_largura": 1800,
+        "still_altura": 1012
+      },
+      {
+        "still_path": "/7DaYojLzvc2ZlgiJecP7vnHybYl.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/foyAsrRVGLfJ6C0GnEqTuPDYiGM.jpg",
+        "still_largura": 3200,
+        "still_altura": 1800
+      },
+      {
+        "still_path": "/ikAh9xQKizR05wSZoqaJwiY3bk2.jpg",
+        "still_largura": 2158,
+        "still_altura": 1214
+      },
+      {
+        "still_path": "/oDuQR8MH9fgrenBPdPIzqjA6l8j.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/susnVH5PQoZSkMFLO9rFctHn9Eg.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/xCYUcZJhMYyhJRR9DPCiXBs2fcJ.jpg",
+        "still_largura": 1408,
+        "still_altura": 792
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-departed",
+      "titulo_letterboxd": "The Departed",
+      "ano_letterboxd": 2006,
+      "tmdb_id_letterboxd": 1422,
+      "tmdb_id_escolhido": 1422,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Departed",
+      "ano_tmdb": 2006,
+      "ano_divergente": false
+    },
+    "paises": [
+      "HK",
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1810381,
+    "por_nivel": {
+      "0.5": 1672,
+      "1.0": 3311,
+      "1.5": 2594,
+      "2.0": 13778,
+      "2.5": 17479,
+      "3.0": 96515,
+      "3.5": 168049,
+      "4.0": 555888,
+      "4.5": 439807,
+      "5.0": 511288
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 6,
+      "positivas": 93
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-departed",
+    "coletado_em": "2026-11-08T08:53:08.776337+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 1672,
+      "1.0": 3311,
+      "1.5": 2594,
+      "2.0": 13778,
+      "2.5": 17479,
+      "3.0": 96515,
+      "3.5": 168049,
+      "4.0": 555888,
+      "4.5": 439807,
+      "5.0": 511288
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 13,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 3,
+      "4.0": 7,
+      "4.5": 8,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 156,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 36,
+      "4.0": 80,
+      "4.5": 96,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 8,
+      "1.5": 7,
+      "2.0": 36,
+      "2.5": 19,
+      "3.0": 33,
+      "3.5": 8,
+      "4.0": 16,
+      "4.5": 14,
+      "5.0": 15
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 2,
+      "1.5": 0,
+      "2.0": 5,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 1,
+      "4.0": 2,
+      "4.5": 4,
+      "5.0": 1
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 7,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "2.0": 5
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 28,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.5": 1,
+          "4.0": 2,
+          "4.5": 4,
+          "5.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 53,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 8,
+      "3.0": 44,
+      "3.5": 77,
+      "4.0": 256,
+      "4.5": 203,
+      "5.0": 235
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 716,
+        "min": "2011-09-01",
+        "max": "2026-11-08",
+        "p5": "2026-08-31",
+        "p50": "2026-10-31",
+        "p95": "2026-11-08"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "2020-05-06",
+          "max": "2026-11-08",
+          "p5": "2026-08-29",
+          "p50": "2026-10-07",
+          "p95": "2026-11-03"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2011-09-01",
+          "max": "2026-11-08",
+          "p5": "2026-10-14",
+          "p50": "2026-10-31",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 284,
+          "min": "2022-07-15",
+          "max": "2026-11-08",
+          "p5": "2026-10-26",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 12,
+      "dias_por_100_paginas": 19.047619047619047,
+      "paginas_para_1_ano": 1916
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 62,
+        "dias_por_100_paginas": 2066.6666666666665,
+        "paginas_para_1_ano": 18
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 16,
+        "dias_por_100_paginas": 1600.0,
+        "paginas_para_1_ano": 23
+      },
+      "2.0": {
+        "n_paginas": 13,
+        "pagina_min": 1,
+        "pagina_max": 13,
+        "dias": 64,
+        "dias_por_100_paginas": 533.3333333333334,
+        "paginas_para_1_ano": 68
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 19,
+        "dias_por_100_paginas": 380.0,
+        "paginas_para_1_ano": 96
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 22,
+        "dias": 21,
+        "dias_por_100_paginas": 100.0,
+        "paginas_para_1_ano": 365
+      },
+      "3.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 2,
+        "dias_por_100_paginas": 100.0,
+        "paginas_para_1_ano": 365
+      },
+      "4.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 64,
+        "dias": 12,
+        "dias_por_100_paginas": 19.047619047619047,
+        "paginas_para_1_ano": 1916
+      },
+      "4.5": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 51,
+        "dias": 9,
+        "dias_por_100_paginas": 18.0,
+        "paginas_para_1_ano": 2028
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 59,
+        "dias": 8,
+        "dias_por_100_paginas": 13.793103448275861,
+        "paginas_para_1_ano": 2646
+      }
+    },
+    "ano_lancamento": 2006,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-departed",
+      "titulo": "The Departed",
+      "ano": 2006,
+      "tmdb_id_letterboxd": 1422,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 1,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 28
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-16",
+        "max": "2026-11-07",
+        "p5": "2026-09-07",
+        "p50": "2026-10-12",
+        "p95": "2026-11-03"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 1,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 10,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 10,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 28,
+          "n_alvo": 26,
+          "n_brutas": 156,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 111,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 7,
+            "abaixo_min_chars": 111,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Final decepcionante e insatisfatório",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam o desfecho, considerado anticlimático, sem sentido ou que estraga tudo o que foi construído antes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews criticam o desfecho, considerado anticlimático, sem sentido ou que estraga tudo o que foi construído antes."
+        },
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é descrito como longo demais, arrastado e entediante, com pessoas relatando dificuldade em terminá-lo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O filme é frequentemente descrito como longo demais, arrastado e entediante, com algumas pessoas relatando dificuldade em terminá-lo."
+        },
+        {
+          "tema": "Linguagem ofensiva e tom agressivo",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo critica o uso excessivo de palavrões, insultos raciais e homofóbicos, além do clima de masculinidade tóxica e violência gratuita.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e roteiro fracos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam falta de profundidade nos personagens, decisões incoerentes e uma trama que não prende, com furos no roteiro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elenco bom, mas desperdiçado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reconhecem que as atuações são competentes, porém consideram que isso não salva o filme de seus problemas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa versus realidade",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores expressam surpresa negativa, já que esperavam mais devido à aclamação e à reputação do diretor, mas não se conectaram com a obra.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos expressam surpresa negativa, já que esperavam mais devido à aclamação e à reputação do diretor, mas não se conectaram com a obra."
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o final decepcionante, a duração excessiva e o tom agressivo, além de problemas de roteiro e personagens. Apesar de elogiarem o elenco, este grupo considera que o filme não atende às expectativas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2011-09-01",
+        "max": "2026-11-08",
+        "p5": "2026-10-11",
+        "p50": "2026-11-01",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 50,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 50,
+            "excedente_cota": 12,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 34,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 6,
+          "n_descartadas_curtas": 80,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 6,
+            "abaixo_min_chars": 80,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Roteiro e desenvolvimento narrativo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O roteiro é apontado como confuso, com desenvolvimento irregular e que não sustenta a história, especialmente na segunda metade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Final e reviravoltas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é criticado por ser anticlimático, forçado e repleto de reviravoltas excessivas que soam implausíveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações e elenco",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações dividem opiniões: espectadores elogiam o elenco, enquanto outros consideram certas performances exageradas ou inadequadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As atuações dividem opiniões: alguns elogiam o elenco, enquanto outros consideram certas performances exageradas ou inadequadas."
+        },
+        {
+          "tema": "Edição e ritmo",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A montagem é vista como irregular, com cortes abruptos e um ritmo que ora acelera demais, ora não prende a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é criticada por ser desconexa e mal inserida, com cortes que não combinam com as cenas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Comparação com o original e remake",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o filme é um remake inferior ao original, sem trazer novidades significativas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam que o filme é um remake inferior ao original, sem trazer novidades significativas."
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam para uma experiência morna: reconhecem qualidades no elenco e em momentos isolados, mas criticam o roteiro, o final e a edição como os principais pontos negativos. Este grupo destaca a sensação de que o filme não atinge todo o seu potencial.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 6
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 11,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 11,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 59,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2022-07-15",
+        "max": "2026-11-08",
+        "p5": "2026-10-26",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 80,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 61,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 61,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 74,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 3,
+            "abaixo_min_chars": 74,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo elogia repetidamente as atuações de DiCaprio, Damon, Nicholson e Wahlberg, destacando a química entre eles e a força do elenco coadjuvante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tensão e jogo de gato e rato",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas enfatizam a atmosfera de suspense constante, com o embate entre policiais e criminosos criando um clima de constante apreensão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Direção de Martin Scorsese",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews exaltam o trabalho de Scorsese na direção, considerando-o um mestre em construir tensão e conduzir a narrativa com maestria.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews exaltam o trabalho de Scorsese na direção, considerando-o um mestre em construir tensão e conduzir a narrativa com maestria."
+        },
+        {
+          "tema": "Reviravoltas e clímax final",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O desfecho é citado como impactante e satisfatório, com reviravoltas que elevam a experiência, embora pessoas achem que ele poderia ser mais bem desenvolvido.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O desfecho é frequentemente citado como impactante e satisfatório, com reviravoltas que elevam a experiência, embora algumas pessoas achem que ele poderia ser mais bem desenvolvido."
+        },
+        {
+          "tema": "Roteiro e trama de infiltração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O conceito de agentes infiltrados em lados opostos é visto como fascinante, com o roteiro explorando espelhos e identidades duplas de forma inteligente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora e fotografia",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera envolvente do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera envolvente do filme."
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam principalmente o elenco estelar, a tensão constante e a direção segura de Scorsese, com o desfecho dividindo opiniões, mas sendo amplamente considerado marcante. Este grupo também valoriza a trama de infiltração e os elementos técnicos como trilha sonora e fotografia.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 93
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "O filme é descrito como longo demais, arrastado e entediante, com pessoas relatando dificuldade em terminá-lo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Edição e ritmo",
+            "exemplo_parafraseado": "A montagem é vista como irregular, com cortes abruptos e um ritmo que ora acelera demais, ora não prende a atenção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Elenco bom, mas desperdiçado",
+            "exemplo_parafraseado": "Reconhecem que as atuações são competentes, porém consideram que isso não salva o filme de seus problemas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e elenco",
+            "exemplo_parafraseado": "As atuações dividem opiniões: espectadores elogiam o elenco, enquanto outros consideram certas performances exageradas ou inadequadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações",
+            "exemplo_parafraseado": "O grupo elogia repetidamente as atuações de DiCaprio, Damon, Nicholson e Wahlberg, destacando a química entre eles e a força do elenco coadjuvante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Direção de Martin Scorsese",
+            "exemplo_parafraseado": "Reviews exaltam o trabalho de Scorsese na direção, considerando-o um mestre em construir tensão e conduzir a narrativa com maestria.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Final decepcionante e insatisfatório",
+            "exemplo_parafraseado": "Reviews criticam o desfecho, considerado anticlimático, sem sentido ou que estraga tudo o que foi construído antes.",
+            "temas_no_mesmo_eixo": [
+              "Personagens e roteiro fracos"
+            ]
+          },
+          "medianas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e desenvolvimento narrativo",
+            "exemplo_parafraseado": "O roteiro é apontado como confuso, com desenvolvimento irregular e que não sustenta a história, especialmente na segunda metade.",
+            "temas_no_mesmo_eixo": [
+              "Final e reviravoltas"
+            ]
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Reviravoltas e clímax final",
+            "exemplo_parafraseado": "O desfecho é citado como impactante e satisfatório, com reviravoltas que elevam a experiência, embora pessoas achem que ele poderia ser mais bem desenvolvido.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro e trama de infiltração"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A música é criticada por ser desconexa e mal inserida, com cortes que não combinam com as cenas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e fotografia",
+            "exemplo_parafraseado": "Reviews mencionam a trilha sonora marcante e a fotografia eficiente, que contribuem para a atmosfera envolvente do filme.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Linguagem ofensiva e tom agressivo",
+            "exemplo_parafraseado": "Este grupo critica o uso excessivo de palavrões, insultos raciais e homofóbicos, além do clima de masculinidade tóxica e violência gratuita.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Tensão e jogo de gato e rato",
+            "exemplo_parafraseado": "As reviews positivas enfatizam a atmosfera de suspense constante, com o embate entre policiais e criminosos criando um clima de constante apreensão.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com o original e remake",
+            "exemplo_parafraseado": "Reviews mencionam que o filme é um remake inferior ao original, sem trazer novidades significativas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa versus realidade",
+            "exemplo_parafraseado": "Espectadores expressam surpresa negativa, já que esperavam mais devido à aclamação e à reputação do diretor, mas não se conectaram com a obra.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um elenco forte, com química entre os protagonistas e coadjuvantes marcantes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elenco e atuações",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia um suspense constante, de embate tenso entre policiais e criminosos",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Tensão e jogo de gato e rato",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza uma direção que constrói tensão e conduz a narrativa com maestria",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Martin Scorsese",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com desfechos anticlimáticos que parecem desfazer o que veio antes",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Final decepcionante e insatisfatório",
+        "rotulo_forca": "muitos",
+        "par_recusado": "POS-D"
+      },
+      {
+        "texto": "evita filmes longos e arrastados, com dificuldade de chegar ao fim",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com palavrões constantes, insultos raciais e homofóbicos e violência gratuita",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Linguagem ofensiva e tom agressivo",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera atuações competentes, embora elas não salvem o filme de seus problemas",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Elenco bom, mas desperdiçado",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 93,
+        "peso_texto": "~93% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [
+      {
+        "tema_origem": "POS-D",
+        "lado": "vale_a_pena",
+        "regra": "R6/R12",
+        "origem": "modelo"
+      }
+    ],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 1,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 13683,
+      "completion_tokens": 1039,
+      "cache_hit_tokens": 9122,
+      "cache_miss_tokens": 4561
+    },
+    "latencia_s": 5.32,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

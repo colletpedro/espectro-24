@@ -1,0 +1,1591 @@
+{
+  "slug": "wall-e",
+  "data_coleta": "2026-11-08T09:55:59.027951+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 3020022,
+  "reviews_url": "https://letterboxd.com/film/wall-e/reviews/",
+  "ficha": {
+    "titulo": "WALL-E",
+    "sinopse_oficial": "No ano 2800, num planeta Terra devastado e sem vida, depois de centenas de anos solitários a fazer aquilo para que foi construído - limpar o planeta de lixo - o pequeno robô WALL-E descobre uma nova missão na sua vida quando conhece uma moderna e brilhante robô exploradora chamada EVE. Os dois vão viajar pela galáxia e viver uma aventura emocionante e inesquecível.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Animação",
+      "Família",
+      "Ficção científica"
+    ],
+    "duracao_min": 97,
+    "diretor": "Andrew Stanton",
+    "diretor_transliterado": false,
+    "ano": 2008,
+    "data_estreia": "2008-06-26",
+    "fonte": "tmdb",
+    "tmdb_id": 10681,
+    "tmdb_fetched_at": "2026-11-08T09:49:14+00:00",
+    "poster_path": "/qNiwJPVCO4cgiM8LVtxwPV2HxHS.jpg",
+    "poster_largura": 1400,
+    "poster_altura": 2100,
+    "backdrop_paths": [
+      "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+      "/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg",
+      "/fK5ssgvtI43z19FoWigdlqgpLRE.jpg",
+      "/3CvNc04vTwTir5q3LBDuvUb8Ng6.jpg",
+      "/qxSArjpoHUOIzP5ha3EHvWbPCdY.jpg",
+      "/eete5ZAaagldSXxDetN62V3WXcg.jpg",
+      "/yDg88BMu8DKqasUwCB6vUJDjsRq.jpg",
+      "/7Q3sZgkSgpBDMJvevQNnMar83Af.jpg",
+      "/paO3UfhgoNe2qblfKGanfon6ve7.jpg",
+      "/iuvEc3wazRxdkrK0MJJAUchrYJx.jpg"
+    ],
+    "backdrop_path": "/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+    "backdrop_largura": 1920,
+    "backdrop_altura": 1080,
+    "poster_sem_texto_path": "/vxs3bVG1xTLN7FVMm8e6SjZfewe.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/t0ezrlozGCE16CX4wTaoG0MHa7G.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/eete5ZAaagldSXxDetN62V3WXcg.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/s0WDKWiHDcRaLd8NLtt0m8nvwZB.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/mzwP8hkj5NBrqwBdjc76DZT36Rx.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/1WBxHNtRCk3J4QYgjcxd1mgPWNq.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/6KNe4jNOMP7xqR8G3sPMyRaEnsB.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cvgPMkQMksEuQrCik97QD2FjXLp.jpg",
+        "still_largura": 2048,
+        "still_altura": 1153
+      },
+      {
+        "still_path": "/g590P141KyOyMpz7Hv21D7FNVCL.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/sH4fNyKKyGXB1CCQNiVAL8YHXrZ.jpg",
+        "still_largura": 3660,
+        "still_altura": 2059
+      },
+      {
+        "still_path": "/oIHOqa1fagsUlSorPNfeAtTJEXm.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vgz2wKrMMvetW35zoKTCeR74dsI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "wall-e",
+      "titulo_letterboxd": "WALL·E",
+      "ano_letterboxd": 2008,
+      "tmdb_id_letterboxd": 10681,
+      "tmdb_id_escolhido": 10681,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "WALL·E",
+      "ano_tmdb": 2008,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 3020022,
+    "por_nivel": {
+      "0.5": 4539,
+      "1.0": 14040,
+      "1.5": 6592,
+      "2.0": 47288,
+      "2.5": 39278,
+      "3.0": 256837,
+      "3.5": 276494,
+      "4.0": 878322,
+      "4.5": 444301,
+      "5.0": 1052331
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 10,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "wall-e",
+    "coletado_em": "2026-11-08T09:55:59.027951+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4539,
+      "1.0": 14040,
+      "1.5": 6592,
+      "2.0": 47288,
+      "2.5": 39278,
+      "3.0": 256837,
+      "3.5": 276494,
+      "4.0": 878322,
+      "4.5": 444301,
+      "5.0": 1052331
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 18,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 2,
+      "4.0": 8,
+      "4.5": 4,
+      "5.0": 10
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 216,
+      "2.5": 72,
+      "3.0": 216,
+      "3.5": 24,
+      "4.0": 96,
+      "4.5": 48,
+      "5.0": 120
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 4,
+      "2.0": 23,
+      "2.5": 17,
+      "3.0": 24,
+      "3.5": 7,
+      "4.0": 12,
+      "4.5": 5,
+      "5.0": 17
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 8,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 3,
+      "4.5": 1,
+      "5.0": 4
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "2.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 20,
+        "n_validas_pos_extensao": 30,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 30,
+        "n_validas_pos_extensao": 41,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "4.0": 3,
+          "4.5": 1,
+          "5.0": 4
+        },
+        "motivo_parada": "teto_extensao",
+        "n_validas_pos_base": 31,
+        "n_validas_pos_extensao": 41,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 12,
+      "2.5": 10,
+      "3.0": 62,
+      "3.5": 67,
+      "4.0": 214,
+      "4.5": 108,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 864,
+        "min": "2008-07-06",
+        "max": "2026-11-08",
+        "p5": "2026-06-17",
+        "p50": "2026-10-19",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 288,
+          "min": "2008-07-16",
+          "max": "2026-11-07",
+          "p5": "2024-11-17",
+          "p50": "2026-08-31",
+          "p95": "2026-11-02"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2008-09-29",
+          "max": "2026-11-08",
+          "p5": "2026-05-03",
+          "p50": "2026-10-16",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 288,
+          "min": "2008-07-06",
+          "max": "2026-11-08",
+          "p5": "2026-10-18",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 23,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 13,
+      "dias_por_100_paginas": 10.236220472440944,
+      "paginas_para_1_ano": 3566
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 29,
+        "dias_por_100_paginas": 1450.0,
+        "paginas_para_1_ano": 25
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 25,
+        "dias_por_100_paginas": 2500.0,
+        "paginas_para_1_ano": 15
+      },
+      "2.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 18,
+        "dias": 138,
+        "dias_por_100_paginas": 811.7647058823529,
+        "paginas_para_1_ano": 45
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 8,
+        "dias": 57,
+        "dias_por_100_paginas": 814.2857142857143,
+        "paginas_para_1_ano": 45
+      },
+      "3.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 31,
+        "dias": 61,
+        "dias_por_100_paginas": 203.33333333333334,
+        "paginas_para_1_ano": 180
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 0,
+        "dias_por_100_paginas": 0.0,
+        "paginas_para_1_ano": null
+      },
+      "4.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 54,
+        "dias": 20,
+        "dias_por_100_paginas": 37.735849056603776,
+        "paginas_para_1_ano": 967
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 27,
+        "dias": 10,
+        "dias_por_100_paginas": 38.46153846153846,
+        "paginas_para_1_ano": 949
+      },
+      "5.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 15,
+        "dias_por_100_paginas": 11.811023622047244,
+        "paginas_para_1_ano": 3090
+      }
+    },
+    "ano_lancamento": 2008,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "wall-e",
+      "titulo": "WALL·E",
+      "ano": 2008,
+      "tmdb_id_letterboxd": 10681,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 30,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 8,
+        "1.5": 4,
+        "2.0": 26
+      },
+      "composicao_atingida": {
+        "0.5": 1,
+        "1.0": 2,
+        "1.5": 4,
+        "2.0": 23
+      },
+      "cascata_por_degrau": {
+        "150": 30
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 30,
+        "min": 1,
+        "max": 18,
+        "p5": 1,
+        "p50": 5,
+        "p95": 18,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 30,
+        "min": "2008-07-30",
+        "max": "2026-11-07",
+        "p5": "2011-01-10",
+        "p50": "2026-08-31",
+        "p95": "2026-10-28"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 1,
+          "n_alvo": 2,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 11,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 11,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 2,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 23,
+          "n_alvo": 26,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 187,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 187,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica à representação dos humanos (gordofobia e cinismo)",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Reviews negativas consideram a retratação dos humanos como obesos e dependentes de tecnologia problemática, vista como gordofóbica e cínica, e que prejudica a mensagem esperançosa do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews negativas consideram a retratação dos humanos como obesos e dependentes de tecnologia problemática, vista como gordofóbica e cínica, e que prejudica a mensagem esperançosa do filme."
+        },
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Este grupo de reviews destaca que o filme é arrastado e entediante, especialmente após a primeira parte, com espectadores relatando dificuldade em terminar a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo de reviews destaca que o filme é arrastado e entediante, especialmente após a primeira parte, com alguns relatando dificuldade em terminar a exibição."
+        },
+        {
+          "tema": "Romance entre robôs pouco convincente",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Reviews negativas apontam que a história de amor entre os robôs soa forçada e sem química, com o protagonista por vezes descrito como um apaixonado excessivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews negativas apontam que a história de amor entre os robôs soa forçada e sem química, com o protagonista por vezes descrito como um apaixonado excessivo."
+        },
+        {
+          "tema": "Falta de diálogos e desconexão",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Reviews mencionam que a ausência quase total de diálogos e a dependência de animação e som para contar a história não funcionaram para elas, gerando desinteresse.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews mencionam que a ausência quase total de diálogos e a dependência de animação e som para contar a história não funcionaram para elas, gerando desinteresse."
+        },
+        {
+          "tema": "Roteiro inconsistente e furos de lógica",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Críticas negativas apontam incoerências na trama, como soluções simplistas e situações que não se sustentam, além de um roteiro considerado fraco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas negativas apontam incoerências na trama, como soluções simplistas e situações que não se sustentam, além de um roteiro considerado fraco."
+        },
+        {
+          "tema": "Mensagem ambiental panfletária e simplista",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 30,
+          "exemplo_parafraseado": "Reviews negativas afirmam que a crítica ao consumismo e ao meio ambiente é panfletária e não aborda causas sistêmicas, soando simplista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews negativas afirmam que a crítica ao consumismo e ao meio ambiente é panfletária e não aborda causas sistêmicas, soando simplista."
+        }
+      ],
+      "observacao_geral": "As reviews negativas apontam para uma insatisfação com a representação dos humanos, o ritmo lento, o romance pouco envolvente e inconsistências no roteiro. Este grupo destaca que, apesar de momentos visualmente belos, o filme não conseguiu conectar-se emocionalmente com essas pessoas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 5,
+        "3.0": 35
+      },
+      "composicao_atingida": {
+        "2.5": 16,
+        "3.0": 24
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 11,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 31,
+        "p5": 1,
+        "p50": 7,
+        "p95": 17,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2008-12-31",
+        "max": "2026-11-06",
+        "p5": "2024-08-24",
+        "p50": "2026-10-11",
+        "p95": "2026-11-04"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 16,
+          "n_alvo": 5,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 24,
+          "n_alvo": 35,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 186,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 4,
+            "abaixo_min_chars": 186,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas relatam que o filme arrasta, especialmente no segundo ato, e que chegaram a cochilar ou rewinder cenas por tédio.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas relatam que o filme arrasta, especialmente no segundo ato, e que chegaram a cochilar ou rewinder cenas por tédio."
+        },
+        {
+          "tema": "Expectativa frustrada pela fama",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca que o filme não corresponde ao hype exagerado, soando superestimado para quem o assistiu sem nostalgia de infância.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Robôs fofos, mas romance forçado",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram o casal de robôs adorável, porém o romance central soa exageradamente heterossexual ou obsessivo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas consideram o casal de robôs adorável, porém o romance central soa exageradamente heterossexual ou obsessivo."
+        },
+        {
+          "tema": "Crítica social simplista",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Há menções de que a sátira sobre consumismo e tecnologia é óbvia e mal desenvolvida, beirando propaganda otimista sobre o capitalismo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem ambiental relevante",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores do grupo reconhecem o valor da mensagem ecológica e a atualidade do tema, mesmo quando o conjunto não agrada plenamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Parte do grupo reconhece o valor da mensagem ecológica e a atualidade do tema, mesmo quando o conjunto não agrada plenamente."
+        },
+        {
+          "tema": "Visual e animação bem feitos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas elogiam a beleza da animação, a fotografia e a trilha, mas sentem que isso não sustenta o interesse do começo ao fim.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas elogiam a beleza da animação, a fotografia e a trilha, mas sentem que isso não sustenta o interesse do começo ao fim."
+        }
+      ],
+      "observacao_geral": "As reviews medianas descrevem uma experiência morna: reconhecem qualidades visuais e a mensagem ambiental, mas apontam ritmo arrastado, romance pouco envolvente e uma sátira que soa simplista. Este grupo específico destaca que o filme não atende às altas expectativas criadas em torno dele.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 10
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 7,
+        "5.0": 16
+      },
+      "composicao_atingida": {
+        "3.5": 6,
+        "4.0": 12,
+        "4.5": 5,
+        "5.0": 17
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 3,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 128,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-18",
+        "max": "2026-11-08",
+        "p5": "2026-10-18",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 6,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 12,
+          "n_alvo": 13,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 5,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 43,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 43,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 17,
+          "n_alvo": 16,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 103,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 103,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Mensagem ambiental e crítica ao consumismo",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a crítica contundente à degradação ambiental e ao consumismo desenfreado, vendo o filme como um alerta sobre o futuro do planeta e a necessidade de preservação.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "História de amor entre Wall-E e Eve",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a relação afetuosa e cativante entre os dois robôs, considerando-a um dos pontos altos do filme, com momentos ternos e bem construídos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Uso mínimo de diálogo e excelência em narrativa visual",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas enaltecem a capacidade do filme de contar uma história envolvente com quase nenhum diálogo, apostando na animação e nos sons para transmitir emoções.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens cativantes e expressivos",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo destaca o carisma de Wall-E e Eve, que mesmo sendo robôs conseguem transmitir grande humanidade e despertar empatia, tornando-se memoráveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à dependência tecnológica e à passividade humana",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas apontam a forma como o filme retrata uma humanidade alienada e dependente da tecnologia, perdendo autonomia e contato com o mundo real, o que gera reflexão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Qualidade da animação e beleza visual",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a animação impressionante e o design visual do filme, com cenas espaciais belíssimas e um cuidado estético que encanta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a força da mensagem ambiental e social, a sensibilidade da história de amor entre os robôs e a ousadia narrativa com pouco diálogo, sendo esses os aspectos mais celebrados por este grupo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 88
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 30,
+      "limiar_pp": 26.36
+    },
+    "margem_lift_pp": 26.36,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 30,
+            "freq_pct": 26.7,
+            "lift_pp": 1.7,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Este grupo de reviews destaca que o filme é arrastado e entediante, especialmente após a primeira parte, com espectadores relatando dificuldade em terminar a exibição.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -1.7,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "Reviews medianas relatam que o filme arrasta, especialmente no segundo ato, e que chegaram a cochilar ou rewinder cenas por tédio.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -19.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 30,
+            "freq_pct": 13.3,
+            "lift_pp": 8.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -8.3,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -10.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 30,
+            "freq_pct": 26.7,
+            "lift_pp": 1.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -9.2,
+            "acima_da_margem": false,
+            "tema": "Visual e animação bem feitos",
+            "exemplo_parafraseado": "Reviews medianas elogiam a beleza da animação, a fotografia e a trilha, mas sentem que isso não sustenta o interesse do começo ao fim.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -1.7,
+            "acima_da_margem": false,
+            "tema": "Qualidade da animação e beleza visual",
+            "exemplo_parafraseado": "Este grupo elogia a animação impressionante e o design visual do filme, com cenas espaciais belíssimas e um cuidado estético que encanta.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 23,
+            "de_n": 30,
+            "freq_pct": 76.7,
+            "lift_pp": 4.2,
+            "acima_da_margem": false,
+            "tema": "Romance entre robôs pouco convincente",
+            "exemplo_parafraseado": "Reviews negativas apontam que a história de amor entre os robôs soa forçada e sem química, com o protagonista por vezes descrito como um apaixonado excessivo.",
+            "temas_no_mesmo_eixo": [
+              "Falta de diálogos e desconexão",
+              "Roteiro inconsistente e furos de lógica"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -4.2,
+            "acima_da_margem": false,
+            "tema": "Robôs fofos, mas romance forçado",
+            "exemplo_parafraseado": "Reviews medianas consideram o casal de robôs adorável, porém o romance central soa exageradamente heterossexual ou obsessivo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 28,
+            "de_n": 40,
+            "freq_pct": 70.0,
+            "lift_pp": -6.7,
+            "acima_da_margem": false,
+            "tema": "História de amor entre Wall-E e Eve",
+            "exemplo_parafraseado": "Este grupo elogia a relação afetuosa e cativante entre os dois robôs, considerando-a um dos pontos altos do filme, com momentos ternos e bem construídos.",
+            "temas_no_mesmo_eixo": [
+              "Uso mínimo de diálogo e excelência em narrativa visual",
+              "Personagens cativantes e expressivos"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 30,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 30,
+            "freq_pct": 20.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 30,
+            "freq_pct": 30.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 30,
+            "freq_pct": 43.3,
+            "lift_pp": -9.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 9.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 30,
+            "freq_pct": 40.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada pela fama",
+            "exemplo_parafraseado": "Este grupo destaca que o filme não corresponde ao hype exagerado, soando superestimado para quem o assistiu sem nostalgia de infância.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 30,
+            "freq_pct": 50.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica à representação dos humanos (gordofobia e cinismo)",
+            "exemplo_parafraseado": "Reviews negativas consideram a retratação dos humanos como obesos e dependentes de tecnologia problemática, vista como gordofóbica e cínica, e que prejudica a mensagem esperançosa do filme.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem ambiental panfletária e simplista"
+            ]
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Crítica social simplista",
+            "exemplo_parafraseado": "Há menções de que a sátira sobre consumismo e tecnologia é óbvia e mal desenvolvida, beirando propaganda otimista sobre o capitalismo.",
+            "temas_no_mesmo_eixo": [
+              "Mensagem ambiental relevante"
+            ]
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Mensagem ambiental e crítica ao consumismo",
+            "exemplo_parafraseado": "As reviews positivas destacam a crítica contundente à degradação ambiental e ao consumismo desenfreado, vendo o filme como um alerta sobre o futuro do planeta e a necessidade de preservação.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à dependência tecnológica e à passividade humana"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "procura um alerta sobre degradação do meio ambiente e excesso de consumo",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Mensagem ambiental e crítica ao consumismo",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se encanta com uma relação afetuosa e cativante entre robôs",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "História de amor entre Wall-E e Eve",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia uma história envolvente contada quase sem diálogos, pela animação e pelo som",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Uso mínimo de diálogo e excelência em narrativa visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "procura uma reflexão sobre pessoas alienadas e dependentes da tecnologia",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica à dependência tecnológica e à passividade humana",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com humanos retratados como obesos e dependentes, leitura tida como gordofóbica",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica à representação dos humanos (gordofobia e cinismo)",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "perde o interesse diante de um ritmo arrastado e entediante após a primeira parte",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "considera forçada e sem química a história de amor entre os robôs",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Romance entre robôs pouco convincente",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "rejeita crítica ambiental e ao consumismo vista como panfletária e simplista",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Mensagem ambiental panfletária e simplista",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-D",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": [
+        "NEG-D"
+      ]
+    },
+    "descartadas": [
+      {
+        "texto": "não se envolve quando a história depende só de animação e som, sem diálogos",
+        "tema_origem": "NEG-D",
+        "lado": "talvez_evite",
+        "flags": [
+          "sem_discriminacao"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 3,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 17095,
+      "completion_tokens": 1194,
+      "cache_hit_tokens": 15054,
+      "cache_miss_tokens": 2041
+    },
+    "latencia_s": 7.03,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

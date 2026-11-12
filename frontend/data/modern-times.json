@@ -1,0 +1,1560 @@
+{
+  "slug": "modern-times",
+  "data_coleta": "2026-11-08T09:43:03.539065+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 301441,
+  "reviews_url": "https://letterboxd.com/film/modern-times/reviews/",
+  "ficha": {
+    "titulo": "Tempos Modernos",
+    "sinopse_oficial": "Sujeito ao ritmo de produção infernal da fábrica, o Vagabundo tem um súbito colapso nervoso. Do hospital, ele vai para a prisão e fica desempregado, sempre cercado pela industrialização moderna. Certo dia, ele se depara com uma menina órfã.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Comédia",
+      "Drama",
+      "Romance"
+    ],
+    "duracao_min": 87,
+    "diretor": "Charlie Chaplin",
+    "diretor_transliterado": false,
+    "ano": 1936,
+    "data_estreia": "1936-02-05",
+    "fonte": "tmdb",
+    "tmdb_id": 3082,
+    "tmdb_fetched_at": "2026-11-08T09:39:11+00:00",
+    "poster_path": "/zQJto2v1hYzm54lHlTZp8d7vRwS.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+      "/83cMbOs2Ng7kfL3U8hpcXEQDXCw.jpg",
+      "/uZs6esC62RsjVDgckSbKrgaRwIQ.jpg",
+      "/zvo2YtKRtkSOJDg1rnfh5TIcEeN.jpg",
+      "/vzKzz7ObY3zNIV4ZYFY6Ib3X6ig.jpg",
+      "/qFWnaG1fVIloWZho6I0td43MpRD.jpg",
+      "/wYfgf0cUgrXCkPiDd5dkC5090DG.jpg",
+      "/x0KeMvw5K1ZNaiNB7btN0ICcWrN.jpg",
+      "/yyi6rpwvH5INxUKmgcfttbxnQv3.jpg",
+      "/oXSWyA4ylTZJw0uoYT1zPqOzabS.jpg"
+    ],
+    "backdrop_path": "/kSlO1pHpwQfPQdgVPr7dJiJNtJ8.jpg",
+    "backdrop_largura": 1376,
+    "backdrop_altura": 774,
+    "poster_sem_texto_path": "/koweDQVbHgdNb21qsMuvCqrFwG8.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1500,
+    "galeria_stills": [
+      {
+        "still_path": "/uZs6esC62RsjVDgckSbKrgaRwIQ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/vc5I9fcKmAuqv9mKyGR3NmJybaR.jpg",
+        "still_largura": 2527,
+        "still_altura": 1421
+      },
+      {
+        "still_path": "/vzKzz7ObY3zNIV4ZYFY6Ib3X6ig.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/wYfgf0cUgrXCkPiDd5dkC5090DG.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/x0KeMvw5K1ZNaiNB7btN0ICcWrN.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/yyi6rpwvH5INxUKmgcfttbxnQv3.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/8DbTNSEOYJuuSaX1527RgSaGK7f.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/bNvGJOwZrLu3U8R5yFL3RWFPixJ.jpg",
+        "still_largura": 1672,
+        "still_altura": 940
+      },
+      {
+        "still_path": "/nY6V09SZUPZoJqtqBvsGbZgJSI3.jpg",
+        "still_largura": 1440,
+        "still_altura": 810
+      },
+      {
+        "still_path": "/o9HdlZGDupvJVyHYpfkBLAniBAa.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/t3vImPBh5aV9rU94hw4oT7m4nvk.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uetsZ3vj9bK0pHr84jyQT1jdupt.jpg",
+        "still_largura": 1440,
+        "still_altura": 810
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "modern-times",
+      "titulo_letterboxd": "Modern Times",
+      "ano_letterboxd": 1936,
+      "tmdb_id_letterboxd": 3082,
+      "tmdb_id_escolhido": 3082,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Modern Times",
+      "ano_tmdb": 1936,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 301441,
+    "por_nivel": {
+      "0.5": 545,
+      "1.0": 1100,
+      "1.5": 821,
+      "2.0": 3930,
+      "2.5": 5011,
+      "3.0": 25382,
+      "3.5": 34749,
+      "4.0": 99406,
+      "4.5": 51008,
+      "5.0": 79489
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 10,
+      "positivas": 88
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "modern-times",
+    "coletado_em": "2026-11-08T09:43:03.539065+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 545,
+      "1.0": 1100,
+      "1.5": 821,
+      "2.0": 3930,
+      "2.5": 5011,
+      "3.0": 25382,
+      "3.5": 34749,
+      "4.0": 99406,
+      "4.5": 51008,
+      "5.0": 79489
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 3,
+      "2.0": 11,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 36,
+      "2.0": 132,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 36,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 10,
+      "1.5": 8,
+      "2.0": 31,
+      "2.5": 18,
+      "3.0": 34,
+      "3.5": 5,
+      "4.0": 17,
+      "4.5": 13,
+      "5.0": 20
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 3,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 1,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "0.5": 1,
+          "1.0": 1,
+          "1.5": 1,
+          "2.0": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 42,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 52,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 13,
+      "3.0": 65,
+      "3.5": 89,
+      "4.0": 256,
+      "4.5": 131,
+      "5.0": 205
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 624,
+        "min": "1972-01-25",
+        "max": "2026-11-08",
+        "p5": "2026-03-19",
+        "p50": "2026-09-30",
+        "p95": "2026-11-06"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 240,
+          "min": "1972-01-25",
+          "max": "2026-11-04",
+          "p5": "2026-03-11",
+          "p50": "2026-08-15",
+          "p95": "2026-10-25"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2023-06-14",
+          "max": "2026-11-07",
+          "p5": "2026-07-13",
+          "p50": "2026-10-08",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2018-02-11",
+          "max": "2026-11-08",
+          "p5": "2026-05-18",
+          "p50": "2026-11-03",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 17,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 166,
+      "dias_por_100_paginas": 130.70866141732284,
+      "paginas_para_1_ano": 279
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 24,
+        "dias_por_100_paginas": 2400.0,
+        "paginas_para_1_ano": 15
+      },
+      "1.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 170,
+        "dias_por_100_paginas": 5666.666666666667,
+        "paginas_para_1_ano": 6
+      },
+      "1.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 133,
+        "dias_por_100_paginas": 6650.0,
+        "paginas_para_1_ano": 5
+      },
+      "2.0": {
+        "n_paginas": 11,
+        "pagina_min": 1,
+        "pagina_max": 11,
+        "dias": 223,
+        "dias_por_100_paginas": 2230.0,
+        "paginas_para_1_ano": 16
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 50,
+        "dias_por_100_paginas": 1000.0,
+        "paginas_para_1_ano": 36
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 32,
+        "dias": 115,
+        "dias_por_100_paginas": 370.96774193548384,
+        "paginas_para_1_ano": 98
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 2,
+        "dias_por_100_paginas": 200.0,
+        "paginas_para_1_ano": 182
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 171,
+        "dias_por_100_paginas": 134.64566929133858,
+        "paginas_para_1_ano": 271
+      },
+      "4.5": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 33,
+        "dias": 73,
+        "dias_por_100_paginas": 228.125,
+        "paginas_para_1_ano": 160
+      },
+      "5.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 51,
+        "dias": 74,
+        "dias_por_100_paginas": 148.0,
+        "paginas_para_1_ano": 247
+      }
+    },
+    "ano_lancamento": 1936,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "modern-times",
+      "titulo": "Modern Times",
+      "ano": 1936,
+      "tmdb_id_letterboxd": 3082,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 3,
+        "p95": 10,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "1972-01-25",
+        "max": "2026-10-26",
+        "p5": "2026-03-31",
+        "p50": "2026-07-29",
+        "p95": "2026-10-24"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 25,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 25,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 132,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 99,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 99,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Humor datado e sem graça",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual."
+        },
+        {
+          "tema": "Ritmo lento e cansativo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Repetição excessiva de piadas",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de conexão com o espectador",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Crítica social simplista",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para alguns."
+        },
+        {
+          "tema": "Dificuldade com o formato silencioso",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o humor datado e sem graça, o ritmo lento e a repetição excessiva das piadas, além de uma desconexão com o público atual. Mesmo reconhecendo a importância histórica e a crítica social, este grupo não se envolveu com a obra.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 32,
+        "p5": 2,
+        "p50": 6,
+        "p95": 32,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2025-07-24",
+        "max": "2026-11-04",
+        "p5": "2026-07-13",
+        "p50": "2026-10-08",
+        "p95": "2026-10-29"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 83,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 83,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "crítica social e capitalismo",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "comédia e pastelão",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora alguns achem as piadas repetitivas ou datadas."
+        },
+        {
+          "tema": "ritmo e duração",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "atuação e carisma de Chaplin",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo reconhece o talento físico e a energia de Chaplin, mas alguns o consideram repetitivo ou pouco envolvente."
+        },
+        {
+          "tema": "preferência por cinema falado",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante."
+        },
+        {
+          "tema": "relevância histórica",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas reconhecem a importância do filme como marco cinematográfico, mas isso não se traduz necessariamente em uma nota mais alta.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas equilibram o reconhecimento da importância histórica e da crítica social com ressalvas sobre o ritmo, o estilo silencioso e o humor datado. Este grupo tende a valorizar o filme mais pelo que representa do que pela experiência de assisti-lo.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 10
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 8,
+        "5.0": 12
+      },
+      "composicao_atingida": {
+        "3.5": 5,
+        "4.0": 15,
+        "4.5": 8,
+        "5.0": 12
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-02-11",
+        "max": "2026-11-08",
+        "p5": "2026-08-20",
+        "p50": "2026-11-03",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 23,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 23,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 12,
+          "n_alvo": 12,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Humor físico e atuação de Chaplin",
+          "mencoes_aproximadas": 25,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atualidade e relevância da obra",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas enfatizam como o filme continua relevante, com suas críticas à industrialização e à desigualdade ecoando problemas contemporâneos como automação e precarização do trabalho.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Transição para o cinema sonoro e trilha musical",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical."
+        },
+        {
+          "tema": "Personagem Vagabundo e despedida",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuação de Paulette Goddard e química com Chaplin",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas elogiam a atuação de Paulette Goddard, sua química com Chaplin e a força de sua personagem, que traz esperança e dinamismo à narrativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas apontam para uma forte admiração pela crítica social de Chaplin, pelo humor físico atemporal e pela forma como o filme equilibra comicidade e melancolia. Este grupo destaca a atuação do diretor e a relevância contínua da obra, frequentemente ressaltando sua atualidade.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 88
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e cansativo",
+            "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "ritmo e duração",
+            "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "atuação e carisma de Chaplin",
+            "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Humor físico e atuação de Chaplin",
+            "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
+            "temas_no_mesmo_eixo": [
+              "Atuação de Paulette Goddard e química com Chaplin"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Repetição excessiva de piadas",
+            "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Personagem Vagabundo e despedida",
+            "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Dificuldade com o formato silencioso",
+            "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Transição para o cinema sonoro e trilha musical",
+            "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": "Humor datado e sem graça",
+            "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "comédia e pastelão",
+            "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Falta de conexão com o espectador",
+            "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "preferência por cinema falado",
+            "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social simplista",
+            "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "crítica social e capitalismo",
+            "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
+            "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+            "temas_no_mesmo_eixo": [
+              "Atualidade e relevância da obra"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma crítica ao capitalismo e à transformação de pessoas em peças da produção",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza uma performance física cômica que arranca risadas em situações simples",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Humor físico e atuação de Chaplin",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca uma obra cujas críticas à industrialização ecoam problemas contemporâneos",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atualidade e relevância da obra",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "não se diverte com comédia pastelão que soa ultrapassada",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Humor datado e sem graça",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se entedia com ritmo arrastado e longa duração",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e cansativo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com situações cômicas repetidas à exaustão",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Repetição excessiva de piadas",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "espera uma sátira à industrialização com mais nuances",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Crítica social simplista",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 88,
+        "peso_texto": "~88% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 4,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 15907,
+      "completion_tokens": 909,
+      "cache_hit_tokens": 14625,
+      "cache_miss_tokens": 1282
+    },
+    "latencia_s": 6.0,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

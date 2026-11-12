@@ -1,0 +1,1562 @@
+{
+  "slug": "once-upon-a-time-in-the-west",
+  "data_coleta": "2026-11-08T09:48:39.398708+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 315963,
+  "reviews_url": "https://letterboxd.com/film/once-upon-a-time-in-the-west/reviews/",
+  "ficha": {
+    "titulo": "Era uma Vez no Oeste",
+    "sinopse_oficial": "Enquanto os construtores ferroviários marcham imparavelmente através do deserto de Arizona a caminho do mar, Jill chega à pequena cidade de Flagstone com a intenção de começar uma nova vida.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Faroeste"
+    ],
+    "duracao_min": 166,
+    "diretor": "Sergio Leone",
+    "diretor_transliterado": false,
+    "ano": 1968,
+    "data_estreia": "1968-12-21",
+    "fonte": "tmdb",
+    "tmdb_id": 335,
+    "tmdb_fetched_at": "2026-11-08T09:43:56+00:00",
+    "poster_path": "/sBcaRQEZInpiQNSKKW5wjcEtXUS.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/u5IhDThM1SClL4pkCUp8hOmsDQJ.jpg",
+      "/26SUDI2iKhZTIKcU4ZzezTH1G15.jpg",
+      "/h31SOVlekuHXsMWVGxI8nPPfY82.jpg",
+      "/vmryZ1Bkko8P2utNaJeO2Yo2Bx4.jpg",
+      "/fccEQecqrOxrczFnq35OxGQfCXi.jpg",
+      "/p1OFxsff2t8bxQC45TPfyo0ZBfU.jpg",
+      "/aKZ9hDmLJTaGSxWdhxqMTcvXmk4.jpg",
+      "/1B44i8YVIEJWiWvOyCTqcE30iyJ.jpg",
+      "/lrhtzg07YH3fZDK2XDPsCQ1E5lN.jpg",
+      "/16j1Wqg3OXI50rzXUfarOLKxGEy.jpg"
+    ],
+    "backdrop_path": "/26SUDI2iKhZTIKcU4ZzezTH1G15.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/cIydBGNpmxMmJrJN7CXfTsgPmZ9.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 2999,
+    "galeria_stills": [
+      {
+        "still_path": "/26SUDI2iKhZTIKcU4ZzezTH1G15.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/u5IhDThM1SClL4pkCUp8hOmsDQJ.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/aKZ9hDmLJTaGSxWdhxqMTcvXmk4.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/qPOQtAIjCbMbktccBfStLIbJzi2.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/wOqFe9hkLi5CXh28sNy6NKbrxA2.jpg",
+        "still_largura": 1454,
+        "still_altura": 816
+      },
+      {
+        "still_path": "/3ZHwrueqi0F6VE3P2whG4Rt8JaW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/8lgdw0n53G3Y3y2cG2SNWKRL8H9.jpg",
+        "still_largura": 2285,
+        "still_altura": 1287
+      },
+      {
+        "still_path": "/aEIogtM9YUqmzHW7fNj8kfJifW7.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hbKUL1tLzFmuVuSGk0h7Sg0Kpu6.jpg",
+        "still_largura": 2277,
+        "still_altura": 1280
+      },
+      {
+        "still_path": "/mndfm0rxGvmRBHKep3SPoVg4Dm0.jpg",
+        "still_largura": 2270,
+        "still_altura": 1277
+      },
+      {
+        "still_path": "/qzvyxN1XIN7ZDuq4JIZERNoXecb.jpg",
+        "still_largura": 1449,
+        "still_altura": 815
+      },
+      {
+        "still_path": "/v3gkRwTZqudt5HpZt3Nl8lQQzfE.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "once-upon-a-time-in-the-west",
+      "titulo_letterboxd": "Once Upon a Time in the West",
+      "ano_letterboxd": 1968,
+      "tmdb_id_letterboxd": 335,
+      "tmdb_id_escolhido": 335,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "alternative_title",
+      "titulo_tmdb_correspondente": "Once Upon A Time In The West",
+      "ano_tmdb": 1968,
+      "ano_divergente": false
+    },
+    "paises": [
+      "IT",
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 315963,
+    "por_nivel": {
+      "0.5": 390,
+      "1.0": 813,
+      "1.5": 793,
+      "2.0": 3406,
+      "2.5": 4494,
+      "3.0": 19532,
+      "3.5": 28777,
+      "4.0": 82446,
+      "4.5": 68628,
+      "5.0": 106684
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 91
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "once-upon-a-time-in-the-west",
+    "coletado_em": "2026-11-08T09:48:39.398708+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 390,
+      "1.0": 813,
+      "1.5": 793,
+      "2.0": 3406,
+      "2.5": 4494,
+      "3.0": 19532,
+      "3.5": 28777,
+      "4.0": 82446,
+      "4.5": 68628,
+      "5.0": 106684
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 24,
+      "1.5": 24,
+      "2.0": 96,
+      "2.5": 72,
+      "3.0": 120,
+      "3.5": 24,
+      "4.0": 48,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 10,
+      "2.0": 35,
+      "2.5": 34,
+      "3.0": 49,
+      "3.5": 6,
+      "4.0": 17,
+      "4.5": 21,
+      "5.0": 32
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 4,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 0,
+      "1.5": 0,
+      "2.0": 0,
+      "2.5": 0,
+      "3.0": 0,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 55,
+        "n_validas_pos_extensao": 55,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 83,
+        "n_validas_pos_extensao": 83,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 76,
+        "n_validas_pos_extensao": 76,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 11,
+      "3.0": 47,
+      "3.5": 69,
+      "4.0": 198,
+      "4.5": 165,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 540,
+        "min": "2008-02-01",
+        "max": "2026-11-08",
+        "p5": "2026-05-23",
+        "p50": "2026-09-27",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 156,
+          "min": "2008-02-01",
+          "max": "2026-11-06",
+          "p5": "2026-05-04",
+          "p50": "2026-08-13",
+          "p95": "2026-11-02"
+        },
+        "medianas": {
+          "n": 192,
+          "min": "2018-05-13",
+          "max": "2026-11-08",
+          "p5": "2026-06-24",
+          "p50": "2026-09-23",
+          "p95": "2026-11-03"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2021-06-02",
+          "max": "2026-11-08",
+          "p5": "2026-07-18",
+          "p50": "2026-11-04",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 14,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 109,
+      "dias_por_100_paginas": 85.8267716535433,
+      "paginas_para_1_ano": 425
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 86,
+        "dias_por_100_paginas": 8600.0,
+        "paginas_para_1_ano": 4
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 81,
+        "dias_por_100_paginas": 8100.0,
+        "paginas_para_1_ano": 5
+      },
+      "2.0": {
+        "n_paginas": 8,
+        "pagina_min": 1,
+        "pagina_max": 8,
+        "dias": 182,
+        "dias_por_100_paginas": 2600.0,
+        "paginas_para_1_ano": 14
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 92,
+        "dias_por_100_paginas": 1840.0,
+        "paginas_para_1_ano": 20
+      },
+      "3.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 24,
+        "dias": 130,
+        "dias_por_100_paginas": 565.2173913043479,
+        "paginas_para_1_ano": 65
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 6,
+        "dias_por_100_paginas": 600.0,
+        "paginas_para_1_ano": 61
+      },
+      "4.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 50,
+        "dias": 86,
+        "dias_por_100_paginas": 175.51020408163265,
+        "paginas_para_1_ano": 208
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 41,
+        "dias": 69,
+        "dias_por_100_paginas": 172.5,
+        "paginas_para_1_ano": 212
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 112,
+        "dias_por_100_paginas": 88.18897637795276,
+        "paginas_para_1_ano": 414
+      }
+    },
+    "ano_lancamento": 1968,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "once-upon-a-time-in-the-west",
+      "titulo": "Once Upon a Time in the West",
+      "ano": 1968,
+      "tmdb_id_letterboxd": 335,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 3,
+        "1.0": 6,
+        "1.5": 6,
+        "2.0": 25
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 7,
+        "p5": 1,
+        "p50": 2,
+        "p95": 6,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-07-23",
+        "max": "2026-11-06",
+        "p5": "2026-05-26",
+        "p50": "2026-09-06",
+        "p95": "2026-11-04"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 3,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 8,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 8,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 25,
+          "n_alvo": 25,
+          "n_brutas": 96,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 4,
+          "motivos_descarte": {
+            "truncada_sem_texto": 4,
+            "spoiler": 2,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews reclamam que o filme se arrasta por quase três horas, com cenas excessivamente prolongadas e diálogos vagarosos, tornando a experiência entediante e cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme se arrasta por quase três horas, com cenas excessivamente prolongadas e diálogos vagarosos, tornando a experiência entediante e cansativa."
+        },
+        {
+          "tema": "Tédio e sonolência",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas relatam que dormiram ou quase dormiram durante a exibição, descrevendo o filme como sonífero e comparando-o a assistir tinta secar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias pessoas relatam que dormiram ou quase dormiram durante a exibição, descrevendo o filme como sonífero e comparando-o a assistir tinta secar."
+        },
+        {
+          "tema": "Personagens rasos e sem carisma",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo critica a falta de profundidade dos personagens, considerando-os unidimensionais, pouco carismáticos e com motivações mal desenvolvidas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Roteiro fraco e confuso",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews apontam que a história é simples demais, mal amarrada e cheia de lacunas, com cenas que parecem não levar a lugar algum.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Tratamento misógino das mulheres",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas destacam o modo problemático como as personagens femininas são retratadas, com situações de assédio e falta de agência.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas destacam o modo problemático como as personagens femininas são retratadas, com situações de assédio e falta de agência."
+        },
+        {
+          "tema": "Fotografia e trilha sonora elogiadas, mas insuficientes",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo reconhecendo a beleza da fotografia e a qualidade da música, essas pessoas sentem que os aspectos técnicos não compensam a lentidão e o vazio narrativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente o ritmo excessivamente lento e a longa duração como os maiores problemas, levando ao tédio e à sonolência. Este grupo também critica personagens rasos, roteiro fraco e tratamento misógino, embora alguns reconheçam qualidades técnicas como fotografia e trilha sonora.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 24,
+        "p5": 1,
+        "p50": 5,
+        "p95": 24,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-09-25",
+        "max": "2026-11-05",
+        "p5": "2026-06-24",
+        "p50": "2026-10-03",
+        "p95": "2026-11-03"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 37,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 37,
+            "excedente_cota": 27,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 64,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 64,
+            "excedente_cota": 16,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme se arrasta por quase três horas, com longos trechos sem ação e um ritmo excessivamente vagaroso que prejudica o envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme se arrasta por quase três horas, com longos trechos sem ação e um ritmo excessivamente vagaroso que prejudica o envolvimento."
+        },
+        {
+          "tema": "Trilha sonora de Ennio Morricone",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia a música marcante e os temas icônicos, embora alguns ponderem que a trilha é melhor aproveitada em outras obras do diretor.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Fotografia e composição visual",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas destacam os enquadramentos, os grandes planos e a beleza visual, considerando a fotografia um dos pontos mais fortes do filme.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens pouco cativantes e motivações confusas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que os personagens carecem de profundidade e carisma, com motivações pouco claras ou arcos incompletos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews apontam que os personagens carecem de profundidade e carisma, com motivações pouco claras ou arcos incompletos."
+        },
+        {
+          "tema": "Roteiro simples e falta de envolvimento",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo considera a história arrastada e pouco envolvente, com uma trama previsível que não justifica a duração.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativa frustrada em relação a outras obras de Leone",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas expressam decepção por comparar o filme desfavoravelmente com a Trilogia dos Dólares, sentindo falta de humor e carisma.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas expressam decepção por comparar o filme desfavoravelmente com a Trilogia dos Dólares, sentindo falta de humor e carisma."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam a trilha sonora e a fotografia como pontos fortes, mas criticam o ritmo lento, a longa duração e a falta de envolvimento com os personagens e a trama. Este grupo específico demonstra expectativas frustradas em relação a outras obras do diretor.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 8
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 11,
+        "4.5": 10,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-08-07",
+        "max": "2026-11-07",
+        "p5": "2026-08-12",
+        "p50": "2026-11-04",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 30,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 30,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 27,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 27,
+            "excedente_cota": 11,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 17,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "trilha sonora de Ennio Morricone",
+          "mencoes_aproximadas": 28,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A música é descrita como um personagem à parte, essencial para a atmosfera e para tornar as cenas memoráveis.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A música é frequentemente descrita como um personagem à parte, essencial para a atmosfera e para tornar as cenas memoráveis."
+        },
+        {
+          "tema": "fotografia e composição visual",
+          "mencoes_aproximadas": 26,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As imagens são elogiadas como verdadeiras pinturas, com enquadramentos meticulosos e planos que deixam uma impressão duradoura.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "direção de Sergio Leone",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção é considerada magistral, com controle absoluto da tensão, do ritmo e da narrativa visual.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "ritmo lento e longa duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo pausado e a extensão do filme dividem opiniões: espectadores consideram que a lentidão contribui para a atmosfera, enquanto outros acham que poderia ser mais enxuto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O ritmo pausado e a extensão do filme dividem opiniões: alguns consideram que a lentidão contribui para a atmosfera, enquanto outros acham que poderia ser mais enxuto."
+        },
+        {
+          "tema": "atuação de Henry Fonda como vilão",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Henry Fonda é destacado por compor um vilão carismático e aterrorizante, com uma crueldade contida que marca presença.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "personagem Cheyenne (Jason Robards)",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Cheyenne é apontado como um dos personagens mais queridos, pela humanidade e humor que traz à história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas exaltam a trilha sonora de Morricone, a fotografia deslumbrante e a direção de Leone, além de elogiarem atuações como a de Henry Fonda. Este grupo também menciona o ritmo lento e a longa duração, vistos por alguns como um defeito e por outros como parte do charme épico.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 91
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": 25.0,
+            "acima_da_margem": true,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews reclamam que o filme se arrasta por quase três horas, com cenas excessivamente prolongadas e diálogos vagarosos, tornando a experiência entediante e cansativa.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews medianas reclamam que o filme se arrasta por quase três horas, com longos trechos sem ação e um ritmo excessivamente vagaroso que prejudica o envolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -25.0,
+            "acima_da_margem": false,
+            "tema": "ritmo lento e longa duração",
+            "exemplo_parafraseado": "O ritmo pausado e a extensão do filme dividem opiniões: espectadores consideram que a lentidão contribui para a atmosfera, enquanto outros acham que poderia ser mais enxuto.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "atuação de Henry Fonda como vilão",
+            "exemplo_parafraseado": "Henry Fonda é destacado por compor um vilão carismático e aterrorizante, com uma crueldade contida que marca presença.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e trilha sonora elogiadas, mas insuficientes",
+            "exemplo_parafraseado": "Mesmo reconhecendo a beleza da fotografia e a qualidade da música, essas pessoas sentem que os aspectos técnicos não compensam a lentidão e o vazio narrativo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e composição visual",
+            "exemplo_parafraseado": "As reviews medianas destacam os enquadramentos, os grandes planos e a beleza visual, considerando a fotografia um dos pontos mais fortes do filme.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 25,
+            "de_n": 40,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "fotografia e composição visual",
+            "exemplo_parafraseado": "As imagens são elogiadas como verdadeiras pinturas, com enquadramentos meticulosos e planos que deixam uma impressão duradoura.",
+            "temas_no_mesmo_eixo": [
+              "direção de Sergio Leone"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens rasos e sem carisma",
+            "exemplo_parafraseado": "O grupo critica a falta de profundidade dos personagens, considerando-os unidimensionais, pouco carismáticos e com motivações mal desenvolvidas.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro fraco e confuso"
+            ]
+          },
+          "medianas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Personagens pouco cativantes e motivações confusas",
+            "exemplo_parafraseado": "Reviews apontam que os personagens carecem de profundidade e carisma, com motivações pouco claras ou arcos incompletos.",
+            "temas_no_mesmo_eixo": [
+              "Roteiro simples e falta de envolvimento"
+            ]
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "personagem Cheyenne (Jason Robards)",
+            "exemplo_parafraseado": "Cheyenne é apontado como um dos personagens mais queridos, pela humanidade e humor que traz à história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 20,
+            "de_n": 40,
+            "freq_pct": 50.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora de Ennio Morricone",
+            "exemplo_parafraseado": "Este grupo elogia a música marcante e os temas icônicos, embora alguns ponderem que a trilha é melhor aproveitada em outras obras do diretor.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "trilha sonora de Ennio Morricone",
+            "exemplo_parafraseado": "A música é descrita como um personagem à parte, essencial para a atmosfera e para tornar as cenas memoráveis.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 15.0,
+            "acima_da_margem": false,
+            "tema": "Tédio e sonolência",
+            "exemplo_parafraseado": "Pessoas relatam que dormiram ou quase dormiram durante a exibição, descrevendo o filme como sonífero e comparando-o a assistir tinta secar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada em relação a outras obras de Leone",
+            "exemplo_parafraseado": "Reviews medianas expressam decepção por comparar o filme desfavoravelmente com a Trilogia dos Dólares, sentindo falta de humor e carisma.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -22.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Tratamento misógino das mulheres",
+            "exemplo_parafraseado": "Críticas destacam o modo problemático como as personagens femininas são retratadas, com situações de assédio e falta de agência.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "aprecia uma trilha que funciona como personagem e sustenta a atmosfera",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "trilha sonora de Ennio Morricone",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "valoriza uma fotografia de composições meticulosas e imagens marcantes",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "fotografia e composição visual",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "busca uma direção com controle absoluto da tensão e da narrativa visual",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "direção de Sergio Leone",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "tolera a longa duração em nome de um ritmo pausado que constrói atmosfera",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "ritmo lento e longa duração",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com cenas prolongadas e diálogos vagarosos que tornam a experiência arrastada",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e longa duração",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "costuma cochilar ou sentir sonolência com filmes comparados a assistir tinta secar",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tédio e sonolência",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "prefere personagens com profundidade, carisma e motivações bem desenvolvidas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens rasos e sem carisma",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "vê beleza na imagem e boa música, mas isso não compensa a lentidão",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia e trilha sonora elogiadas, mas insuficientes",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 91,
+        "peso_texto": "~91% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-F"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 1,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 8,
+        "n_flags": 6,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 8,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 8,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 8
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16122,
+      "completion_tokens": 1046,
+      "cache_hit_tokens": 14748,
+      "cache_miss_tokens": 1374
+    },
+    "latencia_s": 6.93,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

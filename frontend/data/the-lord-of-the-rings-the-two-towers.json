@@ -1,0 +1,1581 @@
+{
+  "slug": "the-lord-of-the-rings-the-two-towers",
+  "data_coleta": "2026-11-08T04:34:10.029821+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 2060891,
+  "reviews_url": "https://letterboxd.com/film/the-lord-of-the-rings-the-two-towers/reviews/",
+  "ficha": {
+    "titulo": "O Senhor dos Anéis: As Duas Torres",
+    "sinopse_oficial": "Após a captura de Merry e Pippin pelos orcs, a Sociedade do Anel é dissolvida. Frodo e Sam seguem sua jornada rumo à Montanha da Perdição para destruir o anel e serão obrigados a confiar no misterioso Gollum. Enquanto isso, Aragorn, o elfo e o arqueiro Legolas e o anão Gimli partem para resgatar os hobbits sequestrados e chegam ao reino de Rohan, onde o rei Théoden foi vítima de uma maldição mortal de Saruman.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Aventura",
+      "Fantasia",
+      "Ação"
+    ],
+    "duracao_min": 180,
+    "diretor": "Peter Jackson",
+    "diretor_transliterado": false,
+    "ano": 2002,
+    "data_estreia": "2002-12-18",
+    "fonte": "tmdb",
+    "tmdb_id": 121,
+    "tmdb_fetched_at": "2026-11-08T04:28:17+00:00",
+    "poster_path": "/mCs8vxvScCqVM3YFMQIdbrdFEhu.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+      "/7ABgKch4hBX4qwCujRKM58fKsoG.jpg",
+      "/kWYfW2Re0rUDE6IHhy4CRuKWeFr.jpg",
+      "/7tNTPZMb13W0AhkcuoL6myRrNRr.jpg",
+      "/zcc0My3G4SYR72VuEYHNcUWkkW0.jpg",
+      "/9BUvLUz1GhbNpcyQRyZm1HNqMq4.jpg",
+      "/3c1AZHFil1M3HbGepQIc9qco3EZ.jpg",
+      "/iuUQEADTIxf10Y0hBGRd1jLmmu4.jpg",
+      "/rx8jbGJF0FfQ5SmCKRAWSWtn5SZ.jpg",
+      "/58xrLn8VXDJSMntMESUyG4Pe1Ro.jpg"
+    ],
+    "backdrop_path": "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/nGTbPsTnwgfUe4HqHgAobyBGvuA.jpg",
+    "poster_sem_texto_largura": 1928,
+    "poster_sem_texto_altura": 2892,
+    "galeria_stills": [
+      {
+        "still_path": "/6G73mNyooWAEQTpckPSnFxFoNmc.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jvF5BDGyrGxh88s00ImXTiyymz6.jpg",
+        "still_largura": 2640,
+        "still_altura": 1485
+      },
+      {
+        "still_path": "/4UZ9JGRTfeQGQollirsfGjvQkPw.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/sFB2g6svd5tzHKAIabokg3LyHB7.jpg",
+        "still_largura": 2844,
+        "still_altura": 1600
+      },
+      {
+        "still_path": "/5EvCVSeTIFJg9nQ52mtqKKJn0rI.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/8WXR3iG8iqDg8KbokwgHxupHyzh.jpg",
+        "still_largura": 2560,
+        "still_altura": 1440
+      },
+      {
+        "still_path": "/b3jI92cHUUnK7AXohjyGcDt5qD7.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/dyG8DYlLO7Gza3FJbC1CERFzpVg.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/ivCSeCelcxAiLvFXSqBwtXTpUNb.jpg",
+        "still_largura": 2048,
+        "still_altura": 1152
+      },
+      {
+        "still_path": "/mGpKF9OyyLuP3tPorNJOspYTbU5.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/qDXf0ETrZGOXYrSpop9YDmt3G8y.jpg",
+        "still_largura": 2249,
+        "still_altura": 1265
+      },
+      {
+        "still_path": "/u49mn7xnHhhevo50sKzMqtDlbjH.jpg",
+        "still_largura": 2839,
+        "still_altura": 1597
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-lord-of-the-rings-the-two-towers",
+      "titulo_letterboxd": "The Lord of the Rings: The Two Towers",
+      "ano_letterboxd": 2002,
+      "tmdb_id_letterboxd": 121,
+      "tmdb_id_escolhido": 121,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Lord of the Rings: The Two Towers",
+      "ano_tmdb": 2002,
+      "ano_divergente": false
+    },
+    "paises": [
+      "NZ",
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 2060891,
+    "por_nivel": {
+      "0.5": 4829,
+      "1.0": 15432,
+      "1.5": 11542,
+      "2.0": 69082,
+      "2.5": 75918,
+      "3.0": 345289,
+      "3.5": 388191,
+      "4.0": 695167,
+      "4.5": 216245,
+      "5.0": 239196
+    },
+    "por_bucket": {
+      "negativas": 5,
+      "medianas": 20,
+      "positivas": 75
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-lord-of-the-rings-the-two-towers",
+    "coletado_em": "2026-11-08T04:34:10.029821+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 4829,
+      "1.0": 15432,
+      "1.5": 11542,
+      "2.0": 69082,
+      "2.5": 75918,
+      "3.0": 345289,
+      "3.5": 388191,
+      "4.0": 695167,
+      "4.5": 216245,
+      "5.0": 239196
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 3
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 12,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 3
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 36,
+      "1.5": 24,
+      "2.0": 144,
+      "2.5": 72,
+      "3.0": 215,
+      "3.5": 48,
+      "4.0": 84,
+      "4.5": 24,
+      "5.0": 36
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 4,
+      "1.5": 7,
+      "2.0": 36,
+      "2.5": 12,
+      "3.0": 40,
+      "3.5": 15,
+      "4.0": 23,
+      "4.5": 7,
+      "5.0": 9
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 4,
+      "4.0": 7,
+      "4.5": 2,
+      "5.0": 3
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 1,
+      "1.5": 0,
+      "2.0": 2,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 16,
+        "paginas_extensao": 3,
+        "extras_por_nivel": {
+          "1.0": 1,
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 41,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 33,
+        "n_validas_pos_extensao": 52,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 54,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 4.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 2,
+      "1.0": 6,
+      "1.5": 4,
+      "2.0": 25,
+      "2.5": 28,
+      "3.0": 127,
+      "3.5": 143,
+      "4.0": 256,
+      "4.5": 80,
+      "5.0": 88
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 707,
+        "min": "2002-12-22",
+        "max": "2026-11-08",
+        "p5": "2026-08-14",
+        "p50": "2026-10-23",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2008-05-27",
+          "max": "2026-11-07",
+          "p5": "2026-07-13",
+          "p50": "2026-09-19",
+          "p95": "2026-11-04"
+        },
+        "medianas": {
+          "n": 287,
+          "min": "2002-12-22",
+          "max": "2026-11-08",
+          "p5": "2026-08-21",
+          "p50": "2026-10-25",
+          "p95": "2026-11-07"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2025-01-31",
+          "max": "2026-11-08",
+          "p5": "2026-10-04",
+          "p50": "2026-11-07",
+          "p95": "2026-11-07"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 21,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 34,
+      "dias_por_100_paginas": 26.771653543307085,
+      "paginas_para_1_ano": 1363
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 35,
+        "dias_por_100_paginas": 3500.0,
+        "paginas_para_1_ano": 10
+      },
+      "1.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 3,
+        "dias": 54,
+        "dias_por_100_paginas": 2700.0,
+        "paginas_para_1_ano": 14
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 38,
+        "dias_por_100_paginas": 3800.0,
+        "paginas_para_1_ano": 10
+      },
+      "2.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 12,
+        "dias": 80,
+        "dias_por_100_paginas": 727.2727272727273,
+        "paginas_para_1_ano": 50
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 14,
+        "dias": 69,
+        "dias_por_100_paginas": 530.7692307692307,
+        "paginas_para_1_ano": 69
+      },
+      "3.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 64,
+        "dias": 78,
+        "dias_por_100_paginas": 123.80952380952381,
+        "paginas_para_1_ano": 295
+      },
+      "3.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 36,
+        "dias": 30,
+        "dias_por_100_paginas": 85.71428571428571,
+        "paginas_para_1_ano": 426
+      },
+      "4.0": {
+        "n_paginas": 7,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 34,
+        "dias_por_100_paginas": 26.771653543307085,
+        "paginas_para_1_ano": 1363
+      },
+      "4.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 0,
+        "dias_por_100_paginas": 0.0,
+        "paginas_para_1_ano": null
+      },
+      "5.0": {
+        "n_paginas": 3,
+        "pagina_min": 1,
+        "pagina_max": 22,
+        "dias": 1,
+        "dias_por_100_paginas": 4.761904761904762,
+        "paginas_para_1_ano": 7665
+      }
+    },
+    "ano_lancamento": 2002,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-lord-of-the-rings-the-two-towers",
+      "titulo": "The Lord of the Rings: The Two Towers",
+      "ano": 2002,
+      "tmdb_id_letterboxd": 121,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 4,
+        "1.5": 5,
+        "2.0": 29
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 12,
+        "p5": 1,
+        "p50": 5,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-07",
+        "max": "2026-11-07",
+        "p5": "2026-08-13",
+        "p50": "2026-09-22",
+        "p95": "2026-11-01"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 19,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 19,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 4,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 29,
+          "n_alvo": 27,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 104,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 1,
+            "abaixo_min_chars": 104,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 22,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais e arrastado, com trechos que parecem intermináveis e que fizeram espectadores dormir ou abandonar a sessão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é longo demais e arrastado, com trechos que parecem intermináveis e que fizeram vários espectadores dormir ou abandonar a sessão."
+        },
+        {
+          "tema": "Tédio e falta de envolvimento",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Pessoas descrevem a experiência como entediante, dizendo que a história não desperta interesse e que é difícil se importar com o que acontece na tela.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas pessoas descrevem a experiência como entediante, dizendo que a história não desperta interesse e que é difícil se importar com o que acontece na tela."
+        },
+        {
+          "tema": "Personagens sem carisma ou desenvolvimento",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que os personagens são superficiais ou irritantes, com destaque para a falta de carisma de alguns e a sensação de que não evoluem ao longo da trama.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias críticas apontam que os personagens são superficiais ou irritantes, com destaque para a falta de carisma de alguns e a sensação de que não evoluem ao longo da trama.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Excesso de batalhas e CGI questionável",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews consideram que o filme tem batalhas longas e repetitivas, e que os efeitos visuais, especialmente os gerados por computador, parecem datados ou exagerados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews consideram que o filme tem batalhas longas e repetitivas, e que os efeitos visuais, especialmente os gerados por computador, parecem datados ou exagerados."
+        },
+        {
+          "tema": "Sensação de que o filme é apenas uma ponte",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Comentários afirmam que a trama não avança de forma significativa, funcionando mais como uma transição entre o primeiro e o terceiro filme, sem uma história própria envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certos comentários afirmam que a trama não avança de forma significativa, funcionando mais como uma transição entre o primeiro e o terceiro filme, sem uma história própria envolvente."
+        },
+        {
+          "tema": "Representação feminina insatisfatória",
+          "mencoes_aproximadas": 3,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas mencionam que a única personagem feminina relevante tem papel acessório, o que incomodou parte do público.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas mencionam que a única personagem feminina relevante tem papel acessório, o que incomodou parte do público.",
+          "quantidade_pendente": true
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a longa duração, o ritmo arrastado e a falta de envolvimento com a história e os personagens. Também são citados o excesso de cenas de batalha, a qualidade dos efeitos visuais e a sensação de que o filme serve apenas como uma ponte para a conclusão da trilogia.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 5
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 16,
+        "p5": 1,
+        "p50": 8,
+        "p95": 16,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2002-12-22",
+        "max": "2026-11-07",
+        "p5": "2020-04-16",
+        "p50": "2026-10-25",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 59,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 59,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 33,
+          "n_alvo": 33,
+          "n_brutas": 215,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 168,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 7,
+            "abaixo_min_chars": 168,
+            "excedente_cota": 7,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo arrastado e longa duração",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram o filme excessivamente longo e lento, com trechos que parecem se estender sem necessidade, tornando a experiência cansativa em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews medianas consideram o filme excessivamente longo e lento, com trechos que parecem se estender sem necessidade, tornando a experiência cansativa em vários momentos."
+        },
+        {
+          "tema": "Comparação desfavorável com o primeiro filme",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo aponta que a continuação não mantém o mesmo nível de interesse do filme anterior, sendo visto como inferior em construção e envolvimento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo frequentemente aponta que a continuação não mantém o mesmo nível de interesse do filme anterior, sendo visto como inferior em construção e envolvimento."
+        },
+        {
+          "tema": "Batalhas e cenas de ação",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As sequências de batalha dividem opiniões: reviews medianas as consideram visualmente impressionantes e empolgantes, enquanto outras as acham superestimadas ou excessivamente longas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As sequências de batalha dividem opiniões: algumas reviews medianas as consideram visualmente impressionantes e empolgantes, enquanto outras as acham superestimadas ou excessivamente longas."
+        },
+        {
+          "tema": "Personagens e dinâmicas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O trio formado por Aragorn, Legolas e Gimli é bastante elogiado, assim como a dupla de hobbits e o personagem Gollum, que gera reações variadas, sendo considerado interessante por uns e irritante por outros.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estrutura de filme do meio",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas descrevem a obra como uma ponte entre o primeiro e o terceiro filme, sentindo que a trama principal pouco avança e que o longa serve apenas para preparar o desfecho.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas descrevem a obra como uma ponte entre o primeiro e o terceiro filme, sentindo que a trama principal pouco avança e que o longa serve apenas para preparar o desfecho."
+        },
+        {
+          "tema": "Efeitos visuais e técnicos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os aspectos técnicos, como efeitos práticos, fotografia e trilha sonora, são reconhecidos como de alta qualidade, mas nem sempre suficientes para despertar envolvimento emocional duradouro.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam o ritmo arrastado e a longa duração como principais pontos negativos, além de frequentemente compararem o filme desfavoravelmente ao primeiro da trilogia. Apesar disso, este grupo reconhece méritos nas cenas de ação, na qualidade técnica e em alguns personagens, mas de forma geral a experiência é vista como morna e pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 20
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 10,
+        "4.0": 18,
+        "4.5": 6,
+        "5.0": 6
+      },
+      "composicao_atingida": {
+        "3.5": 10,
+        "4.0": 18,
+        "4.5": 6,
+        "5.0": 6
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 2,
+        "p95": 128,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-10-03",
+        "max": "2026-11-08",
+        "p5": "2026-10-04",
+        "p50": "2026-11-07",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 31,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 31,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 18,
+          "n_alvo": 18,
+          "n_brutas": 84,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 60,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 60,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Batalha do Abismo de Helm e cenas de ação",
+          "mencoes_aproximadas": 21,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A sequência da batalha no Abismo de Helm é citada como o ponto alto do filme, com destaque para sua escala épica, coreografia impressionante e tensão, sendo considerada por espectadores como a melhor cena de ação de toda a trilogia.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A sequência da batalha no Abismo de Helm é frequentemente citada como o ponto alto do filme, com destaque para sua escala épica, coreografia impressionante e tensão, sendo considerada por muitos como a melhor cena de ação de toda a trilogia."
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o filme é longo e que a primeira metade ou os primeiros terços podem ser lentos, mas que isso é compensado por um ato final emocionante e bem ritmado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews mencionam que o filme é longo e que a primeira metade ou os primeiros terços podem ser lentos, mas que isso é compensado por um ato final emocionante e bem ritmado."
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações são elogiadas, especialmente as de Andy Serkis como Gollum, Sean Astin como Sam e Viggo Mortensen como Aragorn, além do alívio cômico proporcionado por Gimli e Legolas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Efeitos visuais e fotografia",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os efeitos visuais, a fotografia e a trilha sonora são bastante elogiados, com destaque para a qualidade dos efeitos práticos e a grandiosidade visual das batalhas, apesar de espectadores acharem o CGI datado em certos momentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Os efeitos visuais, a fotografia e a trilha sonora são bastante elogiados, com destaque para a qualidade dos efeitos práticos e a grandiosidade visual das batalhas, apesar de alguns acharem o CGI datado em certos momentos."
+        },
+        {
+          "tema": "Gollum e seu arco emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O personagem Gollum é mencionado como um dos pontos fortes, com sua complexidade emocional, a atuação de Andy Serkis e o conflito interno sendo destacados como comoventes e bem retratados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O personagem Gollum é frequentemente mencionado como um dos pontos fortes, com sua complexidade emocional, a atuação de Andy Serkis e o conflito interno sendo destacados como comoventes e bem retratados."
+        },
+        {
+          "tema": "Comparação com o primeiro filme",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews comparam este filme ao primeiro da trilogia, considerando-o superior em termos de desenvolvimento da história, ação e emoção, embora algumas vezes seja visto como uma ponte ou um filme de transição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews comparam este filme ao primeiro da trilogia, considerando-o superior em termos de desenvolvimento da história, ação e emoção, embora algumas vezes seja visto como uma ponte ou um filme de transição.",
+          "quantidade_pendente": true
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a grandiosidade das batalhas, especialmente a do Abismo de Helm, e o arco emocional de Gollum, embora apontem problemas de ritmo e duração. Este grupo considera o filme tecnicamente impressionante e emocionante, com atuações marcantes, mas reconhece que a narrativa pode ser lenta em certos momentos.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 75
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo lento",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais e arrastado, com trechos que parecem intermináveis e que fizeram espectadores dormir ou abandonar a sessão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 23,
+            "de_n": 40,
+            "freq_pct": 57.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo arrastado e longa duração",
+            "exemplo_parafraseado": "Reviews medianas consideram o filme excessivamente longo e lento, com trechos que parecem se estender sem necessidade, tornando a experiência cansativa em certos momentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Reviews mencionam que o filme é longo e que a primeira metade ou os primeiros terços podem ser lentos, mas que isso é compensado por um ato final emocionante e bem ritmado.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "As atuações são elogiadas, especialmente as de Andy Serkis como Gollum, Sean Astin como Sam e Viggo Mortensen como Aragorn, além do alívio cômico proporcionado por Gimli e Legolas.",
+            "temas_no_mesmo_eixo": [
+              "Gollum e seu arco emocional"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de batalhas e CGI questionável",
+            "exemplo_parafraseado": "Reviews consideram que o filme tem batalhas longas e repetitivas, e que os efeitos visuais, especialmente os gerados por computador, parecem datados ou exagerados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Batalhas e cenas de ação",
+            "exemplo_parafraseado": "As sequências de batalha dividem opiniões: reviews medianas as consideram visualmente impressionantes e empolgantes, enquanto outras as acham superestimadas ou excessivamente longas.",
+            "temas_no_mesmo_eixo": [
+              "Efeitos visuais e técnicos"
+            ]
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": "Batalha do Abismo de Helm e cenas de ação",
+            "exemplo_parafraseado": "A sequência da batalha no Abismo de Helm é citada como o ponto alto do filme, com destaque para sua escala épica, coreografia impressionante e tensão, sendo considerada por espectadores como a melhor cena de ação de toda a trilogia.",
+            "temas_no_mesmo_eixo": [
+              "Efeitos visuais e fotografia"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Personagens sem carisma ou desenvolvimento",
+            "exemplo_parafraseado": "Críticas apontam que os personagens são superficiais ou irritantes, com destaque para a falta de carisma de alguns e a sensação de que não evoluem ao longo da trama.",
+            "temas_no_mesmo_eixo": [
+              "Sensação de que o filme é apenas uma ponte"
+            ]
+          },
+          "medianas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Personagens e dinâmicas",
+            "exemplo_parafraseado": "O trio formado por Aragorn, Legolas e Gimli é bastante elogiado, assim como a dupla de hobbits e o personagem Gollum, que gera reações variadas, sendo considerado interessante por uns e irritante por outros.",
+            "temas_no_mesmo_eixo": [
+              "Estrutura de filme do meio"
+            ]
+          },
+          "positivas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 1,
+            "de_n": 40,
+            "freq_pct": 2.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Tédio e falta de envolvimento",
+            "exemplo_parafraseado": "Pessoas descrevem a experiência como entediante, dizendo que a história não desperta interesse e que é difícil se importar com o que acontece na tela.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": "Comparação desfavorável com o primeiro filme",
+            "exemplo_parafraseado": "Este grupo aponta que a continuação não mantém o mesmo nível de interesse do filme anterior, sendo visto como inferior em construção e envolvimento.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Comparação com o primeiro filme",
+            "exemplo_parafraseado": "Reviews comparam este filme ao primeiro da trilogia, considerando-o superior em termos de desenvolvimento da história, ação e emoção, embora algumas vezes seja visto como uma ponte ou um filme de transição.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Representação feminina insatisfatória",
+            "exemplo_parafraseado": "Críticas mencionam que a única personagem feminina relevante tem papel acessório, o que incomodou parte do público.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "procura uma batalha de escala épica com coreografia e tensão marcantes",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Batalha do Abismo de Helm e cenas de ação",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "tolera uma primeira metade lenta por um ato final emocionante e bem ritmado",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aprecia atuações elogiadas e alívio cômico entre os personagens",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por um personagem de complexidade emocional e conflito interno comovente",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Gollum e seu arco emocional",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com longa duração e trechos arrastados que parecem intermináveis",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo lento",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "evita histórias que não despertam interesse e tornam difícil se importar",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Tédio e falta de envolvimento",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se irrita com personagens superficiais, sem carisma e que não evoluem",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens sem carisma ou desenvolvimento",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 75,
+        "peso_texto": "~75% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 5,
+        "peso_texto": "~5% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 7,
+        "n_flags": 2,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 7,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 7
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12594,
+      "completion_tokens": 862,
+      "cache_hit_tokens": 11805,
+      "cache_miss_tokens": 789
+    },
+    "latencia_s": 5.54,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

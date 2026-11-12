@@ -1,0 +1,1586 @@
+{
+  "slug": "rear-window",
+  "data_coleta": "2026-11-08T09:38:55.234231+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 913983,
+  "reviews_url": "https://letterboxd.com/film/rear-window/reviews/",
+  "ficha": {
+    "titulo": "Janela Indiscreta",
+    "sinopse_oficial": "Em Greenwich Village, Nova York, L.B. Jeffries, um fotógrafo profissional, está de molho em seu apartamento por ter quebrado a perna enquanto trabalhava. Como não tem muito o que fazer, fica bisbilhotando a vida dos seus vizinhos com um binóculo. Porém vê algumas coisas que o fazem suspeitar que um assassinato foi cometido.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Thriller",
+      "Mistério",
+      "Drama"
+    ],
+    "duracao_min": 112,
+    "diretor": "Alfred Hitchcock",
+    "diretor_transliterado": false,
+    "ano": 1954,
+    "data_estreia": "1954-08-01",
+    "fonte": "tmdb",
+    "tmdb_id": 567,
+    "tmdb_fetched_at": "2026-11-08T09:33:30+00:00",
+    "poster_path": "/ckYI4gqqKlSWAVwtLfZSUfwoquW.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+      "/zGs5tZOlvc9cprdcU6kDOVNpujf.jpg",
+      "/qt01wUC460FCWfogDqe3UO00T3g.jpg",
+      "/zZvtZZXRnZ4Tdcs0QEWaZZcIWy8.jpg",
+      "/s3tw8ibskk4flXQa3y1EooXtYro.jpg",
+      "/hjM5rPzhTDTD1E0sDIK7dHXghby.jpg",
+      "/AcZMNqaZslBu3mg9aibICB1FuEY.jpg",
+      "/3VT3sZF72ZMYF7PvsdRUqib5rK4.jpg",
+      "/Jn2tqrG2xfRKrPIf6SHsD9XT5g.jpg",
+      "/sdfDFxck5VDaSPKd2lOIyTrOAfq.jpg"
+    ],
+    "backdrop_path": "/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+    "backdrop_largura": 1785,
+    "backdrop_altura": 1004,
+    "poster_sem_texto_path": "/ozXJsO8f69TdaFHQq5e2XlxBAnF.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1500,
+    "galeria_stills": [
+      {
+        "still_path": "/5bN06p5OwRUEqcfrtNs5egV16yb.jpg",
+        "still_largura": 1785,
+        "still_altura": 1004
+      },
+      {
+        "still_path": "/zGs5tZOlvc9cprdcU6kDOVNpujf.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/Jn2tqrG2xfRKrPIf6SHsD9XT5g.jpg",
+        "still_largura": 3550,
+        "still_altura": 1997
+      },
+      {
+        "still_path": "/sdfDFxck5VDaSPKd2lOIyTrOAfq.jpg",
+        "still_largura": 1457,
+        "still_altura": 820
+      },
+      {
+        "still_path": "/1ABrBk4hIhhkNZ01TRHXV0jHroG.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/mP72QWmpidCjalXiIc4ChUxoukc.jpg",
+        "still_largura": 1775,
+        "still_altura": 999
+      },
+      {
+        "still_path": "/iaxEo5c2vfsMjA7ujcW2qOCBroB.jpg",
+        "still_largura": 1786,
+        "still_altura": 1005
+      },
+      {
+        "still_path": "/vqqh6lbQL4Ln0gtEj4j4o2edRor.jpg",
+        "still_largura": 1600,
+        "still_altura": 899
+      },
+      {
+        "still_path": "/3gbQiQU4o4fqMqdCpRD95FDyzXY.jpg",
+        "still_largura": 1760,
+        "still_altura": 990
+      },
+      {
+        "still_path": "/5y3Lq2qHX7Q4RnELGpCqsPoPweI.jpg",
+        "still_largura": 1784,
+        "still_altura": 1003
+      },
+      {
+        "still_path": "/ai5hg5Ro24XjbMH5LMDi3Z9xrlf.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jLrcJx2jcztok01UOMMjMuvzcXv.jpg",
+        "still_largura": 1792,
+        "still_altura": 1008
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "rear-window",
+      "titulo_letterboxd": "Rear Window",
+      "ano_letterboxd": 1954,
+      "tmdb_id_letterboxd": 567,
+      "tmdb_id_escolhido": 567,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Rear Window",
+      "ano_tmdb": 1954,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 913983,
+    "por_nivel": {
+      "0.5": 600,
+      "1.0": 1416,
+      "1.5": 1263,
+      "2.0": 6549,
+      "2.5": 9468,
+      "3.0": 50801,
+      "3.5": 86010,
+      "4.0": 273230,
+      "4.5": 193481,
+      "5.0": 291165
+    },
+    "por_bucket": {
+      "negativas": 1,
+      "medianas": 7,
+      "positivas": 92
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "rear-window",
+    "coletado_em": "2026-11-08T09:38:55.234231+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 600,
+      "1.0": 1416,
+      "1.5": 1263,
+      "2.0": 6549,
+      "2.5": 9468,
+      "3.0": 50801,
+      "3.5": 86010,
+      "4.0": 273230,
+      "4.5": 193481,
+      "5.0": 291165
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 2,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 12,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 24,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 120,
+      "2.5": 72,
+      "3.0": 144,
+      "3.5": 24,
+      "4.0": 60,
+      "4.5": 48,
+      "5.0": 60
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 3,
+      "1.0": 7,
+      "1.5": 8,
+      "2.0": 33,
+      "2.5": 15,
+      "3.0": 36,
+      "3.5": 8,
+      "4.0": 17,
+      "4.5": 14,
+      "5.0": 22
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 2,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 4,
+      "5.0": 5
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 2,
+      "1.5": 0,
+      "2.0": 2,
+      "2.5": 0,
+      "3.0": 2,
+      "3.5": 0,
+      "4.0": 0,
+      "4.5": 0,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 14,
+        "paginas_extensao": 4,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "2.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 38,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "3.0": 2
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 0,
+        "extras_por_nivel": {},
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 61,
+        "n_validas_pos_extensao": 61,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 1,
+      "1.5": 1,
+      "2.0": 6,
+      "2.5": 8,
+      "3.0": 45,
+      "3.5": 76,
+      "4.0": 240,
+      "4.5": 170,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 624,
+        "min": "2014-10-04",
+        "max": "2026-11-08",
+        "p5": "2026-07-04",
+        "p50": "2026-10-23",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 216,
+          "min": "2015-07-21",
+          "max": "2026-11-08",
+          "p5": "2026-06-04",
+          "p50": "2026-09-20",
+          "p95": "2026-11-03"
+        },
+        "medianas": {
+          "n": 216,
+          "min": "2014-10-04",
+          "max": "2026-11-08",
+          "p5": "2026-09-29",
+          "p50": "2026-10-25",
+          "p95": "2026-11-06"
+        },
+        "positivas": {
+          "n": 192,
+          "min": "2015-11-27",
+          "max": "2026-11-08",
+          "p5": "2026-10-18",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 15,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 18,
+      "dias_por_100_paginas": 28.571428571428573,
+      "paginas_para_1_ano": 1278
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "0.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 84,
+        "dias_por_100_paginas": 8400.0,
+        "paginas_para_1_ano": 4
+      },
+      "1.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 134,
+        "dias_por_100_paginas": 4466.666666666667,
+        "paginas_para_1_ano": 8
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 35,
+        "dias_por_100_paginas": 3500.0,
+        "paginas_para_1_ano": 10
+      },
+      "2.0": {
+        "n_paginas": 10,
+        "pagina_min": 1,
+        "pagina_max": 10,
+        "dias": 77,
+        "dias_por_100_paginas": 855.5555555555555,
+        "paginas_para_1_ano": 43
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 6,
+        "dias": 25,
+        "dias_por_100_paginas": 500.0,
+        "paginas_para_1_ano": 73
+      },
+      "3.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 22,
+        "dias": 34,
+        "dias_por_100_paginas": 161.9047619047619,
+        "paginas_para_1_ano": 225
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 1,
+        "dias_por_100_paginas": 100.0,
+        "paginas_para_1_ano": 365
+      },
+      "4.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 60,
+        "dias": 19,
+        "dias_por_100_paginas": 32.20338983050848,
+        "paginas_para_1_ano": 1133
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 42,
+        "dias": 16,
+        "dias_por_100_paginas": 39.02439024390244,
+        "paginas_para_1_ano": 935
+      },
+      "5.0": {
+        "n_paginas": 5,
+        "pagina_min": 1,
+        "pagina_max": 64,
+        "dias": 19,
+        "dias_por_100_paginas": 30.158730158730158,
+        "paginas_para_1_ano": 1210
+      }
+    },
+    "ano_lancamento": 1954,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "rear-window",
+      "titulo": "Rear Window",
+      "ano": 1954,
+      "tmdb_id_letterboxd": 567,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 6,
+        "1.5": 5,
+        "2.0": 27
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 10,
+        "p5": 1,
+        "p50": 3,
+        "p95": 9,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2023-01-01",
+        "max": "2026-11-07",
+        "p5": "2026-06-21",
+        "p50": "2026-09-22",
+        "p95": "2026-10-31"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 2,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 39,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 39,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 13,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 13,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 27,
+          "n_alvo": 27,
+          "n_brutas": 120,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 84,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 84,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 24,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando espectadores a quase desistir ou a dormir durante a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando vários espectadores a quase desistir ou a dormir durante a exibição."
+        },
+        {
+          "tema": "Roteiro previsível e sem reviravoltas",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo."
+        },
+        {
+          "tema": "Protagonista desagradável e voyeurismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O comportamento do personagem principal, que espia os vizinhos, é citado como moralmente problemático e pouco simpático, tornando difícil torcer por ele.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e diálogos fracos",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews criticam a falta de carisma dos personagens e diálogos considerados artificiais, repetitivos ou desinteressantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Falta de tensão e suspense",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores relatam que o suspense só aparece nos minutos finais, não compensando a longa espera, e que o filme não consegue manter a tensão ao longo da projeção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Alguns espectadores relatam que o suspense só aparece nos minutos finais, não compensando a longa espera, e que o filme não consegue manter a tensão ao longo da projeção."
+        },
+        {
+          "tema": "Expectativa frustrada e superestimação",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção."
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e monótono, o roteiro previsível e a dificuldade em se envolver com os personagens. Este grupo considera a obra superestimada e pouco envolvente, apesar de reconhecer qualidades técnicas isoladas.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 1
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "composicao_atingida": {
+        "2.5": 6,
+        "3.0": 34
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 22,
+        "p5": 1,
+        "p50": 5,
+        "p95": 22,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2019-11-28",
+        "max": "2026-11-07",
+        "p5": "2023-10-30",
+        "p50": "2026-10-24",
+        "p95": "2026-11-06"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 6,
+          "n_alvo": 6,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 53,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 4,
+            "abaixo_min_chars": 53,
+            "excedente_cota": 9,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 34,
+          "n_alvo": 34,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 102,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 5,
+            "abaixo_min_chars": 102,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Ritmo lento e falta de tensão",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para espectadores do grupo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para parte do grupo."
+        },
+        {
+          "tema": "Conceito e ambientação elogiados",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo destaca a ideia de narrar tudo a partir de um único ponto de vista e o uso do cenário limitado como algo engenhoso, que prende a atenção mesmo sem grandes deslocamentos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens e relação central",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas elogiam a química entre o casal protagonista e a evolução da personagem feminina, mas também criticam o protagonista por ser pouco simpático ou imaturo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia, o uso de cores e a composição visual são bastante elogiados, com menções à beleza dos enquadramentos e ao visual que permanece moderno apesar da época.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conclusão aquém das expectativas",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Para espectadores deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Para parte deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam."
+        },
+        {
+          "tema": "Machismo e voyeurismo problemáticos",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos."
+        }
+      ],
+      "observacao_geral": "As reviews medianas descrevem uma experiência mista: reconhecem a inventividade do conceito, da fotografia e do elenco, mas frequentemente acham o ritmo lento e a resolução pouco empolgante. Este grupo também demonstra incômodo com aspectos sociais e de voyeurismo vistos como datados.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 7
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 9,
+        "5.0": 14
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 64,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2024-09-06",
+        "max": "2026-11-08",
+        "p5": "2026-10-19",
+        "p50": "2026-11-07",
+        "p95": "2026-11-07"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 16,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 16,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 4,
+          "n_descartadas_curtas": 38,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 4,
+            "abaixo_min_chars": 38,
+            "excedente_cota": 4,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 9,
+          "n_alvo": 9,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 32,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 1,
+            "abaixo_min_chars": 32,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 14,
+          "n_alvo": 14,
+          "n_brutas": 60,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 35,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 35,
+            "excedente_cota": 8,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Suspense e construção do mistério",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam que o suspense é construído de forma magistral, mantendo o espectador em dúvida sobre o que é real ou fruto da paranoia do protagonista, com um ato final que eleva a tensão ao máximo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia, direção e design de produção",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante."
+        },
+        {
+          "tema": "Atuações e personagens",
+          "mencoes_aproximadas": 13,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As atuações de James Stewart e Grace Kelly são bastante elogiadas, assim como a química entre eles e a personalidade marcante da personagem feminina, descrita como elegante e perspicaz.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Conceito de voyeurismo e observação",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O grupo reflete sobre como o filme explora a curiosidade humana e o prazer de observar a vida alheia, comparando a situação do protagonista à experiência do próprio espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Relação entre os protagonistas",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A dinâmica do casal central é vista como um dos pontos fortes, com diálogos afiados e uma evolução que enriquece a trama, mesmo quando o mistério principal não está em foco.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a maestria técnica de Hitchcock, o suspense envolvente e as atuações marcantes, com elogios ao cenário único e à fotografia. Este grupo considera o filme um clássico atemporal, apesar de apontar pequenas ressalvas quanto ao ritmo e ao desenvolvimento de alguns personagens.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 92
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 27,
+            "de_n": 40,
+            "freq_pct": 67.5,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Ritmo lento e tédio",
+            "exemplo_parafraseado": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando espectadores a quase desistir ou a dormir durante a exibição.",
+            "temas_no_mesmo_eixo": [
+              "Falta de tensão e suspense"
+            ]
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": "Ritmo lento e falta de tensão",
+            "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para espectadores do grupo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": -35.0,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "Reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia_e_contraste",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "As atuações de James Stewart e Grace Kelly são bastante elogiadas, assim como a química entre eles e a personalidade marcante da personagem feminina, descrita como elegante e perspicaz.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia e estética",
+            "exemplo_parafraseado": "A fotografia, o uso de cores e a composição visual são bastante elogiados, com menções à beleza dos enquadramentos e ao visual que permanece moderno apesar da época.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Fotografia, direção e design de produção",
+            "exemplo_parafraseado": "Reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro previsível e sem reviravoltas",
+            "exemplo_parafraseado": "Críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo.",
+            "temas_no_mesmo_eixo": [
+              "Protagonista desagradável e voyeurismo",
+              "Personagens e diálogos fracos"
+            ]
+          },
+          "medianas": {
+            "mencoes": 33,
+            "de_n": 40,
+            "freq_pct": 82.5,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Personagens e relação central",
+            "exemplo_parafraseado": "As reviews medianas elogiam a química entre o casal protagonista e a evolução da personagem feminina, mas também criticam o protagonista por ser pouco simpático ou imaturo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": "Relação entre os protagonistas",
+            "exemplo_parafraseado": "A dinâmica do casal central é vista como um dos pontos fortes, com diálogos afiados e uma evolução que enriquece a trama, mesmo quando o mistério principal não está em foco.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 0,
+            "de_n": 40,
+            "freq_pct": 0.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 4,
+            "de_n": 40,
+            "freq_pct": 10.0,
+            "lift_pp": -30.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": "Conceito e ambientação elogiados",
+            "exemplo_parafraseado": "Este grupo destaca a ideia de narrar tudo a partir de um único ponto de vista e o uso do cenário limitado como algo engenhoso, que prende a atenção mesmo sem grandes deslocamentos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 17.5,
+            "acima_da_margem": false,
+            "tema": "Suspense e construção do mistério",
+            "exemplo_parafraseado": "As reviews destacam que o suspense é construído de forma magistral, mantendo o espectador em dúvida sobre o que é real ou fruto da paranoia do protagonista, com um ato final que eleva a tensão ao máximo.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 19,
+            "de_n": 40,
+            "freq_pct": 47.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 15,
+            "de_n": 40,
+            "freq_pct": 37.5,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 22,
+            "de_n": 40,
+            "freq_pct": 55.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 21,
+            "de_n": 40,
+            "freq_pct": 52.5,
+            "lift_pp": 10.0,
+            "acima_da_margem": false,
+            "tema": "Expectativa frustrada e superestimação",
+            "exemplo_parafraseado": "Críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Conclusão aquém das expectativas",
+            "exemplo_parafraseado": "Para espectadores deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Machismo e voyeurismo problemáticos",
+            "exemplo_parafraseado": "Reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Conceito de voyeurismo e observação",
+            "exemplo_parafraseado": "O grupo reflete sobre como o filme explora a curiosidade humana e o prazer de observar a vida alheia, comparando a situação do protagonista à experiência do próprio espectador.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "busca um suspense que mantenha em dúvida o que é real ou paranoia",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Suspense e construção do mistério",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza câmera expressiva, jogo de luz e sombra e o pátio como centro visual",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Fotografia, direção e design de produção",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "valoriza atuações elogiadas e uma personagem feminina elegante e perspicaz",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações e personagens",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se interessa por um filme que explora a curiosidade e o prazer de observar",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Conceito de voyeurismo e observação",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "tolera um ritmo mais lento, embora a história prenda a atenção",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "evita uma condução morosa, com trechos prolongados em que nada relevante acontece",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Ritmo lento e tédio",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "espera uma trama com surpresas em vez de seguir o previsto",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro previsível e sem reviravoltas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se incomoda com um protagonista que espia os vizinhos e soa pouco simpático",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Protagonista desagradável e voyeurismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "quer tensão ao longo do filme, não concentrada nos minutos finais",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Falta de tensão e suspense",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 92,
+        "peso_texto": "~92% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 1,
+        "peso_texto": "~1% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 2,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 0,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 2,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 8,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 9,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 3,
+        "flags": [
+          "exemplo_verbatim",
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 18350,
+      "completion_tokens": 1361,
+      "cache_hit_tokens": 15757,
+      "cache_miss_tokens": 2593
+    },
+    "latencia_s": 7.37,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}

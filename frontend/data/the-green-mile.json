@@ -1,0 +1,1552 @@
+{
+  "slug": "the-green-mile",
+  "data_coleta": "2026-11-08T05:40:56.496030+00:00",
+  "spec_version": "1.9.50",
+  "total_reviews_observadas": 1539760,
+  "reviews_url": "https://letterboxd.com/film/the-green-mile/reviews/",
+  "ficha": {
+    "titulo": "À Espera de um Milagre",
+    "sinopse_oficial": "Milagres acontecem em lugares inesperados, mesmo no bloco de celas para o corredor da morte na Penitenciária Cold Mountain. Lá, John Coffey, um gentil e gigante prisioneiro com poderes sobrenaturais, traz um senso de espírito e humanidade aos seus guardas e colegas de cela.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Fantasia",
+      "Drama",
+      "Crime"
+    ],
+    "duracao_min": 189,
+    "diretor": "Frank Darabont",
+    "diretor_transliterado": false,
+    "ano": 1999,
+    "data_estreia": "1999-12-10",
+    "fonte": "tmdb",
+    "tmdb_id": 497,
+    "tmdb_fetched_at": "2026-11-08T05:36:11+00:00",
+    "poster_path": "/etnQFCNnTbXAi1wWB6WCWWzetjL.jpg",
+    "poster_largura": 1000,
+    "poster_altura": 1500,
+    "backdrop_paths": [
+      "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+      "/b6HWTOxn1xevvyHU2K9ICvaRU6g.jpg",
+      "/vxJ08SvwomfKbpboCWynC3uqUg4.jpg",
+      "/lgJlu0Fp1mdTaFEeaQJ7DskhSOr.jpg",
+      "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
+      "/lDg5NCZB4u1P4O5PULxtdThPMyX.jpg",
+      "/eaQI9xlZAsFB23CjBlVTTtGvS3Z.jpg",
+      "/hvbWh2aBmBNWEBJIjJF2Km6Pn4i.jpg",
+      "/4DciiDvEMhQJyf4EaZErGjJZBAx.jpg",
+      "/2XRapPxR6t1wzMes8VbpzWHtrdG.jpg"
+    ],
+    "backdrop_path": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/7LQjpWp25GrPnTyQJSnZTYKn3cX.jpg",
+    "poster_sem_texto_largura": 1000,
+    "poster_sem_texto_altura": 1426,
+    "galeria_stills": [
+      {
+        "still_path": "/amZavErrjrdgDwhsIdpWxHNenIx.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/b6HWTOxn1xevvyHU2K9ICvaRU6g.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/l6hQWH9eDksNJNiXWYRkWqikOdu.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/A5H3OGC6xRHzu5m0u266afTgNyq.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/voDxAJ3mrnRVKenEgDjngB4UZ4A.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/7dEBYe1Qy4B9aZxmLy6qUyflagT.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/AmuTD9xNREKHbokarF5hU2OEQ58.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/cABVKUw7TeMh5MCbFZ5DtJ8bGgW.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/fKtARnCtw7wmFzWuQahk2oVngbB.jpg",
+        "still_largura": 2912,
+        "still_altura": 1638
+      },
+      {
+        "still_path": "/iRNW9Mfpru7PwavLSjkPEcAeVul.jpg",
+        "still_largura": 2905,
+        "still_altura": 1634
+      },
+      {
+        "still_path": "/jont8NngrIwz1O7HtUfY0P5AgfO.jpg",
+        "still_largura": 1920,
+        "still_altura": 1080
+      },
+      {
+        "still_path": "/sFzQXJh5TqznI6cqGxoV65hWYKd.jpg",
+        "still_largura": 2892,
+        "still_altura": 1627
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "the-green-mile",
+      "titulo_letterboxd": "The Green Mile",
+      "ano_letterboxd": 1999,
+      "tmdb_id_letterboxd": 497,
+      "tmdb_id_escolhido": 497,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "The Green Mile",
+      "ano_tmdb": 1999,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 1539760,
+    "por_nivel": {
+      "0.5": 2015,
+      "1.0": 4178,
+      "1.5": 3358,
+      "2.0": 16120,
+      "2.5": 20040,
+      "3.0": 101159,
+      "3.5": 147207,
+      "4.0": 445958,
+      "4.5": 287753,
+      "5.0": 511972
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 8,
+      "positivas": 90
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "the-green-mile",
+    "coletado_em": "2026-11-08T05:40:56.496030+00:00",
+    "versao_coletor": "1.9.6",
+    "ordenacao_usada": "by/added",
+    "histograma_bruto": {
+      "0.5": 2015,
+      "1.0": 4178,
+      "1.5": 3358,
+      "2.0": 16120,
+      "2.5": 20040,
+      "3.0": 101159,
+      "3.5": 147207,
+      "4.0": 445958,
+      "4.5": 287753,
+      "5.0": 511972
+    },
+    "orcamento_paginas_por_nivel": {
+      "0.5": 1,
+      "1.0": 3,
+      "1.5": 2,
+      "2.0": 10,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_gastas_por_nivel": {
+      "0.5": 1,
+      "1.0": 4,
+      "1.5": 2,
+      "2.0": 12,
+      "2.5": 6,
+      "3.0": 18,
+      "3.5": 2,
+      "4.0": 6,
+      "4.5": 4,
+      "5.0": 6
+    },
+    "paradas_por_limite": [
+      "0.5",
+      "1.0",
+      "1.5",
+      "2.0",
+      "2.5",
+      "3.0",
+      "3.5",
+      "4.0",
+      "4.5",
+      "5.0"
+    ],
+    "contagem_bruta_por_nivel": {
+      "0.5": 12,
+      "1.0": 48,
+      "1.5": 24,
+      "2.0": 144,
+      "2.5": 72,
+      "3.0": 216,
+      "3.5": 24,
+      "4.0": 72,
+      "4.5": 48,
+      "5.0": 72
+    },
+    "contagem_estimada_valida_por_nivel": {
+      "0.5": 2,
+      "1.0": 9,
+      "1.5": 8,
+      "2.0": 32,
+      "2.5": 19,
+      "3.0": 31,
+      "3.5": 6,
+      "4.0": 14,
+      "4.5": 14,
+      "5.0": 20
+    },
+    "motivo_parada_por_nivel": {
+      "0.5": "orcamento_esgotado",
+      "1.0": "orcamento_esgotado",
+      "1.5": "orcamento_esgotado",
+      "2.0": "orcamento_esgotado",
+      "2.5": "orcamento_esgotado",
+      "3.0": "orcamento_esgotado",
+      "3.5": "orcamento_esgotado",
+      "4.0": "orcamento_esgotado",
+      "4.5": "orcamento_esgotado",
+      "5.0": "orcamento_esgotado"
+    },
+    "paginas_base_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 6,
+      "3.0": 10,
+      "3.5": 2,
+      "4.0": 5,
+      "4.5": 3,
+      "5.0": 6
+    },
+    "paginas_extensao_por_nivel": {
+      "0.5": 0,
+      "1.0": 2,
+      "1.5": 0,
+      "2.0": 4,
+      "2.5": 0,
+      "3.0": 8,
+      "3.5": 0,
+      "4.0": 1,
+      "4.5": 1,
+      "5.0": 0
+    },
+    "extensao_por_bucket": {
+      "negativas": {
+        "paginas_base": 13,
+        "paginas_extensao": 6,
+        "extras_por_nivel": {
+          "1.0": 2,
+          "2.0": 4
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 34,
+        "n_validas_pos_extensao": 51,
+        "meta": 50
+      },
+      "medianas": {
+        "paginas_base": 16,
+        "paginas_extensao": 8,
+        "extras_por_nivel": {
+          "3.0": 8
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 36,
+        "n_validas_pos_extensao": 50,
+        "meta": 50
+      },
+      "positivas": {
+        "paginas_base": 16,
+        "paginas_extensao": 2,
+        "extras_por_nivel": {
+          "4.0": 1,
+          "4.5": 1
+        },
+        "motivo_parada": "meta_atingida",
+        "n_validas_pos_base": 45,
+        "n_validas_pos_extensao": 54,
+        "meta": 50
+      }
+    },
+    "profundidade_sondagem": {
+      "nivel_sondado": 5.0,
+      "profundidade": 256,
+      "exata": false,
+      "requisicoes": 4,
+      "motivo": "teto_plataforma"
+    },
+    "profundidade_estimada_por_nivel": {
+      "0.5": 1,
+      "1.0": 2,
+      "1.5": 2,
+      "2.0": 8,
+      "2.5": 10,
+      "3.0": 51,
+      "3.5": 74,
+      "4.0": 223,
+      "4.5": 144,
+      "5.0": 256
+    },
+    "janela_temporal": {
+      "total": {
+        "n": 732,
+        "min": "2000-04-30",
+        "max": "2026-11-08",
+        "p5": "2026-08-09",
+        "p50": "2026-10-17",
+        "p95": "2026-11-07"
+      },
+      "por_bucket": {
+        "negativas": {
+          "n": 228,
+          "min": "2000-04-30",
+          "max": "2026-11-08",
+          "p5": "2026-07-10",
+          "p50": "2026-09-11",
+          "p95": "2026-10-30"
+        },
+        "medianas": {
+          "n": 288,
+          "min": "2016-09-12",
+          "max": "2026-11-07",
+          "p5": "2026-08-23",
+          "p50": "2026-10-14",
+          "p95": "2026-11-05"
+        },
+        "positivas": {
+          "n": 216,
+          "min": "2014-04-04",
+          "max": "2026-11-08",
+          "p5": "2026-10-10",
+          "p50": "2026-11-07",
+          "p95": "2026-11-08"
+        }
+      }
+    },
+    "dias_por_100_paginas": {
+      "n_paginas": 22,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 25,
+      "dias_por_100_paginas": 19.68503937007874,
+      "paginas_para_1_ano": 1854
+    },
+    "dias_por_100_paginas_por_nivel": {
+      "1.0": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 4,
+        "dias": 66,
+        "dias_por_100_paginas": 2200.0,
+        "paginas_para_1_ano": 17
+      },
+      "1.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 43,
+        "dias_por_100_paginas": 4300.0,
+        "paginas_para_1_ano": 8
+      },
+      "2.0": {
+        "n_paginas": 12,
+        "pagina_min": 1,
+        "pagina_max": 12,
+        "dias": 85,
+        "dias_por_100_paginas": 772.7272727272727,
+        "paginas_para_1_ano": 47
+      },
+      "2.5": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 8,
+        "dias": 73,
+        "dias_por_100_paginas": 1042.857142857143,
+        "paginas_para_1_ano": 35
+      },
+      "3.0": {
+        "n_paginas": 18,
+        "pagina_min": 1,
+        "pagina_max": 26,
+        "dias": 57,
+        "dias_por_100_paginas": 228.0,
+        "paginas_para_1_ano": 160
+      },
+      "3.5": {
+        "n_paginas": 2,
+        "pagina_min": 1,
+        "pagina_max": 2,
+        "dias": 1,
+        "dias_por_100_paginas": 100.0,
+        "paginas_para_1_ano": 365
+      },
+      "4.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 56,
+        "dias": 28,
+        "dias_por_100_paginas": 50.90909090909091,
+        "paginas_para_1_ano": 717
+      },
+      "4.5": {
+        "n_paginas": 4,
+        "pagina_min": 1,
+        "pagina_max": 36,
+        "dias": 17,
+        "dias_por_100_paginas": 48.57142857142857,
+        "paginas_para_1_ano": 751
+      },
+      "5.0": {
+        "n_paginas": 6,
+        "pagina_min": 1,
+        "pagina_max": 128,
+        "dias": 26,
+        "dias_por_100_paginas": 20.47244094488189,
+        "paginas_para_1_ano": 1783
+      }
+    },
+    "ano_lancamento": 1999,
+    "ano_fonte": "letterboxd",
+    "identidade_letterboxd": {
+      "slug": "the-green-mile",
+      "titulo": "The Green Mile",
+      "ano": 1999,
+      "tmdb_id_letterboxd": 497,
+      "fonte": "pagina_letterboxd"
+    }
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 2,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 26
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 1,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 11,
+        "p5": 1,
+        "p50": 4,
+        "p95": 11,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2000-04-30",
+        "max": "2026-11-03",
+        "p5": "2026-07-10",
+        "p50": "2026-09-21",
+        "p95": "2026-11-02"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 2,
+          "n_alvo": 3,
+          "n_brutas": 12,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 9,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 9,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 7,
+          "n_alvo": 7,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 36,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 1,
+          "motivos_descarte": {
+            "truncada_sem_texto": 1,
+            "spoiler": 2,
+            "abaixo_min_chars": 36,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 5,
+          "n_alvo": 5,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 15,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 15,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 26,
+          "n_alvo": 25,
+          "n_brutas": 144,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 5,
+          "n_descartadas_curtas": 105,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 2,
+          "motivos_descarte": {
+            "truncada_sem_texto": 2,
+            "spoiler": 5,
+            "abaixo_min_chars": 105,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é muito longo e tem um ritmo lento, com cenas que se arrastam e uma sensação de que a história poderia ser contada em menos tempo.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Estenótipo do negro mágico e racismo",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O personagem negro é retratado de forma submissa e infantilizada, servindo apenas para beneficiar os brancos ao redor, o que reforça um estereótipo racista e problemático.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Sentimentalismo forçado e manipulação emocional",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme tenta a todo custo arrancar lágrimas do espectador, mas essa emotividade parece fabricada e pouco convincente, soando piegas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens unidimensionais e roteiro fraco",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são superficiais e mal desenvolvidos, e a trama se mostra inconsistente, com subtramas irrelevantes e falta de profundidade.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Superestimado e supervalorizado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O filme é exaltado como um clássico, mas não justifica tanta aclamação; parece haver uma superestimação exagerada em torno dele.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Crítica à representação da pena de morte e do sistema prisional",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A abordagem da pena de morte e do sistema carcerário é simplista e enganosa, retratando os guardas como bem-intencionados e ignorando a brutalidade estrutural.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva e o ritmo lento, além de apontarem o estereótipo racial do negro mágico e o sentimentalismo forçado. A insatisfação também recai sobre personagens rasos, roteiro fraco e a percepção de que o filme é superestimado.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 9,
+        "3.0": 31
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 2,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 26,
+        "p5": 1,
+        "p50": 7,
+        "p95": 17,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2018-03-11",
+        "max": "2026-11-05",
+        "p5": "2026-09-09",
+        "p50": "2026-10-16",
+        "p95": "2026-11-03"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 9,
+          "n_alvo": 7,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 47,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 3,
+          "motivos_descarte": {
+            "truncada_sem_texto": 3,
+            "spoiler": 3,
+            "abaixo_min_chars": 47,
+            "excedente_cota": 10,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 31,
+          "n_alvo": 33,
+          "n_brutas": 216,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 7,
+          "n_descartadas_curtas": 173,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 5,
+          "motivos_descarte": {
+            "truncada_sem_texto": 5,
+            "spoiler": 7,
+            "abaixo_min_chars": 173,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo lento",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais, com três horas que poderiam ser reduzidas sem prejuízo, e que o ritmo arrastado torna a experiência cansativa.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme é longo demais, com três horas que poderiam ser reduzidas sem prejuízo, e que o ritmo arrastado torna a experiência cansativa."
+        },
+        {
+          "tema": "Elemento sobrenatural desnecessário ou prejudicial",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo questiona a inclusão de poderes mágicos na trama, considerando que isso soa forçado e desvia a atenção do que poderia ser uma história mais realista e impactante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Críticas ao estereótipo do negro mágico e à representação racial",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews apontam que o personagem negro é retratado como um dispositivo mágico para servir aos brancos, sem profundidade própria, reforçando estereótipos e falhando em abordar o racismo sistêmico.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitas reviews apontam que o personagem negro é retratado como um dispositivo mágico para servir aos brancos, sem profundidade própria, reforçando estereótipos e falhando em abordar o racismo sistêmico."
+        },
+        {
+          "tema": "Tom Hanks e atuações",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Enquanto espectadores elogiam a atuação de Tom Hanks, outros demonstram aversão ao ator ou criticam o tom excessivamente bonachão, mas a maioria reconhece a qualidade do elenco, especialmente Michael Clarke Duncan.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Enquanto alguns elogiam a atuação de Tom Hanks, outros demonstram aversão ao ator ou criticam o tom excessivamente bonachão, mas a maioria reconhece a qualidade do elenco, especialmente Michael Clarke Duncan.",
+          "quantidade_pendente": true
+        },
+        {
+          "tema": "Emoção artificial e apelo lacrimoso",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews medianas descrevem o filme como melodramático e manipulado para arrancar lágrimas, com uma dramatização excessiva que soa forçada em vez de genuína.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Expectativas frustradas e superestimação",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores esperavam mais devido à fama do filme, mas sentiram que não correspondeu ao hype, considerando-o superestimado e sem os elementos excepcionais prometidos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Vários espectadores esperavam mais devido à fama do filme, mas sentiram que não correspondeu ao hype, considerando-o superestimado e sem os elementos excepcionais prometidos."
+        }
+      ],
+      "observacao_geral": "As reviews medianas destacam uma decepção com o excesso de duração e o ritmo lento, além de criticarem a inclusão do elemento sobrenatural e a representação racial estereotipada. Apesar de reconhecerem qualidades nas atuações e na produção, este grupo considera o filme superestimado e emocionalmente manipulador.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 8
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "composicao_atingida": {
+        "3.5": 4,
+        "4.0": 13,
+        "4.5": 8,
+        "5.0": 15
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 0,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 128,
+        "p5": 1,
+        "p50": 3,
+        "p95": 64,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2014-04-04",
+        "max": "2026-11-08",
+        "p5": "2026-10-10",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 4,
+          "n_alvo": 4,
+          "n_brutas": 24,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 17,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 17,
+            "excedente_cota": 2,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 13,
+          "n_alvo": 13,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 3,
+          "n_descartadas_curtas": 55,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 3,
+            "abaixo_min_chars": 55,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 8,
+          "n_alvo": 8,
+          "n_brutas": 48,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 34,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 34,
+            "excedente_cota": 6,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 15,
+          "n_alvo": 15,
+          "n_brutas": 72,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 51,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 51,
+            "excedente_cota": 5,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Impacto emocional e tristeza",
+          "mencoes_aproximadas": 32,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews descrevem a obra como profundamente comovente, capaz de levar às lágrimas e deixar uma marca duradoura, sendo frequente a menção a um choro sentido durante ou após a exibição.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações marcantes",
+          "mencoes_aproximadas": 18,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo elogia as interpretações do elenco, com destaque para a dupla principal e para o intérprete do personagem central, considerados convincentes e essenciais para o impacto da história.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Duração longa e ritmo",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Apesar das mais de três horas, reviews afirmam que o tempo passa rápido, graças ao bom ritmo e ao envolvimento com os personagens, embora haja quem considere a duração excessiva.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Apesar das mais de três horas, muitas reviews afirmam que o tempo passa rápido, graças ao bom ritmo e ao envolvimento com os personagens, embora haja quem considere a duração excessiva."
+        },
+        {
+          "tema": "Roteiro e construção dos personagens",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews destacam a solidez do roteiro, a profundidade dos personagens e a habilidade de despertar empatia ou repulsa, elogiando a narrativa envolvente e a fidelidade à obra original.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Elementos sobrenaturais",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A inclusão de aspectos fantásticos divide opiniões: espectadores consideram que enriquecem a trama, enquanto outros acham que destoam do tom realista, mas em geral são vistos como bem integrados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A inclusão de aspectos fantásticos divide opiniões: alguns consideram que enriquecem a trama, enquanto outros acham que destoam do tom realista, mas em geral são vistos como bem integrados."
+        },
+        {
+          "tema": "Trilha sonora e fotografia",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora e a fotografia são elogiadas por contribuírem para a atmosfera emocional e pela qualidade técnica que realça a experiência cinematográfica.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a forte carga emocional do filme, as atuações marcantes e a capacidade de envolver o espectador apesar da longa duração. Este grupo também ressalta a profundidade dos personagens e a boa execução técnica, ainda que haja ressalvas pontuais sobre o ritmo ou os elementos sobrenaturais.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 90
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 40,
+      "limiar_pp": 22.83
+    },
+    "margem_lift_pp": 22.83,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 40,
+            "freq_pct": 42.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "O filme é muito longo e tem um ritmo lento, com cenas que se arrastam e uma sensação de que a história poderia ser contada em menos tempo.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -20.0,
+            "acima_da_margem": false,
+            "tema": "Duração longa e ritmo",
+            "exemplo_parafraseado": "Apesar das mais de três horas, reviews afirmam que o tempo passa rápido, graças ao bom ritmo e ao envolvimento com os personagens, embora haja quem considere a duração excessiva.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": "Atuações marcantes",
+            "exemplo_parafraseado": "Este grupo elogia as interpretações do elenco, com destaque para a dupla principal e para o intérprete do personagem central, considerados convincentes e essenciais para o impacto da história.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 40,
+            "freq_pct": 5.0,
+            "lift_pp": -15.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 5,
+            "de_n": 40,
+            "freq_pct": 12.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 30,
+            "de_n": 40,
+            "freq_pct": 75.0,
+            "lift_pp": -10.0,
+            "acima_da_margem": false,
+            "tema": "Personagens unidimensionais e roteiro fraco",
+            "exemplo_parafraseado": "Os personagens são superficiais e mal desenvolvidos, e a trama se mostra inconsistente, com subtramas irrelevantes e falta de profundidade.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 34,
+            "de_n": 40,
+            "freq_pct": 85.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 31,
+            "de_n": 40,
+            "freq_pct": 77.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro e construção dos personagens",
+            "exemplo_parafraseado": "As reviews destacam a solidez do roteiro, a profundidade dos personagens e a habilidade de despertar empatia ou repulsa, elogiando a narrativa envolvente e a fidelidade à obra original.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": 7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 3,
+            "de_n": 40,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora e fotografia",
+            "exemplo_parafraseado": "A trilha sonora e a fotografia são elogiadas por contribuírem para a atmosfera emocional e pela qualidade técnica que realça a experiência cinematográfica.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 40,
+            "freq_pct": 25.0,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Sentimentalismo forçado e manipulação emocional",
+            "exemplo_parafraseado": "O filme tenta a todo custo arrancar lágrimas do espectador, mas essa emotividade parece fabricada e pouco convincente, soando piegas.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 40,
+            "freq_pct": 22.5,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": -7.5,
+            "acima_da_margem": false,
+            "tema": "Elementos sobrenaturais",
+            "exemplo_parafraseado": "A inclusão de aspectos fantásticos divide opiniões: espectadores consideram que enriquecem a trama, enquanto outros acham que destoam do tom realista, mas em geral são vistos como bem integrados.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -27.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -37.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 29,
+            "de_n": 40,
+            "freq_pct": 72.5,
+            "lift_pp": 27.5,
+            "acima_da_margem": true,
+            "tema": "Impacto emocional e tristeza",
+            "exemplo_parafraseado": "As reviews descrevem a obra como profundamente comovente, capaz de levar às lágrimas e deixar uma marca duradoura, sendo frequente a menção a um choro sentido durante ou após a exibição.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": "frequencia_e_contraste"
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": "Superestimado e supervalorizado",
+            "exemplo_parafraseado": "O filme é exaltado como um clássico, mas não justifica tanta aclamação; parece haver uma superestimação exagerada em torno dele.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 16,
+            "de_n": 40,
+            "freq_pct": 40.0,
+            "lift_pp": 0.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 11,
+            "de_n": 40,
+            "freq_pct": 27.5,
+            "lift_pp": -12.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Estenótipo do negro mágico e racismo",
+            "exemplo_parafraseado": "O personagem negro é retratado de forma submissa e infantilizada, servindo apenas para beneficiar os brancos ao redor, o que reforça um estereótipo racista e problemático.",
+            "temas_no_mesmo_eixo": [
+              "Crítica à representação da pena de morte e do sistema prisional"
+            ]
+          },
+          "medianas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -17.5,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "tematico",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.50",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza interpretações convincentes do elenco, sobretudo da dupla principal e do protagonista",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Atuações marcantes",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "aceita uma longa duração porque o ritmo prende, embora haja quem a ache excessiva",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Duração longa e ritmo",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "evita filmes arrastados, com ritmo vagaroso e sensação de história esticada",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "rejeita a figura submissa e infantilizada do personagem negro a serviço dos brancos",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Estenótipo do negro mágico e racismo",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita emotividade fabricada que tenta arrancar lágrimas e soa piegas",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Sentimentalismo forçado e manipulação emocional",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 90,
+        "peso_texto": "~90% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": null
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [
+        "POS-A"
+      ],
+      "talvez_evite": []
+    },
+    "descartadas": [
+      {
+        "texto": "procura uma obra profundamente comovente, capaz de levar às lágrimas e deixar marca",
+        "tema_origem": "POS-A",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": {
+      "n_reprovadas": 2,
+      "n_aplicadas": 1,
+      "n_saltadas_pelo_modelo": 0,
+      "n_descartadas": 1,
+      "n_recusadas_pelo_modelo": 0
+    },
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 4,
+    "indice_escolhido": 1,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 6,
+        "n_flags": 4,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 6,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 6,
+        "n_flags": 3,
+        "flags": [
+          "comprimento",
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 6,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 6
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 16843,
+      "completion_tokens": 907,
+      "cache_hit_tokens": 15098,
+      "cache_miss_tokens": 1745
+    },
+    "latencia_s": 7.28,
+    "spec_version": "1.9.50",
+    "variante": "experimento-briefing"
+  }
+}
