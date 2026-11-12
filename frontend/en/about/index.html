@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About / How it works — Espectro 24</title>
+  <meta name="description" content="Espectro 24 is a Portuguese-language site that shows how opinions about a film split across three groups of Letterboxd ratings. How it works, what it uses, what it never shows.">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/fonte.js"></script>
+  <style>
+    .sobre-en { max-width: 720px; font-family: var(--ed-fonte, var(--sans)); }
+    .sobre-en .creditos__titulo { font-family: var(--ed-fonte, var(--sans)); font-weight: 600; }
+    .sobre-en ul { color: var(--text-dim); line-height: 1.62; padding-left: 1.2em; }
+    .sobre-en li { margin: 4px 0; }
+    .sobre-en figure { margin: 18px 0 0; }
+    .sobre-en figure img { width: 100%; height: auto; display: block; border: 1px solid var(--border-soft); border-radius: 8px; }
+    .sobre-en figcaption { color: var(--text-dim); font-size: 0.92rem; line-height: 1.55; margin-top: 12px; }
+    .sobre-en figcaption ol { padding-left: 1.2em; margin: 8px 0 0; }
+  </style>
+</head>
+<body>
+  <div class="spectrum-line" aria-hidden="true"></div>
+
+  <div class="wrap topbar">
+    <a class="back-link" href="/index.html">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Espectro 24
+    </a>
+  </div>
+
+  <main class="wrap creditos sobre-en">
+    <h1 class="creditos__titulo">About / How it works</h1>
+    <p class="creditos__intro">This page is in English for reviewers. The rest of the site is in Brazilian Portuguese.</p>
+
+    <section class="creditos__bloco" aria-labelledby="s-what">
+      <h2 class="creditos__h2" id="s-what">What it is</h2>
+      <p>Espectro 24 is a Portuguese-language website for people who have not seen a film yet. For each film it shows how opinions are distributed across three groups of Letterboxd ratings (0.5–2★, 2.5–3★, 3.5–5★) and what each group says.</p>
+      <p>There is no average rating, score or star anywhere on the site.</p>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-how">
+      <h2 class="creditos__h2" id="s-how">How reviews are used</h2>
+      <ul>
+        <li>For each film we read a sample of about 120 public reviews: 40 per rating group.</li>
+        <li>A language model groups the recurring themes in each group.</li>
+        <li>All counts are computed in code, not by the model. The share of each group comes from the film’s public Letterboxd ratings histogram.</li>
+        <li>The site shows short summaries in Portuguese, not the text of the reviews.</li>
+      </ul>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-never">
+      <h2 class="creditos__h2" id="s-never">What never appears</h2>
+      <ul>
+        <li>No Letterboxd username, or any other reviewer identity, appears on any page or in the data files the site serves.</li>
+        <li>No review text is republished. The examples under each theme are paraphrases written by the model. We check this automatically: the longest run of consecutive words an example shares with any review in its group has a median of 2 words and a maximum of 8 (common phrases), across the roughly 1,800 examples we measured.</li>
+        <li>No average rating, score or star.</li>
+        <li>No plot spoilers: reviews that reveal the plot are filtered out before analysis.</li>
+      </ul>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-train">
+      <h2 class="creditos__h2" id="s-train">Model training</h2>
+      <p>The data is not used to train any model.</p>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-attr">
+      <h2 class="creditos__h2" id="s-attr">Attribution</h2>
+      <p>The reviews come from Letterboxd’s public pages; the site is not affiliated with Letterboxd. Each film page links to that film’s reviews on Letterboxd in its footer. Film details and images come from TMDB, which does not endorse this product (<a href="/creditos.html">credits and sources, in Portuguese</a>).</p>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-example">
+      <h2 class="creditos__h2" id="s-example">Example: <em>Alien</em> (1979)</h2>
+      <figure>
+        <img src="example-alien.png" width="1100" height="1325" alt="Screenshot of the Alien page: a proportion bar, then two columns of themes for the 3.5–5★ and 0.5–2★ groups, a collapsed middle group, and a 'to decide' block.">
+        <figcaption>
+          Top to bottom:
+          <ol>
+            <li><b>Reception bar</b>: the share of each rating group among all public ratings of the film (~2% low, ~9% middle, ~89% high).</li>
+            <li><b>What each group says</b>: the recurring themes of the high-rating group (left) and the low-rating group (right), each with a bar for how often the theme appears in that group’s sample. “Aprofundar” expands a short paraphrased example.</li>
+            <li><b>Middle group</b>: collapsed by default (“~9% stayed in the middle”).</li>
+            <li><b>Para decidir</b>: “worth it if you…” and “maybe avoid if you…”, one line per recurring theme.</li>
+          </ol>
+        </figcaption>
+      </figure>
+      <p class="creditos__link"><a href="/filme.html?slug=alien">Open this page live ↗</a></p>
+    </section>
+
+    <section class="creditos__bloco" aria-labelledby="s-contact">
+      <h2 class="creditos__h2" id="s-contact">Contact and project</h2>
+      <p>A non-commercial project by a student at UFPB (Universidade Federal da Paraíba, Brazil). No ads and no user accounts.</p>
+      <p class="creditos__link"><a href="https://github.com/colletpedro/espectro-24" target="_blank" rel="noopener noreferrer">github.com/colletpedro/espectro-24&nbsp;↗</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="mono">Espectro 24</span>
+      <span class="site-footer__aviso">This product uses the TMDB API but is not endorsed or certified by TMDB.</span>
+    </div>
+  </footer>
+</body>
+</html>
