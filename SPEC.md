@@ -4088,3 +4088,27 @@ piso — exige regeneração do veredito, **mesmo que o estado `contraste` não
 mude**. O estado é uma das entradas do briefing, não um resumo dele.
 Travado em `tests/test_aplicar_lei_margem.py::test_o_criterio_e_o_BRIEFING_e_
 nao_o_estado`.
+
+---
+
+## Regra de publicação (2026-11-12)
+
+### REGRA: publicação só pelo git; deploy direto pelo CLI do Vercel não é usado
+
+O site público é o que o `main` do GitHub contém, construído pelo Vercel a
+cada push. **Nada é publicado por upload direto (`vercel deploy`/`vercel --prod`
+a partir do disco).** Um deploy assim serve arquivos que o git não tem, e o
+próximo push o substitui por uma reconstrução só com o versionado.
+
+**O que a regra custou.** Em 12/11/2026 um push (`1899d72`) trocou o deploy de
+8/11, feito a partir do disco, por um construído só do git: os 29 filmes
+publicados no domingo (`frontend/data/*.json` novos, `data.js`, `indice.js`,
+`entrada_no_catalogo.json`, `dados/publicados.json`) existiam só no working
+tree, e o site caiu de 128 para 99 filmes até o commit `8513bfd`.
+
+**Como é travada.** `tests/test_publicacao_consistente.py` exige que
+`dados/publicados.json`, `frontend/data/`, `js/indice.js` e `js/data.js`
+concordem em contagem e slugs, e que os arquivos servidos estejam versionados
+e sem modificação pendente. O hook `.githooks/pre-push` roda esse teste e
+bloqueia o push se falhar (ativação: `git config core.hooksPath .githooks`,
+no README).

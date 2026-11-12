@@ -109,6 +109,17 @@ pip install -e ".[llm,test]"
 python -m pytest tests/        # zero rede, zero chamada real de LLM
 ```
 
+### Hook de pre-push (uma vez por clone)
+
+```bash
+git config core.hooksPath .githooks
+```
+
+O hook `.githooks/pre-push` roda só `tests/test_publicacao_consistente.py` e
+bloqueia o push se a publicação (`dados/publicados.json`, `frontend/data/`,
+`js/indice.js`, `js/data.js`) não estiver inteira e commitada. Ver "Regra de
+publicação" no `SPEC.md`.
+
 ### Publicar o catálogo
 
 ```bash

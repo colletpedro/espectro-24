@@ -1,0 +1,13 @@
+#!/bin/sh
+# Bloqueia o push se o que o site serve não bate com o que o git versiona.
+# Roda SÓ tests/test_publicacao_consistente.py (rápido, sem rede).
+# Ativar uma vez por clone:  git config core.hooksPath .githooks
+# Motivo: SPEC.md, "Regra de publicação" (12/11/2026: um push apagou 29 filmes).
+cd "$(git rev-parse --show-toplevel)" || exit 1
+if [ -x venv/bin/python ]; then PY=venv/bin/python; else PY=python3; fi
+if ! "$PY" -m pytest -q tests/test_publicacao_consistente.py; then
+  echo "" >&2
+  echo "pre-push: PUSH BLOQUEADO. A publicação (dados/publicados.json, frontend/data/," >&2
+  echo "js/indice.js, js/data.js) não está inteira e commitada. Corrija e tente de novo." >&2
+  exit 1
+fi
