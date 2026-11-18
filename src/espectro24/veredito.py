@@ -41,6 +41,7 @@ import time
 import unicodedata
 
 from . import briefing as br
+from . import estado_amostra as EA
 from . import qualidade as q
 from . import quantificador as Q
 from . import synthesize as S
@@ -298,8 +299,8 @@ def montar_briefing(output: dict) -> dict | None:
     grupos, reduzida = {}, False
     for nome in nomes:
         b = por_nome.get(nome) or {}
-        estado = b.get("estado_piso") or "completa"
-        modo = b.get("modo") or "completo"
+        estado = EA.estado_piso_do_bucket(b)
+        modo = EA.modo_de_bucket_serializado(b)
         # Bucket `sem_analise` não empresta eixo nenhum — não há análise
         # temática para esse grupo, então não há assunto confiável a citar.
         mudo = estado == "sem_analise"
@@ -311,7 +312,7 @@ def montar_briefing(output: dict) -> dict | None:
         }
         if isinstance(b.get("share_real"), (int, float)):
             g["share_pct"] = b["share_real"]
-        if modo == "reduzido" or estado != "completa":
+        if EA.amostra_pequena(modo, estado):
             reduzida = True
         grupos[nome] = g
 
@@ -449,7 +450,7 @@ def serializar_briefing(b: dict) -> str:
         else:
             L.append("  ASSUNTO MAIS FALADO por este grupo: indisponível "
                      "(amostra insuficiente para análise temática).")
-        if g["modo"] == "reduzido" or g["estado_piso"] != "completa":
+        if EA.amostra_pequena(g["modo"], g["estado_piso"]):
             L.append("  AMOSTRA PEQUENA neste grupo: escreva com cautela, "
                      "sem apresentar o achado como sólido.")
         L.append("")
@@ -1148,7 +1149,7 @@ def veredito_template(b: dict) -> str:
         if not freq:
             frase = (verbo + _em_frase(com_lift["eixo_rotulo"])
                      + " — do outro lado, nenhum assunto se destaca tanto assim.")
-        elif outro.get("modo") == "reduzido" or outro.get("estado_piso") != "completa":
+        elif EA.amostra_pequena(outro.get("modo"), outro.get("estado_piso")):
             frase = (verbo + _em_frase(com_lift["eixo_rotulo"]) + "; "
                      + verbo_outro + _em_frase(freq["eixo_rotulo"])
                      + " — amostra pequena demais para dizer mais que isso.")

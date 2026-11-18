@@ -124,7 +124,8 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
     versão; `estado_piso` entra ao lado, não no lugar.
     """
     from .bruto import distribuicao_pagina_origem
-    from .config import BUCKET_ALVO, PISO_POR_BUCKET
+    from .config import BUCKET_ALVO
+    from .estado_amostra import modo_do_bucket
 
     paginas = {}
     orcamento_por_nivel = None
@@ -158,12 +159,7 @@ def montar_buckets(selecao, superset=None) -> list[BucketResult]:
             ))
         n_validas = sel.n_final
         alvo = BUCKET_ALVO[nome]
-        if n_validas < PISO_POR_BUCKET:
-            modo = "sem_analise"
-        elif n_validas >= alvo:
-            modo = "completo"
-        else:
-            modo = "reduzido"
+        modo = modo_do_bucket(n_validas, alvo)
         amostra = [r for ns in sel.niveis.values() for r in ns.validas]
         buckets.append(BucketResult(
             nome=nome, alvo=alvo, modo=modo, estado_piso=sel.estado_piso,

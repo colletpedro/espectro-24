@@ -31,7 +31,8 @@ from __future__ import annotations
 from . import quantificador as _q
 from . import qualidade as q
 from .buckets import FRONTEIRAS
-from .config import PISO_ESCALONADO, QUANT_MAX_REPETICOES
+from . import estado_amostra as _ea
+from .config import QUANT_MAX_REPETICOES
 
 # Ordem canônica dos buckets — usada como desempate estável e como ordem de
 # fallback quando não há distribuição. Sem ela, dois filmes com o mesmo
@@ -162,24 +163,10 @@ def extrair_narrativa(bruto: str) -> str:
             .replace("\\\\", "\\").strip())
 
 
-def _estado_piso(bucket: dict) -> str:
-    """`estado_piso` do bucket, DERIVADO de `n_validas` quando ausente.
-
-    O campo é da v1.9.0 e não está serializado em `resultado/*.json`
-    publicado antes dela — e um default para `"sem_analise"` seria o pior
-    fallback possível: apagaria em silêncio temas perfeitamente bons (medido
-    ao vivo em `cure`, 50 reviews com 6 temas indo para "SEM TEMAS"). Como o
-    estado é FUNÇÃO de `n_validas` pela mesma tabela que o pipeline usa
-    (`PISO_ESCALONADO`, §3[C3]), recomputá-lo é exato, não uma estimativa.
-    """
-    declarado = bucket.get("estado_piso")
-    if declarado:
-        return declarado
-    n = bucket.get("n_validas", 0) or 0
-    for limiar, estado in PISO_ESCALONADO:
-        if n >= limiar:
-            return estado
-    return "sem_analise"
+# `estado_piso` do bucket, derivado de `n_validas` quando ausente. A regra (e
+# o porquê do fallback) mora em `estado_amostra.estado_piso_do_bucket`; o nome
+# privado fica porque `rotulagem` o importa.
+_estado_piso = _ea.estado_piso_do_bucket
 
 
 # [v1.9.21] Fração e rótulo vêm do módulo COMUM (`quantificador.py`). Até

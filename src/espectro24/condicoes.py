@@ -31,6 +31,7 @@ import re
 import time
 import unicodedata
 
+from . import estado_amostra as EA
 from . import qualidade as q
 from . import quantificador as Q
 from . import synthesize as S
@@ -103,8 +104,8 @@ def indexar(output: dict) -> dict:
         nome = b.get("bucket")
         if nome not in CODIGO_BUCKET:
             continue
-        estado = b.get("estado_piso") or "completa"
-        modo = b.get("modo") or "completo"
+        estado = EA.estado_piso_do_bucket(b)
+        modo = EA.modo_de_bucket_serializado(b)
         for i, t in enumerate(b.get("temas") or []):
             if i >= len(LETRAS):
                 break
@@ -350,7 +351,7 @@ def peso_do_lado(idx: dict, lado: str) -> dict:
     if not do_bucket:
         return {"peso_pct": None, "peso_texto": None, "nota_de_amostra": None}
     t = do_bucket[0]
-    reduzida = t["modo"] == "reduzido" or t["estado_piso"] != "completa"
+    reduzida = EA.amostra_pequena(t["modo"], t["estado_piso"])
     pct = t["share_pct"]
     return {
         "peso_pct": pct,
@@ -815,7 +816,7 @@ def serializar_briefing(b: dict, *, variante: str | None = None) -> str:
         for t in b["selecao"][lado]:
             L.append(f"  [{t['id']}] {t['tema']}")
             L.append(f"       o que o grupo diz: {t['exemplo']}")
-            if t["estado_piso"] != "completa" or t["modo"] == "reduzido":
+            if EA.amostra_pequena(t["modo"], t["estado_piso"]):
                 L.append("       AMOSTRA PEQUENA neste grupo: não afirme "
                          "quantidade, nem em palavra.")
             if risco_de_spoiler(t):

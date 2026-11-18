@@ -26,7 +26,6 @@ from .config import (
     MIN_CHARS,
     NIVEIS_ORDENADOS,
     ORDENACAO,
-    PISO_ESCALONADO,
     RESERVA_PROFUNDIDADE,
     TETO_PAGINAS,
     VERSAO_COLETOR,
@@ -534,16 +533,6 @@ def collect_distribuicao(fetcher: Fetcher, slug: str) -> Distribuicao | None:
     return Distribuicao.de_histograma(por_nivel)
 
 
-def estado_do_piso(n_validas: int) -> str:
-    """[v1.9.0, §3[C3]] Piso ESCALONADO — 4 estados a partir do n final.
-
-    Substitui o piso binário de 3, que só distinguia "tem análise" de "não
-    tem". Os limiares (3, 8, 15) são **ARBITRÁRIOS** e estão registrados com
-    esse rótulo na spec: a ordem de grandeza é defensável pela tabela de
-    precisão de §3[C2] (em n=8 o intervalo de 95% já passa de ±34pp, o que
-    torna um quantificador verbal indefensável), mas os cortes exatos não.
-    """
-    for limiar, estado in PISO_ESCALONADO:
-        if n_validas >= limiar:
-            return estado
-    return PISO_ESCALONADO[-1][1]
+# [v1.9.0, §3[C3]] Piso ESCALONADO. Mora em `estado_amostra` (a fonte única
+# do estado de amostra do bucket); reexportado aqui para os imports antigos.
+from .estado_amostra import estado_do_piso  # noqa: E402,F401

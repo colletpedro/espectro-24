@@ -50,6 +50,7 @@ sys.path.insert(0, str(RAIZ / "src"))
 from espectro24 import condicoes as C  # noqa: E402
 from espectro24 import quantificador as Q  # noqa: E402
 from espectro24 import veredito as V  # noqa: E402
+from espectro24.estado_amostra import amostra_pequena  # noqa: E402
 
 RESULTADO_DIR = RAIZ / "resultado"
 SAIDA_DIR = RAIZ / "docs" / "arquivo-de-estudos" / "revisao-condicoes"
@@ -374,9 +375,8 @@ def montar_itens(lote, resultado_dir: Path = RESULTADO_DIR) -> list[dict]:
                     "freq_pct": t.get("freq_pct"),
                     "como_entrou": ("par obrigatório" if t.get("ordem", 0)
                                     >= C.N_POR_LADO else "base"),
-                    "amostra_pequena": bool(t) and (
-                        t.get("estado_piso") != "completa"
-                        or t.get("modo") == "reduzido"),
+                    "amostra_pequena": bool(t) and amostra_pequena(
+                        t.get("modo"), t.get("estado_piso")),
                     "peso_texto": peso.get("peso_texto"),
                     "eixos": (_eixos_do_tema(doc, t["bucket"], tema_hoje)
                               if t else []),
