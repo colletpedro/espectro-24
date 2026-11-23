@@ -81,7 +81,7 @@ def test_detect_provider_nenhuma_chave_e_erro_claro(monkeypatch):
 
 
 def test_provider_default_models_tem_as_tres_chaves():
-    assert set(PROVIDER_DEFAULT_MODELS) == {"anthropic", "gemini", "deepseek"}
+    assert set(PROVIDER_DEFAULT_MODELS) == {"anthropic", "gemini", "deepseek", "local"}
     assert PROVIDER_DEFAULT_MODELS["gemini"] == "gemini-2.5-flash"
     assert PROVIDER_DEFAULT_MODELS["deepseek"] == "deepseek-v4-flash"
 

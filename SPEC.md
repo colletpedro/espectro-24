@@ -1890,6 +1890,33 @@ c. **Escopo:** checagem barata na `observacao_geral` por marcadores literais de 
 
 
 
+### [D] Síntese local em produção (decisão de produto, 2026-11-23)
+
+**Decisão do dono** (registrada em `finetune/FINETUNE_REGISTRO.md`). A síntese gerada pelo modelo local
+`espectro-qwen3-8b-treinado` (GGUF sha256 `e488697e…`, servido pelo Ollama) PODE ser publicada pelo MESMO
+gate dos filmes da Featherless (decisão de 08/11: o juiz fica FORA do gate de publicação): validadores
+mecânicos (`validar_publicado`) + guarda de quantidade em código + leitura do dono (só os bullets,
+"publico? S/N"). É política de produto NOVA, não aprovação retroativa: o veredito da Fase 4 ("não publicável
+pelos critérios pré-registrados": C1 e C3) continua como está.
+
+- **Como entra.** Provider `local` (`sintese_local.py`), só por pedido explícito
+  (`synthesize_bucket(provider="local")`, `cli --sintese-local`); fica fora de `PROVIDER_ENV_KEYS`, então a
+  detecção por chave nunca o escolhe. O padrão do projeto NÃO muda sem decisão do dono. Só a síntese:
+  classificação, rotulagem e condições seguem o caminho de sempre.
+- **O que o adaptador fixa.** Modelo escolhido pelo sha256 do GGUF (lido do `modelfile` do Ollama), não pelo
+  nome; amostragem do DESVIO_P01 (temperature 0,7, top_p 0,8, top_k 20, min_p 0, repeat_penalty 1,0, seed
+  20261019, `think` false, teto de saída 3.000) em CADA chamada; `num_ctx` por chamada = (tokens do prompt +
+  3.000) × 1,10 em múltiplos de 1.024. Prompt, retentativa e validadores são os de `synthesize_bucket`.
+- **Guarda de quantidade** (`guarda_quantidade.py`, em `_construir_temas`): vale para QUALQUER fonte (local,
+  DeepSeek, Featherless). Reescreve de forma determinística as expressões da lista congelada do M1 em
+  `exemplo_parafraseado`; nunca introduz número, nunca remove, junta ou reordena bullet. O texto sem regra
+  segura fica intacto e marcado `quantidade_pendente`. **Fallback:** o bucket com pendente (no exemplo ou no
+  nome do tema) ganha UMA nova chamada com reforço, aceita só se mantiver o mesmo número de temas, não piorar
+  idioma/escopo e reduzir os pendentes; o desfecho vai em `quantidade_fallback`. Os `resultado/*.json` já
+  publicados não são reescritos.
+- **Estrutura impossível de `temas`** (`temas: [3, 5]`) conta como JSON inválido (DESVIO_P04 promovido da
+  avaliação para a produção).
+
 ### [D2] Narrador — saída narrativa, em TRÊS MOVIMENTOS
 
 *(Mesmo padrão do estágio anterior: a lei vinha depois de sete blocos de
