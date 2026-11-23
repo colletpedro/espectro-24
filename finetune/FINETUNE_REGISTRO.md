@@ -1681,6 +1681,50 @@ O treinado NÃO foi gerado nem medido no teste: isso é a Fase 4.
   (IC sup. 0,26 pp acima do limite) e **C3 falha** (M1 +25,7 pp, limite < +10).
 - Desvios da fase: `DESVIO_P03` (τ do M2), `DESVIO_P04` (estrutura impossível de `temas`).
 
+## Guarda de quantidade e C22 — estado até 2026-11-05 (MEDIDO, registrado em 2026-11-23)
+
+Registro de fatos que já estavam nos commits e não neste arquivo. Nada foi reescrito.
+
+- **Guarda de quantidade:** `src/espectro24/guarda_quantidade.py` (`main`, commit `55704e2`; sha256
+  `61da0b7d…`), lista congelada do M1 `a7fcd5a5…`. Reescrita determinística em `exemplo_parafraseado`,
+  dentro de `_construir_temas`; nunca introduz número nem mexe em bullet. Medição no DESENVOLVIMENTO
+  (`finetune/guarda/dev_medicao.md`, commit `e6c6cab`): M1 antes → depois — treinado 82,4% → 2,1%
+  (81,3% dos bullets alterados), base 46,0% → 0,9%, publicado-teste 56,7% → 5,8%, publicado-treino
+  54,8% → 3,6%; temas com a palavra da lista: 0/534, 0/526, 1/534, 0/1079; invariantes violados: 0.
+- **Fluência (critério ≥ 27/30, fixado antes de mostrar; semente 20261106):** o dono respondeu **28/30 S**
+  (commit `e37e3bd`, `finetune/guarda/fluencia_resultado.json`, respostas sha256 `9a61b9a7…`). Passa.
+- **C22:** `PREREGISTRO_C22.md` (commit `82136d7`) para 35 filmes / 105 buckets; geração do treinado com a
+  guarda 105/105 (`5b48d7d`), entrada do juiz (`c7385c8`), juiz (`4e48fc3`), cálculo (`496384e`). **Os
+  números do C22 (C1–C4, juiz) NÃO foram lidos nesta sessão**: a cegueira do dono até o C6 segue de pé, e
+  o C6 do C22 (`c6_mapa.json`, sem commit) não foi lido. A nova política abaixo tira o juiz do gate, mas
+  não abre a cegueira por conta própria.
+
+## Decisão de produto (dono, 2026-11-23): síntese local em produção
+
+- O veredito da Fase 4 continua registrado como está: **"não publicável pelos critérios pré-registrados"
+  (C1 e C3)**. Nada é reescrito, e esta decisão NÃO é uma aprovação retroativa.
+- **Política nova:** a síntese gerada pelo modelo local (`espectro-qwen3-8b-treinado`, GGUF sha256
+  `e488697e7215f12c35c7fdfe9206a5af4438bfe47512a91a8698ad98cdcd6eac`) pode ser publicada pelo MESMO gate
+  dos filmes da Featherless (decisão de 08/11: o juiz fica fora do gate de publicação). O gate é:
+  **validadores mecânicos + guarda de quantidade em código + leitura do dono** ("publico? S/N", só os
+  bullets). O juiz pode rodar depois sobre os pilotos, sem gate, só para registro do portfólio.
+- **Implementação** (commit em `main`; SPEC §[D] "Síntese local em produção"): provider `local`
+  (`src/espectro24/sintese_local.py`), só por pedido explícito, padrão do projeto inalterado; modelo
+  escolhido pelo sha do GGUF; amostragem do DESVIO_P01 em cada chamada; `num_ctx` pela regra do gate 0
+  (MEDIDO: a função reproduz o `num_ctx` dos 105 pares do plano do C22); prompt, retentativa de produção e
+  validadores são os de `synthesize_bucket`.
+- **Fallback da guarda** (era PROPOSTO, agora implementado): o bucket com expressão de quantidade que a
+  guarda não resolveu ganha UMA nova chamada com reforço; aceita só se mantiver o mesmo número de temas, não
+  piorar idioma/escopo e reduzir os pendentes; o desfecho fica em `quantidade_fallback`. Só testado com
+  cliente falso: **nenhuma chamada real foi feita**. ESTIMADO: dispara em até 12% dos buckets do treinado
+  (11/89 com pendente no desenvolvimento) e em 19–27% dos do publicado (34/180, 24/89) — o custo extra só
+  pesa nas fontes pagas. `c22.py` passa `fallback_quantidade=False`: o regime pré-registrado do C22
+  (guarda sem fallback) não muda.
+- **Estrutura impossível de `temas`** (DESVIO_P04) agora é JSON inválido também na produção
+  (`_parse_sintese`).
+- Não aplicado aos `resultado/*.json` já publicados. Piloto (5 filmes) e documento de leitura do dono:
+  PREPARAR, o dono roda; nada publicado.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
