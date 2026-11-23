@@ -328,6 +328,9 @@ PROVIDER_ENV_KEYS = {
     "deepseek": "DEEPSEEK_API_KEY",
 }
 PROVIDER_DEFAULT_MODELS = {
+    # Modelo local (Ollama) da síntese de produção — `sintese_local.py`; o nome é só o rótulo,
+    # quem escolhe o modelo é o sha256 do GGUF. Fora de PROVIDER_ENV_KEYS: só por pedido explícito.
+    "local": "espectro-qwen3-8b-treinado",
     "anthropic": "claude-sonnet-4-6",
     # gemini-2.5-flash (não flash-lite) — ratificado em v1.1.2 com evidência
     # empírica: a comparação de modelos (resultado/comparacao/COMPARACAO.md)

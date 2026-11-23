@@ -67,7 +67,7 @@ from .config import (
     nota_para_url,
 )
 from . import quantificador as _q
-from .guarda_quantidade import reescrever as reescrever_quantidade
+from .guarda_quantidade import reescrever as reescrever_quantidade, tem_quantidade
 from .models import BucketResult, Tema
 
 
@@ -149,6 +149,16 @@ temas): reescreva TUDO em português do Brasil.
 - Se a `observacao_geral` generalizou para "os críticos", "a maioria", "o \
 consenso" ou "a recepção do filme": reescreva se referindo apenas a ESTE \
 grupo de reviews (a faixa de nota analisada), nunca ao filme como um todo."""
+
+# Fallback da guarda de quantidade (2026-11-23): UMA nova chamada do bucket quando, depois da
+# reescrita determinística, ainda sobrou expressão de quantidade da lista congelada do M1.
+_REFORCO_QUANTIDADE = """
+
+REFORÇO — na resposta anterior, algum `exemplo_parafraseado` (ou nome de tema) usou expressão
+de quantidade vaga ("muitos", "alguns", "vários", "a maioria", "poucos", "frequentemente",
+"a metade", "quase todos"...). Refaça a MESMA resposta: os mesmos temas, na mesma quantidade e
+na mesma ordem, o mesmo sentido, descrevendo o que os espectadores dizem SEM dizer quantos
+dizem. Não introduza número nem porcentagem."""
 
 
 
@@ -1893,7 +1903,13 @@ def modelo_do_estagio(estagio: str, provider: str | None = None) -> str:
     return MODELO_POR_ESTAGIO[estagio]
 
 
+def local_client_call(system, user, model):
+    from .sintese_local import client_call_local
+    return client_call_local(system, user, model)
+
+
 PROVIDER_CLIENTS = {
+    "local": local_client_call,
     "anthropic": anthropic_client_call,
     "gemini": gemini_client_call,
     "deepseek": deepseek_client_call,
@@ -1918,6 +1934,10 @@ def detect_provider(explicit: str | None = None) -> str:
     presente — falha aqui em vez de só na hora da chamada real, para que o
     CLI possa recusar antes de gastar qualquer requisição de coleta.
     """
+    if explicit == "local":
+        # Ollama local (`sintese_local.py`): sem chave de API, só por pedido explícito. Fica FORA de
+        # `PROVIDER_ENV_KEYS`, então a detecção automática por chave nunca o escolhe.
+        return "local"
     if explicit is not None:
         if explicit not in PROVIDER_CLIENTS:
             raise ProviderError(
@@ -1961,6 +1981,9 @@ def _resolve_call_and_model(client_call, model, provider, prosa: bool = False):
         return client_call, (model or MODEL_DEFAULT)
     resolved_provider = detect_provider(provider)
     clients = PROVIDER_CLIENTS_PROSA if prosa else PROVIDER_CLIENTS
+    if resolved_provider not in clients:
+        raise ProviderError(f"provider {resolved_provider!r} não serve a etapa de "
+                            f"{'prosa' if prosa else 'síntese'}")
     return clients[resolved_provider], (model or PROVIDER_DEFAULT_MODELS[resolved_provider])
 
 
@@ -1993,6 +2016,25 @@ def _strip_fences(text: str) -> str:
 
 def _parse_llm_json(raw: str) -> dict:
     return json.loads(_strip_fences(raw))
+
+
+def _estrutura_de_temas_valida(data) -> bool:
+    """O que `_construir_temas` precisa para não estourar: um objeto cujo `temas` é
+    ausente/nulo ou lista de objetos. Resposta de modelo pequeno com `temas: [3, 5]`
+    levantaria AttributeError (DESVIO_P04): vale como JSON inválido."""
+    if not isinstance(data, dict):
+        return False
+    temas = data.get("temas")
+    return temas is None or (isinstance(temas, list) and all(isinstance(t, dict) for t in temas))
+
+
+def _parse_sintese(raw: str) -> dict:
+    """`_parse_llm_json` + a estrutura que a síntese supõe (estrutura impossível = `ValueError`,
+    o mesmo caminho do JSON inválido: retentativa e, depois, "Falha ao obter JSON válido")."""
+    data = _parse_llm_json(raw)
+    if not _estrutura_de_temas_valida(data):
+        raise ValueError("JSON com estrutura de temas impossível")
+    return data
 
 
 # --- Validações pós-parsing (código, não prompt) — SPEC §D, v1.1.2 ---
@@ -2092,6 +2134,12 @@ def _tem_marcador_de_prevalencia(texto: str) -> bool:
     return any(m in t for m in _MARCADORES_PREVALENCIA)
 
 
+def _n_quantidade_pendente(temas: list[Tema]) -> int:
+    """Quantos temas ainda têm expressão da lista congelada do M1 depois da guarda: no exemplo
+    (`quantidade_pendente`) ou no nome do tema, que a guarda não reescreve."""
+    return sum(1 for t in temas if t.quantidade_pendente or tem_quantidade(t.tema))
+
+
 def _construir_temas(data: dict, n_analisadas: int) -> list[Tema]:
     """Constrói a lista de Tema a partir do JSON parseado: clamp do
     numerador (v1.1.1) + remoção mecânica de aspas (v1.1.2)."""
@@ -2128,7 +2176,8 @@ def _construir_temas(data: dict, n_analisadas: int) -> list[Tema]:
 
 def synthesize_bucket(bucket: BucketResult, client_call=None,
                       model: str | None = None,
-                      provider: str | None = None) -> BucketResult:
+                      provider: str | None = None, *,
+                      fallback_quantidade: bool = True) -> BucketResult:
     """Preenche `bucket.temas` e `bucket.observacao_geral`.
 
     Buckets sem análise (§C piso) NÃO chamam o LLM. Reviews enviadas usam
@@ -2176,7 +2225,7 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
     for tentativa in range(2):  # chamada + 1 retentativa de JSON inválido (§D)
         raw = chamar(system, user)
         try:
-            data = _parse_llm_json(raw)
+            data = _parse_sintese(raw)
             break
         except (ValueError, json.JSONDecodeError):
             if tentativa == 1:
@@ -2193,7 +2242,7 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
     if not idioma_ok or not escopo_ok:
         raw_retry = chamar(system + _REFORCO_VALIDACAO, user)
         try:
-            data_retry = _parse_llm_json(raw_retry)
+            data_retry = _parse_sintese(raw_retry)
             temas = _construir_temas(data_retry, n_analisadas)
             observacao_geral = str(data_retry.get("observacao_geral", ""))
             idioma_ok = _idioma_e_pt_br(
@@ -2202,10 +2251,40 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
         except (ValueError, json.JSONDecodeError):
             pass  # retentativa não parseou -> mantém o resultado original
 
+    # Fallback da guarda de quantidade: a guarda reescreve o que tem regra segura; o que sobrou
+    # (`quantidade_pendente`, ou palavra da lista no nome do tema) ganha UMA nova chamada deste
+    # bucket com reforço. Aceita só se mantiver o MESMO número de temas (nenhum bullet é removido,
+    # juntado ou criado), não piorar idioma/escopo e reduzir os pendentes; senão fica o texto
+    # original, pendente e marcado. Erro da chamada extra não derruba um bucket já válido.
+    fallback_q = None
+    if fallback_quantidade and _n_quantidade_pendente(temas):
+        fallback_q = "recusado_sem_ganho"
+        try:
+            raw_q = chamar(system + _REFORCO_QUANTIDADE, user)
+            data_q = _parse_sintese(raw_q)
+            temas_q = _construir_temas(data_q, n_analisadas)
+            obs_q = str(data_q.get("observacao_geral", ""))
+        except (ValueError, json.JSONDecodeError):
+            fallback_q = "recusado_json"
+        except LLMError:
+            fallback_q = "recusado_erro_chamada"
+        else:
+            idioma_q = _idioma_e_pt_br(_texto_para_checagem_idioma(temas_q, obs_q))
+            escopo_q = not _tem_marcador_de_escopo(obs_q)
+            if len(temas_q) != len(temas):
+                fallback_q = "recusado_n_bullets"
+            elif (idioma_ok and not idioma_q) or (escopo_ok and not escopo_q):
+                fallback_q = "recusado_validacao"
+            elif _n_quantidade_pendente(temas_q) < _n_quantidade_pendente(temas):
+                temas, observacao_geral = temas_q, obs_q
+                idioma_ok, escopo_ok = idioma_q, escopo_q
+                fallback_q = "aceito"
+
     bucket.temas = temas
     bucket.observacao_geral = observacao_geral
     bucket.idioma_invalido = not idioma_ok
     bucket.escopo_suspeito = not escopo_ok
+    bucket.quantidade_fallback = fallback_q
     bucket.fallback_conteudo = chamar.fallback
     return bucket
 

@@ -133,6 +133,8 @@ def build_output(slug: str, buckets: list[BucketResult], data_coleta: str,
                 # ausência é a declaração "não houve troca", nunca um default.
                 **({"fallback_conteudo": b.fallback_conteudo}
                    if b.fallback_conteudo else {}),
+                **({"quantidade_fallback": b.quantidade_fallback}
+                   if b.quantidade_fallback else {}),
             }
             for b in buckets
         ],

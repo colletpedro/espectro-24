@@ -285,7 +285,9 @@ def executar_par(b, nome: str, num_ctx: int, chamar) -> tuple[dict, list]:
     from espectro24.synthesize import synthesize_bucket
     s, _ = K.prompt_sintese(b)
     tentativas: list[dict] = []
-    final = synthesize_bucket(copy.deepcopy(b), model=nome,
+    # O regime do PREREGISTRO_C22 é guarda SEM fallback: o fallback da guarda (2026-11-23) vale só
+    # para a produção nova e não muda o que o C22 mediu.
+    final = synthesize_bucket(copy.deepcopy(b), model=nome, fallback_quantidade=False,
                               client_call=G.cliente_registrado(chamar, s, nome, num_ctx, tentativas))
     reg = {"ok": True, "bucket_final": G.bucket_final(final),
            "json_parseia": final.observacao_geral != "Falha ao obter JSON válido do LLM.",

@@ -326,6 +326,9 @@ class BucketResult:
     # `{de, para, modelo, motivo}` quando o DeepSeek recusou este bucket e a
     # síntese foi feita pelo Gemini. `None` = nenhuma troca de provider.
     fallback_conteudo: dict | None = None
+    # Fallback da guarda de quantidade (2026-11-23): `None` = não foi preciso; senão o desfecho da
+    # nova chamada do bucket (aceito | recusado_n_bullets | recusado_sem_ganho | ...).
+    quantidade_fallback: str | None = None
 
     @property
     def reviews_analisadas(self) -> list[Review]:

@@ -74,6 +74,9 @@ def _parse_args(argv):
                        "estágio usa o seu: ver PROVIDER_POR_ESTAGIO em "
                        "config.py — classificação em "
                        f"{DEFAULT_PROVIDER!r}, narrativa em Gemini")
+    p.add_argument("--sintese-local", action="store_true",
+                   help="a SÍNTESE roda no modelo local (Ollama; `sintese_local.py`, sha do GGUF). "
+                        "Só a síntese: classificação, rotulagem e condições seguem o caminho de sempre")
     p.add_argument("--model", default=None,
                    help="modelo do LLM; default depende do provider "
                        "resolvido (ver PROVIDER_DEFAULT_MODELS)")
@@ -275,7 +278,8 @@ def main(argv=None):
     try:
         from .synthesize import provider_do_estagio
         if vai_sintetizar and excecao is None:
-            provider_sintese = provider_do_estagio("classificacao", args.provider)
+            provider_sintese = ("local" if args.sintese_local else
+                                provider_do_estagio("classificacao", args.provider))
         if vai_narrar:
             provider_do_estagio("narrativa", args.provider)
         if not args.no_eixos and excecao is None:
