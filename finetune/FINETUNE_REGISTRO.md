@@ -1737,6 +1737,18 @@ Registro de fatos que já estavam nos commits e não neste arquivo. Nada foi ree
 - O veredito da Fase 4 não muda. O do C22 é registro de portfólio; a publicação segue a política de
   23/11 (validadores + guarda + leitura do dono). Não medido: ver o fim de `RESULTADO_C22.md`.
 
+## Preparação da publicação do C22 (2026-11-24; NADA rodado no modelo, NADA publicado)
+
+- Decisão do dono: as sínteses do C22 (treinado, com guarda, sem fallback) são a saída de produção; só os 16
+  buckets com `quantidade_pendente` ganham o fallback. Ferramentas (commits `262c594`, `bf82d6e` e o refactor
+  `aadbe1c`): `scripts/finetune/c22_fallback.py` (`listar` conta 16/105 buckets e 19 bullets — MEDIDO;
+  `rodar` faz UMA chamada com reforço por bucket pelo adaptador de produção, sem regerar a 1ª; `aplicar` monta
+  `finetune/c22/producao/`) e `scripts/finetune/c22_leitura.py` (3 lotes de 10 + re-leitura dos buckets do C6
+  que o fallback trocar). Testes com cliente falso; nenhuma chamada real ao Ollama ainda.
+- Lista de comandos Mac/Windows com ⏸ PARE: `docs/PUBLICACAO_C22_COMANDOS.md` (em `main`).
+- Pendência de desenho: o `resultado/<slug>.json` dos filmes C22 não pode ser montado pelo CLI sem as páginas do
+  Letterboxd (offline falha por falta de cache); proposta de um montador offline no documento acima.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos
