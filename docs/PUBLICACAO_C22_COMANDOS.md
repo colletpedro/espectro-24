@@ -1,44 +1,72 @@
-# Publicação dos filmes do C22 — lista única de comandos (PREPARADA, nada publicado)
+# Publicação dos filmes do C22 — lista única de comandos (nada publicado)
 
-Data: 2026-11-24. Etiquetas: **MEDIDO**, **ESTIMADO**, **PROPOSTO**. Nada aqui publica: o último passo (push) é do dono.
-Política: validadores mecânicos + guarda de quantidade em código + leitura do dono (decisão de 2026-11-23). O
-veredito do C22 (`finetune/RESULTADO_C22.md`: C1–C4 e C6 passam) é registro de portfólio e não é degrau do gate.
+Atualizado em 2026-11-24. Etiquetas: **MEDIDO**, **ESTIMADO**, **PROPOSTO**. O push é sempre do dono (⏸ PARE).
+Política: validadores mecânicos + guarda de quantidade em código + leitura do dono (decisão de 2026-11-23). O veredito
+do C22 (`finetune/RESULTADO_C22.md`: C1–C4 e C6 passam) é registro de portfólio e não é degrau do gate.
+
+## Decisões do dono desta rodada
+- Montador offline: SIM, validado primeiro nos 29 (feito, abaixo). **Rotulagem por LLM autorizada dentro do MESMO teto
+  de US$ 0,50 no total** (rotulagem + condições + qualquer estágio pago); custo real por estágio registrado.
+- `harry-potter-and-the-deathly-hallows-part-1/positivas` (reprovou no C4): UMA nova geração local; se passar nos
+  validadores e na guarda volta para os lotes; senão fica fora desta rodada (registrar).
+- `perfect-blue` 1997 × 1998: aceito, registrado como evidência.
+- Ficam FORA: `coleta_pos_esfriamento.py`, `coletar_biblioteca.py`, `coleta_direta_lenta.py`, os scripts Firecrawl/sessão.
 
 ## Onde estamos (MEDIDO)
 
 | Peça | Estado |
 |---|---|
-| 5 filmes do C6 (full-metal-jacket, american-sniper, the-simpsons-movie, perfect-blue, eyes-wide-shut) | aprovados pelo dono (S nos 5, pelo chat) |
-| 30 filmes restantes | **dependem da leitura do dono** (passos 6–7) |
-| Buckets do C22 com `quantidade_pendente` | **16 de 105** (19 bullets). Dois são dos filmes do C6: `american-sniper/positivas` e `the-simpsons-movie/positivas` |
-| Bucket reprovado no C4 | 1 (`harry-potter-and-the-deathly-hallows-part-1`, 2 de 3 buckets válidos) |
-| Conferência TMDB dos 35 | **feita (MEDIDO): 35 validados, 0 divergentes, custo US$ 0** (`resultado/c22-publicacao/tmdb_conferencia.json`; só Perfect Blue tem ano 1997 no Letterboxd e 1998 no TMDB, evidência e não reprovação) |
-| Fallback só nos 16 pendentes | `scripts/finetune/c22_fallback.py` (listar / rodar / aplicar), testado com cliente falso; **nenhuma chamada real foi feita** |
-| Documento de leitura em 3 lotes | `scripts/finetune/c22_leitura.py lotes` (precisa do passo 4) |
-| **Montagem do `resultado/<slug>.json` dos filmes C22** | **NÃO CONSTRUÍDA** (ver "Decisão em aberto"); sem ela não há condições nem publicação |
+| Montador offline (`src/espectro24/montagem_offline.py`) | **validado nos 29: 29/29 idênticos** (ver abaixo) |
+| Conferência TMDB dos 35 | 35 validados, 0 divergentes, US$ 0 (`resultado/c22-publicacao/tmdb_conferencia.json`) |
+| 5 filmes do C6 | aprovados pelo dono (S nos 5, pelo chat) |
+| Buckets com `quantidade_pendente` | 16 de 105 (19 bullets); 2 são dos filmes do C6 |
+| Bucket reprovado no C4 | `harry-potter-and-the-deathly-hallows-part-1/positivas`: `observacao_geral` vazia (validador `campos_nao_vazios`) |
+| Fallback e nova geração | `scripts/finetune/c22_fallback.py` (`listar`, `rodar`, `regerar`, `aplicar`); só testados com cliente falso |
+| Leitura em lotes | `scripts/finetune/c22_leitura.py` (`lotes`, `avaliar`) |
+| Rotulagem, condições, publicação | depois de 3–6 abaixo |
 
-## ⚠ Atenção antes de começar
+### Validação do montador nos 29 de 08/11 (MEDIDO, `resultado/c22-publicacao/validacao_montador_29.json`)
 
-1. **Os 2 buckets pendentes dos filmes do C6.** O dono aprovou o texto de `american-sniper/positivas` e
-   `the-simpsons-movie/positivas` COM uma palavra de quantidade ainda presente. Se o fallback for aceito, o bucket é
-   regerado por inteiro (nova chamada, não edição de um bullet). O documento de leitura traz esses buckets numa
-   seção **RE-LEITURA**; se o dono responder N, o filme sai da lista dos aprovados.
-2. **O fallback é uma nova geração do bucket**, com a mesma amostragem e seed, mas prompt + reforço. Só é aceito se
-   mantiver o mesmo número de bullets, não piorar idioma/escopo e reduzir os pendentes (as regras de produção).
-3. **Custo.** Fallback e TMDB: US$ 0. Rotulagem e condições (Featherless, `deepseek-ai/DeepSeek-V4.1-Flash-1017`,
-   teto autorizado US$ 0,50 no total): ESTIMADO ≤ US$ 0,0139 por filme com os três estágios pagos
-   (mediana US$ 0,0117, 49 filmes de 08/11, sem desconto de cache) ⇒ **≤ US$ 0,49 para os 35 no pior caso**; como
-   a síntese é local, o esperado é bem menor. O custo real fica em `resultado/c22-publicacao/custo.json` (a ser
-   gravado pelo passo 9); parar se a soma passar de US$ 0,50.
+Para cada um dos 29: bruto versionado + a classificação que o resultado cita (sha conferido) + a síntese INJETADA a
+partir do `resultado/<slug>.json` + a rotulagem REPETIDA das respostas gravadas (chave = sha256 do prompt, então o
+prompt remontado é idêntico byte a byte; 87 chamadas, 3 por filme). Comparação campo a campo com o resultado
+versionado menos `condicoes` e `ficha.paises` (etapas seguintes): **0 diferenças em 29/29**. Contra o `bullets.json`
+original (em `execucoes/`, fora do git) as únicas diferenças são o caminho da fonte (`eixos.verificador.fonte` e
+`proveniencia_llm.classificacao.fonte`: relativo de propósito, 29 × 2). **O que a validação NÃO cobre:** a `ficha` é
+entrada do montador (não foi regerada pelo TMDB: a regeneração baixa imagens para o pHash e travou; a ficha do C22 vem
+da conferência TMDB já feita) e `condicoes`/R13 (etapa seguinte, igual à dos 29).
 
-## Comandos (Mac = `~/Downloads/espectro-24`; Windows = a árvore do `finetune` em que o C22 rodou)
+### Os 6 testes vermelhos (sem afrouxar asserção)
+- `hero_faixa`: lista nomeada atualizada para 128 (+7: alien, cinema-paradiso, life-is-beautiful, modern-times,
+  seven-samurai, the-godfather-part-ii, wall-e); a trava pHash segue valendo para todos. **Corrigido.**
+- `paises_editorial`: reescrito sem conjunto fixo (nenhum filme da base apagado ou alterado além de `ficha.paises`; filme
+  novo exige `ficha.paises` válido). **Corrigido.**
+- `aplicar_lei_margem` (`KeyError 'alien'`): a classificação dos 29 entrou em `consenso.jsonl` e
+  `consenso_verificado.jsonl` (3.455 linhas cada, sem chamada), e `verificador_manifesto.json` registra a incorporação.
+  **Corrigido.**
+- `test_condicoes` (leon) e `publicar_condicoes` (5 filmes): **diagnosticados, NÃO alterados** — ver "Conteúdo no ar".
+
+### Conteúdo no ar: diagnóstico e proposta (nada aplicado)
+- **`leon-the-professional` ("12" no briefing).** O "12" vem da PARÁFRASE de três bullets publicados ("personagem de 12
+  anos", NEG-A, MED-A, POS-C), não de uma condição: o texto das condições publicadas NÃO tem "12" (MEDIDO). A regra R4
+  (zero dígitos) é sobre o que a condição diz; o briefing leva o dígito ao modelo. **Proposta A (custo zero):** reescrever
+  nos três bullets "uma personagem de 12 anos" → "uma personagem muito jovem" (troca mecânica, nenhum número novo).
+  **Proposta B:** exceção estreita "idade de personagem", como a do ano no nome do tema (Pinocchio), o que MUDA o teste e é
+  decisão sua. Recomendo A.
+- **`psycho` NEG-B, `pulp-fiction` NEG-A, `the-shawshank-redemption` NEG-A, `harakiri` NEG-B, `the-lion-king` NEG-E.** Em
+  todos, o tema (eixo `expectativa`, "superestimado") foi PEDIDO (`temas_pedidos`) e a regra R13 o retém; **nenhuma condição
+  publicada tem esse `tema_origem`** (MEDIDO nos 5). Ou seja, a regra foi cumprida no ar; o teste só não conhecia a medição
+  nova. **Proposta:** acrescentar os 5 pares ao conjunto esperado do teste (igualdade exata, como em 2026-09-17 para fight-club,
+  gladiator-2000 e the-truman-show), com o diagnóstico acima no docstring. Custo zero.
+
+## Comandos (Mac = `~/Downloads/espectro-24`; Windows = a árvore do `finetune`)
 
 **0. (Mac) Estado de partida**
 ```bash
-cd ~/Downloads/espectro-24 && git pull && git log --oneline -1 && venv/bin/python -m pytest -q tests/test_fallback_quantidade.py tests/test_sintese_local.py
+cd ~/Downloads/espectro-24 && git pull && git log --oneline -1
 cd ~/Downloads/espectro-24-finetune && git pull && git log --oneline -1
 ```
-Esperado: `main` em `e7c3ed1` ou depois e `finetune` em `bf82d6e` ou depois; testes verdes.
+Esperado: `main` em `c202203` ou depois e `finetune` em `23852be` ou depois.
 
 **1. (Windows) Preparar** — Ollama no ar com o GGUF `e488697e…` (o adaptador escolhe pelo sha, não pelo nome); sem
 `ESPECTRO24_OLLAMA_TEMPERATURE` no ambiente; fora do Claude Code (o script recusa).
@@ -53,81 +81,59 @@ Esperado: `16 de 105 buckets com quantidade_pendente (19 bullets)`.
 ```powershell
 python scripts\finetune\c22_fallback.py rodar --limite 1
 ```
-**⏸ PARE** — veja a linha `[1/1] <filme>/<bucket>: <desfecho> · pendentes N→M`. Se der erro de modelo
-(`ModeloLocalIndisponivel`), o GGUF não está no Ollama: não prossiga.
+**⏸ PARE** — veja `[1/1] <filme>/<bucket>: <desfecho> · pendentes N→M`. Erro `ModeloLocalIndisponivel` = o GGUF não está
+no Ollama: não prossiga.
 
-**3. (Windows) Os 15 restantes** (retoma sozinho; um bucket por vez; ESTIMADO ~45 min = 16 × 168,5 s, a mediana
-MEDIDA da geração do C22)
+**3. (Windows) Os 15 restantes** (retoma sozinho; um bucket por vez; ESTIMADO ~45 min = 16 × 168,5 s, a mediana MEDIDA do C22)
 ```powershell
 python scripts\finetune\c22_fallback.py rodar
-git add finetune\c22\fallback
-git commit -m "c22: fallback da guarda nos 16 buckets pendentes (resultado real)"
+```
+
+**4. (Windows) UMA nova geração do bucket reprovado do Harry Potter** (uma só; usa o prompt de retentativa da produção
+porque a mesma semente reproduziria a saída reprovada — ESTIMADO; ~3 min)
+```powershell
+python scripts\finetune\c22_fallback.py regerar harry-potter-and-the-deathly-hallows-part-1/positivas
+git add finetune\c22\fallback finetune\c22\regeracao
+git commit -m "c22: fallback nos 16 pendentes e nova geracao do bucket reprovado (resultado real)"
 git push origin finetune
 ```
-**⏸ PARE** — avise o Claude: ele continua no Mac.
+Esperado na linha do `regerar`: `passa=True` (validadores + nenhum `quantidade_pendente`). **⏸ PARE** — avise o Claude.
 
-**4. (Mac) Saída de produção do C22** (C22 como está, com o fallback aceito no lugar)
+**5. (Mac) Saída de produção do C22**
 ```bash
 cd ~/Downloads/espectro-24-finetune && git pull
 ../espectro-24/venv/bin/python scripts/finetune/c22_fallback.py aplicar
 ```
-Grava `finetune/c22/producao/<slug>__<bucket>.json` (105) e o manifesto com sha256. Mostra quantos fallbacks foram
-aceitos/recusados e quantos bullets seguem pendentes.
+Mostra quantos fallbacks foram aceitos/recusados, se o Harry Potter voltou (`c22_regerado`) ou fica fora
+(`c22_regeracao_reprovada`) e quantos bullets seguem pendentes.
 
-**5. (Mac) Identidade TMDB — JÁ FEITA** (35/35 validados; para refazer:)
+**6. (Mac) Documento de leitura: re-leitura dos buckets do C6 trocados + 3 lotes de 10**
 ```bash
-cd ~/Downloads/espectro-24 && venv/bin/python scripts/conferir_tmdb_c22.py
-```
-Filme com divergência sai da publicação e vai para a lista `divergentes` do mesmo arquivo. `ano_divergente: true` é
-só evidência (o ano publicado é o do Letterboxd), não é reprovação.
-
-**6. (Mac) Documento de leitura do dono: 3 lotes de 10 + RE-LEITURA do C6**
-```bash
-cd ~/Downloads/espectro-24-finetune
 ../espectro-24/venv/bin/python scripts/finetune/c22_leitura.py lotes
 ```
-Gera `docs/arquivo-de-estudos/finetune-c22/leitura_lote_{1,2,3}.md`, `leitura_lotes_respostas.csv` (coluna `publico`) e
-`leitura_fora.json` (quem saiu e por quê: TMDB, bucket sem síntese válida, sobra sem lote).
-**⏸ PARE** — o dono lê e responde S/N em cada filme. Dúvida = N. (Pode responder pelo chat, como no C6; o Claude
-preenche o CSV e registra a origem.)
+Gera `docs/arquivo-de-estudos/finetune-c22/leitura_lote_{1,2,3}.md`, `leitura_lotes_respostas.csv` e `leitura_fora.json`.
+**⏸ PARE** — o dono lê. Primeiro, **só se o fallback mudou** `american-sniper/positivas` e/ou `the-simpsons-movie/positivas`:
+a seção RE-LEITURA do lote 1 (se o dono responder N, o filme sai dos aprovados). Os lotes de 10 vêm depois.
 
-**7. (Mac) Aprovados**
+**7. (Mac) Montar o `resultado/<slug>.json` + rotulagem (Featherless, dentro do teto) — dos 5 do C6 primeiro**
+`scripts/montar_resultado_c22.py` (a construir quando 5 existir; usa `montagem_offline.montar_documento` com a síntese de
+`finetune/c22/producao/` e a ficha de `resultado/c22-publicacao/cache_tmdb`; `FEATHERLESS_SESSION_DIR` com teto
+US$ 0,50 total, custo por estágio em `resultado/c22-publicacao/custo.json`). **⏸ PARE** antes de qualquer chamada paga.
+
+**8. (Mac) Condições (R13 + validadores) e leitura do dono das condições** — mesmo caminho dos 29
+(`condicoes.gerar` + `publicar_condicoes.aplicar_retiradas`). **⏸ PARE.**
+
+**9. (Mac) Publicar os 5 do C6; depois cada lote aprovado** — slugs em `dados/publicados.json`, `python3
+frontend/build_data.py`, `python3 frontend/build_indice.py`, `pytest`, e **subir `SPEC_VERSION` no commit do primeiro filme
+com `quantidade_fallback`**. **⏸ PARE antes do push** (publicação só pelo git; o hook roda `test_publicacao_consistente`).
+
+**10. (Mac) Verificação no ar**
 ```bash
-../espectro-24/venv/bin/python scripts/finetune/c22_leitura.py avaliar
-```
-Grava `finetune/c22/aprovados.json` (os S dos lotes + os 5 do C6, menos o C6 que for N na re-leitura).
-
-**8. (Mac) Montar `resultado/<slug>.json` dos aprovados — NÃO CONSTRUÍDO.** Ver "Decisão em aberto".
-
-**9. (Mac) Condições pelo Featherless (teto US$ 0,50)** — só depois do 8, só nos aprovados:
-```bash
-cd ~/Downloads/espectro-24 && venv/bin/python scripts/gerar_condicoes.py --slug <slug> --provider featherless --saida resultado/c22-publicacao/condicoes
-```
-(`--saida` nunca é `resultado/`; o §0 exige a leitura humana de 100% das condições antes de publicar.) Registrar o custo
-real em `resultado/c22-publicacao/custo.json`.
-**⏸ PARE** — leitura das condições pelo dono.
-
-**10. (Mac) Publicar os 5 do C6 primeiro** (depois de 1–9 para eles), **depois cada lote aprovado**: acrescentar os
-slugs a `dados/publicados.json`, `python3 frontend/build_data.py`, `python3 frontend/build_indice.py`, `pytest`, e
-**subir `SPEC_VERSION` no commit do primeiro filme publicado com `quantidade_fallback`** (decisão do dono).
-**⏸ PARE antes do push** (publicação só pelo git; o hook de pre-push roda `test_publicacao_consistente`).
-
-**11. (Mac) Verificação no ar** (depois do push, o Vercel leva ~1 min)
-```bash
-curl -s https://espectro-24-eu6z.vercel.app/js/indice.js | grep -c '"slug"'      # esperado: 128 + N publicados
+curl -s https://espectro-24-eu6z.vercel.app/js/indice.js | grep -c '"slug"'      # 128 + N
 for s in <slugs>; do curl -s -o /dev/null -w "$s %{http_code}\n" https://espectro-24-eu6z.vercel.app/data/$s.json; done
 ```
 
-## Decisão em aberto (PROPOSTO) — passo 8
-
-O CLI (`espectro24.cli`) só monta o `resultado/<slug>.json` com a coleta do Letterboxd: offline ele exige as páginas
-em `resultado/cache/` (que não existem para os 35; testei `full-metal-jacket --offline`: `FetchError: offline e sem
-cache`), e coletar de novo esbarra na regra de parar no 403. Os 35 têm o bruto (`dados/bruto/<slug>`, versionado) e a
-classificação (`consenso_verificado`), e as buckets do C22 foram montadas a partir do bruto (`prosa_local._buckets_do_bruto`).
-
-**Proposta:** um montador offline (`scripts/montar_resultado_c22.py`) que repete o que o CLI faz depois da coleta, sem
-rede de Letterboxd: buckets do bruto → síntese = a saída de produção do passo 4 (não chama o modelo) → eixos pela
-classificação verificada → rotulagem (LLM Featherless, dentro do teto) → ficha TMDB (já conferida) → distribuição a
-partir do `histograma_bruto` do `meta.json` → `build_output`. **Risco:** a distribuição vinda do histograma do meta
-pode não ser byte a byte a que o CLI grava; eu mediria a diferença nos 29 de 08/11 (que têm as duas) antes de usar.
-**Alternativa:** recoletar o histograma de cada filme (rede do Letterboxd), o que a regra do 403 desaconselha.
+## Custo (US$, teto total 0,50)
+Gasto até agora nesta rodada: **0,00** (TMDB e fallback não custam; nenhuma chamada paga foi feita). ESTIMADO ≤ 0,0139 por
+filme com os três estágios pagos (mediana 0,0117, 49 filmes de 08/11, sem desconto de cache) ⇒ ≤ 0,49 para 35 no pior
+caso; com a síntese local, rotulagem + condições devem ficar bem abaixo. Parar se a soma real passar de 0,50.
