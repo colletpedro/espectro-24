@@ -1,0 +1,505 @@
+{
+  "jobs": [
+    {
+      "bloco": 1,
+      "etapa": "p12",
+      "job": "batches/kx1t58g766fgykrdoxlwqahn0lup9bg1aqgo",
+      "n": 2378,
+      "submetido": "2026-09-23T01:50:21+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T02:11:47+00:00",
+      "custo_estimado": 1.5668,
+      "retorno": {
+        "criado": "2026-09-23 01:50:17.915080+00:00",
+        "fim": "2026-09-23 02:11:34.385553+00:00"
+      },
+      "n_ok": 2360,
+      "n_falha": 18
+    },
+    {
+      "bloco": 1,
+      "etapa": "p3",
+      "job": "batches/8ycwq95ir4l5h1nxykq2td8z35umk9npflbi",
+      "n": 341,
+      "submetido": "2026-09-23T02:11:57+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T02:16:04+00:00",
+      "custo_estimado": 0.2256,
+      "retorno": {
+        "criado": "2026-09-23 02:11:55.217121+00:00",
+        "fim": "2026-09-23 02:15:59.129656+00:00"
+      },
+      "n_ok": 332,
+      "n_falha": 9
+    },
+    {
+      "bloco": 1,
+      "etapa": "verificador",
+      "job": "batches/gyyxwu7e9p4hujfc4tn7tk4gk4958oecmy9s",
+      "n": 657,
+      "submetido": "2026-09-23T02:16:12+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T02:20:19+00:00",
+      "custo_estimado": 0.3155,
+      "retorno": {
+        "criado": "2026-09-23 02:16:09.413520+00:00",
+        "fim": "2026-09-23 02:19:29.272909+00:00"
+      },
+      "n_ok": 657,
+      "n_falha": 0
+    },
+    {
+      "bloco": 1,
+      "etapa": "commit",
+      "job": null,
+      "n": 0,
+      "estado": "COMMITADO",
+      "coletado": "2026-09-23T02:20:24+00:00",
+      "custo_estimado": 0.0,
+      "resumo": {
+        "reviews_no_consenso": 1180,
+        "incompletas": 9,
+        "pendentes_verificador": 37
+      },
+      "custo_sincrono_do_commit": 0.021,
+      "nota": "valor corrigido em 2026-09-23: a janela de tempo tinha somado o verificador de batch (0,3367)"
+    },
+    {
+      "bloco": 2,
+      "etapa": "p12",
+      "job": "batches/kxm77ngxtezv6a8ofm3hbb30pdvebz1arqri",
+      "n": 2358,
+      "submetido": "2026-09-23T07:03:37+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T07:35:30+00:00",
+      "custo_estimado": 1.5513,
+      "custo_estimado_cheio": 3.1027,
+      "retorno": {
+        "criado": "2026-09-23 07:03:33.885131+00:00",
+        "fim": "2026-09-23 07:13:08.843192+00:00"
+      },
+      "n_ok": 2342,
+      "n_falha": 16,
+      "recusas": [
+        {
+          "slug": "full-metal-jacket",
+          "bucket": "negativas",
+          "id": "viewing:1465038718",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "full-metal-jacket",
+          "bucket": "negativas",
+          "id": "viewing:1491810163",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "poor-things-2023",
+          "bucket": "medianas",
+          "id": "viewing:1495808649",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "poor-things-2023",
+          "bucket": "medianas",
+          "id": "viewing:1499166269",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "poor-things-2023",
+          "bucket": "negativas",
+          "id": "viewing:1490670929",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "poor-things-2023",
+          "bucket": "negativas",
+          "id": "viewing:1498058344",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "poor-things-2023",
+          "bucket": "positivas",
+          "id": "viewing:1498046397",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "project-x-2012",
+          "bucket": "negativas",
+          "id": "viewing:1470018821",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        }
+      ]
+    },
+    {
+      "bloco": 3,
+      "etapa": "p12",
+      "job": "batches/jguruitj3xojhc7531lg0exa5qgeyyhx7unq",
+      "n": 2400,
+      "submetido": "2026-09-23T07:13:47+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T07:35:41+00:00",
+      "custo_estimado": 1.5744,
+      "custo_estimado_cheio": 3.1488,
+      "retorno": {
+        "criado": "2026-09-23 07:13:43.710650+00:00",
+        "fim": "2026-09-23 07:23:10.114762+00:00"
+      },
+      "n_ok": 2398,
+      "n_falha": 2,
+      "recusas": [
+        {
+          "slug": "snatch",
+          "bucket": "negativas",
+          "id": "viewing:1374544729",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        }
+      ]
+    },
+    {
+      "bloco": 4,
+      "etapa": "p12",
+      "job": "batches/ugtjvzskrx4jrsqh8f4e6o92vptqj4jfge53",
+      "n": 2386,
+      "submetido": "2026-09-23T07:23:57+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T07:35:51+00:00",
+      "custo_estimado": 1.5696,
+      "custo_estimado_cheio": 3.1392,
+      "retorno": {
+        "criado": "2026-09-23 07:23:53.037119+00:00",
+        "fim": "2026-09-23 07:27:48.118986+00:00"
+      },
+      "n_ok": 2360,
+      "n_falha": 26,
+      "recusas": [
+        {
+          "slug": "logan-2017",
+          "bucket": "positivas",
+          "id": "viewing:1498311011",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "medianas",
+          "id": "viewing:1489819480",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "negativas",
+          "id": "viewing:1437463887",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "negativas",
+          "id": "viewing:1461449036",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "negativas",
+          "id": "viewing:1477729682",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "positivas",
+          "id": "viewing:1466734274",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "positivas",
+          "id": "viewing:1498391191",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "mid90s",
+          "bucket": "positivas",
+          "id": "viewing:1499877355",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "school-of-rock",
+          "bucket": "medianas",
+          "id": "viewing:1484287755",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "school-of-rock",
+          "bucket": "negativas",
+          "id": "viewing:1424528817",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "superbad",
+          "bucket": "medianas",
+          "id": "viewing:1495392954",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "superbad",
+          "bucket": "negativas",
+          "id": "viewing:1479339905",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "there-will-be-blood",
+          "bucket": "medianas",
+          "id": "viewing:1494762397",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        }
+      ]
+    },
+    {
+      "bloco": 2,
+      "etapa": "p3",
+      "job": "batches/8046sran1t1ijwmwqy5a1dwe2gtj8q8k9wsh",
+      "n": 322,
+      "submetido": "2026-09-23T07:35:37+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-23T16:40:08+00:00",
+      "custo_estimado": 0.2122,
+      "custo_estimado_cheio": 0.4245,
+      "retorno": {
+        "criado": "2026-09-23 07:35:35.715219+00:00",
+        "fim": "2026-09-23 07:38:46.649751+00:00"
+      },
+      "n_ok": 322,
+      "n_falha": 0
+    },
+    {
+      "bloco": 2,
+      "etapa": "verificador",
+      "job": "batches/mjo7mis52b4p8no2wrxk4sq2a3xbf3uhmlvi",
+      "n": 598,
+      "submetido": "2026-09-23T16:40:15+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-24T12:04:52+00:00",
+      "custo_estimado": 0.2865,
+      "custo_estimado_cheio": 0.573,
+      "retorno": {
+        "criado": "2026-09-23 16:40:13.656109+00:00",
+        "fim": "2026-09-23 18:36:53.204820+00:00"
+      },
+      "n_ok": 598,
+      "n_falha": 0
+    },
+    {
+      "bloco": 3,
+      "etapa": "p3",
+      "job": "batches/dllkt15g440n05w47ouepr2howxkc91uj0lb",
+      "n": 330,
+      "submetido": "2026-09-23T16:40:22+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-24T12:05:10+00:00",
+      "custo_estimado": 0.2165,
+      "custo_estimado_cheio": 0.4329,
+      "retorno": {
+        "criado": "2026-09-23 16:40:20.305126+00:00",
+        "fim": "2026-09-23 18:41:37.286809+00:00"
+      },
+      "n_ok": 330,
+      "n_falha": 0
+    },
+    {
+      "bloco": 4,
+      "etapa": "p3",
+      "job": "batches/v3ni36txwipmav11mlj2m0opd902qxh8nq56",
+      "n": 305,
+      "submetido": "2026-09-23T16:40:29+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-24T17:17:17+00:00",
+      "custo_estimado": 0.2012,
+      "custo_estimado_cheio": 0.4023,
+      "retorno": {
+        "criado": "2026-09-23 16:40:27.373849+00:00",
+        "fim": "2026-09-23 18:57:20.982362+00:00"
+      },
+      "n_ok": 305,
+      "n_falha": 0
+    },
+    {
+      "bloco": 5,
+      "etapa": "p12",
+      "job": "batches/o37sttupud6flqh4umog67x3i30jgjaozahf",
+      "n": 2396,
+      "submetido": "2026-09-23T16:40:39+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-24T17:17:28+00:00",
+      "custo_estimado": 1.5651,
+      "custo_estimado_cheio": 3.1301,
+      "retorno": {
+        "criado": "2026-09-23 16:40:35.814653+00:00",
+        "fim": "2026-09-23 18:58:36.277428+00:00"
+      },
+      "n_ok": 2380,
+      "n_falha": 16,
+      "recusas": [
+        {
+          "slug": "fantastic-mr-fox",
+          "bucket": "medianas",
+          "id": "viewing:1498523810",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "scream",
+          "bucket": "medianas",
+          "id": "viewing:1492764467",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-dark-knight-rises",
+          "bucket": "negativas",
+          "id": "viewing:1499474859",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-dark-knight-rises",
+          "bucket": "positivas",
+          "id": "viewing:1499018593",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-empire-strikes-back",
+          "bucket": "negativas",
+          "id": "viewing:1438730265",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-whale-2022",
+          "bucket": "medianas",
+          "id": "viewing:1397440936",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-whale-2022",
+          "bucket": "medianas",
+          "id": "viewing:1489803936",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        },
+        {
+          "slug": "the-whale-2022",
+          "bucket": "negativas",
+          "id": "viewing:1466999230",
+          "bloqueio": "PROHIBITED_CONTENT",
+          "substituta": null
+        }
+      ]
+    },
+    {
+      "bloco": 2,
+      "etapa": "commit",
+      "job": null,
+      "n": 0,
+      "estado": "COMMITADO",
+      "coletado": "2026-09-24T12:05:07+00:00",
+      "custo_estimado": 0.0,
+      "resumo": {
+        "reviews_no_consenso": 1179,
+        "incompletas": 0,
+        "pendentes_verificador": 37
+      },
+      "recusas_no_commit": [],
+      "custo_sincrono_do_commit": 0.0333
+    },
+    {
+      "bloco": 3,
+      "etapa": "verificador",
+      "job": "batches/gtuuveox61t8ft8nvwglkr9xd6unpsx9t5uy",
+      "n": 620,
+      "submetido": "2026-09-24T12:05:18+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-24T17:17:03+00:00",
+      "custo_estimado": 0.2961,
+      "custo_estimado_cheio": 0.5923,
+      "retorno": {
+        "criado": "2026-09-24 12:05:15.708022+00:00",
+        "fim": "2026-09-24 12:30:32.980139+00:00"
+      },
+      "n_ok": 620,
+      "n_falha": 0
+    },
+    {
+      "bloco": 3,
+      "etapa": "commit",
+      "job": null,
+      "n": 0,
+      "estado": "COMMITADO",
+      "coletado": "2026-09-24T17:17:15+00:00",
+      "custo_estimado": 0.0,
+      "resumo": {
+        "reviews_no_consenso": 1200,
+        "incompletas": 0,
+        "pendentes_verificador": 37
+      },
+      "recusas_no_commit": [],
+      "custo_sincrono_do_commit": 0.0048
+    },
+    {
+      "bloco": 4,
+      "etapa": "verificador",
+      "job": "batches/e4f1ow1uj24h5clunmuc1fog0tucksukhoqk",
+      "n": 667,
+      "submetido": "2026-09-24T17:17:25+00:00",
+      "estado": "JOB_STATE_SUCCEEDED",
+      "coletado": "2026-09-27T04:12:45+00:00",
+      "custo_estimado": 0.3175,
+      "custo_estimado_cheio": 0.635,
+      "retorno": {
+        "criado": "2026-09-24 17:17:22.942736+00:00",
+        "fim": "2026-09-24 18:14:46.254599+00:00"
+      },
+      "n_ok": 667,
+      "n_falha": 0
+    },
+    {
+      "bloco": 4,
+      "etapa": "commit",
+      "job": null,
+      "n": 0,
+      "estado": "COMMITADO",
+      "coletado": "2026-09-27T04:12:52+00:00",
+      "custo_estimado": 0.0,
+      "resumo": {
+        "reviews_no_consenso": 1180,
+        "incompletas": 11,
+        "pendentes_verificador": 37
+      },
+      "recusas_no_commit": [],
+      "custo_sincrono_do_commit": 0.0
+    }
+  ],
+  "n_429": 28
+}

@@ -3,17 +3,17 @@
   "passada": 1,
   "eixo": "impacto_emocional",
   "fonte": "resultado/votacao-3/consenso.jsonl",
-  "fonte_n_linhas": 13112,
-  "n_candidatas": 9269,
-  "n_verificadas": 9242,
+  "fonte_n_linhas": 17860,
+  "n_candidatas": 11825,
+  "n_verificadas": 11798,
   "n_falharam": 37,
   "pendentes_por_motivo": {
     "erro_JSONDecodeError": 34,
     "erro_RateLimitError": 3
   },
   "n_fallback_conteudo": 1,
-  "n_removidas": 4187,
-  "n_chamadas": 9242,
+  "n_removidas": 5201,
+  "n_chamadas": 11798,
   "uso": {
     "prompt_tokens": 6152707,
     "completion_tokens": 345886,

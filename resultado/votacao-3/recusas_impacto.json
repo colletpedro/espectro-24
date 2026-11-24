@@ -1,0 +1,241 @@
+{
+  "full-metal-jacket": {
+    "slug": "full-metal-jacket",
+    "n_recusadas": 2,
+    "recusadas": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1465038718",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1418069112"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1491810163",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1475178396"
+      }
+    ],
+    "consenso_deepseek_arquivado": {
+      "viewing:1465038718": [
+        "atuacao",
+        "ritmo",
+        "roteiro_estrutura"
+      ],
+      "viewing:1491810163": [
+        "comparacoes",
+        "critica_social",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ]
+    },
+    "indeterminadas": [],
+    "contraste_a": "valorativo",
+    "cenarios_b": {
+      "b_ie_mantido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": []
+      },
+      "b_ie_removido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": []
+      }
+    },
+    "prioritario_recoleta_deepseek": false,
+    "motivos": [],
+    "estado": "o filtro não muda bullet nem contraste",
+    "medido_em": "2026-09-24T12:05:07+00:00"
+  },
+  "poor-things-2023": {
+    "slug": "poor-things-2023",
+    "n_recusadas": 5,
+    "recusadas": [
+      {
+        "bucket": "medianas",
+        "id": "viewing:1495808649",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1485468329"
+      },
+      {
+        "bucket": "medianas",
+        "id": "viewing:1499166269",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1497280900"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1490670929",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1490669788"
+      },
+      {
+        "bucket": "negativas",
+        "id": "viewing:1498058344",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1496579856"
+      },
+      {
+        "bucket": "positivas",
+        "id": "viewing:1498046397",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1497976398"
+      }
+    ],
+    "consenso_deepseek_arquivado": {
+      "viewing:1498058344": [
+        "critica_social",
+        "direcao_imagem"
+      ],
+      "viewing:1499166269": [
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ],
+      "viewing:1495808649": [
+        "comparacoes",
+        "direcao_imagem",
+        "ritmo",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ],
+      "viewing:1498046397": [
+        "atuacao",
+        "tom_atmosfera"
+      ],
+      "viewing:1490670929": [
+        "comparacoes",
+        "impacto_emocional",
+        "roteiro_estrutura"
+      ]
+    },
+    "indeterminadas": [],
+    "contraste_a": "valorativo",
+    "cenarios_b": {
+      "b_ie_mantido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": [
+          {
+            "eixo": "atuacao",
+            "bucket": "positivas",
+            "a": null,
+            "b": "frequencia"
+          },
+          {
+            "eixo": "direcao_imagem",
+            "bucket": "positivas",
+            "a": "frequencia",
+            "b": null
+          }
+        ]
+      },
+      "b_ie_removido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": [
+          {
+            "eixo": "atuacao",
+            "bucket": "positivas",
+            "a": null,
+            "b": "frequencia"
+          },
+          {
+            "eixo": "direcao_imagem",
+            "bucket": "positivas",
+            "a": "frequencia",
+            "b": null
+          }
+        ]
+      }
+    },
+    "prioritario_recoleta_deepseek": true,
+    "motivos": [
+      "b_ie_mantido: bullet atuacao/positivas None → frequencia",
+      "b_ie_mantido: bullet direcao_imagem/positivas frequencia → None",
+      "b_ie_removido: bullet atuacao/positivas None → frequencia",
+      "b_ie_removido: bullet direcao_imagem/positivas frequencia → None"
+    ],
+    "estado": "PRIORITÁRIO à recoleta em DeepSeek",
+    "medido_em": "2026-09-24T12:05:07+00:00"
+  },
+  "project-x-2012": {
+    "slug": "project-x-2012",
+    "n_recusadas": 1,
+    "recusadas": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1470018821",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1444743547"
+      }
+    ],
+    "consenso_deepseek_arquivado": {
+      "viewing:1470018821": [
+        "critica_social",
+        "impacto_emocional",
+        "roteiro_estrutura",
+        "tom_atmosfera"
+      ]
+    },
+    "indeterminadas": [],
+    "contraste_a": "valorativo",
+    "cenarios_b": {
+      "b_ie_mantido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": []
+      },
+      "b_ie_removido": {
+        "contraste": "valorativo",
+        "bullets_que_mudam": []
+      }
+    },
+    "prioritario_recoleta_deepseek": false,
+    "motivos": [],
+    "estado": "o filtro não muda bullet nem contraste",
+    "medido_em": "2026-09-24T12:05:07+00:00"
+  },
+  "snatch": {
+    "slug": "snatch",
+    "n_recusadas": 1,
+    "recusadas": [
+      {
+        "bucket": "negativas",
+        "id": "viewing:1374544729",
+        "bloqueio": "PROHIBITED_CONTENT",
+        "substituta": "viewing:1460602038"
+      }
+    ],
+    "consenso_deepseek_arquivado": {
+      "viewing:1374544729": null
+    },
+    "indeterminadas": [
+      "viewing:1374544729"
+    ],
+    "contraste_a": "valorativo",
+    "cenarios_b": {},
+    "estado": "indeterminado: sem consenso DeepSeek arquivado para viewing:1374544729",
+    "medido_em": "2026-09-24T17:17:15+00:00"
+  },
+  "logan-2017": {
+    "slug": "logan-2017",
+    "estado": "indeterminado: a medida falhou (AmostraNaoClassificada: a amostra analisada diverge da classificada — publicar encolheria o denominador em silêncio. positivas: 1 de 40 analisadas sem classificação (viewing:1499888309)",
+    "medido_em": "2026-09-27T04:12:53+00:00"
+  },
+  "mid90s": {
+    "slug": "mid90s",
+    "estado": "indeterminado: a medida falhou (AmostraNaoClassificada: a amostra analisada diverge da classificada — publicar encolheria o denominador em silêncio. negativas: 3 de 40 analisadas sem classificação (viewing:1430539803)",
+    "medido_em": "2026-09-27T04:12:53+00:00"
+  },
+  "school-of-rock": {
+    "slug": "school-of-rock",
+    "estado": "indeterminado: a medida falhou (AmostraNaoClassificada: a amostra analisada diverge da classificada — publicar encolheria o denominador em silêncio. medianas: 1 de 40 analisadas sem classificação (viewing:1372827870))",
+    "medido_em": "2026-09-27T04:12:53+00:00"
+  },
+  "superbad": {
+    "slug": "superbad",
+    "estado": "indeterminado: a medida falhou (AmostraNaoClassificada: a amostra analisada diverge da classificada — publicar encolheria o denominador em silêncio. negativas: 1 de 40 analisadas sem classificação (viewing:1477321154)",
+    "medido_em": "2026-09-27T04:12:53+00:00"
+  },
+  "there-will-be-blood": {
+    "slug": "there-will-be-blood",
+    "estado": "indeterminado: a medida falhou (AmostraNaoClassificada: a amostra analisada diverge da classificada — publicar encolheria o denominador em silêncio. medianas: 1 de 40 analisadas sem classificação (viewing:1494729817))",
+    "medido_em": "2026-09-27T04:12:53+00:00"
+  }
+}
