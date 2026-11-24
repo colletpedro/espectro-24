@@ -1725,6 +1725,18 @@ Registro de fatos que já estavam nos commits e não neste arquivo. Nada foi ree
 - Não aplicado aos `resultado/*.json` já publicados. Piloto (5 filmes) e documento de leitura do dono:
   PREPARAR, o dono roda; nada publicado.
 
+## C22 — resultado (MEDIDO, 2026-11-24): C1, C2, C3, C4 e C6 PASSAM
+
+- Relatório completo em `RESULTADO_C22.md`. C1 4,45% (IC 2,54–6,68; limites ≤ 5,6 e < 7,6); C2 83,15%
+  (limite inferior 80,16 > 77,8); C3 3,02% (limite superior 4,30 < 15); C4 104/105 (≥ 102); C6 5 de 5 S
+  (≥ 4). Números abertos só depois da resposta do C6, como o pré-registro manda.
+- C6: mapa commitado antes da leitura (`00392cc`); a resposta do dono veio **pelo chat** e foi o Claude que
+  preencheu o CSV (`6158c8d`, origem em `docs/arquivo-de-estudos/finetune-c22/leitura_c6_origem.md`).
+- M1 antes → depois da guarda: 494/629 (78,5%) → 19/629 (3,0%). Buckets com `quantidade_pendente`:
+  16/105 (15,2%; acima do ESTIMADO de 12%). O fallback ainda não rodou nestes buckets.
+- O veredito da Fase 4 não muda. O do C22 é registro de portfólio; a publicação segue a política de
+  23/11 (validadores + guarda + leitura do dono). Não medido: ver o fim de `RESULTADO_C22.md`.
+
 ## O que NÃO foi medido
 
 - O que foi ENVIADO ao DeepSeek e o que ele devolveu (não gravado); quantos

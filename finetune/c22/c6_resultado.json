@@ -1,0 +1,30 @@
+{
+ "gerado_por": "scripts/finetune/c22.py leitura avaliar",
+ "respostas_sha256": "be6fa7874c89e8be8c77e969c5bf7a55481e83a79f721c813328ff71f59bbb49",
+ "mapa_sha256": "a0e22efd1dacfbbd4ff91033cacff3d2ed516077796e223f6438e2638916aae1",
+ "por_filme": [
+  {
+   "slug": "full-metal-jacket",
+   "publicavel": true
+  },
+  {
+   "slug": "american-sniper",
+   "publicavel": true
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "publicavel": true
+  },
+  {
+   "slug": "perfect-blue",
+   "publicavel": true
+  },
+  {
+   "slug": "eyes-wide-shut",
+   "publicavel": true
+  }
+ ],
+ "publicaveis": 5,
+ "criterio": "≥ 4 de 5",
+ "C6_passa": true
+}
