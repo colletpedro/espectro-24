@@ -272,8 +272,8 @@ def test_busca_no_indice_real():
             vazio: q("   "),
         }));
     """, FILMES_REAIS)
-    assert out["chefao"] == ["the-godfather"]
-    assert out["godfather"] == ["the-godfather"]        # pela chave do slug
+    assert out["chefao"] == ["the-godfather", "the-godfather-part-ii"]
+    assert out["godfather"] == ["the-godfather", "the-godfather-part-ii"]        # pela chave do slug
     assert out["letterboxd"] == ["memories-of-murder"]  # pelo título do Letterboxd
     assert out["ano"] == ["12-angry-men"]
     assert out["titulo_ano"] == ["joker-2019"]
@@ -387,9 +387,9 @@ def test_recem_chegados_tres_por_dia_em_ordem_alfabetica():
 def test_recem_chegados_reais_e_link_para_filmes_filtrado():
     """[rodada editorial] Era "12 da leva"; agora 3 por dia, mesmo link."""
     out = _node("""console.log(JSON.stringify({r: S.recemChegados(D),
-        hoje: S.recemDoDia(D, "2026-10-21")}));""", FILMES_REAIS)
-    assert out["r"]["total"] == 44 and len(out["r"]["filmes"]) == 44
-    assert out["r"]["desde"] == "2026-09-17"
+        hoje: S.recemDoDia(D, "2026-11-08")}));""", FILMES_REAIS)
+    assert out["r"]["total"] == 29 and len(out["r"]["filmes"]) == 29
+    assert out["r"]["desde"] == "2026-11-08"
     assert len(out["hoje"]["filmes"]) == 3
     assert {f["slug"] for f in out["hoje"]["filmes"]} <= {f["slug"] for f in out["r"]["filmes"]}
     fonte = (JS / "inicio.js").read_text(encoding="utf-8")
@@ -774,7 +774,7 @@ def test_carencia_caso_napoleao():
         console.log(JSON.stringify({p20: S.filmeDaPermutacao(D, "2026-11-20").slug,
             aniv: S.fazAniversario(D.find(f => f.slug === "napoleon-2023").estreia, "2026-11-22"),
             e22: S.escolhaDoDia(D, "2026-11-22"), C: S.CARENCIA_ANIVERSARIO_DIAS}));
-    """, FILMES_REAIS)
+    """, [f for f in FILMES_REAIS if f["entrada"] < "2026-11-08"])
     assert out["C"] == 14
     assert out["p20"] == "napoleon-2023" and out["aniv"] is True
     assert out["e22"]["filme"]["slug"] != "napoleon-2023"

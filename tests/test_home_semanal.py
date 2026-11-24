@@ -166,11 +166,11 @@ def test_todos_os_candidatos_aparecem_dentro_do_ciclo():
     """, FILMES_REAIS)
     dec, gen = out["dec"], out["gen"]
     # décadas anteriores a 2000, cronológicas
-    assert dec == sorted(dec) and all(d < 2000 for d in dec) and dec == [1960, 1970, 1990]
+    assert dec == sorted(dec) and all(d < 2000 for d in dec) and dec == [1950, 1960, 1970, 1980, 1990]
     assert set(out["vd"][:len(dec)]) == set(dec)
     # gêneros: nenhum repete antes de os N terem aparecido (2 por semana)
     n = len(gen)
-    assert n == 13
+    assert n == 15
     ciclo = out["vg"][:n]
     assert len(set(ciclo)) == n and set(ciclo) == set(gen)
 

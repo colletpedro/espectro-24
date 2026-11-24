@@ -276,8 +276,7 @@ def test_links_antigos_continuam_validos():
             const e = X.lerFiltros(q);
             r[q] = X.filtrar(D, e.filtros).map(f => f.slug);
         }
-        r.leva = S.recemChegados(D).filmes.map(f => f.slug).concat(
-            D.filter(f => f.slug === "obsession-2025" && f.entrada >= "2026-09-17").map(f => f.slug));
+        r.leva = D.filter(f => f.entrada >= "2026-09-17").map(f => f.slug);
         r.colecao = S.prateleirasBase(D).filter(c => c.chave === "valorativo:critica_social")[0].filmes.map(f => f.slug);
         r.ritmo = S.prateleirasBase(D).filter(c => c.chave === "ritmo")[0].filmes.map(f => f.slug);
         console.log(JSON.stringify(r));""", FILMES_REAIS)
@@ -322,10 +321,10 @@ def test_contagens_da_home_batem_com_filmes_filtrado():
     assert len(out["r"]) > 40
     for k, chave, n_home, n_filmes in out["r"]:
         assert n_home == n_filmes, (k, chave, n_home, n_filmes)
-    assert "obsession-2025" not in out["pagina"] and len(out["pagina"]) == 98
+    assert "obsession-2025" not in out["pagina"] and len(out["pagina"]) == 127
     opcoes = out["opcoes"]
     t = {i["chave"]: i["n"] for i in opcoes["genero"]}
-    assert t["terror"] == 15
+    assert t["terror"] == 17
 
 
 def test_filmes_usa_a_lista_de_exclusao_de_selecao():
