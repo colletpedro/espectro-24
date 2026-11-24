@@ -1,0 +1,49 @@
+{
+  "id": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+  "is_gated": false,
+  "created": 1792322457,
+  "model_class": "deepseek4-763b",
+  "owned_by": "Feather",
+  "context_length": 262144,
+  "max_completion_tokens": 32768,
+  "concurrency_cost": 4,
+  "pricing": {
+    "prompt": "0.000000225",
+    "completion": "0.0000009",
+    "image": "0",
+    "request": "0",
+    "input": 0.225,
+    "output": 0.9
+  },
+  "available_on_current_plan": true,
+  "niche": false,
+  "object": "model",
+  "status": "active",
+  "availability": {
+    "tier": "warm",
+    "is_hot_live": false,
+    "is_hot_recent": false,
+    "loading_stage": null,
+    "last_changed_at": "2026-11-08T03:25:38.979Z"
+  },
+  "huggingface_id": "6ad2e0265a59c8bc18707765",
+  "hf_created_at": "2026-10-17T02:40:38.000Z",
+  "license": "mit",
+  "downloads": 277323,
+  "favorites": 5391,
+  "parameter_size": 763000000000,
+  "is_moe": false,
+  "active_parameters": null,
+  "vision_supported": false,
+  "input_modalities": [
+    "text"
+  ],
+  "output_modalities": [
+    "text"
+  ],
+  "tasks": [
+    "text-generation",
+    "image-text-to-text"
+  ],
+  "tags": null
+}

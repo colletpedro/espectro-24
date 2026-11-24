@@ -1,0 +1,54 @@
+{
+  "id": "Qwen/Qwen3.8-27B",
+  "is_gated": false,
+  "created": 1786726806,
+  "model_class": "qwen3_5-27b",
+  "owned_by": "Feather",
+  "context_length": 262144,
+  "max_completion_tokens": 32768,
+  "concurrency_cost": 2,
+  "pricing": {
+    "prompt": "0.0000004",
+    "completion": "0.000003",
+    "image": "0",
+    "request": "0",
+    "input": 0.4,
+    "output": 3
+  },
+  "features": {
+    "tool_use": true,
+    "image_input": true
+  },
+  "available_on_current_plan": true,
+  "niche": false,
+  "object": "model",
+  "status": "active",
+  "availability": {
+    "tier": "warm",
+    "is_hot_live": false,
+    "is_hot_recent": true,
+    "loading_stage": null,
+    "last_changed_at": "2026-11-08T03:25:38.979Z"
+  },
+  "huggingface_id": "6a72f2e302294c7d32dd278e",
+  "hf_created_at": "2026-08-05T08:22:59.000Z",
+  "license": "apache-2.0",
+  "downloads": 7813215,
+  "favorites": 19346,
+  "parameter_size": 27000000000,
+  "is_moe": false,
+  "active_parameters": null,
+  "vision_supported": true,
+  "input_modalities": [
+    "text",
+    "image"
+  ],
+  "output_modalities": [
+    "text"
+  ],
+  "tasks": [
+    "image-text-to-text",
+    "conversational"
+  ],
+  "tags": []
+}

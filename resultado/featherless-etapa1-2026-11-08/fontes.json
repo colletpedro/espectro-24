@@ -1,0 +1,16 @@
+{
+  "verificado_em": "2026-11-08",
+  "catalogo": "https://api.featherless.ai/v1/models",
+  "plano": "https://api.featherless.ai/v1/plan",
+  "saldo": "https://api.featherless.ai/credits/balance",
+  "cache": [
+    "https://featherless.ai/models/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "https://featherless.ai/models/moonshotai/Kimi-K3.1-Pro",
+    "https://featherless.ai/models/Qwen/Qwen3.8-27B"
+  ],
+  "juiz_local": "https://ollama.com/library/gpt-oss:20b",
+  "juiz_hospedado": "https://featherless.ai/models/openai/gpt-oss-20b",
+  "reasoning": "https://featherless.ai/docs/chat-template-kwargs",
+  "seed": "https://featherless.ai/docs/completions",
+  "alias_nativo": "https://api-docs.deepseek.com/quick_start/pricing/"
+}

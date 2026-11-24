@@ -1,0 +1,53 @@
+{
+  "id": "moonshotai/Kimi-K3.1-Pro",
+  "is_gated": false,
+  "created": 1793834760,
+  "model_class": "kimi3-2780b",
+  "owned_by": "Feather",
+  "context_length": 262144,
+  "concurrency_cost": 4,
+  "pricing": {
+    "prompt": "0.000002",
+    "completion": "0.00001",
+    "image": "0",
+    "request": "0",
+    "input": 2,
+    "output": 10
+  },
+  "features": {
+    "image_input": true
+  },
+  "available_on_current_plan": true,
+  "niche": false,
+  "object": "model",
+  "status": "active",
+  "availability": {
+    "tier": "warm",
+    "is_hot_live": false,
+    "is_hot_recent": false,
+    "loading_stage": null,
+    "last_changed_at": "2026-11-06T02:01:07.844Z"
+  },
+  "huggingface_id": "6ae80dff1c312ffa6afa6a6c",
+  "hf_created_at": "2026-11-02T04:13:51.000Z",
+  "license": "other",
+  "downloads": 22571,
+  "favorites": 1641,
+  "parameter_size": 2780000000000,
+  "is_moe": true,
+  "active_parameters": 104,
+  "vision_supported": true,
+  "input_modalities": [
+    "text",
+    "image"
+  ],
+  "output_modalities": [
+    "text"
+  ],
+  "tasks": [
+    "text-generation",
+    "conversational",
+    "image-text-to-text"
+  ],
+  "tags": null
+}

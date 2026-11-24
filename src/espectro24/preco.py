@@ -202,3 +202,51 @@ def aviso_de_validade(hoje: date | None = None) -> str | None:
 PRECO_ENTRADA_MISS = PICO.miss_por_token
 PRECO_ENTRADA_HIT = PICO.hit_por_token
 PRECO_SAIDA = PICO.saida_por_token
+
+
+# Featherless: GET https://api.featherless.ai/v1/models, 2026-11-08 (despejo completo, 10.244 entradas,
+# versionado em resultado/featherless-etapa1-2026-11-08/catalogo.json). Aqui ficam só os modelos que o
+# projeto usa ou cita no código; um modelo fora desta tabela é RECUSADO antes da rede (featherless.py).
+# Valores USD por TOKEN (strings decimais), sem arredondar input/output da API.
+FEATHERLESS_VERIFICADO_EM = date(2026, 11, 8)
+FEATHERLESS_PRECOS = {'Qwen/Qwen3.8-27B': {'completion': '0.000003',
+                      'concurrency_cost': 2,
+                      'context_length': 262144,
+                      'model_class': 'qwen3_5-27b',
+                      'prompt': '0.0000004'},
+ 'deepseek-ai/DeepSeek-V4.1-Flash': {'completion': '0.0000012',
+                                     'concurrency_cost': 4,
+                                     'context_length': 262144,
+                                     'model_class': 'deepseek4-763b',
+                                     'prompt': '0.0000003'},
+ 'deepseek-ai/DeepSeek-V4.1-Flash-1017': {'completion': '0.0000009',
+                                          'concurrency_cost': 4,
+                                          'context_length': 262144,
+                                          'model_class': 'deepseek4-763b',
+                                          'prompt': '0.000000225'},
+ 'moonshotai/Kimi-K3': {'completion': '0.000015',
+                        'concurrency_cost': 4,
+                        'context_length': 262144,
+                        'model_class': 'kimi3-2780b',
+                        'prompt': '0.000003'},
+ 'moonshotai/Kimi-K3.1-Pro': {'completion': '0.00001',
+                              'concurrency_cost': 4,
+                              'context_length': 262144,
+                              'model_class': 'kimi3-2780b',
+                              'prompt': '0.000002'},
+ 'openai/gpt-oss-20b': {'completion': '0.00000015',
+                        'concurrency_cost': 2,
+                        'context_length': 131072,
+                        'model_class': 'gpt-oss-20b',
+                        'prompt': '0.00000004'}}
+
+# Cache automático: /v1/models não expõe a tarifa cached. Páginas oficiais
+# verificadas em 2026-11-08; USD/TOKEN. O teto sempre reserva SEM desconto.
+FEATHERLESS_CACHE_PRECOS = {
+    "deepseek-ai/DeepSeek-V4.1-Flash-1017": "0.000000006",
+    "moonshotai/Kimi-K3.1-Pro": "0.0000002",
+    "Qwen/Qwen3.8-27B": "0.00000015",
+}
+FEATHERLESS_CACHE_FONTES = {
+    model: f"https://featherless.ai/models/{model}" for model in FEATHERLESS_CACHE_PRECOS
+}

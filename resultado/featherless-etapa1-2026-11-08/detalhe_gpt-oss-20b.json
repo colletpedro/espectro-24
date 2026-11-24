@@ -1,0 +1,48 @@
+{
+  "id": "openai/gpt-oss-20b",
+  "is_gated": false,
+  "created": 1767317513,
+  "model_class": "gpt-oss-20b",
+  "owned_by": "Feather",
+  "context_length": 131072,
+  "concurrency_cost": 2,
+  "pricing": {
+    "prompt": "0.00000004",
+    "completion": "0.00000015",
+    "image": "0",
+    "request": "0",
+    "input": 0.04,
+    "output": 0.15
+  },
+  "available_on_current_plan": true,
+  "niche": false,
+  "object": "model",
+  "status": "active",
+  "availability": {
+    "tier": "warm",
+    "is_hot_live": true,
+    "is_hot_recent": false,
+    "loading_stage": null,
+    "last_changed_at": "2026-11-08T03:25:38.979Z"
+  },
+  "huggingface_id": "68913539bd3d0a833438591d",
+  "hf_created_at": "2025-08-04T22:33:29.000Z",
+  "license": "apache-2.0",
+  "downloads": 5927863,
+  "favorites": 5285,
+  "parameter_size": 20000000000,
+  "is_moe": true,
+  "active_parameters": 3.6,
+  "vision_supported": false,
+  "input_modalities": [
+    "text"
+  ],
+  "output_modalities": [
+    "text"
+  ],
+  "tasks": [
+    "text-generation",
+    "conversational"
+  ],
+  "tags": null
+}
