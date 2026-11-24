@@ -1,0 +1,14 @@
+{
+ "gerado_por": "scripts/finetune/c22.py leitura montar",
+ "semente": 20261109,
+ "filmes": [
+  "full-metal-jacket",
+  "american-sniper",
+  "the-simpsons-movie",
+  "perfect-blue",
+  "eyes-wide-shut"
+ ],
+ "elegiveis": 35,
+ "manifesto_sha256": "555291ab70108bb103488059fddf4e045bdae5df2a338b395f42a2fa0fd9cae8",
+ "script_sha256": "342d2926fa107b8d7c92de06a12b92204877255e4432233a1a4d67b9e282c456"
+}
