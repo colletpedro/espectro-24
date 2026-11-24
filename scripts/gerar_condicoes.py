@@ -78,11 +78,17 @@ VARIANTE_CLI = {None: C.VARIANTE_EXPERIMENTO, "legado": None}
 
 
 def gerar_um(slug: str, destino: Path, *, n: int, modelo: str | None,
-             variante_cli: str | None) -> dict:
+             variante_cli: str | None, provider: str | None = None) -> dict:
     origem = RESULTADO_DIR / f"{slug}.json"
     d = json.loads(origem.read_text(encoding="utf-8"))
     t0 = time.time()
-    bloco = C.gerar(d, n=n, model=modelo, variante=VARIANTE_CLI[variante_cli])
+    if provider == "featherless":
+        from espectro24.featherless import contexto
+        with contexto("condicoes", slug):
+            bloco = C.gerar(d, n=n, model=modelo, provider=provider, variante=VARIANTE_CLI[variante_cli])
+    else:
+        bloco = C.gerar(d, n=n, model=modelo, variante=VARIANTE_CLI[variante_cli],
+                        **({"provider": provider} if provider else {}))
     dt = time.time() - t0
     destino.mkdir(parents=True, exist_ok=True)
     (destino / f"{slug}.json").write_text(
@@ -100,6 +106,7 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=None,
                     help="best-of-N (default: config.BEST_OF_N)")
     ap.add_argument("--modelo", default=None)
+    ap.add_argument("--provider", default=None)
     ap.add_argument("--variante", choices=["legado"], default=None,
                     help="omitido = default de produção (o vencedor do "
                          "experimento de briefing); 'legado' força o braço "
@@ -122,7 +129,7 @@ def main() -> None:
     resumo = []
     for slug in slugs:
         r = gerar_um(slug, destino, n=n, modelo=args.modelo,
-                    variante_cli=args.variante)
+                    variante_cli=args.variante, provider=args.provider)
         b = r["bloco"] or {}
         nc = len(b.get("vale_a_pena", [])) + len(b.get("talvez_evite", []))
         ped = sum(len(v) for v in (b.get("temas_pedidos") or {}).values())

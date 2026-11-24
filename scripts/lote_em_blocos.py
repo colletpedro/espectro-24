@@ -195,25 +195,33 @@ def custo_do_bloco(desde_iso: str, bloco: list[str]) -> dict:
     # [C22] registros da exceção: Gemini, cobrado pela camada que respondeu
     gemini = sum(custo_gemini(r) for r in regs_passes + regs_ver
                  if r.get("excecao") == C22.EXCECAO)
+    featherless = sum(r.get("custo_usd") or 0 for r in regs_passes + regs_ver
+                      if r.get("provider") == "featherless")
     return {"passes": cp.custo_usd, "verificador": cv.custo_usd,
             "gemini": gemini,
-            "total": cp.custo_usd + cv.custo_usd + gemini,
+            "total": cp.custo_usd + cv.custo_usd + gemini + featherless,
+            **({"featherless": featherless} if featherless else {}),
             "n_chamadas": cp.n_chamadas + cv.n_chamadas,
             "pico": cp.custo_pico_usd + cv.custo_pico_usd,
             "fora_de_pico": (cp.custo_fora_de_pico_usd
                              + cv.custo_fora_de_pico_usd)}
 
 
-def processar_bloco(bloco: list[str], excecao: bool = False) -> dict:
+def processar_bloco(bloco: list[str], excecao: bool = False, *,
+                     provider: str = "deepseek", modelo: str | None = None) -> dict:
     """Um bloco de ponta a ponta. Levanta `SystemExit` (saldo) ANTES do commit
     se o dinheiro acabar; nesse caso nenhum dos três arquivos foi tocado.
     `excecao=True`: a exceção C22 (Gemini), ver o docstring do módulo."""
+    if excecao and (provider != "deepseek" or modelo is not None):
+        raise C22.ForaDaExcecao("C22 não admite sobreposição de provider/modelo")
+    selecao = ({"provider": provider, "modelo": modelo}
+               if provider != "deepseek" or modelo is not None else {})
     desde = agora_utc_iso()
     if excecao:
         C22.exigir_no_escopo(bloco)
     n_novas, filmes_novos = registrar_bloco(bloco)
     for n in (1, 2, 3):
-        v3.classificar_passe(n, slugs=bloco, excecao=excecao)
+        v3.classificar_passe(n, slugs=bloco, excecao=excecao, **selecao)
     # [2026-09-23, C22] Review que o Gemini RECUSA (filtro de conteúdo) sai
     # da amostra e a próxima elegível do mesmo bucket entra (`recusas.py`):
     # registrar → re-selecionar → classificar a substituta, até não sobrar
@@ -228,7 +236,7 @@ def processar_bloco(bloco: list[str], excecao: bool = False) -> dict:
         recusas_bloco += novas
         registrar_bloco(bloco)
         for n in (1, 2, 3):
-            v3.classificar_passe(n, slugs=bloco, excecao=excecao)
+            v3.classificar_passe(n, slugs=bloco, excecao=excecao, **selecao)
 
     passes = [v3._ler_passe(n) for n in (1, 2, 3)]
     amostra = json.loads(v3.ARQ_AMOSTRA.read_text(encoding="utf-8"))
@@ -238,7 +246,7 @@ def processar_bloco(bloco: list[str], excecao: bool = False) -> dict:
                                                     bloco)
 
     saida, manifesto = vi.calcular_aplicacao(linhas, slugs=bloco,
-                                             excecao=excecao)
+                                             excecao=excecao, **selecao)
     gravar_bloco(linhas, saida, manifesto)
     return {"bloco": bloco, "reviews_no_consenso":
             sum(1 for l in linhas if l["slug"] in set(bloco)),
@@ -311,6 +319,8 @@ def main(argv=None) -> int:
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawTextHelpFormatter)
     p.add_argument("lista", nargs="?", help="arquivo de slugs, um por linha")
+    p.add_argument("--provider", choices=["deepseek", "featherless"], default="deepseek")
+    p.add_argument("--modelo", default=None)
     p.add_argument("--tamanho-bloco", type=int, default=TAMANHO_BLOCO)
     p.add_argument("--dry-run", action="store_true",
                    help="só conta as chamadas pendentes por bloco")
@@ -378,7 +388,9 @@ def main(argv=None) -> int:
                   f"1..{i - 1} estão COMMITADOS; nada foi tocado neste.")
             return 1
         try:
-            r = processar_bloco(bloco, excecao=args.excecao_gemini)
+            r = processar_bloco(bloco, excecao=args.excecao_gemini,
+                                **({"provider": args.provider, "modelo": args.modelo}
+                                   if args.provider != "deepseek" or args.modelo is not None else {}))
         except SystemExit as e:
             print(f"\nPARADO no bloco {i}/{len(blocos)}: {e}")
             problemas = estado_consistente()

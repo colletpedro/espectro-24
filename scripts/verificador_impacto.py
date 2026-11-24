@@ -269,9 +269,18 @@ def registro_excecao(variante: str, n_passe: int, review: dict,
 
 
 def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
-                arq: Path | None = None, excecao: bool = False) -> None:
+                arq: Path | None = None, excecao: bool = False, *,
+                provider: str = "deepseek", modelo: str | None = None) -> None:
     """`excecao=True` (2026-09-22, C22): as reviews — todas dos 55 — são
     verificadas DIRETO no Gemini (camada de `C22.CAMADA`), com a marca."""
+    if excecao and (provider != "deepseek" or modelo is not None):
+        raise C22.ForaDaExcecao("C22 não admite sobreposição de provider/modelo")
+    if provider not in ("deepseek", "featherless"):
+        raise ValueError(f"provider inválido: {provider}")
+    if modelo is None and provider != "deepseek":
+        from espectro24.config import PROVIDER_DEFAULT_MODELS
+        modelo = PROVIDER_DEFAULT_MODELS[provider]
+
     arq = arq if arq is not None else _arq(variante, n_passe)
     if excecao:
         C22.exigir_no_escopo({r["slug"] for r in reviews})
@@ -289,7 +298,7 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         return
 
     system = VARIANTES[variante]
-    client = None if excecao else deepseek_client()
+    client = None if excecao or provider != "deepseek" else deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     pulados = [0]   # [2026-09-16] não tentadas porque o saldo acabou
     arq.parent.mkdir(parents=True, exist_ok=True)
@@ -310,7 +319,7 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
         # registro. Foi assim que `uncut-gems` (100/100) e `top-gun-maverick`
         # (39/77) ficaram `verificacao_pendente` por motivo administrativo —
         # sem registro, a reexecução depois do depósito retenta todas.
-        if parada_por_saldo():
+        if provider == "deepseek" and parada_por_saldo():
             with lock:
                 pulados[0] += 1
             return
@@ -338,7 +347,8 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                 f"{review['texto']}\n\n"
                 f"Esta review foi marcada com `impacto_emocional`. "
                 f"Confirma ou remove?",
-                MODELO, max_tokens=300, client=client, estagio="verificador",
+                modelo or MODELO, max_tokens=300, client=client, estagio="verificador",
+                **({"provider": provider} if provider != "deepseek" else {}),
                 unidade=f"{review.get('slug', '?')}/{review['id']}")
             data = json.loads(resp["texto"])
             confirma, frase, alvo = _normalizar_veredito(data)
@@ -349,6 +359,9 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                         "modelo": resp["modelo"],
                         "latencia_s": resp["latencia_s"],
                         "ts": agora_utc_iso()}
+            if resp.get("provider") == "featherless":
+                registro["custo_usd"] = resp["custo_usd"]
+                registro["modelo_efetivo"] = resp.get("modelo_efetivo")
             marca = resp["fallback_conteudo"]
         except LLMSaldoEsgotado:
             # A que DESCOBRIU o saldo zerado também não vira registro: o
@@ -370,6 +383,10 @@ def rodar_passe(variante: str, n_passe: int, reviews: list[dict],
                 # Não há retentativa: só a evidência para a próxima ocorrência.
                 registro["resposta_crua"] = resp["texto"]
                 registro["uso"] = resp["uso"]
+                if resp.get("provider") == "featherless":
+                    registro["custo_usd"] = resp.get("custo_usd")
+                    registro["provider"] = "featherless"
+                    registro["modelo"] = resp.get("modelo")
                 registro["provider"] = resp["provider"]
                 registro["modelo"] = resp["modelo"]
             marca = ((resp or {}).get("fallback_conteudo")
@@ -1028,7 +1045,8 @@ def _motivo_pendencia(erro: str) -> dict:
 
 
 def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None,
-                       excecao: bool = False) -> tuple[list[dict], dict]:
+                       excecao: bool = False, *, provider: str = "deepseek",
+                       modelo: str | None = None) -> tuple[list[dict], dict]:
     """O verificador de PRODUÇÃO sobre `linhas` (o consenso, em memória):
     chama o LLM só para as candidatas de `slugs` (`None` = todas) e devolve
     `(consenso_verificado, manifesto)` SEM gravar nada. Quem grava decide a
@@ -1070,7 +1088,9 @@ def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None,
     # o caminho de sempre chama exatamente como antes; o argumento novo só
     # vai quando a exceção C22 está ativa
     rodar_passe(VARIANTE_PRODUCAO, 1, a_chamar, arq=ARQ_PRODUCAO,
-                **({"excecao": True} if excecao else {}))
+                **({"excecao": True} if excecao else {}),
+                **({"provider": provider, "modelo": modelo}
+                   if provider != "deepseek" or modelo is not None else {}))
 
     resultados, ultima_falha = {}, {}
     for l in ARQ_PRODUCAO.read_text(encoding="utf-8").splitlines():
@@ -1132,6 +1152,13 @@ def calcular_aplicacao(linhas: list[dict], slugs: list[str] | None = None,
             "verificada_em": TABELA_VERIFICADA_EM.isoformat(),
         },
     }
+    hospedadas = [r for r in resultados.values() if r.get("provider") == "featherless"]
+    if hospedadas:
+        from espectro24.preco import FEATHERLESS_VERIFICADO_EM
+        manifesto["custo_featherless_usd"] = sum(r.get("custo_usd") or 0 for r in hospedadas)
+        manifesto["custo_usd"] += manifesto["custo_featherless_usd"]
+        manifesto["custo_featherless_incompleto"] = any(r.get("custo_usd") is None for r in hospedadas)
+        manifesto["tabela_featherless_verificada_em"] = FEATHERLESS_VERIFICADO_EM.isoformat()
     return saida, manifesto
 
 

@@ -1797,6 +1797,10 @@ def gerar(output: dict, *, n: int = BEST_OF_N, provider: str | None = None,
         modelo = model or S.modelo_do_estagio(ESTAGIO, provider)
 
         def gerar(system, msg):  # noqa: F811
+            if provider == "featherless":
+                from .featherless import contexto, metadados
+                with contexto(metadados().get("estagio") or "condicoes", output.get("slug")):
+                    return _gerar_real(system, msg, provider=provider, modelo=modelo)
             return _gerar_real(system, msg, provider=provider, modelo=modelo)
     else:
         provider, modelo = provider or "injetado", model or "injetado"

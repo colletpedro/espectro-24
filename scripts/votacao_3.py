@@ -304,13 +304,22 @@ def registro_excecao(review: dict, n_passe: int, tid: str,
 
 def classificar_passe(n_passe: int, limite: int | None = None,
                       slugs: list[str] | None = None,
-                      excecao: bool = False) -> None:
+                      excecao: bool = False, *, provider: str = "deepseek",
+                      modelo: str | None = None) -> None:
     """`excecao=True` (2026-09-22, C22): os `slugs` — todos dentro dos 55 —
     são classificados DIRETO no Gemini (`resposta_json_gemini`, camada
     Flex), cada registro com a marca `excecao`, e o passe 3 dispensa as
     reviews em que os passes 1 e 2 concordam."""
     from dotenv import load_dotenv
     load_dotenv(RAIZ / ".env")
+
+    if excecao and (provider != "deepseek" or modelo is not None):
+        raise C22.ForaDaExcecao("C22 não admite sobreposição de provider/modelo")
+    if provider not in ("deepseek", "featherless"):
+        raise ValueError(f"provider inválido: {provider}")
+    if modelo is None and provider != "deepseek":
+        from espectro24.config import PROVIDER_DEFAULT_MODELS
+        modelo = PROVIDER_DEFAULT_MODELS[provider]
 
     if excecao:
         if slugs is None:
@@ -327,7 +336,7 @@ def classificar_passe(n_passe: int, limite: int | None = None,
     if not pendentes:
         return
 
-    client = None if excecao else deepseek_client()
+    client = None if excecao or provider != "deepseek" else deepseek_client()
     lock, contador, t0 = Lock(), [0], time.time()
     falhas = [0]
     pulados = [0]   # [2026-09-16] não tentados porque o saldo acabou
@@ -353,7 +362,7 @@ def classificar_passe(n_passe: int, limite: int | None = None,
         # gravar como julgamento do modelo o que é falha administrativa — foi
         # exatamente assim que 139 reviews ficaram pendentes em 2026-09-16 —
         # e, sem registro, a reexecução depois do depósito as retenta todas.
-        if parada_por_saldo():
+        if provider == "deepseek" and parada_por_saldo():
             with lock:
                 pulados[0] += 1
             return
@@ -380,7 +389,8 @@ def classificar_passe(n_passe: int, limite: int | None = None,
                 SYSTEM,
                 f"Review (nota {review['nivel']} de 5 estrelas):\n\n"
                 f"{review['texto']}",
-                MODELO, max_tokens=300, client=client,
+                modelo or MODELO, max_tokens=300, client=client,
+                **({"provider": provider} if provider != "deepseek" else {}),
                 unidade=f"{review['slug']}/{review['bucket']}/{review['id']}"
                         f"/passe{n_passe}")
             data = json.loads(resp["texto"])
@@ -395,6 +405,9 @@ def classificar_passe(n_passe: int, limite: int | None = None,
                 "provider": resp["provider"], "modelo": resp["modelo"],
                 "latencia_s": resp["latencia_s"], "ts": agora_utc_iso(),
             }
+            if resp.get("provider") == "featherless":
+                registro["custo_usd"] = resp["custo_usd"]
+                registro["modelo_efetivo"] = resp.get("modelo_efetivo")
             marca = resp["fallback_conteudo"]
         except LLMSaldoEsgotado:
             # A que DESCOBRIU o saldo zerado também não vira registro: o
@@ -412,6 +425,10 @@ def classificar_passe(n_passe: int, limite: int | None = None,
                 # A chamada foi cobrada e a resposta chegou: guardar ambas.
                 # Só a mensagem do erro deixa a falha de parse inexplicável.
                 registro["uso"] = resp["uso"]
+                if resp.get("provider") == "featherless":
+                    registro["custo_usd"] = resp.get("custo_usd")
+                    registro["provider"] = "featherless"
+                    registro["modelo"] = resp.get("modelo")
                 registro["resposta_crua"] = resp["texto"]
             marca = ((resp or {}).get("fallback_conteudo")
                      or getattr(e, "marca", None))
@@ -1025,6 +1042,8 @@ if __name__ == "__main__":
     p_passe = sub.add_parser("passe")
     p_passe.add_argument("n", type=int, choices=[1, 2, 3, 4])
     p_passe.add_argument("--limite", type=int, default=None)
+    p_passe.add_argument("--provider", choices=["deepseek", "featherless"], default="deepseek")
+    p_passe.add_argument("--modelo", default=None)
     p_rodar = sub.add_parser("rodar_1_a_3")
     p_rodar.add_argument("--limite", type=int, default=None)
     sub.add_parser("consenso")
@@ -1036,7 +1055,7 @@ if __name__ == "__main__":
     if args.etapa == "amostra":
         cmd_amostra()
     elif args.etapa == "passe":
-        cmd_passe(args.n, args.limite)
+        classificar_passe(args.n, args.limite, provider=args.provider, modelo=args.modelo)
     elif args.etapa == "rodar_1_a_3":
         cmd_rodar_1_a_3(args.limite)
     elif args.etapa == "consenso":

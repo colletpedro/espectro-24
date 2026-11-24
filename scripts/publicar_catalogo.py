@@ -1,10 +1,10 @@
 """[v1.9.16, Entrega 4] Publica os filmes do catálogo (35, `consenso.jsonl`)
 que ainda não têm `resultado/*.json` sob o pipeline CORRENTE — síntese,
-narrativa (best-of-3) e o bloco `eixos` sob a classificação VERIFICADA
+o bloco `eixos` sob a classificação VERIFICADA
 (default de `pipeline._carregar_consenso_producao` desde a Entrega 1).
 
-Cada filme roda como SUBPROCESSO de `espectro24.cli` (`--tom ambos`, para
-gravar tanto os temas estruturados quanto a prosa) — isolamento: um filme
+Cada filme roda como SUBPROCESSO de `espectro24.cli` (`--tom estruturado`,
+sem gerar narrativa/veredito) — isolamento: um filme
 que trave ou estoure não derruba o lote, mesmo padrão de falha isolada do
 harness de coleta (`espectro24.lote`, §3[H]).
 
@@ -161,7 +161,7 @@ def publicar_um(slug: str, excecao_gemini: bool = False) -> dict:
         # `FetchError` (rc≠0), nunca uma recoleta.
         r = subprocess.run(
             [sys.executable, "-m", "espectro24.cli", "--slug", slug,
-             "--tom", "ambos", "--offline"]
+             "--tom", "estruturado", "--offline"]
             # [2026-09-22, C22] síntese e rotulagem em Gemini, só os 55
             + (["--excecao-gemini"] if excecao_gemini else []),
             cwd=RAIZ, capture_output=True, text=True, timeout=TIMEOUT_S)

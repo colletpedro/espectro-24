@@ -86,7 +86,8 @@ def _valido(eixo: Any) -> str:
 def rotular_bucket(bucket_nome: str, temas: list[dict],
                    client_call: Callable | None = None,
                    model: str | None = None,
-                   provider: str | None = None) -> dict[str, Any]:
+                   provider: str | None = None, *,
+                   slug: str | None = None) -> dict[str, Any]:
     """Uma chamada, um bucket. Devolve rótulos + telemetria.
 
     O conjunto de temas é do CÓDIGO: tema que o modelo esquecer vira `livre`,
@@ -101,6 +102,12 @@ def rotular_bucket(bucket_nome: str, temas: list[dict],
         return saida
 
     call, modelo = _resolver(client_call, model, provider)
+    if provider == "featherless" and client_call is None:
+        from .featherless import contexto
+        original_call = call
+        def call(system, user, model):
+            with contexto("rotulagem", slug, bucket_nome):
+                return original_call(system, user, model)
     system, user = build_system_prompt(), build_user_message(bucket_nome, temas)
 
     from .synthesize import LLMIndisponivel, _registrar_latencia_llm
@@ -201,7 +208,8 @@ def rotular_output(output: dict, client_call: Callable | None = None,
             continue
         r = rotular_bucket(nome, list(b.get("temas") or []),
                            client_call=client_call, model=model,
-                           provider=provider)
+                           provider=provider,
+                           **({"slug": output.get("slug")} if provider == "featherless" else {}))
         telemetria["n_chamadas"] += r["n_chamadas"]
         if r["falhou"]:
             telemetria["falharam"].append(nome)

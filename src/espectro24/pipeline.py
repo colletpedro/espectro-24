@@ -206,7 +206,7 @@ def _gancho_de_extensao(fetcher: Fetcher, slug: str, hist, *,
                         teto_extensao: int,
                         ordenacao: str,
                         dados_dir,
-                        fronteiras=None):
+                        fronteiras=None, meta_extensao=None):
     """[v1.9.4, §3[B]] Monta o gancho que `coletar_superset` chama entre o
     orçamento base e a persistência.
 
@@ -217,7 +217,9 @@ def _gancho_de_extensao(fetcher: Fetcher, slug: str, hist, *,
     inteira a `extensao.estender_bucket`.
     """
     mapa = mapa_de_niveis(FRONTEIRAS if fronteiras is None else fronteiras)
-    meta = meta_com_folga(cota_por_bucket)
+    meta = meta_com_folga(cota_por_bucket) if meta_extensao is None else meta_extensao
+    if meta < cota_por_bucket:
+        raise ValueError('meta_extensao não pode reduzir a cota')
     teto_extras = max(0, teto_extensao - orcamento_base)
 
     def gancho(superset) -> dict | None:
@@ -264,7 +266,8 @@ def _gancho_de_extensao(fetcher: Fetcher, slug: str, hist, *,
                     fetcher, slug, superset.niveis[nivel], ordenacao),
                 paginas_base=paginas_base,
                 vivos={n for n in niveis
-                       if superset.niveis[n].motivo_parada != "material_esgotado"},
+                       if n in superset.niveis
+                       and superset.niveis[n].motivo_parada != "material_esgotado"},
                 teto_extras=teto_extras,
                 meta=meta,
             )
@@ -281,7 +284,7 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
                        ordenacao: str = ORDENACAO,
                        dados_dir: str | Path = DADOS_BRUTO_DIR,
                        distribuicao: bool = True,
-                       on_level=None):
+                       on_level=None, meta_extensao=None):
     """[G] → [C1] → [B] → [B']: a metade de COLETA, isolada.
 
     Devolve `(superset, distrib)`. Não seleciona nada — quem faz isso é
@@ -330,7 +333,7 @@ def collect_all_levels(fetcher: Fetcher, slug: str,
             fetcher, slug, hist, cota_por_bucket=cota_por_bucket,
             orcamento_base=orcamento_paginas_bucket,
             teto_extensao=teto_extensao, ordenacao=ordenacao,
-            dados_dir=dados_dir))
+            dados_dir=dados_dir, meta_extensao=meta_extensao))
     # v1.9.1 (§3[B']): janela temporal sobre o bruto ACUMULADO (não só o
     # lote desta execução) — mesmo espírito de `selecionar` ler o bruto
     # persistido em vez do que acabou de ser raspado. Espelhada também em
@@ -406,7 +409,8 @@ def run_pipeline(fetcher: Fetcher, slug: str, data_coleta: str,
 
     if synth:
         for b in buckets:
-            synthesize_bucket(b, client_call=client_call, model=model, provider=provider)
+            synthesize_bucket(b, client_call=client_call, model=model, provider=provider,
+                              **({"slug": slug} if provider == "featherless" else {}))
     return buckets, superset, distrib
 
 

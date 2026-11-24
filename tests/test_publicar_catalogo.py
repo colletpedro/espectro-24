@@ -209,7 +209,7 @@ def test_publicar_um_roda_o_cli_em_offline(tmp_path, monkeypatch):
         return subprocess.CompletedProcess(argv, 0, "", "")
     monkeypatch.setattr(pc.subprocess, "run", fake_run)
     pc.publicar_um("get-out-2017")
-    assert visto["argv"][-5:] == ["--slug", "get-out-2017", "--tom", "ambos",
+    assert visto["argv"][-5:] == ["--slug", "get-out-2017", "--tom", "estruturado",
                                   "--offline"]
 
 

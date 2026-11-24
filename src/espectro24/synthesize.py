@@ -1021,7 +1021,7 @@ def _erros_transporte_llm(provider: str) -> tuple[type[BaseException], ...]:
     todos 4xx, decisão do serviço sobre o pedido, não falha de rede.
     Retentá-los seria pressão, não recuperação de transporte.
     """
-    if provider == "deepseek":
+    if provider in ("deepseek", "featherless"):
         import openai
 
         # `APIConnectionError` cobre timeout (`APITimeoutError` é subclasse,
@@ -1264,6 +1264,10 @@ def resposta(system: str, user: str, model: str, *, provider: str,
     produziria tentativas ANINHADAS (`LLM_MAX_TENTATIVAS²`), e há teste
     dedicado provando que isso não acontece.
     """
+    if provider == "featherless":
+        from .featherless import resposta as featherless_resposta
+        return featherless_resposta(system, user, model, max_tokens=max_tokens,
+                                     json_mode=json_mode, client=client)
     if provider == "deepseek":
         return deepseek_resposta(system, user, model, max_tokens=max_tokens,
                                  json_mode=json_mode, client=client)
@@ -1286,6 +1290,14 @@ def uso(resp, provider: str) -> dict:
     """
     vazio = {"prompt_tokens": 0, "completion_tokens": 0,
              "cache_hit_tokens": 0, "cache_miss_tokens": 0}
+    if provider == "featherless":
+        u = getattr(resp, "usage", None)
+        entrada = int(getattr(u, "prompt_tokens", 0) or 0)
+        cacheado = int(getattr(u, "cached_tokens", None) or
+                       getattr(getattr(u, "prompt_tokens_details", None), "cached_tokens", 0) or 0)
+        return {"prompt_tokens": entrada,
+                "completion_tokens": int(getattr(u, "completion_tokens", 0) or 0),
+                "cache_hit_tokens": cacheado, "cache_miss_tokens": entrada-cacheado}
     if provider == "deepseek":
         u = getattr(resp, "usage", None)
         if u is None:
@@ -1449,7 +1461,7 @@ def _motivo_resposta_vazia_gemini(resp) -> str:
 
 def resposta_json_com_fallback(system: str, user: str, model: str, *,
                                max_tokens: int, estagio: str, unidade: str,
-                               client=None) -> dict:
+                               client=None, provider: str = "deepseek") -> dict:
     """Uma chamada de JSON CURTO sobre UMA review — DeepSeek, e Gemini SÓ se
     o DeepSeek recusar por conteúdo. Serve aos dois estágios que mandam o
     texto da review: a classificação (`votacao_3`) e o verificador de
@@ -1465,6 +1477,12 @@ def resposta_json_com_fallback(system: str, user: str, model: str, *,
     em `deepseek_resposta`; 4xx sem retentar). `estagio`/`unidade`
     identificam a troca na telemetria.
     """
+    if provider == "featherless":
+        from .featherless import json_resposta
+        return json_resposta(system, user, model, max_tokens=max_tokens,
+                              estagio=estagio, unidade=unidade, client=client)
+    if provider != "deepseek":
+        raise ProviderError(f"provider estruturado desconhecido: {provider}")
     t0 = time.monotonic()
     try:
         resp = deepseek_resposta(system, user, model, max_tokens=max_tokens,
@@ -1483,14 +1501,16 @@ def resposta_json_com_fallback(system: str, user: str, model: str, *,
 
 
 def resposta_classificacao(system: str, user: str, model: str, *,
-                           max_tokens: int, unidade: str, client=None) -> dict:
+                           max_tokens: int, unidade: str, client=None,
+                           provider: str = "deepseek") -> dict:
     """A chamada de CLASSIFICAÇÃO de uma review (`unidade` =
     `slug/bucket/id/passeN`) — `resposta_json_com_fallback` no estágio
     `classificacao`."""
     return resposta_json_com_fallback(system, user, model,
                                       max_tokens=max_tokens,
                                       estagio="classificacao",
-                                      unidade=unidade, client=client)
+                                      unidade=unidade, client=client,
+                                      **({"provider": provider} if provider != "deepseek" else {}))
 
 
 def _json_no_fallback(system: str, user: str, estagio: str,
@@ -1903,6 +1923,29 @@ def modelo_do_estagio(estagio: str, provider: str | None = None) -> str:
     return MODELO_POR_ESTAGIO[estagio]
 
 
+def featherless_client():
+    from openai import OpenAI
+    return OpenAI(api_key=os.environ["FEATHERLESS_API_KEY"],
+                  base_url=os.environ.get("FEATHERLESS_BASE_URL", "https://api.featherless.ai/v1"),
+                  timeout=LLM_TIMEOUT_MS / 1000, max_retries=0)
+
+
+def _featherless_sdk_create(client, kwargs):
+    return client.chat.completions.create(**kwargs)
+
+
+def featherless_client_call(system, user, model):
+    from .featherless import resposta
+    resp = resposta(system, user, model, max_tokens=LLM_MAX_TOKENS, json_mode=True)
+    return resp.choices[0].message.content or ""
+
+
+def featherless_client_call_prosa(system, user, model):
+    from .featherless import resposta
+    resp = resposta(system, user, model, max_tokens=PROSA_MAX_TOKENS, json_mode=False)
+    return resp.choices[0].message.content or ""
+
+
 def local_client_call(system, user, model):
     from .sintese_local import client_call_local
     return client_call_local(system, user, model)
@@ -1910,6 +1953,7 @@ def local_client_call(system, user, model):
 
 PROVIDER_CLIENTS = {
     "local": local_client_call,
+    "featherless": featherless_client_call,
     "anthropic": anthropic_client_call,
     "gemini": gemini_client_call,
     "deepseek": deepseek_client_call,
@@ -1918,6 +1962,7 @@ PROVIDER_CLIENTS = {
 # v1.6.0: adaptadores das etapas de PROSA (§D2 narrador, §E2 editor) — thinking
 # fixo + teto folgado. A síntese por bucket (§D) continua em PROVIDER_CLIENTS.
 PROVIDER_CLIENTS_PROSA = {
+    "featherless": featherless_client_call_prosa,
     "anthropic": anthropic_client_call_prosa,
     "gemini": gemini_client_call_prosa,
     "deepseek": deepseek_client_call_prosa,
@@ -2177,6 +2222,7 @@ def _construir_temas(data: dict, n_analisadas: int) -> list[Tema]:
 def synthesize_bucket(bucket: BucketResult, client_call=None,
                       model: str | None = None,
                       provider: str | None = None, *,
+                      slug: str | None = None,
                       fallback_quantidade: bool = True) -> BucketResult:
     """Preenche `bucket.temas` e `bucket.observacao_geral`.
 
@@ -2214,6 +2260,12 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
         provider = detect_provider(provider)
         habilitado = provider == "deepseek"
     call, model = _resolve_call_and_model(client_call, model, provider)
+    if provider == "featherless" and client_call is None:
+        from .featherless import contexto
+        original_call = call
+        def call(system, user, model):
+            with contexto("sintese", slug, bucket.nome):
+                return original_call(system, user, model)
     chamar = _ChamadaComFallback(call, model, habilitado=habilitado,
                                  unidade=bucket.nome)
 

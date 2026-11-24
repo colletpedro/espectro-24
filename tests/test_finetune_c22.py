@@ -13,7 +13,12 @@ import pytest
 RAIZ = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "scripts" / "finetune"))
 
+# Importar C22 configura a pasta cega de produção. Preserve a configuração
+# da Fase 4 na coleta da suíte; nenhuma asserção/artefato C22 é alterado.
+import _cego  # noqa: E402
+_PASTA_CEGA_ANTES = _cego.PASTA
 import c22 as X  # noqa: E402
+_cego.PASTA = _PASTA_CEGA_ANTES
 import comum as K  # noqa: E402
 from espectro24.models import BucketResult, LevelResult, Review  # noqa: E402
 
