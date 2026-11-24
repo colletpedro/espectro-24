@@ -1,0 +1,63 @@
+{
+  "slug": "forrest-gump",
+  "coletado_em": "2026-11-12T13:32:44.298727+00:00",
+  "identidade_letterboxd": {
+    "slug": "forrest-gump",
+    "titulo": "Forrest Gump",
+    "ano": 1994,
+    "tmdb_id_letterboxd": 13,
+    "fonte": "pagina_letterboxd"
+  },
+  "ano_lancamento": 1994,
+  "ordenacao_usada": "by/added",
+  "piloto": false,
+  "coleta_completa": false,
+  "estado_coleta": "parcial_com_lacunas",
+  "histograma_bruto": {},
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 1,
+    "2.5": 2,
+    "3.0": 2,
+    "3.5": 1,
+    "4.0": 1,
+    "4.5": 1,
+    "5.0": 1
+  },
+  "niveis_concluidos": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5
+  ],
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 1,
+    "2.5": 2,
+    "3.0": 2,
+    "3.5": 1,
+    "4.0": 1,
+    "4.5": 1
+  },
+  "extensao_por_bucket": null,
+  "nivel_ausente_por_falha": true,
+  "transporte": "direto_lento",
+  "amostra_pos_coleta": {
+    "negativas": 40,
+    "medianas": 40,
+    "positivas": 6
+  },
+  "histograma_pendente": true,
+  "erros_firecrawl": 3,
+  "falha_transporte": "FetchError_extensao",
+  "reconferencia_identidade_ok": true
+}

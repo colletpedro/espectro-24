@@ -1,0 +1,297 @@
+{
+  "slug": "the-green-mile",
+  "coletado_em": "2026-11-08T05:40:56.496030+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2015,
+    "1.0": 4178,
+    "1.5": 3358,
+    "2.0": 16120,
+    "2.5": 20040,
+    "3.0": 101159,
+    "3.5": 147207,
+    "4.0": 445958,
+    "4.5": 287753,
+    "5.0": 511972
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 6
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 12,
+    "2.5": 6,
+    "3.0": 18,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 6
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 48,
+    "1.5": 24,
+    "2.0": 144,
+    "2.5": 72,
+    "3.0": 216,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 48,
+    "5.0": 72
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 2,
+    "1.0": 9,
+    "1.5": 8,
+    "2.0": 32,
+    "2.5": 19,
+    "3.0": 31,
+    "3.5": 6,
+    "4.0": 14,
+    "4.5": 14,
+    "5.0": 20
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 3,
+    "5.0": 6
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 2,
+    "1.5": 0,
+    "2.0": 4,
+    "2.5": 0,
+    "3.0": 8,
+    "3.5": 0,
+    "4.0": 1,
+    "4.5": 1,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 6,
+      "extras_por_nivel": {
+        "1.0": 2,
+        "2.0": 4
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 34,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.0": 8
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 36,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "4.0": 1,
+        "4.5": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 54,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 10,
+    "3.0": 51,
+    "3.5": 74,
+    "4.0": 223,
+    "4.5": 144,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 732,
+      "min": "2000-04-30",
+      "max": "2026-11-08",
+      "p5": "2026-08-09",
+      "p50": "2026-10-17",
+      "p95": "2026-11-07"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 228,
+        "min": "2000-04-30",
+        "max": "2026-11-08",
+        "p5": "2026-07-10",
+        "p50": "2026-09-11",
+        "p95": "2026-10-30"
+      },
+      "medianas": {
+        "n": 288,
+        "min": "2016-09-12",
+        "max": "2026-11-07",
+        "p5": "2026-08-23",
+        "p50": "2026-10-14",
+        "p95": "2026-11-05"
+      },
+      "positivas": {
+        "n": 216,
+        "min": "2014-04-04",
+        "max": "2026-11-08",
+        "p5": "2026-10-10",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 22,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 25,
+    "dias_por_100_paginas": 19.68503937007874,
+    "paginas_para_1_ano": 1854
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 66,
+      "dias_por_100_paginas": 2200.0,
+      "paginas_para_1_ano": 17
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 43,
+      "dias_por_100_paginas": 4300.0,
+      "paginas_para_1_ano": 8
+    },
+    "2.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 12,
+      "dias": 85,
+      "dias_por_100_paginas": 772.7272727272727,
+      "paginas_para_1_ano": 47
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 73,
+      "dias_por_100_paginas": 1042.857142857143,
+      "paginas_para_1_ano": 35
+    },
+    "3.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 26,
+      "dias": 57,
+      "dias_por_100_paginas": 228.0,
+      "paginas_para_1_ano": 160
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 1,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 56,
+      "dias": 28,
+      "dias_por_100_paginas": 50.90909090909091,
+      "paginas_para_1_ano": 717
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 36,
+      "dias": 17,
+      "dias_por_100_paginas": 48.57142857142857,
+      "paginas_para_1_ano": 751
+    },
+    "5.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 26,
+      "dias_por_100_paginas": 20.47244094488189,
+      "paginas_para_1_ano": 1783
+    }
+  },
+  "ano_lancamento": 1999,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-green-mile",
+    "titulo": "The Green Mile",
+    "ano": 1999,
+    "tmdb_id_letterboxd": 497,
+    "fonte": "pagina_letterboxd"
+  }
+}

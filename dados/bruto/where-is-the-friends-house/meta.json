@@ -1,0 +1,292 @@
+{
+  "slug": "where-is-the-friends-house",
+  "coletado_em": "2026-09-18T08:36:08.531248+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 161,
+    "1.0": 313,
+    "1.5": 279,
+    "2.0": 1075,
+    "2.5": 1566,
+    "3.0": 7302,
+    "3.5": 14060,
+    "4.0": 44787,
+    "4.5": 32216,
+    "5.0": 43996
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 3,
+    "2.0": 9,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 36,
+    "1.5": 24,
+    "2.0": 96,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 60,
+    "4.5": 48,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 5,
+    "1.0": 11,
+    "1.5": 10,
+    "2.0": 26,
+    "2.5": 30,
+    "3.0": 37,
+    "3.5": 8,
+    "4.0": 23,
+    "4.5": 15,
+    "5.0": 23
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 7,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 1,
+    "1.5": 0,
+    "2.0": 1,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 12,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "2.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 41,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 67,
+      "n_validas_pos_extensao": 67,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 69,
+      "n_validas_pos_extensao": 69,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 6,
+    "2.5": 9,
+    "3.0": 42,
+    "3.5": 80,
+    "4.0": 256,
+    "4.5": 184,
+    "5.0": 251
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 552,
+      "min": "2015-08-05",
+      "max": "2026-09-18",
+      "p5": "2025-12-16",
+      "p50": "2026-08-16",
+      "p95": "2026-09-16"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 168,
+        "min": "2015-08-05",
+        "max": "2026-09-17",
+        "p5": "2025-09-29",
+        "p50": "2026-04-02",
+        "p95": "2026-09-05"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2024-02-13",
+        "max": "2026-09-17",
+        "p5": "2026-04-05",
+        "p50": "2026-08-18",
+        "p95": "2026-09-13"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2025-12-13",
+        "max": "2026-09-18",
+        "p5": "2026-06-21",
+        "p50": "2026-09-14",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 13,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 83,
+    "dias_por_100_paginas": 131.74603174603175,
+    "paginas_para_1_ano": 277
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 224,
+      "dias_por_100_paginas": 11200.0,
+      "paginas_para_1_ano": 3
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 173,
+      "dias_por_100_paginas": 17300.0,
+      "paginas_para_1_ano": 2
+    },
+    "2.0": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 8,
+      "dias": 243,
+      "dias_por_100_paginas": 3471.4285714285716,
+      "paginas_para_1_ano": 11
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 7,
+      "dias": 156,
+      "dias_por_100_paginas": 2600.0,
+      "paginas_para_1_ano": 14
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 21,
+      "dias": 156,
+      "dias_por_100_paginas": 780.0,
+      "paginas_para_1_ano": 47
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 5,
+      "dias_por_100_paginas": 500.0,
+      "paginas_para_1_ano": 73
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 87,
+      "dias_por_100_paginas": 138.0952380952381,
+      "paginas_para_1_ano": 264
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 46,
+      "dias": 72,
+      "dias_por_100_paginas": 160.0,
+      "paginas_para_1_ano": 228
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 63,
+      "dias": 70,
+      "dias_por_100_paginas": 112.90322580645162,
+      "paginas_para_1_ano": 323
+    }
+  },
+  "ano_lancamento": 1987,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "where-is-the-friends-house",
+    "titulo": "Where Is the Friend's House?",
+    "ano": 1987,
+    "tmdb_id_letterboxd": 49964,
+    "fonte": "pagina_letterboxd"
+  }
+}

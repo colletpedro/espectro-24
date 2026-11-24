@@ -1,0 +1,305 @@
+{
+  "slug": "the-lion-king",
+  "coletado_em": "2026-11-08T06:32:55.246483+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2789,
+    "1.0": 7758,
+    "1.5": 4846,
+    "2.0": 34032,
+    "2.5": 34557,
+    "3.0": 225889,
+    "3.5": 229391,
+    "4.0": 691821,
+    "4.5": 298686,
+    "5.0": 793193
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 2,
+    "5.0": 6
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 18,
+    "2.5": 6,
+    "3.0": 18,
+    "3.5": 3,
+    "4.0": 12,
+    "4.5": 2,
+    "5.0": 7
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 216,
+    "2.5": 72,
+    "3.0": 216,
+    "3.5": 36,
+    "4.0": 144,
+    "4.5": 24,
+    "5.0": 84
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 2,
+    "1.0": 7,
+    "1.5": 7,
+    "2.0": 25,
+    "2.5": 6,
+    "3.0": 20,
+    "3.5": 4,
+    "4.0": 19,
+    "4.5": 7,
+    "5.0": 19
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 2,
+    "5.0": 6
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 8,
+    "2.5": 0,
+    "3.0": 8,
+    "3.5": 1,
+    "4.0": 6,
+    "4.5": 0,
+    "5.0": 1
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "2.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 32,
+      "n_validas_pos_extensao": 41,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 15,
+      "n_validas_pos_extensao": 26,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.5": 1,
+        "4.0": 6,
+        "5.0": 1
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 33,
+      "n_validas_pos_extensao": 49,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 11,
+    "2.5": 11,
+    "3.0": 73,
+    "3.5": 74,
+    "4.0": 223,
+    "4.5": 96,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 864,
+      "min": "1994-07-10",
+      "max": "2026-11-08",
+      "p5": "2024-11-14",
+      "p50": "2026-10-06",
+      "p95": "2026-11-07"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 288,
+        "min": "1994-09-08",
+        "max": "2026-11-07",
+        "p5": "2021-06-12",
+        "p50": "2026-07-26",
+        "p95": "2026-10-22"
+      },
+      "medianas": {
+        "n": 288,
+        "min": "1994-07-10",
+        "max": "2026-11-08",
+        "p5": "2024-11-21",
+        "p50": "2026-10-07",
+        "p95": "2026-11-05"
+      },
+      "positivas": {
+        "n": 288,
+        "min": "2010-02-18",
+        "max": "2026-11-08",
+        "p5": "2026-05-12",
+        "p50": "2026-11-05",
+        "p95": "2026-11-08"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 23,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 30,
+    "dias_por_100_paginas": 23.62204724409449,
+    "paginas_para_1_ano": 1545
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 27,
+      "dias_por_100_paginas": 2700.0,
+      "paginas_para_1_ano": 14
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 46,
+      "dias_por_100_paginas": 4600.0,
+      "paginas_para_1_ano": 8
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 61,
+      "dias_por_100_paginas": 6100.0,
+      "paginas_para_1_ano": 6
+    },
+    "2.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 18,
+      "dias": 233,
+      "dias_por_100_paginas": 1370.5882352941176,
+      "paginas_para_1_ano": 27
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 54,
+      "dias_por_100_paginas": 1080.0,
+      "paginas_para_1_ano": 34
+    },
+    "3.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 36,
+      "dias": 90,
+      "dias_por_100_paginas": 257.14285714285717,
+      "paginas_para_1_ano": 142
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 5,
+      "dias_por_100_paginas": 250.0,
+      "paginas_para_1_ano": 146
+    },
+    "4.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 112,
+      "dias": 75,
+      "dias_por_100_paginas": 67.56756756756756,
+      "paginas_para_1_ano": 540
+    },
+    "4.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "5.0": {
+      "n_paginas": 7,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 33,
+      "dias_por_100_paginas": 25.984251968503937,
+      "paginas_para_1_ano": 1405
+    }
+  },
+  "ano_lancamento": 1994,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-lion-king",
+    "titulo": "The Lion King",
+    "ano": 1994,
+    "tmdb_id_letterboxd": 8587,
+    "fonte": "pagina_letterboxd"
+  }
+}

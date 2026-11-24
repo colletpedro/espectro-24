@@ -1,0 +1,302 @@
+{
+  "slug": "terminator-2-judgment-day",
+  "coletado_em": "2026-11-08T05:51:56.247640+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 829,
+    "1.0": 2467,
+    "1.5": 1895,
+    "2.0": 13541,
+    "2.5": 14897,
+    "3.0": 86292,
+    "3.5": 111832,
+    "4.0": 327233,
+    "4.5": 221480,
+    "5.0": 346502
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 13,
+    "3.5": 3,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 6
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 156,
+    "3.5": 36,
+    "4.0": 60,
+    "4.5": 48,
+    "5.0": 72
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 12,
+    "1.0": 3,
+    "1.5": 11,
+    "2.0": 38,
+    "2.5": 17,
+    "3.0": 34,
+    "3.5": 7,
+    "4.0": 15,
+    "4.5": 13,
+    "5.0": 17
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 3,
+    "3.5": 1,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 1
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 64,
+      "n_validas_pos_extensao": 64,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "3.5": 1,
+        "5.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 47,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 1,
+    "2.0": 10,
+    "2.5": 11,
+    "3.0": 64,
+    "3.5": 83,
+    "4.0": 242,
+    "4.5": 164,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 636,
+      "min": "2010-01-01",
+      "max": "2026-11-08",
+      "p5": "2026-06-07",
+      "p50": "2026-10-14",
+      "p95": "2026-11-07"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2013-10-17",
+        "max": "2026-11-07",
+        "p5": "2026-04-03",
+        "p50": "2026-09-02",
+        "p95": "2026-10-24"
+      },
+      "medianas": {
+        "n": 228,
+        "min": "2010-01-01",
+        "max": "2026-11-08",
+        "p5": "2026-08-23",
+        "p50": "2026-10-14",
+        "p95": "2026-11-06"
+      },
+      "positivas": {
+        "n": 216,
+        "min": "2023-01-08",
+        "max": "2026-11-08",
+        "p5": "2026-09-01",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 16,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 17,
+    "dias_por_100_paginas": 26.984126984126984,
+    "paginas_para_1_ano": 1353
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 78,
+      "dias_por_100_paginas": 7800.0,
+      "paginas_para_1_ano": 5
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 85,
+      "dias_por_100_paginas": 8500.0,
+      "paginas_para_1_ano": 4
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 34,
+      "dias_por_100_paginas": 3400.0,
+      "paginas_para_1_ano": 11
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 98,
+      "dias_por_100_paginas": 1088.888888888889,
+      "paginas_para_1_ano": 34
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 57,
+      "dias_por_100_paginas": 1140.0,
+      "paginas_para_1_ano": 32
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 32,
+      "dias": 62,
+      "dias_por_100_paginas": 200.0,
+      "paginas_para_1_ano": 182
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 3,
+      "dias_por_100_paginas": 150.0,
+      "paginas_para_1_ano": 243
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 60,
+      "dias": 26,
+      "dias_por_100_paginas": 44.067796610169495,
+      "paginas_para_1_ano": 828
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 41,
+      "dias": 19,
+      "dias_por_100_paginas": 47.5,
+      "paginas_para_1_ano": 768
+    },
+    "5.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 19,
+      "dias_por_100_paginas": 30.158730158730158,
+      "paginas_para_1_ano": 1210
+    }
+  },
+  "ano_lancamento": 1991,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "terminator-2-judgment-day",
+    "titulo": "Terminator 2: Judgment Day",
+    "ano": 1991,
+    "tmdb_id_letterboxd": 280,
+    "fonte": "pagina_letterboxd"
+  }
+}

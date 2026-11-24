@@ -1,0 +1,297 @@
+{
+  "slug": "bullet-train",
+  "coletado_em": "2026-09-18T08:17:11.443833+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 7109,
+    "1.0": 21928,
+    "1.5": 19983,
+    "2.0": 92103,
+    "2.5": 121028,
+    "3.0": 431374,
+    "3.5": 514589,
+    "4.0": 703662,
+    "4.5": 205363,
+    "5.0": 277726
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 13,
+    "2.5": 6,
+    "3.0": 13,
+    "3.5": 5,
+    "4.0": 11,
+    "4.5": 2,
+    "5.0": 6
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 48,
+    "1.5": 24,
+    "2.0": 156,
+    "2.5": 72,
+    "3.0": 156,
+    "3.5": 60,
+    "4.0": 132,
+    "4.5": 24,
+    "5.0": 72
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 4,
+    "1.0": 10,
+    "1.5": 6,
+    "2.0": 32,
+    "2.5": 17,
+    "3.0": 35,
+    "3.5": 12,
+    "4.0": 18,
+    "4.5": 6,
+    "5.0": 7
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 1,
+    "1.5": 0,
+    "2.0": 3,
+    "2.5": 0,
+    "3.0": 3,
+    "3.5": 0,
+    "4.0": 4,
+    "4.5": 0,
+    "5.0": 4
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 4,
+      "extras_por_nivel": {
+        "1.0": 1,
+        "2.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 43,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 42,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "4.0": 4,
+        "5.0": 4
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 31,
+      "n_validas_pos_extensao": 43,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 3,
+    "1.0": 8,
+    "1.5": 7,
+    "2.0": 34,
+    "2.5": 44,
+    "3.0": 157,
+    "3.5": 187,
+    "4.0": 256,
+    "4.5": 75,
+    "5.0": 101
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 756,
+      "min": "2022-01-01",
+      "max": "2026-09-18",
+      "p5": "2024-11-25",
+      "p50": "2026-09-13",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 240,
+        "min": "2022-08-04",
+        "max": "2026-09-18",
+        "p5": "2025-08-08",
+        "p50": "2026-08-30",
+        "p95": "2026-09-16"
+      },
+      "medianas": {
+        "n": 228,
+        "min": "2022-01-01",
+        "max": "2026-09-18",
+        "p5": "2024-07-18",
+        "p50": "2026-09-13",
+        "p95": "2026-09-17"
+      },
+      "positivas": {
+        "n": 288,
+        "min": "2022-08-17",
+        "max": "2026-09-18",
+        "p5": "2024-09-11",
+        "p50": "2026-09-16",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 19,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 28,
+    "dias_por_100_paginas": 22.04724409448819,
+    "paginas_para_1_ano": 1656
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 30,
+      "dias_por_100_paginas": 1000.0,
+      "paginas_para_1_ano": 36
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 12,
+      "dias_por_100_paginas": 1200.0,
+      "paginas_para_1_ano": 30
+    },
+    "2.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 17,
+      "dias": 38,
+      "dias_por_100_paginas": 237.5,
+      "paginas_para_1_ano": 154
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 22,
+      "dias": 40,
+      "dias_por_100_paginas": 190.47619047619048,
+      "paginas_para_1_ano": 192
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 78,
+      "dias": 40,
+      "dias_por_100_paginas": 51.94805194805195,
+      "paginas_para_1_ano": 703
+    },
+    "3.5": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 47,
+      "dias": 19,
+      "dias_por_100_paginas": 41.30434782608695,
+      "paginas_para_1_ano": 884
+    },
+    "4.0": {
+      "n_paginas": 11,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 28,
+      "dias_por_100_paginas": 22.04724409448819,
+      "paginas_para_1_ano": 1656
+    },
+    "4.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 0,
+      "dias_por_100_paginas": 0.0,
+      "paginas_para_1_ano": null
+    },
+    "5.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 2,
+      "dias_por_100_paginas": 40.0,
+      "paginas_para_1_ano": 912
+    }
+  },
+  "ano_lancamento": 2022,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "bullet-train",
+    "titulo": "Bullet Train",
+    "ano": 2022,
+    "tmdb_id_letterboxd": 718930,
+    "fonte": "pagina_letterboxd"
+  }
+}

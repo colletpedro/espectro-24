@@ -1,0 +1,302 @@
+{
+  "slug": "rear-window",
+  "coletado_em": "2026-11-08T09:38:55.234231+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 600,
+    "1.0": 1416,
+    "1.5": 1263,
+    "2.0": 6549,
+    "2.5": 9468,
+    "3.0": 50801,
+    "3.5": 86010,
+    "4.0": 273230,
+    "4.5": 193481,
+    "5.0": 291165
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 12,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 48,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 144,
+    "3.5": 24,
+    "4.0": 60,
+    "4.5": 48,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 7,
+    "1.5": 8,
+    "2.0": 33,
+    "2.5": 15,
+    "3.0": 36,
+    "3.5": 8,
+    "4.0": 17,
+    "4.5": 14,
+    "5.0": 22
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 4,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 2,
+    "1.5": 0,
+    "2.0": 2,
+    "2.5": 0,
+    "3.0": 2,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 14,
+      "paginas_extensao": 4,
+      "extras_por_nivel": {
+        "1.0": 2,
+        "2.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 38,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "3.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 61,
+      "n_validas_pos_extensao": 61,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 6,
+    "2.5": 8,
+    "3.0": 45,
+    "3.5": 76,
+    "4.0": 240,
+    "4.5": 170,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 624,
+      "min": "2014-10-04",
+      "max": "2026-11-08",
+      "p5": "2026-07-04",
+      "p50": "2026-10-23",
+      "p95": "2026-11-07"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 216,
+        "min": "2015-07-21",
+        "max": "2026-11-08",
+        "p5": "2026-06-04",
+        "p50": "2026-09-20",
+        "p95": "2026-11-03"
+      },
+      "medianas": {
+        "n": 216,
+        "min": "2014-10-04",
+        "max": "2026-11-08",
+        "p5": "2026-09-29",
+        "p50": "2026-10-25",
+        "p95": "2026-11-06"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2015-11-27",
+        "max": "2026-11-08",
+        "p5": "2026-10-18",
+        "p50": "2026-11-07",
+        "p95": "2026-11-08"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 15,
+    "pagina_min": 1,
+    "pagina_max": 64,
+    "dias": 18,
+    "dias_por_100_paginas": 28.571428571428573,
+    "paginas_para_1_ano": 1278
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 84,
+      "dias_por_100_paginas": 8400.0,
+      "paginas_para_1_ano": 4
+    },
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 134,
+      "dias_por_100_paginas": 4466.666666666667,
+      "paginas_para_1_ano": 8
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 35,
+      "dias_por_100_paginas": 3500.0,
+      "paginas_para_1_ano": 10
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 77,
+      "dias_por_100_paginas": 855.5555555555555,
+      "paginas_para_1_ano": 43
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 25,
+      "dias_por_100_paginas": 500.0,
+      "paginas_para_1_ano": 73
+    },
+    "3.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 22,
+      "dias": 34,
+      "dias_por_100_paginas": 161.9047619047619,
+      "paginas_para_1_ano": 225
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 1,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 60,
+      "dias": 19,
+      "dias_por_100_paginas": 32.20338983050848,
+      "paginas_para_1_ano": 1133
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 42,
+      "dias": 16,
+      "dias_por_100_paginas": 39.02439024390244,
+      "paginas_para_1_ano": 935
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 64,
+      "dias": 19,
+      "dias_por_100_paginas": 30.158730158730158,
+      "paginas_para_1_ano": 1210
+    }
+  },
+  "ano_lancamento": 1954,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "rear-window",
+    "titulo": "Rear Window",
+    "ano": 1954,
+    "tmdb_id_letterboxd": 567,
+    "fonte": "pagina_letterboxd"
+  }
+}

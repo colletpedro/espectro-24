@@ -1,0 +1,305 @@
+{
+  "slug": "men-in-black",
+  "coletado_em": "2026-09-18T07:03:48.311173+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 1236,
+    "1.0": 4770,
+    "1.5": 4377,
+    "2.0": 28694,
+    "2.5": 41597,
+    "3.0": 222616,
+    "3.5": 262104,
+    "4.0": 357344,
+    "4.5": 70101,
+    "5.0": 110482
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 18,
+    "2.5": 6,
+    "3.0": 18,
+    "3.5": 9,
+    "4.0": 9,
+    "4.5": 2,
+    "5.0": 4
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 216,
+    "2.5": 72,
+    "3.0": 216,
+    "3.5": 108,
+    "4.0": 108,
+    "4.5": 24,
+    "5.0": 48
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 5,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 30,
+    "2.5": 15,
+    "3.0": 26,
+    "3.5": 15,
+    "4.0": 20,
+    "4.5": 4,
+    "5.0": 8
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 5,
+    "4.0": 7,
+    "4.5": 2,
+    "5.0": 2
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 8,
+    "2.5": 0,
+    "3.0": 8,
+    "3.5": 4,
+    "4.0": 2,
+    "4.5": 0,
+    "5.0": 2
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "2.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 29,
+      "n_validas_pos_extensao": 41,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.0": 8
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 32,
+      "n_validas_pos_extensao": 41,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 8,
+      "extras_por_nivel": {
+        "3.5": 4,
+        "4.0": 2,
+        "5.0": 2
+      },
+      "motivo_parada": "teto_extensao",
+      "n_validas_pos_base": 33,
+      "n_validas_pos_extensao": 47,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 3,
+    "2.0": 21,
+    "2.5": 30,
+    "3.0": 159,
+    "3.5": 188,
+    "4.0": 256,
+    "4.5": 50,
+    "5.0": 79
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 864,
+      "min": "2003-09-19",
+      "max": "2026-09-18",
+      "p5": "2026-03-15",
+      "p50": "2026-09-01",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 288,
+        "min": "2003-09-19",
+        "max": "2026-09-18",
+        "p5": "2025-12-31",
+        "p50": "2026-07-03",
+        "p95": "2026-09-07"
+      },
+      "medianas": {
+        "n": 288,
+        "min": "2017-05-25",
+        "max": "2026-09-17",
+        "p5": "2026-06-19",
+        "p50": "2026-09-04",
+        "p95": "2026-09-16"
+      },
+      "positivas": {
+        "n": 288,
+        "min": "2007-09-17",
+        "max": "2026-09-18",
+        "p5": "2026-08-01",
+        "p50": "2026-09-15",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 23,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 46,
+    "dias_por_100_paginas": 36.22047244094488,
+    "paginas_para_1_ano": 1008
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 156,
+      "dias_por_100_paginas": 15600.0,
+      "paginas_para_1_ano": 2
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 69,
+      "dias_por_100_paginas": 6900.0,
+      "paginas_para_1_ano": 5
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 63,
+      "dias_por_100_paginas": 6300.0,
+      "paginas_para_1_ano": 6
+    },
+    "2.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 18,
+      "dias": 178,
+      "dias_por_100_paginas": 1047.0588235294117,
+      "paginas_para_1_ano": 35
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 15,
+      "dias": 55,
+      "dias_por_100_paginas": 392.85714285714283,
+      "paginas_para_1_ano": 93
+    },
+    "3.0": {
+      "n_paginas": 18,
+      "pagina_min": 1,
+      "pagina_max": 80,
+      "dias": 89,
+      "dias_por_100_paginas": 112.65822784810126,
+      "paginas_para_1_ano": 324
+    },
+    "3.5": {
+      "n_paginas": 9,
+      "pagina_min": 1,
+      "pagina_max": 47,
+      "dias": 32,
+      "dias_por_100_paginas": 69.56521739130434,
+      "paginas_para_1_ano": 525
+    },
+    "4.0": {
+      "n_paginas": 9,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 47,
+      "dias_por_100_paginas": 37.00787401574803,
+      "paginas_para_1_ano": 986
+    },
+    "4.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 2,
+      "dias_por_100_paginas": 200.0,
+      "paginas_para_1_ano": 182
+    },
+    "5.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 3,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    }
+  },
+  "ano_lancamento": 1997,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "men-in-black",
+    "titulo": "Men in Black",
+    "ano": 1997,
+    "tmdb_id_letterboxd": 607,
+    "fonte": "pagina_letterboxd"
+  }
+}

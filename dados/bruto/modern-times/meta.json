@@ -1,0 +1,302 @@
+{
+  "slug": "modern-times",
+  "coletado_em": "2026-11-08T09:43:03.539065+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 545,
+    "1.0": 1100,
+    "1.5": 821,
+    "2.0": 3930,
+    "2.5": 5011,
+    "3.0": 25382,
+    "3.5": 34749,
+    "4.0": 99406,
+    "4.5": 51008,
+    "5.0": 79489
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 11,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 48,
+    "1.5": 36,
+    "2.0": 132,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 36,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 10,
+    "1.5": 8,
+    "2.0": 31,
+    "2.5": 18,
+    "3.0": 34,
+    "3.5": 5,
+    "4.0": 17,
+    "4.5": 13,
+    "5.0": 20
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 1,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 4,
+      "extras_por_nivel": {
+        "0.5": 1,
+        "1.0": 1,
+        "1.5": 1,
+        "2.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 42,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 52,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 55,
+      "n_validas_pos_extensao": 55,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 13,
+    "3.0": 65,
+    "3.5": 89,
+    "4.0": 256,
+    "4.5": 131,
+    "5.0": 205
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 624,
+      "min": "1972-01-25",
+      "max": "2026-11-08",
+      "p5": "2026-03-19",
+      "p50": "2026-09-30",
+      "p95": "2026-11-06"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 240,
+        "min": "1972-01-25",
+        "max": "2026-11-04",
+        "p5": "2026-03-11",
+        "p50": "2026-08-15",
+        "p95": "2026-10-25"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2023-06-14",
+        "max": "2026-11-07",
+        "p5": "2026-07-13",
+        "p50": "2026-10-08",
+        "p95": "2026-11-05"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2018-02-11",
+        "max": "2026-11-08",
+        "p5": "2026-05-18",
+        "p50": "2026-11-03",
+        "p95": "2026-11-07"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 166,
+    "dias_por_100_paginas": 130.70866141732284,
+    "paginas_para_1_ano": 279
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 24,
+      "dias_por_100_paginas": 2400.0,
+      "paginas_para_1_ano": 15
+    },
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 170,
+      "dias_por_100_paginas": 5666.666666666667,
+      "paginas_para_1_ano": 6
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 133,
+      "dias_por_100_paginas": 6650.0,
+      "paginas_para_1_ano": 5
+    },
+    "2.0": {
+      "n_paginas": 11,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 223,
+      "dias_por_100_paginas": 2230.0,
+      "paginas_para_1_ano": 16
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 50,
+      "dias_por_100_paginas": 1000.0,
+      "paginas_para_1_ano": 36
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 32,
+      "dias": 115,
+      "dias_por_100_paginas": 370.96774193548384,
+      "paginas_para_1_ano": 98
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 2,
+      "dias_por_100_paginas": 200.0,
+      "paginas_para_1_ano": 182
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 171,
+      "dias_por_100_paginas": 134.64566929133858,
+      "paginas_para_1_ano": 271
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 33,
+      "dias": 73,
+      "dias_por_100_paginas": 228.125,
+      "paginas_para_1_ano": 160
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 51,
+      "dias": 74,
+      "dias_por_100_paginas": 148.0,
+      "paginas_para_1_ano": 247
+    }
+  },
+  "ano_lancamento": 1936,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "modern-times",
+    "titulo": "Modern Times",
+    "ano": 1936,
+    "tmdb_id_letterboxd": 3082,
+    "fonte": "pagina_letterboxd"
+  }
+}

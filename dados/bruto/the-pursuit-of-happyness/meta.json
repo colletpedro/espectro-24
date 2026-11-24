@@ -1,0 +1,294 @@
+{
+  "slug": "the-pursuit-of-happyness",
+  "coletado_em": "2026-09-18T06:48:51.443731+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2857,
+    "1.0": 6218,
+    "1.5": 5183,
+    "2.0": 24161,
+    "2.5": 29900,
+    "3.0": 131689,
+    "3.5": 180390,
+    "4.0": 400446,
+    "4.5": 166161,
+    "5.0": 268225
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 13,
+    "3.5": 3,
+    "4.0": 9,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 36,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 156,
+    "3.5": 36,
+    "4.0": 108,
+    "4.5": 36,
+    "5.0": 84
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 6,
+    "1.0": 14,
+    "1.5": 7,
+    "2.0": 40,
+    "2.5": 20,
+    "3.0": 31,
+    "3.5": 12,
+    "4.0": 17,
+    "4.5": 9,
+    "5.0": 12
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 3,
+    "3.5": 0,
+    "4.0": 3,
+    "4.5": 0,
+    "5.0": 3
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 67,
+      "n_validas_pos_extensao": 67,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 43,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 6,
+      "extras_por_nivel": {
+        "4.0": 3,
+        "5.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 40,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 15,
+    "2.5": 19,
+    "3.0": 84,
+    "3.5": 115,
+    "4.0": 256,
+    "4.5": 106,
+    "5.0": 171
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 684,
+      "min": "2006-12-15",
+      "max": "2026-09-18",
+      "p5": "2026-06-29",
+      "p50": "2026-09-07",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2006-12-15",
+        "max": "2026-09-17",
+        "p5": "2026-06-24",
+        "p50": "2026-08-21",
+        "p95": "2026-09-15"
+      },
+      "medianas": {
+        "n": 228,
+        "min": "2007-10-01",
+        "max": "2026-09-18",
+        "p5": "2026-06-16",
+        "p50": "2026-09-06",
+        "p95": "2026-09-16"
+      },
+      "positivas": {
+        "n": 264,
+        "min": "2016-12-14",
+        "max": "2026-09-18",
+        "p5": "2026-08-09",
+        "p50": "2026-09-16",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 38,
+    "dias_por_100_paginas": 29.921259842519685,
+    "paginas_para_1_ano": 1220
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 30,
+      "dias_por_100_paginas": 1500.0,
+      "paginas_para_1_ano": 24
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 20,
+      "dias_por_100_paginas": 2000.0,
+      "paginas_para_1_ano": 18
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 54,
+      "dias_por_100_paginas": 540.0,
+      "paginas_para_1_ano": 68
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 47,
+      "dias_por_100_paginas": 522.2222222222222,
+      "paginas_para_1_ano": 70
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 42,
+      "dias": 56,
+      "dias_por_100_paginas": 136.58536585365854,
+      "paginas_para_1_ano": 267
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 29,
+      "dias": 26,
+      "dias_por_100_paginas": 92.85714285714286,
+      "paginas_para_1_ano": 393
+    },
+    "4.0": {
+      "n_paginas": 9,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 39,
+      "dias_por_100_paginas": 30.708661417322833,
+      "paginas_para_1_ano": 1189
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 26,
+      "dias": 11,
+      "dias_por_100_paginas": 44.0,
+      "paginas_para_1_ano": 830
+    },
+    "5.0": {
+      "n_paginas": 7,
+      "pagina_min": 1,
+      "pagina_max": 43,
+      "dias": 8,
+      "dias_por_100_paginas": 19.047619047619047,
+      "paginas_para_1_ano": 1916
+    }
+  },
+  "ano_lancamento": 2006,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "the-pursuit-of-happyness",
+    "titulo": "The Pursuit of Happyness",
+    "ano": 2006,
+    "tmdb_id_letterboxd": 1402,
+    "fonte": "pagina_letterboxd"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "slug": "how-to-make-millions-before-grandma-dies",
+  "coletado_em": "2026-09-18T08:48:27.268005+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 173,
+    "1.0": 407,
+    "1.5": 326,
+    "2.0": 1679,
+    "2.5": 2975,
+    "3.0": 14677,
+    "3.5": 26301,
+    "4.0": 76385,
+    "4.5": 54478,
+    "5.0": 120598
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 4,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 4,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 13,
+    "3.5": 2,
+    "4.0": 5,
+    "4.5": 5,
+    "5.0": 11
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 48,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 156,
+    "3.5": 24,
+    "4.0": 60,
+    "4.5": 60,
+    "5.0": 132
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 3,
+    "1.0": 7,
+    "1.5": 7,
+    "2.0": 35,
+    "2.5": 17,
+    "3.0": 33,
+    "3.5": 5,
+    "4.0": 14,
+    "4.5": 11,
+    "5.0": 22
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 8,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 4,
+    "4.5": 3,
+    "5.0": 7
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 2,
+    "1.5": 0,
+    "2.0": 2,
+    "2.5": 0,
+    "3.0": 3,
+    "3.5": 0,
+    "4.0": 1,
+    "4.5": 2,
+    "5.0": 4
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 13,
+      "paginas_extensao": 4,
+      "extras_por_nivel": {
+        "1.0": 2,
+        "2.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 39,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.0": 3
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 45,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 7,
+      "extras_por_nivel": {
+        "4.0": 1,
+        "4.5": 2,
+        "5.0": 4
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 34,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 5.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 1,
+    "1.5": 1,
+    "2.0": 4,
+    "2.5": 6,
+    "3.0": 31,
+    "3.5": 56,
+    "4.0": 162,
+    "4.5": 116,
+    "5.0": 256
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 708,
+      "min": "2024-02-21",
+      "max": "2026-09-18",
+      "p5": "2024-12-25",
+      "p50": "2026-08-16",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 204,
+        "min": "2024-02-21",
+        "max": "2026-09-17",
+        "p5": "2024-12-10",
+        "p50": "2026-04-26",
+        "p95": "2026-08-31"
+      },
+      "medianas": {
+        "n": 228,
+        "min": "2024-05-20",
+        "max": "2026-09-16",
+        "p5": "2024-10-06",
+        "p50": "2026-08-07",
+        "p95": "2026-09-12"
+      },
+      "positivas": {
+        "n": 276,
+        "min": "2024-04-18",
+        "max": "2026-09-18",
+        "p5": "2026-03-03",
+        "p50": "2026-09-15",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 27,
+    "dias_por_100_paginas": 21.25984251968504,
+    "paginas_para_1_ano": 1717
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 278,
+      "dias_por_100_paginas": 9266.666666666666,
+      "paginas_para_1_ano": 4
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 118,
+      "dias_por_100_paginas": 11800.0,
+      "paginas_para_1_ano": 3
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 238,
+      "dias_por_100_paginas": 2644.4444444444443,
+      "paginas_para_1_ano": 14
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 120,
+      "dias_por_100_paginas": 2400.0,
+      "paginas_para_1_ano": 15
+    },
+    "3.0": {
+      "n_paginas": 13,
+      "pagina_min": 1,
+      "pagina_max": 16,
+      "dias": 60,
+      "dias_por_100_paginas": 400.0,
+      "paginas_para_1_ano": 91
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 3,
+      "dias_por_100_paginas": 300.0,
+      "paginas_para_1_ano": 122
+    },
+    "4.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 40,
+      "dias": 30,
+      "dias_por_100_paginas": 76.92307692307692,
+      "paginas_para_1_ano": 474
+    },
+    "4.5": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 29,
+      "dias": 25,
+      "dias_por_100_paginas": 89.28571428571429,
+      "paginas_para_1_ano": 409
+    },
+    "5.0": {
+      "n_paginas": 11,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 32,
+      "dias_por_100_paginas": 25.19685039370079,
+      "paginas_para_1_ano": 1449
+    }
+  },
+  "ano_lancamento": 2024,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "how-to-make-millions-before-grandma-dies",
+    "titulo": "How to Make Millions Before Grandma Dies",
+    "ano": 2024,
+    "tmdb_id_letterboxd": 1103621,
+    "fonte": "pagina_letterboxd"
+  }
+}

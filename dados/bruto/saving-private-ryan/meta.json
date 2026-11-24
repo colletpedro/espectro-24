@@ -1,0 +1,291 @@
+{
+  "slug": "saving-private-ryan",
+  "coletado_em": "2026-09-18T07:30:35.506949+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 1973,
+    "1.0": 4666,
+    "1.5": 3309,
+    "2.0": 18074,
+    "2.5": 21093,
+    "3.0": 116320,
+    "3.5": 167962,
+    "4.0": 512304,
+    "4.5": 319029,
+    "5.0": 435112
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 11,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 12,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 132,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 24,
+    "4.0": 72,
+    "4.5": 36,
+    "5.0": 60
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 4,
+    "1.0": 4,
+    "1.5": 13,
+    "2.0": 32,
+    "2.5": 19,
+    "3.0": 36,
+    "3.5": 2,
+    "4.0": 20,
+    "4.5": 10,
+    "5.0": 18
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 9,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 2,
+    "4.0": 6,
+    "4.5": 3,
+    "5.0": 5
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 2,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 14,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "2.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 46,
+      "n_validas_pos_extensao": 53,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 55,
+      "n_validas_pos_extensao": 55,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 50,
+      "n_validas_pos_extensao": 50,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 9,
+    "2.5": 11,
+    "3.0": 58,
+    "3.5": 84,
+    "4.0": 256,
+    "4.5": 159,
+    "5.0": 217
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 576,
+      "min": "1998-09-20",
+      "max": "2026-09-18",
+      "p5": "2026-05-30",
+      "p50": "2026-08-30",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2020-05-07",
+        "max": "2026-09-17",
+        "p5": "2026-07-01",
+        "p50": "2026-08-10",
+        "p95": "2026-09-11"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2018-09-14",
+        "max": "2026-09-18",
+        "p5": "2026-05-09",
+        "p50": "2026-09-04",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "1998-09-20",
+        "max": "2026-09-18",
+        "p5": "2026-07-28",
+        "p50": "2026-09-16",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 44,
+    "dias_por_100_paginas": 34.645669291338585,
+    "paginas_para_1_ano": 1054
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 25,
+      "dias_por_100_paginas": 2500.0,
+      "paginas_para_1_ano": 15
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 21,
+      "dias_por_100_paginas": 2100.0,
+      "paginas_para_1_ano": 17
+    },
+    "2.0": {
+      "n_paginas": 11,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 64,
+      "dias_por_100_paginas": 640.0,
+      "paginas_para_1_ano": 57
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 6,
+      "dias": 24,
+      "dias_por_100_paginas": 480.0,
+      "paginas_para_1_ano": 76
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 29,
+      "dias": 47,
+      "dias_por_100_paginas": 167.85714285714286,
+      "paginas_para_1_ano": 217
+    },
+    "3.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 1,
+      "dias_por_100_paginas": 100.0,
+      "paginas_para_1_ano": 365
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 46,
+      "dias_por_100_paginas": 36.22047244094488,
+      "paginas_para_1_ano": 1008
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 40,
+      "dias": 19,
+      "dias_por_100_paginas": 48.717948717948715,
+      "paginas_para_1_ano": 749
+    },
+    "5.0": {
+      "n_paginas": 5,
+      "pagina_min": 1,
+      "pagina_max": 54,
+      "dias": 18,
+      "dias_por_100_paginas": 33.9622641509434,
+      "paginas_para_1_ano": 1075
+    }
+  },
+  "ano_lancamento": 1998,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "saving-private-ryan",
+    "titulo": "Saving Private Ryan",
+    "ano": 1998,
+    "tmdb_id_letterboxd": 857,
+    "fonte": "pagina_letterboxd"
+  }
+}

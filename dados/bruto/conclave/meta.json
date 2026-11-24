@@ -1,0 +1,306 @@
+{
+  "slug": "conclave",
+  "coletado_em": "2026-09-18T05:55:34.132735+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 2694,
+    "1.0": 6204,
+    "1.5": 5293,
+    "2.0": 29482,
+    "2.5": 43308,
+    "3.0": 208131,
+    "3.5": 367629,
+    "4.0": 784117,
+    "4.5": 299438,
+    "5.0": 264287
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 7,
+    "4.5": 3,
+    "5.0": 3
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 4,
+    "1.5": 3,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 12,
+    "3.5": 4,
+    "4.0": 8,
+    "4.5": 3,
+    "5.0": 4
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 48,
+    "1.5": 36,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 144,
+    "3.5": 48,
+    "4.0": 96,
+    "4.5": 36,
+    "5.0": 48
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 5,
+    "1.0": 7,
+    "1.5": 7,
+    "2.0": 33,
+    "2.5": 17,
+    "3.0": 37,
+    "3.5": 9,
+    "4.0": 20,
+    "4.5": 14,
+    "5.0": 8
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 7,
+    "4.5": 3,
+    "5.0": 3
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 2,
+    "1.5": 1,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 2,
+    "3.5": 1,
+    "4.0": 1,
+    "4.5": 0,
+    "5.0": 1
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "1.0": 2,
+        "1.5": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 46,
+      "n_validas_pos_extensao": 52,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 2,
+      "extras_por_nivel": {
+        "3.0": 2
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 47,
+      "n_validas_pos_extensao": 54,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 3,
+      "extras_por_nivel": {
+        "3.5": 1,
+        "4.0": 1,
+        "5.0": 1
+      },
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 43,
+      "n_validas_pos_extensao": 51,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 14,
+    "3.0": 68,
+    "3.5": 120,
+    "4.0": 256,
+    "4.5": 98,
+    "5.0": 86
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 672,
+      "min": "1827-12-31",
+      "max": "2026-09-18",
+      "p5": "2025-07-16",
+      "p50": "2026-09-07",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 228,
+        "min": "2024-10-25",
+        "max": "2026-09-18",
+        "p5": "2025-07-16",
+        "p50": "2026-08-10",
+        "p95": "2026-09-15"
+      },
+      "medianas": {
+        "n": 216,
+        "min": "1827-12-31",
+        "max": "2026-09-18",
+        "p5": "2025-05-06",
+        "p50": "2026-09-08",
+        "p95": "2026-09-16"
+      },
+      "positivas": {
+        "n": 228,
+        "min": "2024-10-26",
+        "max": "2026-09-18",
+        "p5": "2026-07-29",
+        "p50": "2026-09-16",
+        "p95": "2026-09-17"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 17,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 32,
+    "dias_por_100_paginas": 25.19685039370079,
+    "paginas_para_1_ano": 1449
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 49,
+      "dias_por_100_paginas": 4900.0,
+      "paginas_para_1_ano": 7
+    },
+    "1.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 4,
+      "dias": 64,
+      "dias_por_100_paginas": 2133.3333333333335,
+      "paginas_para_1_ano": 17
+    },
+    "1.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 3,
+      "dias": 53,
+      "dias_por_100_paginas": 2650.0,
+      "paginas_para_1_ano": 14
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 49,
+      "dias_por_100_paginas": 544.4444444444445,
+      "paginas_para_1_ano": 67
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 7,
+      "dias": 24,
+      "dias_por_100_paginas": 400.0,
+      "paginas_para_1_ano": 91
+    },
+    "3.0": {
+      "n_paginas": 12,
+      "pagina_min": 1,
+      "pagina_max": 34,
+      "dias": 35,
+      "dias_por_100_paginas": 106.06060606060606,
+      "paginas_para_1_ano": 344
+    },
+    "3.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 30,
+      "dias": 18,
+      "dias_por_100_paginas": 62.06896551724138,
+      "paginas_para_1_ano": 588
+    },
+    "4.0": {
+      "n_paginas": 8,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 32,
+      "dias_por_100_paginas": 25.19685039370079,
+      "paginas_para_1_ano": 1449
+    },
+    "4.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 24,
+      "dias": 11,
+      "dias_por_100_paginas": 47.82608695652174,
+      "paginas_para_1_ano": 763
+    },
+    "5.0": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 22,
+      "dias": 10,
+      "dias_por_100_paginas": 47.61904761904762,
+      "paginas_para_1_ano": 766
+    }
+  },
+  "ano_lancamento": 2024,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "conclave",
+    "titulo": "Conclave",
+    "ano": 2024,
+    "tmdb_id_letterboxd": 974576,
+    "fonte": "pagina_letterboxd"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "slug": "train-dreams",
+  "coletado_em": "2026-09-18T08:44:05.105724+00:00",
+  "versao_coletor": "1.9.6",
+  "ordenacao_usada": "by/added",
+  "histograma_bruto": {
+    "0.5": 782,
+    "1.0": 2551,
+    "1.5": 2655,
+    "2.0": 12162,
+    "2.5": 18838,
+    "3.0": 66421,
+    "3.5": 110860,
+    "4.0": 251340,
+    "4.5": 147687,
+    "5.0": 138163
+  },
+  "orcamento_paginas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 3
+  },
+  "paginas_gastas_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 3
+  },
+  "paradas_por_limite": [
+    "0.5",
+    "1.0",
+    "1.5",
+    "2.0",
+    "2.5",
+    "3.0",
+    "3.5",
+    "4.0",
+    "4.5",
+    "5.0"
+  ],
+  "contagem_bruta_por_nivel": {
+    "0.5": 24,
+    "1.0": 24,
+    "1.5": 24,
+    "2.0": 120,
+    "2.5": 72,
+    "3.0": 120,
+    "3.5": 36,
+    "4.0": 72,
+    "4.5": 48,
+    "5.0": 36
+  },
+  "contagem_estimada_valida_por_nivel": {
+    "0.5": 4,
+    "1.0": 7,
+    "1.5": 6,
+    "2.0": 45,
+    "2.5": 19,
+    "3.0": 40,
+    "3.5": 10,
+    "4.0": 22,
+    "4.5": 17,
+    "5.0": 9
+  },
+  "motivo_parada_por_nivel": {
+    "0.5": "orcamento_esgotado",
+    "1.0": "orcamento_esgotado",
+    "1.5": "orcamento_esgotado",
+    "2.0": "orcamento_esgotado",
+    "2.5": "orcamento_esgotado",
+    "3.0": "orcamento_esgotado",
+    "3.5": "orcamento_esgotado",
+    "4.0": "orcamento_esgotado",
+    "4.5": "orcamento_esgotado",
+    "5.0": "orcamento_esgotado"
+  },
+  "paginas_base_por_nivel": {
+    "0.5": 2,
+    "1.0": 2,
+    "1.5": 2,
+    "2.0": 10,
+    "2.5": 6,
+    "3.0": 10,
+    "3.5": 3,
+    "4.0": 6,
+    "4.5": 4,
+    "5.0": 3
+  },
+  "paginas_extensao_por_nivel": {
+    "0.5": 0,
+    "1.0": 0,
+    "1.5": 0,
+    "2.0": 0,
+    "2.5": 0,
+    "3.0": 0,
+    "3.5": 0,
+    "4.0": 0,
+    "4.5": 0,
+    "5.0": 0
+  },
+  "extensao_por_bucket": {
+    "negativas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 62,
+      "n_validas_pos_extensao": 62,
+      "meta": 50
+    },
+    "medianas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 59,
+      "n_validas_pos_extensao": 59,
+      "meta": 50
+    },
+    "positivas": {
+      "paginas_base": 16,
+      "paginas_extensao": 0,
+      "extras_por_nivel": {},
+      "motivo_parada": "meta_atingida",
+      "n_validas_pos_base": 58,
+      "n_validas_pos_extensao": 58,
+      "meta": 50
+    }
+  },
+  "profundidade_sondagem": {
+    "nivel_sondado": 4.0,
+    "profundidade": 256,
+    "exata": false,
+    "requisicoes": 4,
+    "motivo": "teto_plataforma"
+  },
+  "profundidade_estimada_por_nivel": {
+    "0.5": 1,
+    "1.0": 3,
+    "1.5": 3,
+    "2.0": 12,
+    "2.5": 19,
+    "3.0": 68,
+    "3.5": 113,
+    "4.0": 256,
+    "4.5": 150,
+    "5.0": 141
+  },
+  "janela_temporal": {
+    "total": {
+      "n": 576,
+      "min": "2025-10-28",
+      "max": "2026-09-18",
+      "p5": "2026-02-25",
+      "p50": "2026-08-31",
+      "p95": "2026-09-17"
+    },
+    "por_bucket": {
+      "negativas": {
+        "n": 192,
+        "min": "2025-11-20",
+        "max": "2026-09-16",
+        "p5": "2026-03-14",
+        "p50": "2026-08-13",
+        "p95": "2026-09-11"
+      },
+      "medianas": {
+        "n": 192,
+        "min": "2025-10-28",
+        "max": "2026-09-18",
+        "p5": "2026-02-13",
+        "p50": "2026-09-03",
+        "p95": "2026-09-15"
+      },
+      "positivas": {
+        "n": 192,
+        "min": "2025-11-28",
+        "max": "2026-09-18",
+        "p5": "2026-04-13",
+        "p50": "2026-09-16",
+        "p95": "2026-09-18"
+      }
+    }
+  },
+  "dias_por_100_paginas": {
+    "n_paginas": 18,
+    "pagina_min": 1,
+    "pagina_max": 128,
+    "dias": 41,
+    "dias_por_100_paginas": 32.28346456692913,
+    "paginas_para_1_ano": 1131
+  },
+  "dias_por_100_paginas_por_nivel": {
+    "0.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 61,
+      "dias_por_100_paginas": 6100.0,
+      "paginas_para_1_ano": 6
+    },
+    "1.0": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 22,
+      "dias_por_100_paginas": 2200.0,
+      "paginas_para_1_ano": 17
+    },
+    "1.5": {
+      "n_paginas": 2,
+      "pagina_min": 1,
+      "pagina_max": 2,
+      "dias": 34,
+      "dias_por_100_paginas": 3400.0,
+      "paginas_para_1_ano": 11
+    },
+    "2.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 11,
+      "dias": 69,
+      "dias_por_100_paginas": 690.0,
+      "paginas_para_1_ano": 53
+    },
+    "2.5": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 10,
+      "dias": 49,
+      "dias_por_100_paginas": 544.4444444444445,
+      "paginas_para_1_ano": 67
+    },
+    "3.0": {
+      "n_paginas": 10,
+      "pagina_min": 1,
+      "pagina_max": 34,
+      "dias": 53,
+      "dias_por_100_paginas": 160.6060606060606,
+      "paginas_para_1_ano": 227
+    },
+    "3.5": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 28,
+      "dias": 28,
+      "dias_por_100_paginas": 103.70370370370371,
+      "paginas_para_1_ano": 352
+    },
+    "4.0": {
+      "n_paginas": 6,
+      "pagina_min": 1,
+      "pagina_max": 128,
+      "dias": 44,
+      "dias_por_100_paginas": 34.645669291338585,
+      "paginas_para_1_ano": 1054
+    },
+    "4.5": {
+      "n_paginas": 4,
+      "pagina_min": 1,
+      "pagina_max": 38,
+      "dias": 17,
+      "dias_por_100_paginas": 45.945945945945944,
+      "paginas_para_1_ano": 794
+    },
+    "5.0": {
+      "n_paginas": 3,
+      "pagina_min": 1,
+      "pagina_max": 35,
+      "dias": 10,
+      "dias_por_100_paginas": 29.41176470588235,
+      "paginas_para_1_ano": 1241
+    }
+  },
+  "ano_lancamento": 2025,
+  "ano_fonte": "letterboxd",
+  "identidade_letterboxd": {
+    "slug": "train-dreams",
+    "titulo": "Train Dreams",
+    "ano": 2025,
+    "tmdb_id_letterboxd": 1241983,
+    "fonte": "pagina_letterboxd"
+  }
+}
