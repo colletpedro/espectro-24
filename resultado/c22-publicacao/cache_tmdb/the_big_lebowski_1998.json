@@ -1,0 +1,115 @@
+{
+  "titulo": "O Grande Lebowski",
+  "sinopse_oficial": "Em Los Angeles, 1991, Jeff Lebowski, mais conhecido como \"O Cara\", é um desocupado que gasta o seu tempo ouvindo rock dos anos 1960 e jogando boliche. Mas sua vida vai mudar. Confundido com um milionário da Califórnia, ele se vê envolvido com bandidos da pesada, advogados atrapalhados, detetives, sequestradores e, como se não bastasse, com a polícia. Com sua vida ameaçada, Lebowski procura seu amigo Walter, um veterano da Guerra do Vietnã que irá ajudá-lo com seus métodos pouco ortodoxos.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Comédia",
+    "Crime"
+  ],
+  "duracao_min": 117,
+  "diretor": "Joel Coen",
+  "diretor_transliterado": false,
+  "ano": 1998,
+  "data_estreia": "1998-03-06",
+  "fonte": "tmdb",
+  "tmdb_id": 115,
+  "tmdb_fetched_at": "2026-11-24T05:04:50+00:00",
+  "poster_path": "/d1Qxhvg2l3f2ow1Q6WAkOTkIWv2.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/lpTXHNKCozJgfUQZZJ1Xn3LKpIS.jpg",
+    "/77ElMccPnTMPouRxSdbJ4nEjf69.jpg",
+    "/jpACVHNNaqg8zsDkYSdcVJCVFDy.jpg",
+    "/ti6kJ80ZB8RZTiDIzPkhaCJMoqq.jpg",
+    "/wlpjRBQdRSVdu2a8icYZaIp2xmt.jpg",
+    "/olbS02Olqw4koy5dhKYh2DEwrpO.jpg",
+    "/gJHaZv4T25LyS714mBvIEYW3vg1.jpg",
+    "/xEfEEIK0AZkd7U7s568JNv9hndY.jpg",
+    "/vlNcqfLpqHRq8kXcaB5VUHGX56X.jpg",
+    "/4sNqcMizGQAy0qy1inEFYSg8is2.jpg"
+  ],
+  "backdrop_path": "/lpTXHNKCozJgfUQZZJ1Xn3LKpIS.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/d4mlLPOwfeQV3nZy4yFRjf9rZgY.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/lpTXHNKCozJgfUQZZJ1Xn3LKpIS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/77ElMccPnTMPouRxSdbJ4nEjf69.jpg",
+      "still_largura": 2243,
+      "still_altura": 1262
+    },
+    {
+      "still_path": "/gJHaZv4T25LyS714mBvIEYW3vg1.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/5Hs64K7XXjvrmBXGjjN1MuWh8Xd.jpg",
+      "still_largura": 1845,
+      "still_altura": 1038
+    },
+    {
+      "still_path": "/Ab0GnmJ6EcAjsgA8aMG56r1ja85.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5tj53j2ZORvHWfFOGp9aBYjBGpE.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2SsiSh9io5U18oSojzofrG3zUh6.jpg",
+      "still_largura": 1818,
+      "still_altura": 1022
+    },
+    {
+      "still_path": "/9ykAQnlO0yMzyvY9S9YgEc5vZrK.jpg",
+      "still_largura": 1854,
+      "still_altura": 1042
+    },
+    {
+      "still_path": "/fax2sLzw7G7VjA3qr95Z9zrHWLI.jpg",
+      "still_largura": 3691,
+      "still_altura": 2076
+    },
+    {
+      "still_path": "/mDUdBXxfGSIqlKfx4f5jg8Kpznc.jpg",
+      "still_largura": 1977,
+      "still_altura": 1112
+    },
+    {
+      "still_path": "/qemtsdwQpeIRTlGiClSvvzZWuzn.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/x8ZEBkhXFlDAzCtbinp4ry9dw9i.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "the-big-lebowski",
+    "titulo_letterboxd": "The Big Lebowski",
+    "ano_letterboxd": 1998,
+    "tmdb_id_letterboxd": 115,
+    "tmdb_id_escolhido": 115,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "The Big Lebowski",
+    "ano_tmdb": 1998,
+    "ano_divergente": false
+  }
+}

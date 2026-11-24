@@ -1,0 +1,116 @@
+{
+  "titulo": "Transformers",
+  "sinopse_oficial": "O destino da humanidade está em jogo quando duas raças de robôs, os Autobots e os vilões Decepticons, chegam à Terra. Os robôs possuem a capacidade de se transformarem em diferentes objetos mecânicos enquanto buscam a chave do poder supremo com a ajuda do jovem Sam.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Aventura",
+    "Ficção científica",
+    "Ação"
+  ],
+  "duracao_min": 144,
+  "diretor": "Michael Bay",
+  "diretor_transliterado": false,
+  "ano": 2007,
+  "data_estreia": "2007-06-27",
+  "fonte": "tmdb",
+  "tmdb_id": 1858,
+  "tmdb_fetched_at": "2026-11-24T05:08:48+00:00",
+  "poster_path": "/8YyaPO2MwMhHtuuFDhj80wt7CFv.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/iCDMBi6WLjUBnt24dNwHqqF81UL.jpg",
+    "/77P56ZcL8M9Cw7FIptMIGjhNJoj.jpg",
+    "/1mBRoDVPPJ4T7bDleBBaYvGUYUc.jpg",
+    "/iq6oCC769VhakJubpAeJNFCgvff.jpg",
+    "/wcTDxW9JEr9cORajaQLrv8ls9Ly.jpg",
+    "/eXlmQHijPhAG6E1ikFtZEfQsBxk.jpg",
+    "/3t2yVwrI0rAnTK21apqBi0cuCZN.jpg",
+    "/p4keVXRxWiG3Nb2wJxIa66Oo0zZ.jpg",
+    "/hhqIGDY0zJ5BQkxLgXaiQ12ROjR.jpg",
+    "/5UcMIuPB5zDZPLbIJrHAuacvbdy.jpg"
+  ],
+  "backdrop_path": "/iCDMBi6WLjUBnt24dNwHqqF81UL.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/yi1mmaByZdkcawDuEX3MmDz1EmB.jpg",
+  "poster_sem_texto_largura": 640,
+  "poster_sem_texto_altura": 960,
+  "galeria_stills": [
+    {
+      "still_path": "/iCDMBi6WLjUBnt24dNwHqqF81UL.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/dj1vX0u9WV5H6qhtukX9AfAUgi5.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5UcMIuPB5zDZPLbIJrHAuacvbdy.jpg",
+      "still_largura": 1433,
+      "still_altura": 806
+    },
+    {
+      "still_path": "/248NLtWPHVp23VYDCZemRhlg4Dx.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/swJt65WGYppLIaG5r3igaC09cCx.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/hNUKnbOykE04axQdrwB2bRuUMkj.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/6lSOw7TKpcJ42oXvAzwv3u3Sz8v.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/bKvi3awKavZhD0pC7Ya6s9kRlGI.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/jBarKMba09R6Ql77iBdXEb4KXaY.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/oRatwy13xA8PUJr0uTSMCMIzEv6.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/sAxTMw9WETdzzPO9RIP6GwMW5Ou.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/vP7IDQKouIb0tjzID7AOExiSK9j.jpg",
+      "still_largura": 1419,
+      "still_altura": 798
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "transformers",
+    "titulo_letterboxd": "Transformers",
+    "ano_letterboxd": 2007,
+    "tmdb_id_letterboxd": 1858,
+    "tmdb_id_escolhido": 1858,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Transformers",
+    "ano_tmdb": 2007,
+    "ano_divergente": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "titulo": "Clube de Compras Dallas",
+  "sinopse_oficial": "Ron Woodroof, um eletricista heterossexual de Dallas, foi diagnosticado com AIDS em 1986, durante uma das épocas mais obscuras da doença. Embora os médicos tenham lhe dado apenas alguns meses de vida, Woodroof se recusou a aceitar o prognóstico e, procurando tratamentos alternativos, ele passa a contrabandear drogas ilegais do México.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "História"
+  ],
+  "duracao_min": 116,
+  "diretor": "Jean-Marc Vallée",
+  "diretor_transliterado": false,
+  "ano": 2013,
+  "data_estreia": "2013-11-01",
+  "fonte": "tmdb",
+  "tmdb_id": 152532,
+  "tmdb_fetched_at": "2026-11-24T04:51:10+00:00",
+  "poster_path": "/uLSEfTUCaTZ55ltUSUeVgL4E2xt.jpg",
+  "poster_largura": 1400,
+  "poster_altura": 2100,
+  "backdrop_paths": [
+    "/sbVKj98cq0FztCukzu47bu0H8o7.jpg",
+    "/jHwASc8hBtdfRGUmxS6pq5mHiyN.jpg",
+    "/bYo99KUhunvMdD1OjvAuAP2LiN1.jpg",
+    "/l44aUpuHMyp0NctwUdTh2ztVL8X.jpg",
+    "/j4B40hp0GC2mCLEIiBi9PSe2gEq.jpg",
+    "/wAJFlWWOmQ5mBEFwPw8f184TwVt.jpg",
+    "/f0Af4qTzZIl9mqmuAjJp7Ivb5BD.jpg",
+    "/fX766ur9juYOUJ76PDDMF61QuH7.jpg",
+    "/i1Hufw6ifANwEmm9ONxGnSACeCS.jpg",
+    "/1sL0agBlr3lmfqPRCuWjIHO2UyK.jpg"
+  ],
+  "backdrop_path": "/sbVKj98cq0FztCukzu47bu0H8o7.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/7v7q85zRNJzs3uvpnqVVWhmeDi.jpg",
+  "poster_sem_texto_largura": 1000,
+  "poster_sem_texto_altura": 1426,
+  "galeria_stills": [
+    {
+      "still_path": "/sbVKj98cq0FztCukzu47bu0H8o7.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/jHwASc8hBtdfRGUmxS6pq5mHiyN.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/1EGqWX9pMgvDM6eD9ElQ6qPGCxK.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/301ZgAjWz8mFnBNFYM4dLFhGhfw.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/5V6Gc7XgrKTpkoK46Fs0OZQUUcK.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/ciE33GFXIw02W7oTHFdet7XNqxZ.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/f0Af4qTzZIl9mqmuAjJp7Ivb5BD.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/hXSLOvwqyNYxqw4BDTqAzz2rZac.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/n0ryHtReCwiXcva61qurTeLmMFO.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/rGvIkAG5euAUIHvMVdmrV8YPZrR.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/vRRQYvfbbl8Xjfxv7g9e2TnzndS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/wyl4eI5EewWSUyGOVGVqThT4HOA.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "dallas-buyers-club",
+    "titulo_letterboxd": "Dallas Buyers Club",
+    "ano_letterboxd": 2013,
+    "tmdb_id_letterboxd": 152532,
+    "tmdb_id_escolhido": 152532,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Dallas Buyers Club",
+    "ano_tmdb": 2013,
+    "ano_divergente": false
+  }
+}

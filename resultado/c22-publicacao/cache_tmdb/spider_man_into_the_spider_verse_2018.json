@@ -1,0 +1,117 @@
+{
+  "titulo": "Homem-Aranha: No Aranhaverso",
+  "sinopse_oficial": "Miles Morales é um jovem negro do Brooklyn que se tornou o Homem-Aranha inspirado no legado de Peter Parker, já falecido. Entretanto, ao visitar o túmulo de seu ídolo em uma noite chuvosa, ele é surpreendido com a presença do próprio Peter, vestindo o traje do herói aracnídeo sob um sobretudo. A surpresa fica ainda maior quando Miles descobre que ele veio de uma dimensão paralela, assim como outras variações do Homem-Aranha.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Animação",
+    "Ação",
+    "Aventura",
+    "Ficção científica"
+  ],
+  "duracao_min": 117,
+  "diretor": "Bob Persichetti",
+  "diretor_transliterado": false,
+  "ano": 2018,
+  "data_estreia": "2018-12-06",
+  "fonte": "tmdb",
+  "tmdb_id": 324857,
+  "tmdb_fetched_at": "2026-11-24T05:04:03+00:00",
+  "poster_path": "/ybQSBSrINtjWsJQ6Ih8sva8HlEZ.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+    "/qGQf2OHIkoh89K8XeKQzhxczf96.jpg",
+    "/b9YkKJcW3pPaXgMZu9uoT7v9yRB.jpg",
+    "/hlCq6Qh9GVtuNcGZF4mQYluaZix.jpg",
+    "/8mnXR9rey5uQ08rZAvzojKWbDQS.jpg",
+    "/kJq2u9aSji9gMXFrruIuACnX7nT.jpg",
+    "/oc0zEejZ8OJVQrqBeiBG5Ulp8Cm.jpg",
+    "/e7CE5vx4KqUuz0peKdHRVZB0Pn8.jpg",
+    "/okgZaNGsTgCczwnS9pyODsbSOqj.jpg",
+    "/sAP6kdiGyDnxYOTqfgkM07trPRx.jpg"
+  ],
+  "backdrop_path": "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/2HmMlcQmPepzRx2xcJLM1yw4D0w.jpg",
+  "poster_sem_texto_largura": 1000,
+  "poster_sem_texto_altura": 1426,
+  "galeria_stills": [
+    {
+      "still_path": "/1ntePsIqeklfmrQJqZPncCydsqY.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/o1UKhrt254nLNqNkAwdNVVKJsfF.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/shROD2YqREzo4TuonTsTVnnjpPC.jpg",
+      "still_largura": 3128,
+      "still_altura": 1760
+    },
+    {
+      "still_path": "/w8zAgH43X32uiDYyVFKjoWVgKi.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/cANfckGKWwJ5l0pToCvdu3dwJqT.jpg",
+      "still_largura": 3040,
+      "still_altura": 1710
+    },
+    {
+      "still_path": "/jHBsbMgKE1sI3QbeuojDQ7HscEQ.jpg",
+      "still_largura": 3129,
+      "still_altura": 1760
+    },
+    {
+      "still_path": "/2SWlBWjOacvwN0gQn9bi9A7fOGd.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5v8GN9YoDRXAx0E3TRFCSyEwBQn.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/bII9g04BrGysZZEyjEHv5i2HFbt.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/glyXd9xc0Xq4N9TiW4SIvP5kWia.jpg",
+      "still_largura": 1500,
+      "still_altura": 844
+    },
+    {
+      "still_path": "/mVDWhJWAC1vygTRRnZiive9XJs.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/sY2s47WjdxLE3QY4vEoYLxRqWUK.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "spider-man-into-the-spider-verse",
+    "titulo_letterboxd": "Spider-Man: Into the Spider-Verse",
+    "ano_letterboxd": 2018,
+    "tmdb_id_letterboxd": 324857,
+    "tmdb_id_escolhido": 324857,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Spider-Man: Into the Spider-Verse",
+    "ano_tmdb": 2018,
+    "ano_divergente": false
+  }
+}

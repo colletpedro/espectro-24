@@ -1,0 +1,116 @@
+{
+  "titulo": "De Olhos Bem Fechados",
+  "sinopse_oficial": "Alice, uma curadora de arte, é casada com o doutor Bill Harford. Juntos formam um casal perfeito, porém depois de participarem de uma festa, Alice confessa ter tido atração e fantasias sexuais com outro homem, que também estava na festa. Os dois começam a discutir e Bill passa a se perguntar o porquê disto estar acontecendo com ele, então ele vai procurar seu amigo Nick Nightingale, que irá lhe mostrar um mundo de fantasias e jogos sexuais.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "Thriller",
+    "Mistério"
+  ],
+  "duracao_min": 159,
+  "diretor": "Stanley Kubrick",
+  "diretor_transliterado": false,
+  "ano": 1999,
+  "data_estreia": "1999-07-16",
+  "fonte": "tmdb",
+  "tmdb_id": 345,
+  "tmdb_fetched_at": "2026-11-24T04:52:29+00:00",
+  "poster_path": "/pmU8WQ2fOdxLuYaNe1kHE2L8SlI.jpg",
+  "poster_largura": 800,
+  "poster_altura": 1200,
+  "backdrop_paths": [
+    "/aC6wW62V6b0csr5iUnbOjYAqfhg.jpg",
+    "/cAZ87S5bONxKMMAlPxK8LZvdOcm.jpg",
+    "/i8AqvGMRnWDwvBao6ATcXIvMlbc.jpg",
+    "/gAkbd1mRgK6OvteyX9BwolFoczW.jpg",
+    "/gCCaVhcsNh8Ni4ne0k6nNcr5PHZ.jpg",
+    "/r86LEaT1DSvuy9ngdCyXeRRWg68.jpg",
+    "/9BCKtndgyhcFk4omuLWqZ2P4fKu.jpg",
+    "/fn6KYqHGfqDtgUppOShnvBDQj5s.jpg",
+    "/nIytsYeL1wvUYz13fMH83qBvkI2.jpg",
+    "/d0A76lLOqu1qJPBqQaWGvTk6zxk.jpg"
+  ],
+  "backdrop_path": "/aC6wW62V6b0csr5iUnbOjYAqfhg.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/18wsbKjWJSWdFuidP49L3njQPuL.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/aC6wW62V6b0csr5iUnbOjYAqfhg.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/AmYxFCiZRhEzB091pF93XYdAE6.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/pNlRpt8Ts8D13cONG6voSu1jAyl.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/1IMuVheTIChtdE977iMdfOaAv4Q.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/62HTXxAx9NLzOdfrPOzWDTdLzLS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/5btOj6T6UvjlvTpZ9uP7mRrEBS9.jpg",
+      "still_largura": 1828,
+      "still_altura": 1028
+    },
+    {
+      "still_path": "/8bzCH2lKoegNR6v8RNXgFncfpeU.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/cpOML3PFPgupGoZIIIjZuSbLBJh.jpg",
+      "still_largura": 2894,
+      "still_altura": 1627
+    },
+    {
+      "still_path": "/gRoHRfz87Hc3I62XtycJbPf0oho.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/n35CFQVTY0X1Wyz3dzChGr5TXGx.jpg",
+      "still_largura": 1536,
+      "still_altura": 864
+    },
+    {
+      "still_path": "/rSa6MwZ17FMQZkk6VERVspcDsNN.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/tw1USASUI6oaSYNQqgB2qsRHsB9.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "eyes-wide-shut",
+    "titulo_letterboxd": "Eyes Wide Shut",
+    "ano_letterboxd": 1999,
+    "tmdb_id_letterboxd": 345,
+    "tmdb_id_escolhido": 345,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Eyes Wide Shut",
+    "ano_tmdb": 1999,
+    "ano_divergente": false
+  }
+}

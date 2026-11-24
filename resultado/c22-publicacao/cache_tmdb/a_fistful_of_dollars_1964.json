@@ -1,0 +1,114 @@
+{
+  "titulo": "Por um Punhado de Dólares",
+  "sinopse_oficial": "Joe é um pistoleiro barra pesada que chega a uma cidade que está em guerra. Quando percebem o potencial de Joe, ambas as partes se interessam por contratá-lo; é quando ele percebe que pode ganhar um dinheiro com a situação aceitando a proposta dos dois lados.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Faroeste"
+  ],
+  "duracao_min": 100,
+  "diretor": "Sergio Leone",
+  "diretor_transliterado": false,
+  "ano": 1964,
+  "data_estreia": "1964-09-12",
+  "fonte": "tmdb",
+  "tmdb_id": 391,
+  "tmdb_fetched_at": "2026-11-24T04:49:28+00:00",
+  "poster_path": "/jaF2Pr2JucNk0pALCBDDPOGU9lQ.jpg",
+  "poster_largura": 1000,
+  "poster_altura": 1500,
+  "backdrop_paths": [
+    "/9gMkOYzk7P9QXwndhLRAC8cMZcJ.jpg",
+    "/rTJRWO9zHcB29JecTXHg0wUa4Xs.jpg",
+    "/ApjqczKExVLnHqnXEkibbBTbyTc.jpg",
+    "/rrkijQ3Vd5PVSa9qVqjFCf5aoB.jpg",
+    "/9XBzvj9LFtWASLTRupgGaddYqZk.jpg",
+    "/tpmwYp7u1jpz2S6yhe7oTaT2Zl0.jpg",
+    "/ajSdS9W7gqhYWeoFOZa9ZrbNx3V.jpg",
+    "/bBZkRw7pumVUZOKfceCycYzG7Sc.jpg",
+    "/1WpHOEFaOoP3cxVaPzEefcSLlJX.jpg",
+    "/7NL2SCLmR8m4bckvTJlU1X7KdVa.jpg"
+  ],
+  "backdrop_path": "/9gMkOYzk7P9QXwndhLRAC8cMZcJ.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/zz9YRvAf5peYvZKctHiiIXHMtkr.jpg",
+  "poster_sem_texto_largura": 1365,
+  "poster_sem_texto_altura": 2048,
+  "galeria_stills": [
+    {
+      "still_path": "/wqm1UTzfY1YsapQ8HZdDJVlgC8R.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/rTJRWO9zHcB29JecTXHg0wUa4Xs.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5hJY0f2gW9FOAne4SZTMI7z6Tbb.jpg",
+      "still_largura": 2290,
+      "still_altura": 1288
+    },
+    {
+      "still_path": "/ajSdS9W7gqhYWeoFOZa9ZrbNx3V.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/pItgaB1HImjn4YqWWIn3NDMdXeH.jpg",
+      "still_largura": 2283,
+      "still_altura": 1284
+    },
+    {
+      "still_path": "/djzllg8G6AZOgM2zxbPXFBLvOVZ.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/7Jro9BCW0hixRX6OXZioKJCEEhO.jpg",
+      "still_largura": 1339,
+      "still_altura": 753
+    },
+    {
+      "still_path": "/Asm47Ga5ARhhTfPoJlleZBVzDqY.jpg",
+      "still_largura": 1449,
+      "still_altura": 815
+    },
+    {
+      "still_path": "/bUwWIJeLU2585SJkq4nX63E8sss.jpg",
+      "still_largura": 1449,
+      "still_altura": 815
+    },
+    {
+      "still_path": "/hKGa0O9krVJ5DahzvTpOxY7W5GX.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/j0ZpxLDoKNpcEGWeC93jBiFF2Im.jpg",
+      "still_largura": 3648,
+      "still_altura": 2052
+    },
+    {
+      "still_path": "/r3NCPWUiWEsnYPaxTBnQVTtOIyW.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "a-fistful-of-dollars",
+    "titulo_letterboxd": "A Fistful of Dollars",
+    "ano_letterboxd": 1964,
+    "tmdb_id_letterboxd": 391,
+    "tmdb_id_escolhido": 391,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "alternative_title",
+    "titulo_tmdb_correspondente": "A Fistful of Dollars",
+    "ano_tmdb": 1964,
+    "ano_divergente": false
+  }
+}

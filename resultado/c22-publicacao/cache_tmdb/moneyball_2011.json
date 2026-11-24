@@ -1,0 +1,114 @@
+{
+  "titulo": "O Homem Que Mudou o Jogo",
+  "sinopse_oficial": "O gerente geral da Oakland A, Billy Beane, desafia o sistema e a sabedoria convencional quando é forçado a recompor sua pequena equipe com um orçamento baixo. Apesar da oposição da velha guarda, a mídia, fãs e o próprio gerente de campo, Beane – com a ajuda de um economista jovem, formado em Yale – cria uma lista de desajustados... e acaba mudando para sempre o modo como o baseball é jogado.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama"
+  ],
+  "duracao_min": 134,
+  "diretor": "Bennett Miller",
+  "diretor_transliterado": false,
+  "ano": 2011,
+  "data_estreia": "2011-09-23",
+  "fonte": "tmdb",
+  "tmdb_id": 60308,
+  "tmdb_fetched_at": "2026-11-24T04:58:58+00:00",
+  "poster_path": "/kNloN3TqTBDd1Fcl980LzpWDhzY.jpg",
+  "poster_largura": 1080,
+  "poster_altura": 1620,
+  "backdrop_paths": [
+    "/kYlBNDkB5qFdpTDpnlQdH0CdK3T.jpg",
+    "/yDyB157xeZvX3aejVowW8RpPugf.jpg",
+    "/u8ZEk9zBobrxrpqiHLe41DdKWmE.jpg",
+    "/iN7L98XRZe2H2EtiSRAXCkujQ1d.jpg",
+    "/uiHHEFQJLP5dnPe84BU4ZB7j5PL.jpg",
+    "/7Q2WBWN3gtdJUOQMXopKigOj02S.jpg",
+    "/y5PH2cM3mHt2Q74lMzhuqQi93sh.jpg",
+    "/mcQgtuAsI7xRAtCRqhEf4v5fluV.jpg",
+    "/7BX4um8SguRb2AbnbzVWLHg3a7o.jpg",
+    "/7gyIH73PvuNmKuYrEG9eH8gFani.jpg"
+  ],
+  "backdrop_path": "/iN7L98XRZe2H2EtiSRAXCkujQ1d.jpg",
+  "backdrop_largura": 1280,
+  "backdrop_altura": 720,
+  "poster_sem_texto_path": "/dgTfKotd8AZhzARLPOesViwRHqV.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/iN7L98XRZe2H2EtiSRAXCkujQ1d.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/kYlBNDkB5qFdpTDpnlQdH0CdK3T.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/yDyB157xeZvX3aejVowW8RpPugf.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/7Q2WBWN3gtdJUOQMXopKigOj02S.jpg",
+      "still_largura": 3000,
+      "still_altura": 1688
+    },
+    {
+      "still_path": "/7BX4um8SguRb2AbnbzVWLHg3a7o.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/mcQgtuAsI7xRAtCRqhEf4v5fluV.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/pnjDnkh6QjYAt0mGAp0b8DX04ra.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/yq0aSDzs9LRkpUoKskoc9Z9sswv.jpg",
+      "still_largura": 3839,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/4gaCw0l9A7GsFETsN5Uzf9nU55I.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/f5yPkdVTsAg6Ud4bwsu2WG0hVmh.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/qTgDJMYzuGrzn02paX0RTaiip1X.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/uD1iRVGn1O5XCqBObYsdCZ6pBwk.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "moneyball",
+    "titulo_letterboxd": "Moneyball",
+    "ano_letterboxd": 2011,
+    "tmdb_id_letterboxd": 60308,
+    "tmdb_id_escolhido": 60308,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Moneyball",
+    "ano_tmdb": 2011,
+    "ano_divergente": false
+  }
+}

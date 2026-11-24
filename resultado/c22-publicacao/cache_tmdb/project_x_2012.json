@@ -1,0 +1,114 @@
+{
+  "titulo": "Projeto X: Uma Festa Fora de Controle",
+  "sinopse_oficial": "Três garotos no último ano do colégio decidem fazer uma festa de aniversário para serem reconhecidos. Porém no decorrer da festa as coisas saem de controle.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Comédia"
+  ],
+  "duracao_min": 88,
+  "diretor": "Nima Nourizadeh",
+  "diretor_transliterado": false,
+  "ano": 2012,
+  "data_estreia": "2012-03-01",
+  "fonte": "tmdb",
+  "tmdb_id": 57214,
+  "tmdb_fetched_at": "2026-11-24T05:00:34+00:00",
+  "poster_path": "/yZcrard3hundE2NpgBaJdel3gAw.jpg",
+  "poster_largura": 1121,
+  "poster_altura": 1585,
+  "backdrop_paths": [
+    "/cUqXHZtnptgvyAE1hN47Wsf3ami.jpg",
+    "/yVb5Fu5Dtwy2CRVMpFkwjySPGRx.jpg",
+    "/23pKODvtqtajRSHDFY6joF7UiD7.jpg",
+    "/mwm0Hv8ss9glqm3uy7knVuuVFCk.jpg",
+    "/rAju4Oxef9zQpjYTVm8MIwjzYMs.jpg",
+    "/2Zz6ZM4AqBoR4RY1YZPCDr1vsa6.jpg",
+    "/nhJhebNOmJgepZ5Vt62ZrVhuTw7.jpg",
+    "/lIXwEMvNllNcunGIDGBeptlcxVg.jpg",
+    "/eqM8tOpouKiMOl04Uqp9y5pxIN8.jpg",
+    "/zn7ndui1G1Yts9tYmuepV2Dogt1.jpg"
+  ],
+  "backdrop_path": "/cUqXHZtnptgvyAE1hN47Wsf3ami.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/e26iBj1h0AoDHMt9mU4IStQ6dSG.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/4T7NwNAr81itdB2cvrYUpJNdH4o.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/23pKODvtqtajRSHDFY6joF7UiD7.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/7aCCvPv3dNpfhXGKZaz4eVRcup6.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/rAju4Oxef9zQpjYTVm8MIwjzYMs.jpg",
+      "still_largura": 2000,
+      "still_altura": 1125
+    },
+    {
+      "still_path": "/5vAv4h4vugleYsbsNkUb9kcrk8h.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/2CjPRwddYuzfzQSy9GcMTJQgqTA.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/6J3Uk5uuX5m52CamVRE6zzKF6Hb.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/buDfeku5JXBwIYtUSjDgHbFBdEs.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/f6oA1woy85SR58ykT2h6gVhNeYl.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/jG7SOeAVbbfUiNiKBeE9g4N2tAh.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/oQiPfGz2be1MvOovdjC616vKJqJ.jpg",
+      "still_largura": 1335,
+      "still_altura": 751
+    },
+    {
+      "still_path": "/rlILNn0L7IMqHTblP9kqz2GhNOm.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "project-x-2012",
+    "titulo_letterboxd": "Project X",
+    "ano_letterboxd": 2012,
+    "tmdb_id_letterboxd": 57214,
+    "tmdb_id_escolhido": 57214,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Project X",
+    "ano_tmdb": 2012,
+    "ano_divergente": false
+  }
+}

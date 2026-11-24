@@ -1,0 +1,116 @@
+{
+  "titulo": "Os Simpsons: O Filme",
+  "sinopse_oficial": "Homer deve salvar o mundo de uma catástrofe que ele mesmo criou. Tudo começa com Homer, seu novo porco de estimação, e um silo cheio de excrementos, uma combinação que desencadeia um desastre como Springfield nunca experimentou.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Animação",
+    "Comédia",
+    "Família"
+  ],
+  "duracao_min": 87,
+  "diretor": "David Silverman",
+  "diretor_transliterado": false,
+  "ano": 2007,
+  "data_estreia": "2007-07-25",
+  "fonte": "tmdb",
+  "tmdb_id": 35,
+  "tmdb_fetched_at": "2026-11-24T05:07:11+00:00",
+  "poster_path": "/vTutCMTUTRw8PQAxn21X8hCxVnp.jpg",
+  "poster_largura": 598,
+  "poster_altura": 896,
+  "backdrop_paths": [
+    "/8ln5VUVk7gnNGIb2VNgw8nICDVt.jpg",
+    "/wkYziD3d2hvg8BQXwNJayxaPL3x.jpg",
+    "/aw7NUGTDm0zZNHE50sBpNtvFjqA.jpg",
+    "/pkKUjRqbA34wE2urUrn96ReFGM.jpg",
+    "/iYQ8rWvbJ9cDnmqGaK23TYqZPKn.jpg",
+    "/5T1qQuMM5hGYPfSuBHQpV83GYyb.jpg",
+    "/3rfGBdNJRJTNETuBuqrDp9lqEyv.jpg",
+    "/yajM2akz8QKOx0RdvN6OYaxe3GN.jpg",
+    "/o7XHctO2t4fIdzch8v8ApNaJMcX.jpg",
+    "/7hA2wJh9vfasPSkgurtQh33zLYd.jpg"
+  ],
+  "backdrop_path": "/8ln5VUVk7gnNGIb2VNgw8nICDVt.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/n0NZeWHo7ayA3t3idS0KYNjoRpW.jpg",
+  "poster_sem_texto_largura": 1365,
+  "poster_sem_texto_altura": 2048,
+  "galeria_stills": [
+    {
+      "still_path": "/8ln5VUVk7gnNGIb2VNgw8nICDVt.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/3rfGBdNJRJTNETuBuqrDp9lqEyv.jpg",
+      "still_largura": 2800,
+      "still_altura": 1575
+    },
+    {
+      "still_path": "/pkKUjRqbA34wE2urUrn96ReFGM.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/kcZREw61J6AfR4gBmDPNA48NkPu.jpg",
+      "still_largura": 2880,
+      "still_altura": 1620
+    },
+    {
+      "still_path": "/nAkbXZqrg45MhiJ5KAvWNLkrYLN.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/r6v679SKimsNbC5PeMbD4OFjE2M.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/7ZMmNFvcw4E6uhZ5LgzbuHpzDfV.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/c1qO8ZAegE7htuvKPAveocFr7MO.jpg",
+      "still_largura": 2880,
+      "still_altura": 1620
+    },
+    {
+      "still_path": "/gvBsPoiwvphPDUJU726tJqhz0fM.jpg",
+      "still_largura": 2880,
+      "still_altura": 1620
+    },
+    {
+      "still_path": "/mjsP1Cp0tI0TaQe7Wx0bxrkJSAu.jpg",
+      "still_largura": 2928,
+      "still_altura": 1647
+    },
+    {
+      "still_path": "/rCTcWMCYxx9FOBNu86t01DDQSNh.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/umRfSiGe6YtP37qOa0XRNjFvvVW.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "the-simpsons-movie",
+    "titulo_letterboxd": "The Simpsons Movie",
+    "ano_letterboxd": 2007,
+    "tmdb_id_letterboxd": 35,
+    "tmdb_id_escolhido": 35,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "The Simpsons Movie",
+    "ano_tmdb": 2007,
+    "ano_divergente": false
+  }
+}

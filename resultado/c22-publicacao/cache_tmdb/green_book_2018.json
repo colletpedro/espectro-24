@@ -1,0 +1,116 @@
+{
+  "titulo": "Green Book: O Guia",
+  "sinopse_oficial": "Quando Tony Lip, um segurança ítalo-americano, é contratado como motorista do Dr. Don Shirley, um pianista negro de classe alta, durante uma turnê pelo sul dos Estados Unidos, eles devem seguir o \"O Guia\" para leva-los aos poucos estabelecimentos que eram seguros para os afro-americanos. Confrontados com o racismo, o perigo, assim como pela humanidade e o humor inesperados, eles são forçados a deixar de lado as diferenças para sobreviver e prosperar nessa jornada.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "Comédia",
+    "História"
+  ],
+  "duracao_min": 131,
+  "diretor": "Peter Farrelly",
+  "diretor_transliterado": false,
+  "ano": 2018,
+  "data_estreia": "2018-11-16",
+  "fonte": "tmdb",
+  "tmdb_id": 490132,
+  "tmdb_fetched_at": "2026-11-24T04:55:45+00:00",
+  "poster_path": "/u9dldwRwQjTZGlIxKaAtAPLAjOv.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/5En0fmDagt3Pk8d7P3uTwfeQceg.jpg",
+    "/2Xe9lISpwXKhvKiHttbFfVRERQX.jpg",
+    "/Arxw3x7Y1jmkYryy0CodKce0Cms.jpg",
+    "/78PjwaykLY2QqhMfWRDvmfbC6EV.jpg",
+    "/bjhyMfL5yLtliwBuheRD4HOI78G.jpg",
+    "/maieKYuxiINbah1dnVhp7Qdk7k5.jpg",
+    "/s7RAHfvC5k4xIx2URn0DbgrHHc5.jpg",
+    "/3NBuTZvjWDmuISyUdRnVlDYJnLv.jpg",
+    "/bVzedVBgUT5NucgBHaUfOzifMKl.jpg",
+    "/yJCOTcyVyO6J5OJhaSH9gmUqVlh.jpg"
+  ],
+  "backdrop_path": "/5En0fmDagt3Pk8d7P3uTwfeQceg.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/svxN809oCHFRJMAvSFmhVPu20oL.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/3NBuTZvjWDmuISyUdRnVlDYJnLv.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2Xe9lISpwXKhvKiHttbFfVRERQX.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/Arxw3x7Y1jmkYryy0CodKce0Cms.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/maieKYuxiINbah1dnVhp7Qdk7k5.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/yJCOTcyVyO6J5OJhaSH9gmUqVlh.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/bGGlPVyAaS8ua0H7wGQKgWbf4f7.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5uupyAix9HY9ZnP6bilifjlcizO.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/8cWYzyizHwcAAJkSXRxKyb7PNnp.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/jfnXCmMRCDVPihi98KgCiLUWHPE.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/kswPNmMnxBH9JzYqP6gSPq6s3mE.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/jIvpDFmc9fNEoOHpBYQluxb5yNp.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/vMbFlVopC5geNbfDJMrnAkuVYUp.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "green-book",
+    "titulo_letterboxd": "Green Book",
+    "ano_letterboxd": 2018,
+    "tmdb_id_letterboxd": 490132,
+    "tmdb_id_escolhido": 490132,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Green Book",
+    "ano_tmdb": 2018,
+    "ano_divergente": false
+  }
+}

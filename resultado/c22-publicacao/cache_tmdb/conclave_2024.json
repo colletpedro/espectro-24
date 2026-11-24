@@ -1,0 +1,115 @@
+{
+  "titulo": "Conclave",
+  "sinopse_oficial": "Após a morte inesperada do atual pontífice, o Cardeal Lawrence é encarregado de conduzir esse processo confidencial. Os líderes mais poderosos da Igreja Católica de todo o mundo se reúnem nos corredores do Vaticano para participar da seleção, cada um com suas próprias ambições. Lawrence se vê no centro de uma conspiração, desvendando segredos que ameaçam não apenas sua fé, mas também as fundações da Igreja.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "Thriller"
+  ],
+  "duracao_min": 120,
+  "diretor": "Edward Berger",
+  "diretor_transliterado": false,
+  "ano": 2024,
+  "data_estreia": "2024-10-25",
+  "fonte": "tmdb",
+  "tmdb_id": 974576,
+  "tmdb_fetched_at": "2026-11-24T04:50:50+00:00",
+  "poster_path": "/7pMyhSbULMkCCOQCInBYU34Qmf3.jpg",
+  "poster_largura": 1366,
+  "poster_altura": 2048,
+  "backdrop_paths": [
+    "/91SnazWmEWnnH988aaz0l6NaWY9.jpg",
+    "/muzq3LRUsmMgyZm1ndySjVX45Hi.jpg",
+    "/eZzNdjNDvaSoyywy9ICg2UmFwul.jpg",
+    "/tkRDTu9hyWgaBSSzfkYDCZYd1kV.jpg",
+    "/1YMrOtrW7b4pL2lfD8UciZPOJGs.jpg",
+    "/66nlC5LDZmDUWONGkUZT2BrOszG.jpg",
+    "/7zoz14yAkp3WwOBdmAH9MHP8W9.jpg",
+    "/62lMgtmtx1FQ0YUTmmqHlJLhIiv.jpg",
+    "/9FIlMCzILJQfwA08quDmipfCdyg.jpg",
+    "/b0KRaWjtcW68mdxErOP7dTaUWAA.jpg"
+  ],
+  "backdrop_path": "/91SnazWmEWnnH988aaz0l6NaWY9.jpg",
+  "backdrop_largura": 1744,
+  "backdrop_altura": 981,
+  "poster_sem_texto_path": "/fAlMWXHqg6ykes62US7YOBVMc2R.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/91SnazWmEWnnH988aaz0l6NaWY9.jpg",
+      "still_largura": 1744,
+      "still_altura": 981
+    },
+    {
+      "still_path": "/muzq3LRUsmMgyZm1ndySjVX45Hi.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/66nlC5LDZmDUWONGkUZT2BrOszG.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/9FIlMCzILJQfwA08quDmipfCdyg.jpg",
+      "still_largura": 1422,
+      "still_altura": 800
+    },
+    {
+      "still_path": "/nmJUojmm9ltxvz9jQagYFdfQIde.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/8Wb3wxU71HuQQR0zhAARPZv8Xpr.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/1QpIwmntClFqmBLylKBWqz6uv7Z.jpg",
+      "still_largura": 1333,
+      "still_altura": 750
+    },
+    {
+      "still_path": "/6V7w9XOfsz77u1yHoQKupoYmAqW.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/d47YIEUmheWIYk5U0DEqNvxQGfl.jpg",
+      "still_largura": 3840,
+      "still_altura": 2159
+    },
+    {
+      "still_path": "/hjxtUO7YdHMvESAs4eTZMCoXXCP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/lvOUbtt0Lx0uNej0HrMBYSuOFNA.jpg",
+      "still_largura": 1422,
+      "still_altura": 800
+    },
+    {
+      "still_path": "/sT4hGtBQ3pGeXbYgE66NDB9AKI4.jpg",
+      "still_largura": 1422,
+      "still_altura": 800
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "conclave",
+    "titulo_letterboxd": "Conclave",
+    "ano_letterboxd": 2024,
+    "tmdb_id_letterboxd": 974576,
+    "tmdb_id_escolhido": 974576,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Conclave",
+    "ano_tmdb": 2024,
+    "ano_divergente": false
+  }
+}

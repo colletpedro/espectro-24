@@ -1,0 +1,117 @@
+{
+  "titulo": "MIB - Homens de Preto",
+  "sinopse_oficial": "Kay e Jay, os Homens de Preto, são o maior segredo já mantido no universo. Eles são agentes de uma agência não-oficial do governo e responsáveis por monitorar todos os encontros com alienígenas na Terra. Ao investigar uma série de atividades extraterrestres, descobrem um terrorista intergaláctico cuja missão é assassinar dois embaixadores de galáxias opostas.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Ação",
+    "Aventura",
+    "Comédia",
+    "Ficção científica"
+  ],
+  "duracao_min": 98,
+  "diretor": "Barry Sonnenfeld",
+  "diretor_transliterado": false,
+  "ano": 1997,
+  "data_estreia": "1997-07-02",
+  "fonte": "tmdb",
+  "tmdb_id": 607,
+  "tmdb_fetched_at": "2026-11-24T04:58:46+00:00",
+  "poster_path": "/bUA0TD2COayMP6ur9Qbewdbbm2e.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/aJMhYOP80cVBtq5ku3uyqASF3Ol.jpg",
+    "/o9puyKpayQoX8ikIaYtf2PfKv3.jpg",
+    "/1GJvBE7UWU1WOVi0XREl4JQc7f8.jpg",
+    "/deKO3QN4tqgvQvjggEmDjpgat2G.jpg",
+    "/eR1mhR2SV6uL631zE9F3ZZ7KNK8.jpg",
+    "/kMHtwjPa9bFqqbTL1HFEt8kdlnL.jpg",
+    "/mpFUxLao6NpQe0fwS61wnERdwix.jpg",
+    "/fWN3GgKxSP5v5WP3AQ1fh0Gbe90.jpg",
+    "/wM1aNIXSqB8GSeQY38LOUHYMYIw.jpg",
+    "/lrAz6ayKlVBpClucdgXBmVUP6HG.jpg"
+  ],
+  "backdrop_path": "/aJMhYOP80cVBtq5ku3uyqASF3Ol.jpg",
+  "backdrop_largura": 1280,
+  "backdrop_altura": 720,
+  "poster_sem_texto_path": "/yTN3qOrA1hTp1YR4xbuQu5k2H63.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/kMHtwjPa9bFqqbTL1HFEt8kdlnL.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/wM1aNIXSqB8GSeQY38LOUHYMYIw.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/flTAXL1mI3QOZA8VvxJhYMv35yl.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/v0nKQxKwnU5gvuQnTE83phETvGl.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/1T4jFhoq5MddPVX4sHUWsptosQm.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5TpswjhHJkkPAhQ4g7vU8VMVxHk.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/9TIv0EPDOTz7hEstTG3hi0XRhjG.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/bdNwSpJqfW4c84gvoFLlquK2xg6.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/gOJvCRZLpoDViFVHPNpfAcPJYIW.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/i8fXn1SpBxQWKFoJiPlSnevAQri.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/nWzDfsi1rNYn8fx3doo5GO4NY5G.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/vTNss9eHYLsI0tk3ckWco7OnZqv.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "men-in-black",
+    "titulo_letterboxd": "Men in Black",
+    "ano_letterboxd": 1997,
+    "tmdb_id_letterboxd": 607,
+    "tmdb_id_escolhido": 607,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Men in Black",
+    "ano_tmdb": 1997,
+    "ano_divergente": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "titulo": "Ford vs Ferrari",
+  "sinopse_oficial": "O designer de carros americano Carroll Shelby e o destemido piloto britânico Ken Miles juntos combatem a interferência corporativa e as leis da física para construir um carro de corrida revolucionário e enfrentar Enzo Ferrari nas 24 horas de Le Mans na França em 1966.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "História",
+    "Ação"
+  ],
+  "duracao_min": 153,
+  "diretor": "James Mangold",
+  "diretor_transliterado": false,
+  "ano": 2019,
+  "data_estreia": "2019-11-13",
+  "fonte": "tmdb",
+  "tmdb_id": 359724,
+  "tmdb_fetched_at": "2026-11-24T04:54:34+00:00",
+  "poster_path": "/t8L9dqNMclXJHP0TesPsPS2RvB1.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/2vq5GTJOahE03mNYZGxIynlHcWr.jpg",
+    "/n3UanIvmnBlH531pykuzNs4LbH6.jpg",
+    "/56DXDz52rLbwihHjw9Jfk8cuV8f.jpg",
+    "/huTGQPSYSfYC1ROJZyMZGCbtgUJ.jpg",
+    "/ydmZIafp66mHABs3QJDwvjRgZfE.jpg",
+    "/mn9k8zapebAbCqsiKf24juhXjjx.jpg",
+    "/kPqfO4pkGPlCJRMcTCx0XD29m6R.jpg",
+    "/pyTNkCQaDcZJhTb9g7Q7HGopxrQ.jpg",
+    "/tDcOCk35w1nSn3x6TRbIyuqVdcE.jpg",
+    "/Afvy0c3XzWJ7qwyP3c7jObweUYt.jpg"
+  ],
+  "backdrop_path": "/2vq5GTJOahE03mNYZGxIynlHcWr.jpg",
+  "backdrop_largura": 3000,
+  "backdrop_altura": 1688,
+  "poster_sem_texto_path": "/ecY1xoYOL8XHf62arQTAFVYQmiX.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/2vq5GTJOahE03mNYZGxIynlHcWr.jpg",
+      "still_largura": 3000,
+      "still_altura": 1688
+    },
+    {
+      "still_path": "/n3UanIvmnBlH531pykuzNs4LbH6.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/kPqfO4pkGPlCJRMcTCx0XD29m6R.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/cJrmrt91er9YRbZONwiweV5TYBc.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/gX3w0Nniv2XNYZepdKMx4fBvouK.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/cjt0UI5A7j9sX2ucbH1HoobHBWU.jpg",
+      "still_largura": 2000,
+      "still_altura": 1124
+    },
+    {
+      "still_path": "/3JTiqqbVerVyKEx6zY5RYO7LgVi.jpg",
+      "still_largura": 3333,
+      "still_altura": 1875
+    },
+    {
+      "still_path": "/eZAG6E3Nks84QJPUxT0eiA8fHmg.jpg",
+      "still_largura": 2816,
+      "still_altura": 1584
+    },
+    {
+      "still_path": "/h3CsnArUITcyUwzZQbPZFqbfDiv.jpg",
+      "still_largura": 1620,
+      "still_altura": 911
+    },
+    {
+      "still_path": "/l0hDxEqTwETp4V32IRnRSrhg26p.jpg",
+      "still_largura": 2247,
+      "still_altura": 1264
+    },
+    {
+      "still_path": "/oXMbOnQ5ZdEaLZo6FszEgP1v9k6.jpg",
+      "still_largura": 2254,
+      "still_altura": 1268
+    },
+    {
+      "still_path": "/qxkQRoRfsekcP9fFnRbnRVzlNJS.jpg",
+      "still_largura": 2254,
+      "still_altura": 1268
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "ford-v-ferrari",
+    "titulo_letterboxd": "Ford v Ferrari",
+    "ano_letterboxd": 2019,
+    "tmdb_id_letterboxd": 359724,
+    "tmdb_id_escolhido": 359724,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Ford v Ferrari",
+    "ano_tmdb": 2019,
+    "ano_divergente": false
+  }
+}

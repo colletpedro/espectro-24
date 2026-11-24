@@ -1,0 +1,114 @@
+{
+  "titulo": "Três Homens em Conflito",
+  "sinopse_oficial": "Durante o auge da Guerra Civil, um misterioso pistoleiro vaga pela fronteira do oeste. Ele não possui um lar, lealdade ou companhia... Até que encontra dois estrangeiros, que são tão brutos e desapegados quanto ele. Unidos pelo destino, os três homens juntam suas forças para tentar encontrar uma fortuna em ouro roubado. Mas trabalho em equipe não é uma coisa natural para voluntariosos pistoleiros, e eles logo descobrem que seu maior desafio é concentrar-se em sua perigosa missão — e em manterem-se vivos — atravessando um país arrasado pela guerra.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Faroeste"
+  ],
+  "duracao_min": 163,
+  "diretor": "Sergio Leone",
+  "diretor_transliterado": false,
+  "ano": 1966,
+  "data_estreia": "1966-12-23",
+  "fonte": "tmdb",
+  "tmdb_id": 429,
+  "tmdb_fetched_at": "2026-11-24T05:06:32+00:00",
+  "poster_path": "/16z08yn82sTmdSS7nsGvRNDIVnz.jpg",
+  "poster_largura": 1000,
+  "poster_altura": 1500,
+  "backdrop_paths": [
+    "/lk0aGHigkfxh1vH547EkOiIOVKL.jpg",
+    "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+    "/xnFmcq40R0umHHLXTpvOW5GTdMh.jpg",
+    "/Adrip2Jqzw56KeuV2nAxucKMNXA.jpg",
+    "/eoCSp75lxatmIa6aGqfnzwtbttd.jpg",
+    "/qurG6mKVHSC303BJzeN7bmUE4fw.jpg",
+    "/aUsg0SSlB2EI6qQeGNUJPJRfTsW.jpg",
+    "/jJGML1YYTMfEEfaOKSeBgPRI56H.jpg",
+    "/60NIRR0C8sh7MxhfPx7QEOmkYOG.jpg",
+    "/bc7mLueh5kideXRxdrZkPFTLyGF.jpg"
+  ],
+  "backdrop_path": "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/lDIxtv4nY7oqpkMd7OPtOEWgf3i.jpg",
+  "poster_sem_texto_largura": 1000,
+  "poster_sem_texto_altura": 1500,
+  "galeria_stills": [
+    {
+      "still_path": "/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/Adrip2Jqzw56KeuV2nAxucKMNXA.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/bWhrKKkSzup0KEYyE2uH8Tly66w.jpg",
+      "still_largura": 2880,
+      "still_altura": 1620
+    },
+    {
+      "still_path": "/aTF3Ob8k3uuwLUM14DKn63JCkBr.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/xqJgfpS4It0ZvE9OqCsxNXYW535.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/z562msRBRSJRFIfZvSvjC4vunZF.jpg",
+      "still_largura": 2142,
+      "still_altura": 1205
+    },
+    {
+      "still_path": "/2DPWNVscHvLBvEJ7BilN1mLTeW3.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5WwDnYopnchzN0JpbenImamhpcS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/aLvOdCUoiYi03hZn5KqTfD8W59H.jpg",
+      "still_largura": 2907,
+      "still_altura": 1635
+    },
+    {
+      "still_path": "/k6lowQv0rNGTBbOf11u0txIlxsu.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/oct2K1qOj9tjdinHPT6FnOixxIF.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/u3BIwtb564W5bOGd7g6KbuCM0lK.jpg",
+      "still_largura": 1703,
+      "still_altura": 958
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "the-good-the-bad-and-the-ugly",
+    "titulo_letterboxd": "The Good, the Bad and the Ugly",
+    "ano_letterboxd": 1966,
+    "tmdb_id_letterboxd": 429,
+    "tmdb_id_escolhido": 429,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "title",
+    "titulo_tmdb_correspondente": "The Good, the Bad and the Ugly",
+    "ano_tmdb": 1966,
+    "ano_divergente": false
+  }
+}

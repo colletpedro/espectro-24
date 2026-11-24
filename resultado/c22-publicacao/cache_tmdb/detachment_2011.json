@@ -1,0 +1,114 @@
+{
+  "titulo": "O Substituto",
+  "sinopse_oficial": "Henry Barthes (Adrien Brody) é um professor de ensino médio, que apesar de ter o dom nato para se comunicar com os jovens, só dá aulas como substituto, para não criar vinculos com ninguém. Mas quando ele é chamado para lecionar em uma escola pública, se encontra em meio à professores desmotivados e adolescentes violentos e desencantados com a vida, que só querem encontrar um apoio para substituir seus pais negligentes ou ausentes. Sofrendo uma crise familiar, Henry verá três mulheres entrando em sua vida e vai começar a perceber como ele pode fazer a diferença, mesmo que isso venha com um alto custo.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama"
+  ],
+  "duracao_min": 98,
+  "diretor": "Tony Kaye",
+  "diretor_transliterado": false,
+  "ano": 2011,
+  "data_estreia": "2011-04-24",
+  "fonte": "tmdb",
+  "tmdb_id": 74308,
+  "tmdb_fetched_at": "2026-11-24T04:51:24+00:00",
+  "poster_path": "/crnxHH3SEEtrZEhLf662ulHAPeV.jpg",
+  "poster_largura": 960,
+  "poster_altura": 1440,
+  "backdrop_paths": [
+    "/iJwtR94Yq9U83ET0TzirsGWTewH.jpg",
+    "/aU6Mj8yFZhOnTpXjobqcwrB4KPP.jpg",
+    "/6RCEJGzAH92XbKGNFSmrnLMcaEh.jpg",
+    "/frYaBZwQlmYNrulugOmtOEh9d6H.jpg",
+    "/q6R7eV7oUZcDhsrZP9B0T6P2HHy.jpg",
+    "/diLUey918sWzfwavsVRNkIibSvG.jpg",
+    "/4ofYuHHjAnzw3gsOZc0ubuFDqxt.jpg",
+    "/y0lGNfz4oe5PAz9ukDvjbSdhSnp.jpg",
+    "/tPVteYf6sxL7vfeW6qKtJhB1TDX.jpg",
+    "/cKeDF0RWDBZTep1L7LsDhnFE3q9.jpg"
+  ],
+  "backdrop_path": "/iJwtR94Yq9U83ET0TzirsGWTewH.jpg",
+  "backdrop_largura": 1280,
+  "backdrop_altura": 720,
+  "poster_sem_texto_path": "/tjkC8PQ1Wqe8B63pTMglHP8xvjz.jpg",
+  "poster_sem_texto_largura": 1000,
+  "poster_sem_texto_altura": 1500,
+  "galeria_stills": [
+    {
+      "still_path": "/iJwtR94Yq9U83ET0TzirsGWTewH.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/aU6Mj8yFZhOnTpXjobqcwrB4KPP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/frYaBZwQlmYNrulugOmtOEh9d6H.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/4ofYuHHjAnzw3gsOZc0ubuFDqxt.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/y0lGNfz4oe5PAz9ukDvjbSdhSnp.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/2IWinS1nZAvmT8GaQLjaYIOUJ84.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/cKeDF0RWDBZTep1L7LsDhnFE3q9.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/dEDqbDrHhZWZntr3swfcj1QboFs.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/ekQcug9XrH4MQKi3lppwlN2ktUD.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/ium7wws2rr5cQzpdra5O5x2LGh.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/pUFwDfbDrDZiroIzKk1Ly8avFix.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/x9DzX0pSTTGglochzuw22Yu6JyK.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "detachment",
+    "titulo_letterboxd": "Detachment",
+    "ano_letterboxd": 2011,
+    "tmdb_id_letterboxd": 74308,
+    "tmdb_id_escolhido": 74308,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Detachment",
+    "ano_tmdb": 2011,
+    "ano_divergente": false
+  }
+}

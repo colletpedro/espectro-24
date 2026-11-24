@@ -1,0 +1,116 @@
+{
+  "titulo": "Embriagado de Amor",
+  "sinopse_oficial": "Embora suscetível a ataques violentos, o empresário Barry Egan é um homem tímido que leva uma vida solitária e tranquila. No entanto, vários eventos ocorrem e mudam sua vida, como apaixonar-se por uma colega de trabalho da sua irmã, Lena Leonard. Porém, o romance é ameaçado quando Egan é vítima de um chantagista.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Romance",
+    "Drama",
+    "Comédia"
+  ],
+  "duracao_min": 96,
+  "diretor": "Paul Thomas Anderson",
+  "diretor_transliterado": false,
+  "ano": 2002,
+  "data_estreia": "2002-10-11",
+  "fonte": "tmdb",
+  "tmdb_id": 8051,
+  "tmdb_fetched_at": "2026-11-24T05:01:01+00:00",
+  "poster_path": "/24EtiVyAIG9uk7tA5Gwap1XKKMk.jpg",
+  "poster_largura": 1154,
+  "poster_altura": 1731,
+  "backdrop_paths": [
+    "/q8GwhIAttJwqmjDtbLW8JvEMMdw.jpg",
+    "/l9WzjwHwF7I2DwCtK8DXVQExGjH.jpg",
+    "/3CmxQv7AJlujUxRnKRuKoIslQD6.jpg",
+    "/4nqD5aPd6E1F3T3M80EtWzyeWCU.jpg",
+    "/6kOCxB18CCBvmtyfzs9wvkqTPKN.jpg",
+    "/3Gx02yULHeSKjtZasB1XhJkrYsL.jpg",
+    "/zJtHWpyuLFHbmB98aSM5AwFhZey.jpg",
+    "/uSxwd3VIZmWNrxoGPC0RheQDyQ0.jpg",
+    "/kbtFyfCbMdhZcfliMyZbYwoS25l.jpg",
+    "/bQcZtHP0QemeSwbr7QxYadMAWgN.jpg"
+  ],
+  "backdrop_path": "/q8GwhIAttJwqmjDtbLW8JvEMMdw.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/daXCe69H5SSvR9Nc3WILjEjTbbX.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/kbtFyfCbMdhZcfliMyZbYwoS25l.jpg",
+      "still_largura": 1948,
+      "still_altura": 1096
+    },
+    {
+      "still_path": "/bQcZtHP0QemeSwbr7QxYadMAWgN.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/7zyKvNbCIdCVxBYqHwKfuwN2Zal.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/7XADmGxqKCsihxCVR8mBsMS6moF.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/lYr2IC7XgctVjAjzCzv4c38yfgl.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/4V5TAxOdLfRPcUSaYOOXgN2efm1.jpg",
+      "still_largura": 1420,
+      "still_altura": 799
+    },
+    {
+      "still_path": "/5HTQrVidh0clA1nBb5Ozylla7DK.jpg",
+      "still_largura": 2132,
+      "still_altura": 1199
+    },
+    {
+      "still_path": "/cmTGYTSKQ05K6AtWPxDycRGwKyT.jpg",
+      "still_largura": 1920,
+      "still_altura": 1079
+    },
+    {
+      "still_path": "/eR7iPghbYrUaaFIWDU3hsMDXKNR.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/iAGUz5yYLJ4Hzt2LeJWrRv7aFag.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/szPTC67E1vf3N4zBMYjMzwcG0Bc.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/vmuHJDzOhFgmiORR0M1PPAbUUMh.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "punch-drunk-love",
+    "titulo_letterboxd": "Punch-Drunk Love",
+    "ano_letterboxd": 2002,
+    "tmdb_id_letterboxd": 8051,
+    "tmdb_id_escolhido": 8051,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Punch-Drunk Love",
+    "ano_tmdb": 2002,
+    "ano_divergente": false
+  }
+}

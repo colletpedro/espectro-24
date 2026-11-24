@@ -1,0 +1,116 @@
+{
+  "titulo": "Infiltrado Na Klan",
+  "sinopse_oficial": "Em 1978, Ron Stallworth, um policial negro do Colorado, conseguiu se infiltrar na Ku Klux Klan local. Ele se comunicava com os outros membros do grupo através de telefonemas e cartas, quando precisava estar fisicamente presente enviava um outro policial branco no seu lugar. Depois de meses de investigação, Ron se tornou o líder da seita, sendo responsável por sabotar uma série de linchamentos e outros crimes de ódio orquestrados pelos racistas.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Crime",
+    "Drama",
+    "História"
+  ],
+  "duracao_min": 128,
+  "diretor": "Spike Lee",
+  "diretor_transliterado": false,
+  "ano": 2018,
+  "data_estreia": "2018-08-09",
+  "fonte": "tmdb",
+  "tmdb_id": 487558,
+  "tmdb_fetched_at": "2026-11-24T04:50:21+00:00",
+  "poster_path": "/an1uqCR7gF1DWlSaoTKo6KcnIJ5.jpg",
+  "poster_largura": 1000,
+  "poster_altura": 1500,
+  "backdrop_paths": [
+    "/ot3eZ9XfOF42a3zFWluMPWkfCHB.jpg",
+    "/gMVdhfQ7q9DFHhDkehrququjGPd.jpg",
+    "/97RM7O7yWYhdHpfFYAJ3CaXwMTi.jpg",
+    "/b8rfkesbUGnXmtXvmBK8YAsw7jT.jpg",
+    "/9CNQlduTdPxeH7D4LFWMnVvoY2K.jpg",
+    "/9Uh5xR04t66XFiFag1BKVyPyHqz.jpg",
+    "/5omDZBH7CN6aneEx0L2uK4M5qTW.jpg",
+    "/lSmb2O9dp1OagnEmMELa2pqmoeZ.jpg",
+    "/s2B9HdnaaRq4L0WyaMbycnMESvv.jpg",
+    "/lMnoYqPIAVL0YaLP5YjRy7iwaYv.jpg"
+  ],
+  "backdrop_path": "/ot3eZ9XfOF42a3zFWluMPWkfCHB.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/7szsWQWnlYcs4QwOKPwGKg9i0mS.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/ot3eZ9XfOF42a3zFWluMPWkfCHB.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/gMVdhfQ7q9DFHhDkehrququjGPd.jpg",
+      "still_largura": 3276,
+      "still_altura": 1843
+    },
+    {
+      "still_path": "/b8rfkesbUGnXmtXvmBK8YAsw7jT.jpg",
+      "still_largura": 3648,
+      "still_altura": 2052
+    },
+    {
+      "still_path": "/9Uh5xR04t66XFiFag1BKVyPyHqz.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/s2B9HdnaaRq4L0WyaMbycnMESvv.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/30jr7u2yVBRM44CnawaUiSxmC0A.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/wV71e4uzlNsmkef3gsP4eJjQGt5.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/78Sz6e9Y5w5cw10A5e1csU5BUUB.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/fQYiFaL5pq32ujnjbf67RCKICBm.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/hw9i42xtjtPfstNieBZYjVcQlzy.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/pIo01slH7g6PtjMooCTQkyFfWwP.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/siPzpG2tDf6WoYC4aESCY3cU54Z.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "blackkklansman",
+    "titulo_letterboxd": "BlacKkKlansman",
+    "ano_letterboxd": 2018,
+    "tmdb_id_letterboxd": 487558,
+    "tmdb_id_escolhido": 487558,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "BlacKkKlansman",
+    "ano_tmdb": 2018,
+    "ano_divergente": false
+  }
+}

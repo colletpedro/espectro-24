@@ -1,0 +1,117 @@
+{
+  "titulo": "Aladdin",
+  "sinopse_oficial": "Um jovem humilde descobre uma lâmpada mágica, com um gênio que pode lhe conceder desejos. Agora o rapaz quer conquistar a moça por quem se apaixonou, mas o que ele não sabe é que a jovem é uma princesa que está prestes a se noivar. Com a ajuda do Gênio, ele tenta se passar por um príncipe para conquistar o amor da moça e a confiança do pai dela.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Aventura",
+    "Fantasia",
+    "Romance",
+    "Família"
+  ],
+  "duracao_min": 129,
+  "diretor": "Guy Ritchie",
+  "diretor_transliterado": false,
+  "ano": 2019,
+  "data_estreia": "2019-05-22",
+  "fonte": "tmdb",
+  "tmdb_id": 420817,
+  "tmdb_fetched_at": "2026-11-24T04:49:46+00:00",
+  "poster_path": "/1d8HShFOmSWDwvqtvPEZqzlZbYl.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/rVqY0Bo4Npf6EIONUROxjYAJfmD.jpg",
+    "/yJyZRrXaYUjhOrJGga8awbw4Rud.jpg",
+    "/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+    "/5ILDUFn377xw3J5IPrcuCSWTAqK.jpg",
+    "/hM4aYTG6BRNmvVjidcMXOR9e4wU.jpg",
+    "/o0XitoLDYFGbql60Fnd0xXJQdDP.jpg",
+    "/c5Ed7NisrrmxF2tSQ2wOstZYpPZ.jpg",
+    "/vjHArnGFarPCfpMsLA1JEZsCd8O.jpg",
+    "/k40PQsaXYDXY2czuLXzCvL5BVpo.jpg",
+    "/oX056O8bAInZ75jGY9MacQ2VlsM.jpg"
+  ],
+  "backdrop_path": "/rVqY0Bo4Npf6EIONUROxjYAJfmD.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/gkiYvQJ3E0sB0vYRtmvc4aYo4VQ.jpg",
+  "poster_sem_texto_largura": 1430,
+  "poster_sem_texto_altura": 2048,
+  "galeria_stills": [
+    {
+      "still_path": "/AcMzcoIlcrKbepvxRXsLv0Ju8oI.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/yJyZRrXaYUjhOrJGga8awbw4Rud.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/hM4aYTG6BRNmvVjidcMXOR9e4wU.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/k40PQsaXYDXY2czuLXzCvL5BVpo.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/6tHdMaW2YN6WKNNVWMNCQTiJQXI.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/cLGfqAaMsXOD851zqP7hLAidH1r.jpg",
+      "still_largura": 1993,
+      "still_altura": 1121
+    },
+    {
+      "still_path": "/kfvtx9E67xYziapfxAryHwZnQis.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/sQXoyCMxovJFB9QJaGM4MqW3GRj.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/33zQdAWJdCwYX3wK3YhzKlo9zAa.jpg",
+      "still_largura": 2666,
+      "still_altura": 1500
+    },
+    {
+      "still_path": "/ifyAS8GFDu8kCJB5aq7gthzqElV.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/qk55ZCn9eSaMjBQfYlX42QMiKfl.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/uKiY16Qq3bk7DqT20l8BzQc3gXW.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "aladdin-2019",
+    "titulo_letterboxd": "Aladdin",
+    "ano_letterboxd": 2019,
+    "tmdb_id_letterboxd": 420817,
+    "tmdb_id_escolhido": 420817,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Aladdin",
+    "ano_tmdb": 2019,
+    "ano_divergente": false
+  }
+}

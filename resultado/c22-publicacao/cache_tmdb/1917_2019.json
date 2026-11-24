@@ -1,0 +1,116 @@
+{
+  "titulo": "1917",
+  "sinopse_oficial": "Os cabos Schofield e Blake são jovens soldados britânicos durante a Primeira Guerra Mundial. Quando eles são encarregados de uma missão aparentemente impossível, os dois precisam atravessar território inimigo, lutando contra o tempo, para entregar uma mensagem que pode salvar cerca de 1600 colegas de batalhão.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Guerra",
+    "Drama",
+    "História"
+  ],
+  "duracao_min": 119,
+  "diretor": "Sam Mendes",
+  "diretor_transliterado": false,
+  "ano": 2019,
+  "data_estreia": "2019-12-25",
+  "fonte": "tmdb",
+  "tmdb_id": 530915,
+  "tmdb_fetched_at": "2026-11-24T04:48:50+00:00",
+  "poster_path": "/m6VVgmwNdOWvLo8nlheLPQU5wr7.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/2lBOQK06tltt8SQaswgb8d657Mv.jpg",
+    "/2WgieNR1tGHlpJUsolbVzbUbE1O.jpg",
+    "/cqa3sa4c4jevgnEJwq3CMF8UfTG.jpg",
+    "/asPIcE49HVVnS99KW2UcgL6aJIl.jpg",
+    "/t3VZPH4VS0LkpJjMR6T0ppsdavA.jpg",
+    "/3RarN70b6lohFJFVUdudXRQF6zi.jpg",
+    "/u4nqe3IS9JjiCRNLs5anI0uBGEy.jpg",
+    "/76LpPdXtCf4WxWDagVT2YcF4e9g.jpg",
+    "/57birZ6agG3dpdhbGkKRxXLGQIV.jpg",
+    "/vDQwbN2ymkMQ8ldL3Sc275FGBw3.jpg"
+  ],
+  "backdrop_path": "/2lBOQK06tltt8SQaswgb8d657Mv.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/oG1mL3IgPJQsEdqilmXOpw5uDV0.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/2lBOQK06tltt8SQaswgb8d657Mv.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2WgieNR1tGHlpJUsolbVzbUbE1O.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/t3VZPH4VS0LkpJjMR6T0ppsdavA.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/u4nqe3IS9JjiCRNLs5anI0uBGEy.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/lr17gkfPjS7sv8plOMrBEb9hz3P.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/85ZtxTnFyaDcftmLnEBaf6ssdoN.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/ds9GKAMhxv5AbprmZ2xCpK8FiEG.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/3MBR6vsFwRR27L7X3Sq6jvQL65b.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/ztXcF5ID3rnE48cpyOg3h0LYB7M.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/9blCgJ0jh2JiE8GxGJ6WSeVW3pp.jpg",
+      "still_largura": 2160,
+      "still_altura": 1215
+    },
+    {
+      "still_path": "/el9aP5Xc5FR0cBFCfkkxNgkpcoe.jpg",
+      "still_largura": 1429,
+      "still_altura": 804
+    },
+    {
+      "still_path": "/oLnrv52O6UdTGHSCysrnFsH2rPt.jpg",
+      "still_largura": 1452,
+      "still_altura": 816
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "1917",
+    "titulo_letterboxd": "1917",
+    "ano_letterboxd": 2019,
+    "tmdb_id_letterboxd": 530915,
+    "tmdb_id_escolhido": 530915,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "1917",
+    "ano_tmdb": 2019,
+    "ano_divergente": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "titulo": "Batman: O Cavaleiro das Trevas",
+  "sinopse_oficial": "Após dois anos desde o surgimento do Batman, os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon e do promotor público Harvey Dent, Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa e o contratam para combater o Homem-Morcego.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Ação",
+    "Thriller",
+    "Crime"
+  ],
+  "duracao_min": 152,
+  "diretor": "Christopher Nolan",
+  "diretor_transliterado": false,
+  "ano": 2008,
+  "data_estreia": "2008-07-16",
+  "fonte": "tmdb",
+  "tmdb_id": 155,
+  "tmdb_fetched_at": "2026-11-24T05:05:41+00:00",
+  "poster_path": "/dutnVGV9ljCZh84bkTE1TVZ4s4Y.jpg",
+  "poster_largura": 800,
+  "poster_altura": 1200,
+  "backdrop_paths": [
+    "/cfT29Im5VDvjE0RpyKOSdCKZal7.jpg",
+    "/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
+    "/6SfX1p5G4EEEDnEulFJeSxgbtSV.jpg",
+    "/x5f2uTfw0Pqc5QI4ch5AHICee2o.jpg",
+    "/nMKdUUepR0i5zn0y1T4CsSB5chy.jpg",
+    "/6fA9nie4ROlkyZAUlgKNjGNCbHG.jpg",
+    "/pbEkjhdfP7yuDcMB78YEZwgD4IN.jpg",
+    "/oOv2oUXcAaNXakRqUPxYq5lJURz.jpg",
+    "/plDp52MirFHc2PMJRMNWoG0kfr3.jpg",
+    "/enNubozHn9pXi0ycTVYUWfpHZm.jpg"
+  ],
+  "backdrop_path": "/cfT29Im5VDvjE0RpyKOSdCKZal7.jpg",
+  "backdrop_largura": 3697,
+  "backdrop_altura": 2080,
+  "poster_sem_texto_path": "/eMaH8xS0vXae1jm1Ry0S3yRBEhM.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/A1EZ4ptLCC8Z2DTNruX0iTxBYs.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/qiabHLbI3YI3VRyt7tWYn1u6bob.jpg",
+      "still_largura": 3200,
+      "still_altura": 1800
+    },
+    {
+      "still_path": "/a8OY6Amr4iQTEsWIa3qbGApu1Qx.jpg",
+      "still_largura": 3000,
+      "still_altura": 1687
+    },
+    {
+      "still_path": "/tLvSjFaqKDPYcV0OUJ2TLXq70Di.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/lHhZrxYk8pi25UYKgHVJSbGCwI9.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/hHO44Wd2Gzk96i48IXPnb1mZqLh.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/7WSZaU7eBsbqtTO2LytmggZXyLI.jpg",
+      "still_largura": 3000,
+      "still_altura": 1688
+    },
+    {
+      "still_path": "/bxOoYytUGsWOVRuHLLB4zn2zLbS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/jpXWdOi4iLGuOwvfzWZnPKW0jQp.jpg",
+      "still_largura": 2237,
+      "still_altura": 1259
+    },
+    {
+      "still_path": "/oZIZTZFrFeg8oxgUnc7IdOBEODp.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/vfDawEoEnHiru8nkpEpMpMkFXFN.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "the-dark-knight",
+    "titulo_letterboxd": "The Dark Knight",
+    "ano_letterboxd": 2008,
+    "tmdb_id_letterboxd": 155,
+    "tmdb_id_escolhido": 155,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "The Dark Knight",
+    "ano_tmdb": 2008,
+    "ano_divergente": false
+  }
+}

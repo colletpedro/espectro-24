@@ -1,0 +1,116 @@
+{
+  "titulo": "Um Corpo Que Cai",
+  "sinopse_oficial": "O ex-detetive da polícia de São Francisco, John \"Scottie\" Ferguson, se aposenta da corporação após desenvolver acrofobia e vertigem. Ele é procurado por um antigo conhecido, Gavin Elster, que o contrata para seguir sua esposa, Madeleine, cujo comportamento tem se tornado cada vez mais errático. Conforme Scottie investiga, ele se vê envolvido em um mistério complexo e perturbador que desafia suas percepções de realidade, identidade e obsessão.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Mistério",
+    "Romance",
+    "Thriller"
+  ],
+  "duracao_min": 128,
+  "diretor": "Alfred Hitchcock",
+  "diretor_transliterado": false,
+  "ano": 1958,
+  "data_estreia": "1958-05-28",
+  "fonte": "tmdb",
+  "tmdb_id": 426,
+  "tmdb_fetched_at": "2026-11-24T05:10:17+00:00",
+  "poster_path": "/lzyh1lsD4Qaid6bG5zk57Y3bEM.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+    "/7wt1DA7duYtUitwZs4ChV3VYGRx.jpg",
+    "/77aHwg1SCy89rfvQtiruPU58qEV.jpg",
+    "/80ESwPTkj0QMLQiSf7jWCZ5mrTe.jpg",
+    "/jL8P8bxtwdEzdeabAAoTW1X97L0.jpg",
+    "/y26a4Lettw0PqluxwUl1dkNKssF.jpg",
+    "/uh4G9ACPMZ32EpsorJrBvaFUUZ5.jpg",
+    "/oVDkfWqMMTNryxq60eQdVMMYaw7.jpg",
+    "/tsoBXSRD34TTvgOnS3EAtBCDMCN.jpg",
+    "/97Nv4cIsVaf8nesmpjNW5uWWQY3.jpg"
+  ],
+  "backdrop_path": "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/kBi6wp83DCJ8NBvOcDmKR7ASX4w.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/rtVwkTqllcmyY4TVOycgVBHppWf.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/3tOSDtk8wtCxNyqJoK6vkPkqcHq.jpg",
+      "still_largura": 2677,
+      "still_altura": 1506
+    },
+    {
+      "still_path": "/ajyd21JKfu0BnCv7mJjF7EB6yqK.jpg",
+      "still_largura": 3000,
+      "still_altura": 1688
+    },
+    {
+      "still_path": "/s3Eeszg2RVAnrB9XqtB83VI1Ogp.jpg",
+      "still_largura": 2216,
+      "still_altura": 1246
+    },
+    {
+      "still_path": "/leh2pDBF0SXQCSvh0qABzKxKQry.jpg",
+      "still_largura": 1817,
+      "still_altura": 1022
+    },
+    {
+      "still_path": "/d1UFzNHmUvhoWqtxDDlXGcz9d0S.jpg",
+      "still_largura": 1600,
+      "still_altura": 900
+    },
+    {
+      "still_path": "/14e5tnNiKXoHphrm6vVXWHPXPDL.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/4NEoGh79kDFWXgQ17DPBfCJ6odL.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/896vpLIELuMJ77QvOQKWtGc3j3S.jpg",
+      "still_largura": 1485,
+      "still_altura": 836
+    },
+    {
+      "still_path": "/bEDWutgyFzeRMuifziN7fhjnF4J.jpg",
+      "still_largura": 2711,
+      "still_altura": 1525
+    },
+    {
+      "still_path": "/k42pCngCDcJbSbP5VtGBbAFmfKA.jpg",
+      "still_largura": 2820,
+      "still_altura": 1587
+    },
+    {
+      "still_path": "/qqfbzEFDdL8SnWLctuJrJesKK2C.jpg",
+      "still_largura": 2710,
+      "still_altura": 1524
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "vertigo",
+    "titulo_letterboxd": "Vertigo",
+    "ano_letterboxd": 1958,
+    "tmdb_id_letterboxd": 426,
+    "tmdb_id_escolhido": 426,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Vertigo",
+    "ano_tmdb": 1958,
+    "ano_divergente": false
+  }
+}

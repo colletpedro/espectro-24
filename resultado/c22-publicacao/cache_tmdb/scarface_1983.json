@@ -1,0 +1,116 @@
+{
+  "titulo": "Scarface",
+  "sinopse_oficial": "Após receber residência permanente nos EUA em troca do assassinato de um oficial do governo cubano, Tony Montana se torna chefe do tráfico de drogas em Miami. A pressão da polícia, as guerras com cartéis colombianos e sua própria paranoia servem para alimentar as chamas de sua eventual queda.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Ação",
+    "Crime",
+    "Drama"
+  ],
+  "duracao_min": 166,
+  "diretor": "Brian De Palma",
+  "diretor_transliterado": false,
+  "ano": 1983,
+  "data_estreia": "1983-12-09",
+  "fonte": "tmdb",
+  "tmdb_id": 111,
+  "tmdb_fetched_at": "2026-11-24T05:02:32+00:00",
+  "poster_path": "/b089YkBDJjOGDQxXkOXBR06Lz2Y.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+    "/1qM2BYNE11Viby8ImC9LC00DgDr.jpg",
+    "/58xwzOzusEBR0IVmrSf4DKvjAaz.jpg",
+    "/6BrWQn3Mk5SgXYNlGk7U6VQwHOW.jpg",
+    "/6YIGVHSsGe16zogHNNoIc6gKmcO.jpg",
+    "/AlAUa5zFyCMdsTBPwCoBegHMY52.jpg",
+    "/7sZV5b2RvyWqw1MDt8IBYM16lqa.jpg",
+    "/2UCHbEX5RKLqtUHUDtzGdtOcIhY.jpg",
+    "/bx0Uy86ngo9V3qQZamhZNVn7FuT.jpg",
+    "/t9wN9tTazNT0dZoere4XutT5aXf.jpg"
+  ],
+  "backdrop_path": "/cCvp5Sni75agCtyJkNOMapORUQV.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2157,
+  "poster_sem_texto_path": "/6KD5VtuoDFUAeK2MlFzt7dqScYE.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/rj4wkE3J312EelrHEBDqRrwjjYn.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/1qM2BYNE11Viby8ImC9LC00DgDr.jpg",
+      "still_largura": 2400,
+      "still_altura": 1350
+    },
+    {
+      "still_path": "/6YIGVHSsGe16zogHNNoIc6gKmcO.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/h7qsa7LeZyhi3PofoXa5LtcmKVY.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/rzopTQpOEqN4Ruv8gXknT1RhJ9Z.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/2lIFnZW70mfTjaxu3V5FXjxeKY2.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/4ggGBj7uahWI37vtOnH2hHEP7s1.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/7wJWU6lrNWIfxd5W7Eu9Rmb2s5L.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/az8n4ty1MklkjIX23I0qig4BZcp.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/hXnhUBK5VAINhk190yeG7IcxES8.jpg",
+      "still_largura": 2905,
+      "still_altura": 1634
+    },
+    {
+      "still_path": "/lhhUrdPZr06Y8x8tkYO3a7cR0QU.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/opRp1TW40zylU5q2x68JzEeNFp5.jpg",
+      "still_largura": 3648,
+      "still_altura": 2052
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "scarface-1983",
+    "titulo_letterboxd": "Scarface",
+    "ano_letterboxd": 1983,
+    "tmdb_id_letterboxd": 111,
+    "tmdb_id_escolhido": 111,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Scarface",
+    "ano_tmdb": 1983,
+    "ano_divergente": false
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "titulo": "O Resgate do Soldado Ryan",
+  "sinopse_oficial": "Ao desembarcar na Normandia, no dia 6 de junho de 1944, o capitão Miller recebe a missão de comandar um grupo do segundo batalhão para o resgate do soldado James Ryan, caçula de quatro irmãos, dentre os quais três morreram em combate. Por ordens do chefe George C. Marshall, eles precisam procurar o soldado e garantir o seu retorno, com vida, para casa.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Guerra",
+    "Drama",
+    "História"
+  ],
+  "duracao_min": 170,
+  "diretor": "Steven Spielberg",
+  "diretor_transliterado": false,
+  "ano": 1998,
+  "data_estreia": "1998-07-24",
+  "fonte": "tmdb",
+  "tmdb_id": 857,
+  "tmdb_fetched_at": "2026-11-24T05:01:58+00:00",
+  "poster_path": "/hMLxNLCXRDd62acfCBn6mIyW1HU.jpg",
+  "poster_largura": 2000,
+  "poster_altura": 3000,
+  "backdrop_paths": [
+    "/rW2xRFlJRbTnBJlQTSjQmjevIwb.jpg",
+    "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+    "/pNHv41t8Im8wlwgdzMK9I8WpuBZ.jpg",
+    "/pu6wG3bovFBWCD4LdhbGE2GqeP7.jpg",
+    "/9PQHn6EQYvWysbaz6EIjHK6Mu88.jpg",
+    "/mUxmb6Nbk7KrM3C8dZs6zH9rMjq.jpg",
+    "/3E5pvJLNEz5WmYWl6GfFW8hEVV3.jpg",
+    "/z2NFCCvH3joRoTWHuNDS499FypC.jpg",
+    "/hjQp148VjWF4KjzhsD90OCMr11h.jpg",
+    "/pvsJQ4bstJ5k1PbWTHqEHXGMpLP.jpg"
+  ],
+  "backdrop_path": "/rW2xRFlJRbTnBJlQTSjQmjevIwb.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/5SZeEVeHoO1F6YBwgv725CS1yIP.jpg",
+  "poster_sem_texto_largura": 1800,
+  "poster_sem_texto_altura": 2700,
+  "galeria_stills": [
+    {
+      "still_path": "/9PQHn6EQYvWysbaz6EIjHK6Mu88.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/bdD39MpSVhKjxarTxLSfX6baoMP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/3E5pvJLNEz5WmYWl6GfFW8hEVV3.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/3vylgEgdS2qzNXGFhQeMAFB3A6O.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/9oguZXYDMH6X4LOOLiXFf1EtQzP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/pvsJQ4bstJ5k1PbWTHqEHXGMpLP.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/yhrewSJhDFuQjWwlXnStWKNREaS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/dJkZyYpYWo0AkLMi9SiUwIixCKd.jpg",
+      "still_largura": 1846,
+      "still_altura": 1037
+    },
+    {
+      "still_path": "/4un5tg9zSBBi9HqWQJgDYZkfqzg.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/AeBLwkwdQJRNihr3oNvwubDtHH7.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/j9u074CJXK7qJeXTti1B0sYVyKS.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/tRFG3O48yJTX7vmVKH3cGtT6IHW.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "saving-private-ryan",
+    "titulo_letterboxd": "Saving Private Ryan",
+    "ano_letterboxd": 1998,
+    "tmdb_id_letterboxd": 857,
+    "tmdb_id_escolhido": 857,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Saving Private Ryan",
+    "ano_tmdb": 1998,
+    "ano_divergente": false
+  }
+}

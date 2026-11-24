@@ -1,0 +1,114 @@
+{
+  "titulo": "Por uns Dólares a Mais",
+  "sinopse_oficial": "Monco é um astuto caçador de recompensas, que perambula pelas cidades do velho oeste americano em busca de um novo alvo. Ele o encontra quando vê o cartaz de procurado de Índio, um perigoso bandido que também está sendo procurado pelo coronel Douglas Mortimer, outro caçador de recompensas. Os dois partem no encalço de Índio mas, sem conseguir capturar o bandido nem eliminar o rival, eles precisam decidir entre unir forças ou serem eliminados pela gangue de Índio.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Faroeste"
+  ],
+  "duracao_min": 132,
+  "diretor": "Sergio Leone",
+  "diretor_transliterado": false,
+  "ano": 1965,
+  "data_estreia": "1965-12-18",
+  "fonte": "tmdb",
+  "tmdb_id": 938,
+  "tmdb_fetched_at": "2026-11-24T04:54:06+00:00",
+  "poster_path": "/6hunykeSZ1fn6oPSUP1PyCQVu9G.jpg",
+  "poster_largura": 1000,
+  "poster_altura": 1500,
+  "backdrop_paths": [
+    "/hs6OPto38fF589ScpGhl7uSU4MI.jpg",
+    "/x0bQvdpr88xVhMrVM93tEIKSM2q.jpg",
+    "/f61COvOzOOIwx7whPl5Yj78s9gY.jpg",
+    "/bHkyAtb6aeyo0OgJ0mZ3Yd7D9nL.jpg",
+    "/1IG8rQG4iPMqmfavkvyiVxe2jvO.jpg",
+    "/8tbWZYvniZcjFZEX4XiCjrbHgl4.jpg",
+    "/p8wgxReCQPQJS35bqSx3wbHUJF2.jpg",
+    "/da9UtPu25OJTVG5BdRlPwcVcUzM.jpg",
+    "/aVsy01zwKM1EAYeDZ9lZw3Prj3V.jpg",
+    "/evXj4dOXzOZ2CIOewGW2mJ0kGzE.jpg"
+  ],
+  "backdrop_path": "/hs6OPto38fF589ScpGhl7uSU4MI.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/clFCB9AGBGrbdkNIlm05u2fsOzi.jpg",
+  "poster_sem_texto_largura": 1000,
+  "poster_sem_texto_altura": 1426,
+  "galeria_stills": [
+    {
+      "still_path": "/zchwq3VKF6HeKRoVpYSEJI82mPN.jpg",
+      "still_largura": 2000,
+      "still_altura": 1125
+    },
+    {
+      "still_path": "/x0bQvdpr88xVhMrVM93tEIKSM2q.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/b9qR4RWhbioZcQCXKSWbyK8gTE2.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/viAEGTVmmJvcAr1vs6UW4Ve7dp7.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/3ivYlMYaubMdzxaZ4HtZOZBVyG1.jpg",
+      "still_largura": 2275,
+      "still_altura": 1280
+    },
+    {
+      "still_path": "/7gytxr9KPP7kzGpvrvUKCMOy7yT.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/9rtyQ2GIFFjCb1bkBfJzVvGK39I.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/cABtnTwaij67EYiUcXr5WW0LEW9.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/eoqDOICeUyyZsX7u8msZAMWu0H8.jpg",
+      "still_largura": 2284,
+      "still_altura": 1285
+    },
+    {
+      "still_path": "/j63XX5rMGHMh7E3CJrZOmzqgH97.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/pDOcZ2mW5SLajvzF1Wmh9OgtofE.jpg",
+      "still_largura": 1440,
+      "still_altura": 810
+    },
+    {
+      "still_path": "/thbO0j7bJE2OASI6KPuTdwp1Qgv.jpg",
+      "still_largura": 2281,
+      "still_altura": 1282
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "for-a-few-dollars-more",
+    "titulo_letterboxd": "For a Few Dollars More",
+    "ano_letterboxd": 1965,
+    "tmdb_id_letterboxd": 938,
+    "tmdb_id_escolhido": 938,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "title",
+    "titulo_tmdb_correspondente": "For a Few Dollars More",
+    "ano_tmdb": 1965,
+    "ano_divergente": false
+  }
+}

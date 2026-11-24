@@ -1,0 +1,115 @@
+{
+  "titulo": "Perfect Blue",
+  "sinopse_oficial": "Mima Kirigoe é membro de uma banda de música pop japonesa (J-Pop), chamada \"CHAM!\", que decide deixar a banda para se dedicar à carreira de atriz. Alguns fãs ficam descontentes com a repentina mudança de carreira, pois Mima, sendo um ídolo pop, é vista como uma menina inocente e angelical. Conforme avança em sua nova carreira, Mima mergulha em um intenso drama psicológico no qual fantasia e realidade se confundem colocando em dúvida sua ética moral.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Animação",
+    "Thriller"
+  ],
+  "duracao_min": 85,
+  "diretor": "Satoshi Kon",
+  "diretor_transliterado": true,
+  "ano": 1997,
+  "data_estreia": "1998-02-28",
+  "fonte": "tmdb",
+  "tmdb_id": 10494,
+  "tmdb_fetched_at": "2026-11-24T04:58:58+00:00",
+  "poster_path": "/79vujbsWEbX4dzffBV541QXN6sf.jpg",
+  "poster_largura": null,
+  "poster_altura": null,
+  "backdrop_paths": [
+    "/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg",
+    "/1YRtgjLb5xxUb2rsNRnr54Oc0B2.jpg",
+    "/A1Larywbw79kZQqkvCEiPHJqdLN.jpg",
+    "/dVanL4a1kx0mXeZSOhVWSiJ27Pa.jpg",
+    "/ns4vN9p3Z0inYlhh4q9vYXUw3zp.jpg",
+    "/tSkeqUxitsSpjgjThGh7nimCa1K.jpg",
+    "/fWxuKES1cQMKsQTtdORYkhpr9Yq.jpg",
+    "/wqNks7mG1SR8FXQyFnoCW9WksP8.jpg",
+    "/wLQ4Xj8IYBBp5pzQPHlTfxHHK47.jpg",
+    "/hufoIl9u3j0dOKeQy5NUWFK7Kt2.jpg"
+  ],
+  "backdrop_path": "/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/3bB5WTIVR937a0LRYjqnJumNVHf.jpg",
+  "poster_sem_texto_largura": 936,
+  "poster_sem_texto_altura": 1301,
+  "galeria_stills": [
+    {
+      "still_path": "/ffVuTCvpplOntLpwCQWYKXBu42D.jpg",
+      "still_largura": 2534,
+      "still_altura": 1425
+    },
+    {
+      "still_path": "/1YRtgjLb5xxUb2rsNRnr54Oc0B2.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/ns4vN9p3Z0inYlhh4q9vYXUw3zp.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/wLQ4Xj8IYBBp5pzQPHlTfxHHK47.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/pe8uvGKecWx9M312mpJ445R0keP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/hBjbfz07AM2AZG6L6fsbe40OgL0.jpg",
+      "still_largura": 1504,
+      "still_altura": 846
+    },
+    {
+      "still_path": "/1VTYEh0X9qQH48FWCulUtipO8S0.jpg",
+      "still_largura": 1838,
+      "still_altura": 1034
+    },
+    {
+      "still_path": "/4us9f47lzFgpKeW9f63dm8TOnhD.jpg",
+      "still_largura": 2000,
+      "still_altura": 1125
+    },
+    {
+      "still_path": "/8lia1X9oisZt3Pl5G96BZX09kaj.jpg",
+      "still_largura": 2000,
+      "still_altura": 1125
+    },
+    {
+      "still_path": "/cdatoy38Zo94t2TvfIt5KYvBiiQ.jpg",
+      "still_largura": 1842,
+      "still_altura": 1036
+    },
+    {
+      "still_path": "/gKiwsfW0HvvCRYEQGuCUBqmZrGS.jpg",
+      "still_largura": 1824,
+      "still_altura": 1026
+    },
+    {
+      "still_path": "/sbeyVkkCjXTP7och81FcrrymV9U.jpg",
+      "still_largura": 2849,
+      "still_altura": 1604
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "perfect-blue",
+    "titulo_letterboxd": "Perfect Blue",
+    "ano_letterboxd": 1997,
+    "tmdb_id_letterboxd": 10494,
+    "tmdb_id_escolhido": 10494,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "PERFECT BLUE",
+    "ano_tmdb": 1998,
+    "ano_divergente": true
+  }
+}

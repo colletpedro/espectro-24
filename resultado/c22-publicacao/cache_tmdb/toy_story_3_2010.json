@@ -1,0 +1,116 @@
+{
+  "titulo": "Toy Story 3",
+  "sinopse_oficial": "Woody, Buzz e o resto dos brinquedos de Andy não são usados há anos. Com Andy prestes a ir para a faculdade, o grupo acaba por ser deixado acidentalmente numa creche. Os brinquedos devem se unir para escapar e voltar para casa de Andy.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Animação",
+    "Família",
+    "Comédia"
+  ],
+  "duracao_min": 103,
+  "diretor": "Lee Unkrich",
+  "diretor_transliterado": false,
+  "ano": 2010,
+  "data_estreia": "2010-06-16",
+  "fonte": "tmdb",
+  "tmdb_id": 10193,
+  "tmdb_fetched_at": "2026-11-24T05:08:03+00:00",
+  "poster_path": "/rf67AeS9nP8DD7dZYbvhjEVoIBf.jpg",
+  "poster_largura": 950,
+  "poster_altura": 1425,
+  "backdrop_paths": [
+    "/wE5JGzujfvDPMIfFjJyrhXFjZLc.jpg",
+    "/uAfhsySkr1UzQg1zdg3dZQRz9Fd.jpg",
+    "/9w40MpsvyxMdtnwu1R4tPVW8Gmb.jpg",
+    "/csDxOOSjfcJNNRo4ma8ltVynELV.jpg",
+    "/9KX2pn7AU0qdF2nywtveuxLWdjD.jpg",
+    "/hyZzPjogeCxpgbpMp0NikHVLeHi.jpg",
+    "/7zPQm1ulwBRNvVJF0AHrksgopKI.jpg",
+    "/zz1mS1itLl43k6CCf9SQOU0a1Z0.jpg",
+    "/dxQoQNNjMjR2joLg4sGtngGF3ms.jpg",
+    "/nTsypycw2Xaq1eY2eH7D2oCSj7V.jpg"
+  ],
+  "backdrop_path": "/wE5JGzujfvDPMIfFjJyrhXFjZLc.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/8mGSimWqokkAYShbG2r9NRdcGto.jpg",
+  "poster_sem_texto_largura": 1200,
+  "poster_sem_texto_altura": 1800,
+  "galeria_stills": [
+    {
+      "still_path": "/fkH8k6IEzTeGJxdmL55RgCAosHh.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/uAfhsySkr1UzQg1zdg3dZQRz9Fd.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/dxQoQNNjMjR2joLg4sGtngGF3ms.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/u37Qdw7MsfLgV4fxiruBvgAOGMF.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/xeueGM2SDG4AVCEeFjRrdgjbIav.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/5evYJvj6TDip7hOUcJ2PceBQ45I.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2MAnRM26rDZXHiV5pHgWdj83A6h.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/2InmFoxPoa7FkqxhSkxNaCHuWqx.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/5Q5h7vuhcMGBZHbcQcCo4o63ltC.jpg",
+      "still_largura": 2000,
+      "still_altura": 1123
+    },
+    {
+      "still_path": "/nMqheCzCIlELggYwSF1UPMxWjCs.jpg",
+      "still_largura": 3786,
+      "still_altura": 2129
+    },
+    {
+      "still_path": "/jzhy3AG32dfW75fYvkWyVq7uL3n.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/rmQPU5Ljk3iBVTj8QHeHxDGdnNX.jpg",
+      "still_largura": 3803,
+      "still_altura": 2139
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "toy-story-3",
+    "titulo_letterboxd": "Toy Story 3",
+    "ano_letterboxd": 2010,
+    "tmdb_id_letterboxd": 10193,
+    "tmdb_id_escolhido": 10193,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Toy Story 3",
+    "ano_tmdb": 2010,
+    "ano_divergente": false
+  }
+}

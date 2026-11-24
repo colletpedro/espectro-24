@@ -1,0 +1,116 @@
+{
+  "titulo": "Pobres Criaturas",
+  "sinopse_oficial": "A jovem Bella Baxter é trazida de volta à vida pelo cientista Dr. Godwin Baxter. Querendo ver mais do mundo, ela foge com um advogado e viaja pelos continentes. Livre dos preconceitos de sua época, Bella exige igualdade e libertação.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Ficção científica",
+    "Romance",
+    "Comédia"
+  ],
+  "duracao_min": 141,
+  "diretor": "Yorgos Lanthimos",
+  "diretor_transliterado": true,
+  "ano": 2023,
+  "data_estreia": "2023-12-07",
+  "fonte": "tmdb",
+  "tmdb_id": 792307,
+  "tmdb_fetched_at": "2026-11-24T05:00:06+00:00",
+  "poster_path": "/iOdcXYSVzBgmBJzNIlIMOZ6fz0F.jpg",
+  "poster_largura": 1637,
+  "poster_altura": 2458,
+  "backdrop_paths": [
+    "/zh6IdheEYinU4TPtorWsjx6qPQE.jpg",
+    "/h0oBqUpax591vOacpBsDJ8cynjk.jpg",
+    "/cNffd3wkuIYZMelbPRAZ23E5HBT.jpg",
+    "/o6e8Y0Q7RZIWi4qcJq4s5OYOVJs.jpg",
+    "/fS89P93Lq6pyT7d8ox8AMAEtXUs.jpg",
+    "/gsVC7HMf4VR2XFOyqjTSklY2Tms.jpg",
+    "/jp5MBWKaDVBuzaSFHTHGc9kpu51.jpg",
+    "/zCrUFSJKYLtQDpaAIdbNQ50FUpZ.jpg",
+    "/8n011HNULsfcHKpL9VKc58gVSrp.jpg",
+    "/q2E18ybZg0KkpR8nERH67GOGx33.jpg"
+  ],
+  "backdrop_path": "/zh6IdheEYinU4TPtorWsjx6qPQE.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/ubgZ6CiNzKpW77jV8B1FosUY9aR.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/zh6IdheEYinU4TPtorWsjx6qPQE.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/h0oBqUpax591vOacpBsDJ8cynjk.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2jIoYb2PXSvX2NJOkATjDCAy3vL.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/8jzHZjLTXkOTVNO6XeDdHRFRIrh.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/rr9VSr9VEV5XC5bgCPiJJbc2f59.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/A6fPAdIKjU3cWGKHvviizMSWoT6.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2AnpAB7JLRTJd5h0oVO7jKmRF8z.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/66E2EQA8qVGw6zsiRKiigo0xiH2.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/bp51mmgOs0jfycCg9CpJ3W827NL.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/gVPOp5bffB4M554Axx7831by62i.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/ky58Mb7JSUqYHxWc0f3e8PffgOA.jpg",
+      "still_largura": 1696,
+      "still_altura": 954
+    },
+    {
+      "still_path": "/qcvlIcLYjEFt81svX0iZhdFds4H.jpg",
+      "still_largura": 1511,
+      "still_altura": 850
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "poor-things-2023",
+    "titulo_letterboxd": "Poor Things",
+    "ano_letterboxd": 2023,
+    "tmdb_id_letterboxd": 792307,
+    "tmdb_id_escolhido": 792307,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Poor Things",
+    "ano_tmdb": 2023,
+    "ano_divergente": false
+  }
+}

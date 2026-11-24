@@ -1,0 +1,115 @@
+{
+  "titulo": "Nascido Para Matar",
+  "sinopse_oficial": "Um sargento treina de forma fanática e sádica os recrutas em uma base de treinamentos, na intenção de transformá-los em máquinas de guerra para combater na Guerra do Vietnã. Após serem transformados em fuzileiros navais, eles são enviados para a guerra e quando lá chegam se deparam com seus horrores.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Drama",
+    "Guerra"
+  ],
+  "duracao_min": 117,
+  "diretor": "Stanley Kubrick",
+  "diretor_transliterado": false,
+  "ano": 1987,
+  "data_estreia": "1987-06-26",
+  "fonte": "tmdb",
+  "tmdb_id": 600,
+  "tmdb_fetched_at": "2026-11-24T04:55:30+00:00",
+  "poster_path": "/qHm54HjL1F6CFVyYOz6Q2HAPTfS.jpg",
+  "poster_largura": 892,
+  "poster_altura": 1337,
+  "backdrop_paths": [
+    "/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
+    "/yYderAvjtKnYLBxKujVpmKTVlOM.jpg",
+    "/jqfCHNmjJVo5nJnLPM3ww7yqfNm.jpg",
+    "/yozBWKbyeXtPGN75PlHurOaVvEz.jpg",
+    "/7GbaT2GGyQrJtZVLCmzVG2iqMow.jpg",
+    "/gE0hPfimBVA227VvfxDuHGhnyQZ.jpg",
+    "/oHDTOpVLn6qb950LY0z25xQkPs5.jpg",
+    "/mRhwriJCGeTOtlMo5jaqNZQ2tyl.jpg",
+    "/7GdKMuiypkhQqOOGtlj9l6NFD0N.jpg",
+    "/sC8FgrQODaYRWACJIXXAhSDJdZO.jpg"
+  ],
+  "backdrop_path": "/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/b2sjJUZXWxfVHujBaFpNuspIcXB.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/3k2TRmqMjgt7tcwkYwZQdctnty3.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/yYderAvjtKnYLBxKujVpmKTVlOM.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/2lxknMn7EMpDuhFX9Dj2k6lHmEA.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/2cq8DTaRjOOJMQR6DIiKmesPFq8.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/rozrhgoPFiGM9i0569JJiQ2r15r.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/8sGveSeOboM5h43zOfV46yzT7nl.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/e9Oiv7nokIhOoCNfxL0XDzfnu3v.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/hEfbYVLVtVRrtFfC2rDzayItuA2.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/k2aqyjY18YCIhYOgzszQIsgZNn5.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/mtl2aSxFWetR20etNkB11BikuI4.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/q8yNLT8BpHRQ5R6xRuQluWxRXsT.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/tU0eHryoKAAibxWfMjscKLHT7cr.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "full-metal-jacket",
+    "titulo_letterboxd": "Full Metal Jacket",
+    "ano_letterboxd": 1987,
+    "tmdb_id_letterboxd": 600,
+    "tmdb_id_escolhido": 600,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Full Metal Jacket",
+    "ano_tmdb": 1987,
+    "ano_divergente": false
+  }
+}

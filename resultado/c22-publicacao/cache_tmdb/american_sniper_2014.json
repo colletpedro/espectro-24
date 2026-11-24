@@ -1,0 +1,115 @@
+{
+  "titulo": "Sniper Americano",
+  "sinopse_oficial": "Chris Kyle é um atirador de elite das forças especiais da marinha dos Estados Unidos. Durante a Guerra do Iraque, sua missão é proteger seus companheiros e seu dever faz dele um dos maiores atiradores da história norte-americana. Sua precisão salva inúmeras vidas, mas também o torna um alvo preferencial. Quando Kyle finalmente volta para casa, ele descobre que não tem como deixar a guerra para trás.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Guerra",
+    "Ação"
+  ],
+  "duracao_min": 132,
+  "diretor": "Clint Eastwood",
+  "diretor_transliterado": false,
+  "ano": 2014,
+  "data_estreia": "2014-12-25",
+  "fonte": "tmdb",
+  "tmdb_id": 190859,
+  "tmdb_fetched_at": "2026-11-24T04:50:03+00:00",
+  "poster_path": "/mAXzc2oDTTYcnn6IGHlSXvmXloG.jpg",
+  "poster_largura": 1400,
+  "poster_altura": 2100,
+  "backdrop_paths": [
+    "/rl95VDEP3nsUQmGzE0S1S7y6T0N.jpg",
+    "/nrpivVyJjRQqVDhRTZWVPWqYwQp.jpg",
+    "/h48CBoEpOh4h9ykSfWVxVOQlIs2.jpg",
+    "/dcqI4l0vvGAyLsGGxobNsCVQdNK.jpg",
+    "/p1OUTSc4w7979JaH1mSp4p2FgXQ.jpg",
+    "/smAnf46gZL1jXuP9nZvkM3Uynav.jpg",
+    "/8y8Ey2XssEl8EYCgnaMaV0AQAUJ.jpg",
+    "/kX8MhxjD83ikllgEyMVN0agUHsJ.jpg",
+    "/p4WRCmUTy6i2o31LblJ2f8Bp8VM.jpg",
+    "/mfq6XYwSVDTdZu4qeJ7HYPu7KmA.jpg"
+  ],
+  "backdrop_path": "/rl95VDEP3nsUQmGzE0S1S7y6T0N.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/wvYHTgPv5BiBw2Bl5RFlvRzgKqU.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/rl95VDEP3nsUQmGzE0S1S7y6T0N.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/nrpivVyJjRQqVDhRTZWVPWqYwQp.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/dcqI4l0vvGAyLsGGxobNsCVQdNK.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/p1OUTSc4w7979JaH1mSp4p2FgXQ.jpg",
+      "still_largura": 1280,
+      "still_altura": 720
+    },
+    {
+      "still_path": "/1OOp8VKsbv64hStydIxepMxn85d.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/6QUIEg3CJhHP7an10gwAAiKlzk7.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/9MjrNKVMMuZlmHzJkIdgIPdfyUP.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/aVEkkoLLCR7aKZO8gknQegzTUef.jpg",
+      "still_largura": 1600,
+      "still_altura": 900
+    },
+    {
+      "still_path": "/eKyKypA1Lo9bh6kWiBdY7NwZ7ve.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/jnzMSpgArtuKIhmRWhEXaOngtxa.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/tzatSIWeqfGmFVr3ZVwClAchOEo.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/uTqu1vSBjhaB7U94guT2ZYMFMJ5.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "american-sniper",
+    "titulo_letterboxd": "American Sniper",
+    "ano_letterboxd": 2014,
+    "tmdb_id_letterboxd": 190859,
+    "tmdb_id_escolhido": 190859,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "American Sniper",
+    "ano_tmdb": 2014,
+    "ano_divergente": false
+  }
+}

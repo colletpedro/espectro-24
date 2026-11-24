@@ -1,0 +1,117 @@
+{
+  "titulo": "Como Treinar o Seu Dragão",
+  "sinopse_oficial": "Soluço é um jovem viking que desafia a tradição, quando fica amigo de um dos mais mortais inimigos — um feroz dragão que ele chama de Banguela.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Fantasia",
+    "Aventura",
+    "Animação",
+    "Família"
+  ],
+  "duracao_min": 98,
+  "diretor": "Chris Sanders",
+  "diretor_transliterado": false,
+  "ano": 2010,
+  "data_estreia": "2010-03-18",
+  "fonte": "tmdb",
+  "tmdb_id": 10191,
+  "tmdb_fetched_at": "2026-11-24T04:57:55+00:00",
+  "poster_path": "/spZbO7Ss6U9W5zSHjtH6FvXvCF7.jpg",
+  "poster_largura": 1600,
+  "poster_altura": 2400,
+  "backdrop_paths": [
+    "/59vDC1BuEQvti24OMr0ZvtAK6R1.jpg",
+    "/kxklJL1v8MYEU5xdU6W5VvmBwVz.jpg",
+    "/aH9KWmXFMamXkHMgLjnQmSYjScL.jpg",
+    "/m7r1aqoLym8dGpcluAe6LM2ut19.jpg",
+    "/25pgiBaB0wjtrqLbckOKFYIwnz1.jpg",
+    "/zYltonEJitG5EYciuJEgbMTKjSB.jpg",
+    "/oISEAAMfwAZiY4qwzcLdu9L46QC.jpg",
+    "/oDDn6y7XOwhc3Zu78LDUivUOICn.jpg",
+    "/a67v8BFdKg1wnepNYhBqoU7eTZf.jpg",
+    "/q8wEfjOhHbRyik1gQui0c3rh3pm.jpg"
+  ],
+  "backdrop_path": "/59vDC1BuEQvti24OMr0ZvtAK6R1.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/gHQ5EIlUAhuXyOuxNfrVQMv3AU.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/59vDC1BuEQvti24OMr0ZvtAK6R1.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/kxklJL1v8MYEU5xdU6W5VvmBwVz.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/v529QdjxwGKmJycQWnJj6qGSpta.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/1lvpdNgh6gbXpKC71Tvm4b7CzQ6.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/5MzHU46ty5vnrq4wjTmdsQiJZ8C.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/9LQ2dqR8kht91AOAKSBq179DyuX.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/bpUQYX07OAhmHoh7Ssy0VpY3jGF.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/fpEeYiRZwC6atxSpPOuYv62vdoy.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/l1TasC6wquqQjcVlAzwg9xmgbIz.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/pCYn5SBYDn1CNq9e6VsmDdNbhm8.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/rlaTwTm5HRrBnOPZB6rsSQcRanj.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    },
+    {
+      "still_path": "/wQxfLVswJVn2zKpIqASis3l2LU5.jpg",
+      "still_largura": 1451,
+      "still_altura": 816
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "how-to-train-your-dragon",
+    "titulo_letterboxd": "How to Train Your Dragon",
+    "ano_letterboxd": 2010,
+    "tmdb_id_letterboxd": 10191,
+    "tmdb_id_escolhido": 10191,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "How to Train Your Dragon",
+    "ano_tmdb": 2010,
+    "ano_divergente": false
+  }
+}

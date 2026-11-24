@@ -1,0 +1,115 @@
+{
+  "titulo": "Harry Potter e as Relíquias da Morte - Parte 1",
+  "sinopse_oficial": "Harry, Ron e Hermione estão determinados em sua missão de descobrir e acabar com o segredo da imortalidade e do poder de destruição de Voldemort – os Horcruxes. Fugitivos e sozinhos, os três amigos devem apenas contar uns com os outros, agora mas do que nunca... Mas as Forças das Trevas no caminho ameaçam separá-los para sempre.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Aventura",
+    "Fantasia"
+  ],
+  "duracao_min": 146,
+  "diretor": "David Yates",
+  "diretor_transliterado": false,
+  "ano": 2010,
+  "data_estreia": "2010-11-17",
+  "fonte": "tmdb",
+  "tmdb_id": 12444,
+  "tmdb_fetched_at": "2026-11-24T04:56:15+00:00",
+  "poster_path": "/67FVFOTaeBUQnimhCWpUkDawDct.jpg",
+  "poster_largura": 1067,
+  "poster_altura": 1600,
+  "backdrop_paths": [
+    "/slW0M2G9txC0aUbftCTm1nYX1K8.jpg",
+    "/AqLcLsGGTzAjm3pCCq0CZCQrp6m.jpg",
+    "/fXRXpzxUApE3OuXhIqsdavQjCVa.jpg",
+    "/39kg1yGt9qxPwMuG1a5ysfe3gfG.jpg",
+    "/vcrgU0KaNj5mKUCIQSUdiQwTE9y.jpg",
+    "/5i2QAYnbN5vOZUUolLPYHTb9spe.jpg",
+    "/p2M4xlipwlqUzglAlF2KDlTqeLV.jpg",
+    "/aB8oGw8hXndZ2YYUimn5IxSthQw.jpg",
+    "/qhKA5iCTGY1CJRYiNYHxfEZJeFU.jpg",
+    "/kXdXwK6AsUSdywN33McJ6MXLpfH.jpg"
+  ],
+  "backdrop_path": "/slW0M2G9txC0aUbftCTm1nYX1K8.jpg",
+  "backdrop_largura": 3840,
+  "backdrop_altura": 2160,
+  "poster_sem_texto_path": "/iEAuvMhBXObniBiZFBa88zuT3Yn.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/slW0M2G9txC0aUbftCTm1nYX1K8.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/AqLcLsGGTzAjm3pCCq0CZCQrp6m.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/vcrgU0KaNj5mKUCIQSUdiQwTE9y.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/tHabY8eKqTo2iPIdquymOkcG1ah.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/peTldpC9Jn9kwLf9eDlEk3Onmin.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/9ZF7MMO3muo8JjaLbi6kZBwxfRc.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/xK602y6LlnqTWbk0SRwbmU4rEcA.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/6JSaEiLbBn6060Kmfs1IsuCGd6r.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/cnQSQjomBY2YQOc0Guu1tEMaMgc.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/mvUKh8lfFLVj4mVCNWS9AgvSs4b.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/4bDTrqMBgUTInMbpQFQ5nmvsUyW.jpg",
+      "still_largura": 2048,
+      "still_altura": 1152
+    },
+    {
+      "still_path": "/mMERCUki1obwPAiOASLJmnHhLEK.jpg",
+      "still_largura": 3200,
+      "still_altura": 1800
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "harry-potter-and-the-deathly-hallows-part-1",
+    "titulo_letterboxd": "Harry Potter and the Deathly Hallows: Part 1",
+    "ano_letterboxd": 2010,
+    "tmdb_id_letterboxd": 12444,
+    "tmdb_id_escolhido": 12444,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Harry Potter and the Deathly Hallows: Part 1",
+    "ano_tmdb": 2010,
+    "ano_divergente": false
+  }
+}

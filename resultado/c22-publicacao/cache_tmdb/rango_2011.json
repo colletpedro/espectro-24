@@ -1,0 +1,118 @@
+{
+  "titulo": "Rango",
+  "sinopse_oficial": "Rango é um camaleão da cidade grande que vai parar, após um acidente, em pleno velho oeste, na cidade de Poeira no deserto do Mojave, na Califórnia. De uma hora para outra, sua rotina de animal de estimação mudou radicalmente e agora ele precisa deixar a vida \"camuflada\" para enfrentar os perigos existentes no mundo real, fazendo com que ele vivencie a experiência de fazer amigos, conhecer inimigos e até, quem sabe, se tornar um herói.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Animação",
+    "Comédia",
+    "Família",
+    "Faroeste",
+    "Aventura"
+  ],
+  "duracao_min": 107,
+  "diretor": "Gore Verbinski",
+  "diretor_transliterado": false,
+  "ano": 2011,
+  "data_estreia": "2011-03-02",
+  "fonte": "tmdb",
+  "tmdb_id": 44896,
+  "tmdb_fetched_at": "2026-11-24T05:01:39+00:00",
+  "poster_path": "/q00r635a64HWSg0Zj4tDoA6Yefd.jpg",
+  "poster_largura": 1400,
+  "poster_altura": 2100,
+  "backdrop_paths": [
+    "/mOtKQlXdL5J4lwqcSFlkZmgmFeZ.jpg",
+    "/6B2tOYhaIpv3kPKBkvdebX624Gw.jpg",
+    "/zFpubwUpkUpKw71u4KkfJaJ5126.jpg",
+    "/7dp5f7YPNBSuDJ1F2ae96eCzuSU.jpg",
+    "/qXuwcdfjs868pQW1clEUgQpCepZ.jpg",
+    "/qcpnE7QMjPjS2VYMfpzPaRNCzsj.jpg",
+    "/tEIPATQFiqm92M10jhASG9WqYW7.jpg",
+    "/351FKulpjWbwT4rqYsm2C1EQEo1.jpg",
+    "/sVMj6nkxI3epOWL4kTFkZngWAmF.jpg",
+    "/anSPPInN5tY6Bk1sOwLLTJAFzTq.jpg"
+  ],
+  "backdrop_path": "/6B2tOYhaIpv3kPKBkvdebX624Gw.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/dXtWKg363Inv9RGJzDxXZl5SFMf.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 3000,
+  "galeria_stills": [
+    {
+      "still_path": "/nOc10mbFKxWxJ6OzjoivSF3q4wu.jpg",
+      "still_largura": 2400,
+      "still_altura": 1350
+    },
+    {
+      "still_path": "/7dp5f7YPNBSuDJ1F2ae96eCzuSU.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/351FKulpjWbwT4rqYsm2C1EQEo1.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/sVMj6nkxI3epOWL4kTFkZngWAmF.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/6VOugswiq1nW05M9935fSTu3QVQ.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/A8qBxVrcnVjFgoOsR0w8MJYGGA9.jpg",
+      "still_largura": 1422,
+      "still_altura": 800
+    },
+    {
+      "still_path": "/dKKeoEEIyXyUwZyrZzUk4eUO1X6.jpg",
+      "still_largura": 2844,
+      "still_altura": 1600
+    },
+    {
+      "still_path": "/gMuwlLkl4LxoA7ku6HYCIjPr6GY.jpg",
+      "still_largura": 1423,
+      "still_altura": 800
+    },
+    {
+      "still_path": "/khkxQWeXznqSxNIAwjTbIUZtdCA.jpg",
+      "still_largura": 2844,
+      "still_altura": 1600
+    },
+    {
+      "still_path": "/oAYSBHYQj800BG3qqcGvBCDIpr2.jpg",
+      "still_largura": 2174,
+      "still_altura": 1223
+    },
+    {
+      "still_path": "/sLCbhHuC2DIQf4aHA4RpPAXA2N3.jpg",
+      "still_largura": 2560,
+      "still_altura": 1440
+    },
+    {
+      "still_path": "/wOum52oI9xuNdfnEBKL9a4uY8zQ.jpg",
+      "still_largura": 2844,
+      "still_altura": 1600
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "rango",
+    "titulo_letterboxd": "Rango",
+    "ano_letterboxd": 2011,
+    "tmdb_id_letterboxd": 44896,
+    "tmdb_id_escolhido": 44896,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Rango",
+    "ano_tmdb": 2011,
+    "ano_divergente": false
+  }
+}

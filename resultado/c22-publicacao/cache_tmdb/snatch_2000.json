@@ -1,0 +1,115 @@
+{
+  "titulo": "Snatch: Porcos e Diamantes",
+  "sinopse_oficial": "Quando o ladrão de joias Franky Quatro-Dedos faz uma parada em Londres, antes de entregar um enorme diamante roubado para o seu chefe em Nova York, ele não tinha a menor ideia da avalanche de acontecimentos sinistros e cômicos que abalariam o mundo do boxe, dos ciganos irlandeses, das lojas de penhores, das fazendas de porcos e... de um cão vira-latas.",
+  "sinopse_fallback_en": false,
+  "generos": [
+    "Crime",
+    "Comédia"
+  ],
+  "duracao_min": 103,
+  "diretor": "Guy Ritchie",
+  "diretor_transliterado": false,
+  "ano": 2000,
+  "data_estreia": "2000-09-01",
+  "fonte": "tmdb",
+  "tmdb_id": 107,
+  "tmdb_fetched_at": "2026-11-24T05:02:52+00:00",
+  "poster_path": "/fnbXu4HYTsOvbibOjnq8zF0Q7pe.jpg",
+  "poster_largura": 1333,
+  "poster_altura": 2000,
+  "backdrop_paths": [
+    "/32V4uHVRU2fbDsQl1dsYsZm3uba.jpg",
+    "/gTghF8ardwJ48XLHkiapWk3ZmSo.jpg",
+    "/zruCX3vPPFnFFf4GqTOoegyczBT.jpg",
+    "/9kUo0V2JFxIinzANPMdJ5aOtQXK.jpg",
+    "/jFKM4cMVeoXKy8Vez3RcV60WgNJ.jpg",
+    "/ysKahAEPP8h6MInuLjr0xuZOTjh.jpg",
+    "/oamoFZS2ok4JCIgsWu5lOC6rAr4.jpg",
+    "/zfDunJqllYI4V5XE2PkKo3mZk6x.jpg",
+    "/kg6Dl2ldqG9CrtqH8OBViM3dvTU.jpg",
+    "/1UnjPqG1d730s135O5tAALt2ted.jpg"
+  ],
+  "backdrop_path": "/32V4uHVRU2fbDsQl1dsYsZm3uba.jpg",
+  "backdrop_largura": 1920,
+  "backdrop_altura": 1080,
+  "poster_sem_texto_path": "/fPrCXcSWoOrLBOkeYY4wSYPLVhY.jpg",
+  "poster_sem_texto_largura": 2000,
+  "poster_sem_texto_altura": 2963,
+  "galeria_stills": [
+    {
+      "still_path": "/MNfRkGXbIGWTAUQStO8XHswcYh.jpg",
+      "still_largura": 2898,
+      "still_altura": 1630
+    },
+    {
+      "still_path": "/llq1uA10ybzdrrGr1ZfOmpIZXN3.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/zfDunJqllYI4V5XE2PkKo3mZk6x.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/kg6Dl2ldqG9CrtqH8OBViM3dvTU.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/mCukYtbduu32UmRw1OAHpAWcKem.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/q9cpIQn76HHam2G6h36EFYTZExH.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/4igeVes6nIsK3rEUaHkcpDm9kRW.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/8d41ly1QZcUUQTb3Dlp9MzBmJRH.jpg",
+      "still_largura": 1849,
+      "still_altura": 1040
+    },
+    {
+      "still_path": "/ebuk7XniomwE2xvqcPAlZoK8qqv.jpg",
+      "still_largura": 3840,
+      "still_altura": 2160
+    },
+    {
+      "still_path": "/gKKenfYRuSthziZamgDdHgEBtvy.jpg",
+      "still_largura": 2838,
+      "still_altura": 1596
+    },
+    {
+      "still_path": "/qhMBQjUIdc4OtQ8lB31Rg0Ngq1P.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    },
+    {
+      "still_path": "/ugNbY67gAjWC7hrXzL6MF4VEJk9.jpg",
+      "still_largura": 1920,
+      "still_altura": 1080
+    }
+  ],
+  "ano_fonte": "letterboxd",
+  "identidade": {
+    "versao": 1,
+    "status": "validada",
+    "slug": "snatch",
+    "titulo_letterboxd": "Snatch",
+    "ano_letterboxd": 2000,
+    "tmdb_id_letterboxd": 107,
+    "tmdb_id_escolhido": 107,
+    "fonte_id": "letterboxd",
+    "titulo_tmdb_campo": "original_title",
+    "titulo_tmdb_correspondente": "Snatch",
+    "ano_tmdb": 2000,
+    "ano_divergente": false
+  }
+}
