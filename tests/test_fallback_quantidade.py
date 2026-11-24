@@ -139,3 +139,39 @@ def test_local_so_por_pedido_explicito(monkeypatch):
 def test_local_nao_serve_a_prosa():
     with pytest.raises(S.ProviderError):
         S._resolve_call_and_model(None, None, "local", prosa=True)
+
+
+# --- o fallback isolado (usado para rodar só nos buckets pendentes, sem regerar a 1ª chamada) ----
+
+def _chamar(cliente):
+    """O `chamar` de dentro de synthesize_bucket tem (system, user); o modelo já está dentro."""
+    return lambda system, user: cliente(system, user, "m")
+
+
+def _temas(*exemplos):
+    return S._construir_temas(json.loads(_resp(list(exemplos))), 6)
+
+
+def test_aplicar_fallback_isolado_sem_pendente_nao_chama():
+    c = Cliente()
+    t = _temas("A fotografia chama atenção.")
+    saida = S.aplicar_fallback_quantidade(_chamar(c), "sys", "user", 6, t, "obs", True, True)
+    assert saida == (t, "obs", True, True, None) and not c.systems
+
+
+def test_aplicar_fallback_isolado_aceita_e_devolve_o_novo_estado():
+    c = Cliente(_resp([LIMPO, "A trilha é marcante."]))
+    t = _temas(PENDENTE, "A trilha é marcante.")
+    assert any(x.quantidade_pendente for x in t)
+    temas, obs, idioma_ok, escopo_ok, desfecho = S.aplicar_fallback_quantidade(
+        _chamar(c), "sys", "user", 6, t, "obs", True, True)
+    assert desfecho == "aceito" and c.systems == ["sys" + _REFORCO_QUANTIDADE]
+    assert not any(x.quantidade_pendente for x in temas) and len(temas) == 2
+    assert obs == "Este grupo tem opiniões mistas." and idioma_ok and escopo_ok
+
+
+def test_aplicar_fallback_isolado_recusado_devolve_o_original():
+    c = Cliente(_resp([LIMPO]))                      # mudou o número de bullets
+    t = _temas(PENDENTE, "A trilha é marcante.")
+    temas, obs, *_resto, desfecho = S.aplicar_fallback_quantidade(_chamar(c), "s", "u", 6, t, "obs", True, True)
+    assert desfecho == "recusado_n_bullets" and temas is t and obs == "obs"

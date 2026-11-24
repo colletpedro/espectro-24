@@ -2174,6 +2174,45 @@ def _construir_temas(data: dict, n_analisadas: int) -> list[Tema]:
     return temas
 
 
+def aplicar_fallback_quantidade(chamar, system: str, user: str, n_analisadas: int,
+                                temas: list[Tema], observacao_geral: str,
+                                idioma_ok: bool, escopo_ok: bool,
+                                ) -> tuple[list[Tema], str, bool, bool, str | None]:
+    """Fallback da guarda de quantidade (2026-11-23).
+
+    A guarda reescreve o que tem regra segura; o que sobrou (`quantidade_pendente`, ou palavra da
+    lista no nome do tema) ganha UMA nova chamada deste bucket com reforço. Aceita só se mantiver o
+    MESMO número de temas (nenhum bullet é removido, juntado ou criado), não piorar idioma/escopo e
+    reduzir os pendentes; senão fica o texto original, pendente e marcado. Erro da chamada extra não
+    derruba um bucket já válido. Sem pendente, não chama e devolve `None` no desfecho.
+
+    Devolve `(temas, observacao_geral, idioma_ok, escopo_ok, desfecho)`; o desfecho é um de
+    "aceito" | "recusado_n_bullets" | "recusado_sem_ganho" | "recusado_json" | "recusado_validacao" |
+    "recusado_erro_chamada" | None.
+    """
+    if not _n_quantidade_pendente(temas):
+        return temas, observacao_geral, idioma_ok, escopo_ok, None
+    fallback_q = "recusado_sem_ganho"
+    try:
+        raw_q = chamar(system + _REFORCO_QUANTIDADE, user)
+        data_q = _parse_sintese(raw_q)
+        temas_q = _construir_temas(data_q, n_analisadas)
+        obs_q = str(data_q.get("observacao_geral", ""))
+    except (ValueError, json.JSONDecodeError):
+        return temas, observacao_geral, idioma_ok, escopo_ok, "recusado_json"
+    except LLMError:
+        return temas, observacao_geral, idioma_ok, escopo_ok, "recusado_erro_chamada"
+    idioma_q = _idioma_e_pt_br(_texto_para_checagem_idioma(temas_q, obs_q))
+    escopo_q = not _tem_marcador_de_escopo(obs_q)
+    if len(temas_q) != len(temas):
+        fallback_q = "recusado_n_bullets"
+    elif (idioma_ok and not idioma_q) or (escopo_ok and not escopo_q):
+        fallback_q = "recusado_validacao"
+    elif _n_quantidade_pendente(temas_q) < _n_quantidade_pendente(temas):
+        return temas_q, obs_q, idioma_q, escopo_q, "aceito"
+    return temas, observacao_geral, idioma_ok, escopo_ok, fallback_q
+
+
 def synthesize_bucket(bucket: BucketResult, client_call=None,
                       model: str | None = None,
                       provider: str | None = None, *,
@@ -2251,34 +2290,12 @@ def synthesize_bucket(bucket: BucketResult, client_call=None,
         except (ValueError, json.JSONDecodeError):
             pass  # retentativa não parseou -> mantém o resultado original
 
-    # Fallback da guarda de quantidade: a guarda reescreve o que tem regra segura; o que sobrou
-    # (`quantidade_pendente`, ou palavra da lista no nome do tema) ganha UMA nova chamada deste
-    # bucket com reforço. Aceita só se mantiver o MESMO número de temas (nenhum bullet é removido,
-    # juntado ou criado), não piorar idioma/escopo e reduzir os pendentes; senão fica o texto
-    # original, pendente e marcado. Erro da chamada extra não derruba um bucket já válido.
+    # Fallback da guarda de quantidade (ver `aplicar_fallback_quantidade`): UMA nova chamada deste
+    # bucket com reforço, só se sobrou `quantidade_pendente`.
     fallback_q = None
-    if fallback_quantidade and _n_quantidade_pendente(temas):
-        fallback_q = "recusado_sem_ganho"
-        try:
-            raw_q = chamar(system + _REFORCO_QUANTIDADE, user)
-            data_q = _parse_sintese(raw_q)
-            temas_q = _construir_temas(data_q, n_analisadas)
-            obs_q = str(data_q.get("observacao_geral", ""))
-        except (ValueError, json.JSONDecodeError):
-            fallback_q = "recusado_json"
-        except LLMError:
-            fallback_q = "recusado_erro_chamada"
-        else:
-            idioma_q = _idioma_e_pt_br(_texto_para_checagem_idioma(temas_q, obs_q))
-            escopo_q = not _tem_marcador_de_escopo(obs_q)
-            if len(temas_q) != len(temas):
-                fallback_q = "recusado_n_bullets"
-            elif (idioma_ok and not idioma_q) or (escopo_ok and not escopo_q):
-                fallback_q = "recusado_validacao"
-            elif _n_quantidade_pendente(temas_q) < _n_quantidade_pendente(temas):
-                temas, observacao_geral = temas_q, obs_q
-                idioma_ok, escopo_ok = idioma_q, escopo_q
-                fallback_q = "aceito"
+    if fallback_quantidade:
+        temas, observacao_geral, idioma_ok, escopo_ok, fallback_q = aplicar_fallback_quantidade(
+            chamar, system, user, n_analisadas, temas, observacao_geral, idioma_ok, escopo_ok)
 
     bucket.temas = temas
     bucket.observacao_geral = observacao_geral
