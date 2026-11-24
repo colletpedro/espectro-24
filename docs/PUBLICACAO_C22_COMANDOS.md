@@ -12,7 +12,7 @@ veredito do C22 (`finetune/RESULTADO_C22.md`: C1–C4 e C6 passam) é registro d
 | 30 filmes restantes | **dependem da leitura do dono** (passos 6–7) |
 | Buckets do C22 com `quantidade_pendente` | **16 de 105** (19 bullets). Dois são dos filmes do C6: `american-sniper/positivas` e `the-simpsons-movie/positivas` |
 | Bucket reprovado no C4 | 1 (`harry-potter-and-the-deathly-hallows-part-1`, 2 de 3 buckets válidos) |
-| Conferência TMDB dos 35 | `scripts/conferir_tmdb_c22.py` (grátis, rodando no Mac; resultado em `resultado/c22-publicacao/tmdb_conferencia.json`) |
+| Conferência TMDB dos 35 | **feita (MEDIDO): 35 validados, 0 divergentes, custo US$ 0** (`resultado/c22-publicacao/tmdb_conferencia.json`; só Perfect Blue tem ano 1997 no Letterboxd e 1998 no TMDB, evidência e não reprovação) |
 | Fallback só nos 16 pendentes | `scripts/finetune/c22_fallback.py` (listar / rodar / aplicar), testado com cliente falso; **nenhuma chamada real foi feita** |
 | Documento de leitura em 3 lotes | `scripts/finetune/c22_leitura.py lotes` (precisa do passo 4) |
 | **Montagem do `resultado/<slug>.json` dos filmes C22** | **NÃO CONSTRUÍDA** (ver "Decisão em aberto"); sem ela não há condições nem publicação |
@@ -74,7 +74,7 @@ cd ~/Downloads/espectro-24-finetune && git pull
 Grava `finetune/c22/producao/<slug>__<bucket>.json` (105) e o manifesto com sha256. Mostra quantos fallbacks foram
 aceitos/recusados e quantos bullets seguem pendentes.
 
-**5. (Mac) Identidade TMDB** (grátis; já rodando — o Claude mostra o resultado)
+**5. (Mac) Identidade TMDB — JÁ FEITA** (35/35 validados; para refazer:)
 ```bash
 cd ~/Downloads/espectro-24 && venv/bin/python scripts/conferir_tmdb_c22.py
 ```
