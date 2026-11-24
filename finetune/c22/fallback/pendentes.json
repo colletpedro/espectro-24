@@ -1,0 +1,120 @@
+{
+ "gerado_por": "scripts/finetune/c22_fallback.py listar",
+ "buckets_total": 105,
+ "buckets_pendentes": 16,
+ "bullets_pendentes": 19,
+ "itens": [
+  {
+   "slug": "1917",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "8f40d8a20253a3ddd03ba1b9a80ee5f275f8b74b4e2b53ec50a49043281621b4"
+  },
+  {
+   "slug": "a-fistful-of-dollars",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "aaf965ac7893bd4de7940ab542d4a1725cb4c7c1c6cfaa016b27220b77b24587"
+  },
+  {
+   "slug": "american-sniper",
+   "bucket": "positivas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "e1fb9ce7192bde4c87c75daa054548f1283bc8e2d5f1db0acbff5432c7b98c6d"
+  },
+  {
+   "slug": "detachment",
+   "bucket": "medianas",
+   "n_pendentes": 2,
+   "n_temas": 6,
+   "sintese_sha256": "89bd2002c24433db62a639f0a97666ae27183ded570c44d7874be9fa20738f31"
+  },
+  {
+   "slug": "harry-potter-and-the-deathly-hallows-part-1",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "87e328da5d7700c32590e7e878e5df0adb50ccc9c1e91dd0d83ed57c454483f9"
+  },
+  {
+   "slug": "how-to-train-your-dragon",
+   "bucket": "medianas",
+   "n_pendentes": 2,
+   "n_temas": 6,
+   "sintese_sha256": "5882a33f445d6699baff0723d0ccfa39847af04bcd0717d42a94391bbe01dc8d"
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "5265521c956506694b38025299a9690a47ea5c4da8e52dd68e3a19ba10534874"
+  },
+  {
+   "slug": "kill-bill-vol-2",
+   "bucket": "positivas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "a1e604e60ec463473cb73b798466b19e408e27ccaccb8f3d4614d71a2681d14c"
+  },
+  {
+   "slug": "men-in-black",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "e23e3e4b735a0b4ead10e032373f5ef90c2b94cfe05b7a9a3f67e9f86f6d611c"
+  },
+  {
+   "slug": "poor-things-2023",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "ac5b5551431174dad097acd2ec8e0147a0886f36047b4cd10ad38be9416a53bf"
+  },
+  {
+   "slug": "rango",
+   "bucket": "positivas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "0b3c15f9902ab340b3518a5a61478b06b3755a91981583493ce2ab36a53952c7"
+  },
+  {
+   "slug": "saving-private-ryan",
+   "bucket": "positivas",
+   "n_pendentes": 2,
+   "n_temas": 6,
+   "sintese_sha256": "f5758303d5cd2a2a39411dcd06af50703ac6c2985eb1dfda8adec84692d472c8"
+  },
+  {
+   "slug": "the-dark-knight",
+   "bucket": "medianas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "81e1b438e2f47de0247e874e884cf200e4a2ce37558b16c4054cddf6236f877d"
+  },
+  {
+   "slug": "the-good-the-bad-and-the-ugly",
+   "bucket": "positivas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "87f316d540fd58aee7b6c1ceca70c445674c2324c2175d20fda83f7b43db2574"
+  },
+  {
+   "slug": "the-simpsons-movie",
+   "bucket": "positivas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "f3b00e10402f774b62e5dda39c51de25cf31a0e84f18938deda6b92c7d7858dc"
+  },
+  {
+   "slug": "toy-story-3",
+   "bucket": "negativas",
+   "n_pendentes": 1,
+   "n_temas": 6,
+   "sintese_sha256": "35cb71d95080343f62d5e5391f89e636531ba56f58e8876249c190f8a9d4db92"
+  }
+ ]
+}
