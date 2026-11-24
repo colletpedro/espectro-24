@@ -92,8 +92,47 @@ def test_montar_producao_so_substitui_o_aceito(tmp_path):
     recusado = FB.rodar_um(_registro("b", "medianas"), _entrada(), lambda s, u: _resp([PENDENTE, "x"]))
     (fb / "a__medianas.json").write_text(json.dumps(aceito))
     (fb / "b__medianas.json").write_text(json.dumps(recusado))
-    por = {f"{r['slug']}": r for r in FB.montar_producao(sint, fb)}
+    por = {f"{r['slug']}": r for r in FB.montar_producao(sint, fb, tmp_path / 'rg', validar=False)}
     assert por["a"]["origem"] == "c22_fallback_aceito" and por["a"]["pendentes_depois"] == 0
     assert por["b"]["origem"] == "c22_fallback_recusado_sem_ganho" and por["b"]["pendentes_depois"] == 1
     assert por["c"]["origem"] == "c22_sem_fallback" and por["c"]["quantidade_fallback"] is None
     assert por["d"]["origem"] == "c22_pendente_sem_fallback_rodado"
+
+
+def test_bucket_reprovado_so_volta_se_a_regeracao_passou(tmp_path, monkeypatch):
+    sint, fb, rg = tmp_path / "s", tmp_path / "f", tmp_path / "r"
+    for d in (sint, fb, rg):
+        d.mkdir()
+    for slug in ("hp", "ok"):
+        (sint / f"{slug}__positivas.json").write_text(json.dumps(
+            {**_registro(slug, "positivas", ("A trilha é marcante.", "y")), "json_parseia": True}))
+    # os validadores reprovam o bucket de `hp` (observacao_geral vazia) e aprovam o de `ok`
+    monkeypatch.setattr(FB, "validadores_do_bucket",
+                        lambda bf, j=True: {"passa_publicado": bf.get("observacao_geral") != "VAZIA", "reprovados": []})
+    reg = json.loads((sint / "hp__positivas.json").read_text())
+    reg["bucket_final"]["observacao_geral"] = "VAZIA"
+    (sint / "hp__positivas.json").write_text(json.dumps(reg))
+    por = {r["slug"]: r for r in FB.montar_producao(sint, fb, rg)}
+    assert por["hp"]["ok"] is False and por["hp"]["origem"] == "c22_reprovado_nos_validadores"
+    assert por["ok"]["ok"] is True
+    novo = _registro("hp", "positivas", ("A trilha é marcante.", "y"))["bucket_final"]
+    (rg / "hp__positivas.json").write_text(json.dumps({"passa": False, "quantidade_fallback": None, "bucket_final": novo}))
+    assert FB.montar_producao(sint, fb, rg)[0]["origem"] == "c22_regeracao_reprovada"
+    (rg / "hp__positivas.json").write_text(json.dumps({"passa": True, "quantidade_fallback": None, "bucket_final": novo}))
+    por = {r["slug"]: r for r in FB.montar_producao(sint, fb, rg)}
+    assert por["hp"]["ok"] is True and por["hp"]["origem"] == "c22_regerado"
+
+
+def test_regerar_um_usa_o_prompt_de_retentativa_e_exige_validadores_e_guarda(monkeypatch):
+    sistemas = []
+
+    def cliente(system, user, m):
+        sistemas.append(system)
+        return _resp([LIMPO, "A trilha é marcante."])
+
+    monkeypatch.setattr(FB, "validadores_do_bucket", lambda bf, j=True: {"passa_publicado": True, "reprovados": []})
+    r = FB.regerar_um(_entrada(), "filme", "positivas", cliente)
+    assert len(sistemas) == 1 and sistemas[0].endswith(S._REFORCO_VALIDACAO)
+    assert r["passa"] is True and r["pendentes_depois"] == 0
+    monkeypatch.setattr(FB, "validadores_do_bucket", lambda bf, j=True: {"passa_publicado": False, "reprovados": ["x"]})
+    assert FB.regerar_um(_entrada(), "filme", "positivas", cliente)["passa"] is False

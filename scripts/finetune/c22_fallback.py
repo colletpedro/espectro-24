@@ -10,6 +10,8 @@ sha do GGUF e488697e…, amostragem do DESVIO_P01, num_ctx pela regra do gate 0)
 
     listar   (Mac)      conta e lista os buckets pendentes -> finetune/c22/fallback/pendentes.json (sem modelo)
     rodar    (Windows)  uma chamada por bucket pendente    -> finetune/c22/fallback/<slug>__<bucket>.json (retoma)
+    regerar  (Windows)  UMA nova geração de um bucket que REPROVOU nos validadores (C4), pela produção
+                                                           -> finetune/c22/regeracao/<slug>__<bucket>.json
     aplicar  (Mac)      monta a saída de produção          -> finetune/c22/producao/<slug>__<bucket>.json + manifesto
 
 Nada disso chama API paga. `rodar` fala só com o Ollama local e recusa rodar dentro do Claude Code.
@@ -33,6 +35,7 @@ import c22 as X  # noqa: E402
 PASTA = X.PASTA
 DIR_FALLBACK = PASTA / "fallback"
 DIR_PRODUCAO = PASTA / "producao"
+DIR_REGERACAO = PASTA / "regeracao"
 ARQ_PENDENTES = DIR_FALLBACK / "pendentes.json"
 ARQ_MANIFESTO = DIR_PRODUCAO / "manifesto.json"
 
@@ -133,23 +136,87 @@ def cmd_rodar(a) -> None:
               f"{novo['pendentes_antes']}→{novo['pendentes_depois']} · {novo['parede_s']} s", flush=True)
 
 
-def montar_producao(dir_sintese: Path, dir_fallback: Path) -> list[dict]:
-    """A saída de produção por bucket: o C22 como está, com o fallback aceito no lugar."""
+def validadores_do_bucket(bf: dict, json_parseia: bool = True) -> dict:
+    """Os validadores da produção sobre o `bucket_final` (os mesmos do C4)."""
+    import reconstruir_sintese as R
+    v = R.validar_publicado({**bf, "json_parseia": json_parseia})
+    return {"passa_publicado": bool(json_parseia and v["passa_publicado"]),
+            "reprovados": [k for k, ok in v["publicado"].items() if ok is False]}
+
+
+def regerar_um(entrada: dict, slug: str, bucket: str, client_call, model: str = "m") -> dict:
+    """UMA nova geração do bucket pela produção (`synthesize_bucket`: parse, retentativa de JSON, validações de
+    idioma/escopo, guarda de quantidade e fallback). A chamada leva o reforço `_REFORCO_VALIDACAO` no system:
+    com a MESMA semente e o MESMO prompt o Ollama reproduziria a saída reprovada (ESTIMADO), então a nova geração
+    usa o prompt de retentativa da produção. PASSA = validadores + guarda (nenhum `quantidade_pendente` sobrando)."""
+    from espectro24 import synthesize as S
+    b = X.bucket_da_entrada(entrada)
+    final = S.synthesize_bucket(
+        copy.deepcopy(b), model=model, fallback_quantidade=True,
+        client_call=lambda system, user, m: client_call(system + S._REFORCO_VALIDACAO, user, m))
+    bf = {"temas": [asdict(t) for t in final.temas], "observacao_geral": final.observacao_geral,
+          "n_validas": final.n_validas, "n_analisadas": len(final.reviews_analisadas),
+          "idioma_invalido": final.idioma_invalido, "escopo_suspeito": final.escopo_suspeito}
+    json_ok = final.observacao_geral != "Falha ao obter JSON válido do LLM."
+    val = validadores_do_bucket(bf, json_ok)
+    pend = sum(1 for t in bf["temas"] if t["quantidade_pendente"])
+    return {"slug": slug, "bucket": bucket, "bucket_final": bf, "quantidade_fallback": final.quantidade_fallback,
+            "json_parseia": json_ok, "validadores": val, "pendentes_depois": pend,
+            "passa": bool(val["passa_publicado"] and pend == 0)}
+
+
+def cmd_regerar(a) -> None:
+    if os.environ.get("CLAUDECODE"):
+        raise SystemExit("rode FORA do Claude Code (CLAUDECODE está no ambiente)")
+    from espectro24 import sintese_local as SL
+    SL.resolver_modelo(SL.MODELO_PADRAO)
+    DIR_REGERACAO.mkdir(parents=True, exist_ok=True)
+    for par in a.par:
+        slug, bucket = par.split("/")
+        arq = DIR_REGERACAO / f"{slug}__{bucket}.json"
+        if arq.exists():
+            print(f"{par}: já regerado (UMA nova geração por bucket); nada a fazer")
+            continue
+        n0, t0 = len(SL.REGISTRO), time.time()
+        novo = regerar_um(K.ler_json(X.arq_entrada(slug, bucket)), slug, bucket,
+                          lambda s, u, m: SL.client_call_local(s, u, SL.MODELO_PADRAO))
+        novo.update(telemetria=SL.REGISTRO[n0:], parede_s=round(time.time() - t0, 1),
+                    ts=datetime.now(timezone.utc).isoformat(timespec="seconds"))
+        arq.write_text(json.dumps(novo, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"{par}: passa={novo['passa']} · validadores {novo['validadores']} · pendentes {novo['pendentes_depois']} "
+              f"· fallback {novo['quantidade_fallback']} · {novo['parede_s']} s")
+
+
+def montar_producao(dir_sintese: Path, dir_fallback: Path, dir_regeracao: Path | None = None,
+                    validar: bool = True) -> list[dict]:
+    """A saída de produção por bucket: o C22 como está, com o fallback aceito no lugar e, para o bucket que
+    reprovou nos validadores (C4), a nova geração se ela PASSOU. Bucket reprovado sem geração que passe sai com
+    `ok: False` (o filme fica fora desta rodada)."""
+    dir_regeracao = DIR_REGERACAO if dir_regeracao is None else dir_regeracao
     saida = []
     for arq in _lista_sintese(dir_sintese):
         reg = json.loads(arq.read_text(encoding="utf-8"))
-        fb_arq = dir_fallback / arq.name
-        origem, desfecho, bf = "c22_sem_fallback", None, reg.get("bucket_final")
-        pend_antes = pendentes_do_bucket(reg) if reg.get("ok") else 0
-        if pend_antes and fb_arq.exists():
+        fb_arq, rg_arq = dir_fallback / arq.name, dir_regeracao / arq.name
+        origem, desfecho, bf, ok = "c22_sem_fallback", None, reg.get("bucket_final"), bool(reg.get("ok"))
+        if ok and validar and not validadores_do_bucket(bf, bool(reg.get("json_parseia")))["passa_publicado"]:
+            ok, origem = False, "c22_reprovado_nos_validadores"
+            if rg_arq.exists():
+                rg = json.loads(rg_arq.read_text(encoding="utf-8"))
+                if rg["passa"]:
+                    ok, origem, desfecho, bf = True, "c22_regerado", rg["quantidade_fallback"], rg["bucket_final"]
+                else:
+                    origem = "c22_regeracao_reprovada"
+            reg = {**reg, "bucket_final": bf}
+        pend_antes = pendentes_do_bucket(reg) if ok else 0
+        if ok and origem == "c22_sem_fallback" and pend_antes and fb_arq.exists():
             fb = json.loads(fb_arq.read_text(encoding="utf-8"))
             desfecho = fb["quantidade_fallback"]
             origem = "c22_fallback_aceito" if desfecho == "aceito" else f"c22_fallback_{desfecho}"
             if desfecho == "aceito":
                 bf = fb["bucket_final"]
-        elif pend_antes:
+        elif ok and origem == "c22_sem_fallback" and pend_antes:
             origem = "c22_pendente_sem_fallback_rodado"
-        saida.append({"slug": reg["slug"], "bucket": reg["bucket"], "ok": bool(reg.get("ok")),
+        saida.append({"slug": reg["slug"], "bucket": reg["bucket"], "ok": ok,
                       "origem": origem, "quantidade_fallback": desfecho, "bucket_final": bf,
                       "pendentes_antes": pend_antes,
                       "pendentes_depois": sum(1 for t in (bf or {}).get("temas") or []
@@ -185,10 +252,12 @@ def main() -> None:
     sub.add_parser("listar")
     r = sub.add_parser("rodar")
     r.add_argument("--limite", type=int, default=0, help="só os N primeiros (teste de fumaça)")
+    g = sub.add_parser("regerar")
+    g.add_argument("par", nargs="+", help="<slug>/<bucket>")
     p = sub.add_parser("aplicar")
     p.add_argument("--parcial", action="store_true")
     a = ap.parse_args()
-    {"listar": cmd_listar, "rodar": cmd_rodar, "aplicar": cmd_aplicar}[a.cmd](a)
+    {"listar": cmd_listar, "rodar": cmd_rodar, "regerar": cmd_regerar, "aplicar": cmd_aplicar}[a.cmd](a)
 
 
 if __name__ == "__main__":
