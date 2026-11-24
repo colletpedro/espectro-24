@@ -1,0 +1,383 @@
+{
+ "gerado_por": "manifesto dos 29 filmes publicados em 08/11 (fonte versionada em 2026-11-24)",
+ "fonte_git_ate_entao": "ausente: resultado/<slug>.json e execucoes/ (git-excluido) nao estavam no git",
+ "filmes": [
+  {
+   "slug": "alien",
+   "resultado": "resultado/alien.json",
+   "resultado_sha256": "0810b154a4ded410e273c92e760ef39613e3a9ed63cdb4b726c0402b2af87427",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a17d14b364bf77fe7c30880335e229305db1ed600fc04833ea8f0525b82a18ce",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "american-history-x",
+   "resultado": "resultado/american-history-x.json",
+   "resultado_sha256": "2b6dc159997ce259c1d814a94273894d279d341b5d55e4eb5135ddd3b8c6a832",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/american-history-x/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "1edc1c8120b80bfd57044ae3f97f9ff43e5651786568a8dd408ffb4651b2e0a1",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "casablanca",
+   "resultado": "resultado/casablanca.json",
+   "resultado_sha256": "5cc79214a8495cdceb5e155570cbec63b06014a0e1dfccea4a6be3974af6939f",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "6a9d64a60e2e5995598e7d628af6d47a1e9dcfa111c612e8cb4b49b4d7e005ed",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "cinema-paradiso",
+   "resultado": "resultado/cinema-paradiso.json",
+   "resultado_sha256": "7ca619aad0242a77828ec790c7bc2c483ac34d733e0ad200aee6753160c86dff",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/cinema-paradiso/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "3c24057af94422a77e15c8ce826a52a83b12f47b4a32c9d670315c7915996585",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "harakiri",
+   "resultado": "resultado/harakiri.json",
+   "resultado_sha256": "080f8e76cb0b37b94e6c24360d59f5fdfc4466193862cd2e82cb03d1eb59b28e",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "29ba436decd1b925666eab37874709fec0c078e23e92faf2b58d22912b3f8a63",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "its-a-wonderful-life",
+   "resultado": "resultado/its-a-wonderful-life.json",
+   "resultado_sha256": "4a29e377b6448a3baf99076e635fc84ae48ca6dbbcdb92ee49ad00ce88ad7141",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a0e4f37551f8bf96048cc75ced7c94ee9f7ca393b5112bbdbddee51cf038f8e5",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "leon-the-professional",
+   "resultado": "resultado/leon-the-professional.json",
+   "resultado_sha256": "ac2abd50f6158cbe2b3aa829239c8b07654d258a09a451042db67bb6de58c416",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "880f4b5f437b2f2fbfa329cd523a07af4ed1ced6885ce40ebd21c34402efd892",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "life-is-beautiful",
+   "resultado": "resultado/life-is-beautiful.json",
+   "resultado_sha256": "90dd9d6f46719447e663df124c5a852c958958185bc48d8cabe216820e876d4a",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a032b468cc8b63cd3cb34da7193473ce5cd030b9bf82d9da3e3248320823fa98",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "modern-times",
+   "resultado": "resultado/modern-times.json",
+   "resultado_sha256": "17faa5857155191c5b95d41cf1af5ce3ce93c17d75dfd19d8ceedee384fbd5fa",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "5707a3ca8a4b06537333a6423fc8c76ee79c2c452619ff394cad69d2893ca55c",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "once-upon-a-time-in-the-west",
+   "resultado": "resultado/once-upon-a-time-in-the-west.json",
+   "resultado_sha256": "90cdaeeb305e4d6af8f12df9cdaaba73069050ba965a3ee969f22521797502a9",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "5536e58254edc08b600e8d7bfd49e50f0a42fc3c2564c81315f5fd1bd664f7ad",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "one-flew-over-the-cuckoos-nest",
+   "resultado": "resultado/one-flew-over-the-cuckoos-nest.json",
+   "resultado_sha256": "2fe1d00c3ee73a847dede390acb985d0c6a60c59dd7ed08def0bdb81e2b7743c",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a37119d8392e6c28ad02a6194b806a75a5510835c6a1d7a92fd8b98a80372d8f",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "psycho",
+   "resultado": "resultado/psycho.json",
+   "resultado_sha256": "6b7159aca20c10bcd14c1a0cca28b75488b92a02d6cd71d7e7556aa84b477013",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "c13104ae272f649b7f4f6aa55691eeadbdfbb046dfdac9c156000211673c5d2a",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "pulp-fiction",
+   "resultado": "resultado/pulp-fiction.json",
+   "resultado_sha256": "921a5cb3c0408ab6aa48416c1e2b6f7bd55d1a8b634e22db7e4fbcfc5251cd5a",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/pulp-fiction/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "556770c245bf716cb7ab084cd1d9dc77c29d7d9c63f1eb297fa2768f9f17b348",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "rear-window",
+   "resultado": "resultado/rear-window.json",
+   "resultado_sha256": "086025eadc4590bc893c32e5cc36115d57dd235ff652188cb5fe289ca719c47c",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "402e08b27aecfb49a3043ef4eb0ddf03b270e62b13369ff1a770dcc696ac0e71",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "schindlers-list",
+   "resultado": "resultado/schindlers-list.json",
+   "resultado_sha256": "103064efbe93e9cd25e8ebfed249b6543e76148cfe2f5955e498cfd444cc266f",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "9fd48e49ef08d5707dcf214ea55be9bd140524610dbb673c7e5252adcbad4fbb",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "seven-samurai",
+   "resultado": "resultado/seven-samurai.json",
+   "resultado_sha256": "231187fcfc256ddb54de59fe00bb104b384434c1ef9a9246f0794b3bfe93dac7",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "e9700b0bb9cdbc434f9122a379a4a5d8284b9cf551b5b1f0cff7cec525664ae5",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "star-wars",
+   "resultado": "resultado/star-wars.json",
+   "resultado_sha256": "116506a17a664a633ded4b0fc39d861ae59d98f0862b181e99327febaaa5db0d",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "7490dd228d0f7f35b71ee4c39b9ade39c27bd77b1470dbe46eb41e4390e80b15",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "terminator-2-judgment-day",
+   "resultado": "resultado/terminator-2-judgment-day.json",
+   "resultado_sha256": "66c0782ca90fe4855f5c1ed6ebe7ae2c5a85ebda1f3a57f8373b834694d810d0",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "ffb81257b36045fd34258c13af3ba292adc861ad46d497fbec2ded0f5ba113c6",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-departed",
+   "resultado": "resultado/the-departed.json",
+   "resultado_sha256": "b0fb0b4cfb4ba9c63a00eefb0412236f6544daf7dff3358ded72bb57e97c76b6",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "d7a797cf732f03e2a29368b0df7704a685428913506dfa85cb2e6672d79f4bae",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-godfather-part-ii",
+   "resultado": "resultado/the-godfather-part-ii.json",
+   "resultado_sha256": "6a6091307031b8f86ef1c11b1d8cac11fe9d95986c419b35368383bffdbe06ce",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-godfather-part-ii/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "79e0e528e25391d0e80bf02a9a258c8901e63dfc219925a57373fc8a29aa103c",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-green-mile",
+   "resultado": "resultado/the-green-mile.json",
+   "resultado_sha256": "5518c802bed7590ee27721da1dbc5c60932ebf4291d8fb0c9b349c852d0b544f",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "af30f3c5917df945da497d7c3b72a0a36d46f064b5e28e8ecca15353b8e40f24",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-intouchables",
+   "resultado": "resultado/the-intouchables.json",
+   "resultado_sha256": "f1dd7cfd9843a5d9e6e83cc68c9a14d89c858d7d5463f2357e0c917a7c935798",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a0a541b561bed816e7a09a29c240e415656078d35a1388babfce0b43bbd6fc0b",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-lion-king",
+   "resultado": "resultado/the-lion-king.json",
+   "resultado_sha256": "732d782e3b0b530a6adf75aa2f67f51a2c0f5840aee585c2fa6ac0dc4544e9ff",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "a1cde8fcc6ca679430b0d60db77edd14f801d8fede849a9e7a7613f017dab294",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-lord-of-the-rings-the-two-towers",
+   "resultado": "resultado/the-lord-of-the-rings-the-two-towers.json",
+   "resultado_sha256": "068b52a22073de4f679030499d0da4ad710ae99890baa53b05be2c35955cdc32",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "d8e11a263a340239199608f589d98143f13b2ee52e6d1549d680b920dab86cf9",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-pianist",
+   "resultado": "resultado/the-pianist.json",
+   "resultado_sha256": "d49b78fa37d22571ffecfdb328cb7172ab7aaaf634846fe6c26f89fe327e817b",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "cdee7941f26568a746d5a5319ab7694ef6d7a2aa14f058aa6eeffbf28c138692",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-shawshank-redemption",
+   "resultado": "resultado/the-shawshank-redemption.json",
+   "resultado_sha256": "a16288c7cc8d2ce4f40b0233d04b1870d348923c122b9a6101f1b75d6fdfb080",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-shawshank-redemption/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "d49ebe10245396dc946d8794fa6146772ef57bcf05229e9e2bb69386a391e784",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-silence-of-the-lambs",
+   "resultado": "resultado/the-silence-of-the-lambs.json",
+   "resultado_sha256": "032f2a92f782869370fc34c8e8cb1d211a2bb11b40562dc1144c9b02eddd87a8",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "0c078f10c676000c73525ec4494c60f9a8c370212acd7ecf7cef1fb831fc3b89",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "the-usual-suspects",
+   "resultado": "resultado/the-usual-suspects.json",
+   "resultado_sha256": "ca553f06fd8c80d93f1417b6f287a5245ef5cda6031b397b28d5ff356f816239",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/the-usual-suspects/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "b1fae9edb434fef69b1f427d5904e7c3e327a49d861af2a849642ff99c865e9a",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  },
+  {
+   "slug": "wall-e",
+   "resultado": "resultado/wall-e.json",
+   "resultado_sha256": "959fb3d5f0dbaa32a0e1fd722e0219e2a9fa56ab56efcea7c9cb69161dbb0525",
+   "classificacao": "execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl",
+   "classificacao_sha256": "2ef585a49692add857b947376e5f06b5c6b2f251bba1bad9e6f91716dc3b520d",
+   "classificacao_confere": true,
+   "sintese": {
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+   },
+   "condicoes": true
+  }
+ ]
+}
