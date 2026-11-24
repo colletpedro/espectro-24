@@ -1,0 +1,532 @@
+{
+ "gerado_por": "scripts/validar_montador_29.py",
+ "spec_version_atual": "1.9.50",
+ "contagem": {
+  "IDENTICO": 29
+ },
+ "diferencas_por_caminho": {},
+ "filmes": [
+  {
+   "slug": "alien",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/alien/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "american-history-x",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/american-history-x/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/american-history-x/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/american-history-x/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/american-history-x/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "casablanca",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "cinema-paradiso",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/cinema-paradiso/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/cinema-paradiso/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/cinema-paradiso/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/cinema-paradiso/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "harakiri",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/harakiri/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "its-a-wonderful-life",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "leon-the-professional",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/leon-the-professional/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "life-is-beautiful",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/life-is-beautiful/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "modern-times",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "once-upon-a-time-in-the-west",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/once-upon-a-time-in-the-west/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "one-flew-over-the-cuckoos-nest",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/one-flew-over-the-cuckoos-nest/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "psycho",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/psycho/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "pulp-fiction",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/pulp-fiction/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/pulp-fiction/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/pulp-fiction/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/pulp-fiction/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "rear-window",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "schindlers-list",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/schindlers-list/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "seven-samurai",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "star-wars",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/star-wars/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "terminator-2-judgment-day",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/terminator-2-judgment-day/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-departed",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-departed/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-godfather-part-ii",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-godfather-part-ii/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-godfather-part-ii/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-godfather-part-ii/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-godfather-part-ii/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-green-mile",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-green-mile/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-intouchables",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-intouchables/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-lion-king",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-lion-king/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-lord-of-the-rings-the-two-towers",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verifica..."
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-lord-of-the-rings-the-two-towers/classificacao/consenso_verifica..."
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-pianist",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-pianist/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-shawshank-redemption",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-shawshank-redemption/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-shawshank-redemption/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-shawshank-redemption/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-shawshank-redemption/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-silence-of-the-lambs",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-silence-of-the-lambs/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "the-usual-suspects",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-usual-suspects/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-usual-suspects/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/the-usual-suspects/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/the-usual-suspects/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  },
+  {
+   "slug": "wall-e",
+   "rotulagem_replay_chamadas": 3,
+   "vs_resultado_versionado": [],
+   "vs_bullets_json_original": [
+    {
+     "caminho": ".eixos.verificador.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl\""
+    },
+    {
+     "caminho": ".proveniencia_llm.classificacao.fonte",
+     "montado": "\"execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl\"",
+     "esperado": "\"/Users/pedrocollet/Downloads/espectro-24/execucoes/featherless-etapa2-2026-11-08/aberto/wall-e/classificacao/consenso_verificado.jsonl\""
+    }
+   ],
+   "estado": "IDENTICO"
+  }
+ ]
+}
