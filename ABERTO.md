@@ -2245,6 +2245,536 @@ frente, nunca recuperam os 64: gravar o `model` DEVOLVIDO pela API no registro
 (não o pedido), e migrar o nome para `deepseek-flash`. Nenhuma das duas altera a
 classificação.
 
+### C22. Os 55 do lote de 18/09 classificados em GEMINI — exceção escopada (2026-09-22)
+
+**ESTADO (2026-09-23): gate feito, passes DeepSeek arquivados, BLOCO 1 (10
+filmes) rodado pelo batch com aval do dono (teto US$14). Blocos 2-6 PARADOS
+até conferir no billing que o desconto do batch foi aplicado e medir o prazo
+na escala real (números em (d), abaixo).** Etapa 2 preparada, não rodada.
+
+**Decisão do dono.** O saldo DeepSeek acabou com os 55 do lote de 18/09 com os
+passes 1 e 2 completos e o passe 3 em 38%, e não vai ser recarregado. Os 55
+refazem os TRÊS passes e o verificador `V2_alvo` em Gemini
+(`gemini-3.7-flash`), por exceção escopada a eles. Um provider por filme.
+**NÃO completar o passe 3 em Gemini sobre os passes 1-2 DeepSeek:** a votação
+de 3 pressupõe três sorteios do MESMO modelo (é o que leva a reprodutibilidade
+de 26,5% a 65%), e dois votos de um modelo e um de outro na mesma review
+quebram a premissa sem volta. O código recusa essa mistura
+(`votacao_3.ProviderMisturadoNoVoto`).
+
+**Os passes DeepSeek pagos ficam ARQUIVADOS, não apagados**, em
+`resultado/votacao-3/_arquivo_deepseek_c22/passe_{1,2,3}.jsonl`, com um
+`MOTIVO.md` (`scripts/arquivar_passes_c22.py`, que por padrão só simula).
+**Executado em 2026-09-23 01:50 UTC:** 6.559 + 6.559 + 2.488 = 15.606 linhas
+movidas; as 17.122 linhas de fora dos 55 em cada arquivo ficaram byte a byte
+(hash conferido antes e depois), e os quatro `passe_*.jsonl` voltaram a ser
+IDÊNTICOS ao `HEAD` (as linhas dos 55 eram exatamente o que o lote de 18/09
+tinha acrescentado).
+
+**O catálogo passa a ter TRÊS modelos de classificação:**
+
+| filmes | modelo | proveniência no dado |
+|---|---|---|
+| 35 (até 30/08) | DeepSeek V4-Flash | certa, pela data (C21) |
+| 64 | DeepSeek, V4-Flash ou V4.1-Flash | **não separável** (C21) |
+| 55 (exceção C22) | Gemini `gemini-3.7-flash` | **gravada**: marca `excecao: "C22"`, provider, modelo pedido e EFETIVO (`model_version` da resposta), `finish_reason`, camada, em cada registro de passe e do verificador; `classificacao_excecao` em cada linha do consenso |
+
+Nota sobre o "modelo efetivo": a API devolve `model_version: "gemini-3.7-flash"`,
+sem data de versão. É o que a API expõe, e é o que fica gravado.
+
+**A exceção NÃO passa por `PROVIDER_POR_ESTAGIO`.** A chave `classificacao` é
+compartilhada com a síntese e o `taxonomia_id` não inclui o modelo: uma troca
+no config contaminaria em silêncio qualquer execução futura. A lista dos 55
+vive em `src/espectro24/excecao_c22.py`, reexportada por `scripts/excecao_gemini_c22.py` (igual a
+`dados/lote/lista-noturno-2026-09-18.txt`) e só vale com
+`lote_em_blocos.py --excecao-gemini` ou `scripts/c22_batch.py`; slug fora dela
+é recusado. **Síntese e rotulagem dos 55 (ETAPA 2, publicação) ainda NÃO têm a
+exceção** — hoje são DeepSeek, e sem saldo não publicam. É o próximo passo.
+
+**(a) GATE DE QUALIDADE — PASSOU** (`scripts/gate_gemini_classificacao.py`,
+`resultado/auditoria-acuracia/gemini/gate.json` e `gate_batch.json`). O
+gabarito humano de 100 (`CLASSIFICACAO_CONSOLIDADO.md`), 3 passes +
+`V2_alvo`, contra o DeepSeek já medido em disco (A_regra + V2, 13-14/08,
+V4-Flash). Critério registrado ANTES de rodar: PARAR se, em algum eixo ou no
+micro, o IC95 do ΔF1 pareado ficasse inteiro abaixo de zero, ou ΔF1 ≤ −0,10,
+ou a falha no 1º pedido passasse de 2%. Nenhum disparou, nos dois modos:
+
+| produção (consenso + V2) | F1 DeepSeek | F1 Gemini padrão | F1 Gemini batch |
+|---|---:|---:|---:|
+| micro | 0,811 | 0,862 (ΔF1 +0,051, IC [+0,015, +0,089]) | 0,869 (+0,058, IC [+0,022, +0,096]) |
+| pior eixo | — | `ritmo` 0,800 (−0,047, IC cruza 0) | `ritmo` 0,842 (−0,005) |
+
+Reprodutibilidade (3 passes idênticos): DeepSeek 16%, Gemini 63% (padrão) /
+55% (batch). Verificador: 88,9% contra 96,7%. Truncamento/JSON inválido: 0 em
+842 chamadas Gemini, todas `STOP`, com teto de 2.000 tokens; thinking em ~50%
+das chamadas apesar de `thinking_budget=0` (média ~80-100 tokens, máx. 447 — a
+300 truncaria, como a C15.a mediu). Seis das 100 reviews (`obsession-2026`)
+saíram do corpus na v1.9.50; o texto das 100 vem da amostra do commit
+`4d8e6db`, o mesmo que o DeepSeek leu.
+
+**Ressalvas do gate:** (1) a referência é o V4-Flash de agosto, não o
+V4.1-Flash que classificou os 64 (nunca medido, C21); (2) "não pior" não é
+"igual": o Gemini marca MAIS (recall de `tom_atmosfera` 0,60 → 0,78-0,84, de
+`roteiro_estrutura` 0,75 → 0,93-0,94). Dentro de um filme o contraste é
+coerente (um provider por filme), mas comparação ENTRE filmes do catálogo passa
+a misturar duas calibrações; (3) n = 100, IC largos por eixo.
+
+**(b) TÁTICAS DE CUSTO** (pedido do dono, 2026-09-22). Projeção anterior, 3
+passes + verificador em camada padrão: US$29,6-30,2.
+
+1. **Parar no passe 2 quando os passes 1 e 2 concordam — IMPLEMENTADO.** Com
+   dois votos iguais, todo eixo marcado já tem 2 de 3 e todo eixo não marcado
+   no máximo 1: o 3º voto não muda o consenso. **Provado exaustivamente**
+   (`tests/test_dispensa_passe_3.py`): os 2.048 conjuntos possíveis (10 eixos +
+   `livre`) × os 2.048 votos possíveis do passe 3 = 4.194.304 combinações, zero
+   diferença. A igualdade é sobre o que `_consensuar` de fato lê — `eixos`
+   depois de `_ler_passe` (inválido recuperado), `livre` incluído;
+   `temas_livres` não entra. **O que muda na linha:** `votos` e
+   `eixos_por_passe` passam a ter DOIS votos, e a linha leva
+   `passe_3_dispensado: true`. **Nessas reviews a medida de reprodutibilidade
+   de 3 passes deixa de existir.** Nenhum consumidor de produção lê esses dois
+   campos. Vale SÓ para registros da exceção: os 99 continuam exigindo 3
+   passes (estender a eles mudaria o consenso das reviews cujo passe 3 falhou).
+   p1 == p2 medido no gabarito: 74% padrão, 71% batch; nos 55 o DeepSeek
+   concorda MAIS que no gabarito (42% contra 29%), então 71% é o piso esperado.
+   **Taxa real nos 55: a medir depois do passe 2.**
+2. **Batch — IMPLEMENTADO e medido.** Fontes lidas em 2026-09-22:
+   `ai.google.dev/gemini-api/docs/batch-mode` ("priced at 50% of the standard
+   interactive API cost", "designed to complete within a 24-hour turnaround
+   time", expira após 48 h), `/pricing` (3.7 Flash batch: US$0,375/M entrada,
+   US$1,875/M saída com thinking, até 31/12/2026 — **o preço dobra em
+   01/01/2027**), `/models/gemini-3.7-flash` (lista "Batch API"). **Medido:**
+   5 jobs de 62-100 pedidos voltaram em 1 min 47 s a 2 min 37 s; gate PASSA no
+   modo batch (acima); custo do passe 1 das 100: US$0,061 contra US$0,129 na
+   camada padrão. **Não verificado:** a resposta do batch declara
+   `usageMetadata.serviceTier: "SERVICE_TIER_STANDARD"` (campo que o SDK 2.12.1
+   nem conhece — `_validar_resposta_batch` o guarda em vez de descartar); a
+   cobrança a 50% vem da documentação, não da fatura. Conferir no billing
+   depois do primeiro bloco. `scripts/c22_batch.py` orquestra por bloco
+   (p1-2 → p3 só das divergentes → verificador → commit pelo driver), com as
+   MESMAS funções de registro da chamada síncrona
+   (`votacao_3.registro_excecao`, `verificador_impacto.registro_excecao`).
+   **Flex (achado no caminho):** mesma tarifa do batch, síncrona, alvo de
+   1-15 min; medida em duas sondas de 100: sem capacidade em 35% e 42% das
+   chamadas (503 nas 3 tentativas, cai para a padrão), latência mediana 21-30 s.
+   Não adotada; a retentativa síncrona da exceção usa a camada padrão.
+3. **Schema/config para suprimir thinking — NÃO aplicado, HIPÓTESE.** O
+   thinking custa ~80-100 tokens de saída por chamada (~US$3 nos 55 em batch).
+   Mudar a configuração muda a saída e exigiria refazer o gate (US$2-5). Medir
+   quando houver motivo; a documentação do 3.7 Flash lista thinking "low,
+   medium, high", sem modo desligado.
+4. **Verificador só nas candidatas — JÁ ERA ASSIM.**
+   `verificador_impacto.calcular_aplicacao` só chama as linhas com
+   `impacto_emocional` no consenso. Economia zero.
+5. **Cache — NÃO APLICÁVEL sem mudar o prompt.** O cache implícito do 3.7 Flash
+   exige 4.096 tokens de prefixo (`docs/caching`); o prefixo fixo da
+   classificação tem 929 (`count_tokens`), o do verificador 431, e já vêm
+   antes da review (`systemInstruction`). Nenhuma ordem ou agrupamento de
+   chamadas chega a 4.096. Levar o prompt a 4.096 muda o prompt e invalida o
+   gate; a economia possível, no batch, seria ~US$3 nos 55 (a entrada
+   cacheada custa 10%). Decisão do dono.
+
+**Projeção com as táticas (batch, 50%; `c22_batch.py plano`): US$11,5-12,1**
+— passes 1-2 US$8,62, passe 3 US$1,03-1,25 (24-29% das reviews), verificador
+US$1,86-2,20 (60-71% das candidatas). Entrada cobrada a preço cheio (nenhum
+cache). **Prazo:** 3 rodadas de batch em sequência (p1-2, p3, verificador),
+com os 6 blocos em paralelo em cada rodada. Medido só na escala de 100
+pedidos (~2 min); os jobs reais têm ~2.400 pedidos. Sem medição nessa escala,
+a faixa honesta vai de dezenas de minutos a horas; o teto documentado é 24 h
+por rodada.
+
+**Disjuntor.** O Gemini não tem sonda de saldo. `--teto-usd` (driver e
+`c22_batch.py`) é o disjuntor: gasto MEDIDO da exceção (registros,
+`preco.custo_gemini`, thinking incluído) + estimado dos jobs em voo, conferido
+antes de cada submissão/bloco. O prazo de parede das chamadas síncronas é o
+timeout de rede de sempre (180 s).
+
+**(c) ETAPA 2 — síntese e rotulagem dos 55 em Gemini: PREPARADA, NÃO rodada.**
+`espectro24.cli --excecao-gemini` (e `publicar_catalogo.py --excecao-gemini
+--slug X`, que recusa `--republicar-tudo` e o default de pendentes). Injeta
+`synthesize.ChamadaGeminiExcecao` como `client_call` em `synthesize_bucket` e
+`rotular_output`, o caminho que os dois estágios sempre aceitaram, então
+`PROVIDER_POR_ESTAGIO` não é tocado (teste que o prova: o DeepSeek e
+`provider_do_estagio` viram armadilha e nada os chama). A chamada é a mesma do
+adaptador §D do Gemini (`LLM_MAX_TOKENS=3000`, `thinking_budget=0`, JSON),
+isto é, o caminho do único precedente de síntese em Gemini (bucket
+`positivas` de `a-brighter-summer-day`, pelo fallback), fixada em
+`gemini-3.7-flash`. Recusa slug fora dos 55, `--provider`,
+`--reuse-synthesis` e filme cujo consenso não é INTEIRO da exceção. Grava
+`proveniencia_llm` no `resultado/<slug>.json`: provider, modelo pedido,
+modelos EFETIVOS, e por chamada `finish_reason`, thinking, `uso` e unidade
+(bucket/grupo). `frontend/build_data.py` tira a chave antes do site:
+operacional, não página. **Bucket cuja síntese não dá JSON PARA o filme**
+(exit 7, com o `finish_reason` no aviso). No caminho DeepSeek essa falha
+publica o bucket sem temas; aqui o risco medido do Gemini é justamente
+truncar (C15.a), e a saída vai ao ar sem leitura humana.
+
+**Cobertura dos validadores da síntese contra a troca de provider.** O que a
+síntese põe NA PÁGINA: o nome do tema, a paráfrase (atrás de "Aprofundar") e
+a LARGURA DA BARRA (`mencoes_aproximadas / n`, contagem ESTIMADA pelo LLM, não
+pela classificação). Os validadores que existem são todos mecânicos e não
+dependem do provider: JSON (1 retentativa), clamp de `mencoes` em [0, n],
+remoção de aspas (flag visível), `MAX_TEMAS`, idioma pt-BR por stopwords
+(1 retentativa, flag visível), escopo por 5 frases literais SÓ em
+`observacao_geral` (1 retentativa, flag visível). Na rotulagem: lista
+fechada (fora vira `livre`) e JSON. **Nenhum deles mede o que muda com o
+modelo.** Sem cobertura:
+1. **A barra.** Só o clamp. O risco histórico registrado do Gemini é INFLAR
+   contagem. **Conferência nova, sem chamada:**
+   `proveniencia_classificacao.py --barra`, Δ = fração da síntese − fração da
+   classificação, por célula do bloco `eixos`, contra a base DeepSeek (1.451
+   células nos 99: mediana −0,075, p10 −0,375, p90 +0,150). Precedente
+   Gemini: 5 células de `a-brighter-summer-day`, mediana +0,075, nenhuma acima
+   do p90. Indicativo, n = 5.
+2. **Spoiler.** Só o prompt (regra 1). Nunca medido em nenhum provider.
+3. **Citação literal sem aspas.** A regra 2 (paráfrase) só é conferida pelas
+   ASPAS; um trecho copiado sem aspas passa. Não há checagem de sobreposição
+   com o texto das reviews.
+4. **Quantidade dentro da paráfrase** (D5: 80 de 611 temas no DeepSeek). A
+   checagem de escopo não olha `exemplo_parafraseado`.
+5. **Fidelidade do tema às reviews** (tema inventado ou exagerado). Nenhuma,
+   em nenhum provider.
+6. **Rotulagem tema → eixo.** Nunca medida contra gabarito em nenhum provider;
+   a mitigação registrada em `rotulagem.py` é a conferência à mão.
+Os itens 2 a 6 já estavam descobertos no DeepSeek. A diferença é que ali
+havia 99 filmes de leitura acumulada, e no Gemini há 1 bucket. **A
+conferência que cobre 2 a 6 é a leitura dos primeiros 5 filmes, antes dos
+outros 50.** Os itens 1 e 3 têm conferência mecânica barata e sem chamada:
+o 1 está implementado, o 3 não.
+
+**(d) BLOCO 1 — rodado em 2026-09-23, 01:50-02:21 UTC** (10 filmes, de
+`the-dark-knight` a `conclave`, 1.189 reviews; `c22_batch.py avancar
+--teto-usd 14 --bloco 1`, log em `dados/lote/logs-c22/bloco1.log`, jobs em
+`resultado/votacao-3/c22_batch_jobs.json`).
+
+| rodada | pedidos | retorno do batch | custo medido (a 50%) |
+|---|---:|---:|---:|
+| passes 1-2 | 2.378 | 21 min 16 s | US$1,5386 |
+| passe 3 (divergentes) | 341 | 4 min 04 s | US$0,2278 |
+| verificador | 657 | 3 min 20 s | US$0,3156 |
+| síncronas (commit) | 27 | — | US$0,0210 (camada padrão) |
+| **total** | | **~31 min de parede** | **US$2,1031** |
+
+- **p1 == p2 = 71,9%** (848/1.180; por filme, 63% a 77%). Bate com os 71% do
+  gabarito em batch, e NÃO com a hipótese de que os 55 concordariam mais que o
+  gabarito (o DeepSeek concordava: 42% contra 29%). Passe 3 em 28% das
+  reviews, no topo da faixa projetada.
+- **Os 99 intactos:** as 13.112 linhas deles em `consenso.jsonl` e
+  `consenso_verificado.jsonl` são byte a byte as do `HEAD`, e o hash dos
+  `resultado/*.json` não mudou. O manifesto só cresceu: `fonte_n_linhas`
+  13.112 → 14.292, candidatas 9.269 → 9.926, e os 37 pendentes antigos, os
+  mesmos. O verificador do bloco fez 657 de 657.
+- **O custo acima é a 50% POR SUPOSIÇÃO.** A resposta do batch declara
+  `serviceTier: SERVICE_TIER_STANDARD`. A cobrança real não foi conferida:
+  o painel exige login, e os gráficos por SKU levam até 24 h
+  (ai.google.dev/gemini-api/docs/billing). Com a cobrança cheia, o bloco
+  custou ~US$4,21, e os 55 passam do teto de US$14 no meio.
+
+**ACHADO — o filtro de conteúdo do GEMINI bloqueia, e é determinístico.** 9
+reviews voltaram sem candidato, com `promptFeedback.blockReason:
+PROHIBITED_CONTENT`, nos passes 1, 2 e 3 e na retentativa síncrona: 36 de 36
+tentativas. É o espelho do `Content Exists Risk` do DeepSeek (C16), sem
+fallback possível agora (o fallback seria o DeepSeek, que está sem saldo).
+Distribuição: `perfect-blue` 4 (negativas 3, medianas 1),
+`eyes-wide-shut` 2, `spider-man-into-the-spider-verse` 1,
+`kill-bill-vol-2` 1, `punch-drunk-love` 1. São reviews com palavrão ou
+conteúdo sexual explícito, em várias línguas. As 9 ficaram FORA do consenso
+(`incompletas`), e **a guarda C14.8 RECUSA publicar esses 5 filmes**
+(`AmostraNaoClassificada`: a amostra analisada tem 1 a 4 reviews sem
+classificação). A guarda está certa: publicar encolheria o `n` em silêncio.
+Os outros 5 do bloco passam na guarda. **Risco igual na Etapa 2:** a síntese
+manda o bucket inteiro numa chamada, e um bucket que contém uma review
+bloqueada tende a ser bloqueado inteiro, como no DeepSeek em
+`a-brighter-summer-day`. O CLI da exceção para o filme (exit 7) e diz o
+bloqueio. **Decisão do dono (2026-09-23): SUBSTITUIR pela próxima elegível
+do mesmo bucket, sem reduzir o `n` e sem tocar na C14.8 — ver (f). Aplicado:
+os 10 filmes do bloco 1 passam na guarda.**
+Registro: as 18 falhas do batch dos passes 1-2 ficaram gravadas como
+`JSONDecodeError` (texto vazio), porque o código ainda não lia o
+`block_reason`. Corrigido depois: `bloqueio` passa a ser campo do registro,
+e o erro, `BloqueioDeConteudoGemini: PROHIBITED_CONTENT`. O motivo das 18
+foi conferido no arquivo de saída do job.
+
+**Defeito do orquestrador, corrigido:** o log do commit disse "retentativa
+síncrona US$0,3367". A janela de tempo de `custo_do_bloco` tinha somado o
+verificador de batch, coletado no mesmo segundo. As 27 síncronas custaram
+US$0,021. Agora o custo síncrono sai da camada gravada em cada registro.
+
+**(e) O TETO EM DÓLAR PROTEGE CONTRA VOLUME, NÃO CONTRA PREÇO ERRADO
+(2026-09-23, apontado pelo dono).** `--teto-usd` compara com o gasto
+CALCULADO pela tabela do código (`preco.custo_gemini`), e essa tabela JÁ
+ASSUME o desconto de 50% do batch (`GEMINI_3_7_FLASH_DESCONTO`). Se a
+cobrança real vier cheia, o código continua achando que gastou ~US$11,6 nos
+55, e o teto de US$14 NUNCA dispara, porque o gasto real seria ~US$23. É o
+mesmo padrão das constantes `PRECO_*` que zeraram o DeepSeek duas vezes
+(C18, C19): o disjuntor mede o número que o código acredita, não a fatura. O
+que protege contra preço errado é conferir a cobrança real. Por isso os
+blocos 2-6 esperam o dono confirmar no AI Studio o custo do bloco 1
+(US$2,10 calculado a 50%, ~US$4,21 se cheio). Não mudado no código:
+calcular o teto a preço cheio pararia a execução no meio mesmo com o
+desconto real.
+
+**(f) REVIEWS RECUSADAS PELO FILTRO DO GEMINI — SUBSTITUÍDAS (decisão do dono,
+2026-09-23).** Não reduzir o `n` (exigiria afrouxar a C14.8, que existe para
+impedir `n` encolhido). A recusada sai da SELEÇÃO e a próxima elegível do
+MESMO bucket entra, pela mesma regra determinística: `selecao.selecionar
+(excluir_ids=…)`, inelegível no mesmo passo de truncada e spoiler. O registro
+`resultado/votacao-3/recusas_conteudo.json` (`espectro24/recusas.py`) é lido
+pelos DOIS chamadores de produção da seleção (`run_pipeline` e
+`amostra_do_bruto`), então análise e classificação veem a mesma amostra. A
+C14.8 NÃO foi tocada (`eixos.py` sem diff). Detecção automática
+(`votacao_3.recusas_detectadas`): 2 tentativas com `bloqueio` e nenhuma ok.
+O driver (`lote_em_blocos.processar_bloco --excecao-gemini`) repete
+registrar → re-selecionar → classificar a substituta até não sobrar recusa
+nova. `c22_batch.py` registra logo após a coleta dos passes 1-2, e o passe 3
+não pede a recusada. Reserva esgotada: a seleção devolve menos de 40, a
+recusa leva `substituta: "RESERVA_ESGOTADA"`, e isso vai ao dono ANTES de
+publicar. Cada exclusão fica registrada com review, bucket, `bloqueio`,
+tentativas, evidência e substituta.
+
+**Bloco 1, aplicado:** as 9 recusadas foram substituídas 1 por 1, o `n` ficou
+em 40 em todos os buckets, e nenhuma substituta foi recusada. O bloco agora
+tem 1.189 reviews no consenso e 0 incompletas, e os **10 filmes passam na
+C14.8**. A seleção de TODOS os outros 149 filmes (os 99 incluídos) ficou
+idêntica; só mudaram os 5 filmes com recusa. As substitutas custaram
+US$0,034 (síncrono, camada padrão).
+
+**Onde caíram, e o viés.** Negativas 5, medianas 2, positivas 2. Dois tipos:
+- **5 por palavrão ou gíria sexual:** `kill-bill-vol-2` (positivas),
+  `punch-drunk-love` (negativas, palavrão em russo),
+  `spider-man-into-the-spider-verse` (negativas), `eyes-wide-shut`
+  (medianas, positivas). O conteúdo crítico delas é comum; o que sai é o
+  registro de linguagem.
+- **As 4 de `perfect-blue` (negativas 3, medianas 1) são TODAS críticas à
+  representação de violência sexual e misoginia no filme** (cenas de estupro,
+  "male gaze", misoginia da equipe). Não é linguagem gratuita: é o argumento
+  central dessas reviews. **O filtro retira um tema substantivo do bucket
+  negativo de `perfect-blue`**, que tende a cair em `critica_social`. Duas
+  das três substitutas negativas tocam o mesmo tema (male gaze, violência
+  sexual), o que compensa em parte, por acaso da ordem, não por desenho. Nos
+  blocos 2-6, filmes cuja crítica negativa trata de violência sexual (p. ex.
+  `saving-private-ryan`, `full-metal-jacket`, `scarface-1983`, `poor-things-2023`)
+  podem sofrer o mesmo viés. **A síntese tem o mesmo risco, e maior:** ela
+  manda o bucket inteiro numa chamada, e uma COMBINAÇÃO de reviews pode ser
+  bloqueada mesmo sem nenhuma recusada isoladamente. Nesse caso o CLI para o
+  filme (exit 7) e reporta — decisão do dono: não contornar.
+
+**(g) CITAÇÃO LITERAL SEM ASPAS — conferência nova (2026-09-23).**
+`scripts/conferir_citacao_literal.py`, zero rede: a maior sequência
+contínua de palavras (normalizadas) que a paráfrase de cada bullet
+compartilha com alguma review do mesmo bucket. **Base DeepSeek, 1.775
+bullets: mediana 2, p90 3, p99 5, máximo 8; ≥ 6 palavras em 8 bullets, ≥ 8
+em 2.** As maiores são expressões comuns e nomes próprios ("em uma família de
+classe média alta", "Christoph Waltz, Leonardo DiCaprio, Jamie Foxx"), não
+citação. Precedente Gemini (5 bullets): nenhum acima do p99. Limite
+declarado: tradução literal de review em outra língua não aparece nesta
+medida.
+
+**(h) QUANTO O FILTRO CUSTA POR FILME — medido (2026-09-23), só como medida.**
+`proveniencia_classificacao.py --recusas` recalcula o bloco `eixos` com a
+função de produção (`eixos.montar_bloco`, zero LLM) em dois cenários: (a) a
+amostra publicável, com as substitutas; (b) a amostra original, com as
+recusadas classificadas pelos votos DeepSeek ARQUIVADOS. O cenário (b) nunca é
+gravado nem publicado, e mistura provider por construção: mede o filtro E o
+provider de 1-4 reviews, porque o que o Gemini marcaria nelas é
+desconhecido. Um filme é **candidato prioritário à recoleta em DeepSeek**
+quando algum bullet ou o estado de contraste muda.
+
+**Bloco 1: o DeepSeek classificou as 9 recusadas, sem recusa nenhuma.** Só
+`perfect-blue` muda o que publica:
+- as 4 recusadas têm `critica_social` em **3 de 3 votos DeepSeek**; o
+  consenso delas é `critica_social` + `roteiro_estrutura` (3 reviews) e
+  `critica_social` + `impacto_emocional` + `roteiro_estrutura` +
+  `tom_atmosfera` (1 review);
+- **o estado de contraste não muda:** `valorativo` nos três cenários (n = 40,
+  limiar 22,83 pp);
+- **um bullet muda nas negativas.** Em (a), `critica_social` tem 20/40 e
+  EMPATA com `impacto_emocional` (20/40) pela vaga do 2º bullet de
+  frequência; o desempate é pela ordem canônica dos eixos, e
+  `impacto_emocional` leva. Em (b), `critica_social` vai a 21/40 e vira o
+  bullet no lugar de `impacto_emocional` — com ou sem o
+  `impacto_emocional` não verificado da 4ª review. A diferença é de 1
+  review, porque as substitutas compensam em parte (3 das 4 também marcam
+  `critica_social`);
+- **marcado PRIORITÁRIO à recoleta em DeepSeek**, com o motivo
+  (`proveniencia_classificacao.py`, ★ na tabela).
+Nos outros 4 filmes (`eyes-wide-shut`, `kill-bill-vol-2`,
+`punch-drunk-love`, `spider-man-into-the-spider-verse`), recusas só de
+linguagem: nenhum bullet e nenhum contraste mudam.
+
+Nos blocos 2-6 a medida roda sobre TODO filme com recusa, não só sobre os que
+a leitura julgar "tema": é objetiva, e o superconjunto não custa nada. Ela
+exige os votos DeepSeek arquivados: reserva substituta de substituta ou
+passe 3 ausente sem acordo nos passes 1-2 dá "indeterminado", dito como tal.
+
+**(i) BILLING NÃO CONFERIDO — o teto dos blocos 2-6 é calculado a PREÇO CHEIO
+(decisão do dono, 2026-09-23).** O dono não conseguiu conferir no AI Studio se
+o desconto de batch foi aplicado ao bloco 1, e aceitou seguir sem saber, com o
+pior caso limitado. `c22_batch.py avancar --teto-usd 20 --preco-cheio
+--bloco 2 … --bloco 6`: o teto compara com o gasto dos blocos da EXECUÇÃO
+(medido + estimado em voo) calculado SEM o desconto
+(`preco.custo_gemini(preco_cheio=True)`). Assim ele limita o gasto REAL nos
+dois casos: com o desconto, os blocos 2-6 custam ~US$9,65; sem ele, ~US$19,05
+(projeção na escala real do bloco 1, US$4,219 cheio / US$2,137 com desconto
+em 1.189 reviews). **Pior caso total, com o bloco 1: ~US$24.** A margem do teto
+é de ~5%. Se a taxa de p1 == p2 cair ou as recusas subirem, o teto pode barrar
+a última submissão, e isso vem reportado. O custo cheio e o de batch são
+gravados lado a lado em cada job (`custo_estimado`, `custo_estimado_cheio`).
+A execução também PARA se algum bucket esgotar a reserva de substitutas
+(`recusas.reservas_esgotadas`), e `publicar_catalogo.py --excecao-gemini`
+recusa filme nesse estado.
+
+**(j) BLOCOS 2-6 — dois incidentes de infraestrutura, contornados sem mudar o
+método (2026-09-23).**
+1. **Rota IPv6 da máquina quebrada.** `curl -6` estoura o timeout; `-4`
+   responde em 0,4 s. O httpx do SDK tenta IPv6 primeiro e sem "happy
+   eyeballs": cada chamada ao Gemini passou a levar ~10 min (um
+   `batches.get`, 120 s) até cair no IPv4. Contorno NO PROCESSO, sem mexer na
+   rede da máquina: `ESPECTRO24_GEMINI_IPV4=1` faz o cliente do SDK sair só
+   por IPv4 (`synthesize._http_options_gemini`). Com ele, a mesma consulta
+   leva 1,7-3,3 s. Sem a variável, a chamada é a de sempre. **A publicação
+   (Etapa 2) precisa da mesma variável enquanto a rota não voltar.**
+2. **429 RESOURCE_EXHAUSTED na CRIAÇÃO do job do bloco 5** ("You exceeded
+   your current quota"). Limites do Tier 1
+   (ai.google.dev/gemini-api/docs/rate-limits, lido em 2026-09-23): batch do
+   3.7 Flash com **3.000.000 de tokens ENFILEIRADOS por modelo**, e gasto
+   limitado a **US$10 por janela móvel de 10 min**. Um job de passes 1-2 de
+   um bloco tem ~2,5M tokens, então cabe um de cada vez. Qual dos dois limites
+   disparou não é determinável daqui. Nada foi criado (conferido: os 10 jobs
+   da conta estão todos registrados; o arquivo subido sem job expira em 48 h
+   sem custo). O orquestrador agora trata 429 na criação como "tentar no
+   próximo tique" e PARA se persistir por mais de 60 min.
+
+**(k) BLOCOS 2-4, parados por RESERVA ESGOTADA (2026-09-23, ~07:50 UTC).**
+Passes 1-2 coletados nos blocos 2, 3 e 4. p1 == p2 em 72,5%, 72,5% e 74,2%.
+Custo desses três até a parada (passes 1-2 + parte do passe 3 do bloco 2):
+US$4,41 a preço de batch, US$8,82 a preço cheio. Total da exceção até aqui:
+US$6,55 / US$13,04. **22 recusas**, 20 substituídas com n = 40 mantido:
+`full-metal-jacket` 2, `poor-things-2023` 5, `project-x-2012` 1, `snatch` 1,
+`logan-2017` 1, `mid90s` 7, `school-of-rock` 2, `superbad` 2,
+`there-will-be-blood` 1 (negativas 11, medianas 6, positivas 5). **Duas não
+tiveram substituta:** `school-of-rock`/negativas (n 39 → 38, uma review com
+palavrão em espanhol; n efetivo 39 → 38, limiar 23,12 → 23,42 pp) e
+`superbad`/medianas (n 37 → 36, review sobre a sexualidade adolescente no
+filme; n efetivo 37 → 36, limiar 23,74 → 24,07 pp). Os dois buckets JÁ
+estavam abaixo de 40: toda review elegível do bruto já estava na amostra, e a
+reserva era zero antes do filtro. **Recusas de TEMA, não só de linguagem**
+(pela leitura; a medida objetiva `--recusas` exige o commit dos blocos, que a
+parada impediu): `poor-things-2023` (4 de 5: críticas às cenas de sexo com a
+personagem de mente infantil), `mid90s` (4 de 7: a cena de sexo com o menor
+de 13 anos), `full-metal-jacket` (2 de 2: prostituição e piadas sobre
+estupro), `superbad`/medianas (a sexualidade adolescente). O padrão do bloco
+1 se repete: **o filtro retira a CRÍTICA ao conteúdo sexual do filme**, e ela
+se concentra nas negativas. Estado ao parar: nada commitado nos blocos 2-4
+(consenso intacto e consistente); o job do passe 3 do bloco 2 ficou em voo,
+registrado e coletável; o passe 3 do bloco 3 bateu em 429 e não foi criado;
+blocos 5-6 não submetidos.
+
+**(l) `scream`: a 1ª recusa SEM motivo aparente — o viés pode ser também de
+LÍNGUA (2026-09-24, registrado por decisão do dono em 2026-09-27).** No bloco
+5, o Gemini recusou (`PROHIBITED_CONTENT`) uma review de `scream`
+(medianas, nota 2,5) em **azerbaijano**, sem palavrão nem conteúdo sexual:
+ela comenta a protagonista ignorar sinais de alerta e as casas de filme de
+terror serem fáceis de invadir. Se o filtro recusa texto inofensivo em língua
+menos comum, o viés não é só contra a crítica ao conteúdo sexual: é também
+contra línguas. **A partir daqui toda recusa leva `idioma`**
+(`recusas.idioma_provavel`, heurística declarada, sem dependência nova:
+alfabeto primeiro, depois palavras funcionais de 12 línguas, "indeterminado"
+sem sinal suficiente). Conferida à mão nas 39 recusas então registradas: um
+erro achado e corrigido (espanhol lido como húngaro, e depois como francês,
+por palavras curtas ambíguas). Distribuição nessas 39: inglês 18, espanhol 8,
+francês 7, polonês 2, e 1 cada em português, russo (cirílico), húngaro e
+azerbaijano. **Sem a distribuição de línguas da amostra inteira, isso NÃO
+mede concentração**: o inglês domina as recusas porque domina as reviews. A
+comparação com a base de cada língua entra no relatório final.
+`scream`/medianas ficou sem substituta (n 38 → 37, o bucket já estava abaixo
+de 40 antes do filtro) e foi aceito pelo dono, pelo mesmo critério de
+`school-of-rock` e `superbad`.
+
+**(m) REGRA FIXA de aceite automático da queda de `n` (decisão do dono,
+2026-09-27).** `c22_batch.aplicar_regra_de_aceite` aceita SOZINHA quando valem
+TODAS: (1) o bucket já estava abaixo de 40 ANTES do filtro (a seleção sem o
+registro de recusas, `amostra_do_bruto(ignorar_recusas=True)`), ou seja, a
+reserva esgotou no bruto e não pelo filtro; (2) a queda é de no máximo 2
+reviews no bucket; (3) o `n` resultante fica em 10 ou mais
+(`MARGEM_N_MINIMO`), porque abaixo disso o contraste do bucket deixa de
+existir pela lei da margem. Fora dessas três, a execução PARA. Cada aceite
+automático fica na recusa (a declaração `recusas_filtro_conteudo` do dado do
+filme o carrega, com os números), no log e em
+`c22_batch_jobs.json["aceites_automaticos"]`, e é listado no relatório final.
+
+**(n) ACHADO SOBRE O FILTRO DE CONTEÚDO DO GEMINI — viés COM DIREÇÃO
+(2026-09-27, blocos 1-5, 5.988 reviews enviadas).** 39 reviews recusadas
+(`PROHIBITED_CONTENT`), 0,65% das enviadas; negativas 19, medianas 12,
+positivas 8. O DeepSeek, com o mesmo texto, classificou as recusadas que
+constam do arquivo.
+1. **Contra a CRÍTICA ao conteúdo sexual dos filmes, sobretudo nas negativas.**
+   O filtro retira justamente o aviso que o público-alvo (quem ainda não viu)
+   poderia procurar. Filmes afetados, com o efeito MEDIDO
+   (`proveniencia_classificacao.py --recusas`: amostra publicável contra a
+   original com os votos DeepSeek arquivados; ★ = muda o que publica):
+   - `perfect-blue` ★: 4 recusas (violência sexual, misoginia). O bullet
+     de frequência das negativas passa de `critica_social` para
+     `impacto_emocional`, que vence um empate em 20/40 pela ordem fixa dos
+     eixos. O contraste continua `valorativo`;
+   - `poor-things-2023` ★: 5 recusas (4 sobre as cenas de sexo da
+     personagem de mente infantil). O bullet das POSITIVAS troca `atuacao`
+     por `direcao_imagem`: o efeito aparece num bucket diferente daquele das
+     recusas temáticas;
+   - `mid90s`: 7 recusas (4 sobre a cena com o menor de 13 anos);
+     `full-metal-jacket`: 2 (prostituição, piadas de estupro); `superbad`: 2
+     (sexualidade adolescente). `full-metal-jacket` não muda bullet nem
+     contraste; `mid90s` e `superbad` estão INDETERMINADOS (substitutas não
+     classificadas, ver (o)).
+2. **Contra PALAVRÃO e gíria sexual em qualquer língua:** `kill-bill-vol-2`,
+   `punch-drunk-love`, `spider-man-into-the-spider-verse`, `eyes-wide-shut`,
+   `project-x-2012`, `snatch`, `school-of-rock`, `the-dark-knight-rises`,
+   `the-whale-2022`, `there-will-be-blood`, `logan-2017`. Onde foi medido,
+   não muda bullet nem contraste.
+3. **Possivelmente contra LÍNGUA.** Taxa de recusa por língua provável
+   (heurística de `recusas.idioma_provavel`, mesma nas duas contagens):
+   inglês 18/3.971 = 0,45%; espanhol 8/525 = 1,52%; francês 7/425 = 1,65%;
+   português 1/445 = 0,22%; árabe 0/130; turco 0/102; polonês 2/22;
+   húngaro 1/3; azerbaijano 1/1 (`scream`, texto inofensivo, (l)). Espanhol
+   e francês são recusados a ~3,5× a taxa do inglês. INDICATIVO: 8 e 7
+   casos, e a maioria deles tem palavrão, o que não separa "língua" de
+   "palavrão em língua não inglesa". As línguas raras têm n pequeno demais.
+**A recoleta em DeepSeek, quando houver saldo, começa pelos ★ (`perfect-blue`,
+`poor-things-2023`) e pelos indeterminados de tema (`mid90s`, `superbad`).**
+
+**(o) O CRÉDITO PRÉ-PAGO DO GEMINI ACABOU (2026-09-27 ~04:13 UTC) — e o 402
+passou pelo disjuntor.** Todas as chamadas voltam `402 RESOURCE_EXHAUSTED:
+"Your prepayment credits are depleted"`. Gasto REGISTRADO da exceção até
+aqui: **US$9,61 a preço de batch, US$19,13 a preço cheio** (blocos 1-5), mais
+o gate e as sondas (US$0,98 / US$1,27). Esses números, mais a narrativa, o
+veredito e as condições que já rodavam em Gemini na conta, respondem
+INDIRETAMENTE à pergunta do billing: quem souber o saldo pré-pago em
+2026-09-22 compara com os dois totais. **O DEFEITO, meu:** o SDK do Gemini
+expõe o status em `code`, não em `status_code`, e o disjuntor de saldo (C18)
+só olhava `status_code`. As 11 substitutas do bloco 4 viraram `ok: False`
+(33 registros, julgamento do modelo onde era estado da conta) e **o bloco 4
+foi commitado com 11 incompletas**. O estado continua consistente, e a C14.8
+RECUSA os 5 filmes afetados (`mid90s`, `school-of-rock`, `logan-2017`,
+`there-will-be-blood`, `superbad`), com razão. **Corrigido:**
+`synthesize._saldo_gemini_esgotado` reconhece o 402 do Gemini (por `code` e
+pela mensagem), abre o MESMO disjuntor, e a classificação e o verificador não
+gravam a review; o passe aborta antes do commit; o orquestrador para com
+código 5 (testes em `test_c22_batch.py`). Os 33 registros `ok: False` ficam
+(append-only) e são retentados na reexecução. **Estado ao parar:** blocos 1-3
+commitados completos; bloco 4 commitado com as 11 substitutas pendentes; bloco
+5 com os passes 1-2 coletados e as recusas registradas (sem passe 3,
+verificador nem commit); bloco 6 nada. **Para terminar**, com crédito: as
+substitutas do bloco 4 (síncrono, centavos), o resto do bloco 5 e o bloco 6,
+~US$1,6 a preço de batch ou ~US$3,3 cheio. Os blocos 2-6 fecham em ~US$18,2
+cheio, dentro do teto de US$20.
+
+**Flag para o dono (operacional, não produto):**
+`python scripts/proveniencia_classificacao.py` lista os filmes classificados
+em Gemini (do consenso), com reviews, passes 3 dispensados, camadas, modelos
+efetivos e — se publicado — os eixos de contraste com o ΔF1 do gate ao lado.
+Para escolher o que recoletar em DeepSeek quando houver saldo. Não toca o
+JSON publicado.
+
 ---
 
 ## D. Régua e medição
