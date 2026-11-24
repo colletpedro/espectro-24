@@ -439,10 +439,15 @@ def test_o_primeiro_quadro_da_faixa_e_o_backdrop_publicado_ou_gemeo_dele():
     # [decisão do dono, 2026-11-02] os 7 novos do catálogo expandido foram
     # aceitos: o padrão (hero colapsa num gêmeo perceptual) é o documentado em
     # `ficha._stills`. Um 15º caso continua sendo uma conversa.
+    # [2026-11-24, catálogo de 128] os 29 filmes de 08/11 (versionados nesta data) trouxeram 7 casos do
+    # MESMO padrão: alien, cinema-paradiso, life-is-beautiful, modern-times, seven-samurai,
+    # the-godfather-part-ii e wall-e. A trava de proximidade (pHash ≤ 2× o limiar) acima continua valendo
+    # para todos, inclusive os 7 novos; só a lista nomeada cresceu. Um 22º caso continua sendo uma conversa.
     assert divergentes == [
-        "12-angry-men", "2001-a-space-odyssey", "anatomy-of-a-fall",
-        "cats-2019", "chinatown", "django-unchained", "dune-2021",
+        "12-angry-men", "2001-a-space-odyssey", "alien", "anatomy-of-a-fall",
+        "cats-2019", "chinatown", "cinema-paradiso", "django-unchained", "dune-2021",
         "dune-part-two", "everything-everywhere-all-at-once",
         "friday-the-13th-2009", "goodfellas", "guillermo-del-toros-pinocchio",
-        "the-prestige", "the-substance",
+        "life-is-beautiful", "modern-times", "seven-samurai",
+        "the-godfather-part-ii", "the-prestige", "the-substance", "wall-e",
     ], f"mudou o conjunto de filmes cujo hero colapsou num gêmeo: {divergentes}"

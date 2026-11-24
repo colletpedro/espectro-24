@@ -34,27 +34,37 @@ def _sem_paises(doc: dict) -> dict:
     return d
 
 
+def _paises_validos(nome: str, paises) -> None:
+    assert isinstance(paises, list), nome
+    assert all(isinstance(p, str) and re.fullmatch(r"[A-Z]{2}", p) for p in paises), (nome, paises)
+    assert len(set(paises)) == len(paises), (nome, paises)
+
+
 def test_diff_resultado_so_incluiu_ficha_paises():
+    """Sobre os filmes que JÁ existiam na base: nenhum foi apagado e nenhum mudou além de `ficha.paises`.
+    Os filmes ENTRADOS depois da base (catálogo que cresce: ex. os 29 de 08/11) não têm o que comparar com a
+    base; para eles a verificação é a de estrutura, e `paises` é OBRIGATÓRIO (mesma exigência da rodada)."""
     listagem = _git("ls-tree", "--name-only", f"{BASE}:resultado")
     if listagem is None:
         pytest.skip(f"git ou o commit {BASE} indisponível")
     na_base = {n for n in listagem.split() if n.endswith(".json")}
     na_arvore = {p.name for p in (RAIZ / "resultado").glob("*.json")}
-    assert na_arvore == na_base, "arquivo de resultado/ criado ou apagado"
+    assert na_base <= na_arvore, f"arquivo de resultado/ apagado: {sorted(na_base - na_arvore)}"
 
     com_paises = 0
-    for nome in sorted(na_base):
-        base = json.loads(_git("show", f"{BASE}:resultado/{nome}"))
+    for nome in sorted(na_arvore):
         atual = json.loads((RAIZ / "resultado" / nome).read_text(encoding="utf-8"))
-        assert "paises" not in (base.get("ficha") or {}), nome
-        assert _sem_paises(atual) == base, f"{nome}: mudou algo além de ficha.paises"
-        paises = (atual.get("ficha") or {}).get("paises")
-        if paises is None:
-            continue
-        assert isinstance(paises, list), nome
-        assert all(isinstance(p, str) and re.fullmatch(r"[A-Z]{2}", p)
-                   for p in paises), (nome, paises)
-        assert len(set(paises)) == len(paises), (nome, paises)
+        if nome in na_base:
+            base = json.loads(_git("show", f"{BASE}:resultado/{nome}"))
+            assert "paises" not in (base.get("ficha") or {}), nome
+            assert _sem_paises(atual) == base, f"{nome}: mudou algo além de ficha.paises"
+            paises = (atual.get("ficha") or {}).get("paises")
+            if paises is None:
+                continue
+        else:
+            paises = (atual.get("ficha") or {}).get("paises")
+            assert paises is not None, f"{nome}: filme novo sem ficha.paises"
+        _paises_validos(nome, paises)
         com_paises += 1
     assert com_paises >= 99, com_paises
 
