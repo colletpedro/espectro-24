@@ -298,7 +298,16 @@ def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
     revelados pela publicação real das condições desses filmes, não erro:
     é a mesma medição, sobre um catálogo maior. O resultado esperado
     CRESCE para incluir a medição nova; a regra (R13 por eixo de origem,
-    C14.16) não mudou uma linha."""
+    C14.16) não mudou uma linha.
+
+    [2026-11-24, decisão do dono] +5 depois de os 29 filmes de 08/11 entrarem
+    no catálogo versionado (`psycho`/NEG-B, `pulp-fiction`/NEG-A,
+    `the-shawshank-redemption`/NEG-A, `harakiri`/NEG-B, `the-lion-king`/
+    NEG-E). Diagnóstico (MEDIDO nos 5): em todos o tema é do eixo
+    `expectativa` ("superestimado"), foi PEDIDO em `temas_pedidos` e a R13 o
+    retém; NENHUMA condição publicada tem esse `tema_origem`. A regra foi
+    cumprida no ar; o teste só não conhecia a medição nova. Igualdade
+    exata, nada afrouxado."""
     if not (RAIZ / "resultado" / "votacao-3" / "consenso.jsonl").exists():
         pytest.skip("catálogo ausente neste checkout")
     retidos = _temas_retidos_no_catalogo()
@@ -310,6 +319,12 @@ def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
         ("fight-club", "NEG-A"),
         ("gladiator-2000", "NEG-C"),
         ("the-truman-show", "NEG-C"),
+        # os 29 de 08/11 (ver o docstring)
+        ("psycho", "NEG-B"),
+        ("pulp-fiction", "NEG-A"),
+        ("the-shawshank-redemption", "NEG-A"),
+        ("harakiri", "NEG-B"),
+        ("the-lion-king", "NEG-E"),
     }
 
 

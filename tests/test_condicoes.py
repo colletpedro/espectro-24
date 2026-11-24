@@ -347,6 +347,104 @@ def _porco_rosso():
     return d, C.montar_briefing(d)
 
 
+# [2026-11-24, decisão do dono] `leon-the-professional`: a idade de uma personagem ("personagem de 12 anos")
+# aparece na PARÁFRASE de três bullets publicados. Registro: idade de personagem CITADA PELAS REVIEWS não é
+# quantidade decidida pelo modelo (é um dado do filme, como o ano), então não é o que a regra de zero
+# algarismos (R4) protege. O conteúdo publicado NÃO foi alterado e as condições publicadas não têm o "12".
+# Mesmo formato da exceção do porco-rosso: ESTE filme, ESTES três bullets, ESTE texto.
+_EXCECAO_LEON = {"slug": "leon-the-professional", "texto": "12 anos", "algarismos": ["12", "12"],
+                 "bullets": {"NEG-A": ("buckets", 0, "temas", 0), "MED-A": ("buckets", 1, "temas", 0),
+                             "POS-C": ("buckets", 2, "temas", 2)},
+                 # os dois que o briefing SELECIONA hoje; o MED-A está no `idx`, fora da seleção
+                 "selecionados": ("NEG-A", "POS-C")}
+
+
+def _sem_excecao_do_leon(d, b, proibidos):
+    """Exceção EXATA: só `leon-the-professional`, só os bullets NEG-A, MED-A e POS-C, só a string "12 anos".
+    Qualquer outro algarismo continua falhando. Obsoleta (um bullet mudou, um item saiu do lugar, o
+    algarismo sumiu, o MED-A entrou na seleção e agora há 3 ocorrências) = o teste falha."""
+    e = _EXCECAO_LEON
+    for item, origem in e["bullets"].items():
+        nó = d
+        for k in origem:
+            nó = nó[k]
+        assert e["texto"] in nó["exemplo_parafraseado"], f"exceção obsoleta: origem {item}"
+        assert e["texto"] in b["idx"][item]["exemplo"], f"exceção obsoleta: idx {item}"
+    sel = [t for ts in b["selecao"].values() for t in ts if t["id"] in e["bullets"]]
+    assert sorted(t["id"] for t in sel) == sorted(e["selecionados"]), "exceção obsoleta: item na seleção"
+    assert all(e["texto"] in t["exemplo"] for t in sel), "exceção obsoleta: item"
+    assert proibidos == e["algarismos"], f"exceção obsoleta ou outro algarismo no filme: {proibidos}"
+    for t in sel:
+        t["exemplo"] = t["exemplo"].replace(e["texto"], "XX anos")
+    return b, C.algarismos_proibidos_no_briefing(b)
+
+
+def _leon():
+    caminho = RESULTADO / "leon-the-professional.json"
+    if not caminho.exists():
+        pytest.skip("leon-the-professional.json indisponível neste checkout")
+    d = json.loads(caminho.read_text(encoding="utf-8"))
+    return d, C.montar_briefing(d)
+
+
+def test_excecao_do_leon_vale_hoje_e_zera_o_algarismo():
+    import copy
+    d, b = _leon()
+    proibidos = C.algarismos_proibidos_no_briefing(b)
+    assert proibidos == ["12", "12"]
+    _, depois = _sem_excecao_do_leon(copy.deepcopy(d), copy.deepcopy(b), proibidos)
+    assert depois == []
+
+
+def test_excecao_do_leon_nao_cobre_outro_algarismo_nem_outro_bullet():
+    """Um algarismo qualquer num OUTRO item do mesmo filme continua falhando mesmo com a exceção aplicada."""
+    import copy
+    d, b = _leon()
+    b2 = copy.deepcopy(b)
+    outro = next(t for ts in b2["selecao"].values() for t in ts if t["id"] not in _EXCECAO_LEON["bullets"])
+    outro["exemplo"] += " Com 3 pessoas."
+    proibidos = C.algarismos_proibidos_no_briefing(b2)
+    assert proibidos == ["3", "12", "12"] or sorted(proibidos) == ["12", "12", "3"]
+    with pytest.raises(AssertionError, match="obsoleta ou outro algarismo"):
+        _sem_excecao_do_leon(copy.deepcopy(d), b2, proibidos)
+
+
+def test_excecao_do_leon_obsoleta_dispara():
+    """Cada forma de a exceção ficar obsoleta faz `_sem_excecao_do_leon` falhar."""
+    import copy
+    d, b = _leon()
+    proibidos = C.algarismos_proibidos_no_briefing(b)
+
+    def roda(d, b, proibidos):
+        return _sem_excecao_do_leon(copy.deepcopy(d), copy.deepcopy(b), proibidos)
+
+    for item, origem in _EXCECAO_LEON["bullets"].items():      # a paráfrase de qualquer um dos 3 bullets mudou
+        d1 = copy.deepcopy(d)
+        nó = d1
+        for k in origem:
+            nó = nó[k]
+        nó["exemplo_parafraseado"] = nó["exemplo_parafraseado"].replace("12 anos", "pouca idade")
+        with pytest.raises(AssertionError, match=f"origem {item}"):
+            roda(d1, b, proibidos)
+
+    b1 = copy.deepcopy(b)                                        # o item da seleção já não traz "12 anos"
+    for ts in b1["selecao"].values():
+        for item in ts:
+            if item["id"] == "NEG-A":
+                item["exemplo"] = item["exemplo"].replace("12 anos", "pouca idade")
+    with pytest.raises(AssertionError, match="obsoleta"):
+        roda(d, b1, proibidos)
+
+    with pytest.raises(AssertionError, match="obsoleta"):        # o algarismo sumiu (nada a isentar)
+        roda(d, b, [])
+    with pytest.raises(AssertionError, match="obsoleta ou outro algarismo"):   # a 3ª ocorrência (MED-A selecionado)
+        roda(d, b, ["12", "12", "12"])
+    b2 = copy.deepcopy(b)                                        # o briefing seleciona outro item do filme
+    b2["selecao"]["talvez_evite"] = [t for t in b2["selecao"]["talvez_evite"] if t["id"] != "NEG-A"]
+    with pytest.raises(AssertionError, match="item na seleção"):
+        roda(d, b2, proibidos)
+
+
 def test_excecao_do_porco_rosso_vale_hoje_e_zera_o_algarismo():
     import copy
     d, b = _porco_rosso()
@@ -412,6 +510,8 @@ def test_briefing_nao_tem_algarismo_proibido_em_nenhum_filme():
         proibidos = C.algarismos_proibidos_no_briefing(b)
         if d["slug"] == _EXCECAO_PORCO_ROSSO["slug"]:
             b, proibidos = _sem_excecao_do_porco_rosso(d, b, proibidos)
+        elif d["slug"] == _EXCECAO_LEON["slug"]:
+            b, proibidos = _sem_excecao_do_leon(d, b, proibidos)
         assert proibidos == [], d["slug"]
 
 

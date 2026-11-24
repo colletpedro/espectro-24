@@ -2906,3 +2906,13 @@ não é burocracia"*.
 trabalho de uma sessão — e se (c) fica onde está. **O critério proposto:** sai
 o que responde *por que a regra é essa*; fica o que responde *o que esta regra
 não garante*.
+
+## 2026-11-24 — exceção de idade de personagem em `leon-the-professional` (decisão do dono)
+
+O briefing de `leon-the-professional` carrega "12 anos" (idade da personagem) vindo da PARÁFRASE de três bullets
+publicados (NEG-A, MED-A, POS-C). **Registro:** idade de personagem citada pelas reviews não é quantidade decidida pelo
+modelo; é um dado do filme, como o ano. As condições publicadas NÃO têm o "12" e o conteúdo publicado não foi alterado.
+A exceção é ESTREITA, no formato da do porco-rosso: este filme, estes três bullets, este texto
+(`tests/test_condicoes.py::_EXCECAO_LEON`), com teste de obsolescência (`test_excecao_do_leon_obsoleta_dispara`) e teste
+de que outro algarismo no mesmo filme continua falhando. Também: os 5 pares de `publicar_condicoes` (psycho, pulp-fiction,
+the-shawshank-redemption, harakiri, the-lion-king) entraram no conjunto esperado, com diagnóstico no docstring.
