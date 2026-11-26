@@ -68,14 +68,27 @@
      da rodada 2, agora sem rotação por dia (a rotação é a da coleção do
      dia, abaixo).
 
-   COLEÇÃO DO DIA (`colecaoDoDia`): no dia d (o mesmo contador do filme do
-   dia), a coleção de posição (d mod N) na ordem fixa, N = nº de coleções.
-   Se ela contém o filme da MANCHETE, a busca SALTA MEIO CICLO: tenta as
-   posições (d mod N) + floor(N/2), + floor(N/2) + 1, ... (circular) até a
-   primeira que não contém o filme; se todas contêm, fica a de posição
-   (d mod N). O salto existe porque avançar uma posição escolheria a
-   coleção de amanhã, e a mesma coleção apareceria em dois dias seguidos.
-   Em N dias seguidos sem manchete a evitar, cada coleção aparece uma vez.
+   COLEÇÃO DO DIA (`colecaoDoDia`): uma por dia, a MESMA para todo visitante
+   no mesmo dia (só depende da data e do catálogo; nada fica no navegador).
+   A regra é uma FILA DE DÍVIDA: a coleção do dia é a que aparece há mais
+   tempo entre as que NÃO contêm o filme da MANCHETE do dia. Sem colisão,
+   isso é a ordem fixa, `ordem[d mod N]` (N = nº de coleções). Quando a
+   coleção da vez contém a manchete, ela é PULADA, a próxima mais antiga
+   ocupa o dia e a pulada segue a mais antiga: volta no PRIMEIRO dia em que a
+   manchete não for dela (se colidir de novo, continua na frente da fila).
+   Se TODAS contêm a manchete, fica a da vez. A mesma coleção nunca aparece
+   em dois dias seguidos (a que acabou de aparecer é a mais recente). A
+   história é recalculada a partir da EPOCA, de forma determinística, com o
+   filme do dia de `escolhaDoDia`; `null` no 3º argumento = nenhuma manchete
+   a evitar (vale a ordem fixa).
+   O QUE ESTÁ PROMETIDO (e é medido em tests/test_colecao_rotacao.py): com as
+   manchetes reais, TODA coleção aparece em QUALQUER janela de 2N dias
+   seguidos. Em N dias seguidos sem manchete a evitar, cada uma aparece uma
+   vez. A promessa tem uma condição: ela só falha se a manchete pertencer a
+   uma mesma coleção durante 2N dias seguidos, o que exige uma coleção com
+   a maior parte do catálogo (medido: falha a partir de ~60% dos filmes numa
+   só coleção; a maior real tem 14%, e a maior lacuna medida é de 18 dias
+   para um limite de 30).
    FILMES MOSTRADOS: até LIMITE_COLECAO (4). Com mais que isso, uma janela
    circular de 4 sobre a lista alfabética, começando em (d mod tamanho), e
    reordenada alfabeticamente; o "primeiro filme" (o still grande) é o
@@ -314,28 +327,100 @@
     return colecao.filmes.some(function (f) { return f.slug === slug; });
   }
 
+  /* ROTAÇÃO DAS COLEÇÕES COM FILA DE DÍVIDA. A coleção do dia é a MAIS ANTIGA
+     (a que apareceu há mais tempo) entre as que NÃO contêm o filme da
+     manchete. Sem colisão isso é exatamente `ordem[d mod N]`; quando a da
+     vez colide com a manchete, a próxima mais antiga aparece naquele dia e a
+     pulada continua a mais antiga, então volta no PRIMEIRO dia em que a
+     manchete não for dela (se colidir de novo, segue na frente da fila). Se
+     TODAS colidem, fica a da vez (`ordem[d mod N]`).
+     Sem estado guardado: a história é recalculada, de forma determinística,
+     a partir da EPOCA (nada vai ao navegador) com o filme do dia de
+     `escolhaDoDia`, e guardada em memória por catálogo (WeakMap) só para não
+     repetir a conta. Antes da EPOCA ou além de ROTACAO_MAX_DIAS vale o
+     estado inicial (a rotação simples, com a mesma regra de colisão). */
+  var ROTACAO_MAX_DIAS = 4000;
+  var rotacoes = typeof WeakMap === "function" ? new WeakMap() : null;
+
+  function diaDeIndice(k) {
+    return new Date(utcDoDia(EPOCA) + k * MS_DIA).toISOString().slice(0, 10);
+  }
+
+  function estadoInicial(n) {
+    var ultimo = [];
+    for (var i = 0; i < n; i++) ultimo.push(i - n);   // a ordem fixa, como se já girasse
+    return ultimo;
+  }
+
+  // → { i: coleção escolhida, devida: a mais antiga (ou a da vez, se todas colidem) }
+  function escolherDaFila(ultimo, membros, slug, vez) {
+    var n = ultimo.length;
+    var fila = [];
+    for (var i = 0; i < n; i++) fila.push(i);
+    fila.sort(function (a, b) { return (ultimo[a] - ultimo[b]) || (a - b); });
+    var escolhida = -1;
+    for (var j = 0; j < n; j++) {
+      if (!slug || !membros[fila[j]][slug]) { escolhida = fila[j]; break; }
+    }
+    if (escolhida < 0) return { i: vez, devida: vez };
+    return { i: escolhida, devida: fila[0] };
+  }
+
+  function rotacaoDe(filmes, ordem) {
+    var chave = ordem.map(function (c) { return c.chave; }).join("|") + "#" + (filmes || []).length;
+    var r = rotacoes && filmes ? rotacoes.get(filmes) : null;
+    if (!r || r.chave !== chave) {
+      r = { chave: chave, membros: ordem.map(function (c) {
+              var m = {}; c.filmes.forEach(function (f) { m[f.slug] = true; }); return m; }),
+            antes: [], manchetes: [], atual: estadoInicial(ordem.length), proximo: 0 };
+      if (rotacoes && filmes) rotacoes.set(filmes, r);
+    }
+    return r;
+  }
+
+  // O estado (último dia de cada coleção) ANTES do dia d.
+  function estadoAntesDe(filmes, ordem, d) {
+    var n = ordem.length;
+    if (d < 0 || d > ROTACAO_MAX_DIAS) return { ultimo: estadoInicial(n), membros: rotacaoDe(filmes, ordem).membros };
+    var r = rotacaoDe(filmes, ordem);
+    while (r.proximo <= d) {
+      var k = r.proximo;
+      r.antes.push(r.atual.slice());
+      var e = escolhaDoDia(filmes, diaDeIndice(k));
+      var slug = e ? e.filme.slug : null;
+      r.manchetes.push(slug);
+      var esc = escolherDaFila(r.atual, r.membros, slug, modulo(k, n));
+      r.atual[esc.i] = k;
+      r.proximo = k + 1;
+    }
+    return { ultimo: r.antes[d], membros: r.membros, manchete: r.manchetes[d] };
+  }
+
   // → { colecao, filmes (até LIMITE_COLECAO), total, evitou } ou null.
   // `mancheteSlug` é opcional: sem ele, é o filme do dia de `escolhaDoDia`.
+  // `null` = nenhuma manchete a evitar: vale a ordem fixa, `ordem[d mod N]`.
+  // `evitou` = a coleção devida foi pulada porque a manchete é dela.
   function colecaoDoDia(filmes, dia, mancheteSlug) {
     var ordem = ordemDasColecoes(filmes);
     if (!ordem.length) return null;
-    if (mancheteSlug === undefined) {
-      var e = escolhaDoDia(filmes, dia);
-      mancheteSlug = e && e.filme.slug;
-    }
     var d = diasDesdeEpoca(dia);
     var n = ordem.length;
-    var k0 = modulo(d, n);
-    var escolhida = ordem[k0];
-    if (mancheteSlug && contem(escolhida, mancheteSlug)) {
-      var salto = Math.floor(n / 2);
-      for (var j = 0; j < n; j++) {
-        var c = ordem[(k0 + salto + j) % n];
-        if (c !== ordem[k0] && !contem(c, mancheteSlug)) { escolhida = c; break; }
+    var idx, evitou = false;
+    if (mancheteSlug === null) {
+      idx = modulo(d, n);
+    } else {
+      var est = estadoAntesDe(filmes, ordem, d);
+      if (mancheteSlug === undefined) {
+        if (est.manchete !== undefined) mancheteSlug = est.manchete;
+        else { var e = escolhaDoDia(filmes, dia); mancheteSlug = e ? e.filme.slug : null; }
       }
+      var esc = escolherDaFila(est.ultimo, est.membros, mancheteSlug, modulo(d, n));
+      idx = esc.i;
+      evitou = esc.i !== esc.devida;
     }
+    var escolhida = ordem[idx];
     return { colecao: escolhida, filmes: janelaDoDia(escolhida.filmes, LIMITE_COLECAO, d),
-             total: escolhida.filmes.length, evitou: escolhida !== ordem[k0] };
+             total: escolhida.filmes.length, evitou: evitou };
   }
 
   function modoDoLogo(filme) {
