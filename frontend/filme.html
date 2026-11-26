@@ -22,6 +22,9 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Instrument Sans (padrão) e `?fonte=`: o mesmo da home e de /filmes -->
+  <script src="js/i18n.js"></script>
+  <!-- [i18n] só em inglês: traduções do conteúdo gerado (síncrono, antes do render) -->
+  <script>if (window.I18N && I18N.idioma === "en") { document.write('<script src="js/data_en_home.js"><\/script>');document.write('<script src="js/data_en.js"><\/script>'); }</script>
   <script src="js/fonte.js"></script>
   <!-- ?cor=: paleta dos grupos (js/cor.js) -->
   <script src="js/cor.js"></script>
@@ -41,15 +44,15 @@
         <span class="search__icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         </span>
-        <label class="visually-hidden" for="busca">Buscar filme</label>
+        <label class="visually-hidden" for="busca" data-i18n="filme.buscar_filme">Buscar filme</label>
         <input id="busca" type="text" autocomplete="off" spellcheck="false"
                role="combobox" aria-autocomplete="list" aria-expanded="false"
                aria-controls="buscaResultados">
-        <ul class="busca__resultados" id="buscaResultados" role="listbox" aria-label="Resultados da busca" hidden></ul>
+        <ul class="busca__resultados" id="buscaResultados" role="listbox" aria-label="Resultados da busca" data-i18n-attr="aria-label:filme.resultados_busca" hidden></ul>
         <p class="busca__vazia" id="buscaVazia" role="status" aria-live="polite" hidden></p>
       </div>
 
-      <nav class="ed-cabecalho__nav" aria-label="Seções">
+      <nav class="ed-cabecalho__nav" aria-label="Seções" data-i18n-attr="aria-label:filme.secoes_aria">
         <a id="edLinkFilmes" href="filmes/"></a>
         <a id="edLinkMetodo" href="creditos.html#cred-metodo"></a>
       </nav>
@@ -65,13 +68,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <span style="color:var(--text-mute); font-size:0.9rem;">
-        Síntese automática a partir de reviews públicas ·
+        <span data-i18n="filme.rodape_sintese">Síntese automática a partir de reviews públicas</span> ·
         <a id="footerReviews" href="#" target="_blank" rel="noopener noreferrer">letterboxd&nbsp;↗</a>
         · Espectro 24
       </span>
       <!-- [v1.9.29, Entrega 4] ver o comentário equivalente em index.html -->
-      <span class="site-footer__aviso">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
-      <span class="site-footer__creditos"><a href="creditos.html">créditos e fontes</a> · <a href="en/about/" hreflang="en" lang="en">about</a></span>
+      <span class="site-footer__aviso" data-i18n="filme.rodape_tmdb">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
+      <span class="site-footer__creditos"><a href="creditos.html" data-i18n="filme.rodape_creditos">créditos e fontes</a> · <a href="en/about/" hreflang="en" lang="en">about</a></span>
     </div>
   </footer>
 

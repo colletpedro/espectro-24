@@ -287,7 +287,8 @@ def test_o_lightbox_e_um_dialogo_modal_com_botao_de_fechar():
     assert 'setAttribute("role", "dialog")' in corpo
     assert 'setAttribute("aria-modal", "true")' in corpo
     assert 'className = "lightbox__fechar"' in corpo
-    assert 'setAttribute("aria-label", "Fechar")' in corpo
+    # [i18n] o rótulo passa por `rotulo(chave, pt)`; o pt continua "Fechar"
+    assert 'setAttribute("aria-label", rotulo("filme.lightbox_fechar", "Fechar"))' in corpo
 
 
 def test_o_lightbox_trava_o_scroll_de_tras_e_destrava_ao_fechar():

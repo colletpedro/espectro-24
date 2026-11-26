@@ -18,6 +18,35 @@
 (function () {
   "use strict";
 
+  // Textos da própria página (`data-i18n` em filmes/index.html). Os textos
+  // de componentes (filtros, chips, "mostrar mais") vêm de textos_home.js.
+  if (globalThis.I18N) globalThis.I18N.registrar({
+    pt: {
+      "filmes.titulo_pagina": "Explorar — Espectro 24",
+      "filmes.meta_descricao": "A recepção completa de um filme — o que quem odiou, quem amou e quem ficou no meio diz — sem nota média e sem spoilers.",
+      "filmes.meta_titulo": "Espectro 24 — a recepção completa de um filme, sem spoilers",
+      "filmes.secoes": "Seções",
+      "filmes.vista": "Vista",
+      "filmes.buscar_rotulo": "Buscar filme",
+      "filmes.resultados_busca": "Resultados da busca",
+      "filmes.sintese": "Síntese automática a partir de reviews públicas do Letterboxd. Sem nota média, sem spoilers.",
+      "filmes.aviso_tmdb": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
+      "filmes.creditos_link": "créditos e fontes",
+    },
+    en: {
+      "filmes.titulo_pagina": "Explore — Espectro 24",
+      "filmes.meta_descricao": "The full reception of a film — what those who hated it, loved it and sat in the middle say — with no average rating and no spoilers.",
+      "filmes.meta_titulo": "Espectro 24 — the full reception of a film, no spoilers",
+      "filmes.secoes": "Sections",
+      "filmes.vista": "View",
+      "filmes.buscar_rotulo": "Search for a film",
+      "filmes.resultados_busca": "Search results",
+      "filmes.sintese": "Automatic synthesis of public Letterboxd reviews. No average rating, no spoilers.",
+      "filmes.aviso_tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      "filmes.creditos_link": "credits and sources",
+    },
+  });
+
   var IDX = window.ESPECTRO_INDICE || { filmes: [] };
   var X = window.ESPECTRO_EXPLORAR;
   var T = window.ESPECTRO_TEXTOS;

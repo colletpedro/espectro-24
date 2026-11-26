@@ -46,13 +46,31 @@
   var GRUPO_ALGARISMO = "0–9";
   var DATA_RE = /^\d{4}-\d{2}-\d{2}$/;
 
+  // Textos próprios deste arquivo (js/i18n.js). Sob node (testes) não há
+  // I18N: `T` cai no PT do próprio dicionário, com a mesma saída de antes.
+  var DIC = {
+    pt: { "explorar.decada": "Anos {sufixo}" },
+    en: { "explorar.decada": "{ano}s" },
+  };
+  if (root.I18N) root.I18N.registrar(DIC);
+  function tr(chave, vars) {
+    if (root.I18N) return root.I18N.t(chave, vars);
+    var v = DIC.pt[chave];
+    return String(v == null ? chave : v).replace(/\{(\w+)\}/g, function (m, k) {
+      return vars && vars[k] != null ? String(vars[k]) : m;
+    });
+  }
+
   function decadaDe(f) {
     return typeof f.ano === "number" ? Math.floor(f.ano / 10) * 10 : null;
   }
 
-  // "Anos 60" até 1990; "Anos 2000" em diante (como se fala).
+  // "Anos 60" até 1990; "Anos 2000" em diante (como se fala). EN: "1960s".
   function rotuloDaDecada(d) {
-    return "Anos " + (d < 2000 ? String(d % 100).padStart(2, "0") : String(d));
+    return tr("explorar.decada", {
+      ano: d,
+      sufixo: d < 2000 ? String(d % 100).padStart(2, "0") : String(d),
+    });
   }
 
   // A chave de URL de um gênero: o nome normalizado, espaços em hífen
@@ -97,7 +115,7 @@
     var ng = contar(lista, function (f) {
       return (f.generos || []).map(function (g) {
         var k = chaveDoGenero(g);
-        if (!nomeDoGenero[k]) nomeDoGenero[k] = g;
+        if (!nomeDoGenero[k]) nomeDoGenero[k] = B.generoExibido(g);
         return k;
       });
     });

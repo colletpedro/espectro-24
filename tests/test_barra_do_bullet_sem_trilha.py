@@ -318,8 +318,11 @@ def test_o_denominador_continua_na_alternativa_textual():
     `role="img"`, então sem ele ela fica muda."""
     js = _txt(FILME_JS)
     assert 'bar.setAttribute("role", "img");' in js
-    assert ('bar.setAttribute("aria-label", "Mencionado em cerca de " + x '
-            '+ " de " + n + " reviews");') in js
+    # [i18n] o texto saiu do código para o dicionário `filme.*`: o denominador
+    # N continua na alternativa textual, nos DOIS idiomas ("~X de N")
+    assert 'bar.setAttribute("aria-label", tr("filme.tema_aria", { x: x, n: n }));' in js
+    assert '"filme.tema_aria": "Mencionado em cerca de {x} de {n} reviews"' in js
+    assert '"filme.tema_aria": "Mentioned in about {x} of {n} reviews"' in js
 
 
 # =====================================================================

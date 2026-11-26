@@ -61,7 +61,8 @@ def _git(*args):
 def test_tudo_o_que_o_site_serve_esta_versionado():
     """Arquivo servido que só existe no disco some do site no próximo push."""
     servidos = [f"frontend/data/{s}.json" for s in _publicados()] + [
-        "frontend/js/data.js", "frontend/js/indice.js",
+        "frontend/js/data.js", "frontend/js/indice.js", "frontend/js/data_en.js",
+        "frontend/js/data_en_home.js",
         "frontend/entrada_no_catalogo.json", "dados/publicados.json"]
     fora = [p for p in servidos if _git("ls-files", "--error-unmatch", p).returncode != 0]
     assert not fora, f"não versionados (o deploy não os terá): {fora[:5]} ({len(fora)})"

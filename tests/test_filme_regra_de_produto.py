@@ -245,7 +245,8 @@ def test_o_titulo_da_secao_e_o_titulo_da_colecao(padrao):
     for slug, d in padrao.items():
         c = d["colecao"]
         if c["origem"] == "colecao":
-            assert f'"{c["chave"]}": "{c["titulo"]}"' in texto or f'{c["chave"]}: "{c["titulo"]}"' in texto, slug
+            assert f'"{c["chave"]}": "{c["titulo"]}"' in texto or f'{c["chave"]}: "{c["titulo"]}"' in texto \
+                or f'"home.prateleira.{c["chave"]}": "{c["titulo"]}"' in texto, slug  # [i18n] dicionário pt
 
 
 # --- 8. a galeria e a linha de metadado -------------------------------------
@@ -414,3 +415,150 @@ def test_a_linha_do_peso_do_grupo_nunca_quebra_por_dentro():
     corpos = re.findall(r"\.pagina-filme \.group__share \{([^}]*)\}", css)
     assert any("white-space: nowrap" in c and "margin-left: 0" in c for c in corpos)
     assert re.search(r"@container \(min-width: 380px\) \{\s*\.pagina-filme \.group__share \{ margin-left: auto; \}", css)
+
+
+# --- 9. INGLÊS: as regras de produto valem nos dois idiomas ---------------
+# [i18n] Roda o filme.js REAL com `?lang=en`. Conteúdo gerado (narrativa,
+# temas, condições, veredito) continua em português, sob um aviso visível.
+
+@pytest.fixture(scope="module")
+def ingles():
+    return _rodar({"HARNESS_LANG": "en"})
+
+
+def _txt_en(d):
+    return d["texto_da_pagina"]
+
+
+def test_en_a_pagina_renderiza_sem_erro_e_com_aviso_de_analise_em_pt(ingles):
+    assert ingles
+    for slug, d in ingles.items():
+        assert "erro" not in d, f"{slug}: {d.get('erro', '')[:300]}"
+        assert "This analysis is currently available in Portuguese only." in _txt_en(d), slug
+        assert d["secoes"][0].startswith("disclaimer"), slug
+
+
+def test_en_a_regra_estrutural_e_a_mesma_do_pt(padrao, ingles):
+    for slug, p in padrao.items():
+        e = ingles[slug]
+        for campo in CAMPOS_DA_REGRA:
+            if campo == "meio":   # o resumo ("~X% ficaram…") muda de idioma
+                assert e["meio"] is None or e["meio"]["aberto"] == p["meio"]["aberto"], slug
+            elif campo != "peso_meio":  # idem: texto do peso do meio
+                assert e[campo] == p[campo], f"{slug}: {campo}"
+
+
+def test_en_rotulos_de_secao_e_de_grupo_em_ingles(ingles):
+    for slug, d in ingles.items():
+        t = _txt_en(d)
+        assert "RECEPTION" in t and "WHAT EACH GROUP SAYS" in t, slug
+        for pt in ("RECEPÇÃO", "O QUE CADA GRUPO DIZ", "Aprofundar", "Ler a análise"):
+            assert pt not in t, f"{slug}: {pt} vazou em inglês"
+        for g in d["pesos_grupo"]:
+            if g["texto"] is None:
+                continue
+            assert re.search(r"~\d+% of ratings", g["texto"]), (slug, g)
+        for r in d["rotulos"]:
+            if r["texto"]:
+                assert "das notas" not in r["texto"], (slug, r)
+
+
+def test_en_condicoes_com_abertura_em_ingles(ingles):
+    achou = 0
+    for slug, d in ingles.items():
+        t = _txt_en(d)
+        if d["condicoes"]:
+            achou += 1
+            assert ("Worth it if you…" in t) or ("Maybe skip it if you…" in t), slug
+            assert "Vale a pena se você" not in t and "Talvez evite se você" not in t, slug
+    assert achou
+
+
+def test_en_faixas_de_notas_com_ponto_decimal(ingles):
+    vistos = set()
+    for d in ingles.values():
+        vistos.update(d["faixas_de_notas"])
+    assert vistos and vistos <= {"ratings 0.5 to 2", "ratings 2.5 to 3", "ratings 3.5 to 5"}, vistos
+
+
+def test_en_nenhuma_nota_agregada_nem_porcentagem_solta(ingles):
+    # o "N%" da UI vem sempre como "~N%"; sem estrela nem nota média agregada
+    for slug, d in ingles.items():
+        t = _txt_en(d)
+        for m in re.finditer(r"(?<![~\d.])\d+%", t):
+            pytest.fail(f"{slug}: porcentagem solta {m.group(0)!r}")
+        assert "★" not in t and not re.search(r"average (rating|score)", t, re.I), slug
+
+
+def test_en_modo_degradado_continua_visivel_em_ingles():
+    patch = json.dumps({"slug": "12-angry-men",
+                        "modo": {"negativas": "reduzido", "positivas": "sem_analise"}})
+    pt = _rodar({"HARNESS_PATCH": patch})["12-angry-men"]
+    en = _rodar({"HARNESS_PATCH": patch, "HARNESS_LANG": "en"})["12-angry-men"]
+    for d in (pt, en):
+        assert "erro" not in d, d.get("erro", "")[:300]
+    h = pt["html_da_pagina"]
+    assert "Leia com cautela" in h
+    assert "Poucas críticas negativas reúnem" in h
+    assert "Sem análise temática" in h
+    h = en["html_da_pagina"]
+    assert "Read with caution" in h
+    assert "Few negative reviews have enough depth to make up this group." in h
+    assert "No thematic analysis" in h and "reviews available on Letterboxd" in h
+    assert "Leia com cautela" not in h and "Sem análise temática" not in h
+
+
+# --- 10. INGLÊS COM TRADUÇÃO: texto traduzido, sem aviso; sem tradução, PT + aviso
+
+def _fixture_en(slug, completo):
+    d = json.loads((DATA / f"{slug}.json").read_text(encoding="utf-8"))
+    textos = {}
+    def tr(x):
+        if isinstance(x, str) and x.strip():
+            textos[x] = "EN::" + x[:30]
+    tr((d.get("veredito") or {}).get("texto"))
+    for b in d.get("buckets", []):
+        for t in b.get("temas") or []:
+            tr(t.get("tema")); tr(t.get("exemplo_parafraseado"))
+    for lado in ("vale_a_pena", "talvez_evite"):
+        for c in (d.get("condicoes") or {}).get(lado) or []:
+            tr(c.get("texto"))
+    for par in re.split(r"\n{2,}", d.get("narrativa") or ""):
+        tr(par.strip())
+    if not completo:
+        textos.pop(next(iter(textos)))      # uma só string fica sem tradução
+    return {"vocabulario": {}, "filmes": {slug: {"titulo_en": "Fixture Title", "textos": textos}}}
+
+
+def test_en_com_traducao_completa_mostra_o_texto_em_ingles_e_sem_aviso():
+    slug = "12-angry-men"
+    fx = _fixture_en(slug, True)
+    d = _rodar({"HARNESS_LANG": "en", "HARNESS_EN_FIXTURE": json.dumps(fx)}, slug)[slug]
+    assert "erro" not in d, d.get("erro", "")[:300]
+    assert d["aviso_pt"] == 0 and d["n_lang_pt"] == 0
+    assert "EN::" in d["texto_da_pagina"]
+    assert "This analysis is currently available in Portuguese only." not in d["texto_da_pagina"]
+
+
+def test_en_sem_traducao_mostra_pt_com_aviso_e_lang_pt_br():
+    slug = "12-angry-men"
+    d = _rodar({"HARNESS_LANG": "en"}, slug)[slug]
+    assert d["aviso_pt"] == 1 and d["n_lang_pt"] > 5
+    assert "EN::" not in d["texto_da_pagina"]
+
+
+def test_en_traducao_parcial_mantem_o_aviso_so_no_que_faltou():
+    slug = "12-angry-men"
+    fx = _fixture_en(slug, False)
+    d = _rodar({"HARNESS_LANG": "en", "HARNESS_EN_FIXTURE": json.dumps(fx)}, slug)[slug]
+    assert d["aviso_pt"] == 1 and d["n_lang_pt"] == 1
+
+
+def test_en_com_as_traducoes_reais_nenhum_dos_filmes_publicados_tem_aviso():
+    publicados = json.loads((RAIZ / "dados" / "publicados.json").read_text(encoding="utf-8"))
+    slugs = publicados if isinstance(publicados, list) else list(publicados.get("slugs", publicados))
+    out = _rodar({"HARNESS_LANG": "en", "HARNESS_EN": "real"}, *slugs)
+    assert len(out) == len(slugs) >= 100
+    for slug, d in out.items():
+        assert "erro" not in d, (slug, d.get("erro", "")[:300])
+        assert d["aviso_pt"] == 0 and d["n_lang_pt"] == 0, slug

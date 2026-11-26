@@ -3202,3 +3202,23 @@ body.lightbox-aberto { overflow: hidden; }
 @container (min-width: 380px) {
   .pagina-filme .group__share { margin-left: auto; }
 }
+
+
+/* --- [i18n] seletor de idioma "PT · EN" no cabeçalho --- */
+.idioma { display: inline-flex; align-items: center; gap: 2px; font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em; }
+.idioma__sep { color: var(--text-mute); }
+.idioma__botao {
+  font: inherit; letter-spacing: inherit; color: var(--text-dim);
+  background: none; border: 0; border-radius: 3px; padding: 4px 6px; cursor: pointer;
+}
+.idioma__botao:hover { color: var(--text); }
+.idioma__botao.is-ativo { color: var(--text); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; cursor: default; }
+.idioma__botao:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+@media (max-width: 699px) {
+  .ed-cabecalho__linha .idioma { margin-left: auto; }
+  .ed-cabecalho__nav { margin-left: 0; }
+}
+
+/* [i18n] Aviso discreto na página do filme em inglês: a análise gerada ainda
+   está em português (só aparece quando algum texto ficou sem tradução). */
+.aviso-analise-pt { margin: 0 0 12px; font-size: 0.85rem; color: var(--text-mute); }

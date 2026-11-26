@@ -299,8 +299,28 @@ def test_as_copias_do_loop_sao_invisiveis_para_leitor_de_tela():
 
 def test_o_alt_numerado_de_cada_still_continua_como_estava():
     """Requisito explícito desde a v1.9.41: alt preservado como está."""
-    assert ('alt: "Still " + (i + 1) + " de " + nome + sufixoAno(opcoes.ano)'
-            in _poster_js())
+    # [i18n] o alt agora vem de `T("poster.alt_still")`; o contrato é de
+    # COMPORTAMENTO: renderiza o filme em node, pt idêntico ao de antes e en
+    # com "Still {n} of …" (o título do filme não é traduzido).
+    import json, os, shutil, subprocess
+    if shutil.which("node") is None:
+        import pytest
+        pytest.skip("sem node")
+    def alts(lang):
+        env = dict(os.environ, HARNESS_LANG=lang, HARNESS_ALTS="1")
+        r = subprocess.run(
+            ["node", str(RAIZ / "tests" / "_filme_harness.js"), str(FILME_JS), "12-angry-men"],
+            capture_output=True, text=True, timeout=120, env=env)
+        assert r.returncode == 0, r.stderr[-1500:]
+        d = json.loads(r.stdout)["12-angry-men"]
+        assert "erro" not in d, d.get("erro", "")[:300]
+        return [x for x in d["alts_topo"] if x and x.startswith("Still ")]
+    pt, en = alts("pt"), alts("en")
+    assert len(pt) >= 3 and len(pt) == len(en)
+    for i, x in enumerate(pt):
+        assert x == "Still %d de 12 Homens e uma Sentença (1957)" % (i + 1)
+    for i, x in enumerate(en):
+        assert x == "Still %d of 12 Homens e uma Sentença (1957)" % (i + 1)
 
 
 def test_movimento_reduzido_desliga_a_rolagem_mas_nao_a_faixa():

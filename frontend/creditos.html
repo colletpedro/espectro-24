@@ -3,11 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Créditos e fontes — Espectro 24</title>
-  <meta name="description" content="De onde vêm os dados do Espectro 24: reviews públicas do Letterboxd, ficha e imagens do TMDB.">
+  <title data-i18n="creditos.titulo_pagina">Créditos e fontes — Espectro 24</title>
+  <meta name="description" data-i18n-attr="content:creditos.meta_descricao" content="De onde vêm os dados do Espectro 24: reviews públicas do Letterboxd, ficha e imagens do TMDB.">
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- [i18n] js/i18n.js é o PRIMEIRO script da página (detecção de idioma e
+       toggle PT/EN). Os textos desta página estão no dicionário abaixo. -->
+  <script src="js/i18n.js"></script>
+  <script>
+    I18N.registrar({
+      pt: {
+        "creditos.titulo_pagina": "Créditos e fontes — Espectro 24",
+        "creditos.meta_descricao": "De onde vêm os dados do Espectro 24: reviews públicas do Letterboxd, ficha e imagens do TMDB.",
+        "creditos.voltar": "Voltar",
+        "creditos.titulo": "Créditos e fontes",
+        "creditos.intro": "O Espectro 24 não produz nenhum dado próprio. Tudo o que a página de um filme mostra vem de duas fontes públicas, e esta página diz exatamente o quê de onde.",
+        "creditos.tmdb_titulo": "TMDB — ficha técnica e pôsteres",
+        "creditos.aviso_tmdb_html": "<span lang=\"en\">This product uses the TMDB API but is not endorsed or certified by TMDB.</span> <span class=\"creditos__aviso-pt\">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>",
+        "creditos.tmdb_corpo": "De lá vêm o título em português, a sinopse oficial, o nome do diretor, os gêneros, a duração, o ano de lançamento, o pôster de cada filme e os stills que abrem a página do filme. As imagens são servidas diretamente pelo CDN do TMDB; este site não hospeda nenhuma delas.",
+        "creditos.tmdb_direitos_html": "<strong>O TMDB não estende nenhum direito sobre as imagens.</strong> O copyright dos pôsteres e stills é dos estúdios e distribuidores que os produziram — o TMDB apenas os hospeda e declara não reivindicar propriedade sobre as imagens da API. Eles aparecem aqui a título de identificação do filme.",
+        "creditos.lb_titulo": "Letterboxd — as reviews",
+        "creditos.lb_corpo_html": "As opiniões analisadas são reviews <strong>públicas</strong> de usuários do Letterboxd, lidas das páginas públicas do site. Nenhuma review é reproduzida na íntegra: o que a página mostra são temas recorrentes e paráfrases, nunca a citação de uma pessoa identificável. O Espectro 24 não tem vínculo com o Letterboxd.",
+        "creditos.metodo_titulo": "O que o site faz com isso",
+        "creditos.metodo_corpo_html": "As reviews são separadas em três grupos por nota — quem não gostou, quem ficou no meio, quem gostou — e cada grupo recebe a <strong>mesma profundidade</strong> de análise. O peso real de cada faixa vem do histograma público de notas do filme e é o que a barra do topo mostra. Não existe nota média, score, nem número-síntese único em lugar nenhum do produto — e nada do que é publicado revela acontecimentos do filme.",
+        "creditos.aviso_rodape": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
+      },
+      en: {
+        "creditos.titulo_pagina": "Credits and sources — Espectro 24",
+        "creditos.meta_descricao": "Where the Espectro 24 data comes from: public Letterboxd reviews, and film details and images from TMDB.",
+        "creditos.voltar": "Back",
+        "creditos.titulo": "Credits and sources",
+        "creditos.intro": "Espectro 24 produces no data of its own. Everything a film's page shows comes from two public sources, and this page says exactly what comes from where.",
+        "creditos.tmdb_titulo": "TMDB — film details and posters",
+        "creditos.aviso_tmdb_html": "<span lang=\"en\">This product uses the TMDB API but is not endorsed or certified by TMDB.</span>",
+        "creditos.tmdb_corpo": "TMDB supplies the Portuguese title, the official synopsis, the director's name, the genres, the runtime, the release year, each film's poster and the stills that open the film's page. Images are served directly from TMDB's CDN; this site hosts none of them.",
+        "creditos.tmdb_direitos_html": "<strong>TMDB does not extend any rights over the images.</strong> Copyright in the posters and stills belongs to the studios and distributors that produced them — TMDB only hosts them and states that it claims no ownership of the images in its API. They appear here to identify the film.",
+        "creditos.lb_titulo": "Letterboxd — the reviews",
+        "creditos.lb_corpo_html": "The opinions analyzed are <strong>public</strong> reviews by Letterboxd users, read from the site's public pages. No review is reproduced in full: the page shows recurring themes and paraphrases, never a quote from an identifiable person. Espectro 24 has no affiliation with Letterboxd.",
+        "creditos.metodo_titulo": "What the site does with it",
+        "creditos.metodo_corpo_html": "Reviews are split into three groups by rating — those who disliked the film, those in the middle, those who liked it — and each group gets the <strong>same depth</strong> of analysis. The real weight of each band comes from the film's public rating histogram, and that is what the bar at the top shows. No average rating, score or single summary figure appears anywhere in the product — and nothing published reveals events in the film.",
+        "creditos.aviso_rodape": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      },
+    });
+  </script>
 </head>
 <!-- [v1.9.29, Entrega 4] SEÇÃO "SOBRE / CRÉDITOS" — obrigatória, não
      cosmética. Até a v1.9.28 o site inteiro dizia "fonte TMDB" numa linha de
@@ -20,7 +59,8 @@
      "This product uses the TMDB API but is not endorsed or certified by
      TMDB." Ele aparece abaixo em inglês, LITERAL — é a frase que os termos
      pedem — com a tradução ao lado, porque o produto é em pt-BR e um aviso
-     que o leitor não entende não cumpre a função de avisar.
+     que o leitor não entende não cumpre a função de avisar. Na versão EN o
+     aviso aparece sozinho, na forma literal.
 
      O LOGO DO TMDB NÃO É USADO, e isso é decisão registrada. Os termos
      permitem usá-lo desde que seja um dos oficiais, sem alterar cor,
@@ -36,34 +76,34 @@
   <div class="wrap topbar">
     <a class="back-link" href="index.html">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
-      Voltar
+      <span data-i18n="creditos.voltar">Voltar</span>
     </a>
   </div>
 
   <main class="wrap creditos">
-    <h1 class="creditos__titulo">Créditos e fontes</h1>
+    <h1 class="creditos__titulo" data-i18n="creditos.titulo">Créditos e fontes</h1>
 
-    <p class="creditos__intro">O Espectro 24 não produz nenhum dado próprio.
+    <p class="creditos__intro" data-i18n="creditos.intro">O Espectro 24 não produz nenhum dado próprio.
       Tudo o que a página de um filme mostra vem de duas fontes públicas, e
       esta página diz exatamente o quê de onde.</p>
 
     <section class="creditos__bloco" aria-labelledby="cred-tmdb">
-      <h2 class="creditos__h2" id="cred-tmdb">TMDB — ficha técnica e pôsteres</h2>
+      <h2 class="creditos__h2" id="cred-tmdb" data-i18n="creditos.tmdb_titulo">TMDB — ficha técnica e pôsteres</h2>
 
-      <p class="creditos__aviso">
+      <p class="creditos__aviso" data-i18n-html="creditos.aviso_tmdb_html">
         <span lang="en">This product uses the TMDB API but is not endorsed or
         certified by TMDB.</span>
         <span class="creditos__aviso-pt">Este produto usa a API do TMDB, mas
         não é endossado nem certificado pelo TMDB.</span>
       </p>
 
-      <p>De lá vêm o título em português, a sinopse oficial, o nome do
+      <p data-i18n="creditos.tmdb_corpo">De lá vêm o título em português, a sinopse oficial, o nome do
         diretor, os gêneros, a duração, o ano de lançamento, o pôster de
         cada filme e os stills que abrem a página do filme. As
         imagens são servidas diretamente pelo CDN do TMDB; este site não
         hospeda nenhuma delas.</p>
 
-      <p><strong>O TMDB não estende nenhum direito sobre as imagens.</strong>
+      <p data-i18n-html="creditos.tmdb_direitos_html"><strong>O TMDB não estende nenhum direito sobre as imagens.</strong>
         O copyright dos pôsteres e stills é dos estúdios e distribuidores
         que os produziram — o TMDB apenas os hospeda e declara não
         reivindicar propriedade sobre as imagens da API. Eles aparecem
@@ -74,8 +114,8 @@
     </section>
 
     <section class="creditos__bloco" aria-labelledby="cred-lb">
-      <h2 class="creditos__h2" id="cred-lb">Letterboxd — as reviews</h2>
-      <p>As opiniões analisadas são reviews <strong>públicas</strong> de
+      <h2 class="creditos__h2" id="cred-lb" data-i18n="creditos.lb_titulo">Letterboxd — as reviews</h2>
+      <p data-i18n-html="creditos.lb_corpo_html">As opiniões analisadas são reviews <strong>públicas</strong> de
         usuários do Letterboxd, lidas das páginas públicas do site. Nenhuma
         review é reproduzida na íntegra: o que a página mostra são temas
         recorrentes e paráfrases, nunca a citação de uma pessoa
@@ -85,8 +125,8 @@
     </section>
 
     <section class="creditos__bloco" aria-labelledby="cred-metodo">
-      <h2 class="creditos__h2" id="cred-metodo">O que o site faz com isso</h2>
-      <p>As reviews são separadas em três grupos por nota — quem não gostou,
+      <h2 class="creditos__h2" id="cred-metodo" data-i18n="creditos.metodo_titulo">O que o site faz com isso</h2>
+      <p data-i18n-html="creditos.metodo_corpo_html">As reviews são separadas em três grupos por nota — quem não gostou,
         quem ficou no meio, quem gostou — e cada grupo recebe a
         <strong>mesma profundidade</strong> de análise. O peso real de cada
         faixa vem do histograma público de notas do filme e é o que a barra
@@ -99,7 +139,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <span class="mono">Espectro 24</span>
-      <span class="site-footer__aviso">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
+      <span class="site-footer__aviso" data-i18n="creditos.aviso_rodape">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
       <span class="site-footer__creditos"><a href="en/about/" hreflang="en" lang="en">about (English)</a></span>
     </div>
   </footer>

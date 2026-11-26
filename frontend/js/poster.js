@@ -40,6 +40,33 @@
 
   var CDN = "https://image.tmdb.org/t/p/";
 
+  // Textos do pôster (js/i18n.js). O harness de node carrega este arquivo
+  // sem I18N: `T` cai no PT do próprio dicionário.
+  var DIC = {
+    pt: {
+      "poster.sem_poster": "sem pôster",
+      "poster.sem_imagem": "sem imagem",
+      "poster.alt_poster": "Pôster de {titulo}{ano}",
+      "poster.alt_imagem": "Imagem de {titulo}{ano}",
+      "poster.alt_still": "Still {n} de {titulo}{ano}",
+    },
+    en: {
+      "poster.sem_poster": "no poster",
+      "poster.sem_imagem": "no image",
+      "poster.alt_poster": "Poster of {titulo}{ano}",
+      "poster.alt_imagem": "Image of {titulo}{ano}",
+      "poster.alt_still": "Still {n} of {titulo}{ano}",
+    },
+  };
+  if (globalThis.I18N) globalThis.I18N.registrar(DIC);
+  function T(chave, vars) {
+    if (globalThis.I18N) return globalThis.I18N.t(chave, vars);
+    var v = DIC.pt[chave];
+    return String(v == null ? chave : v).replace(/\{(\w+)\}/g, function (m, k) {
+      return vars && vars[k] != null ? String(vars[k]) : m;
+    });
+  }
+
   // TAMANHOS DO CDN, e o cálculo por trás de cada escolha. O TMDB serve
   // variantes de LARGURA (w92 · w154 · w185 · w342 · w500 · w780 · original)
   // e a regra é a mesma nos dois casos: a maior largura CSS que o elemento
@@ -205,7 +232,7 @@
     marca.textContent = "24";
     var nt = document.createElement("span");
     nt.className = "poster__vazio-nota";
-    nt.textContent = nota || "sem pôster";
+    nt.textContent = nota || T("poster.sem_poster");
     el.appendChild(marca);
     el.appendChild(nt);
     return el;
@@ -294,8 +321,8 @@
       // imagem É. A variante sem texto NÃO muda o alt: para quem não vê a
       // imagem, "o pôster com ou sem o bloco de créditos" não é distinção
       // que informe — é detalhe de tratamento visual.
-      alt: "Pôster de " + nome + sufixoAno(opcoes.ano),
-      notaVazio: "sem pôster",
+      alt: T("poster.alt_poster", { titulo: nome, ano: sufixoAno(opcoes.ano) }),
+      notaVazio: T("poster.sem_poster"),
     });
   }
 
@@ -324,8 +351,8 @@
       // a arte (não temos a descrição) e sem chamá-la de "cena", que seria
       // afirmar uma coisa que nem sempre é verdade (parte do acervo é arte
       // de divulgação, não fotograma).
-      alt: "Imagem de " + (opcoes.titulo || "") + sufixoAno(opcoes.ano),
-      notaVazio: "sem imagem",
+      alt: T("poster.alt_imagem", { titulo: opcoes.titulo || "", ano: sufixoAno(opcoes.ano) }),
+      notaVazio: T("poster.sem_imagem"),
     });
   }
 
@@ -391,8 +418,8 @@
           // usa leitor de tela — o número os distingue sem descrever a cena
           // (não temos a descrição, e descrevê-la arriscaria spoiler além do
           // que a imagem já arrisca).
-          alt: "Still " + (i + 1) + " de " + nome + sufixoAno(opcoes.ano),
-          notaVazio: "sem imagem",
+          alt: T("poster.alt_still", { n: i + 1, titulo: nome, ano: sufixoAno(opcoes.ano) }),
+          notaVazio: T("poster.sem_imagem"),
         });
       });
   }

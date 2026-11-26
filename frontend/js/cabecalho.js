@@ -12,6 +12,7 @@
   var IDX = window.ESPECTRO_INDICE || { filmes: [] };
   var B = window.ESPECTRO_BUSCA;
   var T = window.ESPECTRO_TEXTOS;
+  var I = window.I18N;
   var FILMES = IDX.filmes || [];
   var RAIZ = (document.body && document.body.dataset.raiz) || "";
 
@@ -42,6 +43,65 @@
     var n = document.getElementById(par[0]);
     if (n) n.textContent = par[1];
   });
+
+  // --- [i18n] textos do cabeçalho compartilhado e o seletor de idioma ---
+  I.registrar({
+    pt: {
+      "cabecalho.buscar_filme": "Buscar filme",
+      "cabecalho.resultados": "Resultados da busca",
+      "cabecalho.secoes": "Seções",
+      "cabecalho.idioma": "Idioma",
+      "cabecalho.idioma_pt": "Português",
+      "cabecalho.idioma_en": "English (inglês)",
+    },
+    en: {
+      "cabecalho.buscar_filme": "Search films",
+      "cabecalho.resultados": "Search results",
+      "cabecalho.secoes": "Sections",
+      "cabecalho.idioma": "Language",
+      "cabecalho.idioma_pt": "Português (Portuguese)",
+      "cabecalho.idioma_en": "English",
+    },
+  });
+
+  (function traduzirCabecalho() {
+    var rotulo = document.querySelector('label[for="busca"]');
+    if (rotulo) rotulo.textContent = I.t("cabecalho.buscar_filme");
+    var res = document.getElementById("buscaResultados");
+    if (res) res.setAttribute("aria-label", I.t("cabecalho.resultados"));
+    var nav = document.querySelector(".ed-cabecalho__nav");
+    if (nav) nav.setAttribute("aria-label", I.t("cabecalho.secoes"));
+  })();
+
+  // Seletor "PT · EN": dois botões reais num grupo; o idioma atual fica
+  // marcado (aria-pressed + destaque visual) e o outro troca e recarrega.
+  (function ligarIdioma() {
+    var linha = document.querySelector(".ed-cabecalho__linha");
+    if (!linha || linha.querySelector(".idioma")) return;
+    var grupo = el("div", "idioma");
+    grupo.setAttribute("role", "group");
+    grupo.setAttribute("aria-label", I.t("cabecalho.idioma"));
+    [["pt", "PT", "cabecalho.idioma_pt"], ["en", "EN", "cabecalho.idioma_en"]]
+      .forEach(function (d, i) {
+        if (i) {
+          var sep = el("span", "idioma__sep", "·");
+          sep.setAttribute("aria-hidden", "true");
+          grupo.appendChild(sep);
+        }
+        var b = el("button", "idioma__botao", d[1]);
+        b.type = "button";
+        b.lang = d[0] === "pt" ? "pt-BR" : "en";
+        b.setAttribute("aria-label", I.t(d[2]));
+        var atual = I.idioma === d[0];
+        b.setAttribute("aria-pressed", atual ? "true" : "false");
+        if (atual) b.classList.add("is-ativo");
+        b.addEventListener("click", function () {
+          if (!atual) I.definirIdioma(d[0]);
+        });
+        grupo.appendChild(b);
+      });
+    linha.appendChild(grupo);
+  })();
 
   // --- busca (no cabeçalho) ---
   (function ligarBusca() {

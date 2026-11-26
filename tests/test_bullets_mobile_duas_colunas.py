@@ -267,10 +267,14 @@ def test_as_strings_com_algarismo_continuam_as_mesmas_no_js():
     js = _txt(FILME_JS)
     # [rodada destaque] a string agora é montada uma vez (`textoShare`) e vai
     # para o cabeçalho com ou sem a barra de `?pct=barra`
-    assert 'var textoShare = "~" + b.share_real + "% das notas";' in js
+    # [i18n] a string vive no dicionário; pt idêntico, en "of ratings"
+    assert 'var textoShare = tr("filme.peso_texto", { pct: b.share_real });' in js
+    assert '"filme.peso_texto": "~{pct}% das notas"' in js
+    assert '"filme.peso_texto": "~{pct}% of ratings"' in js
     # [rodada página do filme] a faixa de estrelas virou texto ("notas 0,5
     # a 2"): sem "★", a faixa vem de `FAIXA_DE_NOTAS`
-    assert 'return fx ? "notas " + fx : "";' in js
+    assert 'return fx ? tr("filme.notas", { faixa: fx }) : "";' in js
+    assert '"filme.notas": "notas {faixa}"' in js
     assert "★" not in "\n".join(
         l for l in js.splitlines() if not l.lstrip().startswith("//"))
 
@@ -299,13 +303,16 @@ def test_a_proveniencia_do_bullet_nao_virou_disclosure():
         l for l in js.splitlines() if not l.lstrip().startswith("//"))
     assert "EM DETALHE" not in codigo, "o rótulo voltou"
     assert "detailDivider" not in codigo, "o divisor arco-íris voltou"
-    assert 'sectionLabel("O QUE CADA GRUPO DIZ")' in codigo
+    assert 'sectionLabel(tr("filme.secao.grupos"))' in codigo
+    assert '"filme.secao.grupos": "O QUE CADA GRUPO DIZ"' in codigo
 
 
 def test_sectionLabel_continua_viva_para_as_outras_secoes():
     """A remoção é do RÓTULO DO BLOCO DE BULLETS, não do mecanismo de
     rotular seções: RECEPÇÃO, PARA DECIDIR e GALERIA continuam nomeadas."""
     js = _txt(FILME_JS)
-    for secao in ('sectionLabel("RECEPÇÃO")', 'sectionLabel("PARA DECIDIR")',
-                  'sectionLabel("GALERIA")'):
+    for secao, pt in (('sectionLabel(tr("filme.secao.recepcao"))', "RECEPÇÃO"),
+                      ('sectionLabel(tr("filme.secao.decidir"))', "PARA DECIDIR"),
+                      ('sectionLabel(tr("filme.secao.galeria"))', "GALERIA")):
         assert secao in js, f"{secao} sumiu junto"
+        assert f'"{pt}"' in js, f"o texto pt {pt} sumiu do dicionário"

@@ -15,6 +15,10 @@
   <meta name="color-scheme" content="dark">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/styles.css">
+  <!-- [i18n] idioma (pt/en): sempre o primeiro script -->
+  <script src="js/i18n.js"></script>
+  <!-- [i18n] só em inglês: traduções do conteúdo gerado (síncrono, antes do render) -->
+  <script>if (window.I18N && I18N.idioma === "en") { document.write('<script src="js/data_en_home.js"><\/script>'); }</script>
   <!-- prova de fontes (?fonte=): marca <html data-fonte> e carrega só a
        família pedida, antes de pintar -->
   <script src="js/fonte.js"></script>
@@ -73,13 +77,13 @@
   <footer class="site-footer">
     <div class="wrap">
       <span class="mono">Espectro 24</span>
-      <span style="color:var(--text-mute); font-size:0.9rem;">Síntese automática a partir de reviews públicas do Letterboxd. Sem nota média, sem spoilers.</span>
+      <span style="color:var(--text-mute); font-size:0.9rem;" data-i18n="home.rodape.sintese">Síntese automática a partir de reviews públicas do Letterboxd. Sem nota média, sem spoilers.</span>
       <!-- [v1.9.29, Entrega 4] O aviso do TMDB, de forma PROEMINENTE — em
            todas as páginas, não só na de créditos. Os termos pedem
            proeminência, e um aviso escondido atrás de um clique não é
            proeminente. Conferido contra a página oficial de atribuição. -->
-      <span class="site-footer__aviso">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
-      <span class="site-footer__creditos"><a href="creditos.html">créditos e fontes</a> · <a href="en/about/" hreflang="en" lang="en">about</a></span>
+      <span class="site-footer__aviso" data-i18n="home.rodape.tmdb">Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.</span>
+      <span class="site-footer__creditos"><a href="creditos.html" data-i18n="home.rodape.creditos">créditos e fontes</a> · <a href="en/about/" hreflang="en" lang="en">about</a></span>
     </div>
   </footer>
 

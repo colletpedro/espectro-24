@@ -22,6 +22,16 @@
 (function () {
   "use strict";
 
+  /* [i18n] Rótulo no idioma da página; as chaves `filme.lightbox_*` são
+     registradas por filme.js. Sem I18N (node) ou sem a chave, cai no pt. */
+  function rotulo(chave, pt) {
+    try {
+      var I = typeof window !== "undefined" && window.I18N;
+      var v = I && I.t ? I.t(chave) : chave;
+      return v && v !== chave ? v : pt;
+    } catch (e) { return pt; }
+  }
+
   /* Quantos pixels de arrasto vertical fecham. Abaixo disso o gesto é
      ruído (a mão treme, o dedo desliza ao tocar); muito acima, o gesto
      vira um esforço. 90px é ~11% de um iPhone padrão em altura. */
@@ -79,7 +89,7 @@
     caixa.className = "lightbox";
     caixa.setAttribute("role", "dialog");
     caixa.setAttribute("aria-modal", "true");
-    caixa.setAttribute("aria-label", "Imagem em tela cheia");
+    caixa.setAttribute("aria-label", rotulo("filme.lightbox_aria", "Imagem em tela cheia"));
     caixa.tabIndex = -1;
 
     /* CARREGAMENTO SOB DEMANDA, e por que ele é feito À MÃO aqui.
@@ -129,7 +139,7 @@
     var fechar = document.createElement("button");
     fechar.type = "button";
     fechar.className = "lightbox__fechar";
-    fechar.setAttribute("aria-label", "Fechar");
+    fechar.setAttribute("aria-label", rotulo("filme.lightbox_fechar", "Fechar"));
     fechar.textContent = "×";
     caixa.appendChild(fechar);
 

@@ -62,7 +62,7 @@
   }
 
   function chavesDeTitulo(f) {
-    var ks = [f.titulo, f.titulo_nativo, f.titulo_letterboxd, f.chave_slug]
+    var ks = [f.titulo, f.titulo_pt, f.titulo_nativo, f.titulo_letterboxd, f.chave_slug]
       .filter(Boolean).map(normalizar).filter(Boolean);
     // "titulo ano" também é chave: "coringa 2019" casa como PREFIXO.
     if (f.ano) {
@@ -114,7 +114,36 @@
     return { buscar: buscar };
   }
 
+  /* [i18n] Em inglês, `data_en_home.js` (`ESPECTRO_EN_HOME`) traz o título
+     em inglês de cada filme e o nome em inglês de cada gênero. O TÍTULO é
+     trocado no próprio índice, uma vez (o PT fica em `titulo_pt` e continua
+     valendo na busca, que acha pelos dois). O GÊNERO não: `f.generos` fica em
+     PT porque filtros e prateleiras comparam esse valor; só o nome mostrado
+     passa por `generoExibido`. Sem `ESPECTRO_EN_HOME` (pt, node) é no-op. */
+  function generoExibido(g) {
+    var h = root.ESPECTRO_EN_HOME;
+    return (h && h.vocabulario_generos && h.vocabulario_generos[g]) || g;
+  }
+  function aplicarTitulosEn() {
+    var h = root.ESPECTRO_EN_HOME, idx = root.ESPECTRO_INDICE;
+    if (!h || !h.titulos || !idx || !idx.filmes) return;
+    idx.filmes.forEach(function (f) {
+      var en = h.titulos[f.slug];
+      if (en && f.titulo_pt === undefined) { f.titulo_pt = f.titulo; f.titulo = en; }
+      // O LOGO acompanha o idioma: em inglês vale `logos[slug]` (logo EN do
+      // TMDB, dados/logos_en.json) ou null = título em texto. O logo PT
+      // NUNCA aparece em inglês, nem para slug sem entrada no mapa.
+      if (h.logos && f.logo_pt === undefined) {
+        f.logo_pt = f.logo;
+        f.logo = h.logos[f.slug] || null;
+        f.titulo_difere_do_logo = !!f.logo && f.logo.idioma !== "en";
+      }
+    });
+  }
+  if (typeof module === "undefined" || !module.exports) aplicarTitulosEn();
+
   var api = {
+    generoExibido: generoExibido, aplicarTitulosEn: aplicarTitulosEn,
     chavesDeTitulo: chavesDeTitulo,
     ARTIGOS: ARTIGOS, LIMITE_RESULTADOS: LIMITE_RESULTADOS,
     normalizar: normalizar, comparar: comparar,

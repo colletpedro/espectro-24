@@ -9,10 +9,60 @@
   "use strict";
 
   var KEY_PREFIX = "espectro24:voto:";
-  var OPCOES = {
-    resumo: "O resumo em texto",
-    detalhe: "Os temas detalhados",
+
+  var DIC = {
+    pt: {
+      "survey.pergunta": "Qual formato te ajudou mais a decidir?",
+      "survey.opcao_resumo": "O resumo em texto",
+      "survey.opcao_detalhe": "Os temas detalhados",
+      "survey.comentario_rotulo": "Comentário opcional",
+      "survey.comentario_placeholder": "Comentário (opcional)",
+      "survey.enviar": "Enviar",
+      "survey.obrigado": "Obrigado pelo voto! Você escolheu {escolha}.",
+      "survey.comentario_registrado": "Comentário registrado.",
+      "survey.copiar": "Copiar meu feedback",
+      "survey.copiado": "Copiado!",
+      "survey.copiar_manual": "Selecione e copie manualmente",
+      "survey.copia_titulo": "Espectro 24 — feedback A/B",
+      "survey.copia_filme": "Filme",
+      "survey.copia_formato": "Formato que ajudou mais",
+      "survey.copia_comentario": "Comentário",
+      "survey.copia_nenhum": "(nenhum)",
+      "survey.copia_data": "Data",
+    },
+    en: {
+      "survey.pergunta": "Which format helped you decide the most?",
+      "survey.opcao_resumo": "The text summary",
+      "survey.opcao_detalhe": "The detailed themes",
+      "survey.comentario_rotulo": "Optional comment",
+      "survey.comentario_placeholder": "Comment (optional)",
+      "survey.enviar": "Submit",
+      "survey.obrigado": "Thanks for voting! You chose {escolha}.",
+      "survey.comentario_registrado": "Comment recorded.",
+      "survey.copiar": "Copy my feedback",
+      "survey.copiado": "Copied!",
+      "survey.copiar_manual": "Select and copy it manually",
+      "survey.copia_titulo": "Espectro 24 — A/B feedback",
+      "survey.copia_filme": "Film",
+      "survey.copia_formato": "Format that helped most",
+      "survey.copia_comentario": "Comment",
+      "survey.copia_nenhum": "(none)",
+      "survey.copia_data": "Date",
+    },
   };
+  if (globalThis.I18N) globalThis.I18N.registrar(DIC);
+  function T(chave, vars) {
+    if (globalThis.I18N) return globalThis.I18N.t(chave, vars);
+    var v = DIC.pt[chave];
+    return String(v == null ? chave : v).replace(/\{(\w+)\}/g, function (m, k) {
+      return vars && vars[k] != null ? String(vars[k]) : m;
+    });
+  }
+
+  // Rótulo de uma escolha no idioma atual; null para valor desconhecido.
+  function rotuloDa(valor) {
+    return (valor === "resumo" || valor === "detalhe") ? T("survey.opcao_" + valor) : null;
+  }
 
   window.mountSurvey = function (container, film) {
     var slug = film.slug;
@@ -25,13 +75,13 @@
 
     var form = document.createElement("form");
     form.innerHTML =
-      '<p class="survey__q serif" id="surveyQ">Qual formato te ajudou mais a decidir?</p>' +
+      '<p class="survey__q serif" id="surveyQ">' + esc(T("survey.pergunta")) + "</p>" +
       '<div class="survey__options" role="radiogroup" aria-labelledby="surveyQ">' +
         opt(slug, "resumo") + opt(slug, "detalhe") +
       "</div>" +
-      '<label class="visually-hidden" for="surveyComment">Comentário opcional</label>' +
-      '<textarea id="surveyComment" placeholder="Comentário (opcional)"></textarea>' +
-      '<button class="btn" type="submit" disabled>Enviar</button>';
+      '<label class="visually-hidden" for="surveyComment">' + esc(T("survey.comentario_rotulo")) + "</label>" +
+      '<textarea id="surveyComment" placeholder="' + esc(T("survey.comentario_placeholder")) + '"></textarea>' +
+      '<button class="btn" type="submit" disabled>' + esc(T("survey.enviar")) + "</button>";
 
     var thanks = document.createElement("div");
     thanks.className = "survey__thanks";
@@ -65,7 +115,7 @@
         slug: slug,
         titulo: titulo,
         escolha: chosen.value,
-        escolha_label: OPCOES[chosen.value],
+        escolha_label: rotuloDa(chosen.value),
         comentario: comment.value.trim(),
         data: new Date().toISOString(),
       };
@@ -77,12 +127,13 @@
     function showThanks(vote) {
       thanks.classList.add("is-visible");
       thanks.innerHTML =
-        "<p>Obrigado pelo voto! Você escolheu " +
-        '<span class="choice-echo">' + esc(OPCOES[vote.escolha] || vote.escolha) + "</span>." +
-        (vote.comentario ? " Comentário registrado." : "") +
+        "<p>" + T("survey.obrigado", {
+          escolha: '<span class="choice-echo">' + esc(rotuloDa(vote.escolha) || vote.escolha) + "</span>",
+        }) +
+        (vote.comentario ? " " + esc(T("survey.comentario_registrado")) : "") +
         "</p>" +
         '<div class="survey__actions">' +
-        '<button class="btn btn--ghost" type="button" id="copyFeedback">Copiar meu feedback</button>' +
+        '<button class="btn btn--ghost" type="button" id="copyFeedback">' + esc(T("survey.copiar")) + "</button>" +
         '<span class="copy-status" id="copyStatus" role="status" aria-live="polite"></span>' +
         "</div>";
 
@@ -91,7 +142,7 @@
       copyBtn.addEventListener("click", function () {
         var text = feedbackText(vote);
         copyToClipboard(text, function (ok) {
-          status.textContent = ok ? "Copiado!" : "Selecione e copie manualmente";
+          status.textContent = ok ? T("survey.copiado") : T("survey.copiar_manual");
           status.classList.add("is-visible");
           if (ok) setTimeout(function () { status.classList.remove("is-visible"); }, 2500);
         });
@@ -103,20 +154,21 @@
       return (
         '<label class="survey__opt" for="' + id + '">' +
         '<input type="radio" id="' + id + '" name="fmt-' + esc(slug) + '" value="' + val + '">' +
-        "<span>" + esc(OPCOES[val]) + "</span></label>"
+        "<span>" + esc(rotuloDa(val)) + "</span></label>"
       );
     }
   };
 
   function feedbackText(v) {
     var d = new Date(v.data);
-    var dataLegivel = isNaN(d) ? v.data : d.toLocaleString("pt-BR");
+    var locale = globalThis.I18N && globalThis.I18N.idioma === "en" ? "en-US" : "pt-BR";
+    var dataLegivel = isNaN(d) ? v.data : d.toLocaleString(locale);
     return (
-      "Espectro 24 — feedback A/B\n" +
-      "Filme: " + v.titulo + "\n" +
-      "Formato que ajudou mais: " + (v.escolha_label || v.escolha) + "\n" +
-      "Comentário: " + (v.comentario || "(nenhum)") + "\n" +
-      "Data: " + dataLegivel
+      T("survey.copia_titulo") + "\n" +
+      T("survey.copia_filme") + ": " + v.titulo + "\n" +
+      T("survey.copia_formato") + ": " + (rotuloDa(v.escolha) || v.escolha_label || v.escolha) + "\n" +
+      T("survey.copia_comentario") + ": " + (v.comentario || T("survey.copia_nenhum")) + "\n" +
+      T("survey.copia_data") + ": " + dataLegivel
     );
   }
 

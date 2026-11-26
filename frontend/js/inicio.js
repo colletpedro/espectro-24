@@ -23,6 +23,19 @@
   var P = window.ESPECTRO_POSTER;
   var FILMES = IDX.filmes || [];
 
+  // [i18n] título e descrição da aba no idioma da página (o HTML traz o pt).
+  (function traduzirMeta() {
+    var I = window.I18N;
+    var titulo = I.t("home.titulo_pagina"), desc = I.t("home.descricao_pagina");
+    document.title = titulo;
+    [["meta[name=description]", desc], ["meta[property='og:title']", titulo],
+     ["meta[property='og:description']", desc], ["meta[name='twitter:title']", titulo],
+     ["meta[name='twitter:description']", desc]].forEach(function (p) {
+      var m = document.querySelector(p[0]);
+      if (m) m.setAttribute("content", p[1]);
+    });
+  })();
+
   var paramDia = new URLSearchParams(location.search).get("dia");
   var DIA = /^\d{4}-\d{2}-\d{2}$/.test(paramDia || "")
     ? paramDia : S.diaEmSaoPaulo(new Date());

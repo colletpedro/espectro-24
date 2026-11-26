@@ -134,7 +134,21 @@ function carregar(ctx, arquivo) {
   vm.runInContext(fs.readFileSync(path.join(JS, arquivo), "utf8"), ctx, { filename: arquivo });
 }
 
+// [i18n] O harness carrega o `i18n.js` REAL em cada contexto, DEPOIS de
+// `location.search` ficar pronto (ele lê `?lang=`). Idioma: HARNESS_LANG
+// (padrão `pt`, como os testes sempre rodaram).
+const LANG = process.env.HARNESS_LANG || "pt";
+function carregarI18n(ctx) {
+  carregar(ctx, "i18n.js");
+}
+
 const base = novoContexto();
+base.location.search = "?lang=" + LANG;
+carregarI18n(base.ctx);
+// [i18n] traduções em inglês: HARNESS_EN=real carrega data_en*.js de verdade;
+// HARNESS_EN_FIXTURE='{...}' injeta um `ESPECTRO_EN` de fixture na tela do
+// filme. Sem nenhum dos dois, o inglês roda SEM traduções (fallback PT).
+if (LANG === "en" && process.env.HARNESS_EN === "real") carregar(base.ctx, "data_en_home.js");
 ["data.js", "indice.js", "poster.js", "busca.js", "selecao.js", "textos_home.js", "cartoes.js"]
   .forEach((a) => carregar(base.ctx, a));
 const DATA = base.janela.ESPECTRO_DATA;
@@ -189,6 +203,18 @@ function extrair(app, topo) {
     const p = achar(c, "decide__peso")[0];
     return p ? pesoDe(p) : null;
   });
+  // o `alt` de cada <img> do topo (os stills numerados da faixa)
+  s.alts_topo = [];
+  if (process.env.HARNESS_ALTS) (function varrer(n) { n.children.forEach((c) => {
+    if (c.tagName === "IMG") s.alts_topo.push(c.getAttribute("alt") != null ? c.getAttribute("alt") : (c.alt || null));
+    varrer(c);
+  }); })(topo || { children: [] });
+  // o que entrou por `innerHTML` (avisos de modo, "Aprofundar", etc.)
+  s.html_da_pagina = "";
+  (function varrer(n) { if (n._html) s.html_da_pagina += " " + n._html; n.children.forEach(varrer); })(app);
+  s.aviso_pt = achar(app, "aviso-analise-pt").length;
+  s.n_lang_pt = 0;
+  (function varrer(n) { if (n.attrs && n.attrs.lang === "pt-BR") s.n_lang_pt++; n.children.forEach(varrer); })(app);
   s.texto_da_pagina = app.children.map((c) => c.textContent).join("\n");
   return s;
 }
@@ -213,6 +239,10 @@ if (process.env.HARNESS_PATCH) {
   Object.entries(pt.share || {}).forEach(([b, v]) => {
     f.buckets.forEach((x) => { if (x.bucket === b) x.share_real = v; });
   });
+  // `modo`: {bucket: "reduzido"|"sem_analise"} — força o modo degradado
+  Object.entries(pt.modo || {}).forEach(([b, v]) => {
+    f.buckets.forEach((x) => { if (x.bucket === b) x.modo = v; });
+  });
   Object.entries(pt.peso_pct || {}).forEach(([lado, v]) => {
     f.condicoes.peso[lado].peso_pct = v; f.condicoes.peso[lado].peso_texto = "~" + v + "% das notas";
   });
@@ -228,7 +258,12 @@ Object.keys(DATA.filmes).sort().filter((k) => !filtro.length || filtro.includes(
   });
   ["app", "topo", "footerReviews"].forEach((id) => { elementos[id] = new El("div"); });
   location.search = "?slug=" + slug + (process.env.HARNESS_TOPO ? "&topo=" + process.env.HARNESS_TOPO : "")
-    + (process.env.HARNESS_PCT ? "&pct=" + process.env.HARNESS_PCT : "");
+    + (process.env.HARNESS_PCT ? "&pct=" + process.env.HARNESS_PCT : "")
+    + "&lang=" + LANG;
+  carregarI18n(ctx);
+  if (LANG === "en" && process.env.HARNESS_EN === "real") carregar(ctx, "data_en.js");
+  if (LANG === "en" && process.env.HARNESS_EN_FIXTURE) janela.ESPECTRO_EN = JSON.parse(process.env.HARNESS_EN_FIXTURE);
+  if (LANG === "en" && base.janela.ESPECTRO_EN_HOME) janela.ESPECTRO_EN_HOME = base.janela.ESPECTRO_EN_HOME;
   // as entradas da entrada: dados de entrada da regra, para o teste saber
   // quando um republish mudou o INPUT (e não a regra)
   const f = DATA.filmes[slug];

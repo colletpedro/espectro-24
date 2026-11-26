@@ -55,94 +55,310 @@
   // o texto usa a MESMA função, para não haver duas regras.
   var S = (typeof module !== "undefined" && module.exports)
     ? require("./selecao.js") : root.ESPECTRO_SELECAO;
+  // [i18n] a prosa mora nos dicionários `pt`/`en` abaixo; o resto do arquivo
+  // monta as mesmas constantes de antes a partir de I18N.t (I18N já está
+  // carregado — é o primeiro script da página).
+  var I = (typeof module !== "undefined" && module.exports)
+    ? require("./i18n.js") : root.I18N;
+  var t = I.t;
+
+  I.registrar({
+    pt: {
+      "home.tres_grupos": "HATERS, MIXED e FANS",
+      "home.premissa": "Como {grupos} veem cada filme — cada grupo com as próprias palavras, lado a lado, sem nota e sem spoiler.",
+      "home.aviso_catalogo": "O catálogo cresce com o tempo: novos filmes são adicionados aos poucos.",
+      "home.aviso_link": "Ver todos os filmes",
+      "home.busca_placeholder": "Buscar filme por título ou ano",
+      "home.busca_vazia": "Esse filme ainda não está no catálogo. Novos filmes chegam com o tempo.",
+      "home.busca_vazia_link": "Ver o catálogo completo",
+      "home.rotulo_filme_do_dia": "Filme do dia",
+      "home.rotulo_abrir": "Abrir a análise",
+      "home.rotulo_recem": "Recém-chegados",
+      "home.rotulo_recem_todos": "Ver todos os recém-chegados",
+      "home.nome_site": "Espectro 24",
+      "home.link_filmes": "Filmes",
+      "home.link_metodo": "Método",
+      "home.rotulo_colecao": "Coleção do dia",
+      "home.rotulo_colecao_todos": "Ver todos",
+      "home.titulo_explorar": "Explorar",
+      "home.grupo_explorar.assunto": "Por assunto",
+      "home.grupo_explorar.decada": "Por década",
+      "home.grupo_explorar.genero": "Por gênero",
+      "home.grupo_explorar.pais": "Por país",
+      "home.resumo_explorar": "Explorar por assunto, década, gênero e país",
+      "home.link_indice": "Índice A–Z",
+      "home.vista_grade": "Grade",
+      "home.vista_indice": "Índice A–Z",
+      "home.mostrar_mais": "Mostrar mais",
+      "home.filtro_vazio": "Nenhum filme com esses filtros.",
+      "home.limpar_filtros": "Limpar os filtros",
+      "home.remover_filtro": "Remover filtro",
+      "home.qualquer.colecao": "Qualquer assunto",
+      "home.qualquer.decada": "Qualquer década",
+      "home.qualquer.genero": "Qualquer gênero",
+      "home.qualquer.pais": "Qualquer país",
+      "home.contador": "{mostrados} de {total}",
+      "home.chip_desde": function (v) {
+        return "Recém-chegados desde " + v.d + "/" + v.m + "/" + v.a;
+      },
+      "home.titulo_decada": function (v) {
+        return "Seleção anos " + String(v.decada % 100).padStart(2, "0");
+      },
+      "home.descricao_decada": "Filmes do catálogo lançados entre {ini} e {fim}.",
+      "home.min": "{n} min",
+      "home.titulo_pagina": "Espectro 24 — a recepção completa de um filme, sem spoilers",
+      "home.descricao_pagina": "A recepção completa de um filme — o que quem odiou, quem amou e quem ficou no meio diz — sem nota média e sem spoilers.",
+      "home.rodape.sintese": "Síntese automática a partir de reviews públicas do Letterboxd. Sem nota média, sem spoilers.",
+      "home.rodape.tmdb": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
+      "home.rodape.creditos": "créditos e fontes",
+
+      "home.descricao_eixo.ritmo": "Ritmo é a sensação de tempo do filme: se ele se arrasta, respira ou corre.",
+      "home.descricao_eixo.atuacao": "Atuação é o que o elenco entrega: presença, voz, gesto, a credibilidade de cada personagem.",
+      "home.descricao_eixo.direcao_imagem": "Direção e imagem é o filme como coisa vista: enquadramento, fotografia, cor, a mão de quem dirige.",
+      "home.descricao_eixo.roteiro_estrutura": "Roteiro e estrutura é como a história é montada: diálogos, viradas, a ordem em que as coisas acontecem.",
+      "home.descricao_eixo.som_trilha": "Som e trilha é tudo o que se ouve: a música, o silêncio, o desenho de som.",
+      "home.descricao_eixo.tom_atmosfera": "Tom e atmosfera é o clima que o filme sustenta: o desconforto, a leveza, a estranheza que fica no ar.",
+      "home.descricao_eixo.impacto_emocional": "Impacto emocional é o que o filme faz com quem assiste: se comove, perturba ou deixa frio.",
+      "home.descricao_eixo.comparacoes": "Comparações é quando o filme é medido contra outro: o original, a sequência, a obra anterior de quem dirige.",
+      "home.descricao_eixo.expectativa": "Expectativa é a distância entre o que se esperava e o que se encontrou.",
+      "home.descricao_eixo.critica_social": "Crítica social é o que o filme diz sobre o mundo fora dele: classe, poder, história.",
+
+      "home.frase_tipo.divisao": "Nestes filmes, é desse assunto que um grupo fala muito mais que os outros.",
+      "home.frase_tipo.valorativa": "Nestes filmes, os três grupos falam disso mais do que o habitual e chegam a vereditos diferentes.",
+
+      "home.eixo_nome.ritmo": "ritmo",
+      "home.eixo_nome.atuacao": "atuação",
+      "home.eixo_nome.direcao_imagem": "direção e imagem",
+      "home.eixo_nome.roteiro_estrutura": "roteiro e estrutura",
+      "home.eixo_nome.som_trilha": "som e trilha",
+      "home.eixo_nome.tom_atmosfera": "tom e atmosfera",
+      "home.eixo_nome.impacto_emocional": "impacto emocional",
+      "home.eixo_nome.comparacoes": "comparações com outros filmes",
+      "home.eixo_nome.expectativa": "expectativa",
+      "home.eixo_nome.critica_social": "crítica social",
+
+      "home.prateleira.ritmo": "Onde o ritmo divide",
+      "home.prateleira.atuacao": "Onde a atuação divide",
+      "home.prateleira.direcao_imagem": "Onde a direção e a imagem dividem",
+      "home.prateleira.roteiro_estrutura": "Onde o roteiro divide",
+      "home.prateleira.som_trilha": "Onde o som e a trilha dividem",
+      "home.prateleira.tom_atmosfera": "Onde o tom e a atmosfera dividem",
+      "home.prateleira.impacto_emocional": "Onde o impacto emocional divide",
+      "home.prateleira.comparacoes": "Onde as comparações dividem",
+      "home.prateleira.expectativa": "Onde a expectativa divide",
+      "home.prateleira.critica_social": "Onde a crítica social divide",
+      "home.prateleira.valorativo:ritmo": "Todos falam do ritmo, ninguém concorda",
+      "home.prateleira.valorativo:atuacao": "Todos falam da atuação, ninguém concorda",
+      "home.prateleira.valorativo:direcao_imagem": "Todos falam da direção e da imagem, ninguém concorda",
+      "home.prateleira.valorativo:roteiro_estrutura": "Todos falam do roteiro, ninguém concorda",
+      "home.prateleira.valorativo:som_trilha": "Todos falam do som e da trilha, ninguém concorda",
+      "home.prateleira.valorativo:tom_atmosfera": "Todos falam do tom e da atmosfera, ninguém concorda",
+      "home.prateleira.valorativo:impacto_emocional": "Todos falam do impacto emocional, ninguém concorda",
+      "home.prateleira.valorativo:comparacoes": "Todos fazem comparações, ninguém concorda",
+      "home.prateleira.valorativo:expectativa": "Todos falam da expectativa, ninguém concorda",
+      "home.prateleira.valorativo:critica_social": "Todos falam da crítica social, ninguém concorda",
+
+      "home.tpl.aniversario": "{t} faz aniversário de estreia hoje.",
+      "home.tpl.eixo": "{abre} assunto em que {grupos} mais se afastam é {eixo}. Um dos grupos fala disso bem mais que os outros dois — a página mostra qual, e com que palavras.",
+      "home.tpl.eixo_abre": "{t}: o",
+      "home.tpl.eixo_abre_sem": "Nele, o",
+      "home.tpl.valorativo": "{abre} assunto que aparece mais do que o habitual no catálogo, somando {grupos}, é {eixo}. Os três grupos falam dele e chegam a vereditos diferentes — o que muda é o valor que cada um dá ao filme, não o tema da conversa.",
+      "home.tpl.generico": "{abre} no catálogo com o que {grupos} dizem sobre ele. A página mostra os assuntos de cada grupo lado a lado, cada um com as próprias palavras.",
+      "home.tpl.generico_abre": "{t} está",
+      "home.tpl.generico_abre_sem": "Está",
+    },
+    en: {
+      "home.tres_grupos": "HATERS, MIXED and FANS",
+      "home.premissa": "How {grupos} see each film — each group in its own words, side by side, with no score and no spoilers.",
+      "home.aviso_catalogo": "The catalog grows over time: new films are added a few at a time.",
+      "home.aviso_link": "See all films",
+      "home.busca_placeholder": "Search films by title or year",
+      "home.busca_vazia": "That film isn't in the catalog yet. New films arrive over time.",
+      "home.busca_vazia_link": "See the full catalog",
+      "home.rotulo_filme_do_dia": "Film of the day",
+      "home.rotulo_abrir": "Open the analysis",
+      "home.rotulo_recem": "New arrivals",
+      "home.rotulo_recem_todos": "See all new arrivals",
+      "home.nome_site": "Espectro 24",
+      "home.link_filmes": "Films",
+      "home.link_metodo": "Method",
+      "home.rotulo_colecao": "Collection of the day",
+      "home.rotulo_colecao_todos": "See all",
+      "home.titulo_explorar": "Explore",
+      "home.grupo_explorar.assunto": "By topic",
+      "home.grupo_explorar.decada": "By decade",
+      "home.grupo_explorar.genero": "By genre",
+      "home.grupo_explorar.pais": "By country",
+      "home.resumo_explorar": "Explore by topic, decade, genre and country",
+      "home.link_indice": "A–Z index",
+      "home.vista_grade": "Grid",
+      "home.vista_indice": "A–Z index",
+      "home.mostrar_mais": "Show more",
+      "home.filtro_vazio": "No films match these filters.",
+      "home.limpar_filtros": "Clear filters",
+      "home.remover_filtro": "Remove filter",
+      "home.qualquer.colecao": "Any topic",
+      "home.qualquer.decada": "Any decade",
+      "home.qualquer.genero": "Any genre",
+      "home.qualquer.pais": "Any country",
+      "home.contador": "{mostrados} of {total}",
+      "home.chip_desde": function (v) {
+        var meses = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+                     "Sep", "Oct", "Nov", "Dec"];
+        return "New arrivals since " + meses[Number(v.m) - 1] + " " + Number(v.d) + ", " + v.a;
+      },
+      "home.titulo_decada": function (v) { return "The " + v.decada + "s selection"; },
+      "home.descricao_decada": "Films in the catalog released between {ini} and {fim}.",
+      "home.min": "{n} min",
+      "home.titulo_pagina": "Espectro 24 — the full reception of a film, spoiler-free",
+      "home.descricao_pagina": "The full reception of a film — what those who hated it, those who loved it and those in the middle say — with no average score and no spoilers.",
+      "home.rodape.sintese": "Automatic synthesis of public Letterboxd reviews. No average score, no spoilers.",
+      "home.rodape.tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      "home.rodape.creditos": "credits and sources",
+
+      "home.descricao_eixo.ritmo": "Pacing is the film's sense of time: whether it drags, breathes or runs.",
+      "home.descricao_eixo.atuacao": "Acting is what the cast delivers: presence, voice, gesture, the credibility of each character.",
+      "home.descricao_eixo.direcao_imagem": "Direction and imagery is the film as something seen: framing, cinematography, color, the hand of whoever directs.",
+      "home.descricao_eixo.roteiro_estrutura": "Script and structure is how the story is built: dialogue, turns, the order in which things happen.",
+      "home.descricao_eixo.som_trilha": "Sound and score is everything you hear: the music, the silence, the sound design.",
+      "home.descricao_eixo.tom_atmosfera": "Tone and atmosphere is the mood the film sustains: the unease, the lightness, the strangeness left hanging in the air.",
+      "home.descricao_eixo.impacto_emocional": "Emotional impact is what the film does to whoever watches it: whether it moves, unsettles or leaves them cold.",
+      "home.descricao_eixo.comparacoes": "Comparisons is when the film is measured against another: the original, the sequel, the director's earlier work.",
+      "home.descricao_eixo.expectativa": "Expectations is the distance between what was expected and what was found.",
+      "home.descricao_eixo.critica_social": "Social commentary is what the film says about the world outside it: class, power, history.",
+
+      "home.frase_tipo.divisao": "In these films, this is the topic one group talks about far more than the others.",
+      "home.frase_tipo.valorativa": "In these films, all three groups talk about this more than usual and reach different verdicts.",
+
+      "home.eixo_nome.ritmo": "pacing",
+      "home.eixo_nome.atuacao": "acting",
+      "home.eixo_nome.direcao_imagem": "direction and imagery",
+      "home.eixo_nome.roteiro_estrutura": "script and structure",
+      "home.eixo_nome.som_trilha": "sound and score",
+      "home.eixo_nome.tom_atmosfera": "tone and atmosphere",
+      "home.eixo_nome.impacto_emocional": "emotional impact",
+      "home.eixo_nome.comparacoes": "comparisons with other films",
+      "home.eixo_nome.expectativa": "expectations",
+      "home.eixo_nome.critica_social": "social commentary",
+
+      "home.prateleira.ritmo": "Where pacing divides",
+      "home.prateleira.atuacao": "Where acting divides",
+      "home.prateleira.direcao_imagem": "Where direction and imagery divide",
+      "home.prateleira.roteiro_estrutura": "Where the script divides",
+      "home.prateleira.som_trilha": "Where sound and score divide",
+      "home.prateleira.tom_atmosfera": "Where tone and atmosphere divide",
+      "home.prateleira.impacto_emocional": "Where emotional impact divides",
+      "home.prateleira.comparacoes": "Where comparisons divide",
+      "home.prateleira.expectativa": "Where expectations divide",
+      "home.prateleira.critica_social": "Where social commentary divides",
+      "home.prateleira.valorativo:ritmo": "Everyone talks about the pacing, no one agrees",
+      "home.prateleira.valorativo:atuacao": "Everyone talks about the acting, no one agrees",
+      "home.prateleira.valorativo:direcao_imagem": "Everyone talks about direction and imagery, no one agrees",
+      "home.prateleira.valorativo:roteiro_estrutura": "Everyone talks about the script, no one agrees",
+      "home.prateleira.valorativo:som_trilha": "Everyone talks about sound and score, no one agrees",
+      "home.prateleira.valorativo:tom_atmosfera": "Everyone talks about tone and atmosphere, no one agrees",
+      "home.prateleira.valorativo:impacto_emocional": "Everyone talks about emotional impact, no one agrees",
+      "home.prateleira.valorativo:comparacoes": "Everyone makes comparisons, no one agrees",
+      "home.prateleira.valorativo:expectativa": "Everyone talks about expectations, no one agrees",
+      "home.prateleira.valorativo:critica_social": "Everyone talks about social commentary, no one agrees",
+
+      "home.tpl.aniversario": "{t} has its release anniversary today.",
+      "home.tpl.eixo": "{abre} topic on which {grupos} differ most is {eixo}. One of the groups talks about it far more than the other two — the page shows which, and in what words.",
+      "home.tpl.eixo_abre": "{t}: the",
+      "home.tpl.eixo_abre_sem": "Here, the",
+      "home.tpl.valorativo": "{abre} topic that comes up more than usual in the catalog, across {grupos} combined, is {eixo}. All three groups talk about it and reach different verdicts — what changes is the value each gives the film, not the subject of the conversation.",
+      "home.tpl.generico": "{abre} in the catalog with what {grupos} say about it. The page lays out each group's topics side by side, each in its own words.",
+      "home.tpl.generico_abre": "{t} is",
+      "home.tpl.generico_abre_sem": "It is",
+    },
+  });
+
+  var EIXOS = ["ritmo", "atuacao", "direcao_imagem", "roteiro_estrutura",
+    "som_trilha", "tom_atmosfera", "impacto_emocional", "comparacoes",
+    "expectativa", "critica_social"];
+
+  function porEixo(prefixo) {
+    var o = {};
+    EIXOS.forEach(function (e) { o[e] = t(prefixo + e); });
+    return o;
+  }
 
   // Os rótulos que o site já usa (`GRUPO_LABEL` em filme.js), na ordem
   // de leitura dele.
   var GRUPOS = ["HATERS", "MIXED", "FANS"];
-  var TRES_GRUPOS = "HATERS, MIXED e FANS";
+  var TRES_GRUPOS = t("home.tres_grupos");
 
-  var PREMISSA = "Como " + TRES_GRUPOS + " veem cada filme — cada grupo "
-    + "com as próprias palavras, lado a lado, sem nota e sem spoiler.";
+  var PREMISSA = t("home.premissa", { grupos: TRES_GRUPOS });
 
-  var AVISO_CATALOGO = "O catálogo cresce com o tempo: novos filmes são "
-    + "adicionados aos poucos.";
-  var AVISO_LINK = "Ver todos os filmes";
+  var AVISO_CATALOGO = t("home.aviso_catalogo");
+  var AVISO_LINK = t("home.aviso_link");
 
-  var BUSCA_PLACEHOLDER = "Buscar filme por título ou ano";
-  var BUSCA_VAZIA = "Esse filme ainda não está no catálogo. Novos filmes "
-    + "chegam com o tempo.";
-  var BUSCA_VAZIA_LINK = "Ver o catálogo completo";
+  var BUSCA_PLACEHOLDER = t("home.busca_placeholder");
+  var BUSCA_VAZIA = t("home.busca_vazia");
+  var BUSCA_VAZIA_LINK = t("home.busca_vazia_link");
 
-  var ROTULO_FILME_DO_DIA = "Filme do dia";
-  var ROTULO_ABRIR = "Abrir a análise";
-  var ROTULO_RECEM = "Recém-chegados";
-  var ROTULO_RECEM_TODOS = "Ver todos os recém-chegados";
+  var ROTULO_FILME_DO_DIA = t("home.rotulo_filme_do_dia");
+  var ROTULO_ABRIR = t("home.rotulo_abrir");
+  var ROTULO_RECEM = t("home.rotulo_recem");
+  var ROTULO_RECEM_TODOS = t("home.rotulo_recem_todos");
 
   // [rodada editorial] cabeçalho, coleção do dia e o link final
-  var NOME_SITE = "Espectro 24";
-  var LINK_FILMES = "Filmes";
-  var LINK_METODO = "Método";
-  var ROTULO_COLECAO = "Coleção do dia";
-  var ROTULO_COLECAO_TODOS = "Ver todos";
+  var NOME_SITE = t("home.nome_site");
+  var LINK_FILMES = t("home.link_filmes");
+  var LINK_METODO = t("home.link_metodo");
+  var ROTULO_COLECAO = t("home.rotulo_colecao");
+  var ROTULO_COLECAO_TODOS = t("home.rotulo_colecao_todos");
 
   // [rodada Explorar] o bloco Explorar da home e a página /filmes
-  var TITULO_EXPLORAR = "Explorar";
+  var TITULO_EXPLORAR = t("home.titulo_explorar");
   var ROTULO_GRUPO_EXPLORAR = {
-    assunto: "Por assunto", decada: "Por década", genero: "Por gênero", pais: "Por país",
+    assunto: t("home.grupo_explorar.assunto"), decada: t("home.grupo_explorar.decada"),
+    genero: t("home.grupo_explorar.genero"), pais: t("home.grupo_explorar.pais"),
   };
-  var RESUMO_EXPLORAR = "Explorar por assunto, década, gênero e país";
-  var LINK_INDICE = "Índice A–Z";
-  var VISTA_GRADE = "Grade";
-  var VISTA_INDICE = "Índice A–Z";
-  var MOSTRAR_MAIS = "Mostrar mais";
-  var FILTRO_VAZIO = "Nenhum filme com esses filtros.";
-  var LIMPAR_FILTROS = "Limpar os filtros";
-  var REMOVER_FILTRO = "Remover filtro";
+  var RESUMO_EXPLORAR = t("home.resumo_explorar");
+  var LINK_INDICE = t("home.link_indice");
+  var VISTA_GRADE = t("home.vista_grade");
+  var VISTA_INDICE = t("home.vista_indice");
+  var MOSTRAR_MAIS = t("home.mostrar_mais");
+  var FILTRO_VAZIO = t("home.filtro_vazio");
+  var LIMPAR_FILTROS = t("home.limpar_filtros");
+  var REMOVER_FILTRO = t("home.remover_filtro");
   var QUALQUER = {
-    colecao: "Qualquer assunto", decada: "Qualquer década",
-    genero: "Qualquer gênero", pais: "Qualquer país",
+    colecao: t("home.qualquer.colecao"), decada: t("home.qualquer.decada"),
+    genero: t("home.qualquer.genero"), pais: t("home.qualquer.pais"),
   };
-  function contadorDaPagina(mostrados, total) { return mostrados + " de " + total; }
+  function contadorDaPagina(mostrados, total) {
+    return t("home.contador", { mostrados: mostrados, total: total });
+  }
   function chipDesde(dia) {
     var p = dia.split("-");
-    return "Recém-chegados desde " + p[2] + "/" + p[1] + "/" + p[0];
+    return t("home.chip_desde", { a: p[0], m: p[1], d: p[2] });
   }
 
   // [home semanal] A seleção da década: título e linha FIXOS. Os únicos
   // algarismos são os da própria década (o dado do bloco, como o ano no
   // título de um filme); `decada` é o primeiro ano (1990).
-  function tituloDaDecada(decada) { return "Seleção anos " + String(decada % 100).padStart(2, "0"); }
+  function tituloDaDecada(decada) { return t("home.titulo_decada", { decada: decada }); }
   function descricaoDaDecada(decada) {
-    return "Filmes do catálogo lançados entre " + decada + " e " + (decada + 9) + ".";
+    return t("home.descricao_decada", { ini: decada, fim: decada + 9 });
   }
 
   // Descrição FIXA de cada eixo, para o bloco de texto da coleção do dia.
   // Diz o que o assunto É, nunca como os grupos o julgam.
-  var DESCRICAO_EIXO = {
-    ritmo: "Ritmo é a sensação de tempo do filme: se ele se arrasta, respira ou corre.",
-    atuacao: "Atuação é o que o elenco entrega: presença, voz, gesto, a credibilidade de cada personagem.",
-    direcao_imagem: "Direção e imagem é o filme como coisa vista: enquadramento, fotografia, cor, a mão de quem dirige.",
-    roteiro_estrutura: "Roteiro e estrutura é como a história é montada: diálogos, viradas, a ordem em que as coisas acontecem.",
-    som_trilha: "Som e trilha é tudo o que se ouve: a música, o silêncio, o desenho de som.",
-    tom_atmosfera: "Tom e atmosfera é o clima que o filme sustenta: o desconforto, a leveza, a estranheza que fica no ar.",
-    impacto_emocional: "Impacto emocional é o que o filme faz com quem assiste: se comove, perturba ou deixa frio.",
-    comparacoes: "Comparações é quando o filme é medido contra outro: o original, a sequência, a obra anterior de quem dirige.",
-    expectativa: "Expectativa é a distância entre o que se esperava e o que se encontrou.",
-    critica_social: "Crítica social é o que o filme diz sobre o mundo fora dele: classe, poder, história.",
-  };
+  var DESCRICAO_EIXO = porEixo("home.descricao_eixo.");
 
   // Frase FIXA de cada tipo de coleção (selecao.js: "divisao" | "valorativa").
   var FRASE_TIPO = {
-    divisao: "Nestes filmes, é desse assunto que um grupo fala muito mais que os outros.",
-    valorativa: "Nestes filmes, os três grupos falam disso mais do que o habitual e chegam a vereditos diferentes.",
+    divisao: t("home.frase_tipo.divisao"),
+    valorativa: t("home.frase_tipo.valorativa"),
   };
 
-  // Países (ISO 3166-1) pelo nome em português do Brasil, no máximo
+  // Países (ISO 3166-1) pelo nome no idioma da página, no máximo
   // MAX_PAISES, na ordem do TMDB. Sem `Intl.DisplayNames`, fica o código.
   var MAX_PAISES = 2;
   var nomesDeRegiao = null;
   try {
-    nomesDeRegiao = new Intl.DisplayNames(["pt-BR"], { type: "region" });
+    nomesDeRegiao = new Intl.DisplayNames([I.idioma === "en" ? "en" : "pt-BR"], { type: "region" });
   } catch (e) { nomesDeRegiao = null; }
 
   function nomeDoPais(c) {
@@ -181,8 +397,11 @@
   function partesDaFicha(filme, duracaoMin, comTitulo) {
     var partes = partesDaManchete(filme, comTitulo);
     var generos = (filme.generos || []).slice(0, MAX_GENEROS);
-    if (generos.length) partes.push({ tipo: "generos", texto: generos.join(", ") });
-    if (duracaoMin) partes.push({ tipo: "duracao", texto: duracaoMin + " min" });
+    if (generos.length) partes.push({ tipo: "generos", texto: generos.map(function (g) {
+      var h = root.ESPECTRO_EN_HOME;
+      return (h && h.vocabulario_generos && h.vocabulario_generos[g]) || g;
+    }).join(", ") });
+    if (duracaoMin) partes.push({ tipo: "duracao", texto: t("home.min", { n: duracaoMin }) });
     return partes;
   }
 
@@ -206,51 +425,19 @@
 
   // O eixo em português legível, SEM artigo — os templates o usam depois de
   // dois-pontos, o que dispensa concordância de gênero e número.
-  var EIXO_NOME = {
-    ritmo: "ritmo",
-    atuacao: "atuação",
-    direcao_imagem: "direção e imagem",
-    roteiro_estrutura: "roteiro e estrutura",
-    som_trilha: "som e trilha",
-    tom_atmosfera: "tom e atmosfera",
-    impacto_emocional: "impacto emocional",
-    comparacoes: "comparações com outros filmes",
-    expectativa: "expectativa",
-    critica_social: "crítica social",
-  };
+  var EIXO_NOME = porEixo("home.eixo_nome.");
 
   // Títulos das prateleiras: fixos, neutros, um por chave de prateleira
   // (selecao.js). As de DIVISÃO têm a chave do eixo; as VALORATIVAS,
   // "valorativo:" + o eixo do assunto comum. Nenhum título diz quem fala
   // mais, nem quem gosta mais.
-  var TITULO_PRATELEIRA = {
-    ritmo: "Onde o ritmo divide",
-    atuacao: "Onde a atuação divide",
-    direcao_imagem: "Onde a direção e a imagem dividem",
-    roteiro_estrutura: "Onde o roteiro divide",
-    som_trilha: "Onde o som e a trilha dividem",
-    tom_atmosfera: "Onde o tom e a atmosfera dividem",
-    impacto_emocional: "Onde o impacto emocional divide",
-    comparacoes: "Onde as comparações dividem",
-    expectativa: "Onde a expectativa divide",
-    critica_social: "Onde a crítica social divide",
-    "valorativo:ritmo": "Todos falam do ritmo, ninguém concorda",
-    "valorativo:atuacao": "Todos falam da atuação, ninguém concorda",
-    "valorativo:direcao_imagem": "Todos falam da direção e da imagem, ninguém concorda",
-    "valorativo:roteiro_estrutura": "Todos falam do roteiro, ninguém concorda",
-    "valorativo:som_trilha": "Todos falam do som e da trilha, ninguém concorda",
-    "valorativo:tom_atmosfera": "Todos falam do tom e da atmosfera, ninguém concorda",
-    "valorativo:impacto_emocional": "Todos falam do impacto emocional, ninguém concorda",
-    "valorativo:comparacoes": "Todos fazem comparações, ninguém concorda",
-    "valorativo:expectativa": "Todos falam da expectativa, ninguém concorda",
-    "valorativo:critica_social": "Todos falam da crítica social, ninguém concorda",
-  };
+  var TITULO_PRATELEIRA = {};
+  EIXOS.forEach(function (e) {
+    TITULO_PRATELEIRA[e] = t("home.prateleira." + e);
+    TITULO_PRATELEIRA["valorativo:" + e] = t("home.prateleira.valorativo:" + e);
+  });
 
-  var ORDEM_EIXOS = [
-    "ritmo", "atuacao", "direcao_imagem", "roteiro_estrutura", "som_trilha",
-    "tom_atmosfera", "impacto_emocional", "comparacoes", "expectativa",
-    "critica_social",
-  ];
+  var ORDEM_EIXOS = EIXOS;
 
   function eixoQueMaisDivide(filme) {
     var melhor = null;
@@ -271,41 +458,37 @@
   // antes do título — "Em" + "Em Chamas" dava "Em Em Chamas") — o resto do texto é idêntico. Sem aniversário, os
   // textos são exatamente os da rodada 3.
   var TEMPLATES = {
-    aniversario: function (t) {
-      return t + " faz aniversário de estreia hoje.";
+    aniversario: function (titulo) {
+      return t("home.tpl.aniversario", { t: titulo });
     },
-    eixo: function (t, eixo, semTitulo) {
-      return (semTitulo ? "Nele, o" : t + ": o") + " assunto em que "
-        + TRES_GRUPOS + " mais se afastam é " + EIXO_NOME[eixo]
-        + ". Um dos grupos fala disso bem "
-        + "mais que os outros dois — a página mostra qual, e com que palavras.";
+    eixo: function (titulo, eixo, semTitulo) {
+      return t("home.tpl.eixo", {
+        abre: t(semTitulo ? "home.tpl.eixo_abre_sem" : "home.tpl.eixo_abre", { t: titulo }),
+        grupos: TRES_GRUPOS, eixo: EIXO_NOME[eixo] });
     },
-    valorativo: function (t, eixo, semTitulo) {
-      return (semTitulo ? "Nele, o" : t + ": o")
-        + " assunto que aparece mais do que o habitual no "
-        + "catálogo, somando " + TRES_GRUPOS + ", é " + EIXO_NOME[eixo] + ". Os "
-        + "três grupos falam dele e chegam a vereditos diferentes — o que muda "
-        + "é o valor que cada um dá ao filme, não o tema da conversa.";
+    valorativo: function (titulo, eixo, semTitulo) {
+      return t("home.tpl.valorativo", {
+        abre: t(semTitulo ? "home.tpl.eixo_abre_sem" : "home.tpl.eixo_abre", { t: titulo }),
+        grupos: TRES_GRUPOS, eixo: EIXO_NOME[eixo] });
     },
-    generico: function (t, semTitulo) {
-      return (semTitulo ? "Está" : t + " está") + " no catálogo com o que "
-        + TRES_GRUPOS + " dizem "
-        + "sobre ele. A página mostra os assuntos de cada grupo lado a lado, "
-        + "cada um com as próprias palavras.";
+    generico: function (titulo, semTitulo) {
+      return t("home.tpl.generico", {
+        abre: t(semTitulo ? "home.tpl.generico_abre_sem" : "home.tpl.generico_abre", { t: titulo }),
+        grupos: TRES_GRUPOS });
     },
   };
 
   // Ganchos 2 a 4: o que o filme TEM, independente da data.
   function ganchoDeConteudo(filme, semTitulo) {
-    var t = filme.titulo || filme.slug;
+    var tit = filme.titulo || filme.slug;
     var e = eixoQueMaisDivide(filme);
-    if (e) return { gancho: "eixo", eixo: e.eixo, texto: TEMPLATES.eixo(t, e.eixo, semTitulo) };
+    if (e) return { gancho: "eixo", eixo: e.eixo, texto: TEMPLATES.eixo(tit, e.eixo, semTitulo) };
     var a = filme.assunto_comum;
     if (filme.contraste === "valorativo"
         && Object.prototype.hasOwnProperty.call(EIXO_NOME, a)) {
-      return { gancho: "valorativo", eixo: a, texto: TEMPLATES.valorativo(t, a, semTitulo) };
+      return { gancho: "valorativo", eixo: a, texto: TEMPLATES.valorativo(tit, a, semTitulo) };
     }
-    return { gancho: "generico", eixo: null, texto: TEMPLATES.generico(t, semTitulo) };
+    return { gancho: "generico", eixo: null, texto: TEMPLATES.generico(tit, semTitulo) };
   }
 
   // A regra (dia e mês, ano posterior, 29/02, 01/01 nunca) é a de

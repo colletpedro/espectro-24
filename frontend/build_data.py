@@ -369,6 +369,14 @@ def main():
     spec.loader.exec_module(build_indice)
     build_indice.main([])
 
+    # [versão EN] as traduções do conteúdo gerado (dados/traducao_en/) viram
+    # js/data_en.js, carregado só na versão em inglês. Não toca em data.js.
+    spec_en = importlib.util.spec_from_file_location(
+        "build_traducao_en", FRONTEND / "build_traducao_en.py")
+    build_traducao_en = importlib.util.module_from_spec(spec_en)
+    spec_en.loader.exec_module(build_traducao_en)
+    build_traducao_en.main([])
+
 
 if __name__ == "__main__":
     main()

@@ -471,11 +471,11 @@ def test_a_linha_de_ausencia_esta_no_frontend_palavra_por_palavra():
     silêncio. Comparação sobre o texto CONCATENADO, não sobre o literal, para
     que quebrar a linha em outro ponto não seja falso negativo."""
     import re
+    # [i18n] a frase mora no dicionário `filme.*` (o pt é o primeiro registro)
     js = _js_filme()
-    trecho = js[js.index("function semEstadoDeContraste"):]
-    trecho = trecho[:trecho.index("}")]
-    partes = re.findall(r'"((?:[^"\\]|\\.)*)"', trecho)
-    assert "".join(partes) == LINHA_AUSENCIA
+    assert "return tr(\"filme.sem_contraste\");" in js[js.index("function semEstadoDeContraste"):]
+    m = re.search(r'"filme\.sem_contraste": "((?:[^"\\]|\\.)*)"', js)
+    assert m and m.group(1) == LINHA_AUSENCIA
 
 
 def test_a_linha_de_ausencia_nao_tem_algarismo_nem_quantificador():

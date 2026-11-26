@@ -73,7 +73,7 @@
     var m = agrupar(S.elegiveis(filmes), function (f) {
       return (f.generos || []).map(function (g) {
         var k = X.chaveDoGenero(g);
-        if (!nomes[k]) nomes[k] = g;
+        if (!nomes[k]) nomes[k] = B.generoExibido(g);
         return k;
       });
     });

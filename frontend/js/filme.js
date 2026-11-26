@@ -21,6 +21,178 @@
   var app = document.getElementById("app");
   var topoEl = document.getElementById("topo");
 
+  // =====================================================================
+  // [i18n] TODO texto visível ao usuário desta tela mora neste dicionário
+  // (chaves `filme.*`); o `pt` é o texto de sempre, idêntico, e o `en` é
+  // editorial, não literal. O CONTEÚDO GERADO dos dados (narrativa,
+  // veredito, condições, temas, exemplos, observações) NÃO é traduzido: em
+  // inglês ele continua em português, sob um aviso curto e com `lang="pt-BR"`.
+  // Regras de produto valem nos dois idiomas: frequência sempre "~X of N",
+  // nunca porcentagem solta; sem nota agregada; modo degradado sempre visível.
+  // =====================================================================
+  var I18N = window.I18N;
+  I18N.registrar({
+    pt: {
+      "filme.erro_titulo": "Filme não encontrado",
+      "filme.erro_corpo": "Nenhuma análise para este endereço.",
+      "filme.erro_voltar": "Voltar ao início",
+      "filme.vale_a_pena": "Vale a pena se você…",
+      "filme.talvez_evite": "Talvez evite se você…",
+      "filme.grupo.negativas": "HATERS",
+      "filme.grupo.medianas": "MIXED",
+      "filme.grupo.positivas": "FANS",
+      "filme.adj.negativas": "negativas",
+      "filme.adj.medianas": "medianas",
+      "filme.adj.positivas": "positivas",
+      "filme.grupo_aria": "Grupo {label}",
+      "filme.secao.recepcao": "RECEPÇÃO",
+      "filme.secao.grupos": "O QUE CADA GRUPO DIZ",
+      "filme.secao.decidir": "PARA DECIDIR",
+      "filme.secao.galeria": "GALERIA",
+      "filme.topo_aria": "Topo do filme",
+      "filme.faixa_aria": "Imagens do filme",
+      "filme.ver_todas": "Ver todas →",
+      "filme.ler_analise": "Ler a análise completa",
+      "filme.barra_alt": "Peso real de cada grupo na recepção: {itens}.",
+      "filme.barra_alt_item": "{grupo}, cerca de {pct}% das notas",
+      "filme.nota_cota": "Os grupos são cotas de coleta — não a proporção real das opiniões.",
+      "filme.sem_contraste": "A amostra analisada deste filme é pequena demais para dizer se os grupos falam de coisas diferentes ou se falam das mesmas coisas e divergem no julgamento.",
+      "filme.peso_meio": "~{pct}% das notas ficaram no meio-termo",
+      "filme.peso_meio_sem_coluna": "{texto} — sem coluna própria aqui.",
+      "filme.peso_texto": "~{pct}% das notas",
+      "filme.peso_aria": "cerca de {pct}% das notas",
+      "filme.um_em_cada_menos": "menos de 1 em cada 100",
+      "filme.um_em_cada": "cerca de 1 em cada {n}",
+      "filme.quem_deu_de": "quem deu de {faixa}",
+      "filme.notas": "notas {faixa}",
+      "filme.faixa": "{a} a {b}",
+      "filme.amostra_pequena": "amostra pequena",
+      "filme.meio_resumo": "~{pct}% ficaram no meio-termo",
+      "filme.meio_resumo_sem_pct": "uma parte ficou no meio-termo",
+      "filme.leia_cautela": "Leia com cautela",
+      "filme.reduzido": "Poucas críticas {adj} reúnem profundidade suficiente para compor este grupo.",
+      "filme.sem_analise": "Sem análise temática: amostra insuficiente neste grupo.",
+      "filme.sem_analise_link": "→ reviews disponíveis no Letterboxd&nbsp;↗",
+      "filme.idioma_invalido": "Idioma: saída não confirmadamente em pt-BR — revisão manual pendente.",
+      "filme.escopo_suspeito": "Escopo: a observação pode generalizar este recorte — revisão manual pendente.",
+      "filme.tema_aria": "Mencionado em cerca de {x} de {n} reviews",
+      "filme.aprofundar": "Aprofundar",
+      "filme.aviso_analise_pt": "",
+      "filme.rodape_sintese": "Síntese automática a partir de reviews públicas",
+      "filme.rodape_tmdb": "Este produto usa a API do TMDB, mas não é endossado nem certificado pelo TMDB.",
+      "filme.rodape_creditos": "créditos e fontes",
+      "filme.buscar_filme": "Buscar filme",
+      "filme.resultados_busca": "Resultados da busca",
+      "filme.secoes_aria": "Seções",
+      "filme.lightbox_aria": "Imagem em tela cheia",
+      "filme.lightbox_fechar": "Fechar"
+    },
+    en: {
+      "filme.erro_titulo": "Film not found",
+      "filme.erro_corpo": "There is no analysis for this address.",
+      "filme.erro_voltar": "Back to the homepage",
+      "filme.vale_a_pena": "Worth it if you…",
+      "filme.talvez_evite": "Maybe skip it if you…",
+      "filme.grupo.negativas": "HATERS",
+      "filme.grupo.medianas": "MIXED",
+      "filme.grupo.positivas": "FANS",
+      "filme.adj.negativas": "negative",
+      "filme.adj.medianas": "mixed",
+      "filme.adj.positivas": "positive",
+      "filme.grupo_aria": "Group {label}",
+      "filme.secao.recepcao": "RECEPTION",
+      "filme.secao.grupos": "WHAT EACH GROUP SAYS",
+      "filme.secao.decidir": "TO HELP YOU DECIDE",
+      "filme.secao.galeria": "GALLERY",
+      "filme.topo_aria": "Film header",
+      "filme.faixa_aria": "Film stills",
+      "filme.ver_todas": "See all →",
+      "filme.ler_analise": "Read the full analysis",
+      "filme.barra_alt": "Real weight of each group in the reception: {itens}.",
+      "filme.barra_alt_item": "{grupo}, about {pct}% of ratings",
+      "filme.nota_cota": "The groups are collection quotas — not the real proportion of opinions.",
+      "filme.sem_contraste": "The sample analyzed for this film is too small to tell whether the groups talk about different things, or talk about the same things and differ in judgment.",
+      "filme.peso_meio": "~{pct}% of ratings landed in the middle ground",
+      "filme.peso_meio_sem_coluna": "{texto} — no column of its own here.",
+      "filme.peso_texto": "~{pct}% of ratings",
+      "filme.peso_aria": "about {pct}% of ratings",
+      "filme.um_em_cada_menos": "fewer than 1 in 100",
+      "filme.um_em_cada": "about 1 in {n}",
+      "filme.quem_deu_de": "those who rated it {faixa}",
+      "filme.notas": "ratings {faixa}",
+      "filme.faixa": "{a} to {b}",
+      "filme.amostra_pequena": "small sample",
+      "filme.meio_resumo": "~{pct}% landed in the middle ground",
+      "filme.meio_resumo_sem_pct": "some landed in the middle ground",
+      "filme.leia_cautela": "Read with caution",
+      "filme.reduzido": "Few {adj} reviews have enough depth to make up this group.",
+      "filme.sem_analise": "No thematic analysis: not enough of a sample in this group.",
+      "filme.sem_analise_link": "→ reviews available on Letterboxd&nbsp;↗",
+      "filme.idioma_invalido": "Language: output not confirmed as pt-BR — manual review pending.",
+      "filme.escopo_suspeito": "Scope: this observation may over-generalize this slice — manual review pending.",
+      "filme.tema_aria": "Mentioned in about {x} of {n} reviews",
+      "filme.aprofundar": "Go deeper",
+      "filme.aviso_analise_pt": "This analysis is currently available in Portuguese only.",
+      "filme.rodape_sintese": "Automatic synthesis of public reviews",
+      "filme.rodape_tmdb": "This product uses the TMDB API but is not endorsed or certified by TMDB.",
+      "filme.rodape_creditos": "credits and sources",
+      "filme.buscar_filme": "Search for a film",
+      "filme.resultados_busca": "Search results",
+      "filme.secoes_aria": "Sections",
+      "filme.lightbox_aria": "Full-screen image",
+      "filme.lightbox_fechar": "Close"
+    }
+  });
+  var tr = I18N.t;
+  var EN = I18N.idioma === "en";
+
+  // Texto de peso vindo do dado ("~91% das notas") é PT; em inglês ele é
+  // refeito a partir do número, que é o mesmo dado.
+  function textoDoPeso(peso) {
+    if (EN && typeof peso.peso_pct === "number") return tr("filme.peso_texto", { pct: peso.peso_pct });
+    return peso.peso_texto;
+  }
+  function textoPesoMeio(pm) {
+    if (EN && typeof pm.pct === "number") return tr("filme.peso_meio", { pct: pm.pct });
+    return pm.texto;
+  }
+  function textoNotaDeAmostra(nota) {
+    return nota === "amostra pequena" ? tr("filme.amostra_pequena") : nota;
+  }
+
+  // Conteúdo GERADO (dados em português): marcado `lang="pt-BR"` para leitor
+  // de tela e tradutor do navegador. Em pt a página já é pt-BR: não marca.
+  // Tradução do conteúdo gerado (`window.ESPECTRO_EN`, só carregado em en):
+  // texto do filme -> vocabulário compartilhado -> o próprio PT (fallback).
+  var faltaTraducao = false;   // algum texto renderizado ficou sem tradução
+  function traduzido(sl, s) {
+    if (!EN || !s) return null;
+    var d = window.ESPECTRO_EN;
+    var f = d && d.filmes && d.filmes[sl];
+    return (f && f.textos && f.textos[s]) || (d && d.vocabulario && d.vocabulario[s]) || null;
+  }
+  function tc(sl, s) {
+    var v = traduzido(sl, s);
+    return v !== null ? v : s;
+  }
+  // Põe o texto (traduzido, ou PT com `lang="pt-BR"` + aviso) no elemento.
+  function poe(el, s) {
+    var v = traduzido(slug, s);
+    el.textContent = v !== null ? v : s;
+    if (EN && v === null && s) { faltaTraducao = true; el.setAttribute("lang", "pt-BR"); }
+    return el;
+  }
+  // Aviso discreto, visível, de que a análise gerada está só em português.
+  // Reaproveita `.disclaimer` (já existe no styles.css).
+  function avisoAnalisePt() {
+    if (!EN) return null;
+    var p = document.createElement("p");
+    p.className = "disclaimer aviso-analise-pt";
+    p.setAttribute("data-aviso", "analise-pt");
+    p.textContent = tr("filme.aviso_analise_pt");
+    return p;
+  }
+
   // v1.9.14: rótulos dos 10 eixos (§2.5). O JSON carrega o identificador
   // técnico; a tela mostra português. Lista FECHADA — eixo desconhecido cai
   // no próprio identificador em vez de sumir da tabela.
@@ -40,8 +212,8 @@
   // página, com erro no console; as funções sobreviviam por serem declarações
   // (essas hoistam inteiras), a tabela não.
   var ABERTURA_DA_COLUNA = {
-    vale_a_pena: "Vale a pena se você…",
-    talvez_evite: "Talvez evite se você…"
+    vale_a_pena: tr("filme.vale_a_pena"),
+    talvez_evite: tr("filme.talvez_evite")
   };
 
   // [v1.9.43] O ponto de corte entre os dois modos da página (o porquê do
@@ -106,7 +278,7 @@
   //
   // ANOTADO, NÃO IMPLEMENTADO: "MID" é mais idiomático que "MIXED" em
   // português brasileiro, e era o termo da versão originalmente arquivada.
-  var GRUPO_LABEL = { negativas: "HATERS", medianas: "MIXED", positivas: "FANS" };
+  var GRUPO_LABEL = { negativas: tr("filme.grupo.negativas"), medianas: tr("filme.grupo.medianas"), positivas: tr("filme.grupo.positivas") };
 
   var GRUPO_META = {
     negativas: { label: GRUPO_LABEL.negativas, color: "var(--grupo-neg)", cap: "quem não gostou" },
@@ -153,9 +325,9 @@
 
   if (!film) {
     app.innerHTML =
-      '<div class="section"><h1 class="film-header__title serif">Filme não encontrado</h1>' +
-      '<p class="disclaimer">Nenhuma análise para este endereço. ' +
-      '<a href="index.html" style="color:var(--grupo-pos)">Voltar ao início</a>.</p></div>';
+      '<div class="section"><h1 class="film-header__title serif">' + esc(tr("filme.erro_titulo")) + '</h1>' +
+      '<p class="disclaimer">' + esc(tr("filme.erro_corpo")) + ' ' +
+      '<a href="index.html" style="color:var(--grupo-pos)">' + esc(tr("filme.erro_voltar")) + '</a>.</p></div>';
     return;
   }
 
@@ -341,6 +513,9 @@
   function render(f) {
     montarTopo(f);                                    // 1 topo (faixa | still)
 
+    var aviso = avisoAnalisePt();                     // só em inglês, e só se
+    if (aviso) app.appendChild(aviso);                // algo ficou sem tradução
+
     var veredito = veredictoBlock(f);                 // 2 veredito, linha fina
     if (veredito) app.appendChild(veredito);
 
@@ -348,7 +523,7 @@
 
     var grupos = document.createElement("section");   // 4 o que cada grupo diz
     grupos.className = "grupos";
-    grupos.appendChild(sectionLabel("O QUE CADA GRUPO DIZ"));
+    grupos.appendChild(sectionLabel(tr("filme.secao.grupos")));
     grupos.appendChild(sentimentGroupsBlock(f));
     app.appendChild(grupos);
 
@@ -362,6 +537,8 @@
 
     var colecao = naMesmaColecaoBlock(f);             // 8 na mesma coleção
     if (colecao) app.appendChild(colecao);
+
+    if (aviso && !faltaTraducao) aviso.remove();      // tudo traduzido: sem aviso
   }
 
   // --- o filme no índice -------------------------------------------------
@@ -419,7 +596,7 @@
 
     var secao = document.createElement("section");
     secao.className = "ed-manchete fp-topo fp-topo--" + chave;
-    secao.setAttribute("aria-label", "Topo do filme");
+    secao.setAttribute("aria-label", tr("filme.topo_aria"));
     var duracao = f.ficha && f.ficha.duracao_min;
     var opcoes = {
       nivel: "h1",
@@ -455,7 +632,7 @@
 
     var sum = document.createElement("summary");
     sum.innerHTML =
-      '<span class="disclosure__label">Ler a análise completa</span>' + chevronSvg();
+      '<span class="disclosure__label">' + esc(tr("filme.ler_analise")) + '</span>' + chevronSvg();
     det.appendChild(sum);
 
     var body = document.createElement("div");
@@ -464,7 +641,7 @@
       var p = par.trim();
       if (!p) return;
       var node = document.createElement("p");
-      node.textContent = p;
+      poe(node, p);
       body.appendChild(node);
     });
     det.appendChild(body);
@@ -538,7 +715,7 @@
     faixa.className = "hero-faixa";
     faixa.setAttribute("role", "region");
     faixa.setAttribute("tabindex", "0");
-    faixa.setAttribute("aria-label", "Imagens do filme");
+    faixa.setAttribute("aria-label", tr("filme.faixa_aria"));
 
     var trilha = document.createElement("div");
     trilha.className = "hero-faixa__trilha";
@@ -590,11 +767,11 @@
     el.className = "fp-galeria";
     var cab = document.createElement("div");
     cab.className = "fp-secao__cabeca";
-    cab.appendChild(sectionLabel("GALERIA"));
+    cab.appendChild(sectionLabel(tr("filme.secao.galeria")));
     var todas = document.createElement("button");
     todas.type = "button";
     todas.className = "fp-ver-todas ed-link mono";
-    todas.textContent = "Ver todas →";
+    todas.textContent = tr("filme.ver_todas");
     todas.addEventListener("click", function () { abrir(0, todas); });
     cab.appendChild(todas);
     el.appendChild(cab);
@@ -741,7 +918,7 @@
     // NOMEADO da página. O rótulo entra ACIMA da barra; a barra em si não
     // é tocada (geometria, ordem, callout e animação de entrada da v1.9.28
     // ficam exatamente como estão).
-    el.appendChild(sectionLabel("RECEPÇÃO"));
+    el.appendChild(sectionLabel(tr("filme.secao.recepcao")));
 
     var fatias = fatiasDeProporcao(f);
     if (fatias) {
@@ -1051,10 +1228,9 @@
   // barra diz de qual grupo é cada faixa) e o MESMO inteiro que o
   // cabeçalho daquele grupo imprime — nunca um valor recalculado.
   function alternativaTextualDaBarra(fatias) {
-    return "Peso real de cada grupo na recepção: "
-      + fatias.map(function (s) {
-        return rotuloDoGrupo(s.grupo) + ", cerca de " + s.share + "% das notas";
-      }).join("; ") + ".";
+    return tr("filme.barra_alt", { itens: fatias.map(function (s) {
+      return tr("filme.barra_alt_item", { grupo: rotuloDoGrupo(s.grupo), pct: s.share });
+    }).join("; ") });
   }
 
   // [v1.9.27, Entrega 1] O DISCLAIMER DA COTA SAIU DO RAMO COM BARRA.
@@ -1090,8 +1266,7 @@
   function notaDaCota() {
     var p = document.createElement("p");
     p.className = "proportion__note";
-    p.textContent =
-      "Os grupos são cotas de coleta — não a proporção real das opiniões.";
+    p.textContent = tr("filme.nota_cota");
     return p;
   }
 
@@ -1194,9 +1369,7 @@
   // Declaração de função é hasteada inteira; a ordem deixa de importar.
   // Pego pela verificação no navegador, com a suíte inteira verde.
   function semEstadoDeContraste() {
-    return "A amostra analisada deste filme é pequena demais para dizer se " +
-      "os grupos falam de coisas diferentes ou se falam das mesmas coisas e " +
-      "divergem no julgamento.";
+    return tr("filme.sem_contraste");
   }
 
   // =====================================================================
@@ -1240,7 +1413,7 @@
 
     var sec = document.createElement("section");
     sec.className = "decide";
-    sec.appendChild(sectionLabel("PARA DECIDIR"));
+    sec.appendChild(sectionLabel(tr("filme.secao.decidir")));
 
     // [v1.9.37] O peso do MEIO, nos filmes em que as duas colunas não somam o
     // filme (§0). Sem ele, `napoleon-2023` mostra ~33% e ~22% e deixa 45%
@@ -1249,7 +1422,7 @@
     if (c.peso_meio && c.peso_meio.texto) {
       var pm = document.createElement("p");
       pm.className = "decide__meio";
-      pm.textContent = c.peso_meio.texto + " — sem coluna própria aqui.";
+      pm.textContent = tr("filme.peso_meio_sem_coluna", { texto: textoPesoMeio(c.peso_meio) });
       sec.appendChild(pm);
     }
 
@@ -1277,8 +1450,8 @@
   // "cerca de 1 em cada N", N = round(100 / pct); abaixo de 1% não há N
   // honesto, e a frase é "menos de 1 em cada 100". Todo número é do código.
   function umEmCadaN(pct) {
-    if (pct < 1) return "menos de 1 em cada 100";
-    return "cerca de 1 em cada " + Math.round(100 / pct);
+    if (pct < 1) return tr("filme.um_em_cada_menos");
+    return tr("filme.um_em_cada", { n: Math.round(100 / pct) });
   }
 
   function fraseDeGrupoPequeno(pct) {
@@ -1293,7 +1466,7 @@
     var el = document.createElement("span");
     el.className = "peso-barra";
     el.setAttribute("role", "img");
-    el.setAttribute("aria-label", "cerca de " + pct + "% das notas");
+    el.setAttribute("aria-label", tr("filme.peso_aria", { pct: pct }));
     if (grupo) el.setAttribute("data-g", grupo);
     var fill = document.createElement("span");
     fill.className = "peso-barra__fill";
@@ -1319,8 +1492,8 @@
     // num grupo só (ou nenhuma o declara), o rótulo do grupo não aparece.
     var peso = (c.peso || {})[lado] || {};
     var grupo = grupoDeOrigem(c, lado);
-    var faixaTxt = grupo && faixaDoGrupo(grupo) ? "quem deu de " + faixaDoGrupo(grupo) : null;
-    var nota = peso.peso_texto && peso.nota_de_amostra ? peso.nota_de_amostra : null;
+    var faixaTxt = grupo && faixaDoGrupo(grupo) ? tr("filme.quem_deu_de", { faixa: faixaDoGrupo(grupo) }) : null;
+    var nota = peso.peso_texto && peso.nota_de_amostra ? textoNotaDeAmostra(peso.nota_de_amostra) : null;
     var frasePeso = peso.peso_texto ? fraseDeGrupoPequeno(peso.peso_pct) : null;
     var barra = PCT_VARIANTE === "barra" && peso.peso_texto && typeof peso.peso_pct === "number";
     if (peso.peso_texto || faixaTxt) {
@@ -1329,7 +1502,8 @@
       if (grupo) p.dataset.grupo = grupo;
       // `nota_de_amostra` só existe em bucket reduzido — é a ressalva que o
       // veredito carrega em prosa e que as condições não carregavam.
-      var texto = [peso.peso_texto, frasePeso, faixaTxt, nota].filter(Boolean).join(" · ");
+      var pesoTxt = textoDoPeso(peso);
+      var texto = [pesoTxt, frasePeso, faixaTxt, nota].filter(Boolean).join(" · ");
       if (barra) {
         p.classList.add("decide__peso--barra");
         p.appendChild(barraDePeso(peso.peso_pct, grupo));
@@ -1338,7 +1512,7 @@
         rotulo.textContent = texto;
         p.appendChild(rotulo);
       } else if (frasePeso) {
-        p.appendChild(document.createTextNode(peso.peso_texto));
+        p.appendChild(document.createTextNode(pesoTxt));
         var ex = document.createElement("span");
         ex.className = "peso-extra";
         ex.textContent = " · " + frasePeso;
@@ -1363,7 +1537,7 @@
 
       var txt = document.createElement("p");
       txt.className = "decide__text";
-      txt.textContent = cond.texto;
+      poe(txt, cond.texto);
       li.appendChild(txt);
 
       ul.appendChild(li);
@@ -1428,7 +1602,7 @@
     var el = document.createElement("p");
     el.className = "verdict";
     el.dataset.origem = origem;
-    el.textContent = texto;
+    if (origem === "veredito") poe(el, texto); else el.textContent = texto;
     return el;
   }
 
@@ -1572,8 +1746,8 @@
     det.className = "disclosure disclosure--meio";
 
     var rotuloPct = typeof b.share_real === "number"
-      ? "~" + b.share_real + "% ficaram no meio-termo"
-      : "uma parte ficou no meio-termo";
+      ? tr("filme.meio_resumo", { pct: b.share_real })
+      : tr("filme.meio_resumo_sem_pct");
     var sum = document.createElement("summary");
     sum.innerHTML = '<span class="disclosure__label">' + esc(rotuloPct)
       + "</span>" + chevronSvg();
@@ -1621,7 +1795,7 @@
     // qual grupo é a seção. Entrega 3 troca aqui (`meta.label` vem de
     // `GRUPO_LABEL`). `data-group` continua com a CHAVE INTERNA, que é o
     // que o CSS casa e o que o JSON usa — a chave nunca muda.
-    el.setAttribute("aria-label", "Grupo " + meta.label);
+    el.setAttribute("aria-label", tr("filme.grupo_aria", { label: meta.label }));
 
     // header
     var head = document.createElement("div");
@@ -1654,7 +1828,7 @@
     if (typeof b.share_real === "number") {
       var share = document.createElement("span");
       share.className = "group__share";
-      var textoShare = "~" + b.share_real + "% das notas";
+      var textoShare = tr("filme.peso_texto", { pct: b.share_real });
       if (PCT_VARIANTE === "barra") {
         share.classList.add("group__share--barra");
         share.appendChild(barraDePeso(b.share_real, b.bucket));
@@ -1705,20 +1879,17 @@
     // análise temática), não uma nota demográfica benigna, e merecem
     // continuar lendo como alerta.
     if (b.modo === "reduzido") {
-      var ADJETIVO_GRUPO = {negativas: "negativas", medianas: "medianas",
-                            positivas: "positivas"};
       el.appendChild(groupNote(
-        "Poucas críticas " + ADJETIVO_GRUPO[b.bucket] + " reúnem "
-        + "profundidade suficiente para compor este grupo."));
+        esc(tr("filme.reduzido", { adj: tr("filme.adj." + b.bucket) }))));
     }
     if (b.modo === "sem_analise") {
-      var w = warnBox("Sem análise temática: amostra insuficiente neste grupo.");
+      var w = warnBox(esc(tr("filme.sem_analise")));
       var link = document.createElement("a");
       link.className = "sem-analise-link";
       link.href = f.reviews_url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.innerHTML = "→ reviews disponíveis no Letterboxd&nbsp;↗";
+      link.innerHTML = tr("filme.sem_analise_link");
       w.appendChild(link);
       el.appendChild(w);
       // sem_analise não lista temas — e, desde a v1.9.48, também não
@@ -1728,10 +1899,10 @@
 
     // flags de idioma/escopo do bucket (telemetria), se houver
     if (b.idioma_invalido) {
-      el.appendChild(warnBox("Idioma: saída não confirmadamente em pt-BR — revisão manual pendente."));
+      el.appendChild(warnBox(esc(tr("filme.idioma_invalido"))));
     }
     if (b.escopo_suspeito) {
-      el.appendChild(warnBox("Escopo: a observação pode generalizar este recorte — revisão manual pendente."));
+      el.appendChild(warnBox(esc(tr("filme.escopo_suspeito"))));
     }
 
     // temas — ordenados pelo papel de bullet do eixo (ver `ordenarTemasPorEixo`)
@@ -1778,14 +1949,14 @@
     top.className = "theme__top";
     var nm = document.createElement("span");
     nm.className = "theme__name";
-    nm.textContent = t.tema;
+    poe(nm, t.tema);
     top.appendChild(nm);
     row.appendChild(top);
 
     var bar = document.createElement("div");
     bar.className = "theme__bar";
     bar.setAttribute("role", "img");
-    bar.setAttribute("aria-label", "Mencionado em cerca de " + x + " de " + n + " reviews");
+    bar.setAttribute("aria-label", tr("filme.tema_aria", { x: x, n: n }));
     var fill = document.createElement("span");
     fill.style.width = pct.toFixed(1) + "%";           // largura = X/N
     bar.appendChild(fill);
@@ -1823,7 +1994,7 @@
       btn.type = "button";
       btn.setAttribute("aria-expanded", "false");
       btn.setAttribute("aria-controls", id);
-      btn.innerHTML = '<span class="theme__toggle-label">Aprofundar</span>'
+      btn.innerHTML = '<span class="theme__toggle-label">' + esc(tr("filme.aprofundar")) + '</span>'
         + chevronSvg();
 
       var ex = document.createElement("div");
@@ -1834,7 +2005,7 @@
       clip.className = "theme__example-clip";
       var inner = document.createElement("div");
       inner.className = "theme__example-inner";
-      inner.textContent = t.exemplo_parafraseado;
+      poe(inner, t.exemplo_parafraseado);
       clip.appendChild(inner);
       ex.appendChild(clip);
 
@@ -1862,7 +2033,7 @@
     el.className = "group-note";
     el.setAttribute("role", "note");
     el.innerHTML =
-      '<span class="group-note__label">Leia com cautela</span>' +
+      '<span class="group-note__label">' + esc(tr("filme.leia_cautela")) + '</span>' +
       '<span class="group-note__texto">' + html + '</span>';
     return el;
   }
@@ -1881,18 +2052,20 @@
   // --- helpers ---
   // A faixa de notas do grupo em TEXTO: "notas 0,5 a 2". Sem estrela.
   function numeroBR(n) {
-    return Number.isInteger(n) ? String(n) : String(n).replace(".", ",");
+    return Number.isInteger(n) || EN ? String(n) : String(n).replace(".", ",");
   }
   function faixaDoGrupo(bucket) {
     var fx = FAIXA_DE_NOTAS[bucket];
-    return fx ? numeroBR(fx[0]) + " a " + numeroBR(fx[1]) : "";
+    return fx ? tr("filme.faixa", { a: numeroBR(fx[0]), b: numeroBR(fx[1]) }) : "";
   }
   function textoDasNotas(bucket) {
     var fx = faixaDoGrupo(bucket);
-    return fx ? "notas " + fx : "";
+    return fx ? tr("filme.notas", { faixa: fx }) : "";
   }
   function titleOf(f) {
-    return (f.ficha && f.ficha.titulo) || f.slug;
+    var d = EN && window.ESPECTRO_EN;
+    var fe = d && d.filmes && d.filmes[f.slug];
+    return (fe && fe.titulo_en) || (f.ficha && f.ficha.titulo) || f.slug;
   }
   function esc(s) {
     return String(s).replace(/[&<>"]/g, function (c) {
