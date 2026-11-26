@@ -131,12 +131,20 @@ def medir(slug: str) -> dict:
     briefings = sorted(k for k in bra if bra[k] != brn[k])
     contraste = [antes.get("contraste"), novo.get("contraste")]
     n = [(antes.get("margem") or {}).get("n"), (novo.get("margem") or {}).get("n")]
+    mudou = (contraste[0] != contraste[1] or n[0] != n[1]
+             or bool(margem) or bool(bullets) or bool(briefings))
+    # [2026-11-26, v1.9.51] O carimbo `spec_version` do bloco é a versão SOB A
+    # QUAL ele foi gerado (pipeline.montar_eixos), não a do arquivo que o
+    # hospeda. Quando o estado publicado não muda, republicar com o carimbo
+    # corrente seria diff sem conteúdo — e, a cada bump de `SPEC_VERSION`,
+    # reprovaria "bloco idêntico" em todo filme do catálogo. Mesmo precedente
+    # do `verificador` acima: o carimbo só se move quando o conteúdo se move.
+    if not mudou and not mencoes and "spec_version" in antes and "spec_version" in novo:
+        novo["spec_version"] = antes["spec_version"]
     outras = sorted(k for k in set(antes) | set(novo)
                     if k not in ("linhas", "contraste", "margem")
                     and antes.get(k) != novo.get(k))
 
-    mudou = (contraste[0] != contraste[1] or n[0] != n[1]
-             or bool(margem) or bool(bullets) or bool(briefings))
     return {"slug": slug, "estado_publicado_mudou": mudou,
             "contraste": contraste, "n": n,
             "celulas_cruzando_margem": margem, "bullets": bullets,

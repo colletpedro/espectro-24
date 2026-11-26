@@ -1,11 +1,11 @@
-# Espectro 24 — Especificação v1.9.50
+# Espectro 24 — Especificação v1.9.51
 
-**Data:** 2026-09-08
+**Data:** 2026-11-26
 
 > **O título deste documento e a constante `SPEC_VERSION` são duas coisas
 > diferentes, e a divergência é DELIBERADA.** O título é a versão do
 > DOCUMENTO — a última decisão registrada aqui. `SPEC_VERSION` (`config.py`)
-> está em **`1.9.49`** e é o
+> está em **`1.9.51`** e é o
 > carimbo de ARTEFATO DE PIPELINE: ele só sobe quando muda alguma coisa que
 > um `resultado/<slug>.json` carrega. As v1.9.26–v1.9.37 foram sessões de
 > frontend e de harness de publicação, que não regeram artefato de pipeline —

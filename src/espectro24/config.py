@@ -23,7 +23,13 @@ from fractions import Fraction
 # e publicá-lo de novo seria custo sem retorno. A regra que fica, para não
 # virar dúvida: chave ADITIVA, ausente por default, sem mudança de contrato
 # → a constante não sobe.
-SPEC_VERSION = "1.9.50"
+#
+# [2026-11-26, decisão do dono] O fallback de QUANTIDADE (`quantidade_fallback`,
+# guarda de quantidade — outro mecanismo, não o de conteúdo acima) sobe a
+# constante no commit do primeiro filme que o carrega: v1.9.51. O mesmo commit
+# traz a regra R2 da seleção e o `ficha.paises` do adaptador de importação
+# manual (CHANGELOG.md v1.9.51).
+SPEC_VERSION = "1.9.51"
 
 BASE = "https://letterboxd.com"
 
