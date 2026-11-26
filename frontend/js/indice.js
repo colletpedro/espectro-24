@@ -801,6 +801,53 @@ window.ESPECTRO_INDICE = {
    "titulo_difere_do_logo": false
   },
   {
+   "slug": "boogie-nights",
+   "titulo": "Boogie Nights: Prazer Sem Limites",
+   "titulo_nativo": null,
+   "titulo_letterboxd": "Boogie Nights",
+   "chave_slug": "boogie nights",
+   "ano": 1997,
+   "diretor": "Paul Thomas Anderson",
+   "generos": [
+    "Drama",
+    "Comédia"
+   ],
+   "imagens": {
+    "backdrop_path": "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160
+   },
+   "stills": [
+    "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+    "/uC54rlRdLMZ46fnrz5SoVYleNyv.jpg",
+    "/hb8KUbke2RIdBJIrzK1UWabH1M8.jpg",
+    "/4pujtotbu75hke7v9stTKE3mTZq.jpg",
+    "/jkiQG1UJppoLORybLNTFXufrAxr.jpg",
+    "/vENpXydVoWrY11Lmdit41UjOt8c.jpg",
+    "/AcqbfpWJ3j2EGdHpjb3jr7jliGJ.jpg",
+    "/vdUZvapmfrc0ZmqHw00xZSLqVUm.jpg",
+    "/1FCxUdmuE2nK24xo7RSO5yrT73w.jpg",
+    "/9juHHwVujnmTezU8FGudiUgEsOg.jpg",
+    "/d47ALZbsPr0XIjtwj3O7k8EGj3Z.jpg",
+    "/mssjxxqvxIqEXSuicMMoOi5Wm1x.jpg"
+   ],
+   "distribuicao": {
+    "negativas": 2,
+    "medianas": 9,
+    "positivas": 89
+   },
+   "contraste": "valorativo",
+   "eixos_acima": [],
+   "assunto_comum": "atuacao",
+   "estreia": "1997-10-07",
+   "entrada": "2026-11-26",
+   "paises": [
+    "US"
+   ],
+   "logo": null,
+   "titulo_difere_do_logo": false
+  },
+  {
    "slug": "burning-2018",
    "titulo": "Em Chamas",
    "titulo_nativo": null,
@@ -3121,7 +3168,7 @@ window.ESPECTRO_INDICE = {
      "lift_pp": 30.0
     }
    ],
-   "assunto_comum": "atuacao",
+   "assunto_comum": "critica_social",
    "estreia": "1992-11-18",
    "entrada": "2026-09-17",
    "paises": [
@@ -6337,7 +6384,7 @@ window.ESPECTRO_INDICE = {
    },
    "contraste": "valorativo",
    "eixos_acima": [],
-   "assunto_comum": "atuacao",
+   "assunto_comum": "critica_social",
    "estreia": "2013-12-25",
    "entrada": "2026-09-17",
    "paises": [

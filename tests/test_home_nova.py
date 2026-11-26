@@ -388,7 +388,8 @@ def test_recem_chegados_reais_e_link_para_filmes_filtrado():
     """[rodada editorial] Era "12 da leva"; agora 3 por dia, mesmo link."""
     out = _node("""console.log(JSON.stringify({r: S.recemChegados(D),
         hoje: S.recemDoDia(D, "2026-11-08")}));""", FILMES_REAIS)
-    assert out["r"]["total"] == 29 and len(out["r"]["filmes"]) == 29
+    # [2026-11-26] boogie-nights entrou sozinho (< piso): a leva de 08/11 (29) completa a lista -> 30
+    assert out["r"]["total"] == 30 and len(out["r"]["filmes"]) == 30
     assert out["r"]["desde"] == "2026-11-08"
     assert len(out["hoje"]["filmes"]) == 3
     assert {f["slug"] for f in out["hoje"]["filmes"]} <= {f["slug"] for f in out["r"]["filmes"]}

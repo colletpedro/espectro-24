@@ -321,7 +321,7 @@ def test_contagens_da_home_batem_com_filmes_filtrado():
     assert len(out["r"]) > 40
     for k, chave, n_home, n_filmes in out["r"]:
         assert n_home == n_filmes, (k, chave, n_home, n_filmes)
-    assert "obsession-2025" not in out["pagina"] and len(out["pagina"]) == 127
+    assert "obsession-2025" not in out["pagina"] and len(out["pagina"]) == 128  # 129 publicados - obsession-2025 (2026-11-26: + boogie-nights)
     opcoes = out["opcoes"]
     t = {i["chave"]: i["n"] for i in opcoes["genero"]}
     assert t["terror"] == 17

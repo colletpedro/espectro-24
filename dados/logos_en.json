@@ -583,6 +583,47 @@
    "titulo_difere_do_logo": false,
    "tmdb_id": 791177
   },
+  "boogie-nights": {
+   "classe": "claro",
+   "classe_medida": "claro",
+   "idioma_logo": "en",
+   "logo_escolhido": {
+    "altura": 416,
+    "file_path": "/jT2eAuAhR7SJ0fL1y6GMrAkW6L8.png",
+    "file_type": "png",
+    "idioma": "en",
+    "iso_3166_1": "US",
+    "iso_639_1_original": "en",
+    "largura": 3320,
+    "medida_w500": {
+     "altura_medida": 63,
+     "contraste_wcag": 5.904,
+     "croma_medio": 0.5978,
+     "fracao_escura": 0.0071,
+     "fracao_opaca": 0.3944,
+     "largura_medida": 500,
+     "luminancia_media": 0.4859,
+     "luminancia_relativa_media": 0.2783,
+     "pixels_opacos": 12425,
+     "saturacao_media": 0.7647,
+     "tinha_alfa": true
+    },
+    "titulo_do_logo": "Boogie Nights",
+    "vote_average": 3.334,
+    "vote_count": 1
+   },
+   "logos_disponiveis": {
+    "en": 7,
+    "outros_ignorados": 0,
+    "sem_idioma": 0
+   },
+   "logos_total": 7,
+   "origem": "tmdb_en",
+   "override": null,
+   "reutiliza_logo_pt": false,
+   "titulo_difere_do_logo": false,
+   "tmdb_id": 4995
+  },
   "burning-2018": {
    "classe": "claro",
    "classe_medida": "claro",

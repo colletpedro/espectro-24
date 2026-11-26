@@ -22,6 +22,8 @@ for o mesmo do logo PT). Idempotente: respostas e PNGs ficam em dados/cache
 (ignorado pelo git); rodar de novo sem rede reaproveita tudo.
 
 Uso: venv/bin/python scripts/medir_logos_en.py
+     venv/bin/python scripts/medir_logos_en.py --slug boogie-nights   # só acrescenta/atualiza estes
+                                                                      # (as outras entradas ficam como estão)
 """
 from __future__ import annotations
 
@@ -101,11 +103,23 @@ def processar(slug: str, key: str, pt: dict, overrides: dict) -> dict:
 
 
 def main() -> None:
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--slug", action="append", help="mede só estes slugs e preserva o resto de logos_en.json")
+    args = ap.parse_args()
     slugs = json.loads(PUBLICADOS.read_text(encoding="utf-8"))["slugs"]
+    if args.slug:
+        faltam = [s for s in args.slug if s not in slugs]
+        if faltam:
+            sys.exit(f"fora de dados/publicados.json: {faltam}")
     pt = json.loads(LOGOS_PT.read_text(encoding="utf-8"))["logos"]
     ov = (json.loads(OVERRIDE.read_text(encoding="utf-8")).get("overrides") or {})
     key = me._api_key()
-    logos = {s: processar(s, key, pt, ov) for s in sorted(slugs)}
+    if args.slug:
+        logos = json.loads(SAIDA.read_text(encoding="utf-8"))["logos"]
+        logos.update({s: processar(s, key, pt, ov) for s in args.slug})
+    else:
+        logos = {s: processar(s, key, pt, ov) for s in sorted(slugs)}
     saida = {
         "_leia": ("Logos do TMDB para a versão EN (scripts/medir_logos_en.py), por "
                   "slug publicado. Ordem de idioma: en > sem idioma (null); pt-BR, "

@@ -6,7 +6,6 @@
  "textos": {
   "As opiniões convergem ao avaliar o roteiro e a estrutura da obra, mas discordam sobre a sua eficácia. Enquanto a maioria dos que recomendam valoriza o retrato da espiral de violência e ódio, a maioria dos que não recomendam critica os personagens por considerá-los antipáticos e sem carisma.": "Opinions converge in assessing the script and structure of the work, but disagree on its effectiveness. While most of those who recommend the film value the portrayal of the spiral of violence and hatred, most of those who do not recommend it criticize the characters for finding them unlikable and lacking charisma.",
   "Muitas reviews descrevem o filme como arrastado, com longos períodos de conversa e caminhada que não levam a lugar algum, tornando a experiência tediosa e difícil de terminar.": "Many reviews describe the film as dragging, with long stretches of talking and walking that lead nowhere, making the experience tedious and hard to finish.",
-  "Personagens desagradáveis e sem carisma": "Unpleasant characters with no charisma",
   "Os personagens são frequentemente criticados por serem irritantes, imaturos e difíceis de torcer, o que impede qualquer conexão emocional com a história.": "The characters are often criticized for being irritating, immature and hard to root for, which prevents any emotional connection with the story.",
   "Falta de enredo e desenvolvimento": "Lack of plot and development",
   "Várias reviews apontam que o filme carece de uma trama substantiva, com eventos mínimos e sem progressão dramática, parecendo mais um retrato vazio do que uma narrativa envolvente.": "Several reviews point out that the film lacks a substantive plot, with minimal events and no dramatic progression, seeming more like an empty portrait than an engaging narrative.",
@@ -18,7 +17,6 @@
   "Várias reviews medianas consideram que o filme é arrastado, com momentos repetitivos e uma sensação de que a trama não avança, tornando a experiência entediante para parte do grupo.": "Several middling reviews consider the film dragging, with repetitive moments and a sense that the plot does not move forward, making the experience boring for a portion of the group.",
   "Dificuldade de conexão com os personagens": "Difficulty connecting with the characters",
   "Alguns espectadores deste grupo relatam não terem se apegado aos protagonistas, sentindo indiferença em relação ao que acontece com eles, o que prejudicou o envolvimento emocional.": "Some viewers in this group report not having become attached to the protagonists, feeling indifferent to what happens to them, which hurt emotional involvement.",
-  "Elogios à fotografia e à direção": "Praise for the cinematography and direction",
   "Apesar das ressalvas, muitas reviews medianas reconhecem a qualidade da fotografia em preto e branco, a composição dos planos e a eficácia da direção como pontos fortes do filme.": "Despite their reservations, many middling reviews acknowledge the quality of the black-and-white cinematography, the composition of the shots and the effectiveness of the direction as strengths of the film.",
   "A atuação do trio principal, em especial a de Vincent Cassel, é frequentemente destacada como convincente e natural, mesmo por quem não gostou do filme como um todo.": "The acting of the main trio, especially that of Vincent Cassel, is often highlighted as convincing and natural, even by those who did not like the film as a whole.",
   "Crítica à abordagem do tema e à mensagem": "Criticism of the approach to the theme and the message",
@@ -50,5 +48,8 @@
   "Para quem está numa fração mínima das notas (~5%), boa parte aponta o ritmo lento e repetitivo como um obstáculo, e vários relatam dificuldade de conexão com os personagens, embora uma parcela expressiva mantenha elogios à fotografia e à direção.": "For those in a minimal fraction of the ratings (~5%), a good portion point to the slow, repetitive pace as an obstacle, and several report difficulty connecting with the characters, although a significant share maintain praise for the cinematography and direction.",
   "Nessa leitura expressa numa fração ainda menor das notas (~1%), a maior parte rejeita o filme pelo ritmo lento e entediante. Cerca de metade vê os personagens como desagradáveis e sem carisma, e boa parte critica a falta de enredo e de desenvolvimento dramático.": "In this reading, expressed in an even smaller fraction of the ratings (~1%), most reject the film for its slow, boring pace. About half see the characters as unpleasant and lacking charisma, and a good portion criticize the lack of plot and dramatic development."
  },
- "_orfaos": {}
+ "_orfaos": {
+  "Personagens desagradáveis e sem carisma": "Unpleasant characters with no charisma",
+  "Elogios à fotografia e à direção": "Praise for the cinematography and direction"
+ }
 }

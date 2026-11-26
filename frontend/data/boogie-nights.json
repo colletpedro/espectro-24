@@ -1,0 +1,1344 @@
+{
+  "slug": "boogie-nights",
+  "data_coleta": "2026-11-26T12:40:00-03:00",
+  "spec_version": "1.9.51",
+  "total_reviews_observadas": 755311,
+  "reviews_url": "https://letterboxd.com/film/boogie-nights/reviews/",
+  "ficha": {
+    "titulo": "Boogie Nights: Prazer Sem Limites",
+    "sinopse_oficial": "Eddie Adams é um jovem de 17 anos sexualmente bem-dotado. Ele é descoberto por Jack Horner, um diretor veterano que o transforma em Dirk Diggler, uma celebridade da subcultura do mundo pornô no apogeu dos anos 1970. O sucesso faz com que Eddie se envolva no mundo das drogas e a súbita fama pode ter seu preço.",
+    "sinopse_fallback_en": false,
+    "generos": [
+      "Drama",
+      "Comédia"
+    ],
+    "duracao_min": 155,
+    "diretor": "Paul Thomas Anderson",
+    "diretor_transliterado": false,
+    "ano": 1997,
+    "data_estreia": "1997-10-07",
+    "fonte": "tmdb",
+    "tmdb_id": 4995,
+    "tmdb_fetched_at": "2026-11-26T16:16:16+00:00",
+    "poster_path": "/vLpRnmn90rX0zIL1Z4H5dRtAjmj.jpg",
+    "poster_largura": 2000,
+    "poster_altura": 3000,
+    "backdrop_paths": [
+      "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+      "/uC54rlRdLMZ46fnrz5SoVYleNyv.jpg",
+      "/1yuqMeR4z45bmksOl7ttyNezdUj.jpg",
+      "/aCjScNN2er7esWOCPAuuO4CFGWw.jpg",
+      "/4EmqMRZdkH5axkhXsIvE6n9z2Cc.jpg",
+      "/bQEIYntlPba76NN41uWxIzUmzBb.jpg",
+      "/fgLTbXwMalTjHkCdQiJDXDyExb7.jpg",
+      "/u3DiaQTqCWjvEAAYcSGEDKbENeU.jpg",
+      "/8fTuMJLR65OUGK6Tj5oqz44FUPc.jpg",
+      "/hb8KUbke2RIdBJIrzK1UWabH1M8.jpg"
+    ],
+    "backdrop_path": "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+    "backdrop_largura": 3840,
+    "backdrop_altura": 2160,
+    "poster_sem_texto_path": "/f35f6NNmDyO7h2KAWbCG0WDX8YB.jpg",
+    "poster_sem_texto_largura": 2000,
+    "poster_sem_texto_altura": 3000,
+    "galeria_stills": [
+      {
+        "still_path": "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/uC54rlRdLMZ46fnrz5SoVYleNyv.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/hb8KUbke2RIdBJIrzK1UWabH1M8.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/4pujtotbu75hke7v9stTKE3mTZq.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/jkiQG1UJppoLORybLNTFXufrAxr.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vENpXydVoWrY11Lmdit41UjOt8c.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/AcqbfpWJ3j2EGdHpjb3jr7jliGJ.jpg",
+        "still_largura": 3840,
+        "still_altura": 2160
+      },
+      {
+        "still_path": "/vdUZvapmfrc0ZmqHw00xZSLqVUm.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/1FCxUdmuE2nK24xo7RSO5yrT73w.jpg",
+        "still_largura": 1600,
+        "still_altura": 900
+      },
+      {
+        "still_path": "/9juHHwVujnmTezU8FGudiUgEsOg.jpg",
+        "still_largura": 1739,
+        "still_altura": 978
+      },
+      {
+        "still_path": "/d47ALZbsPr0XIjtwj3O7k8EGj3Z.jpg",
+        "still_largura": 1280,
+        "still_altura": 720
+      },
+      {
+        "still_path": "/mssjxxqvxIqEXSuicMMoOi5Wm1x.jpg",
+        "still_largura": 1764,
+        "still_altura": 992
+      }
+    ],
+    "ano_fonte": null,
+    "identidade": {
+      "versao": 1,
+      "status": "validada",
+      "slug": "boogie-nights",
+      "titulo_letterboxd": "Boogie Nights",
+      "ano_letterboxd": 1997,
+      "tmdb_id_letterboxd": 4995,
+      "tmdb_id_escolhido": 4995,
+      "fonte_id": "letterboxd",
+      "titulo_tmdb_campo": "original_title",
+      "titulo_tmdb_correspondente": "Boogie Nights",
+      "ano_tmdb": 1997,
+      "ano_divergente": false
+    },
+    "paises": [
+      "US"
+    ],
+    "logo": null,
+    "titulo_difere_do_logo": false
+  },
+  "distribuicao": {
+    "n_notas_total": 755311,
+    "por_nivel": {
+      "0.5": 1355,
+      "1.0": 2725,
+      "1.5": 2154,
+      "2.0": 10342,
+      "2.5": 12764,
+      "3.0": 56684,
+      "3.5": 89237,
+      "4.0": 239021,
+      "4.5": 167179,
+      "5.0": 173850
+    },
+    "por_bucket": {
+      "negativas": 2,
+      "medianas": 9,
+      "positivas": 89
+    },
+    "fonte": "letterboxd_histograma"
+  },
+  "coleta": {
+    "slug": "boogie-nights",
+    "coletado_em": "2026-11-26T12:40:00-03:00",
+    "versao_coletor": "importacao_manual",
+    "ordenacao_usada": "importacao_manual",
+    "histograma_bruto": {
+      "0.5": 1355,
+      "1.0": 2725,
+      "1.5": 2154,
+      "2.0": 10342,
+      "2.5": 12764,
+      "3.0": 56684,
+      "3.5": 89237,
+      "4.0": 239021,
+      "4.5": 167179,
+      "5.0": 173850
+    },
+    "total_notas": 755311,
+    "contagem_bruta_por_nivel": {
+      "0.5": 36,
+      "1.0": 36,
+      "1.5": 36,
+      "2.0": 36,
+      "2.5": 36,
+      "3.0": 36,
+      "3.5": 36,
+      "4.0": 36,
+      "4.5": 36,
+      "5.0": 36
+    },
+    "ano_lancamento": 1997,
+    "ano_fonte": "importacao_manual",
+    "identidade_letterboxd": {
+      "slug": "boogie-nights",
+      "titulo": "Boogie Nights",
+      "ano": 1997,
+      "tmdb_id_letterboxd": 4995,
+      "fonte": "importacao_manual"
+    },
+    "importacao_manual": {
+      "origem": "importacao_manual",
+      "importado_em": "2026-11-26T16:16:16+00:00",
+      "arquivos": {
+        "meta": {
+          "nome": "meta.json",
+          "sha256": "3433bef8cb685f3690db5036655252eb5a3bdf2b91d94d3abf0791472cac31f3"
+        },
+        "reviews": {
+          "nome": "reviews.jsonl",
+          "sha256": "6a7309e20c0cc0201cedb998c46885d00a04d63bba75fc657b186f69c5647205"
+        }
+      },
+      "n_linhas_arquivo": 360,
+      "n_duplicadas_no_arquivo": 0,
+      "n_ja_existentes_por_id": 0,
+      "n_ja_existentes_por_url": 0,
+      "n_novas": 360,
+      "data_semantica": "diario: pode NAO ser a data de publicacao da review",
+      "janela_temporal": "nao_calculada (depende de data)",
+      "pagina_origem": "nao_aplicavel: constante 1, sem estratificacao por profundidade",
+      "ordenacao_do_export": "desconhecida (o arquivo nao a declara)",
+      "texto": "integral declarado pelo exportador (truncada=false)",
+      "spoiler": "flag gravado; a exclusao e da selecao (excluir_spoiler=True)",
+      "identidade": "tmdb_id do meta conferido no TMDB por buscar_ficha"
+    },
+    "paises_tmdb": [
+      "US"
+    ]
+  },
+  "buckets": [
+    {
+      "bucket": "negativas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 36,
+      "composicao_alvo": {
+        "0.5": 3,
+        "1.0": 7,
+        "1.5": 5,
+        "2.0": 25
+      },
+      "composicao_atingida": {
+        "0.5": 7,
+        "1.0": 9,
+        "1.5": 13,
+        "2.0": 7
+      },
+      "cascata_por_degrau": {
+        "150": 36
+      },
+      "deficit_redistribuido": 14,
+      "distribuicao_pagina_origem": {
+        "n": 36,
+        "min": 1,
+        "max": 1,
+        "p5": 1,
+        "p50": 1,
+        "p95": 1,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 36,
+        "min": "2026-09-20",
+        "max": "2026-11-24",
+        "p5": "2026-09-25",
+        "p50": "2026-10-25",
+        "p95": "2026-11-21"
+      },
+      "niveis": [
+        {
+          "nivel": 0.5,
+          "n_validas": 7,
+          "n_alvo": 3,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.0,
+          "n_validas": 9,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0,
+            "resumo_de_trama": 1
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 1.5,
+          "n_validas": 13,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 21,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 21,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 2.0,
+          "n_validas": 7,
+          "n_alvo": 25,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 29,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 29,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração excessiva e ritmo arrastado",
+          "mencoes_aproximadas": 14,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais e que poderia ser encurtado sem prejuízo, com passagens arrastadas que dificultam a imersão.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews reclamam que o filme é longo demais e que poderia ser encurtado sem prejuízo, com passagens arrastadas que dificultam a imersão."
+        },
+        {
+          "tema": "Roteiro fraco e subtramas desconexas",
+          "mencoes_aproximadas": 11,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "O texto é descrito como confuso e sem profundidade emocional, com subtramas que não se conectam à história principal e personagens pouco desenvolvidos.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Personagens desagradáveis e sem carisma",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "Este grupo critica a falta de conexão com os personagens, considerados superficiais e difíceis de torcer por eles.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Excesso de nudez e conteúdo sexual",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "As reviews apontam que o filme depende demais de nudez e humor sexual para sustentar a trama, soando gratuito e desconfortável.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações fracas e falta de autenticidade",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "Críticas mencionam atuações que parecem forçadas e pouco convincentes, com destaque para o protagonista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas críticas mencionam atuações que parecem forçadas e pouco convincentes, com destaque para o protagonista."
+        },
+        {
+          "tema": "Abordagem machista e problemática",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 36,
+          "exemplo_parafraseado": "O olhar masculino sobre o corpo feminino e a representação estereotipada de personagens são vistos como problemáticos e datados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews negativas destacam principalmente a duração excessiva, o roteiro confuso e a falta de conexão com os personagens, além de criticarem o excesso de nudez e a abordagem machista. Este grupo considera o filme arrastado e pouco envolvente.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 2
+    },
+    {
+      "bucket": "medianas",
+      "alvo": 40,
+      "modo": "reduzido",
+      "estado_piso": "completa",
+      "n_validas": 22,
+      "composicao_alvo": {
+        "2.5": 7,
+        "3.0": 33
+      },
+      "composicao_atingida": {
+        "2.5": 14,
+        "3.0": 8
+      },
+      "cascata_por_degrau": {
+        "150": 22
+      },
+      "deficit_redistribuido": 7,
+      "distribuicao_pagina_origem": {
+        "n": 22,
+        "min": 1,
+        "max": 1,
+        "p5": 1,
+        "p50": 1,
+        "p95": 1,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 22,
+        "min": "2026-05-20",
+        "max": "2026-11-25",
+        "p5": "2026-11-10",
+        "p50": "2026-11-21",
+        "p95": "2026-11-25"
+      },
+      "niveis": [
+        {
+          "nivel": 2.5,
+          "n_validas": 14,
+          "n_alvo": 7,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 22,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 22,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 3.0,
+          "n_validas": 8,
+          "n_alvo": 33,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 28,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 28,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Duração e ritmo",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "Reviews medianas consideram que o filme se alonga além do necessário, com passagens que poderiam ser encurtadas e uma sensação de que a narrativa demora a engrenar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Diversas reviews medianas consideram que o filme se alonga além do necessário, com passagens que poderiam ser encurtadas e uma sensação de que a narrativa demora a engrenar."
+        },
+        {
+          "tema": "Falta de desenvolvimento dos personagens",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "Este grupo aponta que personagens são superficiais e que subtramas não levam a lugar algum, dificultando o envolvimento emocional do espectador.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Este grupo aponta que vários personagens são superficiais e que subtramas não levam a lugar algum, dificultando o envolvimento emocional do espectador."
+        },
+        {
+          "tema": "Elogios à fotografia e à direção",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "As reviews medianas destacam a qualidade da fotografia, os planos longos e a habilidade técnica da direção, mesmo quando o conjunto não agrada.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Insatisfação com o desfecho",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "Espectadores do grupo criticam o final por considerá-lo abrupto, incoerente com o que foi construído ou por resolver tudo de forma artificial.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Parte do grupo critica o final por considerá-lo abrupto, incoerente com o que foi construído ou por resolver tudo de forma artificial."
+        },
+        {
+          "tema": "Crítica à romantização da indústria pornô",
+          "mencoes_aproximadas": 5,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "Reviews medianas questionam a forma como o filme retrata o universo da pornografia, oscilando entre a crítica e a glamourização sem se aprofundar.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews medianas questionam a forma como o filme retrata o universo da pornografia, oscilando entre a crítica e a glamourização sem se aprofundar."
+        },
+        {
+          "tema": "Atuações irregulares",
+          "mencoes_aproximadas": 4,
+          "n_reviews_analisadas": 22,
+          "exemplo_parafraseado": "Há menções a atuações que não convencem, com destaque para a dificuldade de levar a sério o protagonista, embora certos coadjuvantes sejam elogiados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há menções a atuações que não convencem, com destaque para a dificuldade de levar a sério o protagonista, embora alguns coadjuvantes sejam elogiados."
+        }
+      ],
+      "observacao_geral": "As reviews medianas apontam uma experiência mista: reconhecem a qualidade técnica e alguns bons momentos, mas criticam a duração excessiva, a falta de profundidade dos personagens e um desfecho insatisfatório. Este grupo também demonstra desconforto com a abordagem da indústria pornô e com a irregularidade das atuações.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 9
+    },
+    {
+      "bucket": "positivas",
+      "alvo": 40,
+      "modo": "completo",
+      "estado_piso": "completa",
+      "n_validas": 40,
+      "composicao_alvo": {
+        "3.5": 5,
+        "4.0": 14,
+        "4.5": 10,
+        "5.0": 11
+      },
+      "composicao_atingida": {
+        "3.5": 9,
+        "4.0": 10,
+        "4.5": 10,
+        "5.0": 11
+      },
+      "cascata_por_degrau": {
+        "150": 40
+      },
+      "deficit_redistribuido": 4,
+      "distribuicao_pagina_origem": {
+        "n": 40,
+        "min": 1,
+        "max": 1,
+        "p5": 1,
+        "p50": 1,
+        "p95": 1,
+        "fracao_profunda": null
+      },
+      "janela_amostra": {
+        "n": 40,
+        "min": "2026-07-26",
+        "max": "2026-11-26",
+        "p5": "2026-11-15",
+        "p50": "2026-11-25",
+        "p95": "2026-11-26"
+      },
+      "niveis": [
+        {
+          "nivel": 3.5,
+          "n_validas": 9,
+          "n_alvo": 5,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.0,
+          "n_validas": 10,
+          "n_alvo": 14,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 0,
+          "n_descartadas_curtas": 26,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 0,
+            "abaixo_min_chars": 26,
+            "excedente_cota": 0,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 4.5,
+          "n_validas": 10,
+          "n_alvo": 10,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 1,
+          "n_descartadas_curtas": 24,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 1,
+            "abaixo_min_chars": 24,
+            "excedente_cota": 1,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        },
+        {
+          "nivel": 5.0,
+          "n_validas": 11,
+          "n_alvo": 11,
+          "n_brutas": 36,
+          "filtro_aplicado": 150,
+          "n_sem_nota": 0,
+          "n_descartadas_spoiler": 2,
+          "n_descartadas_curtas": 20,
+          "n_descartadas_truncamento": 0,
+          "n_indisponivel_truncamento": 0,
+          "motivos_descarte": {
+            "truncada_sem_texto": 0,
+            "spoiler": 2,
+            "abaixo_min_chars": 20,
+            "excedente_cota": 3,
+            "duplicata": 0,
+            "outros": 0
+          },
+          "paginas_buscadas": 0
+        }
+      ],
+      "temas": [
+        {
+          "tema": "Elenco e atuações",
+          "mencoes_aproximadas": 30,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews positivas elogiam o elenco, destacando atuações como a de Mark Wahlberg, Burt Reynolds e Julianne Moore, e a capacidade do diretor de extrair o melhor dos atores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Trilha sonora",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trilha sonora é citada como um dos pontos altos, com músicas que embalam a narrativa e contribuem para a atmosfera.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A trilha sonora é frequentemente citada como um dos pontos altos, com músicas que embalam a narrativa e contribuem para a atmosfera."
+        },
+        {
+          "tema": "Direção de Paul Thomas Anderson",
+          "mencoes_aproximadas": 15,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A direção de Paul Thomas Anderson é muito elogiada, com destaque para sua habilidade em construir cenas marcantes e criar uma atmosfera envolvente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Ritmo e duração",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "O ritmo é considerado ágil, com uma primeira metade vibrante e uma segunda metade que, para espectadores, se arrasta um pouco, mas no geral a duração passa rapidamente.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "O ritmo é considerado ágil, com uma primeira metade vibrante e uma segunda metade que, para alguns, se arrasta um pouco, mas no geral a duração passa rapidamente."
+        },
+        {
+          "tema": "Personagens e arcos narrativos",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Os personagens são vistos como complexos e bem desenvolvidos, e suas jornadas de ascensão e queda são convincentes e emocionantes.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia e estética",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia e a recriação de época são elogiadas, com cores e enquadramentos que remetem aos anos 70 e 80.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        }
+      ],
+      "observacao_geral": "As reviews positivas destacam a direção, o elenco e a trilha sonora como pontos fortes, além de elogiarem a construção dos personagens e a atmosfera. Apesar de algumas ressalvas quanto ao ritmo e à duração, este grupo considera o filme uma experiência marcante e divertida.",
+      "idioma_invalido": false,
+      "escopo_suspeito": false,
+      "share_real": 89
+    }
+  ],
+  "eixos": {
+    "taxonomia_id": "ebab2667de74",
+    "margem": {
+      "lei": "lift^2 * n >= 2085136/1000000",
+      "constante_quadrada": [
+        2085136,
+        1000000
+      ],
+      "n": 22,
+      "limiar_pp": 30.79
+    },
+    "margem_lift_pp": 30.79,
+    "linhas": [
+      {
+        "eixo": "ritmo",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 16,
+            "de_n": 36,
+            "freq_pct": 44.4,
+            "lift_pp": 17.2,
+            "acima_da_margem": false,
+            "tema": "Duração excessiva e ritmo arrastado",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é longo demais e que poderia ser encurtado sem prejuízo, com passagens arrastadas que dificultam a imersão.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 22,
+            "freq_pct": 27.3,
+            "lift_pp": -17.2,
+            "acima_da_margem": false,
+            "tema": "Duração e ritmo",
+            "exemplo_parafraseado": "Reviews medianas consideram que o filme se alonga além do necessário, com passagens que poderiam ser encurtadas e uma sensação de que a narrativa demora a engrenar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 8,
+            "de_n": 40,
+            "freq_pct": 20.0,
+            "lift_pp": -24.4,
+            "acima_da_margem": false,
+            "tema": "Ritmo e duração",
+            "exemplo_parafraseado": "O ritmo é considerado ágil, com uma primeira metade vibrante e uma segunda metade que, para espectadores, se arrasta um pouco, mas no geral a duração passa rapidamente.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "atuacao",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 10,
+            "de_n": 36,
+            "freq_pct": 27.8,
+            "lift_pp": -37.2,
+            "acima_da_margem": false,
+            "tema": "Atuações fracas e falta de autenticidade",
+            "exemplo_parafraseado": "Críticas mencionam atuações que parecem forçadas e pouco convincentes, com destaque para o protagonista.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 9,
+            "de_n": 22,
+            "freq_pct": 40.9,
+            "lift_pp": -24.1,
+            "acima_da_margem": false,
+            "tema": "Atuações irregulares",
+            "exemplo_parafraseado": "Há menções a atuações que não convencem, com destaque para a dificuldade de levar a sério o protagonista, embora certos coadjuvantes sejam elogiados.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": 24.1,
+            "acima_da_margem": false,
+            "tema": "Elenco e atuações",
+            "exemplo_parafraseado": "As reviews positivas elogiam o elenco, destacando atuações como a de Mark Wahlberg, Burt Reynolds e Julianne Moore, e a capacidade do diretor de extrair o melhor dos atores.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "direcao_imagem",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 36,
+            "freq_pct": 25.0,
+            "lift_pp": -11.4,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 22,
+            "freq_pct": 36.4,
+            "lift_pp": 1.4,
+            "acima_da_margem": false,
+            "tema": "Elogios à fotografia e à direção",
+            "exemplo_parafraseado": "As reviews medianas destacam a qualidade da fotografia, os planos longos e a habilidade técnica da direção, mesmo quando o conjunto não agrada.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -1.4,
+            "acima_da_margem": false,
+            "tema": "Direção de Paul Thomas Anderson",
+            "exemplo_parafraseado": "A direção de Paul Thomas Anderson é muito elogiada, com destaque para sua habilidade em construir cenas marcantes e criar uma atmosfera envolvente.",
+            "temas_no_mesmo_eixo": [
+              "Fotografia e estética"
+            ]
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "roteiro_estrutura",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 28,
+            "de_n": 36,
+            "freq_pct": 77.8,
+            "lift_pp": -4.0,
+            "acima_da_margem": false,
+            "tema": "Roteiro fraco e subtramas desconexas",
+            "exemplo_parafraseado": "O texto é descrito como confuso e sem profundidade emocional, com subtramas que não se conectam à história principal e personagens pouco desenvolvidos.",
+            "temas_no_mesmo_eixo": [
+              "Personagens desagradáveis e sem carisma"
+            ]
+          },
+          "medianas": {
+            "mencoes": 18,
+            "de_n": 22,
+            "freq_pct": 81.8,
+            "lift_pp": 1.8,
+            "acima_da_margem": false,
+            "tema": "Falta de desenvolvimento dos personagens",
+            "exemplo_parafraseado": "Este grupo aponta que personagens são superficiais e que subtramas não levam a lugar algum, dificultando o envolvimento emocional do espectador.",
+            "temas_no_mesmo_eixo": [
+              "Insatisfação com o desfecho"
+            ]
+          },
+          "positivas": {
+            "mencoes": 32,
+            "de_n": 40,
+            "freq_pct": 80.0,
+            "lift_pp": -1.8,
+            "acima_da_margem": false,
+            "tema": "Personagens e arcos narrativos",
+            "exemplo_parafraseado": "Os personagens são vistos como complexos e bem desenvolvidos, e suas jornadas de ascensão e queda são convincentes e emocionantes.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": "frequencia",
+          "positivas": "frequencia"
+        }
+      },
+      {
+        "eixo": "som_trilha",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 9,
+            "de_n": 36,
+            "freq_pct": 25.0,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 2,
+            "de_n": 22,
+            "freq_pct": 9.1,
+            "lift_pp": -20.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 12,
+            "de_n": 40,
+            "freq_pct": 30.0,
+            "lift_pp": 5.0,
+            "acima_da_margem": false,
+            "tema": "Trilha sonora",
+            "exemplo_parafraseado": "A trilha sonora é citada como um dos pontos altos, com músicas que embalam a narrativa e contribuem para a atmosfera.",
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "tom_atmosfera",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 7,
+            "de_n": 36,
+            "freq_pct": 19.4,
+            "lift_pp": -13.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 5,
+            "de_n": 22,
+            "freq_pct": 22.7,
+            "lift_pp": -9.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 13,
+            "de_n": 40,
+            "freq_pct": 32.5,
+            "lift_pp": 9.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "impacto_emocional",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 12,
+            "de_n": 36,
+            "freq_pct": 33.3,
+            "lift_pp": -11.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 7,
+            "de_n": 22,
+            "freq_pct": 31.8,
+            "lift_pp": -13.2,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": 11.7,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "comparacoes",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 17,
+            "de_n": 36,
+            "freq_pct": 47.2,
+            "lift_pp": -12.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 22,
+            "freq_pct": 36.4,
+            "lift_pp": -23.6,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 24,
+            "de_n": 40,
+            "freq_pct": 60.0,
+            "lift_pp": 12.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "expectativa",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 22,
+            "de_n": 36,
+            "freq_pct": 61.1,
+            "lift_pp": 26.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 6,
+            "de_n": 22,
+            "freq_pct": 27.3,
+            "lift_pp": -33.8,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 14,
+            "de_n": 40,
+            "freq_pct": 35.0,
+            "lift_pp": -26.1,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": "frequencia",
+          "medianas": null,
+          "positivas": null
+        }
+      },
+      {
+        "eixo": "critica_social",
+        "por_bucket": {
+          "negativas": {
+            "mencoes": 14,
+            "de_n": 36,
+            "freq_pct": 38.9,
+            "lift_pp": 2.5,
+            "acima_da_margem": false,
+            "tema": "Excesso de nudez e conteúdo sexual",
+            "exemplo_parafraseado": "As reviews apontam que o filme depende demais de nudez e humor sexual para sustentar a trama, soando gratuito e desconfortável.",
+            "temas_no_mesmo_eixo": [
+              "Abordagem machista e problemática"
+            ]
+          },
+          "medianas": {
+            "mencoes": 8,
+            "de_n": 22,
+            "freq_pct": 36.4,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Crítica à romantização da indústria pornô",
+            "exemplo_parafraseado": "Reviews medianas questionam a forma como o filme retrata o universo da pornografia, oscilando entre a crítica e a glamourização sem se aprofundar.",
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 6,
+            "de_n": 40,
+            "freq_pct": 15.0,
+            "lift_pp": -23.9,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          }
+        },
+        "bullet_de": {
+          "negativas": null,
+          "medianas": null,
+          "positivas": null
+        }
+      }
+    ],
+    "contraste": "valorativo",
+    "rotulagem": {
+      "n_chamadas": 3,
+      "falharam": [],
+      "fora_da_taxonomia": {},
+      "houve_retentativa": []
+    },
+    "spec_version": "1.9.51",
+    "verificador": {
+      "aplicado": true,
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/boogie-nights/classificacao/consenso_verificado.jsonl",
+      "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
+    }
+  },
+  "condicoes": {
+    "vale_a_pena": [
+      {
+        "texto": "valoriza um elenco talentoso e atuações que o diretor sabe extrair",
+        "tema_origem": "POS-A",
+        "bucket_origem": "positivas",
+        "tema_texto": "Elenco e atuações",
+        "rotulo_forca": "a maioria"
+      },
+      {
+        "texto": "aprecia uma trilha sonora que embala a narrativa e cria atmosfera",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "Trilha sonora",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "busca uma direção que constrói cenas marcantes e atmosfera envolvente",
+        "tema_origem": "POS-C",
+        "bucket_origem": "positivas",
+        "tema_texto": "Direção de Paul Thomas Anderson",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera uma segunda metade mais arrastada, embora o ritmo geral seja ágil",
+        "tema_origem": "POS-D",
+        "bucket_origem": "positivas",
+        "tema_texto": "Ritmo e duração",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se envolve com personagens complexos e jornadas de ascensão e queda",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "Personagens e arcos narrativos",
+        "rotulo_forca": "muitos"
+      }
+    ],
+    "talvez_evite": [
+      {
+        "texto": "se incomoda com longa duração e passagens arrastadas que atrapalham a imersão",
+        "tema_origem": "NEG-A",
+        "bucket_origem": "negativas",
+        "tema_texto": "Duração excessiva e ritmo arrastado",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "evita roteiro confuso, com subtramas soltas e personagens rasos",
+        "tema_origem": "NEG-B",
+        "bucket_origem": "negativas",
+        "tema_texto": "Roteiro fraco e subtramas desconexas",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "se desliga de personagens superficiais e difíceis de torcer",
+        "tema_origem": "NEG-C",
+        "bucket_origem": "negativas",
+        "tema_texto": "Personagens desagradáveis e sem carisma",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "estranha atuações forçadas e pouco convincentes, inclusive do protagonista",
+        "tema_origem": "NEG-E",
+        "bucket_origem": "negativas",
+        "tema_texto": "Atuações fracas e falta de autenticidade",
+        "rotulo_forca": "alguns"
+      }
+    ],
+    "ordem_colunas": [
+      "vale_a_pena",
+      "talvez_evite"
+    ],
+    "peso": {
+      "vale_a_pena": {
+        "peso_pct": 89,
+        "peso_texto": "~89% das notas",
+        "nota_de_amostra": null
+      },
+      "talvez_evite": {
+        "peso_pct": 2,
+        "peso_texto": "~2% das notas",
+        "nota_de_amostra": "amostra pequena"
+      }
+    },
+    "peso_meio": null,
+    "origem": "llm",
+    "temas_pedidos": {
+      "vale_a_pena": [
+        "POS-A",
+        "POS-B",
+        "POS-C",
+        "POS-D",
+        "POS-E"
+      ],
+      "talvez_evite": [
+        "NEG-A",
+        "NEG-B",
+        "NEG-C",
+        "NEG-E"
+      ]
+    },
+    "temas_saltados": {
+      "vale_a_pena": [],
+      "talvez_evite": []
+    },
+    "descartadas": [],
+    "sem_condicao_publicavel": [],
+    "par_desfeito": [],
+    "recusas_invalidas": [],
+    "retry": null,
+    "provider": "featherless",
+    "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "n_candidatos": 3,
+    "n_chamadas": 3,
+    "indice_escolhido": 0,
+    "candidatos": [
+      {
+        "indice": 0,
+        "n_condicoes": 9,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 1,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "sem_discriminacao"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      },
+      {
+        "indice": 2,
+        "n_condicoes": 9,
+        "n_flags": 1,
+        "flags": [
+          "exemplo_verbatim"
+        ],
+        "n_temas_cobertos": 9,
+        "n_temas_recusados": 0,
+        "n_temas_resolvidos": 9
+      }
+    ],
+    "uso": {
+      "prompt_tokens": 12600,
+      "completion_tokens": 1090,
+      "cache_hit_tokens": 11788,
+      "cache_miss_tokens": 812
+    },
+    "latencia_s": 0.0,
+    "spec_version": "1.9.51",
+    "variante": "experimento-briefing"
+  }
+}

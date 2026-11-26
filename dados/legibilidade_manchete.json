@@ -5259,10 +5259,52 @@
         "1440": 14.249,
         "1920": 16.625
       }
+    },
+    "boogie-nights": {
+      "backdrop_path": "/ArpTzQZHWh4UVsgUvV6S7WjTq1n.jpg",
+      "caixas": {
+        "700": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "1024": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "1440": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "1920": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "luminancia_sem_veu": {
+        "700": 0.0636,
+        "1024": 0.0636,
+        "1440": 0.0636,
+        "1920": 0.0636
+      },
+      "contraste_com_veu": {
+        "700": 15.205,
+        "1024": 15.205,
+        "1440": 15.205,
+        "1920": 15.205
+      },
+      "caixas_metodo": "limite conservador: imagem inteira; garantia adicional contra branco puro para qualquer caixa"
     }
   },
   "garantia_novos": {
-    "filmes": 29,
+    "filmes": 30,
     "metodo": "Contraste >=4,5 contra branco puro; cobre qualquer região de qualquer imagem, sem afirmar medição de caixas no navegador.",
     "contraste": 4.669491298394515
   }
