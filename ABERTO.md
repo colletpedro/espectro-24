@@ -2916,3 +2916,30 @@ A exceção é ESTREITA, no formato da do porco-rosso: este filme, estes três b
 (`tests/test_condicoes.py::_EXCECAO_LEON`), com teste de obsolescência (`test_excecao_do_leon_obsoleta_dispara`) e teste
 de que outro algarismo no mesmo filme continua falhando. Também: os 5 pares de `publicar_condicoes` (psycho, pulp-fiction,
 the-shawshank-redemption, harakiri, the-lion-king) entraram no conjunto esperado, com diagnóstico no docstring.
+
+## 2026-11-26 — duas pendências abertas na regeneração com a R2 (só registro, nada implementado)
+
+### Estabilidade da síntese entre gerações
+
+Regenerar um bucket com a MESMA amostra e o MESMO prompt troca quase todos os temas pelo nome. Medido em 26/11: em
+`primetime-2026`, sem nenhuma review trocada, a regeneração manteve **0/0/3** dos 6 nomes de tema por bucket
+(negativas/medianas/positivas); em `boogie-nights` (uma review a menos) **1/1/2**; nas três gerações do bucket das
+medianas do `boogie-nights` (mesmo prompt, nesta sessão), **nenhum** nome de tema em comum entre qualquer par
+(0 de 6 nas três combinações). Consequências: (a) o diff publicado × novo mistura o efeito da regra com a variância do
+modelo, e só a leitura item a item separa os dois; (b) qualquer mudança de seleção troca temas publicados além do que
+a regra tocou. Não se mediu estabilidade de SENTIDO (nomes diferentes podem significar o mesmo); a medição que falta é
+comparar as gerações por significado ou pelo eixo, não pelo nome. **O que decidir:** se isso é uma propriedade aceita da
+síntese (e o diff entre gerações passa a ser lido só por item) ou se vale uma medida de estabilidade antes de regenerar
+filme no ar. Medição primeiro, com rótulo manual (política de medir antes de implementar).
+
+### Ausência de checagem automática de spoiler nos bullets e nas condições
+
+O prompt de síntese proíbe evento da trama, destino de personagem e final (instrução 1), mas **nenhum validador lê o
+texto gerado** à procura disso: `validar_publicado` confere idioma, escopo, aspas, menções, ordem, campos; `risco_de_spoiler`
+(`condicoes.py`) é um proxy léxico de baixa precisão (15,8% medida) que só MARCA o briefing e nunca reprova. Os casos
+desta leva foram pegos por leitura: `casablanca` publicado até 26/11 ("Sacrifício e decisão final de Rick", e a
+observação "a decisão final do protagonista"); `boogie-nights` medianas, 1ª geração ("todos os personagens saindo bem")
+e 2ª regeneração ("recompensar personagens sem consequências"). Pelo mesmo motivo, também passa sem alarme o defeito de
+**palavras coladas** ("filmepara" em `casablanca`), que nenhum validador pega. **O que decidir:** o formato da checagem
+(léxica, segundo modelo como juiz, ou as duas) e o que ela faz ao reprovar (bloqueia a publicação, ou marca para leitura).
+Antes de implementar: medir contra um rótulo manual (matriz de acerto) sobre os 128 publicados + os 7 desta leva.
