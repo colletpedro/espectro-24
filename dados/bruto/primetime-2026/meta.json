@@ -1,0 +1,69 @@
+{
+  "slug": "primetime-2026",
+  "coletado_em": "2026-11-26T12:40:00-03:00",
+  "versao_coletor": "importacao_manual",
+  "ordenacao_usada": "importacao_manual",
+  "histograma_bruto": {
+    "0.5": 2188,
+    "1.0": 5348,
+    "1.5": 6647,
+    "2.0": 34751,
+    "2.5": 66748,
+    "3.0": 230096,
+    "3.5": 337872,
+    "4.0": 431887,
+    "4.5": 140822,
+    "5.0": 82110
+  },
+  "total_notas": 1338469,
+  "contagem_bruta_por_nivel": {
+    "0.5": 36,
+    "1.0": 36,
+    "1.5": 36,
+    "2.0": 36,
+    "2.5": 36,
+    "3.0": 36,
+    "3.5": 36,
+    "4.0": 34,
+    "4.5": 36,
+    "5.0": 36
+  },
+  "ano_lancamento": 2026,
+  "ano_fonte": "importacao_manual",
+  "identidade_letterboxd": {
+    "slug": "primetime-2026",
+    "titulo": "Primetime",
+    "ano": 2026,
+    "tmdb_id_letterboxd": 1375441,
+    "fonte": "importacao_manual"
+  },
+  "importacao_manual": {
+    "origem": "importacao_manual",
+    "importado_em": "2026-11-26T16:18:02+00:00",
+    "arquivos": {
+      "meta": {
+        "nome": "meta.json",
+        "sha256": "b787647fabb350021d6402697ae3c333eeb16ffb9b372c99bf2fe6f9a7c0dce4"
+      },
+      "reviews": {
+        "nome": "reviews.jsonl",
+        "sha256": "76d3c022a434a2953863599c6f0638558c0d40847da63e520174369294626942"
+      }
+    },
+    "n_linhas_arquivo": 358,
+    "n_duplicadas_no_arquivo": 0,
+    "n_ja_existentes_por_id": 0,
+    "n_ja_existentes_por_url": 0,
+    "n_novas": 358,
+    "data_semantica": "diario: pode NAO ser a data de publicacao da review",
+    "janela_temporal": "nao_calculada (depende de data)",
+    "pagina_origem": "nao_aplicavel: constante 1, sem estratificacao por profundidade",
+    "ordenacao_do_export": "desconhecida (o arquivo nao a declara)",
+    "texto": "integral declarado pelo exportador (truncada=false)",
+    "spoiler": "flag gravado; a exclusao e da selecao (excluir_spoiler=True)",
+    "identidade": "tmdb_id do meta conferido no TMDB por buscar_ficha"
+  },
+  "paises_tmdb": [
+    "US"
+  ]
+}

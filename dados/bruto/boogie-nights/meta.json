@@ -1,0 +1,69 @@
+{
+  "slug": "boogie-nights",
+  "coletado_em": "2026-11-26T12:40:00-03:00",
+  "versao_coletor": "importacao_manual",
+  "ordenacao_usada": "importacao_manual",
+  "histograma_bruto": {
+    "0.5": 1355,
+    "1.0": 2725,
+    "1.5": 2154,
+    "2.0": 10342,
+    "2.5": 12764,
+    "3.0": 56684,
+    "3.5": 89237,
+    "4.0": 239021,
+    "4.5": 167179,
+    "5.0": 173850
+  },
+  "total_notas": 755311,
+  "contagem_bruta_por_nivel": {
+    "0.5": 36,
+    "1.0": 36,
+    "1.5": 36,
+    "2.0": 36,
+    "2.5": 36,
+    "3.0": 36,
+    "3.5": 36,
+    "4.0": 36,
+    "4.5": 36,
+    "5.0": 36
+  },
+  "ano_lancamento": 1997,
+  "ano_fonte": "importacao_manual",
+  "identidade_letterboxd": {
+    "slug": "boogie-nights",
+    "titulo": "Boogie Nights",
+    "ano": 1997,
+    "tmdb_id_letterboxd": 4995,
+    "fonte": "importacao_manual"
+  },
+  "importacao_manual": {
+    "origem": "importacao_manual",
+    "importado_em": "2026-11-26T16:16:16+00:00",
+    "arquivos": {
+      "meta": {
+        "nome": "meta.json",
+        "sha256": "3433bef8cb685f3690db5036655252eb5a3bdf2b91d94d3abf0791472cac31f3"
+      },
+      "reviews": {
+        "nome": "reviews.jsonl",
+        "sha256": "6a7309e20c0cc0201cedb998c46885d00a04d63bba75fc657b186f69c5647205"
+      }
+    },
+    "n_linhas_arquivo": 360,
+    "n_duplicadas_no_arquivo": 0,
+    "n_ja_existentes_por_id": 0,
+    "n_ja_existentes_por_url": 0,
+    "n_novas": 360,
+    "data_semantica": "diario: pode NAO ser a data de publicacao da review",
+    "janela_temporal": "nao_calculada (depende de data)",
+    "pagina_origem": "nao_aplicavel: constante 1, sem estratificacao por profundidade",
+    "ordenacao_do_export": "desconhecida (o arquivo nao a declara)",
+    "texto": "integral declarado pelo exportador (truncada=false)",
+    "spoiler": "flag gravado; a exclusao e da selecao (excluir_spoiler=True)",
+    "identidade": "tmdb_id do meta conferido no TMDB por buscar_ficha"
+  },
+  "paises_tmdb": [
+    "US"
+  ]
+}
