@@ -14,6 +14,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 import math
+import re
 
 from .alocacao import alocar_bucket, dividir_raso_profundo, redistribuir_deficit
 from .bruto import ReviewBruta
@@ -25,6 +26,28 @@ from .config import (
     MIN_CHARS,
     PISO_ALOCACAO_POR_NIVEL,
 )
+
+
+# [2026-11-26, decisão do dono] RESUMO DE TRAMA — regra R2.
+#
+# Existe uma família de "reviews" que não é opinião: o texto de um resumo
+# completo do filme, final incluído, SEM marca de spoiler. Todas abrem com um
+# título markdown de nível 3 (`### Título (ano) …`), têm 13-23 mil caracteres
+# e vêm em português. Medido em 193 brutos (`scripts/medir_resumo_de_trama.py`):
+# 11 reviews, as 11 resumos de trama, 10 delas na amostra, 4 em filmes no ar.
+# Uma análise "do que o público diz" não pode contar um resumo gerado como
+# voz de ninguém, e o tema que ele produz é o enredo.
+#
+# A régua é a ABERTURA, não o tamanho: um teto de caracteres tiraria também
+# ensaios genuínos (pinocchio-2022, 34 mil; 500-days-of-summer, 66 mil).
+# Limite conhecido: ficha/resumo sem esse cabeçalho não é pego por esta regra
+# (ver a medição de candidatas em `scripts/medir_resumo_de_trama.py`).
+RESUMO_DE_TRAMA_ABERTURA = re.compile(r"\A\s{0,3}###\s+\S")
+
+
+def e_resumo_de_trama(texto: str) -> bool:
+    """`True` se a review abre com título markdown de nível 3 (regra R2)."""
+    return bool(RESUMO_DE_TRAMA_ABERTURA.match(texto or ""))
 
 
 # Ordem de precedência da discriminação de descarte (v1.9.1, §3[C2]) — cada
@@ -91,7 +114,8 @@ def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
                            selecionadas_ids: set[str],
                            filtro_aplicado: int,
                            excluir_spoiler: bool,
-                           excluir_ids: frozenset[str] = frozenset()
+                           excluir_ids: frozenset[str] = frozenset(),
+                           excluir_resumo_de_trama: bool = False
                            ) -> dict[str, int]:
     """Classifica cada review do bruto de um nível em EXATAMENTE uma categoria
     — `selecionada` (não contada) ou um dos motivos de `_MOTIVOS_DESCARTE` —
@@ -103,6 +127,10 @@ def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
     2. `truncada_sem_texto` — `texto_completo == false`;
     3. `spoiler` — marcada spoiler E `excluir_spoiler=True` (não conta quando
        o parâmetro é `False`: a review É elegível nesse caso);
+    3b. `resumo_de_trama` — abre com `### ` (regra R2) E
+       `excluir_resumo_de_trama=True`. A chave só EXISTE quando há uma no
+       nível (como `recusada_conteudo`): o dict de todo outro filme sai com o
+       schema de sempre;
     4. `abaixo_min_chars` — mais curta que `filtro_aplicado` (o degrau da
        cascata que vigorou NAQUELE nível, não o `min_chars` nominal);
     5. `excedente_cota` — passou em tudo, mas ficou além do que a
@@ -132,6 +160,8 @@ def _discriminar_descartes(brutas_do_nivel: list[ReviewBruta],
             motivos["truncada_sem_texto"] += 1
         elif excluir_spoiler and r.spoiler_flag:
             motivos["spoiler"] += 1
+        elif excluir_resumo_de_trama and e_resumo_de_trama(r.texto):
+            motivos["resumo_de_trama"] = motivos.get("resumo_de_trama", 0) + 1
         elif r.n_chars < filtro_aplicado:
             motivos["abaixo_min_chars"] += 1
         else:
@@ -211,7 +241,8 @@ def _escolher_estratificado(pool: list[ReviewBruta], n_alvo: int,
 
 def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
                   cascata: list[int], excluir_spoiler: bool,
-                  excluir_ids: frozenset[str] = frozenset()
+                  excluir_ids: frozenset[str] = frozenset(),
+                  excluir_resumo_de_trama: bool = False
                   ) -> tuple[list[ReviewBruta], int]:
     """Aplica a cascata a UM nível. Devolve `(pool, filtro_que_vigorou)`.
 
@@ -221,7 +252,9 @@ def _cascade_pool(reviews: list[ReviewBruta], min_chars: int,
     """
     elegiveis = [r for r in reviews
                  if r.texto_completo and not (excluir_spoiler and r.spoiler_flag)
-                 and r.id not in excluir_ids]
+                 and r.id not in excluir_ids
+                 and not (excluir_resumo_de_trama
+                          and e_resumo_de_trama(r.texto))]
     degraus = _escada(min_chars, cascata)
     for thr in degraus:
         pool = [r for r in elegiveis if r.n_chars >= thr]
@@ -241,6 +274,7 @@ def selecionar(reviews: list[ReviewBruta],
                piso_nivel: int = PISO_ALOCACAO_POR_NIVEL,
                orcamento_paginas_por_nivel: dict[float, int] | None = None,
                excluir_ids: frozenset[str] = frozenset(),
+               excluir_resumo_de_trama: bool = True,
                ) -> dict[str, BucketSelecionado]:
     """Escolhe até `cota_por_bucket` reviews por bucket, a partir do bruto.
 
@@ -271,6 +305,12 @@ def selecionar(reviews: list[ReviewBruta],
     do provider (`recusas.py`) — inelegíveis no passo 1, como truncada e
     spoiler, então a vaga vai para a próxima review na ordem de sempre.
     Vazio (o default) é a seleção byte a byte de antes.
+
+    `excluir_resumo_de_trama` (2026-11-26, regra R2): reviews que abrem com
+    título markdown `### ` são resumos de trama, não opinião — inelegíveis no
+    passo 1, como truncada e spoiler (a vaga vai para a próxima review na
+    ordem de sempre). `True` é o default de PRODUÇÃO; `False` reproduz a
+    seleção anterior à regra, para medir antes/depois.
     """
     fr = FRONTEIRAS if fronteiras is None else fronteiras
     cascata = CASCATA_CHARS if cascata is None else cascata
@@ -293,7 +333,8 @@ def selecionar(reviews: list[ReviewBruta],
         filtros: dict[float, int] = {}
         for n in niveis:
             pool, thr = _cascade_pool(por_nivel.get(n, []), min_chars, cascata,
-                                      excluir_spoiler, excluir_ids)
+                                      excluir_spoiler, excluir_ids,
+                                      excluir_resumo_de_trama)
             pool.sort(key=lambda r: (r.pagina_origem, posicao[id(r)]))
             pools[n], filtros[n] = pool, thr
 
@@ -315,7 +356,7 @@ def selecionar(reviews: list[ReviewBruta],
             # contagem que pode divergir dele.
             motivos = _discriminar_descartes(
                 brutas_do_nivel, {r.id for r in escolhidas}, filtros[n],
-                excluir_spoiler, excluir_ids)
+                excluir_spoiler, excluir_ids, excluir_resumo_de_trama)
             bucket.niveis[n] = NivelSelecionado(
                 nivel=n,
                 n_alvo=alocacao[n],
