@@ -14,7 +14,6 @@
   "O filme é superestimado e superficial, sem a profundidade que sua fama sugere.": "The film is overrated and superficial, without the depth its fame suggests.",
   "Ritmo lento e falta de humor": "Slow pace and lack of humor",
   "O ritmo é arrastado e as piadas não funcionam, tornando a experiência tediosa.": "The pace is drawn-out and the jokes do not work, making the experience tedious.",
-  "Atuações e química do elenco": "Performances and cast chemistry",
   "Apesar da química entre os protagonistas, as atuações são irregulares e o roteiro não ajuda.": "Despite the chemistry between the leads, the performances are uneven and the script does not help.",
   "Estereótipos raciais e representação problemática": "Racial stereotypes and problematic representation",
   "Reviews apontam que o personagem negro é construído a partir de clichês racistas, como a comparação com Barack Obama ao vestir terno, o comportamento supostamente exótico e a ideia do negro alegre e dançarino.": "Reviews point out that the Black character is built from racist clichés, such as the comparison to Barack Obama when he puts on a suit, the supposedly exotic behavior and the idea of the cheerful, dancing Black man.",
@@ -49,5 +48,7 @@
   "acha tedioso um ritmo arrastado em que as piadas não funcionam": "find a drawn-out pace in which the jokes do not work tedious",
   "tolera atuações irregulares e roteiro fraco, apesar da química entre os protagonistas": "tolerate uneven performances and a weak script, despite the chemistry between the leads"
  },
- "_orfaos": {}
+ "_orfaos": {
+  "Atuações e química do elenco": "Performances and cast chemistry"
+ }
 }

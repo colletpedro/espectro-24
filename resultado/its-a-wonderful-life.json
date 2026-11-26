@@ -1,7 +1,7 @@
 {
   "slug": "its-a-wonderful-life",
   "data_coleta": "2026-11-08T05:20:55.677683+00:00",
-  "spec_version": "1.9.50",
+  "spec_version": "1.9.51",
   "total_reviews_observadas": 805359,
   "reviews_url": "https://letterboxd.com/film/its-a-wonderful-life/reviews/",
   "ficha": {
@@ -569,69 +569,65 @@
       ],
       "temas": [
         {
-          "tema": "ritmo lento e longa duração",
-          "mencoes_aproximadas": 14,
+          "tema": "Ritmo lento e longa duração",
+          "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+          "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa."
+          "exemplo_antes_da_guarda": "Várias reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor."
         },
         {
-          "tema": "mensagem cristã e moral simplista",
-          "mencoes_aproximadas": 12,
+          "tema": "Mensagem moral simplista e manipuladora",
+          "mencoes_aproximadas": 10,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+          "exemplo_parafraseado": "Este grupo critica a forma como o filme reduz questões complexas a uma moral binária entre o bem e o mal, forçando uma lição de vida otimista que soa artificial.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "protagonista irritante e passivo",
-          "mencoes_aproximadas": 10,
+          "tema": "Excesso de sentimentalismo e tom depressivo",
+          "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
+          "exemplo_parafraseado": "As reviews apontam que a obra mistura um clima natalino edificante com um retrato muito triste e depressivo da vida do protagonista, o que soa contraditório e cansativo.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitos consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele."
+          "aspas_removidas": false
         },
         {
-          "tema": "depressão e tom depressivo",
-          "mencoes_aproximadas": 8,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Várias reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera."
-        },
-        {
-          "tema": "crítica ao capitalismo e à estrutura social",
+          "tema": "Personagem principal desagradável e passivo",
           "mencoes_aproximadas": 7,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Certas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema.",
+          "exemplo_parafraseado": "O protagonista é descrito como alguém que reclama demais, se anula em prol dos outros e não desperta empatia, sendo visto como irritante ou pouco crível.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Mensagem cristã e ideologia conservadora",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Críticas destacam que o filme embute uma moral religiosa e uma visão de mundo que naturaliza sacrifícios pessoais e não questiona estruturas sociais injustas.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema."
+          "exemplo_antes_da_guarda": "Algumas críticas destacam que o filme embute uma moral religiosa e uma visão de mundo que naturaliza sacrifícios pessoais e não questiona estruturas sociais injustas."
         },
         {
-          "tema": "personagens femininas sem agência",
-          "mencoes_aproximadas": 3,
+          "tema": "Representação feminina limitada e piadas problemáticas",
+          "mencoes_aproximadas": 4,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Há menções à falta de desenvolvimento e relevância das personagens femininas, que recebem pouco espaço e agência na narrativa.",
+          "exemplo_parafraseado": "Há menções à pouca agência das personagens femininas e a cenas de teor sexista ou racista tratadas como comicidade leve.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         }
       ],
-      "observacao_geral": "Este grupo de reviews negativas destaca principalmente o ritmo lento, a moral cristã simplista, o protagonista pouco carismático e o tom depressivo como os principais pontos de insatisfação. Críticas à estrutura social e à falta de agência feminina também aparecem, mas com menor frequência.",
+      "observacao_geral": "As reviews negativas analisadas destacam principalmente o ritmo arrastado, a moral simplista e o excesso de sentimentalismo, além de considerarem o protagonista pouco carismático e a mensagem conservadora problemática. Este grupo específico não vê no filme o clássico aclamado que costuma ser celebrado.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 2
@@ -720,70 +716,68 @@
           "tema": "Ritmo lento e longa duração",
           "mencoes_aproximadas": 18,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com alguns trechos entediantes."
+          "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final."
         },
         {
-          "tema": "Final eficaz versus desenvolvimento irregular",
-          "mencoes_aproximadas": 15,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Várias críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação."
-        },
-        {
-          "tema": "Roteiro previsível e personagens rasos",
+          "tema": "Final eficaz, mas previsível ou exagerado",
           "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil.",
+          "exemplo_parafraseado": "Pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil."
+          "exemplo_antes_da_guarda": "Algumas pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme."
         },
         {
-          "tema": "Atuação de James Stewart",
+          "tema": "Atuações e personagens",
           "mencoes_aproximadas": 10,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+          "exemplo_parafraseado": "Há elogios à atuação de James Stewart e à simpatia de Donna Reed, mas também críticas à falta de profundidade dos coadjuvantes e ao excesso de idealização do protagonista.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "O desempenho do protagonista divide opiniões: alguns elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente."
+          "aspas_removidas": false
         },
         {
-          "tema": "Excesso de otimismo e moral cristã",
+          "tema": "Mensagem otimista e lição de vida",
           "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+          "exemplo_parafraseado": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora espectadores considerem essa moral excessivamente óbvia ou ingênua.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Certas reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial."
+          "exemplo_antes_da_guarda": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora alguns considerem essa moral excessivamente óbvia ou ingênua."
         },
         {
           "tema": "Clássico superestimado",
           "mencoes_aproximadas": 8,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+          "exemplo_parafraseado": "Reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico."
+          "exemplo_antes_da_guarda": "Algumas reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber."
+        },
+        {
+          "tema": "Fotografia e aspectos técnicos",
+          "mencoes_aproximadas": 6,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora espectadores achem que a direção não compensa outras falhas.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora alguns achem que a direção não compensa outras falhas."
         }
       ],
-      "observacao_geral": "As reviews medianas destacam principalmente problemas de ritmo e duração, além de uma visão crítica sobre o otimismo excessivo e a simplicidade dos personagens. Apesar disso, muitos reconhecem a eficácia do desfecho e a atuação de James Stewart, ainda que com ressalvas.",
+      "observacao_geral": "As reviews medianas apontam para uma experiência mista: reconhecem a mensagem edificante e o valor histórico do filme, mas criticam o ritmo arrastado e a idealização excessiva. Este grupo tende a considerá-lo um clássico competente, porém superestimado.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 7
@@ -823,7 +817,7 @@
         "n": 40,
         "min": "2014-01-23",
         "max": "2026-11-08",
-        "p5": "2024-01-01",
+        "p5": "2026-03-06",
         "p50": "2026-11-06",
         "p95": "2026-11-08"
       },
@@ -864,9 +858,10 @@
             "truncada_sem_texto": 0,
             "spoiler": 3,
             "abaixo_min_chars": 34,
-            "excedente_cota": 1,
+            "excedente_cota": 0,
             "duplicata": 0,
-            "outros": 0
+            "outros": 0,
+            "resumo_de_trama": 1
           },
           "paginas_buscadas": 0
         },
@@ -915,67 +910,73 @@
       ],
       "temas": [
         {
-          "tema": "Emoção e choro",
-          "mencoes_aproximadas": 18,
+          "tema": "Mensagem emocional e comovente",
+          "mencoes_aproximadas": 30,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+          "exemplo_parafraseado": "Reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitas reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho."
+          "exemplo_antes_da_guarda": "Muitas reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações."
         },
         {
           "tema": "Atuação de James Stewart",
           "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Mensagem sobre o valor da vida e da existência",
-          "mencoes_aproximadas": 11,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Clássico atemporal e natalino",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+          "exemplo_parafraseado": "A interpretação de James Stewart é elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "O filme é frequentemente descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura."
+          "exemplo_antes_da_guarda": "A interpretação de James Stewart é frequentemente elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista."
+        },
+        {
+          "tema": "Clássico atemporal",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto."
+        },
+        {
+          "tema": "Espírito natalino e tradição",
+          "mencoes_aproximadas": 9,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Muitos comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança."
+        },
+        {
+          "tema": "Reflexão sobre o valor da vida e das pessoas",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "As reviews refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "As reviews frequentemente refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros."
         },
         {
           "tema": "Ritmo e estrutura narrativa",
-          "mencoes_aproximadas": 8,
+          "mencoes_aproximadas": 7,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+          "exemplo_parafraseado": "Reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final."
-        },
-        {
-          "tema": "Elenco e química entre os atores",
-          "mencoes_aproximadas": 6,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O elenco é elogiado, com destaque para a química entre os protagonistas e a atuação de Donna Reed, que contribuem para a autenticidade dos personagens.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
+          "exemplo_antes_da_guarda": "Algumas reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante."
         }
       ],
-      "observacao_geral": "As reviews positivas deste grupo destacam a forte carga emocional, a atuação marcante de James Stewart e a mensagem inspiradora sobre o valor da vida. Este grupo também valoriza o filme como um clássico natalino atemporal, embora alguns apontem um ritmo inicial mais lento.",
+      "observacao_geral": "As reviews positivas destacam principalmente a carga emocional do filme, a atuação de James Stewart e a mensagem inspiradora sobre a vida e as relações humanas. Este grupo também valoriza o aspecto de clássico atemporal e a tradição natalina associada à obra.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 91
@@ -998,23 +999,23 @@
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
+            "mencoes": 10,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": -10.0,
+            "freq_pct": 25.0,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
-            "tema": "ritmo lento e longa duração",
-            "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+            "tema": "Ritmo lento e longa duração",
+            "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 15,
             "de_n": 40,
             "freq_pct": 37.5,
-            "lift_pp": 10.0,
+            "lift_pp": 12.5,
             "acima_da_margem": false,
             "tema": "Ritmo lento e longa duração",
-            "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+            "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
@@ -1024,7 +1025,7 @@
             "lift_pp": -22.5,
             "acima_da_margem": false,
             "tema": "Ritmo e estrutura narrativa",
-            "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+            "exemplo_parafraseado": "Reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1053,8 +1054,8 @@
             "freq_pct": 30.0,
             "lift_pp": 2.5,
             "acima_da_margem": false,
-            "tema": "Atuação de James Stewart",
-            "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+            "tema": "Atuações e personagens",
+            "exemplo_parafraseado": "Há elogios à atuação de James Stewart e à simpatia de Donna Reed, mas também críticas à falta de profundidade dos coadjuvantes e ao excesso de idealização do protagonista.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
@@ -1064,10 +1065,8 @@
             "lift_pp": -2.5,
             "acima_da_margem": false,
             "tema": "Atuação de James Stewart",
-            "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
-            "temas_no_mesmo_eixo": [
-              "Elenco e química entre os atores"
-            ]
+            "exemplo_parafraseado": "A interpretação de James Stewart é elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista.",
+            "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
@@ -1080,9 +1079,9 @@
         "eixo": "direcao_imagem",
         "por_bucket": {
           "negativas": {
-            "mencoes": 3,
+            "mencoes": 4,
             "de_n": 40,
-            "freq_pct": 7.5,
+            "freq_pct": 10.0,
             "lift_pp": -5.0,
             "acima_da_margem": false,
             "tema": null,
@@ -1090,20 +1089,20 @@
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 5,
+            "mencoes": 6,
             "de_n": 40,
-            "freq_pct": 12.5,
-            "lift_pp": 2.5,
+            "freq_pct": 15.0,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Fotografia e aspectos técnicos",
+            "exemplo_parafraseado": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora espectadores achem que a direção não compensa outras falhas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 4,
+            "mencoes": 3,
             "de_n": 40,
-            "freq_pct": 10.0,
-            "lift_pp": -2.5,
+            "freq_pct": 7.5,
+            "lift_pp": -7.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1125,11 +1124,9 @@
             "freq_pct": 77.5,
             "lift_pp": 0.0,
             "acima_da_margem": false,
-            "tema": "protagonista irritante e passivo",
-            "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
-            "temas_no_mesmo_eixo": [
-              "personagens femininas sem agência"
-            ]
+            "tema": "Personagem principal desagradável e passivo",
+            "exemplo_parafraseado": "O protagonista é descrito como alguém que reclama demais, se anula em prol dos outros e não desperta empatia, sendo visto como irritante ou pouco crível.",
+            "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 31,
@@ -1137,20 +1134,18 @@
             "freq_pct": 77.5,
             "lift_pp": 0.0,
             "acima_da_margem": false,
-            "tema": "Final eficaz versus desenvolvimento irregular",
-            "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
-            "temas_no_mesmo_eixo": [
-              "Roteiro previsível e personagens rasos"
-            ]
+            "tema": "Final eficaz, mas previsível ou exagerado",
+            "exemplo_parafraseado": "Pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme.",
+            "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 23,
+            "mencoes": 25,
             "de_n": 40,
-            "freq_pct": 57.5,
-            "lift_pp": -20.0,
+            "freq_pct": 62.5,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Reflexão sobre o valor da vida e das pessoas",
+            "exemplo_parafraseado": "As reviews refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1164,10 +1159,10 @@
         "eixo": "som_trilha",
         "por_bucket": {
           "negativas": {
-            "mencoes": 1,
+            "mencoes": 2,
             "de_n": 40,
-            "freq_pct": 2.5,
-            "lift_pp": -7.5,
+            "freq_pct": 5.0,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1204,33 +1199,33 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 10,
+            "mencoes": 8,
             "de_n": 40,
-            "freq_pct": 25.0,
-            "lift_pp": -17.5,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
-            "tema": "depressão e tom depressivo",
-            "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
+            "tema": "Excesso de sentimentalismo e tom depressivo",
+            "exemplo_parafraseado": "As reviews apontam que a obra mistura um clima natalino edificante com um retrato muito triste e depressivo da vida do protagonista, o que soa contraditório e cansativo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 6,
+            "mencoes": 7,
             "de_n": 40,
-            "freq_pct": 15.0,
-            "lift_pp": -27.5,
+            "freq_pct": 17.5,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 17,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 42.5,
-            "lift_pp": 17.5,
+            "freq_pct": 32.5,
+            "lift_pp": 12.5,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Espírito natalino e tradição",
+            "exemplo_parafraseado": "Espectadores comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1244,10 +1239,10 @@
         "eixo": "impacto_emocional",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 30.0,
-            "lift_pp": -17.5,
+            "freq_pct": 32.5,
+            "lift_pp": -20.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1257,20 +1252,20 @@
             "mencoes": 10,
             "de_n": 40,
             "freq_pct": 25.0,
-            "lift_pp": -22.5,
+            "lift_pp": -27.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 19,
+            "mencoes": 21,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": 17.5,
+            "freq_pct": 52.5,
+            "lift_pp": 20.0,
             "acima_da_margem": false,
-            "tema": "Emoção e choro",
-            "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+            "tema": "Mensagem emocional e comovente",
+            "exemplo_parafraseado": "Reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1284,33 +1279,33 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 6,
+            "mencoes": 8,
             "de_n": 40,
-            "freq_pct": 15.0,
-            "lift_pp": -20.0,
+            "freq_pct": 20.0,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 12,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 30.0,
-            "lift_pp": -5.0,
+            "freq_pct": 32.5,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 14,
+            "mencoes": 12,
             "de_n": 40,
-            "freq_pct": 35.0,
-            "lift_pp": 5.0,
+            "freq_pct": 30.0,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
-            "tema": "Clássico atemporal e natalino",
-            "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+            "tema": null,
+            "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1324,30 +1319,30 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 17,
+            "mencoes": 15,
             "de_n": 40,
-            "freq_pct": 42.5,
-            "lift_pp": 0.0,
+            "freq_pct": 37.5,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 17,
+            "mencoes": 16,
             "de_n": 40,
-            "freq_pct": 42.5,
-            "lift_pp": 0.0,
+            "freq_pct": 40.0,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
             "tema": "Clássico superestimado",
-            "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+            "exemplo_parafraseado": "Reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 15,
             "de_n": 40,
             "freq_pct": 37.5,
-            "lift_pp": -5.0,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1364,35 +1359,36 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 19,
+            "mencoes": 20,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": 17.5,
+            "freq_pct": 50.0,
+            "lift_pp": 15.0,
             "acima_da_margem": false,
-            "tema": "mensagem cristã e moral simplista",
-            "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+            "tema": "Mensagem moral simplista e manipuladora",
+            "exemplo_parafraseado": "Este grupo critica a forma como o filme reduz questões complexas a uma moral binária entre o bem e o mal, forçando uma lição de vida otimista que soa artificial.",
             "temas_no_mesmo_eixo": [
-              "crítica ao capitalismo e à estrutura social"
+              "Mensagem cristã e ideologia conservadora",
+              "Representação feminina limitada e piadas problemáticas"
             ]
           },
           "medianas": {
-            "mencoes": 12,
+            "mencoes": 14,
             "de_n": 40,
-            "freq_pct": 30.0,
-            "lift_pp": -17.5,
+            "freq_pct": 35.0,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
-            "tema": "Excesso de otimismo e moral cristã",
-            "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+            "tema": "Mensagem otimista e lição de vida",
+            "exemplo_parafraseado": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora espectadores considerem essa moral excessivamente óbvia ou ingênua.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 10,
             "de_n": 40,
             "freq_pct": 25.0,
-            "lift_pp": -22.5,
+            "lift_pp": -25.0,
             "acima_da_margem": false,
-            "tema": "Mensagem sobre o valor da vida e da existência",
-            "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
+            "tema": "Clássico atemporal",
+            "exemplo_parafraseado": "Reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1410,10 +1406,10 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.50",
+    "spec_version": "1.9.51",
     "verificador": {
       "aplicado": true,
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
       "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     }
   },
@@ -1427,36 +1423,36 @@
       "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     },
     "classificacao": {
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
-      "sha256": "a0e4f37551f8bf96048cc75ced7c94ee9f7ca393b5112bbdbddee51cf038f8e5"
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+      "sha256": "ea6129d81eac7cdf4645c6aa942b399f87da6300edb6bd223f71dba58d66f265"
     }
   },
   "condicoes": {
     "vale_a_pena": [
       {
-        "texto": "busca uma história que emociona até as lágrimas e provoca forte comoção",
+        "texto": "busca uma história profundamente tocante sobre o valor da vida e das relações",
         "tema_origem": "POS-A",
         "bucket_origem": "positivas",
-        "tema_texto": "Emoção e choro",
-        "rotulo_forca": "muitos"
+        "tema_texto": "Mensagem emocional e comovente",
+        "rotulo_forca": "a maioria"
       },
       {
-        "texto": "valoriza uma das melhores performances da carreira de James Stewart",
+        "texto": "aprecia uma atuação elogiada como das melhores da carreira de James Stewart",
         "tema_origem": "POS-B",
         "bucket_origem": "positivas",
         "tema_texto": "Atuação de James Stewart",
         "rotulo_forca": "muitos"
       },
       {
-        "texto": "busca uma reflexão sobre o peso de cada existência na vida de outros",
+        "texto": "procura um clássico que envelheceu bem e segue relevante para rever",
         "tema_origem": "POS-C",
         "bucket_origem": "positivas",
-        "tema_texto": "Mensagem sobre o valor da vida e da existência",
-        "rotulo_forca": "muitos"
+        "tema_texto": "Clássico atemporal",
+        "rotulo_forca": "alguns"
       },
       {
-        "texto": "tolera um início lento sabendo que a narrativa ganha força na reta final",
-        "tema_origem": "POS-E",
+        "texto": "tolera um começo lento sabendo que o desenrolar compensa e gratifica",
+        "tema_origem": "POS-F",
         "bucket_origem": "positivas",
         "tema_texto": "Ritmo e estrutura narrativa",
         "rotulo_forca": "alguns"
@@ -1464,31 +1460,24 @@
     ],
     "talvez_evite": [
       {
-        "texto": "se incomoda com uma primeira metade arrastada e uma experiência cansativa pela longa duração",
+        "texto": "se incomoda com narrativa arrastada e longa, de primeira metade tediosa",
         "tema_origem": "NEG-A",
         "bucket_origem": "negativas",
-        "tema_texto": "ritmo lento e longa duração",
+        "tema_texto": "Ritmo lento e longa duração",
         "rotulo_forca": "muitos"
       },
       {
-        "texto": "rejeita uma moralidade simplista de forte orientação cristã que reduz questões complexas",
+        "texto": "evita moral binária entre bem e mal e lições otimistas artificiais",
         "tema_origem": "NEG-B",
         "bucket_origem": "negativas",
-        "tema_texto": "mensagem cristã e moral simplista",
-        "rotulo_forca": "muitos"
-      },
-      {
-        "texto": "se incomoda com um protagonista queixoso, passivo e sem evolução",
-        "tema_origem": "NEG-C",
-        "bucket_origem": "negativas",
-        "tema_texto": "protagonista irritante e passivo",
+        "tema_texto": "Mensagem moral simplista e manipuladora",
         "rotulo_forca": "alguns"
       },
       {
-        "texto": "evita obras cuja visão burguesa reforça estruturas injustas sem questionar o sistema",
-        "tema_origem": "NEG-E",
+        "texto": "se cansa com sentimentalismo natalino somado a um retrato triste e depressivo",
+        "tema_origem": "NEG-C",
         "bucket_origem": "negativas",
-        "tema_texto": "crítica ao capitalismo e à estrutura social",
+        "tema_texto": "Excesso de sentimentalismo e tom depressivo",
         "rotulo_forca": "alguns"
       }
     ],
@@ -1515,13 +1504,12 @@
         "POS-A",
         "POS-B",
         "POS-C",
-        "POS-E"
+        "POS-F"
       ],
       "talvez_evite": [
         "NEG-A",
         "NEG-B",
-        "NEG-C",
-        "NEG-E"
+        "NEG-C"
       ]
     },
     "temas_saltados": {
@@ -1532,64 +1520,53 @@
     "sem_condicao_publicavel": [],
     "par_desfeito": [],
     "recusas_invalidas": [],
-    "retry": {
-      "n_reprovadas": 3,
-      "n_aplicadas": 3,
-      "n_saltadas_pelo_modelo": 0,
-      "n_descartadas": 0,
-      "n_recusadas_pelo_modelo": 0
-    },
+    "retry": null,
     "provider": "featherless",
     "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "n_candidatos": 3,
-    "n_chamadas": 4,
-    "indice_escolhido": 0,
+    "n_chamadas": 3,
+    "indice_escolhido": 1,
     "candidatos": [
       {
         "indice": 0,
-        "n_condicoes": 8,
-        "n_flags": 3,
+        "n_condicoes": 7,
+        "n_flags": 1,
         "flags": [
-          "exemplo_verbatim",
-          "sem_discriminacao"
+          "exemplo_verbatim"
         ],
-        "n_temas_cobertos": 8,
+        "n_temas_cobertos": 7,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 8
+        "n_temas_resolvidos": 7
       },
       {
         "indice": 1,
-        "n_condicoes": 8,
-        "n_flags": 4,
-        "flags": [
-          "exemplo_verbatim",
-          "sem_discriminacao"
-        ],
-        "n_temas_cobertos": 8,
+        "n_condicoes": 7,
+        "n_flags": 0,
+        "flags": [],
+        "n_temas_cobertos": 7,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 8
+        "n_temas_resolvidos": 7
       },
       {
         "indice": 2,
-        "n_condicoes": 8,
-        "n_flags": 4,
+        "n_condicoes": 7,
+        "n_flags": 1,
         "flags": [
-          "exemplo_verbatim",
-          "sem_discriminacao"
+          "exemplo_verbatim"
         ],
-        "n_temas_cobertos": 8,
+        "n_temas_cobertos": 7,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 8
+        "n_temas_resolvidos": 7
       }
     ],
     "uso": {
-      "prompt_tokens": 17890,
-      "completion_tokens": 1085,
-      "cache_hit_tokens": 15517,
-      "cache_miss_tokens": 2373
+      "prompt_tokens": 12909,
+      "completion_tokens": 817,
+      "cache_hit_tokens": 11999,
+      "cache_miss_tokens": 910
     },
-    "latencia_s": 7.26,
-    "spec_version": "1.9.50",
+    "latencia_s": 5.97,
+    "spec_version": "1.9.51",
     "variante": "experimento-briefing"
   }
 }

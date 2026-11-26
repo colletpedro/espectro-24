@@ -1,7 +1,7 @@
 {
   "slug": "modern-times",
   "data_coleta": "2026-11-08T09:43:03.539065+00:00",
-  "spec_version": "1.9.50",
+  "spec_version": "1.9.51",
   "total_reviews_observadas": 301441,
   "reviews_url": "https://letterboxd.com/film/modern-times/reviews/",
   "ficha": {
@@ -578,63 +578,66 @@
           "tema": "Humor datado e sem graça",
           "mencoes_aproximadas": 18,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+          "exemplo_parafraseado": "Reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Várias reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual."
+          "exemplo_antes_da_guarda": "Várias reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado."
         },
         {
-          "tema": "Ritmo lento e cansativo",
-          "mencoes_aproximadas": 15,
+          "tema": "Ritmo arrastado e tédio",
+          "mencoes_aproximadas": 16,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+          "exemplo_parafraseado": "O filme é descrito como lento, monótono e entediante, com cenas que se estendem demais e uma duração que parece maior do que realmente é, levando espectadores a dispersar ou querer dormir.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Repetição excessiva de piadas",
+          "tema": "Repetição de gags e situações",
           "mencoes_aproximadas": 10,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+          "exemplo_parafraseado": "As reviews apontam que as mesmas piadas e situações se repetem à exaustão, sem variação, tornando o filme previsível e cansativo.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
-        },
-        {
-          "tema": "Falta de conexão com o espectador",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_pendente": true
         },
         {
           "tema": "Crítica social simplista",
-          "mencoes_aproximadas": 7,
+          "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
+          "exemplo_parafraseado": "Espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para alguns."
+          "exemplo_antes_da_guarda": "Alguns espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria."
         },
         {
-          "tema": "Dificuldade com o formato silencioso",
-          "mencoes_aproximadas": 7,
+          "tema": "Dificuldade com cinema silencioso",
+          "mencoes_aproximadas": 8,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+          "exemplo_parafraseado": "Espectadores relatam não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há quem relate não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens."
+        },
+        {
+          "tema": "Ressalvas à figura de Chaplin",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews criticam o próprio Chaplin, considerando seu personagem irritante ou incompetente, e reviews mencionam desconforto com questões pessoais do ator, como a diferença de idade em relacionamentos retratados.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Certas reviews criticam o próprio Chaplin, considerando seu personagem irritante ou incompetente, e algumas mencionam desconforto com questões pessoais do ator, como a diferença de idade em relacionamentos retratados."
         }
       ],
-      "observacao_geral": "As reviews negativas destacam principalmente o humor datado e sem graça, o ritmo lento e a repetição excessiva das piadas, além de uma desconexão com o público atual. Mesmo reconhecendo a importância histórica e a crítica social, este grupo não se envolveu com a obra.",
+      "observacao_geral": "Este grupo de reviews negativas concentra-se em problemas de humor datado, ritmo lento e repetição excessiva, além de apontar uma crítica social considerada simplista. Mesmo reconhecendo o valor histórico e técnico do filme, essas pessoas afirmam que a experiência não funcionou para elas, seja pela comédia ultrapassada ou pela dificuldade com o formato silencioso.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 2
@@ -720,67 +723,71 @@
       ],
       "temas": [
         {
-          "tema": "crítica social e capitalismo",
-          "mencoes_aproximadas": 18,
+          "tema": "Crítica social e capitalismo",
+          "mencoes_aproximadas": 28,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+          "exemplo_parafraseado": "A obra retrata a desumanização do trabalho industrial, a mecanização da vida e as desigualdades sociais, mantendo-se relevante quase um século depois.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "comédia e pastelão",
-          "mencoes_aproximadas": 14,
+          "tema": "Comédia pastelão e atuação física de Chaplin",
+          "mencoes_aproximadas": 22,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
+          "exemplo_parafraseado": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora espectadores achem as piadas repetitivas.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora alguns achem as piadas repetitivas ou datadas."
+          "exemplo_antes_da_guarda": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora alguns achem as piadas repetitivas."
         },
         {
-          "tema": "ritmo e duração",
+          "tema": "Falta de diálogos e uso de cartelas",
+          "mencoes_aproximadas": 12,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para espectadores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para parte do público."
+        },
+        {
+          "tema": "Ritmo e estrutura narrativa",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Algumas reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado."
+        },
+        {
+          "tema": "Envelhecimento e experiência de assistir",
           "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "atuação e carisma de Chaplin",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+          "exemplo_parafraseado": "Espectadores do grupo sentem que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Este grupo reconhece o talento físico e a energia de Chaplin, mas alguns o consideram repetitivo ou pouco envolvente."
+          "exemplo_antes_da_guarda": "Parte do grupo sente que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica."
         },
         {
-          "tema": "preferência por cinema falado",
-          "mencoes_aproximadas": 7,
+          "tema": "Vida pessoal de Chaplin como fator negativo",
+          "mencoes_aproximadas": 4,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+          "exemplo_parafraseado": "Pessoas mencionam questões biográficas de Chaplin que afetaram negativamente sua percepção da obra.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante."
-        },
-        {
-          "tema": "relevância histórica",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews medianas reconhecem a importância do filme como marco cinematográfico, mas isso não se traduz necessariamente em uma nota mais alta.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
+          "exemplo_antes_da_guarda": "Algumas pessoas mencionam questões biográficas de Chaplin que afetaram negativamente sua percepção da obra."
         }
       ],
-      "observacao_geral": "As reviews medianas equilibram o reconhecimento da importância histórica e da crítica social com ressalvas sobre o ritmo, o estilo silencioso e o humor datado. Este grupo tende a valorizar o filme mais pelo que representa do que pela experiência de assisti-lo.",
+      "observacao_geral": "As reviews medianas reconhecem a relevância histórica e a crítica social do filme, mas apontam ressalvas quanto ao ritmo, à ausência de diálogos e ao envelhecimento da experiência, resultando em uma recepção morna dentro deste grupo.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 10
@@ -818,10 +825,10 @@
       },
       "janela_amostra": {
         "n": 40,
-        "min": "2018-02-11",
+        "min": "2019-01-05",
         "max": "2026-11-08",
-        "p5": "2026-08-20",
-        "p50": "2026-11-03",
+        "p5": "2026-08-23",
+        "p50": "2026-11-04",
         "p95": "2026-11-07"
       },
       "niveis": [
@@ -903,72 +910,73 @@
             "truncada_sem_texto": 0,
             "spoiler": 1,
             "abaixo_min_chars": 39,
-            "excedente_cota": 8,
+            "excedente_cota": 7,
             "duplicata": 0,
-            "outros": 0
+            "outros": 0,
+            "resumo_de_trama": 1
           },
           "paginas_buscadas": 0
         }
       ],
       "temas": [
         {
-          "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-          "mencoes_aproximadas": 28,
+          "tema": "Crítica social e ao capitalismo",
+          "mencoes_aproximadas": 22,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+          "exemplo_parafraseado": "As reviews destacam a crítica à exploração da classe trabalhadora e à desumanização causada pelo capitalismo, apontando como o filme retrata a transformação do ser humano em peça da máquina produtiva.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Humor físico e atuação de Chaplin",
-          "mencoes_aproximadas": 25,
+          "tema": "Atuação e genialidade de Charlie Chaplin",
+          "mencoes_aproximadas": 18,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
+          "exemplo_parafraseado": "Este grupo elogia a atuação e a direção de Chaplin, considerado um gênio da comédia e do cinema mudo, com performances físicas e timing impecáveis.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Atualidade e relevância da obra",
-          "mencoes_aproximadas": 20,
+          "tema": "Humor e comédia pastelão",
+          "mencoes_aproximadas": 16,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews positivas enfatizam como o filme continua relevante, com suas críticas à industrialização e à desigualdade ecoando problemas contemporâneos como automação e precarização do trabalho.",
+          "exemplo_parafraseado": "As reviews positivas apontam que o humor atemporal e as gags físicas continuam engraçadas mesmo após décadas, com situações cômicas que funcionam muito bem.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Transição para o cinema sonoro e trilha musical",
+          "tema": "Atualidade e relevância do filme",
           "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+          "exemplo_parafraseado": "Os comentários destacam como a crítica à industrialização e à desigualdade social permanece atual e relevante, mesmo quase 90 anos após o lançamento.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Transição para o cinema falado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Este grupo menciona a mistura de elementos do cinema mudo com o som, incluindo a trilha sonora e a cena cantada, como um aspecto interessante da evolução do cinema.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Primeiro contato com Chaplin",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical."
-        },
-        {
-          "tema": "Personagem Vagabundo e despedida",
-          "mencoes_aproximadas": 10,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Atuação de Paulette Goddard e química com Chaplin",
-          "mencoes_aproximadas": 7,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews positivas elogiam a atuação de Paulette Goddard, sua química com Chaplin e a força de sua personagem, que traz esperança e dinamismo à narrativa.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
+          "exemplo_antes_da_guarda": "Muitas reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele."
         }
       ],
-      "observacao_geral": "As reviews positivas apontam para uma forte admiração pela crítica social de Chaplin, pelo humor físico atemporal e pela forma como o filme equilibra comicidade e melancolia. Este grupo destaca a atuação do diretor e a relevância contínua da obra, frequentemente ressaltando sua atualidade.",
+      "observacao_geral": "As reviews positivas deste grupo destacam a genialidade de Chaplin, o humor atemporal e a crítica social presente no filme, frequentemente elogiando sua atualidade e a atuação do diretor. A recepção neste recorte é marcada por admiração e surpresa com a qualidade da obra mesmo após tantos anos.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 88
@@ -991,30 +999,30 @@
         "eixo": "ritmo",
         "por_bucket": {
           "negativas": {
-            "mencoes": 14,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 35.0,
-            "lift_pp": 17.5,
+            "freq_pct": 32.5,
+            "lift_pp": 15.0,
             "acima_da_margem": false,
-            "tema": "Ritmo lento e cansativo",
-            "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+            "tema": "Ritmo arrastado e tédio",
+            "exemplo_parafraseado": "O filme é descrito como lento, monótono e entediante, com cenas que se estendem demais e uma duração que parece maior do que realmente é, levando espectadores a dispersar ou querer dormir.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 7,
             "de_n": 40,
             "freq_pct": 17.5,
-            "lift_pp": -17.5,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
-            "tema": "ritmo e duração",
-            "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
+            "tema": "Ritmo e estrutura narrativa",
+            "exemplo_parafraseado": "Reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 2,
             "de_n": 40,
             "freq_pct": 5.0,
-            "lift_pp": -30.0,
+            "lift_pp": -27.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1031,10 +1039,10 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 12,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 30.0,
-            "lift_pp": -2.5,
+            "freq_pct": 32.5,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1046,21 +1054,19 @@
             "freq_pct": 20.0,
             "lift_pp": -12.5,
             "acima_da_margem": false,
-            "tema": "atuação e carisma de Chaplin",
-            "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+            "tema": "Comédia pastelão e atuação física de Chaplin",
+            "exemplo_parafraseado": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora espectadores achem as piadas repetitivas.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
+            "mencoes": 11,
             "de_n": 40,
-            "freq_pct": 32.5,
-            "lift_pp": 2.5,
+            "freq_pct": 27.5,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
-            "tema": "Humor físico e atuação de Chaplin",
-            "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
-            "temas_no_mesmo_eixo": [
-              "Atuação de Paulette Goddard e química com Chaplin"
-            ]
+            "tema": "Atuação e genialidade de Charlie Chaplin",
+            "exemplo_parafraseado": "Este grupo elogia a atuação e a direção de Chaplin, considerado um gênio da comédia e do cinema mudo, com performances físicas e timing impecáveis.",
+            "temas_no_mesmo_eixo": []
           }
         },
         "bullet_de": {
@@ -1076,27 +1082,27 @@
             "mencoes": 3,
             "de_n": 40,
             "freq_pct": 7.5,
-            "lift_pp": -12.5,
-            "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
-            "temas_no_mesmo_eixo": []
-          },
-          "medianas": {
-            "mencoes": 4,
-            "de_n": 40,
-            "freq_pct": 10.0,
             "lift_pp": -10.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
-          "positivas": {
-            "mencoes": 8,
+          "medianas": {
+            "mencoes": 5,
             "de_n": 40,
-            "freq_pct": 20.0,
-            "lift_pp": 10.0,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
+            "acima_da_margem": false,
+            "tema": null,
+            "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 7,
+            "de_n": 40,
+            "freq_pct": 17.5,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1113,33 +1119,33 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 22,
+            "mencoes": 23,
             "de_n": 40,
-            "freq_pct": 55.0,
+            "freq_pct": 57.5,
             "lift_pp": -5.0,
             "acima_da_margem": false,
-            "tema": "Repetição excessiva de piadas",
-            "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+            "tema": "Repetição de gags e situações",
+            "exemplo_parafraseado": "As reviews apontam que as mesmas piadas e situações se repetem à exaustão, sem variação, tornando o filme previsível e cansativo.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 22,
+            "mencoes": 25,
             "de_n": 40,
-            "freq_pct": 55.0,
-            "lift_pp": -5.0,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Falta de diálogos e uso de cartelas",
+            "exemplo_parafraseado": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para espectadores.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 24,
+            "mencoes": 25,
             "de_n": 40,
-            "freq_pct": 60.0,
-            "lift_pp": 5.0,
+            "freq_pct": 62.5,
+            "lift_pp": 0.0,
             "acima_da_margem": false,
-            "tema": "Personagem Vagabundo e despedida",
-            "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
+            "tema": null,
+            "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1158,8 +1164,8 @@
             "freq_pct": 12.5,
             "lift_pp": -7.5,
             "acima_da_margem": false,
-            "tema": "Dificuldade com o formato silencioso",
-            "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+            "tema": null,
+            "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
@@ -1178,8 +1184,8 @@
             "freq_pct": 20.0,
             "lift_pp": 5.0,
             "acima_da_margem": false,
-            "tema": "Transição para o cinema sonoro e trilha musical",
-            "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+            "tema": null,
+            "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1193,33 +1199,33 @@
         "eixo": "tom_atmosfera",
         "por_bucket": {
           "negativas": {
-            "mencoes": 14,
+            "mencoes": 13,
             "de_n": 40,
-            "freq_pct": 35.0,
-            "lift_pp": -22.5,
+            "freq_pct": 32.5,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
             "tema": "Humor datado e sem graça",
-            "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+            "exemplo_parafraseado": "Reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 15,
+            "mencoes": 19,
             "de_n": 40,
-            "freq_pct": 37.5,
-            "lift_pp": -20.0,
-            "acima_da_margem": false,
-            "tema": "comédia e pastelão",
-            "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
-            "temas_no_mesmo_eixo": []
-          },
-          "positivas": {
-            "mencoes": 23,
-            "de_n": 40,
-            "freq_pct": 57.5,
-            "lift_pp": 20.0,
+            "freq_pct": 47.5,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
+            "temas_no_mesmo_eixo": []
+          },
+          "positivas": {
+            "mencoes": 18,
+            "de_n": 40,
+            "freq_pct": 45.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Humor e comédia pastelão",
+            "exemplo_parafraseado": "As reviews positivas apontam que o humor atemporal e as gags físicas continuam engraçadas mesmo após décadas, com situações cômicas que funcionam muito bem.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1236,26 +1242,26 @@
             "mencoes": 17,
             "de_n": 40,
             "freq_pct": 42.5,
-            "lift_pp": -2.5,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
-            "tema": "Falta de conexão com o espectador",
-            "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
+            "tema": null,
+            "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 18,
+            "mencoes": 19,
             "de_n": 40,
-            "freq_pct": 45.0,
-            "lift_pp": 2.5,
+            "freq_pct": 47.5,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 15,
+            "mencoes": 16,
             "de_n": 40,
-            "freq_pct": 37.5,
+            "freq_pct": 40.0,
             "lift_pp": -7.5,
             "acima_da_margem": false,
             "tema": null,
@@ -1273,30 +1279,30 @@
         "eixo": "comparacoes",
         "por_bucket": {
           "negativas": {
-            "mencoes": 21,
+            "mencoes": 22,
             "de_n": 40,
-            "freq_pct": 52.5,
-            "lift_pp": -5.0,
+            "freq_pct": 55.0,
+            "lift_pp": 12.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 20,
+            "mencoes": 17,
             "de_n": 40,
-            "freq_pct": 50.0,
-            "lift_pp": -7.5,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 23,
+            "mencoes": 17,
             "de_n": 40,
-            "freq_pct": 57.5,
-            "lift_pp": 5.0,
+            "freq_pct": 42.5,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1313,33 +1319,33 @@
         "eixo": "expectativa",
         "por_bucket": {
           "negativas": {
-            "mencoes": 15,
+            "mencoes": 16,
             "de_n": 40,
-            "freq_pct": 37.5,
-            "lift_pp": -7.5,
+            "freq_pct": 40.0,
+            "lift_pp": -10.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Dificuldade com cinema silencioso",
+            "exemplo_parafraseado": "Espectadores relatam não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 13,
             "de_n": 40,
             "freq_pct": 32.5,
-            "lift_pp": -12.5,
+            "lift_pp": -17.5,
             "acima_da_margem": false,
-            "tema": "preferência por cinema falado",
-            "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+            "tema": "Envelhecimento e experiência de assistir",
+            "exemplo_parafraseado": "Espectadores do grupo sentem que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 18,
+            "mencoes": 20,
             "de_n": 40,
-            "freq_pct": 45.0,
-            "lift_pp": 7.5,
+            "freq_pct": 50.0,
+            "lift_pp": 10.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Primeiro contato com Chaplin",
+            "exemplo_parafraseado": "Reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1353,35 +1359,37 @@
         "eixo": "critica_social",
         "por_bucket": {
           "negativas": {
-            "mencoes": 20,
+            "mencoes": 18,
             "de_n": 40,
-            "freq_pct": 50.0,
+            "freq_pct": 45.0,
             "lift_pp": -15.0,
             "acima_da_margem": false,
             "tema": "Crítica social simplista",
-            "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
-            "temas_no_mesmo_eixo": []
+            "exemplo_parafraseado": "Espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria.",
+            "temas_no_mesmo_eixo": [
+              "Ressalvas à figura de Chaplin"
+            ]
           },
           "medianas": {
-            "mencoes": 24,
+            "mencoes": 23,
             "de_n": 40,
-            "freq_pct": 60.0,
-            "lift_pp": -5.0,
+            "freq_pct": 57.5,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
-            "tema": "crítica social e capitalismo",
-            "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+            "tema": "Crítica social e capitalismo",
+            "exemplo_parafraseado": "A obra retrata a desumanização do trabalho industrial, a mecanização da vida e as desigualdades sociais, mantendo-se relevante quase um século depois.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 26,
+            "mencoes": 24,
             "de_n": 40,
-            "freq_pct": 65.0,
-            "lift_pp": 5.0,
+            "freq_pct": 60.0,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
-            "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-            "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+            "tema": "Crítica social e ao capitalismo",
+            "exemplo_parafraseado": "As reviews destacam a crítica à exploração da classe trabalhadora e à desumanização causada pelo capitalismo, apontando como o filme retrata a transformação do ser humano em peça da máquina produtiva.",
             "temas_no_mesmo_eixo": [
-              "Atualidade e relevância da obra"
+              "Atualidade e relevância do filme"
             ]
           }
         },
@@ -1399,10 +1407,10 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.50",
+    "spec_version": "1.9.51",
     "verificador": {
       "aplicado": true,
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl",
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/modern-times/classificacao/consenso_verificado.jsonl",
       "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     }
   },
@@ -1416,61 +1424,54 @@
       "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     },
     "classificacao": {
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl",
-      "sha256": "5707a3ca8a4b06537333a6423fc8c76ee79c2c452619ff394cad69d2893ca55c"
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/modern-times/classificacao/consenso_verificado.jsonl",
+      "sha256": "deec37c9a76b44b2f876a6f325f24f4f5b06bfd4b1a8b6517f4ae3f1ca4ef635"
     }
   },
   "condicoes": {
     "vale_a_pena": [
       {
-        "texto": "aprecia uma crítica ao capitalismo e à transformação de pessoas em peças da produção",
+        "texto": "busca uma crítica à exploração do trabalho e à desumanização imposta pelo capitalismo",
         "tema_origem": "POS-A",
         "bucket_origem": "positivas",
-        "tema_texto": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-        "rotulo_forca": "a maioria"
+        "tema_texto": "Crítica social e ao capitalismo",
+        "rotulo_forca": "cerca de metade"
       },
       {
-        "texto": "valoriza uma performance física cômica que arranca risadas em situações simples",
+        "texto": "aprecia a atuação e a direção de Chaplin, com gênio cômico e timing impecável",
         "tema_origem": "POS-B",
         "bucket_origem": "positivas",
-        "tema_texto": "Humor físico e atuação de Chaplin",
-        "rotulo_forca": "a maioria"
-      },
-      {
-        "texto": "busca uma obra cujas críticas à industrialização ecoam problemas contemporâneos",
-        "tema_origem": "POS-C",
-        "bucket_origem": "positivas",
-        "tema_texto": "Atualidade e relevância da obra",
+        "tema_texto": "Atuação e genialidade de Charlie Chaplin",
         "rotulo_forca": "muitos"
       }
     ],
     "talvez_evite": [
       {
-        "texto": "não se diverte com comédia pastelão que soa ultrapassada",
+        "texto": "considera o pastelão ultrapassado e as piadas repetitivas ou infantis",
         "tema_origem": "NEG-A",
         "bucket_origem": "negativas",
         "tema_texto": "Humor datado e sem graça",
         "rotulo_forca": "muitos"
       },
       {
-        "texto": "se entedia com ritmo arrastado e longa duração",
+        "texto": "se impacienta com ritmo lento, cenas longas e duração que arrasta até o tédio",
         "tema_origem": "NEG-B",
         "bucket_origem": "negativas",
-        "tema_texto": "Ritmo lento e cansativo",
+        "tema_texto": "Ritmo arrastado e tédio",
         "rotulo_forca": "muitos"
       },
       {
-        "texto": "se incomoda com situações cômicas repetidas à exaustão",
+        "texto": "se cansa quando as piadas e situações voltam sem variação, tornando tudo previsível",
         "tema_origem": "NEG-C",
         "bucket_origem": "negativas",
-        "tema_texto": "Repetição excessiva de piadas",
+        "tema_texto": "Repetição de gags e situações",
         "rotulo_forca": "alguns"
       },
       {
-        "texto": "espera uma sátira à industrialização com mais nuances",
-        "tema_origem": "NEG-E",
+        "texto": "se incomoda com um protagonista irritante ou incompetente e com questões pessoais do ator",
+        "tema_origem": "NEG-F",
         "bucket_origem": "negativas",
-        "tema_texto": "Crítica social simplista",
+        "tema_texto": "Ressalvas à figura de Chaplin",
         "rotulo_forca": "alguns"
       }
     ],
@@ -1502,35 +1503,47 @@
         "NEG-A",
         "NEG-B",
         "NEG-C",
-        "NEG-E"
+        "NEG-F"
       ]
     },
     "temas_saltados": {
-      "vale_a_pena": [],
+      "vale_a_pena": [
+        "POS-C"
+      ],
       "talvez_evite": []
     },
-    "descartadas": [],
+    "descartadas": [
+      {
+        "texto": "procura humor atemporal com gags físicas que continuam engraçadas décadas depois",
+        "tema_origem": "POS-C",
+        "lado": "vale_a_pena",
+        "flags": [
+          "exemplo_verbatim"
+        ]
+      }
+    ],
     "sem_condicao_publicavel": [],
     "par_desfeito": [],
     "recusas_invalidas": [],
     "retry": {
-      "n_reprovadas": 1,
-      "n_aplicadas": 1,
+      "n_reprovadas": 4,
+      "n_aplicadas": 3,
       "n_saltadas_pelo_modelo": 0,
-      "n_descartadas": 0,
+      "n_descartadas": 1,
       "n_recusadas_pelo_modelo": 0
     },
     "provider": "featherless",
     "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
     "n_candidatos": 3,
     "n_chamadas": 4,
-    "indice_escolhido": 0,
+    "indice_escolhido": 1,
     "candidatos": [
       {
         "indice": 0,
         "n_condicoes": 7,
-        "n_flags": 1,
+        "n_flags": 5,
         "flags": [
+          "comprimento",
           "exemplo_verbatim"
         ],
         "n_temas_cobertos": 7,
@@ -1542,6 +1555,7 @@
         "n_condicoes": 7,
         "n_flags": 4,
         "flags": [
+          "comprimento",
           "exemplo_verbatim"
         ],
         "n_temas_cobertos": 7,
@@ -1551,8 +1565,9 @@
       {
         "indice": 2,
         "n_condicoes": 7,
-        "n_flags": 2,
+        "n_flags": 5,
         "flags": [
+          "comprimento",
           "exemplo_verbatim"
         ],
         "n_temas_cobertos": 7,
@@ -1561,13 +1576,13 @@
       }
     ],
     "uso": {
-      "prompt_tokens": 15907,
-      "completion_tokens": 909,
-      "cache_hit_tokens": 14625,
-      "cache_miss_tokens": 1282
+      "prompt_tokens": 16327,
+      "completion_tokens": 1092,
+      "cache_hit_tokens": 14777,
+      "cache_miss_tokens": 1550
     },
-    "latencia_s": 6.0,
-    "spec_version": "1.9.50",
+    "latencia_s": 15.23,
+    "spec_version": "1.9.51",
     "variante": "experimento-briefing"
   }
 }

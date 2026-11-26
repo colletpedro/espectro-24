@@ -31,7 +31,6 @@
   "A direção de Bryan Singer e a fotografia são citadas como pontos fortes, com a mise-en-scène sendo descrita como eficaz e visualmente marcante.": "Bryan Singer's direction and the cinematography are cited as strengths, with the mise-en-scène described as effective and visually striking.",
   "Diálogos marcantes": "Memorable dialogue",
   "Os diálogos do filme são lembrados por sua força e inteligência, com citações icônicas sendo mencionadas como parte do charme da obra.": "The film's dialogue is remembered for its strength and intelligence, with iconic lines mentioned as part of the work's charm.",
-  "Clássico atemporal": "Timeless classic",
   "Reviews destacam o filme como um clássico que envelheceu bem, mantendo sua relevância e impacto mesmo décadas após o lançamento.": "Reviews highlight the film as a classic that has aged well, keeping its relevance and impact even decades after release.",
   "aprecia uma virada final surpreendente e bem construída": "appreciate a surprising, well-built final twist",
   "valoriza um elenco excelente e bem escolhido, com atuações destacadas": "value an excellent, well-chosen cast with standout performances",
@@ -41,5 +40,7 @@
   "precisa de personagens com motivações críveis para se conectar à história": "need characters with believable motivations to connect with the story",
   "se irrita com um roteiro confuso e explicativo demais": "get irritated by a confusing, over-explanatory script"
  },
- "_orfaos": {}
+ "_orfaos": {
+  "Clássico atemporal": "Timeless classic"
+ }
 }

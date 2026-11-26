@@ -3,7 +3,7 @@
  "passada": 1,
  "eixo": "impacto_emocional",
  "fonte": "resultado/votacao-3/consenso.jsonl",
- "fonte_n_linhas": 21315,
+ "fonte_n_linhas": 21507,
  "n_candidatas": 11825,
  "n_verificadas": 11798,
  "n_falharam": 37,
@@ -378,6 +378,81 @@
     "n_chamadas": 67,
     "custo_featherless_usd": 0.01188675,
     "verificador_modelo": "DeepSeek-V4.1-Flash"
+   }
+  ]
+ },
+ "incorporacao_regeneracao_r2": {
+  "descricao": "Regeneração com a regra R2 (2026-11-26): a amostra de 4 filmes no ar mudou (resumo de trama `### ` excluído) e foi classificada de novo por filme, com DeepSeek-V4.1-Flash-1017 via Featherless (3 passadas + verificador). As linhas do filme foram SUBSTITUÍDAS em consenso.jsonl e consenso_verificado.jsonl.",
+  "filmes": [
+   {
+    "origem": "regeneracao",
+    "slug": "casablanca",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/casablanca/classificacao/consenso.jsonl",
+    "consenso_sha256": "4253a69cbbf8e1f9b1463798e38a4521bf36ed116c5a51f533cfd6f3ab21d1fe",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/casablanca/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "2836b1e3e1559c05b2bc744243afb3d59e4111b8e5894935ec496f57de99a176",
+    "n_linhas": 120,
+    "n_removidas": 120
+   },
+   {
+    "origem": "regeneracao",
+    "slug": "its-a-wonderful-life",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/its-a-wonderful-life/classificacao/consenso.jsonl",
+    "consenso_sha256": "efb7cfcedb2c84a950887ed27219fcf3498d6b54c01f25c38c6fcc5c4fd0ffa0",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "ea6129d81eac7cdf4645c6aa942b399f87da6300edb6bd223f71dba58d66f265",
+    "n_linhas": 120,
+    "n_removidas": 120
+   },
+   {
+    "origem": "regeneracao",
+    "slug": "modern-times",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/modern-times/classificacao/consenso.jsonl",
+    "consenso_sha256": "da45cca1a4731bcd1641eddaead03dbc63906e843e5f2a0ba3b0fe9c7d7300a5",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/modern-times/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "deec37c9a76b44b2f876a6f325f24f4f5b06bfd4b1a8b6517f4ae3f1ca4ef635",
+    "n_linhas": 120,
+    "n_removidas": 120
+   },
+   {
+    "origem": "regeneracao",
+    "slug": "rear-window",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/rear-window/classificacao/consenso.jsonl",
+    "consenso_sha256": "d57bf8454b7a419762c091da9eb2759638a13c678877eb3545757c8469010a84",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/rear-window/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "8d39c667055a1eba8a9f2687b12765f2b756e73076a0deca5b9fb370a1c9d6fc",
+    "n_linhas": 120,
+    "n_removidas": 120
+   },
+   {
+    "origem": "regeneracao",
+    "slug": "seven-samurai",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/seven-samurai/classificacao/consenso.jsonl",
+    "consenso_sha256": "50be15ce777be0b202766a6af7fecf027571d166946270616975c006eebe476d",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/seven-samurai/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "650ef2389cc97092d5c996b92cc2489c9c9068852cb5c51eef3e94283e7700f3",
+    "n_linhas": 120,
+    "n_removidas": 120
+   },
+   {
+    "origem": "importacao_manual",
+    "slug": "boogie-nights",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/boogie-nights/classificacao/consenso.jsonl",
+    "consenso_sha256": "1fca2746e196a01ddbb7af30e7cbe05074017e888da6568d6a532f1fc4575456",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/boogie-nights/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "cde076a7aa0057b8848d85c20314ab2ef7a93403acb2e299b951ad740db663c0",
+    "n_linhas": 98,
+    "n_removidas": 0
+   },
+   {
+    "origem": "importacao_manual",
+    "slug": "primetime-2026",
+    "consenso": "execucoes/regeneracao-r2-2026-11-26/primetime-2026/classificacao/consenso.jsonl",
+    "consenso_sha256": "05353e1cd2928336f892bc3212b684210a81aab59dbbe605522b50e11ecb03f1",
+    "consenso_verificado": "execucoes/regeneracao-r2-2026-11-26/primetime-2026/classificacao/consenso_verificado.jsonl",
+    "consenso_verificado_sha256": "1912d9e5275838786118f0cbf09cbc3accd99f6ae46c248f8b9c9c5c54d589f2",
+    "n_linhas": 94,
+    "n_removidas": 0
    }
   ]
  }

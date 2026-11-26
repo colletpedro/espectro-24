@@ -1,7 +1,7 @@
 {
   "slug": "seven-samurai",
   "data_coleta": "2026-11-08T05:35:47.264050+00:00",
-  "spec_version": "1.9.50",
+  "spec_version": "1.9.51",
   "total_reviews_observadas": 484049,
   "reviews_url": "https://letterboxd.com/film/seven-samurai/reviews/",
   "ficha": {
@@ -562,52 +562,36 @@
       "temas": [
         {
           "tema": "Duração excessiva",
-          "mencoes_aproximadas": 28,
+          "mencoes_aproximadas": 27,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Espectadores consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitos consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa."
-        },
-        {
-          "tema": "Ritmo lento e tédio",
-          "mencoes_aproximadas": 22,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "O ritmo é descrito como arrastado, com momentos de tédio e uma sensação de que a narrativa demora a engrenar, levando alguns a cochilar ou desistir.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "O ritmo é frequentemente descrito como arrastado, com momentos de tédio e uma sensação de que a narrativa demora a engrenar, levando alguns a cochilar ou desistir.",
-          "quantidade_pendente": true
-        },
-        {
-          "tema": "Atuação exagerada",
-          "mencoes_aproximadas": 12,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As atuações são criticadas por serem teatrais e exageradas, com emoções muito intensas e maneirismos que soam falsos ou datados.",
+          "exemplo_parafraseado": "O tempo de projeção é considerado injustificável para uma história simples, e a sensação é de que a obra se arrasta sem necessidade.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Personagens pouco memoráveis",
-          "mencoes_aproximadas": 10,
+          "tema": "Ritmo lento e tédio",
+          "mencoes_aproximadas": 22,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca.",
+          "exemplo_parafraseado": "A lentidão do desenvolvimento faz com que a experiência seja entediante, com trechos que parecem se prolongar sem acrescentar interesse.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Vários espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca."
+          "aspas_removidas": false
         },
         {
-          "tema": "Roteiro simples e arrastado",
+          "tema": "Roteiro simplista e personagens rasos",
+          "mencoes_aproximadas": 10,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A trama é percebida como pouco desenvolvida, e os personagens carecem de profundidade, tornando difícil se importar com o que acontece.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Atuações exageradas",
           "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "A história é vista como simples demais para justificar a longa duração, com subtramas irrelevantes e um desenvolvimento que não prende a atenção.",
+          "exemplo_parafraseado": "As interpretações são vistas como dramáticas em excesso, com emoções amplificadas e maneirismos que soam artificiais.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
@@ -616,17 +600,25 @@
           "tema": "Superestimado",
           "mencoes_aproximadas": 8,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Espectadores questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos.",
+          "exemplo_parafraseado": "A obra é considerada supervalorizada, e a expectativa criada por sua reputação não se sustenta durante a exibição.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitos questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos."
+          "aspas_removidas": false
+        },
+        {
+          "tema": "Fotografia elogiada, mas insuficiente",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A qualidade visual é reconhecida, porém não compensa os problemas de ritmo e envolvimento emocional.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
         }
       ],
-      "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva e o ritmo lento, que tornam a experiência entediante, além de criticarem atuações exageradas, personagens pouco desenvolvidos e um roteiro simples que não justifica o tempo de tela. Este grupo também contesta a aclamação generalizada, considerando o filme superestimado.",
+      "observacao_geral": "As reviews negativas destacam principalmente a duração excessiva e o ritmo lento, que tornam a experiência arrastada e entediante. Também apontam atuações exageradas e um roteiro simplista, resultando em uma percepção de obra superestimada.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
+      "quantidade_fallback": "aceito",
       "share_real": 1
     },
     {
@@ -711,70 +703,70 @@
       "temas": [
         {
           "tema": "Duração excessiva e ritmo lento",
-          "mencoes_aproximadas": 22,
+          "mencoes_aproximadas": 24,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa.",
+          "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Diversas reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa."
+          "exemplo_antes_da_guarda": "Muitas reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa."
         },
         {
-          "tema": "Fotografia e composição visual elogiadas",
-          "mencoes_aproximadas": 16,
+          "tema": "Fotografia e direção elogiadas",
+          "mencoes_aproximadas": 18,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Várias pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias."
-        },
-        {
-          "tema": "Atuações exageradas ou datadas",
-          "mencoes_aproximadas": 9,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual."
-        },
-        {
-          "tema": "Roteiro simples e falta de conexão emocional",
-          "mencoes_aproximadas": 8,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Certos textos apontam que a história é básica e não consegue envolver, faltando uma ligação emocional com os personagens ou com a trama.",
+          "exemplo_parafraseado": "Este grupo destaca a qualidade da fotografia, da composição visual e da direção de Kurosawa como pontos fortes.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Influência e importância histórica reconhecidas",
-          "mencoes_aproximadas": 8,
+          "tema": "Roteiro simples e previsível",
+          "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Mesmo sem grande entusiasmo, reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema.",
+          "exemplo_parafraseado": "Reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Mesmo sem grande entusiasmo, várias reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema."
+          "exemplo_antes_da_guarda": "Várias reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada."
         },
         {
-          "tema": "Expectativa versus realidade e sensação de superestimação",
-          "mencoes_aproximadas": 7,
+          "tema": "Atuações teatrais e exageradas",
+          "mencoes_aproximadas": 9,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe.",
+          "exemplo_parafraseado": "Críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Algumas pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe."
+          "exemplo_antes_da_guarda": "Algumas críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens."
+        },
+        {
+          "tema": "Superestimado e supervalorizado",
+          "mencoes_aproximadas": 8,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Espectadores dizem que o filme é superestimado e que não corresponde à fama de obra-prima.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Há quem diga que o filme é superestimado e que não corresponde à fama de obra-prima."
+        },
+        {
+          "tema": "Influência histórica e importância",
+          "mencoes_aproximadas": 7,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Mesmo sem amar o filme, reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Mesmo sem amar o filme, várias reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores."
         }
       ],
-      "observacao_geral": "As reviews medianas analisadas destacam a maestria técnica e a importância histórica do filme, mas frequentemente criticam sua longa duração, o ritmo arrastado e a falta de envolvimento emocional. Este grupo específico reconhece o valor cinematográfico, porém não se sente totalmente conectado à obra.",
+      "observacao_geral": "As reviews medianas apontam uma experiência morna: admiram a técnica e a importância histórica, mas criticam a duração excessiva e a falta de conexão emocional.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 4
@@ -812,9 +804,9 @@
       },
       "janela_amostra": {
         "n": 40,
-        "min": "2019-02-15",
+        "min": "2026-09-12",
         "max": "2026-11-07",
-        "p5": "2026-09-23",
+        "p5": "2026-09-28",
         "p50": "2026-11-06",
         "p95": "2026-11-07"
       },
@@ -876,9 +868,10 @@
             "truncada_sem_texto": 0,
             "spoiler": 1,
             "abaixo_min_chars": 34,
-            "excedente_cota": 4,
+            "excedente_cota": 3,
             "duplicata": 0,
-            "outros": 0
+            "outros": 0,
+            "resumo_de_trama": 1
           },
           "paginas_buscadas": 0
         },
@@ -906,68 +899,69 @@
       ],
       "temas": [
         {
-          "tema": "Duração longa e ritmo",
-          "mencoes_aproximadas": 18,
+          "tema": "elogios à direção de Kurosawa",
+          "mencoes_aproximadas": 24,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora reviews achem que poderia ser mais enxuto.",
+          "exemplo_parafraseado": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com espectadores considerando o filme uma obra-prima absoluta.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Várias reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora algumas achem que poderia ser mais enxuto.",
-          "quantidade_pendente": true
+          "exemplo_antes_da_guarda": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com muitos considerando o filme uma obra-prima absoluta."
         },
         {
-          "tema": "Atuações e personagens marcantes",
+          "tema": "personagens marcantes e atuações",
+          "mencoes_aproximadas": 20,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "Comentários positivos ressaltam a construção dos personagens, especialmente a atuação de Toshiro Mifune como Kikuchiyo, e a química entre os sete samurais, que tornam cada um único e cativante.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false
+        },
+        {
+          "tema": "fotografia e impacto visual",
+          "mencoes_aproximadas": 16,
+          "n_reviews_analisadas": 40,
+          "exemplo_parafraseado": "A fotografia em preto e branco é elogiada pela beleza dos enquadramentos e pelo uso da chuva e da lama para criar atmosfera intensa e realista.",
+          "mencoes_clampadas": false,
+          "mencoes_valor_original": null,
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "A fotografia em preto e branco é frequentemente elogiada pela beleza dos enquadramentos e pelo uso da chuva e da lama para criar atmosfera intensa e realista."
+        },
+        {
+          "tema": "cenas de ação e batalhas",
           "mencoes_aproximadas": 15,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Este grupo elogia a construção dos personagens, com destaque para a atuação de Toshirō Mifune e a personalidade distinta de cada samurai.",
+          "exemplo_parafraseado": "As sequências de batalha são destacadas como emocionantes e tecnicamente impressionantes para a época, com coreografia e edição que mantêm o espectador imerso e tenso.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false
         },
         {
-          "tema": "Fotografia e composição visual",
-          "mencoes_aproximadas": 13,
+          "tema": "duração longa e ritmo",
+          "mencoes_aproximadas": 14,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As reviews positivas exaltam os enquadramentos, a iluminação e o uso da chuva e da lama para criar atmosfera, mesmo em preto e branco.",
+          "exemplo_parafraseado": "Apesar do entusiasmo geral, reviews mencionam que a duração de três horas e meia pode ser um desafio, com certos trechos mais lentos, embora considerem a experiência recompensadora.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
-          "aspas_removidas": false
+          "aspas_removidas": false,
+          "quantidade_reescrita": true,
+          "exemplo_antes_da_guarda": "Apesar do entusiasmo geral, muitas reviews mencionam que a duração de três horas e meia pode ser um desafio, com alguns trechos mais lentos, embora considerem a experiência recompensadora."
         },
         {
-          "tema": "Direção de Akira Kurosawa",
+          "tema": "influência e atemporalidade",
           "mencoes_aproximadas": 12,
           "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "A direção de Kurosawa é citada como magistral, com elogios à sua habilidade de conduzir cenas de ação e de desenvolver o roteiro.",
+          "exemplo_parafraseado": "Reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para obras posteriores.",
           "mencoes_clampadas": false,
           "mencoes_valor_original": null,
           "aspas_removidas": false,
           "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "A direção de Kurosawa é frequentemente citada como magistral, com elogios à sua habilidade de conduzir cenas de ação e de desenvolver o roteiro."
-        },
-        {
-          "tema": "Cenas de batalha e ação",
-          "mencoes_aproximadas": 11,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "As sequências de luta, especialmente a batalha final, são descritas como intensas e realistas, contribuindo para o impacto do filme.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false
-        },
-        {
-          "tema": "Caráter atemporal e influência",
-          "mencoes_aproximadas": 10,
-          "n_reviews_analisadas": 40,
-          "exemplo_parafraseado": "Reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores.",
-          "mencoes_clampadas": false,
-          "mencoes_valor_original": null,
-          "aspas_removidas": false,
-          "quantidade_reescrita": true,
-          "exemplo_antes_da_guarda": "Muitas reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores."
+          "exemplo_antes_da_guarda": "Várias reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para inúmeras obras posteriores."
         }
       ],
-      "observacao_geral": "As reviews positivas deste grupo destacam principalmente a maestria técnica de Kurosawa, a profundidade dos personagens e a força das cenas de batalha, ainda que a longa duração seja apontada como um ponto de atenção. Este recorte reflete apenas a faixa de notas altas e não representa a recepção geral do filme.",
+      "observacao_geral": "As reviews positivas destacam a maestria de Kurosawa, a riqueza dos personagens e a beleza visual do filme, embora muitos apontem a longa duração como um pequeno obstáculo. Este grupo demonstra grande admiração pela obra, frequentemente citando-a como um marco do cinema.",
       "idioma_invalido": false,
       "escopo_suspeito": false,
       "share_real": 95
@@ -993,32 +987,32 @@
             "mencoes": 33,
             "de_n": 40,
             "freq_pct": 82.5,
-            "lift_pp": 10.0,
+            "lift_pp": 12.5,
             "acima_da_margem": false,
             "tema": "Duração excessiva",
-            "exemplo_parafraseado": "Espectadores consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
+            "exemplo_parafraseado": "O tempo de projeção é considerado injustificável para uma história simples, e a sensação é de que a obra se arrasta sem necessidade.",
             "temas_no_mesmo_eixo": [
               "Ritmo lento e tédio"
             ]
           },
           "medianas": {
-            "mencoes": 29,
+            "mencoes": 28,
             "de_n": 40,
-            "freq_pct": 72.5,
-            "lift_pp": -10.0,
+            "freq_pct": 70.0,
+            "lift_pp": -12.5,
             "acima_da_margem": false,
             "tema": "Duração excessiva e ritmo lento",
-            "exemplo_parafraseado": "Reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa.",
+            "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 21,
+            "mencoes": 18,
             "de_n": 40,
-            "freq_pct": 52.5,
-            "lift_pp": -30.0,
+            "freq_pct": 45.0,
+            "lift_pp": -37.5,
             "acima_da_margem": false,
-            "tema": "Duração longa e ritmo",
-            "exemplo_parafraseado": "Reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora reviews achem que poderia ser mais enxuto.",
+            "tema": "duração longa e ritmo",
+            "exemplo_parafraseado": "Apesar do entusiasmo geral, reviews mencionam que a duração de três horas e meia pode ser um desafio, com certos trechos mais lentos, embora considerem a experiência recompensadora.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1032,33 +1026,33 @@
         "eixo": "atuacao",
         "por_bucket": {
           "negativas": {
-            "mencoes": 11,
+            "mencoes": 12,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": -5.0,
+            "freq_pct": 30.0,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
-            "tema": "Atuação exagerada",
-            "exemplo_parafraseado": "As atuações são criticadas por serem teatrais e exageradas, com emoções muito intensas e maneirismos que soam falsos ou datados.",
+            "tema": "Atuações exageradas",
+            "exemplo_parafraseado": "As interpretações são vistas como dramáticas em excesso, com emoções amplificadas e maneirismos que soam artificiais.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
             "mencoes": 11,
             "de_n": 40,
             "freq_pct": 27.5,
-            "lift_pp": -5.0,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
-            "tema": "Atuações exageradas ou datadas",
-            "exemplo_parafraseado": "Reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual.",
+            "tema": "Atuações teatrais e exageradas",
+            "exemplo_parafraseado": "Críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 13,
+            "mencoes": 11,
             "de_n": 40,
-            "freq_pct": 32.5,
-            "lift_pp": 5.0,
+            "freq_pct": 27.5,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
-            "tema": "Atuações e personagens marcantes",
-            "exemplo_parafraseado": "Este grupo elogia a construção dos personagens, com destaque para a atuação de Toshirō Mifune e a personalidade distinta de cada samurai.",
+            "tema": "personagens marcantes e atuações",
+            "exemplo_parafraseado": "Comentários positivos ressaltam a construção dos personagens, especialmente a atuação de Toshiro Mifune como Kikuchiyo, e a química entre os sete samurais, que tornam cada um único e cativante.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1077,31 +1071,31 @@
             "freq_pct": 30.0,
             "lift_pp": -20.0,
             "acima_da_margem": false,
-            "tema": null,
-            "exemplo_parafraseado": null,
+            "tema": "Fotografia elogiada, mas insuficiente",
+            "exemplo_parafraseado": "A qualidade visual é reconhecida, porém não compensa os problemas de ritmo e envolvimento emocional.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 18,
+            "mencoes": 19,
             "de_n": 40,
-            "freq_pct": 45.0,
-            "lift_pp": -5.0,
+            "freq_pct": 47.5,
+            "lift_pp": -2.5,
             "acima_da_margem": false,
-            "tema": "Fotografia e composição visual elogiadas",
-            "exemplo_parafraseado": "Pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias.",
+            "tema": "Fotografia e direção elogiadas",
+            "exemplo_parafraseado": "Este grupo destaca a qualidade da fotografia, da composição visual e da direção de Kurosawa como pontos fortes.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 20,
             "de_n": 40,
             "freq_pct": 50.0,
-            "lift_pp": 5.0,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
-            "tema": "Fotografia e composição visual",
-            "exemplo_parafraseado": "As reviews positivas exaltam os enquadramentos, a iluminação e o uso da chuva e da lama para criar atmosfera, mesmo em preto e branco.",
+            "tema": "elogios à direção de Kurosawa",
+            "exemplo_parafraseado": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com espectadores considerando o filme uma obra-prima absoluta.",
             "temas_no_mesmo_eixo": [
-              "Direção de Akira Kurosawa",
-              "Cenas de batalha e ação"
+              "fotografia e impacto visual",
+              "cenas de ação e batalhas"
             ]
           }
         },
@@ -1115,32 +1109,30 @@
         "eixo": "roteiro_estrutura",
         "por_bucket": {
           "negativas": {
-            "mencoes": 24,
-            "de_n": 40,
-            "freq_pct": 60.0,
-            "lift_pp": -10.0,
-            "acima_da_margem": false,
-            "tema": "Personagens pouco memoráveis",
-            "exemplo_parafraseado": "Espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca.",
-            "temas_no_mesmo_eixo": [
-              "Roteiro simples e arrastado"
-            ]
-          },
-          "medianas": {
             "mencoes": 25,
             "de_n": 40,
             "freq_pct": 62.5,
-            "lift_pp": -7.5,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
-            "tema": "Roteiro simples e falta de conexão emocional",
-            "exemplo_parafraseado": "Certos textos apontam que a história é básica e não consegue envolver, faltando uma ligação emocional com os personagens ou com a trama.",
+            "tema": "Roteiro simplista e personagens rasos",
+            "exemplo_parafraseado": "A trama é percebida como pouco desenvolvida, e os personagens carecem de profundidade, tornando difícil se importar com o que acontece.",
+            "temas_no_mesmo_eixo": []
+          },
+          "medianas": {
+            "mencoes": 26,
+            "de_n": 40,
+            "freq_pct": 65.0,
+            "lift_pp": -2.5,
+            "acima_da_margem": false,
+            "tema": "Roteiro simples e previsível",
+            "exemplo_parafraseado": "Reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 28,
+            "mencoes": 27,
             "de_n": 40,
-            "freq_pct": 70.0,
-            "lift_pp": 7.5,
+            "freq_pct": 67.5,
+            "lift_pp": 2.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1149,7 +1141,7 @@
         },
         "bullet_de": {
           "negativas": "frequencia",
-          "medianas": null,
+          "medianas": "frequencia",
           "positivas": "frequencia"
         }
       },
@@ -1200,16 +1192,16 @@
             "mencoes": 4,
             "de_n": 40,
             "freq_pct": 10.0,
-            "lift_pp": -17.5,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 4,
+            "mencoes": 3,
             "de_n": 40,
-            "freq_pct": 10.0,
+            "freq_pct": 7.5,
             "lift_pp": -17.5,
             "acima_da_margem": false,
             "tema": null,
@@ -1217,10 +1209,10 @@
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 11,
+            "mencoes": 10,
             "de_n": 40,
-            "freq_pct": 27.5,
-            "lift_pp": 17.5,
+            "freq_pct": 25.0,
+            "lift_pp": 15.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1247,20 +1239,20 @@
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 17,
+            "mencoes": 16,
             "de_n": 40,
-            "freq_pct": 42.5,
-            "lift_pp": -5.0,
+            "freq_pct": 40.0,
+            "lift_pp": -7.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 15,
+            "mencoes": 17,
             "de_n": 40,
-            "freq_pct": 37.5,
-            "lift_pp": -10.0,
+            "freq_pct": 42.5,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1287,23 +1279,23 @@
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 19,
+            "mencoes": 22,
             "de_n": 40,
-            "freq_pct": 47.5,
-            "lift_pp": -12.5,
+            "freq_pct": 55.0,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
-            "tema": "Influência e importância histórica reconhecidas",
-            "exemplo_parafraseado": "Mesmo sem grande entusiasmo, reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema.",
+            "tema": "Influência histórica e importância",
+            "exemplo_parafraseado": "Mesmo sem amar o filme, reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
             "mencoes": 24,
             "de_n": 40,
             "freq_pct": 60.0,
-            "lift_pp": 10.0,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
-            "tema": "Caráter atemporal e influência",
-            "exemplo_parafraseado": "Reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores.",
+            "tema": "influência e atemporalidade",
+            "exemplo_parafraseado": "Reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para obras posteriores.",
             "temas_no_mesmo_eixo": []
           }
         },
@@ -1320,27 +1312,27 @@
             "mencoes": 18,
             "de_n": 40,
             "freq_pct": 45.0,
-            "lift_pp": -20.0,
+            "lift_pp": -15.0,
             "acima_da_margem": false,
             "tema": "Superestimado",
-            "exemplo_parafraseado": "Espectadores questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos.",
+            "exemplo_parafraseado": "A obra é considerada supervalorizada, e a expectativa criada por sua reputação não se sustenta durante a exibição.",
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 26,
+            "mencoes": 24,
             "de_n": 40,
-            "freq_pct": 65.0,
+            "freq_pct": 60.0,
             "lift_pp": 15.0,
             "acima_da_margem": false,
-            "tema": "Expectativa versus realidade e sensação de superestimação",
-            "exemplo_parafraseado": "Pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe.",
+            "tema": "Superestimado e supervalorizado",
+            "exemplo_parafraseado": "Espectadores dizem que o filme é superestimado e que não corresponde à fama de obra-prima.",
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 20,
+            "mencoes": 17,
             "de_n": 40,
-            "freq_pct": 50.0,
-            "lift_pp": -15.0,
+            "freq_pct": 42.5,
+            "lift_pp": -17.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1349,7 +1341,7 @@
         },
         "bullet_de": {
           "negativas": null,
-          "medianas": "frequencia",
+          "medianas": null,
           "positivas": null
         }
       },
@@ -1360,27 +1352,27 @@
             "mencoes": 7,
             "de_n": 40,
             "freq_pct": 17.5,
-            "lift_pp": -2.5,
+            "lift_pp": 5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "medianas": {
-            "mencoes": 8,
+            "mencoes": 5,
             "de_n": 40,
-            "freq_pct": 20.0,
-            "lift_pp": 2.5,
+            "freq_pct": 12.5,
+            "lift_pp": -5.0,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
             "temas_no_mesmo_eixo": []
           },
           "positivas": {
-            "mencoes": 6,
+            "mencoes": 4,
             "de_n": 40,
-            "freq_pct": 15.0,
-            "lift_pp": -5.0,
+            "freq_pct": 10.0,
+            "lift_pp": -7.5,
             "acima_da_margem": false,
             "tema": null,
             "exemplo_parafraseado": null,
@@ -1401,10 +1393,10 @@
       "fora_da_taxonomia": {},
       "houve_retentativa": []
     },
-    "spec_version": "1.9.50",
+    "spec_version": "1.9.51",
     "verificador": {
       "aplicado": true,
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl",
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/seven-samurai/classificacao/consenso_verificado.jsonl",
       "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     }
   },
@@ -1418,48 +1410,62 @@
       "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
     },
     "classificacao": {
-      "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl",
-      "sha256": "e9700b0bb9cdbc434f9122a379a4a5d8284b9cf551b5b1f0cff7cec525664ae5"
+      "fonte": "execucoes/regeneracao-r2-2026-11-26/seven-samurai/classificacao/consenso_verificado.jsonl",
+      "sha256": "650ef2389cc97092d5c996b92cc2489c9c9068852cb5c51eef3e94283e7700f3"
     }
   },
   "condicoes": {
     "vale_a_pena": [
       {
-        "texto": "tolera uma longa duração porque a atenção se mantém na maior parte do tempo",
+        "texto": "aprecia uma direção que domina composição, movimento de câmera e encenação",
         "tema_origem": "POS-A",
         "bucket_origem": "positivas",
-        "tema_texto": "Duração longa e ritmo",
+        "tema_texto": "elogios à direção de Kurosawa",
+        "rotulo_forca": "cerca de metade"
+      },
+      {
+        "texto": "se interessa por personagens cativantes e pela química entre os sete samurais",
+        "tema_origem": "POS-B",
+        "bucket_origem": "positivas",
+        "tema_texto": "personagens marcantes e atuações",
         "rotulo_forca": "muitos"
       },
       {
-        "texto": "aprecia personagens com personalidades distintas e atuações marcantes",
-        "tema_origem": "POS-B",
+        "texto": "valoriza fotografia em preto e branco com enquadramentos belos e atmosfera intensa",
+        "tema_origem": "POS-C",
         "bucket_origem": "positivas",
-        "tema_texto": "Atuações e personagens marcantes",
+        "tema_texto": "fotografia e impacto visual",
+        "rotulo_forca": "muitos"
+      },
+      {
+        "texto": "tolera uma longa duração com trechos lentos em troca de uma experiência recompensadora",
+        "tema_origem": "POS-E",
+        "bucket_origem": "positivas",
+        "tema_texto": "duração longa e ritmo",
         "rotulo_forca": "muitos"
       }
     ],
     "talvez_evite": [
       {
-        "texto": "considera longa demais uma duração que poderia ser reduzida, tornando a experiência cansativa",
-        "tema_origem": "NEG-A",
-        "bucket_origem": "negativas",
-        "tema_texto": "Duração excessiva",
-        "rotulo_forca": "a maioria"
-      },
-      {
-        "texto": "desiste de uma narrativa arrastada que demora a engrenar e provoca tédio",
+        "texto": "se entedia com um desenvolvimento lento que se prolonga sem acrescentar interesse",
         "tema_origem": "NEG-B",
         "bucket_origem": "negativas",
         "tema_texto": "Ritmo lento e tédio",
         "rotulo_forca": "cerca de metade"
       },
       {
-        "texto": "incomoda-se com interpretações de tom teatral, emoções exacerbadas e trejeitos que parecem postiços",
+        "texto": "precisa de trama desenvolvida e personagens com profundidade para se importar",
         "tema_origem": "NEG-C",
         "bucket_origem": "negativas",
-        "tema_texto": "Atuação exagerada",
-        "rotulo_forca": "muitos"
+        "tema_texto": "Roteiro simplista e personagens rasos",
+        "rotulo_forca": "alguns"
+      },
+      {
+        "texto": "não se satisfaz com qualidade visual que não compensa ritmo fraco e pouco envolvimento",
+        "tema_origem": "NEG-F",
+        "bucket_origem": "negativas",
+        "tema_texto": "Fotografia elogiada, mas insuficiente",
+        "rotulo_forca": "alguns"
       }
     ],
     "ordem_colunas": [
@@ -1484,38 +1490,30 @@
       "vale_a_pena": [
         "POS-A",
         "POS-B",
-        "POS-C"
+        "POS-C",
+        "POS-E"
       ],
       "talvez_evite": [
         "NEG-A",
         "NEG-B",
         "NEG-C",
-        "NEG-E"
+        "NEG-E",
+        "NEG-F"
       ]
     },
     "temas_saltados": {
-      "vale_a_pena": [
-        "POS-C"
-      ],
+      "vale_a_pena": [],
       "talvez_evite": [
-        "NEG-E"
+        "NEG-A"
       ]
     },
     "descartadas": [
       {
-        "texto": "valoriza enquadramentos, iluminação e o uso da chuva e da lama para criar atmosfera",
-        "tema_origem": "POS-C",
-        "lado": "vale_a_pena",
-        "flags": [
-          "exemplo_verbatim"
-        ]
-      },
-      {
-        "texto": "evita uma história simples com subtramas irrelevantes e desenvolvimento que não prende",
-        "tema_origem": "NEG-E",
+        "texto": "se incomoda com duração que se arrasta sem justificar uma história simples",
+        "tema_origem": "NEG-A",
         "lado": "talvez_evite",
         "flags": [
-          "exemplo_verbatim"
+          "sem_discriminacao"
         ]
       }
     ],
@@ -1523,10 +1521,10 @@
     "par_desfeito": [],
     "recusas_invalidas": [],
     "retry": {
-      "n_reprovadas": 3,
-      "n_aplicadas": 1,
+      "n_reprovadas": 1,
+      "n_aplicadas": 0,
       "n_saltadas_pelo_modelo": 0,
-      "n_descartadas": 2,
+      "n_descartadas": 1,
       "n_recusadas_pelo_modelo": 0
     },
     "provider": "featherless",
@@ -1537,48 +1535,47 @@
     "candidatos": [
       {
         "indice": 0,
-        "n_condicoes": 7,
-        "n_flags": 5,
+        "n_condicoes": 9,
+        "n_flags": 2,
         "flags": [
           "comprimento",
           "exemplo_verbatim"
         ],
-        "n_temas_cobertos": 7,
+        "n_temas_cobertos": 9,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 7
+        "n_temas_resolvidos": 9
       },
       {
         "indice": 1,
-        "n_condicoes": 7,
-        "n_flags": 3,
+        "n_condicoes": 9,
+        "n_flags": 1,
         "flags": [
-          "exemplo_verbatim"
+          "sem_discriminacao"
         ],
-        "n_temas_cobertos": 7,
+        "n_temas_cobertos": 9,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 7
+        "n_temas_resolvidos": 9
       },
       {
         "indice": 2,
-        "n_condicoes": 7,
-        "n_flags": 7,
+        "n_condicoes": 9,
+        "n_flags": 1,
         "flags": [
-          "comprimento",
           "exemplo_verbatim"
         ],
-        "n_temas_cobertos": 7,
+        "n_temas_cobertos": 9,
         "n_temas_recusados": 0,
-        "n_temas_resolvidos": 7
+        "n_temas_resolvidos": 9
       }
     ],
     "uso": {
-      "prompt_tokens": 16554,
-      "completion_tokens": 1139,
-      "cache_hit_tokens": 14925,
-      "cache_miss_tokens": 1629
+      "prompt_tokens": 17315,
+      "completion_tokens": 1142,
+      "cache_hit_tokens": 15334,
+      "cache_miss_tokens": 1981
     },
-    "latencia_s": 11.12,
-    "spec_version": "1.9.50",
+    "latencia_s": 24.27,
+    "spec_version": "1.9.51",
     "variante": "experimento-briefing"
   }
 }

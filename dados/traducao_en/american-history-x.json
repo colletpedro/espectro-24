@@ -22,7 +22,6 @@
   "Reviews medianas apontam que o filme tenta transmitir uma mensagem antirracista, mas a execução acaba sendo ambígua ou simplista, podendo ser mal interpretada.": "Middling reviews point out that the film tries to convey an anti-racist message, but the execution ends up ambiguous or simplistic, and may be misinterpreted.",
   "Ritmo arrastado e uso excessivo de flashbacks": "Slow pace and excessive use of flashbacks",
   "Críticas mencionam que a narrativa é lenta e depende demais de flashbacks, o que prejudica o desenvolvimento da história.": "Reviews mention that the narrative is slow and relies too much on flashbacks, which hurts the development of the story.",
-  "Roteiro simplista e personagens rasos": "Simplistic script and shallow characters",
   "O roteiro é visto como superficial e os personagens secundários são pouco desenvolvidos, soando bidimensionais.": "The script is seen as superficial and the supporting characters are underdeveloped, coming across as two-dimensional.",
   "Fotografia em preto e branco": "Black-and-white cinematography",
   "A fotografia em preto e branco é elogiada por sua beleza e eficácia narrativa, sendo um dos aspectos técnicos mais apreciados.": "The black-and-white cinematography is praised for its beauty and narrative effectiveness, being one of the most appreciated technical aspects.",
@@ -48,5 +47,7 @@
   "mesmo com bom desempenho de Norton, se frustra com roteiro e mensagem problemáticos": "even with Norton's good performance, get frustrated by a problematic script and message",
   "se incomoda com recursos como câmera lenta, closes dramáticos, música piegas e imagens monocromáticas": "are bothered by devices such as slow motion, dramatic close-ups, cheesy music and monochrome imagery"
  },
- "_orfaos": {}
+ "_orfaos": {
+  "Roteiro simplista e personagens rasos": "Simplistic script and shallow characters"
+ }
 }

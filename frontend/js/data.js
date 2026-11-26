@@ -27121,7 +27121,7 @@ window.ESPECTRO_DATA = {
     "casablanca": {
       "slug": "casablanca",
       "data_coleta": "2026-11-08T09:14:35.390287+00:00",
-      "spec_version": "1.9.50",
+      "spec_version": "1.9.51",
       "total_reviews_observadas": 904571,
       "reviews_url": "https://letterboxd.com/film/casablanca/reviews/",
       "ficha": {
@@ -27687,64 +27687,63 @@ window.ESPECTRO_DATA = {
               "tema": "Ritmo lento e tédio",
               "mencoes_aproximadas": 24,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews negativas consideram o filme arrastado, com longos trechos de diálogos estáticos que tornam a experiência entediante.",
+              "exemplo_parafraseado": "As reviews descrevem a experiência como arrastada, com longos trechos de conversa e pouca movimentação, levando ao desinteresse.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Roteiro e relacionamento pouco convincentes",
+              "tema": "Expectativa versus realidade",
+              "mencoes_aproximadas": 15,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Obra é vista como superestimada; a expectativa criada pela fama de clássico não se sustenta para este grupo, que a considera apenas mediana.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Roteiro e desenvolvimento de personagens",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo critica a história de amor por soar forçada e mal desenvolvida, com motivações dos personagens que não fazem sentido.",
+              "exemplo_parafraseado": "Críticas apontam falta de coerência nas motivações, romance mal explicado e personagens rasos, com ênfase no triângulo amoroso.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
-            },
-            {
-              "tema": "Personagens rasos e problemáticos",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews apontam que os personagens são unidimensionais e que a escrita perpetua estereótipos, especialmente em relação à protagonista feminina.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Excesso de diálogos e falta de ação",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A dependência de conversas expositivas e a ausência de desenvolvimento visual tornam o filme cansativo para este grupo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Superestimado e datado",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews negativas questionam o status de clássico, afirmando que o filme não corresponde à expectativa e soa ultrapassado.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitas reviews negativas questionam o status de clássico, afirmando que o filme não corresponde à expectativa e soa ultrapassado."
             },
             {
               "tema": "Propaganda e questões políticas",
-              "mencoes_aproximadas": 6,
+              "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Críticas destacam o viés ideológico e a romantização de valores americanos como pontos negativos.",
+              "exemplo_parafraseado": "Reviews classificam o filme como propaganda de guerra americana, com mensagens nacionalistas e estereótipos questionáveis.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas críticas destacam o viés ideológico e a romantização de valores americanos como pontos negativos."
+              "exemplo_antes_da_guarda": "Algumas reviews classificam o filme como propaganda de guerra americana, com mensagens nacionalistas e estereótipos questionáveis."
+            },
+            {
+              "tema": "Atuações e estilo teatral",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Descrevem atuações exageradas e diálogos rápidos, lembrando teatro filmado, o que soa datado para este grupo.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Representação e preconceitos da época",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Comentários destacam ausência de personagens marroquinos, elenco branco em papéis étnicos e visão colonialista, considerados problemáticos.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews negativas apontam principalmente para o ritmo lento, a falta de envolvimento com a história e a percepção de que o filme é superestimado. Este grupo também critica a construção dos personagens e o tom melodramático.",
+          "observacao_geral": "As reviews negativas descrevem a obra como entediante e lenta, com roteiro e personagens que não sustentam a fama de clássico. Este grupo também critica a propaganda política e a representação estereotipada.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
+          "quantidade_fallback": "aceito",
           "share_real": 2
         },
         {
@@ -27828,71 +27827,67 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "Ritmo lento e falta de envolvimento",
+              "tema": "Expectativa frustrada pela reputação de clássico",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas relatam que o filme demora a engatar, com momentos arrastados e uma sensação de que a história só ganha impulso perto do final.",
+              "exemplo_parafraseado": "Reviews medianas dizem que o filme não corresponde ao hype de ser um dos maiores de todos os tempos e que a experiência ficou abaixo do que a fama prometia.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias reviews medianas relatam que o filme demora a engatar, com momentos arrastados e uma sensação de que a história só ganha impulso perto do final."
+              "exemplo_antes_da_guarda": "Várias reviews medianas dizem que o filme não corresponde ao hype de ser um dos maiores de todos os tempos e que a experiência ficou abaixo do que a fama prometia."
             },
             {
-              "tema": "Romance pouco convincente e química ausente",
+              "tema": "Química e romance pouco convincentes",
               "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo questiona a intensidade do romance central, apontando falta de química entre os protagonistas e dificuldade em se envolver com a história de amor.",
+              "exemplo_parafraseado": "Este grupo questiona a química entre o casal principal e considera a história de amor sem força ou até problemática em certos aspectos.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Expectativa frustrada frente à reputação de clássico",
+              "tema": "Ritmo lento e falta de envolvimento",
               "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews medianas mencionam que o filme não corresponde ao status de obra-prima amplamente divulgado, gerando decepção.",
+              "exemplo_parafraseado": "As reviews medianas apontam que a narrativa demora a engrenar e que a atenção só é realmente capturada perto do desfecho.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "As reviews medianas frequentemente mencionam que o filme não corresponde ao status de obra-prima amplamente divulgado, gerando decepção."
-            },
-            {
-              "tema": "Final e resolução apressada ou problemática",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O desfecho é criticado por mudanças bruscas de comportamento dos personagens e por uma resolução que soa forçada ou inconsistente para espectadores deste grupo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "O desfecho é criticado por mudanças bruscas de comportamento dos personagens e por uma resolução que soa forçada ou inconsistente para parte deste grupo."
+              "aspas_removidas": false
             },
             {
               "tema": "Personagens e atuações que não cativam",
-              "mencoes_aproximadas": 7,
+              "mencoes_aproximadas": 8,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas comentam que os personagens principais não despertam empatia, com atuações consideradas rígidas ou pouco envolventes.",
+              "exemplo_parafraseado": "Pessoas não se envolveram com os protagonistas, criticaram a atuação de Ingrid Bergman ou acharam a personagem dela difícil de torcer.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews medianas comentam que os personagens principais não despertam empatia, com atuações consideradas rígidas ou pouco envolventes."
+              "exemplo_antes_da_guarda": "Algumas pessoas não se envolveram com os protagonistas, criticaram a atuação de Ingrid Bergman ou acharam a personagem dela difícil de torcer."
             },
             {
-              "tema": "Contexto histórico e atemporalidade em debate",
+              "tema": "Ressalvas ao roteiro e à coerência narrativa",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Há menções a cenas desnecessárias, mudanças abruptas de comportamento no final e um roteiro que poderia ser mais bem estruturado.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Contexto histórico e importância cultural reconhecidas",
               "mencoes_aproximadas": 6,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo reconhece a importância histórica do filme, mas discute se ele permanece eficaz para o público atual, com espectadores considerando certos elementos datados.",
+              "exemplo_parafraseado": "Mesmo com críticas, reviews medianas reconhecem o valor histórico do filme e sua relevância por ter sido feito durante a Segunda Guerra.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Este grupo reconhece a importância histórica do filme, mas discute se ele permanece eficaz para o público atual, com alguns considerando certos elementos datados."
+              "exemplo_antes_da_guarda": "Mesmo com críticas, várias reviews medianas reconhecem o valor histórico do filme e sua relevância por ter sido feito durante a Segunda Guerra."
             }
           ],
-          "observacao_geral": "As reviews medianas apontam para uma recepção morna, destacando ritmo lento, romance pouco convincente e expectativas não atendidas em relação ao status de clássico. Este grupo reconhece qualidades pontuais, mas não se sente plenamente envolvido pela obra.",
+          "observacao_geral": "As reviews medianas analisadas destacam uma certa distância entre a expectativa criada pela fama de clássico e a experiência pessoal, com críticas à química do casal, ao ritmo e à condução do roteiro. Ainda assim, este grupo reconhece momentos marcantes e a importância histórica da obra.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 9
@@ -27930,9 +27925,9 @@ window.ESPECTRO_DATA = {
           },
           "janela_amostra": {
             "n": 40,
-            "min": "2018-04-05",
+            "min": "2026-08-04",
             "max": "2026-11-08",
-            "p5": "2026-09-15",
+            "p5": "2026-10-04",
             "p50": "2026-11-06",
             "p95": "2026-11-08"
           },
@@ -27973,9 +27968,10 @@ window.ESPECTRO_DATA = {
                 "truncada_sem_texto": 1,
                 "spoiler": 1,
                 "abaixo_min_chars": 39,
-                "excedente_cota": 6,
+                "excedente_cota": 5,
                 "duplicata": 0,
-                "outros": 0
+                "outros": 0,
+                "resumo_de_trama": 1
               },
               "paginas_buscadas": 0
             },
@@ -28024,67 +28020,66 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "Cinematografia e iluminação",
-              "mencoes_aproximadas": 18,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores elogiam o trabalho de câmera, com ângulos criativos e uso expressivo de luz e sombra, especialmente nas cenas do café e nos close-ups que destacam as emoções das personagens.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitos elogiam o trabalho de câmera, com ângulos criativos e uso expressivo de luz e sombra, especialmente nas cenas do café e nos close-ups que destacam as emoções das personagens."
-            },
-            {
-              "tema": "Atuações e carisma de Bogart e Bergman",
+              "tema": "Fotografia e iluminação",
               "mencoes_aproximadas": 15,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As atuações são destacadas, com Humphrey Bogart sendo descrito como magnético e Ingrid Bergman como deslumbrante e sutil em sua expressão facial.",
+              "exemplo_parafraseado": "A fotografia em preto e branco é elogiada pelo jogo de luz e sombra, com destaque para a iluminação suave em Ingrid Bergman e o uso expressivo de sombras que refletem o estado emocional dos personagens.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atuações e carisma",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Humphrey Bogart e Ingrid Bergman são exaltados por atuações marcantes, ele com presença magnética e ela com beleza e nuances sutis, além de química convincente.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Ritmo e desenvolvimento",
+              "mencoes_aproximadas": 11,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "O ritmo é apontado como lento no início, mas a narrativa cresce e culmina em um desfecho satisfatório que compensa a lentidão inicial.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "As atuações são frequentemente destacadas, com Humphrey Bogart sendo descrito como magnético e Ingrid Bergman como deslumbrante e sutil em sua expressão facial."
+              "exemplo_antes_da_guarda": "O ritmo é frequentemente apontado como lento no início, mas a narrativa cresce e culmina em um desfecho satisfatório que compensa a lentidão inicial."
             },
             {
-              "tema": "Trilha sonora e a música As Time Goes By",
-              "mencoes_aproximadas": 12,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A música tema é lembrada como belíssima e essencial para criar a atmosfera romântica e nostálgica, sendo executada em momentos-chave e emocionando o público.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Sacrifício e decisão final de Rick",
+              "tema": "Trilha sonora e música",
               "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O desfecho é elogiado por mostrar o amadurecimento do protagonista, que abre mão da própria felicidade em prol de algo maior, conferindo profundidade emocional à história.",
+              "exemplo_parafraseado": "A canção As Time Goes By e a cena da Marselhesa são lembradas como momentos emocionantes que reforçam o clima romântico e patriótico do filme.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Roteiro e diálogos marcantes",
+              "tema": "Roteiro e diálogos",
               "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O texto é considerado brilhante, repleto de falas memoráveis e uma construção de personagens interessante, com reviravoltas que prendem a atenção.",
+              "exemplo_parafraseado": "O script é elogiado por frases memoráveis e uma trama que combina romance, drama e tensão política, com reviravoltas bem construídas.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Contexto histórico e produção durante a guerra",
-              "mencoes_aproximadas": 9,
+              "tema": "Contexto histórico e mensagem",
+              "mencoes_aproximadas": 8,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O fato de ter sido realizado em plena Segunda Guerra Mundial é visto como algo impressionante, e o contexto histórico enriquece a experiência, dando peso às escolhas dos personagens.",
+              "exemplo_parafraseado": "Reviews positivas valorizam o fato de a obra ter sido produzida e lançada durante a Segunda Guerra Mundial, o que permitiria ao público atual perceber de perto as opiniões e os temores daquela época, quando o desfecho do conflito ainda era incerto. Essas críticas também apontam que o pano de fundo histórico e a mensagem antifascista dão peso às escolhas dos personagens e tornam a experiência mais significativa.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews positivas destacam a cinematografia, as atuações e a trilha sonora como pontos altos, além de valorizarem o contexto histórico e a decisão final do protagonista. Este grupo considera o filme um clássico atemporal, com roteiro e diálogos memoráveis.",
+          "observacao_geral": "As reviews positivas exaltam a fotografia, as atuações e a trilha sonora, além de destacarem o contexto histórico e o desfecho emocionante. Este grupo reconhece o caráter clássico e atemporal da obra, mesmo quando aponta um ritmo inicial mais lento.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
+          "quantidade_fallback": "aceito",
           "share_real": 89
         }
       ],
@@ -28111,7 +28106,7 @@ window.ESPECTRO_DATA = {
                 "lift_pp": 15.0,
                 "acima_da_margem": false,
                 "tema": "Ritmo lento e tédio",
-                "exemplo_parafraseado": "As reviews negativas consideram o filme arrastado, com longos trechos de diálogos estáticos que tornam a experiência entediante.",
+                "exemplo_parafraseado": "As reviews descrevem a experiência como arrastada, com longos trechos de conversa e pouca movimentação, levando ao desinteresse.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
@@ -28121,7 +28116,7 @@ window.ESPECTRO_DATA = {
                 "lift_pp": -20.0,
                 "acima_da_margem": false,
                 "tema": "Ritmo lento e falta de envolvimento",
-                "exemplo_parafraseado": "Reviews medianas relatam que o filme demora a engatar, com momentos arrastados e uma sensação de que a história só ganha impulso perto do final.",
+                "exemplo_parafraseado": "As reviews medianas apontam que a narrativa demora a engrenar e que a atenção só é realmente capturada perto do desfecho.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
@@ -28130,8 +28125,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 20.0,
                 "lift_pp": -15.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Ritmo e desenvolvimento",
+                "exemplo_parafraseado": "O ritmo é apontado como lento no início, mas a narrativa cresce e culmina em um desfecho satisfatório que compensa a lentidão inicial.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -28145,33 +28140,35 @@ window.ESPECTRO_DATA = {
             "eixo": "atuacao",
             "por_bucket": {
               "negativas": {
-                "mencoes": 9,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 22.5,
+                "freq_pct": 20.0,
                 "lift_pp": -7.5,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Atuações e estilo teatral",
+                "exemplo_parafraseado": "Descrevem atuações exageradas e diálogos rápidos, lembrando teatro filmado, o que soa datado para este grupo.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 4,
+                "mencoes": 5,
                 "de_n": 40,
-                "freq_pct": 10.0,
-                "lift_pp": -20.0,
+                "freq_pct": 12.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
-                "tema": "Personagens e atuações que não cativam",
-                "exemplo_parafraseado": "Reviews medianas comentam que os personagens principais não despertam empatia, com atuações consideradas rígidas ou pouco envolventes.",
-                "temas_no_mesmo_eixo": []
+                "tema": "Química e romance pouco convincentes",
+                "exemplo_parafraseado": "Este grupo questiona a química entre o casal principal e considera a história de amor sem força ou até problemática em certos aspectos.",
+                "temas_no_mesmo_eixo": [
+                  "Personagens e atuações que não cativam"
+                ]
               },
               "positivas": {
-                "mencoes": 12,
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 30.0,
+                "freq_pct": 27.5,
                 "lift_pp": 7.5,
                 "acima_da_margem": false,
-                "tema": "Atuações e carisma de Bogart e Bergman",
-                "exemplo_parafraseado": "As atuações são destacadas, com Humphrey Bogart sendo descrito como magnético e Ingrid Bergman como deslumbrante e sutil em sua expressão facial.",
+                "tema": "Atuações e carisma",
+                "exemplo_parafraseado": "Humphrey Bogart e Ingrid Bergman são exaltados por atuações marcantes, ele com presença magnética e ela com beleza e nuances sutis, além de química convincente.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -28185,9 +28182,9 @@ window.ESPECTRO_DATA = {
             "eixo": "direcao_imagem",
             "por_bucket": {
               "negativas": {
-                "mencoes": 6,
+                "mencoes": 7,
                 "de_n": 40,
-                "freq_pct": 15.0,
+                "freq_pct": 17.5,
                 "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
@@ -28195,23 +28192,23 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 7,
+                "mencoes": 6,
                 "de_n": 40,
-                "freq_pct": 17.5,
-                "lift_pp": -12.5,
+                "freq_pct": 15.0,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 12,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": 12.5,
+                "freq_pct": 32.5,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
-                "tema": "Cinematografia e iluminação",
-                "exemplo_parafraseado": "Espectadores elogiam o trabalho de câmera, com ângulos criativos e uso expressivo de luz e sombra, especialmente nas cenas do café e nos close-ups que destacam as emoções das personagens.",
+                "tema": "Fotografia e iluminação",
+                "exemplo_parafraseado": "A fotografia em preto e branco é elogiada pelo jogo de luz e sombra, com destaque para a iluminação suave em Ingrid Bergman e o uso expressivo de sombras que refletem o estado emocional dos personagens.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -28225,41 +28222,34 @@ window.ESPECTRO_DATA = {
             "eixo": "roteiro_estrutura",
             "por_bucket": {
               "negativas": {
-                "mencoes": 29,
+                "mencoes": 28,
                 "de_n": 40,
-                "freq_pct": 72.5,
-                "lift_pp": -2.5,
+                "freq_pct": 70.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
-                "tema": "Roteiro e relacionamento pouco convincentes",
-                "exemplo_parafraseado": "Este grupo critica a história de amor por soar forçada e mal desenvolvida, com motivações dos personagens que não fazem sentido.",
-                "temas_no_mesmo_eixo": [
-                  "Personagens rasos e problemáticos",
-                  "Excesso de diálogos e falta de ação"
-                ]
+                "tema": "Roteiro e desenvolvimento de personagens",
+                "exemplo_parafraseado": "Críticas apontam falta de coerência nas motivações, romance mal explicado e personagens rasos, com ênfase no triângulo amoroso.",
+                "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 30,
+                "mencoes": 32,
                 "de_n": 40,
-                "freq_pct": 75.0,
-                "lift_pp": 2.5,
+                "freq_pct": 80.0,
+                "lift_pp": 10.0,
                 "acima_da_margem": false,
-                "tema": "Romance pouco convincente e química ausente",
-                "exemplo_parafraseado": "Este grupo questiona a intensidade do romance central, apontando falta de química entre os protagonistas e dificuldade em se envolver com a história de amor.",
-                "temas_no_mesmo_eixo": [
-                  "Final e resolução apressada ou problemática"
-                ]
+                "tema": "Ressalvas ao roteiro e à coerência narrativa",
+                "exemplo_parafraseado": "Há menções a cenas desnecessárias, mudanças abruptas de comportamento no final e um roteiro que poderia ser mais bem estruturado.",
+                "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 27,
+                "mencoes": 25,
                 "de_n": 40,
-                "freq_pct": 67.5,
-                "lift_pp": -7.5,
+                "freq_pct": 62.5,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
-                "tema": "Sacrifício e decisão final de Rick",
-                "exemplo_parafraseado": "O desfecho é elogiado por mostrar o amadurecimento do protagonista, que abre mão da própria felicidade em prol de algo maior, conferindo profundidade emocional à história.",
-                "temas_no_mesmo_eixo": [
-                  "Roteiro e diálogos marcantes"
-                ]
+                "tema": "Roteiro e diálogos",
+                "exemplo_parafraseado": "O script é elogiado por frases memoráveis e uma trama que combina romance, drama e tensão política, com reviravoltas bem construídas.",
+                "temas_no_mesmo_eixo": []
               }
             },
             "bullet_de": {
@@ -28275,7 +28265,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 3,
                 "de_n": 40,
                 "freq_pct": 7.5,
-                "lift_pp": -17.5,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28285,20 +28275,20 @@ window.ESPECTRO_DATA = {
                 "mencoes": 2,
                 "de_n": 40,
                 "freq_pct": 5.0,
-                "lift_pp": -20.0,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 10,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 25.0,
-                "lift_pp": 17.5,
+                "freq_pct": 20.0,
+                "lift_pp": 12.5,
                 "acima_da_margem": false,
-                "tema": "Trilha sonora e a música As Time Goes By",
-                "exemplo_parafraseado": "A música tema é lembrada como belíssima e essencial para criar a atmosfera romântica e nostálgica, sendo executada em momentos-chave e emocionando o público.",
+                "tema": "Trilha sonora e música",
+                "exemplo_parafraseado": "A canção As Time Goes By e a cena da Marselhesa são lembradas como momentos emocionantes que reforçam o clima romântico e patriótico do filme.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -28312,10 +28302,10 @@ window.ESPECTRO_DATA = {
             "eixo": "tom_atmosfera",
             "por_bucket": {
               "negativas": {
-                "mencoes": 3,
+                "mencoes": 1,
                 "de_n": 40,
-                "freq_pct": 7.5,
-                "lift_pp": -15.0,
+                "freq_pct": 2.5,
+                "lift_pp": -22.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28325,17 +28315,17 @@ window.ESPECTRO_DATA = {
                 "mencoes": 7,
                 "de_n": 40,
                 "freq_pct": 17.5,
-                "lift_pp": -5.0,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 9,
+                "mencoes": 10,
                 "de_n": 40,
-                "freq_pct": 22.5,
-                "lift_pp": 5.0,
+                "freq_pct": 25.0,
+                "lift_pp": 7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28362,10 +28352,10 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 13,
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 32.5,
-                "lift_pp": -15.0,
+                "freq_pct": 27.5,
+                "lift_pp": -20.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28392,29 +28382,29 @@ window.ESPECTRO_DATA = {
             "eixo": "comparacoes",
             "por_bucket": {
               "negativas": {
-                "mencoes": 12,
+                "mencoes": 15,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -20.0,
-                "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
-                "temas_no_mesmo_eixo": []
-              },
-              "medianas": {
-                "mencoes": 16,
-                "de_n": 40,
-                "freq_pct": 40.0,
+                "freq_pct": 37.5,
                 "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
-              "positivas": {
-                "mencoes": 20,
+              "medianas": {
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 50.0,
+                "freq_pct": 27.5,
+                "lift_pp": -20.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 19,
+                "de_n": 40,
+                "freq_pct": 47.5,
                 "lift_pp": 10.0,
                 "acima_da_margem": false,
                 "tema": null,
@@ -28425,37 +28415,37 @@ window.ESPECTRO_DATA = {
             "bullet_de": {
               "negativas": null,
               "medianas": null,
-              "positivas": "frequencia"
+              "positivas": null
             }
           },
           {
             "eixo": "expectativa",
             "por_bucket": {
               "negativas": {
-                "mencoes": 25,
+                "mencoes": 21,
                 "de_n": 40,
-                "freq_pct": 62.5,
-                "lift_pp": 2.5,
+                "freq_pct": 52.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Superestimado e datado",
-                "exemplo_parafraseado": "Reviews negativas questionam o status de clássico, afirmando que o filme não corresponde à expectativa e soa ultrapassado.",
+                "tema": "Expectativa versus realidade",
+                "exemplo_parafraseado": "Obra é vista como superestimada; a expectativa criada pela fama de clássico não se sustenta para este grupo, que a considera apenas mediana.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 24,
+                "mencoes": 23,
                 "de_n": 40,
-                "freq_pct": 60.0,
-                "lift_pp": -2.5,
+                "freq_pct": 57.5,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
-                "tema": "Expectativa frustrada frente à reputação de clássico",
-                "exemplo_parafraseado": "As reviews medianas mencionam que o filme não corresponde ao status de obra-prima amplamente divulgado, gerando decepção.",
+                "tema": "Expectativa frustrada pela reputação de clássico",
+                "exemplo_parafraseado": "Reviews medianas dizem que o filme não corresponde ao hype de ser um dos maiores de todos os tempos e que a experiência ficou abaixo do que a fama prometia.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 20,
+                "mencoes": 21,
                 "de_n": 40,
-                "freq_pct": 50.0,
-                "lift_pp": -12.5,
+                "freq_pct": 52.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -28465,7 +28455,7 @@ window.ESPECTRO_DATA = {
             "bullet_de": {
               "negativas": "frequencia",
               "medianas": "frequencia",
-              "positivas": null
+              "positivas": "frequencia"
             }
           },
           {
@@ -28475,20 +28465,22 @@ window.ESPECTRO_DATA = {
                 "mencoes": 15,
                 "de_n": 40,
                 "freq_pct": 37.5,
-                "lift_pp": 15.0,
+                "lift_pp": 17.5,
                 "acima_da_margem": false,
                 "tema": "Propaganda e questões políticas",
-                "exemplo_parafraseado": "Críticas destacam o viés ideológico e a romantização de valores americanos como pontos negativos.",
-                "temas_no_mesmo_eixo": []
+                "exemplo_parafraseado": "Reviews classificam o filme como propaganda de guerra americana, com mensagens nacionalistas e estereótipos questionáveis.",
+                "temas_no_mesmo_eixo": [
+                  "Representação e preconceitos da época"
+                ]
               },
               "medianas": {
-                "mencoes": 9,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 22.5,
-                "lift_pp": -15.0,
+                "freq_pct": 20.0,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
-                "tema": "Contexto histórico e atemporalidade em debate",
-                "exemplo_parafraseado": "Este grupo reconhece a importância histórica do filme, mas discute se ele permanece eficaz para o público atual, com espectadores considerando certos elementos datados.",
+                "tema": "Contexto histórico e importância cultural reconhecidas",
+                "exemplo_parafraseado": "Mesmo com críticas, reviews medianas reconhecem o valor histórico do filme e sua relevância por ter sido feito durante a Segunda Guerra.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
@@ -28497,8 +28489,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 17.5,
                 "lift_pp": -20.0,
                 "acima_da_margem": false,
-                "tema": "Contexto histórico e produção durante a guerra",
-                "exemplo_parafraseado": "O fato de ter sido realizado em plena Segunda Guerra Mundial é visto como algo impressionante, e o contexto histórico enriquece a experiência, dando peso às escolhas dos personagens.",
+                "tema": "Contexto histórico e mensagem",
+                "exemplo_parafraseado": "Reviews positivas valorizam o fato de a obra ter sido produzida e lançada durante a Segunda Guerra Mundial, o que permitiria ao público atual perceber de perto as opiniões e os temores daquela época, quando o desfecho do conflito ainda era incerto. Essas críticas também apontam que o pano de fundo histórico e a mensagem antifascista dão peso às escolhas dos personagens e tornam a experiência mais significativa.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -28516,45 +28508,58 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.50",
+        "spec_version": "1.9.51",
         "verificador": {
           "aplicado": true,
-          "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/casablanca/classificacao/consenso_verificado.jsonl",
+          "fonte": "execucoes/regeneracao-r2-2026-11-26/casablanca/classificacao/consenso_verificado.jsonl",
           "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       },
       "condicoes": {
         "vale_a_pena": [
           {
-            "texto": "aprecia trabalho de câmera criativo com jogo expressivo entre claridade e penumbra",
+            "texto": "aprecia fotografia em preto e branco com jogos de luz e sombra expressivos",
             "tema_origem": "POS-A",
             "bucket_origem": "positivas",
-            "tema_texto": "Cinematografia e iluminação",
+            "tema_texto": "Fotografia e iluminação",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "se interessa por atuações magnéticas e expressões faciais sutis",
+            "texto": "busca atuações marcantes com química convincente e nuances sutis",
             "tema_origem": "POS-B",
             "bucket_origem": "positivas",
-            "tema_texto": "Atuações e carisma de Bogart e Bergman",
+            "tema_texto": "Atuações e carisma",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "valoriza uma música tema que cria atmosfera romântica e nostálgica",
+            "texto": "tolera lentidão inicial em troca de uma narrativa que cresce até um desfecho satisfatório",
             "tema_origem": "POS-C",
             "bucket_origem": "positivas",
-            "tema_texto": "Trilha sonora e a música As Time Goes By",
+            "tema_texto": "Ritmo e desenvolvimento",
             "rotulo_forca": "muitos"
           }
         ],
         "talvez_evite": [
           {
-            "texto": "evita histórias de amor forçadas com motivações que não fazem sentido",
-            "tema_origem": "NEG-B",
+            "texto": "perde o interesse diante de uma experiência arrastada, com muita conversa e pouca ação",
+            "tema_origem": "NEG-A",
             "bucket_origem": "negativas",
-            "tema_texto": "Roteiro e relacionamento pouco convincentes",
-            "rotulo_forca": "muitos",
-            "par_recusado": "POS-E"
+            "tema_texto": "Ritmo lento e tédio",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "se irrita com personagens de motivações confusas, romance pouco explicado e figuras superficiais",
+            "tema_origem": "NEG-C",
+            "bucket_origem": "negativas",
+            "tema_texto": "Roteiro e desenvolvimento de personagens",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "se incomoda com ausência de personagens marroquinos e visão colonialista",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Representação e preconceitos da época",
+            "rotulo_forca": "alguns"
           }
         ],
         "ordem_colunas": [
@@ -28585,96 +28590,98 @@ window.ESPECTRO_DATA = {
           "talvez_evite": [
             "NEG-A",
             "NEG-B",
-            "NEG-C"
+            "NEG-C",
+            "NEG-F"
           ]
         },
         "temas_saltados": {
-          "vale_a_pena": [],
+          "vale_a_pena": [
+            "POS-E"
+          ],
           "talvez_evite": [
-            "NEG-A"
+            "NEG-B"
           ]
         },
         "descartadas": [
           {
-            "texto": "se incomoda com ritmo arrastado e longos trechos de diálogos estáticos",
-            "tema_origem": "NEG-A",
-            "lado": "talvez_evite",
+            "texto": "procura frases memoráveis e uma trama com romance, drama e tensão política",
+            "tema_origem": "POS-E",
+            "lado": "vale_a_pena",
             "flags": [
               "exemplo_verbatim"
             ]
-          }
-        ],
-        "sem_condicao_publicavel": [
-          {
-            "tema_origem": "NEG-C",
-            "lado": "talvez_evite",
-            "regra": "R12",
-            "origem": "modelo"
           },
           {
-            "tema_origem": "POS-E",
-            "lado": "vale_a_pena",
-            "regra": "R6/R12",
-            "origem": "modelo"
+            "texto": "se frustra quando clássicos de grande fama se revelam apenas medianos",
+            "tema_origem": "NEG-B",
+            "lado": "talvez_evite",
+            "flags": [
+              "sem_discriminacao"
+            ]
           }
         ],
+        "sem_condicao_publicavel": [],
         "par_desfeito": [],
         "recusas_invalidas": [],
         "retry": {
-          "n_reprovadas": 2,
-          "n_aplicadas": 1,
+          "n_reprovadas": 4,
+          "n_aplicadas": 2,
           "n_saltadas_pelo_modelo": 0,
-          "n_descartadas": 1,
+          "n_descartadas": 2,
           "n_recusadas_pelo_modelo": 0
         },
         "provider": "featherless",
         "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "n_candidatos": 3,
         "n_chamadas": 4,
-        "indice_escolhido": 2,
+        "indice_escolhido": 1,
         "candidatos": [
           {
             "indice": 0,
-            "n_condicoes": 7,
-            "n_flags": 3,
+            "n_condicoes": 8,
+            "n_flags": 7,
             "flags": [
+              "comprimento",
               "exemplo_verbatim"
             ],
-            "n_temas_cobertos": 7,
+            "n_temas_cobertos": 8,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 7
+            "n_temas_resolvidos": 8
           },
           {
             "indice": 1,
-            "n_condicoes": 6,
-            "n_flags": 3,
+            "n_condicoes": 8,
+            "n_flags": 4,
             "flags": [
-              "exemplo_verbatim"
+              "exemplo_verbatim",
+              "sem_discriminacao"
             ],
-            "n_temas_cobertos": 6,
-            "n_temas_recusados": 1,
-            "n_temas_resolvidos": 7
+            "n_temas_cobertos": 8,
+            "n_temas_recusados": 0,
+            "n_temas_resolvidos": 8
           },
           {
             "indice": 2,
-            "n_condicoes": 5,
-            "n_flags": 2,
+            "n_condicoes": 8,
+            "n_flags": 4,
             "flags": [
-              "exemplo_verbatim"
+              "ancora_nao_verificavel",
+              "exemplo_verbatim",
+              "sem_discriminacao"
             ],
-            "n_temas_cobertos": 5,
-            "n_temas_recusados": 2,
-            "n_temas_resolvidos": 7
+            "n_temas_cobertos": 8,
+            "n_temas_recusados": 0,
+            "n_temas_resolvidos": 8
           }
         ],
         "uso": {
-          "prompt_tokens": 16358,
-          "completion_tokens": 1101,
-          "cache_hit_tokens": 14824,
-          "cache_miss_tokens": 1534
+          "prompt_tokens": 17554,
+          "completion_tokens": 1167,
+          "cache_hit_tokens": 15365,
+          "cache_miss_tokens": 2189
         },
-        "latencia_s": 7.56,
-        "spec_version": "1.9.50",
+        "latencia_s": 12.71,
+        "spec_version": "1.9.51",
         "variante": "experimento-briefing"
       }
     },
@@ -79355,7 +79362,7 @@ window.ESPECTRO_DATA = {
     "its-a-wonderful-life": {
       "slug": "its-a-wonderful-life",
       "data_coleta": "2026-11-08T05:20:55.677683+00:00",
-      "spec_version": "1.9.50",
+      "spec_version": "1.9.51",
       "total_reviews_observadas": 805359,
       "reviews_url": "https://letterboxd.com/film/its-a-wonderful-life/reviews/",
       "ficha": {
@@ -79924,69 +79931,65 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "ritmo lento e longa duração",
-              "mencoes_aproximadas": 14,
+              "tema": "Ritmo lento e longa duração",
+              "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+              "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitas reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa."
+              "exemplo_antes_da_guarda": "Várias reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor."
             },
             {
-              "tema": "mensagem cristã e moral simplista",
-              "mencoes_aproximadas": 12,
+              "tema": "Mensagem moral simplista e manipuladora",
+              "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+              "exemplo_parafraseado": "Este grupo critica a forma como o filme reduz questões complexas a uma moral binária entre o bem e o mal, forçando uma lição de vida otimista que soa artificial.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "protagonista irritante e passivo",
-              "mencoes_aproximadas": 10,
+              "tema": "Excesso de sentimentalismo e tom depressivo",
+              "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
+              "exemplo_parafraseado": "As reviews apontam que a obra mistura um clima natalino edificante com um retrato muito triste e depressivo da vida do protagonista, o que soa contraditório e cansativo.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitos consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele."
+              "aspas_removidas": false
             },
             {
-              "tema": "depressão e tom depressivo",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera."
-            },
-            {
-              "tema": "crítica ao capitalismo e à estrutura social",
+              "tema": "Personagem principal desagradável e passivo",
               "mencoes_aproximadas": 7,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Certas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema.",
+              "exemplo_parafraseado": "O protagonista é descrito como alguém que reclama demais, se anula em prol dos outros e não desperta empatia, sendo visto como irritante ou pouco crível.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Mensagem cristã e ideologia conservadora",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Críticas destacam que o filme embute uma moral religiosa e uma visão de mundo que naturaliza sacrifícios pessoais e não questiona estruturas sociais injustas.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas análises criticam a forma como o filme trata o capitalismo, sugerindo que a mensagem reforça estruturas injustas e apresenta uma visão burguesa que não questiona o sistema."
+              "exemplo_antes_da_guarda": "Algumas críticas destacam que o filme embute uma moral religiosa e uma visão de mundo que naturaliza sacrifícios pessoais e não questiona estruturas sociais injustas."
             },
             {
-              "tema": "personagens femininas sem agência",
-              "mencoes_aproximadas": 3,
+              "tema": "Representação feminina limitada e piadas problemáticas",
+              "mencoes_aproximadas": 4,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Há menções à falta de desenvolvimento e relevância das personagens femininas, que recebem pouco espaço e agência na narrativa.",
+              "exemplo_parafraseado": "Há menções à pouca agência das personagens femininas e a cenas de teor sexista ou racista tratadas como comicidade leve.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             }
           ],
-          "observacao_geral": "Este grupo de reviews negativas destaca principalmente o ritmo lento, a moral cristã simplista, o protagonista pouco carismático e o tom depressivo como os principais pontos de insatisfação. Críticas à estrutura social e à falta de agência feminina também aparecem, mas com menor frequência.",
+          "observacao_geral": "As reviews negativas analisadas destacam principalmente o ritmo arrastado, a moral simplista e o excesso de sentimentalismo, além de considerarem o protagonista pouco carismático e a mensagem conservadora problemática. Este grupo específico não vê no filme o clássico aclamado que costuma ser celebrado.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 2
@@ -80075,70 +80078,68 @@ window.ESPECTRO_DATA = {
               "tema": "Ritmo lento e longa duração",
               "mencoes_aproximadas": 18,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+              "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com alguns trechos entediantes."
+              "exemplo_antes_da_guarda": "Várias reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final."
             },
             {
-              "tema": "Final eficaz versus desenvolvimento irregular",
-              "mencoes_aproximadas": 15,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação."
-            },
-            {
-              "tema": "Roteiro previsível e personagens rasos",
+              "tema": "Final eficaz, mas previsível ou exagerado",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil.",
+              "exemplo_parafraseado": "Pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews medianas apontam que a história é muito fantasiosa, os personagens secundários soam como dispositivos de trama e a mensagem é entregue de forma direta e pouco sutil."
+              "exemplo_antes_da_guarda": "Algumas pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme."
             },
             {
-              "tema": "Atuação de James Stewart",
+              "tema": "Atuações e personagens",
               "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+              "exemplo_parafraseado": "Há elogios à atuação de James Stewart e à simpatia de Donna Reed, mas também críticas à falta de profundidade dos coadjuvantes e ao excesso de idealização do protagonista.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "O desempenho do protagonista divide opiniões: alguns elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente."
+              "aspas_removidas": false
             },
             {
-              "tema": "Excesso de otimismo e moral cristã",
+              "tema": "Mensagem otimista e lição de vida",
               "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+              "exemplo_parafraseado": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora espectadores considerem essa moral excessivamente óbvia ou ingênua.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Certas reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial."
+              "exemplo_antes_da_guarda": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora alguns considerem essa moral excessivamente óbvia ou ingênua."
             },
             {
               "tema": "Clássico superestimado",
               "mencoes_aproximadas": 8,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+              "exemplo_parafraseado": "Reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico."
+              "exemplo_antes_da_guarda": "Algumas reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber."
+            },
+            {
+              "tema": "Fotografia e aspectos técnicos",
+              "mencoes_aproximadas": 6,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora espectadores achem que a direção não compensa outras falhas.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora alguns achem que a direção não compensa outras falhas."
             }
           ],
-          "observacao_geral": "As reviews medianas destacam principalmente problemas de ritmo e duração, além de uma visão crítica sobre o otimismo excessivo e a simplicidade dos personagens. Apesar disso, muitos reconhecem a eficácia do desfecho e a atuação de James Stewart, ainda que com ressalvas.",
+          "observacao_geral": "As reviews medianas apontam para uma experiência mista: reconhecem a mensagem edificante e o valor histórico do filme, mas criticam o ritmo arrastado e a idealização excessiva. Este grupo tende a considerá-lo um clássico competente, porém superestimado.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 7
@@ -80178,7 +80179,7 @@ window.ESPECTRO_DATA = {
             "n": 40,
             "min": "2014-01-23",
             "max": "2026-11-08",
-            "p5": "2024-01-01",
+            "p5": "2026-03-06",
             "p50": "2026-11-06",
             "p95": "2026-11-08"
           },
@@ -80219,9 +80220,10 @@ window.ESPECTRO_DATA = {
                 "truncada_sem_texto": 0,
                 "spoiler": 3,
                 "abaixo_min_chars": 34,
-                "excedente_cota": 1,
+                "excedente_cota": 0,
                 "duplicata": 0,
-                "outros": 0
+                "outros": 0,
+                "resumo_de_trama": 1
               },
               "paginas_buscadas": 0
             },
@@ -80270,67 +80272,73 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "Emoção e choro",
-              "mencoes_aproximadas": 18,
+              "tema": "Mensagem emocional e comovente",
+              "mencoes_aproximadas": 30,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+              "exemplo_parafraseado": "Reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitas reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho."
+              "exemplo_antes_da_guarda": "Muitas reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações."
             },
             {
               "tema": "Atuação de James Stewart",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Mensagem sobre o valor da vida e da existência",
-              "mencoes_aproximadas": 11,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Clássico atemporal e natalino",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+              "exemplo_parafraseado": "A interpretação de James Stewart é elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "O filme é frequentemente descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura."
+              "exemplo_antes_da_guarda": "A interpretação de James Stewart é frequentemente elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista."
+            },
+            {
+              "tema": "Clássico atemporal",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Várias reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto."
+            },
+            {
+              "tema": "Espírito natalino e tradição",
+              "mencoes_aproximadas": 9,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Espectadores comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Muitos comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança."
+            },
+            {
+              "tema": "Reflexão sobre o valor da vida e das pessoas",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "As reviews frequentemente refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros."
             },
             {
               "tema": "Ritmo e estrutura narrativa",
-              "mencoes_aproximadas": 8,
+              "mencoes_aproximadas": 7,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+              "exemplo_parafraseado": "Reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final."
-            },
-            {
-              "tema": "Elenco e química entre os atores",
-              "mencoes_aproximadas": 6,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O elenco é elogiado, com destaque para a química entre os protagonistas e a atuação de Donna Reed, que contribuem para a autenticidade dos personagens.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "exemplo_antes_da_guarda": "Algumas reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante."
             }
           ],
-          "observacao_geral": "As reviews positivas deste grupo destacam a forte carga emocional, a atuação marcante de James Stewart e a mensagem inspiradora sobre o valor da vida. Este grupo também valoriza o filme como um clássico natalino atemporal, embora alguns apontem um ritmo inicial mais lento.",
+          "observacao_geral": "As reviews positivas destacam principalmente a carga emocional do filme, a atuação de James Stewart e a mensagem inspiradora sobre a vida e as relações humanas. Este grupo também valoriza o aspecto de clássico atemporal e a tradição natalina associada à obra.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 91
@@ -80353,23 +80361,23 @@ window.ESPECTRO_DATA = {
             "eixo": "ritmo",
             "por_bucket": {
               "negativas": {
-                "mencoes": 11,
+                "mencoes": 10,
                 "de_n": 40,
-                "freq_pct": 27.5,
-                "lift_pp": -10.0,
+                "freq_pct": 25.0,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
-                "tema": "ritmo lento e longa duração",
-                "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado e longo demais, com uma primeira metade tediosa que só melhora perto do final, tornando a experiência cansativa.",
+                "tema": "Ritmo lento e longa duração",
+                "exemplo_parafraseado": "Reviews reclamam que o filme é arrastado, com uma primeira metade tediosa que só engrena nos minutos finais, e que a duração poderia ser bem menor.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 15,
                 "de_n": 40,
                 "freq_pct": 37.5,
-                "lift_pp": 10.0,
+                "lift_pp": 12.5,
                 "acima_da_margem": false,
                 "tema": "Ritmo lento e longa duração",
-                "exemplo_parafraseado": "Reviews medianas mencionam que a primeira metade ou o terço inicial é arrastado e que o filme poderia ser mais curto, com certos trechos entediantes.",
+                "exemplo_parafraseado": "Reviews medianas reclamam que o filme demora a engrenar, com uma primeira metade arrastada que poderia ser encurtada, e que a narrativa só melhora perto do final.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
@@ -80379,7 +80387,7 @@ window.ESPECTRO_DATA = {
                 "lift_pp": -22.5,
                 "acima_da_margem": false,
                 "tema": "Ritmo e estrutura narrativa",
-                "exemplo_parafraseado": "Reviews mencionam que a parte inicial pode parecer lenta, mas que o desfecho compensa, com uma narrativa que ganha força especialmente na reta final.",
+                "exemplo_parafraseado": "Reviews apontam que o início pode ser lento, mas que o desenrolar e especialmente o final compensam, tornando a experiência gratificante.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80408,8 +80416,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 30.0,
                 "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Atuação de James Stewart",
-                "exemplo_parafraseado": "O desempenho do protagonista divide opiniões: espectadores elogiam sua atuação, enquanto outros a consideram exagerada ou pouco convincente.",
+                "tema": "Atuações e personagens",
+                "exemplo_parafraseado": "Há elogios à atuação de James Stewart e à simpatia de Donna Reed, mas também críticas à falta de profundidade dos coadjuvantes e ao excesso de idealização do protagonista.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
@@ -80419,10 +80427,8 @@ window.ESPECTRO_DATA = {
                 "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": "Atuação de James Stewart",
-                "exemplo_parafraseado": "A performance de James Stewart é amplamente elogiada, sendo considerada uma das melhores de sua carreira e fundamental para o impacto do filme.",
-                "temas_no_mesmo_eixo": [
-                  "Elenco e química entre os atores"
-                ]
+                "exemplo_parafraseado": "A interpretação de James Stewart é elogiada como uma das melhores de sua carreira, trazendo humanidade e complexidade ao protagonista.",
+                "temas_no_mesmo_eixo": []
               }
             },
             "bullet_de": {
@@ -80435,9 +80441,9 @@ window.ESPECTRO_DATA = {
             "eixo": "direcao_imagem",
             "por_bucket": {
               "negativas": {
-                "mencoes": 3,
+                "mencoes": 4,
                 "de_n": 40,
-                "freq_pct": 7.5,
+                "freq_pct": 10.0,
                 "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
@@ -80445,20 +80451,20 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 5,
+                "mencoes": 6,
                 "de_n": 40,
-                "freq_pct": 12.5,
-                "lift_pp": 2.5,
+                "freq_pct": 15.0,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Fotografia e aspectos técnicos",
+                "exemplo_parafraseado": "Comentários destacam a boa fotografia, o enquadramento caprichado e a trilha sonora usada com parcimônia, embora espectadores achem que a direção não compensa outras falhas.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 4,
+                "mencoes": 3,
                 "de_n": 40,
-                "freq_pct": 10.0,
-                "lift_pp": -2.5,
+                "freq_pct": 7.5,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -80480,11 +80486,9 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 77.5,
                 "lift_pp": 0.0,
                 "acima_da_margem": false,
-                "tema": "protagonista irritante e passivo",
-                "exemplo_parafraseado": "Espectadores consideram o protagonista alguém que reclama demais, é submisso e não evolui, além de ser visto como aggressivo ou people pleaser, o que torna difícil torcer por ele.",
-                "temas_no_mesmo_eixo": [
-                  "personagens femininas sem agência"
-                ]
+                "tema": "Personagem principal desagradável e passivo",
+                "exemplo_parafraseado": "O protagonista é descrito como alguém que reclama demais, se anula em prol dos outros e não desperta empatia, sendo visto como irritante ou pouco crível.",
+                "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 31,
@@ -80492,20 +80496,18 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 77.5,
                 "lift_pp": 0.0,
                 "acima_da_margem": false,
-                "tema": "Final eficaz versus desenvolvimento irregular",
-                "exemplo_parafraseado": "Críticas afirmam que o desfecho é comovente ou poderoso, mas que o restante do filme demora a engrenar e nem sempre justifica a aclamação.",
-                "temas_no_mesmo_eixo": [
-                  "Roteiro previsível e personagens rasos"
-                ]
+                "tema": "Final eficaz, mas previsível ou exagerado",
+                "exemplo_parafraseado": "Pessoas deste grupo consideram o desfecho emocionante e bem executado, enquanto outras o acham piegas, corrido ou que não compensa os problemas do restante do filme.",
+                "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 23,
+                "mencoes": 25,
                 "de_n": 40,
-                "freq_pct": 57.5,
-                "lift_pp": -20.0,
+                "freq_pct": 62.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Reflexão sobre o valor da vida e das pessoas",
+                "exemplo_parafraseado": "As reviews refletem sobre como o filme lembra a importância de cada existência e o impacto que temos na vida dos outros.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80519,10 +80521,10 @@ window.ESPECTRO_DATA = {
             "eixo": "som_trilha",
             "por_bucket": {
               "negativas": {
-                "mencoes": 1,
+                "mencoes": 2,
                 "de_n": 40,
-                "freq_pct": 2.5,
-                "lift_pp": -7.5,
+                "freq_pct": 5.0,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -80559,33 +80561,33 @@ window.ESPECTRO_DATA = {
             "eixo": "tom_atmosfera",
             "por_bucket": {
               "negativas": {
-                "mencoes": 10,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 25.0,
-                "lift_pp": -17.5,
+                "freq_pct": 20.0,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
-                "tema": "depressão e tom depressivo",
-                "exemplo_parafraseado": "Reviews apontam que o filme é excessivamente depressivo para uma obra natalina, deixando uma sensação de tristeza e falta de esperança, ao contrário do que se espera.",
+                "tema": "Excesso de sentimentalismo e tom depressivo",
+                "exemplo_parafraseado": "As reviews apontam que a obra mistura um clima natalino edificante com um retrato muito triste e depressivo da vida do protagonista, o que soa contraditório e cansativo.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 6,
+                "mencoes": 7,
                 "de_n": 40,
-                "freq_pct": 15.0,
-                "lift_pp": -27.5,
+                "freq_pct": 17.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 17,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 42.5,
-                "lift_pp": 17.5,
+                "freq_pct": 32.5,
+                "lift_pp": 12.5,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Espírito natalino e tradição",
+                "exemplo_parafraseado": "Espectadores comentam que assistir ao filme se tornou uma tradição de Natal, proporcionando uma experiência acolhedora e cheia de esperança.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80599,10 +80601,10 @@ window.ESPECTRO_DATA = {
             "eixo": "impacto_emocional",
             "por_bucket": {
               "negativas": {
-                "mencoes": 12,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -17.5,
+                "freq_pct": 32.5,
+                "lift_pp": -20.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -80612,20 +80614,20 @@ window.ESPECTRO_DATA = {
                 "mencoes": 10,
                 "de_n": 40,
                 "freq_pct": 25.0,
-                "lift_pp": -22.5,
+                "lift_pp": -27.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 19,
+                "mencoes": 21,
                 "de_n": 40,
-                "freq_pct": 47.5,
-                "lift_pp": 17.5,
+                "freq_pct": 52.5,
+                "lift_pp": 20.0,
                 "acima_da_margem": false,
-                "tema": "Emoção e choro",
-                "exemplo_parafraseado": "Reviews relatam que o filme emociona profundamente, levando a lágrimas e a uma forte comoção, especialmente em seu desfecho.",
+                "tema": "Mensagem emocional e comovente",
+                "exemplo_parafraseado": "Reviews destacam que o filme é profundamente tocante e faz chorar, com uma mensagem poderosa sobre o valor da vida e das relações.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80639,33 +80641,33 @@ window.ESPECTRO_DATA = {
             "eixo": "comparacoes",
             "por_bucket": {
               "negativas": {
-                "mencoes": 6,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 15.0,
-                "lift_pp": -20.0,
+                "freq_pct": 20.0,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 12,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -5.0,
+                "freq_pct": 32.5,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 14,
+                "mencoes": 12,
                 "de_n": 40,
-                "freq_pct": 35.0,
-                "lift_pp": 5.0,
+                "freq_pct": 30.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Clássico atemporal e natalino",
-                "exemplo_parafraseado": "O filme é descrito como um clássico que envelhece bem, sendo reassistido em tradições natalinas e admirado por sua qualidade duradoura.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80679,30 +80681,30 @@ window.ESPECTRO_DATA = {
             "eixo": "expectativa",
             "por_bucket": {
               "negativas": {
-                "mencoes": 17,
+                "mencoes": 15,
                 "de_n": 40,
-                "freq_pct": 42.5,
-                "lift_pp": 0.0,
+                "freq_pct": 37.5,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 17,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 42.5,
-                "lift_pp": 0.0,
+                "freq_pct": 40.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": "Clássico superestimado",
-                "exemplo_parafraseado": "Pessoas deste grupo consideram que o filme é superestimado e não corresponde à reputação de obra-prima, mesmo reconhecendo seu valor histórico.",
+                "exemplo_parafraseado": "Reviews medianas questionam o status de obra-prima do filme, sugerindo que ele é bom, mas não merece a reputação de clássico absoluto que costuma receber.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
                 "mencoes": 15,
                 "de_n": 40,
                 "freq_pct": 37.5,
-                "lift_pp": -5.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -80719,35 +80721,36 @@ window.ESPECTRO_DATA = {
             "eixo": "critica_social",
             "por_bucket": {
               "negativas": {
-                "mencoes": 19,
+                "mencoes": 20,
                 "de_n": 40,
-                "freq_pct": 47.5,
-                "lift_pp": 17.5,
+                "freq_pct": 50.0,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
-                "tema": "mensagem cristã e moral simplista",
-                "exemplo_parafraseado": "O grupo critica a forte orientação cristã e a moralidade simplista, que reduzem questões complexas a fórmulas fáceis e manipuladoras, ignorando a complexidade da vida real.",
+                "tema": "Mensagem moral simplista e manipuladora",
+                "exemplo_parafraseado": "Este grupo critica a forma como o filme reduz questões complexas a uma moral binária entre o bem e o mal, forçando uma lição de vida otimista que soa artificial.",
                 "temas_no_mesmo_eixo": [
-                  "crítica ao capitalismo e à estrutura social"
+                  "Mensagem cristã e ideologia conservadora",
+                  "Representação feminina limitada e piadas problemáticas"
                 ]
               },
               "medianas": {
-                "mencoes": 12,
+                "mencoes": 14,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -17.5,
+                "freq_pct": 35.0,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
-                "tema": "Excesso de otimismo e moral cristã",
-                "exemplo_parafraseado": "Reviews medianas criticam o tom excessivamente edificante, a idealização do sacrifício pessoal e a mensagem religiosa ou conservadora que soa artificial.",
+                "tema": "Mensagem otimista e lição de vida",
+                "exemplo_parafraseado": "Este grupo reconhece que o filme transmite uma mensagem positiva sobre valorizar a própria vida e as pessoas ao redor, embora espectadores considerem essa moral excessivamente óbvia ou ingênua.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
                 "mencoes": 10,
                 "de_n": 40,
                 "freq_pct": 25.0,
-                "lift_pp": -22.5,
+                "lift_pp": -25.0,
                 "acima_da_margem": false,
-                "tema": "Mensagem sobre o valor da vida e da existência",
-                "exemplo_parafraseado": "As reviews destacam a reflexão sobre como cada vida importa e influencia a de outros, reforçando a ideia de que ninguém é um fracasso quando tem amigos.",
+                "tema": "Clássico atemporal",
+                "exemplo_parafraseado": "Reviews mencionam que o filme envelheceu bem e continua relevante, sendo considerado um clássico que merece ser visto e revisto.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -80765,39 +80768,39 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.50",
+        "spec_version": "1.9.51",
         "verificador": {
           "aplicado": true,
-          "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
+          "fonte": "execucoes/regeneracao-r2-2026-11-26/its-a-wonderful-life/classificacao/consenso_verificado.jsonl",
           "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       },
       "condicoes": {
         "vale_a_pena": [
           {
-            "texto": "busca uma história que emociona até as lágrimas e provoca forte comoção",
+            "texto": "busca uma história profundamente tocante sobre o valor da vida e das relações",
             "tema_origem": "POS-A",
             "bucket_origem": "positivas",
-            "tema_texto": "Emoção e choro",
-            "rotulo_forca": "muitos"
+            "tema_texto": "Mensagem emocional e comovente",
+            "rotulo_forca": "a maioria"
           },
           {
-            "texto": "valoriza uma das melhores performances da carreira de James Stewart",
+            "texto": "aprecia uma atuação elogiada como das melhores da carreira de James Stewart",
             "tema_origem": "POS-B",
             "bucket_origem": "positivas",
             "tema_texto": "Atuação de James Stewart",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "busca uma reflexão sobre o peso de cada existência na vida de outros",
+            "texto": "procura um clássico que envelheceu bem e segue relevante para rever",
             "tema_origem": "POS-C",
             "bucket_origem": "positivas",
-            "tema_texto": "Mensagem sobre o valor da vida e da existência",
-            "rotulo_forca": "muitos"
+            "tema_texto": "Clássico atemporal",
+            "rotulo_forca": "alguns"
           },
           {
-            "texto": "tolera um início lento sabendo que a narrativa ganha força na reta final",
-            "tema_origem": "POS-E",
+            "texto": "tolera um começo lento sabendo que o desenrolar compensa e gratifica",
+            "tema_origem": "POS-F",
             "bucket_origem": "positivas",
             "tema_texto": "Ritmo e estrutura narrativa",
             "rotulo_forca": "alguns"
@@ -80805,31 +80808,24 @@ window.ESPECTRO_DATA = {
         ],
         "talvez_evite": [
           {
-            "texto": "se incomoda com uma primeira metade arrastada e uma experiência cansativa pela longa duração",
+            "texto": "se incomoda com narrativa arrastada e longa, de primeira metade tediosa",
             "tema_origem": "NEG-A",
             "bucket_origem": "negativas",
-            "tema_texto": "ritmo lento e longa duração",
+            "tema_texto": "Ritmo lento e longa duração",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "rejeita uma moralidade simplista de forte orientação cristã que reduz questões complexas",
+            "texto": "evita moral binária entre bem e mal e lições otimistas artificiais",
             "tema_origem": "NEG-B",
             "bucket_origem": "negativas",
-            "tema_texto": "mensagem cristã e moral simplista",
-            "rotulo_forca": "muitos"
-          },
-          {
-            "texto": "se incomoda com um protagonista queixoso, passivo e sem evolução",
-            "tema_origem": "NEG-C",
-            "bucket_origem": "negativas",
-            "tema_texto": "protagonista irritante e passivo",
+            "tema_texto": "Mensagem moral simplista e manipuladora",
             "rotulo_forca": "alguns"
           },
           {
-            "texto": "evita obras cuja visão burguesa reforça estruturas injustas sem questionar o sistema",
-            "tema_origem": "NEG-E",
+            "texto": "se cansa com sentimentalismo natalino somado a um retrato triste e depressivo",
+            "tema_origem": "NEG-C",
             "bucket_origem": "negativas",
-            "tema_texto": "crítica ao capitalismo e à estrutura social",
+            "tema_texto": "Excesso de sentimentalismo e tom depressivo",
             "rotulo_forca": "alguns"
           }
         ],
@@ -80856,13 +80852,12 @@ window.ESPECTRO_DATA = {
             "POS-A",
             "POS-B",
             "POS-C",
-            "POS-E"
+            "POS-F"
           ],
           "talvez_evite": [
             "NEG-A",
             "NEG-B",
-            "NEG-C",
-            "NEG-E"
+            "NEG-C"
           ]
         },
         "temas_saltados": {
@@ -80873,64 +80868,53 @@ window.ESPECTRO_DATA = {
         "sem_condicao_publicavel": [],
         "par_desfeito": [],
         "recusas_invalidas": [],
-        "retry": {
-          "n_reprovadas": 3,
-          "n_aplicadas": 3,
-          "n_saltadas_pelo_modelo": 0,
-          "n_descartadas": 0,
-          "n_recusadas_pelo_modelo": 0
-        },
+        "retry": null,
         "provider": "featherless",
         "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "n_candidatos": 3,
-        "n_chamadas": 4,
-        "indice_escolhido": 0,
+        "n_chamadas": 3,
+        "indice_escolhido": 1,
         "candidatos": [
           {
             "indice": 0,
-            "n_condicoes": 8,
-            "n_flags": 3,
+            "n_condicoes": 7,
+            "n_flags": 1,
             "flags": [
-              "exemplo_verbatim",
-              "sem_discriminacao"
+              "exemplo_verbatim"
             ],
-            "n_temas_cobertos": 8,
+            "n_temas_cobertos": 7,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 8
+            "n_temas_resolvidos": 7
           },
           {
             "indice": 1,
-            "n_condicoes": 8,
-            "n_flags": 4,
-            "flags": [
-              "exemplo_verbatim",
-              "sem_discriminacao"
-            ],
-            "n_temas_cobertos": 8,
+            "n_condicoes": 7,
+            "n_flags": 0,
+            "flags": [],
+            "n_temas_cobertos": 7,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 8
+            "n_temas_resolvidos": 7
           },
           {
             "indice": 2,
-            "n_condicoes": 8,
-            "n_flags": 4,
+            "n_condicoes": 7,
+            "n_flags": 1,
             "flags": [
-              "exemplo_verbatim",
-              "sem_discriminacao"
+              "exemplo_verbatim"
             ],
-            "n_temas_cobertos": 8,
+            "n_temas_cobertos": 7,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 8
+            "n_temas_resolvidos": 7
           }
         ],
         "uso": {
-          "prompt_tokens": 17890,
-          "completion_tokens": 1085,
-          "cache_hit_tokens": 15517,
-          "cache_miss_tokens": 2373
+          "prompt_tokens": 12909,
+          "completion_tokens": 817,
+          "cache_hit_tokens": 11999,
+          "cache_miss_tokens": 910
         },
-        "latencia_s": 7.26,
-        "spec_version": "1.9.50",
+        "latencia_s": 5.97,
+        "spec_version": "1.9.51",
         "variante": "experimento-briefing"
       }
     },
@@ -98460,7 +98444,7 @@ window.ESPECTRO_DATA = {
     "modern-times": {
       "slug": "modern-times",
       "data_coleta": "2026-11-08T09:43:03.539065+00:00",
-      "spec_version": "1.9.50",
+      "spec_version": "1.9.51",
       "total_reviews_observadas": 301441,
       "reviews_url": "https://letterboxd.com/film/modern-times/reviews/",
       "ficha": {
@@ -99038,63 +99022,66 @@ window.ESPECTRO_DATA = {
               "tema": "Humor datado e sem graça",
               "mencoes_aproximadas": 18,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+              "exemplo_parafraseado": "Reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual."
+              "exemplo_antes_da_guarda": "Várias reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado."
             },
             {
-              "tema": "Ritmo lento e cansativo",
-              "mencoes_aproximadas": 15,
+              "tema": "Ritmo arrastado e tédio",
+              "mencoes_aproximadas": 16,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+              "exemplo_parafraseado": "O filme é descrito como lento, monótono e entediante, com cenas que se estendem demais e uma duração que parece maior do que realmente é, levando espectadores a dispersar ou querer dormir.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Repetição excessiva de piadas",
+              "tema": "Repetição de gags e situações",
               "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+              "exemplo_parafraseado": "As reviews apontam que as mesmas piadas e situações se repetem à exaustão, sem variação, tornando o filme previsível e cansativo.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
-            },
-            {
-              "tema": "Falta de conexão com o espectador",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_pendente": true
             },
             {
               "tema": "Crítica social simplista",
-              "mencoes_aproximadas": 7,
+              "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
+              "exemplo_parafraseado": "Espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para alguns."
+              "exemplo_antes_da_guarda": "Alguns espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria."
             },
             {
-              "tema": "Dificuldade com o formato silencioso",
-              "mencoes_aproximadas": 7,
+              "tema": "Dificuldade com cinema silencioso",
+              "mencoes_aproximadas": 8,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+              "exemplo_parafraseado": "Espectadores relatam não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Há quem relate não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens."
+            },
+            {
+              "tema": "Ressalvas à figura de Chaplin",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Reviews criticam o próprio Chaplin, considerando seu personagem irritante ou incompetente, e reviews mencionam desconforto com questões pessoais do ator, como a diferença de idade em relacionamentos retratados.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Certas reviews criticam o próprio Chaplin, considerando seu personagem irritante ou incompetente, e algumas mencionam desconforto com questões pessoais do ator, como a diferença de idade em relacionamentos retratados."
             }
           ],
-          "observacao_geral": "As reviews negativas destacam principalmente o humor datado e sem graça, o ritmo lento e a repetição excessiva das piadas, além de uma desconexão com o público atual. Mesmo reconhecendo a importância histórica e a crítica social, este grupo não se envolveu com a obra.",
+          "observacao_geral": "Este grupo de reviews negativas concentra-se em problemas de humor datado, ritmo lento e repetição excessiva, além de apontar uma crítica social considerada simplista. Mesmo reconhecendo o valor histórico e técnico do filme, essas pessoas afirmam que a experiência não funcionou para elas, seja pela comédia ultrapassada ou pela dificuldade com o formato silencioso.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 2
@@ -99180,67 +99167,71 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "crítica social e capitalismo",
-              "mencoes_aproximadas": 18,
+              "tema": "Crítica social e capitalismo",
+              "mencoes_aproximadas": 28,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+              "exemplo_parafraseado": "A obra retrata a desumanização do trabalho industrial, a mecanização da vida e as desigualdades sociais, mantendo-se relevante quase um século depois.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "comédia e pastelão",
-              "mencoes_aproximadas": 14,
+              "tema": "Comédia pastelão e atuação física de Chaplin",
+              "mencoes_aproximadas": 22,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
+              "exemplo_parafraseado": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora espectadores achem as piadas repetitivas.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora alguns achem as piadas repetitivas ou datadas."
+              "exemplo_antes_da_guarda": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora alguns achem as piadas repetitivas."
             },
             {
-              "tema": "ritmo e duração",
+              "tema": "Falta de diálogos e uso de cartelas",
+              "mencoes_aproximadas": 12,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para espectadores.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para parte do público."
+            },
+            {
+              "tema": "Ritmo e estrutura narrativa",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Algumas reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado."
+            },
+            {
+              "tema": "Envelhecimento e experiência de assistir",
               "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "atuação e carisma de Chaplin",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+              "exemplo_parafraseado": "Espectadores do grupo sentem que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Este grupo reconhece o talento físico e a energia de Chaplin, mas alguns o consideram repetitivo ou pouco envolvente."
+              "exemplo_antes_da_guarda": "Parte do grupo sente que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica."
             },
             {
-              "tema": "preferência por cinema falado",
-              "mencoes_aproximadas": 7,
+              "tema": "Vida pessoal de Chaplin como fator negativo",
+              "mencoes_aproximadas": 4,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+              "exemplo_parafraseado": "Pessoas mencionam questões biográficas de Chaplin que afetaram negativamente sua percepção da obra.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Diversas reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante."
-            },
-            {
-              "tema": "relevância histórica",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews medianas reconhecem a importância do filme como marco cinematográfico, mas isso não se traduz necessariamente em uma nota mais alta.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "exemplo_antes_da_guarda": "Algumas pessoas mencionam questões biográficas de Chaplin que afetaram negativamente sua percepção da obra."
             }
           ],
-          "observacao_geral": "As reviews medianas equilibram o reconhecimento da importância histórica e da crítica social com ressalvas sobre o ritmo, o estilo silencioso e o humor datado. Este grupo tende a valorizar o filme mais pelo que representa do que pela experiência de assisti-lo.",
+          "observacao_geral": "As reviews medianas reconhecem a relevância histórica e a crítica social do filme, mas apontam ressalvas quanto ao ritmo, à ausência de diálogos e ao envelhecimento da experiência, resultando em uma recepção morna dentro deste grupo.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 10
@@ -99278,10 +99269,10 @@ window.ESPECTRO_DATA = {
           },
           "janela_amostra": {
             "n": 40,
-            "min": "2018-02-11",
+            "min": "2019-01-05",
             "max": "2026-11-08",
-            "p5": "2026-08-20",
-            "p50": "2026-11-03",
+            "p5": "2026-08-23",
+            "p50": "2026-11-04",
             "p95": "2026-11-07"
           },
           "niveis": [
@@ -99363,72 +99354,73 @@ window.ESPECTRO_DATA = {
                 "truncada_sem_texto": 0,
                 "spoiler": 1,
                 "abaixo_min_chars": 39,
-                "excedente_cota": 8,
+                "excedente_cota": 7,
                 "duplicata": 0,
-                "outros": 0
+                "outros": 0,
+                "resumo_de_trama": 1
               },
               "paginas_buscadas": 0
             }
           ],
           "temas": [
             {
-              "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-              "mencoes_aproximadas": 28,
+              "tema": "Crítica social e ao capitalismo",
+              "mencoes_aproximadas": 22,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+              "exemplo_parafraseado": "As reviews destacam a crítica à exploração da classe trabalhadora e à desumanização causada pelo capitalismo, apontando como o filme retrata a transformação do ser humano em peça da máquina produtiva.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Humor físico e atuação de Chaplin",
-              "mencoes_aproximadas": 25,
+              "tema": "Atuação e genialidade de Charlie Chaplin",
+              "mencoes_aproximadas": 18,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
+              "exemplo_parafraseado": "Este grupo elogia a atuação e a direção de Chaplin, considerado um gênio da comédia e do cinema mudo, com performances físicas e timing impecáveis.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Atualidade e relevância da obra",
-              "mencoes_aproximadas": 20,
+              "tema": "Humor e comédia pastelão",
+              "mencoes_aproximadas": 16,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews positivas enfatizam como o filme continua relevante, com suas críticas à industrialização e à desigualdade ecoando problemas contemporâneos como automação e precarização do trabalho.",
+              "exemplo_parafraseado": "As reviews positivas apontam que o humor atemporal e as gags físicas continuam engraçadas mesmo após décadas, com situações cômicas que funcionam muito bem.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Transição para o cinema sonoro e trilha musical",
+              "tema": "Atualidade e relevância do filme",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+              "exemplo_parafraseado": "Os comentários destacam como a crítica à industrialização e à desigualdade social permanece atual e relevante, mesmo quase 90 anos após o lançamento.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Transição para o cinema falado",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Este grupo menciona a mistura de elementos do cinema mudo com o som, incluindo a trilha sonora e a cena cantada, como um aspecto interessante da evolução do cinema.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Primeiro contato com Chaplin",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical."
-            },
-            {
-              "tema": "Personagem Vagabundo e despedida",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Atuação de Paulette Goddard e química com Chaplin",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews positivas elogiam a atuação de Paulette Goddard, sua química com Chaplin e a força de sua personagem, que traz esperança e dinamismo à narrativa.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "exemplo_antes_da_guarda": "Muitas reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele."
             }
           ],
-          "observacao_geral": "As reviews positivas apontam para uma forte admiração pela crítica social de Chaplin, pelo humor físico atemporal e pela forma como o filme equilibra comicidade e melancolia. Este grupo destaca a atuação do diretor e a relevância contínua da obra, frequentemente ressaltando sua atualidade.",
+          "observacao_geral": "As reviews positivas deste grupo destacam a genialidade de Chaplin, o humor atemporal e a crítica social presente no filme, frequentemente elogiando sua atualidade e a atuação do diretor. A recepção neste recorte é marcada por admiração e surpresa com a qualidade da obra mesmo após tantos anos.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 88
@@ -99451,30 +99443,30 @@ window.ESPECTRO_DATA = {
             "eixo": "ritmo",
             "por_bucket": {
               "negativas": {
-                "mencoes": 14,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 35.0,
-                "lift_pp": 17.5,
+                "freq_pct": 32.5,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
-                "tema": "Ritmo lento e cansativo",
-                "exemplo_parafraseado": "O ritmo arrastado e a duração longa para um filme curto tornam a experiência entediante para este grupo.",
+                "tema": "Ritmo arrastado e tédio",
+                "exemplo_parafraseado": "O filme é descrito como lento, monótono e entediante, com cenas que se estendem demais e uma duração que parece maior do que realmente é, levando espectadores a dispersar ou querer dormir.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 7,
                 "de_n": 40,
                 "freq_pct": 17.5,
-                "lift_pp": -17.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
-                "tema": "ritmo e duração",
-                "exemplo_parafraseado": "As reviews medianas apontam que o ritmo é irregular, com partes arrastadas e uma sensação de que a duração poderia ser menor.",
+                "tema": "Ritmo e estrutura narrativa",
+                "exemplo_parafraseado": "Reviews consideram a história arrastada ou repetitiva, com episódios que se prolongam demais, enquanto outras acham o ritmo adequado.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
                 "mencoes": 2,
                 "de_n": 40,
                 "freq_pct": 5.0,
-                "lift_pp": -30.0,
+                "lift_pp": -27.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -99491,10 +99483,10 @@ window.ESPECTRO_DATA = {
             "eixo": "atuacao",
             "por_bucket": {
               "negativas": {
-                "mencoes": 12,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -2.5,
+                "freq_pct": 32.5,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -99506,21 +99498,19 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 20.0,
                 "lift_pp": -12.5,
                 "acima_da_margem": false,
-                "tema": "atuação e carisma de Chaplin",
-                "exemplo_parafraseado": "Este grupo reconhece o talento físico e a energia de Chaplin, mas espectadores o consideram repetitivo ou pouco envolvente.",
+                "tema": "Comédia pastelão e atuação física de Chaplin",
+                "exemplo_parafraseado": "O humor físico e as acrobacias de Chaplin são destacados como impressionantes e engraçados, embora espectadores achem as piadas repetitivas.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 13,
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 32.5,
-                "lift_pp": 2.5,
+                "freq_pct": 27.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Humor físico e atuação de Chaplin",
-                "exemplo_parafraseado": "Este grupo elogia a genialidade cômica de Chaplin, com gags visuais e uma performance física que arranca risadas mesmo em situações simples, sendo considerada atemporal.",
-                "temas_no_mesmo_eixo": [
-                  "Atuação de Paulette Goddard e química com Chaplin"
-                ]
+                "tema": "Atuação e genialidade de Charlie Chaplin",
+                "exemplo_parafraseado": "Este grupo elogia a atuação e a direção de Chaplin, considerado um gênio da comédia e do cinema mudo, com performances físicas e timing impecáveis.",
+                "temas_no_mesmo_eixo": []
               }
             },
             "bullet_de": {
@@ -99536,27 +99526,27 @@ window.ESPECTRO_DATA = {
                 "mencoes": 3,
                 "de_n": 40,
                 "freq_pct": 7.5,
-                "lift_pp": -12.5,
-                "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
-                "temas_no_mesmo_eixo": []
-              },
-              "medianas": {
-                "mencoes": 4,
-                "de_n": 40,
-                "freq_pct": 10.0,
                 "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
-              "positivas": {
-                "mencoes": 8,
+              "medianas": {
+                "mencoes": 5,
                 "de_n": 40,
-                "freq_pct": 20.0,
-                "lift_pp": 10.0,
+                "freq_pct": 12.5,
+                "lift_pp": -5.0,
+                "acima_da_margem": false,
+                "tema": null,
+                "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 7,
+                "de_n": 40,
+                "freq_pct": 17.5,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -99573,33 +99563,33 @@ window.ESPECTRO_DATA = {
             "eixo": "roteiro_estrutura",
             "por_bucket": {
               "negativas": {
-                "mencoes": 22,
+                "mencoes": 23,
                 "de_n": 40,
-                "freq_pct": 55.0,
+                "freq_pct": 57.5,
                 "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Repetição excessiva de piadas",
-                "exemplo_parafraseado": "As mesmas situações cômicas se repetem à exaustão, fazendo a narrativa parecer estagnada.",
+                "tema": "Repetição de gags e situações",
+                "exemplo_parafraseado": "As reviews apontam que as mesmas piadas e situações se repetem à exaustão, sem variação, tornando o filme previsível e cansativo.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 22,
+                "mencoes": 25,
                 "de_n": 40,
-                "freq_pct": 55.0,
-                "lift_pp": -5.0,
+                "freq_pct": 62.5,
+                "lift_pp": 0.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Falta de diálogos e uso de cartelas",
+                "exemplo_parafraseado": "A ausência de fala e a mistura de recursos sonoros e silenciosos foram apontados como confusos ou difíceis de acompanhar para espectadores.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 24,
+                "mencoes": 25,
                 "de_n": 40,
-                "freq_pct": 60.0,
-                "lift_pp": 5.0,
+                "freq_pct": 62.5,
+                "lift_pp": 0.0,
                 "acima_da_margem": false,
-                "tema": "Personagem Vagabundo e despedida",
-                "exemplo_parafraseado": "O grupo enaltece o Vagabundo como um símbolo do homem comum, sua resiliência e otimismo, e considera este filme uma despedida marcante do personagem.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -99618,8 +99608,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 12.5,
                 "lift_pp": -7.5,
                 "acima_da_margem": false,
-                "tema": "Dificuldade com o formato silencioso",
-                "exemplo_parafraseado": "A ausência de diálogos e o estilo mudo foram apontados como barreiras para o envolvimento com o filme.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
@@ -99638,8 +99628,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 20.0,
                 "lift_pp": 5.0,
                 "acima_da_margem": false,
-                "tema": "Transição para o cinema sonoro e trilha musical",
-                "exemplo_parafraseado": "Reviews mencionam a mistura de elementos do cinema mudo com o som, destacando a ousadia de Chaplin e a qualidade da trilha sonora, incluindo o famoso número musical.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -99653,33 +99643,33 @@ window.ESPECTRO_DATA = {
             "eixo": "tom_atmosfera",
             "por_bucket": {
               "negativas": {
-                "mencoes": 14,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 35.0,
-                "lift_pp": -22.5,
+                "freq_pct": 32.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": "Humor datado e sem graça",
-                "exemplo_parafraseado": "Reviews acham a comédia pastelão ultrapassada e sem graça, com piadas que não funcionam para o público atual.",
+                "exemplo_parafraseado": "Reviews afirmam que as piadas não funcionam hoje, soam repetitivas e infantis, e que a comédia pastelão não provoca riso, sendo comparada a esquetes televisivos ou a um humor ultrapassado.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 15,
+                "mencoes": 19,
                 "de_n": 40,
-                "freq_pct": 37.5,
-                "lift_pp": -20.0,
-                "acima_da_margem": false,
-                "tema": "comédia e pastelão",
-                "exemplo_parafraseado": "Este grupo considera as sequências cômicas eficazes dentro do estilo pastelão, embora espectadores achem as piadas repetitivas ou datadas.",
-                "temas_no_mesmo_eixo": []
-              },
-              "positivas": {
-                "mencoes": 23,
-                "de_n": 40,
-                "freq_pct": 57.5,
-                "lift_pp": 20.0,
+                "freq_pct": 47.5,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 18,
+                "de_n": 40,
+                "freq_pct": 45.0,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": "Humor e comédia pastelão",
+                "exemplo_parafraseado": "As reviews positivas apontam que o humor atemporal e as gags físicas continuam engraçadas mesmo após décadas, com situações cômicas que funcionam muito bem.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -99696,26 +99686,26 @@ window.ESPECTRO_DATA = {
                 "mencoes": 17,
                 "de_n": 40,
                 "freq_pct": 42.5,
-                "lift_pp": -2.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Falta de conexão com o espectador",
-                "exemplo_parafraseado": "Muitos não conseguiram se envolver emocionalmente com a história ou com os personagens, achando a experiência vazia.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 18,
+                "mencoes": 19,
                 "de_n": 40,
-                "freq_pct": 45.0,
-                "lift_pp": 2.5,
+                "freq_pct": 47.5,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 15,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 37.5,
+                "freq_pct": 40.0,
                 "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
@@ -99733,30 +99723,30 @@ window.ESPECTRO_DATA = {
             "eixo": "comparacoes",
             "por_bucket": {
               "negativas": {
-                "mencoes": 21,
+                "mencoes": 22,
                 "de_n": 40,
-                "freq_pct": 52.5,
-                "lift_pp": -5.0,
+                "freq_pct": 55.0,
+                "lift_pp": 12.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 20,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 50.0,
-                "lift_pp": -7.5,
+                "freq_pct": 42.5,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 23,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 57.5,
-                "lift_pp": 5.0,
+                "freq_pct": 42.5,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -99773,33 +99763,33 @@ window.ESPECTRO_DATA = {
             "eixo": "expectativa",
             "por_bucket": {
               "negativas": {
-                "mencoes": 15,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 37.5,
-                "lift_pp": -7.5,
+                "freq_pct": 40.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Dificuldade com cinema silencioso",
+                "exemplo_parafraseado": "Espectadores relatam não se adaptar a filmes mudos e em preto e branco, achando a ausência de diálogos um obstáculo para a conexão com a história e os personagens.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 13,
                 "de_n": 40,
                 "freq_pct": 32.5,
-                "lift_pp": -12.5,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
-                "tema": "preferência por cinema falado",
-                "exemplo_parafraseado": "Reviews medianas mencionam dificuldade com filmes silenciosos, resultando em uma experiência morna ou entediante.",
+                "tema": "Envelhecimento e experiência de assistir",
+                "exemplo_parafraseado": "Espectadores do grupo sentem que o filme mostra sua idade e não prende tanto quanto produções modernas, mesmo reconhecendo sua importância histórica.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 18,
+                "mencoes": 20,
                 "de_n": 40,
-                "freq_pct": 45.0,
-                "lift_pp": 7.5,
+                "freq_pct": 50.0,
+                "lift_pp": 10.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Primeiro contato com Chaplin",
+                "exemplo_parafraseado": "Reviews positivas relatam ser a primeira experiência com um filme de Chaplin, destacando como a obra superou expectativas e despertou interesse em assistir a mais filmes dele.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -99813,35 +99803,37 @@ window.ESPECTRO_DATA = {
             "eixo": "critica_social",
             "por_bucket": {
               "negativas": {
-                "mencoes": 20,
+                "mencoes": 18,
                 "de_n": 40,
-                "freq_pct": 50.0,
+                "freq_pct": 45.0,
                 "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": "Crítica social simplista",
-                "exemplo_parafraseado": "A sátira à industrialização e ao capitalismo é vista como rasa e sem nuances, soando infantil para espectadores.",
-                "temas_no_mesmo_eixo": []
+                "exemplo_parafraseado": "Espectadores consideram a mensagem anticapitalista e a crítica à industrialização tratadas de forma rasa, infantil ou secundária, sem o desenvolvimento que o tema exigiria.",
+                "temas_no_mesmo_eixo": [
+                  "Ressalvas à figura de Chaplin"
+                ]
               },
               "medianas": {
-                "mencoes": 24,
+                "mencoes": 23,
                 "de_n": 40,
-                "freq_pct": 60.0,
-                "lift_pp": -5.0,
+                "freq_pct": 57.5,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "crítica social e capitalismo",
-                "exemplo_parafraseado": "As reviews medianas destacam a crítica à desumanização do trabalho e à desigualdade econômica, com a industrialização tratada como tema central.",
+                "tema": "Crítica social e capitalismo",
+                "exemplo_parafraseado": "A obra retrata a desumanização do trabalho industrial, a mecanização da vida e as desigualdades sociais, mantendo-se relevante quase um século depois.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 26,
+                "mencoes": 24,
                 "de_n": 40,
-                "freq_pct": 65.0,
-                "lift_pp": 5.0,
+                "freq_pct": 60.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-                "exemplo_parafraseado": "As reviews positivas destacam a forte crítica ao capitalismo e à exploração da classe trabalhadora, apontando como o filme retrata a transformação das pessoas em meras peças da máquina produtiva e a permanência dessa crítica quase um século depois.",
+                "tema": "Crítica social e ao capitalismo",
+                "exemplo_parafraseado": "As reviews destacam a crítica à exploração da classe trabalhadora e à desumanização causada pelo capitalismo, apontando como o filme retrata a transformação do ser humano em peça da máquina produtiva.",
                 "temas_no_mesmo_eixo": [
-                  "Atualidade e relevância da obra"
+                  "Atualidade e relevância do filme"
                 ]
               }
             },
@@ -99859,64 +99851,57 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.50",
+        "spec_version": "1.9.51",
         "verificador": {
           "aplicado": true,
-          "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/modern-times/classificacao/consenso_verificado.jsonl",
+          "fonte": "execucoes/regeneracao-r2-2026-11-26/modern-times/classificacao/consenso_verificado.jsonl",
           "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       },
       "condicoes": {
         "vale_a_pena": [
           {
-            "texto": "aprecia uma crítica ao capitalismo e à transformação de pessoas em peças da produção",
+            "texto": "busca uma crítica à exploração do trabalho e à desumanização imposta pelo capitalismo",
             "tema_origem": "POS-A",
             "bucket_origem": "positivas",
-            "tema_texto": "Crítica social e econômica (capitalismo, exploração, desigualdade)",
-            "rotulo_forca": "a maioria"
+            "tema_texto": "Crítica social e ao capitalismo",
+            "rotulo_forca": "cerca de metade"
           },
           {
-            "texto": "valoriza uma performance física cômica que arranca risadas em situações simples",
+            "texto": "aprecia a atuação e a direção de Chaplin, com gênio cômico e timing impecável",
             "tema_origem": "POS-B",
             "bucket_origem": "positivas",
-            "tema_texto": "Humor físico e atuação de Chaplin",
-            "rotulo_forca": "a maioria"
-          },
-          {
-            "texto": "busca uma obra cujas críticas à industrialização ecoam problemas contemporâneos",
-            "tema_origem": "POS-C",
-            "bucket_origem": "positivas",
-            "tema_texto": "Atualidade e relevância da obra",
+            "tema_texto": "Atuação e genialidade de Charlie Chaplin",
             "rotulo_forca": "muitos"
           }
         ],
         "talvez_evite": [
           {
-            "texto": "não se diverte com comédia pastelão que soa ultrapassada",
+            "texto": "considera o pastelão ultrapassado e as piadas repetitivas ou infantis",
             "tema_origem": "NEG-A",
             "bucket_origem": "negativas",
             "tema_texto": "Humor datado e sem graça",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "se entedia com ritmo arrastado e longa duração",
+            "texto": "se impacienta com ritmo lento, cenas longas e duração que arrasta até o tédio",
             "tema_origem": "NEG-B",
             "bucket_origem": "negativas",
-            "tema_texto": "Ritmo lento e cansativo",
+            "tema_texto": "Ritmo arrastado e tédio",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "se incomoda com situações cômicas repetidas à exaustão",
+            "texto": "se cansa quando as piadas e situações voltam sem variação, tornando tudo previsível",
             "tema_origem": "NEG-C",
             "bucket_origem": "negativas",
-            "tema_texto": "Repetição excessiva de piadas",
+            "tema_texto": "Repetição de gags e situações",
             "rotulo_forca": "alguns"
           },
           {
-            "texto": "espera uma sátira à industrialização com mais nuances",
-            "tema_origem": "NEG-E",
+            "texto": "se incomoda com um protagonista irritante ou incompetente e com questões pessoais do ator",
+            "tema_origem": "NEG-F",
             "bucket_origem": "negativas",
-            "tema_texto": "Crítica social simplista",
+            "tema_texto": "Ressalvas à figura de Chaplin",
             "rotulo_forca": "alguns"
           }
         ],
@@ -99948,35 +99933,47 @@ window.ESPECTRO_DATA = {
             "NEG-A",
             "NEG-B",
             "NEG-C",
-            "NEG-E"
+            "NEG-F"
           ]
         },
         "temas_saltados": {
-          "vale_a_pena": [],
+          "vale_a_pena": [
+            "POS-C"
+          ],
           "talvez_evite": []
         },
-        "descartadas": [],
+        "descartadas": [
+          {
+            "texto": "procura humor atemporal com gags físicas que continuam engraçadas décadas depois",
+            "tema_origem": "POS-C",
+            "lado": "vale_a_pena",
+            "flags": [
+              "exemplo_verbatim"
+            ]
+          }
+        ],
         "sem_condicao_publicavel": [],
         "par_desfeito": [],
         "recusas_invalidas": [],
         "retry": {
-          "n_reprovadas": 1,
-          "n_aplicadas": 1,
+          "n_reprovadas": 4,
+          "n_aplicadas": 3,
           "n_saltadas_pelo_modelo": 0,
-          "n_descartadas": 0,
+          "n_descartadas": 1,
           "n_recusadas_pelo_modelo": 0
         },
         "provider": "featherless",
         "modelo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "n_candidatos": 3,
         "n_chamadas": 4,
-        "indice_escolhido": 0,
+        "indice_escolhido": 1,
         "candidatos": [
           {
             "indice": 0,
             "n_condicoes": 7,
-            "n_flags": 1,
+            "n_flags": 5,
             "flags": [
+              "comprimento",
               "exemplo_verbatim"
             ],
             "n_temas_cobertos": 7,
@@ -99988,6 +99985,7 @@ window.ESPECTRO_DATA = {
             "n_condicoes": 7,
             "n_flags": 4,
             "flags": [
+              "comprimento",
               "exemplo_verbatim"
             ],
             "n_temas_cobertos": 7,
@@ -99997,8 +99995,9 @@ window.ESPECTRO_DATA = {
           {
             "indice": 2,
             "n_condicoes": 7,
-            "n_flags": 2,
+            "n_flags": 5,
             "flags": [
+              "comprimento",
               "exemplo_verbatim"
             ],
             "n_temas_cobertos": 7,
@@ -100007,13 +100006,13 @@ window.ESPECTRO_DATA = {
           }
         ],
         "uso": {
-          "prompt_tokens": 15907,
-          "completion_tokens": 909,
-          "cache_hit_tokens": 14625,
-          "cache_miss_tokens": 1282
+          "prompt_tokens": 16327,
+          "completion_tokens": 1092,
+          "cache_hit_tokens": 14777,
+          "cache_miss_tokens": 1550
         },
-        "latencia_s": 6.0,
-        "spec_version": "1.9.50",
+        "latencia_s": 15.23,
+        "spec_version": "1.9.51",
         "variante": "experimento-briefing"
       }
     },
@@ -126836,7 +126835,7 @@ window.ESPECTRO_DATA = {
     "rear-window": {
       "slug": "rear-window",
       "data_coleta": "2026-11-08T09:38:55.234231+00:00",
-      "spec_version": "1.9.50",
+      "spec_version": "1.9.51",
       "total_reviews_observadas": 913983,
       "reviews_url": "https://letterboxd.com/film/rear-window/reviews/",
       "ficha": {
@@ -127412,70 +127411,70 @@ window.ESPECTRO_DATA = {
           "temas": [
             {
               "tema": "Ritmo lento e tédio",
-              "mencoes_aproximadas": 24,
+              "mencoes_aproximadas": 28,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando espectadores a quase desistir ou a dormir durante a exibição.",
+              "exemplo_parafraseado": "Reviews descrevem o filme como arrastado e entediante, com longos períodos sem acontecimentos relevantes, levando alguns a quase desistir ou a dormir durante a exibição.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando vários espectadores a quase desistir ou a dormir durante a exibição."
+              "exemplo_antes_da_guarda": "Muitas reviews descrevem o filme como arrastado e entediante, com longos períodos sem acontecimentos relevantes, levando alguns a quase desistir ou a dormir durante a exibição.",
+              "quantidade_pendente": true
             },
             {
               "tema": "Roteiro previsível e sem reviravoltas",
-              "mencoes_aproximadas": 14,
+              "mencoes_aproximadas": 20,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo."
-            },
-            {
-              "tema": "Protagonista desagradável e voyeurismo",
-              "mencoes_aproximadas": 12,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O comportamento do personagem principal, que espia os vizinhos, é citado como moralmente problemático e pouco simpático, tornando difícil torcer por ele.",
+              "exemplo_parafraseado": "O grupo critica a falta de surpresas na trama, considerando o desenrolar óbvio e sem reviravoltas, o que torna a experiência frustrante para quem esperava um suspense envolvente.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Personagens e diálogos fracos",
-              "mencoes_aproximadas": 9,
+              "tema": "Protagonista e personagens desagradáveis",
+              "mencoes_aproximadas": 15,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews criticam a falta de carisma dos personagens e diálogos considerados artificiais, repetitivos ou desinteressantes.",
+              "exemplo_parafraseado": "Reviews apontam o protagonista como egocêntrico, tóxico ou voyeur, e os demais personagens como irritantes ou pouco cativantes, prejudicando o envolvimento com a história.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Várias reviews apontam o protagonista como egocêntrico, tóxico ou voyeur, e os demais personagens como irritantes ou pouco cativantes, prejudicando o envolvimento com a história."
+            },
+            {
+              "tema": "Relação amorosa mal desenvolvida",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Críticas focam na dinâmica do casal principal, considerando o tratamento dado à personagem feminina depreciativo e a química entre eles pouco convincente.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Algumas críticas focam na dinâmica do casal principal, considerando o tratamento dado à personagem feminina depreciativo e a química entre eles pouco convincente."
+            },
+            {
+              "tema": "Diálogos ruins e monótonos",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Há menções a diálogos artificiais, repetitivos ou desinteressantes, que contribuem para a sensação de arrastamento e falta de naturalidade.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Falta de tensão e suspense",
+              "tema": "Final decepcionante",
               "mencoes_aproximadas": 7,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores relatam que o suspense só aparece nos minutos finais, não compensando a longa espera, e que o filme não consegue manter a tensão ao longo da projeção.",
+              "exemplo_parafraseado": "O desfecho é criticado por ser anticlimático ou óbvio, não compensando a lentidão anterior e deixando a impressão de que a história não justificou o tempo investido.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Alguns espectadores relatam que o suspense só aparece nos minutos finais, não compensando a longa espera, e que o filme não consegue manter a tensão ao longo da projeção."
-            },
-            {
-              "tema": "Expectativa frustrada e superestimação",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Diversas críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção."
+              "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews negativas destacam principalmente o ritmo lento e monótono, o roteiro previsível e a dificuldade em se envolver com os personagens. Este grupo considera a obra superestimada e pouco envolvente, apesar de reconhecer qualidades técnicas isoladas.",
+          "observacao_geral": "As reviews negativas deste grupo destacam principalmente o ritmo arrastado, a falta de envolvimento com os personagens e a previsibilidade da trama. Apesar de reconhecerem qualidades técnicas, como fotografia e atuações, a experiência geral é descrita como entediante e frustrante.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
+          "quantidade_fallback": "recusado_sem_ganho",
           "share_real": 1
         },
         {
@@ -127559,67 +127558,67 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "Ritmo lento e falta de tensão",
-              "mencoes_aproximadas": 18,
+              "tema": "ritmo lento e expectativa frustrada",
+              "mencoes_aproximadas": 22,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para espectadores do grupo.",
+              "exemplo_parafraseado": "Reviews medianas relatam tédio e lentidão, esperando por um clímax que não chega, e afirmam que o filme não correspondeu às altas expectativas geradas pela reputação de clássico.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para parte do grupo."
+              "exemplo_antes_da_guarda": "Várias reviews medianas relatam tédio e lentidão, esperando por um clímax que não chega, e afirmam que o filme não correspondeu às altas expectativas geradas pela reputação de clássico."
             },
             {
-              "tema": "Conceito e ambientação elogiados",
-              "mencoes_aproximadas": 15,
+              "tema": "elogio à fotografia e ao uso de cores",
+              "mencoes_aproximadas": 14,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo destaca a ideia de narrar tudo a partir de um único ponto de vista e o uso do cenário limitado como algo engenhoso, que prende a atenção mesmo sem grandes deslocamentos.",
+              "exemplo_parafraseado": "Este grupo destaca a fotografia bonita, o uso expressivo de cores e sombras, e a inventividade visual como os pontos mais fortes do filme.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Personagens e relação central",
+              "tema": "conceito e ambientação única",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews medianas elogiam a química entre o casal protagonista e a evolução da personagem feminina, mas também criticam o protagonista por ser pouco simpático ou imaturo.",
+              "exemplo_parafraseado": "As reviews medianas elogiam a ideia de um filme passado quase inteiramente em um único cenário e a forma como isso cria uma sensação de voyeurismo e comunidade.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Fotografia e estética",
+              "tema": "atuações e química do elenco",
               "mencoes_aproximadas": 11,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A fotografia, o uso de cores e a composição visual são bastante elogiados, com menções à beleza dos enquadramentos e ao visual que permanece moderno apesar da época.",
+              "exemplo_parafraseado": "A química entre os protagonistas e as atuações, especialmente a de Grace Kelly, são citadas como aspectos agradáveis, embora não suficientes para elevar a nota.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "A química entre os protagonistas e as atuações, especialmente a de Grace Kelly, são frequentemente citadas como aspectos agradáveis, embora não suficientes para elevar a nota."
+            },
+            {
+              "tema": "personagens e questões de gênero problemáticas",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Reviews criticam a representação de personagens femininas e o tom machista e voyeurista, considerando esses aspectos datados e desconfortáveis.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Algumas reviews criticam a representação de personagens femininas e o tom machista e voyeurista, considerando esses aspectos datados e desconfortáveis."
+            },
+            {
+              "tema": "roteiro e desenvolvimento da trama",
+              "mencoes_aproximadas": 9,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Há menções a um roteiro que, apesar de ter diálogos interessantes, apresenta um mistério pouco empolgante e um desfecho apressado ou insatisfatório.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
-            },
-            {
-              "tema": "Conclusão aquém das expectativas",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Para espectadores deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Para parte deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam."
-            },
-            {
-              "tema": "Machismo e voyeurismo problemáticos",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos."
             }
           ],
-          "observacao_geral": "As reviews medianas descrevem uma experiência mista: reconhecem a inventividade do conceito, da fotografia e do elenco, mas frequentemente acham o ritmo lento e a resolução pouco empolgante. Este grupo também demonstra incômodo com aspectos sociais e de voyeurismo vistos como datados.",
+          "observacao_geral": "As reviews medianas reunidas aqui apontam para uma experiência morna: reconhecem a qualidade técnica e o conceito inovador, mas frequentemente mencionam ritmo lento, expectativas não atendidas e desconforto com aspectos sociais datados.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 7
@@ -127742,75 +127741,75 @@ window.ESPECTRO_DATA = {
                 "truncada_sem_texto": 0,
                 "spoiler": 3,
                 "abaixo_min_chars": 35,
-                "excedente_cota": 8,
+                "excedente_cota": 7,
                 "duplicata": 0,
-                "outros": 0
+                "outros": 0,
+                "resumo_de_trama": 1
               },
               "paginas_buscadas": 0
             }
           ],
           "temas": [
             {
-              "tema": "Suspense e construção do mistério",
+              "tema": "Direção e construção de suspense de Hitchcock",
+              "mencoes_aproximadas": 28,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "As reviews positivas elogiam a habilidade do diretor em criar tensão a partir de algo simples como observar pela janela, mantendo o espectador engajado e duvidando das suposições do protagonista até o ato final.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Fotografia, design de produção e uso de cenário único",
+              "mencoes_aproximadas": 22,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Este grupo destaca a beleza visual do filme, com elogios ao trabalho de câmera, à composição dos planos e ao cenário do prédio construído em estúdio, que permite à câmera transitar pelas janelas e contar histórias sem sair do apartamento.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atuações e química do elenco",
               "mencoes_aproximadas": 18,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews destacam que o suspense é construído de forma magistral, mantendo o espectador em dúvida sobre o que é real ou fruto da paranoia do protagonista, com um ato final que eleva a tensão ao máximo.",
+              "exemplo_parafraseado": "As reviews positivas elogiam as atuações de James Stewart e Grace Kelly, destacando o carisma e a química entre os dois, além de mencionarem a elegância e o guarda-roupa da personagem feminina.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Fotografia, direção e design de produção",
+              "tema": "Ritmo e envolvimento narrativo",
               "mencoes_aproximadas": 15,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante.",
+              "exemplo_parafraseado": "Reviews consideram o filme envolvente e divertido, com um roteiro que mantém o interesse apesar de se passar em um único local; reviews acham que o ritmo é lento no início, mas logo se torna mais interessante.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitas reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante."
+              "exemplo_antes_da_guarda": "Muitas reviews consideram o filme envolvente e divertido, com um roteiro que mantém o interesse apesar de se passar em um único local; algumas acham que o ritmo é lento no início, mas logo se torna mais interessante."
             },
             {
-              "tema": "Atuações e personagens",
-              "mencoes_aproximadas": 13,
+              "tema": "Personagens femininas fortes e temas de voyeurismo",
+              "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As atuações de James Stewart e Grace Kelly são bastante elogiadas, assim como a química entre eles e a personalidade marcante da personagem feminina, descrita como elegante e perspicaz.",
+              "exemplo_parafraseado": "Este grupo destaca as personagens femininas como inteligentes e ativas na trama, e discute o voyeurismo como tema central, comparando a situação do protagonista à curiosidade humana e à experiência do espectador.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Conceito de voyeurismo e observação",
+              "tema": "Final e clímax de suspense",
               "mencoes_aproximadas": 10,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O grupo reflete sobre como o filme explora a curiosidade humana e o prazer de observar a vida alheia, comparando a situação do protagonista à experiência do próprio espectador.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Ritmo e duração",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
+              "exemplo_parafraseado": "As reviews positivas elogiam o ato final como um momento de grande tensão, com espectadores mencionando que a conclusão é satisfatória ou que o clímax compensa possíveis momentos mais lentos.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
-              "quantidade_pendente": true
-            },
-            {
-              "tema": "Relação entre os protagonistas",
-              "mencoes_aproximadas": 7,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A dinâmica do casal central é vista como um dos pontos fortes, com diálogos afiados e uma evolução que enriquece a trama, mesmo quando o mistério principal não está em foco.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "exemplo_antes_da_guarda": "As reviews positivas elogiam o ato final como um momento de grande tensão, com alguns mencionando que a conclusão é satisfatória ou que o clímax compensa possíveis momentos mais lentos."
             }
           ],
-          "observacao_geral": "As reviews positivas destacam a maestria técnica de Hitchcock, o suspense envolvente e as atuações marcantes, com elogios ao cenário único e à fotografia. Este grupo considera o filme um clássico atemporal, apesar de apontar pequenas ressalvas quanto ao ritmo e ao desenvolvimento de alguns personagens.",
+          "observacao_geral": "As reviews positivas destacam a maestria técnica de Hitchcock, especialmente a direção de suspense, a fotografia e o cenário único, além das atuações carismáticas e da química do casal protagonista. Este grupo considera o filme envolvente e visualmente deslumbrante, com alguns apontando um ritmo inicial lento e um final de grande tensão.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 92
@@ -127836,32 +127835,30 @@ window.ESPECTRO_DATA = {
                 "mencoes": 27,
                 "de_n": 40,
                 "freq_pct": 67.5,
-                "lift_pp": 27.5,
+                "lift_pp": 32.5,
                 "acima_da_margem": true,
                 "tema": "Ritmo lento e tédio",
-                "exemplo_parafraseado": "As reviews descrevem o filme como arrastado, com longos períodos sem acontecimentos relevantes, levando espectadores a quase desistir ou a dormir durante a exibição.",
-                "temas_no_mesmo_eixo": [
-                  "Falta de tensão e suspense"
-                ]
+                "exemplo_parafraseado": "Reviews descrevem o filme como arrastado e entediante, com longos períodos sem acontecimentos relevantes, levando alguns a quase desistir ou a dormir durante a exibição.",
+                "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 16,
+                "mencoes": 14,
                 "de_n": 40,
-                "freq_pct": 40.0,
-                "lift_pp": -27.5,
+                "freq_pct": 35.0,
+                "lift_pp": -32.5,
                 "acima_da_margem": false,
-                "tema": "Ritmo lento e falta de tensão",
-                "exemplo_parafraseado": "Reviews medianas consideram o filme arrastado, com longos períodos em que nada acontece, e que o suspense demora a engrenar, deixando a experiência entediante para espectadores do grupo.",
+                "tema": "ritmo lento e expectativa frustrada",
+                "exemplo_parafraseado": "Reviews medianas relatam tédio e lentidão, esperando por um clímax que não chega, e afirmam que o filme não correspondeu às altas expectativas geradas pela reputação de clássico.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 13,
+                "mencoes": 10,
                 "de_n": 40,
-                "freq_pct": 32.5,
-                "lift_pp": -35.0,
+                "freq_pct": 25.0,
+                "lift_pp": -42.5,
                 "acima_da_margem": false,
-                "tema": "Ritmo e duração",
-                "exemplo_parafraseado": "Reviews mencionam que o ritmo é mais lento do que o esperado, mas que isso não compromete a experiência; outras consideram que a história poderia ser mais curta ou mais dinâmica, embora a maioria ache que o filme prende a atenção.",
+                "tema": "Ritmo e envolvimento narrativo",
+                "exemplo_parafraseado": "Reviews consideram o filme envolvente e divertido, com um roteiro que mantém o interesse apesar de se passar em um único local; reviews acham que o ritmo é lento no início, mas logo se torna mais interessante.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -127888,20 +127885,20 @@ window.ESPECTRO_DATA = {
                 "mencoes": 14,
                 "de_n": 40,
                 "freq_pct": 35.0,
-                "lift_pp": 5.0,
+                "lift_pp": 7.5,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "atuações e química do elenco",
+                "exemplo_parafraseado": "A química entre os protagonistas e as atuações, especialmente a de Grace Kelly, são citadas como aspectos agradáveis, embora não suficientes para elevar a nota.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 12,
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 30.0,
-                "lift_pp": -5.0,
+                "freq_pct": 27.5,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
-                "tema": "Atuações e personagens",
-                "exemplo_parafraseado": "As atuações de James Stewart e Grace Kelly são bastante elogiadas, assim como a química entre eles e a personalidade marcante da personagem feminina, descrita como elegante e perspicaz.",
+                "tema": "Atuações e química do elenco",
+                "exemplo_parafraseado": "As reviews positivas elogiam as atuações de James Stewart e Grace Kelly, destacando o carisma e a química entre os dois, além de mencionarem a elegância e o guarda-roupa da personagem feminina.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -127915,9 +127912,9 @@ window.ESPECTRO_DATA = {
             "eixo": "direcao_imagem",
             "por_bucket": {
               "negativas": {
-                "mencoes": 14,
+                "mencoes": 15,
                 "de_n": 40,
-                "freq_pct": 35.0,
+                "freq_pct": 37.5,
                 "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": null,
@@ -127928,21 +127925,23 @@ window.ESPECTRO_DATA = {
                 "mencoes": 19,
                 "de_n": 40,
                 "freq_pct": 47.5,
-                "lift_pp": 0.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Fotografia e estética",
-                "exemplo_parafraseado": "A fotografia, o uso de cores e a composição visual são bastante elogiados, com menções à beleza dos enquadramentos e ao visual que permanece moderno apesar da época.",
+                "tema": "elogio à fotografia e ao uso de cores",
+                "exemplo_parafraseado": "Este grupo destaca a fotografia bonita, o uso expressivo de cores e sombras, e a inventividade visual como os pontos mais fortes do filme.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 19,
+                "mencoes": 20,
                 "de_n": 40,
-                "freq_pct": 47.5,
-                "lift_pp": 0.0,
+                "freq_pct": 50.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Fotografia, direção e design de produção",
-                "exemplo_parafraseado": "Reviews elogiam o trabalho de câmera, o uso expressivo da luz e das sombras, e o cenário do pátio interno como elemento central da narrativa visual, considerando o apuro técnico impressionante.",
-                "temas_no_mesmo_eixo": []
+                "tema": "Direção e construção de suspense de Hitchcock",
+                "exemplo_parafraseado": "As reviews positivas elogiam a habilidade do diretor em criar tensão a partir de algo simples como observar pela janela, mantendo o espectador engajado e duvidando das suposições do protagonista até o ato final.",
+                "temas_no_mesmo_eixo": [
+                  "Fotografia, design de produção e uso de cenário único"
+                ]
               }
             },
             "bullet_de": {
@@ -127955,36 +127954,38 @@ window.ESPECTRO_DATA = {
             "eixo": "roteiro_estrutura",
             "por_bucket": {
               "negativas": {
-                "mencoes": 29,
-                "de_n": 40,
-                "freq_pct": 72.5,
-                "lift_pp": -10.0,
-                "acima_da_margem": false,
-                "tema": "Roteiro previsível e sem reviravoltas",
-                "exemplo_parafraseado": "Críticas apontam que a trama se desenrola exatamente como o espectador imagina desde o início, sem surpresas ou desenvolvimento significativo.",
-                "temas_no_mesmo_eixo": [
-                  "Protagonista desagradável e voyeurismo",
-                  "Personagens e diálogos fracos"
-                ]
-              },
-              "medianas": {
-                "mencoes": 33,
-                "de_n": 40,
-                "freq_pct": 82.5,
-                "lift_pp": 5.0,
-                "acima_da_margem": false,
-                "tema": "Personagens e relação central",
-                "exemplo_parafraseado": "As reviews medianas elogiam a química entre o casal protagonista e a evolução da personagem feminina, mas também criticam o protagonista por ser pouco simpático ou imaturo.",
-                "temas_no_mesmo_eixo": []
-              },
-              "positivas": {
                 "mencoes": 31,
                 "de_n": 40,
                 "freq_pct": 77.5,
-                "lift_pp": -5.0,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
-                "tema": "Relação entre os protagonistas",
-                "exemplo_parafraseado": "A dinâmica do casal central é vista como um dos pontos fortes, com diálogos afiados e uma evolução que enriquece a trama, mesmo quando o mistério principal não está em foco.",
+                "tema": "Roteiro previsível e sem reviravoltas",
+                "exemplo_parafraseado": "O grupo critica a falta de surpresas na trama, considerando o desenrolar óbvio e sem reviravoltas, o que torna a experiência frustrante para quem esperava um suspense envolvente.",
+                "temas_no_mesmo_eixo": [
+                  "Protagonista e personagens desagradáveis",
+                  "Relação amorosa mal desenvolvida",
+                  "Diálogos ruins e monótonos",
+                  "Final decepcionante"
+                ]
+              },
+              "medianas": {
+                "mencoes": 30,
+                "de_n": 40,
+                "freq_pct": 75.0,
+                "lift_pp": -10.0,
+                "acima_da_margem": false,
+                "tema": "roteiro e desenvolvimento da trama",
+                "exemplo_parafraseado": "Há menções a um roteiro que, apesar de ter diálogos interessantes, apresenta um mistério pouco empolgante e um desfecho apressado ou insatisfatório.",
+                "temas_no_mesmo_eixo": []
+              },
+              "positivas": {
+                "mencoes": 34,
+                "de_n": 40,
+                "freq_pct": 85.0,
+                "lift_pp": 7.5,
+                "acima_da_margem": false,
+                "tema": "Final e clímax de suspense",
+                "exemplo_parafraseado": "As reviews positivas elogiam o ato final como um momento de grande tensão, com espectadores mencionando que a conclusão é satisfatória ou que o clímax compensa possíveis momentos mais lentos.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -128001,7 +128002,7 @@ window.ESPECTRO_DATA = {
                 "mencoes": 2,
                 "de_n": 40,
                 "freq_pct": 5.0,
-                "lift_pp": -5.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128011,17 +128012,17 @@ window.ESPECTRO_DATA = {
                 "mencoes": 0,
                 "de_n": 40,
                 "freq_pct": 0.0,
-                "lift_pp": -10.0,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 4,
+                "mencoes": 6,
                 "de_n": 40,
-                "freq_pct": 10.0,
-                "lift_pp": 5.0,
+                "freq_pct": 15.0,
+                "lift_pp": 10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128041,30 +128042,30 @@ window.ESPECTRO_DATA = {
                 "mencoes": 4,
                 "de_n": 40,
                 "freq_pct": 10.0,
-                "lift_pp": -30.0,
+                "lift_pp": -25.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 9,
+                "mencoes": 10,
                 "de_n": 40,
-                "freq_pct": 22.5,
-                "lift_pp": -17.5,
+                "freq_pct": 25.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
-                "tema": "Conceito e ambientação elogiados",
-                "exemplo_parafraseado": "Este grupo destaca a ideia de narrar tudo a partir de um único ponto de vista e o uso do cenário limitado como algo engenhoso, que prende a atenção mesmo sem grandes deslocamentos.",
+                "tema": "conceito e ambientação única",
+                "exemplo_parafraseado": "As reviews medianas elogiam a ideia de um filme passado quase inteiramente em um único cenário e a forma como isso cria uma sensação de voyeurismo e comunidade.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 16,
+                "mencoes": 14,
                 "de_n": 40,
-                "freq_pct": 40.0,
-                "lift_pp": 17.5,
+                "freq_pct": 35.0,
+                "lift_pp": 10.0,
                 "acima_da_margem": false,
-                "tema": "Suspense e construção do mistério",
-                "exemplo_parafraseado": "As reviews destacam que o suspense é construído de forma magistral, mantendo o espectador em dúvida sobre o que é real ou fruto da paranoia do protagonista, com um ato final que eleva a tensão ao máximo.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -128078,10 +128079,10 @@ window.ESPECTRO_DATA = {
             "eixo": "impacto_emocional",
             "por_bucket": {
               "negativas": {
-                "mencoes": 19,
+                "mencoes": 20,
                 "de_n": 40,
-                "freq_pct": 47.5,
-                "lift_pp": 12.5,
+                "freq_pct": 50.0,
+                "lift_pp": 10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128091,17 +128092,17 @@ window.ESPECTRO_DATA = {
                 "mencoes": 14,
                 "de_n": 40,
                 "freq_pct": 35.0,
-                "lift_pp": -12.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 14,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 35.0,
-                "lift_pp": -12.5,
+                "freq_pct": 40.0,
+                "lift_pp": -10.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128121,27 +128122,27 @@ window.ESPECTRO_DATA = {
                 "mencoes": 19,
                 "de_n": 40,
                 "freq_pct": 47.5,
-                "lift_pp": -7.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 15,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 37.5,
-                "lift_pp": -17.5,
+                "freq_pct": 40.0,
+                "lift_pp": -22.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 22,
+                "mencoes": 25,
                 "de_n": 40,
-                "freq_pct": 55.0,
-                "lift_pp": 7.5,
+                "freq_pct": 62.5,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128161,27 +128162,27 @@ window.ESPECTRO_DATA = {
                 "mencoes": 21,
                 "de_n": 40,
                 "freq_pct": 52.5,
-                "lift_pp": 10.0,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
-                "tema": "Expectativa frustrada e superestimação",
-                "exemplo_parafraseado": "Críticas mencionam que o filme é superestimado e não corresponde à alta reputação ou à nota elevada que possui, gerando decepção.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 17,
+                "mencoes": 19,
                 "de_n": 40,
-                "freq_pct": 42.5,
-                "lift_pp": -10.0,
+                "freq_pct": 47.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Conclusão aquém das expectativas",
-                "exemplo_parafraseado": "Para espectadores deste grupo, o desfecho e a resolução do mistério soam apressados ou pouco satisfatórios, sem a reviravolta ou o clímax impactante que esperavam.",
+                "tema": null,
+                "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 14,
+                "mencoes": 13,
                 "de_n": 40,
-                "freq_pct": 35.0,
-                "lift_pp": -17.5,
+                "freq_pct": 32.5,
+                "lift_pp": -20.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128198,10 +128199,10 @@ window.ESPECTRO_DATA = {
             "eixo": "critica_social",
             "por_bucket": {
               "negativas": {
-                "mencoes": 9,
+                "mencoes": 8,
                 "de_n": 40,
-                "freq_pct": 22.5,
-                "lift_pp": 0.0,
+                "freq_pct": 20.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -128211,10 +128212,10 @@ window.ESPECTRO_DATA = {
                 "mencoes": 9,
                 "de_n": 40,
                 "freq_pct": 22.5,
-                "lift_pp": 0.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Machismo e voyeurismo problemáticos",
-                "exemplo_parafraseado": "Reviews apontam desconforto com a mentalidade machista da época e com a forma como o voyeurismo é tratado, considerando esses aspectos datados e problemáticos.",
+                "tema": "personagens e questões de gênero problemáticas",
+                "exemplo_parafraseado": "Reviews criticam a representação de personagens femininas e o tom machista e voyeurista, considerando esses aspectos datados e desconfortáveis.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
@@ -128223,8 +128224,8 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 20.0,
                 "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Conceito de voyeurismo e observação",
-                "exemplo_parafraseado": "O grupo reflete sobre como o filme explora a curiosidade humana e o prazer de observar a vida alheia, comparando a situação do protagonista à experiência do próprio espectador.",
+                "tema": "Personagens femininas fortes e temas de voyeurismo",
+                "exemplo_parafraseado": "Este grupo destaca as personagens femininas como inteligentes e ativas na trama, e discute o voyeurismo como tema central, comparando a situação do protagonista à curiosidade humana e à experiência do espectador.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -128242,78 +128243,71 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.50",
+        "spec_version": "1.9.51",
         "verificador": {
           "aplicado": true,
-          "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/rear-window/classificacao/consenso_verificado.jsonl",
+          "fonte": "execucoes/regeneracao-r2-2026-11-26/rear-window/classificacao/consenso_verificado.jsonl",
           "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       },
       "condicoes": {
         "vale_a_pena": [
           {
-            "texto": "busca um suspense que mantenha em dúvida o que é real ou paranoia",
+            "texto": "aprecia suspense construído a partir de algo banal, como observar pela janela",
             "tema_origem": "POS-A",
             "bucket_origem": "positivas",
-            "tema_texto": "Suspense e construção do mistério",
-            "rotulo_forca": "muitos"
+            "tema_texto": "Direção e construção de suspense de Hitchcock",
+            "rotulo_forca": "a maioria"
           },
           {
-            "texto": "valoriza câmera expressiva, jogo de luz e sombra e o pátio como centro visual",
+            "texto": "valoriza composição de planos e uma câmera que percorre o cenário de um prédio",
             "tema_origem": "POS-B",
             "bucket_origem": "positivas",
-            "tema_texto": "Fotografia, direção e design de produção",
-            "rotulo_forca": "muitos"
+            "tema_texto": "Fotografia, design de produção e uso de cenário único",
+            "rotulo_forca": "cerca de metade"
           },
           {
-            "texto": "valoriza atuações elogiadas e uma personagem feminina elegante e perspicaz",
+            "texto": "busca carisma e química entre os protagonistas, com elegância no guarda-roupa",
             "tema_origem": "POS-C",
             "bucket_origem": "positivas",
-            "tema_texto": "Atuações e personagens",
+            "tema_texto": "Atuações e química do elenco",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "se interessa por um filme que explora a curiosidade e o prazer de observar",
-            "tema_origem": "POS-D",
-            "bucket_origem": "positivas",
-            "tema_texto": "Conceito de voyeurismo e observação",
-            "rotulo_forca": "alguns"
-          },
-          {
-            "texto": "tolera um ritmo mais lento, embora a história prenda a atenção",
+            "texto": "se interessa por personagens femininas ativas e pelo voyeurismo como tema central",
             "tema_origem": "POS-E",
             "bucket_origem": "positivas",
-            "tema_texto": "Ritmo e duração",
-            "rotulo_forca": "alguns"
+            "tema_texto": "Personagens femininas fortes e temas de voyeurismo",
+            "rotulo_forca": "muitos"
           }
         ],
         "talvez_evite": [
           {
-            "texto": "evita uma condução morosa, com trechos prolongados em que nada relevante acontece",
+            "texto": "se incomoda com passagens arrastadas e longas e sem fatos relevantes",
             "tema_origem": "NEG-A",
             "bucket_origem": "negativas",
             "tema_texto": "Ritmo lento e tédio",
-            "rotulo_forca": "cerca de metade"
+            "rotulo_forca": "a maioria"
           },
           {
-            "texto": "espera uma trama com surpresas em vez de seguir o previsto",
+            "texto": "espera um suspense envolvente com surpresas, e não um desenrolar óbvio",
             "tema_origem": "NEG-B",
             "bucket_origem": "negativas",
             "tema_texto": "Roteiro previsível e sem reviravoltas",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "se incomoda com um protagonista que espia os vizinhos e soa pouco simpático",
+            "texto": "se irrita com protagonista egocêntrico e personagens pouco cativantes",
             "tema_origem": "NEG-C",
             "bucket_origem": "negativas",
-            "tema_texto": "Protagonista desagradável e voyeurismo",
+            "tema_texto": "Protagonista e personagens desagradáveis",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "quer tensão ao longo do filme, não concentrada nos minutos finais",
-            "tema_origem": "NEG-E",
+            "texto": "se incomoda com tratamento depreciativo à personagem feminina e química pouco convincente do casal",
+            "tema_origem": "NEG-D",
             "bucket_origem": "negativas",
-            "tema_texto": "Falta de tensão e suspense",
+            "tema_texto": "Relação amorosa mal desenvolvida",
             "rotulo_forca": "alguns"
           }
         ],
@@ -128347,22 +128341,33 @@ window.ESPECTRO_DATA = {
             "NEG-A",
             "NEG-B",
             "NEG-C",
-            "NEG-E"
+            "NEG-D"
           ]
         },
         "temas_saltados": {
-          "vale_a_pena": [],
+          "vale_a_pena": [
+            "POS-D"
+          ],
           "talvez_evite": []
         },
-        "descartadas": [],
+        "descartadas": [
+          {
+            "texto": "tolera um ritmo lento no início e se interessa por um roteiro envolvente num único local",
+            "tema_origem": "POS-D",
+            "lado": "vale_a_pena",
+            "flags": [
+              "comprimento"
+            ]
+          }
+        ],
         "sem_condicao_publicavel": [],
         "par_desfeito": [],
         "recusas_invalidas": [],
         "retry": {
           "n_reprovadas": 2,
-          "n_aplicadas": 2,
+          "n_aplicadas": 1,
           "n_saltadas_pelo_modelo": 0,
-          "n_descartadas": 0,
+          "n_descartadas": 1,
           "n_recusadas_pelo_modelo": 0
         },
         "provider": "featherless",
@@ -128374,7 +128379,7 @@ window.ESPECTRO_DATA = {
           {
             "indice": 0,
             "n_condicoes": 9,
-            "n_flags": 8,
+            "n_flags": 7,
             "flags": [
               "comprimento",
               "exemplo_verbatim"
@@ -128386,7 +128391,7 @@ window.ESPECTRO_DATA = {
           {
             "indice": 1,
             "n_condicoes": 9,
-            "n_flags": 9,
+            "n_flags": 4,
             "flags": [
               "comprimento",
               "exemplo_verbatim"
@@ -128398,10 +128403,10 @@ window.ESPECTRO_DATA = {
           {
             "indice": 2,
             "n_condicoes": 9,
-            "n_flags": 3,
+            "n_flags": 2,
             "flags": [
-              "exemplo_verbatim",
-              "sem_discriminacao"
+              "comprimento",
+              "exemplo_verbatim"
             ],
             "n_temas_cobertos": 9,
             "n_temas_recusados": 0,
@@ -128409,13 +128414,13 @@ window.ESPECTRO_DATA = {
           }
         ],
         "uso": {
-          "prompt_tokens": 18350,
-          "completion_tokens": 1361,
-          "cache_hit_tokens": 15757,
-          "cache_miss_tokens": 2593
+          "prompt_tokens": 18139,
+          "completion_tokens": 1228,
+          "cache_hit_tokens": 15676,
+          "cache_miss_tokens": 2463
         },
-        "latencia_s": 7.37,
-        "spec_version": "1.9.50",
+        "latencia_s": 36.71,
+        "spec_version": "1.9.51",
         "variante": "experimento-briefing"
       }
     },
@@ -133148,7 +133153,7 @@ window.ESPECTRO_DATA = {
     "seven-samurai": {
       "slug": "seven-samurai",
       "data_coleta": "2026-11-08T05:35:47.264050+00:00",
-      "spec_version": "1.9.50",
+      "spec_version": "1.9.51",
       "total_reviews_observadas": 484049,
       "reviews_url": "https://letterboxd.com/film/seven-samurai/reviews/",
       "ficha": {
@@ -133710,52 +133715,36 @@ window.ESPECTRO_DATA = {
           "temas": [
             {
               "tema": "Duração excessiva",
-              "mencoes_aproximadas": 28,
+              "mencoes_aproximadas": 27,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitos consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa."
-            },
-            {
-              "tema": "Ritmo lento e tédio",
-              "mencoes_aproximadas": 22,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "O ritmo é descrito como arrastado, com momentos de tédio e uma sensação de que a narrativa demora a engrenar, levando alguns a cochilar ou desistir.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "O ritmo é frequentemente descrito como arrastado, com momentos de tédio e uma sensação de que a narrativa demora a engrenar, levando alguns a cochilar ou desistir.",
-              "quantidade_pendente": true
-            },
-            {
-              "tema": "Atuação exagerada",
-              "mencoes_aproximadas": 12,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As atuações são criticadas por serem teatrais e exageradas, com emoções muito intensas e maneirismos que soam falsos ou datados.",
+              "exemplo_parafraseado": "O tempo de projeção é considerado injustificável para uma história simples, e a sensação é de que a obra se arrasta sem necessidade.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Personagens pouco memoráveis",
-              "mencoes_aproximadas": 10,
+              "tema": "Ritmo lento e tédio",
+              "mencoes_aproximadas": 22,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca.",
+              "exemplo_parafraseado": "A lentidão do desenvolvimento faz com que a experiência seja entediante, com trechos que parecem se prolongar sem acrescentar interesse.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Vários espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca."
+              "aspas_removidas": false
             },
             {
-              "tema": "Roteiro simples e arrastado",
+              "tema": "Roteiro simplista e personagens rasos",
+              "mencoes_aproximadas": 10,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A trama é percebida como pouco desenvolvida, e os personagens carecem de profundidade, tornando difícil se importar com o que acontece.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Atuações exageradas",
               "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A história é vista como simples demais para justificar a longa duração, com subtramas irrelevantes e um desenvolvimento que não prende a atenção.",
+              "exemplo_parafraseado": "As interpretações são vistas como dramáticas em excesso, com emoções amplificadas e maneirismos que soam artificiais.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
@@ -133764,17 +133753,25 @@ window.ESPECTRO_DATA = {
               "tema": "Superestimado",
               "mencoes_aproximadas": 8,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Espectadores questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos.",
+              "exemplo_parafraseado": "A obra é considerada supervalorizada, e a expectativa criada por sua reputação não se sustenta durante a exibição.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitos questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos."
+              "aspas_removidas": false
+            },
+            {
+              "tema": "Fotografia elogiada, mas insuficiente",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A qualidade visual é reconhecida, porém não compensa os problemas de ritmo e envolvimento emocional.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
             }
           ],
-          "observacao_geral": "As reviews negativas deste grupo destacam principalmente a duração excessiva e o ritmo lento, que tornam a experiência entediante, além de criticarem atuações exageradas, personagens pouco desenvolvidos e um roteiro simples que não justifica o tempo de tela. Este grupo também contesta a aclamação generalizada, considerando o filme superestimado.",
+          "observacao_geral": "As reviews negativas destacam principalmente a duração excessiva e o ritmo lento, que tornam a experiência arrastada e entediante. Também apontam atuações exageradas e um roteiro simplista, resultando em uma percepção de obra superestimada.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
+          "quantidade_fallback": "aceito",
           "share_real": 1
         },
         {
@@ -133859,70 +133856,70 @@ window.ESPECTRO_DATA = {
           "temas": [
             {
               "tema": "Duração excessiva e ritmo lento",
-              "mencoes_aproximadas": 22,
+              "mencoes_aproximadas": 24,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa.",
+              "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Diversas reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa."
+              "exemplo_antes_da_guarda": "Muitas reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa."
             },
             {
-              "tema": "Fotografia e composição visual elogiadas",
-              "mencoes_aproximadas": 16,
+              "tema": "Fotografia e direção elogiadas",
+              "mencoes_aproximadas": 18,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias."
-            },
-            {
-              "tema": "Atuações exageradas ou datadas",
-              "mencoes_aproximadas": 9,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual."
-            },
-            {
-              "tema": "Roteiro simples e falta de conexão emocional",
-              "mencoes_aproximadas": 8,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Certos textos apontam que a história é básica e não consegue envolver, faltando uma ligação emocional com os personagens ou com a trama.",
+              "exemplo_parafraseado": "Este grupo destaca a qualidade da fotografia, da composição visual e da direção de Kurosawa como pontos fortes.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Influência e importância histórica reconhecidas",
-              "mencoes_aproximadas": 8,
+              "tema": "Roteiro simples e previsível",
+              "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Mesmo sem grande entusiasmo, reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema.",
+              "exemplo_parafraseado": "Reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Mesmo sem grande entusiasmo, várias reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema."
+              "exemplo_antes_da_guarda": "Várias reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada."
             },
             {
-              "tema": "Expectativa versus realidade e sensação de superestimação",
-              "mencoes_aproximadas": 7,
+              "tema": "Atuações teatrais e exageradas",
+              "mencoes_aproximadas": 9,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe.",
+              "exemplo_parafraseado": "Críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Algumas pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe."
+              "exemplo_antes_da_guarda": "Algumas críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens."
+            },
+            {
+              "tema": "Superestimado e supervalorizado",
+              "mencoes_aproximadas": 8,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Espectadores dizem que o filme é superestimado e que não corresponde à fama de obra-prima.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Há quem diga que o filme é superestimado e que não corresponde à fama de obra-prima."
+            },
+            {
+              "tema": "Influência histórica e importância",
+              "mencoes_aproximadas": 7,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Mesmo sem amar o filme, reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Mesmo sem amar o filme, várias reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores."
             }
           ],
-          "observacao_geral": "As reviews medianas analisadas destacam a maestria técnica e a importância histórica do filme, mas frequentemente criticam sua longa duração, o ritmo arrastado e a falta de envolvimento emocional. Este grupo específico reconhece o valor cinematográfico, porém não se sente totalmente conectado à obra.",
+          "observacao_geral": "As reviews medianas apontam uma experiência morna: admiram a técnica e a importância histórica, mas criticam a duração excessiva e a falta de conexão emocional.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 4
@@ -133960,9 +133957,9 @@ window.ESPECTRO_DATA = {
           },
           "janela_amostra": {
             "n": 40,
-            "min": "2019-02-15",
+            "min": "2026-09-12",
             "max": "2026-11-07",
-            "p5": "2026-09-23",
+            "p5": "2026-09-28",
             "p50": "2026-11-06",
             "p95": "2026-11-07"
           },
@@ -134024,9 +134021,10 @@ window.ESPECTRO_DATA = {
                 "truncada_sem_texto": 0,
                 "spoiler": 1,
                 "abaixo_min_chars": 34,
-                "excedente_cota": 4,
+                "excedente_cota": 3,
                 "duplicata": 0,
-                "outros": 0
+                "outros": 0,
+                "resumo_de_trama": 1
               },
               "paginas_buscadas": 0
             },
@@ -134054,68 +134052,69 @@ window.ESPECTRO_DATA = {
           ],
           "temas": [
             {
-              "tema": "Duração longa e ritmo",
-              "mencoes_aproximadas": 18,
+              "tema": "elogios à direção de Kurosawa",
+              "mencoes_aproximadas": 24,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora reviews achem que poderia ser mais enxuto.",
+              "exemplo_parafraseado": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com espectadores considerando o filme uma obra-prima absoluta.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Várias reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora algumas achem que poderia ser mais enxuto.",
-              "quantidade_pendente": true
+              "exemplo_antes_da_guarda": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com muitos considerando o filme uma obra-prima absoluta."
             },
             {
-              "tema": "Atuações e personagens marcantes",
+              "tema": "personagens marcantes e atuações",
+              "mencoes_aproximadas": 20,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "Comentários positivos ressaltam a construção dos personagens, especialmente a atuação de Toshiro Mifune como Kikuchiyo, e a química entre os sete samurais, que tornam cada um único e cativante.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false
+            },
+            {
+              "tema": "fotografia e impacto visual",
+              "mencoes_aproximadas": 16,
+              "n_reviews_analisadas": 40,
+              "exemplo_parafraseado": "A fotografia em preto e branco é elogiada pela beleza dos enquadramentos e pelo uso da chuva e da lama para criar atmosfera intensa e realista.",
+              "mencoes_clampadas": false,
+              "mencoes_valor_original": null,
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "A fotografia em preto e branco é frequentemente elogiada pela beleza dos enquadramentos e pelo uso da chuva e da lama para criar atmosfera intensa e realista."
+            },
+            {
+              "tema": "cenas de ação e batalhas",
               "mencoes_aproximadas": 15,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Este grupo elogia a construção dos personagens, com destaque para a atuação de Toshirō Mifune e a personalidade distinta de cada samurai.",
+              "exemplo_parafraseado": "As sequências de batalha são destacadas como emocionantes e tecnicamente impressionantes para a época, com coreografia e edição que mantêm o espectador imerso e tenso.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false
             },
             {
-              "tema": "Fotografia e composição visual",
-              "mencoes_aproximadas": 13,
+              "tema": "duração longa e ritmo",
+              "mencoes_aproximadas": 14,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As reviews positivas exaltam os enquadramentos, a iluminação e o uso da chuva e da lama para criar atmosfera, mesmo em preto e branco.",
+              "exemplo_parafraseado": "Apesar do entusiasmo geral, reviews mencionam que a duração de três horas e meia pode ser um desafio, com certos trechos mais lentos, embora considerem a experiência recompensadora.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
-              "aspas_removidas": false
+              "aspas_removidas": false,
+              "quantidade_reescrita": true,
+              "exemplo_antes_da_guarda": "Apesar do entusiasmo geral, muitas reviews mencionam que a duração de três horas e meia pode ser um desafio, com alguns trechos mais lentos, embora considerem a experiência recompensadora."
             },
             {
-              "tema": "Direção de Akira Kurosawa",
+              "tema": "influência e atemporalidade",
               "mencoes_aproximadas": 12,
               "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "A direção de Kurosawa é citada como magistral, com elogios à sua habilidade de conduzir cenas de ação e de desenvolver o roteiro.",
+              "exemplo_parafraseado": "Reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para obras posteriores.",
               "mencoes_clampadas": false,
               "mencoes_valor_original": null,
               "aspas_removidas": false,
               "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "A direção de Kurosawa é frequentemente citada como magistral, com elogios à sua habilidade de conduzir cenas de ação e de desenvolver o roteiro."
-            },
-            {
-              "tema": "Cenas de batalha e ação",
-              "mencoes_aproximadas": 11,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "As sequências de luta, especialmente a batalha final, são descritas como intensas e realistas, contribuindo para o impacto do filme.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false
-            },
-            {
-              "tema": "Caráter atemporal e influência",
-              "mencoes_aproximadas": 10,
-              "n_reviews_analisadas": 40,
-              "exemplo_parafraseado": "Reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores.",
-              "mencoes_clampadas": false,
-              "mencoes_valor_original": null,
-              "aspas_removidas": false,
-              "quantidade_reescrita": true,
-              "exemplo_antes_da_guarda": "Muitas reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores."
+              "exemplo_antes_da_guarda": "Várias reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para inúmeras obras posteriores."
             }
           ],
-          "observacao_geral": "As reviews positivas deste grupo destacam principalmente a maestria técnica de Kurosawa, a profundidade dos personagens e a força das cenas de batalha, ainda que a longa duração seja apontada como um ponto de atenção. Este recorte reflete apenas a faixa de notas altas e não representa a recepção geral do filme.",
+          "observacao_geral": "As reviews positivas destacam a maestria de Kurosawa, a riqueza dos personagens e a beleza visual do filme, embora muitos apontem a longa duração como um pequeno obstáculo. Este grupo demonstra grande admiração pela obra, frequentemente citando-a como um marco do cinema.",
           "idioma_invalido": false,
           "escopo_suspeito": false,
           "share_real": 95
@@ -134141,32 +134140,32 @@ window.ESPECTRO_DATA = {
                 "mencoes": 33,
                 "de_n": 40,
                 "freq_pct": 82.5,
-                "lift_pp": 10.0,
+                "lift_pp": 12.5,
                 "acima_da_margem": false,
                 "tema": "Duração excessiva",
-                "exemplo_parafraseado": "Espectadores consideram que o filme é longo demais para a história que conta, com mais de três horas que poderiam ser reduzidas sem prejuízo, tornando a experiência cansativa.",
+                "exemplo_parafraseado": "O tempo de projeção é considerado injustificável para uma história simples, e a sensação é de que a obra se arrasta sem necessidade.",
                 "temas_no_mesmo_eixo": [
                   "Ritmo lento e tédio"
                 ]
               },
               "medianas": {
-                "mencoes": 29,
+                "mencoes": 28,
                 "de_n": 40,
-                "freq_pct": 72.5,
-                "lift_pp": -10.0,
+                "freq_pct": 70.0,
+                "lift_pp": -12.5,
                 "acima_da_margem": false,
                 "tema": "Duração excessiva e ritmo lento",
-                "exemplo_parafraseado": "Reviews medianas reclamam que o filme é muito longo, com uma duração que poderia ser reduzida sem prejuízo, e que o ritmo arrastado torna a experiência cansativa.",
+                "exemplo_parafraseado": "Reviews medianas reclamam que o filme é longo demais e que o ritmo arrasta, tornando a experiência cansativa.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 21,
+                "mencoes": 18,
                 "de_n": 40,
-                "freq_pct": 52.5,
-                "lift_pp": -30.0,
+                "freq_pct": 45.0,
+                "lift_pp": -37.5,
                 "acima_da_margem": false,
-                "tema": "Duração longa e ritmo",
-                "exemplo_parafraseado": "Reviews positivas comentam que, apesar das três horas e meia, o filme prende a atenção na maior parte do tempo, embora reviews achem que poderia ser mais enxuto.",
+                "tema": "duração longa e ritmo",
+                "exemplo_parafraseado": "Apesar do entusiasmo geral, reviews mencionam que a duração de três horas e meia pode ser um desafio, com certos trechos mais lentos, embora considerem a experiência recompensadora.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -134180,33 +134179,33 @@ window.ESPECTRO_DATA = {
             "eixo": "atuacao",
             "por_bucket": {
               "negativas": {
-                "mencoes": 11,
+                "mencoes": 12,
                 "de_n": 40,
-                "freq_pct": 27.5,
-                "lift_pp": -5.0,
+                "freq_pct": 30.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Atuação exagerada",
-                "exemplo_parafraseado": "As atuações são criticadas por serem teatrais e exageradas, com emoções muito intensas e maneirismos que soam falsos ou datados.",
+                "tema": "Atuações exageradas",
+                "exemplo_parafraseado": "As interpretações são vistas como dramáticas em excesso, com emoções amplificadas e maneirismos que soam artificiais.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
                 "mencoes": 11,
                 "de_n": 40,
                 "freq_pct": 27.5,
-                "lift_pp": -5.0,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Atuações exageradas ou datadas",
-                "exemplo_parafraseado": "Reviews criticam o estilo de atuação teatral e excessivamente dramático, com gritos e choros que soam exagerados para o espectador atual.",
+                "tema": "Atuações teatrais e exageradas",
+                "exemplo_parafraseado": "Críticas apontam que a atuação é overactada e teatral, o que prejudica a conexão com os personagens.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 13,
+                "mencoes": 11,
                 "de_n": 40,
-                "freq_pct": 32.5,
-                "lift_pp": 5.0,
+                "freq_pct": 27.5,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Atuações e personagens marcantes",
-                "exemplo_parafraseado": "Este grupo elogia a construção dos personagens, com destaque para a atuação de Toshirō Mifune e a personalidade distinta de cada samurai.",
+                "tema": "personagens marcantes e atuações",
+                "exemplo_parafraseado": "Comentários positivos ressaltam a construção dos personagens, especialmente a atuação de Toshiro Mifune como Kikuchiyo, e a química entre os sete samurais, que tornam cada um único e cativante.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -134225,31 +134224,31 @@ window.ESPECTRO_DATA = {
                 "freq_pct": 30.0,
                 "lift_pp": -20.0,
                 "acima_da_margem": false,
-                "tema": null,
-                "exemplo_parafraseado": null,
+                "tema": "Fotografia elogiada, mas insuficiente",
+                "exemplo_parafraseado": "A qualidade visual é reconhecida, porém não compensa os problemas de ritmo e envolvimento emocional.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 18,
+                "mencoes": 19,
                 "de_n": 40,
-                "freq_pct": 45.0,
-                "lift_pp": -5.0,
+                "freq_pct": 47.5,
+                "lift_pp": -2.5,
                 "acima_da_margem": false,
-                "tema": "Fotografia e composição visual elogiadas",
-                "exemplo_parafraseado": "Pessoas destacam a beleza das imagens, a qualidade da fotografia e o trabalho de câmera, com enquadramentos que se assemelham a fotografias.",
+                "tema": "Fotografia e direção elogiadas",
+                "exemplo_parafraseado": "Este grupo destaca a qualidade da fotografia, da composição visual e da direção de Kurosawa como pontos fortes.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
                 "mencoes": 20,
                 "de_n": 40,
                 "freq_pct": 50.0,
-                "lift_pp": 5.0,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
-                "tema": "Fotografia e composição visual",
-                "exemplo_parafraseado": "As reviews positivas exaltam os enquadramentos, a iluminação e o uso da chuva e da lama para criar atmosfera, mesmo em preto e branco.",
+                "tema": "elogios à direção de Kurosawa",
+                "exemplo_parafraseado": "As reviews deste grupo enaltecem a direção de Akira Kurosawa, destacando seu domínio da composição visual, do movimento de câmera e da encenação, com espectadores considerando o filme uma obra-prima absoluta.",
                 "temas_no_mesmo_eixo": [
-                  "Direção de Akira Kurosawa",
-                  "Cenas de batalha e ação"
+                  "fotografia e impacto visual",
+                  "cenas de ação e batalhas"
                 ]
               }
             },
@@ -134263,32 +134262,30 @@ window.ESPECTRO_DATA = {
             "eixo": "roteiro_estrutura",
             "por_bucket": {
               "negativas": {
-                "mencoes": 24,
-                "de_n": 40,
-                "freq_pct": 60.0,
-                "lift_pp": -10.0,
-                "acima_da_margem": false,
-                "tema": "Personagens pouco memoráveis",
-                "exemplo_parafraseado": "Espectadores acham os personagens rasos e esquecíveis, com pouco desenvolvimento, exceto por um ou outro que se destaca.",
-                "temas_no_mesmo_eixo": [
-                  "Roteiro simples e arrastado"
-                ]
-              },
-              "medianas": {
                 "mencoes": 25,
                 "de_n": 40,
                 "freq_pct": 62.5,
-                "lift_pp": -7.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Roteiro simples e falta de conexão emocional",
-                "exemplo_parafraseado": "Certos textos apontam que a história é básica e não consegue envolver, faltando uma ligação emocional com os personagens ou com a trama.",
+                "tema": "Roteiro simplista e personagens rasos",
+                "exemplo_parafraseado": "A trama é percebida como pouco desenvolvida, e os personagens carecem de profundidade, tornando difícil se importar com o que acontece.",
+                "temas_no_mesmo_eixo": []
+              },
+              "medianas": {
+                "mencoes": 26,
+                "de_n": 40,
+                "freq_pct": 65.0,
+                "lift_pp": -2.5,
+                "acima_da_margem": false,
+                "tema": "Roteiro simples e previsível",
+                "exemplo_parafraseado": "Reviews medianas consideram a história básica e sem grandes surpresas, apesar de bem contada.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 28,
+                "mencoes": 27,
                 "de_n": 40,
-                "freq_pct": 70.0,
-                "lift_pp": 7.5,
+                "freq_pct": 67.5,
+                "lift_pp": 2.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -134297,7 +134294,7 @@ window.ESPECTRO_DATA = {
             },
             "bullet_de": {
               "negativas": "frequencia",
-              "medianas": null,
+              "medianas": "frequencia",
               "positivas": "frequencia"
             }
           },
@@ -134348,16 +134345,16 @@ window.ESPECTRO_DATA = {
                 "mencoes": 4,
                 "de_n": 40,
                 "freq_pct": 10.0,
-                "lift_pp": -17.5,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 4,
+                "mencoes": 3,
                 "de_n": 40,
-                "freq_pct": 10.0,
+                "freq_pct": 7.5,
                 "lift_pp": -17.5,
                 "acima_da_margem": false,
                 "tema": null,
@@ -134365,10 +134362,10 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 11,
+                "mencoes": 10,
                 "de_n": 40,
-                "freq_pct": 27.5,
-                "lift_pp": 17.5,
+                "freq_pct": 25.0,
+                "lift_pp": 15.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -134395,20 +134392,20 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 17,
+                "mencoes": 16,
                 "de_n": 40,
-                "freq_pct": 42.5,
-                "lift_pp": -5.0,
+                "freq_pct": 40.0,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 15,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 37.5,
-                "lift_pp": -10.0,
+                "freq_pct": 42.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -134435,23 +134432,23 @@ window.ESPECTRO_DATA = {
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 19,
+                "mencoes": 22,
                 "de_n": 40,
-                "freq_pct": 47.5,
-                "lift_pp": -12.5,
+                "freq_pct": 55.0,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
-                "tema": "Influência e importância histórica reconhecidas",
-                "exemplo_parafraseado": "Mesmo sem grande entusiasmo, reviews admitem que o filme é pioneiro e exerceu forte influência sobre obras posteriores, sendo um marco do cinema.",
+                "tema": "Influência histórica e importância",
+                "exemplo_parafraseado": "Mesmo sem amar o filme, reviews reconhecem seu papel fundamental na história do cinema e sua influência em obras posteriores.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
                 "mencoes": 24,
                 "de_n": 40,
                 "freq_pct": 60.0,
-                "lift_pp": 10.0,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
-                "tema": "Caráter atemporal e influência",
-                "exemplo_parafraseado": "Reviews destacam que o filme permanece impressionante e influente décadas após seu lançamento, inspirando obras posteriores.",
+                "tema": "influência e atemporalidade",
+                "exemplo_parafraseado": "Reviews enfatizam que o filme permanece impactante e moderno mesmo décadas após seu lançamento, servindo de inspiração para obras posteriores.",
                 "temas_no_mesmo_eixo": []
               }
             },
@@ -134468,27 +134465,27 @@ window.ESPECTRO_DATA = {
                 "mencoes": 18,
                 "de_n": 40,
                 "freq_pct": 45.0,
-                "lift_pp": -20.0,
+                "lift_pp": -15.0,
                 "acima_da_margem": false,
                 "tema": "Superestimado",
-                "exemplo_parafraseado": "Espectadores questionam a alta nota e o status de clássico, considerando o filme superestimado e sem os méritos que lhe são atribuídos.",
+                "exemplo_parafraseado": "A obra é considerada supervalorizada, e a expectativa criada por sua reputação não se sustenta durante a exibição.",
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 26,
+                "mencoes": 24,
                 "de_n": 40,
-                "freq_pct": 65.0,
+                "freq_pct": 60.0,
                 "lift_pp": 15.0,
                 "acima_da_margem": false,
-                "tema": "Expectativa versus realidade e sensação de superestimação",
-                "exemplo_parafraseado": "Pessoas comentam que criaram expectativas altas devido à fama, mas ficaram decepcionadas, achando que o filme não corresponde ao prestígio que recebe.",
+                "tema": "Superestimado e supervalorizado",
+                "exemplo_parafraseado": "Espectadores dizem que o filme é superestimado e que não corresponde à fama de obra-prima.",
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 20,
+                "mencoes": 17,
                 "de_n": 40,
-                "freq_pct": 50.0,
-                "lift_pp": -15.0,
+                "freq_pct": 42.5,
+                "lift_pp": -17.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -134497,7 +134494,7 @@ window.ESPECTRO_DATA = {
             },
             "bullet_de": {
               "negativas": null,
-              "medianas": "frequencia",
+              "medianas": null,
               "positivas": null
             }
           },
@@ -134508,27 +134505,27 @@ window.ESPECTRO_DATA = {
                 "mencoes": 7,
                 "de_n": 40,
                 "freq_pct": 17.5,
-                "lift_pp": -2.5,
+                "lift_pp": 5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "medianas": {
-                "mencoes": 8,
+                "mencoes": 5,
                 "de_n": 40,
-                "freq_pct": 20.0,
-                "lift_pp": 2.5,
+                "freq_pct": 12.5,
+                "lift_pp": -5.0,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
                 "temas_no_mesmo_eixo": []
               },
               "positivas": {
-                "mencoes": 6,
+                "mencoes": 4,
                 "de_n": 40,
-                "freq_pct": 15.0,
-                "lift_pp": -5.0,
+                "freq_pct": 10.0,
+                "lift_pp": -7.5,
                 "acima_da_margem": false,
                 "tema": null,
                 "exemplo_parafraseado": null,
@@ -134549,51 +134546,65 @@ window.ESPECTRO_DATA = {
           "fora_da_taxonomia": {},
           "houve_retentativa": []
         },
-        "spec_version": "1.9.50",
+        "spec_version": "1.9.51",
         "verificador": {
           "aplicado": true,
-          "fonte": "execucoes/featherless-etapa2-2026-11-08/aberto/seven-samurai/classificacao/consenso_verificado.jsonl",
+          "fonte": "execucoes/regeneracao-r2-2026-11-26/seven-samurai/classificacao/consenso_verificado.jsonl",
           "classificacao": "deepseek-ai/DeepSeek-V4.1-Flash-1017"
         }
       },
       "condicoes": {
         "vale_a_pena": [
           {
-            "texto": "tolera uma longa duração porque a atenção se mantém na maior parte do tempo",
+            "texto": "aprecia uma direção que domina composição, movimento de câmera e encenação",
             "tema_origem": "POS-A",
             "bucket_origem": "positivas",
-            "tema_texto": "Duração longa e ritmo",
+            "tema_texto": "elogios à direção de Kurosawa",
+            "rotulo_forca": "cerca de metade"
+          },
+          {
+            "texto": "se interessa por personagens cativantes e pela química entre os sete samurais",
+            "tema_origem": "POS-B",
+            "bucket_origem": "positivas",
+            "tema_texto": "personagens marcantes e atuações",
             "rotulo_forca": "muitos"
           },
           {
-            "texto": "aprecia personagens com personalidades distintas e atuações marcantes",
-            "tema_origem": "POS-B",
+            "texto": "valoriza fotografia em preto e branco com enquadramentos belos e atmosfera intensa",
+            "tema_origem": "POS-C",
             "bucket_origem": "positivas",
-            "tema_texto": "Atuações e personagens marcantes",
+            "tema_texto": "fotografia e impacto visual",
+            "rotulo_forca": "muitos"
+          },
+          {
+            "texto": "tolera uma longa duração com trechos lentos em troca de uma experiência recompensadora",
+            "tema_origem": "POS-E",
+            "bucket_origem": "positivas",
+            "tema_texto": "duração longa e ritmo",
             "rotulo_forca": "muitos"
           }
         ],
         "talvez_evite": [
           {
-            "texto": "considera longa demais uma duração que poderia ser reduzida, tornando a experiência cansativa",
-            "tema_origem": "NEG-A",
-            "bucket_origem": "negativas",
-            "tema_texto": "Duração excessiva",
-            "rotulo_forca": "a maioria"
-          },
-          {
-            "texto": "desiste de uma narrativa arrastada que demora a engrenar e provoca tédio",
+            "texto": "se entedia com um desenvolvimento lento que se prolonga sem acrescentar interesse",
             "tema_origem": "NEG-B",
             "bucket_origem": "negativas",
             "tema_texto": "Ritmo lento e tédio",
             "rotulo_forca": "cerca de metade"
           },
           {
-            "texto": "incomoda-se com interpretações de tom teatral, emoções exacerbadas e trejeitos que parecem postiços",
+            "texto": "precisa de trama desenvolvida e personagens com profundidade para se importar",
             "tema_origem": "NEG-C",
             "bucket_origem": "negativas",
-            "tema_texto": "Atuação exagerada",
-            "rotulo_forca": "muitos"
+            "tema_texto": "Roteiro simplista e personagens rasos",
+            "rotulo_forca": "alguns"
+          },
+          {
+            "texto": "não se satisfaz com qualidade visual que não compensa ritmo fraco e pouco envolvimento",
+            "tema_origem": "NEG-F",
+            "bucket_origem": "negativas",
+            "tema_texto": "Fotografia elogiada, mas insuficiente",
+            "rotulo_forca": "alguns"
           }
         ],
         "ordem_colunas": [
@@ -134618,38 +134629,30 @@ window.ESPECTRO_DATA = {
           "vale_a_pena": [
             "POS-A",
             "POS-B",
-            "POS-C"
+            "POS-C",
+            "POS-E"
           ],
           "talvez_evite": [
             "NEG-A",
             "NEG-B",
             "NEG-C",
-            "NEG-E"
+            "NEG-E",
+            "NEG-F"
           ]
         },
         "temas_saltados": {
-          "vale_a_pena": [
-            "POS-C"
-          ],
+          "vale_a_pena": [],
           "talvez_evite": [
-            "NEG-E"
+            "NEG-A"
           ]
         },
         "descartadas": [
           {
-            "texto": "valoriza enquadramentos, iluminação e o uso da chuva e da lama para criar atmosfera",
-            "tema_origem": "POS-C",
-            "lado": "vale_a_pena",
-            "flags": [
-              "exemplo_verbatim"
-            ]
-          },
-          {
-            "texto": "evita uma história simples com subtramas irrelevantes e desenvolvimento que não prende",
-            "tema_origem": "NEG-E",
+            "texto": "se incomoda com duração que se arrasta sem justificar uma história simples",
+            "tema_origem": "NEG-A",
             "lado": "talvez_evite",
             "flags": [
-              "exemplo_verbatim"
+              "sem_discriminacao"
             ]
           }
         ],
@@ -134657,10 +134660,10 @@ window.ESPECTRO_DATA = {
         "par_desfeito": [],
         "recusas_invalidas": [],
         "retry": {
-          "n_reprovadas": 3,
-          "n_aplicadas": 1,
+          "n_reprovadas": 1,
+          "n_aplicadas": 0,
           "n_saltadas_pelo_modelo": 0,
-          "n_descartadas": 2,
+          "n_descartadas": 1,
           "n_recusadas_pelo_modelo": 0
         },
         "provider": "featherless",
@@ -134671,48 +134674,47 @@ window.ESPECTRO_DATA = {
         "candidatos": [
           {
             "indice": 0,
-            "n_condicoes": 7,
-            "n_flags": 5,
+            "n_condicoes": 9,
+            "n_flags": 2,
             "flags": [
               "comprimento",
               "exemplo_verbatim"
             ],
-            "n_temas_cobertos": 7,
+            "n_temas_cobertos": 9,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 7
+            "n_temas_resolvidos": 9
           },
           {
             "indice": 1,
-            "n_condicoes": 7,
-            "n_flags": 3,
+            "n_condicoes": 9,
+            "n_flags": 1,
             "flags": [
-              "exemplo_verbatim"
+              "sem_discriminacao"
             ],
-            "n_temas_cobertos": 7,
+            "n_temas_cobertos": 9,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 7
+            "n_temas_resolvidos": 9
           },
           {
             "indice": 2,
-            "n_condicoes": 7,
-            "n_flags": 7,
+            "n_condicoes": 9,
+            "n_flags": 1,
             "flags": [
-              "comprimento",
               "exemplo_verbatim"
             ],
-            "n_temas_cobertos": 7,
+            "n_temas_cobertos": 9,
             "n_temas_recusados": 0,
-            "n_temas_resolvidos": 7
+            "n_temas_resolvidos": 9
           }
         ],
         "uso": {
-          "prompt_tokens": 16554,
-          "completion_tokens": 1139,
-          "cache_hit_tokens": 14925,
-          "cache_miss_tokens": 1629
+          "prompt_tokens": 17315,
+          "completion_tokens": 1142,
+          "cache_hit_tokens": 15334,
+          "cache_miss_tokens": 1981
         },
-        "latencia_s": 11.12,
-        "spec_version": "1.9.50",
+        "latencia_s": 24.27,
+        "spec_version": "1.9.51",
         "variante": "experimento-briefing"
       }
     },

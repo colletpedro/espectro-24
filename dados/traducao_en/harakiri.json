@@ -11,7 +11,6 @@
   "O filme é bastante criticado pelo excesso de exposição e monólogos longos, com a sensação de que a história é contada por meio de falas intermináveis, tornando a experiência maçante.": "The film is heavily criticized for excess exposition and long monologues, with the sense that the story is told through endless speeches, making the experience tedious.",
   "Falta de conexão pessoal ou tédio": "Lack of personal connection or boredom",
   "Espectadores afirmam que, apesar dos méritos técnicos e da importância histórica, simplesmente não conseguiram se envolver com a história ou se importar com o que acontecia na tela.": "Viewers state that, despite the technical merits and historical importance, they simply could not engage with the story or care about what was happening on screen.",
-  "Atuações e estilo teatral": "Performances and theatrical style",
   "A atuação é vista por espectadores como rígida ou teatral, com uma encenação que não convence e contribui para a falta de envolvimento com a história.": "The acting is seen by viewers as stiff or theatrical, with a staging that is unconvincing and adds to the lack of engagement with the story.",
   "Ação escassa e má coreografia": "Scarce action and poor choreography",
   "Há críticas à escassez de cenas de ação e à qualidade das coreografias de luta, que espectadores consideram decepcionantes, especialmente em um filme de samurai.": "There are criticisms of the scarcity of action scenes and the quality of the fight choreography, which viewers consider disappointing, especially in a samurai film.",
@@ -41,5 +40,7 @@
   "se incomoda com uma experiência arrastada que parece se prolongar demais": "are bothered by a dragging experience that seems to go on too long",
   "evita filmes que contam a história por meio de falas e monólogos intermináveis": "steer clear of films that tell the story through endless speeches and monologues"
  },
- "_orfaos": {}
+ "_orfaos": {
+  "Atuações e estilo teatral": "Performances and theatrical style"
+ }
 }

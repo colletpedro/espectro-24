@@ -4288,10 +4288,10 @@ window.ESPECTRO_INDICE = {
    "eixos_acima": [
     {
      "eixo": "ritmo",
-     "lift_pp": 27.5
+     "lift_pp": 32.5
     }
    ],
-   "assunto_comum": "ritmo",
+   "assunto_comum": "expectativa",
    "estreia": "1954-08-01",
    "entrada": "2026-11-08",
    "paises": [

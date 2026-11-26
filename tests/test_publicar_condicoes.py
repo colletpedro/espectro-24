@@ -307,7 +307,16 @@ def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
     `expectativa` ("superestimado"), foi PEDIDO em `temas_pedidos` e a R13 o
     retém; NENHUMA condição publicada tem esse `tema_origem`. A regra foi
     cumprida no ar; o teste só não conhecia a medição nova. Igualdade
-    exata, nada afrouxado."""
+    exata, nada afrouxado.
+
+    [2026-11-26, regeneração com a regra R2] +2 (`casablanca`/NEG-B,
+    `seven-samurai`/NEG-E). Os dois filmes foram regenerados sem o resumo de
+    trama (CHANGELOG v1.9.51) e a nova geração produziu, em cada um, um tema
+    do eixo `expectativa` ("Expectativa versus realidade", "Superestimado").
+    Mesmo diagnóstico dos anteriores, MEDIDO nos 2: o tema foi PEDIDO em
+    `temas_pedidos`, a R13 o retém, e NENHUMA condição publicada tem esse
+    `tema_origem` (casablanca publica POS-A/NEG-A; seven-samurai, POS-A/NEG-B).
+    Igualdade exata: a regra não mudou uma linha, o catálogo mudou."""
     if not (RAIZ / "resultado" / "votacao-3" / "consenso.jsonl").exists():
         pytest.skip("catálogo ausente neste checkout")
     retidos = _temas_retidos_no_catalogo()
@@ -325,6 +334,9 @@ def test_a_regra_reproduz_as_oito_da_lista_e_so_retem_as_tres_medidas():
         ("the-shawshank-redemption", "NEG-A"),
         ("harakiri", "NEG-B"),
         ("the-lion-king", "NEG-E"),
+        # a regeneração R2 de 26/11 (ver o docstring)
+        ("casablanca", "NEG-B"),
+        ("seven-samurai", "NEG-E"),
     }
 
 
